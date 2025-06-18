@@ -440,7 +440,7 @@ InitPokegearPalettes:
 ; This is needed because the regular palette is dark at night.
 	ld hl, PokegearOBPals
 	ld de, wOBPals1
-	ld bc, 2 palettes
+	ld bc, 3 palettes ; formerly 2 
 	jmp FarCopyColorWRAM
 
 GetBattlemonBackpicPalettePointer:
