@@ -7,7 +7,7 @@ ENDM
 SpriteHeaders:
 ; entries correspond to SPRITE_* constants
 	table_width NUM_SPRITEDATA_FIELDS, SpriteHeaders
-	overworld_sprite ChrisSpriteGFX, WALKING_SPRITE, PAL_OW_GREEN
+	overworld_sprite ChrisSpriteGFX, WALKING_SPRITE, PAL_OW_GREEN ; chris = sylvan 
 	overworld_sprite ChrisBikeSpriteGFX, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite ChrisSurfSpriteGFX, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite KrisSpriteGFX, WALKING_SPRITE, PAL_OW_GREEN

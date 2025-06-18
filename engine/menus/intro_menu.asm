@@ -874,8 +874,8 @@ FinishPrepIntroPic:
 	lb bc, 7, 7
 	predef_jump PlaceGraphic
 
-Intro_PlacePlayerSprite:
-	farcall GetPlayerIcon
+Intro_PlacePlayerSprite: ;something in here is a palette. But where ? 
+	farcall GetPlayerIcon ; just loads the gfx 
 	ld c, $c
 	ld hl, vTiles0
 	call Request2bppInWRA6
@@ -898,13 +898,13 @@ Intro_PlacePlayerSprite:
 	ld [hli], a
 
 	ld b, 0
-	ld a, [wPlayerGender]
-	bit 0, a
-	jr z, .male
-	ld b, 1
-.male
-	ld a, b
-
+	ld a, $2;[wPlayerGender]
+;	bit 0, a
+;	jr z, .male
+;	ld b, 1
+;.male
+;	ld a, b
+;
 	ld [hli], a
 	dec c
 	jr nz, .loop

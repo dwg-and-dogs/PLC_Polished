@@ -135,7 +135,7 @@ SpriteAnimOAMData:
 	dsprite  1,  0,  0,  0, $01, $0 | X_FLIP | Y_FLIP
 	dsprite  1,  0,  1,  0, $00, $0 | X_FLIP | Y_FLIP
 
-.OAMData_RedWalk:
+.OAMData_RedWalk: ; actually green 
 	db 4
 	dsprite -1,  0, -1,  0, $00, $2
 	dsprite -1,  0,  0,  0, $01, $2
@@ -149,7 +149,7 @@ SpriteAnimOAMData:
 	dsprite  0,  0, -1,  0, $02, -1
 	dsprite  0,  0,  0,  0, $03, -1
 
-.OAMData_MagnetTrainRed:
+.OAMData_MagnetTrainRed:; actually green 
 	db 4
 	dsprite -1,  0, -1,  0, $00, $2 | PRIORITY
 	dsprite -1,  0,  0,  0, $01, $2 | PRIORITY
@@ -296,12 +296,12 @@ SpriteAnimOAMData:
 	dsprite  0,  0, -2,  0, $02, $6
 	dsprite  0,  0,  1,  0, $03, $6
 
-.OAMData_BlueWalk:
+.OAMData_BlueWalk: ; rival should be blue with this 
 	db 4
-	dsprite -1,  0, -1,  0, $00, $2
-	dsprite -1,  0,  0,  0, $01, $2
-	dsprite  0,  0, -1,  0, $02, $2
-	dsprite  0,  0,  0,  0, $03, $2
+	dsprite -1,  0, -1,  0, $00, $1
+	dsprite -1,  0,  0,  0, $01, $1
+	dsprite  0,  0, -1,  0, $02, $1
+	dsprite  0,  0,  0,  0, $03, $1
 
 .OAMData_MagnetTrainBlue:
 	db 4
