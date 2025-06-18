@@ -36,6 +36,8 @@ RuinsofAlphKabutoChamberHiddenDoorsCallback:
 
 
 MapRuinsofAlphKabutoChamberSignpost2Script:
+	checkevent EVENT_SOLVED_KABUTO_PUZZLE
+	iftrue CelebiPuzzleComplete
 	refreshscreen
 	setval $0
 	special Special_UnownPuzzle
@@ -46,17 +48,15 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 .PuzzleComplete:
 	setevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
 	setevent EVENT_SOLVED_KABUTO_PUZZLE
-	earthquake 30
-	pause 15
 	playsound SFX_STRENGTH
-	earthquake 80
+	earthquake 30
 	showemote EMOTE_SHOCK, PLAYER, 15
 	changeblock 4, 0, $25 ; open the door to the item room
 	reloadmappart
-	pause 30
+	pause 15
 	showemote EMOTE_SHOCK, RUINS_SCIENTIST, 15
 	applymovement PLAYER, PlayerStepBack
-	pause 30
+	pause 15
 	applymovement RUINS_SCIENTIST, RuinsScientistMovesToYou
 
 	opentext
@@ -98,6 +98,17 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 
 StepBackText:
 	text "Step back!!"
+	done
+
+CelebiPuzzleComplete:
+	refreshscreen
+	paintingpic CELEBI_PUZZLE
+	waitbutton
+	closepokepic
+	jumpthistext
+
+	text "It's the completed"
+	line "Celebi panel!"
 	done
 
 PlayerStepBack:

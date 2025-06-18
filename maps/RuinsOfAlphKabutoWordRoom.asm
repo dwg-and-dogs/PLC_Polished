@@ -38,6 +38,7 @@ KabutoWordKimonoGirlScript: ; todos, check the menu display
 	reloadmapafterbattle
 	opentext
 .SettingDVsOptions:
+	setevent EVENT_BEAT_KROMA
 	writetext WhatPotentialText
 	promptbutton
 	loadmenu .PhysicalOrSpecialMenuHeader
@@ -229,7 +230,7 @@ KabutoWordKimonoGirlScript: ; todos, check the menu display
 .GiveDragonDVs:;DVS_HP_DRAGON   EQUS "$ff, $ef, $ff"
 	setevent EVENT_SET_DVS_1
 	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ff
 	writetext GaveDVsText
 	waitbutton
