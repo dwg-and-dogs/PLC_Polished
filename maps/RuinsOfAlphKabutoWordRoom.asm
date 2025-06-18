@@ -20,7 +20,7 @@ RuinsOfAlphKabutoWordRoom_MapScriptHeader:
 	object_const_def
 	const KABUTO_WORD_ROOM_KIMONO_GIRL
 		
-KabutoWordKimonoGirlScript: ; todos, check the menu display
+KabutoWordKimonoGirlScript:
 	faceplayer
 	opentext
 	checkevent EVENT_SET_DVS_1
@@ -366,7 +366,7 @@ DV_Setting_CancelText:
 	line "to show it!"
 	done
 
-GreatnessLiesWithinText: ; todo place five others 
+GreatnessLiesWithinText: 
 	text "Greatness lies"
 	line "within!"
 	
