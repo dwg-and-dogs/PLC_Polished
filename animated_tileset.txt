@@ -1,35 +1,13 @@
 Apparently needed files: 
 
 
-***Graphics:
-gfx/tilesets/water/johto_water.png
-
-***Engine:
-engine\tilesets\tileset_anims.asm:
-
-AnimateWaterTile:
-	ld hl, sp+$0
-	ld b, h
-	ld c, l
-
-	; period 4, every 2 frames, offset to 1 tile (16 bytes)
-	ld a, [wTileAnimationTimer]
-	maskbits 4, 1
-	add a
-	add a
-	add a
-
-	add LOW(.WaterTileFrames)
-	ld l, a
-	adc HIGH(.WaterTileFrames)
-	sub l
-	ld h, a
-
-	ld sp, hl
-	jmp WriteTileToDE
-
-.WaterTileFrames:
-INCBIN "gfx/tilesets/water/johto_water.2bpp"
-
 Called by, among others, TilesetPortAnim:: ; technically called by home/video.asm, but that's OK 
 
+1) Make the animated tiles:
+gfx.tilesets.aflame/fireX.png; X = 1 to 8; with each one being 8x40 (8x(8*5)), so five total tiles that each one goes through. 
+
+2) Revise the tileset
+
+3) Revise engine/gfx/tilesets with the sprout tower animations, c.f. the fountain animations 
+	error: main.asm(458) -> engine/tilesets/tileset_anims.asm(768): Unknown symbol "AnimateFireTile.FountainTilePointers"
+error: main.asm(458) -> engine/tilesets/tileset_anims.asm(766): Unknown symbol "AnimateFireTile.FountainTilePointers"

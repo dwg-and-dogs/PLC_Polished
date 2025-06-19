@@ -257,26 +257,26 @@
 	; morn
 	wildmon 23, FURRET
 	wildmon 24, GRIMER
-	wildmon 25, FURRET
+	wildmon 25, VULPIX
 	wildmon 24, GOLBAT
-	wildmon 25, FURRET
-	wildmon 25, FURRET
+	wildmon 25, WEEZING
+	wildmon 25, DUGTRIO
 	wildmon 25, FURRET
 	; day
 	wildmon 23, FURRET
 	wildmon 24, GRIMER
-	wildmon 25, FURRET
+	wildmon 25, VULPIX
 	wildmon 24, GOLBAT
-	wildmon 25, FURRET
-	wildmon 25, FURRET
+	wildmon 25, WEEZING
+	wildmon 25, DUGTRIO
 	wildmon 25, FURRET
 	; nite
 	wildmon 23, FURRET
 	wildmon 24, GRIMER
-	wildmon 25, FURRET
+	wildmon 25, VULPIX
 	wildmon 24, GOLBAT
-	wildmon 25, FURRET
-	wildmon 25, FURRET
+	wildmon 25, WEEZING
+	wildmon 25, DUGTRIO
 	wildmon 25, FURRET
 	end_grass_wildmons
 
@@ -372,24 +372,24 @@
 	wildmon 5, ONIX
 	wildmon 4, MACHOP
 	wildmon 7, TEDDIURSA
-	wildmon 6, MACHOP
-	wildmon 6, TEDDIURSA
+	wildmon 6, DIGLETT
+	wildmon 6, DIGLETT
 	; day
 	wildmon 6, ZUBAT
 	wildmon 6, GEODUDE
 	wildmon 5, ONIX
 	wildmon 4, MACHOP
 	wildmon 7, TEDDIURSA
-	wildmon 6, MACHOP
-	wildmon 6, TEDDIURSA
+	wildmon 6, DIGLETT
+	wildmon 6, DIGLETT
 	; nite
 	wildmon 6, ZUBAT
 	wildmon 6, GEODUDE
 	wildmon 5, ONIX
 	wildmon 4, MACHOP
 	wildmon 7, TEDDIURSA
-	wildmon 6, MACHOP
-	wildmon 6, TEDDIURSA
+	wildmon 6, DIGLETT
+	wildmon 6, DIGLETT
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B1F_NORTH

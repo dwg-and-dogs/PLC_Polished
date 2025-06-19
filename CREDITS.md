@@ -59,6 +59,7 @@ Back Sprites if different from above, using Deviantart handles:
 
 ## Other Art
 
+* Animated Fire from Azure Keys BW3: Genesis 
 * Box Art Assets adapted from Pokemon Trading Card Game art
 * Title Screen: Tree adapted from takashi14_daumzey
 

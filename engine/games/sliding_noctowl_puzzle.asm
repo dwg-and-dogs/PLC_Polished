@@ -826,4 +826,4 @@ SlidingGFXHeaders:
 INCBIN "gfx/unown_puzzle/tile_borders_2.2bpp"
 
 SlidingPuzzleStartCancelLZ:
-INCBIN "gfx/unown_puzzle/start_cancel_2.2bpp.lz"
+INCBIN "gfx/unown_puzzle/start_cancel.2bpp.lz"

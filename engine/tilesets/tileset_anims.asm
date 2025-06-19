@@ -155,21 +155,32 @@ TilesetKanto2Anim::
 	dw NULL,  DoneTileAnimation
 
 TilesetTowerAnim::
-	dw TowerPillarTilePointer9,  AnimateTowerPillarTile
-	dw TowerPillarTilePointer10, AnimateTowerPillarTile
-	dw TowerPillarTilePointer7,  AnimateTowerPillarTile
-	dw TowerPillarTilePointer8,  AnimateTowerPillarTile
-	dw TowerPillarTilePointer5,  AnimateTowerPillarTile
-	dw TowerPillarTilePointer6,  AnimateTowerPillarTile
-	dw TowerPillarTilePointer3,  AnimateTowerPillarTile
-	dw TowerPillarTilePointer4,  AnimateTowerPillarTile
-	dw TowerPillarTilePointer1,  AnimateTowerPillarTile
-	dw TowerPillarTilePointer2,  AnimateTowerPillarTile
+	; pillar animations : each is 8 x 40 
+;	dw TowerPillarTilePointer9,  AnimateTowerPillarTile
+;	dw TowerPillarTilePointer10, AnimateTowerPillarTile
+;	dw TowerPillarTilePointer7,  AnimateTowerPillarTile
+;	dw TowerPillarTilePointer8,  AnimateTowerPillarTile
+;	dw TowerPillarTilePointer5,  AnimateTowerPillarTile
+;	dw TowerPillarTilePointer6,  AnimateTowerPillarTile
+;	dw TowerPillarTilePointer3,  AnimateTowerPillarTile
+;	dw TowerPillarTilePointer4,  AnimateTowerPillarTile
+;	dw TowerPillarTilePointer1,  AnimateTowerPillarTile
+;	dw TowerPillarTilePointer2,  AnimateTowerPillarTile
+	; fire animations : each is 8 x 40 
+	dw TowerFirePointer8, AnimateTowerFireTile ; fire frames 1
+	dw TowerFirePointer7, AnimateTowerFireTile ; fire frames 5
+	dw TowerFirePointer6, AnimateTowerFireTile ; fire frames 2
+	dw TowerFirePointer5, AnimateTowerFireTile ; fire frames 6 
+	dw TowerFirePointer4, AnimateTowerFireTile ; fire frames 3 
+	dw TowerFirePointer3, AnimateTowerFireTile ; fire frames 7
+	dw TowerFirePointer2, AnimateTowerFireTile ; fire frames 4
+	dw TowerFirePointer1, AnimateTowerFireTile ; fire frames 8 
+	
 	dw NULL,  StandingTileFrame
-	dw NULL,  DoNothing
-	dw NULL,  DoNothing
-	dw NULL,  DoNothing
-	dw NULL,  DoNothing
+;	dw NULL,  DoNothing
+;	dw NULL,  DoNothing
+;	dw NULL,  DoNothing
+;	dw NULL,  DoNothing
 	dw NULL,  DoneTileAnimation
 
 TilesetCaveAnim::
@@ -329,6 +340,7 @@ TilesetValenciaAnim::
 	dw NULL,  DoNothing
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
+
 
 TilesetJohto3Anim::
 TilesetHouse1Anim::
@@ -737,6 +749,45 @@ ForestTreeRightAnimation2:
 	ld sp, hl
 	ld hl, vTiles2 tile $53
 	jmp WriteTile
+
+AnimateTowerFireTile:  ; c.f. tower-pillar in this asm. todo: upate the period, etc  
+	ld hl, sp+$0
+	ld b, h
+	ld c, l
+
+	; period 8, offset to index table (1 byte)
+	ld a, [wTileAnimationTimer]
+	maskbits 8
+
+	add LOW(.TowerPillarTileFrameIndexes)
+	ld l, a
+	adc HIGH(.TowerPillarTileFrameIndexes)
+	sub l
+	ld h, a
+	ld a, [hl]
+
+	ld l, e
+	ld h, d
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+	inc hl
+
+	add [hl]
+	inc hl
+	ld h, [hl]
+	ld l, a
+	adc h
+	sub l
+	ld h, a
+
+	ld sp, hl
+	jmp WriteTileToDE
+
+.TowerPillarTileFrameIndexes: ; may need to revise this 
+	db $00, $10, $20, $30, $40, $00, $10, $30
+
+
 
 ForestTreeLeftFrames:
 INCBIN "gfx/tilesets/forest-tree/1.2bpp"
@@ -1198,6 +1249,27 @@ TowerPillarTile8:  INCBIN "gfx/tilesets/tower-pillar/8.2bpp"
 TowerPillarTile9:  INCBIN "gfx/tilesets/tower-pillar/9.2bpp"
 TowerPillarTile10: INCBIN "gfx/tilesets/tower-pillar/10.2bpp"
 
+; todo: Set the proper tiles from $0E to etc. Should use the same logic as the tower pillar. 
+; top parts of the fire: 67, 68, 77, 78 
+TowerFirePointer1: dw vTiles2 tile $67, FireTiles1 ; correct ? 
+TowerFirePointer2: dw vTiles2 tile $68, FireTiles5 ; correct 
+TowerFirePointer3: dw vTiles2 tile $77, FireTiles2
+TowerFirePointer4: dw vTiles2 tile $78, FireTiles6
+; bottom parts of the fire: 64, 65, 74, 75
+TowerFirePointer5: dw vTiles2 tile $64, FireTiles3
+TowerFirePointer6: dw vTiles2 tile $65, FireTiles7
+TowerFirePointer7: dw vTiles2 tile $74, FireTiles4
+TowerFirePointer8: dw vTiles2 tile $75, FireTiles8
+
+FireTiles1: INCBIN "gfx/tilesets/aflame/fire1.2bpp"
+FireTiles2: INCBIN "gfx/tilesets/aflame/fire2.2bpp"
+FireTiles3: INCBIN "gfx/tilesets/aflame/fire3.2bpp"
+FireTiles4: INCBIN "gfx/tilesets/aflame/fire4.2bpp"
+FireTiles5: INCBIN "gfx/tilesets/aflame/fire5.2bpp"
+FireTiles6: INCBIN "gfx/tilesets/aflame/fire6.2bpp"
+FireTiles7: INCBIN "gfx/tilesets/aflame/fire7.2bpp"
+FireTiles8: INCBIN "gfx/tilesets/aflame/fire8.2bpp"
+
 WhirlpoolFrames1: dw vTiles2 tile $32, WhirlpoolTiles1
 WhirlpoolFrames2: dw vTiles2 tile $33, WhirlpoolTiles2
 WhirlpoolFrames3: dw vTiles2 tile $42, WhirlpoolTiles3
@@ -1213,3 +1285,4 @@ FarawayWaterFrames2: dw vTiles2 tile $15, FarawayWaterTiles2
 
 FarawayWaterTiles1: INCBIN "gfx/tilesets/water/faraway_water_1.2bpp"
 FarawayWaterTiles2: INCBIN "gfx/tilesets/water/faraway_water_2.2bpp"
+
