@@ -32,22 +32,12 @@ AnarresHoltGateHollisScene:
 	waitbutton
 	writetext TammyDialogue2
 	waitbutton
-	closetext
-
-	applymovement ANARRESHOLTGATE_HOLLIS, HollisTurnDown
-
-	opentext
 	writetext HollisDialogue2
 	waitbutton
 	closetext
 	
 	applymovement ANARRESHOLTGATE_HOLLIS, HollisExitMovement
 	disappear ANARRESHOLTGATE_HOLLIS
-
-	opentext
-	writetext TammyDialogue3
-	waitbutton
-	closetext
 
 	applymovement ANARRESHOLTGATE_TAMMY, TammyExitMovement
 	disappear ANARRESHOLTGATE_TAMMY
@@ -60,7 +50,6 @@ HollisTurnDown:
 	step_end
 
 HollisExitMovement:
-	step_right
 	step_right
 	step_right
 	step_end
@@ -90,8 +79,8 @@ HollisDialogue1:
 	line "We can't afford"
 	para "any mistakes."
 	line "That means your"
-	line "invention, by"
-	cont "the way."
+	para "invention, by"
+	line "the way."
 	done
 
 
@@ -115,14 +104,6 @@ HollisDialogue2:
 	next
 	text_start
 	text "Such disrespect!"
-	done
-
-TammyDialogue3:
-	text_high
-    text " Tammy: "
-	next
-	text_start
-	text "Urrg!"
 	done
 
 AnarresHoltGateTammyScript:

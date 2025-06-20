@@ -27,7 +27,7 @@ HollysHolt_MapScriptHeader:
 
 
 	def_object_events
-	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, EVENT_BEAT_HOLLIS
+	object_event  9, 25, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltKurtScript, EVENT_ANARRES_HOLT_GATE
 	object_event  8, 25, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltHollisScript, EVENT_TALKED_TO_HOLLIS
 	object_event 18, 38, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HollysHoltTammyScript, EVENT_TAMMY_HOLLYS_HOLT
 	object_event 17, 37, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC6Text, EVENT_TAMMY_HOLLYS_HOLT 
@@ -68,6 +68,7 @@ HollysHoltScript1:
 	turnobject HOLLYS_HOLT_KURT, LEFT
 	turnobject HOLLYS_HOLT_HOLLIS, RIGHT
 	turnobject PLAYER, LEFT
+	pause 20
 	refreshscreen
 	trainerpic HOLLIS
 	waitbutton
@@ -117,8 +118,8 @@ HH_HollisHello:
 	next
 	text_start
 
-	line "Hello! How did"
-	cont "you get behind"
+	text "Hello! How did"
+	line "you get behind"
 	cont "the shrine?"
 	
 	para "Are you also"
@@ -465,7 +466,7 @@ HH_Sign3Text:
 	done
 
 PinecoHeadbuttScript1:
-	jumpthisopenedtext
+	jumpthistext
 	
 	text "The tree is infe-"
 	line "sted with hundr-"

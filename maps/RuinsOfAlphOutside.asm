@@ -51,15 +51,15 @@ GenericTrainerFisherRalph:
 
 	para "The caves were"
 	line "dug by visitors"
-	cont "from Sinnoh,"
-	cont "long ago."
+	para "from Sinnoh,"
+	line "long ago."
 	
 	para "Who knows what"
 	line "message they"
-	cont "were trying to"
-	cont "communicate"
-	cont "with those Unown"
-	cont "on the walls."
+	para "were trying to"
+	line "communicate"
+	para "with those Unown"
+	line "on the walls."
 	done
 
 FisherRalphSeenText:
@@ -103,8 +103,8 @@ GenericTrainerSchoolgirlMolly:
 
 	text "My big brother"
 	line "says that these"
-	cont "ruins contain"
-	cont "portals."
+	para "ruins contain"
+	line "portals."
 	
 	para "I wonder why?"
 	done
@@ -144,8 +144,8 @@ RuinsOfAlphOutsideScientist2Script:
 RuinsOfAlphScientist2Text:
 	text "I'm telling you,"
 	line "there's a conn-"
-	cont "ection between"
-	cont "the Unown and"
+	para "ection between"
+	line "the Unown and"
 	cont "the Kimono girls!"
 	
 	para "How else do you"
@@ -159,14 +159,14 @@ RuinsOfAlphOutsideScientist1Script:
 RuinsOfAlphScientist1Text:
 	text "No, I'm telling"
 	line "you, the Unown"
-	cont "are connected to"
-	cont "visitors from"
+	para "are connected to"
+	line "visitors from"
 	cont "ancient Sinnoh!"
 	
 	para "How else do you"
 	line "explain the"
-	cont "#mon we are"
-	cont "digging up?"
+	para "#mon we are"
+	line "digging up?"
 	done
 
 RuinsOfAlphOutsideScientist3Script:
@@ -175,15 +175,15 @@ RuinsOfAlphOutsideScientist3Script:
 RuinsOfAlphScientist3Text:
 	text "We discovered"
 	line "a Bronzong in"
-	cont "buried in the"
-	cont "ground!"
+	para "buried in the"
+	line "ground!"
 	
 	para "Falkner wants"
 	line "to put it at"
-	cont "the top of his"
-	cont "tower to perform"
-	cont "a Rain Dance to"
-	cont "alleviate the"
+	para "the top of his"
+	line "tower to perform"
+	para "a Rain Dance to"
+	line "alleviate the"
 	cont "drought."
 	
 	done
@@ -196,10 +196,10 @@ RuinsOfAlphNorthScientistScript:
 RuinsOfAlphNorthScientistText:
 	text "Some say if"
 	line "you stare at"
-	cont "the shattered"
-	para "mosaic for long"
-	line "enough, you can"
-	cont "see a story."
+	para "the shattered"
+	line "mosaic for long"
+	para "enough, you can"
+	line "see a story."
 	done
 
 RuinsOfAlphSignText:
@@ -207,7 +207,7 @@ RuinsOfAlphSignText:
 	
 	para "Inner chamber "
 	line "closed due to "
-	cont "unstable sites."
+	cont "falling rocks."
 	done
 	
 RuinsOfAlphResearchCenterSignText:

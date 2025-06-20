@@ -33,9 +33,10 @@ DebugRoom_MapScriptHeader:
 
 DebugInteraction: 
 	opentext
-	givepoke TEDDIURSA, 100
-	givepoke PIDGEY, 100
-	givepoke EKANS, 100 
+	givepoke ONIX, 100
+	givepoke PRINPLUP, 100
+	givepoke YANMA, 100 
+	closetext
 	end
 
 DebugCPU:

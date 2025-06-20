@@ -326,7 +326,7 @@ ENDM
 	map_attributes CianwoodGym, CIANWOOD_GYM, $0, 0
 	map_attributes MoveManiacsHouse, MOVE_MANIACS_HOUSE, $0, 0
 	map_attributes CianwoodCave, CIANWOOD_CAVE, $0, 0
-	map_attributes HollysHolt, HOLLYS_HOLT, $35, 0 ; start of anarres group
+	map_attributes HollysHolt, HOLLYS_HOLT, $33, 0 ; start of anarres group
 	map_attributes AnarresTown, ANARRES_TOWN, $5, 0 
 	map_attributes MistyBasin, MISTY_BASIN, $9, 0
 	map_attributes MistyBasinB1F, MISTY_BASIN_B1F, $9, 0

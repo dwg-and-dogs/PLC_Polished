@@ -19,10 +19,43 @@ AnarresTower1F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  6,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBugCatcherDon, -1
+	object_event  7,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBugCatcherDon, -1
 	object_event  0,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBugCatcherBenny, -1
+	object_event  6,  8, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTowerResetScript, EVENT_BEAT_HOLLIS
+
 
 	object_const_def
+
+
+AnarresTowerResetScript:
+	faceplayer
+	opentext
+	writetext ResetAnarresTowerTrainersText
+	waitbutton
+	yesorno
+	iffalse .ScriptEnds
+	clearevent EVENT_BEAT_BUG_CATCHER_DON
+	clearevent EVENT_BEAT_BUG_CATCHER_WAYNE	
+	writetext AnaressTowerTrainersResetText
+	waitbutton	
+.ScriptEnds:
+	closetext
+	end
+
+ResetAnarresTowerTrainersText:
+	text "Hey, the guards"
+	line "are keeping any-"
+	cont "one out!"
+	
+	para "Did you battle"
+	line "them already?"
+	done
+
+AnaressTowerTrainersResetText:
+	text "I'll tell them to"
+	line "look out for you"
+	cont "again."
+	done
 
 
 GenericTrainerBugCatcherDon:

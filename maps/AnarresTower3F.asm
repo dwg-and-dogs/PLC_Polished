@@ -41,15 +41,15 @@ AnarresTower3FEvent:
 	clearevent EVENT_BEAT_HOLLIS ; this flag randomly gets set somehow. This is a workaround, i think 
 	setscene $1
 	setevent EVENT_SAW_KLEAVOR
-	pause 10
+	pause 20
 	appear ANARRES_TOWER_TAMMY
 	applymovement ANARRES_TOWER_TAMMY, TammyMovesToHollis
-	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
+	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 20
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	opentext
 	writetext HollisPastGuards
 	waitbutton
-	showemote EMOTE_SAD, ANARRES_TOWER_TAMMY, 10
+	showemote EMOTE_SAD, ANARRES_TOWER_TAMMY, 20
 	writetext TammyExplains
 	waitbutton
 	closetext
@@ -61,33 +61,35 @@ AnarresTower3FEvent:
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
 	opentext
-	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 10
+	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 20
 	applyonemovement ANARRES_TOWER_HOLLIS, step_down
 	turnobject PLAYER, DOWN
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	showtext TammyText2
 ;	waitbutton
-	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 10
+	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 20
 ;	showtext HollisHmm
 ;	waitbutton
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
-	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 10
+	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 20
 	showtext TammyText3
 ;	waitbutton
-	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 10
+	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 20
 	showtext HollisAbuse
 	pause 5
 	showtext TammyText4
 	turnobject ANARRES_TOWER_HOLLIS, RIGHT
 	applyonemovement ANARRES_TOWER_HOLLIS, step_right
 	showtext HollisHM
-	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 15
+	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 20
 	showtext TammyThanks
 	closetext
 	applymovement ANARRES_TOWER_TAMMY, TammyWalksOutMovement
 	disappear ANARRES_TOWER_TAMMY
 	applyonemovement ANARRES_TOWER_HOLLIS, step_left
+	applyonemovement ANARRES_TOWER_HOLLIS, step_left
+	turnobject ANARRES_TOWER_HOLLIS, UP
 	opentext
 	writetext HollisCongratulates
 	waitbutton
@@ -304,7 +306,7 @@ HollisCongratulates:
 	para "ring over another"
 	line "towards the sky."
 
-	para "each ring has its"
+	para "Each ring has its"
 	line "day in the sun… "
 	para "but then it's time"
 	line "to support the"

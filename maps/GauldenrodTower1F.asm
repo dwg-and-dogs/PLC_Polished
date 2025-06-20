@@ -7,9 +7,7 @@ GauldenrodTower1F_MapScriptHeader:
 	warp_event  2, 11, GAULDENROD, 9
 	warp_event  3, 11, GAULDENROD, 9
 	warp_event 11,  1, GAULDENROD_TOWER_2F, 1
-	warp_event  1, 11, GAULDENROD_TOWER_2F, 2
-	warp_event  5,  3, GAULDENROD_TOWER_2F, 3
-	warp_event  6,  3, GAULDENROD_TOWER_3F, 1
+	warp_event  1, 10, GAULDENROD_TOWER_1F, 1 ; TELEPORT 
 
 	def_coord_events
 

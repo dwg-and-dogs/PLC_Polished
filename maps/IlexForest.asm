@@ -132,12 +132,15 @@ GenericTrainerBug_catcherWade:
 Bug_catcherWadeSeenText:
 	text "Bug #mon"
 	line "are so cool!"
+	
+	para "I love finding"
+	line "new ones in the"
+	cont "forest!"
 	done
 
 Bug_catcherWadeBeatenText:
-	text "When these "
-	line "evolve, you will"
-	cont "be sorry..."
+	text "You'll be sorry"
+	line "when they evolve!"
 	done
 
 GenericTrainerYoungsterJoey:
@@ -167,10 +170,10 @@ GenericTrainerBug_catcherArnie:
 	done
 
 Bug_catcherArnieSeenText:
-	text "The rarer the"
-	line "#mon, the"
-	para "cooler you are"
-	line "to girls!"
+	text "How will forest"
+	line "#mon survive"
+	para "if all the trees"
+	line "are logged?"
 	done
 
 Bug_catcherArnieBeatenText:

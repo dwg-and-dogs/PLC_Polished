@@ -1642,9 +1642,8 @@ ClairFinalPkmnText:
 	prompt
 
 KurtFinalPkmnText: ; new 
-	text "Down to this..."
-	line "I won't give up"
-	cont "on you, <PLAYER>!"
+	text "You've come so"
+	line "far!"
 	prompt
 
 MejimiFinalPkmnText:

@@ -19,7 +19,7 @@ AnarresDorms_MapScriptHeader:
 	bg_event  0,  5, BGEVENT_READ, AnarresDormsBed 
 
 	def_object_events
-	object_event 2, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, -1 ;
+	object_event 2, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, EVENT_BEAT_SANDRA
 	object_event 5, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC2Text, -1 ;
 	object_event 3, 3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC3Text, -1 ;
 	
@@ -80,6 +80,8 @@ BedText2:
 AnarresDormsKurtScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_HOLLIS
+	iftrue .AnarresKurtPC2
 	writetext KurtAnarresDormsText
 	yesorno
 	iffalse .AnarresKurtPC
@@ -91,12 +93,25 @@ AnarresDormsKurtScript:
 	opentext
 	jumpopenedtext AnarresKurtBattleText2
 
+.AnarresKurtPC2
+	writetext AnarresDormsKurtAfterHollisText
+	waitbutton
 .AnarresKurtPC
 	writetext KurAnarresDormsText2
 	promptbutton
 	special PokemonCenterPC
 	endtext
 	end
+
+AnarresDormsKurtAfterHollisText:
+	text "Excellent. Now,"
+	line "we can head North"
+	para "to get to histo-"
+	line "ric Olivine where"
+	para "outside influence"
+	line "will corrupt"
+	cont "Johto!"
+	done
 
 KurtAnarresDormsText:
 	text "<PLAYER>, these"
