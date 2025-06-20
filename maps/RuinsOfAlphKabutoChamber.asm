@@ -91,6 +91,7 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	writetext WhatsInKabutoWordRoomText
 	closetext
 	setevent EVENT_GOT_UNOWN
+	clearevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 
 	end	
 
 .refusetotakeunown1

@@ -350,7 +350,7 @@ KurtText1:
 	line "sacred!"
 	
 	para "You nearly broke"
-	line " this artifact!"
+	line "this artifact!"
 	done
 
 	

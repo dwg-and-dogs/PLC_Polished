@@ -66,6 +66,10 @@ CelebiCeremonyIntroScript:
 	opentext
 	writetext KurtText_Intro
 	waitbutton
+	writetext KurtText_Intro_2
+	waitbutton
+	writetext KurtText_Intro_3
+	waitbutton
 	closetext
 	applymovement TINDER_GARDEN_OAK, TGOakMovesToYouMovement
 	opentext
@@ -180,8 +184,9 @@ KurtText_Intro:
 	para "I see <RIVAL>"
 	line "came without his"
 	cont "clunky glassware."
-	text_end
+	done
 
+KurtText_Intro_2:
 	text_high
     text " <RIVAL>: "
 	next
@@ -190,8 +195,9 @@ KurtText_Intro:
 	line "can save Azalea!"
 	para "It harvests more"
 	line "10x more oils -- "
-	text_end
+	done
 
+KurtText_Intro_3:
 	text_high
     text " Kurt: "
 	next
@@ -737,7 +743,7 @@ TinderGardenRivalBattleScript1:
 	closetext
 	applymovement TINDER_GARDEN_KURT, KurtLeavesInAHurryMovement
 	disappear TINDER_GARDEN_KURT
-	setscene $2 ; when this was $0 I got stuck in a loop constantly doing the scene
+	setscene $4 ; 
 	setmapscene AZALEA_TOWN, $1 ;now the people shouldn't stop you
 	setmapscene ILEX_FOREST, $1 ;ready for the fight at Ilex Forest
 	clearevent EVENT_KURTS_HOUSE_NOTEBOOK
@@ -1040,7 +1046,7 @@ KurtThinksTheyreCuttingTreesText:
 	text "What's that?"
 	
 	para "Are they cutting"
-	cont "by the shrine?"
+	line "by the shrine?"
 
 	para "That's against"
 	line "the agreement!"
@@ -1087,10 +1093,7 @@ CelebiScript:
 	
 TinderGardernWatchTheLoggersScript:
 ;cf western capital scene 
-	disappear PLAYER
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-	special Special_FadeInQuickly
+	turnobject PLAYER, UP
 	showemote EMOTE_QUESTION, TINDER_GARDEN_ENGINEER_1, 10
 	showtext GardenEngineerText1
 	pause 10
@@ -1098,13 +1101,20 @@ TinderGardernWatchTheLoggersScript:
 	showtext GardenEngineerText2		
 	closetext
 	turnobject TINDER_GARDEN_ENGINEER_1, RIGHT
-	;SFX TO CUT
+	pause 20
+	playsound SFX_CUT
+	waitsfx
 	changeblock 4, 0, $01 
+	reloadmappart
+	pause 20
 	disappear TINDER_GARDEN_CELEBI_2
+	pause 20
 	turnobject TINDER_GARDEN_ENGINEER_1, DOWN
+	pause 20
 	showtext GardenEngineerText3
 	turnobject TINDER_GARDEN_ENGINEER_2, UP
 	showtext GardenEngineerText4
+	pause 20
 	closetext
 	halloffame
 	end
@@ -1119,7 +1129,7 @@ GardenEngineerText1:
 	
 GardenEngineerText2:
 	text "Yup, it may be the"
-	cont "last one in"
+	line "last one in"
 	cont "Johto."
 	done
 
@@ -1145,6 +1155,9 @@ GardenEngineerText4:
 	para "kid toppled the"
 	line "Consul some"
 	cont "160 years ago."
+	
+	para "What was their"
+	line "name again?"
 	done
 
 

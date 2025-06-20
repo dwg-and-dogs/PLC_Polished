@@ -18,7 +18,7 @@ DebugRoom_MapScriptHeader:
 	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
 	bg_event  2,  7, BGEVENT_READ, DebugRoomTileGame
-;	bg_event  0,  2, BGEVENT_UP, DebugInteraction
+	bg_event  0,  2, BGEVENT_UP, DebugInteraction
 
 	def_object_events
 	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1
@@ -31,8 +31,12 @@ DebugRoom_MapScriptHeader:
 	object_const_def
 	const DEBUG_DWG
 
-;DebugInteraction: 
-;	end
+DebugInteraction: 
+	opentext
+	givepoke TEDDIURSA, 100
+	givepoke PIDGEY, 100
+	givepoke EKANS, 100 
+	end
 
 DebugCPU:
 	trainerpic BOBESH

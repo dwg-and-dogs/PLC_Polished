@@ -38,7 +38,8 @@ DebugRoomPortal:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp DEBUG_ROOM, 5, 3
+	warp DEBUG_ROOM, 9, 1
+	clearevent EVENT_TINDER_GARDEN_CELEBI_2
 	end
 
 AskWarpDebugText:
@@ -77,10 +78,6 @@ AzaleaGymBugsyScript:
 	waitsfx
 	setflag ENGINE_HIVEBADGE
 	writethistext
-		text_high
-		text " Bugsy: "
-		next
-		text_start 
 		text "Here, I also want"
 		line "you to have this."
 		done
@@ -88,11 +85,6 @@ AzaleaGymBugsyScript:
 	verbosegivetmhm TM_U_TURN
 	setevent EVENT_GOT_TM69_U_TURN
 	jumpthisopenedtext
-
-	text_high
-    text " Bugsy: "
-	next
-	text_start 
 
 	text "TM69 contains"
 	line "U-turn."
@@ -108,10 +100,6 @@ AzaleaGymBugsyScript:
 	done
 
 .SeenText:
-	text_high
-    text " Bugsy: "
-	next
-	text_start 
 	text "Oh? You have"
 	line "news about a"
 	cont "branched evol-"
@@ -132,10 +120,6 @@ AzaleaGymBugsyScript:
 	done
 
 .BeatenText:
-	text_high
-    text " Bugsy: "
-	next
-	text_start 
 	text "Whoa, amazing!"
 
 	para "I forgot the"
@@ -151,10 +135,6 @@ AzaleaGymBugsyScript:
 	done
 
 AfterTextBugsy:
-	text_high
-    text " Bugsy: "
-	next
-	text_start 
 	text "Bug #mon are"
 	line "deep. There are"
 
@@ -164,11 +144,7 @@ AfterTextBugsy:
 
 
 BranchedEvoText:	
-	text_high
-    text " Bugsy: "
-	next
-	text_start 
-	text "<PLAYER>."
+	text "Bugsy: <PLAYER>."
 	line "I have an idea."
 	
 	para "Scyther's genes"
@@ -183,10 +159,6 @@ BranchedEvoText:
 	done
 
 EndTextBugsy:
-	text_high
-    text " Bugsy: "
-	next
-	text_start 
-	para "Ah, forget it."
+	text "Ah, forget it."
 	line "Who would care?"
 	done

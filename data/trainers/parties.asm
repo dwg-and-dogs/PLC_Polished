@@ -7940,7 +7940,7 @@ EngineerGroup:
 	db "Camden@"
 	db TRAINERTYPE_MOVES ; ILEX FOREXT 
 	; party
-	db 7, SCIZOR ;tried lv 10, way too hard
+	db 5, SCIZOR ;tried lv 10, way too hard
 		db CUT, LEER, AGILITY, FOCUS_ENERGY
 	db -1 ; end
 
