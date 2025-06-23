@@ -4918,7 +4918,7 @@ FirebreatherGroup:
 	; party
 	db 16, PONYTA
 	db 17, MAGMAR
-	db 16, MONFERNO
+;	db 16, MONFERNO
 	db -1 ; end
 
 ; ================
@@ -7803,7 +7803,6 @@ BattleGirlGroup:
 	; party
 	db 11, POLIWAG
 	db 15, POLIWHIRL
-	db 15, POLIWRATH
 	db -1 ; end
 
 ; ================
@@ -8159,9 +8158,9 @@ AromaLadyGroup:
 	db "Bryony@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, JIGGLYPUFF
-	db 18, WIGGLYTUFF
-	db 18, CLEFAIRY
+	db 16, JIGGLYPUFF
+	db 16, WIGGLYTUFF
+	db 16, CLEFAIRY
 	db -1 ; end
 
 ; ================

@@ -28,9 +28,9 @@ CalmCoastCottageDayCareManText:
 	line "wife's Pidgeotto."
 	
 	para "If they will"
-	line "make an egg."
+	line "made an egg,"
 
-	para "Wouldn't that be"
+	para "wouldn't that be"
 	line "a Hoot!"
 	done
 

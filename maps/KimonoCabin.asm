@@ -128,7 +128,7 @@ Kimono1ThanksForHelpingText:
 KimonoCabin2Script:
 	faceplayer
 	opentext
-	checkevent EVENT_KIMONO_CABIN_LARVITAR
+	checkevent EVENT_BATTLED_CABIN_LARVITAR
 	iftrue_jumpopenedtext Kimono2HelpedText
 	checkevent EVENT_BEAT_HOLLIS
 	iffalse_jumpopenedtext Kimono2NotStrongEnoughText
@@ -141,7 +141,10 @@ KimonoCabin2Script:
 	waitbutton
 	closetext
 	; clearevents
-	setevent EVENT_KIMONO_CABIN_LARVITAR
+	clearevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_1
+	clearevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_2
+	clearevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_3
+	clearevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_4	
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
@@ -561,7 +564,6 @@ KimonoCabinSamariaNotebook1:
 	para "leaving..."
 	done
 	
-
 KimonoCabinPiperNotebook1:
 	text "Piper's Journal:"
 	line "Ugh! The Consul!"
@@ -582,7 +584,6 @@ KimonoCabinPiperNotebook1:
 	line "exploitation."
 	done
 
-
 KimonoCabinVeraNotebook1:
 	text "Vera's Journal:"
 	line "At the cabin, ev-"
@@ -599,7 +600,6 @@ KimonoCabinVeraNotebook1:
 	line "I saw a cute Cyn-"
 	cont "daquil!"
 	done
-
 	
 KimonoCabinMorpheaNotebook1:
 	text "Morphea's Journ-"

@@ -38,10 +38,10 @@ Gauldenrod_MapScriptHeader:
 
 	def_object_events
 	; cutscene 
-	object_event  23, 30, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
-	pokemon_event 24, 32, FLAREON, -1, -1, PAL_NPC_RED, ObjectEvent, EVENT_GAULDENROD_FLAREON
-	object_event  23, 33, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
-	object_event  24, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
+	object_event  23, 27, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BOBESH
+	pokemon_event 24, 29, FLAREON, -1, -1, PAL_NPC_RED, ObjectEvent, EVENT_GAULDENROD_FLAREON
+	object_event  23, 30, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
+	object_event  24, 30, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_BRIGADER_CINDY
 	; marts etc 
 	object_event 34, 20, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodHisuiTraderScript, EVENT_GAULDENROD_CIVILIANS
 	mart_clerk_event  27, 25, MARTTYPE_STANDARD, MART_GAULDENROD_1	
@@ -53,7 +53,7 @@ Gauldenrod_MapScriptHeader:
 	; npcs 
 	object_event 31, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, GauldenrodNPC1Script, EVENT_GAULDENROD_CIVILIANS
 	object_event 23, 6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, 			OBJECTTYPE_SCRIPT, 0, GauldenrodNPC2Script, EVENT_GAULDENROD_CIVILIANS
-	object_event 23, 29, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, 				OBJECTTYPE_SCRIPT, 0, GauldenrodNPC3Script, EVENT_GAULDENROD_CIVILIANS
+	object_event 32, 15, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, 				OBJECTTYPE_SCRIPT, 0, GauldenrodNPC3Script, EVENT_GAULDENROD_CIVILIANS
 	object_event 17,  9, SPRITE_MATRON, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 				OBJECTTYPE_SCRIPT, 0, GauldenrodNPC4Script, EVENT_GAULDENROD_CIVILIANS
 	object_event 23, 12, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, 				OBJECTTYPE_SCRIPT, 0, GauldenrodNPC5Script, EVENT_GAULDENROD_CIVILIANS
 	object_event 13,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, GauldenrodNPC6Script, EVENT_GAULDENROD_CIVILIANS
@@ -205,7 +205,7 @@ GauldenrodNPC7Script:
 GauldenrodNPC7Text:
 	text "I always forget my"
 	line "worries watching"
-	cont "some battles at"
+	para "some battles at"
 	line "the stadium."
 	done
 
@@ -260,7 +260,7 @@ AmosWantedSign:
 	text "WANTED: This man"
 	line "is wanted for"
 	para "crimes against"
-	cont "the Consul!"
+	line "the Consul!"
 
 	para "Known alias:"
 	line "Amos."
@@ -438,12 +438,20 @@ GauldenrodHisuiTraderNoThanksText:
 	done
 
 GauldenrodBobeshScene:
-	clearevent EVENT_GAULDENROD_BOBESH
+	applyonemovement PLAYER, step_up
+	applyonemovement PLAYER, step_up
+	applyonemovement PLAYER, step_up	
+	pause 10
+
     showemote GAULDENROD_BRIGADER, EMOTE_BOLT, 10
     showtext BrigaderText1
     showtext CindyText1
+
+	special Special_FadeOutMusic
+	pause 30
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
+
     appear GAULDENROD_BOBESH
-	appear GAULDENROD_BOBESH
     applymovement GAULDENROD_BOBESH, BobeshWalksDown
 	appear GAULDENROD_OCTILLERY
     showemote EMOTE_SHOCK, GAULDENROD_BOBESH, 10
@@ -468,8 +476,9 @@ GauldenrodBobeshScene:
     disappear GAULDENROD_MATRON
     disappear GAULDENROD_BRIGADER
 	disappear GAULDENROD_OCTILLERY ; FLAREON 
-	pause 10
+	pause 30
 	special Special_FadeInQuickly
+	special RestartMapMusic
 	setscene $1
     end
 
@@ -479,8 +488,8 @@ BrigaderText1:
     done
 
 CindyText1:
-    text "I told you,"
-	line "I don't know!"
+    text "Matron: I told"
+	line "you, I don't know!"
     done
 
 BobeshText1:
@@ -494,11 +503,19 @@ BobeshText1:
     done
 
 BrigaderText2:
+	text_high
+    text " Brigader: "
+	next
+	text_start
     text "She harbors the"
 	line "anarchist Amos!"
     done
 
 CindyText2:
+	text_high
+    text " Matron: "
+	next
+	text_start
     text "No! He's lying!"
     done
 
@@ -508,13 +525,17 @@ BobeshText2:
 	next
 	text_start
     text "Such claims!"
-	line "Say, your husband"
-	para "works by the"
-	line "tower, madam?"
-	cont "How is he?"
+	para "Say, your husband"
+	line "works by the"
+	para "tower, madam?"
+	line "How is he?"
     done
 
 CindyText3:
+	text_high
+    text " Matron: "
+	next
+	text_start
     text "He has enough"
 	line "energy to garden"
 	cont "by the tower."
@@ -552,6 +573,10 @@ BobeshText3:
     done
 
 CindyText4:
+	text_high
+    text " Matron: "
+	next
+	text_start
     text "No! It's how we"
 	line "enshrine our"
 	para "values. It's a"

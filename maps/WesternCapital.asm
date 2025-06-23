@@ -36,8 +36,8 @@ WesternCapital_MapScriptHeader: ; todo
 ; cutsceners
 	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI
 	object_event  9, 23, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA 
-	pokemon_event  10, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
-	pokemon_event  12, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
+	pokemon_event  8, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
+	pokemon_event  11, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 ; civilians
 	object_event 16, 16, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN
 	object_event 26, 27, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalHisuiText1, EVENT_BEAT_ADRINNA_MINE
@@ -59,12 +59,13 @@ WesternCapitalCemeteryScene:
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	disappear PLAYER
+
 	opentext
 	writetext Prologue_Text0 ; MEANWHILE, 
 	waitbutton
 	closetext
 	pause 10
-	special Special_FadeInQuickly
+;	special Special_FadeInQuickly
 
 	opentext
 	writetext Prologue_Text1 ; FATHER, WHAT 
@@ -75,6 +76,10 @@ WesternCapitalCemeteryScene:
     appear WESTERN_CAPITAL_ADRINNA
     waitsfx
     applymovement WESTERN_CAPITAL_ADRINNA, WC_AdrinnaMovement1
+	
+	special Special_FadeOutMusic
+	pause 30
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	
 	refreshscreen
 	trainerpic ADRINNA
@@ -88,6 +93,10 @@ WesternCapitalCemeteryScene:
 	opentext
 	writetext Prologue_Text2 ; YOUR STRATEGIES... 
 	waitbutton
+	writetext Prologue_Text2_2
+	waitbutton
+	writetext Prologue_Text2_3
+	waitbutton
 	closetext
 
 	; todo emotes 
@@ -98,6 +107,8 @@ WesternCapitalCemeteryScene:
 	closetext
 	
 	; todo emotes 
+	
+	turnobject WESTERN_CAPITAL_MEJIMI, DOWN
 	
 	opentext
 	writetext Prologue_Text4 ; KENSEY DECEIVES!
@@ -113,10 +124,10 @@ WesternCapitalCemeteryScene:
 
 	; todo emotes 
 	
-	refreshscreen
-	trainerpic MEJIMI
-	waitbutton
-	closepokepic
+;	refreshscreen
+;	trainerpic MEJIMI
+;	waitbutton
+;	closepokepic
 
 	; todo emotes 
 	
@@ -127,7 +138,7 @@ WesternCapitalCemeteryScene:
 	setevent EVENT_PROLOGUE_ADRINNA
 
 	setscene $1
-	warp HOLT_COAST_GATE,  3, 5
+	warp HOLT_COAST_GATE,  3, 7
 	end
 	
 WC_pkmn_text:

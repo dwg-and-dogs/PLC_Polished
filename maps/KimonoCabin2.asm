@@ -1,6 +1,6 @@
 KimonoCabin2_MapScriptHeader: 
 	def_scene_scripts
-		; set all the larvitar events 
+	; issues: kimono doesn't get the hedgehog back, and the hedgehog scripts don't seem to work 
 
 	def_callbacks
 
@@ -20,10 +20,6 @@ KimonoCabin2_MapScriptHeader:
 	def_object_events
 	object_event  9, 10, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2SenseScript, -1
 	object_event  7,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LARVITAR, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Kimono2LarvitarScript, EVENT_KIMONO_CABIN_LARVITAR
-	; 3, 5 
-	; 7, 5
-	; 5, 7
-	; 9, 5
 	
 	object_const_def
 	const KIMONO_CABIN_2_KIMONO_GIRL
@@ -40,12 +36,20 @@ KimonoCabin2SenseScript:
 	iftrue .SkipGeodes
 	writetext Kimono2GivesGeode
 	verbosegiveitem GEODE
+	setevent EVENT_GOT_GEODES
 .SkipGeodes
 	closetext
 	end
 
 SpookedHedgeHogTryAgain:
 	writetext SpookedHedgehogText
+	waitbutton
+	moveobject KIMONO_CABIN_2_LARVITAR, 7, 9
+	appear KIMONO_CABIN_2_LARVITAR
+	clearevent EVENT_SPOOKED_HEDGEHOG
+	closetext
+	end	
+	closetext
 
 Kimono2ExplainsTheGameText:
 	text "We have to play"
@@ -91,31 +95,66 @@ Kimono2GivesGeode:
 Kimono2LarvitarScript:
 	; figure out which one
 	checkevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_4
-	iftrue HedgeHogInteraction ; only from the E 
+	iftrue FifthHedgeHogInteraction ; only from the E 
 	checkevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_3
 	iftrue HedgeHogMoves4thTime ; from 5-7 to 9-5 ; only from the S
 	checkevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_2
 	iftrue HedgeHogMoves3rdTime ; from 7-5 to 5-7 only from the N 
 	checkevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_1
 	iftrue HedgeHogMoves2ndTime ; from 3-5 to 7-5 only from the E
-HedgeHogMoves1stTime: ; from 7-9 to 3-5 only from the S
-	; check facing
-	iffalse SpookedHedgehogScript
-
-SpookedHedgehogScript:
-	; emote
-	; earthquake
-	; clearevents 
-	; disappear 
+;HedgeHogMoves1stTime: ; from 7-9 to 3-5 only from the S
+	readvar VAR_FACING ; player is facing up from the S
+	ifnotequal UP, SpookedHedgehogScript
+	showemote EMOTE_SHOCK, KIMONO_CABIN_2_LARVITAR, 15 
+	playsound SFX_SQUEAK
+	waitsfx	
+	applymovement KIMONO_CABIN_2_LARVITAR, FirstLarvitarMovement
+	setevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_1
 	end
 
-HedgeHogInteraction: 
-	; check that you go from the E 
+HedgeHogMoves2ndTime:; player is facing left freom th E
+	readvar VAR_FACING
+	ifnotequal LEFT, SpookedHedgehogScript
+	showemote EMOTE_SHOCK, KIMONO_CABIN_2_LARVITAR, 15 
+	playsound SFX_SQUEAK
+	waitsfx	
+	applymovement KIMONO_CABIN_2_LARVITAR, SecondLarvitarMovement
+	setevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_2
+	end
+	
+HedgeHogMoves3rdTime:; player is facing down from the N 
+	readvar VAR_FACING
+	ifnotequal DOWN, SpookedHedgehogScript
+	showemote EMOTE_SHOCK, KIMONO_CABIN_2_LARVITAR, 15 
+	playsound SFX_SQUEAK
+	waitsfx	
+	applymovement KIMONO_CABIN_2_LARVITAR, ThirdLarvitarMovement
+	setevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_3
+	end
+	
+HedgeHogMoves4thTime:; player is facing up from the S
+	readvar VAR_FACING
+	ifnotequal UP, SpookedHedgehogScript
+	showemote EMOTE_SHOCK, KIMONO_CABIN_2_LARVITAR, 15 
+	playsound SFX_SQUEAK
+	waitsfx	
+	applymovement KIMONO_CABIN_2_LARVITAR, FourthLarvitarMovement
+	setevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_4
+	end
+
+
+FifthHedgeHogInteraction: ; right now, this does work. But for some reason the other ones don't. May need to just brute force it. 
+	readvar VAR_FACING 
+	ifnotequal LEFT, SpookedHedgehogScript
+	showemote EMOTE_SHOCK, KIMONO_CABIN_2_LARVITAR, 15 
 	earthquake 30
 	loadwildmon LARVITAR, 15
 	startbattle
 	setevent EVENT_KIMONO_CABIN_LARVITAR
+	setevent EVENT_BATTLED_CABIN_LARVITAR
+	disappear KIMONO_CABIN_2_LARVITAR
 	reloadmapafterbattle
+	disappear KIMONO_CABIN_2_LARVITAR
 	applymovement KIMONO_CABIN_2_KIMONO_GIRL, KimonoCabin2GirlMoves
 	opentext
 	writetext Kimono2GladThatsOverText
@@ -127,6 +166,27 @@ HedgeHogInteraction:
 	waitbutton
 	verbosegiveitem SUN_STONE
 	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp KIMONO_CABIN,  3,  8
+	end
+	
+SpookedHedgehogScript:
+	showemote EMOTE_SHOCK, KIMONO_CABIN_2_LARVITAR, 15 
+	earthquake 30
+	playsound SFX_RUN
+	waitsfx
+	disappear KIMONO_CABIN_2_LARVITAR
+	setevent EVENT_SPOOKED_HEDGEHOG
+	clearevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_1
+	clearevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_2
+	clearevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_3
+	clearevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_4	
+	opentext
+	writetext HedgehogSpookedText
+	waitbutton
+	closetext
 	end
 
 KimonoCabin2GirlMoves:
@@ -135,6 +195,8 @@ KimonoCabin2GirlMoves:
 	step_up
 	step_up
 	step_up
+	step_right
+	step_right
 	turn_head_right
 	step_end
 
@@ -164,3 +226,52 @@ Kimono2TakeThisAsThanks2:
 	line "up this weird"
 	cont "stone. Want it?"
 	done
+
+
+HedgehogSpookedText:
+	text "The hedgehog is"
+	line "hiding under the"
+	cont "ground."
+	done
+
+FirstLarvitarMovement: ; 7-9 to 3-5 only from the S 
+	fix_facing
+	fast_jump_step_up
+;	fast_jump_step_up
+	fast_jump_step_left
+;	fast_jump_step_left
+;	fast_jump_step_up
+	fast_jump_step_up
+	step_end
+
+SecondLarvitarMovement: ; from 3-5 to 7-5 only from the E
+	fix_facing
+	fast_jump_step_up
+;	fast_jump_step_up
+	fast_jump_step_right
+;	fast_jump_step_right
+	fast_jump_step_right
+;	fast_jump_step_right
+	fast_jump_step_down
+;	fast_jump_step_down
+	step_end
+
+
+ThirdLarvitarMovement:; from 7-5 to 5-7 only from the N 
+	fix_facing
+	fast_jump_step_down
+;	fast_jump_step_down
+	fast_jump_step_left
+;	fast_jump_step_left
+	step_end
+
+
+FourthLarvitarMovement:; from 5-7 to 9-5 ; only from the S, last check is the E 
+	fix_facing
+	fast_jump_step_right
+;	fast_jump_step_right
+	fast_jump_step_right
+;	fast_jump_step_right
+	fast_jump_step_up
+;	fast_jump_step_up
+	step_end

@@ -4,8 +4,8 @@ GauldenrodUndergroundSouth_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  2,  7, GAULDENROD, 6
-	warp_event  3,  7, GAULDENROD, 6
+	warp_event  2,  7, GAULDENROD, 5
+	warp_event  3,  7, GAULDENROD, 5
 	warp_event  3,  3, GAULDENROD_UNDERGROUND, 2
 
 

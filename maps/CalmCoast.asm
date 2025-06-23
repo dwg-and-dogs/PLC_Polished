@@ -12,8 +12,8 @@ CalmCoast_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event 13, 33, BGEVENT_READ, CalmCoastSign1Text
-	bg_event 12,  6, BGEVENT_READ, CalmCoastSign2Text
+	bg_event 13, 33, BGEVENT_JUMPTEXT, CalmCoastSign1Text
+	bg_event 12,  6, BGEVENT_JUMPTEXT, CalmCoastSign2Text
 	; hidden items: energypowder and pp_up, ADD TO EVENTS AND PLACE ON MAP 
 	bg_event 12, 38, BGEVENT_ITEM + ENERGYPOWDER, EVENT_CALM_COAST_HIDDEN_1
 	bg_event  6, 16, BGEVENT_ITEM + PP_UP, EVENT_CALM_COAST_HIDDEN_2
@@ -81,7 +81,7 @@ GenericTrainerYoungsterJimmy:
 
 	text "Now I'll never"
 	line "make it as a"
-	cont "brigadier."
+	cont "brigader."
 	done
 
 SchoolboyJackSeenText:
@@ -92,7 +92,7 @@ SchoolboyJackSeenText:
 SchoolboyJackBeatenText:
 	text "Now I'll never"
 	line "make it as a"
-	cont "brigadier."
+	cont "brigader."
 	done
 
 GenericTrainerBattleGirlSubaru:
@@ -181,6 +181,7 @@ CalmCoastKurtScript:
 	yesorno
 	iffalse SomeOtherTime_1Text
 	writetext CalmCoastKurtText
+	waitbutton
 	clearevent EVENT_KURTS_HOUSE_BOOK_1 ; now it appears 
 	closetext
 	end
