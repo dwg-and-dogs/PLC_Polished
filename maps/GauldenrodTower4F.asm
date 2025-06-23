@@ -18,7 +18,7 @@ GauldenrodTower4F_MapScriptHeader:
 	object_event  10,  2, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_SANDRA
 	object_event   1,  7, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_AMOS ; initialize this
 	pokemon_event  6,  2, CLEFAIRY, -1, -1, PAL_NPC_RED, GauldenrodClefairyText, EVENT_BEAT_SANDRA
-	object_event   1,  7, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_ADRINNA ; initialize this
+	object_event   5,  2, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_ADRINNA ; initialize this
 	tmhmball_event 5,  1, TM_ROOST, EVENT_TM_ROOST
 ; new 
 
@@ -30,13 +30,10 @@ GauldenrodTower4F_MapScriptHeader:
 	const GAULDENRODTOWER4F_CLEFAIRY
 	const GAULDENRODTOWER4F_ADRINNA
 
-GauldenrodTower4FSandraScript:
+GauldenrodTower4FSandraScript: ; TODO ADD MUSIC 
 	faceplayer
 	opentext
 	writetext SandraIntroText
-	yesorno
-	iffalse .Refused
-	writetext SandraChallengeText
 	waitbutton
 	closetext
 	winlosstext SandraWinText, 0
@@ -66,12 +63,12 @@ GauldenrodTower4FSandraScript:
 	applymovement GAULDENRODTOWER4F_SANDRA, SandraLeaveMovement
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement2
 	pause 15
-	appear GAULDENRODTOWER4F_AMOS;, AmosMovement1
-	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement1
 ; inserting this 
 	showemote EMOTE_SHOCK, PLAYER, 15
 	appear GAULDENRODTOWER4F_ADRINNA
 	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_to ; APPEAR 
+	turnobject GAULDENRODTOWER4F_ADRINNA, LEFT 
+
 	opentext
 	writetext AdrinnaGauldenrodTowerText
 	waitbutton
@@ -79,8 +76,10 @@ GauldenrodTower4FSandraScript:
 	closetext
 	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_from ; APPEAR
 	disappear GAULDENRODTOWER4F_ADRINNA
+;; todo 
+	appear GAULDENRODTOWER4F_AMOS;, AmosMovement1
+	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement1
 	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement2
-;;
 	turnobject PLAYER, LEFT
 	opentext
 	writetext AmosText
@@ -127,15 +126,8 @@ SandraIntroText:
 
 	para "Ha, you will learn"
 	line "soon enough."
-	done
 
-
-SandraChallengeText:
-	text_high
-    text " Sandra: "
-	next
-	text_start
-	text "Show me your"
+	para "Show me your"
 	line "connection!"
 	done
 
@@ -219,7 +211,7 @@ SandraAgreementText:
 	next
 	text_start
 
-	line "Very well."
+	text "Very well."
 	
 	para "I have wanted to"
 	line "talk to him for"
@@ -240,9 +232,7 @@ AmosText:
 
 	para "Oh, you were"
 	line "with her before"
-	cont "they"
-	cont "took her to"
-	cont "the stadium?"
+	cont "they took her?"
 
 	para "Say, you look"
 	line "familiar."
@@ -254,8 +244,7 @@ AmosText:
 	
 	para "..."
 
-	para "I'd better"
-	line "get out,"
+	para "I'd better leave"
 	para "before any brig-"
 	line "aders find me."
 	done
@@ -357,11 +346,10 @@ AdrinnaGauldenrodTowerText:
 	line "Bobesh's stadium?"
 	
 	para "Do strong"
-	cont "trainers"
-	cont "attend?"
+	line "trainers watch?"
 
 	para "Think about it."
-	cont "This might be"
+	line "This might be"
 	cont "of use to you."
 	done
 	

@@ -62,11 +62,11 @@
 	tilecoll WALL, LEDGE_DOWN, WALL, WALL ; 3d
 	tilecoll LEDGE_DOWN, WALL, WALL, WALL ; 3e
 	tilecoll LEDGE_DOWN_RIGHT, WALL, WALL, WALL ; 3f
-	tilecoll WALL, WALL, WALL, WALL ; 40
-	tilecoll WALL, WALL, WALL, WALL ; 41
-	tilecoll WALL, WALL, WALL, WALL ; 42
-	tilecoll WALL, WALL, WALL, WALL ; 43
-	tilecoll WALL, WALL, WALL, WALL ; 44
+	tilecoll HOLE, HOLE, FLOOR, FLOOR ; 40
+	tilecoll FLOOR, FLOOR, HOLE, HOLE ; 41
+	tilecoll HOLE, FLOOR, HOLE, FLOOR ; 42
+	tilecoll FLOOR, HOLE, FLOOR, HOLE ; 43
+	tilecoll HOLE, HOLE, FLOOR, FLOOR ; 44
 	tilecoll WALL, WALL, WALL, WALL ; 45
 	tilecoll WALL, WALL, WALL, WALL ; 46
 	tilecoll WALL, WALL, WALL, WALL ; 47
