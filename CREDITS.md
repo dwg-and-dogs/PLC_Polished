@@ -22,11 +22,12 @@ Front Sprites
 * Pokewilds: Kleavor, Torterra, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott
 * DWG: H__Avalugg
 * Sour Crystal: Quilava, Butterfree, Pidgeotto, Sunflora, Dragonite, Celebi, Xatu
-* utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Sliggoo, H__Goodra, H__Zoroark
+* utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Zoroark
 * Bloodless (Rosie): Overqwil, Ursaluna, H__Electrode, Sneasler, H__Arcanine
 * u/Bread-Zeppelin: Ambipom
 * SageDeoxys: Basculegion, Beedrill, Crobat, Dratini, Dugtrio, Eevee, Forretress, Gastly, Gloom, Gyarados, Magcargo, Natu, Pikachu, Qwilfish, Scyther, Tangela, Weepinball, Xatu
 * ChanseyMedicine animated from Pokets3: HTyphlosion, Sneasler, 
+* Egg3ggEgg: H__Sliggoo, H__Goodra
 
 Back Sprites if different from above, using Deviantart handles:
 

@@ -19,7 +19,7 @@ GauldenrodTower4F_MapScriptHeader:
 	object_event   1,  7, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_AMOS ; initialize this
 	pokemon_event  6,  2, CLEFAIRY, -1, -1, PAL_NPC_RED, GauldenrodClefairyText, EVENT_BEAT_SANDRA
 	object_event   5,  2, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_ADRINNA ; initialize this
-	tmhmball_event 5,  1, TM_ROOST, EVENT_TM_ROOST
+	tmhmball_event 8,  7, TM_ROOST, EVENT_TM_ROOST
 ; new 
 
 
@@ -43,7 +43,10 @@ GauldenrodTower4FSandraScript: ; TODO ADD MUSIC
 	disappear GAULDENRODTOWER4F_CLEFAIRY
 	opentext
 	writetext SandraAfterText
-	givekeyitem RAINBOW_WING
+	waitbutton
+	verbosegivetmhm TM_DAZZLINGLEAM
+	waitbutton
+;	givekeyitem RAINBOW_WING
 	setflag ENGINE_CASCADEBADGE
 	waitbutton
 	closetext
@@ -157,18 +160,19 @@ SandraAfterText:
 	line "dependence from"
 	cont "me to you." 
 
-	para "Also, please"
-	line "accept this Rain-"
-	cont "bow Wing."
+	para "Also, please take"
+	line "this technique."
 	
-	para "It is a feather of"
-	line "the mighty Ho-Oh."
+	para "It'll dazzle your"
+	line "opponenents, the"
+	para "way you dazzled"
+	line "me!"
 
-	para "I used to award"
-	line "them to youth who"
-	para "carried an elder"
-	line "up to the Alpine"
-	cont "Lakes."
+;	para "I used to award"
+;	line "them to youth who"
+;	para "carried an elder"
+;	line "up to the Alpine"
+;	cont "Lakes."
 	done
 
 SandraRefusedText:

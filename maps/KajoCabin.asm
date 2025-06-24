@@ -19,7 +19,7 @@ KajoCabin_MapScriptHeader: ;	def_scene_scripts
     object_event 2, 3, SPRITE_SCHOOLGIRL, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, KajoCabinSchoolgirlScript, EVENT_KAJO_SCHOOLGIRL_CABIN ; should be disappeared until you talk to her dad
     object_event 5, 3, SPRITE_POKEFAN_M, 	SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, KajoCabinDadScript, -1 ; 	
 	object_event 1, 5, SPRITE_MATRON, 		SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, KaJoHealerScript, -1
-	object_event 25, 24, SPRITE_MATRON, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexHealerScript, -1
+
 
 
 	object_const_def
@@ -32,11 +32,9 @@ KaJoHealerScript:
 	waitbutton
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
 	writetext KaJoHealedPokemon
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
 	special RestoreMusic
 	end
 
@@ -46,7 +44,6 @@ KaJoWantToHeal:
 	cont "some healing"
 	cont "items to share."
 	done
-
 
 KaJoHealedPokemon:
 	text "Your #mon"
@@ -105,8 +102,8 @@ KajoCabinDadIntroText:
     cont "from it all."
     para "I sent my daughter"
     line "to the acquifer to"
-    cont "gather water, but"
-    cont "she's lost."
+    para "gather water, but"
+    line "she's lost."
     para "Won't anyone go"
     line "out to look for"
     cont "her?"
@@ -125,10 +122,9 @@ KajoCabinDadThankYouText:
     cont "daughter back!"
     para "Thank you so much."
     line "She made you a"
-    cont "drawing... it has"
-    cont "a lot of glitter"
+    para "drawing... it has"
+    line "a lot of glitter"
     cont "on it."
-    para "Please, take this."
     done
 
 KajoCabinDadAfterText:
@@ -137,15 +133,13 @@ KajoCabinDadAfterText:
     cont "never come off,"
     para "but the bright-"
     line "powder will keep"
-    cont "the hits off of"
-    cont "you!"
+    para "the hits off of"
+    line "you!"
     done
 
 KajoCabinDadBagFullText:
     text "Oh, your Bag is"
-    line "full. Please come"
-    cont "back for this"
-    cont "gift later!"
+    line "full."
     done
 
 KajoCabinSchoolgirlText:
@@ -156,9 +150,6 @@ KajoCabinSchoolgirlText:
     line "with the baby"
     cont "Totodiles again!"
     done
-
-
-
 
 
 KaJoApricornBenchScript:

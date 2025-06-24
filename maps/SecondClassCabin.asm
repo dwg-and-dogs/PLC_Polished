@@ -1,4 +1,4 @@
-SecondClassCabin_MapScriptHeader: ;	def_scene_scripts
+SecondClassCabin_MapScriptHeader: 
 	def_scene_scripts
 
 	def_callbacks
@@ -22,7 +22,6 @@ SecondClassCabin_MapScriptHeader: ;	def_scene_scripts
 	object_event  8,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecondClassCabinYoungster, -1
 	object_event  8,  2, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecondClassCabinMatron, -1
 
-	object_const_def
 
 
 SecondClassCabinMatron:
@@ -51,10 +50,10 @@ MatronSoothesSecondClass:
 MatronSoothesSecondClass2:
 	text "It was bad en-"
 	line "ough when the"
-	cont "train stopped,"
-	cont "but then that"
-	cont "clown scared my"
-	cont "son by doing a"
+	para "train stopped,"
+	line "but then that"
+	para "clown scared my"
+	line "son by doing a"
 	cont "routine."
 	done
 
@@ -62,7 +61,7 @@ SecondClassCabinYoungster:
 	faceplayer
 	opentext
 	writetext YoungsterIsScaredText
-	promptbutton
+	waitbutton
 	closetext
 	end
 	
@@ -88,10 +87,10 @@ SecondClassCabinJuggler2Text:
 	
 	para "He really wants"
 	line "to make a ball-"
-	cont "oon animal for"
-	cont "that kid, but"
-	cont "we don't have"
-	cont "any helium to"
+	para "oon animal for"
+	line "that kid, but"
+	para "we don't have"
+	line "any helium to"
 	cont "fill 'em up."
 	done
 

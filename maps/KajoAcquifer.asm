@@ -6,7 +6,7 @@ KajoAcquifer_MapScriptHeader: ;	def_scene_scripts
 
 	def_warp_events
     warp_event 5, 7, ROUTE_KAJO, 3
-    warp_event 13, 15, ROUTE_KAJO, 4 ; this one doesn't work?
+    warp_event 13, 15, ROUTE_KAJO, 4 
 
 
 	def_coord_events

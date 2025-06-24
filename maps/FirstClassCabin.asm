@@ -74,7 +74,7 @@ FirstClassCabinTeacherText:
 	
 	para "What if the train"
 	line "attracts mische-"
-	cont "vous #mon?"
+	cont "vious #mon?"
 	done
 
 FirstClassCabinGentleman2Text:
@@ -84,6 +84,6 @@ FirstClassCabinGentleman2Text:
 
 	para "Next time I'll"
 	line "opt for a less"
-	cont "attractive mode"
-	cont "of transport."
+	para "attractive mode"
+	line "of transport."
 	done

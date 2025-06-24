@@ -3,7 +3,7 @@ StadiumGrounds_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_TILES, StadiumGroundsFloodCallback
-
+	callback MAPCALLBACK_OBJECTS, StadiumGroundsCallback_MoveNPCs
 	
 	def_warp_events
 	warp_event  4, 23, STADIUM_UNDERGROUND, 1
@@ -65,19 +65,31 @@ StadiumGroundsFloodCallback:
 .Done:
 	endcallback
 
-StadiumGroundsBobeshScene:
-	; player walks down
-	end
+StadiumGroundsCallback_MoveNPCs:
+	checkscene
+	iffalse .Skip
+	moveobject STADIUMGROUNDS_BOBESH, 26, 8
+	turnobject STADIUMGROUNDS_BOBESH, DOWN
+	moveobject STADIUMGROUNDS_SANDRA, 27, 8
+	turnobject STADIUMGROUNDS_SANDRA, LEFT
+.Skip:
+	endcallback
 
+StadiumGroundsBobeshScene:
+	applymovement PLAYER, PlayerWalksDownMovement2
+	turnobject STADIUMGROUNDS_BOBESH, LEFT
+	turnobject STADIUMGROUNDS_SANDRA, LEFT
+	sjump PickupStadiumScene
+	
 StadiumGroundsToxicroakScene:
 	applymovement PLAYER, PlayerWalksDownMovement
 	pause 15
 	special Special_FadeOutMusic
 	pause 30
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
-	showemote EMOTE_SHOCK, STADIUMGROUNDS_BOBESH, 10
 	turnobject STADIUMGROUNDS_BOBESH, DOWN
 	turnobject STADIUMGROUNDS_SANDRA, DOWN
+	showemote EMOTE_SHOCK, STADIUMGROUNDS_BOBESH, 60
 	refreshscreen
 	trainerpic BOBESH
 	waitbutton
@@ -86,7 +98,7 @@ StadiumGroundsToxicroakScene:
 	writetext BobeshIntroText
 	waitbutton
 	closetext
-	showemote EMOTE_SHOCK, PLAYER, 15
+	showemote EMOTE_SHOCK, PLAYER, 60
 	applymovement PLAYER, PlayerMovesToToxicroak
 	turnobject STADIUMGROUNDS_BOBESH, DOWN
 	turnobject STADIUMGROUNDS_SANDRA, DOWN
@@ -101,50 +113,50 @@ StadiumGroundsToxicroakScene:
 .Continue:
 	disappear STADIUMGROUNDS_TOXICROAK
 	special Special_FadeOutMusic
-	pause 30
+	pause 60
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	reloadmapafterbattle
-
 	playsound SFX_EGG_CRACK
 	waitsfx
 	changeblock 26, 12, $86
 	reloadmappart
-	pause 30
+	pause 60
 	changeblock 26, 14, $35
 	reloadmappart
 	playsound SFX_WATER_GUN
 	waitsfx
-	pause 30
+	pause 60
 	changeblock 24, 12, $35	
 	changeblock 28, 12, $35
 	reloadmappart
-	pause 30
+	pause 60
 	changeblock 26, 10, $35
 	reloadmappart
 	setevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
-
-	setscene $1
-
 	applymovement STADIUMGROUNDS_BOBESH, BobeshBlocksStairs
 	applyonemovement STADIUMGROUNDS_SANDRA, step_left
 	applyonemovement STADIUMGROUNDS_SANDRA, step_left
 	turnobject STADIUMGROUNDS_SANDRA, DOWN
 	opentext
 	writetext SandraThankYouText
-	pause 20
-	verbosegivetmhm TM_DAZZLINGLEAM
-	waitbutton
+	pause 60
+
 	writetext SandraHealsText
 	waitbutton
+	playmusic MUSIC_HEAL
 	special HealParty
-	; TODO ADD HEAL SFX 
+	pause 60
+	special RestartMapMusic
 	writetext SandraNegotiateText
 	waitbutton
 	closetext
-
 	applymovement STADIUMGROUNDS_SANDRA, SandraWalkToBobeshMovement
 	applymovement PLAYER, PlayerWalkToBobeshMovement
-
+	turnobject STADIUMGROUNDS_BOBESH, LEFT
+	setscene $1
+	setevent EVENT_TOXICROAK_STADIUM
+	; fallthrough 
+PickupStadiumScene:
 	opentext
 	writetext BobeshBattleText
 	waitbutton
@@ -156,20 +168,24 @@ StadiumGroundsToxicroakScene:
 .Continue2:
 	reloadmapafterbattle
 	; todo: camera pans 	
-	pause 20
-	changeblock 24, 14, $35
-	changeblock 28, 14, $35	
-	reloadmappart
-	pause 20
-	changeblock 22, 12, $35
-	changeblock 30, 12, $35
-
-	reloadmappart
-	pause 20
+	pause 60
 	changeblock 24, 10, $35
 	changeblock 28, 10, $35
 	reloadmappart
-	; todo: camera pans and sfx 
+	playsound SFX_WATER_GUN
+	waitsfx
+	pause 60
+	changeblock 24, 14, $35
+	changeblock 28, 14, $35	
+	reloadmappart
+	playsound SFX_WATER_GUN
+	waitsfx
+	pause 60
+	changeblock 22, 12, $35
+	changeblock 30, 12, $35
+	reloadmappart
+	playsound SFX_WATER_GUN
+	waitsfx
 	setevent EVENT_STADIUM_GROUNDS_SECOND_FLOOD	
 	opentext
 	writetext BobeshDefeatText
@@ -177,16 +193,20 @@ StadiumGroundsToxicroakScene:
 	closetext
 	applyonemovement STADIUMGROUNDS_BOBESH, teleport_from
 	disappear STADIUMGROUNDS_BOBESH
-	turnobject STADIUMGROUNDS_SANDRA, RIGHT
-	turnobject PLAYER, LEFT	
+	applyonemovement STADIUMGROUNDS_SANDRA, step_left
 	opentext
 	writetext SandraInvitesToBoxText
 	waitbutton
 	closetext	
+	playmusic MUSIC_HEAL
+	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	setevent EVENT_BEAT_BOBESH_STADIUM
 	clearevent EVENT_STADIUM_BOX_ADRINNA
 	clearevent EVENT_GAULDENROD_ELDER 
-	setscene $1
+	setscene $2
 	setmapscene STADIUM_BOX, $1
 	end
 
@@ -270,13 +290,6 @@ SandraThankYouText:
 	para "Thank you for a"
 	line "dazzling display,"
 	cont "<PLAYER>." 
-	
-	para "I meant to give"
-	line "this to you,"
-	
-	para "before this rude"
-	line "General Bobesh"
-	cont "whisked me away."
 	done
 
 SandraHealsText:
@@ -465,6 +478,9 @@ SandraInvitesToBoxText:
 	para "above, and we can"
 	line "discuss your"
 	cont "journey."
+	
+	para "I'll heal your"
+	line "#mon again."
 	done
 
 StadiumGroundsSandra2Script:
@@ -612,3 +628,11 @@ PanRightMovementStadium:
 	step_up
 	step_up
 	step_end
+
+PlayerWalksDownMovement2:
+	step_left
+	step_down
+	step_down
+	turn_head_right
+	step_end
+	

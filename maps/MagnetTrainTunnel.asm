@@ -28,7 +28,7 @@ MagnetTrainTunnel_MapScriptHeader: ;	def_scene_scripts
 MagnetTunnelRotom:
 	faceplayer
 	cry ROTOM
-	pause 15
+	pause 60
 	loadwildmon ROTOM, 30
 	startbattle
 	disappear MAGNET_TUNNEL_ROTOM
