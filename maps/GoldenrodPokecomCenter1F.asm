@@ -113,27 +113,28 @@ MapNameNPC1Text:
 	line "is so amazing."
 	para "But I wish I"
 	line "didn't have to"
-	cont "take out a loan"
-	cont "to get a new"
-	cont "#dex every"
-	cont "other year…"
+	para "take out a loan"
+	line "to get a new"
+	para "#dex every"
+	line "other year…"
 	done
 
 MapNameNPC2Text:
 	text "With my new Bike"
 	line "I can deliver"
-	cont "groceries so"
-	cont "much faster!"
+	para "groceries so"
+	line "much faster!"
+	
+	para "I got a loan, and"
+	line "now I can make my"
+	cont "dreams a reality!"
 	done
 
 MapNameNPC3Text:
 	text "The Radio Tower"
-	line "has had to"
-	cont "increase"
-	cont "security even"
-	cont "more. It's just"
-	cont "a magnet for"
-	cont "crime."
+	line "has increased its"
+	para "security even"
+	line "more."
 	done
 
 

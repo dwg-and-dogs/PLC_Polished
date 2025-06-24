@@ -13,7 +13,7 @@ StadiumGrounds_MapScriptHeader:
 	
 	def_coord_events ; todo: need to pan the camera over for changing the blocks, and then also have a condition depending on if you beat the toxicroak but lose to bobesh 
 	coord_event 26,  6, 0, StadiumGroundsToxicroakScene
-; coord_event 0, 0, 1, StadiumGroundsBobeshScene 
+	; coord_event 0, 0, 1, StadiumGroundsBobeshScene 
 
 	def_bg_events
 	bg_event  6, 34, BGEVENT_JUMPTEXT, Text_StadiumSign1;
@@ -24,9 +24,9 @@ StadiumGrounds_MapScriptHeader:
 	bg_event  8, 14, BGEVENT_ITEM + HEAL_POWDER, EVENT_STADIUM_HIDDEN_3
 
 	def_object_events
-	object_event 31,  9, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsBobeshScript, EVENT_BEAT_BOBESH_STADIUM
+	object_event 31,  9, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_BOBESH_STADIUM
 	object_event 32,  10, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandraScript, EVENT_BEAT_BOBESH_STADIUM
-	pokemon_event  30, 10, TOXICROAK, -1, -1, PAL_NPC_BLUE, ToxicroakChallengeText, EVENT_BEAT_BOBESH_STADIUM
+	pokemon_event  30, 10, TOXICROAK, -1, -1, PAL_NPC_BLUE, ToxicroakChallengeText, EVENT_TOXICROAK_STADIUM
 	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, EVENT_STADIUM_GROUNDS_SANDRA	
 	object_event 49, 13, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
 	object_event 49,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
@@ -68,6 +68,9 @@ StadiumGroundsFloodCallback:
 StadiumGroundsToxicroakScene:
 	applymovement PLAYER, PlayerWalksDownMovement
 	pause 15
+	special Special_FadeOutMusic
+	pause 30
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	showemote EMOTE_SHOCK, STADIUMGROUNDS_BOBESH, 10
 	turnobject STADIUMGROUNDS_BOBESH, RIGHT
 	turnobject PLAYER, LEFT
@@ -80,7 +83,10 @@ StadiumGroundsToxicroakScene:
 	writetext BobeshIntroText
 	waitbutton
 	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, PlayerMovesToToxicroak
+	turnobject STADIUMGROUNDS_BOBESH, DOWN
+	turnobject STADIUMGROUNDS_SANDRA, DOWN
 	opentext
 	writetext ToxicroakChallengeText
 	waitbutton
@@ -90,9 +96,26 @@ StadiumGroundsToxicroakScene:
 	startbattle
 	ifequal $1, .Continue
 .Continue:
-	setevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
 	disappear STADIUMGROUNDS_TOXICROAK
+	special Special_FadeOutMusic
+	pause 30
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
+; todo: camera pans
 	reloadmapafterbattle
+	changeblock 26, 12, $86
+	reloadmappart
+	pause 20
+	changeblock 26, 14, $35
+	reloadmappart
+	pause 20
+	changeblock 24, 12, $35	
+	changeblock 28, 12, $35
+	reloadmappart
+	pause 20
+	changeblock 26, 10, $35
+	reloadmappart
+	setevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
+;todo: camera pans back 
 	applymovement STADIUMGROUNDS_BOBESH, BobeshBlocksStairs
 	opentext
 	turnobject STADIUMGROUNDS_SANDRA, DOWN
@@ -116,8 +139,23 @@ StadiumGroundsToxicroakScene:
 	startbattle
 	ifequal $1, .Continue2
 .Continue2:
-	setevent EVENT_STADIUM_GROUNDS_SECOND_FLOOD
 	reloadmapafterbattle
+	; todo: camera pans 	
+	pause 20
+	changeblock 24, 14, $35
+	changeblock 28, 14, $35	
+	reloadmappart
+	pause 20
+	changeblock 22, 12, $35
+	changeblock 30, 12, $35
+
+	reloadmappart
+	pause 20
+	changeblock 24, 10, $35
+	changeblock 28, 10, $35
+	reloadmappart
+	; todo: camera pans and sfx 
+	setevent EVENT_STADIUM_GROUNDS_SECOND_FLOOD	
 	opentext
 	writetext BobeshDefeatText
 	waitbutton
@@ -389,13 +427,13 @@ SandraInvitesToBoxText:
 
 	para "I have much admir-"
 	line "ation for your"
-	cont "bond with your"
-	cont "#mon."
+	para "bond with your"
+	line "#mon."
 
 	para "Please, meet me in"
 	line "the Stadium Box"
-	cont "above, and we can"
-	cont "discuss your"
+	para "above, and we can"
+	line "discuss your"
 	cont "journey."
 	done
 
@@ -487,15 +525,16 @@ GenericTrainerBrigader6:
 
 	text "Want to know a"
 	line "secret? Sometimes"
-	cont "we inflict a"
-	cont "fighter's #MON"
-	cont "with status before"
-	cont "they have to"
+	para "we inflict a"
+	line "fighter's #MON"
+	para "with status before"
+	line "they have to"
 	cont "battle."
 	done
 
 Brigader6SeenText:
-	text "Focus, tightening…"
+	text "You're in my"
+	line "sights!"
 	done
 
 Brigader6BeatenText:

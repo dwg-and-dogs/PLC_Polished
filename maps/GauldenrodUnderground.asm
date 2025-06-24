@@ -80,9 +80,8 @@ GenericTrainerTamerBrett:
 
 	text "I was supposed to"
 	line "take these on my"
-	para "quest but the"
-	line "mountain pass was"
-	cont "closed."
+	para "ritual before the"
+	line "pass was closed."
 	done
 
 TamerBrettSeenText:
@@ -93,9 +92,8 @@ TamerBrettSeenText:
 TamerBrettBeatenText:
 	text "I was supposed to"
 	line "take these on my"
-	para "quest but the"
-	line "mountain pass was"
-	cont "closed."
+	para "ritual before the"
+	line "pass was closed."
 	done
 
 GenericTrainerCooltrainerFBeth:
@@ -139,6 +137,7 @@ GauldenrodUndergroundNPC5Script:
 	disappear GAULDENRODUNDERGROUND_NPC2
 	opentext
 	writetext GauldenrodUndergroundNPC5Text2
+	waitbutton
 	closetext
 	applymovement GAULDENRODUNDERGROUND_NPC5, GauldenrodUndergroundNPC5LeaveMovement
 	disappear GAULDENRODUNDERGROUND_NPC5
@@ -156,9 +155,9 @@ GauldenrodUndergroundNPC4Text:
 
 
 GauldenrodUndergroundNPC5Text:
-	text "Hey, Some-"
-	line "thing is going on"
-	cont "at the stadium!"
+	text "Hey, something's"
+	line "going on at the"
+	cont "stadium!"
 	done
 
 	

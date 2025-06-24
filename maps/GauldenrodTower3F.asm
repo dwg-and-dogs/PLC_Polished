@@ -131,14 +131,7 @@ GauldenrodTowerBoulders:
 GauldenrodTowerBoulderCallback:
 	checkevent EVENT_GAULDENROD_3F_BOULDER
 	iffalse .Done
-	changeblock 2,  2, $09
-	changeblock 4,  2, $09
-	changeblock 6,  2, $09
-	changeblock 2,  4, $09
-	changeblock 2,  6, $09
-	changeblock 4,  6, $09
-	changeblock 6,  6, $09
-	changeblock 6,  4, $09
+	changeblock 8,  6, $09
 .Done:
 	endcallback
 

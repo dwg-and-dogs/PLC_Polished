@@ -4902,7 +4902,7 @@ FirebreatherGroup:
 ; ================
 
 	; FIREBREATHER ; gauldenrod
-	db "Dick@"
+	db "Dan@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 15, QUILAVA
@@ -8147,9 +8147,9 @@ AromaLadyGroup:
 	db "Dahlia@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 18, DARTRIX
-	db 18, PARAS
-	db 18, EXEGGCUTE
+	db 16, DARTRIX
+	db 16, PARAS
+	db 17, EXEGGCUTE
 	db -1 ; end
 
 ; ================
@@ -8602,9 +8602,9 @@ CooltrainerFGroup:
 	; party
 	db 16, DUNSPARCE, LEFTOVERS, "Par Four@"
 		db SANDSTORM, PROTECT, ROOST, HEADBUTT
-	db 18, RHYHORN, SALAC_BERRY, "Ivory@"
+	db 17, RHYHORN, SALAC_BERRY, "Ivory@"
 		db SANDSTORM, ROCK_THROW, DIG, STRENGTH
-	db 20, GLIGAR, POISON_BARB, "Scorpius@"
+	db 18, GLIGAR, POISON_BARB, "Scorpius@"
 		db SANDSTORM, AERIAL_ACE, DIG, POISON_STING
 	db -1 ; end
 
@@ -8961,11 +8961,11 @@ VeteranFGroup:
 	db "Joanne@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 20, MR__MIME, NO_ITEM, "Blanco@"
+	db 14, MR__MIME, NO_ITEM, "Blanco@"
 		db REFLECT, LIGHT_SCREEN, BATON_PASS, CONFUSION
-	db 20, SYLVEON, BIG_ROOT, "Sanguina@"
+	db 14, SYLVEON, BIG_ROOT, "Sanguina@"
 		db DRAIN_KISS, NO_MOVE, NO_MOVE, NO_MOVE
-	db 20, GIRAFARIG, NO_ITEM, "Janus@"
+	db 14, GIRAFARIG, NO_ITEM, "Janus@"
 		db STOMP, BITE, CONFUSION, NO_MOVE
 	db -1 ; end
 

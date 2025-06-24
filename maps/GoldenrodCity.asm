@@ -152,8 +152,7 @@ GoldenrodCityPokefanMText:
 	para "have a big wooden"
 	line "tower, kind of"
 	para "like Sprout Tower"
-	line "used to be in"
-	cont "Violet City."
+	line "of Violet City."
 	done
 
 GoldenrodCityYoungster1Text:
@@ -230,10 +229,10 @@ GoldenrodCityGymLassText:
 
 	para "Take a quote "
 	line "from Whitney's"
-	cont "show and ask a"
-	para "friend if she "
-	line "said it, or if "
-	cont "Giovanni said it."
+	para "show and ask a"
+	line "friend if she "
+	para "said it, or if "
+	line "Giovanni said it."
 	
 	para "You'd be surprised"	
 	line "how often they"
@@ -261,7 +260,7 @@ GoldenrodDeptStoreSignText:
 	line "#mon Goods!"
 
 	para "Goldenrod City"
-	line "Dept.Store"
+	line "Dept. Store"
 	
 	para "Run by Silph"
 	done
@@ -323,13 +322,12 @@ PokeComCenterSignText:
 	done
 
 GoldenrodCityFlowerShopSignText:
-	text "Gloria's"
+	text "     Gloria's"
 	line "Smile Plumes"
 	done
 
 GoldenrodMuseumSignText:
 	text "Goldenrod Museum"
-	line "Opening Soon!"
 	done
 
 GoldenrodCityMoveTutorAskTeachAMoveText:

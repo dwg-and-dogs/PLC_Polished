@@ -25,10 +25,10 @@ GoldenrodMagnetTrainStation_MapScriptHeader:
 	object_event  6, 16, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MagnetTrainFixedChargeScript, -1
 
 
-	object_const_def
-	const STATION_GENTLEMAN
 
 GoldenrodMagnetTrainStationOfficerScript:
+	checkevent EVENT_KURT_UNDERGROUND
+	iftrue_jumptextfaceplayer TrainStationNoPower
     jumptextfaceplayer GoldenrodMagnetTrainStationOfficerText
 
 GoldenrodMagnetTrainStationGentlemanScript:
@@ -68,6 +68,13 @@ GoldenrodMagnetTrainStationOfficerText:
     para "Oh… you don't"
     line "have a ticket."
     done
+
+TrainStationNoPower:
+	text "The train is out"
+	line "of service until"
+	para "we can restore"
+	line "power."
+	done
 
 GentlemanNormalText:
     text "The trains run on"

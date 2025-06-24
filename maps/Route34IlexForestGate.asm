@@ -65,19 +65,13 @@ EggGrannyIntroText:
 EggGrannyEggCountText:
     text "I eat 12 eggs"
     line "every morning!"
-    para "Sunny side up,"
-    line "scrambled, boiled"
-    cont "you name it!"
     done
 
 EggGrannyStrengthText:
     text "And that's how I"
-    line "can still crush a"
-    cont "Pinap Berry with"
-    cont "my bare hands!"
-    para "I churn butter by"
-    line "shaking a whole"
-    cont "Miltank!"
+    line "can churn butter"
+    para "by shaking a "
+    line "whole Miltank!"
     done
 
 EggGrannyOfferEggText:
@@ -91,9 +85,6 @@ EggGrannyAfterText:
     line "will help your"
     cont "#mon gain"
     cont "experience faster!"
-    para "Soon, they'll be"
-    line "strong enough to"
-    cont "shake Miltank too!"
     done
 
 EggGrannyRemindText:
@@ -102,9 +93,8 @@ EggGrannyRemindText:
     para "Remember, twelve"
     line "eggs a day keeps"
     cont "the doctor away!"
-    para "And the neighbors."
-    line "And wild #mon."
-    cont "And..."
+    para "And wild #mon."
+    line "And the neighbors."
     done
 
 EggGrannyBagFullText:
@@ -112,15 +102,11 @@ EggGrannyBagFullText:
     line "full! You must be"
     cont "carrying too many"
     cont "eggs already!"
-    para "Come back when you"
-    line "have room for this"
-    cont "Lucky Egg!"
     done
 
 Route34IlexForestGateButterfreeText:
-	text "This Miltank is"
-	line "wobbly, like it"
-	cont "is feeling dizzy."
+	text "This Miltank"
+	line "looks dizzy."
 	done
 
 Route34IlexForestGateLassText:

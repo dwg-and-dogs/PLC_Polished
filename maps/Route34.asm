@@ -140,25 +140,6 @@ Route34RichBoyIrvingScript:
 	cont "can't buy."
 	done
 
-.IntroText:
-	text "I don't need to"
-	line "gamble for Coins."
-
-	para "I'm rich, so I"
-	line "bought my #-"
-	cont "mon with cash!"
-
-	para "They're strong"
-	line "enough that we"
-	cont "beat Azalea's Gym!"
-
-	para "You want to battle"
-	line "them? Fine--just"
-
-	para "beat everyone else"
-	line "here first!"
-	done
-
 .QuestionText:
 	text "I don't need to"
 	line "gamble for Coins."
@@ -333,10 +314,6 @@ Route34TrainerTipsText:
 	para "Berry trees grow"
 	line "new Berries"
 	cont "every day."
-
-	para "Make a note of"
-	line "which trees bear"
-	cont "which Berries."
 	done
 
 DayCareSignText:
@@ -385,7 +362,7 @@ BreederJulieSeenText:
 
 BreederJulieBeatenText:
     text "My #mon seem"
-    line "stressed..."
+    line "stressed."
     done
 
 GenericTrainerPicnickerErin:
@@ -407,9 +384,10 @@ PicnickerGina1SeenText:
     done
 
 PicnickerGina1BeatenText:
-    text "That was more"
-    line "stressful than"
-    cont "relaxing!"
+    text "I guess I'll go"
+    line "shopping instead."
+    cont "So much for"
+    cont "nature..."
     done
 
 GenericOfficerfMaraScript:
@@ -437,8 +415,7 @@ GenericTrainerPokefanmBrandon:
 
     text "Something fishy is"
     line "going on between"
-    cont "here and the"
-    cont "Azalea..."
+    cont "here and Azalea."
     done
 
 PokefanmBrandonSeenText:

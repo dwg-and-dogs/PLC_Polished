@@ -123,8 +123,8 @@ TrainerBreederJodyScript:
 
     text "I left when the"
     line "power went out."
-    cont "I've never seen"
-    cont "the coast from up"
+    para "I've never seen"
+    line "the coast from up"
     cont "here before."
     done
 
@@ -216,10 +216,9 @@ BreederJodySeenText:
 BreederJodyBeatenText:
     text "Lots of people"
 	line "are hiking. I"
-	cont "even saw a"
-	cont "little girl"
-	cont "headed up to"
-	cont "the peak."
+	para "even saw a little"
+	line "girl headed up"
+	cont "to the peak."
     done
 
 Pokefan_MRobertSeenText:
@@ -239,8 +238,8 @@ SchoolgirlFaithSeenText:
 SchoolgirlFaithBeatenText:
     text "The ruins of Alph"
     line "are just below."
-    cont "You should check"
-    cont "them out."
+    para "You should check"
+    line "them out."
     done
 
 RouteKajoPetroglyph1:
@@ -248,9 +247,11 @@ RouteKajoPetroglyph2:
 RouteKajoPetroglyph3:
 RouteKajoPetroglyph4:
     text "It's a petroglyph"
-    line "worn into the"
-    cont "rock. It looks"
-    cont "like an Unown."
+    line "carved into the"
+	cont "rock."
+	
+	para "It looks like an"
+	line "unown."
     done
 
 RouteKajoSignpost:
@@ -293,8 +294,8 @@ KajoFeraligatrText:
 
 RouteKajoCabinSign:
     text "Cozy Cabin"
-	para "Weary Travelers"
-	line "Welcome"	
+	line "Weary Travelers"
+	cont "Welcome"	
     done
 
 RouteKajoHollowRockScript:
@@ -317,9 +318,9 @@ RouteKajoHollowRockScript:
 PearlForHollowRockText:
 	text "Not many people"
 	line "know, but Johto"
-	cont "used to be very"
-	para "active, volcanic-"
-	line "ally speaking."
+	para "used to be very"
+	line "active, volcanic-"
+	cont "ally speaking."
 	
 	para "The igneous rocks"
 	line "uncovered by the"
@@ -329,23 +330,23 @@ PearlForHollowRockText:
 	
 	para "Take this Hollow"
 	line "Rock. It's proof"
-	cont "that geologic"
-	para "soup bubbled to"
-	line "the surface, and"
-	para "its dissolved gas"
-	line "made a perfect"
-	para "spherical cavity"
-	line "when it cooled."
+	para "that geologic"
+	line "soup bubbled to"
+	para "the surface, and"
+	line "its dissolved gas"
+	para "made a perfect"
+	line "spherical cavity"
+	cont "when it cooled."
 
 	done
 
 PearlForHollowRockQuestionText:
 	text "If I was a rock"
 	line "type #mon, I"
-	cont "would love to"
-	para "live in these."
-	line "I'll trade you"
-	cont "some of mine for"
+	para "would love to"
+	line "live in these."
+	para "I'll trade you"
+	line "some of mine for"
 	cont "a BIG PEARL."	
 	done
 

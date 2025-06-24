@@ -68,7 +68,9 @@ GauldenrodTower4FSandraScript: ; TODO ADD MUSIC
 	appear GAULDENRODTOWER4F_ADRINNA
 	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_to ; APPEAR 
 	turnobject GAULDENRODTOWER4F_ADRINNA, LEFT 
-
+	special Special_FadeOutMusic
+	pause 30
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	opentext
 	writetext AdrinnaGauldenrodTowerText
 	waitbutton
@@ -76,6 +78,8 @@ GauldenrodTower4FSandraScript: ; TODO ADD MUSIC
 	closetext
 	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_from ; APPEAR
 	disappear GAULDENRODTOWER4F_ADRINNA
+	special RestartMapMusic
+	pause 20
 ;; todo 
 	appear GAULDENRODTOWER4F_AMOS;, AmosMovement1
 	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement1
@@ -258,6 +262,7 @@ BrigaderApproachMovement:
 	step_end
 
 SandraLeaveMovement:
+	step_right
 	step_right
 	step_right
 	step_right

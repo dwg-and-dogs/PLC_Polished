@@ -27,7 +27,7 @@ NationalPark_MapScriptHeader:
 	object_event  19, 37, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ThirstyCamperScript, -1
 	object_event 17, 24, SPRITE_PICNICKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkLassText, -1 ; ok
 	object_event 16,  4, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkPokefanFText, -1 ; ok
-	object_event 29, 40, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1 ; ok
+	object_event 29, 40, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1 ; ok
 	object_event 28,  6, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkGameboyKidScript, -1 ; ok
 	object_event 12, 41, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolboyJohnny, -1 ; ok
 	object_event 19, 41, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkTeacher2Text, -1 ; ok
@@ -47,6 +47,7 @@ NationalPark_MapScriptHeader:
 
 NationalParkTradeScene:
 	showemote EMOTE_HAPPY, NATIONAL_PARK_PICNICKER, 30
+	setscene $1 
 	end
 
 NationalParkTeacher1Script:
@@ -129,8 +130,8 @@ GameboyKidComplainText:
 	
     para "Hey, you're a"
     line "#mon trainer,"
-    cont "right? Take"
-    cont "this!"
+    para "right? Take"
+    line "this!"
     done
 
 GameboyKidGaveTMText:
@@ -254,23 +255,15 @@ NationalParkPokefanFText:
 	done
 
 NationalParkTeacher1Text:
-	text "Pay attention,"
-	line "please!"
-
-	para "…Oops, I have to"
-	line "quit thinking like"
-
-	para "a teacher all the"
-	line "time."
-
-	para "You must be a"
-	line "#mon trainer."
-
-	para "Since you're work-"
-	line "ing so hard, I"
-
-	para "want you to have"
-	line "this."
+	text "I've been a tea-"
+	line "cher for many"
+	cont "years, but I"
+	
+	para "can still keep"
+	line "up! How?"
+	
+	para "With this Quick"
+	line "Claw!"
 	done
 
 NationalParkTeacher1Text_GotQuickClaw:
@@ -512,7 +505,7 @@ PearlForWhtApricornText:
 	line "pearl jewelry, "
 	para "but all I have"
 	line "are these white"
-	line "apricorns."
+	cont "apricorns."
 	done
 
 PearlForWhtApricornQuestionText:

@@ -37,10 +37,14 @@ GauldenrodDormsNPC1Text:
 	done
 
 GauldenrodDormsNPC2Text:
-	text "The underground"
-	line "movement doesn't"
-	cont "have a right to"
-	cont "cause commotion."
+	text "I still remember"
+	line "the lessons I"
+	para "learned on my"
+	line "ritual. It's"
+	para "too bad that the"
+	line "brigaders have"
+	para "blocked us from"
+	line "carrying it on."
 	done
 
 GauldenrodDormsNPC3Text:

@@ -16,9 +16,9 @@ StadiumUnderground_MapScriptHeader:
 	def_object_events
 	strengthboulder_event  5, 3, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
 	object_event 11,  2, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundWarpNPCScript, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
-	object_event  3,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC1Script, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
-	object_event  3,  1, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC2Script, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
-	object_event  2,  2, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundHealerScript, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+	object_event  3,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC1Script, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+	object_event  3,  1, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC2Script, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+	object_event  2,  2, SPRITE_MATRON, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundHealerScript, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
 
 	object_const_def
 	const STADIUMUNDERGROUND_BOULDER1
@@ -48,6 +48,7 @@ StadiumUndergroundBoulders:
 	done
 
 StadiumUndergroundNPC1Script:
+	faceplayer
 	checkevent EVENT_GOT_PROTECT_PADS_FROM_LIGHTHOUSE_LEADER
 	iftrue .AlreadyGotItem
 	opentext
@@ -117,6 +118,7 @@ StadiumUndergroundNPC2Text:
 	done
 
 StadiumUndergroundHealerScript:
+	faceplayer
 	opentext
 	writetext StadiumUndergroundHealerText
 	waitbutton

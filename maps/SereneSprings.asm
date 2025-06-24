@@ -12,8 +12,8 @@ SereneSprings_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  5,  7, BGEVENT_READ, StadiumAheadSign
-	bg_event  12, 34, BGEVENT_READ, SereneSpringsSign
+	bg_event  5,  7, BGEVENT_JUMPTEXT, StadiumAheadSign
+	bg_event  12, 34, BGEVENT_JUMPTEXT, SereneSpringsSign
 	bg_event  18, 33, BGEVENT_ITEM + ELIXIR, EVENT_SPRINGS_HIDDEN_1
 
 	def_object_events

@@ -82,8 +82,8 @@ Text_GrampsLookingForYou:
 DayCareManText_GiveEviolite:
     text "After running this"
     line "Day Care for so"
-    cont "long, I've grown"
-    cont "quite fond of"
+    para "long, I've grown"
+    line "quite fond of"
     cont "unevolved #mon."
     para "They're just so"
     line "adorable!"
@@ -92,8 +92,8 @@ DayCareManText_GiveEviolite:
     cont "in battles."
     para "I'd like to help"
     line "them out. Here-"
-    cont "take this"
-    cont "Eviolite."
+    para "take this"
+    line "Eviolite."
     done
 
 DayCareText_PartyAndBoxFull:
@@ -104,21 +104,16 @@ DayCareText_PartyAndBoxFull:
 
 DayCareText_BagFull:
     text "Oh my, your Bag"
-    line "is full. Make some"
-    cont "room and come back"
-    cont "for this Eviolite."
-    para "The unevolved"
-    line "#mon are"
-    cont "counting on you!"
+    line "is full."
     done
 	
 DayCareText_GotEviolite:
     text "Wonderful! This"
     line "Eviolite will"
-    cont "boost the defenses"
-    cont "of any #mon"
-    cont "that can still"
-    cont "evolve."
+    para "boost the defenses"
+    line "of any #mon"
+    para "that can still"
+    line "evolve."
     para "It's perfect for"
     line "those cute little"
     cont "unevolved #mon!"
@@ -129,7 +124,4 @@ DayCareManText_DeclinedEviolite:
     line "bad. Well, if you"
     cont "change your mind,"
     cont "come back anytime."
-    para "I'll be here"
-    line "to support the"
-    cont "little ones!"
     done

@@ -28,8 +28,9 @@ GauldenrodStockroomNPC1Script:
 GauldenrodStockroomNPC1Text:
 	text "See that fence?"
 	line "Long ago, I went"
-	para "on my quest to"
-	cont "the saddle."
+	para "past it, through"
+	line "the caves, and up"
+	cont "on the mountain."
 	done
 
 GauldenrodStockroomNPC2Script:
@@ -60,6 +61,7 @@ GauldenrodStockroomNPC2Script:
 	opentext
 	writetext GauldenrodStockroomNPC2Text3
 	waitbutton
+	closetext
 	end
 
 GauldenrodStockroomNPC2Text1:
@@ -69,8 +71,8 @@ GauldenrodStockroomNPC2Text1:
 
 	para "We tell the"
 	line "children, bring"
-	cont "back something"
-	cont "'unown' to the"
+	para "back something"
+	line "'unown' to the"
 	cont "village…"
 	done
 
@@ -83,8 +85,8 @@ GauldenrodStockroomNPC2Text2:
 GauldenrodStockroomNPC2Text3:
 	text "Congratulations on"
 	line "your quest. What"
-	cont "will you do with"
-	cont "your gifts?"
+	para "will you do with"
+	line "your gifts?"
 	done
 
 GauldenrodStockroomNPC3Script:
@@ -93,15 +95,12 @@ GauldenrodStockroomNPC3Script:
 GauldenrodStockroomNPC3Text:
 	text "It was a rite of"
 	line "passage to go on"
-	cont "an adventure and"
-	cont "bring back"
+	para "an adventure and"
+	line "bring back"
 	cont "knowledge."
 
 	para "I got to a cave,"
-	line "had a fantastic"
-	cont "vision. I saw the"
-	cont "creator of the"
-	cont "universe…"
+	line "had a vision."
 	done
 
 GauldenrodStockroomNPC4Script:
@@ -124,7 +123,7 @@ GauldenrodStockroomNPC5Script:
 GauldenrodStockroomNPC5Text:
 	text "Not everyone came"
 	line "back from the"
-	cont "quest."
+	cont "ritual."
 
 	para "It was a dangerous"
 	line "rite."

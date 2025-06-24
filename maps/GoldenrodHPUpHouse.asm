@@ -42,8 +42,8 @@ GoldenrodHPUpFisherScript:
 	
 	para "We had a tough"
 	line "breakup - she"
-	cont "got to be too"
-	cont "tempestuous for"
+	para "got to be too"
+	line "tempestuous for"
 	cont "me."
 	
 	para "Ah, so I don't"
@@ -54,8 +54,8 @@ GoldenrodHPUpFisherScript:
 .AlreadyHaveRodText:
     text "Remember - "
 	line "there's always"
-	cont "more fish in"
-	cont "the sea!"
+	para "more fish in"
+	line "the sea!"
     done
 
 

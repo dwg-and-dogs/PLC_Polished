@@ -46,7 +46,7 @@ HollysHolt_MapScriptHeader:
 	tmhmball_event 24, 33, TM_X_SCISSOR, EVENT_GOT_TM_X_SCISSOR
 	cuttree_event 25, 5, EVENT_HOLLYS_HOLT_CUT_TREE
 	pokemon_event  18, 37, PINECO, -1, -1, PAL_NPC_BLUE, HollysHoltBagwormText, -1 ; by tammy
-	fruittree_event  9,  8, FRUITTREE_HOLLYS_HOLT, TOUGH_LEAVES, PAL_NPC_GREEN
+	fruittree_event 13, 14, FRUITTREE_HOLLYS_HOLT, TOUGH_LEAVES, PAL_NPC_GREEN
 
 	object_const_def
 	const HOLLYS_HOLT_KURT
