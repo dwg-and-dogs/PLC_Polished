@@ -28,6 +28,7 @@ VioletHouseTrigger:
 	
 .TradeQuestScript:
 	showemote EMOTE_HAPPY, VIOLET_HOUSE_TWIN, 30
+	setscene $1 
 	end
 
 
@@ -41,6 +42,11 @@ VioletNicknameSpeechHouseTeacherScript:
 	verbosegivetmhm TM_GIGA_DRAIN
 	setevent EVENT_GOT_GIGA_DRAIN
 	jumpthisopenedtext
+
+	text "If you get thir-"
+	line "sty, you can use"
+	cont "that TM."
+	done
 
 VioletCity_GotGigaDrain:
 	text "If you get thir-"
@@ -75,7 +81,7 @@ VioletNicknameSpeechHouseLassText:
 	done
 
 TangelaVioletText:
-	text "AngelaHair:"
+	text "AngelHair:"
 	line "La la laa!"
 	
 	para "It has a vibrant"
@@ -83,7 +89,7 @@ TangelaVioletText:
 	done
 
 ParasectVioletText:
-	text "Portosect: "
+	text "Portobela: "
 	line "... "
 	
 	para "It waddles with a"
@@ -94,8 +100,6 @@ ParasectVioletText:
 	cont "mushroom."
 	done
 	
-
-
 VioletPickyEaterScript:
     faceplayer
     opentext
@@ -119,13 +123,13 @@ NeedRageCandyBarText:
 	
 	para "Without water to"
 	line "grow crops, we"
-	cont "might have to eat"
-	cont ".... MUSHROOMS."
+	para "might have to eat"
+	line "...MUSHROOMS."
 	
 	para "Falkner won't let"
 	line "anyone in, so I"
-	cont "haven't had candy"
-	cont "in ages."
+	para "haven't had candy"
+	line "in ages."
     done
 
 Text_BarQuestion:
@@ -138,7 +142,7 @@ Text_BarQuestion:
 	
 	para "mushroom I've"
 	line "harvested from"
-	cont "ol' Paratricia?"	
+	cont "ol' Portobela?"	
     done
 
 Text_NoCandyBar:

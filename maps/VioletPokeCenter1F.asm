@@ -12,13 +12,12 @@ VioletPokeCenter1F_MapScriptHeader:
 	def_bg_events
 	bg_event 10,  1, BGEVENT_READ, PokemonJournalFalknerScript
 
-	def_object_events ; add a prof elm aide?
+	def_object_events
 	pc_nurse_event  5, 1
 	object_event  9,  4, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletPokeCenter1FGameboyKidText, -1
 	object_event  2,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletPokeCenter1FGentlemanText, -1
 	object_event  9,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV6Script, -1
 
-	object_const_def
 
 
 PokemonJournalFalknerScript:
@@ -46,8 +45,8 @@ VioletPokeCenter1FGameboyKidText:
 	done
 
 VioletPokeCenter1FGentlemanText:
-	text "Lots of goods"
-	line "have been found"
+	text "Lots of junk"
+	line "has been found"
 	cont "in the muck."
 	para "You should check"
 	line "for yourself."

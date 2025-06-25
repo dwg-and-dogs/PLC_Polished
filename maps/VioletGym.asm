@@ -16,7 +16,6 @@ VioletGym_MapScriptHeader:
 	def_object_events
 	object_event  4,  2, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletGymPryceText, EVENT_BEAT_FALKNER  
 
-	object_const_def
 
 VioletGymPryceText:
 	text "Johto's Gyms once"
@@ -24,21 +23,21 @@ VioletGymPryceText:
 	cont "fruitful trees."
 
 	para "Now Falkner hides"
-	line "behind walls."
+	line "in a walled"
+	cont "garden."
 
 	para "A Gym's strength"
 	line "lies in nurturing"
-	cont "trainers, not in"
-	cont "baffling them."
+	para "trainers, not in"
+	line "baffling them!"
 
 	para "I hoped to remind"
 	line "him, but he would"
-	cont "rather rule over"
-	para "sand than admit"
-	line "his mistakes."
+	para "rather rule over"
+	line "sand than admit"
+	cont "his mistakes."
 	
-	para "Doesn't he know,"
-	line "sand makes a bad"
+	para "Doesn't he know:"
+	line "sand is a poor"
 	cont "foundation."
-
 	done

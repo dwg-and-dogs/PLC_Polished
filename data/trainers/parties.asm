@@ -5110,9 +5110,9 @@ SchoolboyGroup:
 	db "Alan@" ; ROUTE 36
 	db TRAINERTYPE_MOVES
 	; party
-	db 20, MISDREAVUS
+	db 17, MISDREAVUS
 		db PAIN_SPLIT, CURSE, PSYBEAM, FUTURE_SIGHT
-	db 22, TANGELA
+	db 17, TANGELA
 		db REST, SLEEP_TALK, CURSE, VINE_WHIP
 	db -1 ; end
 ; ================
@@ -5231,7 +5231,7 @@ SchoolboyGroup:
 ; ================
 
 	; SCHOOLBOY
-	db "Johnny@"
+	db "Johnny@" ; national park 
 	db TRAINERTYPE_NORMAL
 	; party
 	db 18, WEEPINBELL

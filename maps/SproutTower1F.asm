@@ -8,7 +8,6 @@ SproutTower1F_MapScriptHeader:
 	warp_event  8, 15, VIOLET_CITY, 7
 	warp_event  4,  4, SPROUT_TOWER_2F, 1
 
-
 	def_coord_events
 
 	def_bg_events
@@ -31,17 +30,16 @@ SproutTower1FStatueText:
 GenericTrainerBirdKeeperRod:
     generictrainer BIRD_KEEPER, ROD, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText
 
-    text "I feel like I"
-    line "could fly from up"
-    cont "here."
+    text "Brought me down"
+	line "to Earth!"
     done
 
 GenericTrainerBirdKeeperAbe:
     generictrainer BIRD_KEEPER, ABE, EVENT_BEAT_BIRD_KEEPER_ABE, BirdKeeperAbeSeenText, BirdKeeperAbeBeatenText
 
-    text "It's hard to have"
-    line "more fun than"
-    cont "flying."
+    text "You've got some"
+	line "wind under your"
+	cont "wings."
     done
 
 BirdKeeperRodSeenText:
@@ -50,16 +48,19 @@ BirdKeeperRodSeenText:
     done
 
 BirdKeeperRodBeatenText:
-    text "Can't get any"
-    line "lower."
+    text "Brought me down"
+	line "to Earth!"
     done
 
 BirdKeeperAbeSeenText:
-    text "It's exhilarating"
-    line "to fly on a bird"
-    cont "#mon!"
+    text "If you want to"
+	line "talk to Falkner,"
+	para "you've got to get"
+	line "through me!"
     done
 
 BirdKeeperAbeBeatenText:
-    text "What a thrill!"
+    text "You've got some"
+	line "wind under your"
+	cont "wings."
     done

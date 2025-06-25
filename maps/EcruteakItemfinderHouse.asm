@@ -1,4 +1,4 @@
-EcruteakItemfinderHouse_MapScriptHeader:
+EcruteakItemfinderHouse_MapScriptHeader: ; not accessible 
 	def_scene_scripts
 
 	def_callbacks

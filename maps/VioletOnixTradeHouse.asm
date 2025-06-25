@@ -18,9 +18,8 @@ VioletOnixTradeHouse_MapScriptHeader:
 VioletKylesHousePokefanMText:
 	text "There's no substi-"
 	line "tute for the smell"
-	cont "of freshly fallen"
-	cont "rain."
-
+	para "of freshly fallen"
+	line "rain."
 	done
 
 VioletHisuiTraderScript:
@@ -97,27 +96,27 @@ VioletHisuiTraderScript:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 5 ; items
-	db "DUSCLOPS@"
-	db "KIRLIA@"
-	db "SNOVER@"
-	db "LAPRAS@"
+	db "Dusclops@"
+	db "Kirlia@"
+	db "Snover@"
+	db "Cancel@"
 	db "CANCEL@"
 
 VioletHisuiTraderRememberText:
 	text "I really miss"
 	line "that #mon, but"
-	cont "I know it was"
-	cont "for the best."
+	para "I know it was"
+	line "for the best."
 	done
 
 VioletHisuiTraderText:
-	text "Are you working"
-	line "on a #dex?"
+	text "Are you a"
+	line "#mon trainer?"
 	
 	para "I rescued these"
 	line "#mon from bad"
-	cont "situations, and"
-	cont "can't take care"
+	para "situations, and"
+	line "can't take care"
 	cont "of them all."
 	
 	para "Would you take"
@@ -125,7 +124,7 @@ VioletHisuiTraderText:
 	done
 
 VioletHisuiTraderDusclopsText:
-	text "Ah, Dusclops!"
+	text "Oh, Dusclops?"
 	
 	para "It must have"
 	line "beckoned to you."
@@ -133,18 +132,13 @@ VioletHisuiTraderDusclopsText:
 	done
 
 VioletHisuiTraderKirliaText:
-	text "Kirlia, so grace-"
-	line "ful!"
-	
-	para "Its power will"
-	line "grow as it bonds"
-	cont "to you."
-	
+	text "Kirlia! Its power"
+	line "will grow as it"
+	cont "bonds to you."	
 	done
 
 VioletHisuiTraderSnoverText:
-	text "Snover, a most"
-	line "curious #mon!"
+	text "Snover!"
 	
 	para "A great companion"
 	line "in the winter."
@@ -160,14 +154,11 @@ VioletHisuiTraderLaprasText:
 
 VioletHisuiTraderPartyFullText:
 	text "Oh! Your party is"
-	line "full. Please make"
-	cont "room and come"
-	cont "back."
+	line "full."
 	done
 
 VioletHisuiTraderNoThanksText:
-	text "No problem! Feel"
-	line "free to come back"
-	cont "if you change"
-	cont "your mind!"
+	text "You won't? But"
+	line "they really need"
+	cont "your help."
 	done

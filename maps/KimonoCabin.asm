@@ -19,40 +19,19 @@ KimonoCabin_MapScriptHeader: ; these people have all fled Capital for fear of lo
 
 	def_object_events ; sprites: cute_girl, lass, ace_trainer_f, matron, granny
 	object_event  5,  6, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin1Script, -1 ; "Vera" , revise dialogue to be a scared little girl
-	; vera should figure out ways to INTERACT with the natural world
-	; shiji is proud of her for learning how to interact with the world 
-
 	object_event  2,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2Script, -1 ; " Piper", a young girl who wants to save the garden
-	; trying to use a natural method to coax the hedgehog out
-	; had just about to be promoted into the clan, now she needs to prove herself again 
-	; cynical, wants to let the world burn and live in this perfect harmony 
-
 	object_event  9,  4, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin3Script, -1 ; "Samaria" , a  woman who is ready to face fears
-	; fears of darkness and the unknown are inevitable, must journey into the unknown 
-	; mad that piper uses all the hot water in the house
-	; 
-
 	object_event  6,  3, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin4Script, -1 ; "Shiji" , an older woman who wants her vision to be accepted
-	; sees herself losing faculties, so she must teach others to maintain the utopia
-	; sad that people had already forgotten how to make apricorns 
-	; optimistic that a better world is possible, unwilling to give up on people 
-
 	object_event  3,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin5Script, -1 
-	; "Morphea", a granny who is aware of her limitations and unsure of how the future will be for her progeny, feels that she is suddenly adrift in time, and realizes that she can only help her children adapt rather than forcing them to take a certain path.
-	; when she sees herself as a young girl again, she is able to see the actions of her parents for what they were, good and bad. 
-	; she finds herself as a young child and with her own great-great-grandmother, learning how to make her own path
-	
-	; once all five of them are helped, they will say that Amos has come by, telling them that 
-	; there is going to be a big event soon. The emperor is destroying books, and the only way
-	; to preserve knowledge and wisdom is to etch it into stone. 
 
-	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinShijiNotebook1, EVENT_KIMONO_CABIN_DRATINI
-	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinSamariaNotebook1, -1
+	; books 
+	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, KimonoCabinShijiNotebook1, EVENT_KIMONO_CABIN_LAPRAS
+	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinSamariaNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 
-	object_event  3,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinPiperNotebook1, -1
-	object_event  4,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinVeraNotebook1, -1
+	object_event  3,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinPiperNotebook1, EVENT_KIMONO_CABIN_LAPRAS
+	object_event  4,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, KimonoCabinVeraNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 
-	object_event  2,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinMorpheaNotebook1, EVENT_KIMONO_CABIN_MORPHEA_NOTEBOOK
+	object_event  2,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptext, KimonoCabinMorpheaNotebook1, EVENT_KIMONO_CABIN_MORPHEA_NOTEBOOK
 
 	object_const_def
 
@@ -332,11 +311,12 @@ Kimono3ThanksForHelpingText:
 	done
 
 KimonoCabin4Script: ; shiji 
+	; todo: after completing this, clear the event for morphea's notebook 
 	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_LAPRAS
 	iftrue_jumpopenedtext Kimono4HelpedText
-	checkevent EVENT_BEAT_REI
+	checkevent EVENT_BEAT_REI ; chronicler vespera 
 	iffalse_jumpopenedtext Kimono4NotStrongEnoughText
 	checkevent EVENT_KIMONO_CABIN_SNEASEL
 	iffalse_jumpopenedtext Kimono4NotStrongEnoughText

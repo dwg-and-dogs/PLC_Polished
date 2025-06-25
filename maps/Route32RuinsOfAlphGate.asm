@@ -40,12 +40,15 @@ Route32RuinsOfAlphGatePokefanMText:
 Route32RuinsOfAlphGateKurtText:
 	text "Well, our plan"
 	line "to go around"
-	cont "has come to a"
-	cont "screeching halt"
-	cont "due to that"
-	cont "excavation."
+	para "has come to a"
+	line "screeching halt"
+	para "due to that"
+	line "excavation."
 	
 	para "We have to get"
 	line "them to pause"
 	cont "to let us past."
+	
+	para "Maybe Falkner can"
+	line "let us through."
 	done

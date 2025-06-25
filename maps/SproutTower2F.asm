@@ -18,19 +18,25 @@ SproutTower2F_MapScriptHeader:
 GenericTrainerBird_keeperTheo:
 	generictrainer BIRD_KEEPER, THEO, EVENT_BEAT_BIRD_KEEPER_THEO, Bird_keeperTheoSeenText, Bird_keeperTheoBeatenText
 
-	text "“The gaps in the"
+	text "The gaps in the"
 	line "tower allow wind"
 	cont "to flow."
+	
+	para "Otherwise, the "
+	line "tower might fall"
+	cont "over."
 	done
 
 Bird_keeperTheoSeenText:
 	text "If my calculations"
-	line "are correct..."
+	line "are correct:"
 	
 	para "You're going to"
 	line "lose!"
 	done
 
 Bird_keeperTheoBeatenText:
-	text "Rounding error?"
+	text "The gaps in the"
+	line "tower allow wind"
+	cont "to flow."
 	done

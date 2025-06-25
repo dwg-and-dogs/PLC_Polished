@@ -490,6 +490,11 @@ StadiumGroundsSandra2Script:
 	writetext StadiumGroundsSandraAsksToTimeTravel
 	yesorno
 	iffalse_jumpopenedtext StadiumGroundsNoTimeTravel
+	waitbutton
+	closetext
+	turnobject STADIUMGROUNDS_SANDRA_2, UP
+	turnobject PLAYER, UP	
+	opentext
 	writetext StadiumGroundsTimeTravel
 	waitbutton
 	closetext

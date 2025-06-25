@@ -18,10 +18,11 @@ Route35GoldenrodGate_MapScriptHeader:
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RandyScript, -1
 	object_event  6,  4, SPRITE_BREEDER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route35GoldenrodGatePokefanFScript, -1
 	object_event  3,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route35GoldenrodGateFisherText, -1
-	object_event  4,  3, SPRITE_KURT,  SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtGoldenrodGateScript, -1
+	object_event  7,  3, SPRITE_KURT,  SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtGoldenrodGateScript, -1
 
 
 WhitneyRadioShowScript:
+	applyonemovement PLAYER, step_down
 	showtext WhitneyRadioShowText
 	setscene $1
 	end
@@ -75,7 +76,7 @@ RandyScript:
 	givepokemail GiftFarfetch_dMail
 	setevent EVENT_GOT_KENYA
 .alreadyhavekenya
-	jumpopenedtext Route35GoldenrodGateRandyWeirdTreeBlockingRoadText
+	jumptext Route35GoldenrodGateRandyWeirdTreeBlockingRoadText
 
 .partyfull
 	jumpopenedtext Route35GoldenrodGateRandyCantCarryAnotherMonText
@@ -131,17 +132,17 @@ Route35GoldenrodGateRandyThanksText:
 	text "You will? Great!"
 	line "Thanks, kid!"
 
-	para "My brother is"
-	line "a fancy guy in"
-	cont "red clothes."
-
-	para "You'll recognize"
-	line "him right away!"
-	
-	para "And, uh, don't"
-	line "tell anyone else"
-	para "where you got"
-	line "that mail, OK?"
+;	para "My brother is"
+;	line "a fancy guy in"
+;	cont "red clothes."
+;
+;	para "You'll recognize"
+;	line "him right away!"
+;	
+;	para "And, uh, don't"
+;	line "tell anyone else"
+;	para "where you got"
+;	line "that mail, OK?"
 	done
 
 Route35GoldenrodGatePlayerReceivedAMonWithMailText:
@@ -182,23 +183,10 @@ Route35GoldenrodGatePokefanFText:
 
 
 Route35GoldenrodGateFisherText:
-	text "I wonder how many"
-	line "kinds of #mon"
-
-	para "there are in the"
-	line "world."
-
-	para "Three years ago,"
-	line "Prof.Oak said that"
-
-	para "there were 150"
-	line "different kinds."
-	
-	para "Now, there are"
-	line "hundreds more!"
-	
-	para "Science sure is"
-	line "amazing."
+	text "I wish the gate"
+	line "agent wouldn't"
+	para "have Whitney's"
+	line "show on so loud."
 	done
 
 KurtGoldenrodGateScript:
@@ -208,6 +196,7 @@ KurtGoldenrodGateScript:
 	yesorno
 	iffalse DontHearHearStory2
 	writetext KurtGoldenrodGateText
+	waitbutton
 	clearevent EVENT_KURTS_HOUSE_BOOK_2
 	closetext
 	end
@@ -245,8 +234,9 @@ KurtGoldenrodGateText:
 	para "We got some funny"
 	line "looks for having"
 	cont "an apricorn - "
-	para "#balls were just"
-	line "becoming common."
+	para "#balls were"
+	line "just getting"
+	cont "popular."
 	
 	para "If you ever want"
 	line "to hear it again,"

@@ -496,7 +496,7 @@ ProfOaksAide3Script:
     writetext ProfOaksAide3ItemFinderText
     playsound SFX_ITEM
     waitsfx
-    itemnotify
+;    itemnotify
     setevent EVENT_GOT_ITEMFINDER_FROM_PROF_OAKS_AIDE
 .Explain
     jumpopenedtext ProfOaksAide3ExplainText

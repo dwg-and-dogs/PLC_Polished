@@ -17,7 +17,7 @@ GoldenrodCity_MapScriptHeader:
 	warp_event 28, 27, GOLDENROD_DEPT_STORE_1F, 1
 	warp_event 18, 21, GOLDENROD_GAME_CORNER, 1
 	warp_event  9, 15, RADIO_TOWER_1F, 1 ; CHECK
-	warp_event 23,  1, ROUTE_35_GOLDENROD_GATE, 3
+	warp_event 23,  3, ROUTE_35_GOLDENROD_GATE, 3
 	warp_event 13,  5, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 5
 	warp_event 13, 29, UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES, 2
 	warp_event 18, 27, GOLDENROD_POKECOM_CENTER_1F, 2
@@ -52,12 +52,12 @@ GoldenrodCity_MapScriptHeader:
 	; npcs 
 	object_event 27,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityGymLassText, -1
 	object_event 38, 24, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 						OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityBeautyText, -1
-	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1 
+	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1
 	object_event 38, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityYoungster1Text, -1
 	object_event 16, 16, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF1Script, -1
-	object_event 25, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster2Script, -1 
-	object_event 20, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1,PAL_NPC_GREEN, 	OBJECTTYPE_SCRIPT, 0, GoldenrodCityGramps1Script, -1 
-	object_event 15, 27, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0,				OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGrampsText, -1 
+	object_event 25, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityYoungster2Script, -1
+	object_event 20, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1,PAL_NPC_GREEN, 	OBJECTTYPE_SCRIPT, 0, GoldenrodCityGramps1Script, -1
+	object_event 15, 27, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0,				OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGrampsText, -1
 
 	; fruittree
 	fruittree_event 21, 13, FRUITTREE_GOLDENROD_CITY, FIXED_CHARGE, PAL_NPC_RED;OK

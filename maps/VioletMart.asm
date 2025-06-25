@@ -20,17 +20,16 @@ VioletMartGrannyText:
 	text "The tower can see"
 	line "for miles away."
 	
-	para "Until the rain"
-	line "dance, Falkner"
-	cont "blows all clouds"
-	cont "over our city"
-	cont "with his bird"
-	cont "#mon."
+	para "Falkner uses his"
+	line "Pidgeotto to blow"
+	para "clouds from all"
+	line "over to rain on"
+	cont "our city."
 	done
 
 VioletMartCooltrainerMText:
 	text "Without rain the"
 	line "sprout tower was"
-	cont "getting too"
-	cont "wobbly."
+	para "getting too"
+	text "wobbly."
 	done

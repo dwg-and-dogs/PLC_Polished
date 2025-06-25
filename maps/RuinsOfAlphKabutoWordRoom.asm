@@ -36,9 +36,9 @@ KabutoWordKimonoGirlScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmapafterbattle
-	opentext
-.SettingDVsOptions:
 	setevent EVENT_BEAT_KROMA
+.SettingDVsOptions:
+	opentext
 	writetext WhatPotentialText
 	promptbutton
 	loadmenu .PhysicalOrSpecialMenuHeader
