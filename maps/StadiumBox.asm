@@ -11,16 +11,18 @@ StadiumBox_MapScriptHeader:
 
 
 	def_coord_events
-	coord_event 5, 11, 1, StadiumBoxScene_warp1
-	coord_event 6, 11, 1, StadiumBoxScene_warp2
-	coord_event 5,  2, 1, StadiumBoxScene_warp3
+	coord_event 5, 10, 1, StadiumBoxScene_warp1
+	coord_event 6, 10, 1, StadiumBoxScene_warp2
+	coord_event 4, 11, 1, StadiumBoxScene_warp3
+	coord_event 7, 11, 1, StadiumBoxScene_warp4
+
 
 
 	def_bg_events
 
 	def_object_events
 	object_event  6,  7, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_STADIUM_BOX_ADRINNA
-	object_event  5,  11, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxSandraScript, EVENT_BEAT_SANDRA
+	object_event  5,  11, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_SANDRA
 	object_event  6,  11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumBoxKurtScript, EVENT_BEAT_SANDRA 
 	itemball_event  8,  2, SCOPE_LENS, 1, EVENT_STADIUM_BOX_SCOPE_LENS
 	itemball_event  2,  2, WIDE_LENS, 1, EVENT_WIDE_LENS
@@ -30,27 +32,35 @@ StadiumBox_MapScriptHeader:
 	const STADIUMBOX_SANDRA
 	const STADIUMBOX_KURT
 
+StadiumBoxScene_warp3:
+	applyonemovement PLAYER, step_up
+	applyonemovement PLAYER, step_right	
+	applyonemovement PLAYER, step_up
+	applyonemovement PLAYER, step_up
+	applyonemovement PLAYER, step_up
+	turnobject PLAYER, RIGHT
+	sjump StadiumBoxScene
+
+
+StadiumBoxScene_warp4:
+	applyonemovement PLAYER, step_up
+	applyonemovement PLAYER, step_left	
 StadiumBoxScene_warp2:
 	applyonemovement PLAYER, step_left
 StadiumBoxScene_warp1:
 	applyonemovement PLAYER, step_up
 	applyonemovement PLAYER, step_up
 	applyonemovement PLAYER, step_up
-	applyonemovement PLAYER, step_up
+	turnobject PLAYER, RIGHT
 	sjump StadiumBoxScene
 
-StadiumBoxScene_warp3:
-	applyonemovement PLAYER, step_down
-	applyonemovement PLAYER, step_down
-	applyonemovement PLAYER, step_down
-	applyonemovement PLAYER, step_left
-	applyonemovement PLAYER, step_down
-	applyonemovement PLAYER, step_down
-	applyonemovement PLAYER, step_right
-	sjump StadiumBoxScene	
 
 StadiumBoxScene:
-	; cut the sound 
+	pause 60
+	special Special_FadeOutMusic
+	pause 60
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
+
 	turnobject STADIUMBOX_ADRINNA, LEFT 
 	refreshscreen
 	trainerpic ADRINNA
@@ -58,9 +68,12 @@ StadiumBoxScene:
 	closepokepic
 	opentext
 	writetext AdrinnaDialogueStadium
+	waitbutton
 	closetext
 	applyonemovement STADIUMBOX_ADRINNA, teleport_from
 	disappear STADIUMBOX_ADRINNA
+	pause 60
+	special RestartMapMusic
 	appear STADIUMBOX_SANDRA
 	applymovement STADIUMBOX_SANDRA, StadiumBoxSandraWalksToPlayer
 	appear STADIUMBOX_KURT
@@ -77,14 +90,16 @@ StadiumBoxScene:
 	writetext SandraDialogue2StadiumBox
 	waitbutton
 	closetext
+	setscene $0  ; shouldn't happen again 
 	applymovement STADIUMBOX_SANDRA, BoxSandraExitMovement
 	disappear STADIUMBOX_SANDRA
 	clearevent EVENT_NO_EVENT
 	setevent EVENT_STADIUM_BOX_ADRINNA
-	setscene $0  ; shouldn't happen again 
-	end
-
-StadiumBoxSandraScript:
+	clearevent EVENT_STADIUM_GROUNDS_SANDRA
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp STADIUM_GROUNDS, 47, 30
 	end
 
 BoxSandraExitMovement:

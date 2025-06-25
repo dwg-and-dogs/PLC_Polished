@@ -32,43 +32,10 @@ DebugRoom_MapScriptHeader:
 	const DEBUG_DWG
 
 DebugInteraction: 
-	opentext
-	givepoke ONIX, 100
-	givepoke PRINPLUP, 100
-	givepoke YANMA, 100 
-	closetext
+	clearevent EVENT_STADIUM_GROUNDS_SANDRA
 	end
 
 DebugCPU:
-	trainerpic BOBESH
-	pause 10
-	waitbutton
-	closepokepic
-	
-	refreshscreen
-	trainerpic NOMAD_M
-	pause 10
-	waitbutton
-	closepokepic
-
-	refreshscreen
-	trainerpic NOMAD_F
-	pause 10
-	waitbutton
-	closepokepic
-
-	refreshscreen
-	trainerpic NINJA
-	pause 10
-	waitbutton
-	closepokepic
-	
-	refreshscreen
-	trainerpic SWIMMERM
-	pause 10
-	waitbutton
-	closepokepic
-
 	opentext
 	writetext DebugCPUText
 	; time

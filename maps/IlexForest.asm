@@ -277,7 +277,7 @@ IlexForestKurtEngineerScript:
 	applymovement ILEX_FOREST_KURT, KurtMovesAfterBattle
 	applymovement ILEX_FOREST_CAMDEN, CamdenMovesAfterBattle
 	applymovement PLAYER, PlayerMovesBelowKurtMovement 
-	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 15
+	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 60
 	opentext
 	writetext KurtText1 
 	waitbutton
@@ -318,7 +318,7 @@ IlexForestKurtEngineerScript:
 	opentext
 	writetext KurtExplainsGSBallText
 	waitbutton
-	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 15
+	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 60
 	writetext KurtExplainsGSBallText2
 	waitbutton
 	closetext
@@ -541,13 +541,13 @@ IlexForestCelebiEventScript:
 	waitbutton
 	closetext ; start to appear celebi 
 	special Special_FadeOutMusic
-	pause 15
+	pause 60
 
 	appear ILEX_RIVAL
 	applymovement ILEX_RIVAL, IlexRivalWalksToShrine
 	turnobject PLAYER, DOWN
 	turnobject ILEX_FOREST_KURT, DOWN
-	showemote EMOTE_QUESTION, ILEX_RIVAL, 15
+	showemote EMOTE_QUESTION, ILEX_RIVAL, 60
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext IlexRivalWhatDoing
@@ -558,7 +558,7 @@ IlexForestCelebiEventScript:
 	writetext KurtStayOutOfThis
 	waitbutton
 	closetext
-	showemote EMOTE_SHOCK, ILEX_RIVAL, 15	
+	showemote EMOTE_SHOCK, ILEX_RIVAL, 60	
 	applymovement ILEX_RIVAL, RivalWalksToYou
 	turnobject PLAYER, LEFT
 	opentext
@@ -617,8 +617,8 @@ IlexForestCelebiEventScript:
 	turnobject PLAYER, RIGHT
 	appear ILEX_CELEBI
 	applymovement ILEX_CELEBI, IlexCelebiMovement
-	pause 50
-	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 15
+	pause 60
+	showemote EMOTE_SHOCK, ILEX_FOREST_KURT, 60
 	opentext
 	writetext WhatIsNaturalText
 	waitbutton

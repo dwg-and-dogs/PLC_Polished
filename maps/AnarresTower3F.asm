@@ -41,15 +41,15 @@ AnarresTower3FEvent:
 	clearevent EVENT_BEAT_HOLLIS ; this flag randomly gets set somehow. This is a workaround, i think 
 	setscene $1
 	setevent EVENT_SAW_KLEAVOR
-	pause 20
+	pause 60
 	appear ANARRES_TOWER_TAMMY
 	applymovement ANARRES_TOWER_TAMMY, TammyMovesToHollis
-	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 20
+	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 60
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	opentext
 	writetext HollisPastGuards
 	waitbutton
-	showemote EMOTE_SAD, ANARRES_TOWER_TAMMY, 20
+	showemote EMOTE_SAD, ANARRES_TOWER_TAMMY, 60
 	writetext TammyExplains
 	waitbutton
 	closetext
@@ -61,28 +61,28 @@ AnarresTower3FEvent:
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
 	opentext
-	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 20
+	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 60
 	applyonemovement ANARRES_TOWER_HOLLIS, step_down
 	turnobject PLAYER, DOWN
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	showtext TammyText2
 ;	waitbutton
-	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 20
+	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 60
 ;	showtext HollisHmm
 ;	waitbutton
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
-	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 20
+	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
 	showtext TammyText3
 ;	waitbutton
-	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 20
+	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 60
 	showtext HollisAbuse
 	pause 5
 	showtext TammyText4
 	turnobject ANARRES_TOWER_HOLLIS, RIGHT
 	applyonemovement ANARRES_TOWER_HOLLIS, step_right
 	showtext HollisHM
-	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 20
+	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
 	showtext TammyThanks
 	closetext
 	applymovement ANARRES_TOWER_TAMMY, TammyWalksOutMovement

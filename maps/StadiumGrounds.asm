@@ -16,9 +16,9 @@ StadiumGrounds_MapScriptHeader:
 	coord_event 26,  6, 1, StadiumGroundsBobeshScene 
 
 	def_bg_events
-	bg_event  6, 34, BGEVENT_JUMPTEXT, Text_StadiumSign1;
-	bg_event 20, 32, BGEVENT_JUMPTEXT, Text_StadiumSign2;
-	; TODO 
+	bg_event  6, 34, BGEVENT_JUMPTEXT, Text_StadiumSign1
+	bg_event 20, 32, BGEVENT_JUMPTEXT, Text_StadiumSign2
+	bg_event  6, 34, BGEVENT_JUMPTEXT, Text_ToWCSign;
 	bg_event 42, 36, BGEVENT_ITEM + ENERGY_ROOT, EVENT_STADIUM_HIDDEN_1
 	bg_event 33, 2, BGEVENT_ITEM + REVIVAL_HERB, EVENT_STADIUM_HIDDEN_2
 	bg_event  8, 14, BGEVENT_ITEM + HEAL_POWDER, EVENT_STADIUM_HIDDEN_3
@@ -28,8 +28,8 @@ StadiumGrounds_MapScriptHeader:
 	object_event 30,  10, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandraScript, EVENT_BEAT_BOBESH_STADIUM
 	pokemon_event  28, 10, TOXICROAK, -1, -1, PAL_NPC_BLUE, ToxicroakChallengeText, EVENT_TOXICROAK_STADIUM
 	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, EVENT_STADIUM_GROUNDS_SANDRA	
-	object_event 49, 13, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
-	object_event 49,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
+	object_event 49, 14, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
+	object_event 49, 11, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
 	object_event 42,  3, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader10, EVENT_BEAT_BOBESH_STADIUM
 	object_event 34, 37, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader11, EVENT_BEAT_BOBESH_STADIUM
 	object_event  7,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader12, EVENT_BEAT_BOBESH_STADIUM
@@ -83,9 +83,9 @@ StadiumGroundsBobeshScene:
 	
 StadiumGroundsToxicroakScene:
 	applymovement PLAYER, PlayerWalksDownMovement
-	pause 15
+	pause 60
 	special Special_FadeOutMusic
-	pause 30
+	pause 60
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	turnobject STADIUMGROUNDS_BOBESH, DOWN
 	turnobject STADIUMGROUNDS_SANDRA, DOWN
@@ -186,6 +186,7 @@ PickupStadiumScene:
 	reloadmappart
 	playsound SFX_WATER_GUN
 	waitsfx
+	pause 60
 	setevent EVENT_STADIUM_GROUNDS_SECOND_FLOOD	
 	opentext
 	writetext BobeshDefeatText
@@ -635,4 +636,13 @@ PlayerWalksDownMovement2:
 	step_down
 	turn_head_right
 	step_end
+
+
+Text_ToWCSign:
+	text "North to Western"
+	line "Capital"
 	
+	para "Visa required"
+	line "from Chronicler"
+	cont "Vespera"
+	done

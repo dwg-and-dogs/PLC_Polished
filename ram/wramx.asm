@@ -1096,7 +1096,7 @@ wUndergroundPathSwitchRoomEntrancesSceneID:: db
 wVioletNicknameSpeechHouseSceneID:: db 
 wWesternCapitalSceneID:: db 
 wWhirlIslandLugiaChamberSceneID:: db 
-wUnused12SceneID:: db
+wStadiumBoxSceneID:: db
 wUnused13SceneID:: db
 wUnused15SceneID:: db  
 wUnused16SceneID:: db

@@ -71,4 +71,5 @@ MapScenes::
 	scene_var TIN_TOWER_OLD_1F, 					  wTinTowerOld1FSceneID 
 	scene_var TIN_TOWER_OLD_3F, 					  wTinTowerOld3FSceneID 
 	scene_var RUSALKA_RUINS_B1F, 					  wRusalkaRuinsB1FSceneID ; todo 
+	scene_var STADIUM_BOX, 							  wStadiumBoxSceneID
 	db -1

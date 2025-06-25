@@ -65,14 +65,14 @@ GauldenrodTower4FSandraScript: ; TODO ADD MUSIC
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement1
 	applymovement GAULDENRODTOWER4F_SANDRA, SandraLeaveMovement
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement2
-	pause 15
+	pause 60
 ; inserting this 
-	showemote EMOTE_SHOCK, PLAYER, 15
+	showemote EMOTE_SHOCK, PLAYER, 60
 	appear GAULDENRODTOWER4F_ADRINNA
 	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_to ; APPEAR 
 	turnobject GAULDENRODTOWER4F_ADRINNA, LEFT 
 	special Special_FadeOutMusic
-	pause 30
+	pause 60
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	opentext
 	writetext AdrinnaGauldenrodTowerText
@@ -82,7 +82,7 @@ GauldenrodTower4FSandraScript: ; TODO ADD MUSIC
 	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_from ; APPEAR
 	disappear GAULDENRODTOWER4F_ADRINNA
 	special RestartMapMusic
-	pause 20
+	pause 60
 ;; todo 
 	appear GAULDENRODTOWER4F_AMOS;, AmosMovement1
 	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement1

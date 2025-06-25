@@ -62,9 +62,9 @@ HollysHoltTrigger:
 	end
 
 HollysHoltScript1:
-	playmusic MUSIC_CELADON_CITY
-	showemote EMOTE_SHOCK, HOLLYS_HOLT_KURT, 15
-	showemote EMOTE_SHOCK, HOLLYS_HOLT_HOLLIS, 15
+;	playmusic MUSIC_CELADON_CITY
+	showemote EMOTE_SHOCK, HOLLYS_HOLT_KURT, 60
+	showemote EMOTE_SHOCK, HOLLYS_HOLT_HOLLIS, 60
 	turnobject HOLLYS_HOLT_KURT, LEFT
 	turnobject HOLLYS_HOLT_HOLLIS, RIGHT
 	turnobject PLAYER, LEFT
@@ -79,14 +79,14 @@ HollysHoltScript1:
 	writetext HH_KurtExplains
 	waitbutton
 	closetext
-	showemote EMOTE_QUESTION, HOLLYS_HOLT_HOLLIS, 15
+	showemote EMOTE_QUESTION, HOLLYS_HOLT_HOLLIS, 60
 	opentext
 	writetext HH_HollisPinecos
 	waitbutton
 	closetext
 	applymovement HOLLYS_HOLT_HOLLIS, HH_Hollis_Leaves
 	disappear HOLLYS_HOLT_HOLLIS
-	showemote EMOTE_SHOCK, HOLLYS_HOLT_KURT, 15
+	showemote EMOTE_SHOCK, HOLLYS_HOLT_KURT, 60
 	turnobject HOLLYS_HOLT_KURT, RIGHT
 	opentext
 	writetext HH_KurtHasAPlan
@@ -200,11 +200,11 @@ HH_KurtHasAPlan:
 	
 HH_HollisSpins:
 	turn_head_down
-	pause 5
+	pause 60
 	turn_head_left
-	pause 5
+	pause 60
 	turn_head_up
-	pause 5
+	pause 60
 	turn_head_right
 	step_end
 

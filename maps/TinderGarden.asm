@@ -62,7 +62,7 @@ CelebiCeremonyIntroScript:
 	
 .Script:
 	applymovement PLAYER, TGPlayerWalksToTreeMovement
-	showemote EMOTE_SHOCK, PLAYER, 15
+	showemote EMOTE_SHOCK, PLAYER, 60
 	opentext
 	writetext KurtText_Intro
 	waitbutton
@@ -105,9 +105,9 @@ CelebiCeremonyIntroScript:
 	writetext KurtLetsBegin2
 	waitbutton
 	closetext 
-	pause 20
+	pause 60
 	appear TINDER_GARDEN_CELEBI
-	showemote EMOTE_SHOCK, TINDER_GARDEN_KURT, 20
+	showemote EMOTE_SHOCK, TINDER_GARDEN_KURT, 60
 	applymovement TINDER_GARDEN_KURT, TGKurtMovesAway
 	turnobject TINDER_GARDEN_BLACK_BELT, LEFT
 	applymovement TINDER_GARDEN_CELEBI, TGCelebiMovesToYou
@@ -129,7 +129,7 @@ CelebiCeremonyIntroScript:
 	waitbutton
 	closetext
 	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls 
-	showemote EMOTE_SHOCK, TINDER_GARDEN_OAK, 10
+	showemote EMOTE_SHOCK, TINDER_GARDEN_OAK, 60
 	opentext
 	writetext WasThatCelebiTextOak	
 	waitbutton
@@ -425,7 +425,7 @@ CyndaquilPokeBallScript:
 	waitbutton
 	closetext
 	applymovement TINDER_GARDEN_RIVAL, RivalPicksOshawottMovement;;;
-	pause 15
+	pause 60
 	disappear TINDER_GARDEN_POKE_BALL2
 	opentext
 	getmonname OSHAWOTT, STRING_BUFFER_3
@@ -469,7 +469,7 @@ OshawottPokeBallScript:
 	waitbutton
 	closetext
 	applymovement TINDER_GARDEN_RIVAL, RivalPicksRowletMovement
-	pause 15
+	pause 60
 	disappear TINDER_GARDEN_POKE_BALL3
 	opentext
 	getmonname ROWLET, STRING_BUFFER_3
@@ -512,7 +512,7 @@ RowletPokeBallScript:
 	waitbutton
 	closetext
 	applymovement TINDER_GARDEN_RIVAL, RivalPicksCyndaquilMovement
-	pause 15
+	pause 60
 	disappear TINDER_GARDEN_POKE_BALL1
 	opentext
 	getmonname CYNDAQUIL, STRING_BUFFER_3
@@ -732,11 +732,11 @@ TinderGardenRivalBattleScript1:
 	closetext
 	applymovement TINDER_GARDEN_RIVAL, TGRivalLeavesMovement
 	disappear TINDER_GARDEN_RIVAL
-	pause 15
+	pause 60
 	earthquake 30
 	playsound SFX_CUT 
 	applymovement TINDER_GARDEN_KURT, KurtMovesForward
-	showemote EMOTE_SHOCK, TINDER_GARDEN_KURT, 15
+	showemote EMOTE_SHOCK, TINDER_GARDEN_KURT, 60
 	opentext
 	writetext KurtThinksTheyreCuttingTreesText
 	promptbutton
@@ -1094,27 +1094,27 @@ CelebiScript:
 TinderGardernWatchTheLoggersScript:
 ;cf western capital scene 
 	turnobject PLAYER, UP
-	showemote EMOTE_QUESTION, TINDER_GARDEN_ENGINEER_1, 10
+	showemote EMOTE_QUESTION, TINDER_GARDEN_ENGINEER_1, 60
 	showtext GardenEngineerText1
-	pause 10
-	showemote EMOTE_BOLT, TINDER_GARDEN_ENGINEER_2, 10
+	pause 60
+	showemote EMOTE_BOLT, TINDER_GARDEN_ENGINEER_2, 60
 	showtext GardenEngineerText2		
 	closetext
 	turnobject TINDER_GARDEN_ENGINEER_1, RIGHT
-	pause 20
+	pause 60
 	playsound SFX_CUT
 	waitsfx
 	changeblock 4, 0, $01 
 	reloadmappart
-	pause 20
+	pause 60
 	disappear TINDER_GARDEN_CELEBI_2
-	pause 20
+	pause 60
 	turnobject TINDER_GARDEN_ENGINEER_1, DOWN
-	pause 20
+	pause 60
 	showtext GardenEngineerText3
 	turnobject TINDER_GARDEN_ENGINEER_2, UP
 	showtext GardenEngineerText4
-	pause 20
+	pause 60
 	closetext
 	halloffame
 	end

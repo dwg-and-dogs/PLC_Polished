@@ -9,7 +9,7 @@
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/samurott/front.dimensions"
 	abilities_for SAMUROTT, TORRENT, SHELL_ARMOR, TECHNICIAN
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 
 	ev_yield   0,   2,   0,   0,   0,   0

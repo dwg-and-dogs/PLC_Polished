@@ -258,17 +258,20 @@ KimonoCabin3Script: ; samaria
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp KIMONO_CABIN_3,  5, 27
+	warp KIMONO_CABIN_3,  5, 28
 	end
 
 Kimono3HelpedText:
-	text "Samaria: Oh,"
-	line "Good to see"
-	cont "you."
-	para "Thanks again"
-	line "for your help"
-	cont "in the attic."
-	done
+	text "It was a feisty"
+	line "Sneasel making"
+	cont "that racket!"
+	
+	para "Thanks for your"
+	line "help. It's scary,"
+	para "being in the dark"
+	line "unsure of your"
+	cont "next steps."
+	line 
 
 Kimono3NotStrongEnoughText:
 	text "Samaria: Oh,"
@@ -285,7 +288,7 @@ Kimono3NotStrongEnoughText:
 	para "the attic, but"
 	line "I hear some-"
 	para "thing scratch-"
-	para "ing around up"
+	line "ing around up"
 	cont "there."
 	para "Oh, you look"
 	line "pretty green..."
@@ -308,13 +311,11 @@ Kimono3AskHelpText:
 	para "the attic, but"
 	line "I hear some-"
 	para "thing scratch-"
-	para "ing around up"
+	line "ing around up"
 	cont "there."
-	para "You look brave"
-	line "- would you"
-	cont "help me see"
-	cont "what's up"
-	cont "there?"
+	para "You look brave."
+	line "Can you help me"
+	cont "investigate?"
 	done
 	
 Kimono3DeclinedText:

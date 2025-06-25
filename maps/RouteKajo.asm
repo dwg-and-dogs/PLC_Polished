@@ -255,9 +255,10 @@ RouteKajoPetroglyph4:
     done
 
 RouteKajoSignpost:
-    text "Danger: Stay off"
-    line "of magnet train"
-    cont "tracks!"
+    text "Route Kajo:"
+	line "An impenetrable"
+	para "fortress of rock"
+	line "and #mon"
     done
 	
 LostKajoGirlScript:

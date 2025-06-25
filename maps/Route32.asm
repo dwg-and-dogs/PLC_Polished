@@ -56,7 +56,7 @@ Route32CooltrainermPetrieScript: ; fix
 	opentext
 	writetext PetrieAfterText
 	promptbutton
-	verbosegiveitem AIR_BALLOON, 3 
+	verbosegiveitem AIR_BALLOON, 5 
 	iffalse_endtext
 	setevent EVENT_GOT_AIR_BALLOONS_FROM_ROUTE_32_LEADER
 	jumpthisopenedtext
@@ -75,8 +75,8 @@ Route32QuestionText:
 	
 	para "The only thing"
 	line "that would raise"
-	cont "them is a tasty"
-	cont "SlowpokeTail..."
+	para "them is a tasty"
+	line "SlowpokeTail..."
 	
 	para "Oh! I smell it!"
 	
@@ -103,10 +103,7 @@ PetrieBeatenText:
 PetrieAfterText:
 	text "Maybe Falkner"
 	line "was right."
-	
-	para "Time for me to"
-	line "hang it up."
-	
+		
 	para "Maybe you can"
 	line "use these better"
 	cont "than me."
@@ -119,26 +116,26 @@ WannaGetMeText:
 	
 	para "But he said my"
 	line "#mon weren't"
-	cont "real flying-"
-	cont "types!"
+	para "real flying-"
+	line "types!"
 	
 	para "I came here to"
 	line "get some comfort"
-	cont "food - a tasty"
-	cont "SlowpokeTail."
+	para "food - a tasty"
+	line "SlowpokeTail."
 	
 	para "But the vendor"
 	line "is so far away."
 	
 	para "If you go to"
 	line "get me one, it"
-	cont "would raise my"
-	cont "spirits!"
+	para "would raise my"
+	line "spirits!"
 	
 	para "I heard you can"
 	line "get one at the"
-	cont "end of this"
-	cont "route."
+	para "end of this"
+	line "route."
 	done
 
 GenericTrainerCamperLloyd:
@@ -187,8 +184,10 @@ GenericTrainerYoungsterAlbert:
 	
 	para "Also, my favorite"
 	line "#mon are"
-	cont "Snorlax and"
-	cont "Zapdos."
+	para "Snorlax, Gengar,"
+	line "Exeggutor, Skarm-"
+	cont "ory, Tyranitar,"
+	cont "and Starmie."
 	done
 
 GenericTrainerYoungsterGordon:
@@ -318,9 +317,9 @@ MeetFriedaText:
 FriedaGivesGiftText:
 	text "But sometimes,"
 	line "when the going"
-	cont "gets tough, it"
-	para "all goes downhill!"
-	line "That's Venoshock!"
+	para "gets tough, it"
+	line "all goes downhill!"
+	para "That's Venoshock!"
 	
 	para "2x damage if your"
 	line "foe is poisoned."

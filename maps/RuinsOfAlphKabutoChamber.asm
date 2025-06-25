@@ -50,13 +50,13 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	setevent EVENT_SOLVED_KABUTO_PUZZLE
 	playsound SFX_STRENGTH
 	earthquake 30
-	showemote EMOTE_SHOCK, PLAYER, 15
+	showemote EMOTE_SHOCK, PLAYER, 60
 	changeblock 4, 0, $25 ; open the door to the item room
 	reloadmappart
-	pause 15
-	showemote EMOTE_SHOCK, RUINS_SCIENTIST, 15
+	pause 60
+	showemote EMOTE_SHOCK, RUINS_SCIENTIST, 60
 	applymovement PLAYER, PlayerStepBack
-	pause 15
+	pause 60
 	applymovement RUINS_SCIENTIST, RuinsScientistMovesToYou
 
 	opentext

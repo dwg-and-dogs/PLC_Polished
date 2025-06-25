@@ -39,18 +39,14 @@ VioletCity_MapScriptHeader:
 	object_event  5, 22, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM2Text, -1 ;
 	object_event 26, 20, SPRITE_FAT_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, 				OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityFisherText, -1 ;
 	; road blocks 
-	object_event  6, 16, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ROUTE 36 
-	object_event  7, 16, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ROUTE 36
 	object_event 34, 30, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ; ROUTE 31 
 	object_event 34, 31, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ; ROUTE 31
- 	object_event 12, 31, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; 	ROUTE 32 
-	object_event 13, 31, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; 	ROUTE 32 
 	object_event 23, 10, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityTowerBlockingText, EVENT_BEAT_FALKNER; 
 	object_event 24, 10, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityTowerBlockingText, EVENT_BEAT_FALKNER; 	
 	; others 
-	cuttree_event  8, 33, EVENT_VIOLET_CITY_CUT_TREE
-	smashrock_event 16, 34	
-	smashrock_event 16, 35	
+;	cuttree_event  8, 33, EVENT_VIOLET_CITY_CUT_TREE
+;	smashrock_event 16, 34	
+;	smashrock_event 16, 35	
 	fruittree_event 14, 33, FRUITTREE_VIOLET_CITY, PNK_APRICORN, PAL_NPC_RED ; 
 	itemball_event 10,  6, PP_MAX, 1, EVENT_VIOLET_CITY_PP_UP
 	itemball_event 35, 12, RARE_CANDY, 1, EVENT_VIOLET_CITY_RARE_CANDY
@@ -93,7 +89,7 @@ VioletCityCooltrainerFScript:
 	line "there won't be a"
 	para "Bronzong. I've"
 	line "always admired"
-	cont "campaniles."
+	cont "belltowers."
 	done 
 
 
@@ -119,7 +115,7 @@ VioletCityCooltrainerM2Text:
 	para "drought forever."
 	line "He raised alarm"
 	para "long before it"
-	para "was mainstream."
+	line "was mainstream."
 	done
 
 VioletCitySignText:
@@ -153,11 +149,10 @@ VioletCityImmigrationText:
 	line "to Violet City "
 	para "due to the low"
 	line "water levels."
-	
-	para "Only trainers who"
-	line "can contribute"
-	para "with HM mastery"
-	line "are allowed."
+
+	para "Southeast Johto"
+	line "is on their own"
+	cont "management plan."
 	done
 
 VioletCityTowerBlockingText:
@@ -186,8 +181,10 @@ VioletTombstoneText:
 	para "Carries only four"
 	line "karat souls, it"
 	
-	para "NOCS FOR"
-	line "YOUR SOUL"
+	para "NOCS"
+	line "FOR "
+	cont "YOUR"
+	cont "SOUL"
 	done
 
 NoctowlTombstone:
@@ -220,7 +217,6 @@ NoVentureText:
 VenturingText:
 	text "Who wouldn't?"
 	done
-
 
 VioletKimonoGirlScript: 
 	faceplayer
@@ -538,7 +534,7 @@ VioletCityDV_Setting_CancelText:
 	line "to show it!"
 	done
 
-VioletCityGreatnessLiesWithinText: ; todo place five others 
+VioletCityGreatnessLiesWithinText:
 	text "Greatness lies"
 	line "within!"
 	done	

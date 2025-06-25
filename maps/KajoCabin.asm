@@ -19,11 +19,39 @@ KajoCabin_MapScriptHeader: ;	def_scene_scripts
     object_event 2, 3, SPRITE_SCHOOLGIRL, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, KajoCabinSchoolgirlScript, EVENT_KAJO_SCHOOLGIRL_CABIN ; should be disappeared until you talk to her dad
     object_event 5, 3, SPRITE_POKEFAN_M, 	SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, KajoCabinDadScript, -1 ; 	
 	object_event 1, 5, SPRITE_MATRON, 		SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, KaJoHealerScript, -1
+    object_event 2, 3, SPRITE_HIKER, 		SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, KajoCabinHikerText, EVENT_TALKED_TO_LOST_KAJO_GIRL ; 	
 
 
-
-	object_const_def
+KajoCabinHikerText:
+	text "Buried high on"
+	line "this mountain is"
+	para "enough crystal-"
+	line "clear water to"
+	cont "serve all Johto."
 	
+	para "Only problem is,"
+	line "the ground is too"
+	para "unstable, and the"
+	line "rocks are always"
+	cont "falling down."
+	
+	para "Silph tried to"
+	line "tap the acquifer"
+	para "when the tracks"
+	line "were laid, but"
+	para "it would've caused"
+	line "a landslide,"
+	para "destroying the"
+	line "Magnet tracks."
+	
+	para "Crazy to think: "
+	line "all the boulders"
+	para "you see have pro-"
+	line "bably been there"
+	para "for hundreds of"
+	line "years!"
+	done
+
 
 KaJoHealerScript:
 	faceplayer
