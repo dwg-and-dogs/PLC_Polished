@@ -7,8 +7,6 @@ RuinsOfAlphHoOhChamber_MapScriptHeader: ; heatran
 	def_warp_events
 	warp_event  3,  9, RUINS_OF_ALPH_OUTSIDE, 1
 	warp_event  4,  9, RUINS_OF_ALPH_OUTSIDE, 1
-	warp_event  3,  3, RUINS_OF_ALPH_INNER_CHAMBER, 2
-	warp_event  4,  3, RUINS_OF_ALPH_INNER_CHAMBER, 3
 	warp_event  4,  0, RUINS_OF_ALPH_HO_OH_ITEM_ROOM, 1
 
 	def_coord_events
@@ -31,6 +29,8 @@ RuinsOfAlphHoOhChamberHiddenDoorsCallback:
 
 
 MapRuinsofAlphHoOhChamberSignpost2Script:
+	checkevent EVENT_SOLVED_HO_OH_PUZZLE
+	iftrue .HeatranPuzzleComplete
 	refreshscreen
 	setval $3
 	special Special_UnownPuzzle
@@ -40,15 +40,24 @@ MapRuinsofAlphHoOhChamberSignpost2Script:
 
 .PuzzleComplete:
 	setevent EVENT_SOLVED_HO_OH_PUZZLE
+	playsound SFX_STRENGTH
 	earthquake 30
-	showemote EMOTE_SHOCK, PLAYER, 15
+	waitsfx
+	showemote EMOTE_SHOCK, PLAYER, 60
 	changeblock 4, 0, $25
 	reloadmappart
-	pause 30
-	playsound SFX_STRENGTH
-	waitsfx
-	pause 20
 	end
+
+.HeatranPuzzleComplete:
+	refreshscreen
+	paintingpic HEATRAN_PUZZLE
+	waitbutton
+	closepokepic
+	jumpthistext
+
+	text "It's the completed"
+	line "Heatran panel!"
+	done
 
 MapRuinsofAlphHoOhChamberSignpost3Script:
 	unowntypeface
@@ -62,5 +71,5 @@ RuinsOfAlphHoOhChamberDescriptionText:
 	line "volcanic cradle,"
 	
 	para "It will melt all"
-	line "to blank slate"
+	line "to a blank slate"
 	done

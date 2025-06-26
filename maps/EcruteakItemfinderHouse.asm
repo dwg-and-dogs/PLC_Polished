@@ -25,27 +25,26 @@ EcruteakHistoryBook:
 	iffalse_endtext
 	jumpthisopenedtext
 
-	text "Ecruteak was also"
-	line "home to three"
+	text "In the ashes of"
+	line "the tower, Ho-Oh"
 
-	para "#mon that raced"
-	line "around the town."
+	para "resurrected three"
+	line "#mon to remind"
 
-	para "They were said to"
-	line "have been born of"
+	para "humans of the"
+	line "sacred, yet"
+	cont "unknowable,"
 
-	para "water, lightning"
-	line "and fire."
+	para "mysteries they"
+	line "share with all"
+	cont "of nature."
 
-	para "But they could not"
-	line "contain their"
-	cont "excessive power."
+	para "They roam Johto,"
+	line "appearing to"
+	para "those who witness"
+	line "the divine in"
+	cont "the ordinary."
 
-	para "So they say the"
-	line "three ran like the"
-
-	para "wind off into the"
-	line "grassland."
 	done
 
 EcruteakHistoryBookText:
@@ -59,17 +58,29 @@ EcruteakTwoTowersText:
 	text "In Ecruteak, there"
 	line "were two towers."
 
-	para "Each tower was the"
-	line "roost of powerful"
-	cont "flying #mon."
-
-	para "But one of the"
-	line "towers burned to"
-	cont "the ground."
-
-	para "The two #mon"
-	line "haven't been seen"
-	cont "since…"
-
-	para "Keep reading?"
+	para "The towers were"
+	line "mirror images:"
+	
+	para "One of Brass,"
+	line "One of Tin."
+	
+	para "The towers were"
+	line "initially constr-"
+	cont "ucted as a show"
+	para "of power for the"
+	line "city against an"
+	cont "invading force."
+	
+	para "The Brass Tower"
+	line "was nearly comp-"
+	cont "lete when it was"
+	
+	para "struck by a ligh-"
+	line "tning bolt."
+	
+	para "Resources for the"
+	line "tower were redir-"
+	cont "ected to other"
+	para "cities to unite"
+	line "Johto together."
 	done

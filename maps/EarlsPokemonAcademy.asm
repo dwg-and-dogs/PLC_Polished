@@ -26,23 +26,23 @@ EarlsPokemonAcademy_MapScriptHeader:
 AcademyNPC1Text:
 	text "Young Falkner saw"
 	line "the drought when"
-	cont "others' eyes"
-	cont "were clouded."
+	para "others' eyes"
+	line "were clouded."
 
 	para "But wisdom, like"
 	line "water, can become"
-	cont "stagnant if not"
-	cont "flowing freely."
+	para "stagnant if not"
+	line "flowing freely."
 
 	para "Now his tower"
 	line "stands tall, yet"
-	cont "casts a long"
-	cont "shadow."
+	para "casts a long"
+	line "shadow."
 
 	para "May he remember:"
 	line "the highest trees"
-	cont "have the deepest"
-	cont "roots."
+	para "have the deepest"
+	line "roots."
 	done
 
 
@@ -51,8 +51,8 @@ GenericTrainerSageEdmond:
 
     text "Most don't realize"
     line "Bellsprout roots"
-    cont "are good for the"
-    cont "ground."
+    para "are good for the"
+    line "ground."
     para "The drought was"
     line "an excuse to push"
     cont "us out."
@@ -63,10 +63,10 @@ GenericTrainerSageTroy:
 
     text "The rain clouds"
     line "Falkner gathers…"
-    para "They are misappro-"
+    para "They're misappro-"
     line "priated when he"
-    cont "pushes them all"
-    cont "to us in vain."
+    para "pushes them all"
+    line "to us in vain."
     done
 
 GenericTrainerSageNeal:
@@ -129,17 +129,12 @@ ElderLiSeenText:
 	para "not by choice,"
 	line "but I hope we can"
 	cont "still shape him."
-
-	para "Can you be the"
-	line "mirror he"
-	cont "needs?"
 	done
 
 
 ElderLiBeatenText:
-	text "Your spirit speaks"
-	line "volumes. You may"
-	cont "pass. "
+	text "You may be the"
+	line "mirror he needs."
 
 	para "Show him that the"
 	line "tallest trees have"
@@ -170,7 +165,11 @@ AcademyKurtScript: ; will this work?....
 
 KurtHearAStoryQuestion:
 	text "Would you like"
-	line "to hear a story?"
+	line "to hear a story,"
+	
+	para "about when I came"
+	line "here with your"
+	cont "father?"
 	done
 
 EarlKurtBattleQuestion:
@@ -192,7 +191,7 @@ EarlKurtText2:
 	line "master one day."
 	done
 	
-AcademyKurtText: ; need to ask the player if htey want to hear a story
+AcademyKurtText: 
 	text "This was your"
 	line "dad's school."
 	

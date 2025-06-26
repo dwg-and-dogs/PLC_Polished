@@ -32,7 +32,7 @@ RuinsofAlphOmanyteChamberHiddenDoorsCallback:
 
 MapRuinsofAlphOmanyteChamberSignpost2Script:
 	checkevent EVENT_SOLVED_OMANYTE_PUZZLE
-	iftrue_jumptext PuzzleSolvedText
+	iftrue .BronzongPuzzleComplete
 	refreshscreen
 	setval $1
 	special Special_UnownPuzzle
@@ -42,16 +42,24 @@ MapRuinsofAlphOmanyteChamberSignpost2Script:
 
 .PuzzleComplete:
 	setevent EVENT_SOLVED_OMANYTE_PUZZLE
-	earthquake 30
-	showemote EMOTE_SHOCK, PLAYER, 15
-	changeblock 4, 0, $25
-	reloadmappart
-	pause 30
 	playsound SFX_STRENGTH
-	waitsfx
-	pause 20
+	earthquake 30
+	showemote EMOTE_SHOCK, PLAYER, 60
+	changeblock 4, 0, $25 ; open the door to the item room
+	reloadmappart
 	end
 
+.BronzongPuzzleComplete:
+	refreshscreen
+	paintingpic LUGIA_PUZZLE
+	waitbutton
+	closepokepic
+	jumpthistext
+
+	text "It's the completed"
+	line "Bronzong panel!"
+	done
+	
 MapRuinsofAlphOmanyteChamberSignpost3Script:
 	unowntypeface
 	showtext RuinsOfAlphOmanyteChamberDescriptionText
@@ -65,9 +73,4 @@ RuinsOfAlphOmanyteChamberDescriptionText:
 	
 	para "incipient"
 	line "raindrops."
-	done
-
-PuzzleSolvedText:
-	text "The mosaic is"
-	line "solved."
 	done

@@ -22,6 +22,7 @@ RuinsOfAlphAerodactylChamber_MapScriptHeader:
 	def_object_events
 
 
+
 RuinsOfAlphAerodactylChamberHiddenDoorsCallback:
 	checkevent EVENT_WALL_OPENED_IN_AERODACTYL_CHAMBER
 	iftrue .WallOpen
@@ -29,29 +30,6 @@ RuinsOfAlphAerodactylChamberHiddenDoorsCallback:
 .WallOpen:
 	endcallback
 
-
-MapRuinsofAlphAerodactylChamberSignpost2Script:
-	checkevent EVENT_SOLVED_AERODACTYL_PUZZLE
-	iftrue_jumptext PuzzleSolvedText
-	refreshscreen
-	setval $2
-	special Special_UnownPuzzle
-	closetext
-	iftrue .PuzzleComplete
-	end
-
-.PuzzleComplete:
-	setevent EVENT_SOLVED_AERODACTYL_PUZZLE
-	earthquake 30
-	showemote EMOTE_SHOCK, PLAYER, 15
-	changeblock 4, 0, $25
-	reloadmappart
-	pause 30
-	playsound SFX_STRENGTH
-	waitsfx
-	pause 20
-	end
-	
 MapRuinsofAlphAerodactylChamberSignpost3Script:
 	unowntypeface
 	showtext RuinsOfAlphAerodactylChamberDescriptionText ; lugia
@@ -66,3 +44,35 @@ RuinsOfAlphAerodactylChamberDescriptionText:
 	para "guided by"
 	line "instinct."
 	done
+
+
+MapRuinsofAlphAerodactylChamberSignpost2Script:
+	checkevent EVENT_SOLVED_AERODACTYL_PUZZLE
+	iftrue .LugiaPuzzleComplete
+	refreshscreen
+	setval $2
+	special Special_UnownPuzzle
+	closetext
+	iftrue .PuzzleComplete
+	end
+
+.PuzzleComplete:
+	setevent EVENT_SOLVED_AERODACTYL_PUZZLE
+	playsound SFX_STRENGTH
+	earthquake 30
+	showemote EMOTE_SHOCK, PLAYER, 60
+	changeblock 4, 0, $25 ; open the door to the item room
+	reloadmappart
+	end
+
+.LugiaPuzzleComplete:
+	refreshscreen
+	paintingpic LUGIA_PUZZLE
+	waitbutton
+	closepokepic
+	jumpthistext
+
+	text "It's the completed"
+	line "Lugia panel!"
+	done
+	

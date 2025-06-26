@@ -37,17 +37,17 @@ PokemonJournalKurtScript:
 	
 	para "excavators found"
 	line "it had entered"
-	cont "through a web"
-	cont "of tunnels that"
-	cont "led to ore-rich"
-	cont "seams."
+	para "through a web"
+	line "of tunnels that"
+	para "led to ore-rich"
+	line "seams."
 	done
 
 Route32Pokecenter1HikerText:
 	text "Seems like we"
 	line "take one step"
-	cont "forward and two"
-	cont "steps back."
+	para "forward and two"
+	line "steps back."
 	
 	para "I don't know if"
 	line "we will ever get"
@@ -57,8 +57,8 @@ Route32Pokecenter1HikerText:
 Route32Pokecenter1FEngineerText:
 	text "What do you call"
 	line "a piano falling"
-	cont "down a mine"
-	cont "shaft?"
+	para "down a mine"
+	line "shaft?"
 	
 	para "A-Flat Minor!"
 	

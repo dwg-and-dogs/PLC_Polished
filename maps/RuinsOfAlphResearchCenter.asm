@@ -20,13 +20,11 @@ RuinsOfAlphResearchCenter_MapScriptHeader:
 	object_event  5,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphResearchCenterScientist2Text, -1
 	object_event  2,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist3Script, -1
 
-	object_const_def
-
 
 RuinsOfAlphResearchCenterScientist3Script:
 	faceplayer
-	checkevent EVENT_GOT_PUMICE_HARP
 	opentext
+	checkevent EVENT_GOT_PUMICE_HARP
 	iffalse_jumpopenedtext .RuinsOfAlphResearchCenterScientist3Text
 	writetext ThatsABrandNewHarpText
 	waitbutton
@@ -36,12 +34,15 @@ RuinsOfAlphResearchCenterScientist3Script:
 .RuinsOfAlphResearchCenterScientist3Text:
 	text "There's an odd"
 	line "energy emanat-"
-	cont "ing from the"
-	cont "northwest cave."
+	para "ing from the"
+	line "northwest cave."
 	
 	para "There's a mini"
 	line "tremor causing"
 	cont "that whirlpool."
+	
+	para "My instruments go"
+	line "haywire near it."
 	done
 
 RuinsOfAlphResearchCenterScientist1Text:
@@ -57,8 +58,8 @@ RuinsOfAlphResearchCenterScientist1Text:
 RuinsOfAlphResearchCenterScientist2Text:
 	text "I'm captivated by"
 	line "the characters on"
-	cont "the walls of the"
-	cont "chambers."
+	para "the walls of the"
+	line "chambers."
 	
 	para "It's like they"
 	line "transport me to"
@@ -95,9 +96,12 @@ ThatsABrandNewHarpText:
 	line "you find it in "
 	cont "the ruins?"
 	
-	para "I wonder, why"
+	para "I wonder: why"
 	line "did they stash"
 	cont "it so deep?"
 
+	para "Perhaps it has"
+	line "some connection"
+	cont "to Mt. Mortar."
 	done
 	

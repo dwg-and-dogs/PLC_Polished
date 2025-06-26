@@ -32,7 +32,33 @@ DebugRoom_MapScriptHeader:
 	const DEBUG_DWG
 
 DebugInteraction: 
-	clearevent EVENT_STADIUM_GROUNDS_SANDRA
+	opentext
+	givepoke ABRA, 10 
+	givepoke GASTLY, 10
+	givepoke SNUBBULL, 10
+	givepoke CLEFAIRY, 10
+	waitbutton
+	closetext
+
+	refreshscreen
+	paintingpic CELEBI_PUZZLE
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	paintingpic BRONZONG_PUZZLE
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	paintingpic LUGIA_PUZZLE
+	waitbutton
+	closepokepic
+	refreshscreen
+	paintingpic HEATRAN_PUZZLE
+	waitbutton
+	closepokepic
+
 	end
 
 DebugCPU:

@@ -22,17 +22,22 @@ SproutTower3F_MapScriptHeader:
 
 
 ElderHealsScript:
-	showtext ElderHealsText1
-	special FadeOutPalettes
-	special LoadMapPalettes
-	playsound SFX_FULL_HEAL
+	faceplayer
+	opentext
+	writetext ElderHealsText1
+	waitbutton
+	playmusic MUSIC_HEAL
 	special HealParty
-	special FadeInPalettes
-	showtext ElderHealsText2
-	end
+	special SaveMusic	
+	writetext ElderHealsText2
+	waitbutton
+	closetext
+	playmusic MUSIC_NONE	
+	special RestoreMusic
+	end		
 	
 ElderHealsText1:
-	text "Edler: Falkner"
+	text "Leader Falkner"
 	line "hasn't left this"
 	cont "floor in weeks."
 	
@@ -105,20 +110,12 @@ FalknerIntroText:
 	para "Presumably, you're"
 	line "here for me."
 	
-	para "But you're too"
-	line "late. The Bronzor"
-	para "is almost"
-	line "unearthed."
-	para "Its tones will"
-	line "pull raindrops "
-	cont "from miles away."
-	
-	para "The Bronzor is"
+	para "The Bronzong is"
 	line "nearly unearthed."
 	para "Its tones will"
 	line "bring rains for"
 	cont "many weeks."
-
+	
 	para "Once I tore out"
 	line "the roots of this"
 	para "tower, it was"
@@ -153,10 +150,9 @@ ReceivedZephyrBadgeText:
 	line "TM and badge."
 	done
 
-
 FalknerAfterText:
-	text "I need to reassess"
-	line "my approach."
+	text "I need to recons-"
+	line "ider my approach."
 
 	para "I've destroyed so"	
     line "much of meaning"
