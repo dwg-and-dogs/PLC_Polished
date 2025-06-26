@@ -4,7 +4,7 @@ RadioTower5F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 12, 0, RADIO_TOWER_4F, 3
+	warp_event 12, 0, RADIO_TOWER_4F, 2
 	warp_event 17, 7, GOLDENROD_MAGNET_TRAIN_STATION, 3
 
 	def_coord_events
@@ -14,7 +14,7 @@ RadioTower5F_MapScriptHeader:
 
 
 	def_object_events
-    object_event  9,  2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtRadioTower5FScript, EVENT_BEAT_RADIO_TOWER_RIVAL ; should be disappeared
+    object_event  9,  2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtRadioTower5FScript, EVENT_RADIO_TOWER_KURT2 ; should be disappeared
     object_event 11,  7, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhitneyScriptRadioTower5F, EVENT_BEAT_WHITNEY
 
 
@@ -62,6 +62,7 @@ WhitneyScriptRadioTower5F:
 	setevent EVENT_BEAT_WHITNEY
 	clearevent EVENT_WHITNEY_GYM
 	setflag ENGINE_PLAINBADGE
+	setevent EVENT_RADIO_TOWER_KURT2
     end
 
 WhitneyIntroText:

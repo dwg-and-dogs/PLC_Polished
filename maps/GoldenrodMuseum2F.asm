@@ -41,7 +41,8 @@ GoldenrodMuseum2FTrigger:
 	end
 	
 .TradeQuestScript:
-	showemote EMOTE_SAD, GOLDENROD_MUSEUM_2F_SCIENTIST, 30
+	showemote EMOTE_SAD, GOLDENROD_MUSEUM_2F_SCIENTIST, 60
+	setscene $1
 	end
 
 LugiaPaintingScript:

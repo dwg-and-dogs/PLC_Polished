@@ -3945,7 +3945,7 @@ PokemaniacGroup:
 	db "Issac@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 12, FLAAFFY
+	db 24, FLAAFFY
 	db -1 ; end
 
 ; ================

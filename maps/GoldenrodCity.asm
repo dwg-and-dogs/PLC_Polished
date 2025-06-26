@@ -42,7 +42,7 @@ GoldenrodCity_MapScriptHeader:
 	bg_event 14, 30, BGEVENT_JUMPTEXT, GoldenrodCityUndergroundSignSouthText
 	bg_event 20, 27, BGEVENT_JUMPTEXT, PokeComCenterSignText
 	bg_event 34,  6, BGEVENT_JUMPTEXT, GoldenrodCityFlowerShopSignText
-
+	bg_event 27, 15, BGEVENT_JUMPTEXT, GoldenrodCityMuseumSignText
 
 	def_object_events
 	; tutor 
@@ -50,8 +50,8 @@ GoldenrodCity_MapScriptHeader:
 	; roadblock
 	object_event  9, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityOfficerText, EVENT_FOUGHT_RADIO_TOWER_RIVAL ; done
 	; npcs 
-	object_event 27,  8, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityGymLassText, -1
-	object_event 38, 24, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 						OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityBeautyText, -1
+	object_event 27,  9, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityGymLassText, -1
+	object_event 36, 24, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 						OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityBeautyText, -1
 	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1
 	object_event 38, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityYoungster1Text, -1
 	object_event 16, 16, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodCityCooltrainerF1Script, -1
@@ -269,9 +269,6 @@ GoldenrodGymSignText:
 	text "Goldenrod City"
 	line "#mon Gym"
 	cont "Leader: Whitney"
-
-	para "The Incredibly"
-	line "Pretty Girl!"
 	
 	para "By appointment"
 	line "only."
@@ -322,7 +319,7 @@ PokeComCenterSignText:
 	done
 
 GoldenrodCityFlowerShopSignText:
-	text "     Gloria's"
+	text " Gloria's"
 	line "Smile Plumes"
 	done
 
@@ -387,3 +384,9 @@ GoldenrodCityMoveTutorYouDontHaveEnoughCoinsText:
 	text "…You don't have"
 	line "enough coins here…"
 	done
+
+GoldenrodCityMuseumSignText:
+	text "Goldenrod City"
+	line "Museum"
+	done
+	

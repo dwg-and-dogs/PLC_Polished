@@ -474,7 +474,7 @@ PearlForShoreFoamQuestionText:
 	cont "you want some."
 	
 	para "All I ask is a"
-	line "BIG PEARL."
+	line "Big Pearl."
 	done
 
 PearlForShoreFoamEndText:

@@ -322,7 +322,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
 	opentext
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -332,7 +332,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -342,7 +342,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -352,7 +352,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -362,7 +362,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -372,7 +372,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -382,7 +382,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -392,7 +392,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -402,7 +402,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -412,7 +412,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -422,7 +422,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -432,7 +432,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -442,7 +442,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -452,7 +452,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -462,7 +462,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end
@@ -472,7 +472,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	loadmem wPartyMon1DVs+0, $fe
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext Route35GaveDVsText
 	waitbutton
 	closetext
 	end

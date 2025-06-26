@@ -40,6 +40,7 @@ DayCareManScript_Inside:
 	checkevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
 	iftrue .AlreadyHaveEviolite
 	writetext DayCareManText_GiveEviolite
+	waitbutton
     giveitem EVIOLITE
     iffalse .BagFull
     setevent EVENT_GOT_EVIOLITE_FROM_DAYCARE

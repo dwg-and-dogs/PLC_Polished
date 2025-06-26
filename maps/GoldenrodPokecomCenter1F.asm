@@ -38,7 +38,7 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	object_event  9, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapNameNPC2Script, -1
 	object_event  3, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MapNameNPC3Script, -1
 	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WonderTradeReceptionistScript, -1
-	object_event  9,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV3Script, -1
+	object_event  12, 13, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV3Script, -1
 
 	object_const_def
 	const POKECOM_KURT
@@ -263,7 +263,7 @@ KurtHasSomeFansText:
 	para "So, my contacts"
 	line "would like our"
 	para "help stopping"
-	cont "her broadcast."
+	line "her broadcast."
 
 	para "Meet me in the"
 	line "Underground."

@@ -16,7 +16,7 @@ RadioTower1F_MapScriptHeader:
 
 
     def_object_events
-    object_event 15,  0, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_RADIO_TOWER
+    object_event 15,  0, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_RADIO_TOWER
 
     object_const_def
     const RADIOTOWER_RIVAL
