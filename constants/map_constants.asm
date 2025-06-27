@@ -90,8 +90,6 @@ ENDM
 	map_const OLIVINE_LIGHTHOUSE_1F,                      10,  9 ; 32
 	map_const OLIVINE_LIGHTHOUSE_2F,                      10,  9 ; 33
 	map_const OLIVINE_LIGHTHOUSE_3F,                      10,  9 ; 34
-;	map_const OLIVINE_LIGHTHOUSE_4F,                      10,  9 ; 35
-;	map_const OLIVINE_LIGHTHOUSE_5F,                      10,  9 ; 36
 	map_const OLIVINE_LIGHTHOUSE_6F,                      10,  9 ; 37
 	map_const OLIVINE_LIGHTHOUSE_ROOF,                    10, 10 ; 38
 	map_const MAHOGANY_MART_1F,                            4,  4 ; 39
@@ -175,7 +173,8 @@ ENDM
 	map_const STADIUM_GROUNDS,                               27, 21 ; JOHTO traditional
 	map_const STADIUM_UNDERGROUND,                            6, 9 ; cave
 	map_const STADIUM_BOX,                                    6, 6 ; traditional HOUSE
-
+	map_const STADIUM_CAPITAL_GATE, 						 4, 4 ; sprout tower
+	map_const STY_CAPITAL_GATE, 						     4, 4 ; sprout tower
 
 	newgroup        ; 7                                         
 	map_const EMPERORS_GARDEN,                               20, 20 ; johto traditional

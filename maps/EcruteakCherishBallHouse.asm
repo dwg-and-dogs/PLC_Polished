@@ -27,6 +27,7 @@ EcruteakCherishBallTrigger:
 	
 .TradeQuest:
 	showemote EMOTE_HEART, ECRUTEAK_CHERISH_HOUSE_BOY, 30
+	setscene $1
 	end
 
 
@@ -35,13 +36,15 @@ GoldLeafMotherText:
 	line "so bashful, his"
 	para "girlfriend could"
 	line "be summering in"
-	para "Kalon instead of"
+	para "Kalos instead of"
 	line "Olivine!"
 	done
 
 EcruteakGoldLeafScript:
 	faceplayer
 	opentext	
+	checkitem GOLD_LEAF
+	iftrue_jumpopenedtext GiveGoldLeafText
 	writetext NeedALiteBlueMailText
 	waitbutton
 	checkitem LITEBLUEMAIL
@@ -82,10 +85,9 @@ Text_LiteBlueMailQuestion:
 GiveGoldLeafText:
 	text "Careful with that"
 	line "as it would be an"
-	cont "heirloom in your"
-	cont "family, I wager."
-	
-	
+	para "heirloom in your"
+	line "family, I wager."
+		
 	para "Now to write her"
 	line "a letter."
 	done

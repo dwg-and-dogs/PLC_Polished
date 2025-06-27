@@ -70,6 +70,8 @@ MapScenes::
 	scene_var MAHOGANY_TOWN,                          wMahoganyTownSceneID 
 	scene_var TIN_TOWER_OLD_1F, 					  wTinTowerOld1FSceneID 
 	scene_var TIN_TOWER_OLD_3F, 					  wTinTowerOld3FSceneID 
-	scene_var RUSALKA_RUINS_B1F, 					  wRusalkaRuinsB1FSceneID ; todo 
+	scene_var RUSALKA_RUINS_B1F, 					  wRusalkaRuinsB1FSceneID
 	scene_var STADIUM_BOX, 							  wStadiumBoxSceneID
+	scene_var STADIUM_CAPITAL_GATE, 				  wStadiumCapitalGateSceneID ; todo 
+	scene_var STY_CAPITAL_GATE, 					  wStyCapitalGateSceneID
 	db -1

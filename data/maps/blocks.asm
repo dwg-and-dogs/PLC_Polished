@@ -728,6 +728,15 @@ HoltCoastGate_BlockData:
 SECTION "GauldenrodSereneSpringsGate_BlockData", ROMX
 GauldenrodSereneSpringsGate_BlockData:
 	INCBIN "maps/GauldenrodSereneSpringsGate.ablk.lz"
+	
+SECTION "StadiumCapitalGate_BlockData", ROMX
+StadiumCapitalGate_BlockData:
+	INCBIN "maps/StadiumCapitalGate.ablk.lz"
+
+	
+SECTION "StyCapitalGate_BlockData", ROMX
+StyCapitalGate_BlockData:
+	INCBIN "maps/StyCapitalGate.ablk.lz"
 
 SECTION "CalmCoastCottage_BlockData", ROMX
 CalmCoastCottage_BlockData:

@@ -32,6 +32,8 @@ INCLUDE "maps/GauldenrodTower4F.asm"
 INCLUDE "maps/StadiumGrounds.asm"
 INCLUDE "maps/StadiumUnderground.asm"
 INCLUDE "maps/StadiumBox.asm"
+INCLUDE "maps/StadiumCapitalGate.asm"
+INCLUDE "maps/StyCapitalGate.asm"
 
 SECTION "Pokemon Center Scripts 4", ROMX
 

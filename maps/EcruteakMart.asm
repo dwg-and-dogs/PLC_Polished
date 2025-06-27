@@ -19,10 +19,10 @@ EcruteakMart_MapScriptHeader:
 EcruteakMartSuperNerdText:
 	text "The theatre used"
 	line "to put on shows"
-	cont "about how bless-"
-	cont "ing nature would"
-	cont "bring you bless-"
-	cont "ing in return."
+	para "about how bless-"
+	line "ing nature would"
+	para "bring you bless-"
+	line "ing in return."
 	
 	para "I wonder how it"
 	line "will be with"
@@ -31,8 +31,7 @@ EcruteakMartSuperNerdText:
 
 
 EcruteakMartGrannyText:
-	text "That Silph man,"
-	line "Ostene, must be"
-	cont "wise to be so"
-	cont "rich."
+	text "Those Silph execs"
+	line "must be so wise"
+	cont "to be so rich."
 	done

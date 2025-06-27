@@ -371,6 +371,8 @@ ENDM
 	map_attributes GauldenrodUndergroundNorth, GAULDENROD_UNDERGROUND_NORTH, $0, 0
 	map_attributes GauldenrodUnderground, GAULDENROD_UNDERGROUND, $0, 0
 	map_attributes GauldenrodSereneSpringsGate, GAULDENROD_SERENE_SPRINGS_GATE, $0, 0
+	map_attributes StadiumCapitalGate, STADIUM_CAPITAL_GATE, $0, 0
+	map_attributes StyCapitalGate, STY_CAPITAL_GATE, $0, 0
 
 	map_attributes CalmCoastCottage, CALM_COAST_COTTAGE, $0, 0
 	map_attributes GauldenrodTower1F, GAULDENROD_TOWER_1F, $0, 0

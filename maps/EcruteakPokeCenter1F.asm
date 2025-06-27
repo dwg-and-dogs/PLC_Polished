@@ -56,21 +56,19 @@ EcruteakPokeCenter1FPokefanMScript:
 
 
 EcruteakPokeCenter1FGymGuyText:
-	text "My friend in Mah-"
-	line "ogany town says"
-	cont "the Lake of Rage"
-	cont "has some truly"
-	cont "powerful #mon"
-	cont "about, now that"
-	cont "Silph abandoned"
-	cont "their project."
+	text "I hear there's a"
+	line "truly powerful"
+	cont "#mon at the"
+	para "Lake of Rage,"
+	line "ever since Silph"
+	cont "abandoned their"
+	cont "project."
 	done
 	
 EcruteakPokeCenter1fPokefan2Text:
-	text "Give it a rest,"
-	line "gramps!"
+	text "Give it a rest!"
 	
-	para "People want this,"
+	para "People want this:"
 	line "entertainment and"
 	cont "excitement."
 	

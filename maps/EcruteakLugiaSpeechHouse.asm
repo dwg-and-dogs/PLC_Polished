@@ -15,7 +15,7 @@ EcruteakLugiaSpeechHouse_MapScriptHeader:
 	def_object_events
 	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakLugiaSpeechHouseGrampsText, -1
 	object_event  2,  4, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakLugiaSpeechHouseYoungsterText, -1
-	object_event  5,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, EcruteakDreamEaterScript, -1
+	object_event  5,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakDreamEaterScript, -1
 
 EcruteakLugiaSpeechHouseGrampsText:
 	text "Back in my day,"
@@ -31,10 +31,10 @@ EcruteakLugiaSpeechHouseGrampsText:
 EcruteakLugiaSpeechHouseYoungsterText:
 	text "We can't live"
 	line "in the past for-"
-	cont "ever! We're shap-"
-	cont "ing our future"
-	cont "while honoring"
-	cont "the past!"	
+	para "ever! We're shap-"
+	line "ing our future"
+	para "while honoring"
+	line "the past!"	
 	done
 
 
@@ -91,12 +91,6 @@ Text_DreamEaterIntro:
 Text_EcruteakTutorDreamEater:
 	text "Dreams have"
 	line "flavors, you know."
-
-	para "Some are sweet"
-	line "like cotton candy,"
-
-	para "Others sharp like"
-	line "winter stars."
 
 	para "Even bitter dreams"
 	line "can restore what"

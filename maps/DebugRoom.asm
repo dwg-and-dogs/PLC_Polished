@@ -33,10 +33,10 @@ DebugRoom_MapScriptHeader:
 
 DebugInteraction: 
 	opentext
-	givepoke ABRA, 10 
-	givepoke GASTLY, 10
-	givepoke SNUBBULL, 10
-	givepoke CLEFAIRY, 10
+	givepoke ABRA, 100
+	givepoke GASTLY, 100
+	givepoke SNUBBULL, 100
+	givepoke CLEFAIRY, 100
 	waitbutton
 	closetext
 

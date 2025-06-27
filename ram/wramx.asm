@@ -1097,8 +1097,8 @@ wVioletNicknameSpeechHouseSceneID:: db
 wWesternCapitalSceneID:: db 
 wWhirlIslandLugiaChamberSceneID:: db 
 wStadiumBoxSceneID:: db
-wUnused13SceneID:: db
-wUnused15SceneID:: db  
+wStadiumCapitalGateSceneID:: db
+wStyCapitalGateSceneID:: db  
 wUnused16SceneID:: db
 wUnused17SceneID:: db
 wUnused18SceneID:: db

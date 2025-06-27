@@ -66,7 +66,7 @@ ValerieCurseText:
 	
 ValeriesHouseRedFairyBookText:
 	text "Just beneath the"
-	line "Tin Tower lies a"
+	line "Tin Tower lies an"
 	para "engineering trick"
 	line "that's perplexed"
 	cont "civil engineers."
@@ -77,7 +77,7 @@ ValeriesHouseRedFairyBookText:
 	line "of metallic"
 	para "filaments inter-"
 	line "twined with its"
-	cont "foundation -"
+	cont "foundation."
 
 	para "A sophisticated"
 	line "lightning protect-"

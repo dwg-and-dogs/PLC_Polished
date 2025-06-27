@@ -88,20 +88,20 @@ MeetSunnyText:
 SunnyGivesGiftText:
 	text "I learned this"
 	line "technique from"
-	cont "when I worked on"
-	cont "the Magnet Train."
+	para "when I worked on"
+	line "the Magnet Train."
 	
 	para "Maybe it would"
 	line "be useful for"
-	cont "restarting the"
-	cont "train, now?"
+	para "restarting the"
+	line "train, now?"
 	done
 	
 Text_Route37TutorQuestion:
 	text "Would you like"
 	line "me to teach a"
-	cont "#mon Zap"
-	cont "Cannon?"
+	para "#mon Zap"
+	line "Cannon?"
 	done
 
 Text_Route37TutorRefused:
@@ -111,8 +111,8 @@ Text_Route37TutorRefused:
 Text_Route37TutorTaught:
 	text "Sunny: That"
 	line "technique may"
-	cont "not hit often,"
-	cont "but when it does,"
+	para "not hit often,"
+	line "but when it does,"
 	cont "it's wicked!"
 	done
 
@@ -198,6 +198,6 @@ Route37SignText:
 	text "Route 37"
 	
 	para "Visit Ecruteak"
-	line "city, experience"
+	line "city! Experience"
 	cont "Johto Culture!"
 	done

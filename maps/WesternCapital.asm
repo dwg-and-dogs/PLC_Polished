@@ -15,6 +15,10 @@ WesternCapital_MapScriptHeader: ; todo
 	warp_event 0, 18, CAPITAL_CULL_GATE, 3
 	warp_event 0, 19, CAPITAL_CULL_GATE, 4
 	warp_event 35, 5, TIN_TOWER_OLD_1F, 1
+	warp_event 3, 31, STADIUM_CAPITAL_GATE, 1
+	warp_event 4, 31, STADIUM_CAPITAL_GATE, 2
+	warp_event 35, 26, STY_CAPITAL_GATE, 1
+	warp_event 35, 27, STY_CAPITAL_GATE, 2
 
 	def_coord_events
 

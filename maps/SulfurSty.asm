@@ -8,7 +8,8 @@ SulfurSty_MapScriptHeader: ;	def_scene_scripts
 	warp_event 9, 17, SULFUR_STY_HOUSE_1, 1
 	warp_event 51,17, SULFUR_STY_HOUSE_2, 1
 	warp_event 34, 7, CLASTS_CRADLE_3F, 1
-
+	warp_event 4, 22, STY_CAPITAL_GATE, 3
+	warp_event 4, 23, STY_CAPITAL_GATE, 4
 
 	def_coord_events
 
@@ -40,7 +41,10 @@ SulfurSty_MapScriptHeader: ;	def_scene_scripts
 	object_event  35, 19, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader21, EVENT_BEAT_ADRINNA_MINE ; ground
 	object_event  37, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader13, EVENT_BEAT_ADRINNA_MINE ; fighting 
 	object_event  22, 13, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader14, EVENT_BEAT_ADRINNA_MINE ; flying 
-
+	; roadblocks 
+	object_event  8, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, BrigaderRoadblock1Text, EVENT_BEAT_AMOS 
+	object_event  8, 23, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, BrigaderRoadblock2Text, EVENT_BEAT_AMOS ; fighting 	
+	
 	tmhmball_event 10, 7, TM_STONE_EDGE, EVENT_GOT_TM_STONE_EDGE 
 	tmhmball_event 21, 8, TM_FOCUS_BLAST, EVENT_GOT_TM_FOCUS_BLAST
 
@@ -137,4 +141,28 @@ Brigader3Text:
 
 StyMagnetonText:
 	text "Beep, spark"
+	done
+
+BrigaderRoadblock1Text:
+	text "I'm telling you,"
+	line "I've seen it!"
+	
+	para "At the bottom of"
+	line "the mine shaft!"
+	
+	para "Just beneath the"
+	line "surface is a sea"
+	cont "of molten rock!"
+	done
+
+BrigaderRoadblock2Text:
+	text "That's impossible!"
+	line "If land sits on a"
+	cont "flowing liquid,"
+	
+	para "then our islands"
+	line "and continents"
+	para "would move like"
+	line "lilypads on a"
+	cont "lake surface!"
 	done

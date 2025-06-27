@@ -43,6 +43,8 @@ HerbalistWifeText:
 EcruteakBlueMailScript: ; TRADE QUEST 
 	faceplayer
 	opentext	
+	checkitem LITEBLUEMAIL
+	iftrue_jumpopenedtext TextReadingTheTeaLeaves
 	writetext NeedABigMushroomText
 	waitbutton
 	checkitem BIG_MUSHROOM
