@@ -53,6 +53,7 @@ InitialEvents:
 	dw EVENT_LANDING_KURT_2
 	dw EVENT_KILN_BOSS
 	dw EVENT_RADIO_TOWER_KURT2
+	dw EVENT_KAJO_SCHOOLGIRL_CABIN
 	dw -1
 
 InitialEngineFlags:

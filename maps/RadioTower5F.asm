@@ -4,8 +4,8 @@ RadioTower5F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 12, 0, RADIO_TOWER_4F, 2
-	warp_event 17, 7, GOLDENROD_MAGNET_TRAIN_STATION, 3
+	warp_event 12, 0, RADIO_TOWER_4F, 1
+	warp_event 17, 6, GOLDENROD_MAGNET_TRAIN_STATION, 3
 
 	def_coord_events
 
@@ -44,6 +44,7 @@ WhitneyScriptRadioTower5F:
     reloadmapafterbattle
 	opentext
 	writetext WhitneyAttractText
+	waitbutton
 	verbosegivetmhm TM_ATTRACT
 	waitbutton
 	closetext
@@ -85,7 +86,7 @@ WhitneyIntroText:
     line "seriously."
 	
     para "Now, I'm an"
-    cont "inspiration!"
+    line "inspiration!"
     done
 
 
@@ -94,7 +95,7 @@ KurtConfrontationText:
     text " Kurt: "
 	next
 	text_start
-    line "You used to make"
+    text "You used to make"
 	line "people feel"
 	cont "heard."
 	
@@ -146,7 +147,7 @@ WhitneyAttractText:
 	next
 	text_start
 	text "<PLAYER>, please,"
-	cont "take this badge"
+	line "take this badge"
 	cont "and TM."
 	
 	para "You reminded me"

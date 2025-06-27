@@ -26,7 +26,7 @@ RouteKajoRuinsOfAlphGateOfficerText:
 	line "good hike?"
 	
 	para "The terrain is so"
-	line "rought, the acqui-"
+	line "rough, the acqui-"
 	cont "fer is basically"
 	para "unobtainable for"
 	line "tapping into."

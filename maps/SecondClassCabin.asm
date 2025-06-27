@@ -18,25 +18,13 @@ SecondClassCabin_MapScriptHeader:
 
 	def_object_events
 	object_event  4,  4, SPRITE_JUGGLER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, trade, NPC_TRADE_KYLE, -1
-	object_event  1,  4, SPRITE_JUGGLER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecondClassCabinJuggler2, -1
-	object_event  8,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecondClassCabinYoungster, -1
-	object_event  8,  2, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecondClassCabinMatron, -1
+	object_event  1,  4, SPRITE_JUGGLER, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecondClassCabinJuggler2, -1
+	object_event  8,  3, SPRITE_YOUNGSTER, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecondClassCabinYoungster, -1
+	object_event  8,  2, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, SecondClassCabinMatronText, -1
 
 
-
-SecondClassCabinMatron:
-	opentext
-	writetext MatronSoothesSecondClass
-	promptbutton
-	closetext
-	faceplayer
-	opentext
-	writetext MatronSoothesSecondClass2
-	promptbutton
-	closetext
-	end
 	
-MatronSoothesSecondClass:
+SecondClassCabinMatronText:
 	text "There, there..."
 	
 	para "It'll be OK."
@@ -45,17 +33,10 @@ MatronSoothesSecondClass:
 	line "to be afraid"
 	cont "of."
 	
+	para "The clown can't"
+	line "hurt you."	
 	done
 	
-MatronSoothesSecondClass2:
-	text "It was bad en-"
-	line "ough when the"
-	para "train stopped,"
-	line "but then that"
-	para "clown scared my"
-	line "son by doing a"
-	cont "routine."
-	done
 
 SecondClassCabinYoungster:
 	faceplayer

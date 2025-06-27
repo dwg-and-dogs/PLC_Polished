@@ -137,6 +137,7 @@ MapNameNPC3Text:
 	line "more."
 	done
 
+	
 
 WonderTradeReceptionistScript:
 	opentext
@@ -153,19 +154,10 @@ WonderTradeReceptionistScript:
 	special WonderTrade
 	iffalse .done
 	playmusic MUSIC_POKECOM_CENTER
-	writetext WonderTradeCompleteText
+	writetext DebugWonderTradeCompleteText
 	playsound SFX_DEX_FANFARE_80_109
 	waitsfx
-	ifnotequal 2, .done
-	setevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
-	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
-	playmusic MUSIC_SPIKY_EARED_PICHU_HGSS
-	writetext WonderTradeForGSBallPichuText
-	promptbutton
-	verbosegivekeyitem GS_BALL
-	writetext WonderTradeForGSBallPichuText2
-	waitbutton
-.done
+.done:
 	jumpopenedtext WonderTradeGoodbyeText
 
 WonderTradeIntroText:

@@ -15,15 +15,20 @@ Route32RuinsOfAlphGate_MapScriptHeader:
 
 	def_object_events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32RuinsOfAlphGateOfficerText, -1
-	object_event  8,  5, SPRITE_HIKER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32RuinsOfAlphGatePokefanMText, -1
+	object_event  8,  5, SPRITE_HIKER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32RuinsOfAlphGatePokefanMText, -1
 	object_event  1,  2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route32RuinsOfAlphGateKurtText, EVENT_BEAT_FALKNER
 
 Route32RuinsOfAlphGateOfficerText:
-	text "Ruins of Alph"
-
-	para "Connect with"
-	line "your history!"
-
+	text "The Ruins are in"
+	line "a delicate state."
+	
+	para "The excavation"
+	line "collapsed the"
+	cont "inner chamber."
+	
+	para "You can still see"
+	line "some mosaics,"
+	cont "though!"
 	done
 
 Route32RuinsOfAlphGatePokefanMText:
@@ -43,12 +48,13 @@ Route32RuinsOfAlphGateKurtText:
 	para "has come to a"
 	line "screeching halt"
 	para "due to that"
-	line "excavation."
+	line "excavation by"
+	cont "the ruins."
 	
 	para "We have to get"
 	line "them to pause"
 	cont "to let us past."
 	
 	para "Maybe Falkner can"
-	line "let us through."
+	line "let us through?"
 	done

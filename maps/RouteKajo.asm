@@ -9,7 +9,7 @@ RouteKajo_MapScriptHeader: ; todo: event set in historic route kajo allows you t
     warp_event 6, 32, GOLDENROD_MAGNET_TRAIN_STATION, 4
     warp_event 6, 33, GOLDENROD_MAGNET_TRAIN_STATION, 5
     warp_event 41, 5, KAJO_ACQUIFER, 1
-    warp_event 48, 13, KAJO_ACQUIFER, 1 
+    warp_event 48, 13, KAJO_ACQUIFER, 2 
 	warp_event 55, 30, MAGNET_TRAIN_TUNNEL, 1
 	warp_event 55, 31, MAGNET_TRAIN_TUNNEL, 2
     warp_event 23, 19, KAJO_CABIN, 1

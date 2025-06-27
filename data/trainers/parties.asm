@@ -3562,7 +3562,7 @@ PokefanMGroup:
 
 ; ================
 
-	; POKEFANM ; route 38 
+	; POKEFANM ; route kajo 
 	db "Robert@"
 	db TRAINERTYPE_ITEM
 	; party
@@ -3576,12 +3576,8 @@ PokefanMGroup:
 	db "Joshua@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 54, PIKACHU, SITRUS_BERRY
-	db 54, PIKACHU, SITRUS_BERRY
-	db 54, PIKACHU, SITRUS_BERRY
-	db 54, PIKACHU, SITRUS_BERRY
-	db 54, PIKACHU, SITRUS_BERRY
-	db 54, PIKACHU, SITRUS_BERRY
+	db 38, QUAGSIRE, SITRUS_BERRY
+	db 38, RAICHU, SITRUS_BERRY
 	db -1 ; end
 
 ; ================

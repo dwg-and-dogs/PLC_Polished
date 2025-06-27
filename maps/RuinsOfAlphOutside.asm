@@ -30,8 +30,8 @@ RuinsOfAlphOutside_MapScriptHeader:
 
 	def_object_events
 	object_event 13, 17, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphNorthScientistScript, -1
-	object_event 12, 21, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist1Script, -1 ; OK
-	object_event 13, 21, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist2Script, -1 ; OK
+	object_event 12, 21, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist1Script, EVENT_BEAT_FALKNER ; OK
+	object_event 13, 21, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist2Script, EVENT_BEAT_FALKNER ; OK
 	object_event 13, 25, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist3Script, -1 ; OK
 	object_event 11, 39, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolgirlEliza, -1;
 	object_event 12, 38, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolgirlMolly, -1;
@@ -170,7 +170,7 @@ RuinsOfAlphScientist1Text:
 	done
 
 RuinsOfAlphOutsideScientist3Script:
-	jumptext RuinsOfAlphScientist3Text
+	jumptextfaceplayer RuinsOfAlphScientist3Text
 
 RuinsOfAlphScientist3Text:
 	text "We discovered"
@@ -185,7 +185,6 @@ RuinsOfAlphScientist3Text:
 	para "a Rain Dance to"
 	line "alleviate the"
 	cont "drought."
-	
 	done
 
 

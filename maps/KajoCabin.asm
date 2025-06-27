@@ -132,9 +132,6 @@ KajoCabinDadIntroText:
     line "to the acquifer to"
     para "gather water, but"
     line "she's lost."
-    para "Won't anyone go"
-    line "out to look for"
-    cont "her?"
     done
 
 KajoCabinDadAskHelpText:

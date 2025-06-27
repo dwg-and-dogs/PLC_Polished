@@ -24,18 +24,20 @@ Route38_MapScriptHeader:
 	object_event 30,  9, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerOfficerMDirk, -1
 
 GenericTrainerPokefanMRobert:
-	generictrainer POKEFANM, ROBERT, EVENT_BEAT_POKEFANM_ROBERT, PokefanMRobertSeenText, PokefanMRobertBeatenText
+	generictrainer POKEFANM, JOSHUA, EVENT_BEAT_POKEFANM_JOSHUA, PokefanMJoshuaSeenText, PokefanMJoshuaBeatenText
 
-PokefanMRobertSeenText:
-	text "Hey, release your"
-	line "Miltanks!"
-	done
-
-PokefanMRobertBeatenText:
+PokefanMJoshuaBeatenText:
 	text "Sorry, thought"
 	line "you were with the"
 	cont "Moomoo Farms."
 	done
+
+PokefanMJoshuaSeenText:
+	text "Hey, release your"
+	line "Miltanks!"
+	done
+
+
 
 GenericTrainerPokefanMCarter:
 	generictrainer POKEFANM, CARTER, EVENT_BEAT_POKEFANM_CARTER, PokefanMCarterSeenText, PokefanMCarterBeatenText
