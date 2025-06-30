@@ -79,12 +79,12 @@ EcruteakCityGramps2Text:
 	line "breathe tradition."
 	
 	para "Even Morty acts"
-	line "insincere about"
+	line "insecure about"
 	cont "the history."	
 	done
 
 EcruteakCityHexManiacText:
-	text "Spirits of #mon"
+	text "#mon spirits"
 	line "haunt this place…"
 	done
 
@@ -116,26 +116,9 @@ EcruteakCityYoungsterText:
 	done
 
 EcruteakCityGramps3Text:
-	text "In the distant"
-	line "past…"
-
-	para "This tower burned"
-	line "in a fire. Three"
-
-	para "nameless #mon"
-	line "perished in it."
-
-	para "A rainbow-colored"
-	line "#mon descended"
-
-	para "from the sky and"
-	line "resurrected them…"
-
-	para "It's a legend that"
-	line "has been passed"
-
-	para "down by Ecruteak"
-	line "Gym Leaders."
+	text "The burned tower"
+	line "is falling beyond"
+	cont "disrepair."
 	done
 
 EcruteakCitySignText:
@@ -149,10 +132,6 @@ EcruteakCitySignText:
 EcruteakGymSignText:
 	text "Ecruteak City"
 	line "#mon Gym"
-	cont "Leader: None"
-
-	para "Danger: fall"
-	line "hazards inside"
 	done
 
 EcruteakDanceTheaterSignText:
@@ -179,10 +158,6 @@ EcruteakCityCuteGirlText:
 
 	para "The sages even do"
 	line "photo ops."
-	
-	para "Really brings the"
-	line "quaint culture "
-	cont "into our century!"
 	done
 
 EcruteakBarrierStationSignText:

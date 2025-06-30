@@ -204,8 +204,8 @@ AcademyKurtText:
 	cont "his apricorn."
 
 	para "The other kids had"
-	line "#seals for their"
-	cont "#balls,"
+	line "#seals for "
+	cont "their #balls,"
 
 	para "So we decorated"
 	line "the Apricorn with"

@@ -75,9 +75,9 @@ EG_Brigader_Text1:
 	done
 	
 EG_KurtText:
-	text "Kurt: Sh! We"
-	line "gotta find a "
-	cont "way out of here."
+	text "The Chronicler"
+	line "sent us back for"
+	cont "a reason."
 	
 	para "Then, we can get"
 	line "to the port, to"
@@ -85,28 +85,28 @@ EG_KurtText:
 	line "from arriving!"
 	done
 
-EmperorsGardenMejimiScene:
+EmperorsGardenMejimiScene: ; todo, add music 
 	;MOVING CAMERA
 	applyonemovement PLAYER, hide_object
 	waitsfx
 	applymovement PLAYER, EG_PanDownMovement ; to add 
-	pause 10 
+	pause 60 
 	; START SCENE
-	applymovement EMPERORS_GARDEN_MEJIMI, MejimiWalksInMovement
+;	applymovement EMPERORS_GARDEN_MEJIMI, MejimiWalksInMovement
 	refreshscreen
 	trainerpic MEJIMI
 	waitbutton
 	closepokepic
-	pause 30
-	showemote EMOTE_QUESTION, EMPERORS_GARDEN_MEJIMI, 10
+	pause 60
+	showemote EMOTE_QUESTION, EMPERORS_GARDEN_MEJIMI, 60
 	showtext EG_Text1
 	waitbutton
 	applyonemovement EMPERORS_GARDEN_MEJIMI, step_right ; in front of bobesh
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
 	showtext EG_Text11
-	showemote EMOTE_SAD, EMPERORS_GARDEN_BOBESH, 10
+	showemote EMOTE_SAD, EMPERORS_GARDEN_BOBESH, 60
 	showtext EG_Text2
-	showemote EMOTE_SHOCK, EMPERORS_GARDEN_MEJIMI, 10
+	showemote EMOTE_SHOCK, EMPERORS_GARDEN_MEJIMI, 60
 	showtext EG_Text3
 	applyonemovement EMPERORS_GARDEN_MEJIMI, step_left ; in front of kensey 
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
@@ -114,17 +114,16 @@ EmperorsGardenMejimiScene:
 	waitbutton
 	showtext EG_Text4_2
 	waitbutton
+	applyonemovement EMPERORS_GARDEN_MEJIMI, step_left ; in front of adrinna
+	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
 	showtext EG_Text5
 	waitbutton
 	showtext EG_Text5_2	
-	applyonemovement EMPERORS_GARDEN_MEJIMI, step_left ; in front of adrinna
-	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
 	refreshscreen
 	trainerpic MEJIMI
 	showtext EG_Text6
-	pause 30
+	pause 60
 	waitbutton
-	closepokepic
 	applymovement EMPERORS_GARDEN_MEJIMI, MejimiLeavesMovement
 	disappear EMPERORS_GARDEN_MEJIMI
 	applymovement EMPERORS_GARDEN_BOBESH, GeneralsLeaveMovement
@@ -135,10 +134,10 @@ EmperorsGardenMejimiScene:
 	disappear EMPERORS_GARDEN_ADRINNA
 	setevent EVENT_EMPERORS_GARDEN_MEJIMI
 	setscene $1
-	pause 10
+	pause 60
 	special Special_FadeOutMusic
 	special FadeOutPalettes
-	pause 15
+	pause 60
 	warpfacing LEFT, EMPERORS_GARDEN, 28, 28
 	end
 
@@ -206,7 +205,7 @@ EG_Text4_2:
     text " Kensey: "
 	next
 	text_start
-	para "My liege, we have"
+	text "My liege, we have"
 	line "traded for Tin"
 	cont "and Brass."
 	para "The Hisuians"

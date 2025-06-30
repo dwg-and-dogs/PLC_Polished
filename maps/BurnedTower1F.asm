@@ -37,6 +37,7 @@ BurnedTower1FMortyScript:
 	faceplayer
 	opentext
 	writetext Morty1FIntroText
+	waitbutton
 	checkpoke RAIKOU
 	iftrue .MortyReturns
 	checkpoke SUICUNE
@@ -114,8 +115,8 @@ BurnedTower1FSageText:
 
 	para "To study them"
 	line "would remove the"
-	cont "mystery, perhaps"
-	cont "make you think you"
+	para "mystery, even"
+	line "make you think you"
 	cont "can control them!"
 	done
 	
@@ -157,13 +158,13 @@ FirebreatherBillBeatenText:
 BurnedTower1FSage2Text:
 	text "When this tower"
 	line "burned down,"
-	cont "Ho-Oh briefly"
-	cont "returned to"
+	para "Ho-Oh briefly"
+	line "returned to"
 
 	para "revive three"
 	line "innocent #mon"
-	cont "to roam the"
-	cont "land, where"
+	para "to roam the"
+	line "land, where"
 	cont "they could"
 
 	para "inspire people"

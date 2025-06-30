@@ -16,9 +16,8 @@ WiseTriosRoom_MapScriptHeader:
 
 
 	def_object_events
-	object_event  5,  2, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, WiseTriosRoomText1, -1
-	object_event  6,  6, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, WiseTriosRoomText2, -1
-	object_event  4,  5, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, WiseTriosRoomText3, -1
+	object_event  5,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WiseTriosRoomText1, -1
+	object_event  4,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WiseTriosRoomText3, -1
 
 	object_const_def
 
@@ -28,13 +27,6 @@ WiseTriosRoomText1:
 	line "come this far"
 	cont "to learn our"
 	cont "history."
-	done
-	
-WiseTriosRoomText2:
-	text "We have but one"
-	line "of the two towers"
-	cont "left. We guard it"
-	cont "day and night."
 	done
 
 WiseTriosRoomText3:

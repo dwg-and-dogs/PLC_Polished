@@ -32,24 +32,21 @@ VioletCity_MapScriptHeader:
 
 
 	def_object_events
-	object_event 28, 32, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, 					OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityLassText, -1 
+	object_event 28, 32, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, 					OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityLassText, -1 
 	object_event 26, 18, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WANDER, 2, 1, -1, 0, 0, 							OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM1Text, -1 
 	object_event 26, 18, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, 0, 0, 							OBJECTTYPE_SCRIPT, 0, VioletCityCooltrainerFScript, -1
 	object_event 17, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, 						OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityGrampsText, -1 ;
-	object_event  5, 22, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM2Text, -1 ;
-	object_event 26, 20, SPRITE_FAT_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, 				OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityFisherText, -1 ;
+	object_event  5, 22, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityCooltrainerM2Text, -1 ;
+	object_event 26, 20, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, 				OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityFisherText, -1 ;
 	; road blocks 
-	object_event 34, 30, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ; ROUTE 31 
-	object_event 34, 31, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ; ROUTE 31
-	object_event 23, 10, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityTowerBlockingText, EVENT_BEAT_FALKNER; 
-	object_event 24, 10, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityTowerBlockingText, EVENT_BEAT_FALKNER; 	
+	object_event 34, 30, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ; ROUTE 31 
+	object_event 34, 31, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityImmigrationText, -1; ; ROUTE 31
+	object_event 23, 10, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityTowerBlockingText, EVENT_BEAT_FALKNER; 
+	object_event 24, 10, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletCityTowerBlockingText, EVENT_BEAT_FALKNER; 	
 	; others 
-;	cuttree_event  8, 33, EVENT_VIOLET_CITY_CUT_TREE
-;	smashrock_event 16, 34	
-;	smashrock_event 16, 35	
 	fruittree_event 14, 33, FRUITTREE_VIOLET_CITY, PNK_APRICORN, PAL_NPC_RED ; 
 	itemball_event 10,  6, PP_MAX, 1, EVENT_VIOLET_CITY_PP_UP
-	itemball_event 35, 12, RARE_CANDY, 1, EVENT_VIOLET_CITY_RARE_CANDY
+	itemball_event 35, 12, CALCIUM, 1, EVENT_VIOLET_CITY_RARE_CANDY
 	object_event 1, 1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, VioletKimonoGirlScript, EVENT_SET_DVS_3
 
 
@@ -184,7 +181,7 @@ VioletTombstoneText:
 	para "NOCS"
 	line "FOR "
 	cont "YOUR"
-	cont "SOUL"
+	cont "TOLL"
 	done
 
 NoctowlTombstone:
@@ -277,7 +274,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -287,7 +284,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -297,7 +294,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -307,7 +304,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -317,7 +314,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -327,7 +324,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -337,7 +334,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -347,7 +344,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -357,7 +354,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -367,7 +364,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -377,7 +374,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -387,7 +384,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -397,7 +394,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -407,7 +404,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -417,7 +414,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -427,7 +424,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $fe
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext VioletGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -520,7 +517,7 @@ VioletCityGaveMaximumDVsText:
 	line "maximized!"
 	done
 
-VioletCityGaveDVsText:
+VioletGaveDVsText:
 	text "Your #mon is"
 	line "now expressing"
 	para "that part of its"

@@ -13,11 +13,11 @@ VioletNicknameSpeechHouse_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  0,  2, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, VioletPickyEaterScript, -1
+	object_event  1,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, VioletPickyEaterScript, -1
 	object_event  2,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, VioletNicknameSpeechHouseTeacherScript, -1
-	object_event  6,  4, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletNicknameSpeechHouseLassText, -1
-	pokemon_event  6,  2, TANGELA, -1, -1, PAL_NPC_GREEN, TangelaVioletText, -1
-	pokemon_event  0,  3, PARASECT, -1, -1, PAL_NPC_GREEN, ParasectVioletText, -1
+	object_event  5,  2, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletNicknameSpeechHouseLassText, -1
+	pokemon_event  6,  2, TANGELA, -1, -1, PAL_NPC_BLUE, TangelaVioletText, -1
+	pokemon_event  0,  3, PARASECT, -1, -1, PAL_NPC_RED, ParasectVioletText, -1
 
 	object_const_def
 	const VIOLET_HOUSE_TWIN
@@ -103,6 +103,8 @@ ParasectVioletText:
 VioletPickyEaterScript:
     faceplayer
     opentext
+	checkitem BIG_MUSHROOM
+	iftrue_jumpopenedtext GiveBigMushroomText
 	writetext NeedRageCandyBarText
 	waitbutton
 	checkitem RAGECANDYBAR
@@ -146,11 +148,10 @@ Text_BarQuestion:
     done
 
 Text_NoCandyBar:
-    text "Ugh...."
+    text "Ugh..."
     done
 
 GiveBigMushroomText:
-    text "Thank goodness."
-	line "Don't tell my"
-	cont "sister."
+    text "Don't tell my sis"
+	line "about that candy!"
     done

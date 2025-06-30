@@ -145,7 +145,7 @@ Route36KurtBattleText:
 Route36BronzongScript:
 	cry BRONZONG
 	pause 15
-	loadwildmon BRONZONG, 20
+	loadwildmon BRONZONG, 30
 	startbattle
 	disappear ROUTE_36_BRONZONG
 	setevent EVENT_ROUTE_36_BRONZONG

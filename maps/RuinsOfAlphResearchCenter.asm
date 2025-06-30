@@ -13,7 +13,7 @@ RuinsOfAlphResearchCenter_MapScriptHeader:
 
 	def_bg_events
 	bg_event  6,  5, BGEVENT_JUMPTEXT, RuinsOfAlphResearchCenterAcademicBooksText
-	bg_event  5,  0, BGEVENT_JUMPTEXT, RuinsOfAlphResearchCenterProfSilktreePhotoText
+;	bg_event  5,  1, BGEVENT_JUMPTEXT, RuinsOfAlphResearchCenterProfSilktreePhotoText
 
 	def_object_events
 	object_event  4,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphResearchCenterScientist1Text, -1

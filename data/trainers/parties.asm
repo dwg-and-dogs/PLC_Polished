@@ -4923,9 +4923,9 @@ FirebreatherGroup:
 	db "Burt@" ; ROUTE 36 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 16, EKANS
-	db 18, GRIMER
-	db 18, NIDORINO
+	db 26, ARBOK
+	db 28, GRIMER
+	db 28, NIDORINO
 	db -1 ; end
 
 ; ================
@@ -5706,9 +5706,9 @@ SageGroup:
 	db "Edmond@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 20, WEEPINBELL
-	db 20, BAYLEEF
-	db 20, GLOOM
+	db 22, WEEPINBELL
+	db 23, BAYLEEF
+	db 24, GLOOM
 	db -1 ; end
 
 ; ================
@@ -5717,8 +5717,8 @@ SageGroup:
 	db "Neal@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 19, SUNFLORA
-	db 22, MURKROW
+	db 22, SUNFLORA
+	db 25, MURKROW
 	db -1 ; end
 
 ; ================

@@ -31,5 +31,5 @@ VioletMartCooltrainerMText:
 	text "Without rain the"
 	line "sprout tower was"
 	para "getting too"
-	text "wobbly."
+	line "wobbly."
 	done

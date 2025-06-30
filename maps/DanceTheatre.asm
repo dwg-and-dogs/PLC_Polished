@@ -19,10 +19,7 @@ DanceTheatre_MapScriptHeader:
 	object_event  0,  3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TheatreElderScript, -1
 	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlSayo, -1 ; FLAREON, kimono girl 1 -- DONE 
 	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlKuni, -1 ; GLACEON, kimono girl 4 -- DONE
-	object_event  3, 10, SPRITE_OSTENE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreOstene1Text, -1;
-	pokemon_event  6, 9, PORYGON_Z, -1, -1, PAL_NPC_RED, PorygonZText, EVENT_BEAT_RIVAL_ROUTE_42;
 	object_event 10,  8, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheatreKurtScript, EVENT_BEAT_KIMONO_GIRL_EMI ; 
-	object_event  1, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreSilphText, -1 ; SILPH 
 	object_event  3,  8, SPRITE_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, DanceTheatreNPC1Text, -1
 
 
@@ -76,6 +73,7 @@ DanceTheatreRivalScript:
 .FinishRivalBattle:
     special DeleteSavedMusic
     playmusic MUSIC_RIVAL_AFTER
+	setevent EVENT_BEAT_RIVAL_THEATRE
     jumptext RivalTheatreAfterBattleText
 
 TheatreRivalWinText:
@@ -113,13 +111,20 @@ TheatreRivalBeforeText:
 	done
 
 DanceTheatreOstene1Text:
-	text "Ostene: Oh, hi… "
-	line "isn't this show"
-	cont "boring?"
+	text "Isn't this show"
+	line "boring?"
 	
 	para "It needs to be"
 	line "brought back "
 	cont "to life."
+	
+	para "We at Silph are"
+	line "imagining better"
+	cont "futures."
+	
+	para "Like <RIVAL>'s new"
+	line "distillation"
+	cont "method!"
 	done
 	
 RivalTheatreAfterBattleText:

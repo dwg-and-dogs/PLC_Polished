@@ -93,7 +93,7 @@ BellchimeTrailEmiScript:
 	playmusic MUSIC_HEAL
 	special HealParty
 	special SaveMusic	
-	writetext EmiHealedPokemonText	; 
+;	writetext EmiHealedPokemonText	; 
 .AskToTimeTravel:
 	writetext BellchimeTrailAskToTimeTravelText
 	yesorno
@@ -120,7 +120,7 @@ KimonoGirlEmiIntroText:
 	line "way to save"
 	cont "your heritage."
 	
-	para "You haveve"
+	para "You have"
 	line "brought people"
 	para "together in"
 	line "Goldenrod and"
@@ -177,9 +177,8 @@ KimonoGirlEmiRewardText:
 	
 	para "It struck the"
 	line "Brass tower as"
-	para "the Consul"
-	line "raised his"
-	cont "hands."
+	para "the Consul raised"
+	line "his hands."
 
 	para "His ambitions,"
 	line "to rise above"
@@ -220,7 +219,9 @@ EmiHealedPokemonText:
 
 BellchimeTrailAskToTimeTravelText:
 	text "Would you like to"
-	line "see for yourself?"
+	line "see how the story"
+	cont "unfolds for your-"
+	cont "self? Hehe."
 	done
 
 

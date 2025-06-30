@@ -4,8 +4,8 @@ RuinsOfAlphAerodactylItemRoom_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  3,  9, RUINS_OF_ALPH_AERODACTYL_CHAMBER, 5
-	warp_event  4,  9, RUINS_OF_ALPH_AERODACTYL_CHAMBER, 5
+	warp_event  3,  9, RUINS_OF_ALPH_AERODACTYL_CHAMBER, 3
+	warp_event  4,  9, RUINS_OF_ALPH_AERODACTYL_CHAMBER, 3
 
 
 	def_coord_events
