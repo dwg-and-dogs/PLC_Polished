@@ -17,7 +17,7 @@ BellchimeTrail_MapScriptHeader:
 
 	def_object_events
 	object_event 14,  4, SPRITE_REI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailEmiScript, -1
-;	object_event 21, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeBlockerText, EVENT_GOT_TM30_SHADOW_BALL ;beat morty 
+	object_event 11,  4, SPRITE_KURT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeTrailKurtText, EVENT_BEAT_KIMONO_GIRL_EMI
 
 	object_const_def
 	
@@ -83,7 +83,6 @@ BellchimeTrailEmiScript:
 	loadtrainer REI, 1 ; kimono keeper emi has a unique trainer sprite
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_KIMONO_GIRL_EMI
 	opentext
 	writetext KimonoGirlEmiRewardText
 	promptbutton
@@ -101,6 +100,7 @@ BellchimeTrailEmiScript:
 	writetext BellChimeTrailYesTimeTravelText
 	waitbutton
 	closetext
+	setevent EVENT_BEAT_KIMONO_GIRL_EMI
 	setevent EVENT_BEAT_RIVAL_THEATRE
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
@@ -241,4 +241,25 @@ BellchimeBlockerText:
 	para "a few have been"
 	line "granted access by"
 	cont "Leader Morty."
+	done
+
+BellchimeTrailKurtText:
+	text "<PLAYER>. The"
+	line "Kimono Girls have"
+	para "recognized your"
+	line "pure heart."
+	
+	para "Good thing I did"
+	line "that ritual, eh?"
+	
+	para "We have a chance"
+	line "to go back to"
+	para "stop the modern-"
+	line "izing influences"
+	para "to save Johto's"
+	line "culture."
+	
+	para "Talk to her, and"
+	line "see if she will"
+	cont "pray with us."
 	done

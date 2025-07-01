@@ -2028,13 +2028,4 @@ BobeshFinalPkmnText:
 	text "I'm not holding"
 	line "back any more!"
 	prompt
-
-ReiFinalPkmnText:
-	text "You're as strong"
-	line "as I thought."
-	prompt
-
-OsteneFinalPkmnText:
-	text "You have some"
-	line "nerve!"
-	prompt
+	
