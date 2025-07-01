@@ -1755,10 +1755,9 @@ Rival1_5FinalPkmnText:  ; new
 	line "like you!"
 	prompt
 
-Rival2_1FinalPkmnText:
-	text "I see. You weren't"
-	line "coming to Kanto"
-	cont "just to show off…"
+Rival2_1FinalPkmnText: ; DANCE THEATRE 
+	text "Why do you have"
+	line "to ruin it all?"
 	prompt
 
 Rival2_2FinalPkmnText:

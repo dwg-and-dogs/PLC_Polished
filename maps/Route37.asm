@@ -18,9 +18,9 @@ Route37_MapScriptHeader:
 	object_event 14, 11, SPRITE_PSYCHIC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPsychicGreg, -1 ; OK
 	object_event  4,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyCallie, -1 ; OK
 	object_event  9,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBeautyCassandra, -1 ; OK
-	fruittree_event 13,  5, FRUITTREE_ROUTE_37_1, TOUGH_LEAVES, PAL_NPC_GREEN ; ok
+	fruittree_event 13,  5, FRUITTREE_ROUTE_37_1, RED_APRICORN, PAL_NPC_RED ; ok
 	fruittree_event 16,  5, FRUITTREE_ROUTE_37_2, WHT_APRICORN, PAL_NPC_SILVER ; ok
-	fruittree_event 10, 11, FRUITTREE_ROUTE_37_3, SHORE_FOAM, PAL_NPC_BLUE;  ok
+	fruittree_event 12, 10, FRUITTREE_ROUTE_37_3, TOUGH_LEAVES, PAL_NPC_GREEN;  ok
 
 	object_const_def
 

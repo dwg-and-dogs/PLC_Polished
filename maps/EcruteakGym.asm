@@ -43,7 +43,7 @@ EcruteakGym_MapScriptHeader:
 	strengthboulder_event 3, 8, EVENT_ECRUTEAK_BOULDER_2 
 	object_event  2, 15, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymBouldersResetScript, -1  
 	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1 
-	object_event  5, 14, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymPryceScript, EVENT_BURNED_TOWER_MORTY
+	object_event  5, 13, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymPryceScript, EVENT_BURNED_TOWER_MORTY
 	pokemon_event  4, 13, MAMOSWINE, -1, -1, PAL_NPC_BLUE, EcruteakMamoswineText, EVENT_BURNED_TOWER_MORTY
 
 	object_event  2,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumRebecca, -1
@@ -57,7 +57,7 @@ EcruteakGymBoulders:
 	usestonetable .BoulderTable
 	endcallback
 
-.BoulderTable:
+.BoulderTable: ; todo add all the possible warps 
 	stonetable 26, 	ECRUTEAK_GYM_BOULDER1, .Disappear1
 	stonetable 8, 	ECRUTEAK_GYM_BOULDER2, .Disappear2
 	db -1 ; end
@@ -66,13 +66,25 @@ EcruteakGymBoulders:
 	disappear ECRUTEAK_GYM_BOULDER1
 	pause 30
 	playsound SFX_FORESIGHT
-	done
-	
+	earthquake 80
+	reloadmappart
+	jumpthistext
+
+	text "The boulder fell"
+	line "down!"
+	done	
+
 .Disappear2:
 	disappear ECRUTEAK_GYM_BOULDER2
 	pause 30
 	playsound SFX_FORESIGHT
-	done
+	earthquake 80
+	reloadmappart
+	jumpthistext
+
+	text "The boulder fell"
+	line "down!"
+	done	
 
 GenericTrainerMediumRebecca:
 	generictrainer MEDIUM, REBECCA, EVENT_BEAT_MEDIUM_REBECCA, RebeccaSeenText, RebeccaBeatenText
@@ -210,18 +222,60 @@ EcruteakMamoswineText:
 	line "Mamooo!"
 	done
 
-EcruteakGymBouldersResetScript:
+EcruteakGymBouldersResetScript: ; C.F. KIMONO CABIN 3
 	faceplayer
-	showtext EG_ResettingBoulders
-	special Special_FadeBlackQuickly
-	clearevent EVENT_ECRUTEAK_BOULDER_1
-	clearevent EVENT_ECRUTEAK_BOULDER_2
-	reloadmap	
-	special Special_ReloadSpritesNoPalettes
-	special Special_FadeInQuickly
+	opentext
+	checkevent EVENT_BURNED_TOWER_MORTY
+	iffalse_jumpopenedtext MortyIsntHereNowText
+	writetext EG_CallBackBoulderText
+	waitbutton
+	yesorno
+	iffalse .Done
+	closetext
+.CheckBoulder1:
+	checkevent EVENT_ECRUTEAK_BOULDER_1
+	iffalse .CheckBoulder2
+	earthquake 80
+	clearevent EVENT_ECRUTEAK_BOULDER_1	
+	moveobject ECRUTEAK_GYM_BOULDER1, 0, 0	
+	appear ECRUTEAK_GYM_BOULDER1	
+.CheckBoulder2:
+	checkevent EVENT_ECRUTEAK_BOULDER_2
+	iffalse_jumptext EG_BouldersAreAllBack
+	earthquake 80
+	clearevent EVENT_ECRUTEAK_BOULDER_2	
+	moveobject ECRUTEAK_GYM_BOULDER2, 0, 0
+	appear ECRUTEAK_GYM_BOULDER2
+; finish 
+	opentext
+	writetext EG_BouldersAreBackText
+	waitbutton
+.Done:
+	closetext
 	end
-
-EG_ResettingBoulders:
-	text "The boulders are"
-	line "now reset."
+	
+EG_CallBackBoulderText:
+	text "Call back the"
+	line "boulders?"
 	done
+
+EG_BouldersAreBackText:
+	text "Boulders are"
+	line "levitated back!"
+	done
+	
+EG_BouldersAreAllBack:
+	text "The boulders are"
+	line "all up here!"
+	done
+	
+
+MortyIsntHereNowText:
+	text "The Gym is not"
+	line "accepting any"
+	cont "challengers."
+	
+	para "Morty hasn't been"
+	line "himself lately."
+	done
+	
