@@ -1,4 +1,5 @@
-TinTowerOld2F_MapScriptHeader: ;	def_scene_scripts
+TinTowerOld2F_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -20,6 +21,3 @@ TinTowerOld2F_MapScriptHeader: ;	def_scene_scripts
 
 	def_object_events
 
-
-
-	object_const_def

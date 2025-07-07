@@ -273,8 +273,8 @@ ShimmerGramps2Text5:
 	
 	para "Without you, I'd"
 	line "have followed an"
-	cont "illusion until I"
-	cont "joined her."
+	para "illusion until I"
+	line "joined her."
 	
 	para "Let's go home."
 	line "There's work to"
@@ -334,10 +334,10 @@ ShimmerText2:
 	
 	para "The old lady has"
 	line "no idea where she"
-	cont "is going! She just"
-	para "goes on and on, "
-	line "saying the path"
-	cont "is unknown."
+	para "is going! She just"
+	line "goes on and on, "
+	para "saying the path"
+	line "is unknown."
 	done
 	
 ShimmerText3:
@@ -359,14 +359,14 @@ ShimmerText4:
 	
 	para "It came so fast,"
 	line "we had no time to"
-	cont "prepare... All"
-	para "our supplies,"
-	line "stolen in an"
-	cont "instant, by a"
-	cont "flash of light?"
-	para "My elder hasn't"
-	line "seen any #mon"
-	cont "like it..."
+	para "prepare... All"
+	line "our supplies,"
+	para "stolen in an"
+	line "instant, by a"
+	para "flash of light?"
+	line "My elder hasn't"
+	para "seen any #mon"
+	line "like it..."
 	done
 
 ShimmerSaddleGramps2Script:

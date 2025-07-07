@@ -9622,7 +9622,7 @@ AdrinnaGroup:
 	; party
 	db 30, FORRETRESS, FOCUS_SASH,  FAKE_PERFECT_DVS, "KiloJaal@" ; net or trap 
 		db SPIKES, EXPLOSION, U_TURN, NO_MOVE
-	db 27, LUXIO, FOCUS_SASH,  FAKE_PERFECT_DVS, "Kalamp@" ; darkness, amp 
+	db 27, LUXIO, NO_ITEM,  FAKE_PERFECT_DVS, "Kalamp@" ; darkness, amp 
 		db ROAR, BITE, SPARK, NO_MOVE
 	db 29, SNEASEL, NO_ITEM, DVS_HP_POISON, "Chaorctic@" ; shadow arctic 
 		db ICE_SHARD, PURSUIT, QUICK_ATTACK, NO_MOVE

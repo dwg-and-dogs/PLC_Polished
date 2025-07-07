@@ -19,7 +19,6 @@ BellchimeTrail_MapScriptHeader:
 	object_event 14,  4, SPRITE_REI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailEmiScript, -1
 	object_event 11,  4, SPRITE_KURT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeTrailKurtText, EVENT_BEAT_KIMONO_GIRL_EMI
 
-	object_const_def
 	
 
 BellchimeTrailStepDownTrigger:
@@ -92,6 +91,7 @@ BellchimeTrailEmiScript:
 	playmusic MUSIC_HEAL
 	special HealParty
 	special SaveMusic	
+	setevent EVENT_BEAT_KIMONO_GIRL_EMI
 ;	writetext EmiHealedPokemonText	; 
 .AskToTimeTravel:
 	writetext BellchimeTrailAskToTimeTravelText
@@ -100,7 +100,6 @@ BellchimeTrailEmiScript:
 	writetext BellChimeTrailYesTimeTravelText
 	waitbutton
 	closetext
-	setevent EVENT_BEAT_KIMONO_GIRL_EMI
 	setevent EVENT_BEAT_RIVAL_THEATRE
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
@@ -143,8 +142,7 @@ EmiBattleText:
 	cont "of the story?"
 
 	para "I'll tell you if"
-	line "you can beat"
-	cont "me!"
+	line "you can beat me!"
 	done
 
 EmiRefusedText:
@@ -172,17 +170,16 @@ EmiBeatenText:
 
 KimonoGirlEmiRewardText:
 	text "The infamous"
-	line "lightning"
-	cont "strike…"
+	line "lightning strike…"
 	
 	para "It struck the"
 	line "Brass tower as"
 	para "the Consul raised"
 	line "his hands."
 
-	para "His ambitions,"
+	para "His ambitions"
 	line "to rise above"
-	para "nature itself,"
+	para "nature itself"
 	line "made the tower"
 	cont "imbalanced."
 	

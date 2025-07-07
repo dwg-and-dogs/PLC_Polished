@@ -42,15 +42,15 @@ TinTowerOldMasterBallTrigger:
 TinTowerOld1FNPC1Text:
 	text "This tower was"
 	line "modernized with"
-	cont "metals thanks to"
-	cont "Hisui crafters."
+	para "metals thanks to"
+	line "Hisui crafters."
 	done
 
 TinTowerOld1FNPC2Text:
 	text "The towers are a"
 	line "veritable maze"
-	cont "from Vespera's"
-	cont "#mon powers."
+	para "from Vespera's"
+	line "#mon powers."
 	done
 
 TinTowerOld1FNPC3Text:
@@ -59,8 +59,8 @@ TinTowerOld1FNPC3Text:
 	
 	para "She determines "
 	line "who is worthy"
-	cont "to cross the"
-	cont "Capital's moat."
+	para "to cross the"
+	line "Capital's moat."
 	done
 
 MasterBallScript:
@@ -88,12 +88,12 @@ NeedSweetHoneyText:
     
     para "When complete,"
     line "they'll surpass"
-    cont "any ever made."
+    cont "any ever made!"
     
     para "But these old"
     line "hands need some"
-    cont "honey to steady"
-    cont "themselves."
+    para "Honey to steady"
+    line "themselves."
     done
 
 Text_HoneyQuestion:
@@ -107,8 +107,8 @@ Text_HoneyQuestion:
 	
 	para "Just what these"
 	line "old bones need"
-	cont "to finish my"
-	cont "project."
+	para "to finish my"
+	line "project."
     done
 
 Text_NoHoney:
@@ -139,17 +139,12 @@ TextGaveMasterBall2:
     para "Like a powerful"
     line "technique, its"
     cont "power demands"
-    cont "wisdom - "
+    cont "wisdom."
     
     para "That's why I've"
     line "chosen to share"
     cont "it with you, yet"
     cont "make no more."
-    
-    para "For in the right"
-    line "hands, power can"
-    cont "shape the world"
-    cont "we dream of."
 	
 	para "Go on. What dream"
 	line "would you chase,"

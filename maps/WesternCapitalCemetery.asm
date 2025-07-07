@@ -1,4 +1,4 @@
-WesternCapitalCemetery_MapScriptHeader: ;	def_scene_scripts
+WesternCapitalCemetery_MapScriptHeader: 
 	def_scene_scripts
 
 	def_callbacks
@@ -10,7 +10,6 @@ WesternCapitalCemetery_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_coord_events
-
 
 
 	def_bg_events
@@ -42,15 +41,12 @@ WesternCapitalCemetery_MapScriptHeader: ;	def_scene_scripts
 	bg_event 6,  1, BGEVENT_JUMPTEXT, WC_Cemetery0Text	
 	
 
-
 	def_object_events
 	object_event  4, 4, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC1Text, -1
 	object_event  5, 8, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC2Text, -1
 	object_event 4, 11, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC3Text, EVENT_BEAT_ADRINNA_MOUNT_MORTAR
 	object_event  4, 1, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC4Text, -1
 	object_event  5, 1, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC4Text, -1
-
-	object_const_def
 
 
 CemeteryNPC1Text:
@@ -142,7 +138,7 @@ WC_Cemetery4Text:
 	para "Father of "
 	line "Bronte,"
 	
-	para "Wished us well, as"
+	para "Wished us well-"
 	line "he brought clean"
 	cont "water to all."
 	done

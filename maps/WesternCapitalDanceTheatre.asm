@@ -16,14 +16,12 @@ WesternCapitalDanceTheatre_MapScriptHeader: ;	def_scene_scripts
 	def_object_events
 
 
-	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlMasako, EVENT_BEAT_ADRINNA_MOUNT_MORTAR ; 
-	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlHaruko, EVENT_BEAT_ADRINNA_MOUNT_MORTAR ; FLAREON, kimono girl 1 -- DONE 
-	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlTamiko, EVENT_BEAT_ADRINNA_MOUNT_MORTAR ; GLACEON, kimono girl 4 -- DONE
-	object_event  1, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WC_DanceTheatreNPC1Script, -1 ; SILPH 
+	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlMasako, EVENT_BEAT_ADRINNA_MOUNT_MORTAR ; 
+	object_event  3,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlHaruko, EVENT_BEAT_ADRINNA_MOUNT_MORTAR ; FLAREON, kimono girl 1 -- DONE 
+	object_event  7,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerKimono_girlTamiko, EVENT_BEAT_ADRINNA_MOUNT_MORTAR ; GLACEON, kimono girl 4 -- DONE
+	object_event  1, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WC_DanceTheatreNPC1Script, -1 
 	object_event  7,  5, SPRITE_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WC_DanceTheatreNPC2Script, -1
 	object_event  9,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_MON,
-
-	object_const_def
 
 
 WC_DanceTheatreNPC1Script:
@@ -172,31 +170,5 @@ Kimono_girl_1TamikoBeatenText:
 	text "When lightning"
 	line "strikes, ground"
 	cont "yourself."
-	done
-
-
-WC_DanceTheatreNPC1IntroText:
-	text "The Generals are"
-	line "frequent visitors"
-	cont "to the theatre."
-	
-	para "I can't seem to"
-	line "get past their"
-	cont "flashy robes."
-	done
-
-WC_DanceTheatreNPC1Text2:
-	text "Oh! You beat all"
-	line "three of them!"
-	
-	para "Please, take this"
-	line "for showing me"
-	cont "such pizzazz."
-	done
-
-WC_DanceTheatreNPC2Text:
-	text "I wonder where"
-	line "the other Kimono"
-	cont "Girls went?"
 	done
 	

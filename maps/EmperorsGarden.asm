@@ -24,20 +24,20 @@ EmperorsGarden_MapScriptHeader:
 	def_object_events
 	; scene 1
 	object_event  	26,	30, 	SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
-	object_event  	29,	31, 	SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
-	object_event  	28,	31,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
-	object_event  	27,	31,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
+	object_event  	29,	32, 	SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
+	object_event  	28,	32,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
+	object_event  	27,	32,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
 	; other scenes 
 	object_event  	26,	12,		SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_BOBESH 
 	object_event  	20,	6,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY 
 	object_event  	27,	12,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_BOBESH 	
 	object_event  	21,	6,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY 	
 	object_event  	13,	10,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_ADRINNA 	
-	object_event 	16, 20, 	SPRITE_AMOS, 	SPRITEMOVEDATA_STANDING_UP,  	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosGardenScript, EVENT_BATTLED_AMOS_GARDEN 	
+	object_event 	16, 17, 	SPRITE_AMOS, 	SPRITEMOVEDATA_STANDING_LEFT,  	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 2, AmosGardenScript, EVENT_BATTLED_AMOS_GARDEN 	
 	; others 
-	object_event	22,	30, 	SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EG_Brigader_Text1, -1 ;
-	object_event	22,	31, 	SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, EG_Brigader_Text2, -1 ;
-	object_event 	27, 28, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EG_KurtText, EVENT_EMPERORS_GARDEN_ADRINNA ;
+	object_event	22,	30, 	SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EG_Brigader_Text1, EVENT_BATTLED_AMOS_GARDEN ;
+	object_event	22,	31, 	SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, EG_Brigader_Text2, EVENT_BATTLED_AMOS_GARDEN ;
+	object_event 	27, 28, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EG_KurtText, EVENT_BATTLED_AMOS_GARDEN ;
 	object_event	 2,	14, 	SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_FAST, 	0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EG_SeedBombMT, -1 ;	
 	fruittree_event  2, 21, FRUITTREE_EMPERORS_GARDEN_1, WHT_APRICORN, PAL_NPC_SILVER
 	fruittree_event  5, 24, FRUITTREE_EMPERORS_GARDEN_2, LUM_BERRY, PAL_NPC_RED
@@ -45,7 +45,6 @@ EmperorsGarden_MapScriptHeader:
 	itemball_event  27,  9, PROTEIN, 1, EVENT_EMPERORS_GARDEN_PROTEIN
 	itemball_event  21,  3, CALCIUM, 1, EVENT_EMPERORS_GARDEN_CALCIUM
 	itemball_event  13,  9, CARBOS, 1, EVENT_EMPERORS_GARDEN_CARBOS
-	strengthboulder_event 32, 15
 
 	object_const_def
 	const EMPERORS_GARDEN_MEJIMI
@@ -59,6 +58,7 @@ EmperorsGarden_MapScriptHeader:
 	const EMPERORS_GARDEN_ADRINNA_3
 	const EMPERORS_GARDEN_ADRINNA_4
 	const EMPERORS_GARDEN_AMOS
+	
 
 EG_Brigader_Text2:
 	text "Brigader: No, I"
@@ -91,46 +91,49 @@ EmperorsGardenMejimiScene: ; todo, add music
 	waitsfx
 	applymovement PLAYER, EG_PanDownMovement ; to add 
 	pause 60 
-	; START SCENE
-;	applymovement EMPERORS_GARDEN_MEJIMI, MejimiWalksInMovement
+	special Special_FadeOutMusic
+	pause 60
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
+	applymovement EMPERORS_GARDEN_MEJIMI, MejimiWalksInMovement
 	refreshscreen
 	trainerpic MEJIMI
 	waitbutton
 	closepokepic
 	pause 60
-	showemote EMOTE_QUESTION, EMPERORS_GARDEN_MEJIMI, 60
 	showtext EG_Text1
-	waitbutton
+;	waitbutton
 	applyonemovement EMPERORS_GARDEN_MEJIMI, step_right ; in front of bobesh
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
+	turnobject EMPERORS_GARDEN_BOBESH, UP
 	showtext EG_Text11
-	showemote EMOTE_SAD, EMPERORS_GARDEN_BOBESH, 60
 	showtext EG_Text2
 	showemote EMOTE_SHOCK, EMPERORS_GARDEN_MEJIMI, 60
 	showtext EG_Text3
 	applyonemovement EMPERORS_GARDEN_MEJIMI, step_left ; in front of kensey 
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
+	turnobject EMPERORS_GARDEN_KENSEY, UP
 	showtext EG_Text4
-	waitbutton
+;	waitbutton
 	showtext EG_Text4_2
-	waitbutton
+;	waitbutton
 	applyonemovement EMPERORS_GARDEN_MEJIMI, step_left ; in front of adrinna
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
+	turnobject EMPERORS_GARDEN_ADRINNA, UP
 	showtext EG_Text5
-	waitbutton
+;	waitbutton
 	showtext EG_Text5_2	
-	refreshscreen
-	trainerpic MEJIMI
+;	refreshscreen
+;	trainerpic MEJIMI
 	showtext EG_Text6
 	pause 60
-	waitbutton
+;	waitbutton
 	applymovement EMPERORS_GARDEN_MEJIMI, MejimiLeavesMovement
 	disappear EMPERORS_GARDEN_MEJIMI
 	applymovement EMPERORS_GARDEN_BOBESH, GeneralsLeaveMovement
 	disappear EMPERORS_GARDEN_BOBESH
 	applymovement EMPERORS_GARDEN_KENSEY, GeneralsLeaveMovement
 	disappear EMPERORS_GARDEN_KENSEY
-	applymovement EMPERORS_GARDEN_ADRINNA, GeneralsLeaveMovement
+	applymovement EMPERORS_GARDEN_ADRINNA, GeneralsLeaveMovement2
 	disappear EMPERORS_GARDEN_ADRINNA
 	setevent EVENT_EMPERORS_GARDEN_MEJIMI
 	setscene $1
@@ -138,14 +141,10 @@ EmperorsGardenMejimiScene: ; todo, add music
 	special Special_FadeOutMusic
 	special FadeOutPalettes
 	pause 60
-	warpfacing LEFT, EMPERORS_GARDEN, 28, 28
+	warpfacing DOWN, EMPERORS_GARDEN, 28, 28
 	end
 
 MejimiWalksInMovement:
-	step_right
-	step_right
-	step_right
-	step_right
 	step_right
 	step_right
 	turn_head_down
@@ -271,26 +270,32 @@ MejimiLeavesMovement:
 	step_left
 	step_end
 
+GeneralsLeaveMovement2:
+	step_right
 GeneralsLeaveMovement:
 	step_right
 	step_right
+	step_up
+	step_up
 	step_right
 	step_right
+	step_up
+	step_up
 	step_right
 	step_right
-	step_right
-	step_right
-	step_right
+	step_up
+	step_up
 	step_end
+
 
 EmperorsGardenBobeshScene:
 	showemote EMOTE_BOLT, EMPERORS_GARDEN_ADRINNA_2, 10
 	showtext EG_Bobesh_Text1
-	waitbutton
+;	waitbutton
 	showtext EG_Bobesh_Text1_2
-	waitbutton
+;	waitbutton
 	showtext EG_Bobesh_Text1_3
-	closetext
+;	closetext
 	applymovement EMPERORS_GARDEN_ADRINNA_2, AdrinnaMoves2
 	disappear EMPERORS_GARDEN_ADRINNA_2
 	applyonemovement EMPERORS_GARDEN_BOBESH_2, teleport_from
@@ -333,7 +338,7 @@ EG_Bobesh_Text1_3:
     text " Adrinna: "
 	next
 	text_start
-	para "Shut it. Your"
+	text "Enough. Your"
 	line "venue rotted"
 	cont "minds. Maybe"
 	cont "yours, too."
@@ -357,11 +362,11 @@ EmperorsGardenKenseyScene:
 	pause 30
 	showemote EMOTE_QUESTION, EMPERORS_GARDEN_ADRINNA_3, 10
 	showtext EG_Kensey_Text_1
-	waitbutton
+;	waitbutton
 	showtext EG_Kensey_Text_1_2
-	waitbutton
+;	waitbutton
 	showtext EG_Kensey_Text_1_3	
-	closetext
+;	closetext
 	applymovement EMPERORS_GARDEN_ADRINNA_3, AdrinnaMoves3
 	pause 15
 	opentext
@@ -456,6 +461,7 @@ AdrinnaMoves4:
 EmperorsGardenAdrinnaScene:
 	showemote EMOTE_HAPPY, EMPERORS_GARDEN_ADRINNA_4, 10
 	turnobject EMPERORS_GARDEN_ADRINNA_4, DOWN
+	applyonemovement EMPERORS_GARDEN_ADRINNA_4, step_down
 	turnobject PLAYER, UP
 	showtext EG_AdrinnaText1
 	applymovement EMPERORS_GARDEN_ADRINNA_4, EG_AdrinnaMove3
@@ -466,7 +472,10 @@ EmperorsGardenAdrinnaScene:
 	dontrestartmapmusic
 	reloadmap	
 	showtext EG_AdrinnaText2
+	closetext
+	opentext
 	verbosegivekeyitem SILVER_WING
+	waitbutton
 	showtext EG_AdrinnaText3
 	applyonemovement EMPERORS_GARDEN_ADRINNA_4, teleport_from
 	disappear EMPERORS_GARDEN_ADRINNA_4
@@ -476,7 +485,6 @@ EmperorsGardenAdrinnaScene:
 	end
 
 EG_AdrinnaMove3:
-	step_down
 	step_down
 	step_down
 	step_end
@@ -517,9 +525,8 @@ EG_AdrinnaText2:
 	text "For entertaining"
 	line "me, a gift."
 	
-	para "It's a rare fea-"
-	line "ther from the"
-	cont "towers."
+	para "A rare feather"
+	line "from the towers."
 	done
 
 EG_AdrinnaText3:
@@ -632,6 +639,7 @@ EG_PanDownMovement:
 	step_down
 	step_down
 	step_down
+	step_down
 	step_end
 
 AmosGardenScript:
@@ -643,13 +651,20 @@ AmosGardenScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
-	reloadmap	
+	reloadmapafterbattle
 	showtext AmosGardenAfterBattleText
 	applyonemovement EMPERORS_GARDEN_AMOS, teleport_from
 	disappear EMPERORS_GARDEN_ADRINNA_4
 	setevent EVENT_BATTLED_AMOS_GARDEN
 	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
+	pause 60
+	special Special_FadeOutMusic
+	special FadeOutPalettes
+	pause 60
+	warpfacing RIGHT, EMPERORS_GARDEN, 15, 17
 	end
+
+
 
 AmosSuspectsYouText:
 	text_high

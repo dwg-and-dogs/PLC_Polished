@@ -94,3 +94,5 @@ FinalText_SinglePhrases:
 	dw WalkerFinalPkmnText
 	dw ImakuniFinalPkmnText
 	dw KenseyFinalPkmnText ;new
+	dw ReiFinalPkmnText 
+	

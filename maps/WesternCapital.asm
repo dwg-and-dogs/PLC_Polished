@@ -127,16 +127,6 @@ WesternCapitalCemeteryScene:
 	waitbutton
 	closetext	
 
-	; todo emotes 
-	
-;	refreshscreen
-;	trainerpic MEJIMI
-;	waitbutton
-;	closepokepic
-
-	; todo emotes 
-	
-
 	special Special_FadeBlackQuickly
 	
 	setevent EVENT_PROLOGUE_MEJIMI
@@ -290,8 +280,8 @@ WesternCapitalHisuiText1:
 	jumpthistext
 	text "My blessing will"
 	line "attract #mon"
-	cont "to protect the"
-	cont "tower."
+	para "to protect the"
+	line "tower."
 	done
 
 WesternCapitalNPC2Text:
@@ -437,5 +427,3 @@ WC_AmosWantedSign:
 WC_ToStadiumSign:
 	text "South: To Stadium"
 	done
-
-	

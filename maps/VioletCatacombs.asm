@@ -17,18 +17,18 @@ VioletCatacombs_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  3,  2, BGEVENT_UP, VioletCatacombsPuzzleScript
 
 	def_object_events
 	strengthboulder_event  11, 24, CATACOMBS_BOULDER_1
 	strengthboulder_event  14, 25, CATACOMBS_BOULDER_2
-	object_event  7,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NOCTOWL, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CatacombsNoctowl, EVENT_CATACOMBS_NOCTOWL
-
+	object_event  4,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NOCTOWL, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CatacombsNoctowl, EVENT_CATACOMBS_NOCTOWL
+	object_event  6, 21, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, UNOWN, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, VioletCatacombsPuzzleScript, EVENT_SOLVED_CATACOMBS_PUZZLE
 	
 	object_const_def
 	const CATACOMBS_BOULDER_1
 	const CATACOMBS_BOULDER_2
 	const CATACOMBS_NOCTOWL
+	const CATACOMBS_UNOWN
 
 ; sliding puzzle 
 
@@ -86,9 +86,10 @@ VioletCatacombsPuzzleScript:
 	changeblock  8, 22, $0D
 	reloadmappart
 	pause 30
-	playsound SFX_STRENGTH
+	playsound SFX_FORESIGHT
 	waitsfx
 	pause 20
+	disappear CATACOMBS_UNOWN
 	end
 
 NotSolvedText:

@@ -426,10 +426,6 @@ TinTower3FSamsaraScript:
 
 
 TinTower3FStudyHarderText:
-	text_high
-    text " Vespera: "
-	next
-	text_start
 	text "You would like to"
 	line "leave the city?"
 	
@@ -451,10 +447,6 @@ TinTower3FStudyHarderText:
 
 
 ReceivedHeavensBadgeText:
-	text_high
-    text " Vespera: "
-	next
-	text_start
 	text "Now, take this"
 	line "Heavens badge."
 	
@@ -466,16 +458,12 @@ ReceivedHeavensBadgeText:
 	line "is also from me."
 	para "It's a reminder"
 	line "that the past is"
-	cont "always trying to"
-	para "reach into the"
-	line "future."
+	para "always trying to"
+	line "reach into the"
+	cont "future."
 	done
 	
 SamsaraIntroText:
-	text_high
-    text " Vespera: "
-	next
-	text_start 
 	text "So, you're here"
 	line "to stop Urgaust"
 	cont "and preserve"
@@ -520,8 +508,8 @@ SamsaraWinLossText:
 	para "with their uni-"
 	line "que talents."
 
-	para "This is what Mej-"
-	line "imi forgot."
+	para "This is what"
+	line "Urgaust forgot."
 	
 	para "His ancestors"
 	line "were not revered"
@@ -532,10 +520,6 @@ SamsaraWinLossText:
 
 
 SamsaraAfterText:
-	text_high
-    text " Vespera: " 
-	next
-	text_start 
 	text "There is still"
 	line "time to change"
 	cont "the Consul."
@@ -548,7 +532,7 @@ SamsaraAfterText:
 	done
 
 TinTowerHaunterScript:
-	jumpopenedtext TinTowerHaunterText
+	jumptext TinTowerHaunterText
 	done
 
 TinTowerHaunterText:
@@ -556,7 +540,7 @@ TinTowerHaunterText:
 	done
 
 TinTowerHTyphlosionScript:
-	jumpopenedtext TinTowerHTyphlosionText
+	jumptext TinTowerHTyphlosionText
 	done
 	
 TinTowerHTyphlosionText:

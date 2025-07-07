@@ -2028,4 +2028,10 @@ BobeshFinalPkmnText:
 	text "I'm not holding"
 	line "back any more!"
 	prompt
+
+ReiFinalPkmnText:
+	text "Celebi has really"
+	line "chosen you?"
+	prompt
+	
 	
