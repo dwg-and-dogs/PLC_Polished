@@ -70,6 +70,7 @@ StadiumBoxScene:
 	writetext AdrinnaDialogueStadium
 	waitbutton
 	closetext
+	playsound SFX_WARP_TO
 	applyonemovement STADIUMBOX_ADRINNA, teleport_from
 	disappear STADIUMBOX_ADRINNA
 	pause 60

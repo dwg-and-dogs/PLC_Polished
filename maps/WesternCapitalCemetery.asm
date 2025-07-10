@@ -45,8 +45,8 @@ WesternCapitalCemetery_MapScriptHeader:
 	object_event  4, 4, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC1Text, -1
 	object_event  5, 8, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC2Text, -1
 	object_event 4, 11, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC3Text, EVENT_BEAT_ADRINNA_MOUNT_MORTAR
-	object_event  4, 1, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC4Text, -1
-	object_event  5, 1, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC4Text, -1
+	object_event  4, 1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC4Text, -1
+	object_event  5, 1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CemeteryNPC4Text, -1
 
 
 CemeteryNPC1Text:
@@ -74,7 +74,7 @@ CemeteryNPC2Text:
 	
 	para "We all noticed"
 	line "that he looked"
-	cont "striking similar."
+	cont "so similar."
 	done
 	
 

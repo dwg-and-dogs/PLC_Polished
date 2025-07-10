@@ -15,8 +15,8 @@ WesternCapital_MapScriptHeader: ; todo
 	warp_event 0, 18, CAPITAL_CULL_GATE, 3
 	warp_event 0, 19, CAPITAL_CULL_GATE, 4
 	warp_event 35, 5, TIN_TOWER_OLD_1F, 1
-	warp_event 3, 31, STADIUM_CAPITAL_GATE, 1
-	warp_event 4, 31, STADIUM_CAPITAL_GATE, 2
+	warp_event 3, 31, STADIUM_CAPITAL_GATE, 3
+	warp_event 4, 31, STADIUM_CAPITAL_GATE, 4
 	warp_event 35, 26, STY_CAPITAL_GATE, 1
 	warp_event 35, 27, STY_CAPITAL_GATE, 2
 
@@ -45,14 +45,14 @@ WesternCapital_MapScriptHeader: ; todo
 	pokemon_event  11, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
 ; civilians
 	object_event 16, 16, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN
-	object_event 26, 27, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalHisuiText1, EVENT_BEAT_ADRINNA_MINE
-	object_event 28, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC2Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
+	object_event 36, 7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalHisuiText1, EVENT_BEAT_ADRINNA_MINE
+	object_event 28, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC2Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
 	object_event 16, 21, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC3Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
 	object_event 18, 26, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC4Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
 	object_event 9, 17, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC5Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
 	object_event 5, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderText, -1
 
-	fruittree_event 6, 5, FRUITTREE_WESTERN_CAPITAL, FIXED_CHARGE, PAL_NPC_RED
+	fruittree_event 6, 6, FRUITTREE_WESTERN_CAPITAL, FIXED_CHARGE, PAL_NPC_RED
 
 
 	object_const_def
@@ -277,7 +277,6 @@ WesternCapitalNPC1Text_2:
 	done
 
 WesternCapitalHisuiText1:
-	jumpthistext
 	text "My blessing will"
 	line "attract #mon"
 	para "to protect the"

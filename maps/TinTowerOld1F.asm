@@ -10,7 +10,7 @@ TinTowerOld1F_MapScriptHeader:
 	warp_event 8, 15, WESTERN_CAPITAL, 9
 	warp_event 8, 3, TIN_TOWER_OLD_3F, 1
 	warp_event 2, 12, TIN_TOWER_OLD_2F, 1
-	warp_event 2, 3, TIN_TOWER_OLD_2F, 2	
+	warp_event 2, 3, TIN_TOWER_OLD_2F, 2
 
 
 	def_coord_events
@@ -23,7 +23,7 @@ TinTowerOld1F_MapScriptHeader:
 
 	def_object_events
 	object_event  7,  13, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, MasterBallScript, -1
-	object_event 7, 12, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC1Text, -1 ; done
+	object_event 12,  7, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC1Text, -1 ; done
 	object_event 11, 12, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC2Text, -1 ; done
 	object_event 13, 2, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC3Text, -1 ; done
 
@@ -37,6 +37,7 @@ TinTowerOldMasterBallTrigger:
 	
 .TradeScript:
 	showemote EMOTE_HAPPY, TIN_TOWER_OLD_1F_MASTER_BALL_SAGE, 20
+	setscene $1
 	end
 
 TinTowerOld1FNPC1Text:

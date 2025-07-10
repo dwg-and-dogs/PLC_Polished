@@ -105,10 +105,10 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 68
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 69
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6a
-	tilecoll WALL, WALL, WALL, WALL ; 6b
-	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 6c
-	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 6d
-	tilecoll WALL, WALL, LEFT_WALL, RIGHT_WALL ; 6e
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6b
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6c
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6d
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6e
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6f
 	tilecoll WALL, TOP_WALL, LEFT_WALL, FLOOR ; 70
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 71

@@ -6,9 +6,9 @@ TinTowerOld3F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 0, 15, TIN_TOWER_OLD_1F, 3 ; WARP 
-	warp_event 1, 1, TIN_TOWER_OLD_2F, 3 ; STAIRS 
-	warp_event 4, 5, TIN_TOWER_OLD_2F, 4 ; HOLE 
+	warp_event 0, 15, TIN_TOWER_OLD_1F, 3 ; WARP
+	warp_event 1, 1, TIN_TOWER_OLD_2F, 3 ; STAIRS
+	warp_event 4, 5, TIN_TOWER_OLD_2F, 4 ; HOLE
 
 	def_coord_events
 	coord_event 7, 10, 0, TT3F_CCW_Bottom_Trigger
@@ -28,65 +28,45 @@ TinTowerOld3F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  7, 7, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHaunterScript, EVENT_TIN_TOWER_OLD_HAUNTER_1
-	object_event  8, 7, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHaunterScript, EVENT_TIN_TOWER_OLD_HAUNTER_2
-	object_event  7, 6, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHaunterScript, EVENT_TIN_TOWER_OLD_HAUNTER_3
-	object_event  8, 6, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HAUNTER, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHaunterScript, EVENT_TIN_TOWER_OLD_HAUNTER_4
-	object_event 13, 13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__TYPHLOSION, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHTyphlosionScript, EVENT_TIN_TOWER_OLD_HAUNTER_4
+	object_event 12, 14, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__TYPHLOSION, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHTyphlosionScript, -1
 
 	object_event 14, 7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageJeffrey, -1
 	object_event  10, 1, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSagePing, -1
 	object_event  2, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageJin, -1
 
-	object_event 12, 13, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TinTower3FSamsaraScript, -1 ; party is done 
+	object_event 12, 13, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TinTower3FSamsaraScript, -1 ; party is done
 
 
 	object_const_def
-	const TIN_TOWER_OLD_3F_HAUNTER_1
-	const TIN_TOWER_OLD_3F_HAUNTER_2
-	const TIN_TOWER_OLD_3F_HAUNTER_3
-	const TIN_TOWER_OLD_3F_HAUNTER_4
 
 TT3F_CCW_Bottom_Trigger:
-	pause 5
-	appear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
-	disappear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
-	appear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
-	disappear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
-	appear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
-	disappear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
-	appear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
-	disappear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	applymovement PLAYER, Player_CCW_Bottom_Move
 	setscene $1
 	end
-	
+
+Haunter1Text:
+	text "Haunter1"
+	done
+
 TT3F_CW_Bottom_Trigger:
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	applymovement PLAYER, Player_CW_Bottom_Move
 	setscene $0
 	end
@@ -111,110 +91,111 @@ Player_CW_Bottom_Move:
 	step_end
 
 TT3F_CCW_Right_Trigger:
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	applymovement PLAYER, Player_CCW_Right_Move
 	setscene $1
 	end
 	
 TT3F_CW_Right_Trigger:
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	applymovement PLAYER, Player_CW_Right_Move
 	setscene $0
 	end
 
 Player_CCW_Right_Move: 
+	step_left
 	step_up
-	step_right
-	step_right
-	step_right
-	step_right
-	step_right
+	step_up
+	step_up
+	step_up
+	step_up
+	step_left
+	step_up
+	step_up
 	step_end
 	
 Player_CW_Right_Move:
-	step_up
-	step_left
-	step_up
-	step_up
 	step_left
 	step_left
 	step_left
+	step_down
+	step_down
 	step_end
 
 
 
 TT3F_CCW_Top_Trigger:
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	applymovement PLAYER, Player_CCW_Top_Move
 	setscene $1
 	end
 	
 TT3F_CW_Top_Trigger:
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	applymovement PLAYER, Player_CW_Top_Move
 	setscene $0
 	end
@@ -240,45 +221,45 @@ Player_CW_Top_Move:
 
 
 TT3F_CCW_Left_Trigger:
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	applymovement PLAYER, Player_CCW_Left_Move
 	setscene $1
 	end
 	
 TT3F_CW_Left_Trigger:
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_4
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_3
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_2
-	pause 5
+	pause 30
 	appear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	disappear TIN_TOWER_OLD_3F_HAUNTER_1
-	pause 5
+	pause 30
 	applymovement PLAYER, Player_CW_Left_Move
 	setscene $0
 	end
@@ -367,7 +348,7 @@ SagePingBeatenText:
 
 
 GenericTrainerSageJin:
-    generictrainer SAGE, JIN, EVENT_BEAT_SAGE_JEFFREY, SageJinSeenText, SageJinBeatenText
+    generictrainer SAGE, JIN, EVENT_BEAT_SAGE_JIN, SageJinSeenText, SageJinBeatenText
 
     text "Yes, I see!"
 	
@@ -385,6 +366,7 @@ SageJinSeenText:
 	para "Does it upset the"
 	line "delicate balance"
 	cont "that sustains us?"
+	done
 
 SageJinBeatenText:
     text "Yes, I see!"

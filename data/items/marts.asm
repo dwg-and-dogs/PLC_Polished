@@ -1,29 +1,29 @@
 Marts: 
 	table_width 2, Marts
-	dw CherrygroveMart ; unused
-	dw CherrygroveMartAfterDex ; unused
-	dw VioletMart
-	dw AzaleaMart
-	dw Goldenrod2FMart1
-	dw Goldenrod2FMart2
-	dw Goldenrod2FMart2Eevee
-	dw Goldenrod3FMart
-	dw Goldenrod4FMart
-	dw Goldenrod5FTMMart
-	dw GoldenrodBallsMart
-	dw UndergroundMart
-	dw EcruteakMart
-	dw OlivineMart
-	dw WesternCapitalMonMart
-	dw WesternCapitalPrepMart ; unused
-	dw MahoganyMart1 ; unused
-	dw MahoganyMart2
-	dw BlackthornMart ; unused
-	dw TradersLandingMart
-	dw AnarresMart
-	dw GauldenrodMart1
-	dw GauldenrodMart2 ; BERRIES
-	dw GauldenrodMart3 ; TMS 
+	dw CherrygroveMart ; unused MART_CHERRYGROVE
+	dw CherrygroveMartAfterDex ; unused MART_CHERRYGROVE_DEX
+	dw VioletMart ; MART_VIOLET
+	dw AzaleaMart ; MART_AZALEA
+	dw Goldenrod2FMart1 ; MART_GOLDENROD_2F_1
+	dw Goldenrod2FMart2 ; MART_GOLDENROD_2F_2
+	dw Goldenrod2FMart2Eevee ; MART_GOLDENROD_2F_2_EEVEE
+	dw Goldenrod3FMart ; MART_GOLDENROD_3F
+	dw Goldenrod4FMart ; MART_GOLDENROD_4F
+	dw Goldenrod5FTMMart ; MART_GOLDENROD_5F_TM
+	dw GoldenrodBallsMart ; MART_GOLDENROD_HARBOR
+	dw UndergroundMart ; MART_UNDERGROUND
+	dw EcruteakMart ; MART_ECRUTEAK
+	dw OlivineMart ; MART_OLIVINE
+	dw WesternCapitalMonMart ; MART_WESTERN_CAPITAL_MON
+	dw WesternCapitalPrepMart ; MART_WESTERN_CAPITAL_PREP
+	dw MahoganyMart1 ; unused MART_MAHOGANY_1
+	dw MahoganyMart2 ; MART_MAHOGANY_2
+	dw BlackthornMart ; unused MART_BLACKTHORN
+	dw TradersLandingMart ; MART_TRADERS_LANDING
+	dw AnarresMart ; MART_ANARRES
+	dw GauldenrodMart1 ; MART_GAULDENROD_1
+	dw GauldenrodMart2 ; BERRIES ; MART_GAULDENROD_2
+	dw GauldenrodMart3 ; TMS  ; MART_GAULDENROD_3
 	dw WesternCapitalMart
 	dw WesternCapitalMart_TM
 	dw TradersLandingMart_TM

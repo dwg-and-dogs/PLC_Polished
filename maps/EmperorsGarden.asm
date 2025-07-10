@@ -298,6 +298,7 @@ EmperorsGardenBobeshScene:
 ;	closetext
 	applymovement EMPERORS_GARDEN_ADRINNA_2, AdrinnaMoves2
 	disappear EMPERORS_GARDEN_ADRINNA_2
+	playsound SFX_WARP_TO
 	applyonemovement EMPERORS_GARDEN_BOBESH_2, teleport_from
 	disappear EMPERORS_GARDEN_BOBESH_2
 	setevent EVENT_EMPERORS_GARDEN_BOBESH
@@ -375,6 +376,7 @@ EmperorsGardenKenseyScene:
 	closetext
 	applymovement EMPERORS_GARDEN_ADRINNA_3, AdrinnaMoves4
 	disappear EMPERORS_GARDEN_ADRINNA_3
+	playsound SFX_WARP_TO
 	applyonemovement EMPERORS_GARDEN_KENSEY_2, teleport_from
 	disappear EMPERORS_GARDEN_KENSEY_2
 	setevent EVENT_EMPERORS_GARDEN_KENSEY
@@ -477,6 +479,7 @@ EmperorsGardenAdrinnaScene:
 	verbosegivekeyitem SILVER_WING
 	waitbutton
 	showtext EG_AdrinnaText3
+	playsound SFX_WARP_TO
 	applyonemovement EMPERORS_GARDEN_ADRINNA_4, teleport_from
 	disappear EMPERORS_GARDEN_ADRINNA_4
 	setevent EVENT_EMPERORS_GARDEN_ADRINNA
@@ -653,18 +656,27 @@ AmosGardenScript:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	showtext AmosGardenAfterBattleText
+	playsound SFX_WARP_TO
 	applyonemovement EMPERORS_GARDEN_AMOS, teleport_from
-	disappear EMPERORS_GARDEN_ADRINNA_4
+	disappear EMPERORS_GARDEN_AMOS
 	setevent EVENT_BATTLED_AMOS_GARDEN
 	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
-	pause 60
-	special Special_FadeOutMusic
-	special FadeOutPalettes
-	pause 60
-	warpfacing RIGHT, EMPERORS_GARDEN, 15, 17
+	setmapscene WESTERN_CAPITAL, $1
+;	reloadmap
+;	pause 60
+;	special Special_FadeOutMusic
+;	special FadeOutPalettes
+;	pause 60
+;	warpfacing RIGHT, EMPERORS_GARDEN, 15, 17
 	end
 
-
+AmosWalksAwayMovement_EG:
+	step_down
+	step_down
+	step_down
+	step_down
+	step_down
+	step_end
 
 AmosSuspectsYouText:
 	text_high
