@@ -6,10 +6,11 @@ TinTowerOld2F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 4, 14, TIN_TOWER_OLD_1F, 4
-	warp_event 10, 13, TIN_TOWER_OLD_1F, 5
-	warp_event 11, 3, TIN_TOWER_OLD_3F, 2
-	warp_event 4, 3, TIN_TOWER_OLD_3F, 3 ; HOLE DROPDOWN 
+	warp_event  7, 3, TIN_TOWER_OLD_1F, 3 ; stairs down to first floor
+	warp_event  2, 12, TIN_TOWER_OLD_3F, 1 ; stairs up to 3rd floor
+
+	warp_event  3,  3, TIN_TOWER_OLD_3F, 2 ; stairs up 
+	warp_event  3,  7, TIN_TOWER_OLD_3F, 3 ; HOLE DROPDOWN
 
 	def_coord_events
 

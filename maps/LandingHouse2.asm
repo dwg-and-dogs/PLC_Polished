@@ -13,9 +13,7 @@ LandingHouse2_MapScriptHeader:
 	def_coord_events
 
 
-
 	def_bg_events
-
 
 
 	def_object_events
@@ -32,8 +30,8 @@ LandingHouse2Trigger:
 	
 .TradeQuest:
 	showemote EMOTE_HAPPY, LANDING_HOUSE_2_NOMAD, 30
+	setscene $1
 	end
-	
 	
 
 LandingHouse2CuteGirlText:
@@ -73,14 +71,14 @@ NeedALightBallText:
 	
 	para "Oh, but my sea-"
 	line "faring days are"
-	cont "over. Yet - I"
-	cont "still adore"
+	para "over. Yet - I"
+	line "still adore"
 	cont "#mon!"
 	
 	para "I have seen some"
 	line "little electric"
-	cont "mice running"
-	cont "around."
+	para "mice running"
+	line "around."
 	
 	para "Do you have the"
 	line "yellow ball that"
@@ -94,8 +92,8 @@ Text_LightBallQuestion:
 
 	para "Please, trade"
 	line "me, I will give"
-	cont "the rarest of all"
-	cont "pearls!"
+	para "the rarest of all"
+	line "pearls!"
 	done
 
 GivePearlText: 
@@ -123,6 +121,10 @@ LandingHouse2AssaultVestScript:
 	setevent EVENT_GOT_ASSAULT_VEST
 	jumpthisopenedtext
 
+	text "That's not a life"
+	line "saving device."
+	done
+
 GotAssaultVestText:
 	text "That's not a life"
 	line "saving device."
@@ -141,9 +143,8 @@ GiveAssaultVestText:
 	para "But I'm sneaky."
 	
 	para "I do a little"
-	line "switcheroo sabot-"
-	cont "age with one of"
-	cont "my heavy vests."
+	line "switcheroo with"
+	cont "one of mine."
 	
 	para "... Don't let 'em"
 	line "keep you down."	

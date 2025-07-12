@@ -1,5 +1,4 @@
 LandingTavern_MapScriptHeader:
-
 	def_scene_scripts
 
 
@@ -7,15 +6,14 @@ LandingTavern_MapScriptHeader:
 
 
 	def_warp_events
-
+	warp_event 5, 7, TRADERS_LANDING, 4
+	warp_event 4, 7, TRADERS_LANDING, 4
 
 
 	def_coord_events
 
 
-
 	def_bg_events
-
 
 
 	def_object_events
@@ -24,8 +22,6 @@ LandingTavern_MapScriptHeader:
 	object_event 7, 2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingTavernSailorText, EVENT_BEAT_KENSEY_PORT
 	object_event 8, 2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingTavernSailorText, EVENT_BEAT_KENSEY_PORT
 
-
-	object_const_def
 
 
 LandingTavernNomad1:
@@ -65,8 +61,7 @@ LandingTavernNomad2:
 	para "barbarian ships"
 	line "into port."
 	
-	para "Never! We're on"
-	line "strike!"
+	para "Never!"
 	done
 	
 TavernGladThatsOverText2:

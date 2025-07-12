@@ -44,10 +44,10 @@
 	tilecoll WALL, LEDGE_LEFT, WALL, WALL ; 2b
 	tilecoll LEDGE_RIGHT, WALL, WALL, WALL ; 2c
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 2d
-	tilecoll WALL, WALL, WALL, FLOOR ; 2e
-	tilecoll WALL, WALL, FLOOR, WALL ; 2f
-	tilecoll WALL, FLOOR, WALL, FLOOR ; 30
-	tilecoll FLOOR, WALL, FLOOR, WALL ; 31
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2e
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 2f
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 30
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 31
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 32
 	tilecoll WALL, WALL, WALL, FLOOR ; 33
 	tilecoll WALL, WALL, FLOOR, WALL ; 34
@@ -105,10 +105,10 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 68
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 69
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6a
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6b
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6c
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6d
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6e
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 6b
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 6c
+	tilecoll WALL, WALL, WALL, FLOOR ; 6d
+	tilecoll WALL, WALL, FLOOR, WALL ; 6e
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 6f
 	tilecoll WALL, TOP_WALL, LEFT_WALL, FLOOR ; 70
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 71

@@ -7,11 +7,10 @@ CapitalCullGate_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 7,  2, WESTERN_CAPITAL, 7 
-	warp_event 7,  3, WESTERN_CAPITAL, 8 
 	warp_event 0,  2, CATTLE_CULL_38, 1 
 	warp_event 0,  3, CATTLE_CULL_38, 2 
-
+	warp_event 7,  2, WESTERN_CAPITAL, 7 
+	warp_event 7,  3, WESTERN_CAPITAL, 8 
 
 	def_coord_events
 

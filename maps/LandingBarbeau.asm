@@ -28,8 +28,8 @@ LandingBarbeau_MapScriptHeader:
 KenseyOfficeKenseyText:
 	text "Yes, Sir! We are"
 	line "working on a raft"
-	cont "to guide the ship"
-	cont "to shore!"
+	para "to guide the ship"
+	line "to shore!"
 	
 	para "Just a bit more"
 	line "time, please."
@@ -38,12 +38,12 @@ KenseyOfficeKenseyText:
 KenseyOfficeSailorText:
 	text "It's taking too"
 	line "long! I've alrea-"
-	cont "dy sent mail for"
-	cont "another ship."
+	para "dy sent mail for"
+	line "another ship."
 	
 	para "The safety of the"
 	line "port depends on"
-	cont "you, General."
+	cont "you, Kensey."
 	done
 
 SailorMachampText:
@@ -52,6 +52,5 @@ SailorMachampText:
 
 KenseyVaporeonText:
 	text "Tidechaser:"
-	line "Vapoh!"
+	line "Vaaa!"
 	done
-

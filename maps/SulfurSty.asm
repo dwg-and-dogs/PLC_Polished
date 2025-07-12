@@ -1,4 +1,5 @@
-SulfurSty_MapScriptHeader: ;	def_scene_scripts
+SulfurSty_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -8,8 +9,8 @@ SulfurSty_MapScriptHeader: ;	def_scene_scripts
 	warp_event 9, 17, SULFUR_STY_HOUSE_1, 1
 	warp_event 51,17, SULFUR_STY_HOUSE_2, 1
 	warp_event 34, 7, CLASTS_CRADLE_3F, 1
-	warp_event 4, 22, STY_CAPITAL_GATE, 3
-	warp_event 4, 23, STY_CAPITAL_GATE, 4
+	warp_event 4, 22, STY_CAPITAL_GATE, 1
+	warp_event 4, 23, STY_CAPITAL_GATE, 2
 
 	def_coord_events
 

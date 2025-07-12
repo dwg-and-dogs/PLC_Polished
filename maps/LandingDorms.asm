@@ -27,7 +27,7 @@ LandingDorms_MapScriptHeader:
 	object_event 12, 3, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC1Text, -1
 	object_event 12, 4, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC2Text, -1
 	object_event 3, 3, SPRITE_NOMAD_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC3Text, -1
-
+	object_event  14, 4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingDormsBarbeauJournalScript, -1
 
 	object_const_def
 
@@ -47,26 +47,26 @@ LandingDormsNPC1Text:
 LandingDormsNPC2Text:
 	text "We navigated to"
 	line "those sheltered"
-	cont "shores south of"
-	cont "the port every"
+	para "shores south of"
+	line "the port every"
 	cont "summer."
 	
 	para "Then, when winter"
 	line "monsoons arrived,"
-	cont "we surfed to the"
-	cont "cliffs here."
+	para "we surfed to the"
+	line "cliffs here."
 	done
 
 LandingDormsNPC3Text:
 	text "Don't try to use"
 	line "a map to find"
-	cont "your way in the"
-	cont "whirlpools."
+	para "your way in the"
+	line "whirlpools."
 	
 	para "Our histories ar"
 	line "full of fools who"
-	cont "tried to do so,"
-	cont "and were lost"
+	para "tried to do so,"
+	line "and were lost"
 	cont "at sea!"
 	done
 	
@@ -111,7 +111,7 @@ LandingDormsKurtScript:
 .TLKurtPC
 	writetext KurTLDormsText2
 	promptbutton
-	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
+	special PokemonCenterPC
 	endtext
 	end
 
@@ -152,6 +152,13 @@ TLKurtBattleText2:
 	cont "you like."
 	done
 
+LandingDormsBarbeauJournalScript:
+	italictypeface
+	showtext BarbeauJournal
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
 BarbeauJournal:
 	text "Barbeau's Journal"
 	
@@ -159,6 +166,6 @@ BarbeauJournal:
 	line "restless... Is"
 	para "Amos' plan really"
 	line "enough to repel"
-	para "the barbarians"
+	para "both barbarians"
 	line "and the Consul?"
 	done

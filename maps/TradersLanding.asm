@@ -385,10 +385,10 @@ TL_Brigader_Script:
 	done
 
 TL_Brigader_AfterKenseyText:
-	text "The port will"
-	line "take some time"
-	cont "to rebuild after"
-	cont "that nasty storm."
+	text "On a clear night"
+	line "I still think I"
+	para "hear Lugia's cry"
+	line "from the ocean."
 	done
 
 
@@ -473,9 +473,9 @@ TL_Move_Kurt_1:
 
 LandingBarbeauScript:
 	faceplayer
-	checkevent EVENT_BEAT_KENSEY_PORT
-	iftrue AfterKensey
 	opentext
+	checkevent EVENT_BEAT_KENSEY_PORT
+	iftrue .AfterKensey
 	writetext BarbeauTimeTravelText
 	yesorno
 	iffalse_jumpopenedtext BarbeauNoTimeTravelText
@@ -487,6 +487,21 @@ LandingBarbeauScript:
 	waitsfx
 	warp ROUTE_40, 14, 2
 	end
+
+.AfterKensey:
+	checkpoke LUGIA
+	iftrue_jumptextfaceplayer BarbeauLugiaText
+	jumpthisopenedtext
+	
+	text "What will we do?"
+	line "Lugia, guardian"
+	cont "of the seas, is"
+	para "no longer with"
+	line "us. We must find"
+	para "ways to adapt"
+	line "without her."
+	done
+
 
 BarbeauTimeTravelText:
 	text "I thought you"
@@ -501,21 +516,6 @@ BarbeauNoTimeTravelText:
 	text "Some other time."
 	done
 
-
-
-AfterKensey:
-	checkpoke LUGIA
-	iftrue_jumptextfaceplayer BarbeauLugiaText
-	jumpthisopenedtext
-	
-	text "What will we do?"
-	line "Lugia, guardian"
-	cont "of the seas, is"
-	para "no longer with"
-	line "us. We must find"
-	cont "ways to adapt"
-	cont "without her."
-	done
 
 BarbeauLugiaText:
 	text "What will we do?"

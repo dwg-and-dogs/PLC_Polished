@@ -544,6 +544,9 @@ EG_AdrinnaText3:
 	done
 
 EG_SeedBombMT:
+	; debug tech
+	setflag ENGINE_BOULDERBADGE
+	; END DEBUG 	
 	faceplayer
 	opentext
 	checkevent EVENT_LISTENED_TO_SEED_BOMB_INTRO

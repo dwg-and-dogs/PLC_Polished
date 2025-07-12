@@ -12,13 +12,13 @@ WesternCapital_MapScriptHeader: ; todo
 	warp_event 23, 17, WESTERN_CAPITAL_DANCE_THEATRE, 1
 	warp_event 21, 25, WESTERN_CAPITAL_DORMS, 1
 	warp_event 27, 23, WESTERN_CAPITAL_STOCKROOM, 1	
-	warp_event 0, 18, CAPITAL_CULL_GATE, 3
-	warp_event 0, 19, CAPITAL_CULL_GATE, 4
+	warp_event 4, 32, CAPITAL_CULL_GATE, 3
+	warp_event 4, 33, CAPITAL_CULL_GATE, 4
 	warp_event 35, 5, TIN_TOWER_OLD_1F, 1
-	warp_event 3, 31, STADIUM_CAPITAL_GATE, 3
-	warp_event 4, 31, STADIUM_CAPITAL_GATE, 4
-	warp_event 35, 26, STY_CAPITAL_GATE, 1
-	warp_event 35, 27, STY_CAPITAL_GATE, 2
+	warp_event 9, 31, STADIUM_CAPITAL_GATE, 3
+	warp_event 10, 31, STADIUM_CAPITAL_GATE, 4
+	warp_event 35, 26, STY_CAPITAL_GATE, 3
+	warp_event 35, 27, STY_CAPITAL_GATE, 4
 
 	def_coord_events
 
@@ -425,4 +425,7 @@ WC_AmosWantedSign:
 
 WC_ToStadiumSign:
 	text "South: To Stadium"
+
+	para "West: To Trader's"
+	line "Landing"
 	done

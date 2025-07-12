@@ -10,7 +10,7 @@ StadiumGrounds_MapScriptHeader:
 	warp_event 26,  5, STADIUM_BOX, 1
 	warp_event  8, 39, SERENE_SPRINGS, 3
 	warp_event  7, 39, SERENE_SPRINGS, 4
-	warp_event  49, 3, STADIUM_CAPITAL_GATE, 3
+	warp_event  49, 3, STADIUM_CAPITAL_GATE, 1
 	
 	def_coord_events ; todo: need to pan the camera over for changing the blocks, and then also have a condition depending on if you beat the toxicroak but lose to bobesh 
 	coord_event 26,  6, 0, StadiumGroundsToxicroakScene

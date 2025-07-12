@@ -21,10 +21,10 @@ CattleCull39_MapScriptHeader:
 
 
 	def_object_events
-	object_event 11, 16, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, GenericTrainerNomadMDale, -1
-	object_event 13, 20, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, GenericTrainerNomadMJacob, -1
-	object_event 7,  7, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, GenericTrainerNomadFMarlene, -1
-	object_event 5,  29, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, GenericTrainerNomadFRin, -1
+	object_event 11, 16, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerNomadMDale, -1
+	object_event 13, 20, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerNomadMJacob, -1
+	object_event 7,  7, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFMarlene, -1
+	object_event 5,  29, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFRin, -1
 	object_event 13, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CattleCullKurtScript, -1
 	pokemon_event  5, 10, TAUROS, -1, -1, PAL_NPC_RED, TaurosText, -1;
 	pokemon_event  4, 11, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
@@ -63,23 +63,22 @@ GenericTrainerNomadMDale:
    generictrainer NOMAD_M, NOMAD_M_DALE, EVENT_BEAT_NOMAD_M_DALE, NomadDaleSeenText, NomadDaleBeatenText
 
    text "We read storms to"
-   line "guide our kin."
-   para "Now guards watch"
-   line "our paths..."
-   para "Who guards our"
-   line "old wisdom?"
+   line "guide our path."
    done
 
 NomadDaleSeenText:
    text "The winds speak"
-   line "to wanderers..."
+   line "to wanderers."
    para "Their weathermen"
    line "are deaf."
    done
 
 NomadDaleBeatenText:
-   text "You flow like the"
-   line "changing tides."
+   text "Their guards watch"
+   line "our paths."
+   para "Meanwhile, our"
+   line "traditions are"
+   cont "running away."
    done
 
 
@@ -87,12 +86,12 @@ NomadDaleBeatenText:
 GenericTrainerNomadFRin:
    generictrainer NOMAD_F, NOMAD_F_RIN, EVENT_BEAT_NOMAD_F_RIN, NomadRinSeenText, NomadRinBeatenText
 
-   text "Their new healing"
-   line "house rises..."
-   para "But health flowed"
-   line "with movement."
-   para "What sickness do"
-   line "they fear most?"
+   text "There's a season"
+   line "for everything."
+   
+   para "Does the consul"
+   line "think he controls"
+   cont "the heavens?"
    done
 
 NomadRinSeenText:
@@ -101,8 +100,8 @@ NomadRinSeenText:
    done
 
 NomadRinBeatenText:
-   text "True strength"
-   line " needs freedom!"
+   text "We've been made"
+   line "stagnant, though."
    done
 
 GenericTrainerNomadMJacob:
@@ -110,8 +109,9 @@ GenericTrainerNomadMJacob:
 
    text "They say their"
    line "routes are safe."
-   para "Safe for gold,"
-   line "perhaps..."
+   para "But they don't"
+   line "know how to navig-"
+   cont "ate the fog."
    done
 
 NomadJacobSeenText:
@@ -216,8 +216,9 @@ NomadF_GotHoneClaws:
 HoneClawsText:
 	text "We're adapting to"
 	line "living on these"
-	cont "cliffs for the"
-	cont "time being."
+	cont "cliffs for perpe-"
+	cont "tuity, not just"
+	cont "seasonal."
 	
 	para "Learning a new"
 	line "skill is a good"

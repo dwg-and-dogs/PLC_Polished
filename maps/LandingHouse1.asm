@@ -24,21 +24,28 @@ LandingHouse1_MapScriptHeader:
 
 
 
-	object_const_def
-
-
 LandingHouse1MomScript:
 	faceplayer
+	opentext
 	checkevent EVENT_NOMAD_NEXUS
 	iffalse_jumpopenedtext LandingHouseWhereSonText
-	checkevent EVENT_GOT_LIFE_ORB ; CHECK 
-	iftrue_jumptextfaceplayer LandingHouse1_GotLifeOrb
-	opentext
+	checkevent EVENT_GOT_LIFE_ORB  
+	iffalse_jumpopenedtext LandingHouse1_GotLifeOrb
 	writetext LandingHouse1_GiveLifeOrb
 	promptbutton
 	verbosegiveitem LIFE_ORB
 	setevent EVENT_GOT_LIFE_ORB
 	jumpthisopenedtext
+
+	text "Thank goodness my"
+	line "son is back."
+	
+	para "Even though our"
+	line "lives are diffe-"
+	cont "rent, we can at"
+	para "least depend on"
+	line "our families."
+	done
 
 LandingHouse1_GotLifeOrb:
 	text "Thank goodness my"
@@ -81,6 +88,11 @@ LandingHouse1SonScript:
 	verbosegivetmhm TM_FLASH
 	setevent EVENT_GOT_TM_FLASH
 	jumpthisopenedtext
+
+	text "I won't need that"
+	line "anymore. I'm"
+	cont "needed here."
+	done
 
 LandingHouse1_GotFlash:
 	text "I won't need that"
