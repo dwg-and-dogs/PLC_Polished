@@ -9,9 +9,7 @@ CianwoodCove_MapScriptHeader:
 	def_warp_events
 
 
-
 	def_coord_events
-
 
 
 	def_bg_events

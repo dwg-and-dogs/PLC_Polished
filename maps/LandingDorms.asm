@@ -7,7 +7,8 @@ LandingDorms_MapScriptHeader:
 
 
 	def_warp_events
-
+	warp_event  4,  7, TRADERS_LANDING, 3
+	warp_event  5,  7, TRADERS_LANDING, 3
 
 
 	def_coord_events

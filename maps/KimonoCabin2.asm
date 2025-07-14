@@ -1,7 +1,7 @@
 KimonoCabin2_MapScriptHeader: 
 	def_scene_scripts
-	; issues: kimono doesn't get the hedgehog back, and the hedgehog scripts don't seem to work 
-
+	
+	
 	def_callbacks
 
 

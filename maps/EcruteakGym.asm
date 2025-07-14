@@ -8,12 +8,16 @@ EcruteakGym_MapScriptHeader:
 	def_warp_events
 	warp_event  4, 17, ECRUTEAK_CITY, 10
 	warp_event  5, 17, ECRUTEAK_CITY, 10
+
+	warp_event  7,  6, ECRUTEAK_GYM, 3 ; 3 boulder 1
+	warp_event  2,  8, ECRUTEAK_GYM, 3	; 4 boulder 2 
+	
 	warp_event  4, 14, ECRUTEAK_GYM, 4
 	warp_event  2,  4, ECRUTEAK_GYM, 3
 	warp_event  2,  5, ECRUTEAK_GYM, 3
 	warp_event  2,  6, ECRUTEAK_GYM, 3
 	warp_event  2,  7, ECRUTEAK_GYM, 3	
-	warp_event  2,  8, ECRUTEAK_GYM, 3
+
 	warp_event  2,  9, ECRUTEAK_GYM, 3
 	warp_event  2,  10, ECRUTEAK_GYM, 3	
 	warp_event  3,  10, ECRUTEAK_GYM, 3	
@@ -31,7 +35,7 @@ EcruteakGym_MapScriptHeader:
 	warp_event  6,  4, ECRUTEAK_GYM, 3		
 	warp_event  6,  5, ECRUTEAK_GYM, 3			
 	warp_event  6,  6, ECRUTEAK_GYM, 3				
-	warp_event  7,  6, ECRUTEAK_GYM, 3				
+
 
 	def_coord_events
 
@@ -58,14 +62,16 @@ EcruteakGymBoulders:
 	endcallback
 
 .BoulderTable: ; todo add all the possible warps 
-	stonetable 26, 	ECRUTEAK_GYM_BOULDER1, .Disappear1
-	stonetable 8, 	ECRUTEAK_GYM_BOULDER2, .Disappear2
+	; boulder 1 
+	stonetable 3, 	ECRUTEAK_GYM_BOULDER1, .Disappear1
+	; boulder 2 
+	stonetable 4, 	ECRUTEAK_GYM_BOULDER2, .Disappear2
 	db -1 ; end
 
 .Disappear1:
 	disappear ECRUTEAK_GYM_BOULDER1
 	pause 30
-	playsound SFX_FORESIGHT
+	playsound SFX_STRENGTH
 	earthquake 80
 	reloadmappart
 	jumpthistext
@@ -222,6 +228,7 @@ EcruteakMamoswineText:
 	line "Mamooo!"
 	done
 
+
 EcruteakGymBouldersResetScript: ; C.F. KIMONO CABIN 3
 	faceplayer
 	opentext
@@ -237,14 +244,14 @@ EcruteakGymBouldersResetScript: ; C.F. KIMONO CABIN 3
 	iffalse .CheckBoulder2
 	earthquake 80
 	clearevent EVENT_ECRUTEAK_BOULDER_1	
-	moveobject ECRUTEAK_GYM_BOULDER1, 0, 0	
+	moveobject ECRUTEAK_GYM_BOULDER1, 7, 11	
 	appear ECRUTEAK_GYM_BOULDER1	
 .CheckBoulder2:
 	checkevent EVENT_ECRUTEAK_BOULDER_2
 	iffalse_jumptext EG_BouldersAreAllBack
 	earthquake 80
 	clearevent EVENT_ECRUTEAK_BOULDER_2	
-	moveobject ECRUTEAK_GYM_BOULDER2, 0, 0
+	moveobject ECRUTEAK_GYM_BOULDER2, 3, 8
 	appear ECRUTEAK_GYM_BOULDER2
 ; finish 
 	opentext

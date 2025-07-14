@@ -4,18 +4,18 @@ SproutTower1F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  7, 15, VIOLET_CITY, 7
 	warp_event  8, 15, VIOLET_CITY, 7
-	warp_event  4,  4, SPROUT_TOWER_2F, 1
+	warp_event  9, 15, VIOLET_CITY, 7
+	warp_event  7,  7, SPROUT_TOWER_2F, 1
 
 	def_coord_events
 
 	def_bg_events
 	bg_event  5, 15, BGEVENT_JUMPTEXT, SproutTower1FStatueText
-	bg_event 10, 15, BGEVENT_JUMPTEXT, SproutTower1FStatueText
+	bg_event 12, 15, BGEVENT_JUMPTEXT, SproutTower1FStatueText
 
 	def_object_events
-	object_event  5, 12, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBirdKeeperRod, -1
+	object_event  7, 12, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBirdKeeperRod, -1
 	object_event  10, 12, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBirdKeeperAbe, -1
 
 

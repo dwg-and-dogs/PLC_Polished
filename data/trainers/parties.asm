@@ -9363,8 +9363,6 @@ NomadMGroup:
 	
 	; BUCK
 	db "Jacob@"
-	db TRAINERTYPE_NORMAL
-	; party
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party
 	db 30, STARMIE, NO_ITEM
@@ -9378,8 +9376,6 @@ NomadMGroup:
 	; need to revise parties 
 	; BUCK
 	db "Aiden@"
-	db TRAINERTYPE_NORMAL
-	; party
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party
 	db 30, STARMIE, NO_ITEM
@@ -9392,8 +9388,6 @@ NomadMGroup:
 	
 	; BUCK
 	db "Dan@"
-	db TRAINERTYPE_NORMAL
-	; party
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party
 	db 30, STARMIE, NO_ITEM
@@ -9406,8 +9400,6 @@ NomadMGroup:
 
 	; BUCK
 	db "Teddy@"
-	db TRAINERTYPE_NORMAL
-	; party
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party
 	db 30, STARMIE, NO_ITEM
@@ -9420,8 +9412,6 @@ NomadMGroup:
 	
 	; BUCK
 	db "Tyrone@"
-	db TRAINERTYPE_NORMAL
-	; party
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party
 	db 30, STARMIE, NO_ITEM

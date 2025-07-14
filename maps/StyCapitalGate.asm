@@ -7,10 +7,10 @@ StyCapitalGate_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 0,  2, SULFUR_STY, 4 
-	warp_event 0,  3, SULFUR_STY, 5 
-	warp_event 7,  2, WESTERN_CAPITAL, 12 
-	warp_event 7,  3, WESTERN_CAPITAL, 13
+	warp_event 7,  2, SULFUR_STY, 4 
+	warp_event 7,  3, SULFUR_STY, 5 
+	warp_event 0,  2, WESTERN_CAPITAL, 12 
+	warp_event 0,  3, WESTERN_CAPITAL, 13
 
 
 	def_coord_events

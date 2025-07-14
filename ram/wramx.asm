@@ -1099,7 +1099,7 @@ wWhirlIslandLugiaChamberSceneID:: db
 wStadiumBoxSceneID:: db
 wStadiumCapitalGateSceneID:: db
 wStyCapitalGateSceneID:: db  
-wUnused16SceneID:: db
+wTradersLandingSceneID:: db
 wUnused17SceneID:: db
 wUnused18SceneID:: db
 wUnused19SceneID:: db

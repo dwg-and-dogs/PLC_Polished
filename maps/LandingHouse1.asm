@@ -1,5 +1,4 @@
 LandingHouse1_MapScriptHeader: 
-
 	def_scene_scripts
 
 
@@ -7,7 +6,8 @@ LandingHouse1_MapScriptHeader:
 
 
 	def_warp_events
-
+	warp_event  3,  7, TRADERS_LANDING, 5
+	warp_event  4,  7, TRADERS_LANDING, 5
 
 
 	def_coord_events

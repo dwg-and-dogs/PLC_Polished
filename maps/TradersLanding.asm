@@ -46,13 +46,15 @@ TradersLanding_MapScriptHeader:
 	object_event  5, 5, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, LandingBarbeauScript, -1 
 	object_event 5, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANDING_KURT_2
 	; roadblock 
-	object_event 20, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, -1
-	object_event 21, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, TL_Brigader_Script, -1
+	object_event 20, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TL_Brigader_Script, -1
+	object_event 21, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TL_Brigader_Script, -1
 	; NPCs
 	object_event 10, 19, SPRITE_FIREBREATHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingEggScript, EVENT_BEAT_KENSEY_PORT
-	; todos 
 	object_event 21, 15, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1 ; todo 
 	object_event 19, 19, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadFScript, -1 ; todo 
+	; sailboat 
+	object_event 14, 29, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_TOP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, -1
+	object_event 14, 29, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_BOTTOM, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, -1
 
 	object_const_def
 	const TRADERS_LANDING_BARBEAU_1
@@ -115,12 +117,14 @@ TL_Scene_Part_1_Script:
 	disappear TRADERS_LANDING_BARBEAU_1
 	applyonemovement TRADERS_LANDING_KURT, step_up
 	turnobject TRADERS_LANDING_KURT, RIGHT
+	turnobject PLAYER, LEFT
 	showtext TL_Text9
 	applymovement TRADERS_LANDING_KURT, TL_Move_Kurt_2
 	disappear TRADERS_LANDING_KURT
 	setevent EVENT_LANDING_SCENE_1_BARBEAU
 	setevent EVENT_LANDING_SCENE_1_KENSEY
 	setevent EVENT_LANDING_SCENE_1_KURT
+	setscene $1
 	end
 
 TL_Text1:
@@ -232,7 +236,7 @@ TL_Text9:
 	line "the Consul."
 	
 	para "But with your "
-	line "silver wing,"
+	line "Silver Wing,"
 	para "we can go to our"
 	line "time and bring"
 	cont "her here to save"
@@ -373,8 +377,13 @@ TL_OpenForBusinessSign:
 	done
 
 TL_Brigader_Script:
+	faceplayer
+	opentext
+	; debug tech
+	setscene $1
+	; end debug tech 
 	checkevent EVENT_BEAT_KENSEY_PORT
-	iftrue_jumptextfaceplayer TL_Brigader_AfterKenseyText
+	iftrue_jumptext TL_Brigader_AfterKenseyText
 	jumpthisopenedtext
 	
 	text "Port is open only"
@@ -404,7 +413,7 @@ LandingEggScript: ;cf the cafe script
 	checkmoney $0, 10000
 	ifequal $2, .NoMoney 
 	promptbutton
-	giveegg H__SLIGGOO
+	givepoke H__SLIGGOO, 5
 	iffalse_jumpopenedtext NoRoomText
 	playsound SFX_TRANSACTION
 	takemoney $0, 10000
@@ -422,14 +431,17 @@ GivingHSliggooEggText:
 	text "Hey, you my"
 	line "contact?"
 	
-	para "I gotta the egg"
-	line "smuggled outta"
+	para "I smuggled that"
+	line "#mon outta"
 	para "Hisui, like I"
 	line "told ya. 10k."
 	done
 	
 GotHSliggooEggText:
-	text "Now, I just need"
+	text "That egg is a"
+	line "rare #mon."
+
+	para "Now, I just need"
 	line "to escape back on"
 	para "the Sailor's boat"
 	line "and it's a big"
@@ -468,7 +480,7 @@ TL_Move_Kurt_1:
 	step_down
 	step_down
 	turn_head_right
-	done
+	step_end
 
 
 LandingBarbeauScript:

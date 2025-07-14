@@ -26,7 +26,7 @@ CattleCull39_MapScriptHeader:
 	object_event 7,  7, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFMarlene, -1
 	object_event 5,  29, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFRin, -1
 	object_event 13, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CattleCullKurtScript, -1
-	pokemon_event  5, 10, TAUROS, -1, -1, PAL_NPC_RED, TaurosText, -1;
+	pokemon_event  5, 10, TAUROS, -1, -1, PAL_NPC_BROWN, TaurosText, -1;
 	pokemon_event  4, 11, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
 	pokemon_event  9, 12, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
 	pokemon_event  6, 12, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
@@ -140,12 +140,14 @@ CattleCullKurtScript:
 	yesorno
 	iffalse DontHearHearStory4
 	writetext KurtCattleCullStoryText
+	waitbutton
 	clearevent EVENT_KURTS_HOUSE_BOOK_4
 	closetext
 	end
 
 DontHearHearStory4:
 	writetext SomeOtherTime_4Text
+	waitbutton
 	closetext
 	end
 
@@ -183,7 +185,7 @@ KurtCattleCullStoryText:
 	para "his career with"
 	line "for Silph's #-"
 	para "ball R&D in"
-	cont "Kanto, he left"
+	line "Kanto, he left"
 	para "Cyndaquil for me"
 	line "to take care of."
 

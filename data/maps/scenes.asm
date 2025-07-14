@@ -74,4 +74,5 @@ MapScenes::
 	scene_var STADIUM_BOX, 							  wStadiumBoxSceneID
 	scene_var STADIUM_CAPITAL_GATE, 				  wStadiumCapitalGateSceneID ; todo 
 	scene_var STY_CAPITAL_GATE, 					  wStyCapitalGateSceneID
+	scene_var TRADERS_LANDING, 						  wTradersLandingSceneID
 	db -1

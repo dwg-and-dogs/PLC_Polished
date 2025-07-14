@@ -1,4 +1,4 @@
-WesternCapital_MapScriptHeader: ; todo 
+WesternCapital_MapScriptHeader: 
 	def_scene_scripts
 	scene_script WesternCapitalCemeteryScene
 

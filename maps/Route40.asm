@@ -1,4 +1,4 @@
-Route40_MapScriptHeader:
+Route40_MapScriptHeader: ; TODO REVISE SCENE TO A SECEN SCRPT 
 	def_scene_scripts
 	
 
@@ -16,7 +16,7 @@ Route40_MapScriptHeader:
 	def_object_events
 	; npc who gives you razor claw for defeating them all 
 	object_event 11, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RazorScavengerScript, -1
-	object_event 13, 2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_40_KURT
+	object_event 13, 2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_40_KURT
 ;monica
 	object_event  10,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
 	smashrock_event  7, 11
