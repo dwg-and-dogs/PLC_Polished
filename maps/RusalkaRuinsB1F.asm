@@ -22,21 +22,29 @@ RusalkaRuinsB1F_MapScriptHeader:
 
 
 	def_object_events
-;	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RUSALKA_B1F_SPIRITOMB_1
-;	object_event  0,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RUSALKA_B1F_SPIRITOMB_2
-	object_event  1,  10, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog01, -1
-	object_event  8,  10, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog02, -1
-	object_event  13,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog03, -1
-	object_event  20,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog04, -1
-	object_event  4,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog08, -1	
+	object_event  1,  10, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog01, -1
+	object_event  8,  10, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog02, -1
+	object_event  13,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog03, -1
+	object_event  20,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog04, -1
+	object_event  4,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog08, -1	
+
 	bg_event  5,  7, BGEVENT_ITEM + X_ATTACK, EVENT_RUSALKA_B1F_X_ATTACK 
 	bg_event 27, 13, BGEVENT_ITEM + X_SPEED, EVENT_RUSALKA_B1F_X_SPEED
 
+
+
 	object_const_def
-;	const RUSALKA_B1F_SPIRITOMB_1
-;	const RUSALKA_B1F_SPIRITOMB_2
+
+
 
 CaptainsLog01:
+	italictypeface
+	showtext CaptainsLog01Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog01Text:
 	text "Captain's Log 1"
 	line "March 01"
 	
@@ -49,27 +57,25 @@ CaptainsLog01:
 	
 	para "The locals"
 	line "surrendered with"
-	cont "surprising"
-	cont "grace."
-	
+	cont "surprising grace."
+
 	para "Their chief's"
 	line "wife insisted"
-	cont "on accompanying"
-	cont "us to port,"
-	cont "bearing some"
-	cont "sort of stone"
+	para "on accompanying"
+	line "us to port,"
+	para "bearing some"
+	line "sort of stone"
 	cont "as tribute."
-	
-	para "Dark,"
-	line "unremarkable"
-	cont "thing."
-	
-	para "Will look fine"
-	line "beside the"
-	cont "captured flag."
 	done
 
 CaptainsLog02:
+	italictypeface
+	showtext CaptainsLog02Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog02Text:
 	text "Captain's Log 2"
 	line "March 16"
 	
@@ -78,20 +84,16 @@ CaptainsLog02:
 	cont "desk."
 	
 	para "Eleanor writes"
-	line "faithfully -"
-	cont "perhaps too"
-	cont "faithfully."
+	line "faithfully."
 	
 	para "I'll read them"
 	line "when we've"
-	cont "properly secured"
-	cont "our new"
-	cont "territories."
+	para "properly secured"
+	line "our territory."
 	
 	para "That stone..."
-	line "there's"
-	cont "something regal"
-	cont "about it."
+	line "there's something"
+	cont "regal about it."
 	
 	para "Had crew take"
 	line "shifts standing"
@@ -99,11 +101,18 @@ CaptainsLog02:
 	
 	para "Can't risk"
 	line "anyone getting"
-	cont "ideas about my"
-	cont "collection."
+	para "ideas about my"
+	line "collection."
 	done
 
 CaptainsLog03:
+	italictypeface
+	showtext CaptainsLog03Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog03Text:
 	text "Captain's Log 3"
 	line "April 09"
 	
@@ -113,21 +122,28 @@ CaptainsLog03:
 	
 	para "I regaled them"
 	line "with one of my"
-	cont "best, the time"
-	cont "I sacrificed"
-	cont "the life boats"
-	cont "to get enough"
-	cont "speed to catch"
-	cont "a shiny Swanna."
+	para "best, the time"
+	line "I sacrificed"
+	para "the life boats"
+	line "to get enough"
+	para "speed to catch"
+	line "a shiny Swanna."
 	
 	para "Also, found a"
-	line "few crew"
-	cont "stealing - sent"
-	cont "them below deck"
-	cont "in the cells."
+	line "few of my crew"
+	para "stealing - sent"
+	line "them below deck"
+	cont "in the cells!"
 	done
 
 CaptainsLog04:
+	italictypeface
+	showtext CaptainsLog04Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog04Text:
 	text "Captain's Log 4"
 	line "April 12"
 	
@@ -140,66 +156,48 @@ CaptainsLog04:
 	
 	para "I plan to read"
 	line "it once I finish"
-	cont "investigating"
-	cont "the faint green"
-	cont "glow emanating"
-	cont "from the stone."
+	para "investigating"
+	line "the faint green"
+	para "glow emanating"
+	line "from the stone."
 	
 	para "It began to"
 	line "glow last night."
 	
 	para "Incidentally,"
 	line "the four crew"
-	cont "locked up have"
-	cont "disappeared."
+	para "locked up have"
+	line "disappeared."
 	done
 
 CaptainsLog08:
+	italictypeface
+	showtext CaptainsLog08Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog08Text:
 	text "Captain's Log 8"
 	line "June 05"
 	
-	para "The expedition"
-	line "came back"
-	cont "missing half"
-	cont "the crew."
-	
-	para "However, a"
-	line "dozen greedy"
-	cont "sailors"
-	cont "kidnapped the"
-	cont "woman and"
-	cont "forced her to"
-	cont "take them."
-	
-	para "They got their"
-	line "comeuppance"
-	cont "when she was"
-	cont "the only one to"
-	cont "come back."
-	
-	para "The alluring"
-	line "glow from the"
-	cont "stone is"
-	cont "brighter"
-	cont "tonight."
-	
-	para "Eleanor, how"
-	line "could I have"
-	cont "done this!"
-	
-	para "Finally read"
-	line "your mail."
+	para "Finally read the"
+	line "mail from Ellie."
 	
 	para "I shall be a"
 	line "father!"
 	
 	para "I have dallied"
 	line "around these"
-	cont "islands too"
-	cont "long thinking"
+	para "islands too"
+	line "long thinking"
 	cont "about riches."
 	
 	para "The life within"
 	line "you is what I"
 	cont "want to hold."
+	
+	para "I'll set a course"
+	line "once I admire the"
+	cont "gemstone again."
 	done

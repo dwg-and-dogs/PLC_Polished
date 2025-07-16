@@ -36,15 +36,22 @@ RusalkaRuins1F_MapScriptHeader:
 
 	def_object_events
 
-	object_event 30, 13, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog05, -1	
-	object_event 25, 17, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog06, -1	
-	object_event 18, 16, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog07, -1	
-	object_event  6, 13, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog09, -1	
+	object_event 30, 13, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog05, -1	
+	object_event 25, 17, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog06, -1	
+	object_event 18, 16, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog07, -1	
+	object_event  6, 13, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog09, -1	
 
 	object_const_def
 
 
 CaptainsLog05:
+	italictypeface
+	showtext CaptainsLog05Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog05Text:
 	text "Captain's Log 5"
 	line "May 15"
 	
@@ -66,10 +73,18 @@ CaptainsLog05:
 	
 	para "That woman claims"
 	line "that the islands"
-	cont "have precious"
-	cont "metals inside."
+	para "have precious"
+	line "metals inside."
+	done
 
-CaptainsLog06:
+CaptainsLog06
+	italictypeface
+	showtext CaptainsLog06Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog06Text:
 	text "Captain's Log 6"
 	line "May 20"
 	
@@ -101,36 +116,50 @@ CaptainsLog06:
 
 
 CaptainsLog07:
+	italictypeface
+	showtext CaptainsLog07Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog07Text:
 	text "Captain's Log 7"
 	line "June 03"
 	
-	para "Still stuck in"
-	line "the endlessly"
-	cont "turning whirl"
+	para "The expedition"
+	line "has yet to return"
+	cont "from the whirling"
 	cont "islands."
 	
 	para "No mail for 2"
 	line "weeks - how is"
 	cont "it possible,"
-	cont "when we are so"
-	cont "close?"
+	para "when we are so"
+	line "close to shore?"
 	done
 
 CaptainsLog09:
+	italictypeface
+	showtext CaptainsLog09Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog09Text:
 	text "Captain's Log 9"
 	line "June 06"
 	
 	para "Took heavy"
 	line "losses getting"
-	cont "through the"
-	cont "whirlpools and"
-	cont "now crash inside"
-	cont "this cave."
+	para "through the"
+	line "whirlpools and"
+	para "now crash inside"
+	line "this cave."
 	
 	para "If I'd had the"
 	line "full crew we"
-	cont "might have"
-	cont "done it."
+	para "might have"
+	line "done it."
 	
 	para "No one has seen"
 	line "that woman since"

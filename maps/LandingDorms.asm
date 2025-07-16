@@ -20,7 +20,6 @@ LandingDorms_MapScriptHeader:
 	bg_event  0,  3, BGEVENT_READ, TradersLandingDormsBed
 	bg_event  0,  4, BGEVENT_READ, TradersLandingDormsBed
 	bg_event  0,  5, BGEVENT_READ, TradersLandingDormsBed
-	bg_event 0, 0, BGEVENT_JUMPTEXT, BarbeauJournal
 
 
 	def_object_events

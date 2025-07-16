@@ -60,7 +60,7 @@ CianwoodGymSignText:
 	done
 
 CianwoodPharmacySignText:
-	text "500 Years of"
+	text "100 Years of"
 	line "Tradition"
 
 	para "Cianwood City"
@@ -70,29 +70,10 @@ CianwoodPharmacySignText:
 	line "Medicinal Queries"
 	done
 
-CianwoodPhotoStudioSignText:
-	text "Cianwood City"
-	line "Photo Studio"
-
-	para "Take a Snapshot as"
-	line "a Keepsake!"
-	done
-
-CianwoodCliffEdgeGateSignText:
-	text "Cliff Edge Gate"
-
-	para "Yellow Forest is"
-	line "just ahead!"
-	done
-
-CianwoodMoveManiacSignText:
-	text "The Move Maniac"
-	line "Ahead"
-	done
-
 
 CianwoodEusineScript:
 	faceplayer
+	opentext
 	checkevent EVENT_HEARD_CIANWOOD_SHPEEL
 	iftrue .HeardShpeel
 	showtext CianwoodShpeelText
@@ -132,7 +113,7 @@ CianwoodEusineScript:
 	
 CianwoodShpeelText:
 	text_high
-    text " Barbeau: " 
+    text " Eusine: " 
 	next
 	text_start 
 	text "Absurd. The storm"
@@ -198,6 +179,7 @@ CC_Move_Eusine_1:
 CC_Move_Kurt_2:
 	step_up
 	step_up
+	step_end
 
 CC_KurtText1:
 	text_high
@@ -208,7 +190,7 @@ CC_KurtText1:
 	line "a similar cynicism"
 	para "but now, I feel"
 	line "empowered. Like"
-	para "I'm fulfilling my"
+	para "I'm fulfilling a"
 	line "destiny."
 	done
 	
@@ -249,8 +231,8 @@ CC_KurtPrayer:
 	para "Lugia: In this"
 	line "darkest hour,"
 	
-	para "on this"
-	line "tattered atoll,"
+	para "on this tattered"
+	line "atoll,"
 	
 	para "Bring a cleansing"
 	line "shower,"
@@ -264,7 +246,9 @@ CianwoodCityShrineScript: ; revise: show painting of lugia
 	paintingpic LUGIA_PAINTING
 	waitbutton
 	closepokepic
-	showtext CC_AskToTimeTravelText
+
+	opentext
+	writetext CC_AskToTimeTravelText
 	yesorno
 	iffalse_jumpopenedtext CC_NoTimeTravelText
 	writetext CC_YesTimeTravelText

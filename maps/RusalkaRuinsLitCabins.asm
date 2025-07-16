@@ -28,5 +28,3 @@ RusalkaRuinsLitCabins_MapScriptHeader:
 	tmhmball_event 26, 4, TM_WILL_O_WISP, EVENT_RUSALKA_WILLOWISP
 	itemball_event 16, 10, RAZOR_FANG, 1, EVENT_RUSALKA_RAZOR_FANG
 	
-
-	object_const_def

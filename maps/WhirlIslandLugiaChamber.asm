@@ -53,6 +53,8 @@ WhirlIslandKurtLugiaScript:
 	setscene $1
 	setevent EVENT_LUGIA_POKEBALL
 	setevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_KURT
+	clearevent EVENT_CIANWOODCITY_KURT
+	clearevent EVENT_CIANWOODCITY_LUGIA
 	end
 	
 KurtLugiaText1:

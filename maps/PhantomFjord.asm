@@ -13,7 +13,6 @@ PhantomFjord_MapScriptHeader:
 	def_coord_events
 
 
-
 	def_bg_events
 	bg_event   3,  8, BGEVENT_ITEM + REVIVAL_HERB, EVENT_FJORD_HIDDEN_1
 

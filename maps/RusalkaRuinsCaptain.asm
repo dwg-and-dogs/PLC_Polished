@@ -19,7 +19,7 @@ RusalkaRuinsCaptain_MapScriptHeader:
 
 	def_object_events
 	object_event  4,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPIRITOMB, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CaptainSpiritomb, EVENT_RUSALKA_SPIRITOMB
-	object_event  5,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, CaptainsLog10, -1
+	object_event  5,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CaptainsLog10, -1
 	object_event 3, 3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_COMMAND, jumptext, DeadCaptainText, -1
 
 	object_const_def
@@ -42,52 +42,51 @@ DeadCaptainText:
 
 
 CaptainsLog10:
+	italictypeface
+	showtext CaptainsLog10Text
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+CaptainsLog10Text:
 	text "Captain's Log 10"
-	line "My Final Entry"
-	
+
 	para "The stone glows"
 	line "brighter with"
-	cont "each breath -"
-	cont "the last light"
-	cont "in this trophy-"
-	cont "lined tomb."
+	cont "each breath."
 	
 	para "The bats screech"
 	line "a eulogy for"
-	cont "the crew I"
-	cont "sacrificed in"
-	cont "these cursed"
-	cont "islands."
+	para "the crew I"
+	line "sacrificed."
 	
 	para "How fitting to"
 	line "die surrounded"
-	cont "by my precious"
-	cont "trophies, each"
-	cont "one a moment I"
-	cont "chose wrong."
+	para "by my precious"
+	line "trophies, each"
+	para "one a moment I"
+	line "chose wrong."
 	
 	para "Eleanor's last"
 	line "letter sits"
 	cont "before me."
 	
 	para "A child."
-	line "A child I'll"
-	cont "never meet."
+	para "A child I'll"
+	line "never meet."
 	
 	para "But let me give"
-	line "a last"
-	cont "confession:"
+	line "a confession:"
 	
 	para "I would have"
-	line "barely known you"
-	cont "anyway."
+	line "barely known you."
 	
 	para "I'd be hunting"
 	line "for my own"
-	cont "gemstones and"
-	cont "missing your"
-	cont "milestones just"
-	cont "like I did to"
+	para "gemstones and"
+	line "missing your"
+	para "milestones just"
+	line "like I did to"
 	cont "your mother."
 	
 	para "Perhaps it's"
