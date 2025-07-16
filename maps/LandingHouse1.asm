@@ -30,7 +30,7 @@ LandingHouse1MomScript:
 	checkevent EVENT_NOMAD_NEXUS
 	iffalse_jumpopenedtext LandingHouseWhereSonText
 	checkevent EVENT_GOT_LIFE_ORB  
-	iffalse_jumpopenedtext LandingHouse1_GotLifeOrb
+	iftrue_jumpopenedtext LandingHouse1_GotLifeOrb
 	writetext LandingHouse1_GiveLifeOrb
 	promptbutton
 	verbosegiveitem LIFE_ORB

@@ -1,16 +1,16 @@
 CianwoodCave_MapScriptHeader: 
-
 	def_scene_scripts
-;na
+
 
 	def_callbacks
-;na
+
 
 	def_warp_events
 	warp_event 5, 37, CIANWOOD_CITY, 4
 
 
 	def_coord_events
+
 
 	def_bg_events
 	bg_event 4, 22, BGEVENT_ITEM + ELIXIR, EVENT_CIANWOODCAVE_HIDDEN_ETHER ;ok
@@ -19,8 +19,8 @@ CianwoodCave_MapScriptHeader:
 	def_object_events
 	itemball_event 3, 3, DRAGON_SCALE, 1, EVENT_CAVE_DRAGON_SCALE ; TOP OF THE CAVE
 	tmhmball_event 17, 33, TM_DRAGON_PULSE, EVENT_DRAGON_PULSE ; ON ONE OF THE THINGS 
-	itemball_event 11, 21, REVIVE, 1, EVENT_CIANWOODCAVE_REVIVE ;ok
-	itemball_event 11, 29, HYPER_POTION, 1, EVENT_CIANWOODCAVE_HYPER_POTION ;ok
+	itemball_event 11, 21, REVIVE, 1, EVENT_CIANWOODCAVE_REVIVE
+	itemball_event 11, 29, HYPER_POTION, 1, EVENT_CIANWOODCAVE_HYPER_POTION 
 	smashrock_event  13, 5
 	smashrock_event  15, 5
 	smashrock_event  9, 13

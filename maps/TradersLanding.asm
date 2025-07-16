@@ -53,8 +53,8 @@ TradersLanding_MapScriptHeader:
 	object_event 21, 15, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1 ; todo 
 	object_event 19, 19, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadFScript, -1 ; todo 
 	; sailboat 
-	object_event 14, 29, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_TOP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, -1
-	object_event 14, 29, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_BOTTOM, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, -1
+	object_event 15, 28, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_TOP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, EVENT_BEAT_KENSEY_PORT
+	object_event 15, 28, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_BOTTOM, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, EVENT_BEAT_KENSEY_PORT
 
 	object_const_def
 	const TRADERS_LANDING_BARBEAU_1
@@ -250,6 +250,7 @@ TL_Scene_2_L:
 	applyonemovement PLAYER, step_right
 TL_Scene_2_R:
 	applymovement PLAYER, TL_2_PlayerMovesUp
+	turnobject PLAYER, LEFT
 	turnobject TRADERS_LANDING_BARBEAU_2, RIGHT
 	showtext TL_2_Text1 ; you've comE? 
 	pause 10
@@ -271,7 +272,7 @@ TL_Scene_2_R:
 	setevent EVENT_BARBEAU_WARPED
 	special FadeOutPalettes
 	waitsfx
-	warp ROUTE_40, 14, 2
+	warp ROUTE_40, 14, 4
 	end
 
 TL_2_Text1:
@@ -380,7 +381,10 @@ TL_Brigader_Script:
 	faceplayer
 	opentext
 	; debug tech
-	setscene $1
+;	setscene $1
+;	setevent EVENT_NOMAD_NEXUS
+;	clearevent EVENT_NOMAD_ISLANDS_HOUSE
+;	giveitem LIGHT_BALL, 1
 	; end debug tech 
 	checkevent EVENT_BEAT_KENSEY_PORT
 	iftrue_jumptext TL_Brigader_AfterKenseyText
@@ -497,7 +501,7 @@ LandingBarbeauScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp ROUTE_40, 14, 2
+	warp ROUTE_40, 14, 4
 	end
 
 .AfterKensey:
@@ -626,7 +630,6 @@ TL_2_PlayerMovesUp:
 	step_up
 	step_up
 	step_up
-	turn_head_left
 	step_end
 
 TL_2_KurtMoves2:

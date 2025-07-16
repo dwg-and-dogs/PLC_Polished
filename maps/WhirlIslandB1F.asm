@@ -31,7 +31,6 @@ WhirlIslandB1F_MapScriptHeader:
 	itemball_event 11, 30, MAX_ELIXIR, 1, EVENT_WHIRL_ISLAND_B2F_MAX_ELIXIR
 	tmhmball_event  7, 15, TM_REST, EVENT_WHIRL_ISLANDS_TM_REST
 
-	object_const_def
 	
 	
 WhirlIslandB1FKurtText:
@@ -50,5 +49,5 @@ WhirlIslandB1FKurtText:
 	done
 
 GirafarigText:
-	text "Rafir!"
+	text "Rafar!"
 	done

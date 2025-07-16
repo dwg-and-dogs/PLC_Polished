@@ -81,8 +81,8 @@ Route41SageImpressedText:
 Route41SageText2:
 	para "Clearly you honor"
 	line "Lugia if you"
-	para "preserve of"
-	line "her feather."
+	para "preserve one of"
+	line "her feathers."
 	
 	para "We grant you"
 	line "passage."
@@ -124,7 +124,6 @@ Route41TimeTravel:
 	para "Even pulls the"
 	line "Day into night."
 	
-	
 	para "From the deep"
 	line "she watches all,"
 	para "Until tides turn"
@@ -132,7 +131,7 @@ Route41TimeTravel:
 	done
 	
 Route41WaitText:
-	text "Whoa, what is"
+	text "Egad! What is"
 	line "happening to you?"
 	done
 
@@ -140,7 +139,7 @@ GenericTrainerSwimmermMathew:
 	generictrainer SWIMMERM, MATHEW, EVENT_BEAT_SWIMMERM_MATHEW, .SeenText10, .BeatenText10
 
 .BeatenText10:
-	text "OK: what's at the"
+	text "So: what's atop"
 	line "the lighthouse?"
 	
 	para "It's a #mon"
@@ -236,8 +235,8 @@ GenericTrainerBeautyOlivia:
 .BeatenText6:
 	text "Oh, I lost. I'll"
 	line "never have the"
-	cont "nerve to swim to"
-	cont "those scientists."
+	para "nerve to swim to"
+	line "those scientists."
 	done
 
 .SeenText6:
@@ -270,8 +269,8 @@ GenericTrainerBeautyBridget:
 	done
 
 .SeenText4:
-	text "You found our"
-	line "secret beach!"
+	text "How did you"
+	line "find us?"
 	done
 
 GenericTrainerScientistBraydon:

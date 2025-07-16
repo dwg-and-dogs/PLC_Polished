@@ -31,9 +31,13 @@ WhirlIslandKurtLugiaScript:
 	end
 	
 .Script:
+	; todo: music for legendary
 	applyonemovement PLAYER, step_up
-	showemote EMOTE_BOLT, WHIRLISLANDLUGIACHAMBER_KURT, 15
+	pause 60
+	; music
+	showemote EMOTE_BOLT, WHIRLISLANDLUGIACHAMBER_KURT, 60
 	showtext KurtLugiaText1
+	; cry lugia?
 	appear WHIRLISLANDLUGIACHAMBER_BALL
 	pause 30
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
@@ -45,7 +49,8 @@ WhirlIslandKurtLugiaScript:
 	showtext KurtLugiaText2
 	applymovement WHIRLISLANDLUGIACHAMBER_KURT, KurtLeavesMovement
 	disappear WHIRLISLANDLUGIACHAMBER_KURT
-	setscene $1 ; need to add to scenes
+	; revise the music back 
+	setscene $1
 	setevent EVENT_LUGIA_POKEBALL
 	setevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_KURT
 	end
@@ -66,6 +71,8 @@ KurtLugiaText2: ; need to have kurt go to the top floor and tell the player here
 	para "There may be a"
 	line "shrine we can use"
 	cont "at Cianwood."
+	
+	para "Let's go."
 	done
 
 KurtLeavesMovement:

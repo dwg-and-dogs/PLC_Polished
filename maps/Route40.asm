@@ -1,13 +1,15 @@
 Route40_MapScriptHeader: ; TODO REVISE SCENE TO A SECEN SCRPT 
 	def_scene_scripts
-	
+	scene_script Route40_KurtScene
 
 	def_callbacks
 
+
 	def_warp_events
+	
 
 	def_coord_events
-	coord_event 14, 2, 0, Route40_KurtScene
+
 
 	def_bg_events
 	bg_event 14, 10, BGEVENT_JUMPTEXT, Route40SignText ; fix sign 
@@ -16,12 +18,12 @@ Route40_MapScriptHeader: ; TODO REVISE SCENE TO A SECEN SCRPT
 	def_object_events
 	; npc who gives you razor claw for defeating them all 
 	object_event 11, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RazorScavengerScript, -1
-	object_event 13, 2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_40_KURT
+	object_event 13, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_40_KURT
 ;monica
-	object_event  10,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
-	smashrock_event  7, 11
-	smashrock_event  6, 9
-	smashrock_event  7, 8
+	object_event  10,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
+	smashrock_event  7, 15
+	smashrock_event  6, 13
+	smashrock_event  7, 12
 ; double edge 
 	object_event 15, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40FisherScript, -1
 	object_event 14, 29, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40SailorText, -1
@@ -34,8 +36,8 @@ Route40_MapScriptHeader: ; TODO REVISE SCENE TO A SECEN SCRPT
 	object_event 12, 10, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route40MatronScript, -1 ; redo text and heal you 
 	object_event  9,  7, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
 ; roadblock NPCs, quarantine the city while they look for who took the part 
-	object_event 19, 2, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
-	object_event 19, 3, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	object_event 19, 4, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	object_event 19, 5, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
 
 
 	object_const_def
@@ -153,7 +155,6 @@ RazorScavengerScript: ; check route 31 script if not working
 	para "me, so I can have"
 	line "an interesting"
 	cont "battle."
-	
 	done
 
 .QuestionText:;  
@@ -187,8 +188,6 @@ RazorScavengerScript: ; check route 31 script if not working
 	para "I found it in a"
 	line "shipwreck."
 	done
-	
-
 
 MonicaScript:
 	checkevent EVENT_GOT_SHARP_BEAK_FROM_MONICA
@@ -359,11 +358,11 @@ Route40Healed:
 Route40Lass2Text:
 	text "The output from"
 	line "the desal plant"
-	line "has changed the"
-	para "ocean chemistry."
-	line "Around here, you"
-	para "need a wetsuit to"
-	line "protect yourself."
+	para "has changed the"
+	line "ocean chemistry."
+	para "Around here, you"
+	line "need a wetsuit to"
+	cont "protect yourself."
 	done
 
 
