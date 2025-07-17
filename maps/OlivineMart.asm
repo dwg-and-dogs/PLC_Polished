@@ -14,7 +14,7 @@ OlivineMart_MapScriptHeader:
 	def_object_events
 	mart_clerk_event  1,  3, MARTTYPE_STANDARD, MART_OLIVINE
 	object_event  6,  2, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineMartCooltrainerFText, -1
-	object_event  1,  6, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineMartLassText, -1
+	object_event  1,  6, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineMartLassText, EVENT_BEAT_CHUCK
 ; ability patch vendor 
 	object_event 3,  5, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AbilityPatchVendorScript, -1
 
@@ -23,22 +23,22 @@ OlivineMart_MapScriptHeader:
 OlivineMartCooltrainerFText:
 	text "Chuck's Slowking"
 	line "is just another"
-	cont "invention. It may"
-	para "disrupt a few"
-	line "jobs, but I can't"
-	cont "imagine doing"
+	para "invention. It may"
+	line "disrupt a few"
+	para "jobs, but I can't"
+	line "imagine doing"
 	cont "mine without it."
 	done
 
 OlivineMartLassText:
 	text "Jasmine hasn't"
 	line "responded to any"
-	cont "calls asking her"
-	para "to look in to the"
-	line "effect that the"
-	cont "Desal Plant is"
-	cont "having on the"
-	cont "shoreline."	
+	para "calls asking her"
+	line "to look in to the"
+	para "effect that the"
+	line "Desal Plant is"
+	para "having on the"
+	line "shoreline."
 	done
 
 AbilityPatchVendorScript:
@@ -66,7 +66,7 @@ AbilityPatchVendorScript:
 
 GivingPatchText:
 	text "Thanks to using"
-	line "Super Sloking,"
+	line "OMLAS Sloking,"
 	
 	para "I've developed an"
 	line "Ability Patch to"

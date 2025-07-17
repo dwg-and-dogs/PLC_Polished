@@ -54,7 +54,7 @@ OfferGoodRodText:
 
 GiveGoodRodText:
 	text "Ah, hahah!"
-	line "We have ourselves"
+	line "I knew I smelled"
 	cont "a new angler!"
 	done
 
@@ -65,9 +65,8 @@ GaveGoodRodText:
 	done
 
 DontWantGoodRodText:
-	text "Whaaat? You don't"
-	line "like to fish?!"
-	cont "Incomprehensible!"
+	text "Suit yourself!"
+	line "Stay salty!"
 	done
 
 HaveGoodRodText:

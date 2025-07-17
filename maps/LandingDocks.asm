@@ -1,6 +1,6 @@
 LandingDocks_MapScriptHeader: 
 	def_scene_scripts
-
+	; todo: rewrite a la stadium grounds 
 
 	def_callbacks
 

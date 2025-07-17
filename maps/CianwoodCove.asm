@@ -1,10 +1,9 @@
 CianwoodCove_MapScriptHeader: 
-
 	def_scene_scripts
 
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, CianwoodCoveFlyPoint
+
 
 	def_warp_events
 
@@ -25,16 +24,17 @@ CianwoodCove_MapScriptHeader:
 	object_const_def
 	const CIANWOOD_COVE_KURT
 
-CianwoodCoveFlyPoint:
-	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
-	endcallback	
-	
+
 CianwoodCoveKurtScript:
 	faceplayer
-	showtext KurtExplainsTheStormText
+	opentext
+	writetext KurtExplainsTheStormText
+	waitbutton
+	closetext
 	applymovement CIANWOOD_COVE_KURT, CC_Kurt_Moves_Away
 	disappear CIANWOOD_COVE_KURT
 	setevent EVENT_CIANWOOD_COVE_KURT
+	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
 	end
 	
 KurtExplainsTheStormText:
@@ -47,19 +47,15 @@ KurtExplainsTheStormText:
 	
 	para "Surely it will"
 	line "wreck any boats"
-	para "trying to ferry"
-	line "Steel for the"
-	cont "Consul."
+	para "holding steel for"
+	line "the Consul."
 	
 	para "Come, <PLAYER>."
 	line "We must use this"
-	cont "#mon's power"
-	cont "for good, even"
+	para "#mon's power"
+	line "for good, even"
 	para "though it might"
 	line "not understand."
-	
-	para "Let's head back"
-	line "to the port."
 	done
 	
 CC_Kurt_Moves_Away:

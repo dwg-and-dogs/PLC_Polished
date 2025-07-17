@@ -16,7 +16,7 @@ OlivinePunishmentSpeechHouse_MapScriptHeader:
 	def_object_events
 	object_event  2,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineLightBallScript, -1
 	object_event  1,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, VoltSwitchScript, -1
-	object_event  5,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, jumptextfaceplayer, OlivinePunishmentSpeechHouseDaughterText, -1
+	object_event  5,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivinePunishmentSpeechHouseDaughterText, -1
 
 
 	object_const_def
@@ -28,6 +28,7 @@ OlivineHouseTrigger:
 	
 .TradeQuest:
 	showemote EMOTE_HEART, OLIVINE_HOUSE_LASS, 30
+	setscene $1
 	end
 
 
@@ -73,7 +74,7 @@ OlivinePunishmentSpeechHouseDaughterText:
 	cont "level position,"
 	
 	para "but the Slowking"
-	line "compute does all"
+	line "OMLAS does all"
 	cont "those things now."
 	
 	para "I hope I can do"

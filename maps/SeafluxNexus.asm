@@ -32,11 +32,7 @@ SeafluxNexus_MapScriptHeader:
 
 
 	def_object_events
-	object_event 18, 20, NOMAD_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NexusNomadScript, EVENT_NOMAD_NEXUS ;
-
-
-
-	object_const_def
+	object_event 10, 21, NOMAD_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NexusNomadScript, EVENT_NOMAD_NEXUS 
 
 
 NexusNomadScript:
@@ -61,12 +57,11 @@ NexusNomadText:
 	
 	para "But my friends"
 	line "gave up. I can't"
-	para "keep up with food"
-	line "and water all by"
-	cont "myself..."
+	para "keep up all by"
+	line "myself..."
 	
 	para "I need to head"
-	line "home tonight."
+	line "home soon."
 
 	para "It'll really"
 	line "surprise my mom."

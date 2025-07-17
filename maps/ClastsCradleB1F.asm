@@ -1,9 +1,8 @@
 ClastsCradleB1F_MapScriptHeader: 
 	def_scene_scripts
-
+	scene_script CradleScene1_Mejimi
 
 	def_callbacks
-
 ; SQUARES OF 14, 6; 14, 26;  TURN INTO $5D DEPENDING ON EVENT_CRADLE_BOULDER_1,  _3
 ; SQUARES OF 18, 14;  TURN INTO $5F DEPENDING ON EVENT_CRADLE_BOULDER_2
 
@@ -15,7 +14,7 @@ ClastsCradleB1F_MapScriptHeader:
 
 
 	def_coord_events
-	coord_event 21, 12, 0, CradleScene1_Mejimi; cutscene
+;	coord_event 21, 12, 0, CradleScene1_Mejimi; cutscene
 	coord_event  5, 26, 1, CradleScene2_Heatran; battle heatran 
 	coord_event  5, 26, 2, CradleScene2_Adrinna; battle with adrinna
 	
@@ -88,25 +87,30 @@ KurtCradleText2:
 
 CradleScene1_Mejimi:	
 ;cf western capital
+	disappear PLAYER
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
-	disappear PLAYER
+
 	opentext
 	writetext CradleCutscene_Text0 ; MEANWHILE, 
 	waitbutton
 	closetext
-	pause 10
-	special Special_FadeInQuickly
+
+	special Special_FadeOutMusic
+	pause 30
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 
 	opentext
-	showemote EMOTE_BOLT, CRADLE_CUTSCENE_ADRINNA, 10
+	showemote EMOTE_BOLT, CRADLE_CUTSCENE_ADRINNA, 30
 	writetext CradleCutscene_Text1
 	waitbutton
 	writetext CradleCutscene_Text2
 	waitbutton
 	closetext
 	turnobject CRADLE_CUTSCENE_ADRINNA, DOWN
-	showtext CradleCutscene_Text3 
+	opentext
+	writetext CradleCutscene_Text3 
+	waitbutton
 	closetext
 
     applymovement CRADLE_CUTSCENE_MEJIMI, CC_MejimiMoves1
@@ -116,46 +120,67 @@ CradleScene1_Mejimi:
 	waitbutton
 	closepokepic
 	
-	showtext CradleCutscene_Text4 ; shoo worker
+	opentext
+	writetext CradleCutscene_Text4 ; shoo worker
+	waitbutton
+	closetext
 
 	applymovement CRADLE_CUTSCENE_WORKER, CC_WorkerMoves1 ; 2 d 1 l 3 d 5 r
 	
-	showtext CradleCutscene_Text5 ; hello adrinna
+	opentext
+	writetext CradleCutscene_Text5 ; hello adrinna
 	waitbutton
-	showtext CradleCutscene_Text6 ; how is kensey?
+	writetext CradleCutscene_Text6 ; how is kensey?
 	waitbutton
 	turnobject CRADLE_CUTSCENE_ADRINNA, LEFT
-	showtext CradleCutscene_Text7 ; how unfortunate	
-	turnobject CRADLE_CUTSCENE_ADRINNA, DOWN
-	showtext CradleCutscene_Text8 
-	turnobject CRADLE_CUTSCENE_MEJIMI, LEFT
-	pause 20
-	waitbutton	
-	showemote EMOTE_QUESTION, CRADLE_CUTSCENE_ADRINNA, 10
-	applymovement CRADLE_CUTSCENE_ADRINNA, CC_AdrinnaMoves2; left down face right
-	showtext CradleCutscene_Text9 ; I thought we were done?
+	writetext CradleCutscene_Text7 ; how unfortunate
 	waitbutton
-	showtext CradleCutscene_Text10 ; repurposed
+	turnobject CRADLE_CUTSCENE_ADRINNA, DOWN
+	writetext CradleCutscene_Text8 
+	waitbutton
+	closetext
+	turnobject CRADLE_CUTSCENE_MEJIMI, LEFT
+	pause 30
+	waitbutton	
+	showemote EMOTE_QUESTION, CRADLE_CUTSCENE_ADRINNA, 30
+	applymovement CRADLE_CUTSCENE_ADRINNA, CC_AdrinnaMoves2; left down face right
+	opentext
+	writetext CradleCutscene_Text9 ; I thought we were done?
+	waitbutton
+	writetext CradleCutscene_Text10 ; repurposed
+	waitbutton
+	closetext
 	applymovement CRADLE_CUTSCENE_ADRINNA, step_left
-	showtext CradleCutscene_Text11
+	opentext
+	writetext CradleCutscene_Text11
+	waitbutton
 	turnobject CRADLE_CUTSCENE_MEJIMI, DOWN
-	showtext CradleCutscene_Text12
+	writetext CradleCutscene_Text12
+	waitbutton
+	closetext
 	applymovement CRADLE_CUTSCENE_MEJIMI, CC_MejimiMoves2 ; 4 D 5 raw
-	pause 20
-	showtext CradleCutscene_Text13
-	pause 20
+	pause 60
+	opentext
+	writetext CradleCutscene_Text13
+	waitbutton
+	closetext
+	pause 60
 	applymovement CRADLE_CUTSCENE_WORKER, CC_MejimiMoves1 ; comes back from mejimi tile 
 	turnobject CRADLE_CUTSCENE_WORKER, LEFT
-	showtext CradleCutscene_Text14
+	opentext
+	writetext CradleCutscene_Text14
+	waitbutton
 	turnobject CRADLE_CUTSCENE_ADRINNA, RIGHT
-	showtext CradleCutscene_Text15
-	pause 15
+	writetext CradleCutscene_Text15
+	waitbutton
+	closetext
+	pause 60
 	cry GYARADOS
-	pause 15
+	pause 60
 	special Special_FadeBlackQuickly
 	setevent EVENT_CRADLE_CUTSCENE
 	setscene $1
-	warp OLIVINE_CITY,  19, 22 ; revise to the desal plant 
+	warp OLIVINE_DESAL_1F,  4, 3 
 	end
 
 CradleCutscene_Text0:

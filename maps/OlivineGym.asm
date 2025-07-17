@@ -65,6 +65,15 @@ OlivineGymJasmineScript:
 	setevent EVENT_GOT_TM23_IRON_TAIL
 	jumpthisopenedtext
 
+	text "Olivine will find"
+	line "a way to persist."
+	
+	para "Though we were"
+	line "corroded, we will"
+	cont "polish ourselves"
+	cont "and shine bright."	
+	done
+
 Jasmine_GoodLuck:
 	text "Olivine will find"
 	line "a way to persist."
@@ -87,10 +96,11 @@ Jasmine_SteelTypeIntro:
 	line "permissive, I"
 	
 	para "was derelict in"
-	line "my duties. Now, "
+	line "my duties as a"
+	cont "gym leader."
 	
-	para "show me your"
-	line "#mon!"
+	para "So: let me see"
+	line "how you battle!"
 
 	done
 
@@ -107,15 +117,10 @@ Text_ReceivedMineralBadge:
 	done
 
 Jasmine_BadgeSpeech:
-	text "With that Badge,"
-	line "all #mon up"
-
-	para "to <LV>70, even"
-	line "traded ones, will"
-
-	para "obey you without"
-	line "question."
-
-	para "…Um… Please take"
-	line "this too…"
+	text "Please take this"
+	line "TM. It's a way of"
+	para "lowering your"
+	line "enemy's defenses,"
+	para "in case you lack"
+	line "a certain charm."
 	done

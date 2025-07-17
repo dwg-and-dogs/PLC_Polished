@@ -41,21 +41,21 @@ AnchorageNomadMText:
 	
 	para "Watch out, there"
 	line "are a few traps"
-	cont "in front of the"
-	cont "port..."
+	para "in front of the"
+	line "port..."
 	done
 	
 AnchorageNomadFText:
-	text "Where did this"
-	line "rainstorm come"
-	para "from? Skies were"
-	line "clear just an"
-	cont "hour ago."
+	text "Where'd the storm"
+	line "come from?" 
+	para "The skies were"
+	line "just clear."
 	done
 
 Overqwil1:
 	opentext
 	writetext OverqwilText
+	waitbutton
 	closetext
 	setevent EVENT_ANCHORAGE_OVERQWIL_1
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
@@ -68,6 +68,7 @@ Overqwil1:
 Overqwil2:
 	opentext
 	writetext OverqwilText
+	waitbutton
 	closetext
 	setevent EVENT_ANCHORAGE_OVERQWIL_2
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
@@ -89,9 +90,8 @@ SailorEugeneBeatenText:
 	done
 	
 SailorEugeneSeenText:
-	text "Hey, how did you"
-	line "get past the"
-	cont "traps?"
+	text "Those traps are"
+	line "something else!"
 	done
 
 GenericTrainerSailorTerrell:
@@ -112,13 +112,12 @@ GenericTrainerSailorKent:
 
 SailorKentBeatenText:
 	text "I'll never make"
-	line "admiral at this"
-	cont "rate."
+	line "admiral!"
 	done
 	
 SailorKentSeenText:
 	text "Time to prove"
-	line "my mettle!"
+	line "my worht!"
 	done
 	
 GenericTrainerSailorErnest:

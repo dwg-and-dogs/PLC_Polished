@@ -1,5 +1,5 @@
 ROUTE39FARMHOUSE_MILK_PRICE EQU 500
-ROUTE39FARMHOUSE_DOZEN_MILK_PRICE EQU 6000
+ROUTE39FARMHOUSE_DOZEN_MILK_PRICE EQU 5000
 
 Route39Farmhouse_MapScriptHeader:
 	def_scene_scripts
@@ -121,11 +121,8 @@ FarmerMText_BuyMilk:
 	para "It's my pride and"
 	line "joy, there."
 
-	para "Give it to #mon"
+	para "#mon drink it"
 	line "to restore HP!"
-
-	para "I'll give it to ya"
-	line "fer just ¥500."
 	done
 
 FarmerMText_GotMilk:
@@ -170,4 +167,3 @@ FarmerFText_InTrouble:
 	
 	para "Magical, right?"
 	done
-

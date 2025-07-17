@@ -39,8 +39,8 @@ PokemonJournalJasmineScript:
 	
 	para "remains hopeful"
 	line "that the next"
-	cont "disaster can be"
-	cont "averted."
+	para "disaster can be"
+	line "averted."
 	done
 
 OlivinePokeCenter1FFisherText:
@@ -53,9 +53,9 @@ OlivinePokeCenter1FTeacherText:
 	text "Chuck's project"
 	cont "is called OMLAS."
 	
-	para "It stands for"
-	line "OMniscient"
-	cont "Liberated"
+	para "It stands for:"
+	para "OMniscient"
+	line "Liberated"
 	cont "Augmented"
 	cont "Slowking."	
 	done
@@ -85,10 +85,7 @@ IlexExcelsiorV2Text:
 	para "Second Edition"
 
 	para "The Desal Plant"
-	line "poisons minds"
-	
-	para "remove parts"
-	line "from basement"
+	line "corrodes minds"
 	done
 	
 KurtOlivineScript:
@@ -106,10 +103,13 @@ KurtOlivineScript:
 	jumpopenedtext OlivineKurtBattleText2
 
 KurtOlivineText:
-	text "<PLAYER>. Nothing"
-	line "good can come"
-	cont "of Chuck's super-"
-	cont "Slowking."
+	text "<PLAYER>! Nothing"
+	line "good can come of"
+	cont "Chuck's project."
+	
+	para "Another example"
+	line "of Silph tech"
+	cont "run amok."
 	
 	para "It's putting the"
 	line "whole town out of"
@@ -132,13 +132,11 @@ KurtOlivineText:
 	done
 	
 KurtOlivineText3:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
+	text "Some other time."
 	done
 
 OlivineKurtBattleText:
-	text "Rocked!"
+	text "What a battle!"
 	done
 
 OlivineKurtBattleText2:

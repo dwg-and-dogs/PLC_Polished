@@ -24,9 +24,7 @@ Route39_MapScriptHeader:
 	pokemon_event  4, 15, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
 	pokemon_event  8, 13, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
 	fruittree_event  9,  3, FRUITTREE_ROUTE_39, PNK_APRICORN, PAL_NPC_RED
-
 	object_event  13,19, SPRITE_COWGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39FarmerScript, -1  ; annie 
-
 	itemball_event 11, 32, BLACK_SLUDGE, 1, EVENT_ROUTE_39_SLUDGE ; TOP OF THE CAVE
 ; trainers 
 	object_event  3,  9, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerTamerVince, -1
@@ -79,6 +77,7 @@ Route39MiltankText:
 
 Route39FarmerScript:
 	faceplayer
+	opentext
 	checkevent EVENT_GAVE_MOOMOO_MILKS
 	iftrue_jumptext CowgirlThanksAgainText
 	checkevent EVENT_BEAT_COWGIRL_ANNIE
@@ -327,9 +326,8 @@ GenericTrainerCowgirlApril:
 	line "Harass you,"
 	cont "Herd you,"
 	
-	para "and if that hasn't"
-	line "worked,"
-	cont "Hogtie you."
+	para "and if we need,"
+	line "Hogtie you."
 	done
 
 .BeatenText3:

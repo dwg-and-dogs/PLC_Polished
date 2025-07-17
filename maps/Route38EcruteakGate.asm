@@ -65,7 +65,7 @@ ProfOaksAide2HiText:
 	para "So, <PLAYER>,"
 	line "have you caught"
 
-	para "at least 30 kinds"
+	para "at least 50 kinds"
 	line "of #mon?"
 	done
 

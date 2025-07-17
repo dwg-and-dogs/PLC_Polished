@@ -57,16 +57,6 @@ Text_ZenHeadbuttIntro:
 	line "for hours - ideal"
 	cont "posture."
 
-	para "He ignores bugs"
-	line "landing on him,"
-	cont "complete non-att-"
-	cont "achment."
-	
-
-	para "Notice her gaze?"
-	line "A stare of deep"
-	cont "dharmic insight."
-	
 	para "Perfect Zen!"
 	done
 
@@ -158,9 +148,8 @@ Text_BarnTutorIronHead:
 TaurosBarnTextIron:
 	text "The Tauros' head"
 	line "is covered by"
-	cont "solder excess and"
-	para "rusty metal"
-	line "scraps."
+	para "solder excess and"
+	line "metal scraps."
 	
 	para "It has hulking"
 	line "neck muscles."

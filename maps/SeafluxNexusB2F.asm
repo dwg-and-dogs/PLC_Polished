@@ -1,16 +1,12 @@
-SeafluxNexusB2F_MapScriptHeader:
+SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off 
 	def_scene_scripts
 ; REVISE THE MAP SO THAT THERE IS WATERFALLS PUSHING YOU BACK TO THE CENTRAL WARP UNTIL YOU GET BOTH OF THEM 
 
-	def_callbacks
+	def_callbacks ; revise based on the tin tower old 3f 
 	;CALLBACKS BASED ON EVENT_NEXUS_B1F_BOULDER_1, EVENT_NEXUS_B1F_BOULDER_2
 	; solving the strength puzzles lets you access the fifth 
-	callback MAPCALLBACK_TILES, SeafluxNexusB2FCallback1 ; boulder 1
-	callback MAPCALLBACK_TILES, SeafluxNexusB2FCallback3 ; all waterfalls 
-	callback MAPCALLBACK_TILES, SeafluxNexusB2FCallbackFalls1 ; falls 1 
-	callback MAPCALLBACK_TILES, SeafluxNexusB2FCallbackFalls2 ; falls 2 
-	callback MAPCALLBACK_TILES, SeafluxNexusB2FCallbackFalls3 ; falls 3 
-	callback MAPCALLBACK_TILES, SeafluxNexusB2FCallbackFalls4 ; falls 4 
+	callback MAPCALLBACK_TILES, SeafluxNexusB2FCallback ; boulder 1
+
 
 
 	def_warp_events
@@ -45,10 +41,9 @@ SeafluxNexusB2F_MapScriptHeader:
 	itemball_event 21, 17, HP_UP, 1, EVENT_NEXUSB2F_ITEM6
 
 
-	object_const_def
-	
-
-SeafluxNexusB2FCallback1:
+SeafluxNexusB2FCallback:
+; first, check the boulders. Nothing happens without them. 
+; these events allow you to move beyond the opening ladder. 
 	checkevent EVENT_NEXUS_B1F_BOULDER_1
 	iffalse .Check2
 	changeblock 18, 20, $02
@@ -56,10 +51,8 @@ SeafluxNexusB2FCallback1:
 	checkevent EVENT_NEXUS_B1F_BOULDER_2
 	iffalse .Done
 	changeblock 20, 20, $02
-.Done:
-	endcallback	
-	
-SeafluxNexusB2FCallback3:
+; next, we have to check each of the swithces. 
+; first we will check if the master switch is thrown. 
 	checkevent EVENT_NEXUS_B2F_FALLS_SWITCH
 	iffalse .Done
 ;top waterfalls
@@ -81,8 +74,30 @@ SeafluxNexusB2FCallback3:
 	changeblock 24, 14, $02
 	changeblock 10, 22, $02
 	changeblock 24, 22, $02	
+; now we have to check all of the individual switches. 
+	; .Switch5
+	; checkevent event_switch_5
+	; iffalse .checkswitch2
+	; .Switch5Waterfall2
+
+	; checkevent event_waterfall_2
+	; iftrue .Switch5Waterfall2Jump
+	; setevent event_waterfall_2
+	; sjump .Switch5Waterfall4
+	; .Switch5Waterfall2Jump
+	; clearevent event_waterfall_2
+
+	; .Switch5Waterfall4
+	; checkevent event_waterfall_4
+	; iftrue .Switch5Waterfall4Jump
+	; setevent event_waterfall_4
+	; sjump .Switch4
+	; .Switch5Waterfall4Jump
+	; clearevent event_waterfall_4
+	; .Switch4
 .Done:
 	endcallback	
+	
 
 SeafluxNexusB2F_MasterSwitch:
 	checkevent EVENT_NEXUS_B2F_FALLS_SWITCH

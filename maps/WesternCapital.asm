@@ -23,7 +23,6 @@ WesternCapital_MapScriptHeader:
 	def_coord_events
 
 
-
 	def_bg_events
 	bg_event 7, 7, BGEVENT_JUMPTEXT, WCBrassTowerText
 	bg_event 37, 7, BGEVENT_JUMPTEXT, WCTinTowerText
@@ -69,7 +68,7 @@ WesternCapitalCemeteryScene:
 	writetext Prologue_Text0 ; MEANWHILE, 
 	waitbutton
 	closetext
-	pause 10
+	pause 60
 ;	special Special_FadeInQuickly
 
 	opentext
