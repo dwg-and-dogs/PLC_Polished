@@ -17,7 +17,7 @@ Route43Gate_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  0,  4, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OfficerScript_GuardWithSludgeBomb, EVENT_GOT_TM_POISON_JAB
+	object_event  0,  4, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OfficerScript_GuardWithSludgeBomb, -1
 
 	object_const_def
 
@@ -32,6 +32,7 @@ OfficerScript_GuardWithSludgeBomb:
 	yesorno
 	iffalse_jumptextfaceplayer NotTheOne
 	writetext PoisonJabbarText
+	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
@@ -41,10 +42,13 @@ OfficerScript_GuardWithSludgeBomb:
 	special RestartMapMusic
 	opentext
 	writetext IncredibleJabbarText
-	promptbutton
+	waitbutton
 	verbosegivetmhm TM_POISON_JAB
+	writetext OfficerText_AvoidGrass
+	waitbutton
+	closetext
 	setevent EVENT_GOT_TM_POISON_JAB
-	endtext
+	end
 
 OfficerText_FoundTM:
 	text "Put your hand in"
@@ -59,6 +63,7 @@ OfficerText_AvoidGrass:
 NotTheOne:
 	text "You are not"
 	line "the one."
+	done
 	
 PoisonJabbarText:
 	text "This box contains"

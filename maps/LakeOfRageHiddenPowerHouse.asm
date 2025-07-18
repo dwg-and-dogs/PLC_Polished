@@ -110,6 +110,7 @@ BasculegionBlessingText:
 PryceCabinText2:
 	opentext
 	writetext ItsALetterText
+	waitbutton
 	closetext
 	italictypeface
 	showtext PryceCabinText2Text
@@ -120,6 +121,7 @@ PryceCabinText2:
 PryceCabinText1:
 	opentext
 	writetext ItsALetterText
+	waitbutton
 	closetext
 	italictypeface
 	showtext PryceCabinText1Text

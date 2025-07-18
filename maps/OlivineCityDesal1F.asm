@@ -1,6 +1,6 @@
 OlivineCityDesal1F_MapScriptHeader: 
 	def_scene_scripts
-	; todo 
+	scene_script OlivineDesal1FScene
 
 	def_callbacks
 
@@ -20,12 +20,58 @@ OlivineCityDesal1F_MapScriptHeader:
 
 
 	def_object_events
+	object_event 3, 1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_JASMINE
+	object_event 4, 1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_CHUCK
 	object_event  4,  5, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Desal1FNPCText, -1
-	object_event 0, 0, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_JASMINE
-	object_event 0, 0, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_CHUCK
+
 
 	object_const_def
+	const DESAL_JASMINE
+	const DESAL_CHUCK
 
+OlivineDesal1FScene:
+	showemote EMOTE_SHOCK, DESAL_JASMINE, 60
+	opentext
+	writetext OlivineDesal_Text_1
+	waitbutton
+	writetext OlivineDesal_Text_2
+	waitbutton
+	writetext OlivineDesal_Text_3
+	waitbutton
+	closetext
+	pause 30
+	turnobject DESAL_CHUCK, RIGHT
+	opentext
+	writetext OlivineDesal_Text_4
+	waitbutton
+	writetext OlivineDesal_Text_5
+	waitbutton
+	closetext
+	pause 30
+	turnobject DESAL_CHUCK, LEFT
+	showemote EMOTE_BOLT, DESAL_CHUCK, 30
+	opentext
+	writetext OlivineDesal_Text_6
+	waitbutton
+	closetext
+	applyonemovement DESAL_CHUCK, step_up
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	disappear DESAL_CHUCK
+	setevent EVENT_DESAL_1F_CHUCK
+	turnobject DESAL_JASMINE, UP
+	opentext
+	writetext OlivineDesal_Text_7
+	waitbutton
+	closetext
+	applyonemovement DESAL_JASMINE, step_up
+	playsound SFX_EXIT_BUILDING
+	waitsfx
+	disappear DESAL_JASMINE
+	setevent EVENT_DESAL_1F_JASMINE
+	setscene $1
+	end
+	
 
 OlivineDesal_Text_1:
 	text_high
@@ -118,16 +164,12 @@ OlivineDesal_Text_7:
 	text_start
 	
 	text "What am I allow-"
-	line "ing. Our coast is"
+	line "ing? Our coast is"
 	para "nearly toxic with"
 	line "the discharge"
 	cont "from this plant!"
 	done
 	
-
-
-
-
 
 Desal1FNPCText:
 	text "How horrible!"
@@ -135,4 +177,3 @@ Desal1FNPCText:
 	cont "machine part from"
 	cont "the Desal plant."
 	done
-

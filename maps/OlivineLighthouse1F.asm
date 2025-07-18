@@ -50,6 +50,7 @@ LighthouseRivalTrigger2:
 	; after the battle
     applymovement LIGHTHOUSE_RIVAL, LighthouseRivalRetreatMovement
     playsound SFX_EXIT_BUILDING
+	waitsfx
     disappear LIGHTHOUSE_RIVAL
     setscene $1
     setevent EVENT_FOUGHT_RADIO_TOWER_RIVAL
@@ -110,6 +111,14 @@ LighthouseRivalApproachMovement:
 	step_end
 
 LighthouseRivalRetreatMovement:
+	step_left
+	step_left
+	step_down
+	step_down
+	step_left
+	step_left
+	step_down
+	step_down	
     step_end
 
 LighthouseRivalBeforeText:
@@ -146,7 +155,7 @@ LighthouseRivalBeforeText_3:
 	para "I just wanted to"
 	line "let us come into"
 	para "a balance with"
-	line "nature. As you"
+	line "nature."
 	para "As you look back,"
 	line "I look forward!"	
 	done
@@ -223,7 +232,7 @@ Kurt_LighthouseText1:
 	
 	para "He uses #mon"
 	line "brutally, for his" 
-	cont "own plans!"
+	cont "own designs!"
 	done
 
 TrainerScientistJoseph:

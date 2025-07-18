@@ -62,7 +62,7 @@ MahoganyGymPryceScript:
 
 PryceText_Intro: ; done 
 	text "I heard about the"
-	cont "troubles you two"
+	line "troubles you two"
 	cont "faced together."
 	para "I hope that you"
 	line "you will show"
@@ -97,14 +97,13 @@ PryceText_Impressed:
 	line "this Badge!"
 	done
 
-
 Text_ReceivedGlacierBadge:
 	text "<PLAYER> received"
 	line "the Glacier Badge."
 	done
 
 PryceText_GlacierBadgeSpeech:
-	text "These are gifts"
+	text "This is a gift"
 	line "from me."
 	done
 
@@ -123,7 +122,7 @@ PryceText_MeetYouAtTheLake:
 	line "the north shore."	
 	
 	para "Make sure you"
-	cont "have supplies."
+	line "have supplies."
 	done
 
 

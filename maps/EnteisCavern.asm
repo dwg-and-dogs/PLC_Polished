@@ -27,12 +27,13 @@ EnteisCavern_MapScriptHeader:
 EnteiCavernScript:
 	opentext
 	writetext EnteiText
+	waitbutton
 	cry ENTEI
-	pause 15
+	pause 60
 	closetext
 	setevent EVENT_FOUGHT_ENTEI
 	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
-	loadwildmon ENTEI, 50
+	loadwildmon ENTEI, 40
 	startbattle
 	disappear ENTEIS_CAVERN_ENTEI
 	reloadmapafterbattle

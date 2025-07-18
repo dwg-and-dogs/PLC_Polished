@@ -21,10 +21,9 @@ Route43MahoganyGate_MapScriptHeader:
 Route43MahoganyGateOfficer:
 	jumpthistextfaceplayer
 
-	text "Handly anyone"
-	line "goes up to the"
-	line "Lake of Rage these"
-	cont "days."
+	text "The Lake is only"
+	line "visited by hard-"
+	cont "core backpackers."
 	done
 
 

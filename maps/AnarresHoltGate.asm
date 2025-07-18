@@ -35,11 +35,13 @@ AnarresHoltGateHollisScene:
 	writetext HollisDialogue2
 	waitbutton
 	closetext
-	
 	applymovement ANARRESHOLTGATE_HOLLIS, HollisExitMovement
+	playsound SFX_EXIT_BUILDING
+	waitsfx
 	disappear ANARRESHOLTGATE_HOLLIS
-
 	applymovement ANARRESHOLTGATE_TAMMY, TammyExitMovement
+	playsound SFX_EXIT_BUILDING
+	waitsfx
 	disappear ANARRESHOLTGATE_TAMMY
 	setevent EVENT_ANARRES_HOLT_GATE
 	setscene $1
