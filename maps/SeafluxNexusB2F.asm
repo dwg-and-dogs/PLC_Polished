@@ -10,8 +10,8 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 
 
 	def_warp_events
-	warp_event 17, 21, SEAFLUX_NEXUS_B1F, 3 ; ladder 
-	warp_event 9, 31, SEAFLUX_NEXUS_B1F, 4
+	warp_event 17, 21, SEAFLUX_NEXUS_B1F, 4 ; 1 ladder 
+	warp_event 9, 31, SEAFLUX_NEXUS_B1F, 5 ; 2
 ; hole drop 
 	warp_event 7, 27, SEAFLUX_NEXUS_B3F, 1 ; to the bottom of the waterfall 
 

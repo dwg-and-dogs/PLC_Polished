@@ -1,4 +1,5 @@
-SlowpokeDreamsBackgroundN_MapScriptHeader: ;	def_scene_scripts
+SlowpokeDreamsBackgroundN_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -18,6 +19,3 @@ SlowpokeDreamsBackgroundN_MapScriptHeader: ;	def_scene_scripts
 
 	def_object_events
 
-
-
-	object_const_def

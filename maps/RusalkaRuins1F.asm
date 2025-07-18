@@ -77,7 +77,7 @@ CaptainsLog05Text:
 	line "metals inside."
 	done
 
-CaptainsLog06
+CaptainsLog06:
 	italictypeface
 	showtext CaptainsLog06Text
 	restoretypeface

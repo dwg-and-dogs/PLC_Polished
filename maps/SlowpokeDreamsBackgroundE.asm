@@ -1,4 +1,5 @@
-SlowpokeDreamsBackgroundE_MapScriptHeader: ;	def_scene_scripts
+SlowpokeDreamsBackgroundE_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks

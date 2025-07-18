@@ -17,17 +17,15 @@ MahoganyMart1F_MapScriptHeader:
 	object_event  4,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyMartGrampsText, -1
 
 
-	object_const_def
-
 
 MahoganyMartGrampsText:
 	text "We had a few good"
 	line "years while the"
 	para "Silph engineers"
-	
 	line "dug the canal."
+
 	para "Now that the lake"
 	line "is empty, we get"
-	cont "by selling stones"
-	cont "from the rocks."
+	para "by selling stones"
+	line "from the rocks."
 	done

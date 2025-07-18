@@ -13,10 +13,11 @@ ManiasHouse_MapScriptHeader:
 	bg_event  5,  1, BGEVENT_JUMPSTD, radio2
 	bg_event  7,  1, BGEVENT_JUMPSTD, picturebookshelf
 
+	def_object_events
 	object_event  2,  4, SPRITE_MON_ICON, SPRITEMOVEDATA_STILL, 0, TEDDIURSA, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, ManiasDollText, -1
 	object_event  4,  5, SPRITE_MON_ICON, SPRITEMOVEDATA_STILL, 0, CHANSEY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ManiaHealerScript, -1
 
-	def_object_events
+
 
 ManiasDollText:
 	text "A shiny Teddiursa"
@@ -26,17 +27,26 @@ ManiasDollText:
 
 
 ManiaHealerScript:
-	showtext ManiaHealingDoll
+	opentext
+	writetext ManiaHealingDoll
 	waitbutton
 	playmusic MUSIC_HEAL
 	special HealParty
 	special SaveMusic	
+	writetext ManiaHealed
+	waitbutton
+	closetext
 	playmusic MUSIC_NONE	
 	special RestoreMusic
 	end
 
+
 ManiaHealingDoll:
-	text "It's a Chansey"
-	line "doll. It can heal"
+	text "A special Chansey"
+	line "doll! They heal"
 	cont "#mon."
+	done
+
+ManiaHealed:
+	text "All better!"
 	done

@@ -26,6 +26,11 @@ MahoganyRedGyaradosSpeechHouseBlackBeltScript:
 	setevent EVENT_GOT_TM_SCALD
 	jumpthisopenedtext
 
+	text "Not everyone has"
+	line "the guts to drink"
+	cont "such a hot drink."
+	done
+
 GotScaldText:
 	text "Not everyone has"
 	line "the guts to drink"
@@ -46,4 +51,3 @@ MahoganyRedGyaradosSpeechHouseTeacherText:
 	line "cold I prefer a"
 	cont "nice cold brew."
 	done
-

@@ -52,22 +52,10 @@ CianwoodCitySignText:
 CianwoodGymSignText:
 	text "Cianwood City"
 	line "#mon Gym"
-
-	para "Leader: Chuck"
-
-	para "His Roaring Fists"
-	line "Do the Talking"
 	done
 
 CianwoodPharmacySignText:
-	text "100 Years of"
-	line "Tradition"
-
-	para "Cianwood City"
-	line "Pharmacy"
-
-	para "We Await Your"
-	line "Medicinal Queries"
+	text "Move Reminder"
 	done
 
 
@@ -76,7 +64,9 @@ CianwoodEusineScript:
 	opentext
 	checkevent EVENT_HEARD_CIANWOOD_SHPEEL
 	iftrue .HeardShpeel
-	showtext CianwoodShpeelText
+	writetext CianwoodShpeelText
+	waitbutton
+	setevent EVENT_HEARD_CIANWOOD_SHPEEL
 .HeardShpeel	
 	checkpoke LUGIA
 	iffalse_jumpopenedtext CianwoodEusineNoLugiaText

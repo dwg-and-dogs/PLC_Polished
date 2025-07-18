@@ -450,8 +450,9 @@ ENDM
 	map_attributes LandingBarbeau, LANDING_BARBEAU, $0, 0
 
 	map_attributes ShelteredShores, SHELTERED_SHORES, $35, NORTH | WEST 
-	connection west, CianwoodCove, CIANWOOD_COVE, 0
 	connection north, ArduousAnchorage, ARDUOUS_ANCHORAGE, 15
+	connection west, CianwoodCove, CIANWOOD_COVE, 0
+
 
 	map_attributes CianwoodCove, CIANWOOD_COVE, $35, EAST
 	connection east, ShelteredShores, SHELTERED_SHORES, 0

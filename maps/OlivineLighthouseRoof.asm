@@ -41,7 +41,7 @@ EusineRaikouScript:
 	turnobject LIGHTHOUSE_EUSINE, RIGHT
 	turnobject PLAYER, RIGHT
 	cry RAIKOU
-	pause 20
+	pause 60
 	loadwildmon RAIKOU, 40
 	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
 	startbattle
@@ -55,9 +55,9 @@ EusineRaikouScript:
 LighthouseRaikouMovement1: ; fix 
 	fix_facing
 	fast_jump_step_up
+;	fast_jump_step_up
 	fast_jump_step_up
-	fast_jump_step_up
-	fast_jump_step_right
+;	fast_jump_step_right
 	fast_jump_step_right
 	fast_jump_step_up
 	step_end

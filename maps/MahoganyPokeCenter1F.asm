@@ -44,9 +44,6 @@ MahoganyPokeCenter1FYoungsterText:
 	
 	para "#mon there"
 	line "are too strong."
-	
-	para "Yeah, right."
-
 	done
 
 MahoganyPokeCenter1FCooltrainerfText:
@@ -63,7 +60,7 @@ MahoganyPokeCenter1FMatronText:
 	line "the Lake after it"
 	cont "drained."
 	
-	para "Now, wild #mon"
+	para "Wild #mon"
 	line "are taking over."
 	done
 

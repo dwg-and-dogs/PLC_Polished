@@ -47,8 +47,8 @@ MoveReminderIntroText::
 	
 	para "And someone needs"
 	line "to remember this"
-	cont "sandy little city"
-	cont "until it washes"
+	para "sandy little city"
+	line "until it washes"
 	cont "into the sea."
 	done
 

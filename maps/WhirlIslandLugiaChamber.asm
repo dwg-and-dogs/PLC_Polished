@@ -31,7 +31,6 @@ WhirlIslandKurtLugiaScript:
 	end
 	
 .Script:
-	; todo: music for legendary
 	applyonemovement PLAYER, step_up
 	pause 60
 	; music
@@ -39,7 +38,10 @@ WhirlIslandKurtLugiaScript:
 	showtext KurtLugiaText1
 	; cry lugia?
 	appear WHIRLISLANDLUGIACHAMBER_BALL
-	pause 30
+	playsound SFX_THROW_BALL
+	waitsfx
+	playsound SFX_BALL_BOUNCE
+	waitsfx
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
 	setevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
 	pause 30

@@ -15,15 +15,15 @@ Route42EcruteakGate_MapScriptHeader:
 
 	def_object_events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42EcruteakGateOfficerText, -1
-	object_event  6,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, jumptextfaceplayer, Route42GateEnergyBall, -1 
+	object_event  6,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route42GateEnergyBall, -1 
 
 
 Route42EcruteakGateOfficerText:
-	text "Mt.Mortar is like"
-	line "a maze inside."
-
-	para "Be careful. Don't"
-	line "get lost in there."
+	text "Mt.Mortar has had"
+	line "some landslides,"
+	
+	para "so most entrances"
+	line "are caved in."
 	done
 
 Route42GateEnergyBall:
@@ -36,6 +36,11 @@ Route42GateEnergyBall:
 	verbosegivetmhm TM_ENERGY_BALL
 	setevent EVENT_GOT_TM_ENERGY_BALL
 	jumpthisopenedtext
+
+	text "Energy Ball is a"
+	line "thorn in your"
+	cont "foe's side!"
+	done
 
 GotEnergyBallText:
 	text "Energy Ball is a"
@@ -51,10 +56,9 @@ GiveEnergyBall:
 	
 	para "When stressed,"
 	line "they secrete che-"
-	cont "micals to repel"
-	cont "herbivores."
+	cont "micals."
 	
 	para "If they need to"
 	line "do more, they use"
-	cont "this Energy Ball!"	
+	cont "Energy Ball!"	
 	done

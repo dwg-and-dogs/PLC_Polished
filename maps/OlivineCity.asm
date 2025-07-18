@@ -24,8 +24,8 @@ OlivineCity_MapScriptHeader:
 	bg_event 20, 22, BGEVENT_JUMPTEXT, OlivineCityPortSignText
 	bg_event  7,  7, BGEVENT_JUMPTEXT, OlivineGymSignText
 	bg_event 34, 20, BGEVENT_JUMPTEXT, OlivineLighthouseSignText
-	bg_event  1, 21, BGEVENT_JUMPTEXT, OlivineCityBattleTowerSignText
-	bg_event 50, 27, BGEVENT_JUMPTEXT, OlivineCityPokeathlonDomeSignText
+;	bg_event  1, 21, BGEVENT_JUMPTEXT, OlivineCityBattleTowerSignText
+;	bg_event 50, 27, BGEVENT_JUMPTEXT, OlivineCityPokeathlonDomeSignText
 	bg_event 10, 17, BGEVENT_JUMPTEXT, OlivineCityCafeSignText
 	bg_event 36, 14, BGEVENT_ITEM + RARE_CANDY, EVENT_OLIVINE_CITY_HIDDEN_RARE_CANDY
 	bg_event 47, 17, BGEVENT_ITEM + BIG_PEARL, EVENT_OLIVINE_CITY_HIDDEN_BIG_PEARL
@@ -169,49 +169,33 @@ OlivineGymSignText:
 	text "Olivine City"
 	line "#mon Gym"
 	cont "Leader: Jasmine"
-
-	para "The Steel-Clad"
-	line "Defense Girl"
 	done
 
 OlivineLighthouseSignText:
 	text "Olivine Lighthouse"
-	line "Also known as the"
-	cont "Glitter Lighthouse"
-	done
-
-OlivineCityBattleTowerSignText:
-	text "Battle Tower Ahead"
-	line "Opening Now!"
-	done
-
-OlivineCityPokeathlonDomeSignText:
-	text "The #athlon"
-	line "Project Has"
-	cont "Started!"
 	done
 
 OlivineCityCafeSignText:
 	text "Olivine Café"
+	line "and fish market"
 	done
 
-;;;
 OlivineCityPnkApricornScript:
 	faceplayer
 	opentext
-	writetext PearlForPnkApricornText ;;
+	writetext PearlForPnkApricornText 
 	waitbutton
 	checkitem BIG_PEARL
 	iffalse .NoBigPearl
-	writetext PearlForPnkApricornQuestionText ;;
+	writetext PearlForPnkApricornQuestionText
 	yesorno
 	iffalse .NoBigPearl
 	takeitem BIG_PEARL
-	giveapricorn PNK_APRICORN, 5 ; ez mode
-	jumpopenedtext PearlForPnkApricornEndText ;;
+	giveapricorn PNK_APRICORN, 5
+	jumpopenedtext PearlForPnkApricornEndText
 
 .NoBigPearl
-	jumpopenedtext NoPearlForPnkApricornText ;;
+	jumpopenedtext NoPearlForPnkApricornText
 
 PearlForPnkApricornText:
 	text "I tried to grow"
@@ -219,7 +203,7 @@ PearlForPnkApricornText:
 	cont "my backyard,"
 	
 	para "but it was a-"
-	line "useless Pink"
+	line "useless PNK"
 	cont "Apricorn tree!"
 
 	para "I can't eat those."
@@ -229,17 +213,15 @@ PearlForPnkApricornText:
 
 PearlForPnkApricornQuestionText:
 	text "Please trade me,"
-	line "I can't eat these"
-	cont "apricorns!"
+	line "I can't eat them!"
 	
 	para "A big boba pearl"
-	line "sounds so good,"
-	cont "here on the dock."
+	line "sounds so yummy."
 	done
 
 PearlForPnkApricornEndText:
 	text "<PLAYER> got 5"
-	line "PNK APRICORN."
+	line "PNK Apricorn."
 	
 	para "Thanks! Hey,"
 	line "this isn't a"

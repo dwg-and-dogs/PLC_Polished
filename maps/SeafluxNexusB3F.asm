@@ -4,8 +4,8 @@ SeafluxNexusB3F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 13, 31, SEAFLUX_NEXUS_B1F, 3 ; easy back or with waterfall 
-	warp_event 9, 5, SEAFLUX_NEXUS_B2F, 3 ; 
+	warp_event 13, 31, SEAFLUX_NEXUS_B1F, 3 ; 1 easy back or with waterfall 
+	warp_event 9, 5, SEAFLUX_NEXUS_B2F, 3 ; 2 
 
 	def_coord_events
 

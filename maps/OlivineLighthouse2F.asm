@@ -13,8 +13,8 @@ OlivineLighthouse2F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events ; scientists, engineers 
-	object_event  15,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, 	TrainerScientistNigel, -1 ; porygon
-	object_event  6, 14, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, 	TrainerBattleGirlNozomi, -1
+	object_event  15,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, 	TrainerScientistNigel, -1 
+	object_event  6, 14, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBattleGirlNozomi, -1
 	object_event  16,  9, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, 	TrainerEngineerHugo, -1
 
 TrainerScientistNigel:

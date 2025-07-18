@@ -122,6 +122,8 @@ BlackbeltLungBeatenText:
 CianwoodGymResetScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
+	iftrue_jumptext CianwoodCongratulationsText
 	writetext ResetCianwoodGymText
 	promptbutton
 	closetext
@@ -130,7 +132,7 @@ CianwoodGymResetScript:
 	clearevent EVENT_BEAT_BLACKBELT_LAO
 	clearevent EVENT_BEAT_BLACKBELT_YOSHI
 	reloadmap
-	done
+	end
 
 ResetCianwoodGymText:
 	text "We no longer rely"
@@ -148,3 +150,10 @@ ResetCianwoodGymText:
 	para "Each one has a 2"
 	line "tile vision."
 	done
+
+CianwoodCongratulationsText:
+	text "Congratulations"
+	line "to have earned"
+	cont "our TM."
+	done
+	

@@ -1,6 +1,5 @@
-Route40_MapScriptHeader: ; TODO REVISE SCENE TO A SECEN SCRPT 
+Route40_MapScriptHeader: ; todo revise the warp and move Kurt 
 	def_scene_scripts
-	scene_script Route40_KurtScene
 
 	def_callbacks
 
@@ -9,18 +8,18 @@ Route40_MapScriptHeader: ; TODO REVISE SCENE TO A SECEN SCRPT
 	
 
 	def_coord_events
-
+	coord_event 7, 5, 0, Route40_KurtScene
 
 	def_bg_events
 	bg_event 14, 10, BGEVENT_JUMPTEXT, Route40SignText ; fix sign 
-	bg_event  8,  2, BGEVENT_ITEM + HYPER_POTION, EVENT_ROUTE_40_HIDDEN_HYPER_POTION
+	bg_event  8,  4, BGEVENT_ITEM + HYPER_POTION, EVENT_ROUTE_40_HIDDEN_HYPER_POTION
 
 	def_object_events
 	; npc who gives you razor claw for defeating them all 
 	object_event 11, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RazorScavengerScript, -1
-	object_event 13, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_40_KURT
+	object_event 6, 5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_40_KURT
 ;monica
-	object_event  10,  5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
+	object_event  14,  6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
 	smashrock_event  7, 15
 	smashrock_event  6, 13
 	smashrock_event  7, 12
@@ -34,7 +33,7 @@ Route40_MapScriptHeader: ; TODO REVISE SCENE TO A SECEN SCRPT
 	object_event  9, 25, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermCharlie, -1
 ; beach NPCs
 	object_event 12, 10, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route40MatronScript, -1 ; redo text and heal you 
-	object_event  9,  7, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
+	object_event  10,  8, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
 ; roadblock NPCs, quarantine the city while they look for who took the part 
 	object_event 19, 4, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
 	object_event 19, 5, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
@@ -46,11 +45,14 @@ Route40_MapScriptHeader: ; TODO REVISE SCENE TO A SECEN SCRPT
 
 
 Route40_KurtScene:
-	pause 10
 	turnobject PLAYER, LEFT
 	turnobject ROUTE40_KURT, RIGHT
-	showemote EMOTE_SHOCK, ROUTE40_KURT, 15
-	showtext Route40_KurtText
+	showemote EMOTE_SHOCK, ROUTE40_KURT, 30
+	opentext
+	writetext Route40_KurtText
+	waitbutton
+	closetext
+	pause 60 
 	applymovement ROUTE40_KURT, Route40KurtMovesDown
 	disappear ROUTE40_KURT
 	setevent EVENT_ROUTE_40_KURT

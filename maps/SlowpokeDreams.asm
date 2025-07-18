@@ -27,6 +27,7 @@ SlowpokeDreams_MapScriptHeader: ;	def_scene_scripts
 SlowkingDreamsScript:
 	opentext
 	writetext SlowkingWiseText
+	waitbutton
 	cry SLOWKING
 	pause 15
 	closetext
@@ -91,7 +92,5 @@ SlowkingAfterText:
 	cont "curse on you."
 	
 	para "A changing world"
-	line "is not doomed - "
-	para "it is an invita-"
-	line "tion to build."
+	line "is not doomed."
 	done

@@ -14,7 +14,7 @@ Route41_MapScriptHeader:
 
 	def_bg_events
 	bg_event  24, 24, BGEVENT_ITEM + BIG_NUGGET, EVENT_ROUTE_41_HIDDEN_MAX_ETHER
-	bg_event 26, 42, BGEVENT_JUMPTEXT, Route41SignText ; fix sign 
+	bg_event 26, 42, BGEVENT_JUMPTEXT, Route41SignText ; fix sign
 
 
 	def_object_events
@@ -28,7 +28,7 @@ Route41_MapScriptHeader:
 	object_event 23, 20, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermBerke, -1
 	object_event  8, 28, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSwimmermMathew, -1
 ; gentleman out for a boat ride , done
-	object_event 24, 8, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerGentlemanCamus, -1;;
+	object_event 23,  8, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerGentlemanCamus, -1;;
 ;beauties sunbathing on a bachelorette party , done
 	object_event 23, 29, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBeautyOlivia, -1;;
 	object_event 24, 26, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBeautyCharlotte, -1;;
@@ -54,7 +54,7 @@ Route41SageScript:
 	showtext Route41SageImpressedText ; sees the silver wing
 	turnobject ROUTE41_SAGE_1, RIGHT
 	turnobject ROUTE41_SAGE_1, LEFT
-	pause 15
+	pause 60
 	turnobject ROUTE41_SAGE_1, UP
 	turnobject ROUTE41_SAGE_1, UP
 	showtext Route41SageText2

@@ -275,7 +275,7 @@ TL_Scene_2_R:
 	setevent EVENT_BARBEAU_WARPED
 	special FadeOutPalettes
 	waitsfx
-	warp ROUTE_40, 14, 4
+	warp ROUTE_40, 7, 4
 	end
 
 TL_2_Text1:
@@ -384,10 +384,10 @@ TL_Brigader_Script:
 	faceplayer
 	opentext
 	; debug tech
-;	setscene $1
-;	setevent EVENT_NOMAD_NEXUS
-;	clearevent EVENT_NOMAD_ISLANDS_HOUSE
-;	giveitem LIGHT_BALL, 1
+	setscene $1
+	setevent EVENT_NOMAD_NEXUS
+	clearevent EVENT_NOMAD_ISLANDS_HOUSE
+	giveitem LIGHT_BALL, 1
 	; end debug tech 
 	checkevent EVENT_BEAT_KENSEY_PORT
 	iftrue_jumptext TL_Brigader_AfterKenseyText
@@ -504,7 +504,7 @@ LandingBarbeauScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp ROUTE_40, 14, 4
+	warp ROUTE_40, 7, 4
 	end
 
 .AfterKensey:
@@ -636,8 +636,8 @@ TL_2_PlayerMovesUp:
 	step_end
 
 TL_2_KurtMoves2:
-	step_left
 	step_up
+	step_left
 	step_up
 	step_end
 
