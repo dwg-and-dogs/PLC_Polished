@@ -80,7 +80,6 @@ OlivineCafe1Script: ; 5000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-
 	text "Here you go, kid!"
 	line "Enjoy it!"
 	done
@@ -106,7 +105,6 @@ OlivineCafe1Script: ; 5000
 	takemoney $0, 5000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
-
 
 	text "Here you go, kid!"
 	line "Enjoy it!"
@@ -192,13 +190,14 @@ NeedAPearlText:
 	para "can't pull any"
 	line "fish! I need"
 	cont "better lures."
+
 	para "Fish love shiny"
 	line "little orbs."
 	
 	para "It does give me"
 	line "time to doodle"
-	cont "while I watch the"
-	cont "sea, though."
+	para "while I watch the"
+	line "sea, though."
 	done
 
 Text_PearlQuestion:
@@ -219,8 +218,8 @@ GiveSurfMailText:
 	
 	para "Hopefully it's a"
 	line "way to remember"
-	cont "it by, if you"
-	cont "ever leave."
+	para "it by, if you"
+	line "ever leave."
 	done
 
 Text_NoPearl:

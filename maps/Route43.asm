@@ -38,6 +38,11 @@ Route43_MapScriptHeader:
 GenericTrainerSightseerFRosie:
 	generictrainer SIGHTSEERF, ROSIE, EVENT_BEAT_SIGHTSEERF_ROSIE, .SeenText6, .BeatenText6
 
+	text "Granola, Oats,"
+	line "Raisins, Peanuts!"
+	cont "GORP!"
+	done
+
 .BeatenText6:
 	text "Don't they call "
 	line "it GORP every-"
@@ -122,8 +127,8 @@ GenericTrainerOfficerFJamie:
 	line "But be careful,"
 	para "I'm tracking a"
 	line "powerful Ursaring"
-	cont "that's stalking"
-	cont "Mahogany Town."
+	para "that's stalking"
+	line "Mahogany Town."
 	done
 
 .SeenText1:
@@ -137,8 +142,8 @@ Route43UrsalunaScene:
 	applymovement ROUTE_43_HURSALUNA, Route43HursalunaMove1
 	cry URSARING
 	earthquake 30
-	applyonemovement PLAYER, fast_step_down
-	applyonemovement PLAYER, fast_step_down
+	applyonemovement PLAYER, step_down
+	applyonemovement PLAYER, step_down
 	pause 30
 	disappear ROUTE_43_HURSALUNA
 	setevent EVENT_ROUTE_43_HURSALUNA

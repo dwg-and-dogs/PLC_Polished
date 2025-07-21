@@ -1,9 +1,9 @@
 LandingDocks_MapScriptHeader: 
 	def_scene_scripts
-	; todo: rewrite a la stadium grounds 
+; may have to rewrite so that Lugia slides in with Kurt
 
 	def_callbacks
-
+	callback MAPCALLBACK_OBJECTS, LandinDocksCallback_MoveNPCs
 
 	def_warp_events
 	warp_event 2, 19, ARDUOUS_ANCHORAGE, 2
@@ -13,6 +13,7 @@ LandingDocks_MapScriptHeader:
 
 	def_coord_events
 	coord_event 14, 16, 0, LandingDocksScene
+	coord_event 14, 16, 1, LandingDocksScene_BeatBarbeau
 
 
 	def_bg_events
@@ -34,10 +35,25 @@ LandingDocks_MapScriptHeader:
 	const LANDING_DOCKS_SURGE
 	const LANDING_DOCKS_LUGIA
 
+LandinDocksCallback_MoveNPCs:
+	checkscene
+	iffalse .Skip
+	; surge sprite is gone
+;	moveobject STADIUMGROUNDS_BOBESH, 26, 8
+;	turnobject STADIUMGROUNDS_BOBESH, DOWN
+;	moveobject STADIUMGROUNDS_SANDRA, 27, 8
+;	turnobject STADIUMGROUNDS_SANDRA, LEFT
+.Skip:
+	endcallback
+
+LandingDocksScene_BeatBarbeau:
+	; applymovements
+	;  turnobjects
+	sjump PickupDocksScene
 
 LandingDocksScene:
 	applyonemovement PLAYER, step_up
-	showemote EMOTE_BOLT, LANDING_DOCKS_SURGE, 10
+	showemote EMOTE_BOLT, LANDING_DOCKS_SURGE, 30
 	showtext Docks_Text1
 	waitbutton
 	showtext Docks_Text1_2
@@ -60,13 +76,13 @@ LandingDocksScene:
 	showtext Docks_Text4
 	waitbutton
 	showtext Docks_Text4_2
-	showemote EMOTE_SHOCK, LANDING_DOCKS_SURGE, 10
+	showemote EMOTE_SHOCK, LANDING_DOCKS_SURGE, 30
 	applymovement LANDING_DOCKS_SURGE, Docks_CaptainMove1
 	disappear LANDING_DOCKS_SURGE
 	setevent EVENT_DOCKS_SURGE
-	showemote EMOTE_HAPPY, LANDING_DOCKS_BARBEAU, 10
+	showemote EMOTE_HAPPY, LANDING_DOCKS_BARBEAU, 30
 	showtext Docks_Text5
-	showemote EMOTE_QUESTION, LANDING_DOCKS_KENSEY, 10
+	showemote EMOTE_QUESTION, LANDING_DOCKS_KENSEY, 30
 	showtext Docks_Text6
 	waitbutton
 	showtext Docks_Text6_2
@@ -75,12 +91,12 @@ LandingDocksScene:
 	applyonemovement LANDING_DOCKS_KURT, step_right
 	turnobject LANDING_DOCKS_KURT, UP
 	showtext Docks_Text8
-	showemote EMOTE_QUESTION, LANDING_DOCKS_BARBEAU, 20
+	showemote EMOTE_QUESTION, LANDING_DOCKS_BARBEAU, 30
 	showtext Docks_Text9
 	applyonemovement LANDING_DOCKS_KURT, step_left
 	turnobject LANDING_DOCKS_KURT, UP
 	showtext Docks_Text10
-	showemote EMOTE_BOLT, LANDING_DOCKS_BARBEAU, 10
+	showemote EMOTE_BOLT, LANDING_DOCKS_BARBEAU, 30
 	showtext Docks_Text11
 	waitbutton
 	showtext Docks_Text11_2
@@ -108,9 +124,15 @@ LandingDocksScene:
 	special HealParty
 	special SaveMusic	
 	playmusic MUSIC_NONE	
-	special RestoreMusic	
+	special RestoreMusic
+	setscene $1
+
+PickupDocksScene:
+	special Special_FadeOutMusic
+	pause 30
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	turnobject LANDING_DOCKS_KENSEY, LEFT
-	showemote EMOTE_BOLT, LANDING_DOCKS_KENSEY, 15
+	showemote EMOTE_BOLT, LANDING_DOCKS_KENSEY, 30
 	showtext Docks_Text13
 	applyonemovement LANDING_DOCKS_KENSEY, step_down
 	turnobject LANDING_DOCKS_KENSEY, LEFT
@@ -125,11 +147,11 @@ LandingDocksScene:
 	showtext Docks_Text15
 	applyonemovement LANDING_DOCKS_KURT, step_up
 	turnobject LANDING_DOCKS_KURT, DOWN
-	showemote EMOTE_QUESTION, LANDING_DOCKS_KURT, 10
+	showemote EMOTE_QUESTION, LANDING_DOCKS_KURT, 30
 	showtext Docks_Text16
-	showemote EMOTE_SAD, LANDING_DOCKS_BARBEAU, 10
+	showemote EMOTE_SAD, LANDING_DOCKS_BARBEAU, 30
 	showtext Docks_Text17
-	showemote EMOTE_BOLT, LANDING_DOCKS_KENSEY, 10
+	showemote EMOTE_BOLT, LANDING_DOCKS_KENSEY, 30
 	showtext Docks_Text18
 	applymovement LANDING_DOCKS_KENSEY, Docks_KenseyMoves1
 	disappear LANDING_DOCKS_KENSEY
@@ -138,7 +160,7 @@ LandingDocksScene:
 	special Special_CelebiShrineEvent
 	showtext Docks_Text20
 ; end 
-	setscene $1
+	setscene $2
 	setevent EVENT_DOCKS_KURT
 	setevent EVENT_DOCKS_KENSEY
 	setevent EVENT_DOCKS_BARBEAU
@@ -211,12 +233,12 @@ Docks_Text3:
 
 Docks_LugiaMove1:
 	fix_facing
-	fast_jump_step_down
-	fast_jump_step_down
-	fast_jump_step_down
-	fast_jump_step_down
-	fast_jump_step_down
-	fast_jump_step_down
+	slide_step_down
+	slide_step_down
+	slide_step_down
+	slide_step_down
+	slide_step_down
+	slide_step_down
 	step_end
 
 Docks_Text4:

@@ -20,19 +20,22 @@ Route42_MapScriptHeader:
 	bg_event 16, 11, BGEVENT_ITEM + MAX_POTION, EVENT_ROUTE_42_HIDDEN_MAX_POTION
 ;entei's cavern if you have the pumice harp 
 	bg_event 46,  7, BGEVENT_READ, PumiceHarpEntrance 
+	bg_event 26,  5, BGEVENT_READ, MissingMachinePartScript 
 
 
 	def_object_events
 	object_event  47,  7, SPRITE_EUSINE, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42EusineScript, EVENT_EUSINE_ROUTE_42
 	object_event  26,  10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42CharcoalKilnBossText, -1
-	object_event  26,  8, SPRITE_FARFETCH_D, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42FarfetchdScript, -1
+	object_event  29,  9, SPRITE_FARFETCH_D, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42FarfetchdScript, -1
 	object_event  13,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFisherArnold, -1; husbands that fish together 
 	object_event  13,  8, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFisherKyle, -1	;
 	object_event  52,   9, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerAromaLadyHeather, -1	; 
 	object_event  53,   9, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerAromaLadyHolly, -1;
 	object_event  6,  9, SPRITE_CAMPER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperDean, -1	;
 	object_event  44,  10, SPRITE_CAMPER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperSid, -1 ;
-	
+
+	object_event  27,  8, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 	PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptext, KilnChemistryText, -1
+	object_event  28,  8, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 	PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptext, KilnChemistryText, -1	
 
 	
 	object_event  2,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_CHUCK
@@ -45,20 +48,62 @@ Route42_MapScriptHeader:
 	object_const_def
 	const ROUTE_42_EUSINE
 
+MissingMachinePartScript:
+	checkevent EVENT_GOT_MACHINE_PART
+	iftrue_jumptext Route42_FoundMachinePartText
+	showemote EMOTE_SHOCK, PLAYER, 30
+	opentext
+	writetext Route42_MachinePartText
+	waitbutton
+	verbosegivekeyitem MACHINE_PART
+	waitbutton
+	writetext Route42_MachinePartText_2
+	waitbutton
+	setevent EVENT_GOT_MACHINE_PART
+	end
+
+Route42_FoundMachinePartText:
+	text "It's the opening"
+	line "where the Desal"
+	para "Plant's machine"
+	line "part was stashed."
+	done
+
+Route42_MachinePartText:
+	text "It looks like the"
+	line "missing part for"
+	cont "the Desal Plant!"
+	
+	para "It's still in good"
+	line "condition."
+	
+	para "It was removed by"
+	line "someone very fa-"
+	cont "miliar with it."
+	done
+	
+Route42_MachinePartText_2:
+	text "Best keep this"
+	line "hidden, in case"
+	cont "Chuck changes"
+	cont "his mind."
+	done
 
 PumiceHarpEntrance:
 	showtext PumiceHarpEntranceText1
 	checkkeyitem PUMICE_HARP
-	iffalse_jumptext .NoHarp
+	iffalse .NoHarp
 	showtext PumiceHarpEntranceText2
 	yesorno
 	iffalse .NoHarp
 	waitbutton
 	playsound SFX_SQUEAK ; sfx_harp
 	waitsfx
+	turnobject ROUTE_42_EUSINE, LEFT
+	showemote EMOTE_SHOCK, ROUTE_42_EUSINE, 30
 	showtext PumiceHarpEntranceText3
 	waitbutton
-	playsound SFX_EGG_BOMB ; sfx_rock_slide
+	playsound SFX_EGG_BOMB ; sfx_rock_slide?
 	waitsfx
 	warp ENTEIS_CAVERN, 11, 17
 .NoHarp:
@@ -77,9 +122,11 @@ PumiceHarpEntranceText2:
 	done
 
 PumiceHarpEntranceText3:
+	text_high "Eusine: "
+	
 	text "It crumbles!"
-	line "You enter the"
-	cont "cavern..."
+	line "You must enter"
+	cont "the cavern!"
 	done
 
 Route42EusineScript:
@@ -94,13 +141,16 @@ Route42EusineScript:
 
 	jumpthistext
 
+	text_high "Eusine: "
+
 	text "Do do do doooo..."
-	
-	para "Re re re ree..."
+	line "Re re re ree..."
 	
 	para "Mi mi mi meee..."
+	line "La la la laaaa..."
 	
-	para "La la la laaaa..."
+	para "What is the right"
+	line "frequency?"
 	done
 	
 .FoughtEntei:
@@ -108,6 +158,8 @@ Route42EusineScript:
 	jumptextfaceplayer EusineFoughtEnteiText
 
 Route42EusineIntroText:
+	text_high "Eusine: "
+
 	text "<PLAYER>, do you"
 	line "see the markings"
 	cont "on the mountain?"

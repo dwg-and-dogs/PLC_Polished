@@ -9,8 +9,10 @@ OlivineLighthouse6F_MapScriptHeader:
 	warp_event  9,  2, OLIVINE_LIGHTHOUSE_ROOF, 1
 
 	def_coord_events 
-	coord_event 13, 11, 0, Lighthouse6FScene0
+	; 0 = go to the slowking
+	coord_event 13, 11, 0, Lighthouse6FScene0 
 	coord_event 13, 10, 0, Lighthouse6FScene
+	; after you warp, this'll have to be rewritten that you keep heading left until you see them 
 	coord_event  9, 10, 1, Lighthouse6FScene1
 	coord_event  9, 10, 1, Lighthouse6FScene2
 	coord_event  9, 10, 1, Lighthouse6FScene3
