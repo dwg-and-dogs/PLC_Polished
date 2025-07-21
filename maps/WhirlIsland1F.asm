@@ -88,7 +88,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -98,7 +98,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -108,7 +108,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -118,7 +118,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -128,7 +128,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -138,7 +138,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -148,7 +148,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -158,7 +158,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -168,7 +168,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -178,7 +178,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -188,7 +188,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -198,7 +198,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -208,7 +208,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -218,7 +218,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -228,7 +228,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -238,7 +238,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $fe
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext GaveDVsText_WhirlIsland
 	waitbutton
 	closetext
 	end
@@ -330,7 +330,7 @@ WhirlIsland1FGaveMaximumDVsText:
 	line "maximized!"
 	done
 
-WhirlIsland1FGaveDVsText:
+GaveDVsText_WhirlIsland:
 	text "Your #mon is"
 	line "now expressing"
 	para "that part of its"

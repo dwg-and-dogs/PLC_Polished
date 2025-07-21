@@ -6,14 +6,14 @@ SeafluxNexusB1F_MapScriptHeader:
 	callback MAPCALLBACK_STONETABLE, NexusB1FBoulders
 
 	def_warp_events
-	warp_event 23, 5, SEAFLUX_NEXUS, 9 ; 1 stairs up, the first one you take ok 
-	warp_event 9, 19, SEAFLUX_NEXUS, 10 ; 2 accessible after waterfall ok 
-	warp_event 26, 26, SEAFLUX_NEXUS_B3F, 1 ; 3 secret passageway to the lugia waterfall ok 
+	warp_event 23, 5, SEAFLUX_NEXUS, 9 ; 1 stairs down -- checked 
+	warp_event 9, 19, SEAFLUX_NEXUS, 10 ; 2 accessible after whirlpool 
+	warp_event 26, 26, SEAFLUX_NEXUS_B3F, 1 ; 3 secret passageway to the lugia waterfall  -- checked 
 	warp_event 3, 13, SEAFLUX_NEXUS_B2F, 2  ; 4 to the top of the waterfall 
 	warp_event 14, 4, SEAFLUX_NEXUS_B2F, 1 ; 5 
 ;HOLES 
-	warp_event 4, 9, SEAFLUX_NEXUS_B2F, 1 ; 6 hole  ok 
-	warp_event 8, 13, SEAFLUX_NEXUS_B2F, 1 ; 7 hole  ok 
+	warp_event 4, 9, SEAFLUX_NEXUS_B2F, 1 ; 6 hole
+	warp_event 8, 13, SEAFLUX_NEXUS_B2F, 1 ; 7 hole 
 
 
 

@@ -13,11 +13,18 @@ WhirlIslandB3F_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-
+	; debug tech
+	bg_event 8, 25, BGEVENT_READ, WhirlIslandB3f_Debug
 
 	def_object_events
 
 
 
 	
+WhirlIslandB3f_Debug:
+	setevent EVENT_LUGIA_POKEBALL
+	jumpthistext 
 	
+	text "Cleared Lugia"
+	line "#ball event"
+	done

@@ -102,7 +102,7 @@ Route41SageScript2:
 	showtext Route41WaitText
 	special FadeOutPalettes
 	waitsfx
-	warp SEAFLUX_NEXUS, 29, 7
+	warp SHELTERED_SHORES, 34, 20
 	end
 
 Route41AskToTimeTravel:
@@ -132,7 +132,7 @@ Route41TimeTravel:
 	
 Route41WaitText:
 	text "Egad! What is"
-	line "happening to you?"
+	line "happening to us?"
 	done
 
 GenericTrainerSwimmermMathew:
