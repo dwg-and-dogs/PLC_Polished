@@ -19,8 +19,8 @@ SinjohEldersHouse_MapScriptHeader:
 
 
 	def_object_events
-	object_event  6,  2, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, SinjohElderBulkUpScript, EVENT_BEAT_KANNA ; GIVE false swipe
-	object_event  5,  2, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohElderNPCText, EVENT_BEAT_KANNA ;
+	object_event  6,  2, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, SinjohElderBulkUpScript, EVENT_GOT_TM_BULK_UP
+	object_event  5,  2, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohElderNPCText, EVENT_BEAT_KANNA
 
 SinjohElderBulkUpScript: 
 	checkevent EVENT_GOT_TM_BULK_UP

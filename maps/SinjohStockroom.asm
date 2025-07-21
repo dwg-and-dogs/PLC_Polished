@@ -15,7 +15,7 @@ SinjohStockroom_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  0,  2, BGEVENT_READ, TLApricornBenchScript
+	bg_event  0,  2, BGEVENT_READ, SCApricornBenchScript
 
 
 	def_object_events
@@ -50,7 +50,6 @@ SinjohLeftoversScript:
 	writetext LeftiesIntroText
 	promptbutton
 	verbosegiveitem LEFTOVERS
-	iffalse .BagFull
 	setevent EVENT_GOT_LEFTOVERS
 	writetext LeftiesAfterText
 	waitbutton
@@ -63,11 +62,6 @@ SinjohLeftoversScript:
 	closetext
 	end
 
-.BagFull:
-	writetext LeftiesBagFullText
-	waitbutton
-	closetext
-	end
 
 LeftiesIntroText:
 	text "I get hungry in"
@@ -89,12 +83,6 @@ LeftiesAfterText:
 	text "Those leftovers"
 	line "will sustain you"
 	cont "for long battles."
-	done
-
-
-LeftiesBagFullText:
-	text "Oh no! Your Bag"
-	line "is full."
 	done
 
 SnorlaxText:

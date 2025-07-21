@@ -10,13 +10,11 @@ TranquilTarn_MapScriptHeader:
 	def_warp_events
 
 
-
 	def_coord_events
-	coord_event 26, 20, 0, TranquilTarnDestructionScene ; probably going to cut this  
+;	coord_event 26, 20, 0, TranquilTarnDestructionScene ; probably going to cut this  
 
 
 	def_bg_events
-
 
 
 	def_object_events
@@ -37,9 +35,29 @@ TranquilTarn_MapScriptHeader:
 	itemball_event 38, 14, REVIVAL_HERB, 1, EVENT_TARN_ITEM_2
 
 	object_const_def
-	const TRANQUIL_TARN_HANK
-	const TRANQUIL_TARN_BRIGADER
-	const TRANQUIL_TARN_GYARADOS
+;	const TRANQUIL_TARN_HANK
+;	const TRANQUIL_TARN_BRIGADER
+;	const TRANQUIL_TARN_GYARADOS
+
+TranquilTarnCallback:
+	checkevent EVENT_BEAT_KANNA
+	iffalse .Done
+	changeblock 26, 8, $CB
+	changeblock 32, 8, $CB 
+	changeblock 26, 10, $CB 
+	changeblock 32, 10, $CB 
+	changeblock 24, 12, $CB 
+	changeblock 32, 12, $CB 
+	changeblock 24, 14, $CB 
+	changeblock 30, 14, $CB 
+	changeblock 22, 16, $CB 
+	changeblock 28, 16, $CB 
+	changeblock 22, 18, $CB 
+	changeblock 28, 18, $CB 
+	changeblock 24, 20, $CB 
+	changeblock 26, 20, $CB 
+.Done:
+	endcallback
 
 TranquilTarnFlyPoint:
 	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
@@ -100,26 +118,6 @@ BugManiacRobSeenText:
 	line "strong, right?"
 	done
 
-TranquilTarnCallback:
-	checkevent EVENT_BEAT_KANNA
-	iffalse .Done
-	changeblock 26, 8, $CB
-	changeblock 32, 8, $CB 
-	changeblock 26, 10, $CB 
-	changeblock 32, 10, $CB 
-	changeblock 24, 12, $CB 
-	changeblock 32, 12, $CB 
-	changeblock 24, 14, $CB 
-	changeblock 30, 14, $CB 
-	changeblock 22, 16, $CB 
-	changeblock 28, 16, $CB 
-	changeblock 22, 18, $CB 
-	changeblock 28, 18, $CB 
-	changeblock 24, 20, $CB 
-	changeblock 26, 20, $CB 
-.Done:
-	endcallback
-
 TranquilTarnBrigaderScript:
 	faceplayer
 	checkevent EVENT_BEAT_KANNA
@@ -128,8 +126,8 @@ TranquilTarnBrigaderScript:
 	
 	text "Hey kid, want a"
 	line "Gyarados? They're"
-	cont "full of Dragon"
-	cont "energy."
+	para "full of Dragon"
+	line "energy."
 	
 	para "Far stronger than"
 	line "your #mon."
@@ -189,131 +187,131 @@ GyaradosText:
 	text "Gayash!"
 	done
 
-TranquilTarnDestructionScene:	; c.f. western capital  -- probably will cut, but leaving here in case I want to do it 
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-	disappear PLAYER
-	showtext TarnScene_Text0 ; MEANWHILE, 
-	pause 10
-	special Special_FadeInQuickly
-	showemote EMOTE_SHOCK, TRANQUIL_TARN_HANK, 10
-	showtext TarnScene_Text1
-	showtext TarnScene_Text2
-	applyonemovement TRANQUIL_TARN_BRIGADER, step_down
-	turnobject TRANQUIL_TARN_BRIGADER, UP
-	applyonemovement TRANQUIL_TARN_HANK, step_right
-	showemote EMOTE_BOLT, TRANQUIL_TARN_GYARADOS, 10
-	applymovement TRANQUIL_TARN_GYARADOS, TarnGyarados_Movement1
-	earthquake 30
-	changeblock 28, 18, $CB
-	reloadmappart
-	turnobject TRANQUIL_TARN_HANK, UP
-	showemote EMOTE_SHOCK, TRANQUIL_TARN_HANK, 10	
-	showtext TarnScene_Text3
-	applymovement TRANQUIL_TARN_GYARADOS, TarnGyarados_Movement2
-	earthquake 30
-	changeblock 28, 16, $CB
-	reloadmappart
-	applyonemovement TRANQUIL_TARN_BRIGADER, step_left
-	applyonemovement TRANQUIL_TARN_BRIGADER, step_up	
-	showemote EMOTE_BOLT, TRANQUIL_TARN_BRIGADER, 20		
-	showtext TarnScene_Text4
-	; DO ALL THE REST 
-	special Special_FadeBlackQuickly
-	disappear TRANQUIL_TARN_GYARADOS
-	disappear PLAYER
-	setevent EVENT_BEAT_KANNA
-	; do all the blocks 
-	changeblock 26, 8, $CB
-	changeblock 32, 8, $CB 
-	changeblock 26, 10, $CB 
-	changeblock 32, 10, $CB 
-	changeblock 24, 12, $CB 
-	changeblock 32, 12, $CB 
-	changeblock 24, 14, $CB 
-	changeblock 30, 14, $CB 
-	changeblock 22, 16, $CB 
-	changeblock 28, 16, $CB 
-	changeblock 22, 18, $CB 
-	changeblock 28, 18, $CB 
-	changeblock 24, 20, $CB 
-	changeblock 26, 20, $CB 
-	reloadmappart
-	pause 10
-	special Special_FadeInQuickly	
-	turnobject TRANQUIL_TARN_HANK, LEFT
-	showtext TarnScene_Text5
-	turnobject TRANQUIL_TARN_BRIGADER, RIGHT	
-	showtext TarnScene_Text6
-	setscene $1
-	setevent EVENT_BEAT_KANNA
-	warp GROTTOED_GLACIER_B2F, 17, 5
-	end
+;TranquilTarnDestructionScene:	; c.f. western capital  -- probably will cut, but leaving here in case I want to do it 
+;	special Special_FadeBlackQuickly
+;	special Special_ReloadSpritesNoPalettes
+;	disappear PLAYER
+;	showtext TarnScene_Text0 ; MEANWHILE, 
+;	pause 10
+;	special Special_FadeInQuickly
+;	showemote EMOTE_SHOCK, TRANQUIL_TARN_HANK, 10
+;	showtext TarnScene_Text1
+;	showtext TarnScene_Text2
+;	applyonemovement TRANQUIL_TARN_BRIGADER, step_down
+;	turnobject TRANQUIL_TARN_BRIGADER, UP
+;	applyonemovement TRANQUIL_TARN_HANK, step_right
+;	showemote EMOTE_BOLT, TRANQUIL_TARN_GYARADOS, 10
+;	applymovement TRANQUIL_TARN_GYARADOS, TarnGyarados_Movement1
+;	earthquake 30
+;	changeblock 28, 18, $CB
+;	reloadmappart
+;	turnobject TRANQUIL_TARN_HANK, UP
+;	showemote EMOTE_SHOCK, TRANQUIL_TARN_HANK, 10	
+;	showtext TarnScene_Text3
+;	applymovement TRANQUIL_TARN_GYARADOS, TarnGyarados_Movement2
+;	earthquake 30
+;	changeblock 28, 16, $CB
+;	reloadmappart
+;	applyonemovement TRANQUIL_TARN_BRIGADER, step_left
+;	applyonemovement TRANQUIL_TARN_BRIGADER, step_up	
+;	showemote EMOTE_BOLT, TRANQUIL_TARN_BRIGADER, 20		
+;	showtext TarnScene_Text4
+;	; DO ALL THE REST 
+;	special Special_FadeBlackQuickly
+;	disappear TRANQUIL_TARN_GYARADOS
+;	disappear PLAYER
+;	setevent EVENT_BEAT_KANNA
+;	; do all the blocks 
+;	changeblock 26, 8, $CB
+;	changeblock 32, 8, $CB 
+;	changeblock 26, 10, $CB 
+;	changeblock 32, 10, $CB 
+;	changeblock 24, 12, $CB 
+;	changeblock 32, 12, $CB 
+;	changeblock 24, 14, $CB 
+;	changeblock 30, 14, $CB 
+;	changeblock 22, 16, $CB 
+;	changeblock 28, 16, $CB 
+;	changeblock 22, 18, $CB 
+;	changeblock 28, 18, $CB 
+;	changeblock 24, 20, $CB 
+;	changeblock 26, 20, $CB 
+;	reloadmappart
+;	pause 10
+;	special Special_FadeInQuickly	
+;	turnobject TRANQUIL_TARN_HANK, LEFT
+;	showtext TarnScene_Text5
+;	turnobject TRANQUIL_TARN_BRIGADER, RIGHT	
+;	showtext TarnScene_Text6
+;	setscene $1
+;	setevent EVENT_BEAT_KANNA
+;	warp GROTTOED_GLACIER_B2F, 17, 5
+;	end
 	
-TarnScene_Text0:
-	text "Meanwhile, at the"
-	line "Tranquil Tarn:"
-	done
-
-TarnScene_Text1:
-	text "Hank: Really? You"
-	line "will let me Pilot"
-	cont "this Gyarados?"
-	done
+;TarnScene_Text0:
+;	text "Meanwhile, at the"
+;	line "Tranquil Tarn:"
+;	done
+;
+;TarnScene_Text1:
+;	text "Hank: Really? You"
+;	line "will let me Pilot"
+;	cont "this Gyarados?"
+;	done
 ; hank gets a gyarados 
-TarnScene_Text2:
-	text "Brigader: Yes, "
-	line "just get a taste"
-	cont "of its power."
-	done
+;TarnScene_Text2:
+;	text "Brigader: Yes, "
+;	line "just get a taste"
+;	cont "of its power."
+;	done
 ;brigader gives it to hank 
-TarnScene_Text3:
-	text "Hank: Wow! OK..."
-	line "Wait, what's it-"
-	
-	para "Stop! Stop it!"
-	line "Stop thrashing!"
-	done
+;TarnScene_Text3:
+;	text "Hank: Wow! OK..."
+;	line "Wait, what's it-"
+;	
+;	para "Stop! Stop it!"
+;	line "Stop thrashing!"
+;	done
 ;gyarados thrashes about, wrecking the ice and ruining the landscape 
-TarnScene_Text4:
-	text "Brigader: Look at"
-	line "it crush the ice"
-	cont "in one blow!"
-	done
+;TarnScene_Text4:
+;	text "Brigader: Look at"
+;	line "it crush the ice"
+;	cont "in one blow!"
+;	done
 ;hank is conflicted, but intoxicated
-TarnScene_Text5:
-	text "Hank: Incredible."
-	line "The Tarn, ruined,"
-	cont "and yet..."
-	
-	para "their power is so"
-	line "intoxicating..."
-	
-	para "Does the General"
-	line "have any flying"
-	cont "Dragons I can"
-	cont "tame?"
-	done
-
-TarnScene_Text6:
-	text "Brigader: Come to"
-	line "the mine and see"
-	cont "for yourself!"
-
-	para "Join us and wield"  
-	line "unrivaled might!"
-	done
-
-TarnGyarados_Movement1:
-	fix_facing
-	fast_jump_step_up
-	fast_jump_step_left
-	fast_jump_step_up
-	fast_jump_step_left
-	step_end
-
-TarnGyarados_Movement2:
-	fix_facing
-	fast_jump_step_up
-	fast_jump_step_up
-	step_end
+;TarnScene_Text5:
+;	text "Hank: Incredible."
+;	line "The Tarn, ruined,"
+;	cont "and yet..."
+;	
+;	para "their power is so"
+;	line "intoxicating..."
+;	
+;	para "Does the General"
+;	line "have any flying"
+;	cont "Dragons I can"
+;	cont "tame?"
+;	done
+;
+;TarnScene_Text6:
+;	text "Brigader: Come to"
+;	line "the mine and see"
+;	cont "for yourself!"
+;
+;	para "Join us and wield"  
+;	line "unrivaled might!"
+;	done
+;
+;TarnGyarados_Movement1:
+;	fix_facing
+;	fast_jump_step_up
+;	fast_jump_step_left
+;	fast_jump_step_up
+;	fast_jump_step_left
+;	step_end
+;
+;TarnGyarados_Movement2:
+;	fix_facing
+;	fast_jump_step_up
+;	fast_jump_step_up
+;	step_end

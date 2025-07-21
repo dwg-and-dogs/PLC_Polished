@@ -15,7 +15,7 @@ GrottoedGlacierB2F_MapScriptHeader:
 
 	def_coord_events
 	coord_event 17, 7, 0, GrottoedGlacierB1FScene0
-	coord_event 17, 7, 0, GrottoedGlacierB1FScene1
+	coord_event 17, 7, 1, GrottoedGlacierB1FScene1
 
 	def_bg_events
 
@@ -46,39 +46,45 @@ GlacierBouldersB2FCallback:
 
 
 GlacierB2FCallback_MoveAK:
-	checkevent EVENT_BATTLED_BASCULEGION ; if >1$?
+	checkscene
 	iffalse .Skip
 	moveobject GLACIER_B2F_KANNA, 18, 3
 	moveobject GLACIER_B2F_ADRINNA, 18, 6
 .Skip:
 	endcallback
 
+GrottoedGlacierB1FScene1:
+;	applymovement PLAYER, PlayerWalksDownMovement2
+;	turnobject STADIUMGROUNDS_BOBESH, LEFT
+;	turnobject STADIUMGROUNDS_SANDRA, LEFT
+	sjump PickupGlacierScene
+
 GrottoedGlacierB1FScene0:
-	pause 10
+	pause 30
 	showtext GlacierB2F_Text1
 	turnobject GLACIER_B2F_KANNA, RIGHT
 	showtext GlacierB2F_Text2
 	applyonemovement GLACIER_B2F_KANNA, step_right
 	applyonemovement GLACIER_B2F_KANNA, step_up	
 	turnobject GLACIER_B2F_KANNA, LEFT
-	showemote EMOTE_SLEEP, GLACIER_B2F_BASCULEGION_SLEEPY, 10 
+	showemote EMOTE_SLEEP, GLACIER_B2F_BASCULEGION_SLEEPY, 30 
 	showtext GlacierB2F_Text3
 	waitbutton
 	showtext GlacierB2F_Text3_2
 	turnobject GLACIER_B2F_KANNA, DOWN
-	showemote EMOTE_BOLT, GLACIER_B2F_KANNA, 10
+	showemote EMOTE_BOLT, GLACIER_B2F_KANNA, 30
 	showtext GlacierB2F_Text4
 	disappear GLACIER_B2F_BASCULEGION_SLEEPY
 	appear GLACIER_B2F_BASCULEGION_ALIVE
-	pause 10
-	showemote EMOTE_BOLT, GLACIER_B2F_BASCULEGION_ALIVE, 10
+	pause 30
+	showemote EMOTE_BOLT, GLACIER_B2F_BASCULEGION_ALIVE, 30
 	applymovement GLACIER_B2F_BASCULEGION_ALIVE, GlacierBasc_Move1
 	applyonemovement GLACIER_B2F_ADRINNA, step_right
 	turnobject GLACIER_B2F_ADRINNA, LEFT
 	applymovement GLACIER_B2F_BASCULEGION_ALIVE, GlacierBasc_Move2
 	showtext BasculegionText
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon TOXICROAK, 20
+	loadwildmon BASCULEGION, 40
 	startbattle
 	ifequal $1, .Continue
 .Continue:
@@ -87,11 +93,12 @@ GrottoedGlacierB1FScene0:
 	setevent EVENT_BATTLED_BASCULEGION
 	setevent EVENT_BASCULEGION_SLEEPS
 	setevent EVENT_BASCULEGION_LIVES
-GrottoedGlacierB1FScene1:
+
+PickupGlacierScene:
 	showtext GlacierB2F_Text5
-	showemote EMOTE_QUESTION, GLACIER_B2F_KANNA, 10 
+	showemote EMOTE_QUESTION, GLACIER_B2F_KANNA, 30 
 	showtext GlacierB2F_Text6
-	showemote EMOTE_BOLT, GLACIER_B2F_KANNA, 10 	
+	showemote EMOTE_BOLT, GLACIER_B2F_KANNA, 30 	
 	showtext GlacierB2F_Text7
 	waitbutton
 	showtext GlacierB2F_Text7_2	
@@ -112,7 +119,8 @@ GrottoedGlacierB1FScene1:
 	writetext KannaTellAmosText	
 	closetext
 	earthquake 100
-	showemote EMOTE_SHOCK, GLACIER_B2F_KANNA, 10 
+	playsound SFX_BEAT_UP
+	showemote EMOTE_SHOCK, GLACIER_B2F_KANNA, 30 
 	showtext GlacierB2F_Text8
 	waitbutton
 	showtext GlacierB2F_Text8_2

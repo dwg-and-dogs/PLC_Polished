@@ -24,11 +24,10 @@ SinjohDorms_MapScriptHeader:
 	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SinjohDormsKurtScript, EVENT_BEAT_KANNA
 
 	object_event 13, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC1Text, EVENT_BEAT_KANNA
-	pokemon_event  12, 3, CHIKORITA, -1, -1, PAL_NPC_GREEN, ChikoritaText, -1
+	pokemon_event  12, 3, CHIKORITA, -1, -1, PAL_NPC_GREEN, ChikoritaText, EVENT_BEAT_KANNA
 	object_event 5, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC2Text, EVENT_BEAT_KANNA
 	object_event 3, 3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC3Text, EVENT_BEAT_KANNA
 
-	object_const_def
 
 SinjohDormsNPC1Text:
 	text "I love visiting"
@@ -101,7 +100,7 @@ SinjohDormsKurtScript:
 .WCKurtPC
 	writetext KurSCDormsText2
 	promptbutton
-	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
+	special PokemonCenterPC
 	endtext
 	end
 
@@ -112,18 +111,18 @@ KurtSCDormsText:
 	
 	para "It's surreal to"
 	line "be at the site"
-	cont "where Johto and"
-	cont "Hisui communed!"
+	para "where Johto and"
+	line "Hisui communed!"
 	
 	para "We need to find a"
 	line "way to get to the"
-	cont "mine and shut it"
-	cont "down for good."
+	para "mine and shut it"
+	line "down for good."
 	
 	para "The Hisuian Elder"
 	line "in the Glacier"
-	cont "might be able to"
-	cont "help us."	
+	para "might be able to"
+	line "help us."	
 	done
 	
 KurSCDormsText2:

@@ -14,16 +14,12 @@ EmpiresExtentEerieHamletGate_MapScriptHeader:
 	def_coord_events
 
 
-
 	def_bg_events
-
 
 
 	def_object_events
 	object_event 3, 4, SPRITE_VETERAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, HamletGateNPCScript, -1
 
-
-	object_const_def
 
 
 HamletGateNPCScript:
