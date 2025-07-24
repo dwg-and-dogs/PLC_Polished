@@ -1,6 +1,6 @@
 OlivineDesal1F_MapScriptHeader: 
 	def_scene_scripts
-
+	scene_script OlivineDesal1FScene
 
 	def_callbacks
 
@@ -8,11 +8,11 @@ OlivineDesal1F_MapScriptHeader:
 	def_warp_events
 	warp_event  4,  0, OLIVINE_CITY, 9
 	warp_event  5,  0, OLIVINE_CITY, 10	
-;	warp_event  5,  12, OLIVINE_DESAL_B1F, 1
+	warp_event  5,  12, OLIVINE_DESAL_B1F, 1
 
 
 	def_coord_events
-	coord_event 5, 4, 0 OlivineDesal1FScene
+
 
 	def_bg_events
 

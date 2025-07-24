@@ -987,9 +987,10 @@ SECTION "OlivineDesal1F_BlockData", ROMX
 OlivineDesal1F_BlockData:
 	INCBIN "maps/OlivineDesal1F.ablk.lz"
 
-;SECTION "OlivineDesalB1F_BlockData", ROMX
-;OlivineDesalB1F_BlockData:
-;	INCBIN "maps/OlivineDesalB1F.ablk.lz"
+SECTION "OlivineDesalB1F_BlockData", ROMX
+OlivineDesalB1F_BlockData:
+	INCBIN "maps/OlivineDesalB1F.ablk.lz"
+
 
 SECTION "SlowpokeDreams_BlockData", ROMX
 SlowpokeDreams_BlockData:

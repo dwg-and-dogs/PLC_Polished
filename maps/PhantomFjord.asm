@@ -21,7 +21,7 @@ PhantomFjord_MapScriptHeader:
 
 
 FjordDebugSpot:
-	warpfacing UP, OLIVINE_DESAL_1F,  5, 9
+	warpfacing UP, OLIVINE_DESAL_1F,  5, 4
 	end
 ;	setevent EVENT_DOCKS_KURT
 ;	setevent EVENT_DOCKS_LUGIA 

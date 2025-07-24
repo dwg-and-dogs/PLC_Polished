@@ -134,7 +134,7 @@ InitMapNameSign::
 	and a
 	ret
 
-.CheckExcludedMap:
+.CheckExcludedMap: ; maps that should not: western capital, clasts_cradleb1f, EMPERORS GARDEN?
 	ld a, [wMapGroup]
 	assert GROUP_ROUTE_35_NATIONAL_PARK_GATE == GROUP_ROUTE_36_NATIONAL_PARK_GATE
 	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE

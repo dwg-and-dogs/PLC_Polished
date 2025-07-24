@@ -33,16 +33,15 @@ DebugRoom_MapScriptHeader:
 
 DebugInteraction: 
 	opentext
-	givepoke ABRA, 100
-	givepoke GASTLY, 100
-	givepoke SNUBBULL, 100
-	givepoke CLEFAIRY, 100
+	givepoke TYPHLOSION, 100
+	givepoke FERALIGATR, 100
+	givepoke MEGANIUM, 100
+	givepoke RAIKOU, 100
+	givepoke POLITOED, 100
 	waitbutton
 	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
+;	setflag ENGINE_PHONE_CARD
 	setflag ENGINE_MAP_CARD
-	setflag ENGINE_RADIO_CARD
-	setflag ENGINE_EXPN_CARD
 	; pokedex
 	setflag ENGINE_POKEDEX
 for x, NUM_TMS + NUM_HMS
@@ -97,16 +96,23 @@ endr
 	giveitem FLOWER_MAIL, 1
 	; max money
 	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 999999
-	givecoins 50000
+	; all badges
+	setflag ENGINE_ZEPHYRBADGE
+	setflag ENGINE_HIVEBADGE
+	setflag ENGINE_PLAINBADGE
+	setflag ENGINE_FOGBADGE
+	setflag ENGINE_STORMBADGE
+	setflag ENGINE_MINERALBADGE
+	setflag ENGINE_GLACIERBADGE
+	setflag ENGINE_RISINGBADGE
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
+	setflag ENGINE_VOLCANOBADGE
+	setflag ENGINE_EARTHBADGE
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_AZALEA
 	setflag ENGINE_FLYPOINT_GOLDENROD
@@ -129,21 +135,21 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp RADIO_TOWER_4F, 17, 1
+	warp OLIVINE_DESAL_1F, 4, 5
 	end
 
 DebugCPU:
 	opentext
 	writetext DebugCPUText
 	; time
-	special Special_SetDayOfWeek
-	special Special_InitialClearDSTFlag
+;	special Special_SetDayOfWeek
+;	special Special_InitialClearDSTFlag
 	; full pokegear
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
 	setflag ENGINE_MAP_CARD
-	setflag ENGINE_RADIO_CARD
-	setflag ENGINE_EXPN_CARD
+;	setflag ENGINE_RADIO_CARD
+;	setflag ENGINE_EXPN_CARD
 	; pokedex
 	setflag ENGINE_POKEDEX
 	; all key items

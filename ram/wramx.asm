@@ -1055,14 +1055,14 @@ wHollysHoltSceneID:: db
 wHoltCoastGateSceneID:: db 
 wIlexForestSceneID:: db  
 wKurtsHouseSceneID:: db 
-wLakeOfRageSceneID:: 
+wLakeOfRageSceneID:: db
 wLandingDocksSceneID:: db
 wLandingHouse2SceneID:: db
 wMahoganyTownSceneID:: db
 wMistyBasinSceneID:: db 
 wNationalParkSceneID:: db
 wOlivineCafeSceneID:: db 
-wOlivineCityDesal1FSceneID:: db
+wOlivineDesal1FSceneID:: db
 wOlivineLighthouse1FSceneID:: db
 wOlivineLighthouse6FSceneID:: db
 wOlivinePunishmentSpeechHouseSceneID:: db

@@ -141,7 +141,7 @@ INCLUDE "maps/ArduousAnchorage.asm"
 SECTION "Dark Cave Scripts", ROMX
 
 INCLUDE "maps/OlivineDesal1F.asm"
-;INCLUDE "maps/OlivineDesalB1F.asm"
+INCLUDE "maps/OlivineDesalB1F.asm"
 INCLUDE "maps/SlowpokeDreams.asm"
 INCLUDE "maps/SlowpokeDreamsBackgroundN.asm"
 INCLUDE "maps/SlowpokeDreamsBackgroundS.asm"

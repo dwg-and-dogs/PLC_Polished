@@ -340,7 +340,7 @@ ENDM
 	
 	; new from 08-13-24
 	map_attributes OlivineDesal1F, OLIVINE_DESAL_1F, $0, 0
-;	map_attributes OlivineDesalB1F, OLIVINE_DESAL_B1F, $0, 0	
+	map_attributes OlivineDesalB1F, OLIVINE_DESAL_B1F, $0, 0
 	
 	map_attributes AnarresHoltGate, ANARRES_HOLT_GATE, $0, 0
 	

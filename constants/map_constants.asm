@@ -42,7 +42,7 @@ ENDM
 	map_const ROUTE_39,                                   10, 20 ; 13
 	map_const OLIVINE_CITY,                               33, 16 ; 14
 	map_const OLIVINE_DESAL_1F,							   6, 10 ; 15 UNDERGROUND
-;	map_const OLIVINE_DESAL_B1F,				           4,  5 ; 17 FACILITY
+	map_const OLIVINE_DESAL_B1F,				           4,  5 ; 17 FACILITY
 
 	newgroup                                                     ;  2 lake of rage and surrounding
 	map_const MAHOGANY_RED_GYARADOS_SPEECH_HOUSE,          4,  4 ;  1

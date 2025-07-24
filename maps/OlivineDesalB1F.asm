@@ -3,10 +3,11 @@ OlivineDesalB1F_MapScriptHeader:
 
 
 	def_callbacks
-	warp_event 3, 8, OLIVINE_DESAL_1F, 3
+
 
 	def_warp_events
-
+	warp_event 3, 8, OLIVINE_DESAL_1F, 3
+	
 
 	def_coord_events
 
@@ -30,7 +31,7 @@ DesalB1FScript1:
 DesalB1FText1:
 	text "If we don't get"
 	line "this plant going"
-	cont "soon, Slowking"
+	cont "soon, OMLAS"
 	
 	para "won't have enough"
 	line "water! The whole"
