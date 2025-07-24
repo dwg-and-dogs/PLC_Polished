@@ -110,8 +110,8 @@ JOHTO_FLYPOINT EQU const_value
 	const FLY_VIOLET
 	const FLY_UNION_CAVE
 	const FLY_ECRUTEAK
-	const FLY_OLIVINE
 	const FLY_CIANWOOD
+	const FLY_OLIVINE
 	const FLY_MAHOGANY
 	const FLY_LAKE_OF_RAGE
 ; historic johto, as KANTO
@@ -127,4 +127,3 @@ KANTO_FLYPOINT EQU const_value
 	const FLY_SULFUR_STY
 	const FLY_TIMELESS_TAPESTRY
 NUM_FLYPOINTS EQU const_value
-

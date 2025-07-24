@@ -1,4 +1,4 @@
-Flypoints: ; ENGINE_FLYPOINT_... 
+Flypoints: ; ENGINE_FLYPOINT_... in constants/map_data_constants
 	; landmark, spawn point
 	db AZALEA_TOWN,      	SPAWN_AZALEA
 	db GOLDENROD_CITY,   	SPAWN_GOLDENROD

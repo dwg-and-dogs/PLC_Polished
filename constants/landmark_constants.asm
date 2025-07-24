@@ -72,7 +72,7 @@ KANTO_LANDMARK EQU const_value ;old johto updated 04.01.24
 	const CLASTS_CRADLE ;MT MORTAR
 	const TIMELESS_TAPESTRY
 SHAMOUTI_LANDMARK EQU const_value
-;	const SHAMOUTI_ISLAND    ; 81
+	const SHAMOUTI_ISLAND    ; 81 dummy 
 NUM_LANDMARKS EQU const_value
 
 ; used in CaughtData

@@ -69,7 +69,7 @@ KurtHouseEventScript:
 	callstd receiveitem
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
-	setflag ENGINE_MAP_CARD
+;	setflag ENGINE_MAP_CARD
 	addcellnum PHONE_MOM
 	setscene $1 ; this should keep the event from playing in a loop?
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom

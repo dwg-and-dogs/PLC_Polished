@@ -76,7 +76,7 @@ Landmarks:
 	landmark 112,  56, ClastsCradleName
 	landmark  92,  92, TimelessTapestryName
 	assert_table_length SHAMOUTI_LANDMARK
-;	landmark  76,  68, ShamoutiIslandName
+	landmark  76,  68, ShamoutiIslandName ; dummy 
 	assert_table_length NUM_LANDMARKS
 
 ;modern johto
@@ -136,18 +136,20 @@ TradersLandingName:	   rawchar "Trader's¯Landing@"
 CianwoodCoveName:      rawchar "Cianwood¯Cove@"
 ShelteredShoresName:   rawchar "Sheltered¯Shores@"
 PhantomFjordName:      rawchar "Phantom¯Fjord@"
-SeaFluxNexusName:      rawchar "Sea Flux¯Nexus@"
+SeaFluxNexusName:      rawchar "Seaflux¯Nexus@"
 ArduousAnchorageName:  rawchar "Arduous¯Anchorage@"
 LandingDocksName:      rawchar "Landing¯Docks@"
 TranquilTarnName:      rawchar "Tranquil¯Tarn@"
 GrottoedGlacierName:   rawchar "Grottoed¯Glacier@"
 EnigmaGlacierName:     rawchar "Enigma¯Glacier@"
 SinjohCampName:        rawchar "Sinjoh¯Camp@"
-EmpiresReachName:      rawchar "Empires¯Reach@"
+EmpiresReachName:      rawchar "Empire's¯Reach@"
 EerieHamletName:       rawchar "Eerie¯Hamlet@"
 RebelsRedoubtName:     rawchar "Rebel's¯Redoubt@"
 SulfurStyName:         rawchar "Sulfur¯Sty@"
 ClastsCradleName:      rawchar "Clast's¯Cradle@"
 TimelessTapestryName:      rawchar "Timeless¯Tapestry@"
+; SHAMOUTI DUMMY 
+ShamoutiIslandName:		rawchar "Dummy¯Name"
 
 SpecialMapName:        rawchar "?@"

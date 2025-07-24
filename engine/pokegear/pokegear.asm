@@ -106,13 +106,13 @@ Pokegear_LoadGFX:
 	ld a, [wMapNumber]
 	ld c, a
 	call GetWorldMapLocation
-;	ld hl, FastShipGFX ; removed these lines 01-08-24 
-;	cp CIANWOOD_CITY ; removed 
+	ld hl, FastShipGFX
+;	cp FAST_SHIP
 ;	jr z, .load_alt_sprite
 ;	ld hl, SinjohRuinsArrowGFX
-;	cp CIANWOOD_CITY
+;	cp SINJOH_RUINS
 ;	jr z, .load_alt_sprite
-;	cp CIANWOOD_CITY
+;	cp MYSTRI_STAGE
 ;	jr z, .load_alt_sprite
 	farcall GetPlayerIcon
 	ldh a, [rSVBK]
@@ -556,7 +556,7 @@ PokegearMap_ContinueMap:
 	ld [hl], a
 .wrap_around_up
 	inc [hl]
-	call SkipHiddenOrangeIslandsUp
+;	call SkipHiddenOrangeIslandsUp
 	jr .done_dpad
 
 .down
@@ -569,7 +569,7 @@ PokegearMap_ContinueMap:
 	ld [hl], a
 .wrap_around_down
 	dec [hl]
-	call SkipHiddenOrangeIslandsDown
+;	call SkipHiddenOrangeIslandsDown
 
 .done_dpad
 	ld a, [wPokegearMapCursorLandmark]
@@ -581,57 +581,57 @@ PokegearMap_ContinueMap:
 	ld a, [wPokegearMapCursorLandmark]
 	jmp PokegearMap_UpdateCursorPosition
 
-SkipHiddenOrangeIslandsUp:
-	call CheckSkipNavelRock
-	jr nz, .not_after_navel_rock
-	inc [hl]
-.not_after_navel_rock
-	call CheckSkipFarawayIsland
-	jr nz, .not_after_faraway_island
-	inc [hl]
-.not_after_faraway_island
-	ld a, [hl]
-	cp TINDER_GARDEN + 1 ; CHANGED THIS MIGHT HAVE PROBLEMS WITH MAPS
-	ret nz
-	ld [hl], TINDER_GARDEN
-	ret
+;SkipHiddenOrangeIslandsUp:
+;	call CheckSkipNavelRock
+;	jr nz, .not_after_navel_rock
+;	inc [hl]
+;.not_after_navel_rock
+;	call CheckSkipFarawayIsland
+;	jr nz, .not_after_faraway_island
+;	inc [hl]
+;.not_after_faraway_island
+;	ld a, [hl]
+;	cp FARAWAY_ISLAND + 1
+;	ret nz
+;	ld [hl], SHAMOUTI_ISLAND
+;	ret
 
-SkipHiddenOrangeIslandsDown:
-	call CheckSkipFarawayIsland
-	jr nz, .not_before_faraway_island
-	dec [hl]
-.not_before_faraway_island
-	call CheckSkipNavelRock
-	ret nz
-	dec [hl]
-	ret
+;SkipHiddenOrangeIslandsDown:
+;	call CheckSkipFarawayIsland
+;	jr nz, .not_before_faraway_island
+;	dec [hl]
+;.not_before_faraway_island
+;	call CheckSkipNavelRock
+;	ret nz
+;	dec [hl]
+;	ret
 
-CheckSkipNavelRock:
-	ld a, [hl]
-	cp TINDER_GARDEN ; HOPEFULLY POKEGEAR WORKS OK
-	ret nz
-	push hl
-	eventflagcheck EVENT_VISITED_NAVEL_ROCK
-	pop hl
-	ret
+;CheckSkipNavelRock:
+;	ld a, [hl]
+;	cp NAVEL_ROCK
+;	ret nz
+;	push hl
+;	eventflagcheck EVENT_VISITED_NAVEL_ROCK
+;	pop hl
+;	ret
 
-CheckSkipFarawayIsland:
-	ld a, [hl]
-	cp TINDER_GARDEN
-	ret nz
-	push hl
-	eventflagcheck EVENT_VISITED_FARAWAY_ISLAND
-	pop hl
-	ret
+;CheckSkipFarawayIsland:
+;	ld a, [hl]
+;	cp FARAWAY_ISLAND
+;	ret nz
+;	push hl
+;	eventflagcheck EVENT_VISITED_FARAWAY_ISLAND
+;	pop hl
+;	ret
 
 PokegearMap_InitPlayerIcon:
 	push af
 	depixel 0, 0
-	ld b, SPRITE_ANIM_INDEX_RED_WALK ; maybe this will work? 
+	ld b, SPRITE_ANIM_INDEX_RED_WALK
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
-	ld b, SPRITE_ANIM_INDEX_RED_WALK
+	ld b, SPRITE_ANIM_INDEX_BLUE_WALK
 .got_gender
 	ld a, b
 	call _InitSpriteAnimStruct
@@ -717,19 +717,19 @@ TownMap_ConvertLineBreakCharacters:
 	ret
 
 TownMap_GetJohtoLandmarkLimits:
-	lb de, LAKE_OF_RAGE, AZALEA_TOWN ; USED TO BE AZALEA TOWN 
+	lb de, LAKE_OF_RAGE, AZALEA_TOWN ; LAST_LANDMARK, FIRST_LANDMARK 
 	ret
 
-TownMap_GetKantoLandmarkLimits: ; will need to update these for the old johto map
-	lb de, TIMELESS_TAPESTRY, HOLLYS_HOLT ; ??
+TownMap_GetKantoLandmarkLimits:
+	lb de, TIMELESS_TAPESTRY, HOLLYS_HOLT
 ;	ld a, [wStatusFlags]
 ;	bit 6, a
 ;	ret z
-;	ld e, TINDER_GARDEN ; ANARRES TOWN ?? 
+;	ld e, PALLET_TOWN
 	ret
 
 TownMap_GetOrangeLandmarkLimits:
-	lb de, LAKE_OF_RAGE, AZALEA_TOWN ; SHOULDN'T be able to access these... 
+	lb de, SHAMOUTI_ISLAND, SHAMOUTI_ISLAND ; 
 	ret
 
 PokegearRadio_Init:
@@ -1663,8 +1663,8 @@ _TownMap:
 	call DelayFrame
 
 	ld a, [wTownMapPlayerIconLandmark]
-;	cp SHAMOUTI_LANDMARK
-;	jr nc, .orange
+	cp SHAMOUTI_LANDMARK
+	jr nc, .orange
 	cp KANTO_LANDMARK
 	jr nc, .kanto
 	call TownMap_GetJohtoLandmarkLimits
@@ -1719,7 +1719,7 @@ _TownMap:
 .okay
 	inc [hl]
 	push de
-	call SkipHiddenOrangeIslandsUp
+;	call SkipHiddenOrangeIslandsUp
 	jr .next
 
 .pressed_down
@@ -1734,7 +1734,7 @@ _TownMap:
 .okay2
 	dec [hl]
 	push de
-	call SkipHiddenOrangeIslandsDown
+;	call SkipHiddenOrangeIslandsDown
 
 .next
 	ld a, [wTownMapCursorLandmark]
@@ -2094,10 +2094,10 @@ FlyMap:
 ; Start from New Bark Town
 	ld a, FLY_AZALEA
 	ld [wTownMapPlayerIconLandmark], a
-; Modern Johto Flypoints begin at New Bark Town...
+; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
-; ..and end at lake of rage 
-	ld a, FLY_LAKE_OF_RAGE  
+; ..and end at Silver Cave
+	ld a, FLY_LAKE_OF_RAGE
 	ld [wEndFlypoint], a
 ; Fill out the map
 	call FillJohtoMap
@@ -2110,30 +2110,34 @@ FlyMap:
 
 .KantoFlyMap:
 ; The event that there are no flypoints enabled in a map is not
+
 ; accounted for. As a result, if you attempt to select a flypoint
 ; when there are none enabled, the game will crash. Additionally,
+
 ; the flypoint selection has a default starting point that
 ; can be flown to even if none are enabled
+
 ; To prevent both of these things from happening when the player
 ; enters Kanto, fly access is restricted until Indigo Plateau is
+
 ; visited and its flypoint enabled
 	push af
-	ld c, SPAWN_ANARRES ; in Polished, this is indigo plateau
-	call HasVisitedSpawn
-	and a
-	jr z, .NoKanto
+;	ld c, SPAWN_INDIGO
+;	call HasVisitedSpawn
+;	and a
+;	jr z, .NoKanto
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_ANARRES;_TOWN  ; ANARRES_TOWN, this is a FLY_<> value, searchable 
+	ld a, FLY_ANARRES
 	ld [wStartFlypoint], a
-	ld [wTownMapPlayerIconLandmark], a ; DEFAULT FIRST PLACE 
-; ...and end at Timeless Tapestry
-	ld a, FLY_TIMELESS_TAPESTRY 
+; ...and end at Indigo Plateau
+	ld a, FLY_TIMELESS_TAPESTRY
 	ld [wEndFlypoint], a
 ; Because Indigo Plateau is the first flypoint the player
-; visits, it's made the default flypoint
 
+; visits, it's made the default flypoint
+	ld [wTownMapPlayerIconLandmark], a
 ; Fill out the map
 	call FillKantoMap
 	call TownMapBubble
@@ -2143,22 +2147,22 @@ FlyMap:
 	pop af
 	jmp TownMapPlayerIcon
 
-.NoKanto:
-; If Indigo Plateau hasn't been visited, we use Johto's map instead
-; Start from New Bark Town
-	ld a, FLY_AZALEA
-	ld [wTownMapPlayerIconLandmark], a
-; Flypoints begin at New Bark Town...
-	ld [wStartFlypoint], a
+;.NoKanto:
+;; If Indigo Plateau hasn't been visited, we use Johto's map instead
+;
+;; Start from New Bark Town
+;	ld a, FLY_NEW_BARK
+;	ld [wTownMapPlayerIconLandmark], a
+;; Flypoints begin at New Bark Town...
+;	ld [wStartFlypoint], a
 ; ..and end at Silver Cave
-	ld a, FLY_LAKE_OF_RAGE
-	ld [wEndFlypoint], a
-	call FillJohtoMap
-	pop af
-	call TownMapBubble
-	call TownMapPals
-	call TownMapJohtoFlips
-
+;	ld a, FLY_MT_SILVER
+;	ld [wEndFlypoint], a
+;	call FillJohtoMap
+;	pop af
+;	call TownMapBubble
+;	call TownMapPals
+;	call TownMapJohtoFlips
 .MapHud:
 	hlbgcoord 0, 0 ; BG Map 0
 	call TownMapBGUpdate
@@ -2482,19 +2486,19 @@ Pokedex_GetArea:
 ;	jr z, .FastShip
 ;	cp SINJOH_RUINS
 ;	jr z, .Sinjoh
-;	cp LAKE_OF_RAGE
+;	cp MYSTRI_STAGE
 ;	jr z, .Sinjoh
 	farjp GetPlayerIcon
 
-.FastShip:
-	ld de, FastShipGFX
-	ld b, BANK(FastShipGFX)
-	ret
+;.FastShip:
+;	ld de, FastShipGFX
+;	ld b, BANK(FastShipGFX)
+;	ret
 
-.Sinjoh:
-	ld de, SinjohRuinsArrowGFX
-	ld b, BANK(SinjohRuinsArrowGFX)
-	ret
+;.Sinjoh:
+;	ld de, SinjohRuinsArrowGFX
+;	ld b, BANK(SinjohRuinsArrowGFX)
+;	ret
 
 TownMapBGUpdate:
 ; Update BG Map tiles and attributes
@@ -2703,7 +2707,7 @@ TownMapPlayerIcon:
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
-	ld b, SPRITE_ANIM_INDEX_RED_WALK ; Female
+	ld b, SPRITE_ANIM_INDEX_BLUE_WALK ; Female
 .got_gender
 	ld a, b
 	call _InitSpriteAnimStruct
