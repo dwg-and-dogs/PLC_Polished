@@ -135,7 +135,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp OLIVINE_DESAL_1F, 4, 5
+	warp OLIVINE_DESAL_1F, 5, 4
 	end
 
 DebugCPU:

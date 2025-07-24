@@ -57,7 +57,7 @@ InitMapNameSign::
 ;	ld a, [wVermilionCitySceneID]
 ;	and a
 ;	jr z, .dont_do_map_sign
-.not_vermilion_city
+;.not_vermilion_city
 
 ; Landmark sign timer: descends $74-$00
 ; $73-$68: Sliding out (old sign)
@@ -136,22 +136,44 @@ InitMapNameSign::
 
 .CheckExcludedMap: ; maps that should not: western capital, clasts_cradleb1f, EMPERORS GARDEN?
 	ld a, [wMapGroup]
-	assert GROUP_ROUTE_35_NATIONAL_PARK_GATE == GROUP_ROUTE_36_NATIONAL_PARK_GATE
-	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE
-	jr nz, .not_national_park_gate
-	ld a, [wMapNumber]
+;.NationalParkGates for some reason?
+	assert GROUP_ROUTE_35_NATIONAL_PARK_GATE == GROUP_ROUTE_36_NATIONAL_PARK_GATE ; make will fail if this is not true 
+	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE ; compare this to a, if
+	jr nz, .check_olivine_desal ; if we're not at the gates then move on 
+	ld a, [wMapNumber] ; 
 	cp MAP_ROUTE_35_NATIONAL_PARK_GATE
 	ret z
 	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
 	ret
-.not_national_park_gate
-;	assert GROUP_OLIVINE_PORT == GROUP_VERMILION_PORT
-;	cp GROUP_OLIVINE_PORT
-;	ret nz
-;	ld a, [wMapNumber]
-;	cp MAP_OLIVINE_PORT
-;	ret z
-;	cp MAP_VERMILION_PORT
+.check_olivine_desal:
+	ld a, [wMapGroup]
+	cp GROUP_OLIVINE_DESAL_1F
+	jr nz, .check_western_capital
+	ld a, [wMapNumber]
+	cp MAP_OLIVINE_DESAL_1F
+	ret z
+.check_western_capital:
+	ld a, [wMapGroup]
+	cp GROUP_WESTERN_CAPITAL
+	jr nz, .check_emperors_garden
+	ld a, [wMapNumber]
+	cp MAP_WESTERN_CAPITAL
+	ret z
+.check_emperors_garden:
+	ld a, [wMapGroup]
+	cp GROUP_EMPERORS_GARDEN
+	jr nz, .check_clasts_cradle
+	ld a, [wMapNumber]
+	cp MAP_EMPERORS_GARDEN
+	ret z
+.check_clasts_cradle:
+	ld a, [wMapGroup]
+	cp GROUP_CLASTS_CRADLE_B1F
+	ret nz
+	ld a, [wMapNumber]
+	cp MAP_CLASTS_CRADLE_B1F
+	ret z
+; need this last ret?
 	ret
 
 PlaceMapNameSign::
