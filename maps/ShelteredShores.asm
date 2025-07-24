@@ -36,7 +36,7 @@ ShelteredShoresFlyPoint:
 	endcallback	
 
 ShelteredShoresOpenCallback:
-	checkevent EVENT_BEAT_EUSINE ; need to open up the whirl islands so you don't black out and get stuck 
+	checkevent EVENT_CIANWOODCITY_EUSINE ; need to open up the whirl islands so you don't black out and get stuck 
 	iffalse .Done
 	changeblock 12, 24, $35
 	changeblock 36, 26, $35

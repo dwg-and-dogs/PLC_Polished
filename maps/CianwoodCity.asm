@@ -19,12 +19,12 @@ CianwoodCity_MapScriptHeader:
 	bg_event 19, 47, BGEVENT_JUMPTEXT, CianwoodPharmacySignText
 	bg_event  5, 19, BGEVENT_ITEM + REVIVE, EVENT_CIANWOOD_CITY_HIDDEN_REVIVE
 	bg_event 17, 35, BGEVENT_ITEM + MAX_ETHER, EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER
-	bg_event 10, 24, BGEVENT_READ, CianwoodCityShrineScript
+	bg_event 14, 19, BGEVENT_READ, CianwoodCityShrineScript
 
 	def_object_events
 	object_event 14, 20, SPRITE_EUSINE, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodEusineScript, EVENT_CIANWOODCITY_EUSINE	
 	object_event 11, 25, SPRITE_KURT, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CIANWOODCITY_KURT ; INITIALIZE THIS EVENT
-	pokemon_event 14, 22, LUGIA, -1, -1, PAL_NPC_BLUE, ObjectEvent, EVENT_CIANWOODCITY_LUGIA ; INITIALIZE 
+	pokemon_event 14, 23, LUGIA, -1, -1, PAL_NPC_BLUE, ObjectEvent, EVENT_CIANWOODCITY_LUGIA ; INITIALIZE 
 	smashrock_event 17, 44
 	smashrock_event 15, 40
 	smashrock_event 13, 32
@@ -68,14 +68,17 @@ CianwoodEusineScript:
 	waitbutton
 	setevent EVENT_HEARD_CIANWOOD_SHPEEL
 .HeardShpeel	
-	checkpoke LUGIA
+	checkevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_KURT
 	iffalse_jumpopenedtext CianwoodEusineNoLugiaText
 	; music 
 	closetext
 	appear CIANWOODCITY_KURT
 	applymovement CIANWOODCITY_KURT, CC_Move_Kurt
 	appear CIANWOODCITY_LUGIA
+	cry LUGIA 
 	applymovement PLAYER, CC_Move_PlayerStepsDown
+	applyonemovement CIANWOODCITY_EUSINE, step_left
+	turnobject CIANWOODCITY_EUSINE, DOWN
 	showemote EMOTE_SHOCK, CIANWOODCITY_EUSINE, 10
 	showtext CC_KurtText1
 	applymovement CIANWOODCITY_EUSINE, CC_Move_Eusine_1
@@ -144,10 +147,9 @@ CianwoodEusineNoLugiaText:
 CC_Move_Kurt:
 	step_up
 	step_up
-	step_up
 	step_right
 	step_right
-	step_up
+	turn_head_up
 	step_end
 	
 CC_Move_PlayerStepsDown:
@@ -155,11 +157,10 @@ CC_Move_PlayerStepsDown:
 	step_down
 	step_left
 	step_down
-	turn_head_right
+	turn_head_up
 	step_end
 
 CC_Move_Eusine_1:
-	step_left
 	step_down
 	step_down
 	step_right
@@ -169,6 +170,9 @@ CC_Move_Eusine_1:
 CC_Move_Kurt_2:
 	step_up
 	step_up
+	step_up
+	step_right
+	turn_head_up
 	step_end
 
 CC_KurtText1:
@@ -211,7 +215,7 @@ CC_KurtText2:
 	
 CC_KurtPrayer:
 	text_high
-    text " Eusine: " 
+    text " Kurt: " 
 	next
 	text_start 
 	text "So this is my"

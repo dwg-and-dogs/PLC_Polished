@@ -95,7 +95,7 @@ UpdateCelebiPosition:
 	ld hl, SPRITEANIMSTRUCT_YCOORD
 	add hl, bc
 	ld a, [hl]
-	cp 8 * 10 + 2
+	cp 8 * 8 + 2  ; This equals 66;	cp 8 * 10 + 2
 	jr nc, .FreezeCelebiPosition
 	ld hl, SPRITEANIMSTRUCT_YCOORD
 	add hl, bc

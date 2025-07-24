@@ -1,4 +1,5 @@
-OlivineCityDesalIntake_MapScriptHeader: ;	def_scene_scripts
+OlivineDesalIntake_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -17,7 +18,3 @@ OlivineCityDesalIntake_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
-
-
-
-	object_const_def

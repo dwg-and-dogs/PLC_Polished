@@ -27,6 +27,9 @@ ManiasDollText:
 
 
 ManiaHealerScript:
+	; debug tech TODO REMOVE
+	setevent EVENT_CIANWOODCITY_KURT
+	setevent EVENT_CIANWOODCITY_LUGIA
 	opentext
 	writetext ManiaHealingDoll
 	waitbutton

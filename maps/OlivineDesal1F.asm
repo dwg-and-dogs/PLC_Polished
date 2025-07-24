@@ -1,28 +1,26 @@
-OlivineCityDesal1F_MapScriptHeader: 
+OlivineDesal1F_MapScriptHeader: 
 	def_scene_scripts
-	scene_script OlivineDesal1FScene
+
 
 	def_callbacks
 
 
 	def_warp_events
-	warp_event 3, 0, OLIVINE_CITY, 9
-	warp_event 4, 0, OLIVINE_CITY, 10	
-	warp_event 3, 4, OLIVINE_DESAL_B1F, 1
+	warp_event  4,  0, OLIVINE_CITY, 9
+	warp_event  5,  0, OLIVINE_CITY, 10	
+;	warp_event  5,  12, OLIVINE_DESAL_B1F, 1
 
 
 	def_coord_events
-
-
+	coord_event 5, 4, 0 OlivineDesal1FScene
 
 	def_bg_events
 
 
-
 	def_object_events
-	object_event 3, 1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_JASMINE
-	object_event 4, 1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_CHUCK
-	object_event  4,  5, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Desal1FNPCText, -1
+	object_event  4,  1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_JASMINE
+	object_event  5,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_CHUCK
+;	object_event  7,  1, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Desal1FNPCText, -1
 
 
 	object_const_def
@@ -135,7 +133,7 @@ OlivineDesal_Text_5:
 	cont "in a drought!"
 	
 	para "And why does it"
-	line "sound liek that"
+	line "sound like that"
 	para "OMLAS Slowking"
 	line "is in pain?"
 	done

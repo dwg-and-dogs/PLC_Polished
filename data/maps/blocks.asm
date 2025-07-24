@@ -983,17 +983,13 @@ SECTION "ArduousAnchorage_BlockData", ROMX
 ArduousAnchorage_BlockData:
 	INCBIN "maps/ArduousAnchorage.ablk.lz"
 
-SECTION "OlivineCityDesal1F_BlockData", ROMX
-OlivineCityDesal1F_BlockData:
-	INCBIN "maps/OlivineCityDesal1F.ablk.lz"
+SECTION "OlivineDesal1F_BlockData", ROMX
+OlivineDesal1F_BlockData:
+	INCBIN "maps/OlivineDesal1F.ablk.lz"
 
-SECTION "OlivineCityDesalIntake_BlockData", ROMX
-OlivineCityDesalIntake_BlockData:
-	INCBIN "maps/OlivineCityDesalIntake.ablk.lz"
-
-SECTION "OlivineCityDesalB1F_BlockData", ROMX
-OlivineCityDesalB1F_BlockData:
-	INCBIN "maps/OlivineCityDesalB1F.ablk.lz"
+;SECTION "OlivineDesalB1F_BlockData", ROMX
+;OlivineDesalB1F_BlockData:
+;	INCBIN "maps/OlivineDesalB1F.ablk.lz"
 
 SECTION "SlowpokeDreams_BlockData", ROMX
 SlowpokeDreams_BlockData:

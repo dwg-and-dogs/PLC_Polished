@@ -18,7 +18,7 @@ MapScenes::
 	scene_var DAYCARE,                                wDayCareSceneID ; NEED TO KEEP 
 	scene_var ILEX_FOREST,                            wIlexForestSceneID
 	scene_var KURTS_HOUSE,                            wKurtsHouseSceneID
-	scene_var OLIVINE_DESAL_1F,                       wOlivineCityDesal1FSceneID
+	scene_var OLIVINE_DESAL_1F,                       wOlivineCityDesal1FSceneID ; OLIVINE_DESAL 
 	scene_var RADIO_TOWER_5F,                         wRadioTower5FSceneID
 	scene_var ROUTE_34_ILEX_FOREST_GATE,              wAlways0SceneID
 	scene_var ROUTE_35_NATIONAL_PARK_GATE,            wRoute35NationalParkGateSceneID

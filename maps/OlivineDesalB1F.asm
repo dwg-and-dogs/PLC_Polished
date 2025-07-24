@@ -1,4 +1,4 @@
-OlivineCityDesalB1F_MapScriptHeader: 
+OlivineDesalB1F_MapScriptHeader: 
 	def_scene_scripts
 
 

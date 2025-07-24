@@ -79,7 +79,7 @@ CianwoodCovetimeTravelScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp CIANWOOD_CITY, 11, 16
+	warp CIANWOOD_CITY, 14, 20
 	end
 
 CCAskToTimeTravelText:

@@ -15,7 +15,7 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_bg_events
-
+; todo add a 
 
 	def_object_events
 	object_event  28,  20, SPRITE_BIRD_KEEPER, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperHank, EVENT_BEAT_KANNA

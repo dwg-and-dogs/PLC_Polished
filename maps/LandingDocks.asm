@@ -22,8 +22,8 @@ LandingDocks_MapScriptHeader:
 
 	def_object_events
 	object_event  9, 16, SPRITE_KURT, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_KURT
-	object_event 15, 12, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_KENSEY
-	object_event 14, 11, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_BARBEAU
+	object_event 15, 12, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_KENSEY
+	object_event 14, 11, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_BARBEAU
 	object_event 14, 12, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED,OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_SURGE
 	object_event  15,  14, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LUGIA, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_LUGIA 
 
@@ -39,28 +39,39 @@ LandinDocksCallback_MoveNPCs:
 	checkscene
 	iffalse .Skip
 	; surge sprite is gone
-;	moveobject STADIUMGROUNDS_BOBESH, 26, 8
-;	turnobject STADIUMGROUNDS_BOBESH, DOWN
-;	moveobject STADIUMGROUNDS_SANDRA, 27, 8
-;	turnobject STADIUMGROUNDS_SANDRA, LEFT
+	moveobject LANDING_DOCKS_KURT, 15, 14
+	turnobject LANDING_DOCKS_KURT, LEFT
+	moveobject LANDING_DOCKS_KENSEY, 15, 12
+	turnobject LANDING_DOCKS_KENSEY, DOWN
+	moveobject LANDING_DOCKS_BARBEAU, 14, 12
+	turnobject LANDING_DOCKS_BARBEAU, DOWN
 .Skip:
 	endcallback
 
 LandingDocksScene_BeatBarbeau:
-	; applymovements
-	;  turnobjects
+	applymovement PLAYER, PlayerMovesToBeatKensey
 	sjump PickupDocksScene
 
 LandingDocksScene:
+
+
+	special Special_FadeOutMusic
+	pause 30
+	playmusic MUSIC_LUGIA_BATTLE_HGSS ; MUSIC_BATTLE_FACTORY_RSE ; MUSIC_FRONTIER_BRAIN_BATTLE_RSE, MUSIC_ELITE_FOUR_BATTLE_SM
+
 	applyonemovement PLAYER, step_up
 	showemote EMOTE_BOLT, LANDING_DOCKS_SURGE, 30
-	showtext Docks_Text1
+	opentext
+	writetext Docks_Text1
 	waitbutton
-	showtext Docks_Text1_2
+	writetext Docks_Text1_2
+	waitbutton
 	turnobject LANDING_DOCKS_KENSEY, UP
-	showtext Docks_Text2
+	writetext Docks_Text2
+	waitbutton
+	closetext
 	appear LANDING_DOCKS_KURT
-	applymovement LANDING_DOCKS_KURT, Docks_KurtMove1
+	applymovement LANDING_DOCKS_KURT, Docks_KurtMove1 
 	appear LANDING_DOCKS_LUGIA
 	cry LUGIA
 	pause 20
@@ -68,57 +79,92 @@ LandingDocksScene:
 	pokepic LUGIA
 	waitbutton
 	closepokepic
-	showtext Docks_Text3
+	turnobject LANDING_DOCKS_KENSEY, DOWN
+	turnobject LANDING_DOCKS_BARBEAU, DOWN
+	turnobject LANDING_DOCKS_SURGE, DOWN
+	opentext
+	writetext Docks_Text3
+	waitbutton
+	closetext
 	applymovement LANDING_DOCKS_LUGIA, Docks_LugiaMove1
+	playsound SFX_AEROBLAST
+	waitsfx
 	disappear LANDING_DOCKS_LUGIA
 	setevent EVENT_DOCKS_LUGIA
 	showemote EMOTE_SHOCK, LANDING_DOCKS_BARBEAU, 30
-	showtext Docks_Text4
+	opentext
+	writetext Docks_Text4
 	waitbutton
-	showtext Docks_Text4_2
+	writetext Docks_Text4_2
+	waitbutton
+	closetext
 	showemote EMOTE_SHOCK, LANDING_DOCKS_SURGE, 30
 	applymovement LANDING_DOCKS_SURGE, Docks_CaptainMove1
 	disappear LANDING_DOCKS_SURGE
 	setevent EVENT_DOCKS_SURGE
-	showemote EMOTE_HAPPY, LANDING_DOCKS_BARBEAU, 30
-	showtext Docks_Text5
-	showemote EMOTE_QUESTION, LANDING_DOCKS_KENSEY, 30
-	showtext Docks_Text6
+	applyonemovement LANDING_DOCKS_BARBEAU, step_down
+	opentext
+	writetext Docks_Text5
 	waitbutton
-	showtext Docks_Text6_2
+	turnobject LANDING_DOCKS_BARBEAU, RIGHT
+	turnobject LANDING_DOCKS_KENSEY, LEFT
+	showemote EMOTE_QUESTION, LANDING_DOCKS_KENSEY, 30
+	writetext Docks_Text6
+	waitbutton
+	writetext Docks_Text6_2
+	waitbutton
 	turnobject LANDING_DOCKS_KENSEY, DOWN
-	showtext Docks_Text7
+	turnobject LANDING_DOCKS_BARBEAU, DOWN
+	writetext Docks_Text7
+	waitbutton
+	closetext
 	applyonemovement LANDING_DOCKS_KURT, step_right
 	turnobject LANDING_DOCKS_KURT, UP
-	showtext Docks_Text8
+	opentext
+	writetext Docks_Text8
+	waitbutton
+	closetext
 	showemote EMOTE_QUESTION, LANDING_DOCKS_BARBEAU, 30
-	showtext Docks_Text9
+	opentext 
+	writetext Docks_Text9
+	waitbutton
 	applyonemovement LANDING_DOCKS_KURT, step_left
 	turnobject LANDING_DOCKS_KURT, UP
-	showtext Docks_Text10
-	showemote EMOTE_BOLT, LANDING_DOCKS_BARBEAU, 30
-	showtext Docks_Text11
+	writetext Docks_Text10
 	waitbutton
-	showtext Docks_Text11_2
-	applyonemovement LANDING_DOCKS_KURT, step_left
-	turnobject LANDING_DOCKS_KURT, RIGHT
+	showemote EMOTE_BOLT, LANDING_DOCKS_BARBEAU, 30
+	writetext Docks_Text11
+	waitbutton
+	writetext Docks_Text11_2
+	waitbutton
+	closetext
+	applyonemovement LANDING_DOCKS_KURT, step_right
+	turnobject LANDING_DOCKS_KURT, LEFT
 	applyonemovement PLAYER, step_up
 	playmusic MUSIC_HEAL
 	special HealParty
 	special SaveMusic	
 	playmusic MUSIC_NONE	
 	special RestoreMusic	
+	turnobject LANDING_DOCKS_KURT, UP
 	applyonemovement LANDING_DOCKS_BARBEAU, step_down
 	winlosstext BarbeauBeatenText1, 0
 	loadtrainer BARBEAU, 1 
 	startbattle
 	reloadmapafterbattle ; OBJECTS IN THE RIGHT SPOT?
 ; start of kensey section 
-	showtext Docks_Text12
+	opentext
+	writetext Docks_Text12
+	waitbutton
+	closetext
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_RAINBOWBADGE
-	promptbutton
+;	promptbutton
+	applyonemovement LANDING_DOCKS_BARBEAU, step_up
+	turnobject LANDING_DOCKS_BARBEAU, DOWN
+	turnobject LANDING_DOCKS_KURT, LEFT
+	turnobject PLAYER, RIGHT	
 	showtext Docks_Text12_2
 	playmusic MUSIC_HEAL
 	special HealParty
@@ -133,29 +179,42 @@ PickupDocksScene:
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	turnobject LANDING_DOCKS_KENSEY, LEFT
 	showemote EMOTE_BOLT, LANDING_DOCKS_KENSEY, 30
+	turnobject PLAYER, UP	
+	turnobject LANDING_DOCKS_KURT, UP	
 	showtext Docks_Text13
 	applyonemovement LANDING_DOCKS_KENSEY, step_down
-	turnobject LANDING_DOCKS_KENSEY, LEFT
-	turnobject PLAYER, RIGHT
+	applyonemovement LANDING_DOCKS_KENSEY, step_left
+	turnobject LANDING_DOCKS_KENSEY, DOWN
+	turnobject PLAYER, UP
+	turnobject LANDING_DOCKS_KURT, UP
 	winlosstext KenseyBeaten1, 0
 	loadtrainer KENSEY, 1 
 	startbattle
 	reloadmapafterbattle ; OBJECTS IN THE RIGHT SPOT?
+	special RestartMapMusic
 	showtext Docks_Text14
+	applyonemovement LANDING_DOCKS_KENSEY, step_right
 	applyonemovement LANDING_DOCKS_KENSEY, step_up
 	turnobject LANDING_DOCKS_KENSEY, DOWN
-	showtext Docks_Text15
-	applyonemovement LANDING_DOCKS_KURT, step_up
+	opentext
+	writetext Docks_Text15
+	waitbutton
 	turnobject LANDING_DOCKS_KURT, DOWN
-	showemote EMOTE_QUESTION, LANDING_DOCKS_KURT, 30
-	showtext Docks_Text16
-	showemote EMOTE_SAD, LANDING_DOCKS_BARBEAU, 30
-	showtext Docks_Text17
-	showemote EMOTE_BOLT, LANDING_DOCKS_KENSEY, 30
-	showtext Docks_Text18
+	turnobject PLAYER, DOWN
+	writetext Docks_Text16
+	waitbutton
+	writetext Docks_Text17
+	waitbutton
+	turnobject LANDING_DOCKS_KENSEY, LEFT
+	writetext Docks_Text18
+	waitbutton
+	closetext
 	applymovement LANDING_DOCKS_KENSEY, Docks_KenseyMoves1
 	disappear LANDING_DOCKS_KENSEY
 	setevent EVENT_DOCKS_KENSEY
+;	applyonemovement LANDING_DOCKS_BARBEAU, step_down
+	turnobject LANDING_DOCKS_KURT, UP
+	turnobject PLAYER, UP
 	showtext Docks_Text19
 	special Special_CelebiShrineEvent
 	showtext Docks_Text20
@@ -169,7 +228,7 @@ PickupDocksScene:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp CLASTS_CRADLE_B1F, 21, 12
+	warp CLASTS_CRADLE_B1F, 21, 11
 	end
 
 Docks_Text1:
@@ -195,7 +254,7 @@ Docks_Text1_2:
 	next
 	text_start 
 	text "We are trying!"
-	line  "Right, Barbeau?"
+	line "Right, Barbeau?"
 	done
 
 
@@ -215,10 +274,10 @@ Docks_KurtMove1:
 	step_right
 	step_right
 	step_right
-	step_right
 	step_up
 	step_up
 	step_left
+	turn_head_up
 	step_end
 
 Docks_Text3:
@@ -399,7 +458,11 @@ Docks_Text12:
 	done
 
 Docks_Text12_2:
-	para "Kurt: Excellent,"
+	text_high
+    text " Kurt: " 
+	next
+	text_start 
+	text "Excellent battle,"
 	line "<PLAYER>. I'll"
 	cont "heal you again."
 
@@ -421,9 +484,8 @@ Docks_Text13:
 	line "You fight without"
 	cont "thought, Barbeau!"
 	
-	para "I'll wipe you off"
-	line "these docks, and"
-	cont "save the port!"
+	para "I'll wipe them"
+	line "off the docks!"
 	done
 
 KenseyBeaten1:
@@ -431,8 +493,8 @@ KenseyBeaten1:
 	line "for battling. But"
 	para "I don't think we"
 	line "have seen the"
-	para "last of the out-"
-	line "siders yet."
+	para "last of new tech"
+	line "just yet."
 	
 	para "The Consul has a"
 	line "mine to the East"
@@ -447,7 +509,7 @@ Docks_Text14:
     text " Kensey: " 
 	next
 	text_start 
-	text "Kensey: There is"
+	text "Fools. There is"
 	line "a mine east of"
 	cont "the capital."
 
@@ -506,11 +568,9 @@ Docks_Text18:
 	para "Your whole clan"
 	line "will learn maps!"
 	
-	para "And you, old man,"
-	line "I will tell the"
-	cont "Consul that you"
-	
-	para "are the one who"
+	para "I need to tell"
+	line "Consul Urgaust"
+	para "how these two"
 	line "stole his Lugia!"
 	done
 
@@ -530,10 +590,10 @@ Docks_Text19:
 	next
 	text_start 
 	text "Kurt, you did"
-	cont "what you said."
+	line "what you said."
 	
-	line "I wonder if it"
-	cont "was worth it."
+	para "I wonder if it"
+	line "was worth it."
 	
 	para "A few weeks time"
 	line "against Lugia?"
@@ -549,12 +609,15 @@ Docks_Text20:
 	next
 	text_start 
 	text "Time is running"
-	line "short. Your"
-	para "hubris put nature"
-	line "further into"
-	cont "imbalance!" 
+	line "short. You've"
+	para "made nature more"
+	line "imbalanced!"
 	
-	para "Are you still"
-	line "worthy?"
+	para "Which of you are"
+	line "still worthy?"
 	done
-	
+
+PlayerMovesToBeatKensey:
+	step_up
+	step_up
+	step_end

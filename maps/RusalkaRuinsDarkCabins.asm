@@ -38,4 +38,4 @@ RusalkaRuinsDarkCabins_MapScriptHeader:
 
 
 	def_object_events
-
+	tmhmball_event 6, 10, TM_WILL_O_WISP, EVENT_RUSALKA_WILLOWISP

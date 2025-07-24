@@ -65,16 +65,16 @@ CaptainsLog05Text:
 	
 	para "We can't get any"
 	line "closer."
-
-	para "Another mail"
-	line "batch of Eleanor,"
-	para "Kangaskhan stamps"
-	line "this time."
 	
-	para "That woman claims"
+	para "The woman claims"
 	line "that the islands"
 	para "have precious"
 	line "metals inside."
+
+	para "Oh, another mail"
+	line "batch of Eleanor,"
+	para "Kangaskhan stamps"
+	line "this time."
 	done
 
 CaptainsLog06:
@@ -94,16 +94,16 @@ CaptainsLog06Text:
 	
 	para "Sent a large"
 	line "exploratory crew"
-	cont "into the caves"
-	cont "to look for"
-	cont "metals two days"
-	cont "back with the"
+	para "into the caves"
+	line "to look for"
+	para "metals two days"
+	line "back with the"
 	cont "chief's wife."
 	
 	para "If they come"
 	line "back with any,"
-	cont "I'll be twice"
-	cont "the hero!"
+	para "I'll be twice"
+	line "the hero!"
 	
 	para "I am the one"
 	line "worthy of the"

@@ -85,23 +85,32 @@ KurtCradleText2:
 	text "You can do it!"
 	done
 
-CradleScene1_Mejimi:	
-;cf western capital
-	disappear PLAYER
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
+	disappear PLAYER
+
+	opentext
+	writetext Prologue_Text0 ; MEANWHILE, 
+	waitbutton
+	closetext
+	pause 60
+
+CradleScene1_Mejimi:	
+;cf western capital
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	disappear PLAYER
 
 	opentext
 	writetext CradleCutscene_Text0 ; MEANWHILE, 
 	waitbutton
 	closetext
+	pause 60
 
 	special Special_FadeOutMusic
-	pause 30
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 
 	opentext
-	showemote EMOTE_BOLT, CRADLE_CUTSCENE_ADRINNA, 30
 	writetext CradleCutscene_Text1
 	waitbutton
 	writetext CradleCutscene_Text2
@@ -150,7 +159,7 @@ CradleScene1_Mejimi:
 	writetext CradleCutscene_Text10 ; repurposed
 	waitbutton
 	closetext
-	applymovement CRADLE_CUTSCENE_ADRINNA, step_left
+	applyonemovement CRADLE_CUTSCENE_ADRINNA, step_left
 	opentext
 	writetext CradleCutscene_Text11
 	waitbutton
@@ -180,7 +189,7 @@ CradleScene1_Mejimi:
 	special Special_FadeBlackQuickly
 	setevent EVENT_CRADLE_CUTSCENE
 	setscene $1
-	warp OLIVINE_DESAL_1F,  4, 3 
+	warpfacing UP, OLIVINE_DESAL_1F,  4, 3 
 	end
 
 CradleCutscene_Text0:
@@ -327,7 +336,7 @@ CradleCutscene_Text11:
 	line "are so close to"
 	para "the #mon that"
 	line "can shape Johto"
-	para "to how I-Er,"
+	para "to how I-Er, how"
 	line "you want!" 
 	done
 
@@ -336,8 +345,8 @@ CradleCutscene_Text12:
     text " Urgaust: " 
 	next
 	text_start 
-	text "Your plans can"
-	line "wait."
+	text "Hold off on those"
+	line "plans."
 	
 	para "A coronation will"
 	line "revive Johto."
@@ -350,7 +359,7 @@ CradleCutscene_Text13:
     text " Adrinna: " 
 	next
 	text_start 
-	text "Adrinna: How I"
+	text "Urgaust, how I"
 	line "misjudged you..."
 	done
 
@@ -409,6 +418,7 @@ CC_WorkerMoves1: ; 2 d 1 l 3 d 5 r
 	step_down
 	step_down
 	step_down
+	step_down
 	step_right
 	step_right
 	step_right
@@ -428,6 +438,8 @@ CC_MejimiMoves2: ;; 4 D 5 raw
 	step_down
 	step_down
 	step_down
+	step_down
+	step_right
 	step_right
 	step_right
 	step_right

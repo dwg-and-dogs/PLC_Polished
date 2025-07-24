@@ -339,11 +339,8 @@ ENDM
 	map_attributes AnarresHouse, ANARRES_HOUSE, $0, 0
 	
 	; new from 08-13-24
-	map_attributes OlivineCityDesal1F, OLIVINE_DESAL_1F, $0, 0
-
-	map_attributes OlivineCityDesalIntake, OLIVINE_DESAL_INTAKE, $0, 0
-
-	map_attributes OlivineCityDesalB1F, OLIVINE_DESAL_B1F, $0, 0	
+	map_attributes OlivineDesal1F, OLIVINE_DESAL_1F, $0, 0
+;	map_attributes OlivineDesalB1F, OLIVINE_DESAL_B1F, $0, 0	
 	
 	map_attributes AnarresHoltGate, ANARRES_HOLT_GATE, $0, 0
 	
@@ -478,11 +475,11 @@ ENDM
 	connection west, SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, 0
 	connection east, SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, 0
 	
-	map_attributes SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, $0;, SOUTH | NORTH
+	map_attributes SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, $0, 0;, SOUTH | NORTH
 ;	connection south, SlowpokeDreams, SLOWPOKE_DREAMS, 2
 ;	connection north, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -2
 
-	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0;, NORTH | SOUTH 
+	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0, 0;, NORTH | SOUTH 
 ;	connection north, SlowpokeDreams, SLOWPOKE_DREAMS, 2
 ;	connection south, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, 0
 
