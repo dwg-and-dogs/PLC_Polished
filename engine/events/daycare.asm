@@ -377,7 +377,7 @@ DayCareTextTable:
 	text_far _ComeAgainText
 	text_end
 
-Special_DayCareManOutside:
+Special_DayCareManOutside: ; prints "not yet" if the daycareman has no egg
 	ld hl, wDayCareMan
 	bit DAYCAREMAN_HAS_EGG_F, [hl]
 	jr nz, .AskGiveEgg

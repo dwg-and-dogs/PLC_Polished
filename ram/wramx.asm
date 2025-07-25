@@ -1100,7 +1100,7 @@ wStadiumBoxSceneID:: db
 wStadiumCapitalGateSceneID:: db
 wStyCapitalGateSceneID:: db  
 wTradersLandingSceneID:: db
-wUnused17SceneID:: db
+wRoute34SceneID:: db ;needed for daycare?
 wUnused18SceneID:: db
 wUnused19SceneID:: db
 wUnused1SceneID:: db   

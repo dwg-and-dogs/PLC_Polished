@@ -20,7 +20,7 @@ PhantomFjord_MapScriptHeader:
 	def_object_events
 
 
-FjordDebugSpot:
+FjordDebugSpot: ; todo remove debug 
 	warpfacing UP, OLIVINE_DESAL_1F,  5, 4
 	end
 ;	setevent EVENT_DOCKS_KURT

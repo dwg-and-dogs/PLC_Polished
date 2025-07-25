@@ -17,7 +17,6 @@ DebugRoom_MapScriptHeader:
 	def_bg_events
 	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
-	bg_event  2,  7, BGEVENT_READ, DebugRoomTileGame
 	bg_event  0,  2, BGEVENT_UP, DebugInteraction
 
 	def_object_events
@@ -34,10 +33,9 @@ DebugRoom_MapScriptHeader:
 DebugInteraction: 
 	opentext
 	givepoke TYPHLOSION, 100
-	givepoke FERALIGATR, 100
-	givepoke MEGANIUM, 100
 	givepoke RAIKOU, 100
 	givepoke POLITOED, 100
+	giveegg CYNDAQUIL
 	waitbutton
 	setflag ENGINE_POKEGEAR
 ;	setflag ENGINE_PHONE_CARD
@@ -651,16 +649,3 @@ DebugWonderTradeCompleteText:
 DebugWonderTradeGoodbyeText:
 	text "See ya!"
 	done
-
-
-DebugRoomTileGame:
-	refreshscreen
-	setval $0
-	special Special_SlotMachine
-	closetext
-	iftrue .PuzzleComplete
-	end
-
-.PuzzleComplete:
-	givecoins 100
-	end
