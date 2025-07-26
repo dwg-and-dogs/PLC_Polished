@@ -17,7 +17,7 @@ OlivineLighthouse1F_MapScriptHeader:
 
 
 	def_object_events ; black belts 
-	object_event 14, 9, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_RIVAL_LIGHTHOUSE 
+	object_event 14, 9, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_RIVAL_LIGHTHOUSE 
 	object_event 11, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_KURT_LIGHTHOUSE_1 
 
 	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerScientistJoseph, -1
@@ -65,7 +65,14 @@ LighthouseRivalTrigger2:
 
 LigthouseRivalBattleScript:
     playmusic MUSIC_RIVAL_ENCOUNTER
-    showtext LighthouseRivalBeforeText
+	opentext
+    writetext LighthouseRivalBeforeText
+	waitbutton
+	writetext LighthouseRivalBeforeText_2
+	waitbutton
+	writetext LighthouseRivalBeforeText_3
+	waitbutton
+	closetext
     setevent EVENT_RIVAL_RADIO_TOWER
     checkevent EVENT_GOT_OSHAWOTT
     iftrue .Oshawott
@@ -108,13 +115,14 @@ LighthouseRivalApproachMovement:
 	step_down
 	step_down
 	step_left
+	turn_head_down
 	step_end
 
 LighthouseRivalRetreatMovement:
-	step_left
-	step_left
+	step_right
 	step_down
 	step_down
+	step_left
 	step_left
 	step_left
 	step_down

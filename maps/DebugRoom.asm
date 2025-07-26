@@ -35,7 +35,9 @@ DebugInteraction:
 	givepoke TYPHLOSION, 100
 	givepoke RAIKOU, 100
 	givepoke POLITOED, 100
-	giveegg CYNDAQUIL
+	givepoke LUGIA, 100
+	givepoke HEATRAN, 100 
+	givepoke H__GOODRA, 100 
 	waitbutton
 	setflag ENGINE_POKEGEAR
 ;	setflag ENGINE_PHONE_CARD

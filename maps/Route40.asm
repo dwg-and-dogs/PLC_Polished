@@ -35,8 +35,8 @@ Route40_MapScriptHeader: ; todo revise the warp and move Kurt
 	object_event 12, 10, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route40MatronScript, -1 ; redo text and heal you 
 	object_event  10,  8, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
 ; roadblock NPCs, quarantine the city while they look for who took the part 
-	object_event 19, 4, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
-	object_event 19, 5, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK ; redo text and heal you 
+	object_event 19, 4, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_DOCKS_KENSEY ; redo text and heal you 
+	object_event 19, 5, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_DOCKS_KENSEY ; redo text and heal you 
 
 
 	object_const_def

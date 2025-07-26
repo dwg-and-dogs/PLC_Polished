@@ -59,6 +59,7 @@ InitialEvents:
 	dw EVENT_LUGIA_POKEBALL
 	dw EVENT_DOCKS_KURT
 	dw EVENT_DOCKS_LUGIA
+	dw EVENT_KURT_LIGHTHOUSE_1
 	dw -1
 
 InitialEngineFlags:

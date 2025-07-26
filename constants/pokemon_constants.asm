@@ -273,8 +273,9 @@
 	const LUGIA      ; f9
 	const HO_OH      ; fa
 	const CELEBI     ; fb
-NUM_POKEMON EQU const_value - 1 ; fe
-	const EGG        ; ff ;may have to remove all of the unown types... 
+NUM_POKEMON EQU const_value - 1 ; fc
+	; room for up to two more? 
+	const EGG        ; ff? seems to be the same as polished 
 
 CANCEL EQU -1
 

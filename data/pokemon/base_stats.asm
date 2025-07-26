@@ -287,5 +287,5 @@ INCLUDE "data/pokemon/base_stats/heatran.asm";;
 INCLUDE "data/pokemon/base_stats/lugia.asm"
 INCLUDE "data/pokemon/base_stats/ho_oh.asm"
 INCLUDE "data/pokemon/base_stats/celebi.asm"
-	assert_table_length NUM_POKEMON ;one of the entries is not 35 bits. Removing an entry (celebi) from the list above and removing one of the lines of code from a base stat (heatran EV yield) does not change the error message.
-INCLUDE "data/pokemon/base_stats/egg.asm"
+	assert_table_length NUM_POKEMON 
+INCLUDE "data/pokemon/base_stats/egg.asm" ; no change to this since originl 

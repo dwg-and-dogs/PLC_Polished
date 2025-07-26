@@ -2032,7 +2032,7 @@ endr
 	ldh [hScriptVar], a
 	ret
 
-Script_giveegg:
+Script_giveegg: ; no change here from the original 
 ; return 0 in hScriptVar if no room in party or box
 ; return 1 if sent to party, return 2 if sent to box
 	xor a ; a = 0
@@ -2042,9 +2042,9 @@ Script_giveegg:
 	inc a
 	ld [wMonType], a  ; OTPARTYMON
 	ld [wBattleMode], a ; 
-	ld [wCurPartyLevel], a ; EGG_LEVEL
+	ld [wCurPartyLevel], a ; EGG_LEVEL ; does this mean egg level is set to 1?
 	ld a, POKE_BALL
-	ld [wGiftMonBall], a
+	ld [wGiftMonBall], a ; the egg will be in a pokeball ? 
 	call GetScriptByte
 	ld [wCurPartySpecies], a
 	ld [wEnemyMonSpecies], a

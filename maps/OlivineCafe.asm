@@ -30,6 +30,7 @@ OlivineCafeTrigger:
 	
 .TradeQuest:
 	showemote EMOTE_BOLT, OLIVINE_CAFE_FISHER_1, 30
+	setscene $1
 	end
 	
 	
@@ -143,7 +144,7 @@ OlivineCafe1Text:
 	line "Chinchou, Corsola"
 	cont "or Shuckle."
 	
-	para "Buy for ¥4000?"
+	para "Buy for ¥5000?"
 	done
 
 OlivineCafeText4:

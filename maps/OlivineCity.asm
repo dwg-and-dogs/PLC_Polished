@@ -36,16 +36,18 @@ OlivineCity_MapScriptHeader:
 
 	object_event 20,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, OlivineCityYoungster1Script, -1
 	object_event 26, 22, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1  
-	object_event 23, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCitySchoolBoyScript, -1 
-	object_event 23, 17, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCityPokefanMScript, -1 
+	object_event 23, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCitySchoolBoyScript, -1 
+	object_event 26, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, OlivineCityPokefanMScript, -1 
 
 	object_event 18, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityRefugeeText, -1
 	object_event 11, 23, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanFText, -1 
 ;roadblocks, their text is in route 40 
-	object_event -1, 19, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK
-	object_event -1, 18, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK
-	object_event 19, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK 
-	object_event 20, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_BEAT_CHUCK
+;	object_event -1, 19, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK
+;	object_event -1, 18, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK
+	object_event 19, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK 
+	object_event 20, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK
+	object_event 18, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK 
+	object_event 21, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK
 	; 
 	tmhmball_event 8, 3, TM_VOLT_SWITCH, EVENT_TM_VOLT_SWITCH
 	smashrock_event 52, 23
@@ -241,3 +243,15 @@ OlivineCityRefugeeText:
 	line "than living on"
 	cont "a sandbar."
 	done
+
+
+OlivineOfficerText2:
+	text "Olivine is in a"
+	line "strict lockdown."
+	
+	para "We need to catch"
+	line "a thief who took"
+	para "a part from the"
+	line "desal plant."
+	done
+	
