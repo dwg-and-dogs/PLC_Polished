@@ -44,11 +44,12 @@ Lighthouse6FScene:
 	applyonemovement PLAYER, step_left
 	applyonemovement PLAYER, step_left
 	applyonemovement PLAYER, step_left ; now at 10, 10 
-	showemote EMOTE_SAD, LIGHTHOUSE_JASMINE, 10
+	showemote EMOTE_SAD, LIGHTHOUSE_JASMINE, 30
 	showtext LighthouseJasmineText1
-	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 10
+	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 30
 	showtext LighthouseChuckText1
-	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 10 
+	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 30 
+	turnobject LIGHTHOUSE_KURT1, LEFT
 	showtext LighthouseKurtText1
 	closetext
 	applyonemovement PLAYER, step_left

@@ -5,7 +5,7 @@ OlivineLighthouse2F_MapScriptHeader:
 
 	def_warp_events
 	warp_event  3, 11, OLIVINE_LIGHTHOUSE_1F, 3
-	warp_event  5,  3, OLIVINE_LIGHTHOUSE_3F, 2
+	warp_event  5,  3, OLIVINE_LIGHTHOUSE_3F, 1
 
 
 	def_coord_events
@@ -13,9 +13,9 @@ OlivineLighthouse2F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events ; scientists, engineers 
-	object_event  15,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, 	TrainerScientistNigel, -1 
+	object_event  15,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, 	TrainerScientistNigel, -1 
 	object_event  6, 14, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBattleGirlNozomi, -1
-	object_event  16,  9, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, 	TrainerEngineerHugo, -1
+	object_event  16,  9, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, 	TrainerEngineerHugo, -1
 
 TrainerScientistNigel:
 	generictrainer SCIENTIST, NIGEL, EVENT_BEAT_SCIENTIST_NIGEL, .SeenText, .BeatenText

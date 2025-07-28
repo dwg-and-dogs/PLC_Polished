@@ -294,12 +294,12 @@ endc
 	push hl
 	push bc
 	ld a, [wCurItem]
-	cp POLYCHROME
+	cp POLYCHROME ; this item should never be held, and even if it was, it doesn't hcange th aplette 
 	jp z, .PolychromeEffect
 	; If not POLYCHROME, check if species is Porygon
-	ld a, [wColorVarySpecies]
-	cp PORYGON
-	jp z, .PolychromeEffect
+;	ld a, [wColorVarySpecies]
+;	cp PORYGON
+;	jp z, .PolychromeEffect
 	pop bc
 	pop hl
 	jp .StandardColors
