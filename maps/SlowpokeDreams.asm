@@ -37,12 +37,14 @@ SlowkingDreamsScript:
 	startbattle
 	ifequal $1, .Continue
 .Continue:
+	reloadmapafterbattle
 	showtext SlowkingAfterText
 	special HealParty
 	setevent EVENT_SLOWKING_DREAMS
 	setmapscene OLIVINE_LIGHTHOUSE_6F, $1
 	warp OLIVINE_LIGHTHOUSE_6F, 9, 10 
 	end
+
 	
 SlowkingWiseText:
 	text "You peer inside"

@@ -11,22 +11,23 @@ OlivineLighthouse6F_MapScriptHeader:
 	def_coord_events 
 	; 0 = go to the slowking
 	coord_event 13, 11, 0, Lighthouse6FScene0 
-	coord_event 13, 10, 0, Lighthouse6FScene
 	; after you warp, this'll have to be rewritten that you keep heading left until you see them 
-	coord_event  9, 10, 1, Lighthouse6FScene1
-	coord_event  9, 10, 1, Lighthouse6FScene2
-	coord_event  9, 10, 1, Lighthouse6FScene3
+	coord_event 11, 10, 1, Lighthouse6FScene1
+	coord_event 11, 11, 1, Lighthouse6FScene2
+
 
 	
 	def_bg_events
+	; TODO add bg_event reads for all the way around, 'toxic sludge, don't go in!"
+	; todo change the color of the water to purple with a palette change 
 
 	def_object_events
 	object_event 14, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LighthouseKurtScript, EVENT_BEAT_CHUCK
-	object_event 7, 10, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
-	object_event 8, 10, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
+	object_event 9, 10, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
+	object_event 10, 10, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
 
-	pokemon_event  9, 9, SLOWKING, -1, -1, PAL_NPC_RED, SlowkingLighthouseText, EVENT_SLOWKING_DREAMS
-	pokemon_event  9, 8, TENTACRUEL, -1, -1, PAL_NPC_BLUE, TentacruelLighthouseText, EVENT_SLOWKING_DREAMS
+	pokemon_event 12, 9, SLOWKING, -1, -1, PAL_NPC_RED, SlowkingLighthouseText, EVENT_SLOWKING_DREAMS
+	pokemon_event 12, 8, TENTACRUEL, -1, -1, PAL_NPC_BLUE, TentacruelLighthouseText, EVENT_SLOWKING_DREAMS
 
 	object_event 18,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Lighthouse6FScientistScript, -1
 	itemball_event  2,  9, DUBIOUS_DISC, 1, EVENT_DUBIOUS_DISC
@@ -41,9 +42,7 @@ OlivineLighthouse6F_MapScriptHeader:
 Lighthouse6FScene0:
 	applyonemovement PLAYER, step_up
 Lighthouse6FScene:
-	applyonemovement PLAYER, step_left
-	applyonemovement PLAYER, step_left
-	applyonemovement PLAYER, step_left ; now at 10, 10 
+	applyonemovement PLAYER, step_left 
 	showemote EMOTE_SAD, LIGHTHOUSE_JASMINE, 30
 	showtext LighthouseJasmineText1
 	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 30

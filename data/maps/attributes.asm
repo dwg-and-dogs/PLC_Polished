@@ -469,23 +469,16 @@ ENDM
 	map_attributes SeafluxNexusB3F, SEAFLUX_NEXUS_B3F, $9, 0
 	map_attributes LandingDocks, LANDING_DOCKS, $A, 0 
 
-	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, WEST | EAST ;
-;	connection north, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, -2
-;	connection south, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -2
-	connection west, SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, 0
-	connection east, SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, 0
+	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, 0;WEST | EAST ;
+
 	
 	map_attributes SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, $0, 0;, SOUTH | NORTH
-;	connection south, SlowpokeDreams, SLOWPOKE_DREAMS, 2
-;	connection north, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -2
 
 	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0, 0;, NORTH | SOUTH 
-;	connection north, SlowpokeDreams, SLOWPOKE_DREAMS, 2
-;	connection south, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, 0
+
 
 	map_attributes SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, $0, WEST | EAST
-	connection west, SlowpokeDreams, SLOWPOKE_DREAMS, 0
-	connection east, SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, 0
+
 
 	map_attributes SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, $0, WEST | EAST 
 	connection east, SlowpokeDreams, SLOWPOKE_DREAMS, 0
