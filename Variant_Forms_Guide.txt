@@ -1,0 +1,13 @@
+Files
+
+Just looking to add the regional forms. 
+
+constants/pokemon_constants.asm
+--this file just tells the makers how many variant forms there will be. 
+
+```
+ALOLAN_FORM EQU 2
+	const_skip
+	...
+
+Some things are there for making sure there is a constant number of these 

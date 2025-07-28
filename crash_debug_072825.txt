@@ -1,0 +1,4 @@
+*branch crashed when I tried to start a new game and just past the spot where I set the time 
+*ran make clean and had the same issue
+*most likely problem is a problem in the initialize events file 
+*tested a version from 07-27-27 (```git checkout c8be725d5f5bca0f0fe28f39a5ed2cd980bc36b7```) and that one made just fine 
