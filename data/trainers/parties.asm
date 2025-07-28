@@ -7500,7 +7500,7 @@ ScientistGroup:
 	db "Joseph@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 36, VOLTORB
+	db 30, VOLTORB
 	db 30, MAGNEMITE
 	db 33, MAGNETON
 	db -1 ; end

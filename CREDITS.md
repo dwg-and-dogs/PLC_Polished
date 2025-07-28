@@ -17,7 +17,7 @@ Front Sprites
 * Azure Keys: Dewott, Samurott, Spiritomb
 * E-SY (From PiaCRT Deviantart): Monferno, Infernape, Prinplup, Roserade, Hippowdon, Heatran, Grotle, Empoleon, Bronzor, Bronzong, Skuntank, Staraptor
 * Rowlet: Matdemo
-* H__Braviary: Pokets3
+* Pokets3: H__Braviary
 * Nuukie: Wyrdeer, Roselia, Drifblim, Lopunny, Toxicroak, Snover, Abomasnow, Froslass, Kirlia, Gardevoir, Gallade
 * Pokewilds: Kleavor, Torterra, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott
 * DWG: H__Avalugg
