@@ -297,10 +297,10 @@ endc
 	cp POLYCHROME
 	jp z, .PolychromeEffect
 	; If not POLYCHROME, check if species is Porygon
-	ld a, [wColorVarySpecies]
-	cp PORYGON
+;	ld a, [wColorVarySpecies]
+;	cp PORYGON
 	jp z, .PolychromeEffect
-	pop bc
+;	pop bc
 	pop hl
 	jp .StandardColors
 

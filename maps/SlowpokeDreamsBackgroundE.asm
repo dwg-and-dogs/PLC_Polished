@@ -20,5 +20,3 @@ SlowpokeDreamsBackgroundE_MapScriptHeader:
 	def_object_events
 
 
-
-	object_const_def

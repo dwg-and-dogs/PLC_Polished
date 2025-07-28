@@ -21,7 +21,7 @@ OlivineLighthouse1F_MapScriptHeader:
 	object_event 11, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_KURT_LIGHTHOUSE_1 
 
 	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerScientistJoseph, -1
-	object_event 13,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBlackBeltWai, -1
+	object_event 13,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBlackBeltWai, -1
 	object_event  2,  4, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerEngineerLang, -1
 
 	object_const_def 
@@ -41,10 +41,10 @@ LighthouseRivalTrigger2:
     showemote EMOTE_SHOCK, PLAYER, 15
     special Special_FadeOutMusic
     pause 15
-    appear LIGHTHOUSE_RIVAL
+;    appear LIGHTHOUSE_RIVAL
     waitsfx
     applymovement LIGHTHOUSE_RIVAL, LighthouseRivalApproachMovement
-	turnobject KURT, UP
+	turnobject LIGHTHOUSE_KURT, UP
 	turnobject PLAYER, UP
     scall LigthouseRivalBattleScript
 	; after the battle
@@ -54,6 +54,7 @@ LighthouseRivalTrigger2:
     disappear LIGHTHOUSE_RIVAL
     setscene $1
     setevent EVENT_FOUGHT_RADIO_TOWER_RIVAL
+	setevent EVENT_RIVAL_LIGHTHOUSE
     waitsfx
     playmapmusic
 	showemote EMOTE_SHOCK, LIGHTHOUSE_KURT, 10
@@ -68,6 +69,7 @@ LigthouseRivalBattleScript:
 	opentext
     writetext LighthouseRivalBeforeText
 	waitbutton
+	
 	writetext LighthouseRivalBeforeText_2
 	waitbutton
 	writetext LighthouseRivalBeforeText_3
@@ -258,7 +260,7 @@ TrainerScientistJoseph:
 
 
 TrainerBlackBeltWai:
-	generictrainer BLACK_BELT, WAI, EVENT_BEAT_BLACKBELT_WAI, .SeenText2, .BeatenText2
+	generictrainer BLACKBELT_T, WAI, EVENT_BEAT_BLACKBELT_WAI, .SeenText2, .BeatenText2
 	
 .BeatenText2:
 	text "I wonder if any-"
@@ -273,7 +275,7 @@ TrainerBlackBeltWai:
 	done
 
 TrainerEngineerLang:
-	generictrainer ENGINEER, LANG, EVENT_BEAT_ENGINEER_JOSEPH, .SeenText3, .BeatenText3
+	generictrainer ENGINEER, LANG, EVENT_BEAT_ENGINEER_LANG, .SeenText3, .BeatenText3
 
 .BeatenText3:
 	text "Unit conversion"

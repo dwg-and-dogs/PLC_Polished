@@ -48,6 +48,7 @@ Lighthouse6FScene:
 	showtext LighthouseJasmineText1
 	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 10
 	showtext LighthouseChuckText1
+	turnobject LIGHTHOUSE_KURT1, LEFT
 	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 10 
 	showtext LighthouseKurtText1
 	closetext
