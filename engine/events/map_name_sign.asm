@@ -162,9 +162,16 @@ InitMapNameSign::
 .check_emperors_garden:
 	ld a, [wMapGroup]
 	cp GROUP_EMPERORS_GARDEN
-	jr nz, .check_clasts_cradle
+	jr nz, .check_slowpoke_dreams
 	ld a, [wMapNumber]
 	cp MAP_EMPERORS_GARDEN
+	ret z
+.check_slowpoke_dreams:
+	ld a, [wMapGroup]
+	cp GROUP_SLOWPOKE_DREAMS
+	jr nz, .check_clasts_cradle
+	ld a, [wMapNumber]
+	cp MAP_SLOWPOKE_DREAMS
 	ret z
 .check_clasts_cradle:
 	ld a, [wMapGroup]

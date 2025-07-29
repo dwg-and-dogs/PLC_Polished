@@ -18,7 +18,7 @@ SlowpokeDreams_MapScriptHeader:
 
 
 	def_object_events
-	object_event  5, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWKING, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SlowkingDreamsScript, EVENT_SLOWKING_DREAMS
+	object_event  4, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWKING, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SlowkingDreamsScript, EVENT_SLOWKING_DREAMS
 	itemball_event 6, 9, POKE_BALL, 1, EVENT_DREAMS_POKEBALL
 
 	object_const_def
@@ -47,12 +47,10 @@ SlowkingDreamsScript:
 
 	
 SlowkingWiseText:
-	text "You peer inside"
-	line "my mind?"
-	
-	para "My sacrifice:" 
-	line "Tentacruel poison"
-	cont "in my veins."
+	text "Tentacruel toxins"
+	line "on my axons cause"
+	para "my brain to go to"
+	line "a higher plane."
 
 	para "I see every poss-"
 	line "ible outcome:"

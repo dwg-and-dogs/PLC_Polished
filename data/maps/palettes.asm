@@ -52,26 +52,27 @@ ENDM
 	special_bg_pal tileset,  TILESET_SAFARI_ZONE,         PAL_TIMEOFDAY, SafariZonePalette
 	special_bg_pal tileset,  TILESET_RUINS_OF_ALPH,       PAL_SINGLE,    RuinsPalette
 	special_bg_pal tileset,  TILESET_ALPH_WORD_ROOM,      PAL_SINGLE,    RuinsPalette
+	special_bg_pal map,  	 OLIVINE_LIGHTHOUSE_6F,       PAL_SINGLE,    CinnabarLabPalette
 
-	special_bg_pal landmark, ANARRES_TOWN, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.
-	special_bg_pal landmark, CALM_COAST, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.
-	special_bg_pal landmark, GAULDENROD, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
-	special_bg_pal landmark, SERENE_SPRINGS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
-	special_bg_pal landmark, STADIUM,			          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
-	special_bg_pal landmark, STADIUM_GROUNDS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
-	special_bg_pal landmark, WESTERN_CAPITAL,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
-	special_bg_pal landmark, EMPERORS_GARDEN,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
-	special_bg_pal landmark, CATTLE_CULL,				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.	
-	special_bg_pal landmark, TRADERS_LANDING,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, CIANWOOD_COVE,		          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, SHELTERED_SHORES,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, ARDUOUS_ANCHORAGE,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
-	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; looks OK.		
+	special_bg_pal landmark, ANARRES_TOWN, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
+	special_bg_pal landmark, CALM_COAST, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
+	special_bg_pal landmark, GAULDENROD, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, SERENE_SPRINGS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, STADIUM,			          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
+	special_bg_pal landmark, STADIUM_GROUNDS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, WESTERN_CAPITAL,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, EMPERORS_GARDEN,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, CATTLE_CULL,				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
+	special_bg_pal landmark, TRADERS_LANDING,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, CIANWOOD_COVE,		          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, SHELTERED_SHORES,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, ARDUOUS_ANCHORAGE,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
 
 	special_bg_pal map,      CIANWOOD_CAVE,               PAL_SINGLE,    WhirlIslandsPalette
 
@@ -982,6 +983,19 @@ endr
 	RGB_MONOCHROME_BLACK
 	MONOCHROME_RGB_FOUR_NIGHT
 	MONOCHROME_RGB_FOUR_NIGHT
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+endc
+
+Lighthouse6FPalette:
+if !DEF(MONOCHROME)
+INCLUDE "maps/Lighthouse6F.pal" ; the section below copied from brunos room 
+else
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
 	RGB_MONOCHROME_WHITE
 	RGB_MONOCHROME_WHITE
 	RGB_MONOCHROME_DARK

@@ -103,13 +103,13 @@ ClairScript:
 	checkevent EVENT_BEAT_CLAIR
 	iftrue_jumptextfaceplayer .AfterClairText
 	showtext .ClairText1
-	promptbutton
+	faceplayer
 	showtextfaceplayer .SeenText
 	winlosstext .BeatenText, 0
 	loadtrainer CLAIR, 1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_BUGSY
+	setevent EVENT_BEAT_CLAIR
 	opentext
 	writethistext
 		text "<PLAYER> received"
@@ -164,7 +164,7 @@ ClairScript:
 	para "ranks to become"
 	line "an Elite Four,"
 	
-	para "I falter. Is my "
+	para "I fall. Is my "
 	line "drive too much?"
 
 	para "You've earned the"
@@ -188,8 +188,4 @@ ClairScript:
 	para "even if they are"
 	line "not strong in the"
 	cont "ways I expect."
-
-	para "There's more than"
-	line "one way to reach"
-	cont "the summit."
 	done
