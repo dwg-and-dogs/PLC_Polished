@@ -52,7 +52,7 @@ ENDM
 	special_bg_pal tileset,  TILESET_SAFARI_ZONE,         PAL_TIMEOFDAY, SafariZonePalette
 	special_bg_pal tileset,  TILESET_RUINS_OF_ALPH,       PAL_SINGLE,    RuinsPalette
 	special_bg_pal tileset,  TILESET_ALPH_WORD_ROOM,      PAL_SINGLE,    RuinsPalette
-	special_bg_pal map,  	 OLIVINE_LIGHTHOUSE_6F,       PAL_SINGLE,    CinnabarLabPalette
+	special_bg_pal map,  	 OLIVINE_LIGHTHOUSE_6F,       PAL_SINGLE,    Lighthouse6FPalette
 
 	special_bg_pal landmark, ANARRES_TOWN, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
 	special_bg_pal landmark, CALM_COAST, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 

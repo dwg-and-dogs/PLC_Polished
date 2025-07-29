@@ -169,9 +169,16 @@ InitMapNameSign::
 .check_slowpoke_dreams:
 	ld a, [wMapGroup]
 	cp GROUP_SLOWPOKE_DREAMS
-	jr nz, .check_clasts_cradle
+	jr nz, .check_dragons_den
 	ld a, [wMapNumber]
 	cp MAP_SLOWPOKE_DREAMS
+	ret z
+.check_dragons_den:
+	ld a, [wMapGroup]
+	cp GROUP_DRAGONS_DEN
+	jr nz, .check_clasts_cradle
+	ld a, [wMapNumber]
+	cp MAP_DRAGONS_DEN
 	ret z
 .check_clasts_cradle:
 	ld a, [wMapGroup]
