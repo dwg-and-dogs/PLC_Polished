@@ -72,6 +72,7 @@ TinderGarden2Script:
 	writetext TG2_Text3
 	waitbutton
 	closetext
+	; todo, insert all of the events that are needed to complete the tower again 
 	halloffame
 	end
 

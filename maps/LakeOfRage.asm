@@ -4,6 +4,7 @@ LakeOfRage_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, LakeOfRageFlyPoint
+	callback MAPCALLBACK_TILES, LakeOfRageTreeCut
 
 
 	def_warp_events
@@ -32,7 +33,7 @@ LakeOfRage_MapScriptHeader:
 	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA 
 ;trainers
 	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
-	pokemon_event 3,  4, MEOWTH, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
+	pokemon_event 3,  4, GIRAFARIG, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
 	object_event  5, 23, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMBlaise, -1
 	object_event  3, 14, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMGareth, -1
 	object_event  23, 29, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFKamila, -1
@@ -40,12 +41,13 @@ LakeOfRage_MapScriptHeader:
 	object_event  18, 30,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacCalvin, -1
 	object_event  33, 22,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacShane, -1
 	object_event 2, 30, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LakeOfRageKimonoGirlScript, EVENT_SET_DVS_6
+	object_event 0, 0, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LakeOfRageScientistText, -1
 ;itemballs
 	itemball_event  7,  10, ELIXIR, 1, EVENT_LAKE_OF_RAGE_ELIXIR
 	itemball_event 38,  14, ULTRA_BALL, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
 	tmhmball_event 31, 3, TM_WILD_CHARGE, EVENT_GOT_TM_WILD_CHARGE 
 	fruittree_event 32, 10, FRUITTREE_LAKE_OF_RAGE, TOUGH_LEAVES, PAL_NPC_GREEN
-
+	cuttree_event 7, 30, EVENT_LAKE_TREE 
 
 	object_const_def
 	const LAKEOFRAGE_PRYCE
@@ -57,6 +59,12 @@ LakeOfRageFlyPoint:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 	endcallback
 
+LakeOfRageTreeCut:
+	checkevent EVENT_EXTENT_TREE
+	iffalse .Done ; needs to block if we are not cut the tree 
+	changeblock 0, 0, $00
+.Done:
+	endcallback
 
 LakeHursalunaScript:
 	turnobject PLAYER, UP
@@ -483,8 +491,8 @@ WesleyDynamicPunchText:
 	done
 
 WesleyMeowthText:
-	text "Meeeowww!"
-	line "It's purring!"
+	text "Girafarig:"
+	line "Rafar!"
 	done
 
 GenericTrainerSightseerFKamila:
@@ -896,4 +904,18 @@ LakeOfRageGreatnessLiesWithinText: ; todo place five others
 	text "Greatness lies"
 	line "within!"
 	done	
+
+LakeOfRageScientistText:
+	text "The best time to"
+	line "plant a tree is"
+	cont "20 years ago."
 	
+	para "The next best is"
+	line "right now."
+	
+	para "Just think, all"
+	line "of these trees"
+	para "were tiny little"
+	line "saplings just a"
+	cont "generation ago!"
+	done

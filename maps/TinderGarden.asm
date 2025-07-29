@@ -1116,6 +1116,7 @@ TinderGardernWatchTheLoggersScript:
 	showtext GardenEngineerText4
 	pause 60
 	closetext
+	; todo, insert all of the events that are needed to complete the tower again 
 	halloffame
 	end
 	

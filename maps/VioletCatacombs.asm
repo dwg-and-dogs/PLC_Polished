@@ -30,9 +30,6 @@ VioletCatacombs_MapScriptHeader:
 	const CATACOMBS_NOCTOWL
 	const CATACOMBS_UNOWN
 
-; sliding puzzle 
-
-
 CatacombsBoulders:
 	usestonetable .BoulderTable
 	endcallback
@@ -44,6 +41,8 @@ CatacombsBoulders:
 
 .Disappear1:
 	disappear CATACOMBS_BOULDER_1
+	changeblock 12, 24, $68
+	reloadmappart
 	pause 30
 	playsound SFX_STRENGTH
 	earthquake 60
@@ -51,6 +50,8 @@ CatacombsBoulders:
 
 .Disappear2:
 	disappear CATACOMBS_BOULDER_2
+	changeblock 8, 8, $68
+	reloadmappart
 	pause 30
 	playsound SFX_STRENGTH
 	earthquake 60
@@ -97,9 +98,7 @@ NotSolvedText:
 	line "such a thing?"
 	done
 
-
-
-CatacombsNoctowl:	
+CatacombsNoctowl:	; eventually, crypt noctowl 
 	opentext
 	writetext NoctowlText
 	cry NOCTOWL

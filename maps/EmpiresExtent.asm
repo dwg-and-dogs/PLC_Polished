@@ -119,10 +119,7 @@ GenericTrainerNinja6: ; dusk
 ExtentNPCText1:
 	text "Hank: The Gyara-"
 	line "dos were out of"
-	cont "control - "
-	
-	para "But there was a"
-	line "beauty in it."
+	cont "control..."
 	
 	para "I'm following the"
 	line "Brigaders to have"
@@ -133,22 +130,12 @@ ExtentNPCText2:
 	text "Jones: History"
 	line "belongs to those"
 	cont "who take it!"
-	
-	para "Adrinna inspires"
-	line "me."
 	done
 
 ExtentNPCText3:
 	text "Leland: Sooner or"
 	line "later, might will"
 	cont "make right."
-	
-	para "I'm not going to"
-	line "impotently stand"
-	cont "in the way - "
-	
-	para "I'm going to be"
-	line "a part of it!"
 	done
 
 ExtentSignText:

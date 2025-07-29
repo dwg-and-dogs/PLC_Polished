@@ -122,6 +122,7 @@ BrassTowerRoofScript:
 
 	special FadeOutPalettes
 	waitsfx
+	setevent EVENT_BEAT_MEJIMI
 ; 	clearevents todo, all events related to the brass tower from when you enter 2F 
 	warp TIMELESS_TAPESTRY,  9, 26
 	end

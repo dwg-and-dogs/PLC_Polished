@@ -51,8 +51,8 @@ GiveStoneEdgeText:
 	
 	para "My poor Machamp"
 	line "is No Guard, not"
-	cont "Guts, so doesn't"
-	cont "last long in the"
+	para "Guts, so doesn't"
+	line "last long in the"
 	cont "mine's smog."
 	
 	para "Can you cover for"

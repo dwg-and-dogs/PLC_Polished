@@ -21,17 +21,12 @@ EerieHamletDorms_MapScriptHeader:
 	bg_event  0,  5, BGEVENT_READ, HamletDormsBed
 
 	def_object_events
-	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS
-	
+	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS ; event_talked_to_kurt_cc
 	object_event 6,  6, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EerieDormsSleepTalkScript, -1 
 	object_event 13, 3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC1Text, -1
 	pokemon_event  12, 3, SNEASEL, -1, -1, PAL_NPC_RED, SneaselText, -1
-
 	object_event 5, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC2Text, -1
 	object_event 3, 3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC3Text, -1
-
-
-	object_const_def
 
 
 HamletDormsNPC1Text:
@@ -122,14 +117,9 @@ Text_SleepTalkIntro:
 	
 	para "While we sleep,"
 	line "our deepest fears"
-	cont "and desires speak"
-	cont "through our sub-"
+	para "and desires speak"
+	line "through our sub-"
 	cont "conscious."
-	
-	para "Master this power"
-	line "and you control"
-	cont "what lies beneath"
-	cont "the waking mind!"	
 	done
 
 Text_EerieDormsTutorSleepTalk:
@@ -161,7 +151,6 @@ Text_EerieDormsTutorTaught:
 	line "you need another"
 	cont "tutor."
 	done
-
 
 HamletDormsKurtScript:
 	faceplayer

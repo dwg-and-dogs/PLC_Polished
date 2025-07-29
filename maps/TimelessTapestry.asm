@@ -1,6 +1,6 @@
 TimelessTapestry_MapScriptHeader: 
 	def_scene_scripts
-
+	scene_script TapestrySceneFinale
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, TimelessTapestryFlyPoint
@@ -10,7 +10,7 @@ TimelessTapestry_MapScriptHeader:
 
 
 	def_coord_events
-	coord_event 9, 26, 0, TapestrySceneFinale
+;	coord_event 9, 26, 0, TapestrySceneFinale
 
 
 	def_bg_events
@@ -73,6 +73,8 @@ TapestryAmosNoText:
 
 TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to come with too 
 	;cf western capital scene ;
+	checkevent EVENT_BEAT_MEJIMI
+	iffalse .NoScene
 	disappear PLAYER
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
@@ -87,6 +89,9 @@ TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to com
 	applyonemovement TAPESTRY_SAMSARA, step_up
 	disappear TAPESTRY_SAMSARA
 	warp TINDER_GARDEN_2, 10, 4 
+	end
+
+.NoScene: ; hm? 
 	end
 
 TapestryTextAmos:
