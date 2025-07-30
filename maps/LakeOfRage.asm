@@ -47,7 +47,6 @@ LakeOfRage_MapScriptHeader:
 	itemball_event 38,  14, ULTRA_BALL, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
 	tmhmball_event 31, 3, TM_WILD_CHARGE, EVENT_GOT_TM_WILD_CHARGE 
 	fruittree_event 32, 10, FRUITTREE_LAKE_OF_RAGE, TOUGH_LEAVES, PAL_NPC_GREEN
-	cuttree_event 7, 30, EVENT_LAKE_TREE 
 
 	object_const_def
 	const LAKEOFRAGE_PRYCE

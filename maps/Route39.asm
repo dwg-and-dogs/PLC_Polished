@@ -92,10 +92,6 @@ Route39LostMiltankText:
 	text "One of the Milt-"
 	line "ank went missin'."
 	
-	para "Well, it went a"
-	line "bit loopy lookin'"
-	cont "for its babe."
-	
 	para "But, uh, for now"
 	line "it needs to get"
 	cont "to milking."
@@ -163,7 +159,8 @@ Route39MiltankScript:
 	ifequal LEFT, .SendToSuicuneOption
 	; IF FACING RIGHT, SEND TO RANCHER 
 .SendToRancher:
-	showtext SpookToRancherText
+	opentext
+	writetext SpookToRancherText
 	yesorno
 	iffalse_jumptext NoSpookMiltankText
 	applymovement ROUTE_39_MILTANK, MiltankMovement3
@@ -172,11 +169,13 @@ Route39MiltankScript:
 	end
 	
 .SendToSuicuneOption:
-	showtext SpookToSuicuneText
+	opentext
+	writetext SpookToSuicuneText
 	yesorno
 	iffalse_jumptext NoSpookMiltankText
 	showtext SpookedToSuicuneText
 	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; 
+	applyonemovement PLAYER, step_right
 	showemote EMOTE_HAPPY, ROUTE_39_MILTANK, 60
 	applymovement ROUTE_39_SUICUNE, SuicuneMovement ; three right, down one 
 	opentext
@@ -198,11 +197,7 @@ Route39MiltankScript:
 	end
 
 ExplainMiltankDecisionText:
-	text "It's a lost"
-	line "#mon! It looks"
-	cont "distressed."
-	
-	para "It's eyes dart"
+	text "It's eyes dart"
 	line "between Suicune"
 	cont "and the rancher."
 	done
@@ -276,7 +271,6 @@ PlayerFollowMiltank:
 
 SuicuneMovement:
 	fix_facing
-	fast_jump_step_right
 	fast_jump_step_right
 	slide_step_down
 	slide_step_right

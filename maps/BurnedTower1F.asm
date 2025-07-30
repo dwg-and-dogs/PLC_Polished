@@ -25,9 +25,9 @@ BurnedTower1F_MapScriptHeader:
 	object_event 12,  3, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFirebreatherLyle, -1
 	object_event  0,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFirebreatherBill, -1
 
-	object_event  7, 7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FScientistText, EVENT_BURNED_TOWER_MORTY
-	object_event  8, 7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FSageText, EVENT_BURNED_TOWER_MORTY
-	object_event  6, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FSage2Text, -1
+	object_event  7, 7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FScientistText, -1
+	object_event  8, 7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FSageText, -1
+	object_event  11, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FSage2Text, -1
 
 
 	object_const_def
@@ -55,8 +55,8 @@ BurnedTower1FMortyScript:
 	text "Sublime! But..."
 	line "That #mon."
 
-	para "It was just..."
-	line "being."
+	para "Its beauty is so"
+	line "simple and pure."
 
 	para "Like an elite"
 	line "gymnast who makes"
@@ -72,7 +72,7 @@ BurnedTower1FMortyScript:
 	line "something bigger."
 	
 	para "I will return"
-	cont "to my Gym."
+	line "to my Gym."
 	done
 
 Morty1FIntroText:

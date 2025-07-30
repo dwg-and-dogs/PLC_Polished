@@ -158,6 +158,7 @@ Lighthouse6FScene1:
 	showtext LighthouseJasmineText4
 	applymovement LIGHTHOUSE_JASMINE, LighthouseChuckLeavesMovement
 	disappear LIGHTHOUSE_JASMINE
+	clearevent EVENT_JASMINE_GYM
 	setscene $2
 	end
 	

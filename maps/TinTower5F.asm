@@ -17,7 +17,7 @@ TinTower5F_MapScriptHeader:
 
 	def_object_events
 	itemball_event  7,  9, HP_UP, 1, EVENT_TIN_TOWER_5F_RARE_CANDY
-	object_event 16, 3, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TinTower5FKimonoGirlScript, EVENT_SET_DVS_5
+	object_event 11, 6, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TinTower5FKimonoGirlScript, EVENT_SET_DVS_5
 
 TinTower5FKimonoGirlScript: 
 	faceplayer
@@ -78,7 +78,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -88,7 +88,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -98,7 +98,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -108,7 +108,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -118,7 +118,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -128,7 +128,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -138,7 +138,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -148,7 +148,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -158,7 +158,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -168,7 +168,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -178,7 +178,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -188,7 +188,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -198,7 +198,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -208,7 +208,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -218,7 +218,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -228,7 +228,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $fe
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext GaveDVsText_TinTower
 	waitbutton
 	closetext
 	end
@@ -315,7 +315,7 @@ TinTower5FGaveMaximumDVsText:
 	line "maximized!"
 	done
 
-TinTower5FGaveDVsText:
+GaveDVsText_TinTower:
 	text "Your #mon is"
 	line "now expressing"
 	para "that part of its"

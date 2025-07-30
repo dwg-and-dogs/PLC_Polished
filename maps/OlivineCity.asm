@@ -49,7 +49,7 @@ OlivineCity_MapScriptHeader:
 	object_event 18, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK 
 	object_event 21, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK
 	; 
-	tmhmball_event 8, 3, TM_VOLT_SWITCH, EVENT_TM_VOLT_SWITCH
+;	tmhmball_event 8, 3, TM_VOLT_SWITCH, EVENT_TM_VOLT_SWITCH
 	smashrock_event 52, 23
 	smashrock_event 55, 26
 

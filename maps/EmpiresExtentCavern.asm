@@ -28,7 +28,7 @@ EmpiresExtentCavern_MapScriptHeader:
 EECavernMysticScript:
 	faceplayer
 	checkevent EVENT_BEAT_CLAIR
-	ifture_jumptext EE_Cavern_BeatClairText
+	iftrue_jumptext EE_Cavern_BeatClairText
 	opentext
 	writetext MysticText1
 	yesorno

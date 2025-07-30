@@ -2,7 +2,7 @@ TinTowerRoof_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, TinTowerRoofHoOh
+
 
 	def_warp_events
 	warp_event  7, 13, TIN_TOWER_10F, 2
@@ -19,25 +19,11 @@ TinTowerRoof_MapScriptHeader:
 	const TINTOWERROOF_HO_OH
 	const TINTOWERROOF_SILVER
 
-TinTowerRoofHoOh:
-	checkevent EVENT_FOUGHT_HO_OH
-	iftrue .NoAppear
-	checkkeyitem RAINBOW_WING
-	iftrue .Appear
-	sjump .NoAppear
-
-.Appear:
-	appear TINTOWERROOF_HO_OH
-	endcallback
-
-.NoAppear:
-	disappear TINTOWERROOF_HO_OH
-	endcallback
 
 TinTowerHoOh:
+	opentext
 	checkevent EVENT_BEAT_SILVER
 	iffalse_jumpopenedtext HoOhText
-	opentext
 	writetext HoOhText
 	cry HO_OH
 	pause 15
@@ -87,9 +73,7 @@ TinTowerRoofSilverIntroText:
 	para "But one day, I"
 	line "saw the pain in"
 	para "their bloodshot"
-	line "eyes. Deep red"
-	para "threads of our"
-	line "collective abuse."
+	line "eyes."
 	
 	para "I wept. My tears"
 	line "washed it clean."

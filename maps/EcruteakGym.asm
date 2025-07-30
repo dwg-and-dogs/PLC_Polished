@@ -9,32 +9,32 @@ EcruteakGym_MapScriptHeader:
 	warp_event  4, 17, ECRUTEAK_CITY, 10
 	warp_event  5, 17, ECRUTEAK_CITY, 10
 
-	warp_event  7,  6, ECRUTEAK_GYM, 3 ; 3 boulder 1
-	warp_event  2,  8, ECRUTEAK_GYM, 3	; 4 boulder 2 
+	warp_event  7,  6, ECRUTEAK_GYM, 5 ; 3 boulder 1
+	warp_event  2,  8, ECRUTEAK_GYM, 5	; 4 boulder 2 
 	
 	warp_event  4, 14, ECRUTEAK_GYM, 4
-	warp_event  2,  4, ECRUTEAK_GYM, 3
-	warp_event  2,  5, ECRUTEAK_GYM, 3
-	warp_event  2,  6, ECRUTEAK_GYM, 3
-	warp_event  2,  7, ECRUTEAK_GYM, 3	
+	warp_event  2,  4, ECRUTEAK_GYM, 5
+	warp_event  2,  5, ECRUTEAK_GYM, 5
+	warp_event  2,  6, ECRUTEAK_GYM, 5
+	warp_event  2,  7, ECRUTEAK_GYM, 5	
 
-	warp_event  2,  9, ECRUTEAK_GYM, 3
-	warp_event  2,  10, ECRUTEAK_GYM, 3	
-	warp_event  3,  10, ECRUTEAK_GYM, 3	
-	warp_event  4,  10, ECRUTEAK_GYM, 3	
-	warp_event  5,  10, ECRUTEAK_GYM, 3		
-	warp_event  6,  10, ECRUTEAK_GYM, 3		
-	warp_event  6,  11, ECRUTEAK_GYM, 3			
-	warp_event  6,  9, ECRUTEAK_GYM, 3			
-	warp_event  6,  8, ECRUTEAK_GYM, 3			
-	warp_event  4,  4, ECRUTEAK_GYM, 3			
-	warp_event  4,  5, ECRUTEAK_GYM, 3			
-	warp_event  4,  6, ECRUTEAK_GYM, 3			
-	warp_event  4,  7, ECRUTEAK_GYM, 3			
-	warp_event  5,  4, ECRUTEAK_GYM, 3			
-	warp_event  6,  4, ECRUTEAK_GYM, 3		
-	warp_event  6,  5, ECRUTEAK_GYM, 3			
-	warp_event  6,  6, ECRUTEAK_GYM, 3				
+	warp_event  2,  9, ECRUTEAK_GYM, 5
+	warp_event  2,  10, ECRUTEAK_GYM, 5	
+	warp_event  3,  10, ECRUTEAK_GYM, 5
+	warp_event  4,  10, ECRUTEAK_GYM, 5	
+	warp_event  5,  10, ECRUTEAK_GYM, 5		
+	warp_event  6,  10, ECRUTEAK_GYM, 5		
+	warp_event  6,  11, ECRUTEAK_GYM, 5			
+	warp_event  6,  9, ECRUTEAK_GYM, 5			
+	warp_event  6,  8, ECRUTEAK_GYM, 5			
+	warp_event  4,  4, ECRUTEAK_GYM, 5			
+	warp_event  4,  5, ECRUTEAK_GYM, 5			
+	warp_event  4,  6, ECRUTEAK_GYM, 5			
+	warp_event  4,  7, ECRUTEAK_GYM, 5			
+	warp_event  5,  4, ECRUTEAK_GYM, 5			
+	warp_event  6,  4, ECRUTEAK_GYM, 5		
+	warp_event  6,  5, ECRUTEAK_GYM, 5			
+	warp_event  6,  6, ECRUTEAK_GYM, 5				
 
 
 	def_coord_events

@@ -15,7 +15,7 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_bg_events ; TODO 
-	bg_event  0,  0, BGEVENT_READ, TarnShrineScript
+	bg_event  0,  0, BGEVENT_READ, TranquilTarnShrineScript
 	bg_event 0, 0, BGEVENT_READ, TarnDebugScript 
 
 	def_object_events
@@ -34,7 +34,7 @@ TranquilTarn_MapScriptHeader:
 	tmhmball_event 31, 29, TM_AVALANCHE, EVENT_TM_AVALANCHE
 	itemball_event 26, 33, ENERGY_ROOT, 1, EVENT_TARN_ITEM_1
 	itemball_event 38, 14, REVIVAL_HERB, 1, EVENT_TARN_ITEM_2
-	cuttree_event 0, 0, EVENT_TRANQUIL_TARN_TREE
+	cuttree_event 0, 0, EVENT_EXTENT_TREE
 
 	object_const_def
 ;	const TRANQUIL_TARN_HANK
@@ -70,7 +70,7 @@ TarnDebugScript:
 	reloadmap
 	end
 
-IlexForestShrineScript:
+TranquilTarnShrineScript:
 	opentext
 	writetext AskToTimeTravelText_TT
 	yesorno

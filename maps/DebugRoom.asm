@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, BRASS_TOWER_ROOF, 1
+	warp_event  1, 8, TIN_TOWER_1F, 1
 
 
 	def_coord_events
@@ -135,7 +135,8 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp OLIVINE_LIGHTHOUSE_6F, 9, 14
+	setevent EVENT_GOT_TM30_SHADOW_BALL ; for testing tin tower 
+;	warp OLIVINE_LIGHTHOUSE_6F, 9, 14
 	end
 
 DebugCPU:
