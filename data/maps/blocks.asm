@@ -16,14 +16,13 @@ OlivineMart_BlockData:
 GenericMart_BlockData:: ; used by tilesets/palettes.asm:LoadSpecialMapPalette
 	INCBIN "maps/Mart.ablk.lz"
 
+Route43Gate_BlockData:
 Route34IlexForestGate_BlockData:
 Route35GoldenrodGate_BlockData:
 Route36RuinsOfAlphGate_BlockData:
 Route43MahoganyGate_BlockData:
 	INCBIN "maps/NorthSouthGate.ablk.lz"
 
-
-Route43Gate_BlockData:
 Route36VioletGate_BlockData:
 Route32RuinsOfAlphGate_BlockData:
 IlexForestAzaleaGate_BlockData:

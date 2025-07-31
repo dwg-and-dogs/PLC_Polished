@@ -22,10 +22,10 @@ MahoganyTown_MapScriptHeader:
 
 	def_object_events
 	object_event  11,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest 
-	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, -1 ; 
-	object_event  9, 3, 	SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
+	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, -1 ; 
+	object_event  9, 2, 	SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
 	object_event  6,  7, 	SPRITE_FISHER, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
-	object_event 12,  8, 	SPRITE_CUTE_GIRL, 	SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, PAL_NPC_RED,	OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
+	object_event 13, 15, 	SPRITE_CUTE_GIRL, 	SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, PAL_NPC_RED,	OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
 	object_event 10,  9, 	SPRITE_GRANNY, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownGrannyText, -1
 
 	
@@ -34,6 +34,7 @@ MahoganyTown_MapScriptHeader:
 
 MahoganyTradeQuestTrigger:
 	showemote EMOTE_SAD, MAHOGANY_TOWN_GRAMPS, 30
+	setscene $1
 	end
 
 MahoganyTownFlyPoint:
@@ -67,7 +68,6 @@ MahoganyTownGrampsScript:
 	iffalse_jumpopenedtext Text_NoSurfMail
 	takeitem SURF_MAIL
 	verbosegiveitem OLD_AMBER
-	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveOldAmberText 
 
@@ -131,9 +131,18 @@ MahoganyTownFisherText:
 	done
 
 MahoganyTownLassText:
-	text "We have to ration"
-	line "water, now that"
-	cont "the lake is dry."
+	text "Blackthorn City"
+	line "radicals blocked"
+	cont "Route 44."
+	
+	para "They don't want"
+	line "Silph to get to"
+	cont "their water."
+	
+	para "But Mahogany has"
+	line "always welcomed"
+	cont "outside investors"
+	cont "even long ago."
 	done
 
 MahoganyTownSignText:
@@ -158,12 +167,14 @@ MahoganyKurtScript:
 	yesorno
 	iffalse DontHearHearStory5
 	writetext KurtMahoganyStoryText
+	waitbutton
 	clearevent EVENT_KURTS_HOUSE_BOOK_5
 	closetext
 	end
 
 DontHearHearStory5:
 	writetext SomeOtherTime_5Text
+	waitbutton
 	closetext
 	end
 

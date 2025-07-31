@@ -16,7 +16,7 @@ CianwoodCove_MapScriptHeader:
 
 
 	def_object_events
-	object_event 11, 16, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCoveKurtScript, EVENT_CIANWOOD_COVE_KURT
+	object_event 11, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCoveKurtScript, EVENT_BEAT_KENSEY_DOCKS
 	itemball_event 11, 21, PETAYA_BERRY, 3, EVENT_CIANWOODCOVE_BERRY_1
 	itemball_event 11, 26, LIECHI_BERRY, 3, EVENT_CIANWOODCOVE_BERRY_2
 	fruittree_event 16, 29, FRUITTREE_CIANWOOD_COVE, SHORE_FOAM, PAL_NPC_GREEN ;OK
@@ -26,15 +26,19 @@ CianwoodCove_MapScriptHeader:
 
 
 CianwoodCoveKurtScript:
+	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
 	faceplayer
 	opentext
+	checkevent EVENT_CIANWOOD_COVE_KURT
+	iftrue .KurtPC
 	writetext KurtExplainsTheStormText
 	waitbutton
-	closetext
-	applymovement CIANWOOD_COVE_KURT, CC_Kurt_Moves_Away
-	disappear CIANWOOD_COVE_KURT
 	setevent EVENT_CIANWOOD_COVE_KURT
-	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
+.KurtPC
+	writetext KurtCOvePCText
+	promptbutton
+	special PokemonCenterPC
+	endtext
 	end
 	
 KurtExplainsTheStormText:
@@ -57,7 +61,13 @@ KurtExplainsTheStormText:
 	para "though it might"
 	line "not understand."
 	done
-	
+
+KurtCOvePCText:
+	text "I can run back to"
+	line "manage your PC,"
+	cont "if you need."
+	done
+
 CC_Kurt_Moves_Away:
 	step_down
 	step_down

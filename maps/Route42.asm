@@ -24,7 +24,7 @@ Route42_MapScriptHeader:
 
 
 	def_object_events
-	object_event  47,  7, SPRITE_EUSINE, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42EusineScript, EVENT_EUSINE_ROUTE_42
+	object_event  47,  8, SPRITE_EUSINE, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42EusineScript, EVENT_EUSINE_ROUTE_42
 	object_event  26,  10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42CharcoalKilnBossText, -1
 	object_event  29,  9, SPRITE_FARFETCH_D, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42FarfetchdScript, -1
 	object_event  13,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFisherArnold, -1; husbands that fish together 
@@ -42,7 +42,7 @@ Route42_MapScriptHeader:
 	object_event  2,  9, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_CHUCK
 	itemball_event  7, 13, ULTRA_BALL, 1, EVENT_ROUTE_42_ULTRA_BALL
 	itemball_event 12, 15, HYPER_POTION, 1, EVENT_ROUTE_42_SUPER_POTION
-	tmhmball_event 10, 2, TM_SCALD, EVENT_GOT_TM_SCALD 
+;	tmhmball_event 10, 2, TM_SCALD, EVENT_GOT_TM_SCALD 
 	fruittree_event 25, 5, FRUITTREE_ROUTE_42, HOLLOW_ROCK, PAL_NPC_BLUE
 
 	object_const_def
@@ -59,6 +59,7 @@ MissingMachinePartScript:
 	waitbutton
 	writetext Route42_MachinePartText_2
 	waitbutton
+	closetext
 	setevent EVENT_GOT_MACHINE_PART
 	end
 
@@ -141,7 +142,10 @@ Route42EusineScript:
 
 	jumpthistext
 
-	text_high "Eusine: "
+	text_high
+    text " Eusine: "
+	next
+	text_start
 
 	text "Do do do doooo..."
 	line "Re re re ree..."
@@ -158,7 +162,10 @@ Route42EusineScript:
 	jumptextfaceplayer EusineFoughtEnteiText
 
 Route42EusineIntroText:
-	text_high "Eusine: "
+	text_high
+    text " Eusine: "
+	next
+	text_start
 
 	text "<PLAYER>, do you"
 	line "see the markings"

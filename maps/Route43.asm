@@ -138,10 +138,10 @@ GenericTrainerOfficerFJamie:
 
 Route43UrsalunaScene:
 	pause 30
-	showemote EMOTE_SHOCK, PLAYER, 10
 	applymovement ROUTE_43_HURSALUNA, Route43HursalunaMove1
 	cry URSARING
 	earthquake 30
+	showemote EMOTE_SHOCK, PLAYER, 30
 	applyonemovement PLAYER, step_down
 	applyonemovement PLAYER, step_down
 	pause 30
@@ -152,7 +152,7 @@ Route43UrsalunaScene:
 
 Route43HursalunaMove1:
 	fix_facing
-	fast_jump_step_down
+	slide_step_down
 	step_end
 
 
@@ -161,6 +161,6 @@ Route43Sign2Text:
 	done
 
 Route43TrainerTipsText:
-	text "Si_ph Spr__gs"
-	line "Check___ ga__"
+	text "Silph Springgs"
+	line "Check-in gate"
 	done

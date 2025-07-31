@@ -486,7 +486,7 @@ ENDM
 
 	map_attributes EnteisCavern, ENTEIS_CAVERN, $9, 0
 
-	map_attributes TranquilTarn, TRANQUIL_TARN, $0, NORTH | SOUTH ; 
+	map_attributes TranquilTarn, TRANQUIL_TARN, $5, NORTH | SOUTH ; 
 	connection north, SinjohCrossroads, SINJOH_CROSSROADS, 0
 	connection south, EmpiresExtent, EMPIRES_EXTENT, 0
 	

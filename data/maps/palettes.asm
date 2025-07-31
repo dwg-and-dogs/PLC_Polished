@@ -67,8 +67,8 @@ ENDM
 	special_bg_pal landmark, CIANWOOD_COVE,		          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, SHELTERED_SHORES,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, ARDUOUS_ANCHORAGE,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
-	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
-	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		; todo revise to an icy one 
+	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		; todo revise to an icy one 
 	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
 	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		

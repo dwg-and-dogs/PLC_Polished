@@ -14,7 +14,7 @@ LakeOfRageMagikarpHouse_MapScriptHeader:
 
 	def_object_events
 	object_event  2,  3, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LakeOfRageEarthPowerScript, -1
-	pokemon_event 3,  4, QUAGSIRE, -1, -1, PAL_NPC_BLUE, QuagsireEarthPowerText, -1
+	pokemon_event 2,  4, QUAGSIRE, -1, -1, PAL_NPC_BLUE, QuagsireEarthPowerText, -1
 	
 QuagsireEarthPowerText:
 	text "Quag! Quag!"

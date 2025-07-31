@@ -214,8 +214,8 @@ TarnNPC1Text:
 
 TranquilTarnNPC2Text:
 	text "Those brigaders"
-	line "lost control of"
-	cont "their #mon!"
+	line "have no control"
+	cont "of their #mon!"
 	
 	para "Where is their"
 	line "discipline?"

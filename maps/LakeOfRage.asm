@@ -27,10 +27,10 @@ LakeOfRage_MapScriptHeader:
 
 	def_object_events
 	object_event 17, 3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
-	object_event 12, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_KURT ; INITIALIZE 
+	object_event 12, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT ; INITIALIZE 
 	object_event 23, 3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL ; INITIALIZE 
 ;HURSALUNA
-	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA 
+	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA  ; todo initialize 
 ;trainers
 	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
 	pokemon_event 3,  4, GIRAFARIG, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
@@ -66,14 +66,15 @@ LakeOfRageTreeCut:
 	endcallback
 
 LakeHursalunaScript:
+;	appear EVENT_LAKE_HURSALUNA
 	turnobject PLAYER, UP
 	earthquake 30
+	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement
+	earthquake 20
 	cry URSARING
 	pause 20
 	showemote PLAYER, EMOTE_SHOCK, 20
 	pause 20
-	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement
-	earthquake 20
 	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement2
 	earthquake 20	
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
@@ -84,27 +85,28 @@ LakeHursalunaScript:
 	setevent EVENT_LAKE_HURSALUNA
 	setscene $1
 	end
+	
+LakeKurtScript:
+	;todo
+	end
 
 LakeHursalunaApproachesMovement:
 	fix_facing
 	fast_jump_step_down
-	fast_jump_step_down
+;	fast_jump_step_down
 	step_end
 
 LakeHursalunaApproachesMovement2:
 	fix_facing
-	fast_jump_step_down
+;	fast_jump_step_down
 	fast_jump_step_down
 	step_end
 
 LakeOfRageSignText:
-	text "Sil__ _pring_"
+	text "Silph Springs"
 	
-	para "Form___y kn__n"
-	line "L___ __ _a_e"
-	
-	para "The paint on the"
-	line "sign is faded."
+	para "Formerly known as"
+	line "Lake of Rage"
 	done
 
 LakeOfRageSignPryceText:
@@ -121,11 +123,18 @@ LakeRivalScript:
 	showtext LakeRivalText1
 	appear LAKEOFRAGE_KURT
  	applymovement LAKEOFRAGE_KURT, LakeKurtToPlayer
-	showtext LakeKurtText1
+	opentext
+	writetext LakeKurtText1
+	waitbutton
 	turnobject LAKEOFRAGE_RIVAL, DOWN
-	showtext LakeRivalText2
-	showemote EMOTE_BOLT, LAKEOFRAGE_RIVAL, 10
+	writetext LakeRivalText2
+	waitbutton
+	writetext LakeRivalText2_2
+	waitbutton
+	writetext LakeRivalText2_3
+	waitbutton
 	turnobject LAKEOFRAGE_RIVAL, LEFT
+	showemote EMOTE_BOLT, LAKEOFRAGE_RIVAL, 30
     scall LakeRivalBattleScript 
     applymovement LAKEOFRAGE_RIVAL, LakeRivalWalksAway
     setscene $2
@@ -211,7 +220,7 @@ LakeRivalText2_2: ; todo
     text " Kurt: "
 	next
 	text_start
-	para "Aha! So, you see"
+	text "Aha! So, you see"
 	line "inventions upset"
 	cont "the balance! You"
 	
@@ -395,8 +404,15 @@ LakeRivalWalksAway:
 	step_end
 
 
-LakePryceScript:
-	showtext LakeShrineQuestion
+LakePryceScript: ; todo add the celebi reaction
+	opentext
+	checkevent EVENT_PRYCE_REACTED
+	iftrue .PryceAsks
+	writetext LakePryceReactsText
+	waitbutton
+	setevent EVENT_PRYCE_REACTED
+.PryceAsks:
+	writetext LakeShrineQuestion
 	yesorno
 	iffalse_jumptext LakeNoText
 	showtext LakePrayerText
@@ -406,6 +422,10 @@ LakePryceScript:
 	waitsfx
 	warp TRANQUIL_TARN, 12, 4
 	end
+
+LakePryceReactsText:
+	text "todo" ; todo 
+	done
 
 LakeShrineQuestion:
 	text "Pryce: <PLAYER>,"
@@ -499,7 +519,8 @@ GenericTrainerSightseerFKamila:
 
 .BeatenText1:
 	text "My #mon keep"
-	line "my foold cold."
+	line "my food cold"
+	cont "or warm it up."
 	
 	para "So I can carry"
 	line "whatever I like!"	
@@ -646,7 +667,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -656,7 +677,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -666,7 +687,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -676,7 +697,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -686,7 +707,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -696,7 +717,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -706,7 +727,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -716,7 +737,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -726,7 +747,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -736,7 +757,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -746,7 +767,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -756,7 +777,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -766,7 +787,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -776,7 +797,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -786,7 +807,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
@@ -796,7 +817,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $fe
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	writetext LakeOfRageGaveDVsText
 	waitbutton
 	closetext
 	end
