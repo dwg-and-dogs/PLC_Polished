@@ -10,20 +10,19 @@ GauldenrodDorms_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  2, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  0,  3, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  0,  4, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  0,  5, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  2,  4, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  2,  5, BGEVENT_READ, GauldenrodDormsBed
+	bg_event  10,  2, BGEVENT_READ, GauldenrodDormsBed
+	bg_event  10,  3, BGEVENT_READ, GauldenrodDormsBed
+	bg_event  12,  2, BGEVENT_READ, GauldenrodDormsBed
+	bg_event  12,  3, BGEVENT_READ, GauldenrodDormsBed
+
 
 	def_object_events
-	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GauldenrodDormsKurtScript, EVENT_BEAT_BOBESH_STADIUM
-	object_event 12, 3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC1Text, -1
-	object_event 12, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC2Text, -1
-	object_event 3, 3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC3Text, -1
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GauldenrodDormsKurtScript, EVENT_BEAT_BOBESH_STADIUM
+	object_event 2, 3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC1Text, -1
+	object_event 2, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC2Text, -1
+	object_event 7, 5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC3Text, -1
 
-	object_const_def
+
 
 GauldenrodDormsNPC1Text:
 	text "I wish the protest"

@@ -56,21 +56,22 @@ ENDM
 
 	special_bg_pal landmark, ANARRES_TOWN, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
 	special_bg_pal landmark, CALM_COAST, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
-	special_bg_pal landmark, GAULDENROD, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+
+	special_bg_pal landmark, GAULDENROD, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	; todo pinker palette at the roof 
 	special_bg_pal landmark, SERENE_SPRINGS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, STADIUM,			          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
 	special_bg_pal landmark, STADIUM_GROUNDS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
-	special_bg_pal landmark, WESTERN_CAPITAL,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, WESTERN_CAPITAL,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	; todo palette at the roof 
 	special_bg_pal landmark, EMPERORS_GARDEN,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, CATTLE_CULL,				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
-	special_bg_pal landmark, TRADERS_LANDING,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, TRADERS_LANDING,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; todo palette at the roof 		
 	special_bg_pal landmark, CIANWOOD_COVE,		          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, SHELTERED_SHORES,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, ARDUOUS_ANCHORAGE,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
-	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		; todo revise to an icy one 
-	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		; todo revise to an icy one 
-	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
-	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
+	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SinjohCrossroadsPalette 		; todo revise to an icy one 
+	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SinjohCrossroadsPalette 		; todo revise to an icy one 
+	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SinjohCrossroadsPalette 		
+	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	; todo palette at the roof 
 	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
 	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
 
@@ -1057,6 +1058,39 @@ endc
 VioletEcruteakPalette:
 if !DEF(MONOCHROME)
 INCLUDE "gfx/tilesets/violet_ecruteak.pal"
+else
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 4
+	MONOCHROME_RGB_FOUR_NIGHT
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+	MONOCHROME_RGB_FOUR_NIGHT
+	MONOCHROME_RGB_FOUR_NIGHT
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+endc
+
+SinjohCrossroadsPalette:
+if !DEF(MONOCHROME)
+INCLUDE "gfx/tilesets/sinjoh_crossroads_mildsepia.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR

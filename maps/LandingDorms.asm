@@ -16,20 +16,19 @@ LandingDorms_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  0,  2, BGEVENT_READ, TradersLandingDormsBed
-	bg_event  0,  3, BGEVENT_READ, TradersLandingDormsBed
-	bg_event  0,  4, BGEVENT_READ, TradersLandingDormsBed
-	bg_event  0,  5, BGEVENT_READ, TradersLandingDormsBed
+	bg_event  10,  2, BGEVENT_READ, TradersLandingDormsBed
+	bg_event  10,  3, BGEVENT_READ, TradersLandingDormsBed
+	bg_event  12,  2, BGEVENT_READ, TradersLandingDormsBed
+	bg_event  12,  3, BGEVENT_READ, TradersLandingDormsBed
 
 
 	def_object_events
-	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LandingDormsKurtScript, EVENT_BEAT_KENSEY_PORT
-	object_event 12, 3, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC1Text, -1
-	object_event 12, 4, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC2Text, -1
-	object_event 3, 3, SPRITE_NOMAD_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC3Text, -1
-	object_event  14, 4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingDormsBarbeauJournalScript, -1
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LandingDormsKurtScript, EVENT_BEAT_KENSEY_PORT
+	object_event 2, 3, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC1Text, -1
+	object_event 2, 4, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC2Text, -1
+	object_event 7, 6, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC3Text, -1
+	object_event  4, 4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingDormsBarbeauJournalScript, -1
 
-	object_const_def
 
 
 
@@ -49,12 +48,21 @@ LandingDormsNPC2Text:
 	line "those sheltered"
 	para "shores south of"
 	line "the port every"
-	cont "summer."
+	cont "summer,"
+	
+	para "and older members"
+	line "would stay back"
+	para "to avoid the hard"
+	line "journey."
 	
 	para "Then, when winter"
 	line "monsoons arrived,"
 	para "we surfed to the"
-	line "cliffs here."
+	line "cliffs here,"
+	
+	para "bringing an ocean"
+	line "harvest to share"
+	cont "with them."
 	done
 
 LandingDormsNPC3Text:
@@ -63,7 +71,7 @@ LandingDormsNPC3Text:
 	para "your way in the"
 	line "whirlpools."
 	
-	para "Our histories ar"
+	para "Our histories are"
 	line "full of fools who"
 	para "tried to do so,"
 	line "and were lost"

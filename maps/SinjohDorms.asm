@@ -15,18 +15,18 @@ SinjohDorms_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  0,  2, BGEVENT_READ, SinjohDormsBed
-	bg_event  0,  3, BGEVENT_READ, SinjohDormsBed
-	bg_event  0,  4, BGEVENT_READ, SinjohDormsBed
-	bg_event  0,  5, BGEVENT_READ, SinjohDormsBed
+	bg_event  10,  2, BGEVENT_READ, SinjohDormsBed
+	bg_event  10,  3, BGEVENT_READ, SinjohDormsBed
+	bg_event  12,  2, BGEVENT_READ, SinjohDormsBed
+	bg_event  12,  3, BGEVENT_READ, SinjohDormsBed
 
 	def_object_events
-	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SinjohDormsKurtScript, EVENT_BEAT_KANNA
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SinjohDormsKurtScript, EVENT_BEAT_KANNA
 
-	object_event 13, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC1Text, EVENT_BEAT_KANNA
-	pokemon_event  12, 3, CHIKORITA, -1, -1, PAL_NPC_GREEN, ChikoritaText, EVENT_BEAT_KANNA
-	object_event 5, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC2Text, EVENT_BEAT_KANNA
-	object_event 3, 3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC3Text, EVENT_BEAT_KANNA
+	object_event 2, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC1Text, EVENT_BEAT_KANNA
+	pokemon_event  1, 3, CHIKORITA, -1, -1, PAL_NPC_GREEN, ChikoritaText, EVENT_BEAT_KANNA
+	object_event 5, 4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC2Text, EVENT_BEAT_KANNA
+	object_event 7, 5, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SinjohDormsNPC3Text, EVENT_BEAT_KANNA
 
 
 SinjohDormsNPC1Text:
@@ -37,6 +37,7 @@ SinjohDormsNPC1Text:
 
 ChikoritaText:
 	text "Chika!"
+	done
 
 SinjohDormsNPC2Text:
 	text "General Adrinna"
@@ -123,6 +124,10 @@ KurtSCDormsText:
 	line "in the Glacier"
 	para "might be able to"
 	line "help us."	
+	
+	para "Oh, I found some"
+	line "#mon nearby."
+	cont "Want to battle?"
 	done
 	
 KurSCDormsText2:

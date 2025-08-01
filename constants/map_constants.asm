@@ -141,7 +141,7 @@ ENDM
 	map_const ANARRES_TOWN,                               20,  9 ;  2 johto traditional
 	map_const MISTY_BASIN,                                10,  9 ;  3 cave 
 	map_const MISTY_BASIN_B1F,                            10,  9 ;  3 cave 
-	map_const ANARRES_DORMS,                               4,  3 ;  4 johto house
+	map_const ANARRES_DORMS,                               7, 4  ;  4 johto house
 	map_const ANARRES_STOCKROOM,                           6,  4 ;  5 traditional hosue
 	map_const ANARRES_TOWER_1F,                            6,  6 ;  6 sprout tower
 	map_const ANARRES_TOWER_2F,                            6,  6 ;  7 sprout tower
@@ -156,7 +156,7 @@ ENDM
 	map_const CALM_COAST,                                   10, 27 ;  1
 	map_const SERENE_SPRINGS,                               12, 18 ;  3
 	map_const GAULDENROD,                              		22, 18 ;  6
-	map_const GAULDENROD_DORMS,                               9, 4 ;  7 johto house
+	map_const GAULDENROD_DORMS,                               7, 4 ;  7 johto house
 	map_const GAULDENROD_STOCKROOM,                           5, 4 ;  7 traditional house
 	map_const GAULDENROD_GUILD,                               5, 4 ; traditional house
 	map_const GAULDENROD_HOUSE,                               4, 4 ; traditional house
@@ -177,7 +177,7 @@ ENDM
 
 	newgroup        ; 7                                         
 	map_const EMPERORS_GARDEN,                               20, 20 ; johto traditional
-	map_const WESTERN_CAPITAL_DORMS,                           9,  4 ; johto house c.f. gauldenron
+	map_const WESTERN_CAPITAL_DORMS,                           7, 4 ; johto house c.f. gauldenron
 	map_const WESTERN_CAPITAL_DANCE_THEATRE,                   6,  7 ;  cf dance theatre
 	map_const WESTERN_CAPITAL_STOCKROOM,                       5,  4 ;  cf gauldenrod stockroom
 	map_const WESTERN_CAPITAL_CEMETERY,                        5,  9 ;  sprout tower
@@ -287,7 +287,7 @@ ENDM
 	map_const CATTLE_CULL_39,                             10, 20 ; shamouti                    
 	map_const TRADERS_LANDING,                            23, 16 ; shamouti
 	map_const LANDING_STOCKROOM,                           5, 4 ; cf gauldenrod stock, trad house
-	map_const LANDING_DORMS,                               9, 4 ; cd gauldenrod dorms, 7 johto house
+	map_const LANDING_DORMS,                               7, 4; cd gauldenrod dorms, 7 johto house
 	map_const LANDING_HOUSE_1,                             4, 4 ; traditional house
 	map_const LANDING_HOUSE_2,                             4, 4 ; traditional house
 	map_const LANDING_TAVERN,                              5, 4 ; johto house
@@ -320,8 +320,8 @@ ENDM
 	newgroup                                                     ; 17
 	map_const TRANQUIL_TARN,                                 20, 18 ; johto overcast
 	map_const SINJOH_CROSSROADS,                             21, 12 ; johto overcast
-	map_const SINJOH_DORMS,                                   9, 4 ; cd gauldenrod dorms, 7 johto house
-	map_const SINJOH_ELDERS_HOUSE,                            4, 5 ; lighthouse
+	map_const SINJOH_DORMS,                                   7, 4 ; cd gauldenrod dorms, 7 johto house
+	map_const SINJOH_ELDERS_HOUSE,                            4, 4 ; lighthouse
 	map_const SINJOH_STOCKROOM,                               5, 4 ; cf gauldenrod stock, trad house
 	map_const GROTTOED_GLACIER_1F,                            8, 8 ; ice path
 	map_const GROTTOED_GLACIER_B1F,                          12, 12; ice path
@@ -336,7 +336,7 @@ ENDM
 	map_const EMPIRES_EXTENT_CAVERN,                          5, 5 ; ruins of alph
 	map_const DRAGONS_DEN,                                   13, 11 ; johto traditional
 	map_const EERIE_HAMLET,                                  10, 9; johto traditional
-	map_const EERIE_HAMLET_DORMS,                             9, 4 ; cd gauldenrod dorms, 7 johto house, 
+	map_const EERIE_HAMLET_DORMS,                             7, 4 ; cd gauldenrod dorms, 7 johto house, 
 	map_const EERIE_HAMLET_STOCKROOM,                         5, 4 ; cf gauldenrod stock, trad house, takes place of gym
 	map_const REBELS_REDOUBT_1F,                              4,  4 ; take same as mahogany mart
 	map_const REBELS_REDOUBT_B1F,                             15, 9 ; sproute tower

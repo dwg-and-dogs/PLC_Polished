@@ -6,26 +6,24 @@ AnarresDorms_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event  4,  5, ANARRES_TOWN, 6
-	warp_event  5,  5, ANARRES_TOWN, 6
+	warp_event  4,  7, ANARRES_TOWN, 6
+	warp_event  5,  7, ANARRES_TOWN, 6
 
 	def_coord_events
 
 
 	def_bg_events
-	bg_event  0,  2, BGEVENT_READ, AnarresDormsBed 
-	bg_event  0,  3, BGEVENT_READ, AnarresDormsBed 
-	bg_event  0,  4, BGEVENT_READ, AnarresDormsBed 
-	bg_event  0,  5, BGEVENT_READ, AnarresDormsBed 
+	bg_event  10,  2, BGEVENT_READ, AnarresDormsBed 
+	bg_event  10,  3, BGEVENT_READ, AnarresDormsBed 
+	bg_event  12,  2, BGEVENT_READ, AnarresDormsBed 
+	bg_event  12,  3, BGEVENT_READ, AnarresDormsBed 
 
 	def_object_events
-	object_event 2, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, EVENT_BEAT_SANDRA
-	object_event 5, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC2Text, -1 ;
-	object_event 3, 3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC3Text, -1 ;
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, EVENT_BEAT_SANDRA
+	object_event 2, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC2Text, -1 ;
+	object_event 6, 3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC3Text, -1 ;
 	
-	object_const_def
 	
-
 	
 AnarresDormsNPC2Text:
 	text "The Pineco are"
@@ -41,7 +39,7 @@ AnarresDormsNPC2Text:
 	para "eat the whole"
 	line "forest, then"
 	para "they won't have"
-	line "anything to eat."
+	line "anything to eat!"
 	done
 	
 AnarresDormsNPC3Text:
@@ -51,8 +49,14 @@ AnarresDormsNPC3Text:
 
 	para "They keep a"
 	line "#mon as long"
-	para "as you continue"
-	line "to interact."
+	cont "as you interact."
+
+	para "If you stop, the"
+	line "#mon will get"
+	cont "bored and leave."
+	
+	para "But that'd take"
+	line "years, I bet."
 	done
 
 AnarresDormsBed:

@@ -22,7 +22,7 @@ GrottoedGlacierB1F_MapScriptHeader:
 	def_object_events
 	strengthboulder_event 3, 7, EVENT_BOULDER1_IN_GLACIER
 	strengthboulder_event 11, 12, EVENT_BOULDER2_IN_GLACIER
-	object_event 12,  9, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumEsther, EVENT_BEAT_KANNA
+	object_event 12,  9, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerMediumEsther, EVENT_BEAT_KANNA
 	object_event  4, 19, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageVirgil, EVENT_BEAT_KANNA
 	; TODO PLACE THESE ITEMS 
 	itemball_event 13, 14, NEVERMELTICE, 1, EVENT_GLACIER_B1F_ITEM_1
@@ -78,7 +78,7 @@ GenericTrainerMediumEsther:
 .SeenText:
 	text "You're not from"
 	line "Hisui - are you"
-	cont "Adrinna's?"	
+	cont "with Adrinna?"	
 	done
 
 

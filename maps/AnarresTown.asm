@@ -6,8 +6,8 @@ AnarresTown_MapScriptHeader:
 	callback MAPCALLBACK_NEWMAP, AnarresTownFlypointCallback
 
 	def_warp_events
-	warp_event  2, 10, ANARRES_HOLT_GATE, 1
-	warp_event  2, 11, ANARRES_HOLT_GATE, 2
+	warp_event  4, 10, ANARRES_HOLT_GATE, 1
+	warp_event  4, 11, ANARRES_HOLT_GATE, 2
 	warp_event  9,  3, ANARRES_HOUSE, 1
 	warp_event 21, 15, ANARRES_CHARCOAL_KILN, 1
 	warp_event 11, 13, ANARRES_TOWER_1F, 1
@@ -26,10 +26,10 @@ AnarresTown_MapScriptHeader:
 	bg_event 16, 10, BGEVENT_JUMPTEXT, AnarresDormsSignText
 
 	def_object_events
-	object_event  5,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC1Script, -1
-	object_event 17, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC2Script, -1 
-	object_event 12,  6, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC3Script, -1 
-	object_event 15, 13, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC4Text, -1 
+	object_event  7,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC1Script, -1
+	object_event 17, 14, SPRITE_BLACK_BELT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC2Script, -1
+	object_event 12,  6, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, AnarresNPC3Script, -1
+	object_event 15, 13, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC4Text, -1
 ; blocker
 	object_event 11, 15, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresNPC5Text, EVENT_BEAT_TAMMY
 ; others 

@@ -36,7 +36,7 @@ SinjohCrossroads_MapScriptHeader:
 SinjohBrigader1Script:
 	faceplayer
 	checkevent EVENT_BEAT_KANNA
-	iftrue_jumptext Brigader1Text1
+	iffalse_jumptext Brigader1Text1
 	jumpthistext
 	
 	text "Haha! Her plan,"
@@ -57,7 +57,7 @@ Brigader1Text1:
 SinjohBrigader2Script:
 	faceplayer
 	checkevent EVENT_BEAT_KANNA
-	iftrue_jumptext Brigader2Text1
+	iffalse_jumptext Brigader2Text1
 	jumpthistext
 	
 	text "We didn't get all"

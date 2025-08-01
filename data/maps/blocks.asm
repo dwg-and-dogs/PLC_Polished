@@ -74,6 +74,7 @@ AnarresHouse_BlockData:
 GauldenrodHouse_BlockData:
 LandingHouse1_BlockData:
 LandingHouse2_BlockData:
+SinjohEldersHouse_BlockData:
 SulfurStyHouse1_BlockData:
 SulfurStyHouse2_BlockData:
 	INCBIN "maps/TraditionalHouse.ablk.lz"
@@ -206,7 +207,6 @@ AnarresCharcoalKiln_BlockData:
 
 SECTION "KurtsHouse_BlockData", ROMX
 KurtsHouse_BlockData:
-SinjohEldersHouse_BlockData:
 	INCBIN "maps/KurtsHouse.ablk.lz"
 
 SECTION "SlowpokeWellEntrance_BlockData", ROMX
@@ -652,10 +652,6 @@ SECTION "MistyBasinB1F_BlockData", ROMX
 MistyBasinB1F_BlockData:
 	INCBIN "maps/MistyBasinB1F.ablk.lz"
 
-SECTION "AnarresDorms_BlockData", ROMX
-AnarresDorms_BlockData:
-	INCBIN "maps/AnarresDorms.ablk.lz"
-
 SECTION "AnarresStockroom_BlockData", ROMX
 AnarresStockroom_BlockData:
 	INCBIN "maps/AnarresStockroom.ablk.lz"
@@ -685,6 +681,7 @@ Gauldenrod_BlockData:
 	INCBIN "maps/Gauldenrod.ablk.lz"
 
 SECTION "GauldenrodDorms_BlockData", ROMX
+AnarresDorms_BlockData:
 GauldenrodDorms_BlockData:
 WesternCapitalDorms_BlockData:
 LandingDorms_BlockData:
