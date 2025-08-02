@@ -1,4 +1,4 @@
-RebelsRedoubt1F_MapScriptHeader: ; need a callback a la ruins of alph 
+RebelsRedoubt1F_MapScriptHeader: 
 	def_scene_scripts
 
 
@@ -39,23 +39,24 @@ RebelRedoubt1FCallback:
 	
 RedoubtKnockOffTutorScript:
 	faceplayer
+	opentext
 	checkevent EVENT_BEAT_AMOS
 	iffalse_jumptext SecretNinjaTechniqueText
 	checkevent EVENT_LISTENED_TO_KNOCK_OFF_INTRO
-	opentext
-	iftrue RedoubtTutorKnockOffScript
+	iftrue .RedoubtTutorKnockOffScript
 	writetext Text_KnockOffIntro
 	waitbutton
 	closetext
 	applymovement REDOUBT_1B_NINJA, KnockOffMovement
 	applymovement REDOUBT_1F_POKEBALL, KnockOffMovement2
 	playsound SFX_SHARPEN ; crash! 
+	disappear REDOUBT_1F_POKEBALL
 	pause 60
 	faceplayer
 	opentext
 	writetext Text_KnockOffIntro2
 	setevent EVENT_LISTENED_TO_KNOCK_OFF_INTRO
-RedoubtTutorKnockOffScript:
+.RedoubtTutorKnockOffScript:
 	writetext Text_RedoubtTutorKnockOff ;;
 	waitbutton
 	checkitem SILVER_LEAF
@@ -78,7 +79,7 @@ RedoubtTutorKnockOffScript:
 	jumpopenedtext Text_RedoubtTutorTaught ;;
 	
 Text_KnockOffIntro: 
-	text "Oh! YOu are here"
+	text "Oh! You are here"
 	line "to witness my"
 	cont "ninja technique!"
 	
@@ -133,9 +134,8 @@ SecretNinjaTechniqueText:
 	text "I've got a secret"
 	line "ninja technique."
 	
-	para "But it's only"
-	line "available with"
-	cont "Amos' blessing."
+	para "As if I'd teach"
+	line "it to you!"
 	done
 
 KnockOffMovement:
@@ -144,7 +144,7 @@ KnockOffMovement:
 
 KnockOffMovement2:
 	fix_facing
-	step_up
+	slide_step_up
 	step_end
 
 RR_1F_BallText:

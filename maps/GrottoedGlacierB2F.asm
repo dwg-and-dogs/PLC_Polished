@@ -10,7 +10,7 @@ GrottoedGlacierB2F_MapScriptHeader:
 
 	def_warp_events
 	warp_event 5, 15, GROTTOED_GLACIER_B1F, 2
-	warp_event 6, 15, GROTTOED_GLACIER_B1F, 2
+	warp_event 4, 15, GROTTOED_GLACIER_B1F, 2
 
 
 	def_coord_events
@@ -22,8 +22,8 @@ GrottoedGlacierB2F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  17,  4, SPRITE_KANNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GLACIER_KANNA
-	object_event  17,  6, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GLACIER_ADRINNA
+	object_event  17,  4, SPRITE_KANNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GLACIER_KANNA ; TODO, CHANGE PALETTE TO GREEN AND REVISE THE TITLE TO "HISUI" FROM SINNOH 
+	object_event  17,  5, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GLACIER_ADRINNA
 	pokemon_event  17, 3, BASCULEGION, -1, -1, PAL_NPC_ROCK, BasculegionText, EVENT_BASCULEGION_SLEEPS
 	pokemon_event  17, 3, BASCULEGION, -1, -1, PAL_NPC_RED, BasculegionText, EVENT_BASCULEGION_LIVES ; INITIALIZE 
 	itemball_event  7, 2, CHOICE_SPECS, 1, EVENT_CHOICE_SPECS
@@ -40,7 +40,7 @@ GlacierBouldersB2FCallback:
 	changeblock  8,  8, $2D
 	checkevent EVENT_BOULDER2_IN_GLACIER
 	iffalse .Done
-	changeblock  8, 14, $2F
+	changeblock  8, 14, $2E
 .Done:
 	endcallback
 
@@ -49,31 +49,37 @@ GlacierB2FCallback_MoveAK:
 	checkscene
 	iffalse .Skip
 	moveobject GLACIER_B2F_KANNA, 18, 3
-	moveobject GLACIER_B2F_ADRINNA, 18, 6
+	moveobject GLACIER_B2F_ADRINNA, 18, 5
+	turnobject GLACIER_B2F_ADRINNA, LEFT
 .Skip:
 	endcallback
 
 GrottoedGlacierB1FScene1:
-;	applymovement PLAYER, PlayerWalksDownMovement2
-;	turnobject STADIUMGROUNDS_BOBESH, LEFT
-;	turnobject STADIUMGROUNDS_SANDRA, LEFT
+	applyonemovement PLAYER, step_up
 	sjump PickupGlacierScene
 
 GrottoedGlacierB1FScene0:
+	applyonemovement PLAYER, step_up
 	pause 30
+	special Special_FadeOutMusic
+	pause 60
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	showtext GlacierB2F_Text1
 	turnobject GLACIER_B2F_KANNA, RIGHT
 	showtext GlacierB2F_Text2
 	applyonemovement GLACIER_B2F_KANNA, step_right
 	applyonemovement GLACIER_B2F_KANNA, step_up	
 	turnobject GLACIER_B2F_KANNA, LEFT
-	showemote EMOTE_SLEEP, GLACIER_B2F_BASCULEGION_SLEEPY, 30 
-	showtext GlacierB2F_Text3
+	opentext
+	writetext GlacierB2F_Text3
 	waitbutton
-	showtext GlacierB2F_Text3_2
+	writetext GlacierB2F_Text3_2
+	waitbutton
 	turnobject GLACIER_B2F_KANNA, DOWN
 	showemote EMOTE_BOLT, GLACIER_B2F_KANNA, 30
-	showtext GlacierB2F_Text4
+	writetext GlacierB2F_Text4
+	waitbutton
+	closetext
 	disappear GLACIER_B2F_BASCULEGION_SLEEPY
 	appear GLACIER_B2F_BASCULEGION_ALIVE
 	pause 30
@@ -89,20 +95,32 @@ GrottoedGlacierB1FScene0:
 	ifequal $1, .Continue
 .Continue:
 	disappear GLACIER_B2F_BASCULEGION_ALIVE
+	reloadmapafterbattle
 	setscene $1
 	setevent EVENT_BATTLED_BASCULEGION
 	setevent EVENT_BASCULEGION_SLEEPS
 	setevent EVENT_BASCULEGION_LIVES
 
+
+
 PickupGlacierScene:
-	showtext GlacierB2F_Text5
-	showemote EMOTE_QUESTION, GLACIER_B2F_KANNA, 30 
-	showtext GlacierB2F_Text6
-	showemote EMOTE_BOLT, GLACIER_B2F_KANNA, 30 	
-	showtext GlacierB2F_Text7
+	applyonemovement GLACIER_B2F_KANNA, step_left
+	applyonemovement GLACIER_B2F_KANNA, step_down
+	
+	opentext
+	writetext GlacierB2F_Text5
 	waitbutton
-	showtext GlacierB2F_Text7_2	
+	showemote EMOTE_QUESTION, GLACIER_B2F_KANNA, 30 
+	writetext GlacierB2F_Text6
+	waitbutton
+	writetext GlacierB2F_Text7_2	
+	waitbutton
+	closetext
+	applyonemovement GLACIER_B2F_ADRINNA, step_down
+	turnobject GLACIER_B2F_ADRINNA, LEFT
 	special HealParty
+	showtext GlacierB2F_Text7_3
+	applyonemovement PLAYER, step_up
 	winlosstext KannaWinText, 0
 	setlasttalked GLACIER_B2F_KANNA
 	loadtrainer KANNA, 1
@@ -110,27 +128,37 @@ PickupGlacierScene:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	setevent EVENT_BEAT_KANNA
+	applyonemovement GLACIER_B2F_ADRINNA, step_up
 	opentext
 	writetext KannaWaterfallText
+	waitbutton
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_MARSHBADGE
 	verbosegivetmhm HM_WATERFALL	
 	writetext KannaTellAmosText	
+	waitbutton
 	closetext
 	earthquake 100
 	playsound SFX_BEAT_UP
 	showemote EMOTE_SHOCK, GLACIER_B2F_KANNA, 30 
-	showtext GlacierB2F_Text8
+	opentext
+	writetext GlacierB2F_Text8
 	waitbutton
-	showtext GlacierB2F_Text8_2
+	applyonemovement GLACIER_B2F_ADRINNA, step_up
+	turnobject GLACIER_B2F_ADRINNA, LEFT
+	writetext GlacierB2F_Text8_2
 	waitbutton
-	showtext GlacierB2F_Text8_3
+	turnobject GLACIER_B2F_KANNA, RIGHT
+	writetext GlacierB2F_Text8_3
 	waitbutton
-	showtext GlacierB2F_Text8_4
+	writetext GlacierB2F_Text8_4
+	waitbutton
+	closetext
 	applyonemovement GLACIER_B2F_ADRINNA, teleport_from
 	disappear GLACIER_B2F_ADRINNA
 	setevent EVENT_GLACIER_ADRINNA
+	turnobject GLACIER_B2F_KANNA, DOWN
 	showtext GlacierB2F_Text9
 	applyonemovement GLACIER_B2F_KANNA, teleport_from
 	disappear GLACIER_B2F_KANNA	
@@ -139,11 +167,17 @@ PickupGlacierScene:
 	end
 
 GlacierB2F_Text1:
-	text "Adrinna: Your"
-	line "people enjoy the"
-	para "Gyarados. Some"
-	line "say they will"
-	cont "stay in Johto."
+	text_high
+    text " Adrinna: "
+	next
+	text_start
+
+	text "Your people are"
+	line "entranced by my"
+	cont "Gyarados."
+	
+	para "Many have joined"
+	line "our forces."
 	done
 
 GlacierB2F_Text2:
@@ -174,6 +208,7 @@ GlacierB2F_Text3:
 	para "destroy what"
 	line "gives their"
 	cont "lives meaning."
+	done
 
 GlacierB2F_Text3_2:
 	text_high
@@ -214,27 +249,34 @@ GlacierB2F_Text6::
     text " Kanna: " 
 	next
 	text_start
-	text "Who is this?"
-	done
+	text "Who are you? You"
+	line "spoiled my trap!"
 
-GlacierB2F_Text7:
-	text_high
-    text " Kanna: " 
-	next
-	text_start
-	text "Are they your"
-	line "lieutenant? I'll"
-	para "start with you!"
+	para "I'll take you out,"
+	line "then deal with"
+	cont "General Adrinna!"
 	done
 
 GlacierB2F_Text7_2:
 	text_high
-    text " Kanna: " 
+    text " Adrinna: " 
 	next
 	text_start
 	text "Let me heal you."
 	line "She's hardly"
 	cont "being fair."
+	done
+
+GlacierB2F_Text7_3:
+	text_high
+    text " Adrinna: " 
+	next
+	text_start
+	text "Make me proud,"
+	line "<PLAYER>. Can a"
+	para "kid from nowhere"
+	line "stand even with"
+	cont "a Hisuian elder?"
 	done
 
 KannaWinText:
@@ -272,7 +314,7 @@ GlacierB2F_Text8_2:
     text " Adrinna: " 
 	next
 	text_start
-	para "Oh, it's just my"
+	text "Oh, it's just my"
 	line "Gyarados letting"
 	para "loose. My"
 	line "brigaders are"
@@ -303,6 +345,16 @@ GlacierB2F_Text8_4:
 	text "You know, it was"
 	line "a nice try to"
 	cont "ambush me here."
+	
+	para "But I must get to"
+	line "the mine. We're"
+	para "nearly to the"
+	line "heart of it."
+	
+	para "<PLAYER>, you'll"
+	line "know where to"
+	cont "find me. This is"
+	cont "not goodbye."
 	done
 
 GlacierB2F_Text9:
@@ -314,10 +366,22 @@ GlacierB2F_Text9:
 	line "to leave, before"
 	para "anything else"
 	line "happens..."
+	
+	para "And you: please,"
+	line "think about what"
+	para "your ancestors"
+	line "would think if"
+	para "they saw you,"
+	line "joining forces"
+	cont "with Adrinna."
 	done
 	
 KannaWaterfallText:
-	text "I hate that you"
+	text_high
+    text " Kanna: " 
+	next
+	text_start
+	text "I regret that you"
 	line "beat me, but I"
 	para "took an oath. You"
 	line "can have this HM"
@@ -334,13 +398,12 @@ KannaTellAmosText:
 
 GlacierBasc_Move1: ; just in front of adrinna
 	fix_facing
-	fast_jump_step_down
-	fast_jump_step_down
+	slide_step_down
 	step_end	
 
 GlacierBasc_Move2: ; in front of player 
 	fix_facing
-	fast_jump_step_down
+	slide_step_down
 	step_end
 	
 BasculegionText:
