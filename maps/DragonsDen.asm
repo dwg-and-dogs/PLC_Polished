@@ -14,14 +14,14 @@ DragonsDen_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  10, 14, BGEVENT_JUMPTEXT, DragonsDenSignText 
+;	bg_event  10, 14, BGEVENT_JUMPTEXT, DragonsDenSignText 
 
 
 	def_object_events
 	object_event  10, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerDragonTamerDarin, -1
 	object_event  13, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerDragonTamerPaul, -1
 ;warper 
-	object_event  9, 15, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenElder, -1	 
+	object_event  9, 14, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenElder, -1	 
 
 	object_event  11,  11, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ClairScript, -1
 	pokemon_event 12,  11, DRAGONAIR, -1, -1, PAL_NPC_BLUE, DragonairText, -1

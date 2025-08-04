@@ -37,7 +37,7 @@ EECavernMysticScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp DRAGONS_DEN, 6, 40
+	warp DRAGONS_DEN, 9, 17
 	end
 
 	

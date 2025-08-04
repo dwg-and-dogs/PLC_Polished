@@ -488,13 +488,13 @@ ENDM
 
 	map_attributes TranquilTarn, TRANQUIL_TARN, $5, NORTH | SOUTH ; 
 	connection north, SinjohCrossroads, SINJOH_CROSSROADS, 0
-	connection south, EmpiresExtent, EMPIRES_EXTENT, 0
+	connection south, EmpiresExtent, EMPIRES_EXTENT, 5
 	
 	map_attributes SinjohCrossroads, SINJOH_CROSSROADS, $5, SOUTH
 	connection south, TranquilTarn, TRANQUIL_TARN, 0
 	
 	map_attributes EmpiresExtent, EMPIRES_EXTENT, $5, NORTH | SOUTH
-	connection north, TranquilTarn, TRANQUIL_TARN, 0 
+	connection north, TranquilTarn, TRANQUIL_TARN, -5 
 	connection south, EerieHamlet, EERIE_HAMLET, 0
 
 	map_attributes SinjohDorms, SINJOH_DORMS, $0, 0
@@ -511,15 +511,15 @@ ENDM
 
 	map_attributes EmpiresExtentEerieHamletGate, EMPIRES_EXTENT_EERIE_HAMLET_GATE, $0, 0
 
-	map_attributes EmpiresExtentCavern, EMPIRES_EXTENT_CAVERN, $5, 0
+	map_attributes EmpiresExtentCavern, EMPIRES_EXTENT_CAVERN, $0, 0
 	map_attributes DragonsDen, DRAGONS_DEN, $0, 0
 
-	map_attributes EerieHamlet, EERIE_HAMLET, $5, NORTH | WEST
+	map_attributes EerieHamlet, EERIE_HAMLET, $71, NORTH | WEST
 	connection north, EmpiresExtent, EMPIRES_EXTENT, 0
-	connection west, SulfurSty, SULFUR_STY, -1
+	connection west, SulfurSty, SULFUR_STY, -7
 	
 	map_attributes SulfurSty, SULFUR_STY, $5, EAST
-	connection east, EerieHamlet, EERIE_HAMLET, 1
+	connection east, EerieHamlet, EERIE_HAMLET, 7
 
 	map_attributes EerieHamletDorms, EERIE_HAMLET_DORMS, $0, 0
 	map_attributes EerieHamletStockroom, EERIE_HAMLET_STOCKROOM, $0, 0

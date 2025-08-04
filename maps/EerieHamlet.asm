@@ -13,7 +13,7 @@ EerieHamlet_MapScriptHeader:
 
 
 	def_coord_events
-	coord_event  9, 5, 0, EerieHamletTradeQuestScene
+	coord_event  9, 4, 0, EerieHamletTradeQuestScene
 
 	def_bg_events
 	bg_event  4,  6, BGEVENT_JUMPTEXT, HamletText
@@ -35,6 +35,7 @@ EerieHamlet_MapScriptHeader:
 
 EerieHamletTradeQuestScene:
 	showemote EMOTE_SLEEP, EERIE_HAMLET_ENGINEER, 30
+	setscene $1
 	end
 
 EerieHamletFlyPoint:

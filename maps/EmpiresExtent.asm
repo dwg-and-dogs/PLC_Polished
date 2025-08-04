@@ -32,7 +32,7 @@ EmpiresExtent_MapScriptHeader:
 ;items 
 	itemball_event 13, 17, REVIVAL_HERB,			1,	EVENT_EXTENT_ITEM_1
 	itemball_event 10, 34, ENERGY_ROOT, 	1,	EVENT_EXTENT_ITEM_2
-	itemball_event 11, 25, BIG_NUGGET, 		1,	EVENT_EXTENT_ITEM_3
+	itemball_event 10, 24, BIG_NUGGET, 		1,	EVENT_EXTENT_ITEM_3
 
 GenericTrainerNinja1: ;shadow 
 	generictrainer NINJA, NINJA1, EVENT_BEAT_NINJA1, .SeenText1, .BeatenText1  
@@ -119,10 +119,13 @@ GenericTrainerNinja6: ; dusk
 ExtentNPCText1:
 	text "Hank: The Gyara-"
 	line "dos were out of"
-	cont "control..."
+	cont "control."
 	
-	para "I'm following the"
-	line "Brigaders to have"
+	para "It was almost"
+	line "beautiful."
+	
+	para "I'm following"
+	line "Adrinna to have"
 	cont "that power."
 	done
 

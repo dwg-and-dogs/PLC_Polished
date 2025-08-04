@@ -7,7 +7,8 @@ EerieHamletDorms_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 3, 9, EERIE_HAMLET, 4
+	warp_event  4,  7, EERIE_HAMLET, 4
+	warp_event  5,  7, EERIE_HAMLET, 4
 
 
 	def_coord_events
