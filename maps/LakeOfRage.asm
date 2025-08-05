@@ -61,7 +61,7 @@ LakeOfRageFlyPoint:
 LakeOfRageTreeCut:
 	checkevent EVENT_EXTENT_TREE
 	iffalse .Done ; needs to block if we are not cut the tree 
-	changeblock 0, 0, $00
+	changeblock 4, 30, $65
 .Done:
 	endcallback
 
@@ -293,7 +293,7 @@ LakeRivalAfterText:
 	line "will you?"
 	done
 
-LakeKurtAfterRivalText: ; todo 
+LakeKurtAfterRivalText:
 	text_high
     text " Kurt: "
 	next
@@ -306,7 +306,7 @@ LakeKurtAfterRivalText: ; todo
 	cont "past."
 	done
 
-LakePryceAfterRivalText: ; todo 
+LakePryceAfterRivalText:
 	text_high
     text " Pyrce: "
 	next
@@ -333,7 +333,7 @@ LakePryceAfterRivalText: ; todo
 	line "role as stewards."
 	done
 
-LakeKurtAfterRivalText_2: ; todo 
+LakeKurtAfterRivalText_2:  
 	text_high
     text " Kurt: "
 	next
@@ -350,7 +350,7 @@ LakeKurtAfterRivalText_2: ; todo
 	cont "pray."
 	done
 	
-LakePryceAfterRivalText_2: ; todo 
+LakePryceAfterRivalText_2:
 	text_high
     text " Pryce: "
 	next

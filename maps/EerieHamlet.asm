@@ -7,7 +7,7 @@ EerieHamlet_MapScriptHeader:
 
 	def_warp_events
 	warp_event 13, 7, REBELS_REDOUBT_1F, 1
-	warp_event 9, 3, EMPIRES_EXTENT_EERIE_HAMLET_GATE, 2
+	warp_event 9, 3, EMPIRES_EXTENT_EERIE_HAMLET_GATE, 3
 	warp_event 5, 13, EERIE_HAMLET_STOCKROOM, 1
 	warp_event 15, 13, EERIE_HAMLET_DORMS, 1
 

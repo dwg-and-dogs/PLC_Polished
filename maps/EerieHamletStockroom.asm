@@ -6,8 +6,8 @@ EerieHamletStockroom_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 5, 9, EERIE_HAMLET, 3
-
+	warp_event 3, 7, EERIE_HAMLET, 3
+	warp_event 4, 7, EERIE_HAMLET, 3
 
 	def_coord_events
 
@@ -18,9 +18,9 @@ EerieHamletStockroom_MapScriptHeader:
 
 	def_object_events
 	object_event 2, 3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EHStockroomNPC1Text, -1
-	object_event 5, 2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EHStockroomNPC2Text, -1 
-	object_event 6, 2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EHStockroomNPC3Text, -1 
-	object_event  9,  0, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_EERIE_HAMLET, -1
+	object_event 4, 5, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EHStockroomNPC2Text, -1 
+	object_event 5, 5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, EHStockroomNPC3Text, -1 
+	object_event 9, 2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_EERIE_HAMLET, -1
 
 
 

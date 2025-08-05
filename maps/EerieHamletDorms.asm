@@ -18,8 +18,8 @@ EerieHamletDorms_MapScriptHeader:
 	def_bg_events
 	bg_event  10,  2, BGEVENT_READ, HamletDormsBed
 	bg_event  10,  3, BGEVENT_READ, HamletDormsBed
-	bg_event  11,  2, BGEVENT_READ, HamletDormsBed
-	bg_event  11,  3, BGEVENT_READ, HamletDormsBed
+	bg_event  12,  2, BGEVENT_READ, HamletDormsBed
+	bg_event  12,  3, BGEVENT_READ, HamletDormsBed
 
 	def_object_events
 	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS ; event_talked_to_kurt_cc
@@ -188,6 +188,11 @@ KurtEHDormsText:
 	para "save its tradit-"
 	line "ions from being"
 	cont "wiped away!"
+	
+	para "I found some good"
+	line "#mon in the"
+	cont "grass. Want to"
+	cont "battle?"
 	done
 	
 KurEHDormsText2:

@@ -516,10 +516,10 @@ ENDM
 
 	map_attributes EerieHamlet, EERIE_HAMLET, $71, NORTH | WEST
 	connection north, EmpiresExtent, EMPIRES_EXTENT, 0
-	connection west, SulfurSty, SULFUR_STY, -7
+	connection west, SulfurSty, SULFUR_STY, -8
 	
 	map_attributes SulfurSty, SULFUR_STY, $5, EAST
-	connection east, EerieHamlet, EERIE_HAMLET, 7
+	connection east, EerieHamlet, EERIE_HAMLET, 8
 
 	map_attributes EerieHamletDorms, EERIE_HAMLET_DORMS, $0, 0
 	map_attributes EerieHamletStockroom, EERIE_HAMLET_STOCKROOM, $0, 0

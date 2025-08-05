@@ -21,7 +21,7 @@ Route42_MapScriptHeader:
 ;entei's cavern if you have the pumice harp 
 	bg_event 46,  7, BGEVENT_READ, PumiceHarpEntrance 
 	bg_event 26,  5, BGEVENT_READ, MissingMachinePartScript 
-
+	bg_event 10,  5, BGEVENT_READ, Route42TimeTravelScript 
 
 	def_object_events
 	object_event  47,  8, SPRITE_EUSINE, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route42EusineScript, EVENT_EUSINE_ROUTE_42
@@ -37,7 +37,6 @@ Route42_MapScriptHeader:
 	object_event  27,  8, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 	PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptext, ChemistryText, -1
 	object_event  28,  8, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 	PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptext, ChemistryText, -1	
 
-	
 	object_event  2,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_CHUCK
 	object_event  2,  9, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_CHUCK
 	itemball_event  7, 13, ULTRA_BALL, 1, EVENT_ROUTE_42_ULTRA_BALL
@@ -376,4 +375,47 @@ ChemistryText:
 	para "Smells good,"
 	line "though!"
 	done
+
+
+Route42TimeTravelScript: ; todo finish fixing 
+	opentext
+	checkevent EVENT_BEAT_ADRINNA_MINE
+	iffalse_jumptext Route42NoTimeTravelYetText
+	writetext Route42AskToTimeTravelText
+	yesorno
+	iffalse_jumpopenedtext Route42NoTimeTravelText
+	writetext Route42YesTimeTravelText
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp SULFUR_STY, 14, 17
+	end
+
+Route42NoTimeTravelYetText:
+	text "An impression on"
+	line "the mountain,"
 	
+	para "apparently carved"
+	line "with intention."
+	
+	para "Who could have"
+	line "made it?"
+	done
+
+Route42AskToTimeTravelText:
+	text "It's a petroglyph"
+	line "of Celebi!"
+	
+	para "Call to travel"
+	line "back in time?"
+	done
+
+Route42NoTimeTravelText:
+	text "Some other time."
+	done
+
+Route42YesTimeTravelText:
+	text "Time to go."
+	done

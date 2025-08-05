@@ -22,9 +22,9 @@ RebelsRedoubtB3F_MapScriptHeader:
 	object_event 22, 11, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 1, RedoubtHollisScript, EVENT_BEAT_AMOS
 	object_event 19, 11, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 1, RedoubtSandraScript, EVENT_BEAT_AMOS
 	object_event  8,  7, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, RedoubtBarbeauScript, EVENT_BEAT_AMOS
-	itemball_event 2, 15, MAX_POTION, 1, EVENT_REDOUBT_ITEM_3
-	itemball_event 13, 15, ELIXIR, 1, EVENT_REDOUBT_ITEM_4
-	itemball_event 15, 11, FULL_RESTORE, 1, EVENT_REDOUBT_ITEM_5
+	itemball_event 2, 15, REVIVAL_HERB, 1, EVENT_REDOUBT_ITEM_3
+	itemball_event 13, 15, ENERGY_ROOT, 1, EVENT_REDOUBT_ITEM_4
+	itemball_event 15, 11, LUM_BERRY, 1, EVENT_REDOUBT_ITEM_5
 
 RedoubtHollisScript: 
 	refreshscreen
@@ -43,6 +43,7 @@ RedoubtHollisScript:
 	startbattle
 	reloadmapafterbattle
 .FightDone:
+	opentext
 	writetext Text_HollisRedoubt2
 	setevent EVENT_BEAT_HOLLIS_REDOUBT
 	promptbutton
@@ -110,6 +111,7 @@ RedoubtSandraScript:
 	startbattle
 	reloadmapafterbattle
 .FightDone:
+	opentext
 	writetext Text_SandraRedoubt2
 	setevent EVENT_BEAT_SANDRA_REDOUBT
 	promptbutton
@@ -188,6 +190,7 @@ RedoubtBarbeauScript:
 	startbattle
 	reloadmapafterbattle
 .FightDone:
+	opentext
 	writetext Text_BarbeauRedoubt2
 	setevent EVENT_BEAT_BARBEAU_REDOUBT
 	promptbutton

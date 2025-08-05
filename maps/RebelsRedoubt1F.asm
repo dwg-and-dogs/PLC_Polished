@@ -190,7 +190,7 @@ Redoubt1FScript:
 	reloadmappart
 	; sfx for changing the map part
 	showtext RR_1F_KurtText2
-	applyonemovement REDOUBT_1F_KURT, step_down
+	applyonemovement REDOUBT_1F_KURT, step_up
 	disappear REDOUBT_1F_KURT
 	setevent EVENT_REDOUBT_KURT
 	end
@@ -214,9 +214,17 @@ RR_1F_KurtText1:
 	done
 
 RR_1F_NinjaText2:
-	text "Hmm. others will"
-	line "battle you to get"
-	cont "a better look."
+	text "Hmm. They are the"
+	line "badges from the"
+	para "Holt, Gauldenrod,"
+	line "and the Landing."
+	
+	para "I suppose you can"
+	line "at least plead a"
+	cont "case to Amos."
+	
+	para "I'll open the"
+	line "trapdoor."
 	done
 
 

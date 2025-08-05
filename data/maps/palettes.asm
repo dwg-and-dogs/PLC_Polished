@@ -71,11 +71,12 @@ ENDM
 	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SinjohCrossroadsPalette 		; todo revise to an icy one 
 	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SinjohCrossroadsPalette 		; todo revise to an icy one 
 	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SinjohCrossroadsPalette 		
-	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	; todo palette at the roof 
+	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, EerieHamletPalette 	; todo palette at the roof 
 	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
 	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
 
 	special_bg_pal map,      CIANWOOD_CAVE,               PAL_SINGLE,    WhirlIslandsPalette
+	special_bg_pal map,  	 DRAGONS_DEN,       		  PAL_SINGLE,    DragonShrinePalette
 
 	special_bg_pal overcast, (unused),                    PAL_TIMEOFDAY, OvercastBGPalette
 	db 0 ; end
@@ -1091,6 +1092,40 @@ endc
 SinjohCrossroadsPalette:
 if !DEF(MONOCHROME)
 INCLUDE "gfx/tilesets/sinjoh_crossroads_mildsepia.pal"
+else
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 4
+	MONOCHROME_RGB_FOUR_NIGHT
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+	MONOCHROME_RGB_FOUR_NIGHT
+	MONOCHROME_RGB_FOUR_NIGHT
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+endc
+
+
+EerieHamletPalette:
+if !DEF(MONOCHROME)
+INCLUDE "gfx/tilesets/eerie_hamlet_mildsepia.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR
