@@ -1,4 +1,5 @@
-SulfurStyHouse1_MapScriptHeader: ;	def_scene_scripts
+SulfurStyHouse1_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -21,7 +22,6 @@ SulfurStyHouse1_MapScriptHeader: ;	def_scene_scripts
 	object_event  5,  4, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, SulfurStyHouse1StoneEdgeScript, -1 ; GIVE false swipe
 	pokemon_event 5,  3, MACHAMP, -1, -1, PAL_NPC_BLUE, MachampStoneText, -1
 
-	object_const_def
 
 
 SulfurStyHouse1StoneEdgeScript: ;CF THE ROUTE34GATE TEACHER

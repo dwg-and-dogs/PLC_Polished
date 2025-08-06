@@ -21,7 +21,6 @@ ClastsCradle2F_MapScriptHeader:
 
 
 	def_object_events
- ;check which sound effects would be best? 
 	tmhmball_event 9, 6, TM_EXPLOSION, EVENT_GOT_TM_EXPLOSION
 ; ENGINEERS FACE AWAY FROM YOU BUT WILL BATTLE YOU 
 	object_event  16,  6, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerGoeth, -1
@@ -91,10 +90,14 @@ GenericTrainerEngineerGoeth: ; goethite
 	generictrainer ENGINEER, GOETH, EVENT_BEAT_ENGINEER_GOETH, GoethSeenText, GoethBeatenText
 	
 GoethBeatenText:
-	text "..."
+	text "You reduced me to"
+	line "rubble!"
 	done
 
 GoethSeenText:
-	text "..."
+	text "My battle skills"
+	line "are rusty, but I"
+	para "can still take"
+	line "you down!"
 	done
 	

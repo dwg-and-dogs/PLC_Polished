@@ -72,7 +72,7 @@ ENDM
 	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SinjohCrossroadsPalette 		; todo revise to an icy one 
 	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SinjohCrossroadsPalette 		
 	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, EerieHamletPalette 	; todo palette at the roof 
-	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, EerieHamletPalette 		
 	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
 
 	special_bg_pal map,      CIANWOOD_CAVE,               PAL_SINGLE,    WhirlIslandsPalette

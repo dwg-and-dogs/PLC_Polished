@@ -20,14 +20,15 @@ SulfurSty_MapScriptHeader:
 	bg_event 40,  6, BGEVENT_ITEM + REVIVAL_HERB, 	EVENT_HIDDEN_STY_2
 	bg_event 44, 10, BGEVENT_ITEM + BIG_NUGGET, 	EVENT_HIDDEN_STY_3 
 	bg_event 46, 11, BGEVENT_ITEM + MAX_ELIXIR, 	EVENT_HIDDEN_STY_4
-
+	bg_event 45, 25, BGEVENT_JUMPTEXT, StySignText
+	bg_event 14, 17, SulfurStyTimeTravelScript
 
 	def_object_events
 	; set 1
 	object_event  46,  25, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, Ninja1Text, EVENT_BEAT_ADRINNA_MINE ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
 	pokemon_event 47, 25, CROBAT, -1, -1, PAL_NPC_BLUE, StyCrobatText, EVENT_BEAT_ADRINNA_MINE
 	object_event  49, 25, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, Brigader1Text, EVENT_BEAT_ADRINNA_MINE ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
-	pokemon_event 48, 25, RHYPERIOR, -1, -1, PAL_NPC_BROWN, StyRhydonText, EVENT_BEAT_ADRINNA_MINE
+	pokemon_event 48, 25, RHYDON, -1, -1, PAL_NPC_BROWN, StyRhydonText, EVENT_BEAT_ADRINNA_MINE
 	; set
 	object_event  24, 23, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, Ninja2Text, EVENT_BEAT_ADRINNA_MINE ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
 	pokemon_event 25, 23, SNEASLER, -1, -1, PAL_NPC_BLUE, StySneaslerText, EVENT_BEAT_ADRINNA_MINE
@@ -42,6 +43,8 @@ SulfurSty_MapScriptHeader:
 	object_event  35, 19, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader21, EVENT_BEAT_ADRINNA_MINE ; ground
 	object_event  37, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader13, EVENT_BEAT_ADRINNA_MINE ; fighting 
 	object_event  22, 13, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader14, EVENT_BEAT_ADRINNA_MINE ; flying 
+
+	object_event 14, 18, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BrigaderRoadblock3Text, EVENT_BEAT_ADRINNA_MINE ; fighting 	
 	; roadblocks 
 	object_event  8, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, BrigaderRoadblock1Text, EVENT_BEAT_AMOS 
 	object_event  8, 23, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, BrigaderRoadblock2Text, EVENT_BEAT_AMOS ; fighting 	
@@ -51,6 +54,60 @@ SulfurSty_MapScriptHeader:
 
 	object_const_def
 
+SulfurStyTimeTravelScript: ; TODO 
+	opentext
+	checkevent EVENT_BEAT_ADRINNA_MINE
+	iffalse_jumptext SulfurStyNoTimeTravelYetText
+	writetext SulfurStyAskToTimeTravelText
+	yesorno
+	iffalse_jumpopenedtext SulfurStyNoTimeTravelText
+	writetext SulfurStyYesTimeTravelText
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp ROUTE_42, 10, 6
+	end
+
+SulfurStyNoTimeTravelYetText:
+	text "An impression on"
+	line "the mountain,"
+	
+	para "apparently carved"
+	line "with intention."
+	
+	para "Who could have"
+	line "made it?"
+	done
+
+SulfurStyAskToTimeTravelText:
+	text "It's a petroglyph"
+	line "of Celebi!"
+	
+	para "Call to travel"
+	line "forward in time?"
+	done
+
+SulfurStyNoTimeTravelText:
+	text "Some other time."
+	done
+
+SulfurStyYesTimeTravelText:
+	text "Time to go."
+	done
+
+StySignText:
+	text "The Sulfur Sty"
+	line "Beneath the"
+	cont "Clast's Cradle"
+	done
+
+BrigaderRoadblock3Text:
+	text "Even if we lose,"
+	line "our symbols will"
+	cont "persist!"
+	done
 
 GenericTrainerBrigader21:
 	generictrainer BRIGADER, 21, EVENT_BEAT_ROCKET_GRUNTM_12, Brigader12SeenText, Brigader12BeatenText
@@ -141,7 +198,7 @@ Brigader3Text:
 	done
 
 StyMagnetonText:
-	text "Beep, spark"
+	text "<Beep, spark>"
 	done
 
 BrigaderRoadblock1Text:
@@ -163,7 +220,6 @@ BrigaderRoadblock2Text:
 	
 	para "then our islands"
 	line "and continents"
-	para "would move like"
-	line "lilypads on a"
-	cont "lake surface!"
+	para "would move like a"
+	line "lake's lilypad!"
 	done

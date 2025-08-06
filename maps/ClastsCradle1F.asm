@@ -99,7 +99,7 @@ GenericTrainerBrigader16: ; dragons
 
 Brigader16BeatenText:
 	text "We're getting so"
-	line "close. You can't'"
+	line "close. You can't"
 	cont "stop us."
 	done
 
@@ -170,6 +170,11 @@ IngsolSeenText:
 GenericTrainerDragonTamerHank2:
 	generictrainer DRAGON_TAMER, HANK2, EVENT_BEAT_DRAGON_TAMER_HANK2, Hank2SeenText, Hank2BeatenText  
 
+
+	text "My dragons don't"
+	line "rule the ground."
+	done
+
 Hank2BeatenText:
 	text "They don't rule"
 	line "the caves..."
@@ -177,7 +182,8 @@ Hank2BeatenText:
 
 Hank2SeenText:
 	text "Dragons will rule"
-	line "the sky!"
+	line "the sky! From"
+	cont "Hisui to Johto!"
 	done
 
 
@@ -185,13 +191,17 @@ GenericTrainerDragonTamerJones2:
 	generictrainer DRAGON_TAMER, JONES2, EVENT_BEAT_DRAGON_TAMER_JONES2, Jones2SeenText, Jones2BeatenText  
 
 Jones2BeatenText:
-	text "Even dragons can"
-	line "melt, I see."
+	text "They don't have"
+	line "trainers like you"
+	cont "in Hisui."
 	done
 
 Jones2SeenText:
 	text "Can you damage my"
 	line "Steel dragons?"
+	para "They didn't have"
+	line "dragons like this"
+	cont "in Hisui!"
 	done
 
 

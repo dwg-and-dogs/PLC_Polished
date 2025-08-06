@@ -390,7 +390,7 @@ Route42TimeTravelScript: ; todo finish fixing
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp SULFUR_STY, 14, 17
+	warp SULFUR_STY,  15, 18
 	end
 
 Route42NoTimeTravelYetText:

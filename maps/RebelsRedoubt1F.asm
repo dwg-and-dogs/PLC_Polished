@@ -47,14 +47,24 @@ RedoubtKnockOffTutorScript:
 	writetext Text_KnockOffIntro
 	waitbutton
 	closetext
-	applymovement REDOUBT_1B_NINJA, KnockOffMovement
+	turnobject REDOUBT_1B_NINJA, UP
+	pause 10
+	turnobject REDOUBT_1B_NINJA, LEFT
+	pause 10
+	turnobject REDOUBT_1B_NINJA, DOWN
+	pause 10
+	turnobject REDOUBT_1B_NINJA, RIGHT
+	pause 10
 	applymovement REDOUBT_1F_POKEBALL, KnockOffMovement2
-	playsound SFX_SHARPEN ; crash! 
+	pause 10
+	playsound SFX_BONE_CLUB ; crash! 
 	disappear REDOUBT_1F_POKEBALL
-	pause 60
+	pause 10
+	showemote EMOTE_SHOCK, REDOUBT_1B_NINJA, 30
 	faceplayer
 	opentext
 	writetext Text_KnockOffIntro2
+	waitbutton
 	setevent EVENT_LISTENED_TO_KNOCK_OFF_INTRO
 .RedoubtTutorKnockOffScript:
 	writetext Text_RedoubtTutorKnockOff ;;
@@ -87,8 +97,8 @@ Text_KnockOffIntro:
 	line "technique starts"
 	cont "with a spin, and"
 
-	para "ends with a str-"
-	line "ike at the ...."
+	para "ends with a big"
+	line "strike!"
 	done
 
 Text_KnockOffIntro2:
@@ -98,7 +108,7 @@ Text_KnockOffIntro2:
 	done	
 
 Text_RedoubtTutorKnockOff:
-	text "But I could teach"
+	text "I could teach"
 	line "your #mon to"
 	cont "Knock Off,"
 	
@@ -113,8 +123,7 @@ Text_RedoubtTutorNoSilverLeaf:
 
 Text_RedoubtTutorQuestion:
 	text "Shall I tutor you"
-	line "my elegant, mast-"
-	cont "erful Knock Off?"
+	line "Knock Off?"
 	done
 
 Text_RedoubtTutorRefused:
@@ -139,7 +148,10 @@ SecretNinjaTechniqueText:
 	done
 
 KnockOffMovement:
+	turn_head_down
 	turn_head_left
+	turn_head_up
+	turn_head_right
 	step_end
 
 KnockOffMovement2:

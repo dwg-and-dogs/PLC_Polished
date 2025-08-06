@@ -3,14 +3,14 @@ ClastsCradleB1F_MapScriptHeader:
 	scene_script CradleScene1_Mejimi
 
 	def_callbacks
-; SQUARES OF 14, 6; 14, 26;  TURN INTO $5D DEPENDING ON EVENT_CRADLE_BOULDER_1,  _3
-; SQUARES OF 18, 14;  TURN INTO $5F DEPENDING ON EVENT_CRADLE_BOULDER_2
+	callback MAPCALLBACK_TILES, CradleB1FStonesCallback
+
 
 
 	def_warp_events
 	warp_event 3, 3, CLASTS_CRADLE_1F, 2
-; HOLE DROP 
-	warp_event 12, 7, CLASTS_CRADLE_1F, 2
+; HOLEs DROP 
+	warp_event 12, 7, CLASTS_CRADLE_B1F, 2
 
 
 	def_coord_events
@@ -31,8 +31,9 @@ ClastsCradleB1F_MapScriptHeader:
 	object_event   4,  16, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
 	object_event   5,  15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CC_HEATRAN
 	object_event   5,  26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2
-; KURT TO HEAL YOU 
-	object_event   8,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, KurtScriptCC, EVENT_BEAT_ADRINNA_MINE
+
+	object_event 8, 5, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosScriptCC, EVENT_BEAT_ADRINNA_MINE
+
 ; TRAINERS
 	object_event  22,  20, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader19, EVENT_BEAT_ADRINNA_MINE
 	object_event  17,  24, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader20, EVENT_BEAT_ADRINNA_MINE
@@ -48,52 +49,21 @@ ClastsCradleB1F_MapScriptHeader:
 	const CRADLE_HEATRAN
 	const CRADLE_KURT
 
-KurtScriptCC:
-	faceplayer
-	checkevent EVENT_KURT_INTRO_MINE
-	iftrue .AmosHeals
-	showtext KurtCradleText1
-	setevent EVENT_KURT_INTRO_MINE
-.AmosHeals:
-	showtext KurtHealsTextCC
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-	special HealParty
-	playmusic MUSIC_HEAL
-	pause 20
-	special RestartMapMusic
-	special Special_FadeInQuickly
-	showtext KurtCradleText2
-	end 
-	
-KurtCradleText1:
-	text "<PLAYER>, I can"
-	line "hear Adrinna up"
-	cont "ahead."
-	
-	para "It sounds like a"
-	line "powerful #mon"
-	cont "is nearby, also."
-	done
 
-KurtHealsTextCC:
-	text "Let me heal you"
-	line "up."
-	done
-
-KurtCradleText2:
-	text "You can do it!"
-	done
-
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-	disappear PLAYER
-
-	opentext
-	writetext Prologue_Text0 ; MEANWHILE, 
-	waitbutton
-	closetext
-	pause 60
+CradleB1FStonesCallback:
+	checkevent EVENT_CRADLE_BOULDER_1
+	iffalse .Check2
+	changeblock 14,  6, $5D
+.Check2:
+	checkevent EVENT_CRADLE_BOULDER_2
+	iffalse .Check3
+	changeblock 18,  14, $5F
+.Check3:
+	checkevent EVENT_CRADLE_BOULDER_3
+	iffalse .Done
+	changeblock 14,  26, $5D
+.Done:
+	endcallback
 
 CradleScene1_Mejimi:	
 ;cf western capital
@@ -471,22 +441,25 @@ Brigader20BeatenText:
 
 Brigader20SeenText:
 	text "Tyson: I'm the"
-	line "top Brigader in"
-	cont "here! You would"
-	cont "not last a day in"
-	cont "this environment!"
+	line "top Brigader!"
+	
+	para "You wouldn't last"
+	line "a day in here!"
 	done
 
 
 CradleScene2_Adrinna:
 	applymovement PLAYER, Player_CCB1F_Move1
-	sjump Crade_Scene3
+	sjump Cradle_Scene3
 
 CradleScene2_Heatran:
 	applymovement PLAYER, Player_CCB1F_Move1
+	turnobject PLAYER, LEFT
+	turnobject CRADLE_ADRINNA_2, RIGHT
 	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
 	showtext CradleAdrinnaText1
 ; may need an additional 
+	turnobject PLAYER, RIGHT
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon HEATRAN, 50
 	startbattle
@@ -496,15 +469,15 @@ CradleScene2_Heatran:
 	disappear CRADLE_HEATRAN
 	setevent EVENT_CC_HEATRAN
 	;fallthru 
-Crade_Scene3: ; just in case you lose to adrinna after heatran 
+Cradle_Scene3: ; just in case you lose to adrinna after heatran 
 	showtext CradleAdrinnaText2
-	pause 10
+	pause 30
 	appear CRADLE_KURT
 	applymovement CRADLE_KURT, CradleKurtMovesToYou
 	turnobject CRADLE_ADRINNA_2, DOWN
 	showtext CradleKurtText1
 	special HealParty
-	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 10
+	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
 	showtext CradleAdrinnaText3
 	winlosstext CradleAdrinnaText4, 0
 	loadtrainer ADRINNA, ADRINNA2
@@ -519,7 +492,7 @@ Crade_Scene3: ; just in case you lose to adrinna after heatran
 	setevent EVENT_BEAT_ADRINNA_MINE
 	applyonemovement CRADLE_ADRINNA_2, teleport_from	
 	disappear CRADLE_ADRINNA_2
-	showemote EMOTE_SHOCK, CRADLE_KURT, 10
+	showemote EMOTE_SHOCK, CRADLE_KURT, 30
 	showtext CradleKurtText2
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
@@ -606,7 +579,9 @@ CradleAdrinnaText2:
 	cont "should do."
 	
 	para "Your only limit"
-	line "is ... ...?"
+	line "is ..."
+
+	para "...?"
 	done
 	
 	
@@ -616,7 +591,8 @@ CradleKurtText1:
 	next
 	text_start
 	text "Don't listen!"
-	line "I've been wrong."
+	line "I've been thinking"
+	cont "about my actions."
 	
 	para "When we could've"
 	line "used <RIVAL>'s"
@@ -661,7 +637,9 @@ CradleAdrinnaText5:
 	para "coming at his"
 	line "coronation."
 
-	para "Goodbye, for now."  
+	para "Now, <PLAYER>."
+	line "It's not too late"
+	cont "to join me."
 	done
 	
 CradleKurtText2:
@@ -676,4 +654,66 @@ CradleKurtText2:
 	line "regroup south"
 	para "of the capital."
 	line "Let's head there."
+	done
+
+AmosScriptCC:
+	faceplayer
+	checkevent EVENT_AMOS_INTRO_MINE
+	iftrue .AmosHeals
+	opentext
+	writetext AmosCradleText1
+	waitbutton
+	setevent EVENT_AMOS_INTRO_MINE
+	setflag ENGINE_FLYPOINT_SULFUR_STY
+.AmosHeals:
+	writetext AmosHealsText
+	waitbutton
+	closetext
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	special HealParty
+	playmusic MUSIC_HEAL
+	pause 60
+	special RestartMapMusic
+	special Special_FadeInQuickly
+	showtext AmosCradleText2
+	end 
+
+
+AmosCradleText1:
+	text_high
+    text " Amos: " 
+	next
+	text_start
+	text "<PLAYER>, I can"
+	line "hear Adrinna up"
+	cont "ahead."
+	
+	para "It sounds like a"
+	line "powerful #mon"
+	cont "is nearby, also."
+	done
+
+	
+AmosHealsText:	
+	text_high
+    text " Amos: " 
+	next
+	text_start
+	text "Let me heal your"
+	line "#mon."
+	done
+	
+	
+AmosCradleText2:
+	text_high
+    text " Amos: " 
+	next
+	text_start
+	text "Adrinna is deep"
+	line "within the mine."
+	
+	para "We're counting on"
+	line "you to disrupt"
+	cont "her plans!"
 	done
