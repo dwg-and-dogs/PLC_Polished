@@ -65,6 +65,7 @@ InitialEvents:
 	dw EVENT_LAKE_RIVAL
 	dw EVENT_LAKE_HURSALUNA
 	dw EVENT_BASCULEGION_LIVES
+	dw EVENT_KURT_MINE_2
 	dw -1
 
 InitialEngineFlags:

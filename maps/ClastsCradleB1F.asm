@@ -29,14 +29,15 @@ ClastsCradleB1F_MapScriptHeader:
 	object_event 27, 14, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 ; CUTSCENE 2
 	object_event   4,  16, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
-	object_event   5,  15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CC_HEATRAN
-	object_event   5,  26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2
+	pokemon_event  5,  14, HEATRAN, -1, -1, PAL_NPC_RED, HeatranText, EVENT_CC_HEATRAN
+;	object_event   5,  14, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CC_HEATRAN
+	object_event   5,  21, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2 ; initialize 
 
 	object_event 8, 5, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosScriptCC, EVENT_BEAT_ADRINNA_MINE
 
 ; TRAINERS
-	object_event  22,  20, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader19, EVENT_BEAT_ADRINNA_MINE
-	object_event  17,  24, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader20, EVENT_BEAT_ADRINNA_MINE
+	object_event  22,  20, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader19, EVENT_BEAT_ADRINNA_MINE
+	object_event  17,  24, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader20, EVENT_BEAT_ADRINNA_MINE
 
 	tmhmball_event 25, 23, TM_FOCUS_BLAST, EVENT_GOT_TM_FOCUS_BLAST 
 
@@ -64,6 +65,10 @@ CradleB1FStonesCallback:
 	changeblock 14,  26, $5D
 .Done:
 	endcallback
+	
+HeatranText:
+	text "Object"
+	done
 
 CradleScene1_Mejimi:	
 ;cf western capital
@@ -454,12 +459,18 @@ CradleScene2_Adrinna:
 
 CradleScene2_Heatran:
 	applymovement PLAYER, Player_CCB1F_Move1
+	pause 60
+	special Special_FadeOutMusic
+	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	turnobject PLAYER, LEFT
 	turnobject CRADLE_ADRINNA_2, RIGHT
 	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
 	showtext CradleAdrinnaText1
 ; may need an additional 
-	turnobject PLAYER, RIGHT
+	turnobject PLAYER, UP
+	cry HEATRAN
+	pause 30
+	applyonemovement CRADLE_HEATRAN, slide_step_down
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon HEATRAN, 50
 	startbattle
@@ -468,16 +479,21 @@ CradleScene2_Heatran:
 	setscene $2
 	disappear CRADLE_HEATRAN
 	setevent EVENT_CC_HEATRAN
+	reloadmapafterbattle
 	;fallthru 
 Cradle_Scene3: ; just in case you lose to adrinna after heatran 
+	turnobject PLAYER, LEFT
 	showtext CradleAdrinnaText2
+	turnobject PLAYER, DOWN
+	turnobject CRADLE_ADRINNA_2, DOWN
 	pause 30
 	appear CRADLE_KURT
 	applymovement CRADLE_KURT, CradleKurtMovesToYou
-	turnobject CRADLE_ADRINNA_2, DOWN
 	showtext CradleKurtText1
 	special HealParty
 	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
+	turnobject PLAYER, LEFT
+	turnobject CRADLE_ADRINNA_2, RIGHT
 	showtext CradleAdrinnaText3
 	winlosstext CradleAdrinnaText4, 0
 	loadtrainer ADRINNA, ADRINNA2
@@ -511,13 +527,10 @@ Player_CCB1F_Move1:
 	step_up
 	step_up
 	step_up
+	step_up
 	step_end
 	
 CradleKurtMovesToYou:
-	step_left
-	step_left
-	step_up
-	step_up
 	step_up
 	step_up
 	step_up
@@ -658,9 +671,13 @@ CradleKurtText2:
 
 AmosScriptCC:
 	faceplayer
+	opentext
+	; debug tech
+	setevent EVENT_KURT_MINE_2
+	disappear CRADLE_KURT
+	; end debug tech TODO 
 	checkevent EVENT_AMOS_INTRO_MINE
 	iftrue .AmosHeals
-	opentext
 	writetext AmosCradleText1
 	waitbutton
 	setevent EVENT_AMOS_INTRO_MINE
