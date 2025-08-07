@@ -4838,7 +4838,7 @@ RuinManiacGroup:
 ; ================
 
 	; RUIN_MANIAC ; becomes dragon tamer 
-	db "Leland@"
+	db "Lloyd@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 36, TORTERRA
@@ -7894,7 +7894,7 @@ DragonTamerGroup:
 ; ================
 
 	; DRAGON_TAMER
-	db "Leland@" ; LELAND2
+	db "Lloyd@" ; LELAND2
 	db TRAINERTYPE_NORMAL
 	; party
 	db 47, HIPPOWDON

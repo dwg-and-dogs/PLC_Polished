@@ -30,20 +30,16 @@ ClastsCradle1F_MapScriptHeader:
 	strengthboulder_event 22, 16, EVENT_BOULDER_CRADLE1F_1; goes to hole at 3
 	strengthboulder_event 30, 23, EVENT_BOULDER_CRADLE1F_2; goes to hole at 4
 	strengthboulder_event 23, 35, EVENT_BOULDER_CRADLE1F_3; goes to hole at 5	
-	
+	; todo add a ninja that tells you there's three boulders we need to push down 
+	object_event  16,  6, SPRITE_NINJA, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, CradleNinjaHelpText, EVENT_BEAT_ADRINNA_MINE
 	object_event  22,  4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader16, EVENT_BEAT_ADRINNA_MINE
-	object_event  31, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader17, EVENT_BEAT_ADRINNA_MINE
+	object_event  31, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBrigader17, EVENT_BEAT_ADRINNA_MINE
 	object_event   3, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader18, EVENT_BEAT_ADRINNA_MINE
-
 	object_event  14, 28, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerNobel, EVENT_BEAT_ADRINNA_MINE	
 	object_event  11, 39, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerIngsol, EVENT_BEAT_ADRINNA_MINE
-
 	object_event  32, 11, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerHank2, EVENT_BEAT_ADRINNA_MINE	
 	object_event  31, 31, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerJones2, EVENT_BEAT_ADRINNA_MINE
 	object_event  16, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerLeland2, EVENT_BEAT_ADRINNA_MINE
-
-
-
 	itemball_event 9, 9, NUGGET, 1, EVENT_CRADLE_1F_NUGGET
 	itemball_event 28, 35, FULL_RESTORE, 1, EVENT_CRADLE_1F_FULL_RESTORE
 	itemball_event 19, 33, MAX_REVIVE, 1, EVENT_CRADLE_1F_MAX_REVIVE
@@ -69,18 +65,18 @@ Cradle1FBoulders:
 
 .BoulderTable:
 	stonetable 3, CRADLE1F_BOULDER1, .Disappear1
-	stonetable 4, CRADLE1F_BOULDER1, .Disappear2
-	stonetable 5, CRADLE1F_BOULDER1, .Disappear3
+	stonetable 4, CRADLE1F_BOULDER2, .Disappear2
+	stonetable 5, CRADLE1F_BOULDER3, .Disappear3
 	db -1 ; end
 
-.Disappear2:
+.Disappear1:
 	disappear CRADLE1F_BOULDER1
 	sjump .BouldersCradle1F
-	
-.Disappear1:
+
+.Disappear2:
 	disappear CRADLE1F_BOULDER2
 	sjump .BouldersCradle1F
-
+	
 .Disappear3:
 	disappear CRADLE1F_BOULDER3
 ;fallthru
@@ -92,6 +88,20 @@ Cradle1FBoulders:
 
 	text "The boulder fell"
 	line "through!"
+	done
+
+CradleNinjaHelpText:
+	text "<PLAYER>. Amos is"
+	line "down below, but"
+	para "we can't get to"
+	line "Adrinna yet."
+	
+	para "We need to span"
+	line "three lava fields"
+	cont "to reach her."
+	
+	para "Hurry! There's"
+	line "not much time!"
 	done
 
 GenericTrainerBrigader16: ; dragons 
@@ -221,6 +231,9 @@ Leland2SeenText:
 	done
 
 CC_1F_Switch1:
+	;debug tech
+	setmapscene CLASTS_CRADLE_B1F, $1
+	; end debug tech todo 
 	opentext
 	writetext CartSwitchText
 	yesorno
@@ -231,7 +244,7 @@ CC_1F_Switch1:
 	changeblock 14, 28, $C4
 	playsound SFX_THUNDER
 	waitsfx
-	setevent EVENT_CRADLE_2F_CART_1
+	setevent EVENT_CRADLE_1F_CART_1
 	reloadmappart
 	jumptext CartMovedText 
 	
@@ -240,6 +253,6 @@ CC_1F_SwitchBack:
 	changeblock 14, 28, $C5
 	playsound SFX_THUNDER
 	waitsfx
-	clearevent EVENT_CRADLE_2F_CART_1
+	clearevent EVENT_CRADLE_1F_CART_1
 	reloadmappart
 	jumptext CartMovedText 

@@ -21,7 +21,7 @@ SulfurSty_MapScriptHeader:
 	bg_event 44, 10, BGEVENT_ITEM + BIG_NUGGET, 	EVENT_HIDDEN_STY_3 
 	bg_event 46, 11, BGEVENT_ITEM + MAX_ELIXIR, 	EVENT_HIDDEN_STY_4
 	bg_event 45, 25, BGEVENT_JUMPTEXT, StySignText
-	bg_event 14, 17, SulfurStyTimeTravelScript
+	bg_event 14, 17, BGEVENT_READ, SulfurStyTimeTravelScript
 
 	def_object_events
 	; set 1
@@ -41,8 +41,8 @@ SulfurSty_MapScriptHeader:
 	pokemon_event 24, 6, MAGNETON, -1, -1, PAL_NPC_BROWN, StyMagnetonText, EVENT_BEAT_ADRINNA_MINE
 
 	object_event  35, 19, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader21, EVENT_BEAT_ADRINNA_MINE ; ground
-	object_event  37, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader13, EVENT_BEAT_ADRINNA_MINE ; fighting 
-	object_event  22, 13, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader14, EVENT_BEAT_ADRINNA_MINE ; flying 
+	object_event  37, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBrigader13, EVENT_BEAT_ADRINNA_MINE ; fighting 
+	object_event  24, 13, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader14, EVENT_BEAT_ADRINNA_MINE ; flying 
 
 	object_event 14, 18, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BrigaderRoadblock3Text, EVENT_BEAT_ADRINNA_MINE ; fighting 	
 	; roadblocks 
@@ -110,7 +110,7 @@ BrigaderRoadblock3Text:
 	done
 
 GenericTrainerBrigader21:
-	generictrainer BRIGADER, 21, EVENT_BEAT_ROCKET_GRUNTM_12, Brigader12SeenText, Brigader12BeatenText
+	generictrainer BRIGADER, 21, EVENT_BEAT_ROCKET_GRUNTM_21, Brigader21SeenText, Brigader21BeatenText
 
 Brigader21BeatenText:
 	text "Crushed!"
@@ -198,7 +198,7 @@ Brigader3Text:
 	done
 
 StyMagnetonText:
-	text "<Beep, spark>"
+	text "(Beep, spark)"
 	done
 
 BrigaderRoadblock1Text:

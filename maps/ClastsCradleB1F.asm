@@ -51,15 +51,15 @@ ClastsCradleB1F_MapScriptHeader:
 
 
 CradleB1FStonesCallback:
-	checkevent EVENT_CRADLE_BOULDER_1
+	checkevent EVENT_BOULDER_CRADLE1F_1
 	iffalse .Check2
 	changeblock 14,  6, $5D
 .Check2:
-	checkevent EVENT_CRADLE_BOULDER_2
+	checkevent EVENT_BOULDER_CRADLE1F_2
 	iffalse .Check3
 	changeblock 18,  14, $5F
 .Check3:
-	checkevent EVENT_CRADLE_BOULDER_3
+	checkevent EVENT_BOULDER_CRADLE1F_3
 	iffalse .Done
 	changeblock 14,  26, $5D
 .Done:

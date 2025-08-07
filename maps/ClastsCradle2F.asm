@@ -24,7 +24,7 @@ ClastsCradle2F_MapScriptHeader:
 	tmhmball_event 9, 6, TM_EXPLOSION, EVENT_GOT_TM_EXPLOSION
 ; ENGINEERS FACE AWAY FROM YOU BUT WILL BATTLE YOU 
 	object_event  16,  6, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerGoeth, -1
-	object_event   3,  5, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader15, -1
+	object_event   4,  5, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBrigader15, -1
 	
 	object_const_def
 
@@ -53,7 +53,7 @@ CC_2F_Switch:
 	
 CC_2F_SwitchBack:
 	changeblock 16,  8, $C8 
-	changeblock 4, 8, $C5
+	changeblock 4, 8, $B8
 	playsound SFX_THUNDER
 	waitsfx
 	clearevent EVENT_CRADLE_2F_CART_1

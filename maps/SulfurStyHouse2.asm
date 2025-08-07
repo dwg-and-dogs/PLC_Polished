@@ -18,7 +18,7 @@ SulfurStyHouse2_MapScriptHeader:
 
 	def_object_events
 	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, SulfurStyHouse2Script, -1
-	pokemon_event 8,  4, TAUROS, -1, -1, PAL_NPC_BROWN, TaurosGigaText, -1
+	pokemon_event 6,  4, TAUROS, -1, -1, PAL_NPC_BROWN, TaurosGigaText, -1
 
 
 SulfurStyHouse2Script: 
