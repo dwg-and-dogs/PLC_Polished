@@ -19,7 +19,7 @@ TinderGarden2_MapScriptHeader:
 	object_event  3,  1, SPRITE_BLACK_BELT, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event  5,  3, SPRITE_SCHOOLBOY, 	SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event  6,  1, SPRITE_WHITNEY, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	pokemon_event   7, 2, PINECO, 		-1, -1, PAL_NPC_BLUE, 	TG2Text, -1 ; POISON VS GRASS VS ROCK/GND
+	pokemon_event   7, 2, PINECO, 		-1, -1, PAL_NPC_BLUE, 	TG2Text, -1 ; BUG  VS GRASS VS ROCK/GND
 	pokemon_event   8, 2, TANGELA, 		-1, -1, PAL_NPC_GREEN, 	TG2Text, -1
 	pokemon_event   9, 2, GEODUDE, 		-1, -1, PAL_NPC_BROWN, 	TG2Text, -1	
 	
@@ -244,5 +244,6 @@ TG2_Text3:
 	cont "us one more time"
 	
 	para "about the hero on"
-	line "the Burned Tower?"
+	line "the Burned Tower,"
+	cont "180 years ago?"
 	done

@@ -12,9 +12,7 @@ BrassTower17F_MapScriptHeader:
 	warp_event 10, 15, BRASS_TOWER_14F, 1
 
 
-
 	def_coord_events
-
 
 
 	def_bg_events
@@ -38,7 +36,6 @@ BrassTower17FCallback:
 
 GenericTrainerElderSatoru:
     generictrainer ELDER, SATORU, EVENT_BEAT_ELDER_SATORU, SatoruSeenText, SatoruBeatenText
-
 
 SatoruBeatenText:
 	text "Hm, but why does"

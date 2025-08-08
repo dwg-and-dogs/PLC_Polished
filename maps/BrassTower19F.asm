@@ -14,29 +14,36 @@ BrassTower19F_MapScriptHeader:
 
 
 	def_bg_events
-
+; todo add something that warps you to the next room and resets events 
 
 
 	def_object_events
-	pokemon_event  1, 10, 	FLAREON, 	-1, -1, PAL_NPC_RED, BrassTower19FFlareonText, EVENT_BRASS_TOWER_FLAREON
-	pokemon_event  14,  6, 	VAPOREON, 	-1, -1, PAL_NPC_BLUE, BrassTower19FVaporeonText, EVENT_BRASS_TOWER_VAPOREON
-	pokemon_event  1,  2, 	JOLTEON, 	-1, -1, PAL_NPC_BROWN, BrassTower19FJolteonText, EVENT_BRASS_TOWER_JOLTEON
+	pokemon_event  1, 10, 	FLAREON, 	-1, -1, PAL_NPC_SILVER, BrassTower19FFlareonText, EVENT_BRASS_TOWER_FLAREON
+	pokemon_event  12,  6, 	VAPOREON, 	-1, -1, PAL_NPC_SILVER, BrassTower19FVaporeonText, EVENT_BRASS_TOWER_VAPOREON
+	pokemon_event  1,  2, 	JOLTEON, 	-1, -1, PAL_NPC_SILVER, BrassTower19FJolteonText, EVENT_BRASS_TOWER_JOLTEON
 
 
-
-	object_const_def
 
 BrassTower19FFlareonText:
 	text "Flareon stands"
 	line "guard intently."
+	
+	para "Or is it just an"
+	line "apparition?"
 	done
 	
 BrassTower19FVaporeonText:
 	text "Vaporeon stands"
 	line "guard intently."
+
+	para "Or is it just an"
+	line "apparition?"
 	done
 	
 BrassTower19FJolteonText:
 	text "Jolteon stands"
 	line "guard intently."
+
+	para "Or is it just an"
+	line "apparition?"
 	done

@@ -176,11 +176,25 @@ InitMapNameSign::
 .check_dragons_den:
 	ld a, [wMapGroup]
 	cp GROUP_DRAGONS_DEN
-	jr nz, .check_clasts_cradle
+	jr nz, .check_clasts_cradle_2f
 	ld a, [wMapNumber]
 	cp MAP_DRAGONS_DEN
 	ret z
-.check_clasts_cradle:
+.check_clasts_cradle_2f:
+	ld a, [wMapGroup]
+	cp GROUP_CLASTS_CRADLE_2F
+	jr nz, .check_clasts_cradle_1f
+	ld a, [wMapNumber]
+	cp MAP_CLASTS_CRADLE_2F
+	ret z
+.check_clasts_cradle_1f:
+	ld a, [wMapGroup]
+	cp GROUP_CLASTS_CRADLE_1F
+	jr nz, .check_clasts_cradle_b1f
+	ld a, [wMapNumber]
+	cp MAP_CLASTS_CRADLE_1F
+	ret z
+.check_clasts_cradle_b1f:
 	ld a, [wMapGroup]
 	cp GROUP_CLASTS_CRADLE_B1F
 	ret nz

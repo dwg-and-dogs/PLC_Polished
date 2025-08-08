@@ -48,6 +48,7 @@ BrassTower14FFlareonScript:
 	disappear BRASS_TOWER_FLAREON
 	setevent EVENT_BRASS_TOWER_FLAREON
 	reloadmapafterbattle
+	showtext FlareonGoneText
 	end
 	
 FlareonGuardianText:
