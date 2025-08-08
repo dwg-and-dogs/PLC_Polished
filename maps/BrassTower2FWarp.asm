@@ -1,4 +1,5 @@
-BrassTower2FWarp_MapScriptHeader: ;	def_scene_scripts
+BrassTower2FWarp_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -21,7 +22,7 @@ BrassTower2FWarp_MapScriptHeader: ;	def_scene_scripts
 	object_event  4,  2, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTowerBobesh, -1
 
 
-	object_const_def
+
 	
 BrassTowerBobesh:
 	checkevent EVENT_BEAT_BOBESH_TOWER
@@ -41,8 +42,8 @@ BrassTowerBobesh:
     text " Bobesh: " 
 	next
 	text_start
-	text "What're you doing"
-	line "in my sanctum?"
+	text "You! Here, in"
+	line "my sanctum?"
 	
 	para "You ruined my"
 	line "stadium!"

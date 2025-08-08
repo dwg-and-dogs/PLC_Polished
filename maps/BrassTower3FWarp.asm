@@ -1,4 +1,5 @@
-BrassTower3FWarp_MapScriptHeader: ;	def_scene_scripts
+BrassTower3FWarp_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -43,7 +44,7 @@ BrassTowerKensey:
 	text_start
 	text "Egad! How did the"
 	line "winds of fate"
-	cont "bring YOU here?"
+	cont "bring you here?"
 	
 	para "Were my traps not"
 	line "confusing enough?"
@@ -68,9 +69,9 @@ BrassTowerKensey:
 	next
 	text_start
 	text "I have no more"
-	line "ways to stop"
-	para "you. The arc"
-	line "of the universe"
+	line "ways to stop you."
+	para "But the arc of"
+	line "the universe"
 	para "will arrest you"
 	line "soon enough."
 	done

@@ -1,4 +1,5 @@
-BrassTower4FWarp_MapScriptHeader: ;	def_scene_scripts
+BrassTower4FWarp_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -12,28 +13,28 @@ BrassTower4FWarp_MapScriptHeader: ;	def_scene_scripts
 	def_coord_events
 
 
-
 	def_bg_events
-
 
 
 	def_object_events
 	object_event  5,  4, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTowerAdrinna, -1
 
 
-	object_const_def
-	
 BrassTowerAdrinna:
 	checkevent EVENT_BEAT_ADRINNA_TOWER
 	iftrue_jumptextfaceplayer AdrinnaAfterText
 	checkpoke CELEBI
-	iftrue .DeclinedCelebi 
-	showtextfaceplayer AdrinnaTowerSeenText
-	pause 10
+	iftrue .DeclinedDueToCelebi
+	faceplayer
+	opentext
+	writetext AdrinnaTowerSeenText
+	pause 30
 	yesorno
 	iftrue .YesToAdrinna
 .Declined:
-	showtext NoToAdrinnaText
+	writetext NoToAdrinnaText
+	waitbutton
+	closetext
 	winlosstext BeatenTextAdrinnaWarp, 0
 	loadtrainer ADRINNA, 3
 	startbattle
@@ -42,17 +43,19 @@ BrassTowerAdrinna:
 	setevent EVENT_BEAT_ADRINNA_TOWER
 	end
 
-.DeclinedCelebi:
+.DeclinedDueToCelebi:
 	showtext AdrinnaSeenText0
 	sjump .Declined
 	end
 
 .YesToAdrinna:
-	showtext AreYouSureAdrinna
+	writetext AreYouSureAdrinna
 	yesorno
 	iffalse .Declined ; jumps above
 	setevent EVENT_ACCEPTED_ADRINNA
-	showtext AdrinnaTakesOverText
+	writetext AdrinnaTakesOverText
+	waitbutton
+	closetext
 	setevent EVENT_BEAT_ADRINNA_TOWER
 	end
 
@@ -107,9 +110,9 @@ AdrinnaTowerSeenText:
 	line "around the world!"
 	
 	para "What do you say?"
-	line "Join with"
-	para "me. We only need"
-	line "a cult of self."
+	line "Join me. We only"
+	cont "need a cult of"
+	cont "the self."
 	done
 
 
@@ -132,7 +135,7 @@ AdrinnaAfterText:
 	text_start
 	text "Goodbye <PLAYER>."
 	line "One day, you'll"
-	line "look around and"
+	cont "look around and"
 	para "see corruption"
 	line "metastasize, and"
 	para "you'll wish that"
@@ -150,9 +153,9 @@ AdrinnaTakesOverText:
 	text "Excellent. Meet"
 	line "me on the roof."
 	para "We will show"
-	line "them how little"
-	para "they need"
-	line "Consul Urgaust."
+	line "Johto how little"
+	cont "it needs Consul"
+	cont "Urgaust."
 	done
 
 AreYouSureAdrinna:

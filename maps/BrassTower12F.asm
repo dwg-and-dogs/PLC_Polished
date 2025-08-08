@@ -91,10 +91,10 @@ SpiritsChangedText:
 	text "Sprits changed!"
 	done
 
-BrassTowerGuardText:
-	text "A spirit blocks"
-	line "the path."
-	done
+;BrassTowerGuardText:
+;	text "A spirit blocks"
+;	line "the path."
+;	done
 
 GenericTrainerElderNoboru:
     generictrainer ELDER, NOBORU, EVENT_BEAT_ELDER_NOBORU, NoboruSeenText, NoboruBeatenText
