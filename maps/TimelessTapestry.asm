@@ -14,23 +14,25 @@ TimelessTapestry_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event 10,  9, BGEVENT_ITEM + MAX_ELIXIR, 	EVENT_HIDDEN_TAPESTRY_1 
+	bg_event 10,  9, BGEVENT_ITEM + MAX_ELIXIR, 	EVENT_HIDDEN_TAPESTRY_1
 	bg_event  7, 15, BGEVENT_ITEM + BIG_NUGGET, 	EVENT_HIDDEN_TAPESTRY_2
-
+	bg_event 4, 8, BGEVENT_JUMPTEXT, TT_SignText
+	bg_event 4, 13, BGEVENT_JUMPTEXT, TT_ChamberText
+	bg_event 16, 13, BGEVENT_JUMPTEXT, TT_ChamberText
 
 	def_object_events
 	; objects for the final cutscene 
-	object_event 8, 26, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TAPESTRY_SAMSARA ; 
+	object_event 8, 26, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TAPESTRY_SAMSARA ;
 	object_event 7, 26, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	; player at 9, 29 
 	; interactables  
-	object_event 10, 14, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryVera, -1 ; VERA 
-	object_event 15, 15, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, -1 ; PIPER, former beauty 
-	object_event 12, 22, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestrySamaria, -1 ; SAMARIA
-	object_event 13, 22, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryShiji, -1
-	object_event 16, 15, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryMorphea, -1
-	object_event 13, 21, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TapestryAmos, -1
-	pokemon_event 14, 21, BRONZONG, -1, -1, PAL_NPC_BLUE, TT_BronzongText, -1
+	object_event  6,  8, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryVera, -1 ; VERA
+	object_event  9, 17, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, -1 ; PIPER, former beauty
+	object_event 12, 20, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestrySamaria, -1 ; SAMARIA
+	object_event 13, 20, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryShiji, -1
+	object_event 10, 17, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TapestryMorphea, -1
+	object_event 16, 15, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TapestryAmos, -1
+	pokemon_event 17, 15, BRONZONG, -1, -1, PAL_NPC_BLUE, TT_BronzongText, -1
 
 	object_const_def
 	const TAPESTRY_SAMSARA
@@ -39,6 +41,18 @@ TimelessTapestry_MapScriptHeader:
 TimelessTapestryFlyPoint:
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	endcallback	
+
+TT_SignText:
+	text "Timeless Tapestry"
+	para "A sanctum of"
+	line "wisdom from Johto"
+	cont "and beyond"
+	done
+
+TT_ChamberText:
+	text "Rubble covers the"
+	line "temple's opening."
+	done
 
 TapestryAmos:
 	faceplayer
@@ -283,11 +297,38 @@ PiperAfterText:
 	done
 	
 TapestryMorphea:
+	faceplayer
+	opentext
+	checkevent EVENT_KIMONO_CABIN_EEVEE
+	iffalse_jumptext MorpheaNoEeveeText
+	checkevent EVENT_TAPESTRY_CELEBI
+	iftrue_jumptext MorpheaAfterText
+	jumpthistext 
+	
 	text "Morphea: Doesn't"
 	line "my great grand-"
 	para "daughter wear"
 	line "the Kimono so"
 	cont "elegantly?"
+	done
+
+MorpheaNoEeveeText:
+	text "I've been having"
+	line "such odd dreams."
+	
+	para "If you think you"
+	line "can help, please"
+	para "visit me back at"
+	line "the cabin in the"
+	cont "Holt."
+	done
+
+MorpheaAfterText:
+	text "You've done it!"
+	line "Celebi has joined"
+	para "you! Now, Amos is"
+	line "waiting: You must"
+	cont "stop Urgaust!"
 	done
 
 TapestrySamaria:

@@ -395,10 +395,10 @@ ENDM
 	map_attributes WesternCapitalCemetery, WESTERN_CAPITAL_CEMETERY, $0, 0
 
 	map_attributes WesternCapital, WESTERN_CAPITAL, $5, SOUTH 
-	connection south, WhispersWay, WHISPERS_WAY, 7
+	connection south, WhispersWay, WHISPERS_WAY, 4
 	
 	map_attributes WhispersWay, WHISPERS_WAY, $5, NORTH 
-	connection north, WesternCapital, WESTERN_CAPITAL, 7	; 
+	connection north, WesternCapital, WESTERN_CAPITAL, -4	; 
 
 	map_attributes TimelessTapestry, TIMELESS_TAPESTRY, $5, 0
 	

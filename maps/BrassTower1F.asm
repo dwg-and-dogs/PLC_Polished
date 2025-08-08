@@ -6,7 +6,7 @@ BrassTower1F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 8, 2, BRASS_TOWER_12F, 4
+	warp_event 8, 2, BRASS_TOWER_12F, 1
 
 	def_coord_events
 
@@ -51,7 +51,7 @@ BrassTowerAmosScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp TIMELESS_TAPESTRY, 12, 21
+	warp TIMELESS_TAPESTRY, 12, 18
 	end
 
 BrassTowerAmosText1:

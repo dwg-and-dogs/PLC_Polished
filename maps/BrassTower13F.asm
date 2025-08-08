@@ -28,8 +28,8 @@ BrassTower13F_MapScriptHeader:
 	pokemon_event  10,  5, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
 	pokemon_event  2, 12, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
 
-	object_event  1, 6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderIsamu, -1 ; courage
-	object_event  12,6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderKaito, -1 ; sea, soar
+	object_event  1, 6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerElderIsamu, -1 ; courage
+	object_event  12,6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerElderKaito, -1 ; sea, soar
 
 
 	object_const_def
@@ -42,26 +42,41 @@ BrassTowerGuardText:
 
 BrassTowerSwitchScript:
 	checkevent EVENT_BRASS_TOWER_RIGHT_GUARD
-	iftrue AskSwitchToLeft
+	iftrue .AskSwitchToLeft
 	opentext
-	writetext SwitchSpiritsText
-	yesorno
-	iffalse_jumpopenedtext NotSwitchingText
-	clearevent EVENT_BRASS_TOWER_RIGHT_GUARD
-	setevent EVENT_BRASS_TOWER_LEFT_GUARD
-	reloadmap
-	endtext
-
-AskSwitchToLeft:
-	opentext
-	writetext SwitchSpiritsText
+	writetext SwitchSpiritsTextRight
 	yesorno
 	iffalse_jumpopenedtext NotSwitchingText
 	setevent EVENT_BRASS_TOWER_RIGHT_GUARD
 	clearevent EVENT_BRASS_TOWER_LEFT_GUARD
-	reloadmap
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	special Special_FadeInQuickly
 	endtext
+	end
 
+.AskSwitchToLeft:
+	opentext
+	writetext SwitchSpiritsTextLeft
+	yesorno
+	iffalse_jumpopenedtext NotSwitchingText
+	clearevent EVENT_BRASS_TOWER_RIGHT_GUARD
+	setevent EVENT_BRASS_TOWER_LEFT_GUARD
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	special Special_FadeInQuickly
+	endtext
+	end
+
+SwitchSpiritsTextRight:
+	text "Call up the LEFT"
+	line "spirits?"
+	done
+
+SwitchSpiritsTextLeft:
+	text "Call up the RIGHT"
+	line "spirits?"
+	done
 
 SwitchSpiritsText:
 	text "Change spirits?"
@@ -72,9 +87,12 @@ NotSwitchingText:
 	done
 
 BrassTower13FUnownScript:
-	showtext BrassTowerUnownText
+	opentext
+	writetext BrassTowerUnownText
+	waitbutton
 	cry UNOWN
 	pause 15
+	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon UNOWN, 50
 	startbattle

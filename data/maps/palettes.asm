@@ -61,7 +61,7 @@ ENDM
 	special_bg_pal landmark, SERENE_SPRINGS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, STADIUM,			          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
 	special_bg_pal landmark, STADIUM_GROUNDS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
-	special_bg_pal landmark, WESTERN_CAPITAL,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	; todo palette at the roof 
+	special_bg_pal landmark, WESTERN_CAPITAL,			  PAL_TIMEOFDAY, WesternCapitalPalette 	; todo palette at the roof 
 	special_bg_pal landmark, EMPERORS_GARDEN,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, CATTLE_CULL,				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
 	special_bg_pal landmark, TRADERS_LANDING,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette ; todo palette at the roof 		
@@ -73,7 +73,7 @@ ENDM
 	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SinjohCrossroadsPalette 		
 	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, EerieHamletPalette 	; todo palette at the roof 
 	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, EerieHamletPalette 		
-	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 		
+	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, WesternCapitalPalette 		
 
 	special_bg_pal map,      CIANWOOD_CAVE,               PAL_SINGLE,    WhirlIslandsPalette
 	special_bg_pal map,  	 DRAGONS_DEN,       		  PAL_SINGLE,    DragonShrinePalette
@@ -1126,6 +1126,39 @@ endc
 EerieHamletPalette:
 if !DEF(MONOCHROME)
 INCLUDE "gfx/tilesets/eerie_hamlet_mildsepia.pal"
+else
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 7
+	MONOCHROME_RGB_FOUR
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+rept 4
+	MONOCHROME_RGB_FOUR_NIGHT
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+	MONOCHROME_RGB_FOUR_NIGHT
+	MONOCHROME_RGB_FOUR_NIGHT
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+endc
+
+WesternCapitalPalette:
+if !DEF(MONOCHROME)
+INCLUDE "gfx/tilesets/WesternCapitalPalette.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR
