@@ -11,6 +11,7 @@ BrassTower2F_MapScriptHeader:
 	warp_event 2, 4, BRASS_TOWER_3F, 1
 
 
+
 	def_coord_events
 
 

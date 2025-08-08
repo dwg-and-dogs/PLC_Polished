@@ -34,3 +34,10 @@
 	RGB 29,25,21, 21,13,05, 16,09,01, 06,05,05 ; brown
 	RGB 29,25,21, 18,06,03, 11,05,04, 06,05,05 ; roof
 	RGB 31,31,16, 31,31,16, 14,09,00, 00,00,00 ; text
+;New_R = R * 0.9 + (R > 15 ? 2 : 0)
+;New_G = G * 0.85 
+;New_B = B * 0.8 + 1
+;Gray palettes: Add slight red tint to simulate ash with ember dust
+;Green palettes: Reduce saturation more heavily (multiply G by 0.7) - vegetation struggles in volcanic environments
+;Brown/Mountain palettes: Shift toward darker, more reddish-brown volcanic rock tones
+;Water palettes: Add slight gray tint to simulate ash settling on water surfaces

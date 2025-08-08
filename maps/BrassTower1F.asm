@@ -6,7 +6,7 @@ BrassTower1F_MapScriptHeader:
 
 
 	def_warp_events
-
+	warp_event 8, 2, BRASS_TOWER_12F, 4
 
 	def_coord_events
 
@@ -17,14 +17,30 @@ BrassTower1F_MapScriptHeader:
 
 
 	def_object_events
+	object_event  5,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, BrassTowerKurtJournalText, -1
 	object_event 6, 2, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TowerKurtScript, -1 ; 
+	object_event   7, 2, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptBT, -1
+
 	object_event 7, 13, SPRITE_AMOS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerAmosScript, -1 ; done
 	object_event  5,  13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_PREP, -1
 	object_event 9, 13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerHealScript, -1 ; done
-	object_event  5,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, BrassTowerKurtJournalText, -1
 
 
-	object_const_def
+NatuScriptBT:
+	opentext
+	writetext BT_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+BT_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+	done
+
 
 BrassTowerAmosScript:
 	faceplayer
@@ -47,15 +63,15 @@ BrassTowerAmosText1:
 
 	para "If you need more"
 	line "preparation, I"
-	para "can warp you out"
-	line "of here."
+	para "can teleport you"
+	line "out of here."
 	done
 
 BrassTowerAmosText:
-	text "Let's go. I'll"
-	line "hold off anyone"
-	cont "who tries to come"
-	cont "up behind."
+	text "Let's go. There"
+	line "may be brigaders"
+	para "or sages guarding"
+	line "the tower."
 	done
 
 BrassTowerHealScript: ; cf ilex healer
@@ -84,21 +100,13 @@ BrassHealedPokemon:
 
 TowerKurtScript: 
 	faceplayer
-	writetext TowerKurtPCQuestion
-	yesorno
-	iffalse_jumpopenedtext KurtTowerDeclineText
+	opentext
 	writetext KurtTowerText2
-	promptbutton
-	special PokemonCenterPC
+	waitbutton
+	closetext
 	end
 
-TowerKurtPCQuestion:
-	text "Do you need me to"
-	line "manage your party"
-	cont "for you?"
-	done
-
-KurtTowerDeclineText:
+KurtTowerText2:
 	text "Let's finish what"
 	line "we started."
 	
@@ -112,12 +120,6 @@ KurtTowerDeclineText:
 	line "to him before we"
 	para "get caught in the"
 	line "rainstorm."
-	done
-
-KurtTowerText2:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
 	done
 
 BrassTowerKurtJournalText:

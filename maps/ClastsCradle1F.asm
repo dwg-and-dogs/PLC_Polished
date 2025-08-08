@@ -54,7 +54,7 @@ ClastsCradle1F_MapScriptHeader:
 Cradle1FCartCallback:
 	checkevent EVENT_CRADLE_1F_CART
 	iffalse .Done
-	changeblock 30, 28, $C9
+	changeblock 30, 28, $C8
 	changeblock 14, 28, $C5
 .Done:
 	endcallback
@@ -89,6 +89,35 @@ Cradle1FBoulders:
 	text "The boulder fell"
 	line "through!"
 	done
+	
+
+CC_1F_Switch1:
+	;debug tech
+	setmapscene CLASTS_CRADLE_B1F, $1
+	; end debug tech todo 
+	opentext
+	writetext CartSwitchText
+	yesorno
+	iffalse_jumptext CartNoSwitchText
+	checkevent EVENT_CRADLE_1F_CART_1
+	iftrue CC_1F_SwitchBack
+	changeblock 30, 28, $C9
+	changeblock 14, 28, $C4
+	playsound SFX_THUNDER
+	waitsfx
+	setevent EVENT_CRADLE_1F_CART_1
+	reloadmappart
+	jumptext CartMovedText 
+	
+CC_1F_SwitchBack:
+	changeblock 30, 28, $C8 
+	changeblock 14, 28, $C5
+	playsound SFX_THUNDER
+	waitsfx
+	clearevent EVENT_CRADLE_1F_CART_1
+	reloadmappart
+	jumptext CartMovedText 
+
 
 CradleNinjaHelpText:
 	text "<PLAYER>. Amos is"
@@ -229,30 +258,3 @@ Leland2SeenText:
 	line "when I'm done"
 	cont "with you!"
 	done
-
-CC_1F_Switch1:
-	;debug tech
-	setmapscene CLASTS_CRADLE_B1F, $1
-	; end debug tech todo 
-	opentext
-	writetext CartSwitchText
-	yesorno
-	iffalse_jumptext CartNoSwitchText
-	checkevent EVENT_CRADLE_1F_CART_1
-	iftrue CC_1F_SwitchBack
-	changeblock 30, 28, $C9
-	changeblock 14, 28, $C4
-	playsound SFX_THUNDER
-	waitsfx
-	setevent EVENT_CRADLE_1F_CART_1
-	reloadmappart
-	jumptext CartMovedText 
-	
-CC_1F_SwitchBack:
-	changeblock 30, 28, $C8 
-	changeblock 14, 28, $C5
-	playsound SFX_THUNDER
-	waitsfx
-	clearevent EVENT_CRADLE_1F_CART_1
-	reloadmappart
-	jumptext CartMovedText 

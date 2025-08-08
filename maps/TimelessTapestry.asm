@@ -1,12 +1,12 @@
 TimelessTapestry_MapScriptHeader: 
 	def_scene_scripts
-	scene_script TapestrySceneFinale
+	scene_script TapestrySceneFinale ; may need to have something set this map scene earlier?
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, TimelessTapestryFlyPoint
 
 	def_warp_events
-	warp_event 3, 5, WHISPERS_TAPESTRY_GATE, 2
+	warp_event 3, 5, WHISPERS_TAPESTRY_GATE, 3
 
 
 	def_coord_events
@@ -19,6 +19,7 @@ TimelessTapestry_MapScriptHeader:
 
 
 	def_object_events
+	; objects for the final cutscene 
 	object_event 8, 26, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TAPESTRY_SAMSARA ; 
 	object_event 7, 26, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	; player at 9, 29 
@@ -57,21 +58,53 @@ TT_BronzongText:
 	done
 
 TapestryAmosText1:
-	text "Brigaders guard"
-	line "the tower, but my"
-	para "#mon can tel-"
-	line "eport inside."
+	text_high
+    text " Amos: "
+	next
+	text_start
+	
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at the mine."
+	
+	para "But my sources"
+	line "say that Adrinna"
+	para "plans to usurp"
+	line "the Consul at his"
+	cont "coronation."
+	
+	para "Even if she does"
+	line "not, the Consul"
+	para "plans to annex"
+	line "all of Johto at"
+	cont "the ceremony."
+	
+	para "Our traditions"
+	line "will be replaced"
+	para "to honor a new"
+	line "emperor!"
+	
+	para "This is not the"
+	line "way to repel the"
+	cont "outsiders!"
+	
+	para "We must stop them"
+	line "at all costs."
+	
+	para "Brigaders guard"
+	line "the Bell tower,"
+	para "but my #mon"
+	line "can teleport us."
 	
 	para "Are you ready?"
 	done
 
 TapestryAmosNoText:
-	text "Get ready quick!"
-	line "There's not much"
-	cont "time!"
+	text "Go quick! There's"
+	line "not much time!"
 	done
 
-TapestrySceneFinale: ; if you helped all the kimono girls then piper gets to come with too 
+TapestrySceneFinale: 
 	;cf western capital scene ;
 	checkevent EVENT_BEAT_MEJIMI
 	iffalse .NoScene
@@ -106,10 +139,11 @@ TapestryTextAmos:
 	line "and if there is"
 	
 	para "no more need for"
-	line "common defense,"
+	line "common defense"
+	cont "against outsiders"
 	
-	para "dissolve our"
-	line "union."
+	para "we will dissolve"
+	line "our union."
 	
 	para "..."
 
@@ -124,7 +158,7 @@ TapestryTextSamsara:
 	next
 	text_start
 	text "The events of the"
-	line "Burned Tower."
+	line "Bell Tower."
 	
 	para "A time when we"
 	line "rejected the idea"
@@ -151,8 +185,11 @@ TapestryVera:
 	done
 
 TapestryPiper:
+	checkevent EVENT_KIMONO_CABIN_EEVEE
+	iffalse_jumptextfaceplayer PiperNoEeveeText
 	checkevent EVENT_TAPESTRY_CELEBI
 	iftrue_jumptextfaceplayer PiperAfterText
+
 	faceplayer
 	opentext
 	writetext SummonCelebiText
@@ -177,19 +214,46 @@ TapestryPiper:
 	showtext PiperCaughtCelebiText
 	end
 
+PiperNoEeveeText:
+	text "It's so odd being"
+	line "back here!"
+	
+	para "It used to be a"
+	line "bustling center,"
+	
+	para "but the temples"
+	line "are empty."
+	
+	para "I learned how to"
+	line "summon Celebi,"
+	para "but you'll need"
+	line "to convince my"
+	para "great-grandma you"
+	line "are worthy."
+	
+	para "Visit us in our"
+	line "cabin in the Holt"
+	cont "and ask her."
+	done
+
 SummonCelebiText:
 	text "Piper: My great-"
 	line "grandma taught me"
 	para "how to summon"
 	line "Celebi."
 	
-	para "Shall we proceed?"
+	para "She tells me that"
+	line "you are worthy to"
+	cont "commune with her."
+	
+	para "Shall we summon"
+	line "Celebi together?"
 	done
 
 
 PiperNoCatchCelebiText:
 	text "Oh, you didn't"
-	line "catch it."
+	line "catch Celebi."
 	
 	para "Don't worry-"
 	line "we still believe"
@@ -207,26 +271,29 @@ PiperCaughtCelebiText:
 	cont "you could."
 	done
 
-	
 PiperAfterText:
-	text "This Kimono feels"
-	line "heavy. Each fiber"
-	cont "is a story."
+	text "It's so odd being"
+	line "back here!"
+	
+	para "It used to be a"
+	line "bustling center,"
+	
+	para "but the temples"
+	line "are empty."
 	done
 	
 TapestryMorphea:
 	text "Morphea: Doesn't"
 	line "my great grand-"
-	cont "daughter wear"
-	cont "the Kimono so"
+	para "daughter wear"
+	line "the Kimono so"
 	cont "elegantly?"
 	done
 
 TapestrySamaria:
 	text "Samaria: Will our"
 	line "plans be enough"
-	cont "to stop the emp-"
-	cont "eror?"
+	cont "to stop Urgaust?"
 	
 	para "Maybe we should"
 	line "have stayed away."
@@ -235,10 +302,11 @@ TapestrySamaria:
 TapestryShiji:
 	text "Shiji: We heard"
 	line "that it was time"
-	cont "to return to the"
-	cont "Capital."
+	para "to return to the"
+	line "Capital."
 	
-	para "The temples are"
-	line "still under cons-"
-	cont "truction."
+	para "The templeas are"
+	line "becoming a ruins"
+	para "without proper"
+	line "upkeep!"
 	done

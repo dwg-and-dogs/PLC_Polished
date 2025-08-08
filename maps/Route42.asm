@@ -122,7 +122,10 @@ PumiceHarpEntranceText2:
 	done
 
 PumiceHarpEntranceText3:
-	text_high "Eusine: "
+	text_high
+    text " Eusine: "
+	next
+	text_start
 	
 	text "It crumbles!"
 	line "You must enter"
