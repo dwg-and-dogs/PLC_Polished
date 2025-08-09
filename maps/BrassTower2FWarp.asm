@@ -19,7 +19,7 @@ BrassTower2FWarp_MapScriptHeader:
 
 
 	def_object_events
-	object_event  4,  2, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTowerBobesh, -1
+	object_event  4,  2, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTowerBobesh, -1
 
 
 

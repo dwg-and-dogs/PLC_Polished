@@ -20,9 +20,9 @@ BrassTower12F_MapScriptHeader:
 
 
 	def_object_events
-	pokemon_event  10,  6, GENGAR, -1, -1, PAL_NPC_PURPLE, 	BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD ; starts clear, then gets set
-	pokemon_event   5,  6, MISDREAVUS, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD ; starts clear, then gets set
-	object_event  3,  6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderNoboru, -1
+	pokemon_event  10,  7, GENGAR, -1, -1, PAL_NPC_PURPLE, 	BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD ; starts clear, then gets set
+	pokemon_event   5,  7, MISDREAVUS, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD ; starts clear, then gets set
+	object_event  2,  6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderNoboru, -1
 	object_event  13, 6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderTakashi, -1
 	itemball_event 7, 7, ENERGY_ROOT, 	3,	EVENT_BRASS_TOWER_ITEM_1
 

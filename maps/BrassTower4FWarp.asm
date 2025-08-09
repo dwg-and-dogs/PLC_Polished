@@ -17,7 +17,7 @@ BrassTower4FWarp_MapScriptHeader:
 
 
 	def_object_events
-	object_event  5,  4, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTowerAdrinna, -1
+	object_event  5,  4, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTowerAdrinna, -1
 
 
 BrassTowerAdrinna:

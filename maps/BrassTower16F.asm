@@ -7,7 +7,7 @@ BrassTower16F_MapScriptHeader:
 
 	def_warp_events
 	warp_event 1, 15, BRASS_TOWER_15F, 1
-	warp_event 15, 15, BRASS_TOWER_15F, 1
+	warp_event 15, 15, BRASS_TOWER_15F, 2
 	warp_event 4, 15, BRASS_TOWER_13F, 4
 	warp_event 14, 0, BRASS_TOWER_17F, 1
 	warp_event 14, 6, BRASS_TOWER_17F, 2

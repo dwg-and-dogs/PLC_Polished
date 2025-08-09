@@ -19,7 +19,7 @@ BrassTower3FWarp_MapScriptHeader:
 
 
 	def_object_events
-	object_event  5,  3, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTowerKensey, -1
+	object_event  5,  3, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerKensey, -1
 
 
 	object_const_def
@@ -54,7 +54,7 @@ BrassTowerKensey:
 	cont "lift all boats!"
 	
 	para "I'll guide it."
-	cont "It's inevitable!"
+	line "It's inevitable!"
 	done
 
 
