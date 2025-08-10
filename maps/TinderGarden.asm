@@ -17,7 +17,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	coord_event  5, 14, 1, TinderGardenTryToLeaveScript
 	coord_event  4, 14, 3, TinderGardenRivalBattleScript1
 	coord_event  5, 14, 3, TinderGardenRivalBattleScript2	;add text for the tree
-	coord_event  3, 3, 4, TinderGardernWatchTheLoggersScript
+	coord_event  3, 3, 4, TinderGardernWatchTheLoggersScript ; this needs to have a different music, hah
 
 	def_bg_events
 	bg_event  4,  8, BGEVENT_JUMPTEXT, TGTreeText
@@ -1093,7 +1093,12 @@ CelebiScript:
 	
 TinderGardernWatchTheLoggersScript:
 ;cf western capital scene 
+	; revise music 
+	pause 60
+	special Special_FadeOutMusic
 	turnobject PLAYER, UP
+	pause 60
+;	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
 	showemote EMOTE_QUESTION, TINDER_GARDEN_ENGINEER_1, 60
 	showtext GardenEngineerText1
 	pause 60
@@ -1155,7 +1160,7 @@ GardenEngineerText4:
 	line "ever since that"
 	para "kid toppled the"
 	line "Consul some"
-	cont "160 years ago."
+	cont "180 years ago."
 	
 	para "What was their"
 	line "name again?"

@@ -3,7 +3,7 @@ KimonoCabin5_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_callbacks
-
+	callback MAPCALLBACK_TILES, KimonoCabin5Callback 
 
 	def_warp_events
 	warp_event  8, 17, KIMONO_CABIN, 1
@@ -26,12 +26,32 @@ KimonoCabin5_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	object_event 16,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KIMONO_CABIN_5_GRANNY
 	object_event 17,  0, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin5Lass, -1
 	object_event  9, 16, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin55Script, -1
-	pokemon_event   6, 18, EEVEE, -1, -1, PAL_NPC_BROWN, KimonoEeveeText, -1
+	pokemon_event  16, 0, EEVEE, -1, -1, PAL_NPC_BROWN, KimonoEeveeText, -1
 	tmhmball_event 24, 33, TM_SUBSTITUTE, EVENT_KIMONO_TM_SUBSTITUTE
 
 	object_const_def
 	const KIMONO_CABIN_5_GRANNY1
 	const KIMONO_CABIN_5_KIMONO_GIRL
+
+KimonoCabin5Callback:
+	checkevent EVENT_KIMONO_CABIN_5_SWITCH_1
+	iffalse .Check2
+	changeblock 6, 0, $4D	
+.Check2:
+	checkevent EVENT_KIMONO_CABIN_5_SWITCH_2
+	iffalse .Check3
+	changeblock 6, 2, $4D	
+.Check3:
+	checkevent EVENT_KIMONO_CABIN_5_SWITCH_3
+	iffalse .Check4
+	changeblock 8, 4, $4B
+.Check4:
+	checkevent EVENT_KIMONO_CABIN_5_SWITCH_4
+	iffalse .Done
+	changeblock 8, 4, $5D	
+.Done:
+	endcallback	
+
 
 KimonoCabin55Script:
 	faceplayer
@@ -39,6 +59,8 @@ KimonoCabin55Script:
 ;	checkevent EVENT_KIMONO_CABIN_EEVEE
 ;	iftrue KimonoCabin5ThankYou
 	writetext KimonoCabin5ExplainText
+	waitbutton
+	closetext
 	end
 	
 	
@@ -108,6 +130,8 @@ KimonoCabin5Switch1Script:
 	iffalse_jumpopenedtext DontSwitchKimono5
 	writetext WhoWouldntKimono5
 	changeblock 6, 0, $4D	
+	setevent EVENT_KIMONO_CABIN_5_SWITCH_1
+	reloadmap
 	end
 	
 KimonoCabin5Switch2Script:
@@ -117,6 +141,8 @@ KimonoCabin5Switch2Script:
 	iffalse_jumpopenedtext DontSwitchKimono5
 	writetext WhoWouldntKimono5
 	changeblock 6, 2, $4D	
+	setevent EVENT_KIMONO_CABIN_5_SWITCH_2
+	reloadmap
 	end
 	
 KimonoCabin5Switch3Script:
@@ -125,7 +151,9 @@ KimonoCabin5Switch3Script:
 	yesorno
 	iffalse_jumpopenedtext DontSwitchKimono5
 	writetext WhoWouldntKimono5
-	changeblock 6, 4, $4B
+	changeblock 8, 4, $4B
+	setevent EVENT_KIMONO_CABIN_5_SWITCH_3
+	reloadmap
 	end
 	
 KimonoCabin5Switch4Script:
@@ -135,6 +163,8 @@ KimonoCabin5Switch4Script:
 	iffalse_jumpopenedtext DontSwitchKimono5
 	writetext WhoWouldntKimono5
 	changeblock 8, 4, $5D	
+	setevent EVENT_KIMONO_CABIN_5_SWITCH_4
+	reloadmap
 	end
 	
 

@@ -67,6 +67,7 @@ InitialEvents:
 	dw EVENT_BASCULEGION_LIVES
 	dw EVENT_KURT_MINE_2
 	dw EVENT_BRASS_TOWER_LEFT_GUARD
+	dw EVENT_ROOF_CELEBI
 	dw -1
 
 InitialEngineFlags:

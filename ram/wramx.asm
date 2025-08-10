@@ -1101,7 +1101,7 @@ wStadiumCapitalGateSceneID:: db
 wStyCapitalGateSceneID:: db  
 wTradersLandingSceneID:: db
 wRoute34SceneID:: db ;needed for daycare?
-wUnused18SceneID:: db
+wBrassTowerRoofSceneID:: db
 wUnused19SceneID:: db
 wUnused1SceneID:: db   
 wUnused20SceneID:: db
