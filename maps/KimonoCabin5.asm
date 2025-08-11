@@ -16,9 +16,9 @@ KimonoCabin5_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 
 
 	def_bg_events
-	bg_event 8,  1, BGEVENT_READ, KimonoCabin5Switch1Script
+	bg_event 8,  1, BGEVENT_READ, KimonoCabin5Switch3Script
 	bg_event 0,  3, BGEVENT_READ, KimonoCabin5Switch2Script
-	bg_event 0,  11, BGEVENT_READ, KimonoCabin5Switch3Script
+	bg_event 0,  11, BGEVENT_READ, KimonoCabin5Switch1Script
 	bg_event 16,  17, BGEVENT_READ, KimonoCabin5Switch4Script
 
 	
@@ -36,19 +36,19 @@ KimonoCabin5_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 KimonoCabin5Callback:
 	checkevent EVENT_KIMONO_CABIN_5_SWITCH_1
 	iffalse .Check2
-	changeblock 6, 0, $4D	
+	changeblock 4, 0, $30	
 .Check2:
 	checkevent EVENT_KIMONO_CABIN_5_SWITCH_2
 	iffalse .Check3
-	changeblock 6, 2, $4D	
+	changeblock 6, 0, $30	
 .Check3:
 	checkevent EVENT_KIMONO_CABIN_5_SWITCH_3
 	iffalse .Check4
-	changeblock 8, 4, $4B
+	changeblock 8, 4, $60
 .Check4:
 	checkevent EVENT_KIMONO_CABIN_5_SWITCH_4
 	iffalse .Done
-	changeblock 8, 4, $5D	
+	changeblock 16, 8, $5D	
 .Done:
 	endcallback	
 
@@ -56,8 +56,6 @@ KimonoCabin5Callback:
 KimonoCabin55Script:
 	faceplayer
 	opentext
-;	checkevent EVENT_KIMONO_CABIN_EEVEE
-;	iftrue KimonoCabin5ThankYou
 	writetext KimonoCabin5ExplainText
 	waitbutton
 	closetext
@@ -80,36 +78,38 @@ KimonoCabin5ExplainText:
 	line "mean?"
 	done
 	
-;KimonoCabin5ThankYou:
-;	text "Morphea: Thank"
-;	line "you. You have"
-;	cont "been so kind to"
-;	cont "my family."
-;	
-;	para "I hope your"
-;	line "family grows"
-;	cont "as strong as"
-;	cont "ours."
-;	done
-
 KimonoCabin5Lass:
 	faceplayer
 	appear KIMONO_CABIN_5_GRANNY1
 	applymovement KIMONO_CABIN_5_GRANNY1, KimonoCabin5GrannyToLassMovement
+	showemote EMOTE_SHOCK, KIMONO_CABIN_5_GRANNY1, 30
 	opentext
 	writetext KimonoCabin5GrannyText1
+	waitbutton
+	showemote EMOTE_HAPPY, KIMONO_CABIN_5_KIMONO_GIRL, 20
 	writetext KimonoCabin5LassText1
-	applymovement KIMONO_CABIN_5_KIMONO_GIRL, KimonoCabin5KimonoSpins
+	waitbutton
+	turnobject KIMONO_CABIN_5_KIMONO_GIRL, LEFT
+	pause 10
+	turnobject KIMONO_CABIN_5_KIMONO_GIRL, UP
+	pause 10
+	turnobject KIMONO_CABIN_5_KIMONO_GIRL, RIGHT
+	pause 10
+	turnobject KIMONO_CABIN_5_KIMONO_GIRL, DOWN
+	pause 10	
 	writetext KimonoCabin5LassText2
+	waitbutton
 	givepoke EEVEE, NO_FORM, 5, LUM_BERRY, LOVE_BALL, GROWTH
+	closetext
 	setevent EVENT_KIMONO_CABIN_EEVEE
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp KIMONO_CABIN_5,  3, 4
+	warp KIMONO_CABIN,  4, 3
 	end
 
 KimonoCabin5GrannyToLassMovement:
+	step_up
 	step_up
 	step_up
 	step_up
@@ -129,7 +129,7 @@ KimonoCabin5Switch1Script:
 	yesorno
 	iffalse_jumpopenedtext DontSwitchKimono5
 	writetext WhoWouldntKimono5
-	changeblock 6, 0, $4D	
+	changeblock 4, 0, $30	
 	setevent EVENT_KIMONO_CABIN_5_SWITCH_1
 	reloadmap
 	end
@@ -140,7 +140,7 @@ KimonoCabin5Switch2Script:
 	yesorno
 	iffalse_jumpopenedtext DontSwitchKimono5
 	writetext WhoWouldntKimono5
-	changeblock 6, 2, $4D	
+	changeblock 6, 0, $30	
 	setevent EVENT_KIMONO_CABIN_5_SWITCH_2
 	reloadmap
 	end
@@ -151,7 +151,7 @@ KimonoCabin5Switch3Script:
 	yesorno
 	iffalse_jumpopenedtext DontSwitchKimono5
 	writetext WhoWouldntKimono5
-	changeblock 8, 4, $4B
+	changeblock 8, 4, $60
 	setevent EVENT_KIMONO_CABIN_5_SWITCH_3
 	reloadmap
 	end
@@ -162,7 +162,7 @@ KimonoCabin5Switch4Script:
 	yesorno
 	iffalse_jumpopenedtext DontSwitchKimono5
 	writetext WhoWouldntKimono5
-	changeblock 8, 4, $5D	
+	changeblock 16, 8, $5D	
 	setevent EVENT_KIMONO_CABIN_5_SWITCH_4
 	reloadmap
 	end
@@ -182,7 +182,7 @@ WhoWouldntKimono5:
 	done
 
 KimonoCabin5GrannyText1:
-	text "Morphea: That-"
+	text "Old Morphea: Oh!"
 	line "that's me, as"
 	cont "a young woman!"
 	
@@ -202,23 +202,25 @@ KimonoCabin5GrannyText1:
 	
 KimonoCabin5LassText1:
 	text "Young Morphea:"
-	line "But Morphea - "
+	line "But Morphea!"
 	
 	para "We succeeded."
 	line "The greatest gift"
-	cont "we inherited was"
-	cont "perseverance and"
+	para "we inherited was"
+	line "perseverance and"
 	cont "adaptability. "
-	
-	para "With a simple"
-	line "modification, "
-	cont "no one noticed."
 	done
 	
 KimonoCabin5LassText2:
 	text "Young Morphea:"
 	line "<PLAYER> - take"
-	cont "this as thanks."
+	cont "this Eevee."
+	
+	para "It represents the"
+	line "Growth we earn"
+	para "from others who"
+	line "help us to be"
+	cont "our best."
 
 	para "How will you"
 	line "adapt? Who will"
