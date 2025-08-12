@@ -15,7 +15,7 @@ RuinsOfAlphHoOhItemRoom_MapScriptHeader: ; HEATRAN
 	bg_event  5,  1, BGEVENT_JUMPTEXT, RuinsofAlphStatueText
 
 	def_object_events
-	object_event  2,  5, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, PumiceHarpScript, EVENT_GOT_PUMICE_HARP
+	object_event  3,  3, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, PumiceHarpScript, EVENT_GOT_PUMICE_HARP
 
 	itemball_event  2,  6, ODD_SOUVENIR, 1, EVENT_PICKED_UP_SUN_STONE_FROM_HO_OH_ITEM_ROOM
 	tmhmball_event  5,  6, TM_EARTHQUAKE, EVENT_PICKED_UP_MOON_STONE_FROM_HO_OH_ITEM_ROOM
@@ -53,18 +53,18 @@ HoldingAHarpText:
 	cont "carved from"
 	cont "porous pumice."
 		
-	para "In her hands,"  
-	line "a strange metal" 
-	cont "harp gleams."
+	para "She has a shining"
+	line "metal harp."
 		
 	para "Pluck the"
 	line "strings?"
 	done
 
 StatueDissolvesText:
-	text "The harp's notes"
-	line "resonate with"
-	cont "the pumice. The"
-	cont "statue crumbles"
+	text "The harp's music"
+	line "resonates with"
+	cont "the pumice."
+	
+	para "She's crumbled"
 	cont "to fine ash."
 	done

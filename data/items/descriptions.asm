@@ -280,7 +280,7 @@ KeyItemDescriptions:
 	dw BlueCardDesc
 	dw OrangeTicketDesc
 	dw MysticTicketDesc
-	dw OldSeaMapDesc
+	dw PumiceHarpDesc
 	dw ShinyCharmDesc
 	dw OvalCharmDesc
 	dw CatchCharmDesc
@@ -1353,9 +1353,9 @@ MysticTicketDesc:
 	db   "A ticket for the"
 	next "Seagallop Ferry.@"
 
-OldSeaMapDesc:
-	db   "A faded sea chart"
-	next "of a small island.@"
+PumiceHarpDesc: ; pumice harp 
+	db   "Resonates with"
+	next "volcanic rock.@"
 
 ShinyCharmDesc:
 	db   "A charm for find-"

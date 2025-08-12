@@ -2,10 +2,12 @@ Route42_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, Route42CavernCallback
 
 	def_warp_events
 	warp_event  0,  8, ROUTE_42_ECRUTEAK_GATE, 3
 	warp_event  0,  9, ROUTE_42_ECRUTEAK_GATE, 4
+	warp_event 46, 7, ENTEIS_CAVERN, 1
 ; entei's cavern 
 
 
@@ -46,6 +48,13 @@ Route42_MapScriptHeader:
 
 	object_const_def
 	const ROUTE_42_EUSINE
+
+Route42CavernCallback:
+	checkevent EVENT_OPENED_CAVERN
+	iffalse .Closed
+	changeblock 46, 6, $0F
+.Closed:
+	endcallback
 
 MissingMachinePartScript:
 	checkevent EVENT_GOT_MACHINE_PART
@@ -90,29 +99,42 @@ Route42_MachinePartText_2:
 	done
 
 PumiceHarpEntrance:
-	showtext PumiceHarpEntranceText1
+	checkevent EVENT_OPENED_CAVERN
+	iftrue .NoHarp
+	opentext
+	writetext PumiceHarpEntranceText1
+	waitbutton
 	checkkeyitem PUMICE_HARP
 	iffalse .NoHarp
-	showtext PumiceHarpEntranceText2
+	writetext PumiceHarpEntranceText2
 	yesorno
 	iffalse .NoHarp
-	waitbutton
-	playsound SFX_SQUEAK ; sfx_harp
+	closetext
+	playsound SFX_SING ; sfx_harp
 	waitsfx
-	turnobject ROUTE_42_EUSINE, LEFT
-	showemote EMOTE_SHOCK, ROUTE_42_EUSINE, 30
-	showtext PumiceHarpEntranceText3
-	waitbutton
+	setevent EVENT_OPENED_CAVERN
 	playsound SFX_EGG_BOMB ; sfx_rock_slide?
 	waitsfx
-	warp ENTEIS_CAVERN, 11, 17
+	changeblock 46, 6, $0F
+	turnobject ROUTE_42_EUSINE, LEFT
+	showemote EMOTE_SHOCK, ROUTE_42_EUSINE, 30
+	opentext
+	writetext PumiceHarpEntranceText3
+	waitbutton
+	closetext
+	applyonemovement PLAYER, step_up
+	disappear PLAYER 
+	warpfacing UP, ENTEIS_CAVERN, 11, 17
 .NoHarp:
+	closetext
 	end
 
 PumiceHarpEntranceText1:
 	text "The obsidian wall"
-	line "wobbles with your"
-	cont "steps."
+	line "wobbles."
+
+	para "It looks like it"
+	line "could shatter!"
 	done
 
 PumiceHarpEntranceText2:
@@ -135,6 +157,8 @@ PumiceHarpEntranceText3:
 Route42EusineScript:
 	checkevent EVENT_FOUGHT_ENTEI
 	iftrue .FoughtEntei
+	checkevent EVENT_OPENED_CAVERN
+	iftrue .GoFightEntei
 	checkevent EVENT_ROUTE_42_EUSINE_INTRO
 	iftrue .SkipIntro
 	faceplayer
@@ -158,6 +182,9 @@ Route42EusineScript:
 	para "What is the right"
 	line "frequency?"
 	done
+	
+.GoFightEntei:
+	jumptextfaceplayer EusineSeeEnteiText
 	
 .FoughtEntei:
 	setevent EVENT_EUSINE_ROUTE_42
@@ -188,6 +215,11 @@ Route42EusineIntroText:
 	
 	para "it may shatter"
 	line "the wall!"	
+	done
+
+EusineSeeEnteiText:
+	text "What's the holdup?"
+	line "Entei's in there!"
 	done
 	
 EusineFoughtEnteiText:

@@ -22,6 +22,7 @@ PryceScriptOlivine:
     writetext PryceTextOlivine
 	waitbutton
     closetext
+	givekeyitem PUMICE_HARP 
     end
 
 PryceTextOlivine:

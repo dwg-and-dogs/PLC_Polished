@@ -281,7 +281,7 @@ KeyItemIconPointers:
 	dba BlueCardIcon
 	dba OrangeTicketIcon
 	dba MysticTicketIcon
-	dba OldSeaMapIcon
+	dba PumiceHarpIcon ; pumice harp 
 	dba ShinyCharmIcon
 	dba OvalCharmIcon
 	dba CatchCharmIcon
