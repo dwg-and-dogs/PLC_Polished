@@ -77,4 +77,5 @@ MapScenes::
 	scene_var TRADERS_LANDING, 						  wTradersLandingSceneID
 	scene_var ROUTE_34,                               wRoute34SceneID ; needed for daycare man, I think 
 	scene_var BRASS_TOWER_ROOF, 					  wBrassTowerRoofSceneID
+	scene_var TINDER_GARDEN_2, 						  wTinderGarden2SceneID
 	db -1

@@ -176,9 +176,16 @@ InitMapNameSign::
 .check_dragons_den:
 	ld a, [wMapGroup]
 	cp GROUP_DRAGONS_DEN
-	jr nz, .check_clasts_cradle_2f
+	jr nz, .check_tinder_garden_2
 	ld a, [wMapNumber]
 	cp MAP_DRAGONS_DEN
+	ret z
+.check_tinder_garden_2:
+	ld a, [wMapGroup]
+	cp GROUP_TINDER_GARDEN_2
+	jr nz, .check_clasts_cradle_2f
+	ld a, [wMapNumber]
+	cp MAP_TINDER_GARDEN_2
 	ret z
 .check_clasts_cradle_2f:
 	ld a, [wMapGroup]

@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, KIMONO_CABIN_4, 1
+	warp_event  1, 8, VIOLET_CATACOMBS, 1
 
 
 	def_coord_events
@@ -135,7 +135,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp KIMONO_CABIN_5, 9, 14
+	warp TINDER_GARDEN_2, 4, 2
 	end
 
 DebugCPU:

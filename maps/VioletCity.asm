@@ -195,7 +195,7 @@ NoctowlTombstone:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp VIOLET_CATACOMBS,  4,  26
+	warp VIOLET_CATACOMBS,  3,  26
 	end
 
 AskToVentureText:

@@ -1102,7 +1102,7 @@ wStyCapitalGateSceneID:: db
 wTradersLandingSceneID:: db
 wRoute34SceneID:: db ;needed for daycare?
 wBrassTowerRoofSceneID:: db
-wUnused19SceneID:: db
+wTinderGarden2SceneID:: db
 wUnused1SceneID:: db   
 wUnused20SceneID:: db
 wUnused21SceneID:: db

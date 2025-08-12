@@ -15,7 +15,7 @@ TinderGarden2_MapScriptHeader:
 
 
 	def_object_events
-	object_event  4,  3, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event  3,  3, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event  3,  1, SPRITE_BLACK_BELT, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event  5,  3, SPRITE_SCHOOLBOY, 	SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event  6,  1, SPRITE_WHITNEY, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
@@ -34,17 +34,14 @@ TG2Text:
 
 TinderGarden2Script:
 	opentext
-	showtext TG2_Text1
+	writetext TG2_Text1
 	waitbutton
-	closetext
-	pause 30
-	opentext
 	writetext TG2_Text2
 	waitbutton
 	closetext
-	showemote EMOTE_HEART, TINDER_GARDEN_2_PRYCE, 10
 	applyonemovement TINDER_GARDEN_2_PRYCE, step_down
 	turnobject TINDER_GARDEN_2_PRYCE, RIGHT
+	turnobject PLAYER, LEFT 
 	opentext 
 	writetext TG2_Text_Kurt5
 	pause 30
@@ -66,6 +63,7 @@ TinderGarden2Script:
 	
 	applyonemovement TINDER_GARDEN_2_PRYCE, step_up
 	turnobject TINDER_GARDEN_2_PRYCE, DOWN
+	turnobject PLAYER, DOWN
 	
 	showemote EMOTE_HAPPY, TINDER_GARDEN_2_SCHOOLGIRL, 15
 	opentext
@@ -117,11 +115,8 @@ TG2_Text_Kurt5:
 	cont "Burned Tower."
 	
 	para "It says it was"
-	line "your grandpa's,"
-	
-	para "and addressed"
-	line "to you."
-	
+	line "your grandpa's."
+		
 	para "I don't know how"
 	line "it got there, but"
 	cont "it's genuine."
@@ -164,7 +159,11 @@ TG2_Text_Kurt5_2: ; todo
 	para "While I waited,"
 	line "I looked in the "
 	para "bag and found his"
-	line "apricorn."
+	line "Apricorn."
+	
+	para "The one that we'd"
+	line "shared so many"
+	cont "memories over."
 	
 	para "The paint was ne-"
 	line "arly all chipped"
@@ -172,15 +171,14 @@ TG2_Text_Kurt5_2: ; todo
 	line "and I would know"
 	cont "what it once was." 
 	
-	para "When I picked it"
-	line "up it was cold"
-	para "and still."
+	para "It was cold and"
+	line "still in my hand."
 	
 	para "When I opened it,"
-	line "the inside was "
-	para "dark. I tried re-"
-	line "opening it to no"
-	cont "avail."	
+	line "it was dark. The"
+	para "#mon inside"
+	line "had fled due to"
+	cont "neglect."
 
 	para "I closed it for"
 	line "the last time,"
@@ -188,20 +186,18 @@ TG2_Text_Kurt5_2: ; todo
 	line "of that part of"
 	cont "my life."
 
-	para "Now, looking back, I"
-	line "had been so rigid"
-	para "in my thinking."
+	para "Now, looking back"
+	line "I'd been so rigid"
+	cont "in my thinking."
 
-	para "I should have said,"
+	para "I should've said,"
 	line "'I am sorry.' I"
 	para "should have said,"
-	line "'I support your"
-	cont "dreams.'"
+	line "'I support you.'"
 
 	para "I should have said,"
-	line "'I love you and"
-	para "accept you as"
-	line "you are.'"
+	line "'I accept you as"
+	cont "you are'."
 
 	para "Instead of trying"
 	line "to make you into"
@@ -219,9 +215,9 @@ TG2_Text_Kurt5_2: ; todo
 	line "have had if I'd"
 	cont "been wiser."
 
-	para "If you're listening,"
-	line "I hope you"
-	para "can forgive a"
+	para "If you read this,"
+	line "I hope you can"
+	para "forgive me, a"
 	line "stubborn old man."
 
 	para "And I hope you'll"

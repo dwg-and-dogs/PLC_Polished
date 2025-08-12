@@ -553,7 +553,7 @@ ENDM
 	
 	map_attributes ShimmerSaddle, SHIMMER_SADDLE,  $5, 0
 	
-	map_attributes VioletCatacombs, VIOLET_CATACOMBS,  $0, 0
+	map_attributes VioletCatacombs, VIOLET_CATACOMBS,  $09, 0
 
 	map_attributes RouteKajoRuinsOfAlphGate, ROUTE_KAJO_RUINS_OF_ALPH_GATE,  $0, 0
 	
