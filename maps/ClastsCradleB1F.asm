@@ -4,14 +4,15 @@ ClastsCradleB1F_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_TILES, CradleB1FStonesCallback
-
+	callback MAPCALLBACK_OBJECTS, ClastsCradleCallback_AfterHeatran
 
 
 	def_warp_events
 	warp_event 3, 3, CLASTS_CRADLE_1F, 2
 ; HOLEs DROP 
 	warp_event 12, 7, CLASTS_CRADLE_B1F, 2
-
+; DEBUG WARP 
+	warp_event 9, 26, CLASTS_CRADLE_1F, 2
 
 	def_coord_events
 ;	coord_event 21, 12, 0, CradleScene1_Mejimi; cutscene
@@ -30,9 +31,7 @@ ClastsCradleB1F_MapScriptHeader:
 ; CUTSCENE 2
 	object_event   4,  16, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
 	pokemon_event  5,  14, HEATRAN, -1, -1, PAL_NPC_RED, HeatranText, EVENT_CC_HEATRAN
-;	object_event   5,  14, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CC_HEATRAN
-	object_event   5,  21, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2 ; initialize 
-
+	object_event   5,  21, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2 ; initialize 
 	object_event 8, 5, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosScriptCC, EVENT_BEAT_ADRINNA_MINE
 
 ; TRAINERS
@@ -64,6 +63,13 @@ CradleB1FStonesCallback:
 	iffalse .Done
 	changeblock 14,  26, $5D
 .Done:
+	endcallback
+
+ClastsCradleCallback_AfterHeatran:
+	checkevent EVENT_CC_HEATRAN
+	iffalse .Skip
+	moveobject CRADLE_KURT, 4, 18
+.Skip:
 	endcallback
 	
 HeatranText:
@@ -455,7 +461,7 @@ Brigader20SeenText:
 
 CradleScene2_Adrinna:
 	applymovement PLAYER, Player_CCB1F_Move1
-	sjump Cradle_Scene3
+	sjump Cradle_Scene3Pickup
 
 CradleScene2_Heatran:
 	applymovement PLAYER, Player_CCB1F_Move1
@@ -480,8 +486,6 @@ CradleScene2_Heatran:
 	disappear CRADLE_HEATRAN
 	setevent EVENT_CC_HEATRAN
 	reloadmapafterbattle
-	;fallthru 
-Cradle_Scene3: ; just in case you lose to adrinna after heatran 
 	turnobject PLAYER, LEFT
 	showtext CradleAdrinnaText2
 	turnobject PLAYER, DOWN
@@ -489,10 +493,19 @@ Cradle_Scene3: ; just in case you lose to adrinna after heatran
 	pause 30
 	appear CRADLE_KURT
 	applymovement CRADLE_KURT, CradleKurtMovesToYou
+	applyonemovement PLAYER, step_down
+	applyonemovement PLAYER, step_down
+	turnobject PLAYER, LEFT
+	turnobject CRADLE_KURT, RIGHT 
 	showtext CradleKurtText1
 	special HealParty
-	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
+	applyonemovement PLAYER, step_up
+	applyonemovement PLAYER, step_up
 	turnobject PLAYER, LEFT
+	turnobject CRADLE_KURT, UP
+	turnobject PLAYER, LEFT
+Cradle_Scene3Pickup:  
+	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
 	turnobject CRADLE_ADRINNA_2, RIGHT
 	showtext CradleAdrinnaText3
 	winlosstext CradleAdrinnaText4, 0
@@ -533,7 +546,7 @@ Player_CCB1F_Move1:
 CradleKurtMovesToYou:
 	step_up
 	step_up
-	step_up
+	step_left
 	step_up
 	step_end
 

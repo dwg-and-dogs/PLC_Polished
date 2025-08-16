@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, GROTTOED_GLACIER_B2F, 3
+	warp_event  1, 8, CLASTS_CRADLE_B1F, 3
 
 
 	def_coord_events
@@ -418,6 +418,10 @@ DWGTextAfter1:
 
 
 DebugCPU2:
+	; debug 
+	setmapscene CLASTS_CRADLE_B1F, $1
+	clearevent EVENT_BEAT_ADRINNA_MINE
+	; debug
 	opentext
 	special PokemonCenterPC
 	endtext
