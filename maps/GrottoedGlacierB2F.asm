@@ -11,6 +11,7 @@ GrottoedGlacierB2F_MapScriptHeader:
 	def_warp_events
 	warp_event 5, 15, GROTTOED_GLACIER_B1F, 2
 	warp_event 4, 15, GROTTOED_GLACIER_B1F, 2
+	warp_event 17, 10, GROTTOED_GLACIER_B1F, 2 ; debug only 
 
 
 	def_coord_events
@@ -48,7 +49,7 @@ GlacierBouldersB2FCallback:
 GlacierB2FCallback_MoveAK:
 	checkscene
 	iffalse .Skip
-	moveobject GLACIER_B2F_KANNA, 18, 3
+	moveobject GLACIER_B2F_KANNA, 17, 4
 	moveobject GLACIER_B2F_ADRINNA, 18, 5
 	turnobject GLACIER_B2F_ADRINNA, LEFT
 .Skip:
@@ -100,13 +101,12 @@ GrottoedGlacierB1FScene0:
 	setevent EVENT_BATTLED_BASCULEGION
 	setevent EVENT_BASCULEGION_SLEEPS
 	setevent EVENT_BASCULEGION_LIVES
-
-
-
-PickupGlacierScene:
 	applyonemovement GLACIER_B2F_KANNA, step_left
 	applyonemovement GLACIER_B2F_KANNA, step_down
-	
+
+
+PickupGlacierScene:	
+	turnobject GLACIER_B2F_ADRINNA, LEFT
 	opentext
 	writetext GlacierB2F_Text5
 	waitbutton

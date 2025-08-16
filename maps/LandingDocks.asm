@@ -13,7 +13,7 @@ LandingDocks_MapScriptHeader:
 
 	def_coord_events
 	coord_event 14, 16, 0, LandingDocksScene
-	coord_event 14, 16, 1, LandingDocksScene_BeatBarbeau
+	coord_event 14, 16, 1, LandingDocksScene_AfterCaptainLeaves
 
 
 	def_bg_events
@@ -21,7 +21,7 @@ LandingDocks_MapScriptHeader:
 
 
 	def_object_events
-	object_event  9, 16, SPRITE_KURT, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_KURT
+	object_event  9, 16, SPRITE_KURT, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_KURT
 	object_event 15, 12, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_KENSEY
 	object_event 14, 11, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_BARBEAU
 	object_event 14, 12, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED,OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DOCKS_SURGE
@@ -40,7 +40,7 @@ LandinDocksCallback_MoveNPCs:
 	iffalse .Skip
 	; surge sprite is gone
 	moveobject LANDING_DOCKS_KURT, 15, 14
-	turnobject LANDING_DOCKS_KURT, LEFT
+	turnobject LANDING_DOCKS_KURT, UP
 	moveobject LANDING_DOCKS_KENSEY, 15, 12
 	turnobject LANDING_DOCKS_KENSEY, DOWN
 	moveobject LANDING_DOCKS_BARBEAU, 14, 12
@@ -48,17 +48,14 @@ LandinDocksCallback_MoveNPCs:
 .Skip:
 	endcallback
 
-LandingDocksScene_BeatBarbeau:
-	applymovement PLAYER, PlayerMovesToBeatKensey
+LandingDocksScene_AfterCaptainLeaves:
+	applymovement PLAYER, PlayerMovesForDocksScene1
 	sjump PickupDocksScene
 
 LandingDocksScene:
-
-
 	special Special_FadeOutMusic
 	pause 30
 	playmusic MUSIC_LUGIA_BATTLE_HGSS ; MUSIC_BATTLE_FACTORY_RSE ; MUSIC_FRONTIER_BRAIN_BATTLE_RSE, MUSIC_ELITE_FOUR_BATTLE_SM
-
 	applyonemovement PLAYER, step_up
 	showemote EMOTE_BOLT, LANDING_DOCKS_SURGE, 30
 	opentext
@@ -120,6 +117,9 @@ LandingDocksScene:
 	closetext
 	applyonemovement LANDING_DOCKS_KURT, step_right
 	turnobject LANDING_DOCKS_KURT, UP
+	setscene $1
+	; fallthrough 
+PickupDocksScene:
 	opentext
 	writetext Docks_Text8
 	waitbutton
@@ -142,6 +142,7 @@ LandingDocksScene:
 	turnobject LANDING_DOCKS_KURT, LEFT
 	applyonemovement PLAYER, step_up
 	playmusic MUSIC_HEAL
+	waitsfx
 	special HealParty
 	special SaveMusic	
 	playmusic MUSIC_NONE	
@@ -151,16 +152,13 @@ LandingDocksScene:
 	winlosstext BarbeauBeatenText1, 0
 	loadtrainer BARBEAU, 1 
 	startbattle
-	reloadmapafterbattle ; OBJECTS IN THE RIGHT SPOT?
-; start of kensey section 
+	reloadmapafterbattle
 	opentext
 	writetext Docks_Text12
 	waitbutton
 	closetext
 	playsound SFX_GET_BADGE
-	waitsfx
-	setflag ENGINE_RAINBOWBADGE
-;	promptbutton
+	waitsfx ; YOU GET THE BADGE AT THE END 
 	applyonemovement LANDING_DOCKS_BARBEAU, step_up
 	turnobject LANDING_DOCKS_BARBEAU, DOWN
 	turnobject LANDING_DOCKS_KURT, LEFT
@@ -171,9 +169,6 @@ LandingDocksScene:
 	special SaveMusic	
 	playmusic MUSIC_NONE	
 	special RestoreMusic
-	setscene $1
-
-PickupDocksScene:
 	special Special_FadeOutMusic
 	pause 30
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
@@ -212,7 +207,6 @@ PickupDocksScene:
 	applymovement LANDING_DOCKS_KENSEY, Docks_KenseyMoves1
 	disappear LANDING_DOCKS_KENSEY
 	setevent EVENT_DOCKS_KENSEY
-;	applyonemovement LANDING_DOCKS_BARBEAU, step_down
 	turnobject LANDING_DOCKS_KURT, UP
 	turnobject PLAYER, UP
 	showtext Docks_Text19
@@ -220,6 +214,7 @@ PickupDocksScene:
 	showtext Docks_Text20
 ; end 
 	setscene $2
+	setflag ENGINE_RAINBOWBADGE
 	setevent EVENT_DOCKS_KURT
 	setevent EVENT_DOCKS_KENSEY
 	setevent EVENT_DOCKS_BARBEAU
@@ -363,10 +358,6 @@ Docks_Text6_2:
 	next
 	text_start 
 	text "She chose us!"
-	done
-
-	para "Barbeau: Lugia"
-	line "chose us!"	
 	done
 
 Docks_Text7:
@@ -617,7 +608,6 @@ Docks_Text20:
 	line "still worthy?"
 	done
 
-PlayerMovesToBeatKensey:
-	step_up
+PlayerMovesForDocksScene1:
 	step_up
 	step_end

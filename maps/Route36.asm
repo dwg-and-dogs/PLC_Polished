@@ -315,7 +315,7 @@ Route36TreeScript:
 	special Special_CelebiShrineEvent
 	special FadeOutPalettes
 	waitsfx
-	warp STADIUM_GROUNDS, 33, 10
+	warp STADIUM_GROUNDS, 47, 28
 	end
 	
 AskToTimeTravelTextRoute36:

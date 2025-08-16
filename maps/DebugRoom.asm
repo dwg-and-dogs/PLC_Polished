@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, ROUTE_39, 1
+	warp_event  1, 8, GROTTOED_GLACIER_B2F, 3
 
 
 	def_coord_events
