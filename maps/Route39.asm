@@ -101,8 +101,11 @@ Route39LostMiltankText:
 	done
 
 CowgirlThanksPlayer:
-	showtext CowgirlThanksPlayerText
+	opentext
+	writetext CowgirlThanksPlayerText
+	waitbutton
 	verbosegiveitem MOOMOO_MILK, 12
+	closetext
 	setevent EVENT_GAVE_MOOMOO_MILKS
 	end
 
@@ -163,6 +166,7 @@ Route39MiltankScript:
 	writetext SpookToRancherText
 	yesorno
 	iffalse_jumptext NoSpookMiltankText
+	closetext
 	applymovement ROUTE_39_MILTANK, MiltankMovement3
 	setevent EVENT_MILTANK_COWGIRL
 	setevent EVENT_ROUTE39_MILTANK
@@ -175,7 +179,8 @@ Route39MiltankScript:
 	iffalse_jumptext NoSpookMiltankText
 	showtext SpookedToSuicuneText
 	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; 
-	applyonemovement PLAYER, step_right
+	applyonemovement PLAYER, step_left
+	pause 30
 	showemote EMOTE_HAPPY, ROUTE_39_MILTANK, 60
 	applymovement ROUTE_39_SUICUNE, SuicuneMovement ; three right, down one 
 	opentext

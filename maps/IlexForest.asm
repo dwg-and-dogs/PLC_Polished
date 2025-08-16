@@ -647,7 +647,8 @@ IlexForestShrineScript:
 	writetext YesTimeTravelText
 	waitbutton
 	closetext
-	playsound SFX_WARP_TO
+	special Special_CelebiShrineEvent
+;	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
 	warp HOLLYS_HOLT, 10, 25

@@ -343,6 +343,7 @@ HollysHoltShrineScript:
 	writetext HHYesTimeTravelText
 	waitbutton
 	closetext
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx

@@ -312,7 +312,7 @@ Route36TreeScript:
 	writetext YesTimeTravelTextRoute36
 	waitbutton
 	closetext
-	playsound SFX_WARP_TO
+	special Special_CelebiShrineEvent
 	special FadeOutPalettes
 	waitsfx
 	warp STADIUM_GROUNDS, 33, 10

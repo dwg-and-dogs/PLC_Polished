@@ -499,7 +499,7 @@ StadiumGroundsSandra2Script:
 	writetext StadiumGroundsTimeTravel
 	waitbutton
 	closetext
-	playsound SFX_WARP_TO
+	special Special_CelebiShrineEvent
 	setevent EVENT_SANDRA_WARPED
 	setevent EVENT_WHITNEY_GYM
 	special FadeOutPalettes
