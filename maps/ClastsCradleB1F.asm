@@ -29,15 +29,14 @@ ClastsCradleB1F_MapScriptHeader:
 	object_event 22, 8, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 	object_event 27, 14, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CRADLE_CUTSCENE
 ; CUTSCENE 2
-	object_event   4,  16, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
+	object_event   6,  16, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
 	pokemon_event  5,  14, HEATRAN, -1, -1, PAL_NPC_RED, HeatranText, EVENT_CC_HEATRAN
-	object_event   5,  21, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2 ; initialize 
+	object_event   5,  21, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2 ; initialize 
 	object_event 8, 5, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosScriptCC, EVENT_BEAT_ADRINNA_MINE
 
 ; TRAINERS
 	object_event  22,  20, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader19, EVENT_BEAT_ADRINNA_MINE
 	object_event  17,  24, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader20, EVENT_BEAT_ADRINNA_MINE
-
 	tmhmball_event 25, 23, TM_FOCUS_BLAST, EVENT_GOT_TM_FOCUS_BLAST 
 
 
@@ -68,7 +67,7 @@ CradleB1FStonesCallback:
 ClastsCradleCallback_AfterHeatran:
 	checkevent EVENT_CC_HEATRAN
 	iffalse .Skip
-	moveobject CRADLE_KURT, 4, 18
+	moveobject CRADLE_KURT, 4, 16
 .Skip:
 	endcallback
 	
@@ -468,8 +467,8 @@ CradleScene2_Heatran:
 	pause 60
 	special Special_FadeOutMusic
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
-	turnobject PLAYER, LEFT
-	turnobject CRADLE_ADRINNA_2, RIGHT
+	turnobject PLAYER, RIGHT
+	turnobject CRADLE_ADRINNA_2, LEFT
 	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
 	showtext CradleAdrinnaText1
 ; may need an additional 
@@ -486,27 +485,23 @@ CradleScene2_Heatran:
 	disappear CRADLE_HEATRAN
 	setevent EVENT_CC_HEATRAN
 	reloadmapafterbattle
-	turnobject PLAYER, LEFT
+	turnobject PLAYER, RIGHT
 	showtext CradleAdrinnaText2
 	turnobject PLAYER, DOWN
 	turnobject CRADLE_ADRINNA_2, DOWN
 	pause 30
 	appear CRADLE_KURT
 	applymovement CRADLE_KURT, CradleKurtMovesToYou
-	applyonemovement PLAYER, step_down
-	applyonemovement PLAYER, step_down
-	turnobject PLAYER, LEFT
 	turnobject CRADLE_KURT, RIGHT 
+	turnobject PLAYER, LEFT
+	turnobject CRADLE_ADRINNA_2, LEFT 
 	showtext CradleKurtText1
 	special HealParty
-	applyonemovement PLAYER, step_up
-	applyonemovement PLAYER, step_up
-	turnobject PLAYER, LEFT
-	turnobject CRADLE_KURT, UP
-	turnobject PLAYER, LEFT
 Cradle_Scene3Pickup:  
+	turnobject PLAYER, RIGHT
+	turnobject CRADLE_ADRINNA_2, LEFT
+	turnobject CRADLE_KURT, RIGHT
 	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
-	turnobject CRADLE_ADRINNA_2, RIGHT
 	showtext CradleAdrinnaText3
 	winlosstext CradleAdrinnaText4, 0
 	loadtrainer ADRINNA, ADRINNA2
@@ -545,6 +540,8 @@ Player_CCB1F_Move1:
 	
 CradleKurtMovesToYou:
 	step_up
+	step_up	
+	step_up
 	step_up
 	step_left
 	step_up
@@ -581,9 +578,8 @@ CradleAdrinnaText1:
 	para "The #mon here"
 	line "is liquid steel."
 
-	para "We can remake"
-	line "Johto from the"
-	cont "bedrock up."
+	para "Let's remake Johto"
+	line "from the bedrock."
 	
 	para "<PLAYER>, I want"
 	line "you to have it."

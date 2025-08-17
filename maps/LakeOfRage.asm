@@ -27,10 +27,10 @@ LakeOfRage_MapScriptHeader:
 
 	def_object_events
 	object_event 17, 3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
-	object_event 12, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT ; INITIALIZE 
-	object_event 23, 3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL ; INITIALIZE 
+	object_event 12, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT
+	object_event 23, 3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL  
 ;HURSALUNA
-	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA  ; todo initialize 
+	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA
 ;trainers
 	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
 	pokemon_event 3,  4, GIRAFARIG, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
@@ -41,7 +41,7 @@ LakeOfRage_MapScriptHeader:
 	object_event  18, 30,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacCalvin, -1
 	object_event  33, 22,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacShane, -1
 	object_event 2, 30, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LakeOfRageKimonoGirlScript, EVENT_SET_DVS_6
-	object_event 0, 0, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LakeOfRageScientistText, -1
+	object_event 7, 27, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LakeOfRageScientistText, -1
 ;itemballs
 	itemball_event  7,  10, ELIXIR, 1, EVENT_LAKE_OF_RAGE_ELIXIR
 	itemball_event 38,  14, ULTRA_BALL, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
@@ -66,7 +66,7 @@ LakeOfRageTreeCut:
 	endcallback
 
 LakeHursalunaScript:
-;	appear EVENT_LAKE_HURSALUNA
+	appear LAKEOFRAGE_HURSALUNA
 	turnobject PLAYER, UP
 	earthquake 30
 	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement
@@ -93,12 +93,10 @@ LakeKurtScript:
 LakeHursalunaApproachesMovement:
 	fix_facing
 	fast_jump_step_down
-;	fast_jump_step_down
 	step_end
 
 LakeHursalunaApproachesMovement2:
 	fix_facing
-;	fast_jump_step_down
 	fast_jump_step_down
 	step_end
 
@@ -142,7 +140,24 @@ LakeRivalScript:
 	disappear LAKEOFRAGE_RIVAL
     waitsfx
     playmapmusic
-    end
+	turnobject PLAYER, UP
+	applyonemovement LAKEOFRAGE_PRYCE, step_left
+	applyonemovement LAKEOFRAGE_PRYCE, step_up
+	showemote EMOTE_QUESTION, LAKEOFRAGE_KURT, 30
+	opentext
+	writetext LakeKurtAfterRivalText
+	waitbutton
+	writetext LakePryceAfterRivalText
+	waitbutton
+	writetext LakeKurtAfterRivalText_2
+	waitbutton
+	writetext LakePryceAfterRivalText_2
+	waitbutton
+	special Special_CelebiShrineEvent
+	special FadeOutPalettes
+	waitsfx
+	warp TRANQUIL_TARN, 12, 4
+	end
 
 LakeRivalBattleScript:
     playmusic MUSIC_RIVAL_ENCOUNTER
@@ -215,7 +230,7 @@ LakeRivalText2:
 	line "Silph any more."
 	done
 
-LakeRivalText2_2: ; todo 
+LakeRivalText2_2: 
 	text_high
     text " Kurt: "
 	next
@@ -224,11 +239,10 @@ LakeRivalText2_2: ; todo
 	line "inventions upset"
 	cont "the balance! You"
 	
-	para "ought to head"
-	line "home."
+	para "You ought to"
+	line "head home."
 	done
 
-; fallthru 
 LakeRivalText2_3:
 	text_high
     text " <RIVAL>: "
@@ -404,27 +418,31 @@ LakeRivalWalksAway:
 	step_end
 
 
-LakePryceScript: ; todo add the celebi reaction
+LakePryceScript: 
 	opentext
-	checkevent EVENT_PRYCE_REACTED
-	iftrue .PryceAsks
-	writetext LakePryceReactsText
-	waitbutton
-	setevent EVENT_PRYCE_REACTED
-.PryceAsks:
 	writetext LakeShrineQuestion
 	yesorno
 	iffalse_jumptext LakeNoText
 	showtext LakePrayerText
-	waitbutton
-	playsound SFX_WARP_TO
+;	playsound SFX_WARP_TO
+	special Special_CelebiShrineEvent
 	special FadeOutPalettes
 	waitsfx
 	warp TRANQUIL_TARN, 12, 4
 	end
 
 LakePryceReactsText:
-	text "todo" ; todo 
+	text "You and <RIVAL>"
+	line "have different"
+	para "ideas of what the"
+	line "future should be."
+	
+	para "I wish that it'd"
+	line "been possible to"
+	cont "fold him in."
+	
+	para "He was chosen by"
+	line "Celebi too, Kurt."
 	done
 
 LakeShrineQuestion:
@@ -824,13 +842,13 @@ LakeOfRageKimonoGirlScript:
 
 .PhysicalOrSpecialMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 ;todo proper size
+	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 
 	dw .PhysicalOrSpecialMenuData
 	db 1 ; default option
 
 .PhysicalDVsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1 
 ;	menu_coords 0, 0, 15, TEXTBOX_Y - 1 ; alternate syntax
 	dw .PhysicalMenuData
 	db 1 ; default option
@@ -920,7 +938,7 @@ LakeOfRageDV_Setting_CancelText:
 	line "to show it!"
 	done
 
-LakeOfRageGreatnessLiesWithinText: ; todo place five others 
+LakeOfRageGreatnessLiesWithinText:  
 	text "Greatness lies"
 	line "within!"
 	done	

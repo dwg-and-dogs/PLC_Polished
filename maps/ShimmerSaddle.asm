@@ -245,7 +245,7 @@ ShimmerSaddle_Scene3_ManHZ:
 	applyonemovement PLAYER, step_up
 ;	setlasttalked SHIMMER_HZ_3
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon H__ZOROARK, 20
+	loadwildmon H__ZOROARK, 30
 	startbattle
 	disappear SHIMMER_HZ_3
 	setevent EVENT_SHIMMER_HZ_3
