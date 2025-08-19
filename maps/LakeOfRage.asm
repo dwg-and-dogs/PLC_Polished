@@ -14,7 +14,7 @@ LakeOfRage_MapScriptHeader:
 
 	def_coord_events
 	coord_event 16, 18, 0, LakeHursalunaScript
-	coord_event 17, 4, 1, LakeRivalScript
+	coord_event 18, 4, 1, LakeRivalScript
 
 	def_bg_events
 	bg_event 21, 27, BGEVENT_JUMPTEXT, LakeOfRageSignText
@@ -26,9 +26,9 @@ LakeOfRage_MapScriptHeader:
 	bg_event  7, 13, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_LAKE_OF_RAGE
 
 	def_object_events
-	object_event 17, 3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
-	object_event 12, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT
-	object_event 23, 3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL  
+	object_event 17, 4, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
+	object_event 13, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT
+	object_event 24, 5, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL  
 ;HURSALUNA
 	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA
 ;trainers
@@ -140,9 +140,11 @@ LakeRivalScript:
 	disappear LAKEOFRAGE_RIVAL
     waitsfx
     playmapmusic
-	turnobject PLAYER, UP
-	applyonemovement LAKEOFRAGE_PRYCE, step_left
-	applyonemovement LAKEOFRAGE_PRYCE, step_up
+	turnobject PLAYER, LEFT
+	applyonemovement LAKEOFRAGE_KURT, step_right
+	applyonemovement LAKEOFRAGE_KURT, step_up
+	turnobject LAKEOFRAGE_KURT, LEFT
+	turnobject LAKEOFRAGE_PRYCE, RIGHT
 	showemote EMOTE_QUESTION, LAKEOFRAGE_KURT, 30
 	opentext
 	writetext LakeKurtAfterRivalText
@@ -150,6 +152,10 @@ LakeRivalScript:
 	writetext LakePryceAfterRivalText
 	waitbutton
 	writetext LakeKurtAfterRivalText_2
+	waitbutton
+	writetext LakeShrineQuestion
+	yesorno
+	iffalse_jumptext LakeNoText
 	waitbutton
 	writetext LakePryceAfterRivalText_2
 	waitbutton
@@ -314,37 +320,55 @@ LakeKurtAfterRivalText:
 	text_start
 
 	text "Is what he said"
-	line "true? I thought"
-	para "tradition meant"
-	line "repeating the"
-	cont "past."
+	line "true? Isn't trad-"
+	cont "ition repeating"
+	cont "the past?"
 	done
 
 LakePryceAfterRivalText:
 	text_high
-    text " Pyrce: "
+    text " Pryce: "
 	next
 	text_start	
 	
 	text "Nature goes in"
-	line "cycles. Before"
-	para "the rampaging"
-	line "Gyarados, this"
+	line "cycles. This area"
+	cont "is rarely static."
 	
-	para "was a muddy Tarn."
-	line "It took decades"
-	para "to learn methods"
-	line "that could rest-"
-	cont "ore balance."
+	para "It was once a"
+	line "tarn: the extent"
+	cont "of a glacier."
+
+	para "Ahead of me, a"
+	line "chasm dug by a"
+	cont "glacier long ago."
 	
-	para "Silph has changed"
-	line "it again, harming"
-	para "untold numbers of"
-	line "#mon. We"
-	para "can only try to"
-	line "restore natural"
-	para "cycles. That's our"
-	line "role as stewards."
+	para "Then a Gyarados"
+	line "rampage shaped"
+	para "the area into a"
+	line "lake."
+	
+	para "Surely the years"
+	line "after weren't easy"
+	para "as people sought"
+	line "balance with the"
+	cont "new system."
+	
+	para "Now, Silph has"
+	line "drained the lake."
+	para "Ironically, the"
+	line "future they crea-"
+	cont "ted gives us a"
+	para "glimpse into the"
+	line "past in the mud."
+
+	para "Now, it's up to"
+	line "the Mahogany Gym"
+	para "to find a new"
+	line "balance here."
+	
+	para "That's our role"
+	line "as stewards."
 	done
 
 LakeKurtAfterRivalText_2:  
@@ -394,7 +418,7 @@ LakeRivalToPlayer:
 	step_left
 	step_left
 	step_left
-	step_down
+	step_up
 	step_left
 	step_left
 	step_end
@@ -404,14 +428,14 @@ LakeKurtToPlayer:
 	step_right
 	step_right
 	step_right
-	step_down
 	step_right
+	step_up
 	step_end
 
 LakeRivalWalksAway:
 	step_right
 	step_right
-	step_up
+	step_down
 	step_right
 	step_right	
 	step_right
@@ -446,7 +470,11 @@ LakePryceReactsText:
 	done
 
 LakeShrineQuestion:
-	text "Pryce: <PLAYER>,"
+	text_high
+    text " Pryce: "
+	next
+	text_start
+	text "<PLAYER>,"
 	line "would you like to"
 	cont "pray to Celebi"
 	cont "with me?"
