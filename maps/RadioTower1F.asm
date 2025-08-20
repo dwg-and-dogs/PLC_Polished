@@ -30,6 +30,7 @@ RadioTowerRivalTrigger1:
     waitsfx
     applymovement PLAYER, RadioTowerPlayerPushbackMovement
     applymovement RADIOTOWER_RIVAL, RadioTowerRivalApproachMovement
+	playmusic MUSIC_RIVAL_ENCOUNTER
     scall RadioTowerRivalBattleScript
 	; picks up back here 
     applymovement RADIOTOWER_RIVAL, RadioTowerRivalRetreatMovement

@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, LAKE_OF_RAGE, 2
+	warp_event  1, 8, BRASS_TOWER_ROOF, 1
 
 
 	def_coord_events

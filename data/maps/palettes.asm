@@ -29,6 +29,7 @@ ENDM
 	special_bg_pal map,      GOLDENROD_MUSEUM_1F,         PAL_SINGLE,    GoldenrodMuseumPalette
 	special_bg_pal map,      GOLDENROD_MUSEUM_2F,         PAL_SINGLE,    GoldenrodMuseumPalette
 	special_bg_pal map,      TIN_TOWER_ROOF,              PAL_TIMEOFDAY, TinTowerRoofPalette
+	special_bg_pal landmark,      BRASS_TOWER,            PAL_TIMEOFDAY, BrassTowerRoofPalette
 	special_bg_pal map,      BRASS_TOWER_ROOF,            PAL_TIMEOFDAY, BrassTowerRoofPalette
 	special_bg_pal map,      BELLCHIME_TRAIL,             PAL_TIMEOFDAY, BellchimeTrailPalette
 	special_bg_pal map,      HIDDEN_TREE_GROTTO,          PAL_SINGLE,    HiddenTreeGrottoPalette

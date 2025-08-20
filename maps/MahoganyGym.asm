@@ -137,6 +137,10 @@ SkierRoxanneBeatenText:
 SkierRoxanneSeenText:
 	text "This is no"
 	line "bunny slope!"
+	
+	para "Restoring the"
+	line "Lake isn't for"
+	cont "beginners!"
 	done
 
 
@@ -161,13 +165,15 @@ GenericTrainerBoarderDouglas:
 
 BoarderDouglasBeatenText:
 	text "He meditated in"
-	line "the lake in"
-	cont "Winter."
+	line "the lake in the"
+	cont "coldest winters."
 	done
 
 BoarderDouglasSeenText:
 	text "I know Pryce's"
-	line "secret."
+	line "secret. I've seen"
+	para "how we'll restore"
+	line "the Lake."
 	done
 
 
@@ -187,12 +193,19 @@ BoarderRonaldSeenText:
 	
 	para "Come to see what"
 	line "we're about?"
+	
+	para "It's not for the"
+	line "faint of heart!"
 	done
 
 
 GenericTrainerBoarderBrad:
 	generictrainer BOARDER, BRAD, EVENT_BEAT_BOARDER_BRAD, BoarderBradSeenText, BoarderBradBeatenText
 
+	text "The Lake needs"
+	line "attention. We're"
+	cont "going to fix it."
+	done
 
 BoarderBradBeatenText:
 	text "Do you see how"

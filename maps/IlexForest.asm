@@ -542,7 +542,6 @@ IlexForestCelebiEventScript:
 	closetext ; start to appear celebi 
 	special Special_FadeOutMusic
 	pause 60
-
 	appear ILEX_RIVAL
 	applymovement ILEX_RIVAL, IlexRivalWalksToShrine
 	turnobject PLAYER, DOWN

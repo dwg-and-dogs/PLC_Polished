@@ -121,6 +121,7 @@ LakeRivalScript:
 	showtext LakeRivalText1
 	appear LAKEOFRAGE_KURT
  	applymovement LAKEOFRAGE_KURT, LakeKurtToPlayer
+	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext LakeKurtText1
 	waitbutton

@@ -13,8 +13,10 @@ LakeOfRageMagikarpHouse_MapScriptHeader:
 	bg_event  7,  1, BGEVENT_JUMPSTD, difficultbookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LakeOfRageEarthPowerScript, -1
-	pokemon_event 2,  4, QUAGSIRE, -1, -1, PAL_NPC_BLUE, QuagsireEarthPowerText, -1
+	object_event  2,  4, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LakeOfRageEarthPowerScript, -1
+	pokemon_event 2,  3, QUAGSIRE, -1, -1, PAL_NPC_BLUE, QuagsireEarthPowerText, -1
+	object_event  5,  3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LakeOfRageHealerScript, -1
+	pokemon_event 5,  4, CHANSEY, -1, -1, PAL_NPC_RED, LoRChanseyText, -1
 	
 QuagsireEarthPowerText:
 	text "Quag! Quag!"
@@ -105,4 +107,35 @@ Text_LakeOfRageTutorTaught:
 	line "can wield the"
 	para "flatus of the"
 	line "Earth as well!"
+	done
+
+LoRChanseyText:
+	text "Chaan!"
+	done
+
+
+LakeOfRageHealerScript:
+	faceplayer
+	opentext
+	writetext LoRHealText
+	waitbutton
+	playmusic MUSIC_HEAL
+	special HealParty
+	writetext LoRHealedText
+	waitbutton
+	closetext
+	playmusic MUSIC_NONE	
+	special RestoreMusic
+	end
+
+LoRHealText:
+	text "Our cabin is a"
+	line "respite for weary"
+	cont "adventurers."
+	
+	para "Take a rest."
+	done
+	
+LoRHealedText:
+	text "All better!"
 	done
