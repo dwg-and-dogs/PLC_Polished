@@ -28,8 +28,23 @@ LandingDorms_MapScriptHeader:
 	object_event 2, 4, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC2Text, -1
 	object_event 7, 6, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingDormsNPC3Text, -1
 	object_event  4, 4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingDormsBarbeauJournalScript, -1
+	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptLandingDorms, -1
 
 
+NatuScriptLandingDorms:
+	opentext
+	writetext Landing_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+Landing_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+	done
 
 
 LandingDormsNPC1Text:
@@ -118,9 +133,8 @@ LandingDormsKurtScript:
 
 .TLKurtPC
 	writetext KurTLDormsText2
-	promptbutton
-	special PokemonCenterPC
-	endtext
+	waitbutton
+	closetext
 	end
 
 KurtTLDormsText:
@@ -145,9 +159,8 @@ KurtTLDormsText:
 	done
 	
 KurTLDormsText2:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
+	text "We must stop that"
+	line "General Kensey!"
 	done
 
 TLKurtBattleText:

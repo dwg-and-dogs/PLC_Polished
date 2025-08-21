@@ -135,7 +135,8 @@ TapestrySceneFinale:
 	turnobject TAPESTRY_SAMSARA, UP
 	applyonemovement TAPESTRY_SAMSARA, step_up
 	disappear TAPESTRY_SAMSARA
-	warp TINDER_GARDEN_2, 10, 4 
+	pause 30
+	warp TINDER_GARDEN_2, 4, 2 
 	end
 
 .NoScene: ; hm? 
@@ -162,7 +163,7 @@ TapestryTextAmos:
 	para "..."
 
 	para "What will you "
-	cont "inscribe here?"
+	line "inscribe here?"
 	done
 
 	

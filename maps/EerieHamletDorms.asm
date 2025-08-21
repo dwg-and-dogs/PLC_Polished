@@ -28,7 +28,23 @@ EerieHamletDorms_MapScriptHeader:
 	pokemon_event  6, 3, SNEASEL, -1, -1, PAL_NPC_RED, SneaselText, -1
 	object_event 2, 2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC2Text, -1
 	object_event 8, 6, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC3Text, -1
+	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptHamletDorms, -1
+	
 
+NatuScriptHamletDorms:
+	opentext
+	writetext Hamlet_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+Hamlet_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+	done
 
 HamletDormsNPC1Text:
 	text "Ever since the"
@@ -169,9 +185,8 @@ HamletDormsKurtScript:
 
 .WCKurtPC
 	writetext KurEHDormsText2
-	promptbutton
-	special PokemonCenterPC 
-	endtext
+	waitbutton
+	closetext
 	end
 
 KurtEHDormsText:
@@ -185,7 +200,7 @@ KurtEHDormsText:
 	
 	para "But I believe "
 	line "Johto can still"
-	para "save its tradit-"
+	para "keep its tradit-"
 	line "ions from being"
 	cont "wiped away!"
 	
@@ -196,9 +211,8 @@ KurtEHDormsText:
 	done
 	
 KurEHDormsText2:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
+	text "We must stop the"
+	line "mine's operation!"
 	done
 
 EHKurtBattleText:

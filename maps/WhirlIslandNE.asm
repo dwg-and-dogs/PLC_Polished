@@ -13,6 +13,7 @@ WhirlIslandNE_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
+	object_event   14,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptWINE, EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
 	object_event 15, 3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhirlIslandsKurtScript, EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA ; revise event and set the 
 	itemball_event 11, 11, ULTRA_BALL, 1, EVENT_WHIRL_ISLAND_NE_ULTRA_BALL
 
@@ -24,10 +25,7 @@ WhirlIslandsKurtScript:
 	playmusic MUSIC_HEAL
 	special HealParty
 	special SaveMusic	
-	writetext KurtWhirlPCText
-	promptbutton
-	special PokemonCenterPC
-	endtext
+	closetext
 	end
 
 KurtWhirlHealText:
@@ -47,11 +45,17 @@ KurtWhirlHealText:
 	done
 
 
-KurtWhirlPCText:
-	text "Oh, I can run to"
-	line "a PC to manage"
-	cont "your #mon."
-	
-	para "Just let me know"
-	line "what you need."
+NatuScriptWINE:
+	opentext
+	writetext WINE_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+WINE_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to a computer to"
+	line "manange #mon."
 	done

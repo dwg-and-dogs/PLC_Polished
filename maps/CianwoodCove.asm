@@ -17,28 +17,19 @@ CianwoodCove_MapScriptHeader:
 
 	def_object_events
 	object_event 11, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCoveKurtScript, EVENT_BEAT_KENSEY_DOCKS
+	object_event   10, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptCianwoodCove, EVENT_BEAT_KENSEY_DOCKS
 	itemball_event 11, 21, PETAYA_BERRY, 3, EVENT_CIANWOODCOVE_BERRY_1
 	itemball_event 11, 26, LIECHI_BERRY, 3, EVENT_CIANWOODCOVE_BERRY_2
 	fruittree_event 16, 29, FRUITTREE_CIANWOOD_COVE, SHORE_FOAM, PAL_NPC_GREEN ;OK
 
-	object_const_def
-	const CIANWOOD_COVE_KURT
 
 
 CianwoodCoveKurtScript:
-	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
 	faceplayer
 	opentext
-	checkevent EVENT_CIANWOOD_COVE_KURT
-	iftrue .KurtPC
 	writetext KurtExplainsTheStormText
 	waitbutton
-	setevent EVENT_CIANWOOD_COVE_KURT
-.KurtPC
-	writetext KurtCOvePCText
-	promptbutton
-	special PokemonCenterPC
-	endtext
+	closetext
 	end
 	
 KurtExplainsTheStormText:
@@ -62,21 +53,22 @@ KurtExplainsTheStormText:
 	line "not understand."
 	done
 
-KurtCOvePCText:
-	text "I can run back to"
-	line "manage your PC,"
-	cont "if you need."
+
+NatuScriptCianwoodCove:
+	opentext
+	writetext Cianwood_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+Cianwood_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
 	done
 
-CC_Kurt_Moves_Away:
-	step_down
-	step_down
-	step_down
-	step_down
-	step_down
-	step_down
-	step_down
-	step_end
 
 CianwoodCovetimeTravelScript:
 	opentext

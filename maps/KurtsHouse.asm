@@ -25,7 +25,7 @@ KurtsHouse_MapScriptHeader:
 	object_event    6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
 	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV5Script, EVENT_KURTS_HOUSE_NOTEBOOK
 	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FiddlerBookScript, -1	
-	pokemon_event  14,  4, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
+	pokemon_event  14,  4, NATU, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
 ; kurt's books 
 	object_event  0,  1, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal1Script, EVENT_KURTS_HOUSE_BOOK_1 ; INITIALLY SET  
 	object_event  0,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal2Script, EVENT_KURTS_HOUSE_BOOK_2 ; INITIALLY SET  
@@ -220,8 +220,8 @@ WhereIsCharcoalFamily:
 	done
 	
 KurtsHouseShuckleText:
-	text "Shuckle:"
-	line "Shucka!"
+	text "Natu:"
+	line "Atune!"
 	done
 	
 PokemonJournalProfWestwoodScript:

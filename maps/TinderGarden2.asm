@@ -195,7 +195,7 @@ TG2_Text_Kurt5_2: ; todo
 	para "should have said,"
 	line "'I support you.'"
 
-	para "I should have said,"
+	para "I should've said,"
 	line "'I accept you as"
 	cont "you are'."
 
@@ -227,11 +227,14 @@ TG2_Text_Kurt5_2: ; todo
 	done
 
 
-TG2_Text_Kurt5_3: ; todo 
-	text "<RIVAL>'s Father:"
-	line "Kurt would be so"
-	para "proud of you,"
-	line "<PLAYER>."
+TG2_Text_Kurt5_3: ; todo
+	text_high
+    text " <RIVAL>'s Father: " 
+	next
+	text_start	 
+	text "Kurt would be so"
+	line "proud of you,"
+	cont "<PLAYER>."
 	done
 
 TG2_Text3:

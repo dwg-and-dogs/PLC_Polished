@@ -21,8 +21,22 @@ WesternCapitalDorms_MapScriptHeader: ;	def_scene_scripts
 	object_event 5, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC1Text, -1
 	object_event 2, 2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC2Text, -1
 	object_event 7, 6, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC3Text, -1
+	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptCapitalDorms, -1
 
+NatuScriptCapitalDorms:
+	opentext
+	writetext Capital_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
 
+Capital_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+	done
 
 WesternCapitalDormsNPC1Text:
 	text "My husband and I"
@@ -85,9 +99,8 @@ WesternCapitalDormsKurtScript:
 
 .WCKurtPC
 	writetext KurWCDormsText2
-	promptbutton
-	special PokemonCenterPC
-	endtext
+	waitbutton
+	closetext
 	end
 
 KurtWCDormsText:
@@ -104,10 +117,6 @@ KurtWCDormsText:
 	para "can help us get"
 	line "across the moat?"
 	
-	para "I can run back to"
-	line "our time for a PC"
-	cont "if you need."
-	
 	para "Oh! I found some"
 	line "neat #mon in"
 	cont "the wild areas"
@@ -117,9 +126,8 @@ KurtWCDormsText:
 	done
 	
 KurWCDormsText2:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
+	text "We must get to"
+	line "the port!"
 	done
 
 WCKurtBattleText:

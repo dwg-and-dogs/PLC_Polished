@@ -21,7 +21,23 @@ GauldenrodDorms_MapScriptHeader:
 	object_event 2, 3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC1Text, -1
 	object_event 2, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC2Text, -1
 	object_event 7, 5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC3Text, -1
+	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptGauldenrodDorms, -1
+	
 
+NatuScriptGauldenrodDorms:
+	opentext
+	writetext Gauldenrod_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+Gauldenrod_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+	done
 
 
 GauldenrodDormsNPC1Text:
@@ -76,9 +92,7 @@ GauldenrodBedText2:
 	line "restored!"
 	done
 
-
-
-GauldenrodDormsKurtScript: ; will this work?....
+GauldenrodDormsKurtScript:
 	faceplayer
 	opentext
 	writetext KurtGauldenrodDormsText
@@ -94,9 +108,8 @@ GauldenrodDormsKurtScript: ; will this work?....
 
 .GauldenrodKurtPC
 	writetext KurtGauldenrodDormsText2
-	promptbutton
-	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
-	endtext
+	waitbutton
+	closetext
 	end
 
 KurtGauldenrodDormsText:
@@ -114,10 +127,6 @@ KurtGauldenrodDormsText:
 	line "through whatever"
 	cont "used to be at the"
 	cont "National Park?"
-
-	para "I can run back to"
-	line "our time for a PC"
-	cont "if you need."
 	
 	para "Oh! I found some"
 	line "neat #mon in"
@@ -138,6 +147,6 @@ GauldenrodKurtBattleText2:
 	done
 
 KurtGauldenrodDormsText2:
-	text "Just let me know"
-	line "what you need."
+	text "We have to find a"
+	line "way north!"
 	done

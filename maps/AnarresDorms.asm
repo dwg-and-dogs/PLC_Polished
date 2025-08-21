@@ -19,10 +19,26 @@ AnarresDorms_MapScriptHeader:
 	bg_event  12,  3, BGEVENT_READ, AnarresDormsBed 
 
 	def_object_events
-	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, EVENT_BEAT_SANDRA
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, EVENT_BEAT_HOLLIS
 	object_event 2, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC2Text, -1 ;
 	object_event 6, 3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC3Text, -1 ;
+	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptAnarresDorms, -1
 	
+
+NatuScriptAnarresDorms:
+	opentext
+	writetext Anarres_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+Anarres_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+	done	
 	
 	
 AnarresDormsNPC2Text:
@@ -84,8 +100,6 @@ BedText2:
 AnarresDormsKurtScript:
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_HOLLIS
-	iftrue .AnarresKurtPC2
 	writetext KurtAnarresDormsText
 	yesorno
 	iffalse .AnarresKurtPC
@@ -97,14 +111,11 @@ AnarresDormsKurtScript:
 	opentext
 	jumpopenedtext AnarresKurtBattleText2
 
-.AnarresKurtPC2
-	writetext AnarresDormsKurtAfterHollisText
-	waitbutton
+
 .AnarresKurtPC
 	writetext KurAnarresDormsText2
-	promptbutton
-	special PokemonCenterPC
-	endtext
+	waitbutton
+	closetext
 	end
 
 AnarresDormsKurtAfterHollisText:
@@ -127,9 +138,10 @@ KurtAnarresDormsText:
 	cont "the Cut HM, but"
 	cont "he's holed up!"
 	
-	para "I can run back to"
-	line "our time for a PC"
-	cont "if you need."
+	para "Natu can teleport"
+	line "to the present if"
+	para "you need to man-"
+	line "age your party."
 	
 	para "Oh! I found some"
 	line "neat #mon in"

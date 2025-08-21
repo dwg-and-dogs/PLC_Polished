@@ -56,20 +56,22 @@ BrassTowerRoofScript:
 	end
 	
 .DeclinedAdrinnaRoofScript:
-	applymovement PLAYER, BTR_PlayerStepsDownMovement
+	applyonemovement PLAYER, step_down
+	applyonemovement PLAYER, step_down	
+	applyonemovement PLAYER, step_down
 	showtext TowerRoofMejimiText1_0
-	pause 10
+	pause 30
 	turnobject BRASS_TOWER_ROOF_MEJIMI, UP
-	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
+	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 30
 	showtext TowerRoofMejimiText1_1
 	appear BRASS_TOWER_ROOF_KURT
 	applymovement BRASS_TOWER_ROOF_KURT, BTR_KurtStepsDownMovement
 	showtext TowerRoofMejimiText1_4
-	showemote EMOTE_QUESTION, BRASS_TOWER_ROOF_MEJIMI, 10
+	showemote EMOTE_QUESTION, BRASS_TOWER_ROOF_MEJIMI, 30
 	showtext TowerRoofMejimiText1_5
-	showemote EMOTE_BOLT, BRASS_TOWER_ROOF_MEJIMI, 10
+	showemote EMOTE_BOLT, BRASS_TOWER_ROOF_MEJIMI, 30
 	showtext TowerRoofMejimiText1_7
-	applyonemovement PLAYER, step_down
+;	applyonemovement PLAYER, step_down
 ; BATTLE MEJIMI 
 	winlosstext TowerRoofMejimiText1_8, 0
 	loadtrainer MEJIMI, 1
@@ -77,24 +79,28 @@ BrassTowerRoofScript:
 	ifequal $1, .Continue
 .Continue:
 	reloadmapafterbattle
-	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
+	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 30
+	pause 10
 	appear BRASS_TOWER_ROOF_LIGHTNING_1
-	pause 2
+	pause 10
 	appear BRASS_TOWER_ROOF_LIGHTNING_2
-	pause 2
+	pause 10
 	appear BRASS_TOWER_ROOF_LIGHTNING_3
-	pause 2
-	disappear BRASS_TOWER_ROOF_LIGHTNING_1
-	pause 2
-	disappear BRASS_TOWER_ROOF_LIGHTNING_2
-	pause 2
-	disappear BRASS_TOWER_ROOF_LIGHTNING_3
-	pause 2
+	pause 10
+	showtext LightningBoltText1
+	earthquake 30
 	playsound SFX_THUNDER
 	waitsfx
-	changeblock 6, 6, $0F ; fire, todo 
+	disappear BRASS_TOWER_ROOF_LIGHTNING_1
+	pause 10
+	disappear BRASS_TOWER_ROOF_LIGHTNING_2
+	pause 10
+	disappear BRASS_TOWER_ROOF_LIGHTNING_3
+	pause 10
+	changeblock 6, 6, $0B ; fire, todo 
+	changeblock 8, 6, $0B ; fire, todo 
+	changeblock 10, 6, $0B ; fire, todo 
 	setevent EVENT_FIRST_LIGHTNING_ROOF
-	applyonemovement BRASS_TOWER_ROOF_MEJIMI, step_down
 	turnobject BRASS_TOWER_ROOF_MEJIMI, LEFT 
 	showtext TowerRoofMejimiText1_9
 	applymovement BRASS_TOWER_ROOF_LUGIA, BrassTowerLugiaFleesMovement 
@@ -104,10 +110,12 @@ BrassTowerRoofScript:
 ; changeblock 10, 6, $0F ; fire, todo 	
 	turnobject BRASS_TOWER_ROOF_MEJIMI, RIGHT 
 	showtext TowerRoofMejimiText1_9_2
+	turnobject BRASS_TOWER_ROOF_MEJIMI, UP
 	applymovement BRASS_TOWER_ROOF_HOOH, BrassTowerHoOhMovement1
+	turnobject BRASS_TOWER_ROOF_KURT, RIGHT
+	turnobject PLAYER, LEFT
 	showtext TowerRoofMejimiText1_10
 	; more flames 
-	turnobject PLAYER, RIGHT
 	disappear PLAYER
 	applymovement BRASS_TOWER_ROOF_HOOH, BrassTowerHoOhMovement2 ; steps down off screen
 	disappear BRASS_TOWER_ROOF_HOOH
@@ -137,6 +145,7 @@ BTR_KurtStepsDownMovement:
 	step_left
 	step_down
 	step_down
+	step_down	
 	step_end
 
 TowerRoofMejimiText1_0: 
@@ -291,8 +300,7 @@ BrassTowerLugiaFleesMovement:
 	
 BrassTowerHoOhMovement1:
 	fix_facing
-	fast_jump_step_up
-	fast_jump_step_up
+	slide_step_up
 	step_end
 
 BrassTowerHoOhMovement2:
@@ -675,4 +683,8 @@ LightningBoltText:
 	line "Absorb nullifies"
 	cont "its power."
 	done
-	
+
+LightningBoltText1:
+	text "The lightning bolt"
+	line "crashes!"
+	done

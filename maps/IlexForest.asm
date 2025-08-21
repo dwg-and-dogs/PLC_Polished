@@ -33,7 +33,7 @@ IlexForest_MapScriptHeader:
 	object_event  9, 26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestKurtScript, EVENT_ILEX_SHRINE_CELEBI 
 	object_event 11, 27, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EngineerCamdenScript, EVENT_LOGGERS_ILEX_FOREST 
 	object_event 10, 26, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GSBallScript, EVENT_LOGGERS_ILEX_FOREST
-	pokemon_event  9, 27, SHUCKLE, -1, -1, PAL_NPC_RED, IlexForestShuckleText, EVENT_LOGGERS_ILEX_FOREST
+	pokemon_event  9, 27, NATU, -1, -1, PAL_NPC_RED, IlexForestShuckleText, EVENT_LOGGERS_ILEX_FOREST
 	pokemon_event 10, 27, SCIZOR, -1, -1, PAL_NPC_RED, IlexForestScizorText, EVENT_LOGGERS_ILEX_FOREST
 	object_event 10, 21, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4, 26, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestRivalScript, EVENT_ILEX_FOREST_RIVAL
@@ -518,16 +518,15 @@ GSBallScript: ;shouldn't be able to access this
 	done
 	
 GSBallText: ;shouldn't be able to access this
-	text "A damaged"
-	line "artifact."
+	text "Object Event"
 	done
 
 IlexForestShuckleText: ; shouldn't be able to access this
-	text "Shucka shuck!"
+	text "Object Event"
 	done
 	
 IlexForestScizorText:
-	text "Snip"
+	text "Object Event"
 	done ; shouldn't be able to access this
 
 IlexForestCelebiEventScript:
