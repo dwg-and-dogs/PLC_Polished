@@ -77,13 +77,13 @@ SneaselText:
 
 HamletDormsBed:
 	showtext HamletBedText1
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-	special HealParty
+	
 	playmusic MUSIC_HEAL
+	special HealParty
 	pause 60
-	special RestartMapMusic
 	special Special_FadeInQuickly
+	special RestartMapMusic
+
 	showtext HamletBedText2
 	end
 

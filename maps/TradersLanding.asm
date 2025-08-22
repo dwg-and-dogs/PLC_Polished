@@ -383,12 +383,6 @@ TL_OpenForBusinessSign:
 TL_Brigader_Script:
 	faceplayer
 	opentext
-	; debug tech
-	setscene $1
-	setevent EVENT_NOMAD_NEXUS
-	clearevent EVENT_NOMAD_ISLANDS_HOUSE
-	giveitem LIGHT_BALL, 1
-	; end debug tech 
 	checkevent EVENT_BEAT_KENSEY_PORT
 	iftrue_jumptext TL_Brigader_AfterKenseyText
 	jumpthisopenedtext

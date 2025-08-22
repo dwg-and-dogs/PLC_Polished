@@ -260,9 +260,15 @@ IlexHealerScript:
 	opentext
 	writetext WantToHeal
 	waitbutton
+	closetext
+
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+
+	opentext
 	writetext IlexHealedPokemon
 	waitbutton
 	closetext

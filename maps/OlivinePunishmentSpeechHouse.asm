@@ -94,7 +94,7 @@ OlivineLightBallScript:
 	yesorno
 	iffalse_jumpopenedtext NoGoldLeafText
 	takeitem GOLD_LEAF
-	verbosegiveitem LIGHT_BALL, 2
+	verbosegiveitem PEARL, 2
 	setscene $1
 	iffalse_endtext
 	jumpopenedtext GiveLightBallText 
@@ -102,8 +102,19 @@ OlivineLightBallScript:
 NeedAGoldLeafText:
 	text "I need to impress"
 	line "my boyfriend's"
-	para "family."
-	line "They're so gaudy!"
+	para "family. But all I"
+	line "have are pearls."
+	
+	para "Each day, I go on"
+	line "the shore to get"
+	cont "all the pearls."
+	
+	para "But my boyfriend's"
+	line "mom thinks they're"
+	cont "tacky."
+	
+	para "I need something"
+	line "glittering!"
 	done
 
 NoGoldLeafText:
@@ -115,12 +126,8 @@ Text_GoldLeafMailQuestion:
 	text "Oh, Gold Leaf!"
 	line "What an idea!"
 	
-	para "I'll give you my"
-	line "best beach toy,"
-	
-	para "2 Light Balls to"
-	line "play volleyball"
-	cont "with!"
+	para "Would you trade"
+	line "it for a pearl?"
 	done
 
 GiveLightBallText:
