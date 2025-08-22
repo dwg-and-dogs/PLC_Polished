@@ -262,6 +262,9 @@ IlexHealerScript:
 	waitbutton
 	closetext
 
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
 	pause 60
@@ -272,8 +275,6 @@ IlexHealerScript:
 	writetext IlexHealedPokemon
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end
 
 	
@@ -652,7 +653,7 @@ IlexForestShrineScript:
 	waitbutton
 	closetext
 	special Special_CelebiShrineEvent
-;	playsound SFX_WARP_TO
+	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
 	warp HOLLYS_HOLT, 10, 25

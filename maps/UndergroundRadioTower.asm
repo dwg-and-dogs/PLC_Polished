@@ -81,9 +81,10 @@ UndergroundRadioTowerKurtScript:
     faceplayer
     opentext
     writetext KurtThankYouText
-    special HealParty
-    playsound SFX_FULL_HEAL
-    waitsfx
+	waitbutton
+	playmusic MUSIC_HEAL
+	special HealParty
+	pause 60
     writetext KurtAfterHealText
     yesorno
     iffalse .NotReady

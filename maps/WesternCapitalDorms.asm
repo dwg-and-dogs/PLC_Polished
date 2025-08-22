@@ -63,6 +63,7 @@ WesternCapitalDormsNPC3Text:
 
 WesternCapitalDormsBed:
 	showtext WesternCapitalBedText1
+	
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	special HealParty
@@ -70,6 +71,7 @@ WesternCapitalDormsBed:
 	pause 60
 	special RestartMapMusic
 	special Special_FadeInQuickly
+
 	showtext WesternCapitalBedText2
 	end
 

@@ -85,17 +85,17 @@ ScientistDennettBeatenText:
 
 UnionHealerScript:
 	faceplayer
-	opentext
-	writetext .WantToHeal
-	waitbutton
+	showtext .WantToHeal
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
-	writetext .HealedPokemon
-	waitbutton
-	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+
+	showtext .HealedPokemon
 	end
 	
 .WantToHeal:

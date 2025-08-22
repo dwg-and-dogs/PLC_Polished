@@ -55,16 +55,24 @@ WhitneyScriptRadioTower5F:
     writetext KurtFinalText
     waitbutton
     closetext
+
 	playmusic MUSIC_HEAL
-    special HealParty
-	special SaveMusic	
-	playmusic MUSIC_NONE	
-	special RestoreMusic
+	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	setevent EVENT_BEAT_WHITNEY
 	clearevent EVENT_WHITNEY_GYM
 	setflag ENGINE_PLAINBADGE
 	setevent EVENT_RADIO_TOWER_KURT2
     end
+
+
+	playmusic MUSIC_HEAL
+	special HealParty
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
 
 WhitneyIntroText:
 	text_high

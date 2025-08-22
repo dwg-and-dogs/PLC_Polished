@@ -79,19 +79,25 @@ BrassTowerHealScript: ; cf ilex healer
 	opentext
 	writetext WantToHealBrassTower
 	waitbutton
+	closetext
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+
+	opentext
 	writetext BrassHealedPokemon
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end
 
 WantToHealBrassTower:
-	text "Shall I heal"
-	line "your #mon?"
+	text "Let me heal your"
+	line "#mon."
 	done
 
 BrassHealedPokemon:

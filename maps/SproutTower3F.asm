@@ -26,14 +26,20 @@ ElderHealsScript:
 	opentext
 	writetext ElderHealsText1
 	waitbutton
+	closetext
+	
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	
+	opentext
 	writetext ElderHealsText2
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end		
 	
 ElderHealsText1:

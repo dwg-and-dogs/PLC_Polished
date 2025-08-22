@@ -496,7 +496,10 @@ CradleScene2_Heatran:
 	turnobject PLAYER, LEFT
 	turnobject CRADLE_ADRINNA_2, LEFT 
 	showtext CradleKurtText1
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
 Cradle_Scene3Pickup:  
 	turnobject PLAYER, RIGHT
 	turnobject CRADLE_ADRINNA_2, LEFT

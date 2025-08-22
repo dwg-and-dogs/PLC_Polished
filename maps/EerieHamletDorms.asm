@@ -78,6 +78,8 @@ SneaselText:
 HamletDormsBed:
 	showtext HamletBedText1
 	
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
 	pause 60

@@ -336,14 +336,20 @@ Route40MatronScript:
 	opentext
 	writetext Route40WantToHeal
 	waitbutton
+	closetext
+	
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	
+	opentext
 	writetext Route40Healed
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end
 
 Route40WantToHeal:

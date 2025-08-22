@@ -142,11 +142,9 @@ PickupDocksScene:
 	turnobject LANDING_DOCKS_KURT, LEFT
 	applyonemovement PLAYER, step_up
 	playmusic MUSIC_HEAL
-	waitsfx
 	special HealParty
-	special SaveMusic	
-	playmusic MUSIC_NONE	
-	special RestoreMusic	
+	pause 60
+	special RestartMapMusic	
 	turnobject LANDING_DOCKS_KURT, UP
 	applyonemovement LANDING_DOCKS_BARBEAU, step_down
 	winlosstext BarbeauBeatenText1, 0

@@ -75,16 +75,22 @@ RuinsOfAlphTeacherScript:
 	faceplayer
 	opentext
 	writetext WantToHeal2
-	promptbutton
+	waitbutton
+	closetext
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+
+	opentext
 	writetext AlphHealedPokemon
-	promptbutton
-	playmusic MUSIC_NONE	
-	special RestoreMusic
+	waitbutton
 	closetext
-	end ;endtext?
+	end
 	
 WantToHeal2:
 	text "We are here on"

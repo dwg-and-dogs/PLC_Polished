@@ -88,9 +88,12 @@ BellchimeTrailEmiScript:
 	verbosegiveitem ODD_SOUVENIR ; hisui stone
 	writetext EmiHealsYouText
 	waitbutton
+
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special RestartMapMusic
+	
 	setevent EVENT_BEAT_KIMONO_GIRL_EMI
 ;	writetext EmiHealedPokemonText	; 
 .AskToTimeTravel:
@@ -101,6 +104,8 @@ BellchimeTrailEmiScript:
 	waitbutton
 	closetext
 	setevent EVENT_BEAT_RIVAL_THEATRE
+
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx

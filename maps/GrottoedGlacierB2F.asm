@@ -118,7 +118,10 @@ PickupGlacierScene:
 	closetext
 	applyonemovement GLACIER_B2F_ADRINNA, step_down
 	turnobject GLACIER_B2F_ADRINNA, LEFT
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
 	showtext GlacierB2F_Text7_3
 	applyonemovement PLAYER, step_up
 	winlosstext KannaWinText, 0

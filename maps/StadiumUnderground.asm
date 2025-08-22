@@ -123,10 +123,15 @@ StadiumUndergroundHealerScript:
 	writetext StadiumUndergroundHealerText
 	waitbutton
 	closetext
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	pause 30
+	pause 60
+	special Special_FadeInQuickly
 	special RestartMapMusic
+
 	opentext
 	writetext StadiumUndergroundHealedText
 	waitbutton

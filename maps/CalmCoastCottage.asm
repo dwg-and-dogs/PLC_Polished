@@ -53,10 +53,13 @@ CalmCoastCottageDayCareWomanScript:
 	writetext CalmCoastCottageDayCareWomanText
 	waitbutton
 	closetext
+
 	playmusic MUSIC_HEAL
 	special HealParty
 	pause 60
+	special Special_FadeInQuickly
 	special RestartMapMusic
+
 	end
 
 CalmCoastCottageDayCareWomanText:

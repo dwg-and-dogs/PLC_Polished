@@ -27,27 +27,29 @@ ManiasDollText:
 
 
 ManiaHealerScript:
-	; debug tech TODO REMOVE
-	setevent EVENT_CIANWOODCITY_KURT
-	setevent EVENT_CIANWOODCITY_LUGIA
 	opentext
 	writetext ManiaHealingDoll
 	waitbutton
+	closetext
+	
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	
+	opentext
 	writetext ManiaHealed
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end
 
 
 ManiaHealingDoll:
-	text "A special Chansey"
-	line "doll! They heal"
-	cont "#mon."
+	text "Chansey dolls can"
+	line "heal #mon!"
 	done
 
 ManiaHealed:

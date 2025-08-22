@@ -107,11 +107,13 @@ BrassTower15FChanseyScript:
 	writetext BrassTowerHealQuestion
 	waitbutton
 	closetext
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
-	playmusic MUSIC_NONE	
-	special RestoreMusic
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
 	end
 
 BrassTowerHealQuestion:

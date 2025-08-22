@@ -58,12 +58,18 @@ KaJoHealerScript:
 	opentext
 	writetext KaJoWantToHeal
 	waitbutton
+	closetext
+	
 	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	
+	opentext
 	writetext KaJoHealedPokemon
 	waitbutton
 	closetext
-	special RestoreMusic
 	end
 
 KaJoWantToHeal:

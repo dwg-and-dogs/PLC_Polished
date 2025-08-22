@@ -119,13 +119,20 @@ LakeOfRageHealerScript:
 	opentext
 	writetext LoRHealText
 	waitbutton
+	closetext
+	
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	
+	opentext
 	writetext LoRHealedText
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end
 
 LoRHealText:

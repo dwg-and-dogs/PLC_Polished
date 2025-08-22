@@ -31,15 +31,19 @@ RadioTower4FKurtScript:
     writetext RadioTower4FKurtHealText
     waitbutton
     closetext
+
 	playmusic MUSIC_HEAL
-    special HealParty
-	special SaveMusic	
-	playmusic MUSIC_NONE	
-	special RestoreMusic
+	special HealParty
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+
+
     opentext
     writetext RadioTower4KurtRemindText
     waitbutton
     closetext
+	;todo figure out which of these need to be initialized 
 	setevent EVENT_BEAT_RADIO_TOWER_RIVAL
 	clearevent EVENT_BEAT_WHITNEY
     end
