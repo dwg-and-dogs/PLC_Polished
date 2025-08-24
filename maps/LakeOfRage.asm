@@ -449,7 +449,6 @@ LakePryceScript:
 	yesorno
 	iffalse_jumptext LakeNoText
 	showtext LakePrayerText
-;	playsound SFX_WARP_TO
 	special Special_CelebiShrineEvent
 	special FadeOutPalettes
 	waitsfx

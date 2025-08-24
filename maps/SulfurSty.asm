@@ -64,9 +64,10 @@ SulfurStyTimeTravelScript: ; TODO
 	writetext SulfurStyYesTimeTravelText
 	waitbutton
 	closetext
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
-	waitsfx
+	waitsfx	
 	warp ROUTE_42, 10, 6
 	end
 

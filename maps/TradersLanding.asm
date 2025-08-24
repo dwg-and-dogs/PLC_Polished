@@ -52,9 +52,9 @@ TradersLanding_MapScriptHeader:
 	object_event 34, 20, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Lighthouse_BrigaderText, -1
 	object_event 33, 27, SPRITE_BRIGADER, 	SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TL_Brigader_Script, -1
 	; NPCs
-	object_event 10, 19, SPRITE_FIREBREATHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingEggScript, EVENT_BEAT_KENSEY_PORT
-	object_event 21, 15, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1 ; todo 
-	object_event 19, 19, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadFScript, -1 ; todo 
+	object_event 10, 19, SPRITE_FIREBREATHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LandingEggScript, EVENT_BEAT_KENSEY_PORT
+	object_event 21, 15, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1 ; todo 
+	object_event 19, 19, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingNomadFScript, -1 ; todo 
 	; sailboat 
 	object_event 15, 28, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_TOP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, EVENT_BEAT_KENSEY_PORT
 	object_event 15, 28, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_BOTTOM, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, EVENT_BEAT_KENSEY_PORT
@@ -270,9 +270,9 @@ TL_Scene_2_R:
 	turnobject PLAYER, UP
 	applyonemovement PLAYER, step_up
 	applymovement TRADERS_LANDING_KURT_2, TL_2_KurtMoves2
-	showtext TL_2_Text5 ; honor Lugia
+	showtext TL_2_Text5
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
-	setevent EVENT_BARBEAU_WARPED
 	special FadeOutPalettes
 	waitsfx
 	warp ROUTE_40, 7, 4
@@ -495,9 +495,11 @@ LandingBarbeauScript:
 	writetext TL_2_Text5
 	waitbutton
 	closetext
+
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
-	waitsfx
+	waitsfx	
 	warp ROUTE_40, 7, 4
 	end
 

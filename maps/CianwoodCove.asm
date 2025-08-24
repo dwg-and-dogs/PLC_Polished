@@ -78,9 +78,10 @@ CianwoodCovetimeTravelScript:
 	writetext CCYesTimeTravelText
 	waitbutton
 	closetext
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
-	waitsfx
+	waitsfx	
 	warp CIANWOOD_CITY, 14, 20
 	end
 

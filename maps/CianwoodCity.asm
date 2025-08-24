@@ -95,13 +95,14 @@ CianwoodEusineScript:
 	paintingpic LUGIA_PAINTING
 	waitbutton
 	closepokepic
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
 	setevent EVENT_CIANWOODCITY_LUGIA
 	setevent EVENT_CIANWOODCITY_KURT
 	setevent EVENT_CIANWOODCITY_EUSINE
 	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
+	special Special_CelebiShrineEvent
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx	
 	warp CIANWOOD_COVE, 11, 15
 	end
 	

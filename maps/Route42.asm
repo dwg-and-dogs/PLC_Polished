@@ -422,9 +422,10 @@ Route42TimeTravelScript: ; todo finish fixing
 	writetext Route42YesTimeTravelText
 	waitbutton
 	closetext
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
-	waitsfx
+	waitsfx	
 	warp SULFUR_STY,  14, 18
 	end
 

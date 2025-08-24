@@ -1,4 +1,4 @@
-Route40_MapScriptHeader: ; todo revise the warp and move Kurt 
+Route40_MapScriptHeader: 
 	def_scene_scripts
 
 	def_callbacks
