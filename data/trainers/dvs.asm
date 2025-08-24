@@ -16,8 +16,8 @@ TrainerClassDVsAndPersonality:
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; KURT
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; MEJIMI
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; bruno
-	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; karen-SANDRA
-	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; champion
+	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; SANDRA
+	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; KURT_FINAL
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; brock
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE  ; Samsara
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; lt surge
@@ -106,6 +106,8 @@ TrainerClassDVsAndPersonality:
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; cooltrainerm
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; cooltrainerf
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; ace duo
+	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; NOMAD_M
+	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; NOMAD_F
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; veteranm
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; veteranf
 	db  0, $BB, $BB, $BB, ABILITY_1 | QUIRKY, MALE   ; proton
@@ -127,12 +129,10 @@ TrainerClassDVsAndPersonality:
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; inver/AMOS
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; cheryl
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; riley
-	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; buck---NOMAD_M
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; marley
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; mira
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; anabel-LANNA
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; darach
-	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; caitlin--NOMAD_F
 	db  0, $DD, $DD, $DD,  ABILITY_1 | LONELY, FEMALE ; candela/BOBESH
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; blanche/ADRINNA
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; spark/BOBESH

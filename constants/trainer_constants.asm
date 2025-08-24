@@ -8,15 +8,15 @@ ENDM
 
 ; trainer class ids
 ; `trainerclass` indexes are for:
-; - TrainerClassNames (see data/trainers/class_names.asm)
-; - TrainerClassAttributes (see data/trainers/attributes.asm)
-; - TrainerClassDVsAndPersonality (see data/trainers/dvs.asm)
-; - TrainerGroups (see data/trainers/party_pointers.asm)
-; - TrainerEncounterMusic (see data/trainers/encounter_music.asm)
-; - TrainerPicPointers (see data/trainers/pic_pointers.asm)
-; - TrainerPalettes (see data/trainers/palettes.asm)
-; - BTTrainerClassSprites (see data/trainers/sprites.asm)
-; - BTTrainerClassGenders (see data/trainers/genders.asm)
+; - TrainerClassNames (see data/trainers/class_names.asm).
+; - TrainerClassAttributes (see data/trainers/attributes.asm).
+; - TrainerClassDVsAndPersonality (see data/trainers/dvs.asm).
+; - TrainerGroups (see data/trainers/party_pointers.asm).
+; - TrainerEncounterMusic (see data/trainers/encounter_music.asm).
+; - TrainerPicPointers (see data/trainers/pic_pointers.asm).
+; - TrainerPalettes (see data/trainers/palettes.asm).
+; - BTTrainerClassSprites (see data/trainers/sprites.asm).
+; - BTTrainerClassGenders (see data/trainers/genders.asm).
 ; trainer constants are indexes for the sub-tables of TrainerGroups (see data/trainers/parties.asm)
 CHRIS EQU __trainer_class__
 	trainerclass TRAINER_NONE ; 0
@@ -61,7 +61,7 @@ KRIS EQU __trainer_class__
 	const KURT10 ; SINJOH , donphan azumarill bastiodon lopunny kirlia lv 40 
 	const KURT11 ; AMOS , starvia drapion roselia lucario hbraviary lv 43 
 	const KURT12 ; whispering way , nidoking nidoqueen yanmega ursaring snorlax lv 46 
-	const KURT13 ; TOP OF TIN TOWER , umbreon celebi heracross ursaluna wyrdeer kleavor 
+	const KURT13 ; TOP OF TIN TOWER , umbreon celebi heracross ursaluna wyrdeer kleavor  --> THIS IS MOVED TO THE KURTFINAL 
 
 	trainerclass MEJIMI ; 93
 
@@ -69,9 +69,7 @@ KRIS EQU __trainer_class__
 
 	trainerclass SANDRA ; e replaces karen
 
-	trainerclass CHAMPION ; f
-	const LANCE
-	const LANCE2
+	trainerclass KURT_FINAL ; f replaces lance and champion 
 
 	trainerclass BROCK ; 10
 
@@ -981,6 +979,27 @@ KRIS EQU __trainer_class__
 	const DANANDCARA1
 	const DANANDCARA2
 
+	trainerclass NOMAD_M ; MOVED  ; FORMERLY BUCK 
+	const NOMAD_M_JOEL
+	const NOMAD_M_GLENN
+	const NOMAD_M_DALE
+	const NOMAD_M_JACOB
+	const NOMAD_M_AIDEN
+	const NOMAD_M_DAN
+	const NOMAD_M_TEDDY
+	const NOMAD_M_TYRONE 
+
+	trainerclass NOMAD_F ; MOVED  ; FORMERLY CAITLIN 
+	const NOMAD_F_REINA
+	const NOMAD_F_ALINA
+	const NOMAD_F_MARLENE
+	const NOMAD_F_RIN
+	const NOMAD_F_COLETTE
+	const NOMAD_F_HILLARY
+	const NOMAD_F_SHIRLEY
+	const NOMAD_F_KATHRYN
+	const NOMAD_F_CLARICE
+
 	trainerclass VETERANM ; 68
 	const MATT
 	const REMY
@@ -1041,16 +1060,6 @@ KRIS EQU __trainer_class__
 
 	trainerclass RILEY ; 7c
 
-	trainerclass NOMAD_M ; 7d ; FORMERLY BUCK 
-	const NOMAD_M_JOEL
-	const NOMAD_M_GLENN
-	const NOMAD_M_DALE
-	const NOMAD_M_JACOB
-	const NOMAD_M_AIDEN
-	const NOMAD_M_DAN
-	const NOMAD_M_TEDDY
-	const NOMAD_M_TYRONE 
-
 	trainerclass MARLEY ; 7e
 
 	trainerclass MIRA ; 7f
@@ -1058,17 +1067,6 @@ KRIS EQU __trainer_class__
 	trainerclass LANNA ; 80 anabel
 
 	trainerclass DARACH ; 81
-
-	trainerclass NOMAD_F ; 82 ; FORMERLY CAITLIN 
-	const NOMAD_F_REINA
-	const NOMAD_F_ALINA
-	const NOMAD_F_MARLENE
-	const NOMAD_F_RIN
-	const NOMAD_F_COLETTE
-	const NOMAD_F_HILLARY
-	const NOMAD_F_SHIRLEY
-	const NOMAD_F_KATHRYN
-	const NOMAD_F_CLARICE
 
 	trainerclass BOBESH ; 83 CANDELA
 	const BOBESH1

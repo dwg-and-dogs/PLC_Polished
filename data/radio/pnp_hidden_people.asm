@@ -5,7 +5,7 @@ PnP_HiddenPeople:
 	db MEJIMI
 	db BRUNO
 	db SANDRA
-	db CHAMPION
+;	db CHAMPION
 	; fallthrough
 PnP_HiddenPeople_BeatE4:
 	db BROCK

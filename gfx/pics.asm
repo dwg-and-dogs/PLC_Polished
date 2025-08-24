@@ -735,7 +735,7 @@ KurtPic:                  INCBIN "gfx/trainers/kurt.2bpp.lz"
 MejimiPic:                INCBIN "gfx/trainers/mejimi.2bpp.lz"
 BrunoPic:                 INCBIN "gfx/trainers/bruno.2bpp.lz"
 SandraPic:                INCBIN "gfx/trainers/sandra.2bpp.lz"
-ChampionPic:              INCBIN "gfx/trainers/champion.2bpp.lz"
+KurtFinalPic:              INCBIN "gfx/trainers/kurtfinal.2bpp.lz"
 BrockPic:                 INCBIN "gfx/trainers/brock.2bpp.lz"
 
 

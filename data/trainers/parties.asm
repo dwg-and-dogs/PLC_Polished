@@ -380,24 +380,6 @@ KurtGroup:
 	db 45, URSARING
 	db 46, SNORLAX
 	db -1 ; end
-	
-	; KURT13 ; TIN TOWER, final battle 
-	db "Kurt@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
-	; party
-	db 57, HERACROSS, SCOPE_LENS, FAKE_PERFECT_DVS, "Ohmu@" ; nausicaa  ; hp bug 
-		db MEGAHORN, SWORDS_DANCE, CLOSE_COMBAT, EARTHQUAKE
-	db 56, UMBREON, LEFTOVERS, DVS_HP_DARK, "Howl@" ; moving castle  ; hp dark 
-		db RECOVER, CURSE, SUCKER_PUNCH, TOXIC
-	db 57, URSALUNA, FLAME_ORB, FAKE_PERFECT_DVS, "Okkoto@" ; mononoke  ; hp fire 
-		db EARTHQUAKE, FACADE, REST, SLEEP_TALK
-	db 58, WYRDEER, WIDE_LENS, FAKE_PERFECT_DVS, "Yubaba@" ; spirited away  ; hp psychic? 
-		db HYPNOSIS, ZEN_HEADBUTT, HI_JUMP_KICK, BODY_SLAM
-	db 59, KLEAVOR, HARD_STONE, DVS_HP_ROCK, "Piccolo@" ; porco rosso ; hp fighting 
-		db ROCK_SLIDE, X_SCISSOR, QUICK_ATTACK, SWORDS_DANCE
-	db 60, CELEBI, LEFTOVERS, FAKE_PERFECT_DVS, "@" ; no nickname?
-		db CALM_MIND, PSYCHIC_M, ENERGY_BALL, RECOVER
-	db -1 ; end
 
 ; ================
 ; ================================
@@ -479,16 +461,26 @@ SandraGroup:
 
 ; ================================
 
-ChampionGroup:
+KurtFinalGroup:
 ; ================================
 ; ================
 
-	; CHAMPION ; unused 
-	db "Lance@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
+	; KURT ; TIN TOWER, final battle 
+	db "Kurt@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 57, GYARADOS, MUSCLE_BAND, 208, ABIL_GYARADOS_INTIMIDATE | NAT_SPD_UP_SATK_DOWN, MALE
-		db DRAGON_DANCE, FLY, WATERFALL, EARTHQUAKE
+	db 57, HERACROSS, SCOPE_LENS, FAKE_PERFECT_DVS, "Ohmu@" ; nausicaa  ; hp bug 
+		db MEGAHORN, SWORDS_DANCE, CLOSE_COMBAT, EARTHQUAKE
+	db 56, UMBREON, LEFTOVERS, DVS_HP_DARK, "Howl@" ; moving castle  ; hp dark 
+		db RECOVER, CURSE, SUCKER_PUNCH, TOXIC
+	db 57, URSALUNA, FLAME_ORB, FAKE_PERFECT_DVS, "Okkoto@" ; mononoke  ; hp fire 
+		db EARTHQUAKE, FACADE, REST, SLEEP_TALK
+	db 58, WYRDEER, WIDE_LENS, FAKE_PERFECT_DVS, "Yubaba@" ; spirited away  ; hp psychic? 
+		db HYPNOSIS, ZEN_HEADBUTT, HI_JUMP_KICK, BODY_SLAM
+	db 59, KLEAVOR, HARD_STONE, DVS_HP_ROCK, "Piccolo@" ; porco rosso ; hp fighting 
+		db ROCK_SLIDE, X_SCISSOR, QUICK_ATTACK, SWORDS_DANCE
+	db 60, CELEBI, LEFTOVERS, FAKE_PERFECT_DVS, "@" ; no nickname?
+		db CALM_MIND, PSYCHIC_M, ENERGY_BALL, RECOVER
 	db -1 ; end
 
 ; ================================
@@ -8888,6 +8880,178 @@ AceDuoGroup: ; unused
 ; ================================
 ; ================
 
+NomadMGroup:
+; ================================
+; ================
+
+	; BUCK
+	db "Joel@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 20, MILTANK
+	db 24, MILTANK
+	db 28, MILTANK
+	db 32, MILTANK
+	db -1 ; end
+	
+	; BUCK
+	db "Glenn@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 28, DONPHAN
+	db 28, WEEPINBELL
+	db 30, OVERQWIL
+	db -1 ; end
+	
+	; BUCK
+	db "Dale@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 25, PIDGEOTTO
+	db 30, OVERQWIL
+	db 30, GLIGAR
+	db -1 ; end
+	
+	; BUCK
+	db "Jacob@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 32, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 32, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
+	
+	; need to revise parties 
+	; BUCK
+	db "Aiden@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 32, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 32, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
+	
+	; BUCK
+	db "Dan@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 32, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 32, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
+
+	; BUCK
+	db "Teddy@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 32, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 32, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
+	
+	; BUCK
+	db "Tyrone@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	; party
+	db 30, STARMIE, NO_ITEM
+		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
+	db 32, KADABRA, NO_ITEM
+		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
+	db 32, MISDREAVUS, NO_ITEM
+		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
+	db -1 ; end
+	
+
+; ================
+; ================================
+
+NomadFGroup:
+; ================================
+; ================
+
+	; 
+	db "Reina@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 27, GLOOM
+	db 30, MANTINE
+	db 32, DRIFBLIM	
+	db -1 ; end
+
+	db "Alina@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 25, SKIPLOOM
+	db 28, JUMPLUFF	
+	db 30, OVERQWIL	
+	db -1 ; end
+
+	db "Marlene@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 20, PIDGEOTTO
+	db 28, PIDGEOTTO	
+	db 36, PIDGEOT	
+	db -1 ; end
+
+	db "Rin@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+
+	db "Collette@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; unused
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+	
+	db "Hillary@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; unused
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+	
+	db "Shirley@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; unused
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+	
+	db "Kathryn@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; unused
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
+	
+	db "Clarice@"
+	db TRAINERTYPE_NORMAL
+	; party
+	; unused
+	db 25, MANKEY
+	db 30, PRIMEAPE
+	db -1 ; end
 
 ; ================
 ; ================================
@@ -9329,102 +9493,6 @@ RileyGroup:
 ; ================
 ; ================================
 
-NomadMGroup:
-; ================================
-; ================
-
-	; BUCK
-	db "Joel@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 20, MILTANK
-	db 24, MILTANK
-	db 28, MILTANK
-	db 32, MILTANK
-	db -1 ; end
-	
-	; BUCK
-	db "Glenn@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 28, DONPHAN
-	db 28, WEEPINBELL
-	db 30, OVERQWIL
-	db -1 ; end
-	
-	; BUCK
-	db "Dale@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 25, PIDGEOTTO
-	db 30, OVERQWIL
-	db 30, GLIGAR
-	db -1 ; end
-	
-	; BUCK
-	db "Jacob@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-	; party
-	db 30, STARMIE, NO_ITEM
-		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
-	db 32, KADABRA, NO_ITEM
-		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
-	db 32, MISDREAVUS, NO_ITEM
-		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
-	db -1 ; end
-	
-	; need to revise parties 
-	; BUCK
-	db "Aiden@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-	; party
-	db 30, STARMIE, NO_ITEM
-		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
-	db 32, KADABRA, NO_ITEM
-		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
-	db 32, MISDREAVUS, NO_ITEM
-		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
-	db -1 ; end
-	
-	; BUCK
-	db "Dan@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-	; party
-	db 30, STARMIE, NO_ITEM
-		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
-	db 32, KADABRA, NO_ITEM
-		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
-	db 32, MISDREAVUS, NO_ITEM
-		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
-	db -1 ; end
-
-	; BUCK
-	db "Teddy@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-	; party
-	db 30, STARMIE, NO_ITEM
-		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
-	db 32, KADABRA, NO_ITEM
-		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
-	db 32, MISDREAVUS, NO_ITEM
-		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
-	db -1 ; end
-	
-	; BUCK
-	db "Tyrone@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
-	; party
-	db 30, STARMIE, NO_ITEM
-		db WHIRLPOOL, WATER_GUN, NO_MOVE, NO_MOVE
-	db 32, KADABRA, NO_ITEM
-		db WHIRLPOOL, REFLECT, NO_MOVE, NO_MOVE
-	db 32, MISDREAVUS, NO_ITEM
-		db WHIRLPOOL, NO_MOVE, NO_MOVE, NO_MOVE
-	db -1 ; end
-	
-
-; ================
-; ================================
 
 MarleyGroup:
 ; ================================
@@ -9484,81 +9552,7 @@ DarachGroup:
 ; ================
 ; ================================
 
-NomadFGroup:
-; ================================
-; ================
 
-	; 
-	db "Reina@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 27, GLOOM
-	db 30, MANTINE
-	db 32, DRIFBLIM	
-	db -1 ; end
-
-	db "Alina@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 25, SKIPLOOM
-	db 28, JUMPLUFF	
-	db 30, OVERQWIL	
-	db -1 ; end
-
-	db "Marlene@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 20, PIDGEOTTO
-	db 28, PIDGEOTTO	
-	db 36, PIDGEOT	
-	db -1 ; end
-
-	db "Rin@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 25, MANKEY
-	db 30, PRIMEAPE
-	db -1 ; end
-
-	db "Collette@"
-	db TRAINERTYPE_NORMAL
-	; party
-	; unused
-	db 25, MANKEY
-	db 30, PRIMEAPE
-	db -1 ; end
-	
-	db "Hillary@"
-	db TRAINERTYPE_NORMAL
-	; party
-	; unused
-	db 25, MANKEY
-	db 30, PRIMEAPE
-	db -1 ; end
-	
-	db "Shirley@"
-	db TRAINERTYPE_NORMAL
-	; party
-	; unused
-	db 25, MANKEY
-	db 30, PRIMEAPE
-	db -1 ; end
-	
-	db "Kathryn@"
-	db TRAINERTYPE_NORMAL
-	; party
-	; unused
-	db 25, MANKEY
-	db 30, PRIMEAPE
-	db -1 ; end
-	
-	db "Clarice@"
-	db TRAINERTYPE_NORMAL
-	; party
-	; unused
-	db 25, MANKEY
-	db 30, PRIMEAPE
-	db -1 ; end
 
 ; ================
 ; ================================

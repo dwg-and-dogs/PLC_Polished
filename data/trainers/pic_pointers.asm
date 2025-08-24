@@ -15,7 +15,7 @@ TrainerPicPointers::
 	dba MejimiPic
 	dba BrunoPic
 	dba SandraPic
-	dba ChampionPic
+	dba KurtFinalPic ; from championpic 
 	dba BrockPic
 	dba SamsaraPic
 	dba LtSurgePic
@@ -104,6 +104,8 @@ TrainerPicPointers::
 	dba CooltrainermPic
 	dba CooltrainerfPic
 	dba AceDuoPic
+	dba NomadMPic
+	dba NomadFPic
 	dba VeteranmPic
 	dba VeteranfPic
 	dba ProtonPic
@@ -125,12 +127,10 @@ TrainerPicPointers::
 	dba AmosPic
 	dba CherylPic
 	dba RileyPic
-	dba NomadMPic
 	dba MarleyPic
 	dba MiraPic
 	dba LannaPic
 	dba DarachPic
-	dba NomadFPic
 	dba BobeshPic
 	dba AdrinnaPic
 	dba BarbeauPic
