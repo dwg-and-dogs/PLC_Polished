@@ -1,4 +1,10 @@
-WesternCapital_MapScriptHeader: 
+WesternCapital_MapScriptHeader: ; todo: 
+;1) revise the npc text scripts to talk about a scuffle in front of the tower 
+;2) disappear the 5,6 brigader and appear a different one + ninja + pokemon battler 
+;3) revise the pokemart to have the excellent items with an NPC talking about it 
+;4) revise amos script in the timeless tapestry 
+
+
 	def_scene_scripts
 	scene_script WesternCapitalCemeteryScene
 

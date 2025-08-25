@@ -392,6 +392,10 @@ TL_Brigader_Script:
 	
 	para "Go see Barbeau"
 	line "for assignment."
+	
+	para "Wait, you don't"
+	line "look like one of"
+	cont "the nomads?"
 	done
 
 TL_Brigader_AfterKenseyText:

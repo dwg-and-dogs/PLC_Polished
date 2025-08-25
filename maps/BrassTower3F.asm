@@ -16,7 +16,12 @@ BrassTower3F_MapScriptHeader:
 
 
 	def_bg_events
-
+	bg_event 3, 2,  BGEVENT_JUMPTEXT, BrassTowerStormText
+	bg_event 4, 2,  BGEVENT_JUMPTEXT, BrassTowerStormText
+	bg_event 5, 2,  BGEVENT_JUMPTEXT, BrassTowerStormText
+	bg_event 6, 2,  BGEVENT_JUMPTEXT, BrassTowerStormText
+	bg_event 7, 2,  BGEVENT_JUMPTEXT, BrassTowerStormText
+	bg_event 8, 2,  BGEVENT_JUMPTEXT, BrassTowerStormText
 
 
 	def_object_events

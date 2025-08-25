@@ -129,7 +129,7 @@ TrainerClassNames::
 	li "<PK><MN> Trainer" ; RILEY / unused 
 	li "<PK><MN> Trainer" ; MARLEY / unused 
 	li "<PK><MN> Trainer" ; MIRA / unused 
-	li "Anarres"          ; Lanna / ANABEL
+	li "Anarres"          ; Lanna / ANABEL unused 
 	li "Valet"            ; DARACH UNUSED 
 	li "General"          ; bobesh / CANDELA
 	li "General"          ; adrinna / BLANCHE
@@ -141,7 +141,7 @@ TrainerClassNames::
 	li "<PK><MN> Trainer" ; KUKUI UNUSED 
 	li "Scavenger"        ; VICTOR 
 	li "#Maniac"          ; BILL_T UNUSED 
-	li "Anarres"          ; TAMMY (YELLOW), yup this is right
+	li "Anarres"          ; Tammy
 	li "<PK><MN> Trainer" ; SILVER FROM WALKER rival
 	li "Student"          ; IMAKUNI, UNUSED 
 	li "General"          ; Kensey  / LAWRENCE

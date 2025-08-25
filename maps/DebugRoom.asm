@@ -345,7 +345,7 @@ dwgDebugScript:
 	winlosstext DWGWinText, DWGLossText
 	setlasttalked DEBUG_DWG
 ;	loadtrainer ENGINEER, DWG
-	loadtrainer BOBESH, 2
+	loadtrainer NOMAD_M, NOMAD_M_JOEL
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -613,6 +613,10 @@ DebugWonderTradeScript:
 	faceplayer
 	opentext
 	givepoke NOCTOWL, 100
+	givepoke CELEBI, 100
+	givepoke LUGIA, 100
+	givepoke GARCHOMP, 100
+	givepoke DRAGONITE, 100
 ;	giveitem POLYCHROME, 1
 	writetext DebugWonderTradeIntroText
 	waitbutton

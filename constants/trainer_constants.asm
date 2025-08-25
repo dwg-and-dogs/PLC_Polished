@@ -96,16 +96,16 @@ KRIS EQU __trainer_class__
 	trainerclass RIVAL1 ; 1b
 	const RIVAL1_4
 	const RIVAL1_5
-	const RIVAL1_6
+	const RIVAL1_6;
 	const RIVAL1_7
 	const RIVAL1_8
-	const RIVAL1_9
+	const RIVAL1_9;
 	const RIVAL1_10
 	const RIVAL1_11
-	const RIVAL1_12
+	const RIVAL1_12;
 	const RIVAL1_13
 	const RIVAL1_14
-	const RIVAL1_15
+	const RIVAL1_15;
 
 	trainerclass RIVAL2 ; 1c
 

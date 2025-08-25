@@ -1665,10 +1665,9 @@ SandraFinalPkmnText:
 	line "trust is built!"
 	prompt
 
-ChampionFinalPkmnText:
-	text "All right! I"
-	line "thought this would"
-	cont "never happen!"
+KurtFinalFinalPkmnText:
+	text "I'll always fight"
+	line "for my home!"
 	prompt
 
 BrockFinalPkmnText:

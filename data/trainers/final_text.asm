@@ -48,7 +48,7 @@ FinalText_SinglePhrases:
 	dw MejimiFinalPkmnText
 	dw BrunoFinalPkmnText
 	dw SandraFinalPkmnText
-	dw ChampionFinalPkmnText
+	dw KurtFinalFinalPkmnText ; TODO FINAL TEXT??? 
 	dw BrockFinalPkmnText
 	dw SamsaraFinalPkmnText
 	dw LtSurgeFinalPkmnText
@@ -74,13 +74,11 @@ FinalText_SinglePhrases:
 	dw AmosFinalPkmnText ;new
 	dw CherylFinalPkmnText
 	dw RileyFinalPkmnText
-	dw BuckFinalPkmnText
 	dw MarleyFinalPkmnText
 	dw MiraFinalPkmnText
 	dw LannaFinalPkmnText ;new
 	dw DarachFinalPkmnText
-	dw CaitlinFinalPkmnText
-	dw BobeshFinalPkmnText
+	dw BobeshFinalPkmnText ; hopefully lines up?
 	dw AdrinnaFinalPkmnText ;new
 	dw BarbeauFinalPkmnText ;new
 	dw FlanneryFinalPkmnText
