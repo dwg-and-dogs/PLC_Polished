@@ -647,6 +647,16 @@ EggPic:                   	INCBIN "gfx/pokemon/egg/front.animated.2bpp.lz"
 NoctowlFrontpic: 			INCBIN "gfx/pokemon/noctowl/front.animated.2bpp.lz"
 NoctowlBackpic: 			INCBIN "gfx/pokemon/noctowl/back.2bpp.lz"
 
+AnnihilapeFrontpic: 		INCBIN "gfx/pokemon/annihilape/front.animated.2bpp.lz"
+AnnihilapeBackpic: 			INCBIN "gfx/pokemon/annihilape/back.2bpp.lz"
+MinsirFrontpic: 			INCBIN "gfx/pokemon/minsir/front.animated.2bpp.lz"
+MinsirBackpic: 				INCBIN "gfx/pokemon/minsir/back.2bpp.lz"
+
+
+
+
+
+
 SECTION "Unown Pics 1", ROMX
 
 UnownAFrontpic:           INCBIN "gfx/pokemon/unown_a/front.animated.2bpp.lz"

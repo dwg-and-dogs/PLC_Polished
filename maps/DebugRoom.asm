@@ -612,12 +612,8 @@ BreederText:
 DebugWonderTradeScript: 
 	faceplayer
 	opentext
-	givepoke NOCTOWL, 100
-	givepoke CELEBI, 100
-	givepoke LUGIA, 100
-	givepoke GARCHOMP, 100
-	givepoke DRAGONITE, 100
-;	giveitem POLYCHROME, 1
+	givepoke MINSIR, 100
+	givepoke ANNIHILAPE, 100
 	writetext DebugWonderTradeIntroText
 	waitbutton
 	writetext DebugWonderTradeExplanationText
