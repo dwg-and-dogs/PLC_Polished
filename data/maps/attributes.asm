@@ -274,6 +274,7 @@ ENDM
 	map_attributes KurtsHouse, KURTS_HOUSE, $0, 0
 	map_attributes AzaleaGym, AZALEA_GYM, $0, 0
 	map_attributes TinderGarden, TINDER_GARDEN, $33, 0
+	map_attributes TinderGarden3, TINDER_GARDEN_3, $33, 0
 	map_attributes LakeOfRageHiddenPowerHouse, LAKE_OF_RAGE_HIDDEN_POWER_HOUSE, $0, 0
 	map_attributes LakeOfRageMagikarpHouse, LAKE_OF_RAGE_MAGIKARP_HOUSE, $0, 0
 	map_attributes Route43MahoganyGate, ROUTE_43_MAHOGANY_GATE, $0, 0

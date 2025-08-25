@@ -17,7 +17,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	coord_event  5, 14, 1, TinderGardenTryToLeaveScript
 	coord_event  4, 14, 3, TinderGardenRivalBattleScript1
 	coord_event  5, 14, 3, TinderGardenRivalBattleScript2	;add text for the tree
-	coord_event  3, 3, 4, TinderGardernWatchTheLoggersScript ; this needs to have a different music, hah
+;	coord_event  3, 3, 4, TinderGardernWatchTheLoggersScript ; this needs to have a different music, hah
 
 	def_bg_events
 	bg_event  4,  8, BGEVENT_JUMPTEXT, TGTreeText
@@ -36,10 +36,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	object_event  8, 12, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RowletPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4,  9, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CelebiScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4, 11, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 
-;for the cutscene if you choose adrinna
-	object_event  3, 0, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event  3, 1, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	pokemon_event  4, 3, CELEBI, -1, -1, PAL_NPC_GREEN, Celebi2Text, EVENT_TINDER_GARDEN_CELEBI_2
+
 
 
 	object_const_def
@@ -52,9 +49,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	const TINDER_GARDEN_POKE_BALL3	
 	const TINDER_GARDEN_CELEBI
 	const TINDER_GARDEN_PRYCE
-	const TINDER_GARDEN_ENGINEER_1
-	const TINDER_GARDEN_ENGINEER_2
-	const TINDER_GARDEN_CELEBI_2
+
 
 CelebiCeremonyIntroScript:
 	sdefer .Script
@@ -1089,83 +1084,6 @@ TGTreeText:
 
 CelebiScript:
 	end
-	
-	
-TinderGardernWatchTheLoggersScript:
-;cf western capital scene 
-	; revise music 
-	pause 60
-	special Special_FadeOutMusic
-	turnobject PLAYER, UP
-	pause 60
-;	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
-	showemote EMOTE_QUESTION, TINDER_GARDEN_ENGINEER_1, 60
-	showtext GardenEngineerText1
-	pause 60
-	showemote EMOTE_BOLT, TINDER_GARDEN_ENGINEER_2, 60
-	showtext GardenEngineerText2		
-	closetext
-	turnobject TINDER_GARDEN_ENGINEER_1, RIGHT
-	pause 60
-	playsound SFX_CUT
-	waitsfx
-	changeblock 4, 0, $01 
-	reloadmappart
-	pause 60
-	disappear TINDER_GARDEN_CELEBI_2
-	pause 60
-	turnobject TINDER_GARDEN_ENGINEER_1, DOWN
-	pause 60
-	showtext GardenEngineerText3
-	turnobject TINDER_GARDEN_ENGINEER_2, UP
-	showtext GardenEngineerText4
-	pause 60
-	closetext
-	; todo, insert all of the events that are needed to complete the tower again 
-	halloffame
-	end
-	
-GardenEngineerText1:
-	text "Is this the one?"
-	line "I couldn't find"
-	cont "any other blossom"
-	cont "trees."
-	done
-
-	
-GardenEngineerText2:
-	text "Yup, it may be the"
-	line "last one in"
-	cont "Johto."
-	done
-
-	
-Celebi2Text:
-	text "..."
-	done
-
-GardenEngineerText3:
-	text "What are we using"
-	line "this for, anyway?"
-	done
-
-GardenEngineerText4:
-	text "Hoenn wants the"
-	line "them for an extr-"
-	cont "avagant shrine."
-	
-	para "I'm glad Johto"
-	line "doesn't have such"
-	para "wasteful things"
-	line "ever since that"
-	para "kid toppled the"
-	line "Consul some"
-	cont "180 years ago."
-	
-	para "What was their"
-	line "name again?"
-	done
-
 
 LittleGiddingText:
 	text "We shalln't cease"

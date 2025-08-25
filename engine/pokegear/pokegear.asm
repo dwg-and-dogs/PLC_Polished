@@ -256,8 +256,8 @@ InitPokegearTilemap:
 .Jumptable:
 	dw .Clock
 	dw .Map
-	dw .Phone
-	dw .Radio
+;	dw .Phone
+;	dw .Radio
 
 .Clock:
 	ld hl, ClockTilemapRLE

@@ -188,6 +188,10 @@ AzaleaGym_BlockData:
 SECTION "TinderGarden_BlockData", ROMX ;added 04.02.24
 TinderGarden_BlockData:
 	INCBIN "maps/TinderGarden.ablk.lz"
+	
+SECTION "TinderGarden3_BlockData", ROMX ;added 04.02.24
+TinderGarden3_BlockData:
+	INCBIN "maps/TinderGarden3.ablk.lz"
 
 SECTION "AzaleaTown_BlockData", ROMX
 AzaleaTown_BlockData:

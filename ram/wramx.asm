@@ -1103,7 +1103,7 @@ wTradersLandingSceneID:: db
 wRoute34SceneID:: db ;needed for daycare?
 wBrassTowerRoofSceneID:: db
 wTinderGarden2SceneID:: db
-wUnused1SceneID:: db   
+wTinderGarden3SceneID:: db   
 wUnused20SceneID:: db
 wUnused21SceneID:: db
 wUnused24SceneID:: db 

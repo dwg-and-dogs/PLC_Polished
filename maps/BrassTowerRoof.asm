@@ -399,8 +399,7 @@ AcceptedAdrinnaRoofScript:
 	showtext TowerRoofText2_18
 	applymovement PLAYER, BTR_PlayerToFrontMovement
 	pause 30
-	setmapscene TINDER_GARDEN, $4
-	warp TINDER_GARDEN, 3, 3
+	warpfacing UP, TINDER_GARDEN_3, 4, 11
 	end
 	
 BTR_AdrinnaMove1:

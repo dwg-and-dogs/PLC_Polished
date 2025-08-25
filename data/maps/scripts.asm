@@ -222,7 +222,9 @@ INCLUDE "maps/AzaleaGym.asm"
 INCLUDE "maps/CharcoalKiln.asm"
 INCLUDE "maps/KurtsHouse.asm"
 INCLUDE "maps/TinderGarden.asm"
+INCLUDE "maps/TinderGarden3.asm"
 INCLUDE "maps/TinderGarden2.asm"
+
 
 SECTION "Slowpoke Well Scripts", ROMX
 
