@@ -50,6 +50,7 @@ ValidPokemonLevels: ; for Wonder Trade
 	db	 1,	 25	;	persian
 	db	 1,	 25	;	mankey
 	db	 1,	 25	;	primeape
+	db	 1,	 25	;	ANNIHILAPE
 	db	 1,	 25	;	growlithe
 	db	 1,	 25	;	arcanine
 	db	 1,	 25	;	harcanine
@@ -117,6 +118,7 @@ ValidPokemonLevels: ; for Wonder Trade
 	db	 1,	 25	;	magmar
 	db	 1,	 25	;	magmortar
 	db	 1,	 25	;	pinsir
+	db	 1,	 25	;	Minsir	
 	db	 1,	 25	;	tauros
 	db	 1,	 25	;	magikarp
 	db	 1,	 25	;	gyarados

@@ -1,0 +1,2 @@
+	endanim
+; 0xd1d9c

@@ -69,6 +69,7 @@
 	const PERSIAN  ; 2d
 	const MANKEY      ; 2e
 	const PRIMEAPE   ; 2f
+	const ANNIHILAPE ; Annihilape
 	const GROWLITHE    ; 30
 	const ARCANINE   ; 31
 	const H__ARCANINE    ; 32
@@ -136,6 +137,7 @@
 	const MAGMAR    ; 70
 	const MAGMORTAR    ; 71
 	const PINSIR ; 72
+	const MINSIR 
 	const TAUROS     ; 73
 	const MAGIKARP     ; 74
 	const GYARADOS     ; 75

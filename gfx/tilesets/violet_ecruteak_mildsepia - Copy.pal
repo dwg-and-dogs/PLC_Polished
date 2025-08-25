@@ -1,4 +1,4 @@
-; morn ; from violetecruteak.pal with mild sepia filter PLC_Mild_sepia
+; morn ; from violetecruteak.pal with mild sepia filter PLC_Mild_sepai
 	RGB 26,31,26, 20,22,24, 12,14,15, 06,07,08 ; gray
 	RGB 26,31,26, 18,15,16, 12,09,11, 06,07,08 ; red
 	RGB 22,30,22, 14,23,12, 06,12,06, 06,07,08 ; green

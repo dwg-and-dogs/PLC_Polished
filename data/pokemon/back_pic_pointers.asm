@@ -48,6 +48,7 @@ BackPicPointers::
 	dba	PersianBackpic
 	dba	MankeyBackpic
 	dba	PrimeapeBackpic
+	dba AnnihilapeBackpic
 	dba	GrowlitheBackpic
 	dba	ArcanineBackpic
 	dba	HarcanineBackpic
@@ -115,6 +116,7 @@ BackPicPointers::
 	dba	MagmarBackpic
 	dba	MagmortarBackpic
 	dba	PinsirBackpic
+	dba	MinsirBackpic
 	dba	TaurosBackpic
 	dba	MagikarpBackpic
 	dba	GyaradosBackpic

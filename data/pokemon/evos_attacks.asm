@@ -906,6 +906,7 @@ MankeyEvosAttacks:
 	db 0 ; no more level-up moves
 
 PrimeapeEvosAttacks:
+	db EVOLVE_MOVE, OUTRAGE, PRIMEAPE
 	db 0 ; no more evolutions
 	db 1, RAGE
 	db 1, TACKLE
@@ -923,8 +924,30 @@ PrimeapeEvosAttacks:
 	db 35, THRASH
 	db 39, CLOSE_COMBAT
 	db 44, SCREECH
-	db 48, GUNK_SHOT ; Stomping Tantrum → HGSS tutor move
-	db 53, OUTRAGE
+	db 48, OUTRAGE
+	db 53, GUNK_SHOT ; Stomping Tantrum → HGSS tutor move
+	db 0 ; no more level-up moves
+
+AnnihilapeEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, RAGE
+	db 1, TACKLE
+	db 1, LOW_KICK
+	db 1, LEER
+	db 1, FOCUS_ENERGY
+	db 5, FURY_STRIKES ; Fury Swipes → similar move
+	db 8, KARATE_CHOP
+	db 12, PURSUIT
+	db 15, SEISMIC_TOSS
+	db 19, SWAGGER
+	db 22, CROSS_CHOP
+	db 26, REVERSAL ; Assurance → egg move
+	db 30, FEINT_ATTACK ; Punishment → new move
+	db 35, THRASH
+	db 39, CLOSE_COMBAT
+	db 44, SCREECH
+	db 48, OUTRAGE
+	db 53, SWORDS_DANCE
 	db 0 ; no more level-up moves
 	
 GrowlitheEvosAttacks:
@@ -2256,6 +2279,7 @@ MagmortarEvosAttacks:
 	db 0 ; no more level-up moves
 
 PinsirEvosAttacks:
+	db EVOLVE_ITEM, DUSK_STONE, MINSIR
 	db 0 ; no more evolutions
 	db 1, FURY_STRIKES ; Vice Grip → new move
 	db 1, FOCUS_ENERGY
@@ -2271,6 +2295,24 @@ PinsirEvosAttacks:
 	db 40, SWORDS_DANCE
 	db 43, THRASH
 	db 47, CLOSE_COMBAT ; Superpower → similar move
+	db 50, MEGAHORN ; Guillotine → new move
+	db 0 ; no more level-up moves
+	
+MinsirEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, FOCUS_ENERGY
+	db 1, BITE ; Vice Grip → new move
+	db 8, SEISMIC_TOSS
+	db 12, BUG_BITE ; Harden → similar move
+	db 16, RAGE ; Revenge → RBY TM move
+	db 20, PURSUIT ; Brick Break → event move
+	db 26, NIGHT_SLASH ; Vital Throw → TM move
+	db 29, X_SCISSOR
+	db 33, FEINT_ATTACK ; Submission → egg moves
+	db 36, HONE_CLAWS ; Storm Throw → Let's Go move
+	db 40, SWORDS_DANCE
+	db 43, THRASH
+	db 47, SUCKER_PUNCH ; Superpower → similar move
 	db 50, MEGAHORN ; Guillotine → new move
 	db 0 ; no more level-up moves
 

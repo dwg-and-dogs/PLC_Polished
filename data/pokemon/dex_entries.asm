@@ -193,6 +193,10 @@ SECTION "PrimeapePokedexEntry", ROMX
 PrimeapePokedexEntry::
 INCLUDE "data/pokemon/dex_entries/057.asm";;
 
+SECTION "PrimeapePokedexEntry", ROMX
+PrimeapePokedexEntry::
+INCLUDE "data/pokemon/dex_entries/057_evolve.asm";;
+
 SECTION "GrowlithePokedexEntry", ROMX
 GrowlithePokedexEntry::
 INCLUDE "data/pokemon/dex_entries/058.asm";;
@@ -460,6 +464,10 @@ INCLUDE "data/pokemon/dex_entries/240.asm";;
 SECTION "PinsirPokedexEntry", ROMX
 PinsirPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/127.asm";;
+
+SECTION "PinsirPokedexEntry", ROMX
+PinsirPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/127_evolve.asm";;
 
 SECTION "TaurosPokedexEntry", ROMX
 TaurosPokedexEntry::

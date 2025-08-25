@@ -48,6 +48,7 @@ FrontPicPointers::
 	dba	PersianFrontpic
 	dba	MankeyFrontpic
 	dba	PrimeapeFrontpic
+	dba	AnnihilapeFrontpic
 	dba	GrowlitheFrontpic
 	dba	ArcanineFrontpic
 	dba	HarcanineFrontpic
@@ -115,6 +116,7 @@ FrontPicPointers::
 	dba	MagmarFrontpic
 	dba	MagmortarFrontpic
 	dba	PinsirFrontpic
+	dba	MinsirFrontpic
 	dba	TaurosFrontpic
 	dba	MagikarpFrontpic
 	dba	GyaradosFrontpic

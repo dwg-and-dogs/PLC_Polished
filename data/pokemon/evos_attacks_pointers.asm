@@ -52,6 +52,7 @@ EvosAttacksPointers::
 	dw PersianEvosAttacks
 	dw MankeyEvosAttacks
 	dw PrimeapeEvosAttacks
+	dw AnnihilapeEvosAttacks	
 	dw GrowlitheEvosAttacks
 	dw ArcanineEvosAttacks
 	dw HarcanineEvosAttacks
@@ -119,6 +120,7 @@ EvosAttacksPointers::
 	dw MagmarEvosAttacks
 	dw MagmortarEvosAttacks
 	dw PinsirEvosAttacks
+	dw MinsirEvosAttacks
 	dw TaurosEvosAttacks
 	dw MagikarpEvosAttacks
 	dw GyaradosEvosAttacks

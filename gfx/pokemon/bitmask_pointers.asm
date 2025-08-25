@@ -48,6 +48,7 @@ BitmasksPointers:
 	dw PersianBitmasks
 	dw MankeyBitmasks
 	dw PrimeapeBitmasks
+	dw AnnihilapeBitmasks
 	dw GrowlitheBitmasks
 	dw ArcanineBitmasks
 	dw HarcanineBitmasks
@@ -115,6 +116,7 @@ BitmasksPointers:
 	dw MagmarBitmasks
 	dw MagmortarBitmasks
 	dw PinsirBitmasks
+	dw MinsirBitmasks
 	dw TaurosBitmasks
 	dw MagikarpBitmasks
 	dw GyaradosBitmasks

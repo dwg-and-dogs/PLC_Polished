@@ -50,6 +50,7 @@ IconPointers:
 	dba PersianIcon ;PERSIAN  ; 2d
 	dba MankeyIcon ;MANKEY      ; 2e
 	dba PrimeapeIcon ;PRIMEAPE   ; 2f
+	dba AnnihilapeIcon ;ANNIHILAPE   ; 2f
 	dba GrowlitheIcon ;GROWLITHE    ; 30
 	dba ArcanineIcon ;ARCANINE   ; 31
 	dba HarcanineIcon ;H__ARCANINE    ; 32
@@ -117,6 +118,7 @@ IconPointers:
 	dba MagmarIcon ;MAGMAR    ; 70
 	dba MagmortarIcon ;MAGMORTAR    ; 71
 	dba PinsirIcon ;PINSIR ; 72
+	dba MinsirIcon ;MINSIR ; 72	
 	dba TaurosIcon ;TAUROS     ; 73
 	dba MagikarpIcon ;MAGIKARP     ; 74
 	dba GyaradosIcon ;GYARADOS     ; 75

@@ -54,6 +54,7 @@ PokemonCries::
 	mon_cry CRY_CLEFAIRY,    $099,  $17f ; Persian
 	mon_cry CRY_NIDOQUEEN,   $0dd,  $0e0 ; Mankey
 	mon_cry CRY_NIDOQUEEN,   $0af,  $0c0 ; Primeape
+	mon_cry CRY_NIDOQUEEN,   $0af,  $0c0 ; Annihilape
 	mon_cry CRY_GROWLITHE,   $020,  $0c0 ; Growlithe
 	mon_cry CRY_WEEDLE,      $000,  $100 ; Arcanine
 	mon_cry CRY_WEEDLE,      $000,  $100 ; HArcanine	
@@ -121,6 +122,7 @@ PokemonCries::
 	mon_cry CRY_CHARMANDER,  $0ff,  $0b0 ; Magmar
 	mon_cry CRY_CHARMANDER,  $0ff,  $0b0 ; Magmortar	
 	mon_cry CRY_PIDGEOTTO,   $000,  $100 ; Pinsir
+	mon_cry CRY_PIDGEOTTO,   $000,  $100 ; Minsir
 	mon_cry CRY_SQUIRTLE,    $011,  $0c0 ; Tauros
 	mon_cry CRY_EKANS,       $080,  $080 ; Magikarp
 	mon_cry CRY_EKANS,       $000,  $100 ; Gyarados

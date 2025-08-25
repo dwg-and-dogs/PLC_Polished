@@ -49,6 +49,7 @@ PokedexDataPointerTable:
 	dba	PersianPokedexEntry
 	dba	MankeyPokedexEntry
 	dba	PrimeapePokedexEntry
+	dba	AnnihilapePokedexEntry
 	dba	GrowlithePokedexEntry
 	dba	ArcaninePokedexEntry
 	dba	HarcaninePokedexEntry
@@ -116,6 +117,7 @@ PokedexDataPointerTable:
 	dba	MagmarPokedexEntry
 	dba	MagmortarPokedexEntry
 	dba	PinsirPokedexEntry
+	dba	MinsirPokedexEntry
 	dba	TaurosPokedexEntry
 	dba	MagikarpPokedexEntry
 	dba	GyaradosPokedexEntry

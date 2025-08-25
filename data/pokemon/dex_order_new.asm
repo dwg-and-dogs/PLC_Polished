@@ -50,6 +50,7 @@ NewPokedexOrder:
 	db	PERSIAN
 	db	MANKEY
 	db	PRIMEAPE
+	db	ANNIHILAPE
 	db	GROWLITHE
 	db	ARCANINE
 	db	H__ARCANINE
@@ -117,6 +118,7 @@ NewPokedexOrder:
 	db	MAGMAR
 	db	MAGMORTAR
 	db	PINSIR
+	db	MINSIR
 	db	TAUROS
 	db	MAGIKARP
 	db	GYARADOS

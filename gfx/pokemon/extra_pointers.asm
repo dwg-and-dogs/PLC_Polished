@@ -48,6 +48,7 @@ AnimationExtraPointers:
 	dw PersianAnimationExtra
 	dw MankeyAnimationExtra
 	dw PrimeapeAnimationExtra
+	dw AnnihilapeAnimationExtra
 	dw GrowlitheAnimationExtra
 	dw ArcanineAnimationExtra
 	dw HarcanineAnimationExtra
@@ -115,6 +116,7 @@ AnimationExtraPointers:
 	dw MagmarAnimationExtra
 	dw MagmortarAnimationExtra
 	dw PinsirAnimationExtra
+	dw MinsirAnimationExtra
 	dw TaurosAnimationExtra
 	dw MagikarpAnimationExtra
 	dw GyaradosAnimationExtra

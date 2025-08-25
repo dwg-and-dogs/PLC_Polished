@@ -48,6 +48,7 @@ EvolutionMoves::
 	db HYPNOSIS		;PERSIAN  ; 2d
 	db NO_MOVE		;MANKEY      ; 2e
 	db NO_MOVE		;PRIMEAPE   ; 2f
+	db NO_MOVE		;ANNIHILAPE   ; 2f
 	db NO_MOVE		;GROWLITHE    ; 30
 	db EXTREMESPEED	;ARCANINE   ; 31
 	db EXTREMESPEED	;H__ARCANINE    ; 32
@@ -115,6 +116,7 @@ EvolutionMoves::
 	db NO_MOVE		;MAGMAR    ; 70
 	db FLASH_CANNON	;MAGMORTAR    ; 71
 	db NO_MOVE		;PINSIR ; 72
+	db CRUNCH		;MINSIR ; 72
 	db NO_MOVE		;TAUROS     ; 73
 	db NO_MOVE		;MAGIKARP     ; 74
 	db AQUA_TAIL	;GYARADOS     ; 75
