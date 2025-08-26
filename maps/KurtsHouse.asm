@@ -68,9 +68,9 @@ KurtHouseEventScript:
 	getstring GearName, $1
 	callstd receiveitem
 	setflag ENGINE_POKEGEAR
-;	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_PHONE_CARD
 	setflag ENGINE_MAP_CARD
-;	addcellnum PHONE_MOM
+	addcellnum PHONE_MOM
 	setscene $1 ; this should keep the event from playing in a loop?
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
 	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
@@ -99,6 +99,8 @@ KurtHouseEventScript:
 .NoInstructions:
 	promptbutton
 	givekeyitem APRICORN_BOX
+	givekeyitem KURTS_MAP
+	givekeyitem TIMEPIECE
 	writetext KurtOutroText0
 	promptbutton
 	special SpecialNameRival
@@ -139,13 +141,13 @@ KurtShuckleText:
 	done
 
 MomPokegearText:
-	text "#mon Gear, or"
-	line "just #gear."
+	text "That #gear is"
+	line "an old timepiece"
+	para "passed down from"
+	line "my Grandpa, and"
+	para "a map of Johto"
+	line "if you get lost."
 
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
-	
 	para "I also threw in"
 	line "a new Apricorn"
 	cont "box."

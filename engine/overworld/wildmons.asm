@@ -473,10 +473,10 @@ _ChooseWildEncounter:
 	ld a, [wMapNumber]
 	cp MAP_VIOLET_CITY ; first Ghost map in its group
 	jr c, .not_ghost
-	ld a, SILPHSCOPE2
-	ld [wCurKeyItem], a
-	call CheckKeyItem
-	jr c, .not_ghost
+;	ld a, SILPHSCOPE2
+;	ld [wCurKeyItem], a
+;	call CheckKeyItem
+;	jr c, .not_ghost
 	ld a, BATTLETYPE_GHOST
 	ld [wBattleType], a
 .not_ghost

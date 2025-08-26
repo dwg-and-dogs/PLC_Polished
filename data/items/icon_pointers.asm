@@ -264,27 +264,31 @@ KeyItemIconPointers:
 	dba SuperRodIcon
 	dba CoinCaseIcon
 	dba ItemfinderIcon
-	dba MysteryEggIcon
-	dba SquirtBottleIcon
-	dba UnownReportIcon ; replaces secretpotion icon
-	dba RedScaleIcon
-	dba CardKeyIcon
-	dba BasementKeyIcon
-	dba SSTicketIcon
-	dba PassIcon
-	dba MachinePartIcon
-	dba LostItemIcon
+	dba UnownReportIcon
 	dba RainbowWingIcon
 	dba SilverWingIcon
 	dba ClearBellIcon
 	dba GSBallIcon
-	dba BlueCardIcon
-	dba OrangeTicketIcon
-	dba MysticTicketIcon
-	dba PumiceHarpIcon ; pumice harp 
+	dba PumiceHarpIcon
 	dba ShinyCharmIcon
 	dba OvalCharmIcon
 	dba CatchCharmIcon
-	dba SilphScope2Icon
+	dba TimePieceIcon
+	dba KurtsMapIcon
+	dba MintLeafKIcon
+	dba TinymushroomKIcon
+	dba LemonadeKIcon
+	dba BrickPieceKIcon
+	dba RagecandybarKIcon
+	dba BigMushroomKIcon
+	dba LiteBlueMailKIcon
+	dba GoldLeafKIcon
+	dba PearlKIcon
+	dba SurfMailKIcon
+	dba OldAmberKIcon
+	dba SweetHoneyKIcon
 	dba ApricornBoxIcon
 	dba TypeChartIcon
+	dba MachinePartIcon
+;	assert_table_length NUM_KEY_ITEMS
+

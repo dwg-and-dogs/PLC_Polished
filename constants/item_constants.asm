@@ -587,9 +587,9 @@ NUM_APRICORNS EQU const_value - 1
 ; - KeyItemDescriptions (see data/items/descriptions.asm)..
 ; - KeyItemAttributes (see data/items/attributes.asm)..
 ; - KeyItemEffects (see engine/items/item_effects.asm) todo
-; icon pointers todo 
-; gfx/items.asm  todo 
-; engine/gfx/palettes todo 
+; icon pointers done 
+; gfx/items.asm  done
+; engine/gfx/palettes done
 	const_def
 	const BICYCLE      ; 00
 	const OLD_ROD      ; 01

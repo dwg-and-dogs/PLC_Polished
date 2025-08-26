@@ -343,7 +343,7 @@ StartMenu_Pokegear:
 	farcall InitPokegearPalettes
 	farcall PokeGear
 	call CloseSubmenu
-	call ApplyTilemapInVBlank
+;	call ApplyTilemapInVBlank
 	call SetPalettes
 	call DelayFrame
 	xor a

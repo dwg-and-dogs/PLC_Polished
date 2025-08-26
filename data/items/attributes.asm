@@ -556,9 +556,9 @@ KeyItemAttributes: ; ; Return 1 in wItemAttributeParamBuffer and carry if wCurKe
 ; CATCH CHARM
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; TIMEPIECE
-	key_item_attribute 1, ITEMMENU_CURRENT, ITEMMENU_NOUSE
+	key_item_attribute 0, ITEMMENU_CLOSE, ITEMMENU_NOUSE
 ; KURTS_MAP
-	key_item_attribute 1, ITEMMENU_CURRENT, ITEMMENU_NOUSE
+	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 
 ; MINT_LEAF_K
 	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE

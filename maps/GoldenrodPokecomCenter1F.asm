@@ -53,7 +53,7 @@ PokecomKurtScript:
 	closetext
 	checkevent EVENT_GOT_BASEMENT_KEY
 	iftrue .end
-	givekeyitem BASEMENT_KEY
+;	givekeyitem BASEMENT_KEY
 	setevent EVENT_GOT_BASEMENT_KEY
 .end
 	end
@@ -259,6 +259,9 @@ KurtHasSomeFansText:
 
 	para "Meet me in the"
 	line "Underground."
+	
+	para "I'll go unlock"
+	line "the door."
     done
 
 IlexExcelsiorV3Script:

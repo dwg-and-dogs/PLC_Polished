@@ -1411,4 +1411,11 @@ HollowRockDesc:
 PnkApricornDesc:
 	db    "Lovely pink"
 	next  "Apricorn.@"
-	
+
+KurtsMapDesc:
+	db 	  "For when you've" 
+	next  "lost your way.@"
+
+TimePieceDesc:
+	db    "Accurate within"
+	next  "160 years.@"
