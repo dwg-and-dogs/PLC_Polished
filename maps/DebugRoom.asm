@@ -612,8 +612,7 @@ BreederText:
 DebugWonderTradeScript: 
 	faceplayer
 	opentext
-	givepoke MINSIR, 100
-	givepoke ANNIHILAPE, 100
+	giveegg CYNDAQUIL
 	writetext DebugWonderTradeIntroText
 	waitbutton
 	writetext DebugWonderTradeExplanationText

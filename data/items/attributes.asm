@@ -523,7 +523,7 @@ key_item_attribute: MACRO
 	dn \2, \3
 ENDM
 
-KeyItemAttributes:
+KeyItemAttributes: ; ; Return 1 in wItemAttributeParamBuffer and carry if wCurKeyItem can be selected.
 	table_width KEYITEMATTR_STRUCT_LENGTH, KeyItemAttributes
 ; BICYCLE
 	key_item_attribute 1, ITEMMENU_CLOSE, ITEMMENU_NOUSE
@@ -537,25 +537,7 @@ KeyItemAttributes:
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; ITEMFINDER
 	key_item_attribute 1, ITEMMENU_CLOSE, ITEMMENU_NOUSE
-; MYSTERY EGG
-	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; SQUIRTBOTTLE
-	key_item_attribute 0, ITEMMENU_CLOSE, ITEMMENU_NOUSE
 ; UNOWN REPORT
-	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; RED SCALE
-	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; CARD KEY
-	key_item_attribute 0, ITEMMENU_CLOSE, ITEMMENU_NOUSE
-; BASEMENT KEY
-	key_item_attribute 0, ITEMMENU_CLOSE, ITEMMENU_NOUSE
-; S.S.TICKET
-	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; PASS
-	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; MACHINE PART
-	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; LOST ITEM
 	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 ; RAINBOW WING
 	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
@@ -565,24 +547,51 @@ KeyItemAttributes:
 	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 ; GS BALL
 	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
-; BLUE CARD
-	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
-; ORANGETICKET
-	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
-; MYSTICTICKET
-	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
-; OLD SEA MAP
-	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
+; PUMICE_HARP
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 ; SHINY CHARM
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; OVAL CHARM
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; CATCH CHARM
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
-; SILPHSCOPE2
-	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
+; TIMEPIECE
+	key_item_attribute 1, ITEMMENU_CURRENT, ITEMMENU_NOUSE
+; KURTS_MAP
+	key_item_attribute 1, ITEMMENU_CURRENT, ITEMMENU_NOUSE
+
+; MINT_LEAF_K
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; TINYMUSHROOM_K
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; LEMONADE_K 
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; BRICK_PIECE_K 
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; RAGECANDYBAR_K
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; BIG_MUSHROOM_K
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; LITEBLUEMAIL_K 
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; GOLD_LEAF_K
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; PEARL_K 
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; SURF_MAIL_K
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; OLD_AMBER_K
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+; SWEET_HONEY_K
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
+
 ; APRICORN BOX
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; TYPE CHART
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_CURRENT
+; MACHINE PART
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 	assert_table_length NUM_KEY_ITEMS
+
+
+	

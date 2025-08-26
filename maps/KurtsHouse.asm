@@ -68,9 +68,9 @@ KurtHouseEventScript:
 	getstring GearName, $1
 	callstd receiveitem
 	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
-;	setflag ENGINE_MAP_CARD
-	addcellnum PHONE_MOM
+;	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_MAP_CARD
+;	addcellnum PHONE_MOM
 	setscene $1 ; this should keep the event from playing in a loop?
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
 	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
@@ -113,6 +113,8 @@ KurtHouseEventScript:
 .kurt_walks_back:
 	step_down
 	step_down
+	step_left
+	step_left
 	step_down
 	step_down
 	step_down
