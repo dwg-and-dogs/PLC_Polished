@@ -35,17 +35,18 @@ AnarresHouseTinyMushroomTrigger:
 AnarresHouseMushroomScript: 
 	faceplayer
 	opentext	
+	checkevent EVENT_GAVE_TINYMUSHROOM
+	iftrue_jumpopenedtext GiveTinyMushroomText
 	writetext NeedAMintLeafText
 	waitbutton
-	checkitem MINT_LEAF
+	checkkeyitem MINT_LEAF_K
 	iffalse_jumpopenedtext Text_NoMintLeaf
-	writetext Text_MintLeafQuestion ;;
+	writetext Text_MintLeafQuestion 
 	yesorno
 	iffalse_jumpopenedtext Text_NoMintLeaf
-	takeitem MINT_LEAF
-	verbosegiveitem TINYMUSHROOM
-	setscene $1
-	iffalse_endtext
+	takekeyitem MINT_LEAF
+	verbosegivekeyitem TINYMUSHROOM_K
+	setevent EVENT_GAVE_TINYMUSHROOM
 	jumpopenedtext GiveTinyMushroomText 
 
 NeedAMintLeafText: 
@@ -92,10 +93,8 @@ GiveTinyMushroomText:
 	cont "a great dish."
 	done
 
-
 Text_NoMintLeaf:
-	text "You don't?"
-	line "That's sad."
+	text "No? That stinks."
 	done
 
 AnarresHouseHexManiacScript:

@@ -123,11 +123,12 @@ AzaleaPokeCenter1FSightseermText:
 AzaleaPokeCenter1FPokefanScript: 
 	faceplayer
 	opentext	
+	checkevent EVENT_GOT_MINT_LEAF
+	iftrue_jumpopenedtext GiveMintLeafText
 	writetext MintLeafGiftText
 	promptbutton
-	verbosegiveitem MINT_LEAF
-	setscene $1
-	iffalse_endtext
+	verbosegivekeyitem MINT_LEAF_K
+	setevent EVENT_GOT_MINT_LEAF
 	jumpopenedtext GiveMintLeafText 
 
 MintLeafGiftText: 
@@ -141,7 +142,7 @@ MintLeafGiftText:
 	cont "toothpaste."
 	done
 	
-GiveMintLeafText: ;;
+GiveMintLeafText:
 	text "That Mint Leaf"
 	line "will freshen"
 	cont "your breath."
