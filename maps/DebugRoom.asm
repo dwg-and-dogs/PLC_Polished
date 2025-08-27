@@ -40,7 +40,7 @@ DebugInteraction:
 	waitbutton
 	setflag ENGINE_POKEGEAR
 ;	setflag ENGINE_PHONE_CARD
-	setflag ENGINE_MAP_CARD
+;	setflag ENGINE_MAP_CARD
 	; pokedex
 	setflag ENGINE_POKEDEX
 for x, NUM_TMS + NUM_HMS
@@ -141,12 +141,12 @@ DebugCPU:
 	opentext
 	writetext DebugCPUText
 	; time
-;	special Special_SetDayOfWeek
+	special Special_SetDayOfWeek
 ;	special Special_InitialClearDSTFlag
 	; full pokegear
 	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
-	setflag ENGINE_MAP_CARD
+;	setflag ENGINE_PHONE_CARD
+;	setflag ENGINE_MAP_CARD
 ;	setflag ENGINE_RADIO_CARD
 ;	setflag ENGINE_EXPN_CARD
 	; pokedex

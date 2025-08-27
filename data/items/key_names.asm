@@ -24,7 +24,7 @@ KeyItemNames::
 	li "Brick Piece"
 	li "Ragecandybar"
 	li "Big Mushroom"
-	li "Liteblue Mail"
+	li "LiteblueMail"
 	li "Gold Leaf"
 	li "Pearl"
 	li "Surf Mail"

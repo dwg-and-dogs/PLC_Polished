@@ -160,7 +160,7 @@ StartMenu::
 .SaveString:     db "Save@"
 .OptionString:   db "Options@"
 .ExitString:     db "Exit@"
-.PokegearString: db "<PO><KE>gear@"
+.PokegearString: db "Watch@"
 .QuitString:     db "Quit@"
 
 .OpenMenu:
@@ -343,7 +343,7 @@ StartMenu_Pokegear:
 	farcall InitPokegearPalettes
 	farcall PokeGear
 	call CloseSubmenu
-;	call ApplyTilemapInVBlank
+	call ApplyTilemapInVBlank
 	call SetPalettes
 	call DelayFrame
 	xor a

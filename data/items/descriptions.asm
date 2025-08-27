@@ -1112,8 +1112,8 @@ BalmMushroomDesc:
 	next "Sell very high.@"
 
 PearlDesc:
-	db   "For attracting"
-	next "clams.@"
+	db   "Beachcomber's"
+	next "desire.@"
 
 BigPearlDesc:
 	db   "Spherical; trade"
@@ -1144,8 +1144,8 @@ SilverLeafDesc:
 	next "love these.@"
 
 GoldLeafDesc:
-	db   "For a dignif-"
-	next "ied sheen.@"
+	db   "For a dignified"
+	next "sheen.@"
 
 SlowpokeTailDesc:
 	db   "Very tasty. Sell"
@@ -1344,8 +1344,8 @@ ClearBellDesc:
 	next "ringing.@"
 
 GSBallDesc:
-	db   "The mysterious"
-	next "Ball.@"
+	db   "Mysterious ball"
+	next "from Ilex.@"
 
 BlueCardDesc:
 	db   "Card to save"

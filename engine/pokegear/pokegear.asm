@@ -1,4 +1,4 @@
-	const_def
+	const_def ; only going to get the clock card 
 	const CLOCK_CARD
 	const MAP_CARD
 	const PHONE_CARD
@@ -263,15 +263,15 @@ InitPokegearTilemap:
 	ld hl, ClockTilemapRLE
 	call Pokegear_LoadTilemapRLE
 	hlcoord 12, 1
-	ld de, .switch
+	ld de, .clocktext
 	rst PlaceString
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
 	jmp Pokegear_UpdateClock
 
-.switch
-	db " Switch▶@"
+.clocktext
+	db "+/-160yr@"
 
 .Map:
 	call PokegearMap
@@ -398,7 +398,7 @@ PokegearClock_Joypad:
 	call .UpdateClock
 	ld hl, hJoyLast
 	ld a, [hl]
-	and A_BUTTON + B_BUTTON + START + SELECT
+	and A_BUTTON + B_BUTTON + START + SELECT ; maybe consider removing some of these to see which ones are getting the problem? 
 	jr nz, .quit
 	ld a, [hl]
 	and D_RIGHT

@@ -1925,7 +1925,7 @@ UseRod:
 Itemfinder:
 	farjp ItemFinder
 
-KurtsMapKeyItem:
+KurtsMapKeyItem: ; c.f. typechart 
 	call FadeToMenu
 	farcall _TownMap ; this is in pokegear 
 	call ExitMenu
@@ -1935,19 +1935,18 @@ KurtsMapKeyItem:
 	farcall WaitBGMap_DrawPackGFX
 	farjp Pack_InitColors
 
-TimePieceKeyItem:
-	ld hl, ClockTilemapRLE
-	call Pokegear_LoadTilemapRLE
-	hlcoord 12, 1
-	ld de, .switch
-	rst PlaceString
-	hlcoord 0, 12
-	lb bc, 4, 18
-	call Textbox
-	jmp Pokegear_UpdateClock
+TimePieceKeyItem: ; from engine-rtc-timeset.asm, from the intro monologue 
+	call UpdateTime
+	ldh a, [hHours]
+	ld c, a
+	farcall PrintHour
+	ld a, ":"
+	ld [hli], a
+	ld de, hMinutes
+	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
+	jmp PrintNum
 
-.switch
-	db " Switch▶@"
+
 
 RestorePPEffect:
 	ld a, [wCurItem]

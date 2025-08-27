@@ -65,12 +65,15 @@ KurtHouseEventScript:
 	opentext
 	writetext KurtIntroText
 	promptbutton
+;	verbosegivekeyitem TIMEPIECE
+	verbosegivekeyitem KURTS_MAP
+	verbosegivekeyitem APRICORN_BOX
 	getstring GearName, $1
 	callstd receiveitem
 	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
-	setflag ENGINE_MAP_CARD
-	addcellnum PHONE_MOM
+;	setflag ENGINE_PHONE_CARD
+;	setflag ENGINE_MAP_CARD
+;	addcellnum PHONE_MOM
 	setscene $1 ; this should keep the event from playing in a loop?
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
 	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
@@ -98,9 +101,6 @@ KurtHouseEventScript:
 	promptbutton
 .NoInstructions:
 	promptbutton
-	givekeyitem APRICORN_BOX
-	givekeyitem KURTS_MAP
-	givekeyitem TIMEPIECE
 	writetext KurtOutroText0
 	promptbutton
 	special SpecialNameRival
@@ -130,18 +130,10 @@ KurtIntroText:
 	line "want to give you"
 	cont "a some gifts."
 	done
-	
-KurtShuckleText:
-	text "First of all, a"
-	line "mighty Shuckle!"
-	
-	para "It will be with"
-	line "you through"
-	cont "anything."
-	done
+
 
 MomPokegearText:
-	text "That #gear is"
+	text "These gifts are"
 	line "an old timepiece"
 	para "passed down from"
 	line "my Grandpa, and"
@@ -149,24 +141,16 @@ MomPokegearText:
 	line "if you get lost."
 
 	para "I also threw in"
-	line "a new Apricorn"
-	cont "box."
+	line "an Apricorn box."
 	
 	para "You can use that"
-	line "Apricorn kit at"
-	cont "any bench."
+	line "at any bench."
 	
-	para "You're getting so"
-	line "good. I think you"
-	cont "could fashion a"
-	cont "ball from almost"
-	cont "anything!"
+	para "Try making balls"
+	line "from many things!"
 
-	para "Oh, the day of the"
-	line "week isn't set."
-
-	para "You mustn't forget"
-	line "that!"
+	para "Oh, say, what day"
+	line "is it today?"
 	done
 
 MomDSTText:
@@ -175,13 +159,10 @@ MomDSTText:
 	done
 
 GearName:
-	db "#gear@"
+	db "Watch@"
 
 MomRunningShoesText:
-	text "Isn't it so"
-	line "convenient?"
-
-	para "By the way, do"
+	text "By the way, do"
 	line "you know how to"
 
 	para "use your new"
@@ -195,19 +176,16 @@ MomInstructionsText:
 
 KurtOutroText0:
 	text "We're waiting on"
-	line "the charcoal fam-"
-	cont "ily. Do you know"
-	cont "the boy's name?"
+	line "the charcoal boy."
+	
+	para "What's his name"
+	line "again?"
 	done
 
 KurtOutroText:
-	text "Can you go see"
-	line "what is holding"
-	cont "up <RIVAL> and"
-	cont "his dad?"
-	
-	para "I'll go outside"
-	line "and wait."
+	text "What's holding up"
+	line "<RIVAL>? Go see."
+	cont "I'll wait outside."
 	done
 
 KurtHouseScript:
@@ -244,6 +222,9 @@ PokemonJournalProfWestwoodScript:
 	
 	para "used to catch"
 	line "rock types."
+	
+	para "Need to explore"
+	line "Union Cave!"
 	done
 
 KurtsHouseOakPhotoText:
@@ -254,8 +235,7 @@ KurtsHouseOakPhotoText:
 
 KurtsHouseCelebiStatueText:
 	text "It's a statue of"
-	line "the forest's pro-"
-	cont "tector."
+	line "Celebi."
 	done
 
 
