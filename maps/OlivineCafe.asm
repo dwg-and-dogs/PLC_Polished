@@ -164,20 +164,22 @@ Text_NoCarry:
 	line "it, kid."
 	done
 
+
 CafeSurfMailScript: 
 	faceplayer
 	opentext	
+	checkevent EVENT_GOT_SURF_MAIL
+	iftrue_jumpopenedtext GiveSurfMailText
 	writetext NeedAPearlText
 	waitbutton
-	checkitem PEARL
+	checkkeyitem PEARL_K
 	iffalse_jumpopenedtext Text_NoPearl
 	writetext Text_PearlQuestion
 	yesorno
 	iffalse_jumpopenedtext Text_NoPearl
-	takeitem PEARL
-	verbosegiveitem SURF_MAIL
-	setscene $1
-	iffalse_endtext
+	takekeyitem PEARL_K
+	verbosegivekeyitem SURF_MAIL_K
+	setevent EVENT_GOT_SURF_MAIL
 	jumpopenedtext GiveSurfMailText 
 
 NeedAPearlText: 

@@ -72,16 +72,14 @@ MasterBallScript:
 	iftrue_jumpopenedtext TextGaveMasterBall2
 	writetext NeedSweetHoneyText
 	waitbutton
-	checkitem SWEET_HONEY
+	checkkeyitem SWEET_HONEY_K
 	iffalse_jumpopenedtext Text_NoHoney
 	writetext Text_HoneyQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext Text_NoHoney
-	takeitem SWEET_HONEY
+	takekeyitem SWEET_HONEY
 	verbosegiveitem MASTER_BALL
 	setevent EVENT_GAVE_MASTER_BALL
-	setscene $1
-	iffalse_endtext
 	jumpopenedtext TextGaveMasterBall 
 
 NeedSweetHoneyText: 

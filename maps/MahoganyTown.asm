@@ -21,8 +21,8 @@ MahoganyTown_MapScriptHeader:
 	bg_event  8,  2, BGEVENT_JUMPTEXT, SilphSpringsAheadText
 
 	def_object_events
-	object_event  11,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest 
-	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, -1 ; 
+	object_event 11,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT,, 	0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest
+	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, -1 ;
 	object_event  9, 2, 	SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
 	object_event  6,  7, 	SPRITE_FISHER, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
 	object_event 13, 15, 	SPRITE_CUTE_GIRL, 	SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, PAL_NPC_RED,	OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
@@ -59,16 +59,18 @@ MahoganyTownGrannyText:
 MahoganyTownGrampsScript:
 	faceplayer
 	opentext	
+	checkevent EVENT_GOT_OLD_AMBER
+	iftrue_jumpopenedtext GiveOldAmberText
 	writetext NeedASurfMailText
 	waitbutton
-	checkitem SURF_MAIL
+	checkkeyitem SURF_MAIL_K
 	iffalse_jumpopenedtext Text_NoSurfMail
 	writetext Text_SurfMailQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext Text_NoSurfMail
-	takeitem SURF_MAIL
-	verbosegiveitem OLD_AMBER
-	iffalse_endtext
+	takekeyitem SURF_MAIL_K
+	verbosegivekeyitem OLD_AMBER_K
+	setevent EVENT_GOT_OLD_AMBER
 	jumpopenedtext GiveOldAmberText 
 
 NeedASurfMailText: 
@@ -97,14 +99,12 @@ Text_SurfMailQuestion:
 	text "Hey! What're"
 	line "those doodles?"
 	
-	para "They look like"
-	line "the view from the"
-	cont "Olivine Pier."
+	para "They remind me of"
+	line "Olivine's pier."
 	
-	para "Could... Could I"
-	line "have it? I will"
-	para "give you a fossil"
-	line "I found."
+	para "Can I have it?"
+	line "I'll give you a"
+	cont "fossil I dug up."
 	done
 
 	

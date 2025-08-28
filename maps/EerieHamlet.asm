@@ -121,17 +121,18 @@ EerieHamletRoadblockText2:
 EerieHamletHoneyScript:
 	faceplayer
 	opentext	
+	checkevent EVENT_GOT_SWEET_HONEY
+	iftrue_jumpopenedtext GiveSweetHoneyText
 	writetext NeedAFossilText
 	waitbutton
-	checkitem OLD_AMBER
+	checkkeyitem OLD_AMBER_K
 	iffalse_jumpopenedtext Text_NoFossil
 	writetext Text_FossilQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext Text_NoFossil
-	takeitem OLD_AMBER
-	verbosegiveitem SWEET_HONEY
-	setscene $1
-	iffalse_endtext
+	takekeyitem OLD_AMBER_K
+	verbosegivekeyitem SWEET_HONEY_K
+	setevent EVENT_GOT_SWEET_HONEY
 	jumpopenedtext GiveSweetHoneyText 
 
 NeedAFossilText: 
@@ -148,10 +149,7 @@ NeedAFossilText:
 	line "artifact from the"
 	para "ground, that'd"
 	line "show that I was"
-	cont "working hard,"
-	
-	para "and get Adrinna"
-	line "off my back."
+	cont "working hard."
 	done
 
 Text_FossilQuestion:

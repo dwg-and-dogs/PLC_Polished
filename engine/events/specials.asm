@@ -332,61 +332,61 @@ CheckIfTrendyPhraseIsLucky:
 	db "Lucky@"
 
 RespawnOneOffs:
-	eventflagreset EVENT_BEAT_LAWRENCE
-	eventflagreset EVENT_BEAT_FLANNERY
-	eventflagreset EVENT_BEAT_MAYLENE
-	eventflagreset EVENT_BEAT_SKYLA_AGAIN
-	eventflagreset EVENT_BEAT_KUKUI
+;	eventflagreset EVENT_BEAT_LAWRENCE
+;	eventflagreset EVENT_BEAT_FLANNERY
+;	eventflagreset EVENT_BEAT_MAYLENE
+;	eventflagreset EVENT_BEAT_SKYLA_AGAIN
+;	eventflagreset EVENT_BEAT_KUKUI
 
-	eventflagcheck EVENT_GOT_MUSCLE_BAND_FROM_STEVEN
+;	eventflagcheck EVENT_GOT_MUSCLE_BAND_FROM_STEVEN
 	jr z, .SkipSteven
-	eventflagset EVENT_EMBEDDED_TOWER_STEVEN_1
-	eventflagreset EVENT_EMBEDDED_TOWER_STEVEN_2
-	eventflagreset EVENT_BEAT_STEVEN
+;	eventflagset EVENT_EMBEDDED_TOWER_STEVEN_1
+;	eventflagreset EVENT_EMBEDDED_TOWER_STEVEN_2
+;	eventflagreset EVENT_BEAT_STEVEN
 .SkipSteven
 
 	eventflagcheck EVENT_GOT_WISE_GLASSES_FROM_CYNTHIA
 	jr z, .SkipCynthia
-	eventflagset EVENT_MYSTRI_STAGE_CYNTHIA
-	eventflagreset EVENT_SINJOH_RUINS_HOUSE_CYNTHIA
-	eventflagreset EVENT_BEAT_CYNTHIA
+;	eventflagset EVENT_MYSTRI_STAGE_CYNTHIA
+;	eventflagreset EVENT_SINJOH_RUINS_HOUSE_CYNTHIA
+;	eventflagreset EVENT_BEAT_CYNTHIA
 .SkipCynthia
 
 	ld a, SUDOWOODO - 1
 	call CheckCaughtMon
 	jr nz, .CaughtSudowoodo
-	eventflagreset EVENT_ROUTE_36_SUDOWOODO
+;	eventflagreset EVENT_ROUTE_36_SUDOWOODO
 .CaughtSudowoodo
 
 	ld a, SUICUNE - 1 ; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtArticuno
-	eventflagreset EVENT_SEAFOAM_ISLANDS_ARTICUNO
+;	eventflagreset EVENT_SEAFOAM_ISLANDS_ARTICUNO
 .CaughtArticuno
 
 	ld a, RAIKOU - 1; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtZapdos
-	eventflagreset EVENT_ROUTE_10_ZAPDOS
-	eventflagreset EVENT_ZAPDOS_GONE
+;	eventflagreset EVENT_ROUTE_10_ZAPDOS
+;	eventflagreset EVENT_ZAPDOS_GONE
 .CaughtZapdos
 
 	ld a, ENTEI - 1; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtMoltres
-	eventflagreset EVENT_CINNABAR_VOLCANO_MOLTRES
+;	eventflagreset EVENT_CINNABAR_VOLCANO_MOLTRES
 .CaughtMoltres
 
 	ld a, CELEBI - 1; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtMewtwo
-	eventflagreset EVENT_CERULEAN_CAVE_MEWTWO
+;	eventflagreset EVENT_CERULEAN_CAVE_MEWTWO
 .CaughtMewtwo
 
 	ld a, CELEBI - 1; CHANGED
 	call CheckCaughtMon
 	jr nz, .CaughtMew
-	eventflagreset EVENT_FARAWAY_JUNGLE_MEW
+;	eventflagreset EVENT_FARAWAY_JUNGLE_MEW
 .CaughtMew
 
 	ld a, RAIKOU - 1
@@ -421,15 +421,15 @@ RespawnOneOffs:
 	ld a, LUGIA - 1
 	call CheckCaughtMon
 	jr nz, .CaughtLugia
-	eventflagreset EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
-	eventflagreset EVENT_FOUGHT_LUGIA
+;	eventflagreset EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
+;	eventflagreset EVENT_FOUGHT_LUGIA
 .CaughtLugia
 
 	ld a, HO_OH - 1
 	call CheckCaughtMon
 	ret nz
-	eventflagreset EVENT_TIN_TOWER_ROOF_HO_OH
-	eventflagreset EVENT_FOUGHT_HO_OH
+;	eventflagreset EVENT_TIN_TOWER_ROOF_HO_OH
+;	eventflagreset EVENT_FOUGHT_HO_OH
 	ret
 
 RespawnRoamingRaikou:

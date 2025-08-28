@@ -86,17 +86,18 @@ OlivinePunishmentSpeechHouseDaughterText:
 OlivineLightBallScript:
 	faceplayer
 	opentext	
+	checkevent EVENT_GOT_PEARL_OLIVINE
+	iftrue_jumpopenedtext GiveLightBallText
 	writetext NeedAGoldLeafText
 	waitbutton
-	checkitem GOLD_LEAF
+	checkkeyitem GOLD_LEAF_K
 	iffalse_jumpopenedtext NoGoldLeafText
 	writetext Text_GoldLeafMailQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext NoGoldLeafText
-	takeitem GOLD_LEAF
-	verbosegiveitem PEARL, 2
-	setscene $1
-	iffalse_endtext
+	takekeyitem GOLD_LEAF_K
+	verbosegivekeyitem PEARL_K
+	setevent EVENT_GOT_PEARL_OLIVINE
 	jumpopenedtext GiveLightBallText 
 
 NeedAGoldLeafText:

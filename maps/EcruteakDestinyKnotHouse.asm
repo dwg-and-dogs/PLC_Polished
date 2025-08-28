@@ -43,19 +43,18 @@ HerbalistWifeText:
 EcruteakBlueMailScript: ; TRADE QUEST 
 	faceplayer
 	opentext	
-	checkitem LITEBLUEMAIL
+	checkevent EVENT_GAVE_LITEBLUEMAIL
 	iftrue_jumpopenedtext TextReadingTheTeaLeaves
 	writetext NeedABigMushroomText
 	waitbutton
-	checkitem BIG_MUSHROOM
+	checkkeyitem BIG_MUSHROOM_K
 	iffalse_jumpopenedtext NoBigMushroom
 	writetext Text_BigMushroomQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext NoBigMushroom
-	takeitem BIG_MUSHROOM
-	verbosegiveitem LITEBLUEMAIL
-	iffalse_endtext
-	setscene $1 
+	takekeyitem BIG_MUSHROOM
+	verbosegivekeyitem LITEBLUEMAIL_K
+	setevent EVENT_GAVE_LITEBLUEMAIL
 	jumpopenedtext TextReadingTheTeaLeaves
 
 
@@ -63,8 +62,7 @@ NeedABigMushroomText:
 	text "Have you come to"
 	line "have your fortune"
 	para "told? I can read"
-	line "the tea leaves, so"
-	cont "to speak."
+	line "your tea leaves."
 
 	para "The only thing I"
 	line "need is a Big"
@@ -86,13 +84,13 @@ Text_BigMushroomQuestion:
 	done
 
 TextReadingTheTeaLeaves:
-	text "Some hot water,"
-	line "some Toe Of"
-	para "Politoed, some"
-	line "Moss of Zubat,"
-	para "and it looks nice"
-	cont "and blue..."
+	text "Hot water, Toe of"
+	line "Politoed, Big"
+	cont "Mushroom..."
 	
+	para "The broth is now"
+	line "a lite blue..."
+		
 	para "Dunk the papers"
 	line "in the broth..."
 
@@ -102,4 +100,21 @@ TextReadingTheTeaLeaves:
 	line "spoken! Your"
 	para "future is"
 	line "undecided!"
+
+	para "My Litebluemail"
+	line "is perfect if you"
+	para "aren't sure what"
+	line "the future holds."
+	done
+
+TextReadingTheTeaLeaves2:
+	text "The spirits have"
+	line "spoken! Your"
+	para "future is"
+	line "undecided!"
+	
+	para "My Litebluemail"
+	line "is perfect if you"
+	para "aren't sure what"
+	line "the future holds."
 	done
