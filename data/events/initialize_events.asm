@@ -78,6 +78,7 @@ InitialEvents:
 	dw EVENT_ROOF_JOLTEON
 	dw EVENT_ROOF_ADRINNA
 	dw EVENT_ROOF_KURT
+	dw EVENT_CAPITAL_SKIRMISHER
 	dw -1
 
 InitialEngineFlags:

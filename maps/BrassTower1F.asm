@@ -7,6 +7,8 @@ BrassTower1F_MapScriptHeader:
 
 	def_warp_events
 	warp_event 8, 2, BRASS_TOWER_12F, 1
+	warp_event 7, 15, WESTERN_CAPITAL, 14
+	warp_event 8, 15, WESTERN_CAPITAL, 14
 
 	def_coord_events
 
@@ -22,7 +24,7 @@ BrassTower1F_MapScriptHeader:
 	object_event   7, 2, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptBT, -1
 
 	object_event 7, 13, SPRITE_AMOS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerAmosScript, -1 ; done
-	object_event  5,  13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_PREP, -1
+;	object_event  5,  13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_PREP, -1
 	object_event 9, 13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerHealScript, -1 ; done
 
 
@@ -46,35 +48,25 @@ BrassTowerAmosScript:
 	faceplayer
 	opentext
 	writetext BrassTowerAmosText1
-	yesorno
-	iffalse_jumptext BrassTowerAmosText
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
-	warp TIMELESS_TAPESTRY, 12, 18
+	waitbutton
+	closetext
 	end
 
 BrassTowerAmosText1:
-	text "If you need any-"
-	line "thing, one of our"
-	cont "soldiers can sell"
-	cont "you some items or"
-	cont "heal you."
-
-	para "If you need more"
-	line "preparation, I"
-	para "can teleport you"
-	line "out of here."
+	text_high
+    text " Amos: "
+	next
+	text_start
+	text "Consul Urgaust"
+	line "is on the top of"
+	cont "the tower."
+	
+	para "Hurry! We mustn't"
+	line "let him become"
+	cont "an emperor!"
 	done
 
-BrassTowerAmosText:
-	text "Let's go. There"
-	line "may be brigaders"
-	para "or sages guarding"
-	line "the tower."
-	done
-
-BrassTowerHealScript: ; cf ilex healer
+BrassTowerHealScript: 
 	faceplayer
 	opentext
 	writetext WantToHealBrassTower

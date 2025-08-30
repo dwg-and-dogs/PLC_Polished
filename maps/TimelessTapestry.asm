@@ -24,19 +24,22 @@ TimelessTapestry_MapScriptHeader:
 	; objects for the final cutscene 
 	object_event 8, 26, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TAPESTRY_SAMSARA ;
 	object_event 7, 26, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	; player at 9, 29 
+	; other objects 
+	object_event 16, 15, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TapestryAmos, EVENT_SKIRMISH_STARTED
+	pokemon_event 17, 15, BRONZONG, -1, -1, PAL_NPC_BLUE, TT_BronzongText, EVENT_TAPESTRY_BRONZONG
 	; interactables  
 	object_event  6,  8, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryVera, -1 ; VERA
 	object_event  9, 17, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, -1 ; PIPER, former beauty
 	object_event 12, 20, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestrySamaria, -1 ; SAMARIA
 	object_event 13, 20, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryShiji, -1
 	object_event 10, 17, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TapestryMorphea, -1
-	object_event 16, 15, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TapestryAmos, -1
-	pokemon_event 17, 15, BRONZONG, -1, -1, PAL_NPC_BLUE, TT_BronzongText, -1
+
 
 	object_const_def
 	const TAPESTRY_SAMSARA
 	const TAPESTRY_AMOS
+	const TAPESTRY_AMOS_2
+	const TAPESTRY_BRONZONG
 
 TimelessTapestryFlyPoint:
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
@@ -61,15 +64,35 @@ TapestryAmos:
 	waitbutton
 	yesorno
 	iffalse_jumptext TapestryAmosNoText
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
-	warp BRASS_TOWER_1F, 7, 14
+	showtext TapestryAmosYesText
+	
+	disappear TAPESTRY_BRONZONG
+	setevent EVENT_TAPESTRY_BRONZONG
+	pause 20
+	readvar VAR_FACING
+	ifnotequal RIGHT, .AmosLeavesLeft
+	applyonemovement TAPESTRY_AMOS_2, step_up
+	applyonemovement TAPESTRY_AMOS_2, step_left
+.AmosLeavesLeft:
+	applymovement TAPESTRY_AMOS_2, AmosLeavesLeftMovement
+	disappear TAPESTRY_AMOS_2
+	setevent EVENT_SKIRMISH_STARTED
+	clearevent EVENT_CAPITAL_SKIRMISHER
+	setmapscene WESTERN_CAPITAL, $1 ; DEBUG TECH 
 	end
 
 TT_BronzongText:
 	text "Overtone: ♪"
 	done
+
+AmosLeavesLeftMovement:
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_end
+	
 
 TapestryAmosText1:
 	text_high
@@ -105,17 +128,33 @@ TapestryAmosText1:
 	para "We must stop them"
 	line "at all costs."
 	
-	para "Brigaders guard"
-	line "the Bell tower,"
-	para "but my #mon"
-	line "can teleport us."
-	
 	para "Are you ready?"
 	done
 
+TapestryAmosYesText:
+	text_high
+    text " Amos: "
+	next
+	text_start
+	text "Our ninjas will"
+	line "open up a path to"
+	cont "the Brass Tower."
+	
+	para "I will see you"
+	line "inside."
+	
+	para "Make haste!"
+	done
+
 TapestryAmosNoText:
-	text "Go quick! There's"
-	line "not much time!"
+	text_high
+    text " Amos: "
+	next
+	text_start
+	text "Quickly prepare!"
+	line "Urgaust will soon"
+	para "declare himself"
+	line "the Emperor!"
 	done
 
 TapestrySceneFinale: 

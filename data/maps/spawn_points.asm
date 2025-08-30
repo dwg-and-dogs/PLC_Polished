@@ -26,7 +26,7 @@ SpawnPoints:
 	spawn VIOLET_CITY,                31, 30
 	spawn ROUTE_32,                   11, 74 ; UNION CAVE 
 	spawn ECRUTEAK_CITY,              23, 28
-	spawn CIANWOOD_CITY,              23, 44
+	spawn CIANWOOD_CITY,              13, 44
 	spawn OLIVINE_CITY,               13, 18
 	spawn MAHOGANY_TOWN,              15, 14
 	spawn LAKE_OF_RAGE,               21, 29

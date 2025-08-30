@@ -3251,6 +3251,12 @@ _InitialOptionsText::
 	line "built on the"
 	cont "Polished Crystal"
 	cont "3.0.0 by dwg."
+	
+	para "You are playing"
+	line "an unfinished"
+	cont "version. Please"
+	cont "do not stream or"
+	cont "distribute!"
 
 	para "Please see the"
 	line "Credits file for"

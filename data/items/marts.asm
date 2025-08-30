@@ -233,6 +233,7 @@ WesternCapitalMart:
 	db SILVER_LEAF
 	db -1
 
+
 WesternCapitalMart_TM: ; unused 
 	db 1 ; # items
 	db RARE_CANDY
