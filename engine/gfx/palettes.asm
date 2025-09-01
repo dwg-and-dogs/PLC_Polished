@@ -1102,10 +1102,10 @@ if !DEF(MONOCHROME)
 ; CATCH CHARM
 	RGB 10, 29, 22
 	RGB 04, 19, 16
-; TIMEPIECE todo check the palette 
+; TIMEPIECE 
 	RGB 31, 22, 10
 	RGB 25, 12, 02
-; KURTS_MAP todo check the palette 
+; KURTS_MAP 
 	RGB 04, 25, 10
 	RGB 05, 22, 31
 ; MINT LEAF

@@ -4,7 +4,7 @@ GetFinalPkmnTextPointer::
 	ld hl, FinalTextList_TriplePhrases
 	call .findinarray
 	jr c, .rival_or_lyra
-	; Proton to Giovanni have a phrase for each ID - todo fix 
+	; Proton to Giovanni have a phrase for each ID
 	ld a, [wOtherTrainerClass]
 	cp PROTON
 	jr c, .not_rocket

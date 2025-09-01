@@ -208,7 +208,7 @@ EMOTE_FROM_MEM EQU -1
 	const FRUITTREE_HOLLYS_HOLT     ; 0a tough leaves
 	const FRUITTREE_MISTYBASIN      ; 0b radiant opal
 FIRST_BERRY_TREE EQU const_value
-;	const FRUITTREE_ROUTE_29        ; todo: check if these can be removed at next build 
+;	const FRUITTREE_ROUTE_29        ;
 ;	const FRUITTREE_ROUTE_30_1      ; 
 ;	const FRUITTREE_ROUTE_30_2      ; 
 ;	const FRUITTREE_ROUTE_31        ; 

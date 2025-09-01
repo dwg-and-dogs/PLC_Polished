@@ -3916,7 +3916,7 @@ BattleCommand_damagecalc:
 	call MultiplyAndDivide
 
 .no_crit
-	; Item boosts. TODO: move species items here
+	; Item boosts.
 	call GetUserItem
 
 	ld a, b

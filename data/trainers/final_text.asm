@@ -48,7 +48,7 @@ FinalText_SinglePhrases:
 	dw MejimiFinalPkmnText
 	dw BrunoFinalPkmnText
 	dw SandraFinalPkmnText
-	dw KurtFinalFinalPkmnText ; TODO FINAL TEXT??? 
+	dw KurtFinalFinalPkmnText
 	dw BrockFinalPkmnText
 	dw SamsaraFinalPkmnText
 	dw LtSurgeFinalPkmnText

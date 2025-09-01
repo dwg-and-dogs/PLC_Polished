@@ -586,7 +586,7 @@ NUM_APRICORNS EQU const_value - 1
 ; - KeyItemNames (see data/items/key_names.asm)..
 ; - KeyItemDescriptions (see data/items/descriptions.asm)..
 ; - KeyItemAttributes (see data/items/attributes.asm)..
-; - KeyItemEffects (see engine/items/item_effects.asm) todo
+; - KeyItemEffects (see engine/items/item_effects.asm)
 ; icon pointers done 
 ; gfx/items.asm  done
 ; engine/gfx/palettes done

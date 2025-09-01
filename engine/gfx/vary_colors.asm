@@ -957,12 +957,12 @@ endc
 
 .HPFirePalsDark:
 if !DEF(MONOCHROME)
-	RGB 31, 21, 11 ; todo these should be orange 
+	RGB 31, 21, 11 
 else
 	RGB_MONOCHROME_DARK
 endc
 
-.HPWaterPalsLite: ; TODO ARE THESE WRONG?
+.HPWaterPalsLite: 
 if !DEF(MONOCHROME)
 	RGB 21, 29, 29
 else

@@ -4,7 +4,7 @@ scene_var: MACRO
 	map_id \1
 	dw \2
 ENDM
-;ram/wramx.asm uses these. todo: organize. 
+;ram/wramx.asm uses these. 
 MapScenes::
 	scene_var AZALEA_TOWN,                            wAzaleaTownSceneID
 	scene_var AZALEA_POKECENTER_1F,                   wAzaleaPokecenter1FSceneID
@@ -72,7 +72,7 @@ MapScenes::
 	scene_var TIN_TOWER_OLD_3F, 					  wTinTowerOld3FSceneID 
 	scene_var RUSALKA_RUINS_B1F, 					  wRusalkaRuinsB1FSceneID
 	scene_var STADIUM_BOX, 							  wStadiumBoxSceneID
-	scene_var STADIUM_CAPITAL_GATE, 				  wStadiumCapitalGateSceneID ; todo 
+	scene_var STADIUM_CAPITAL_GATE, 				  wStadiumCapitalGateSceneID  
 	scene_var STY_CAPITAL_GATE, 					  wStyCapitalGateSceneID
 	scene_var TRADERS_LANDING, 						  wTradersLandingSceneID
 	scene_var ROUTE_34,                               wRoute34SceneID ; needed for daycare man, I think 

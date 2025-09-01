@@ -54,16 +54,16 @@ ENDM
 	special_bg_pal tileset,  TILESET_RUINS_OF_ALPH,       PAL_SINGLE,    RuinsPalette
 	special_bg_pal tileset,  TILESET_ALPH_WORD_ROOM,      PAL_SINGLE,    RuinsPalette
 	special_bg_pal map,  	 OLIVINE_LIGHTHOUSE_6F,       PAL_SINGLE,    Lighthouse6FPalette
-	special_bg_pal map,  	 ROUTE_KAJO,       			  PAL_TIMEOFDAY, RouteKaJoPalette ; todo 
+	special_bg_pal map,  	 ROUTE_KAJO,       			  PAL_TIMEOFDAY, RouteKaJoPalette  
 
 	special_bg_pal landmark, ANARRES_TOWN, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
 	special_bg_pal landmark, CALM_COAST, 				  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
 
-	special_bg_pal landmark, GAULDENROD, 				  PAL_TIMEOFDAY, SepiaGauldenrodPalette 	; todo pinker palette at the roof 
+	special_bg_pal landmark, GAULDENROD, 				  PAL_TIMEOFDAY, SepiaGauldenrodPalette 
 	special_bg_pal landmark, SERENE_SPRINGS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, STADIUM,			          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 
 	special_bg_pal landmark, STADIUM_GROUNDS,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
-	special_bg_pal landmark, WESTERN_CAPITAL,			  PAL_TIMEOFDAY, WesternCapitalPalette 	; todo palette at the roof 
+	special_bg_pal landmark, WESTERN_CAPITAL,			  PAL_TIMEOFDAY, WesternCapitalPalette 	
 	special_bg_pal landmark, EMPERORS_GARDEN,			  PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, CIANWOOD_COVE,		          PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
 	special_bg_pal landmark, SHELTERED_SHORES,		      PAL_TIMEOFDAY, SepiaVioletEcruteakPalette 	
@@ -71,7 +71,7 @@ ENDM
 	special_bg_pal landmark, TRANQUIL_TARN,		      	  PAL_TIMEOFDAY, SinjohCrossroadsPalette
 	special_bg_pal landmark, SINJOH_CAMP,		      	  PAL_TIMEOFDAY, SinjohCrossroadsPalette
 	special_bg_pal landmark, EMPIRES_EXTENT,		  	  PAL_TIMEOFDAY, SinjohCrossroadsPalette
-	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, EerieHamletPalette 	; todo palette at the roof ?
+	special_bg_pal landmark, EERIE_HAMLET,		      	  PAL_TIMEOFDAY, EerieHamletPalette 
 	special_bg_pal landmark, SULFUR_STY,		      	  PAL_TIMEOFDAY, EerieHamletPalette 		
 	special_bg_pal landmark, TIMELESS_TAPESTRY,		  	  PAL_TIMEOFDAY, WesternCapitalPalette 		
 	special_bg_pal landmark, SHIMMER_SADDLE,		  	  PAL_TIMEOFDAY, RouteKaJoPalette 		
