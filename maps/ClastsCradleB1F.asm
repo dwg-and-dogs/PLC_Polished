@@ -684,10 +684,6 @@ CradleKurtText2:
 AmosScriptCC:
 	faceplayer
 	opentext
-	; debug tech
-	setevent EVENT_KURT_MINE_2
-	disappear CRADLE_KURT
-	; end debug tech TODO 
 	checkevent EVENT_AMOS_INTRO_MINE
 	iftrue .AmosHeals
 	writetext AmosCradleText1

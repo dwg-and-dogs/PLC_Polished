@@ -3,10 +3,6 @@ BrassTowerRoof_MapScriptHeader:
 	scene_script BrassTowerRoofScript
 
 	def_callbacks
-; callbacks for right before the noadrinna mejimi battle
-
-; callback for right before the yesadrinna mejimi battle
-; callback for right before the noadrinna kurt battle 
 
 
 	def_warp_events
@@ -97,17 +93,15 @@ BrassTowerRoofScript:
 	pause 10
 	disappear BRASS_TOWER_ROOF_LIGHTNING_3
 	pause 10
-	changeblock 6, 6, $0B ; fire, todo 
-	changeblock 8, 6, $0B ; fire, todo 
-	changeblock 10, 6, $0B ; fire, todo 
+	changeblock 6, 6, $0B ; fire 
+	changeblock 8, 6, $0B ; fire 
+	changeblock 10, 6, $0B ; fire 
 	setevent EVENT_FIRST_LIGHTNING_ROOF
 	turnobject BRASS_TOWER_ROOF_MEJIMI, LEFT 
 	showtext TowerRoofMejimiText1_9
 	applymovement BRASS_TOWER_ROOF_LUGIA, BrassTowerLugiaFleesMovement 
 	disappear BRASS_TOWER_ROOF_LUGIA
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
-; another lightning bolt, 	moveobject BRASS_TOWER_ROOF_LIGHTNING_1, 10,  3?
-; changeblock 10, 6, $0F ; fire, todo 	
 	turnobject BRASS_TOWER_ROOF_MEJIMI, RIGHT 
 	showtext TowerRoofMejimiText1_9_2
 	turnobject BRASS_TOWER_ROOF_MEJIMI, UP
@@ -131,7 +125,6 @@ BrassTowerRoofScript:
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_BEAT_MEJIMI
-; 	clearevents todo, all events related to the brass tower from when you enter 2F 
 	warp TIMELESS_TAPESTRY,  9, 26
 	end
 
@@ -350,7 +343,6 @@ AcceptedAdrinnaRoofScript:
 	disappear BRASS_TOWER_ROOF_LUGIA
 	pause 20
 	appear BRASS_TOWER_ROOF_JOLTEON
-	; TODO sfx of doors and leaving
 	turnobject PLAYER, RIGHT
 	showtext TowerRoofText2_9
 	applymovement BRASS_TOWER_ROOF_ADRINNA, BTR_AdrinnaMove2
@@ -361,7 +353,7 @@ AcceptedAdrinnaRoofScript:
 	showtext TowerRoofText2_12
 	turnobject BRASS_TOWER_ROOF_KURT, DOWN
 	showtext TowerRoofText2_13
-	special Special_CelebiShrineEvent ; todo check that this is OK 
+	special Special_CelebiShrineEvent 
 	appear BRASS_TOWER_ROOF_CELEBI
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_KURT, 10
 	showtext TinTowerRoofText2_Celebi
@@ -594,7 +586,7 @@ TowerRoofText2_13:
 	line "for my home!"
 	done
 
-TinTowerRoofText2_Celebi:  ; todo trim this up a bit
+TinTowerRoofText2_Celebi: 
 	text_high
     text " Celebi: " 
 	next
@@ -602,11 +594,9 @@ TinTowerRoofText2_Celebi:  ; todo trim this up a bit
 	text "Humans are not "
 	line "above or below "
 	cont "nature - "
-	
-	para "you are nature."
-	line "Just as a forest"
-	para "needs growth and"
-	line "decay,"
+	cont "you are nature."
+	para "As a forest needs"
+	line "growth and decay,"
 	
 	para "society needs"
 	line "tradition and"

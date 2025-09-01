@@ -1,4 +1,4 @@
-KajoAcquifer_MapScriptHeader: ;	todo: add a static minsir
+KajoAcquifer_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks

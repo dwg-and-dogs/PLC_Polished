@@ -30,7 +30,6 @@ ClastsCradle1F_MapScriptHeader:
 	strengthboulder_event 22, 16, EVENT_BOULDER_CRADLE1F_1; goes to hole at 3
 	strengthboulder_event 30, 23, EVENT_BOULDER_CRADLE1F_2; goes to hole at 4
 	strengthboulder_event 23, 35, EVENT_BOULDER_CRADLE1F_3; goes to hole at 5
-	; todo add a ninja that tells you there's three boulders we need to push down 
 	object_event  16,  6, SPRITE_NINJA, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, CradleNinjaHelpText, EVENT_BEAT_ADRINNA_MINE
 	object_event  22,  4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader16, EVENT_BEAT_ADRINNA_MINE
 	object_event  31, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBrigader17, EVENT_BEAT_ADRINNA_MINE
@@ -92,9 +91,6 @@ Cradle1FBoulders:
 	
 
 CC_1F_Switch1:
-	;debug tech
-	setmapscene CLASTS_CRADLE_B1F, $1
-	; end debug tech todo 
 	opentext
 	writetext CartSwitchText
 	yesorno

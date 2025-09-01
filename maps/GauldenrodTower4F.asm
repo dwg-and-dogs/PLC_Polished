@@ -30,7 +30,7 @@ GauldenrodTower4F_MapScriptHeader:
 	const GAULDENRODTOWER4F_CLEFAIRY
 	const GAULDENRODTOWER4F_ADRINNA
 
-GauldenrodTower4FSandraScript: ; TODO ADD MUSIC 
+GauldenrodTower4FSandraScript: 
 	faceplayer
 	opentext
 	writetext SandraIntroText
@@ -66,10 +66,9 @@ GauldenrodTower4FSandraScript: ; TODO ADD MUSIC
 	applymovement GAULDENRODTOWER4F_SANDRA, SandraLeaveMovement
 	applymovement GAULDENRODTOWER4F_BRIGADER, BrigaderLeaveMovement2
 	pause 60
-; inserting this 
 	showemote EMOTE_SHOCK, PLAYER, 60
 	appear GAULDENRODTOWER4F_ADRINNA
-	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_to ; APPEAR 
+	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_to
 	turnobject GAULDENRODTOWER4F_ADRINNA, LEFT 
 	special Special_FadeOutMusic
 	pause 60
@@ -79,12 +78,11 @@ GauldenrodTower4FSandraScript: ; TODO ADD MUSIC
 	waitbutton
 	verbosegivetmhm HM_STRENGTH
 	closetext
-	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_from ; APPEAR
+	applyonemovement GAULDENRODTOWER4F_ADRINNA, teleport_from
 	disappear GAULDENRODTOWER4F_ADRINNA
 	special RestartMapMusic
 	pause 60
-;; todo 
-	appear GAULDENRODTOWER4F_AMOS;, AmosMovement1
+	appear GAULDENRODTOWER4F_AMOS
 	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement1
 	applymovement GAULDENRODTOWER4F_AMOS, AmosEnterMovement2
 	turnobject PLAYER, LEFT
@@ -168,11 +166,11 @@ SandraAfterText:
 	para "way you dazzled"
 	line "me!"
 
-;	para "I used to award"
-;	line "them to youth who"
-;	para "carried an elder"
-;	line "up to the Alpine"
-;	cont "Lakes."
+	para "I used to award"
+	line "them to youth who"
+	para "carried an elder"
+	line "up to the Alpine"
+	cont "Lakes."
 	done
 
 SandraRefusedText:

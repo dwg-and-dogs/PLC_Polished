@@ -56,7 +56,7 @@ AzaleaTownFlypointCallback:
 	setflag ENGINE_FLYPOINT_AZALEA
 	endcallback
 
-Azalea_PokefanStopsYouTrigger1: ;todo how do these people know when it's time to let you do it?... 
+Azalea_PokefanStopsYouTrigger1:
 	playmusic MUSIC_MOM
 	turnobject AZALEATOWN_POKEFAN_F, LEFT
 	showtext Text_WaitPlayer

@@ -148,22 +148,16 @@ Kimono2NotStrongEnoughText: ; TODO REWRITE
 	para "here thanks to"
 	line "that dumb Consul."
 
-	para "Why does"
-	line "grandma Shiji"
-	cont "even bother?"
+	para "Why does grandma"
+	line "even bother?"
 
-	para "Hey, tell you"
-	line "what. I'm"
-	para "setting up a"
-	line "garden, but"
-	para "have to coax"
-	line "this hedgehog"
-	cont "out of the dirt."
+	para "Hey, I'm setting"
+	line "up a garden, but"
+	para "there's an ornery"
+	line "hedgehog."
 	
-	para "I would show"
-	line "you how, but"
-	para "you don't look"
-	line "like you could"
+	para "Oh, but I don't"
+	line "think you could"
 	cont "handle it."
 	done
 	
@@ -175,49 +169,33 @@ Kimono2AskHelpText: ; TODO REWRITE
 	para "here thanks to"
 	line "that dumb Consul."
 
-	para "Why does"
-	line "grandma Shiji"
-	cont "even bother?"
+	para "Why does grandma"
+	line "even bother?"
 
-	para "Hey, tell you"
-	line "what. I'm"
-	para "setting up a"
-	line "garden, but"
-	para "have to coax"
-	line "this hedgehog"
-	cont "out of the dirt."
+	para "Hey, I'm setting"
+	line "up a garden, but"
+	para "there's an ornery"
+	line "hedgehog."
 	
 	para "If I can teach"
 	line "you, an outsider,"
 	
-	para "how to use her"
-	line "method, then"
-	para "maybe there's hope"
-	line "for others."
+	para "the maybe there's"
+	line "hope for others."
 	done
 
 Kimono2DeclinedText:
 	text "Piper: No?"
-	line "Figures, enjoy"
-	para "living under"
-	line "the Consul's"
-	para "boots. We'll"
-	line "still be here,"
-	para "living off the"
-	line "land."
+	line "Figures..."
 	done
 	
 Kimono2ThanksForHelpingText:
 	text "Piper: OK,"
-	line "Great! I'll"
-	cont "take you there."
-	para "Don't screw"
-	line "this up, OK?"
+	line "Great! Let's go!"
 	done
 
 
 
-	
 KimonoCabin3Script: ; samaria 
 	faceplayer
 	opentext
@@ -244,31 +222,21 @@ Kimono3HelpedText:
 	text "It was a feisty"
 	line "Sneasel making"
 	cont "that racket!"
-	
-	para "Thanks for your"
-	line "help. It's scary,"
-	para "being in the dark"
-	line "unsure of your"
-	cont "next steps."
 	line 
 
 Kimono3NotStrongEnoughText:
-	text "Samaria: Oh,"
-	line "hello. Welcome"
-	cont "to our cabin."
+	text "Samaria: Welcome"
+	line "to our cabin."
 	para "Sorry if we"
 	line "smell, my"
-	para "daughter Piper"
-	line "keeps taking"
-	para "all the hot"
-	line "water."
+	para "daughters use"
+	line "all the soap."
 	para "Say, I stashed"
-	line "some soaps in"
-	para "the attic, but"
-	line "I hear some-"
-	para "thing scratch-"
-	line "ing around up"
-	cont "there."
+	line "some in the attic"
+	para "but something's"
+	line "scratching around"
+	cont "up there."
+
 	para "Oh, you look"
 	line "pretty green..."
 	para "I doubt you"
@@ -276,42 +244,35 @@ Kimono3NotStrongEnoughText:
 	done
 	
 Kimono3AskHelpText:
-	text "Samaria: Oh,"
-	line "hello. Welcome"
-	cont "to our cabin."
+	text "Samaria: Welcome"
+	line "to our cabin."
 	para "Sorry if we"
 	line "smell, my"
-	para "daughter Piper"
-	line "keeps taking"
-	para "all the hot"
-	line "water."
+	para "daughters use"
+	line "all the soap."
 	para "Say, I stashed"
-	line "some soaps in"
-	para "the attic, but"
-	line "I hear some-"
-	para "thing scratch-"
-	line "ing around up"
-	cont "there."
+	line "some in the attic"
+	para "but something's"
+	line "scratching around"
+	cont "up there."
+	
 	para "You look brave."
 	line "Can you help me"
 	cont "investigate?"
 	done
 	
 Kimono3DeclinedText:
-	text "Samaria: No?"
-	line "Well, I suppose"
-	cont "we can always"
+	text "Samaria: Let me"
+	line "know if your mind"
+	cont "changes."
 	done
 
 Kimono3ThanksForHelpingText:
-	text "Samaria:"
-	line "Thanks! I'll"
-	cont "take you up"
-	cont "there now."
+	text "Samaria: Let's go"
+	line "there now!"
 	done
 
-KimonoCabin4Script: ; shiji 
-	; todo: after completing this, clear the event for morphea's notebook 
+KimonoCabin4Script: 
 	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_LAPRAS
@@ -328,7 +289,20 @@ KimonoCabin4Script: ; shiji
 	clearevent EVENT_EXPLAINED_SUDOKU
 	waitbutton
 	closetext
-	; clearevents for the switches
+	
+	clearevent EVENT_KC4_00
+	clearevent EVENT_KC4_10
+	clearevent EVENT_KC4_20
+	clearevent EVENT_KC4_01
+	clearevent EVENT_KC4_21
+	clearevent EVENT_KC4_31
+	clearevent EVENT_KC4_02
+	clearevent EVENT_KC4_12
+	clearevent EVENT_KC4_03
+	clearevent EVENT_KC4_13
+	clearevent EVENT_KC4_23
+	clearevent EVENT_KC4_33
+	
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx

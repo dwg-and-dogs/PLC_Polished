@@ -45,9 +45,6 @@ GenericTrainerNomadMJoel:
 	line "guided our herds"
 	para "along the cliffs"
 	line "to the shores."
-	para "The Consul says"
-	line "progress needs"
-	cont "gates and guards."
 	done
 
 NomadJoelSeenText:
@@ -68,10 +65,7 @@ GenericTrainerNomadMGlenn:
 	generictrainer NOMAD_M, NOMAD_M_GLENN, EVENT_BEAT_NOMAD_M_GLENN, NomadGlennSeenText, NomadGlennBeatenText
 
 	text "The Consul's ships"
-	line "patrol our seas."
-	para "They say it keeps"
-	line "us safe, but it"
-	cont "feels like chains."
+	line "patrol our seas!"
 	done
 
 NomadGlennSeenText:
@@ -106,7 +100,7 @@ NomadReinaSeenText:
 
 NomadReinaBeatenText:
 	text "You move like"
-	line "you roam free."
+	line "a free wind."
 	done
 
 

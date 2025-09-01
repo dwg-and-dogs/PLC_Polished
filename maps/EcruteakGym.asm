@@ -61,7 +61,7 @@ EcruteakGymBoulders:
 	usestonetable .BoulderTable
 	endcallback
 
-.BoulderTable: ; todo add all the possible warps 
+.BoulderTable:
 	; boulder 1 
 	stonetable 3, 	ECRUTEAK_GYM_BOULDER1, .Disappear1
 	; boulder 2 

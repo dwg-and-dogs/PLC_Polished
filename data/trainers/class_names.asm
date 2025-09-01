@@ -135,7 +135,7 @@ TrainerClassNames::
 	li "General"          ; adrinna / BLANCHE
 	li "Elder"            ; barbeau / SPARK_T
 	li "Trainer"          ; FLANNERY UNUSED 
-	li "Sinnoh"           ; MAYLENE UNUSED
+	li "Hisui"           ; Kanna UNUSED
 	li "Pilot"            ; SKYLA UNUSED
 	li "Designer"         ; VALERIE UNUSED 
 	li "<PK><MN> Trainer" ; KUKUI UNUSED 

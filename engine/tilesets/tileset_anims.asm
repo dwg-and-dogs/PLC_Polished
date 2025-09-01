@@ -750,7 +750,7 @@ ForestTreeRightAnimation2:
 	ld hl, vTiles2 tile $53
 	jmp WriteTile
 
-AnimateTowerFireTile:  ; c.f. tower-pillar in this asm. todo: upate the period, etc  
+AnimateTowerFireTile:  ; c.f. tower-pillar in this asm.
 	ld hl, sp+$0
 	ld b, h
 	ld c, l
@@ -1249,7 +1249,6 @@ TowerPillarTile8:  INCBIN "gfx/tilesets/tower-pillar/8.2bpp"
 TowerPillarTile9:  INCBIN "gfx/tilesets/tower-pillar/9.2bpp"
 TowerPillarTile10: INCBIN "gfx/tilesets/tower-pillar/10.2bpp"
 
-; todo: Set the proper tiles from $0E to etc. Should use the same logic as the tower pillar. 
 ; top parts of the fire: 67, 68, 77, 78 
 TowerFirePointer1: dw vTiles2 tile $67, FireTiles1 ; correct ? 
 TowerFirePointer2: dw vTiles2 tile $68, FireTiles5 ; correct 

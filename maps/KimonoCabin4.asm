@@ -16,7 +16,7 @@ KimonoCabin4_MapScriptHeader: ;REVISE THE TEXT
 	def_coord_events
 
 
-	def_bg_events ; todo: add all the new events
+	def_bg_events 
 	bg_event 0,  0, BGEVENT_UP, Switch00Script; blue done FLOWERS
 	bg_event 2,  0, BGEVENT_UP, Switch10Script ; red  done  FLOWERS 
 	bg_event 4,  0, BGEVENT_UP, Switch20Script ; brown  

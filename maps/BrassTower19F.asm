@@ -15,7 +15,6 @@ BrassTower19F_MapScriptHeader:
 
 	def_bg_events
 	bg_event 7, 0, BGEVENT_READ, BrassTower19FWarpMenu
-; todo add something that warps you to the next room and resets events 
 
 
 	def_object_events
@@ -74,7 +73,7 @@ BrassTower19FWarpMenu:
 	clearevent EVENT_CRADLE_CUTSCENE
 	setevent EVENT_CRADLE_CUTSCENE_KURT
 	setevent EVENT_CRADLE_CUTSCENE_ADRINNA
-	warp BRASS_TOWER_2F, 8, 3 ; TODO GET THE COORDINATE 
+	warp BRASS_TOWER_2F, 8, 3 
 	end 
 
 BrassTower19FAscendText:

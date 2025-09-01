@@ -116,11 +116,11 @@ EG_KurtText:
 	line "from arriving!"
 	done
 
-EmperorsGardenMejimiScene: ; todo, add music 
+EmperorsGardenMejimiScene: 
 	;MOVING CAMERA
 	applyonemovement PLAYER, hide_object
 	waitsfx
-	applymovement PLAYER, EG_PanDownMovement ; to add 
+	applymovement PLAYER, EG_PanDownMovement
 	pause 60 
 	special Special_FadeOutMusic
 	pause 60
