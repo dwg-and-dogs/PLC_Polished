@@ -261,7 +261,7 @@ Text_ROUTE35_TutorTaught:
 	line "your problems!"
 	done
 
-Route35KimonoGirlScript: ; todo some problem... 
+Route35KimonoGirlScript:
 	faceplayer
 	opentext
 	checkevent EVENT_SET_DVS_2
@@ -479,14 +479,13 @@ Route35KimonoGirlScript: ; todo some problem...
 
 .PhysicalOrSpecialMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 ;todo proper size
+	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10
 	dw .PhysicalOrSpecialMenuData
 	db 1 ; default option
 
 .PhysicalDVsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size
-;	menu_coords 0, 0, 15, TEXTBOX_Y - 1 ; alternate syntax
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  
 	dw .PhysicalMenuData
 	db 1 ; default option
 
@@ -512,7 +511,7 @@ Route35KimonoGirlScript: ; todo some problem...
 	
 .SpecialDVsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size 
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1 
 	dw .SpecialMenuData
 	db 1 ; default option
 
@@ -573,7 +572,7 @@ Route35DV_Setting_CancelText:
 	line "to show it!"
 	done
 
-Route35GreatnessLiesWithinText: ; todo place five others 
+Route35GreatnessLiesWithinText:
 	text "Greatness lies"
 	line "within!"
 	done	

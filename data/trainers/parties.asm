@@ -9823,7 +9823,7 @@ TammyGroup:
 ; ================
 
 	; Tammy
-	db "Tammy@"
+	db "Ursula@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 10, PINECO, ROCKY_HELMET, "Silky@"

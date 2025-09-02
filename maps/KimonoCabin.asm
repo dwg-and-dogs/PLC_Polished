@@ -1,4 +1,4 @@
-KimonoCabin_MapScriptHeader: ; these people have all fled Capital for fear of losing their knowledge
+KimonoCabin_MapScriptHeader:
 	def_scene_scripts
 
 
@@ -54,10 +54,8 @@ KimonoCabin1Script:
 	end
 
 Kimono1HelpedText:
-	text "Vera: Hey cool"
-	line "trainer!"
-	para "Thanks for your"
-	line "help."
+	text "Vera: Hey thanks"
+	line "for your help!"
 	para "Great-grandma"
 	line "Shiji is proud"
 	para "that I can rock"
@@ -65,27 +63,22 @@ Kimono1HelpedText:
 	done
 	
 Kimono1AskHelpText:
-	text "Vera: Hi! My"
-	line "name is Vera."
-	para "Are you from"
-	line "Anarres?"
-	para "Can you tell me"
-	line "if it gets more"
-	cont "fun here?"
-	para "My great-"
-	line "grandma Shiji"
-	para "made us move"
-	line "here, and now"
+	text "Hi! I'm Vera."
+	line "Are you from"
+	cont "Anarres?"
+	para "It is always so"
+	line "boring here?"
+	para "We had to move"
+	line "cause my great-"
+	cont "grandma Shiji"
+	cont "said so."
+
 	para "I have chores."
-	line "For instance I"
-	para "have to go down"
-	line "to fuh-reezing"
-	para "cellar to clear"
-	line "rocks."
+	line "I have to go a"
+	cont "freezing cellar."
 	para "And there's a"
 	line "big scary worm"
-	para "just writhing"
-	line "around."
+	cont "writhing around."
 	para "Would you help"
 	line "me? Pleeease?"
 	done
@@ -140,7 +133,7 @@ Kimono2HelpedText:
 	cont "after all."
 	done
 	
-Kimono2NotStrongEnoughText: ; TODO REWRITE 
+Kimono2NotStrongEnoughText: 
 	text "Piper: It's so"
 	line "unfair. I was"
 	para "about to be prom-"
@@ -161,7 +154,7 @@ Kimono2NotStrongEnoughText: ; TODO REWRITE
 	cont "handle it."
 	done
 	
-Kimono2AskHelpText: ; TODO REWRITE 
+Kimono2AskHelpText:
 	text "Piper: It's so"
 	line "unfair. I was"
 	para "about to be prom-"
@@ -326,44 +319,31 @@ Kimono4NotStrongEnoughText:
 	text "Shiji: Darling!"
 	line "A visitor!"
 	para "I knew we would"
-	line "have some soon"
-	cont "enough."
-	para "Have you come"
-	line "to learn how to"
-	para "work with"
-	line "nature?"
+	line "have some soon."
+
 	para "I'm setting up"
 	line "a garden, but"
 	para "I'm not strong"
 	line "enough to move"
-	para "the landscaping"
-	line "around."
-	para "Oh, but you"
-	line "don't look"
-	cont "strong enough."
+	para "boulders around."
+	para "Oh, but you're not"
+	line "strong enough."
 	para "..."
-	line "..."
-	para "Maybe this"
-	line "whole move was"
-	cont "a bad idea."
+	para "Maybe this move"
+	line "was a bad idea."
 	done
 
 Kimono4AskHelpText:
 	text "Shiji: Darling!"
 	line "A visitor!"
 	para "I knew we would"
-	line "have some soon"
-	cont "enough."
-	para "Have you come"
-	line "to learn how to"
-	para "work with"
-	line "nature?"
+	line "have some soon."
+
 	para "I'm setting up"
 	line "a garden, but"
 	para "I'm not strong"
 	line "enough to move"
-	para "the landscaping"
-	line "around."
+	para "boulders around."
 	para "I can teach you"
 	line "some landscap-"
 	cont "ing to attract"
@@ -373,7 +353,7 @@ Kimono4AskHelpText:
 Kimono4DeclinedText:
 	text "Really? That is"
 	line "quite sad..."
-	para "maybe the last"
+	para "Maybe the last"
 	line "garden in Johto"
 	para "has already"
 	line "been tilled."
@@ -381,8 +361,7 @@ Kimono4DeclinedText:
 
 Kimono4ThanksForHelpingText:
 	text "Wonderful! You"
-	line "won't regret"
-	cont "it."
+	line "won't regret it"
 	para "Please come"
 	line "with me!"
 	done
@@ -392,9 +371,9 @@ KimonoCabin5Script:
 	opentext
 	checkevent EVENT_KIMONO_CABIN_EEVEE
 	iftrue_jumpopenedtext Kimono5HelpedText
-	checkevent EVENT_BEAT_KENSEY_DOCKS ; plot check 
+	checkevent EVENT_BEAT_KENSEY_DOCKS 
 	iffalse_jumpopenedtext Kimono5NotStrongEnoughText
-	checkevent EVENT_KIMONO_CABIN_LAPRAS ; from kimono cabin 4
+	checkevent EVENT_KIMONO_CABIN_LAPRAS
 	iffalse_jumpopenedtext Kimono5NotStrongEnoughText
 	writetext Kimono5AskHelpText
 	yesorno
@@ -402,7 +381,10 @@ KimonoCabin5Script:
 	writetext Kimono5ThanksForHelpingText
 	waitbutton
 	closetext
-	; clear events for the warps
+	clearevent EVENT_KIMONO_CABIN_5_SWITCH_1
+	clearevent EVENT_KIMONO_CABIN_5_SWITCH_2
+	clearevent EVENT_KIMONO_CABIN_5_SWITCH_3
+	clearevent EVENT_KIMONO_CABIN_5_SWITCH_4
 	setevent EVENT_KIMONO_CABIN_5_GRANNY
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
@@ -411,30 +393,20 @@ KimonoCabin5Script:
 	end
 
 Kimono5HelpedText:
-	text "Morphea:"
-	line "Thank you again"
-	cont "for your help."
-	para "We will be"
-	line "leaving this"
-	para "cabin very"
-	line "soon..."
-	para "my great-"
-	line "grandson Amos"
-	para "tells me that"
+	text "Morphea: Thank"
+	line "you again."
+	para "We'll be leaving"
+	line "very soon."
+	para "We're hearing that"
 	line "the time is nigh"
 	para "to inscribe our"
-	line "knowledge"
-	cont "across Johto."
-	para "Others like us"
-	line "are already"
-	cont "started."
+	line "knowledge upon"
+	cont "Johto."
 	done
 
 Kimono5NotStrongEnoughText:
-	text "Morphea:"
-	line "stay still, my"
-	para "eyes are so"
-	line "bad."
+	text "Morphea: Still!"
+	line "My eyes are bad."
 	para "The only time I"
 	line "see clearly is"
 	cont "in my dreams."
@@ -450,10 +422,8 @@ Kimono5NotStrongEnoughText:
 	done
 	
 Kimono5AskHelpText:
-	text "Morphea:"
-	line "stay still, my"
-	para "eyes are so"
-	line "bad."
+	text "Morphea: Still!"
+	line "My eyes are bad."
 	para "The only time I"
 	line "see clearly is"
 	cont "in my dreams."
@@ -471,8 +441,7 @@ Kimono5DeclinedText:
 	line "could blame"
 	para "you... We can't"
 	line "force anyone to"
-	para "choose any"
-	line "path."
+	cont "choose a path."
 	done
 
 Kimono5ThanksForHelpingText:
@@ -484,6 +453,7 @@ Kimono5ThanksForHelpingText:
 	cont "as I drift off..."
 	done
 
+; todos 
 
 KimonoCabinShijiNotebook1:
 	text "Shiji's Journal: "
@@ -516,7 +486,7 @@ KimonoCabinSamariaNotebook1:
 	
 	para "Perhaps Shiji has"
 	line "made a mistake in"
-	para "leaving..."
+	cont "leaving..."
 	done
 	
 KimonoCabinPiperNotebook1:
@@ -531,19 +501,17 @@ KimonoCabinPiperNotebook1:
 	line "everyone reliant"
 	cont "on him."
 	
-	para "My Amos and I, we"
-	line "will not grow old"
-	para "without learning"
-	line "how to thrive in-"
-	para "depently of his"
-	line "exploitation."
+	para "I won't get old"
+	line "without learning"
+	para "how to thrive in-"
+	line "depently of his"
+	cont "exploitation."
 	done
 
 KimonoCabinVeraNotebook1:
 	text "Vera's Journal:"
 	line "At the cabin, ev-"
-	para "eryone but mom"
-	line "smells bad."
+	para "eryone smells!"
 	
 	para "And no one ever"
 	line "dances anymore."
@@ -551,9 +519,8 @@ KimonoCabinVeraNotebook1:
 	para "And there isn't"
 	line "any candy."
 	
-	para "Oh, the other day"
-	line "I saw a cute Cyn-"
-	cont "daquil!"
+	para "Oh, but I saw a"
+	line "cute Cyndaquil!"
 	done
 	
 KimonoCabinMorpheaNotebook1:

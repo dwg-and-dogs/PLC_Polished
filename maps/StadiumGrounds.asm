@@ -12,7 +12,7 @@ StadiumGrounds_MapScriptHeader:
 	warp_event  7, 39, SERENE_SPRINGS, 4
 	warp_event  49, 3, STADIUM_CAPITAL_GATE, 1
 	
-	def_coord_events ; todo: need to pan the camera over for changing the blocks, and then also have a condition depending on if you beat the toxicroak but lose to bobesh 
+	def_coord_events 
 	coord_event 26,  6, 0, StadiumGroundsToxicroakScene
 	coord_event 26,  6, 1, StadiumGroundsBobeshScene 
 
@@ -168,7 +168,6 @@ PickupStadiumScene:
 	ifequal $1, .Continue2
 .Continue2:
 	reloadmapafterbattle
-	; todo: camera pans 	
 	pause 60
 	changeblock 24, 10, $35
 	changeblock 28, 10, $35

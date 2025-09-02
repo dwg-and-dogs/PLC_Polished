@@ -1,4 +1,4 @@
-RouteKajo_MapScriptHeader: ; todo: event set in historic route kajo allows you to save the girl, with some callback 
+RouteKajo_MapScriptHeader:
     def_scene_scripts
 
     def_callbacks

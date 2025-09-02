@@ -53,7 +53,7 @@ AnarresNPC1Script:
 
 .Text1:
 	text "I'm going to ask"
-	line "Tammy how to do"
+	line "Ursula how to do"
 	para "the Headbutt to"
 	line "shake off Pineco!"
 	done

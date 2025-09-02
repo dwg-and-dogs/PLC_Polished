@@ -54,7 +54,7 @@ SulfurSty_MapScriptHeader:
 
 	object_const_def
 
-SulfurStyTimeTravelScript: ; TODO 
+SulfurStyTimeTravelScript:  
 	opentext
 	checkevent EVENT_BEAT_ADRINNA_MINE
 	iffalse_jumptext SulfurStyNoTimeTravelYetText

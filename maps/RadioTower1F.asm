@@ -79,6 +79,7 @@ RadioTowerRivalBattleScript:
 .FinishRivalBattle:
     special DeleteSavedMusic
     playmusic MUSIC_RIVAL_AFTER
+	setevent EVENT_BEAT_RADIO_TOWER_RIVAL
     jumptext RadioTowerRivalAfterText
 
 RadioTowerRivalApproachMovement:

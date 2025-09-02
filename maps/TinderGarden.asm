@@ -1,4 +1,4 @@
-TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the left of the uppermost pokeball. also, at the end of the battle, the scene needs to be set to something else. 
+TinderGarden_MapScriptHeader: 
 	def_scene_scripts
 	scene_script CelebiCeremonyIntroScript
 

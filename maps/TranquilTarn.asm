@@ -11,12 +11,9 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_coord_events
-;	coord_event 26, 20, 0, TranquilTarnDestructionScene ; probably going to cut this  
 
 
-	def_bg_events ; TODO 
-	bg_event  0,  0, BGEVENT_READ, TranquilTarnShrineScript
-	bg_event 0, 0, BGEVENT_READ, TarnDebugScript 
+	def_bg_events  
 
 	def_object_events
 	object_event  28,  20, SPRITE_BIRD_KEEPER, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperHank, EVENT_BEAT_KANNA
@@ -34,12 +31,9 @@ TranquilTarn_MapScriptHeader:
 	tmhmball_event 31, 29, TM_AVALANCHE, EVENT_TM_AVALANCHE
 	itemball_event 26, 33, ENERGY_ROOT, 1, EVENT_TARN_ITEM_1
 	itemball_event 38, 14, REVIVAL_HERB, 1, EVENT_TARN_ITEM_2
-	cuttree_event 0, 0, EVENT_EXTENT_TREE
+	cuttree_event 11, 27, EVENT_EXTENT_TREE
 
-	object_const_def
-;	const TRANQUIL_TARN_HANK
-;	const TRANQUIL_TARN_BRIGADER
-;	const TRANQUIL_TARN_GYARADOS
+
 
 TranquilTarnCallback:
 	checkevent EVENT_BEAT_KANNA
@@ -70,37 +64,37 @@ TarnDebugScript:
 	reloadmap
 	end
 
-TranquilTarnShrineScript:
-	opentext
-	writetext AskToTimeTravelText_TT
-	yesorno
-	iffalse_jumpopenedtext NoTimeTravelText_TT
-	writetext YesTimeTravelText_TT
-	waitbutton
-	closetext
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
-	warp LAKE_OF_RAGE, 0, 0 ; todo 
-	end
-
-AskToTimeTravelText_TT:
-	text "A Celebi shrine"
-	line "built at the last"
-	para "commune of Johto"
-	line "and Hisui."
-	
-	para "Ask her to travel"
-	line "back in time?"
-	done
-
-NoTimeTravelText_TT:
-	text "Staying put."
-	done
-	
-YesTimeTravelText_TT:
-	text "Time to go!"
-	done
+;TranquilTarnShrineScript:
+;	opentext
+;	writetext AskToTimeTravelText_TT
+;	yesorno
+;	iffalse_jumpopenedtext NoTimeTravelText_TT
+;	writetext YesTimeTravelText_TT
+;	waitbutton
+;	closetext
+;	playsound SFX_WARP_TO
+;	special FadeOutPalettes
+;	waitsfx
+;	warp LAKE_OF_RAGE, 0, 0 ; todo 
+;	end
+;
+;AskToTimeTravelText_TT:
+;	text "A Celebi shrine"
+;	line "built at the last"
+;	para "commune of Johto"
+;	line "and Hisui."
+;	
+;	para "Ask her to travel"
+;	line "back in time?"
+;	done
+;
+;NoTimeTravelText_TT:
+;	text "Staying put."
+;	done
+;	
+;YesTimeTravelText_TT:
+;	text "Time to go!"
+;	done
 
 GenericTrainerBirdKeeperHank:
 	generictrainer BIRD_KEEPER, HANK, EVENT_BEAT_BIRD_KEEPER_HANK, HankSeenText, HankBeatenText

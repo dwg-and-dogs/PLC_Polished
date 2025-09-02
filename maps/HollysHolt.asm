@@ -433,7 +433,7 @@ Text_HHTutorTaught:
 
 
 HollysHoltNPC6Text:
-	text "Tammy is showing"
+	text "Ursula is showing"
 	line "me how to use"
 	cont "Headbutt."
 

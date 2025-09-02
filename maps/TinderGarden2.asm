@@ -70,7 +70,9 @@ TinderGarden2Script:
 	writetext TG2_Text3
 	waitbutton
 	closetext
-	; todo, insert all of the events that are needed to complete the tower again 
+	
+	pause 120
+
 	halloffame
 	end
 
@@ -127,7 +129,7 @@ TG2_Text_Kurt5:
 	para "Eh-Hem."
 	done
 
-TG2_Text_Kurt5_2: ; todo 
+TG2_Text_Kurt5_2: 
 	text_high
     text " Kurt's Journal: " 
 	next
@@ -227,7 +229,7 @@ TG2_Text_Kurt5_2: ; todo
 	done
 
 
-TG2_Text_Kurt5_3: ; todo
+TG2_Text_Kurt5_3: 
 	text_high
     text " <RIVAL>'s Father: " 
 	next

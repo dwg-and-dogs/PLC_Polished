@@ -27,7 +27,7 @@ LakeOfRage_MapScriptHeader:
 
 	def_object_events
 	object_event 17, 4, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
-	object_event 13, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT
+	object_event 13, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_KURT
 	object_event 24, 5, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL  
 ;HURSALUNA
 	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA
@@ -87,7 +87,6 @@ LakeHursalunaScript:
 	end
 	
 LakeKurtScript:
-	;todo
 	end
 
 LakeHursalunaApproachesMovement:
@@ -877,7 +876,6 @@ LakeOfRageKimonoGirlScript:
 .PhysicalDVsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1 
-;	menu_coords 0, 0, 15, TEXTBOX_Y - 1 ; alternate syntax
 	dw .PhysicalMenuData
 	db 1 ; default option
 
@@ -903,7 +901,7 @@ LakeOfRageKimonoGirlScript:
 	
 .SpecialDVsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size 
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw .SpecialMenuData
 	db 1 ; default option
 

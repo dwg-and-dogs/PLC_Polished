@@ -4,8 +4,8 @@ RouteKajoRuinsOfAlphGate_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  0,  4, ROUTE_KAJO, 8 ; TODO 
-	warp_event  0,  5, ROUTE_KAJO, 9 ; TODO FIGURE OUT THE WARP 
+	warp_event  0,  4, ROUTE_KAJO, 8  
+	warp_event  0,  5, ROUTE_KAJO, 9  
 	warp_event  9,  4, RUINS_OF_ALPH_OUTSIDE, 11  
 	warp_event  9,  5, RUINS_OF_ALPH_OUTSIDE, 12  
 

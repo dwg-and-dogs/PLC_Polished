@@ -1,10 +1,4 @@
-WesternCapital_MapScriptHeader: ; todo: 
-;1) revise the npc text scripts to talk about a scuffle in front of the tower 
-;2) disappear the 5,6 brigader and appear a different one + ninja + pokemon battler 
-;3) revise the pokemart to have the excellent items with an NPC talking about it 
-;4) revise amos script in the timeless tapestry 
-
-
+WesternCapital_MapScriptHeader: 
 	def_scene_scripts
 	scene_script WesternCapitalCemeteryScene
 
@@ -59,7 +53,6 @@ WesternCapital_MapScriptHeader: ; todo:
 	object_event 5, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderText, EVENT_SKIRMISH_STARTED
 	object_event 17, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderTextTT, EVENT_BEAT_ADRINNA_MINE
 	object_event 18, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderTextTT, EVENT_BEAT_ADRINNA_MINE
-; TODO: ADD A NINJA SKIRMISH WITH THE BRIGADER IN FRONT OF THE BELL TOWER 
 	fruittree_event 6, 6, FRUITTREE_WESTERN_CAPITAL, FIXED_CHARGE, PAL_NPC_RED
 ; SKIRMISH 
 	object_event  5, 9, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, WCNinjaSkirmishText, EVENT_CAPITAL_SKIRMISHER ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
@@ -125,16 +118,12 @@ WesternCapitalCemeteryScene:
 	waitbutton
 	closetext
 	
-	; todo emotes 
-	
 	turnobject WESTERN_CAPITAL_MEJIMI, DOWN
 	
 	opentext
-	writetext Prologue_Text4 ; KENSEY DECEIVES!
+	writetext Prologue_Text4
 	waitbutton
 	closetext	
-	
-	; todo emotes 
 
 	opentext
 	writetext Prologue_Text5 ; eh adrinna?

@@ -46,7 +46,7 @@ TapestryBatonPassScript:
 .TeachMove
 	jumpopenedtext Text_TapestryTutorTaught ;;
 	
-Text_BatonPassIntro:  ; todo fix this text 
+Text_BatonPassIntro:  
 	text "Ahead is the site"
 	line "where we pass our"
 	para "knowledge to fut-"
@@ -55,8 +55,7 @@ Text_BatonPassIntro:  ; todo fix this text
 	para "At least, we used"
 	line "to, before a self"
 	para "declared Emperor"
-	line "ordered the cham-"
-	cont "bers closed."
+	line "closed it up."
 	done
 
 Text_TapestryTutorBatonPass:

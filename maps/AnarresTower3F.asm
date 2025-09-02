@@ -165,7 +165,7 @@ HollisChallengesText:
 
 TammyExplains:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "Listen! The Pine-"
@@ -190,7 +190,7 @@ HollisBeatenText:
 	
 TammyText2:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "You've managed"
@@ -212,7 +212,7 @@ TammyText2:
 
 TammyText3:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "The forest binds"
@@ -235,7 +235,7 @@ HollisAbuse:
 	
 TammyText4:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "We will review"
@@ -265,7 +265,7 @@ HollisHM:
 
 TammyThanks:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "Thank you! I'll"

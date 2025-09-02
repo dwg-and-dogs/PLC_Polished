@@ -235,14 +235,13 @@ TinTower5FKimonoGirlScript:
 
 .PhysicalOrSpecialMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 ;todo proper size
+	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 
 	dw .PhysicalOrSpecialMenuData
 	db 1 ; default option
 
 .PhysicalDVsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size
-;	menu_coords 0, 0, 15, TEXTBOX_Y - 1 ; alternate syntax
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw .PhysicalMenuData
 	db 1 ; default option
 
@@ -329,7 +328,7 @@ TinTower5FDV_Setting_CancelText:
 	line "to show it!"
 	done
 
-TinTower5FGreatnessLiesWithinText: ; todo place five others 
+TinTower5FGreatnessLiesWithinText:
 	text "Greatness lies"
 	line "within!"
 	done	

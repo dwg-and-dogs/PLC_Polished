@@ -62,8 +62,8 @@ KimonoCabin3_MapScriptHeader: ; fix the warps, then reduce the boulders, then wr
 	strengthboulder_event  8,  1, EVENT_KIMONO_CABIN_3_BOULDER_5 ; keep
 	; others 
 	object_event  5, 26, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin33Script, -1
-	object_event  0, 22, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, UMBREON, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, KimonoCabin3BoulderResetScript, -1 ; todo
-	object_event  6, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, UMBREON, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KimonoCabin3BoulderResetScript, -1 ; todo
+	object_event  0, 22, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, UMBREON, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, KimonoCabin3BoulderResetScript, -1 
+	object_event  6, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, UMBREON, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KimonoCabin3BoulderResetScript, -1 
 	tmhmball_event 9, 10, TM_DARK_PULSE, EVENT_KIMONO_CABIN_TM_DARK_PULSE
 	itemball_event 16, 0, DUSK_STONE, 1, EVENT_KIMONO_CABIN_DUSK_STONE
 

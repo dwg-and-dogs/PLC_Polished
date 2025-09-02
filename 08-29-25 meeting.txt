@@ -6,4 +6,4 @@
 	*Won't stray from the design 
 
 
-*need the better setup and measuring the temperature! Quantificaitn of low response time is a risk we have! Need to beat that !
+*need the better setup and measuring the temperature! Quantificaitn of low response time is a risk we have! Need to beat that ! SHow a 

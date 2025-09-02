@@ -43,9 +43,7 @@ RadioTower4FKurtScript:
     writetext RadioTower4KurtRemindText
     waitbutton
     closetext
-	;todo figure out which of these need to be initialized 
 	setevent EVENT_BEAT_RADIO_TOWER_RIVAL
-	clearevent EVENT_BEAT_WHITNEY
     end
 
 RadioTower4FKurtHealText:

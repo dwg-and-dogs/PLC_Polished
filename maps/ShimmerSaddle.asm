@@ -391,9 +391,7 @@ ShimmerText4:
 	done
 
 ShimmerSaddleGramps2Script:
-	; debug tech remove
 	setscene $2
-	; debug tech todo 
 	jumptextfaceplayer SaddleGramps2Text
 	
 SaddleGramps2Text:

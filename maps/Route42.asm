@@ -412,7 +412,7 @@ ChemistryText:
 	done
 
 
-Route42TimeTravelScript: ; todo finish fixing 
+Route42TimeTravelScript: 
 	opentext
 	checkevent EVENT_BEAT_ADRINNA_MINE
 	iffalse_jumptext Route42NoTimeTravelYetText

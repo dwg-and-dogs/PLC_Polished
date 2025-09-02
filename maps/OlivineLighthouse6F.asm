@@ -30,8 +30,6 @@ OlivineLighthouse6F_MapScriptHeader:
 	bg_event 11,  8, BGEVENT_JUMPTEXT, LighthousePoisonText
 	bg_event 11,  7, BGEVENT_JUMPTEXT, LighthousePoisonText
 	bg_event 11,  6, BGEVENT_JUMPTEXT, LighthousePoisonText
-	; TODO add bg_event reads for all the way around, 'toxic sludge, don't go in!"
-	; todo change the color of the water to purple with a palette change 
 
 	def_object_events
 	object_event 14, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LighthouseKurtScript, EVENT_BEAT_CHUCK
