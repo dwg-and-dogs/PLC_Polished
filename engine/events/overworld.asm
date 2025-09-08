@@ -62,46 +62,78 @@ CheckBadge:
 	text_far _BadgeRequiredText
 	text_end
 
-CheckPartyMove:
-; Check if a monster in your party has move d.
+CheckPartyMove: ; from 9bit polished 
+; Check if a monster in your party has move d, or
+; can have move d and you have TM/HM e.
 
-	ld e, 0
 	xor a
 	ld [wCurPartyMon], a
-.loop
-	ld c, e
-	ld b, 0
-	ld hl, wPartySpecies
-	add hl, bc
-	ld a, [hl]
-	call IsAPokemon
-	jr c, .no
 
-	ld bc, PARTYMON_STRUCT_LENGTH
-	ld hl, wPartyMon1Form
 	ld a, e
-	rst AddNTimes
+	ld [wCurTMHM], a
+
+	ld e, 0
+.loop1
+	ld a, [wPartyCount]
+	cp e
+	jr z, .maybe
+	ld hl, wPartyMon1IsEgg
+	ld a, e
+	call GetPartyLocation
 	bit MON_IS_EGG_F, [hl]
-	jr nz, .next
+	jr nz, .next1
 	ld bc, MON_MOVES - MON_FORM
 	add hl, bc
 	ld b, NUM_MOVES
-.check
+.check1
 	ld a, [hli]
 	cp d
 	jr z, .yes
 	dec b
-	jr nz, .check
-
-.next
+	jr nz, .check1
+.next1
 	inc e
-	jr .loop
+	jr .loop1
+
+.maybe
+	ld a, d
+	ld [wPutativeTMHMMove], a
+	ld a, [wCurTMHM]
+	inc a
+	jr z, .no
+	call CheckTMHM
+	jr nc, .no
+	ld e, 0
+.loop2
+	ld a, [wPartyCount]
+	cp e
+	jr z, .no
+	ld hl, wPartyMon1IsEgg
+	ld a, e
+	call GetPartyLocation
+	bit MON_IS_EGG_F, [hl]
+	jr nz, .next2
+	ld a, [hl]
+	and SPECIESFORM_MASK
+	ld [wCurForm], a
+	ld bc, MON_SPECIES - MON_FORM
+	add hl, bc
+	ld a, [hl]
+	ld [wCurPartySpecies], a
+	predef CanLearnTMHMMove
+	ld a, c
+	and a
+	jr nz, .yes
+.next2
+	inc e
+	jr .loop2
 
 .yes
 	ld a, e
 	ld [wCurPartyMon], a ; which mon has the move
 	xor a
 	ret
+
 .no
 	scf
 	ret
@@ -592,7 +624,7 @@ TrySurfOW::
 	call CheckEngineFlag
 	jr c, .quit
 
-	ld d, SURF
+	lb de, SURF, HM_SURF
 	call CheckPartyMove
 	jr c, .quit
 
@@ -1085,13 +1117,13 @@ SetStrengthFlag:
 	ld hl, wOWState
 	set OWSTATE_STRENGTH, [hl]
 PrepareOverworldMove:
-;	ld a, [wCurPartyMon]
-;	ld e, a
-;	ld d, 0
-;	ld hl, wPartySpecies
-;	add hl, de
-;	ld a, [hl]
-;	ld [wBuffer6], a
+	ld a, [wCurPartyMon]
+	ld e, a
+	ld d, 0
+	ld hl, wPartySpecies
+	add hl, de
+	ld a, [hl]
+	ld [wBuffer6], a
 	jmp GetPartyNickname
 
 Script_StrengthFromMenu:
