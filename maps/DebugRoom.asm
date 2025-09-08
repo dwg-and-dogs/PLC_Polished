@@ -32,13 +32,14 @@ DebugRoom_MapScriptHeader:
 DebugInteraction: 
 	opentext
 	givepoke TYPHLOSION, 100
-	givepoke RAIKOU, 100
-	givepoke POLITOED, 100
-	givepoke LUGIA, 100
-	givepoke HEATRAN, 100 
-	givepoke H__GOODRA, 100 
+	givepoke WEEPINBELL, 100
+;	givepoke RAIKOU, 100
+;	givepoke POLITOED, 100
+;	givepoke LUGIA, 100
+;	givepoke HEATRAN, 100 
+;	givepoke H__GOODRA, 100 
 	waitbutton
-	setflag ENGINE_POKEGEAR
+;	setflag ENGINE_POKEGEAR
 ;	setflag ENGINE_PHONE_CARD
 ;	setflag ENGINE_MAP_CARD
 	; pokedex
@@ -134,7 +135,10 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp TINDER_GARDEN_2, 4, 2
+;	opentext
+;	special KimonoDVsUpdate
+;	waitendtext
+	warp ROUTE_32, 10, 20
 	end
 
 DebugCPU:

@@ -10,26 +10,26 @@ SpawnPoints:
 
 	spawn KURTS_HOUSE,                 7,  1 ;  "YOUR HOUSE"
 
-	spawn ANARRES_TOWN,               17, 10 ; ok 
-	spawn GAULDENROD,                 18, 28 ; ok 
-	spawn WESTERN_CAPITAL,            21, 26 ; ok 
-	spawn TRADERS_LANDING,            15, 17 ; ok 
-	spawn SHELTERED_SHORES,           34, 20 ; ok 
-	spawn CIANWOOD_COVE,              11, 14 ; ok 
-	spawn TRANQUIL_TARN,              13,  4 ; ok 
-	spawn EERIE_HAMLET,               11,  8 ; ok 
-	spawn SULFUR_STY,                 34,  8 ; ok 
-	spawn TIMELESS_TAPESTRY,           3,  6 ; ok 
+	spawn ANARRES_TOWN,               17, 10 ; todo needs hardcode exception 
+	spawn GAULDENROD,                 18, 28 ; todo needs hardcode exception
+	spawn WESTERN_CAPITAL,            21, 26 ; todo needs a hardcode exception 
+	spawn TRADERS_LANDING,            15, 17 ; todo needs a hardcode exception 
+	spawn SHELTERED_SHORES,           34, 20 ; todo needs a hardcode exception 
+	spawn CIANWOOD_COVE,              11, 14 ; todo needs a hardcode 
+	spawn TRANQUIL_TARN,              13,  4 ; todo
+	spawn EERIE_HAMLET,               11,  8 ; todo 
+	spawn SULFUR_STY,                 34,  8 ; todo 
+	spawn TIMELESS_TAPESTRY,           3,  6 ; todo 
 
-	spawn AZALEA_TOWN,                15, 10
-	spawn GOLDENROD_CITY,             18, 28
-	spawn VIOLET_CITY,                31, 30
-	spawn ROUTE_32,                   11, 74 ; UNION CAVE 
-	spawn ECRUTEAK_CITY,              23, 28
-	spawn CIANWOOD_CITY,              13, 44
-	spawn OLIVINE_CITY,               13, 18
-	spawn MAHOGANY_TOWN,              15, 14
-	spawn LAKE_OF_RAGE,               21, 29
+	spawn AZALEA_TOWN,                15, 10 ; works 
+	spawn GOLDENROD_CITY,             18, 28 ; works 
+	spawn VIOLET_CITY,                31, 30 ; works! 
+	spawn ROUTE_32,                   11, 74 ; UNION CAVE works 
+	spawn ECRUTEAK_CITY,              23, 28 ; works 
+	spawn CIANWOOD_CITY,              13, 44 ; this will need a hardcode exception 
+	spawn OLIVINE_CITY,               13, 18 ; works 
+	spawn MAHOGANY_TOWN,              15, 14 ; works
+	spawn LAKE_OF_RAGE,               21, 29 ; needs a hardcode exception 
 
 	spawn N_A,                        -1, -1
 
@@ -79,7 +79,7 @@ SpawnPoints:
 ;	spawn LAKE_OF_RAGE,               21, 29
 ;	spawn BLACKTHORN_CITY,            21, 30
 ;	spawn SILVER_CAVE_OUTSIDE,        23, 14
-;	spawn FAST_SHIP_CABINS_SW_SSW_NW,  6,  2
+;	spawn FAST_SHIP_CABINS_SW_SSW_NW,  6,  2 "	blackoutmod FAST_SHIP_CABINS_SW_SSW_NW "
 ;
 ;	spawn N_A,                        -1, -1
 ;

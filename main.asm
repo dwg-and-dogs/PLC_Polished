@@ -255,6 +255,7 @@ INCLUDE "engine/events/squirtbottle.asm"
 INCLUDE "engine/events/card_key.asm"
 INCLUDE "engine/events/basement_key.asm"
 INCLUDE "engine/events/sacred_ash.asm"
+;INCLUDE "engine/events/dv_update.asm"
 
 
 SECTION "bank14", ROMX

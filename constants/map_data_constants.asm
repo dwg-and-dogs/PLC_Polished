@@ -87,15 +87,15 @@ NUM_FISHGROUPS EQU const_value - 1
 	const SPAWN_SULFUR_STY
 	const SPAWN_TIMELESS_TAPESTRY
 ; johto
-	const SPAWN_AZALEA       ; 11 - matches AZALEA_TOWN
-	const SPAWN_GOLDENROD    ; 12 - matches GOLDENROD_CITY
-	const SPAWN_VIOLET       ; 13 - matches VIOLET_CITY
-	const SPAWN_UNION_CAVE   ; 14 - matches ROUTE_32
-	const SPAWN_ECRUTEAK     ; 15 - matches ECRUTEAK_CITY
-	const SPAWN_CIANWOOD     ; 16 - matches CIANWOOD_CITY
-	const SPAWN_OLIVINE      ; 17 - matches OLIVINE_CITY
-	const SPAWN_MAHOGANY     ; 18 - matches MAHOGANY_TOWN
-	const SPAWN_LAKE_OF_RAGE ; 19 - matches LAKE_OF_RAGE
+	const SPAWN_AZALEA ; matches 
+	const SPAWN_GOLDENROD ; matches 
+	const SPAWN_VIOLET ; matches 
+	const SPAWN_UNION_CAVE ; matches 
+	const SPAWN_ECRUTEAK ; matches 
+	const SPAWN_CIANWOOD ; matches 
+	const SPAWN_OLIVINE ; matches 
+	const SPAWN_MAHOGANY ; mathces 
+	const SPAWN_LAKE_OF_RAGE ; matches 
 NUM_SPAWNS EQU const_value
 
 

@@ -31,11 +31,17 @@ WhirlIsland1F_MapScriptHeader:
 
 WhirlIsland1FKimonoGirlScript: 
 	faceplayer
+	; Store the original DVs in temporary memory locations
+	readmem wPartyMon1DVs+0     ; Reads value into hScriptVar
+	writemem wOriginalDV1       ; Writes hScriptVar to wOriginalDV1
+	readmem wPartyMon1DVs+1     ; Reads value into hScriptVar
+	writemem wOriginalDV2       ; Writes hScriptVar to wOriginalDV1
+	readmem wPartyMon1DVs+2     ; Reads value into hScriptVar
+	writemem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
 	opentext
 	checkevent EVENT_SET_DVS_4
-	iftrue_jumptext WhirlIsland1FGreatnessLiesWithinText 
-	opentext
-	writetext WhirlIsland1FWhatPotentialText
+	iftrue_jumptext WhirlIslandGreatnessLiesWithinText 
+	writetext WhirlIslandWhatPotentialText
 	promptbutton
 	loadmenu .PhysicalOrSpecialMenuHeader
 	verticalmenu
@@ -43,205 +49,13 @@ WhirlIsland1FKimonoGirlScript:
 	ifequal 1, .PhysicalDVSettingMenus
 	ifequal 2, .SpecialDVSettingMenus
 	ifequal 3, .MaximumDVSetting
-	jumptext WhirlIsland1FDV_Setting_CancelText 
+	jumptext WhirlIslandDV_Setting_CancelText 
 
-.MaximumDVSetting:
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ff
-	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveMaximumDVsText
-	waitbutton
-	closetext
-	end
+.NoChange:
+	jumptext WhirlIslandDV_Setting_CancelText
 
-.PhysicalDVSettingMenus:	
-	loadmenu .PhysicalDVsMenuHeader
-	verticalmenu
-	closewindow
-	ifequal 1, .GiveFightingDVs
-	ifequal 2, .GiveFlyingDVs
-	ifequal 3, .GivePoisonDVs
-	ifequal 4, .GiveGroundDVs
-	ifequal 5, .GiveRockDVs
-	ifequal 6, .GiveBugDVs
-	ifequal 7, .GiveGhostDVs
-	ifequal 8, .GiveSteelDVs
-	jumptext WhirlIsland1FDV_Setting_CancelText 
-
-.SpecialDVSettingMenus:	
-	loadmenu .SpecialDVsMenuHeader
-	verticalmenu
-	closewindow
-	ifequal 1, .GiveFireDVs
-	ifequal 2, .GiveWaterDVs
-	ifequal 3, .GiveGrassDVs
-	ifequal 4, .GiveElectricDVs
-	ifequal 5, .GivePsychicDVs
-	ifequal 6, .GiveIceDVs
-	ifequal 7, .GiveDragonDVs
-	ifequal 8, .GiveDarkDVs
-	jumptext WhirlIsland1FDV_Setting_CancelText
-
-.GiveFightingDVs:; 	db $ff, $ee, $ee
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ee
-	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveFlyingDVs: ; DVS_HP_FLYING   EQUS "$ff, $fe, $ee"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $fe
-	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GivePoisonDVs: ; DVS_HP_POISON   EQUS "$ff, $ef, $ee"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ef
-	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveGroundDVs: ; DVS_HP_GROUND   EQUS "$ff, $ff, $ee"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ff
-	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveRockDVs: ; DVS_HP_ROCK     EQUS "$ff, $ee, $fe"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ee
-	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveBugDVs: ; DVS_HP_BUG      EQUS "$ff, $fe, $fe"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $fe
-	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveGhostDVs: ; DVS_HP_GHOST    EQUS "$ff, $ef, $fe"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ef
-	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveSteelDVs: ;DVS_HP_STEEL    EQUS "$ff, $ff, $fe"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ff
-	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveFireDVs: ; EQUS "$ff, $ee, $ef"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ee
-	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveWaterDVs:;DVS_HP_WATER    EQUS "$ff, $fe, $ef"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $fe
-	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveGrassDVs:;DVS_HP_GRASS    EQUS "$ff, $ef, $ef"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ef
-	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveElectricDVs:;DVS_HP_ELECTRIC EQUS "$ff, $ff, $ef"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ff
-	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GivePsychicDVs:;DVS_HP_PSYCHIC  EQUS "$ff, $ee, $ff"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ee
-	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveIceDVs:;DVS_HP_ICE      EQUS "$ff, $fe, $ff"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $fe
-	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveDragonDVs:;DVS_HP_DRAGON   EQUS "$ff, $ef, $ff"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ef
-	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
-
-.GiveDarkDVs:;DVS_HP_DARK     EQUS "$fe, $ff, $ff"
-	setevent EVENT_SET_DVS_4
-	loadmem wPartyMon1DVs+0, $fe
-	loadmem wPartyMon1DVs+1, $ff
-	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText_WhirlIsland
-	waitbutton
-	closetext
-	end
+.EggChange:
+	jumptext WhirlIslandDV_Setting_EggText
 
 .PhysicalOrSpecialMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -251,7 +65,7 @@ WhirlIsland1FKimonoGirlScript:
 
 .PhysicalDVsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1 
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 	dw .PhysicalMenuData
 	db 1 ; default option
 
@@ -282,7 +96,7 @@ WhirlIsland1FKimonoGirlScript:
 	db 1 ; default option
 
 .SpecialMenuData:
-	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
+	db STATICMENU_CURSOR | STATICMENU_WRAP
 	db 8 ; items
 	db "FIR@"
 	db "WTR@"
@@ -293,7 +107,540 @@ WhirlIsland1FKimonoGirlScript:
 	db "DGN@"
 	db "DRK@"
 
-WhirlIsland1FWhatPotentialText:
+.MaximumDVSetting:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ff
+	writetext GaveMaximumDVsText_WhirlIsland
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	; Player confirms - make it permanent
+	setevent EVENT_SET_DVS_4
+	writetext DVChangeConfirmedText
+	waitbutton
+	closetext
+	end
+
+.PhysicalDVSettingMenus:	
+	loadmenu .PhysicalDVsMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .GiveFightingDVs
+	ifequal 2, .GiveFlyingDVs
+	ifequal 3, .GivePoisonDVs
+	ifequal 4, .GiveGroundDVs
+	ifequal 5, .GiveRockDVs
+	ifequal 6, .GiveBugDVs
+	ifequal 7, .GiveGhostDVs
+	ifequal 8, .GiveSteelDVs
+	jumptext WhirlIslandDV_Setting_CancelText 
+
+.SpecialDVSettingMenus:	
+	loadmenu .SpecialDVsMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .GiveFireDVs
+	ifequal 2, .GiveWaterDVs
+	ifequal 3, .GiveGrassDVs
+	ifequal 4, .GiveElectricDVs
+	ifequal 5, .GivePsychicDVs
+	ifequal 6, .GiveIceDVs
+	ifequal 7, .GiveDragonDVs
+	ifequal 8, .GiveDarkDVs
+	jumptext WhirlIslandDV_Setting_CancelText
+
+.GiveFightingDVs:	; todo: Make all of the other .Give__DVs: follow this format. Keep the original values after loadmem. FOr instance, flying should still have ff, ef, ee
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ee
+; begin section to copy throughout 
+	opentext
+	writetext GaveDVsText_WhirlIsland_Fighting ; make new writetxt for ..._Flying, _Dark, etc 
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+; end 
+
+.GiveFlyingDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $ee
+	opentext
+	writetext GaveDVsText_WhirlIsland_Flying
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GivePoisonDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ef
+	loadmem wPartyMon1DVs+2, $ee
+	opentext
+	writetext GaveDVsText_WhirlIsland_Poison
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveGroundDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ee
+	opentext
+	writetext GaveDVsText_WhirlIsland_Ground
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveRockDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $fe
+	opentext
+	writetext GaveDVsText_WhirlIsland_Rock
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveBugDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $fe
+	opentext
+	writetext GaveDVsText_WhirlIsland_Bug
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveGhostDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ef
+	loadmem wPartyMon1DVs+2, $fe
+	opentext
+	writetext GaveDVsText_WhirlIsland_Ghost
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveSteelDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $fe
+	opentext
+	writetext GaveDVsText_WhirlIsland_Steel
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveFireDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ef
+	opentext
+	writetext GaveDVsText_WhirlIsland_Fire
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveWaterDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $ef
+	opentext
+	writetext GaveDVsText_WhirlIsland_Water
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveGrassDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ef
+	loadmem wPartyMon1DVs+2, $ef
+	opentext
+	writetext GaveDVsText_WhirlIsland_Grass
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveElectricDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ef
+	opentext
+	writetext GaveDVsText_WhirlIsland_Electric
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GivePsychicDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ff
+	opentext
+	writetext GaveDVsText_WhirlIsland_Psychic
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveIceDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $ff
+	opentext
+	writetext GaveDVsText_WhirlIsland_Ice
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveDragonDVs:
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ef
+	loadmem wPartyMon1DVs+2, $ff
+	opentext
+	writetext GaveDVsText_WhirlIsland_Dragon
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveDarkDVs:
+	loadmem wPartyMon1DVs+0, $fe
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ff
+	opentext
+	writetext GaveDVsText_WhirlIsland_Dark
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	readmem wPartyMon1Species
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_WhirlIsland
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.ConfirmChanges:
+	setevent EVENT_SET_DVS_4
+	writetext DVChangeConfirmedText_WhirlIsland
+	waitbutton
+	closetext
+	end
+
+.UndoChanges:
+;	writetext DebugStoringText
+;	waitbutton
+	; Store the original DVs in temporary memory locations
+	readmem wOriginalDV1       ; Writes hScriptVar to wOriginalDV1
+	writemem wPartyMon1DVs+0     ; Reads value into hScriptVar
+	readmem wOriginalDV2       ; Writes hScriptVar to wOriginalDV1
+	writemem wPartyMon1DVs+1     ; Reads value into hScriptVar
+	readmem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
+	writemem wPartyMon1DVs+2     ; Reads value into hScriptVar
+	writetext DVChangeUndoneText_WhirlIsland
+	waitbutton
+	closetext
+	end
+
+GaveMaximumDVsText_WhirlIsland:
+	text "Intrinsic power"
+	line "maximized!"
+	done
+
+GaveDVsText_WhirlIsland:
+	text "DVs are set"
+	done
+
+
+GaveDVsText_WhirlIsland_Fighting:
+	text "Maximized DVs for"
+	line "HP Fighting!"
+	done
+
+GaveDVsText_WhirlIsland_Flying:
+	text "Maximized DVs for"
+	line "HP Flying!"
+	done
+
+GaveDVsText_WhirlIsland_Poison:
+	text "Maximized DVs for"
+	line "HP Poison!"
+	done
+
+GaveDVsText_WhirlIsland_Ground:
+	text "Maximized DVs for"
+	line "HP Ground!"
+	done
+
+GaveDVsText_WhirlIsland_Rock:
+	text "Maximized DVs for"
+	line "HP Rock!"
+	done
+
+GaveDVsText_WhirlIsland_Bug:
+	text "Maximized DVs for"
+	line "HP Bug!"
+	done
+
+GaveDVsText_WhirlIsland_Ghost:
+	text "Maximized DVs for"
+	line "HP Ghost!"
+	done
+
+GaveDVsText_WhirlIsland_Steel:
+	text "Maximized DVs for"
+	line "HP Steel!"
+	done
+
+GaveDVsText_WhirlIsland_Fire:
+	text "Maximized DVs for"
+	line "HP Fire!"
+	done
+
+GaveDVsText_WhirlIsland_Water:
+	text "Maximized DVs for"
+	line "HP Water!"
+	done
+
+GaveDVsText_WhirlIsland_Grass:
+	text "Maximized DVs for"
+	line "HP Grass!"
+	done
+
+GaveDVsText_WhirlIsland_Electric:
+	text "Maximized DVs for"
+	line "HP Electric!"
+	done
+
+GaveDVsText_WhirlIsland_Psychic:
+	text "Maximized DVs for"
+	line "HP Psychic!"
+	done
+
+GaveDVsText_WhirlIsland_Ice:
+	text "Maximized DVs for"
+	line "HP Ice!"
+	done
+
+GaveDVsText_WhirlIsland_Dragon:
+	text "Maximized DVs for"
+	line "HP Dragon!"
+	done
+
+GaveDVsText_WhirlIsland_Dark:
+	text "Maximized DVs for"
+	line "HP Dark!"
+	done
+
+ConfirmDVChangeText_WhirlIsland:
+	text "This is how your"
+	line "#mon will"
+	cont "appear."
+	
+	para "Do you wish to"
+	line "make this change"
+	cont "permanent?"
+	done
+
+DVChangeConfirmedText_WhirlIsland:
+	text "The transformation"
+	line "is complete!"
+	
+	para "Your #mon has"
+	line "unlocked its true"
+	cont "potential!"
+	done
+
+DVChangeUndoneText_WhirlIsland:
+	text "Your #mon has"
+	line "returned to its"
+	cont "original form."
+	
+	para "The potential"
+	line "remains dormant"
+	cont "for now."
+	done
+
+WhirlIslandDV_Setting_CancelText:
+	text "Greatness lies"
+	line "within - if you"
+	para "have the courage"
+	line "to show it!"
+	done
+
+WhirlIslandGreatnessLiesWithinText:
+	text "Greatness lies"
+	line "within!"
+	done
+
+WhirlIslandDV_Setting_EggText:
+	text "That's only an"
+	line "egg! Give it time"
+	cont "to grow."
+	done
+
+WhirlIslandWhatPotentialText:
 	text "How do we break"
 	line "free of self-"
 	para "defeating cycles,"
@@ -323,28 +670,5 @@ WhirlIsland1FWhatPotentialText:
 	line "party, if you"
 	cont "need to."
 	done
-
-WhirlIsland1FGaveMaximumDVsText:
-	text "Intrinsic power"
-	line "maximized!"
-	done
-
-GaveDVsText_WhirlIsland:
-	text "Your #mon is"
-	line "now expressing"
-	para "that part of its"
-	line "lineage."
-	done
-
-WhirlIsland1FDV_Setting_CancelText:
-	text "Greatness lies"
-	line "within - if you"
-	para "have the courage"
-	line "to show it!"
-	done
-
-WhirlIsland1FGreatnessLiesWithinText:
-	text "Greatness lies"
-	line "within!"
-	done	
+	
 	

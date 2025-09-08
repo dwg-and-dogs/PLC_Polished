@@ -906,9 +906,12 @@ wBattleTowerTopStreak:: dw
 wBattleFactoryCurStreak:: dw
 wBattleFactoryTopStreak:: dw
 wBattleFactorySwapCount:: db ; Amount of swaps performed.
+; these are used for palette swaps, and wOriginalDVx is just a placeholder in
+wOriginalDV1:: ds 1 ; Store original DV byte 1 
+wOriginalDV2:: ds 1 ; Store original DV byte 2 
+wOriginalDV3:: ds 1 ; Store original DV byte 3
 
-	ds 13 ; unused
-
+	ds 10 ; unused
 wMapObjects::
 wPlayerObject:: map_object wPlayer
 for n, 1, NUM_OBJECTS ; discount player

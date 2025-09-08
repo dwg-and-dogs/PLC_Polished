@@ -1085,13 +1085,13 @@ SetStrengthFlag:
 	ld hl, wOWState
 	set OWSTATE_STRENGTH, [hl]
 PrepareOverworldMove:
-	ld a, [wCurPartyMon]
-	ld e, a
-	ld d, 0
-	ld hl, wPartySpecies
-	add hl, de
-	ld a, [hl]
-	ld [wBuffer6], a
+;	ld a, [wCurPartyMon]
+;	ld e, a
+;	ld d, 0
+;	ld hl, wPartySpecies
+;	add hl, de
+;	ld a, [hl]
+;	ld [wBuffer6], a
 	jmp GetPartyNickname
 
 Script_StrengthFromMenu:
