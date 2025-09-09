@@ -1,4 +1,4 @@
-DayCare_MapScriptHeader:
+DayCare_MapScriptHeader: ; expected behavior: no eggs 
 	def_scene_scripts
 
 	def_callbacks
@@ -17,7 +17,8 @@ DayCare_MapScriptHeader:
 
 	def_object_events
 	object_event  5,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DayCareLadyScript, -1
-	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Inside, EVENT_DAYCARE_MAN_IN_DAYCARE
+	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Inside, -1
+	object_event  2,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, DayCarePokeFanNoEggText, -1
 
 	object_const_def
 	const DAYCARE_GRANNY
@@ -61,8 +62,8 @@ DayCareManScript_Inside:
 DayCareLadyScript:
 	faceplayer
 	opentext
-	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG
-	iftrue_jumpopenedtext Text_GrampsLookingForYou
+;	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG
+;	iftrue_jumpopenedtext Text_GrampsLookingForYou
 	special Special_DayCareLady
 	waitendtext
 
@@ -115,9 +116,6 @@ DayCareText_GotEviolite:
     line "of any #mon"
     para "that can still"
     line "evolve."
-    para "It's perfect for"
-    line "those cute little"
-    cont "unevolved #mon!"
     done
 
 DayCareManText_DeclinedEviolite:
@@ -126,3 +124,17 @@ DayCareManText_DeclinedEviolite:
     cont "change your mind,"
     cont "come back anytime."
     done
+
+DayCarePokeFanNoEggText:
+	text "We're not sure why"
+	line "but #mon won't"
+	para "produce eggs"
+	line "here anymore."
+	
+	para "I think it might"
+	line "be the stress of"
+	para "the loud logging"
+	line "equipment in the"
+	cont "Ilex Forest."
+	done
+	
