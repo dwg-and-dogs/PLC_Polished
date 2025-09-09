@@ -169,6 +169,7 @@ TL_Scene_Part_1_Script:
 	setevent EVENT_LANDING_SCENE_1_KENSEY
 	setevent EVENT_LANDING_SCENE_1_KURT
 	setscene $1
+	blackoutmod TRADERS_LANDING
 	end
 
 TL_Text1:
@@ -293,11 +294,12 @@ TL_Text9:
 TL_Scene_2_L:
 	applyonemovement PLAYER, step_right
 TL_Scene_2_R:
+	blackoutmod TRADERS_LANDING
 	applymovement PLAYER, TL_2_PlayerMovesUp
 	turnobject PLAYER, LEFT
 	turnobject TRADERS_LANDING_BARBEAU_2, RIGHT
-	showtext TL_2_Text1 ; you've comE? 
-	pause 10
+	showtext TL_2_Text1 ; you've come? 
+	pause 30
 	appear TRADERS_LANDING_KURT_2
 	applymovement TRADERS_LANDING_KURT_2, TL_2_PlayerMovesUp
 	turnobject TRADERS_LANDING_BARBEAU_2, DOWN

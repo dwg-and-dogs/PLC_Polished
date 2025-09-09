@@ -463,6 +463,7 @@ CradleScene2_Adrinna:
 	sjump Cradle_Scene3Pickup
 
 CradleScene2_Heatran:
+	blackoutmod SULFUR_STY
 	applymovement PLAYER, Player_CCB1F_Move1
 	pause 60
 	special Special_FadeOutMusic
@@ -525,6 +526,7 @@ Cradle_Scene3Pickup:
 	special FadeOutPalettes
 	waitsfx
 	setscene $2
+	blackoutmod TIMELESS_TAPESTRY
 	warp WHISPERS_WAY, 10, 4
 	end
 	

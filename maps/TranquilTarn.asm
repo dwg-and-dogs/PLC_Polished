@@ -58,12 +58,7 @@ TranquilTarnCallback:
 TranquilTarnFlyPoint:
 	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
 	endcallback
-
-TarnDebugScript:
-	setevent EVENT_BEAT_KANNA
-	reloadmap
-	end
-
+	
 ;TranquilTarnShrineScript:
 ;	opentext
 ;	writetext AskToTimeTravelText_TT

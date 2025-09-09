@@ -300,7 +300,7 @@ KeyItemEffects:
 	dw IsntTheTimeMessage ; SHINY_CHARM
 	dw IsntTheTimeMessage ; OVAL_CHARM
 	dw IsntTheTimeMessage ; CATCH_CHARM
-	dw TimePieceKeyItem		  ; Timepiece
+	dw NatuCallKeyItem		  ; Timepiece
 	dw KurtsMapKeyItem	  ; townmap
 	dw IsntTheTimeMessage ; MintLeafKIcon
 	dw IsntTheTimeMessage ; TinymushroomKIcon
@@ -1935,17 +1935,9 @@ KurtsMapKeyItem: ; c.f. typechart
 	farcall WaitBGMap_DrawPackGFX
 	farjp Pack_InitColors
 
-TimePieceKeyItem: ; from engine-rtc-timeset.asm, from the intro monologue 
-	call UpdateTime
-	ldh a, [hHours]
-	ld c, a
-	farcall PrintHour
-	ld a, ":"
-	ld [hli], a
-	ld de, hMinutes
-	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
-	jmp PrintNum
-
+NatuCallKeyItem: 
+	farcall FlyFunction
+	ret
 
 
 RestorePPEffect:

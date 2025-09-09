@@ -27,6 +27,7 @@ AnarresDorms_MapScriptHeader:
 
 NatuScriptAnarresDorms:
 	opentext
+	blackoutmod ANARRES_TOWN
 	writetext Anarres_NatuText_1
 	promptbutton
 	special PokemonCenterPC
@@ -38,6 +39,9 @@ Anarres_NatuText_1:
 	line "It can teleport"
 	para "to the present to"
 	line "manage the party."
+	
+	para "It also sets the"
+	line "waypoint here."
 	done	
 	
 	
@@ -83,6 +87,7 @@ AnarresDormsBed:
 	pause 60
 	special Special_FadeInQuickly
 	special RestartMapMusic
+	blackoutmod ANARRES_TOWN
 
 	showtext BedText2
 	end
@@ -95,9 +100,13 @@ BedText1:
 BedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+	
+	para "Waypoint set to"
+	line "Anarres Town."
 	done
 
 AnarresDormsKurtScript:
+	blackoutmod ANARRES_TOWN
 	faceplayer
 	opentext
 	writetext KurtAnarresDormsText

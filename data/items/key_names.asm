@@ -16,7 +16,7 @@ KeyItemNames::
 	li "Shiny Charm"
 	li "Oval Charm"
 	li "Catch Charm"
-	li "Timepiece"
+	li "Natu Call"
 	li "Kurt's Map"
 	li "Mint Leaf"
 	li "Tinymushroom"

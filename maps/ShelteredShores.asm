@@ -58,6 +58,7 @@ ShoresSageScript:
 	showtext ShoresWaitText
 	special FadeOutPalettes
 	waitsfx
+	blackoutmod CIANWOOD_CITY
 	warp ROUTE_41, 37, 20
 	end
 

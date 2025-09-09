@@ -24,6 +24,7 @@ WesternCapitalDorms_MapScriptHeader: ;	def_scene_scripts
 	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptCapitalDorms, -1
 
 NatuScriptCapitalDorms:
+	blackoutmod WESTERN_CAPITAL
 	opentext
 	writetext Capital_NatuText_1
 	promptbutton
@@ -36,6 +37,10 @@ Capital_NatuText_1:
 	line "It can teleport"
 	para "to the present to"
 	line "manage the party."
+
+
+	para "It also sets the"
+	line "waypoint here."
 	done
 
 WesternCapitalDormsNPC1Text:
@@ -63,7 +68,7 @@ WesternCapitalDormsNPC3Text:
 
 WesternCapitalDormsBed:
 	showtext WesternCapitalBedText1
-	
+	blackoutmod WESTERN_CAPITAL
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	special HealParty
@@ -83,9 +88,13 @@ WesternCapitalBedText1:
 WesternCapitalBedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+
+	para "Waypoint set to"
+	line "Western Capital."
 	done
 
 WesternCapitalDormsKurtScript:
+	blackoutmod WESTERN_CAPITAL
 	faceplayer
 	opentext
 	writetext KurtWCDormsText

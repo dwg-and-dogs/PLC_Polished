@@ -31,10 +31,10 @@ DebugRoom_MapScriptHeader:
 
 DebugInteraction: 
 	opentext
-	givepoke TYPHLOSION, 100
-	givepoke WEEPINBELL, 100
+	givepoke CYNDAQUIL, 5
+;	givepoke WEEPINBELL, 100
 ;	givepoke RAIKOU, 100
-	givepoke POLITOED, 100
+;	givepoke POLITOED, 100
 ;	givepoke LUGIA, 100
 ;	givepoke HEATRAN, 100 
 ;	givepoke H__GOODRA, 100 
@@ -135,10 +135,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-;	opentext
-;	special KimonoDVsUpdate
-;	waitendtext
-	warp SINJOH_DORMS, 4, 7
+	warp ANARRES_DORMS, 4, 7
 	end
 
 DebugCPU:

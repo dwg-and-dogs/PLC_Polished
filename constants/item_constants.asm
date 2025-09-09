@@ -606,7 +606,7 @@ NUM_APRICORNS EQU const_value - 1
 	const SHINY_CHARM  ; 0c
 	const OVAL_CHARM   ; 0d
 	const CATCH_CHARM  ; 0e
-	const TIMEPIECE	   ; 0f
+	const NATU_CALL	   ; 0f
 	const KURTS_MAP	   ; 10
 	const MINT_LEAF_K   ; 11
 	const TINYMUSHROOM_K; 12

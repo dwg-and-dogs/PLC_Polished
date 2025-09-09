@@ -32,6 +32,7 @@ EerieHamletDorms_MapScriptHeader:
 	
 
 NatuScriptHamletDorms:
+	blackoutmod EERIE_HAMLET
 	opentext
 	writetext Hamlet_NatuText_1
 	promptbutton
@@ -44,6 +45,9 @@ Hamlet_NatuText_1:
 	line "It can teleport"
 	para "to the present to"
 	line "manage the party."
+
+	para "It also sets the"
+	line "waypoint here."
 	done
 
 HamletDormsNPC1Text:
@@ -76,8 +80,8 @@ SneaselText:
 	done
 
 HamletDormsBed:
-	showtext HamletBedText1
-	
+	blackoutmod EERIE_HAMLET
+	showtext HamletBedText1	
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
@@ -97,6 +101,9 @@ HamletBedText1:
 HamletBedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+
+	para "Waypoint set to"
+	line "Eerie Hamlet."
 	done
 
 
@@ -172,6 +179,7 @@ Text_EerieDormsTutorTaught:
 	done
 
 HamletDormsKurtScript:
+	blackoutmod EERIE_HAMLET
 	faceplayer
 	opentext
 	writetext KurtEHDormsText

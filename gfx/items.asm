@@ -329,7 +329,7 @@ PumiceHarpIcon::    INCBIN "gfx/items/pumice_harp.2bpp.lz"
 ShinyCharmIcon::   INCBIN "gfx/items/shiny_charm.2bpp.lz"
 OvalCharmIcon::    INCBIN "gfx/items/oval_charm.2bpp.lz"
 CatchCharmIcon::   INCBIN "gfx/items/catch_charm.2bpp.lz"
-TimePieceIcon::    INCBIN "gfx/items/timepiece.2bpp.lz"  
+NatuCallIcon::    INCBIN "gfx/items/natucall.2bpp.lz"  
 
 
 SECTION "Key Item Icons 2", ROMX

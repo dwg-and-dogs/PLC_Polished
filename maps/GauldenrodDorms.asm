@@ -25,6 +25,7 @@ GauldenrodDorms_MapScriptHeader:
 	
 
 NatuScriptGauldenrodDorms:
+	blackoutmod GAULDENROD
 	opentext
 	writetext Gauldenrod_NatuText_1
 	promptbutton
@@ -37,6 +38,10 @@ Gauldenrod_NatuText_1:
 	line "It can teleport"
 	para "to the present to"
 	line "manage the party."
+
+	para "It also sets the"
+	line "waypoint here."
+
 	done
 
 
@@ -80,6 +85,7 @@ GauldenrodDormsBed:
 	special RestartMapMusic
 	special Special_FadeInQuickly
 	showtext GauldenrodBedText2
+	blackoutmod GAULDENROD
 	end
 
 GauldenrodBedText1:
@@ -90,9 +96,13 @@ GauldenrodBedText1:
 GauldenrodBedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+
+	para "Waypoint set to"
+	line "Gauldenrod."
 	done
 
 GauldenrodDormsKurtScript:
+	blackoutmod GAULDENROD
 	faceplayer
 	opentext
 	writetext KurtGauldenrodDormsText

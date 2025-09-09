@@ -272,7 +272,7 @@ KeyItemDescriptions:
 	dw ShinyCharmDesc
 	dw OvalCharmDesc
 	dw CatchCharmDesc
-	dw TimePieceDesc
+	dw NatuCallDesc
 	dw KurtsMapDesc
 	dw MintLeafDesc
 	dw TinyMushroomDesc
@@ -1416,6 +1416,6 @@ KurtsMapDesc:
 	db 	  "For when you've" 
 	next  "lost your way.@"
 
-TimePieceDesc:
-	db    "Accurate within"
-	next  "160 years.@"
+NatuCallDesc:
+	db    "Call's Kurt's Natu"
+	next  "to fly away.@"

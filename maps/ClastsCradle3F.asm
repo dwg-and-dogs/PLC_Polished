@@ -23,6 +23,7 @@ ClastsCradle3F_MapScriptHeader:
 
 
 KurtScriptCC:
+	blackoutmod SULFUR_STY
 	faceplayer
 	opentext
 	checkevent EVENT_KURT_INTRO_MINE
@@ -74,6 +75,7 @@ KurtCradleText2:
 	done
 
 NatuScriptCC:
+	blackoutmod SULFUR_STY
 	opentext
 	writetext CC_NatuText_1
 	promptbutton
@@ -86,4 +88,6 @@ CC_NatuText_1:
 	line "It can teleport"
 	para "to the present to"
 	line "manage the party."
+	para "It also sets the"
+	line "waypoint here."
 	done

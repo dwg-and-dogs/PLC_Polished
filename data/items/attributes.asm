@@ -555,8 +555,8 @@ KeyItemAttributes: ; ; Return 1 in wItemAttributeParamBuffer and carry if wCurKe
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; CATCH CHARM
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
-; TIMEPIECE
-	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
+; NATU_CALL
+	key_item_attribute 0, ITEMMENU_CLOSE, ITEMMENU_NOUSE
 ; KURTS_MAP
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 

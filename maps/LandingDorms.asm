@@ -32,6 +32,7 @@ LandingDorms_MapScriptHeader:
 
 
 NatuScriptLandingDorms:
+	blackoutmod TRADERS_LANDING
 	opentext
 	writetext Landing_NatuText_1
 	promptbutton
@@ -44,6 +45,9 @@ Landing_NatuText_1:
 	line "It can teleport"
 	para "to the present to"
 	line "manage the party."
+
+	para "It also sets the"
+	line "waypoint here."
 	done
 
 
@@ -95,6 +99,7 @@ LandingDormsNPC3Text:
 	
 
 TradersLandingDormsBed:
+	blackoutmod TRADERS_LANDING
 	showtext TradersLandingBedText1
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
@@ -114,10 +119,15 @@ TradersLandingBedText1:
 TradersLandingBedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+
+
+	para "Waypoint set to"
+	line "Trader's Landing."
 	done
 
 
 LandingDormsKurtScript:
+	blackoutmod TRADERS_LANDING
 	faceplayer
 	opentext
 	writetext KurtTLDormsText
