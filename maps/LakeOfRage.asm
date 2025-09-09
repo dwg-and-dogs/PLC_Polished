@@ -111,6 +111,7 @@ LakeOfRageSignPryceText:
 	done
 
 LakeRivalScript:
+	blackoutmod LAKE_OF_RAGE
     showemote EMOTE_SHOCK, PLAYER, 15
     special Special_FadeOutMusic
     pause 15
@@ -162,6 +163,7 @@ LakeRivalScript:
 	special Special_CelebiShrineEvent
 	special FadeOutPalettes
 	waitsfx
+	blackoutmod TRANQUIL_TARN
 	warp TRANQUIL_TARN, 12, 4
 	end
 
@@ -451,6 +453,7 @@ LakePryceScript:
 	special Special_CelebiShrineEvent
 	special FadeOutPalettes
 	waitsfx
+	blackoutmod TRANQUIL_TARN
 	warp TRANQUIL_TARN, 12, 4
 	end
 

@@ -14,6 +14,7 @@ TranquilTarn_MapScriptHeader:
 
 
 	def_bg_events  
+	bg_event 16, 29, BGEVENT_READ, TranquilTarnShrineScript
 
 	def_object_events
 	object_event  28,  20, SPRITE_BIRD_KEEPER, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperHank, EVENT_BEAT_KANNA
@@ -24,9 +25,9 @@ TranquilTarn_MapScriptHeader:
 	object_event  26,  25, SPRITE_BUG_MANIAC, 	SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBugManiacRob, EVENT_BEAT_KANNA
 	object_event 20, 6, SPRITE_AROMA_LADY, 	SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TranquilTarnNPC1Script, EVENT_BEAT_KANNA
 	object_event 11, 10, SPRITE_BLACK_BELT, 	SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TranquilTarnNPC2Text, EVENT_BEAT_KANNA
-	object_event 23, 10, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TranquilTarnBrigaderScript, -1	
+	object_event 23, 10, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TranquilTarnBrigaderScript, -1
 	pokemon_event  24, 10, GYARADOS, -1, -1, PAL_NPC_BLUE, GyaradosText, EVENT_BEAT_KANNA
-	fruittree_event 17, 26, FRUITTREE_TRANQIL_TARN_1, TOUGH_LEAVES, PAL_NPC_GREEN;OK
+	fruittree_event 19, 30, FRUITTREE_TRANQIL_TARN_1, TOUGH_LEAVES, PAL_NPC_GREEN;OK
 	fruittree_event 36,  5, FRUITTREE_TRANQIL_TARN_2, RADIANT_OPAL, PAL_NPC_RED;OK
 	tmhmball_event 31, 29, TM_AVALANCHE, EVENT_TM_AVALANCHE
 	itemball_event 26, 33, ENERGY_ROOT, 1, EVENT_TARN_ITEM_1
@@ -59,37 +60,37 @@ TranquilTarnFlyPoint:
 	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
 	endcallback
 	
-;TranquilTarnShrineScript:
-;	opentext
-;	writetext AskToTimeTravelText_TT
-;	yesorno
-;	iffalse_jumpopenedtext NoTimeTravelText_TT
-;	writetext YesTimeTravelText_TT
-;	waitbutton
-;	closetext
-;	playsound SFX_WARP_TO
-;	special FadeOutPalettes
-;	waitsfx
-;	warp LAKE_OF_RAGE, 0, 0 ; todo 
-;	end
-;
-;AskToTimeTravelText_TT:
-;	text "A Celebi shrine"
-;	line "built at the last"
-;	para "commune of Johto"
-;	line "and Hisui."
-;	
-;	para "Ask her to travel"
-;	line "back in time?"
-;	done
-;
-;NoTimeTravelText_TT:
-;	text "Staying put."
-;	done
-;	
-;YesTimeTravelText_TT:
-;	text "Time to go!"
-;	done
+TranquilTarnShrineScript:
+	opentext
+	writetext AskToTimeTravelText_TT
+	yesorno
+	iffalse_jumpopenedtext NoTimeTravelText_TT
+	writetext YesTimeTravelText_TT
+	waitbutton
+	closetext
+	playsound SFX_SNORE
+	special FadeOutPalettes
+	waitsfx
+	blackoutmod LAKE_OF_RAGE
+	warp LAKE_OF_RAGE, 21, 32  
+	end
+
+AskToTimeTravelText_TT:
+	text "It's a shrine to"
+	line "a blue and gray"
+	para "sauropod-like"
+	line "#mon."
+	
+	para "Give an offering?"
+	done
+
+NoTimeTravelText_TT:
+	text "None given."
+	done
+	
+YesTimeTravelText_TT:
+	text "There's a roar!"
+	done
 
 GenericTrainerBirdKeeperHank:
 	generictrainer BIRD_KEEPER, HANK, EVENT_BEAT_BIRD_KEEPER_HANK, HankSeenText, HankBeatenText

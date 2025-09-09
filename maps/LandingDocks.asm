@@ -53,6 +53,7 @@ LandingDocksScene_AfterCaptainLeaves:
 	sjump PickupDocksScene
 
 LandingDocksScene:
+	blackoutmod CIANWOOD_COVE
 	special Special_FadeOutMusic
 	pause 30
 	playmusic MUSIC_LUGIA_BATTLE_HGSS ; MUSIC_BATTLE_FACTORY_RSE ; MUSIC_FRONTIER_BRAIN_BATTLE_RSE, MUSIC_ELITE_FOUR_BATTLE_SM

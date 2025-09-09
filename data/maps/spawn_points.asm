@@ -29,7 +29,7 @@ SpawnPoints:
 	spawn CIANWOOD_CITY,              13, 44 ; sorta done 
 	spawn OLIVINE_CITY,               13, 18 ; works 
 	spawn MAHOGANY_TOWN,              15, 14 ; works
-	spawn LAKE_OF_RAGE,               21, 29 ; needs a hardcode exception 
+	spawn LAKE_OF_RAGE,               21, 31 ; needs a hardcode exception 
 
 	spawn N_A,                        -1, -1
 

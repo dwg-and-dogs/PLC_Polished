@@ -64,7 +64,7 @@ Route41SageScript:
 	disappear ROUTE41_SAGE_2
 	setevent EVENT_ROUTE_41_SAGE_1
 	setevent EVENT_ROUTE_41_SAGE_2
-	; teleports away
+	blackoutmod SHELTERED_SHORES
 	end
 
 Route41SageImpressedText:

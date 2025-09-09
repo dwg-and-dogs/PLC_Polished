@@ -92,3 +92,8 @@ ManiaWarpDollText1:
 ManiaWarpDollNoText:
 	text "Leaving it be."
 	done
+
+ManiaWarpText:
+	text "Nothing feels"
+	line "quite like home."
+	done

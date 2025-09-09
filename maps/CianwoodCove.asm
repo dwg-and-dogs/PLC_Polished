@@ -25,6 +25,7 @@ CianwoodCove_MapScriptHeader:
 
 
 CianwoodCoveKurtScript:
+	blackoutmod CIANWOOD_COVE
 	faceplayer
 	opentext
 	writetext KurtExplainsTheStormText
@@ -55,6 +56,7 @@ KurtExplainsTheStormText:
 
 
 NatuScriptCianwoodCove:
+	blackoutmod CIANWOOD_COVE
 	opentext
 	writetext Cianwood_NatuText_1
 	promptbutton
@@ -67,6 +69,9 @@ Cianwood_NatuText_1:
 	line "It can teleport"
 	para "to the present to"
 	line "manage the party."
+
+	para "It also sets the"
+	line "waypoint here."
 	done
 
 
@@ -82,7 +87,8 @@ CianwoodCovetimeTravelScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	
-	warp CIANWOOD_CITY, 14, 20
+	blackoutmod CIANWOOD_CITY
+	warp CIANWOOD_CITY, 14, 20	
 	end
 
 CCAskToTimeTravelText:

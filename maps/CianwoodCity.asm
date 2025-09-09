@@ -103,6 +103,7 @@ CianwoodEusineScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	
+	blackoutmod CIANWOOD_COVE
 	warp CIANWOOD_COVE, 11, 15
 	end
 	
@@ -253,6 +254,7 @@ CianwoodCityShrineScript: ; revise: show painting of lugia
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
+	blackoutmod CIANWOOD_COVE
 	warp CIANWOOD_COVE, 10, 14
 	end
 
