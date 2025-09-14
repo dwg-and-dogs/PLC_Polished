@@ -1,2 +1,0 @@
-1) replace champion group with kurt_final
-2) move nomad_m and nomad_f between ace duo and veteran_m

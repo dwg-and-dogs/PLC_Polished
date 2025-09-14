@@ -1,8 +1,14 @@
 Top: Kurt, Pryce, Player Sprites
 Bottom: Emperor, Adrinna, Bobesh, Kensey 
 
-Screenshot 1: Finding a radian opal, crafting it
 Screenshot 2: Tinder Garden Scene
+Screenshots:
+*Vs. Bobesh 1
+*Vs. Kensey 1
+*Vs. Adrinna 1
+*Fixed Charge to Deci Ball
+*Minsir (better picture -- show the type)
+*Vs. Emperor on the roof 
 
 Text: "Embark on a time-traveling adventure through Johto! 
 
@@ -13,3 +19,4 @@ In modern times, an environmental crisis is brewing as gym leaders neglect their
 To set Johto on a better course, join Kurt as you travel 160 years in the past. Johto was in danger of being taken over by a power-hungry Emperor and his three generals: the cunning Adrinna, the fearsome Bobesh, and calculating Kensey. 
 
 You'll find new pokemon, tough puzzles, and hard decisions in Pokémon Crystal: Inheritance!
+

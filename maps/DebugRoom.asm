@@ -275,11 +275,11 @@ Breeder1Script:
 	iffalse_jumpopenedtext Breeder1SayNoText
 	writetext Breeder1Text	
 	; good party
-;	givepoke H__TYPHLOSION, NO_FORM, 100, LEFTOVERS
-;	loadmem wPartyMon1Moves+0, FLAMETHROWER
-;	loadmem wPartyMon1Moves+1, SHADOW_BALL
-;	loadmem wPartyMon1Moves+2, EARTHQUAKE
-;	loadmem wPartyMon1Moves+3, THUNDERPUNCH
+	givepoke H__ZOROARK, NO_FORM, 50, LEFTOVERS
+	loadmem wPartyMon1Moves+0, NASTY_PLOT
+	loadmem wPartyMon1Moves+1, SHADOW_BALL
+	loadmem wPartyMon1Moves+2, PSYCHIC_M
+	loadmem wPartyMon1Moves+3, MOONBLAST
 	; hm mules
 ;	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
 ;	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
@@ -305,10 +305,15 @@ Breeder1Script:
 ;	loadmem wPartyMon3PP+1, 15
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
-	; trying to set DVs...HP_ATK_DV from POKEMON_DATA_CONSTANTS?
-	loadmem wPartyMon1DVs+0, $fe
+	; bug 
+	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+	loadtrainer CHUCK, 1
+	startbattle
+	reloadmap
+	showtext DWGTextAfter1
+	special HealPartyEvenForNuzlocke
 ;	callasm FillPokedex
 	closetext
 	end

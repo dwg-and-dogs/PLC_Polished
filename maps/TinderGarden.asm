@@ -198,7 +198,7 @@ KurtText_Intro_3:
 	next
 	text_start 
 	text "Take a joke,"
-	line "spaz!"
+	line "kid!"
 	done
 	
 OakText_Pokedex:
@@ -303,9 +303,8 @@ WasThatCelebiTextOak:
     text " Oak: "
 	next
 	text_start 
-	text "My #dex"
-	line "doesn't recognize"
-	cont "two of them."
+	text "Two of them are"
+	line "not from Johto!"
 	done
 
 WasThatCelebiTextKurt:
@@ -315,14 +314,14 @@ WasThatCelebiTextKurt:
 	text_start
 	text "Hold on, I"
 	line "know these from"
-	para "an old book."
-	line "These three were"
-	para "carried a hero"
-	line "from Hisui."
+	cont "an old book."
+	para "These three were"
+	line "carried by a hero"
+	cont "from Hisui."
 	
-	para "Kurt: Celebi"
+	para "Clearly, Celebi"
 	line "brought them for"
-	para "us. You both"
+	para "you both. You"
 	line "should pick one!"
 	done
 
@@ -393,7 +392,7 @@ TGKurtChecksBalls:
 	step_end
 
 TGWhereYouGoing:
-	text "Kurt: Wait! Where"
+	text "Wait! Where"
 	line "are you going?"
 	done
 
@@ -533,8 +532,7 @@ TakeCyndaquilText:
 	next
 	text_start
 	text "So, you want"
-	line "Cyndaquil, the"
-	cont "fire #mon?"
+	line "Cyndaquil?"
 	
 	para "You know, that"
 	line "was your dad's"
@@ -547,8 +545,7 @@ TakeOshawottText:
 	next
 	text_start
 	text "So, you want"
-	line "Oshawott, the"
-	cont "water #mon?"
+	line "Oshawott?"
 	done
 
 TakeRowletText:
@@ -557,8 +554,7 @@ TakeRowletText:
 	next
 	text_start
 	text "So, you want"
-	line "Rowlet, the"
-	cont "grass #mon?"
+	line "Rowlet?"
 	done
 
 DidntChooseStarterText:
@@ -619,9 +615,8 @@ KurtDontLoseItText:
 	cont "this one in the"
 	cont "forest..."
 	
-	para "Now let's all"
-	line "go rebuild the"
-	cont "shrine!"
+	para "Now to go rebuild"
+	line "the shrine!"
 	done
 
 RivalPicksRowletMovement:
@@ -763,10 +758,9 @@ CelebiHeroText:
     text " Celebi: "
 	next
 	text_start 
-	text "Something unnat-"
-	line "ural threatens"
-	para "my forest!"
-	line "Help!"
+	text "An unnatural"
+	line "force threatens"
+	cont "my forest! Help!"
 	done
 
 OakScript:
@@ -820,13 +814,18 @@ PryceWatchKurtPleaseText3:
 	next
 	text_start
 	text "Kurt's always been"
-	line "steadfast, but I"
-	para "see a rigidity as"
-	line "he wields tradit-"
-	para "ion as a sword,"
-	line "rather than the"
-	para "bridge it should"
-	line "be, <PLAYER>."
+	line "steadfast."
+	
+	para "But now, he uses"
+	line "tradition like a"
+	para "weapon against"
+	line "anyone he disa-"
+	cont "grees with."
+	
+	para "Tradition should"
+	line "bring people in,"
+	para "not guard against"
+	line "newcomers!"
 	done
 
 PryceWatchKurtPleaseText4:
@@ -837,12 +836,12 @@ PryceWatchKurtPleaseText4:
 	text "He's not entirely"
 	line "wrong, mind you."
 	
-	para "Johto could use "
-	line "more people who "
+	para "Johto could use"
+	line "more people who"
 	para "care about their"
-	line "community's leg-"
-	cont "acy, not their"
-	cont "own legacy."
+	line "community's"
+	para "legacy, not just"
+	line "their own."
 	done
 
 
@@ -862,8 +861,8 @@ PrycePokemonText:
 
 	para "This gift is for"
 	line "you. This TM grows"
-	cont "stronger with"
-	cont "your bond!"
+	para "stronger with"
+	line "your bond!"
 	done
 
 PryceWatchKurtPleaseText2:
@@ -882,11 +881,10 @@ TGKurtScript:
 	jumpopenedtext TGKurtFirstPokemonText
 
 OakPokemonText:
-	text "What strange"
-	line "#mon. I"
-	cont "haven't had a"
-	cont "rush like that"
-	cont "in years!"
+	text "How strange!"
+	line "I haven't had a"
+	para "rush like that in"
+	line "over 20 years!"
 	done
 
 
@@ -928,8 +926,7 @@ RivalIndependentText:
     text " <RIVAL>: "
 	next
 	text_start
-	text "No one"
-	para "appreciates my"
+	text "No one see my"
 	line "ingenuity."
 	done
 
@@ -999,8 +996,8 @@ TGRivalText_YouLost:
 	
 	para "I know I can"
 	line "reach my true"
-	cont "power without"
-	cont "you all hold-"
+	para "power without"
+	line "you all hold-"
 	cont "ing me back."
 	done
 
@@ -1019,8 +1016,6 @@ TGRivalGoodbyeText:
 	para "Who put you in"
 	line "charge, anyway?"
 	done
-
-
 
 PlayerMovesForRivalBattle:
 	step_left
@@ -1074,12 +1069,10 @@ KurtLeavesInAHurryMovement:
 
 TGTreeText:
 	text "A beautiful"
-	line "blossoming "
-	cont "tree. "
+	line "blossoming tree."
 	
-	para "Its aromatic"
-	line "bark will att-"
-	cont "ract #mon."
+	para "Its aromatic bark"
+	line "beckons #mon."
 	done
 
 CelebiScript:

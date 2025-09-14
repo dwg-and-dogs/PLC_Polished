@@ -282,9 +282,8 @@ WeirdTextGoldenrodCenter:
 IlexExcelsiorV3Text:
 	text "Ilex Excelsior"
 	
-	para "When the tree"
-	line "rings, will"
-	cont "you answer"
+	para "If the tree rings"
+	line "will you answer"
 	
 	para "Third Edition"
 
