@@ -13,9 +13,9 @@ Route33_MapScriptHeader:
 	bg_event 11, 11, BGEVENT_JUMPTEXT, Route33SignText
 
 	def_object_events
-	object_event 7, 12, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHikerAnthony, -1
+	object_event  6, 12, SPRITE_HIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHikerAnthony, -1
 	object_event 12, 17, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSchoolgirlImogen, -1
-	object_event 13, 16, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route33PayDayScript, -1 
+	object_event 13, 16, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route33PayDayScript, -1
 	fruittree_event 14, 16, FRUITTREE_ROUTE_33, PECHA_BERRY, PAL_NPC_RED
 
 GenericTrainerHikerAnthony:
@@ -93,20 +93,17 @@ Route33TutorPayDayScript:
 	jumpopenedtext Text_Route33TutorTaught ;;
 	
 Text_PayDayIntro: 
-	text "I got fired"
-	line "from my job as"
-	cont "a dishwasher."
+	text "I was fired from"
+	line "a dishwasher job."
 	
-	para "I don't know"
-	line "why, I was just"
-	para "using cold water"
-	line "to rinse the"
-	cont "dishes."
+	para "It's not fair! I"
+	line "was just rinsing"
+	para "the dishes with"
+	line "ColdWater."
 	
-	para "Anyway, now"
-	line "we are farming"
-	para "Pay Day to "
-	line "make rent."
+	para "Anyway, now we're"
+	line "farming Pay Day"
+	cont "to make rent."
 	done
 
 Text_Route33TutorPayDay:

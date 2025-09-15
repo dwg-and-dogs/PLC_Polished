@@ -38,8 +38,8 @@ AzaleaTown_MapScriptHeader:
 ; others 
 	object_event 26,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 			PAL_NPC_BLUE, 		OBJECTTYPE_SCRIPT, 0, PokemonMemoriesNPCScript, -1
 	object_event 12, 16, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, 						OBJECTTYPE_SCRIPT, 0, AzaleaTownMatronScript, -1
-	object_event 13,  8, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, 						OBJECTTYPE_SCRIPT, 0, KurtAZScript, EVENT_CHARCOAL_TALKED
-	object_event 15, 11, SPRITE_CAMPER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 							OBJECTTYPE_SCRIPT, 0, AzaleaTownYoungsterScript, -1
+	object_event 13,  7, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, 						OBJECTTYPE_SCRIPT, 0, KurtAZScript, EVENT_CHARCOAL_TALKED
+	object_event 17, 13, SPRITE_CAMPER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 							OBJECTTYPE_SCRIPT, 0, AzaleaTownYoungsterScript, -1
 ; others 
 	object_event  8, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 	object_event 29,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
@@ -331,6 +331,7 @@ PokemonMemoriesNPCScript:
     checkevent EVENT_GOT_SILK_SCARF_FROM_MEMORIES_NPC
     iftrue .CheckPidgey
 	writetext AzaleaUsedToBeATrainerText
+	waitbutton
     writetext AskForTeddiursaText
     promptbutton
     checkpoke TEDDIURSA

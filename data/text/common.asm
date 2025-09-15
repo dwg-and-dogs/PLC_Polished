@@ -177,7 +177,7 @@ _OakTimeWokeUpText::
 	line "………………………………"
 
 	para "Zzz… Hm? Wha…?"
-	line "You woke me up!"
+	line "I dozed off!"
 
 	para "Will you check the"
 	line "clock for me?"
@@ -3272,9 +3272,10 @@ _ElmText1::
 	line "Today is your"
 	cont "ceremony!"
 	
-	para "Grandpa Kurt will"
-	line "make sure it all"
-	cont "goes to plan."
+	para "The ceremony has"
+	line "been a part of"
+	para "Azalea culture"
+	line "for generations!"
 	
 	para "It means that you"
 	line "are ready to care"
@@ -3282,6 +3283,7 @@ _ElmText1::
 	
 	para "It's how we pass"
 	line "down our values!"
+
 	para "Feed the saplings"
 	line "and prune weeds."
 
@@ -3293,9 +3295,9 @@ _ElmText1::
 	line "ask your dad, but"
 	para "some traditions"
 	line "are worth bending"
-	para "rules for. This"
-	line "is your legacy"
-	cont "too."
+	cont "the rules for."
+	para "This is your"
+	line "legacy too."
 	prompt
 
 
@@ -3336,25 +3338,24 @@ _ElmText4::
 
 SECTION "_ElmText5", ROMX
 _ElmText5::
-	text "This drought..."
-	line "I hope it breaks"
-	para "soon. People are"
-	line "turning to Silph"
-	cont "technology."
+	text "This drought…"
+	line "I hope it breaks."
+	para "People are losing"
+	line "faith in the old"
+	cont "ways, and turning"
+	cont "towards Silph."
 	
 	para "Your parents too."
 	line "But I - um, we"
 	cont "know better."
 	
-	para "Can Silph's inve-"
-	line "ntions really do"
-	cont "better than me?"	
+	para "We don't need any"
+	line "of that here!"
 	
 	para "Oh, I've gone on"
 	line "too long. Let's"
 	cont "focus on you."
 	prompt
-
 
 
 SECTION "_ElmText6", ROMX
@@ -3373,12 +3374,12 @@ _ElmText7::
 	
 	para "After today, you"
 	line "carry the hopes"
-	cont "and dreams of all"
-	cont "who came before."
+	para "and dreams of all"
+	line "who came before."
 	
-	para "When the tree"
-	line "rings, I know you"
-	cont "will answer."
+	para "If the tree rings"
+	line "I know you will"
+	cont "answer."
 	done
 
 

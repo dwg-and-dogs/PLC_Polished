@@ -676,7 +676,7 @@ Rival0Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 5, ROWLET, NO_ITEM
+	db 5, ROWLET, ORAN_BERRY
 	db -1 ; end
 
 ; ================
@@ -685,7 +685,7 @@ Rival0Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 5, CYNDAQUIL, NO_ITEM
+	db 5, CYNDAQUIL, ORAN_BERRY
 	db -1 ; end
 
 ; ================
@@ -694,7 +694,7 @@ Rival0Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 5, OSHAWOTT, NO_ITEM
+	db 5, OSHAWOTT, ORAN_BERRY
 	db -1 ; end
 
 ; ================
@@ -7927,7 +7927,7 @@ EngineerGroup:
 	db "Camden@"
 	db TRAINERTYPE_MOVES ; ILEX FOREXT 
 	; party
-	db 5, SCIZOR ;tried lv 10, way too hard
+	db 7, SCIZOR ;tried lv 10, way too hard
 		db CUT, LEER, AGILITY, FOCUS_ENERGY
 	db -1 ; end
 

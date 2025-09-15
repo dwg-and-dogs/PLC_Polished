@@ -219,9 +219,8 @@ OakText_Balls:
     text " Oak: "
 	next
 	text_start 
-	text "And you will"
-	line "want these to"
-	cont "fill it up."
+	text "You'll want these"
+	line "to fill it up."
 	done
 
 OakText_PokedexRival:
@@ -229,7 +228,7 @@ OakText_PokedexRival:
     text " Oak: "
 	next
 	text_start 
-	text "I brought one"
+	text "I brought them"
 	line "for you as well."
 	done
 
@@ -477,6 +476,7 @@ OshawottPokeBallScript:
 	writetext KurtGreatJobText
 	turnobject TINDER_GARDEN_KURT, RIGHT
 	writetext KurtDontLoseItText
+	waitbutton
 	turnobject TINDER_GARDEN_KURT, DOWN
 	closetext
 	setevent EVENT_KURT_HEARS_LOGGERS
@@ -520,6 +520,7 @@ RowletPokeBallScript:
 	writetext KurtGreatJobText
 	turnobject TINDER_GARDEN_KURT, RIGHT
 	writetext KurtDontLoseItText
+	waitbutton
 	turnobject TINDER_GARDEN_KURT, DOWN
 	closetext
 	setevent EVENT_KURT_HEARS_LOGGERS
@@ -991,14 +992,13 @@ TGRivalText_YouLost:
     text " <RIVAL>: "
 	next
 	text_start
-	text "This is just"
-	line "the beginning."
+	text "This is the start"
+	line "of my story."
 	
-	para "I know I can"
-	line "reach my true"
-	para "power without"
-	line "you all hold-"
-	cont "ing me back."
+	para "I can reach my"
+	line "potential without"
+	para "you all holding"
+	line "me back."
 	done
 
 TGRivalGoodbyeText:
@@ -1006,7 +1006,7 @@ TGRivalGoodbyeText:
     text " <RIVAL>: "
 	next
 	text_start
-	text "With my own"
+	text "Now, with my own"
 	line "#mon, I'm"
 	cont "leaving."
 	

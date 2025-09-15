@@ -535,29 +535,30 @@
 	def_grass_wildmons SLOWPOKE_WELL_B2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 6, ZUBAT
-	wildmon 7, EKANS
-	wildmon 6, WOOPER
-	wildmon 7, EKANS
-	wildmon 6, WOOPER
+	wildmon 3, ZUBAT
+	wildmon 4, EKANS
+	wildmon 3, WOOPER
+	wildmon 4, EKANS
+	wildmon 3, WOOPER
 	wildmon 4, SLOWPOKE
-	wildmon 4, WOOPER
+	wildmon 3, WOOPER
 	; day
-	wildmon 6, ZUBAT
-	wildmon 7, WOOPER
-	wildmon 6, ZUBAT
-	wildmon 7, EKANS
-	wildmon 6, WOOPER
-	wildmon 4, SLOWPOKE
+	wildmon 3, ZUBAT
 	wildmon 4, WOOPER
+	wildmon 3, ZUBAT
+	wildmon 4, EKANS
+	wildmon 3, WOOPER
+	wildmon 4, SLOWPOKE
+	wildmon 3, WOOPER
 	; nite
-	wildmon 6, ZUBAT
-	wildmon 7, WOOPER
-	wildmon 6, ZUBAT
-	wildmon 7, EKANS
-	wildmon 6, WOOPER
-	wildmon 4, SLOWPOKE
+	wildmon 3, ZUBAT
 	wildmon 4, WOOPER
+	wildmon 3, ZUBAT
+	wildmon 4, EKANS
+	wildmon 3, WOOPER
+	wildmon 4, SLOWPOKE
+	wildmon 3, WOOPER
+	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B3F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

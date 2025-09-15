@@ -68,11 +68,15 @@ AzaleaPokeCenter1FToughLeavesScript:
 	jumpopenedtext NoPearlForToughLeavesText ;;
 
 PearlForToughLeavesText:
-	text "Hey, did you know"
-	line "that leaves in"
-	para "Ilex Forest are"
-	line "are the toughest"
-	cont "in the world!"
+	text "Did you know that"
+	line "leaves from Ilex"
+	para "Forest are the"
+	line "toughest in the"
+	cont "whole world?"
+	
+	para "One handful is at"
+	line "least worth a"
+	cont "Big Pearl."
 	done
 
 PearlForToughLeavesQuestionText:
@@ -81,12 +85,12 @@ PearlForToughLeavesQuestionText:
 	para "pearl for a few of"
 	line "these withered-"
 	para "I mean, verdant"
-	line "leaves."
+	line "Leaves."
 	done
 
 PearlForToughLeavesEndText:
 	text "<PLAYER> got 5"
-	line "TOUGH LEAVES."
+	line "Tough Leaves."
 
 	para "Come back any"
 	line "time."
@@ -101,11 +105,12 @@ NoPearlForToughLeavesText:
 	done
 
 AzaleaPokeCenter1FGentlemanText:
-	text "I wonder if the"
-	line "drought is conne-"
-	para "cted to the Slow-"
-	line "poke being driven"
-	cont "out of the well."
+	text "Could the drought"
+	line "be connected to"
+	para "the construction"
+	line "in Union Cave"
+	para "disturbing the"
+	line "Slowpoke Well?"
 	done
 
 AzaleaPokeCenter1FSightseermText:

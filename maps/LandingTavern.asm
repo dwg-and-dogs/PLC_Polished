@@ -17,8 +17,8 @@ LandingTavern_MapScriptHeader:
 
 
 	def_object_events
-	object_event 1, 5, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingTavernNomad1, -1
-	object_event 2, 5, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingTavernNomad2, -1
+	object_event  3,  4, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingTavernNomad1, -1
+	object_event  4,  4, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingTavernNomad2, -1
 	object_event 7, 2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingTavernSailorText, EVENT_BEAT_KENSEY_PORT
 	object_event 8, 2, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingTavernSailorText, EVENT_BEAT_KENSEY_PORT
 
