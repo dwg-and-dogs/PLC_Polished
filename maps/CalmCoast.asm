@@ -62,8 +62,11 @@ YoungsterWarrenBeatenText:
 GenericTrainerCooltrainerMGaven:
 	generictrainer COOLTRAINERM, GAVEN1, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainerMGavenSeenText, CooltrainerMGavenBeatenText
 
-	text "I lost? Now that's"
-	line "bizarre."
+	text "The bazaar has so"
+	line "many vendors."
+	
+	para "You have to check"
+	line "it out!"
 	done
 
 CooltrainerMGavenBeatenText:
@@ -79,9 +82,13 @@ CooltrainerMGavenSeenText:
 GenericTrainerYoungsterJimmy:
 	generictrainer SCHOOLBOY, JACK1, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJackSeenText, SchoolboyJackBeatenText
 
-	text "Now I'll never"
-	line "make it as a"
-	cont "brigader."
+	text "The strongest"
+	line "#mon trainers"
+	cont "become brigaders."
+	
+	para "It's a brand new"
+	line "division started"
+	cont "by the Consul!"
 	done
 
 SchoolboyJackSeenText:
@@ -115,8 +122,9 @@ BattleGirlSubaruBeatenText:
 GenericTrainerBattleGirlDiane:
 	generictrainer BATTLE_GIRL, DIANE, EVENT_BEAT_BATTLE_GIRL_DIANE, BattleGirlDianeSeenText, BattleGirlDianeBeatenText
 
-	text "Crashed and"
-	line "burned."
+	text "We're training for"
+	line "an attack on the"
+	cont "Stadium."
 	done
 
 BattleGirlDianeSeenText:
@@ -208,19 +216,15 @@ CalmCoastKurtText:
 
 	para "Once, on the way"
 	line "back to Azalea, he"
-	cont "was playing with"
-	para "an apricorn and"
-	line "caught"
-	cont "a Cyndaquil."
+	para "was playing with"
+	line "an apricorn and"
+	para "accidentally got"
+	line "a Cyndaquil!"
 	
 	para "The apricorn had"
 	line "a soft glow in"
-	cont "his hands with the"
-	cont "#mon inside!"
-
-	para "It was so simple."
-	line "He caught it the"
-	cont "right way."
+	para "his hands with the"
+	line "#mon inside!"
 	
 	para "If you ever want"
 	line "to hear it again,"
@@ -243,6 +247,7 @@ CalmCoastSign2Text:
 	line "Damaging Oshawott"
 	cont "dams is punishable"
 	cont "by imprisonment."
+	done
 
 CalmCoastSign1Text:
 	text "The Calm Coast"

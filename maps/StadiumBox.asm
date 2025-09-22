@@ -191,10 +191,11 @@ AdrinnaDialogueStadium:
 	text_start
 	line "Your victory was"
 	cont "extraordinary."
+	
 
 	para "You achieved it"
-	line "through your own"
-	cont "merit."
+	line "by your own"
+	cont "Strength."
 
 	para "You have some"
 	line "potential, if you"
@@ -202,7 +203,6 @@ AdrinnaDialogueStadium:
 	line "misguided ideals."
 	done
 
-	
 StadiumBoxSandraWalksToPlayer:
 	step_up
 	step_up	

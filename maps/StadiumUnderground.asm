@@ -50,31 +50,28 @@ StadiumUndergroundBoulders:
 StadiumUndergroundNPC1Script:
 	faceplayer
 	checkevent EVENT_GOT_PROTECT_PADS_FROM_LIGHTHOUSE_LEADER
-	iftrue .AlreadyGotItem
+	iftrue_jumptext  StadiumUndergroundNPC1AfterText
 	opentext
 	writetext StadiumUndergroundNPC1Text
 	promptbutton
 	verbosegiveitem PROTECT_PADS
-	iffalse .BagFull
 	setevent EVENT_GOT_PROTECT_PADS_FROM_LIGHTHOUSE_LEADER
-	jumpthisopenedtext StadiumUndergroundNPC1GaveItemText
-.AlreadyGotItem:
-	jumptextfaceplayer StadiumUndergroundNPC1AfterText
-.BagFull:
-	jumpthisopenedtext StadiumUndergroundNPC1BagFullText
+	writetext StadiumUndergroundNPC1GaveItemText
+	waitbutton
+	closetext
+	end
+
 
 StadiumUndergroundNPC1Text:
 	text "Are you the new"
 	line "recruit?"
 	
-	para "Seems like you"
-	line "took the long way"
-	cont "here."
+	para "You took the long"
+	line "way here!"
 	
 	para "We've nearly"
 	line "finished divert-"
-	para "ing the under-"
-	line "ground river."
+	para "ing the springs."
 	
 	para "The rocks can be"
 	line "pretty rough on"
@@ -103,18 +100,13 @@ StadiumUndergroundNPC1AfterText:
 	cont "stadium."
 	done
 
-StadiumUndergroundNPC1BagFullText:
-	text "Oh? Your bag is"
-	line "full."
-	done
-
 StadiumUndergroundNPC2Script:
 	jumptextfaceplayer StadiumUndergroundNPC2Text
 
 StadiumUndergroundNPC2Text:
-	text "I don't know if I"
-	line "can go through"
-	cont "with this…"
+	text "Can we really do"
+	line "this? What if we"
+	cont "hurt Sandra?"
 	done
 
 StadiumUndergroundHealerScript:
@@ -140,8 +132,7 @@ StadiumUndergroundHealerScript:
 
 StadiumUndergroundHealerText:
 	text "There may be a"
-	line "big battle up"
-	cont "ahead."
+	line "battle ahead."
 
 	para "Let me heal your"
 	line "#mon."

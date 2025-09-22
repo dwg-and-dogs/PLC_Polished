@@ -24,7 +24,7 @@ Route36_MapScriptHeader:
 	
 	def_object_events
 	object_event  39,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, BRONZONG, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route36BronzongScript, EVENT_ROUTE_36_BRONZONG
-	object_event 50,  8, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, -1
+	object_event 50,  8, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ArthurScript, -1
 	fruittree_event 25,  4, FRUITTREE_ROUTE_36, WHT_APRICORN, PAL_NPC_SILVER ; USED TO BE A BERRY TREE
 	object_event 36, 13, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36KurtScript, EVENT_GOT_BASEMENT_KEY
 	object_event 24,  7, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36MatronScript, -1
@@ -260,27 +260,28 @@ MeetArthurText:
 
 	para "I'm Arthur of"
 	line "Thursday."
+	
+	para "The ruins are all"
+	line "collapsed in a"
+	cont "big rock pile!"
 	done
 
 ArthurGivesGiftText:
-	text "Take this if you"
-	line "are exploring"
-	para "the Ruins. You"
-	line "don't want to be"
-	para "buried under"
-	line "the tombs!"
+	text "It was just like"
+	line "my favorite TM:"
+	cont "Rock Slide!"
 	done
 
 ArthurGaveGiftText:
-	text "Arthur: That"
-	line "technique may"
-	para "make the foe"
-	line "flinch."
+	text "That technique"
+	line "may cause the foe"
+	cont "to flinch."
 	done
 
 ArthurThursdayText:
-	text "Arthur: I'm Arthur"
-	line "of Thursday."
+	text "That TM is great"
+	line "against Flying or"
+	cont "Fire-types."
 	done
 
 Route36SignText:

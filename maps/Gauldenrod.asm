@@ -128,7 +128,7 @@ GauldenrodNPC3Script:
 	iftrue_jumptextfaceplayer .Text3
 	jumpthistextfaceplayer
 
-	text "There's cool stuff"
+	text "There's neat stuff"
 	line "at the bazaar!"
 	
 	para "Apparently from"
@@ -323,7 +323,7 @@ GauldenrodHisuiTraderScript:
 	end
 
 .GiveLuxio:
-	givepoke LUXIO, 20
+	givepoke LUXIO, 15
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
 	writetext GauldenrodHisuiTraderLuxioText
@@ -332,7 +332,7 @@ GauldenrodHisuiTraderScript:
 	end
 
 .GiveRoselia:
-	givepoke ROSELIA, 20
+	givepoke ROSELIA, 15
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
 	writetext GauldenrodHisuiTraderRoseliaText
@@ -341,7 +341,7 @@ GauldenrodHisuiTraderScript:
 	end
 
 .GiveStaravia:
-	givepoke STARAVIA, 20
+	givepoke STARAVIA, 15
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
 	writetext GauldenrodHisuiTraderStaraviaText
@@ -350,7 +350,7 @@ GauldenrodHisuiTraderScript:
 	end
 
 .GiveVespiquen:
-	givepoke VESPIQUEN, 20
+	givepoke VESPIQUEN, 15
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
 	writetext GauldenrodHisuiTraderVespiquenText

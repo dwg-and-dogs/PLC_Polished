@@ -19,7 +19,7 @@ GauldenrodTower4F_MapScriptHeader:
 	object_event   1,  7, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_AMOS ; initialize this
 	pokemon_event  6,  2, CLEFAIRY, -1, -1, PAL_NPC_RED, GauldenrodClefairyText, EVENT_BEAT_SANDRA
 	object_event   5,  2, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GAULDENROD_ADRINNA ; initialize this
-	tmhmball_event 8,  7, TM_ROOST, EVENT_TM_ROOST
+	tmhmball_event 10,  7, TM_ROOST, EVENT_TM_ROOST
 ; new 
 
 
@@ -251,8 +251,8 @@ AmosText:
 	para "..."
 
 	para "I'd better leave"
-	para "before any brig-"
-	line "aders find me."
+	line "before Bobesh's"
+	cont "Brigaders see me."
 	done
 
 

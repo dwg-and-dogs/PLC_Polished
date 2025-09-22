@@ -67,14 +67,13 @@ AnarresStockroomNPC2Text:
 	done
 
 AnarresStockroomNPC3Text:
-	text "Why does the"
-	line "Elder use bug"
-	para "#mon? To"
-	line "remind us that"
-	para "nature isn't"
-	line "just cute"
-	para "Pikachu, but"
-	line "also scary"
+	text "Why does Hollis"
+	line "train bugs?"
+	
+	para "To remind us that"
+	line "nature isn't just"
+	para "cute Pikachus,"
+	line "but also scary"
 	cont "Ariados."
 	done
 

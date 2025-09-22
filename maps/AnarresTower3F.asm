@@ -49,7 +49,6 @@ AnarresTower3FEvent:
 	opentext
 	writetext HollisPastGuards
 	waitbutton
-	showemote EMOTE_SAD, ANARRES_TOWER_TAMMY, 60
 	writetext TammyExplains
 	waitbutton
 	closetext
@@ -61,15 +60,10 @@ AnarresTower3FEvent:
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
 	opentext
-	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 60
 	applyonemovement ANARRES_TOWER_HOLLIS, step_down
 	turnobject PLAYER, DOWN
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	showtext TammyText2
-;	waitbutton
-	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 60
-;	showtext HollisHmm
-;	waitbutton
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
 	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60

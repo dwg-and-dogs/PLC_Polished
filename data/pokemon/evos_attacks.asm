@@ -10,7 +10,7 @@ INCLUDE "data/pokemon/evos_attacks_pointers.asm" ;done
 EvosAttacks::
 
 CyndaquilEvosAttacks:
-	db EVOLVE_LEVEL, 12, QUILAVA
+	db EVOLVE_LEVEL, 16, QUILAVA
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -85,7 +85,7 @@ HtyphlosionEvosAttacks:
 	db 0 ; no more level-up moves
 
 RowletEvosAttacks:
-	db EVOLVE_LEVEL, 12, DARTRIX
+	db EVOLVE_LEVEL, 16, DARTRIX
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -161,7 +161,7 @@ HdecidueyeEvosAttacks:
 	db 0 ; no more level-up moves
 
 OshawottEvosAttacks:
-	db EVOLVE_LEVEL, 12, DEWOTT
+	db EVOLVE_LEVEL, 16, DEWOTT
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -764,7 +764,7 @@ ParasectEvosAttacks:
 VenonatEvosAttacks:
 	db EVOLVE_LEVEL, 20, VENOMOTH
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, POISON_STING
 	db 1, DISABLE
 	db 1, FORESIGHT
 	db 1, ABSORB
@@ -773,7 +773,7 @@ VenonatEvosAttacks:
 	db 13, POISONPOWDER
 	db 17, PSYBEAM
 	db 23, BUG_BITE ; Stun Spore → HGSS tutor move
-	db 25, STUN_SPORE ; Signal Beam → Stun Spore
+	db 25, SLUDGE_BOMB ; Signal Beam → Stun Spore
 	db 29, SLEEP_POWDER
 	db 35, LEECH_LIFE
 	db 37, ZEN_HEADBUTT
@@ -785,14 +785,15 @@ VenomothEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUG_BUZZ
 	db 1, TACKLE
-	db 1, POISON_STING
-	db 1, GUST
+	db 1, DISABLE
+	db 1, FORESIGHT
+	db 1, ABSORB
 	db 5, SUPERSONIC
-	db 11, CONFUSION
+	db 11, PSYBEAM
 	db 13, POISONPOWDER
-	db 17, PSYBEAM
+	db 17, POISON_STING
 	db 23, BUG_BITE ; Stun Spore → HGSS tutor move
-	db 25, STUN_SPORE ; Signal Beam → Stun Spore
+	db 25, SLUDGE_BOMB ; Signal Beam → Stun Spore
 	db 29, SLEEP_POWDER
 	db 31, GUST
 	db 37, LEECH_LIFE
@@ -3132,7 +3133,7 @@ SunfloraEvosAttacks:
 	db 0 ; no more level-up moves
 	
 WooperEvosAttacks:
-	db EVOLVE_LEVEL, 12, QUAGSIRE
+	db EVOLVE_LEVEL, 16, QUAGSIRE
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 1, LEER ; Tail Whip → similar move

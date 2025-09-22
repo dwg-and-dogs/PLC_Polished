@@ -186,11 +186,11 @@ HH_KurtHasAPlan:
     text " Kurt: "
 	next
 	text_start
-	text "<PLAYER>!"
-	line "Of course, the"
-	para "corruption comes"
-	line "from historic "
-	cont "Olivine."
+	text "<PLAYER>! Outside"
+	line "technology is"
+	para "being brought in"
+	line "through historic"
+	cont "Olivine City."
 	
 	para "We have to find"
 	line "a way out of this"

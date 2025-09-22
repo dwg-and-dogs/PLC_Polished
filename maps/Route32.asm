@@ -17,7 +17,7 @@ Route32_MapScriptHeader:
 	bg_event 13,  3, BGEVENT_JUMPTEXT, Route32SignText
 	bg_event  9,  1, BGEVENT_JUMPTEXT, Route32RuinsSignText
 	bg_event  6, 80, BGEVENT_JUMPTEXT, Route32UnionCaveSignText
-	bg_event  8, 10, BGEVENT_ITEM + SUPER_POTION, EVENT_ROUTE_32_HIDDEN_SUPER_POTION_2;
+	bg_event 11, 14, BGEVENT_ITEM + MAX_REVIVE, EVENT_ROUTE_32_HIDDEN_SUPER_POTION_2;
 	bg_event  4, 41, BGEVENT_ITEM + SILVER_LEAF, EVENT_ROUTE_32_HIDDEN_GOLD_LEAF
 	bg_event 13, 84, BGEVENT_ITEM + GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL_2 ; ok
 
@@ -343,7 +343,7 @@ Route32SignText:
 	text "Route 32"
 
 	para "Violet City -"
-	line "Azalea Town"
+	line "Union Cave"
 	done
 
 Route32RuinsSignText:

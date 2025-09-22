@@ -77,6 +77,7 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	promptbutton
 	waitsfx
 	writetext ScientistText_GotUnown
+	waitbutton
 	playsound SFX_KEY_ITEM
 	waitsfx
 	ifequal 1, .unowninparty
@@ -89,6 +90,7 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	promptbutton
 .unowninparty
 	writetext WhatsInKabutoWordRoomText
+	waitbutton
 	closetext
 	setevent EVENT_GOT_UNOWN
 	clearevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 

@@ -11,6 +11,7 @@ GauldenrodStockroom_MapScriptHeader:
 
 	def_bg_events
 	bg_event  0,  2, BGEVENT_READ, GSApricornBenchScript
+	bg_event  1,  2, BGEVENT_READ, GSApricornBenchScript
 
 	def_object_events
 	object_event 2, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodStockroomNPC1Script, -1

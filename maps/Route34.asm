@@ -393,10 +393,8 @@ PicnickerGina1BeatenText:
 GenericOfficerfMaraScript:
     generictrainer OFFICERF, MARA, EVENT_BEAT_OFFICERF_MARA, OfficerfMaraSeenText, OfficerfMaraBeatenText
 
-    text "Just forget what"
-    line "you saw here,"
-    cont "okay? Go enjoy"
-    cont "the city!"
+    text "Stay out of"
+	line "mischief!"
     done
 
 OfficerfMaraSeenText:

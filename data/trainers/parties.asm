@@ -721,7 +721,7 @@ Rival1Group:
 	; party
 	db 10, SLOWPOKE, NO_ITEM, 16
 	db 11, YANMA, NO_ITEM, 16
-	db 12, QUILAVA, ORAN_BERRY, 16
+	db 12, CYNDAQUIL, ORAN_BERRY, 16
 	db -1 ; end
 
 ; ================
@@ -741,15 +741,15 @@ Rival1Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 20, SLOWPOKE, NO_ITEM, 16
+	db 22, SLOWPOKE, NO_ITEM, 16
 		db CURSE, HEADBUTT, WATER_GUN, DISABLE
-	db 21, GROWLITHE, NO_ITEM, 16
+	db 23, GROWLITHE, NO_ITEM, 16
 		db DOUBLE_KICK, EMBER, LEER, SAFEGUARD
-	db 21, MURKROW, NO_ITEM, 16
+	db 23, MURKROW, NO_ITEM, 16
 		db NIGHT_SHADE, WING_ATTACK, PURSUIT, HAZE
-	db 17, EEVEE, NO_ITEM, 16
+	db 19, EEVEE, NO_ITEM, 16
 		db BITE, QUICK_ATTACK, LEER, SWIFT
-	db 23, DARTRIX, MIRACLE_SEED, 16
+	db 25, DARTRIX, MIRACLE_SEED, 16
 		db WING_ATTACK, ENERGY_BALL, ROOST, NIGHT_SHADE
 	db -1 ; end
 
@@ -759,15 +759,15 @@ Rival1Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 20, TANGELA, NO_ITEM, 16
+	db 22, TANGELA, NO_ITEM, 16
 		db SLEEP_POWDER, GROWTH, MEGA_DRAIN, POISONPOWDER
-	db 21, SLOWPOKE, NO_ITEM, 16
+	db 23, SLOWPOKE, NO_ITEM, 16
 		db CURSE, HEADBUTT, WATER_GUN, DISABLE
-	db 21, YANMA, NO_ITEM, 16
+	db 23, YANMA, NO_ITEM, 16
 		db SONIC_BOOM, DOUBLE_TEAM, PROTECT, BUG_BITE
-	db 17, EEVEE, NO_ITEM, 16
+	db 19, EEVEE, NO_ITEM, 16
 		db BITE, QUICK_ATTACK, LEER, SWIFT
-	db 23, QUILAVA, CHARCOAL, 16
+	db 25, QUILAVA, CHARCOAL, 16
 		db FLAME_CHARGE, SMOKESCREEN, DIG, QUICK_ATTACK
 	db -1 ; end
 
@@ -777,15 +777,15 @@ Rival1Group:
 	db "<RIVAL>@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
 	; party
-	db 20, GROWLITHE, NO_ITEM, 16
+	db 22, GROWLITHE, NO_ITEM, 16
 		db DOUBLE_KICK, EMBER, LEER, SAFEGUARD
-	db 21, TANGELA, NO_ITEM, 16
+	db 23, TANGELA, NO_ITEM, 16
 		db SLEEP_POWDER, GROWTH, MEGA_DRAIN, POISONPOWDER
-	db 21, TOGETIC, NO_ITEM, 16
+	db 23, TOGETIC, NO_ITEM, 16
 		db DIZZY_PUNCH, ENCORE, DISARM_VOICE, CHARM
-	db 17, EEVEE, NO_ITEM, 16
+	db 19, EEVEE, NO_ITEM, 16
 		db BITE, QUICK_ATTACK, LEER, SWIFT
-	db 23, DEWOTT, ORAN_BERRY, 32
+	db 25, DEWOTT, ORAN_BERRY, 32
 		db LEER, RAGE, WATER_GUN, BITE
 	db -1 ; end
 
@@ -1306,7 +1306,7 @@ YoungsterGroup:
 
 ; ================
 
-	; YOUNGSTER CALM COAST 
+	; YOUNGSTER CALM COAST --> this is jack, not jimmy 
 	db "Jimmy@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -2190,9 +2190,9 @@ FisherGroup:
 	db "Ralph@" ; ALPH
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, CHINCHOU
-	db 7, STARYU
-	db 6, TOTODILE
+	db 9, CHINCHOU
+	db 8, STARYU
+	db 7, TOTODILE
 	db -1 ; end
 
 ; ================
@@ -3020,9 +3020,9 @@ HikerGroup:
 	db "Benjamin@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 24, DIGLETT
-	db 24, DUNSPARCE
-	db 28, GLIGAR
+	db 22, DIGLETT
+	db 22, DUNSPARCE
+	db 25, GLIGAR
 	db -1 ; end
 
 ; ================
@@ -3387,7 +3387,7 @@ BrigaderGroup:
 	db "Manolete@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 18, TAUROS, CHOICE_BAND, "Islero@"
+	db 13, TAUROS, CHOICE_BAND, "Islero@"
 		db THRASH, NO_MOVE, NO_MOVE, NO_MOVE
 	db -1 ; end	
 
@@ -4843,9 +4843,9 @@ RuinManiacGroup:
 	db "Petry@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 7, RAMPARDOS
+	db 10, RAMPARDOS
 		db ROCK_SMASH, SCARY_FACE, SCREECH, NO_MOVE
-	db 7, BASTIODON
+	db 10, BASTIODON
 		db MIRROR_COAT, TACKLE, SCREECH, NO_MOVE
 	db -1 ; end
 
@@ -5039,12 +5039,12 @@ SchoolboyGroup:
 ; ================
 
 	; SCHOOLBOY
-	db "Jack@" ; USED
+	db "Jack@" ; calm coast 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 16, CYNDAQUIL
-	db 16, EKANS
-	db 16, DIGLETT
+	db 10, CYNDAQUIL
+	db 11, EKANS
+	db 12, DIGLETT
 	db -1 ; end
 
 ; ================
@@ -9117,16 +9117,14 @@ VeteranFGroup:
 ; ================================
 ; ================
 
-	; VETERANF used... somewhere? 
+	; VETERANF gauldenrod tower 
 	db "Joanne@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 14, MR__MIME, NO_ITEM, "Blanco@"
+	db 12, MR__MIME, NO_ITEM, "Blanco@"
 		db REFLECT, LIGHT_SCREEN, BATON_PASS, CONFUSION
-	db 14, SYLVEON, BIG_ROOT, "Sanguina@"
+	db 10, SYLVEON, BIG_ROOT, "Sanguina@"
 		db DRAIN_KISS, NO_MOVE, NO_MOVE, NO_MOVE
-	db 14, GIRAFARIG, NO_ITEM, "Janus@"
-		db STOMP, BITE, CONFUSION, NO_MOVE
 	db -1 ; end
 
 ; ================

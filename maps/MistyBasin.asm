@@ -43,15 +43,8 @@ MistyBasonMatronScript:
 
 
 MatronYawnText:
-	text "A slowpoke yawn"
-	line "causes rain. Ten"
-	para "elders ago,"
-	line "there was a"
-	para "drought, and it"
-	line "broke once we"
-	para "revered the"
-	line "simple act of a"
-	cont "Slowpoke yawn."
+	text "Without water,"
+	line "there is no life!"
 	done
 
 MistyBasinGiveWaterPulse:

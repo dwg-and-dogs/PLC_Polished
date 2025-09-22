@@ -144,8 +144,8 @@ KurtAnarresDormsText:
 	
 	para "We need to see"
 	line "the Elder about"
-	cont "the Cut HM, but"
-	cont "he's holed up!"
+	para "the Cut HM, but"
+	line "he's holed up!"
 	
 	para "Natu can teleport"
 	line "to the present if"
@@ -161,9 +161,9 @@ KurtAnarresDormsText:
 	done
 	
 KurAnarresDormsText2:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
+	text "We must convince"
+	line "Elder Hollis to"
+	cont "let us North!"
 	done
 
 AnarresKurtBattleText:

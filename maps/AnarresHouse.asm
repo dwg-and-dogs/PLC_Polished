@@ -44,7 +44,7 @@ AnarresHouseMushroomScript:
 	writetext Text_MintLeafQuestion 
 	yesorno
 	iffalse_jumpopenedtext Text_NoMintLeaf
-	takekeyitem MINT_LEAF
+	takekeyitem MINT_LEAF_K
 	verbosegivekeyitem TINYMUSHROOM_K
 	setevent EVENT_GAVE_TINYMUSHROOM
 	jumpopenedtext GiveTinyMushroomText 

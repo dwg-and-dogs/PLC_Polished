@@ -4,7 +4,8 @@ GoldenrodCity_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, GoldenrodCityFlyPointAndFloria
-
+	callback MAPCALLBACK_TILES, GoldenrodCaveCallback
+	
 	def_warp_events
 	warp_event 28,  7, GOLDENROD_GYM, 1
 	warp_event 33, 29, GOLDENROD_BIKE_SHOP, 1
@@ -49,9 +50,9 @@ GoldenrodCity_MapScriptHeader:
 	; tutor 
 	object_event 16, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MoveTutor, -1
 	; roadblock
-	object_event  9, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityOfficerText, EVENT_FOUGHT_RADIO_TOWER_RIVAL ; done
+	object_event  9, 16, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityOfficerText, EVENT_KURT_UNDERGROUND ; done
 	; npcs 
-	object_event 27,  9, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, GoldenrodCityGymLassText, -1
+	object_event 27,  9, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityGymLassText, -1
 	object_event 36, 24, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 						OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityBeautyText, -1
 	object_event 11, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityPokefanMText, -1
 	object_event 38, 17, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodCityYoungster1Text, -1
@@ -68,6 +69,13 @@ GoldenrodCity_MapScriptHeader:
 
 GoldenrodCityFlyPointAndFloria:
 	setflag ENGINE_FLYPOINT_GOLDENROD
+	endcallback
+
+GoldenrodCaveCallback:
+	checkevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
+	iffalse .Done
+	changeblock 18, 02, $5A
+.Done:
 	endcallback
 
 MoveTutor:

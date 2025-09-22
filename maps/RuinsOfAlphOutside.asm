@@ -94,7 +94,7 @@ RuinsOfAlphTeacherScript:
 	
 WantToHeal2:
 	text "We are here on"
-	line "a field trip."
+	line "a field trip!"
 	
 	para "I'll heal your"
 	line "#mon for you."
@@ -107,10 +107,9 @@ AlphHealedPokemon:
 GenericTrainerSchoolgirlMolly:
 	generictrainer SCHOOLGIRL, MOLLY, EVENT_BEAT_SCHOOLGIRL_MOLLY, SchoolgirlMollySeenText, SchoolgirlMollyBeatenText
 
-	text "My big brother"
-	line "says that these"
-	para "ruins contain"
-	line "portals."
+	text "My big bro says"
+	line "there's portals"
+	cont "inside the ruins."
 	
 	para "I wonder why?"
 	done

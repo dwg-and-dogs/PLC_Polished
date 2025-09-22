@@ -49,7 +49,7 @@ KabutoWordKimonoGirlScript:
 	readmem wPartyMon1DVs+2     ; Reads value into hScriptVar
 	writemem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
 	opentext
-	checkevent EVENT_SET_DVS_3
+	checkevent EVENT_SET_DVS_1
 	iftrue_jumptext AlphRuinsGreatnessLiesWithinText 
 	writetext AlphRuinsWhatPotentialText
 	promptbutton
@@ -135,7 +135,7 @@ KabutoWordKimonoGirlScript:
 	yesorno
 	iffalse .UndoChanges
 	; Player confirms - make it permanent
-	setevent EVENT_SET_DVS_3
+	setevent EVENT_SET_DVS_1
 	writetext DVChangeConfirmedText
 	waitbutton
 	closetext

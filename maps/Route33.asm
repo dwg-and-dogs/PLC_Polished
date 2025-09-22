@@ -28,7 +28,9 @@ GenericTrainerHikerAnthony:
 
 
 HikerAnthony1BeatenText:
-	text "I sure don't."
+	text "I wouldn't last"
+	line "long working in"
+	cont "Union Cave."
 	done
 
 HikerAnthony1SeenText:

@@ -41,7 +41,7 @@ LemonadeHouseLadyScript:
 	writetext Text_MushroomQuestion
 	yesorno
 	iffalse_jumpopenedtext Text_NoMushroom
-	takekeyitem TINYMUSHROOM
+	takekeyitem TINYMUSHROOM_K
 	verbosegivekeyitem LEMONADE_K
 	setevent EVENT_GOT_LEMONADE_FROM_LADY
 	jumpopenedtext GivingLemonadeText 

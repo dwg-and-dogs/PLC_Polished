@@ -2,6 +2,7 @@ RadioTower5F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
+;	callback MAPCALLBACK_OBJECTS, Callback_RadioTower_Kurt
 
 	def_warp_events
 	warp_event 12, 0, RADIO_TOWER_4F, 1
@@ -22,7 +23,6 @@ RadioTower5F_MapScriptHeader:
     const RADIOTOWER_KURT
     const RADIOTOWER_WHITNEY
 
-
 WhitneyScriptRadioTower5F:
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue_jumptextfaceplayer WhitneyAfterBattleText
@@ -38,6 +38,7 @@ WhitneyScriptRadioTower5F:
     promptbutton
     writetext WhitneyResponseText
 	promptbutton
+	setevent EVENT_RADIO_TOWER_KURT2
     winlosstext WhitneyBeatenText, 0
     loadtrainer WHITNEY, 1
     startbattle
@@ -66,13 +67,6 @@ WhitneyScriptRadioTower5F:
 	setflag ENGINE_PLAINBADGE
 	setevent EVENT_RADIO_TOWER_KURT2
     end
-
-
-	playmusic MUSIC_HEAL
-	special HealParty
-	pause 60
-	special Special_FadeInQuickly
-	special RestartMapMusic
 
 WhitneyIntroText:
 	text_high

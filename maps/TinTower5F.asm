@@ -107,6 +107,7 @@ TinTower5FKimonoGirlScript:
 	; Show the pokemon with new DVs
 	readmem wPartyMon1Species
 	pokepic 0
+	pause 60
 	cry 0
 	waitsfx
 	closepokepic

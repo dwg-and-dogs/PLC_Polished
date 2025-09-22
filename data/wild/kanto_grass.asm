@@ -31,27 +31,27 @@
 	def_grass_wildmons MISTY_BASIN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 8, ZUBAT
-	wildmon 7, ZUBAT
+	wildmon 8, WOOPER
+	wildmon 7, POLIWAG
 	wildmon 6, ZUBAT
 	wildmon 8, ZUBAT
-	wildmon 5, SLOWPOKE
+	wildmon 5, GASTLY
 	wildmon 6, SLOWPOKE
 	wildmon 7, SLOWPOKE
 ;	; day
-	wildmon 8, ZUBAT
-	wildmon 7, ZUBAT
+	wildmon 8, WOOPER
+	wildmon 7, POLIWAG
 	wildmon 6, ZUBAT
 	wildmon 8, ZUBAT
-	wildmon 5, SLOWPOKE
+	wildmon 5, GASTLY
 	wildmon 6, SLOWPOKE
 	wildmon 7, SLOWPOKE
 ;	; nite7
-	wildmon 8, ZUBAT
-	wildmon 7, ZUBAT
+	wildmon 8, WOOPER
+	wildmon 7, POLIWAG
 	wildmon 6, ZUBAT
 	wildmon 8, ZUBAT
-	wildmon 5, SLOWPOKE
+	wildmon 5, GASTLY
 	wildmon 6, SLOWPOKE
 	wildmon 7, SLOWPOKE
 	end_grass_wildmons
