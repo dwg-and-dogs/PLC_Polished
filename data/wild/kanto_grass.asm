@@ -172,57 +172,57 @@
 	def_grass_wildmons EMPERORS_GARDEN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 22, FURRET
-	wildmon 22, TOGETIC
-	wildmon 22, DUNSPARCE
-	wildmon 22, MISDREAVUS
-	wildmon 22, DRATINI
-	wildmon 22, SKARMORY
-	wildmon 22, EEVEE
+	wildmon 25, FURRET
+	wildmon 24, TOGETIC
+	wildmon 25, DUNSPARCE
+	wildmon 26, MISDREAVUS
+	wildmon 20, DRATINI
+	wildmon 25, SKARMORY
+	wildmon 20, EEVEE
 ;	; day
-	wildmon 22, FURRET
-	wildmon 22, TOGETIC
-	wildmon 22, DUNSPARCE
-	wildmon 22, MISDREAVUS
-	wildmon 22, DRATINI
-	wildmon 22, SKARMORY
-	wildmon 22, EEVEE
+	wildmon 25, FURRET
+	wildmon 24, TOGETIC
+	wildmon 25, DUNSPARCE
+	wildmon 26, MISDREAVUS
+	wildmon 20, DRATINI
+	wildmon 25, SKARMORY
+	wildmon 20, EEVEE
 ;	; nite
-	wildmon 22, FURRET
-	wildmon 22, TOGETIC
-	wildmon 22, DUNSPARCE
-	wildmon 22, MISDREAVUS
-	wildmon 22, DRATINI
-	wildmon 22, SKARMORY
-	wildmon 22, EEVEE
+	wildmon 25, FURRET
+	wildmon 24, TOGETIC
+	wildmon 25, DUNSPARCE
+	wildmon 26, MISDREAVUS
+	wildmon 20, DRATINI
+	wildmon 25, SKARMORY
+	wildmon 20, EEVEE
 	end_grass_wildmons
 
 	def_grass_wildmons CATTLE_CULL_38
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 24, FARFETCH_D
-	wildmon 24, MEOWTH
-	wildmon 24, MILTANK
-	wildmon 24, TAUROS
-	wildmon 24, GIRAFARIG
-	wildmon 24, GLIGAR
-	wildmon 24, GROTLE
+	wildmon 27, FARFETCH_D
+	wildmon 27, MEOWTH
+	wildmon 27, MILTANK
+	wildmon 27, TAUROS
+	wildmon 27, GIRAFARIG
+	wildmon 27, GLIGAR
+	wildmon 27, GROTLE
 ;	; day
-	wildmon 24, FARFETCH_D
-	wildmon 24, MEOWTH
-	wildmon 24, MILTANK
-	wildmon 24, TAUROS
-	wildmon 24, GIRAFARIG
-	wildmon 24, GLIGAR
-	wildmon 24, GROTLE
+	wildmon 27, FARFETCH_D
+	wildmon 27, MEOWTH
+	wildmon 27, MILTANK
+	wildmon 27, TAUROS
+	wildmon 27, GIRAFARIG
+	wildmon 27, GLIGAR
+	wildmon 27, GROTLE
 ;	; nite
-	wildmon 24, FARFETCH_D
-	wildmon 24, MEOWTH
-	wildmon 24, MILTANK
-	wildmon 24, TAUROS
-	wildmon 24, GIRAFARIG
-	wildmon 24, GLIGAR
-	wildmon 24, GROTLE
+	wildmon 27, FARFETCH_D
+	wildmon 27, MEOWTH
+	wildmon 27, MILTANK
+	wildmon 27, TAUROS
+	wildmon 27, GIRAFARIG
+	wildmon 27, GLIGAR
+	wildmon 27, GROTLE
 	end_grass_wildmons
 
 	def_grass_wildmons CATTLE_CULL_39

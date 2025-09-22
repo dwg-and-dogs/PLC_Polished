@@ -23,8 +23,6 @@ WhirlIslandB1F_MapScriptHeader:
 
 
 	def_object_events
-	object_event 18, 20, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, WhirlIslandB1FKurtText, EVENT_NEXUS_B2F_FALLS_SWITCH ;
-	pokemon_event 19, 20, GIRAFARIG, -1, -1, PAL_NPC_BROWN, GirafarigText, EVENT_NEXUS_B2F_FALLS_SWITCH
 	tmhmball_event 17, 14, HM_WHIRLPOOL, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
 ; kurt, who tells you that there's a whirlpool around this
 	itemball_event  5,  4, FULL_RESTORE, 1, EVENT_WHIRL_ISLAND_B2F_FULL_RESTORE

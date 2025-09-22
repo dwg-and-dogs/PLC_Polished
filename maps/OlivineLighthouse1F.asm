@@ -75,6 +75,7 @@ LigthouseRivalBattleScript:
 	waitbutton
 	closetext
     setevent EVENT_RIVAL_RADIO_TOWER
+	setevent EVENT_KURT_LIGHTHOUSE_1
     checkevent EVENT_GOT_OSHAWOTT
     iftrue .Oshawott
     checkevent EVENT_GOT_ROWLET

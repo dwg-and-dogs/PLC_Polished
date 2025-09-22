@@ -26,6 +26,7 @@ EcruteakDestinyKnotTrigger:
 	
 .TradeQuestScript:
 	showemote EMOTE_HEART, ECRUTEAK_DESTINY_HOUSE_SAGE, 30
+	setscene $1
 	end
 
 

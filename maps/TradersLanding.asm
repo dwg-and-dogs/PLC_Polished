@@ -318,6 +318,7 @@ TL_Scene_2_R:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
+	setevent EVENT_LANDING_KURT_2
 	warp ROUTE_40, 7, 4
 	end
 

@@ -21,9 +21,11 @@ OlivineLighthouseRoof_MapScriptHeader:
 
 EusineRaikouScript:
 	faceplayer
+	opentext
 	checkevent EVENT_BATTLED_RAIKOU
 	iftrue_jumptext RaikouText3
-	showtext RaikouConditionText
+	writetext RaikouConditionText
+	waitbutton
 	checkpoke LUGIA
 	iftrue .RaikouAppears
 	checkpoke POLITOED
@@ -31,13 +33,14 @@ EusineRaikouScript:
 	jumpthisopenedtext
 	
 	text "If only I could"
-	line "summon a rain-"
-	cont "storm..."
+	line "summon a storm!"
 	done
 	
 .RaikouAppears
 	showemote EMOTE_SHOCK, LIGHTHOUSE_EUSINE, 30
-	showtext RaikouCOnditionText2
+	writetext RaikouCOnditionText2
+	waitbutton
+	closetext
 	readvar VAR_FACING
 	ifequal LEFT, .RaikouBattleRight
 	readvar VAR_FACING

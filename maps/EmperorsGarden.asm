@@ -360,9 +360,14 @@ EG_Bobesh_Text1_2:
     text " Bobesh: "
 	next
 	text_start
-	text "It was a white"
-	line "lie. It won't"
-	cont "happen again."
+	
+	text "I don't know how"
+	line "the HM got out of"
+	cont "our hands!"
+	
+	para "Gauldenrod will"
+	line "be brought back"
+	cont "to heel."
 	
 	para "If we had an even"
 	line "bigger stadium,"
@@ -374,10 +379,9 @@ EG_Bobesh_Text1_3:
     text " Adrinna: "
 	next
 	text_start
-	text "Enough. Your"
-	line "venue rotted"
-	cont "minds. Maybe"
-	cont "yours, too."
+	text "Enough. The venue"
+	line "rotted minds."
+	cont "Maybe yours, too."
 	done
 
 

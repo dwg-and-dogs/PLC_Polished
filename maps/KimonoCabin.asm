@@ -14,22 +14,27 @@ KimonoCabin_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  0, 0, BGEVENT_JUMPTEXT, KimonoCabinBookshelfText
+	bg_event  0,  1, BGEVENT_JUMPTEXT, KimonoCabinBookshelfText
+	bg_event  1,  1, BGEVENT_JUMPTEXT, KimonoCabinBookshelfText
+	bg_event  6,  1, BGEVENT_JUMPTEXT, KimonoCabinBookshelfText
+	bg_event  7,  1, BGEVENT_JUMPTEXT, KimonoCabinBookshelfText
+	bg_event  8,  1, BGEVENT_JUMPTEXT, KimonoCabinBookshelfText
+	bg_event  9,  1, BGEVENT_JUMPTEXT, KimonoCabinBookshelfText
 
 
 	def_object_events ; sprites: cute_girl, lass, ace_trainer_f, matron, granny
-	object_event  5,  6, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin1Script, -1 ; "Vera" , revise dialogue to be a scared little girl
-	object_event  2,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2Script, -1 ; " Piper", a young girl who wants to save the garden
+	object_event  3,  6, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin1Script, -1 ; "Vera" , revise dialogue to be a scared little girl
+	object_event  0,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2Script, -1 ; " Piper", a young girl who wants to save the garden
 	object_event  9,  4, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin3Script, -1 ; "Samaria" , a  woman who is ready to face fears
 	object_event  6,  3, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin4Script, -1 ; "Shiji" , an older woman who wants her vision to be accepted
-	object_event  3,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin5Script, -1 
+	object_event  3,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin5Script, -1
 
 	; books 
 	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, KimonoCabinShijiNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinSamariaNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 
-	object_event  3,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinPiperNotebook1, EVENT_KIMONO_CABIN_LAPRAS
-	object_event  4,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, KimonoCabinVeraNotebook1, EVENT_KIMONO_CABIN_LAPRAS
+	object_event  1,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinPiperNotebook1, EVENT_KIMONO_CABIN_LAPRAS
+	object_event  2,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, KimonoCabinVeraNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 
 	object_event  2,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptext, KimonoCabinMorpheaNotebook1, EVENT_KIMONO_CABIN_MORPHEA_NOTEBOOK
 
@@ -198,7 +203,6 @@ KimonoCabin3Script: ; samaria
 	iffalse_jumpopenedtext Kimono3NotStrongEnoughText
 	checkevent EVENT_KIMONO_CABIN_LARVITAR
 	iffalse_jumpopenedtext Kimono3NotStrongEnoughText
-	checkevent EVENT_KIMONO_CABIN_LARVITAR
 	writetext Kimono3AskHelpText
 	yesorno
 	iffalse_jumpopenedtext Kimono3DeclinedText
@@ -212,10 +216,9 @@ KimonoCabin3Script: ; samaria
 	end
 
 Kimono3HelpedText:
-	text "It was a feisty"
-	line "Sneasel making"
-	cont "that racket!"
-	line 
+	text "A feisty sneasel"
+	line "was up there!"
+	done
 
 Kimono3NotStrongEnoughText:
 	text "Samaria: Welcome"
@@ -270,7 +273,7 @@ KimonoCabin4Script:
 	opentext
 	checkevent EVENT_KIMONO_CABIN_LAPRAS
 	iftrue_jumpopenedtext Kimono4HelpedText
-	checkevent EVENT_BEAT_REI ; chronicler vespera 
+	checkevent EVENT_BEAT_SAMSARA ; chronicler vespera 
 	iffalse_jumpopenedtext Kimono4NotStrongEnoughText
 	checkevent EVENT_KIMONO_CABIN_SNEASEL
 	iffalse_jumpopenedtext Kimono4NotStrongEnoughText

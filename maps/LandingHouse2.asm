@@ -1,6 +1,6 @@
 LandingHouse2_MapScriptHeader: 
 	def_scene_scripts
-	scene_script LandingHouse2Trigger 
+
 
 	def_callbacks
 
@@ -20,17 +20,7 @@ LandingHouse2_MapScriptHeader:
 	object_event  2,  4, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingHouse2AssaultVestScript, -1 
 	object_event  6,  5, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LandingHouse2CuteGirlText, -1
 
-	object_const_def
-	const LANDING_HOUSE_2_NOMAD
 
-LandingHouse2Trigger:
-	sdefer .TradeQuest
-	end
-	
-.TradeQuest:
-	showemote EMOTE_HAPPY, LANDING_HOUSE_2_NOMAD, 30
-	setscene $1
-	end
 	
 
 LandingHouse2CuteGirlText:

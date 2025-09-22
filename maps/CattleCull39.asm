@@ -39,23 +39,22 @@ GenericTrainerNomadFMarlene:
    generictrainer NOMAD_F, NOMAD_F_MARLENE, EVENT_BEAT_NOMAD_F_MARLENE, NomadMarleneSeenText, NomadMarleneBeatenText
 
 
-   text "They fear barbari-"
-   line "ans will kidnap"
-   cont "our children."
-   para "But here, we lose"
-   line "them anyway..."
+   text "The Consul never"
+   line "let us try to"
+   para "repel on our own"
+   line "to repel the"
+   cont "outsiders."
    done
 
 NomadMarleneSeenText:
-   text "My child won't"
-   line "know our ways..."
-   para "They call this"
-   line "safety?"
+   text "Our tempest will"
+   line "never be settled!"
    done
 
 NomadMarleneBeatenText:
-   text "My little one saw"
-   line "our strength..."
+   text "One day we will"
+   line "be free from the"
+   cont "Consul."
    done
 
 
@@ -69,16 +68,14 @@ GenericTrainerNomadMDale:
 NomadDaleSeenText:
    text "The winds speak"
    line "to wanderers."
-   para "Their weathermen"
-   line "are deaf."
+   para "The brigaders"
+   line "are deaf!"
    done
 
 NomadDaleBeatenText:
-   text "Their guards watch"
-   line "our paths."
-   para "Meanwhile, our"
-   line "traditions are"
-   cont "running away."
+   text "Eventually, the"
+   line "wind will blow"
+   cont "our way."
    done
 
 
