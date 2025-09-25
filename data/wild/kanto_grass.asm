@@ -372,25 +372,25 @@
 	wildmon 33, SNEASEL
 	wildmon 33, JYNX
 	wildmon 33, JYNX
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 	wildmon 33, PILOSWINE
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 ;	; day
 	wildmon 33, SNOVER
 	wildmon 33, SNEASEL
 	wildmon 33, JYNX
 	wildmon 33, JYNX
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 	wildmon 33, PILOSWINE
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 ;	; nite
 	wildmon 33, SNOVER
 	wildmon 33, SNEASEL
 	wildmon 33, JYNX
 	wildmon 33, JYNX
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 	wildmon 33, PILOSWINE
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 	end_grass_wildmons
 	
 	def_grass_wildmons GROTTOED_GLACIER_B1F
@@ -400,25 +400,25 @@
 	wildmon 33, SNEASEL
 	wildmon 33, JYNX
 	wildmon 33, JYNX
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 	wildmon 33, PILOSWINE
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 ;	; day
 	wildmon 33, SNOVER
 	wildmon 33, SNEASEL
 	wildmon 33, JYNX
 	wildmon 33, JYNX
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 	wildmon 33, PILOSWINE
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 ;	; nite
 	wildmon 33, SNOVER
 	wildmon 33, SNEASEL
 	wildmon 33, JYNX
 	wildmon 33, JYNX
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 	wildmon 33, PILOSWINE
-	wildmon 33, LUCARIO
+	wildmon 33, SNEASEL
 	end_grass_wildmons
 
 	def_grass_wildmons WESTERN_GLACIER_1F
@@ -430,7 +430,7 @@
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
-	wildmon 34, LUCARIO
+	wildmon 34, SNEASEL
 ;	; day
 	wildmon 34, SNOVER
 	wildmon 34, PILOSWINE
@@ -438,7 +438,7 @@
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
-	wildmon 34, LUCARIO
+	wildmon 34, SNEASEL
 ;	; nite
 	wildmon 34, SNOVER
 	wildmon 34, PILOSWINE
@@ -446,7 +446,7 @@
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
-	wildmon 34, LUCARIO
+	wildmon 34, SNEASEL
 	end_grass_wildmons
 	
 	def_grass_wildmons WESTERN_GLACIER_B1F
@@ -458,7 +458,7 @@
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
-	wildmon 34, LUCARIO
+	wildmon 34, SNEASEL
 ;	; day
 	wildmon 34, SNOVER
 	wildmon 34, PILOSWINE
@@ -466,7 +466,7 @@
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
-	wildmon 34, LUCARIO
+	wildmon 34, SNEASEL
 ;	; nite
 	wildmon 34, SNOVER
 	wildmon 34, PILOSWINE
@@ -474,7 +474,7 @@
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
 	wildmon 34, PILOSWINE
-	wildmon 34, LUCARIO
+	wildmon 34, SNEASEL
 	end_grass_wildmons
 	
 	def_grass_wildmons WESTERN_GLACIER_B2F
@@ -483,26 +483,26 @@
 	wildmon 34, SNOVER
 	wildmon 34, PILOSWINE
 	wildmon 34, JYNX
-	wildmon 34, LUCARIO
-	wildmon 34, LUCARIO
-	wildmon 34, LUCARIO
-	wildmon 34, LUCARIO
+	wildmon 34, SNOVER
+	wildmon 34, PILOSWINE
+	wildmon 34, JYNX
+	wildmon 36, MAMOSWINE
 ;	; day
 	wildmon 34, SNOVER
 	wildmon 34, PILOSWINE
 	wildmon 34, JYNX
-	wildmon 34, LUCARIO
-	wildmon 34, LUCARIO
-	wildmon 34, LUCARIO
-	wildmon 34, LUCARIO
+	wildmon 34, SNOVER
+	wildmon 34, PILOSWINE
+	wildmon 34, JYNX
+	wildmon 36, MAMOSWINE
 ;	; nite
 	wildmon 34, SNOVER
 	wildmon 34, PILOSWINE
 	wildmon 34, JYNX
-	wildmon 34, LUCARIO
-	wildmon 34, LUCARIO
-	wildmon 34, LUCARIO
-	wildmon 34, LUCARIO
+	wildmon 34, SNOVER
+	wildmon 34, PILOSWINE
+	wildmon 34, JYNX
+	wildmon 36, MAMOSWINE
 	end_grass_wildmons
 
 	def_grass_wildmons SINJOH_CROSSROADS

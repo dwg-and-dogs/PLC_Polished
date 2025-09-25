@@ -99,7 +99,7 @@ Text_LakeOfRageTutorQuestion:
 	done
 
 Text_LakeOfRageTutorRefused:
-	text "Suit yourself."
+	text "Toot yourself."
 	done
 
 Text_LakeOfRageTutorTaught:

@@ -91,7 +91,7 @@ GrottoedGlacierB1FScene0:
 	applymovement GLACIER_B2F_BASCULEGION_ALIVE, GlacierBasc_Move2
 	showtext BasculegionText
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon BASCULEGION, 40
+	loadwildmon BASCULEGION, 45
 	startbattle
 	ifequal $1, .Continue
 .Continue:

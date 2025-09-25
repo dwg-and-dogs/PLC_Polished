@@ -501,7 +501,7 @@ LakePrayerText:
 	done
 
 WesleyScript:
-	checkevent EVENT_GOT_BLACK_BELT_FROM_WESLEY
+	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
 	iftrue_jumptextfaceplayer WesleyDynamicPunchText
 	faceplayer
 	opentext
@@ -511,7 +511,7 @@ WesleyScript:
 	promptbutton
 	verbosegivetmhm TM_DYNAMICPUNCH ; 
 	iffalse_endtext
-	setevent EVENT_GOT_BLACK_BELT_FROM_WESLEY
+	setevent EVENT_GOT_TM01_DYNAMICPUNCH
 	jumpopenedtext WesleyDynamicPunchText
 
 

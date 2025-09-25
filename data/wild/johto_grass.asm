@@ -1179,9 +1179,9 @@
 	def_grass_wildmons ROUTE_42
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 40, DONPHAN
-	wildmon 42, SKARMORY
-	wildmon 42, DUGTRIO
+	wildmon 35, DONPHAN
+	wildmon 37, SKARMORY
+	wildmon 37, DUGTRIO
 	wildmon 43, AZUMARILL
 	wildmon 41, GLIGAR
 	wildmon 44, GLIGAR
