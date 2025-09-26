@@ -522,6 +522,7 @@ Cradle_Scene3Pickup:
 	disappear CRADLE_ADRINNA_2
 	showemote EMOTE_SHOCK, CRADLE_KURT, 30
 	showtext CradleKurtText2
+	special HealParty
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx

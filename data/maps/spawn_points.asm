@@ -27,7 +27,7 @@ SpawnPoints:
 	spawn ROUTE_32,                   11, 74 ; UNION CAVE works 
 	spawn ECRUTEAK_CITY,              23, 28 ; works 
 	spawn CIANWOOD_CITY,              13, 44 ; sorta done 
-	spawn OLIVINE_CITY,               13, 18 ; works 
+	spawn ROUTE_40,               	  14, 4 ; works 
 	spawn MAHOGANY_TOWN,              15, 14 ; works
 	spawn LAKE_OF_RAGE,               21, 31 ; needs a hardcode exception 
 

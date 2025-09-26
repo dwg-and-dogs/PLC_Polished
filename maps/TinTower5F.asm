@@ -19,6 +19,8 @@ TinTower5F_MapScriptHeader:
 	itemball_event  7,  9, HP_UP, 1, EVENT_TIN_TOWER_5F_RARE_CANDY
 	object_event 11, 6, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TinTower5FKimonoGirlScript, EVENT_SET_DVS_5
 
+
+
 TinTower5FKimonoGirlScript: 
 	faceplayer
 	; Store the original DVs in temporary memory locations
@@ -477,11 +479,10 @@ TinTower5FKimonoGirlScript:
 	writetext DVChangeConfirmedText
 	waitbutton
 	closetext
+	halloffame
 	end
 
 .UndoChanges:
-;	writetext DebugStoringText
-;	waitbutton
 	; Store the original DVs in temporary memory locations
 	readmem wOriginalDV1       ; Writes hScriptVar to wOriginalDV1
 	writemem wPartyMon1DVs+0     ; Reads value into hScriptVar

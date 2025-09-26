@@ -11,8 +11,8 @@ OlivineLighthouseRoof_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event 10, 14, SPRITE_EUSINE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EusineRaikouScript, EVENT_BATTLED_RAIKOU ; 	
-	object_event  10,  19, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, RAIKOU, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTHOUSE_RAIKOU ; INITIALIZE HTIS 
+	object_event 10, 14, SPRITE_EUSINE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EusineRaikouScript, EVENT_BATTLED_RAIKOU 
+	object_event  10,  19, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, RAIKOU, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LIGHTHOUSE_RAIKOU 
 	itemball_event 16,  8, SILVER_LEAF, 1, EVENT_OLIVINE_LIGHTHOUSE_ROOF_SILVER_LEAF
 
 	object_const_def
@@ -27,16 +27,20 @@ EusineRaikouScript:
 	writetext RaikouConditionText
 	waitbutton
 	checkpoke LUGIA
-	iftrue .RaikouAppears
+	iftrue RaikouAppears
 	checkpoke POLITOED
-	iftrue .RaikouAppears
-	jumpthisopenedtext
-	
+	iftrue RaikouAppears
+	writetext EusineTextNoRain
+	waitbutton
+	closetext
+	end
+
+EusineTextNoRain:
 	text "If only I could"
 	line "summon a storm!"
 	done
 	
-.RaikouAppears
+RaikouAppears:
 	showemote EMOTE_SHOCK, LIGHTHOUSE_EUSINE, 30
 	writetext RaikouCOnditionText2
 	waitbutton

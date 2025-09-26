@@ -183,9 +183,16 @@ InitMapNameSign::
 .check_tinder_garden_2:
 	ld a, [wMapGroup]
 	cp GROUP_TINDER_GARDEN_2
-	jr nz, .check_clasts_cradle_2f
+	jr nz, .check_timeless_tapestry
 	ld a, [wMapNumber]
 	cp MAP_TINDER_GARDEN_2
+	ret z
+.check_timeless_tapestry:
+	ld a, [wMapGroup]
+	cp GROUP_TIMELESS_TAPESTRY
+	jr nz, .check_clasts_cradle_2f
+	ld a, [wMapNumber]
+	cp MAP_TIMELESS_TAPESTRY
 	ret z
 .check_clasts_cradle_2f:
 	ld a, [wMapGroup]

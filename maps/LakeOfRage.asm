@@ -27,7 +27,7 @@ LakeOfRage_MapScriptHeader:
 
 	def_object_events
 	object_event 17, 4, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
-	object_event 13, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_KURT
+	object_event 13, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT
 	object_event 24, 5, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL  
 ;HURSALUNA
 	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA
@@ -86,9 +86,6 @@ LakeHursalunaScript:
 	setscene $1
 	end
 	
-LakeKurtScript:
-	end
-
 LakeHursalunaApproachesMovement:
 	fix_facing
 	fast_jump_step_down
@@ -113,9 +110,11 @@ LakeOfRageSignPryceText:
 LakeRivalScript:
 	blackoutmod LAKE_OF_RAGE
     showemote EMOTE_SHOCK, PLAYER, 15
+
     special Special_FadeOutMusic
     pause 15
 	turnobject PLAYER, RIGHT
+	turnobject LAKEOFRAGE_PRYCE, RIGHT
     appear LAKEOFRAGE_RIVAL
  	applymovement LAKEOFRAGE_RIVAL, LakeRivalToPlayer
 	showtext LakeRivalText1
@@ -162,6 +161,7 @@ LakeRivalScript:
 	waitbutton
 	special Special_CelebiShrineEvent
 	special FadeOutPalettes
+	special HealParty
 	waitsfx
 	blackoutmod TRANQUIL_TARN
 	warp TRANQUIL_TARN, 12, 4
@@ -169,6 +169,7 @@ LakeRivalScript:
 
 LakeRivalBattleScript:
     playmusic MUSIC_RIVAL_ENCOUNTER
+	setevent EVENT_LAKE_KURT
     setevent EVENT_LAKE_RIVAL
     checkevent EVENT_GOT_OSHAWOTT
     iftrue .Oshawott
@@ -245,7 +246,7 @@ LakeRivalText2_2:
 	text_start
 	text "Aha! So, you see"
 	line "inventions upset"
-	cont "the balance! You"
+	cont "the balance!"
 	
 	para "You ought to"
 	line "head home."
@@ -1293,8 +1294,8 @@ LakeOfRageWhatPotentialText:
 	
 	para "You never know"
 	line "what you may find"
-	para "when you dig aro-"
-	line "und in the muck."
+	para "when you dig in"
+	line "the muck."
 	
 	para "#mon can do"
 	line "the same - each"
@@ -1310,4 +1311,22 @@ LakeOfRageWhatPotentialText:
 	para "Reorganize your"
 	line "party, if you"
 	cont "need to."
+	done
+
+LakeKurtScript:
+	faceplayer
+	opentext
+	writetext LakeKurtText2
+	waitbutton
+	closetext
+	end
+	
+LakeKurtText2:
+	text "Let's ask Pryce"
+	line "to pray to Celebi"
+	cont "here at the lake."
+	
+	para "We can go back to"
+	line "stop Adrinna and"
+	cont "Urgaust's mine!"
 	done

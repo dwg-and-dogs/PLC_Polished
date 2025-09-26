@@ -2927,9 +2927,9 @@ NatuEvosAttacks:
 	db 17, HYPNOSIS ; Stored Power → new move
 	db 20, PAIN_SPLIT ; Ominous Wind → HGSS tutor move
 	db 23, CONFUSE_RAY
-	db 28, RECOVER ; Wish → similar move
+	db 28, ROOST ; Wish → similar move
 	db 33, PSYCHIC_M
-	db 36, ROOST ; Miracle Eye → egg move
+	db 38, DRILL_PECK ; Miracle Eye → egg move
 	db 39, HAZE ; Psycho Shift → egg move
 	db 44, FUTURE_SIGHT
 	db 47, HEX ; Power Swap + Guard Swap → new move
@@ -2947,9 +2947,9 @@ XatuEvosAttacks:
 	db 17, HYPNOSIS ; Stored Power → new move
 	db 20, PAIN_SPLIT ; Ominous Wind → HGSS tutor move
 	db 23, CONFUSE_RAY
-	db 29, RECOVER ; Wish → similar move
+	db 29, ROOST ; Wish → similar move
 	db 35, PSYCHIC_M
-	db 39, ROOST ; Miracle Eye → egg move
+	db 39, DRILL_PECK ; Miracle Eye → egg move
 	db 43, HAZE ; Psycho Shift → egg move
 	db 49, FUTURE_SIGHT
 	db 53, HEX ; Power Swap + Guard Swap → new move

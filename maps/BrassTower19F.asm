@@ -73,7 +73,8 @@ BrassTower19FWarpMenu:
 	clearevent EVENT_CRADLE_CUTSCENE
 	setevent EVENT_CRADLE_CUTSCENE_KURT
 	setevent EVENT_CRADLE_CUTSCENE_ADRINNA
-	warp BRASS_TOWER_2F, 8, 3 
+	setevent EVENT_ROOF_KURT
+	warp BRASS_TOWER_2F, 8, 5
 	end 
 
 BrassTower19FAscendText:

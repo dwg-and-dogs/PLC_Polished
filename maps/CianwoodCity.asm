@@ -62,12 +62,12 @@ CianwoodPharmacySignText:
 CianwoodEusineScript:
 	faceplayer
 	opentext
-	checkevent EVENT_HEARD_CIANWOOD_SHPEEL
-	iftrue .HeardShpeel
+;	checkevent EVENT_HEARD_CIANWOOD_SHPEEL
+;	iftrue .HeardShpeel
 	writetext CianwoodShpeelText
 	waitbutton
-	setevent EVENT_HEARD_CIANWOOD_SHPEEL
-.HeardShpeel	
+;	setevent EVENT_HEARD_CIANWOOD_SHPEEL
+;.HeardShpeel	
 	checkevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_KURT
 	iffalse_jumpopenedtext CianwoodEusineNoLugiaText
 	; music 
@@ -132,10 +132,9 @@ CianwoodShpeelText:
 	cont "seawall in time."
 	
 	para "Was I naive to"
-	line "only see beauty?"
+	line "only see beauty"
+	cont "in nature?"
 	
-	para "I long to see the"
-	line "sublime."
 	para "I want to hope"
 	line "again."
 	done

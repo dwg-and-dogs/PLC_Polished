@@ -2687,8 +2687,8 @@ BirdKeeperGroup:
 	db "Hank@" ; rule the sky 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 42, STARAVIA
-	db 44, STARAPTOR
+	db 35, STARAVIA
+	db 40, STARAPTOR
 	db -1 ; end
 
 ; ================
@@ -2697,8 +2697,8 @@ BirdKeeperGroup:
 	db "Roy@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 42, H__BRAVIARY
-	db 44, EMPOLEON
+	db 39, H__BRAVIARY
+	db 40, EMPOLEON
 	db -1 ; end
 
 ; ================
@@ -3418,83 +3418,83 @@ BrigaderGroup:
 	db "Singh@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Fighting/Rock focus
-	db 45, HITMONCHAN
-	db 45, SUDOWOODO
-	db 47, HITMONLEE
-	db 49, RHYPERIOR
+	db 40, HITMONCHAN
+	db 42, SUDOWOODO
+	db 42, HITMONLEE
+	db 43, RHYPERIOR
 	db -1 ; end
 	
 	; GRUNTM  14; Ali sulfur sty 
 	db "Ali@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Flying/Ground focus
-	db 44, GLIGAR
-	db 46, STARAPTOR
-	db 48, GLISCOR
+	db 42, GLIGAR
+	db 43, STARAPTOR
+	db 44, GLISCOR
 	db -1 ; end
 	
 	; GRUNTM 15 ; Suzuki ; clast cradle 2f 15
 	db "Suzuki@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Fire focus
-	db 50, MONFERNO
-	db 46, MAGCARGO
-	db 48, HOUNDOOM
+	db 40, MONFERNO
+	db 45, MAGCARGO
+	db 42, HOUNDOOM
 	db -1 ; end
 	
 	; GRUNTM 16 Marten cc 1f 
 	db "Marten@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Dragon/Ground focus
-	db 43, GABITE
-	db 45, DRAGONAIR
-	db 47, PUPITAR
+	db 40, GABITE
+	db 41, DRAGONAIR
+	db 45, PUPITAR
 	db -1 ; end
 	
 	; GRUNTM 17 ; Lee cc 1f 17
 	db "Lee@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Poison focus
-	db 44, ARBOK
-	db 46, MUK
-	db 48, WEEZING
+	db 40, ARBOK
+	db 43, MUK
+	db 46, WEEZING
 	db -1 ; end
 	
 	; GRUNTM 18 ; Gupta cc 1f 
 	db "Gupta@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Steel/Rock focus
-	db 49, KANGASKHAN
-	db 48, HITMONTOP
-	db 50, MISMAGIUS
+	db 42, KANGASKHAN
+	db 43, HITMONTOP
+	db 45, MISMAGIUS
 	db -1 ; end
 	
 	; GRUNTM 19 ; Liu cc b1f 19
 	db "Liu@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Bug/Ghost focus
-	db 45, PINSIR
-	db 47, ARIADOS
-	db 49, YANMEGA
-	db 50, DUSKNOIR
+	db 42, PINSIR
+	db 44, ARIADOS
+	db 44, YANMEGA
+	db 46, DUSKNOIR
 	db -1 ; end
 	
 	; GRUNTM 20 ;  cc b1f
 	db "Tyson@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Poison focus
-	db 46, STEELIX
-	db 46, NIDOKING
-	db 48, NIDOQUEEN
+	db 45, STEELIX
+	db 45, NIDOKING
+	db 45, NIDOQUEEN
 	db -1 ; end
 	
 	; GRUNTM 21 sulfur sty 
 	db "Lopez@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Ground focus
-	db 43, HIPPOWDON
-	db 45, QUAGSIRE
-	db 47, DONPHAN
+	db 41, HIPPOWDON
+	db 43, QUAGSIRE
+	db 45, DONPHAN
 	db -1 ; end
 	
 ; ================================
@@ -4682,8 +4682,8 @@ BugManiacGroup:
 	db "Rob@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 40, VESPIQUEN
-	db 42, DRAPION
+	db 36, VESPIQUEN
+	db 40, DRAPION
 	db -1 ; end
 
 ; ================
@@ -4824,12 +4824,12 @@ RuinManiacGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 36, BRONZOR
-	db 44, BRONZONG
+	db 40, BRONZONG
 	db -1 ; end
 
 ; ================
 
-	; RUIN_MANIAC ; becomes dragon tamer 
+	; RUIN_MANIAC ; becomes dragon tamer tarn 
 	db "Lloyd@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -7897,12 +7897,9 @@ DragonTamerGroup:
 
 	; DRAGON_TAMER
 	db "Aegon@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
-
-	db 43, DRAGONITE, FOCUS_SASH, 132, ABIL_DRAGONITE_MULTISCALE | NAT_ATK_UP_SATK_DOWN, MALE
-		db FOCUS_ENERGY, DRAGON_CLAW, EARTHQUAKE, ICE_PUNCH
-	db 43, KINGDRA, FOCUS_SASH, 132, ABIL_KINGDRA_SNIPER | NAT_SATK_UP_ATK_DOWN, MALE
-		db DOUBLE_TEAM, DRAGON_PULSE, SURF, ICE_BEAM
+	db TRAINERTYPE_NORMAL
+	; party
+	db 47, GABITE
 	db -1 ; end
 
 ; ================

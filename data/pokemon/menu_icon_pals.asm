@@ -9,7 +9,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal RED, PINK ; TYPHLOSION
 	iconpal RED, PURPLE ; HTYPHLOSION
 	iconpal GREEN, BROWN	;ROWLET	      ; 05 OK
-	iconpal BROWN, GREEN	;DARTRIX         ; 06 OK
+	iconpal GREEN, BROWN	;DARTRIX         ; 06 OK
 	iconpal BROWN, GREEN	;DECIDUEYE       ; 07
 	iconpal BROWN, RED		;H__DECIDUEYE    ; 08
 	iconpal BLUE, TEAL		;OSHAWOTT  ; 09

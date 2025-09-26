@@ -1,0 +1,14 @@
+vary colors check
+
+1. with one pokemon, does the pokepic work? Does it work with max DV and with HP Fighting?
+
+2. with two pokemon, does the pokepic work with the first one? What about saying yes, then saying no, then swapping party around?
+
+
+
+
+halloffame
+1. does the palette issue happen if you have six pokemon with no new palettes?
+--> NO
+2. does the palette issue happen if only the second pokemon has the new palette?
+-->If the second pokemon has a new palette then no pokemon have new palettes 

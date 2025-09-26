@@ -2129,7 +2129,8 @@ FlyMap:
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_ANARRES
+	ld a, FLY_ANARRES;
+	ld [wTownMapPlayerIconLandmark], a
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
 	ld a, FLY_TIMELESS_TAPESTRY
@@ -2137,7 +2138,7 @@ FlyMap:
 ; Because Indigo Plateau is the first flypoint the player
 
 ; visits, it's made the default flypoint
-	ld [wTownMapPlayerIconLandmark], a
+
 ; Fill out the map
 	call FillKantoMap
 	call TownMapBubble
