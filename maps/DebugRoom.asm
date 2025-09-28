@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, LANDING_DORMS, 1
+	warp_event  1, 8, ECRUTEAK_SHRINE_OUTSIDE, 1
 
 
 	def_coord_events
@@ -161,43 +161,39 @@ endr
 	
 
 DebugInteraction2: 
-;	refreshscreen
-;	readmem wPartyMon1Species
-;	pokepic 0
-;	pause 60
-;	closepokepic
-;	
-;	; Set Fighting HP pattern for Mon1
+	refreshscreen
+	readmem wPartyMon1Species
+	pokepic 0
+	pause 60
+	closepokepic
+	
+	; Set Fighting HP pattern for Mon1
 ;	loadmem wPartyMon1DVs+0, $ff
 ;	loadmem wPartyMon1DVs+1, $ee
 ;	loadmem wPartyMon1DVs+2, $ee
-;	
-;	; Set normal DVs for Mon2 (if exists)
+	
+	; Set normal DVs for Mon2 (if exists)
 ;	loadmem wPartyMon2DVs+0, $aa
 ;	loadmem wPartyMon2DVs+1, $bb
 ;	loadmem wPartyMon2DVs+2, $cc
-;
-;	
-;	opentext
-;	writethistext
-;		text "DV change"
-;		done
-;	waitbutton
-;	closetext
-;	
-;	; Show Mon1 with new palette
-;	refreshscreen
-;	readmem wPartyMon1Species
-;	pokepic 0
-;	pause 60
-;	closepokepic
-;	
-;	; Show Mon2 to verify it doesn't have Fighting palette
-;	readmem wPartyMon2Species
-;	pokepic 0
-;	pause 60
-;	closepokepic
-;	
+
+	
+	opentext
+	writethistext
+		text "DV change"
+		done
+	waitbutton
+	closetext
+	
+	; Show Mon1 with new palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	closepokepic
+	
 	halloffame
 	end
 

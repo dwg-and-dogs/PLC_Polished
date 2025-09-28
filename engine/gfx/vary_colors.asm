@@ -1,4 +1,6 @@
-CopyDVsToColorVaryDVs:
+CopyDVsToColorVaryDVs: 
+;Revise these to look at the  DVs of the mon, 
+; check if the DVs match those of the 
 ; e = HPAtkDV
 	ld a, [hli]
 	ld e, a
@@ -157,6 +159,42 @@ VaryBlueByDV:
 	ld [hld], a
 	ret
 
+CheckDVsHPType:
+; Check if DVs match a Hidden Power type pattern
+; Input: bc = wColorVaryDVs pointer, de = pattern pointer
+; Returns: carry flag set if match, clear if no match
+	push hl
+	push de
+	push bc
+	
+	; Set up for block comparison
+	ld h, b
+	ld l, c                    ; hl = source (wColorVaryDVs)
+	; de already contains pattern pointer
+	ld b, 3                    ; compare 3 bytes
+	
+.compare_loop
+	ld a, [de]
+	cp [hl]
+	jr nz, .no_match
+	inc hl
+	inc de
+	dec b
+	jr nz, .compare_loop
+	
+	; Match found
+	scf  ; set carry flag
+	jr .done
+	
+.no_match
+	and a  ; clear carry flag
+	
+.done
+	pop bc
+	pop de
+	pop hl
+	ret
+
 VaryColorsByDVs::
 ; hl = colors
 ; [hl+0] = gggr:rrrr
@@ -187,10 +225,724 @@ endc
 
 	ld bc, wColorVaryDVs
 
-	ld a, [wColorVarySpecies]
-	cp CYNDAQUIL
-	jr z, .Smeargle
+	; Check each Hidden Power type in order
+	ld de, .HPFightingPattern
+	call CheckDVsHPType
+	jp c, .HPFightingEffect
+	
+	ld de, .HPFlyingPattern
+	call CheckDVsHPType
+	jp c, .HPFlyingEffect
+	
+	ld de, .HPPoisonPattern
+	call CheckDVsHPType
+	jp c, .HPPoisonEffect
+	
+	ld de, .HPGroundPattern
+	call CheckDVsHPType
+	jp c, .HPGroundEffect
+	
+	ld de, .HPRockPattern
+	call CheckDVsHPType
+	jp c, .HPRockEffect
+	
+	ld de, .HPBugPattern
+	call CheckDVsHPType
+	jp c, .HPBugEffect
+	
+	ld de, .HPGhostPattern
+	call CheckDVsHPType
+	jp c, .HPGhostEffect
+	
+	ld de, .HPSteelPattern
+	call CheckDVsHPType
+	jp c, .HPSteelEffect
+	
+	ld de, .HPFirePattern
+	call CheckDVsHPType
+	jp c, .HPFireEffect
+	
+	ld de, .HPWaterPattern
+	call CheckDVsHPType
+	jp c, .HPWaterEffect
+	
+	ld de, .HPGrassPattern
+	call CheckDVsHPType
+	jp c, .HPGrassEffect
+	
+	ld de, .HPElectricPattern
+	call CheckDVsHPType
+	jp c, .HPElectricEffect
+	
+	ld de, .HPPsychicPattern
+	call CheckDVsHPType
+	jp c, .HPPsychicEffect
+	
+	ld de, .HPIcePattern
+	call CheckDVsHPType
+	jp c, .HPIceEffect
+	
+	ld de, .HPDragonPattern
+	call CheckDVsHPType
+	jp c, .HPDragonEffect
+	
+	ld de, .HPDarkPattern
+	call CheckDVsHPType
+	jp c, .HPDarkEffect
 
+	jp .StandardColors
+
+.HPFightingEffect:
+	; Load light palette
+	ld de, .HPFightingPalsLite
+	ld a, [de]
+	ld [hli], a       ; Store first byte of light palette
+	inc de
+	ld a, [de]
+	ld [hli], a       ; Store second byte of light palette
+	
+	; Load dark palette
+	ld de, .HPFightingPalsDark
+	ld a, [de]
+	ld [hli], a       ; Store first byte of dark palette
+	inc de
+	ld a, [de]
+	ld [hl], a        ; Store second byte of dark palette
+	
+	pop af            ; Restore af (contains the original bank value)
+	ldh [rSVBK], a    ; Restore the original bank
+	ret               ; Return
+	
+
+.HPFlyingEffect:
+	; Load light palette
+	ld de, .HPFlyingPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPFlyingPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPPoisonEffect:
+	; Load light palette
+	ld de, .HPPoisonPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPPoisonPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPGroundEffect:
+	; Load light palette
+	ld de, .HPGroundPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPGroundPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPRockEffect:
+	; Load light palette
+	ld de, .HPRockPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPRockPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPBugEffect:
+	; Load light palette
+	ld de, .HPBugPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPBugPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPGhostEffect:
+	; Load light palette
+	ld de, .HPGhostPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPGhostPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPSteelEffect:
+	; Load light palette
+	ld de, .HPSteelPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPSteelPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPFireEffect:
+	; Load light palette
+	ld de, .HPFirePalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPFirePalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPWaterEffect:
+	; Load light palette
+	ld de, .HPWaterPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPWaterPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPGrassEffect:
+	; Load light palette
+	ld de, .HPGrassPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPGrassPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPElectricEffect:
+	; Load light palette
+	ld de, .HPElectricPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPElectricPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPPsychicEffect:
+	; Load light palette
+	ld de, .HPPsychicPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPPsychicPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPIceEffect:
+	; Load light palette
+	ld de, .HPIcePalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPIcePalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPDragonEffect:
+	; Load light palette
+	ld de, .HPDragonPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPDragonPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.HPDarkEffect:
+	; Load light palette
+	ld de, .HPDarkPalsLite
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hli], a
+	; Load dark palette
+	ld de, .HPDarkPalsDark
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+; Hidden Power DV patterns
+.HPFightingPattern:
+	db $ff, $ee, $ee
+.HPFlyingPattern:
+	db $ff, $fe, $ee
+.HPPoisonPattern:
+	db $ff, $ef, $ee
+.HPGroundPattern:
+	db $ff, $ff, $ee
+.HPRockPattern:
+	db $ff, $ee, $fe
+.HPBugPattern:
+	db $ff, $fe, $fe
+.HPGhostPattern:
+	db $ff, $ef, $fe
+.HPSteelPattern:
+	db $ff, $ff, $fe
+.HPFirePattern:
+	db $ff, $ee, $ef
+.HPWaterPattern:
+	db $ff, $fe, $ef
+.HPGrassPattern:
+	db $ff, $ef, $ef
+.HPElectricPattern:
+	db $ff, $ff, $ef
+.HPPsychicPattern:
+	db $ff, $ee, $ff
+.HPIcePattern:
+	db $ff, $fe, $ff
+.HPDragonPattern:
+	db $ff, $ef, $ff
+.HPDarkPattern:
+	db $fe, $ff, $ff
+
+; Hidden Power palettes
+.HPFightingPalsLite:
+if !DEF(MONOCHROME)
+	RGB 23, 24, 23
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPFightingPalsDark:
+if !DEF(MONOCHROME)
+	RGB 31, 16, 0
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPFlyingPalsLite:
+if !DEF(MONOCHROME)
+	RGB 27, 28, 31
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPFlyingPalsDark:
+if !DEF(MONOCHROME)
+	RGB 0, 9, 21
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPPoisonPalsLite:
+if !DEF(MONOCHROME)
+	RGB 17, 9, 19
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPPoisonPalsDark:
+if !DEF(MONOCHROME)
+	RGB 24, 6, 6
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPGroundPalsLite:
+if !DEF(MONOCHROME)
+	RGB 25, 24, 21
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPGroundPalsDark:
+if !DEF(MONOCHROME)
+	RGB 18, 10, 4
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPRockPalsLite:
+if !DEF(MONOCHROME)
+	RGB 17, 14, 10
+
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPRockPalsDark:
+if !DEF(MONOCHROME)
+	RGB 6, 10, 10
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPBugPalsLite:
+if !DEF(MONOCHROME)
+	RGB 27, 2, 7
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPBugPalsDark:
+if !DEF(MONOCHROME)
+	RGB 4, 17, 4
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPGhostPalsLite:
+if !DEF(MONOCHROME)
+	RGB 17, 9, 17
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPGhostPalsDark:
+if !DEF(MONOCHROME)
+	RGB 6, 3, 5
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPSteelPalsLite:
+if !DEF(MONOCHROME)
+	RGB 23, 23, 23
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPSteelPalsDark:
+if !DEF(MONOCHROME)
+	RGB 14, 16, 18
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPFirePalsLite:
+if !DEF(MONOCHROME)
+	RGB 28, 5, 5
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPFirePalsDark:
+if !DEF(MONOCHROME)
+	RGB 31, 21, 11 
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPWaterPalsLite: 
+if !DEF(MONOCHROME)
+	RGB 21, 29, 29
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPWaterPalsDark:
+if !DEF(MONOCHROME)
+	RGB 4, 18, 31
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPGrassPalsLite:
+if !DEF(MONOCHROME)
+	RGB 25, 16, 8
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPGrassPalsDark:
+if !DEF(MONOCHROME)
+	RGB 6, 25, 6
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPElectricPalsLite:
+if !DEF(MONOCHROME)
+	RGB 31, 26, 0
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPElectricPalsDark:
+if !DEF(MONOCHROME)
+	RGB 5, 3, 13
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPPsychicPalsLite:
+if !DEF(MONOCHROME)
+	RGB 31, 2, 18
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPPsychicPalsDark:
+if !DEF(MONOCHROME)
+	RGB 9, 0, 16
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPIcePalsLite:
+if !DEF(MONOCHROME)
+	RGB 29, 31, 31
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPIcePalsDark:
+if !DEF(MONOCHROME)
+	RGB 16, 25, 29
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPDragonPalsLite:
+if !DEF(MONOCHROME)
+	RGB 10, 12, 27
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPDragonPalsDark:
+if !DEF(MONOCHROME)
+	RGB 30, 23, 0
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPDarkPalsLite:
+if !DEF(MONOCHROME)
+	RGB 16, 27, 30
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.HPDarkPalsDark:
+if !DEF(MONOCHROME)
+	RGB 8, 6, 6
+else
+	RGB_MONOCHROME_DARK
+endc
+
+.PolychromeEffect:
+	pop bc
+	pop hl
+
+;;; Use Porygon/Polychrome palette logic
+; a = (AtkDV & %11) << 2 | (DefDV & %11)
+	ld a, [bc]
+	and %11
+	add a
+	add a
+	ld d, a
+	inc bc
+	ld a, [bc]
+	swap a
+	and %11
+	or d
+; d, e = base paint color
+	ld e, a
+	ld d, 0
+	push hl
+	push bc
+	; Get both light and dark colors for Porygon
+	; First the light color
+	ld hl, .SmearglePalsLite
+	ld a, [wColorVaryShiny]
+	and SHINY_MASK
+	jr z, .not_shiny_lite
+	ld hl, .SmeargleShinyPalsLite
+.not_shiny_lite
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld d, a
+	ld a, [hl]
+	ld e, a
+	pop bc
+	pop hl
+	; Store lite RGB
+	ld a, e
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	
+	; Now get the dark color
+	push hl
+	push bc
+	ld bc, wColorVaryDVs
+	ld a, [bc]
+	and %11
+	add a
+	add a
+	ld d, a
+	inc bc
+	ld a, [bc]
+	swap a
+	and %11
+	or d
+	ld e, a
+	ld d, 0
+	ld hl, .SmearglePalsDark
+	ld a, [wColorVaryShiny]
+	and SHINY_MASK
+	jr z, .not_shiny_dark
+	ld hl, .SmeargleShinyPalsDark
+.not_shiny_dark
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld d, a
+	ld a, [hl]
+	ld e, a
+	pop bc
+	pop hl
+	; Store dark RGB
+	ld a, e
+	ld [hli], a
+	ld a, d
+	ld [hl], a
+	
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.StandardColors:
 ;;; LiteRed ~ HPDV, aka, rrrrr ~ hhhh
 ; store HPDV in e
 	ld a, [bc]
@@ -224,7 +976,6 @@ endc
 	inc hl
 	inc hl
 
-.Finish:
 ;;; DarkRed ~ SpdDV, aka, RRRRR ~ ssss
 ; store SpdDV in e
 	ld a, [bc]
@@ -257,56 +1008,12 @@ endc
 	ldh [rSVBK], a
 	ret
 
-; TODO: vary paint color with unused DV bits
+; could do: vary paint color with unused DV bits
 ; * DarkRed' = DarkRed + (HPDV & %0100 >> 2) - (HPDV & %1000 >> 3)
 ; * DarkGrn' = DarkGrn + (AtkDV & %0100 >> 2) - (AtkDV & %1000 >> 3)
 ; * DarkBlu' = DarkBlu + (DefDV & %0100 >> 2) - (DefDV & %1000 >> 3)
-.Smeargle:
-; a = (AtkDV & %11) << 2 | (DefDV & %11)
-	ld a, [bc]
-	and %11
-	add a
-	add a
-	ld d, a
-	inc bc
-	ld a, [bc]
-	swap a
-	and %11
-	or d
-; d, e = base paint color
-	ld e, a
-	ld d, 0
-	push hl
-	ld hl, .SmearglePals
-	ld a, [wColorVaryShiny]
-	and SHINY_MASK
-	jr z, .not_shiny
-	ld hl, .SmeargleShinyPals
-.not_shiny
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld d, a
-	ld a, [hl]
-	ld e, a
-	pop hl
-;;; DarkRGB = base paint color
-	inc hl
-	inc hl
-	inc hl
-	ld a, e
-	ld [hld], a
-	ld a, d
-	ld [hld], a
-	dec hl
-;;; LiteRGB ~ Spd,SAt,SDfDVs
-	jr .Finish
 
-; red and blue channels: no 0 or 31
-; green channel: no 0, 7, 8, 15, 16, 23, 24, or 31
-; need to be able to add or subtract 1 without overflow/underflow
-
-.SmearglePals:
+.SmearglePalsDark:
 if !DEF(MONOCHROME)
 	RGB 14, 05, 06 ; maroon (fighting)
 	RGB 27, 09, 26 ; lavender (flying)
@@ -343,7 +1050,81 @@ else
 	RGB_MONOCHROME_DARK
 endc
 
-.SmeargleShinyPals: ; TODO
+.SmearglePalsLite:
+if !DEF(MONOCHROME)
+	RGB 14, 05, 06 ; maroon (fighting)
+	RGB 27, 09, 26 ; lavender (flying)
+	RGB 29, 05, 06 ; red (poison)
+	RGB 26, 26, 26 ; white (ground)
+	RGB 18, 11, 05 ; brown (rock)
+	RGB 16, 28, 01 ; lime (bug)
+	RGB 14, 06, 27 ; purple (ghost)
+	RGB 14, 14, 18 ; gray (steel)
+	RGB 29, 13, 02 ; orange (fire)
+	RGB 01, 09, 28 ; blue (water)
+	RGB 04, 19, 01 ; green (grass)
+	RGB 30, 25, 01 ; yellow (electric)
+	RGB 30, 10, 13 ; pink (psychic)
+	RGB 02, 22, 26 ; teal (ice)
+	RGB 07, 11, 30 ; indigo (dragon)
+	RGB 08, 06, 06 ; black (dark)
+else
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+endc
+
+.SmeargleShinyPalsDark:
+if !DEF(MONOCHROME)
+	RGB 14, 05, 06 ; maroon (fighting)
+	RGB 27, 09, 26 ; lavender (flying)
+	RGB 29, 05, 06 ; red (poison)
+	RGB 26, 26, 26 ; white (ground)
+	RGB 18, 11, 05 ; brown (rock)
+	RGB 16, 28, 01 ; lime (bug)
+	RGB 14, 06, 27 ; purple (ghost)
+	RGB 14, 14, 18 ; gray (steel)
+	RGB 29, 13, 02 ; orange (fire)
+	RGB 01, 09, 28 ; blue (water)
+	RGB 04, 19, 01 ; green (grass)
+	RGB 30, 25, 01 ; yellow (electric)
+	RGB 30, 10, 13 ; pink (psychic)
+	RGB 02, 22, 26 ; teal (ice)
+	RGB 07, 11, 30 ; indigo (dragon)
+	RGB 08, 06, 06 ; black (dark)
+else
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_DARK
+endc
+
+.SmeargleShinyPalsLite:
 if !DEF(MONOCHROME)
 	RGB 14, 05, 06 ; maroon (fighting)
 	RGB 27, 09, 26 ; lavender (flying)

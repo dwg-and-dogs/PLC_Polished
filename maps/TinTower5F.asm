@@ -162,10 +162,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -183,10 +185,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -203,10 +207,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -223,10 +229,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -243,10 +251,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -263,10 +273,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -283,10 +295,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -303,10 +317,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -323,10 +339,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -343,10 +361,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -363,10 +383,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -383,10 +405,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -403,10 +427,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -423,10 +449,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -443,11 +471,14 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
+
 	opentext
 	writetext ConfirmDVChangeText
 	yesorno
@@ -463,10 +494,12 @@ TinTower5FKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
