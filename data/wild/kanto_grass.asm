@@ -3,29 +3,29 @@
 	def_grass_wildmons HOLLYS_HOLT
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 9, PIDGEY
-	wildmon 6, ARIADOS
+	wildmon 4, PIDGEY
+	wildmon 7, ARIADOS
 	wildmon 7, GLOOM
-	wildmon 8, WEEPINBELL
-	wildmon 8, LEDIAN
-	wildmon 9, WEEPINBELL
-	wildmon 5, CYNDAQUIL
+	wildmon 7, WEEPINBELL
+	wildmon 6, LEDIAN
+	wildmon 6, WEEPINBELL
+	wildmon 9, CYNDAQUIL
 ;	; day
-	wildmon 9, PIDGEY
-	wildmon 6, ARIADOS
+	wildmon 4, PIDGEY
+	wildmon 7, ARIADOS
 	wildmon 7, GLOOM
-	wildmon 8, WEEPINBELL
-	wildmon 8, LEDIAN
-	wildmon 9, WEEPINBELL
-	wildmon 5, CYNDAQUIL
+	wildmon 7, WEEPINBELL
+	wildmon 6, LEDIAN
+	wildmon 6, WEEPINBELL
+	wildmon 9, CYNDAQUIL
 ;	; nite7
-	wildmon 9, PIDGEY
-	wildmon 6, ARIADOS
+	wildmon 4, PIDGEY
+	wildmon 7, ARIADOS
 	wildmon 7, GLOOM
-	wildmon 8, WEEPINBELL
-	wildmon 8, LEDIAN
-	wildmon 9, WEEPINBELL
-	wildmon 5, CYNDAQUIL
+	wildmon 7, WEEPINBELL
+	wildmon 6, LEDIAN
+	wildmon 6, WEEPINBELL
+	wildmon 9, CYNDAQUIL
 	end_grass_wildmons
 
 	def_grass_wildmons MISTY_BASIN
@@ -60,54 +60,54 @@
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
 	wildmon 10, ZUBAT
-	wildmon 11, ZUBAT
-	wildmon 12, ZUBAT
+	wildmon 11, SLOWPOKE
+	wildmon 10, ARIADOS
 	wildmon 10, SLOWPOKE
-	wildmon 7, SLOWPOKE
-	wildmon 8, WOOPER
-	wildmon 9, WOOPER
+	wildmon 12, WOOPER
+	wildmon 8, MISDREAVUS
+	wildmon 9, MISDREAVUS
 ;	; day
 	wildmon 10, ZUBAT
-	wildmon 11, ZUBAT
-	wildmon 12, ZUBAT
+	wildmon 11, SLOWPOKE
+	wildmon 10, ARIADOS
 	wildmon 10, SLOWPOKE
-	wildmon 7, SLOWPOKE
-	wildmon 8, WOOPER
-	wildmon 9, WOOPER
+	wildmon 12, WOOPER
+	wildmon 8, MISDREAVUS
+	wildmon 9, MISDREAVUS
 ;	; nite7
 	wildmon 10, ZUBAT
-	wildmon 11, ZUBAT
-	wildmon 12, ZUBAT
+	wildmon 11, SLOWPOKE
+	wildmon 10, ARIADOS
 	wildmon 10, SLOWPOKE
-	wildmon 7, SLOWPOKE
-	wildmon 8, WOOPER
-	wildmon 9, WOOPER
+	wildmon 12, WOOPER
+	wildmon 8, MISDREAVUS
+	wildmon 9, MISDREAVUS
 	end_grass_wildmons
 
 
 	def_grass_wildmons CALM_COAST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 10, SNUBBULL
-	wildmon 11, MARILL
+	wildmon 8, SNUBBULL
+	wildmon 9, MARILL
 	wildmon 10, PIDGEY
-	wildmon 12, MARILL
+	wildmon 11, MARILL
 	wildmon 10, SKIPLOOM
 	wildmon 10, OSHAWOTT
 	wildmon 12, OSHAWOTT
 ;	; day
-	wildmon 10, SNUBBULL
-	wildmon 11, MARILL
+	wildmon 8, SNUBBULL
+	wildmon 9, MARILL
 	wildmon 10, PIDGEY
-	wildmon 12, MARILL
+	wildmon 11, MARILL
 	wildmon 10, SKIPLOOM
 	wildmon 10, OSHAWOTT
 	wildmon 12, OSHAWOTT
 ;	; nite
-	wildmon 10, SNUBBULL
-	wildmon 11, MARILL
+	wildmon 8, SNUBBULL
+	wildmon 9, MARILL
 	wildmon 10, PIDGEY
-	wildmon 12, MARILL
+	wildmon 11, MARILL
 	wildmon 10, SKIPLOOM
 	wildmon 10, OSHAWOTT
 	wildmon 12, OSHAWOTT
@@ -116,141 +116,141 @@
 	def_grass_wildmons SERENE_SPRINGS
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 12, NIDORINO
-	wildmon 12, NIDORINA
+	wildmon 10, NIDORINO
+	wildmon 11, NIDORINA
 	wildmon 12, ABRA
-	wildmon 12, MAREEP
+	wildmon 15, MAREEP
 	wildmon 12, SNUBBULL
-	wildmon 12, MAGCARGO
-	wildmon 12, YANMA
+	wildmon 10, MAGCARGO
+	wildmon 13, YANMA
 ;	; day
-	wildmon 12, NIDORINO
-	wildmon 12, NIDORINA
+	wildmon 10, NIDORINO
+	wildmon 11, NIDORINA
 	wildmon 12, ABRA
-	wildmon 12, MAREEP
+	wildmon 15, MAREEP
 	wildmon 12, SNUBBULL
-	wildmon 12, MAGCARGO
-	wildmon 12, YANMA
+	wildmon 10, MAGCARGO
+	wildmon 13, YANMA
 ;	; nite
-	wildmon 12, NIDORINO
-	wildmon 12, NIDORINA
+	wildmon 10, NIDORINO
+	wildmon 11, NIDORINA
 	wildmon 12, ABRA
-	wildmon 12, MAREEP
+	wildmon 15, MAREEP
 	wildmon 12, SNUBBULL
-	wildmon 12, MAGCARGO
-	wildmon 12, YANMA
+	wildmon 10, MAGCARGO
+	wildmon 13, YANMA
 	end_grass_wildmons
 
 	def_grass_wildmons STADIUM_GROUNDS
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 14, SKIPLOOM
-	wildmon 14, MURKROW
-	wildmon 14, SUNFLORA
+	wildmon 11, SKIPLOOM
+	wildmon 12, MURKROW
+	wildmon 13, SUNFLORA
 	wildmon 14, CLEFAIRY
-	wildmon 14, CLEFAIRY
-	wildmon 14, CHIKORITA
-	wildmon 14, CHIKORITA
+	wildmon 13, CLEFAIRY
+	wildmon 12, CHIKORITA
+	wildmon 10, CHIKORITA
 ;	; day
-	wildmon 14, SKIPLOOM
-	wildmon 14, MURKROW
-	wildmon 14, SUNFLORA
+	wildmon 11, SKIPLOOM
+	wildmon 12, MURKROW
+	wildmon 13, SUNFLORA
 	wildmon 14, CLEFAIRY
-	wildmon 14, CLEFAIRY
-	wildmon 14, CHIKORITA
-	wildmon 14, CHIKORITA
+	wildmon 13, CLEFAIRY
+	wildmon 12, CHIKORITA
+	wildmon 10, CHIKORIT
 ;	; nite
-	wildmon 14, SKIPLOOM
-	wildmon 14, MURKROW
-	wildmon 14, SUNFLORA
+	wildmon 11, SKIPLOOM
+	wildmon 12, MURKROW
+	wildmon 13, SUNFLORA
 	wildmon 14, CLEFAIRY
-	wildmon 14, CLEFAIRY
-	wildmon 14, CHIKORITA
-	wildmon 14, CHIKORITA
+	wildmon 13, CLEFAIRY
+	wildmon 12, CHIKORITA
+	wildmon 10, CHIKORIT
 	end_grass_wildmons
 
 	def_grass_wildmons EMPERORS_GARDEN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
 	wildmon 25, FURRET
-	wildmon 24, TOGETIC
+	wildmon 28, TOGETIC
 	wildmon 25, DUNSPARCE
-	wildmon 26, MISDREAVUS
-	wildmon 20, DRATINI
+	wildmon 24, MISDREAVUS
 	wildmon 25, SKARMORY
-	wildmon 20, EEVEE
+	wildmon 25, DRATINI
+	wildmon  5, EEVEE
 ;	; day
 	wildmon 25, FURRET
-	wildmon 24, TOGETIC
+	wildmon 28, TOGETIC
 	wildmon 25, DUNSPARCE
-	wildmon 26, MISDREAVUS
-	wildmon 20, DRATINI
+	wildmon 24, MISDREAVUS
 	wildmon 25, SKARMORY
-	wildmon 20, EEVEE
+	wildmon 25, DRATINI
+	wildmon  5, EEVEE
 ;	; nite
 	wildmon 25, FURRET
-	wildmon 24, TOGETIC
+	wildmon 28, TOGETIC
 	wildmon 25, DUNSPARCE
-	wildmon 26, MISDREAVUS
-	wildmon 20, DRATINI
+	wildmon 24, MISDREAVUS
 	wildmon 25, SKARMORY
-	wildmon 20, EEVEE
+	wildmon 25, DRATINI
+	wildmon  5, EEVEE
 	end_grass_wildmons
 
 	def_grass_wildmons CATTLE_CULL_38
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 27, FARFETCH_D
-	wildmon 27, MEOWTH
-	wildmon 27, MILTANK
-	wildmon 27, TAUROS
-	wildmon 27, GIRAFARIG
-	wildmon 27, GLIGAR
-	wildmon 27, GROTLE
+	wildmon 28, FARFETCH_D
+	wildmon 29, MEOWTH
+	wildmon 25, MILTANK
+	wildmon 25, TAUROS
+	wildmon 28, GIRAFARIG
+	wildmon 28, GLIGAR
+	wildmon 20, GROTLE
 ;	; day
-	wildmon 27, FARFETCH_D
-	wildmon 27, MEOWTH
-	wildmon 27, MILTANK
-	wildmon 27, TAUROS
-	wildmon 27, GIRAFARIG
-	wildmon 27, GLIGAR
-	wildmon 27, GROTLE
+	wildmon 28, FARFETCH_D
+	wildmon 29, MEOWTH
+	wildmon 25, MILTANK
+	wildmon 25, TAUROS
+	wildmon 28, GIRAFARIG
+	wildmon 28, GLIGAR
+	wildmon 20, GROTLE
 ;	; nite
-	wildmon 27, FARFETCH_D
-	wildmon 27, MEOWTH
-	wildmon 27, MILTANK
-	wildmon 27, TAUROS
-	wildmon 27, GIRAFARIG
-	wildmon 27, GLIGAR
-	wildmon 27, GROTLE
+	wildmon 28, FARFETCH_D
+	wildmon 29, MEOWTH
+	wildmon 25, MILTANK
+	wildmon 25, TAUROS
+	wildmon 28, GIRAFARIG
+	wildmon 28, GLIGAR
+	wildmon 20, GROTLE
 	end_grass_wildmons
 
 	def_grass_wildmons CATTLE_CULL_39
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 25, FARFETCH_D
-	wildmon 25, MEOWTH
+	wildmon 28, FARFETCH_D
+	wildmon 29, MEOWTH
 	wildmon 25, MILTANK
 	wildmon 25, TAUROS
 	wildmon 25, GIRAFARIG
-	wildmon 25, ELECTABUZZ
-	wildmon 25, ELECTABUZZ
+	wildmon 29, ELECTABUZZ
+	wildmon 25, MAGNEMITE
 ;	; day
-	wildmon 25, FARFETCH_D
-	wildmon 25, MEOWTH
+	wildmon 28, FARFETCH_D
+	wildmon 29, MEOWTH
 	wildmon 25, MILTANK
 	wildmon 25, TAUROS
 	wildmon 25, GIRAFARIG
-	wildmon 25, ELECTABUZZ
-	wildmon 25, ELECTABUZZ
+	wildmon 29, ELECTABUZZ
+	wildmon 25, MAGNEMITE
 ;	; nite
-	wildmon 25, FARFETCH_D
-	wildmon 25, MEOWTH
+	wildmon 28, FARFETCH_D
+	wildmon 29, MEOWTH
 	wildmon 25, MILTANK
 	wildmon 25, TAUROS
 	wildmon 25, GIRAFARIG
-	wildmon 25, ELECTABUZZ
-	wildmon 25, ELECTABUZZ
+	wildmon 29, ELECTABUZZ
+	wildmon 25, MAGNEMITE
 	end_grass_wildmons
 
 	def_grass_wildmons PHANTOM_FJORD
@@ -340,29 +340,29 @@
 	def_grass_wildmons TRANQUIL_TARN
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 32, LOPUNNY
-	wildmon 32, VESPIQUEN
-	wildmon 32, KIRLIA
-	wildmon 32, LOPUNNY
-	wildmon 32, BASTIODON
-	wildmon 32, KIRLIA
-	wildmon 32, LOPUNNY
+	wildmon 38, LOPUNNY
+	wildmon 38, VESPIQUEN
+	wildmon 39, KIRLIA
+	wildmon 39, LOPUNNY
+	wildmon 30, BASTIODON
+	wildmon 37, KIRLIA
+	wildmon 37, LOPUNNY
 ;	; day
-	wildmon 32, LOPUNNY
-	wildmon 32, VESPIQUEN
-	wildmon 32, KIRLIA
-	wildmon 32, LOPUNNY
-	wildmon 32, BASTIODON
-	wildmon 32, KIRLIA
-	wildmon 32, LOPUNNY
+	wildmon 38, LOPUNNY
+	wildmon 38, VESPIQUEN
+	wildmon 39, KIRLIA
+	wildmon 39, LOPUNNY
+	wildmon 30, BASTIODON
+	wildmon 37, KIRLIA
+	wildmon 37, LOPUNNY
 ;	; nite
-	wildmon 32, LOPUNNY
-	wildmon 32, VESPIQUEN
-	wildmon 32, KIRLIA
-	wildmon 32, LOPUNNY
-	wildmon 32, BASTIODON
-	wildmon 32, KIRLIA
-	wildmon 32, LOPUNNY
+	wildmon 38, LOPUNNY
+	wildmon 38, VESPIQUEN
+	wildmon 39, KIRLIA
+	wildmon 39, LOPUNNY
+	wildmon 30, BASTIODON
+	wildmon 37, KIRLIA
+	wildmon 37, LOPUNNY
 	end_grass_wildmons
 
 	def_grass_wildmons GROTTOED_GLACIER_1F

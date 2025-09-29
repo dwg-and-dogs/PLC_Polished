@@ -34,7 +34,7 @@ AzaleaTown_MapScriptHeader:
 
 	def_object_events
 	object_event 18, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, AzaleaTownGrampsScript, -1
-	object_event  7, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownPokefanFScript, -1
+	object_event  7, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BLUE, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownPokefanFScript, -1
 ; others 
 	object_event 26,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 			PAL_NPC_BLUE, 		OBJECTTYPE_SCRIPT, 0, PokemonMemoriesNPCScript, -1
 	object_event 12, 16, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, 						OBJECTTYPE_SCRIPT, 0, AzaleaTownMatronScript, -1

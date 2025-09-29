@@ -1,0 +1,344 @@
+; Complete implementation for Hall of Fame with DV support
+; This breaks save compatibility but provides full DV color variation
+
+; 1. Update the constant (put this in your constants file)
+HOF_MON_LENGTH EQU 1 + 2 + 2 + 3 + 1 + (MON_NAME_LENGTH - 1)
+; species(1) + id(2) + personality(2) + dvs(3) + level(1) + nickname
+
+; 2. Update GetHallOfFameParty to save DVs
+GetHallOfFameParty:
+	ld hl, wOverworldMapBlocks
+	ld bc, HOF_LENGTH
+	xor a
+	rst ByteFill
+	ld a, [wHallOfFameCount]
+	ld de, wOverworldMapBlocks
+	ld [de], a
+	inc de
+	ld hl, wPartySpecies
+	ld c, 0
+.next
+	ld a, [hli]
+	inc a
+	jr z, .done
+	ld a, c
+	push hl
+	ld hl, wPartyMon1IsEgg
+	call GetPartyLocation
+	bit MON_IS_EGG_F, [hl]
+	pop hl
+	jr z, .mon
+	inc c
+	jr .next
+
+.mon
+	push hl
+	push de
+	push bc
+
+	ld a, c
+	ld hl, wPartyMons
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	ld c, l
+	ld b, h
+
+	; Save species
+	ld hl, MON_SPECIES
+	add hl, bc
+	ld a, [hl]
+	ld [de], a
+	inc de
+
+	; Save ID (2 bytes)
+	ld hl, MON_ID
+	add hl, bc
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	inc de
+
+	; Save personality (2 bytes)
+	ld hl, MON_PERSONALITY
+	add hl, bc
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	inc de
+
+	; Save DVs (3 bytes) - THIS IS THE NEW PART
+	ld hl, MON_DVS
+	add hl, bc
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	inc de
+
+	; Save level
+	ld hl, MON_LEVEL
+	add hl, bc
+	ld a, [hl]
+	ld [de], a
+	inc de
+
+	; Save nickname
+	pop bc
+	push bc
+	ld a, c
+	ld hl, wPartyMonNicknames
+	ld bc, MON_NAME_LENGTH
+	rst AddNTimes
+	ld bc, MON_NAME_LENGTH - 1
+	rst CopyBytes
+
+	pop bc
+	inc c
+	pop de
+	ld hl, HOF_MON_LENGTH
+	add hl, de
+	ld e, l
+	ld d, h
+	pop hl
+	jr .next
+
+.done
+	ld a, $ff
+	ld [de], a
+	ret
+
+; 3. Update DisplayHOFMon to load DVs
+DisplayHOFMon:
+	xor a
+	ldh [hBGMapMode], a
+	
+	; Load species
+	ld a, [hli]
+	ld [wTempMonSpecies], a
+	
+	; Load ID (2 bytes)
+	ld a, [hli]
+	ld [wTempMonID], a
+	ld a, [hli]
+	ld [wTempMonID + 1], a
+	
+	; Load personality (2 bytes)
+	ld a, [hli]
+	ld [wTempMonPersonality], a
+	ld a, [hli]
+	ld [wTempMonPersonality + 1], a
+	
+	; Load DVs (3 bytes) - THIS IS THE NEW PART
+	ld a, [hli]
+	ld [wTempMonDVs], a
+	ld a, [hli]
+	ld [wTempMonDVs + 1], a
+	ld a, [hli]
+	ld [wTempMonDVs + 2], a
+	
+	; Load level
+	ld a, [hli]
+	ld [wTempMonLevel], a
+	
+	; Copy nickname
+	ld de, wStringBuffer2
+	ld bc, MON_NAME_LENGTH - 1
+	rst CopyBytes
+	ld a, "@"
+	ld [wStringBuffer2 + 10], a
+	
+	; Clear screen
+	hlcoord 0, 0
+	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+	ld a, " "
+	rst ByteFill
+	
+	; Draw text boxes
+	hlcoord 0, 0
+	lb bc, 3, SCREEN_WIDTH - 2
+	call Textbox
+	hlcoord 0, 12
+	lb bc, 4, SCREEN_WIDTH - 2
+	call Textbox
+	
+	; Set up species and form
+	ld a, [wTempMonSpecies]
+	ld [wCurPartySpecies], a
+	ld [wTextDecimalByte], a
+	ld hl, wTempMonForm
+	predef GetVariant
+	
+	; Prepare the frontpic
+	hlcoord 6, 5
+	call PrepMonFrontpicFlipped
+	
+	; Check if egg
+	ld a, [wTempMonIsEgg]
+	bit MON_IS_EGG_F, a
+	jr nz, .print_id_no
+	
+	; Print species number
+	hlcoord 1, 13
+	ld a, "№"
+	ld [hli], a
+	ld [hl], "."
+	hlcoord 3, 13
+	ld de, wTextDecimalByte
+	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
+	call PrintNum
+	
+	; Print species name
+	call GetBasePokemonName
+	hlcoord 7, 13
+	rst PlaceString
+	
+	; Print gender
+	ld a, TEMPMON
+	ld [wMonType], a
+	farcall GetGender
+	ld a, " "
+	jr c, .got_gender
+	ld a, "♂"
+	jr nz, .got_gender
+	ld a, "♀"
+
+.got_gender
+	hlcoord 18, 13
+	ld [hli], a
+	
+	; Print nickname
+	hlcoord 8, 14
+	ld a, "/"
+	ld [hli], a
+	ld de, wStringBuffer2
+	rst PlaceString
+	
+	; Print level
+	hlcoord 1, 16
+	call PrintLevel
+
+.print_id_no
+	; Print ID number
+	hlcoord 7, 16
+	ld a, "<ID>"
+	ld [hli], a
+	ld a, "№"
+	ld [hli], a
+	ld [hl], "."
+	hlcoord 10, 16
+	ld de, wTempMonID
+	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
+	jmp PrintNum
+
+; 4. Update AnimateHOFMonEntrance to use DVs for palette
+AnimateHOFMonEntrance:
+	push hl
+	call ClearBGPalettes
+	farcall ResetDisplayBetweenHallOfFameMons
+	pop hl
+	
+	; Load species
+	ld a, [hli]
+	ld [wTempMonSpecies], a
+	ld [wCurPartySpecies], a
+	
+	; Skip ID (2 bytes)
+	inc hl
+	inc hl
+	
+	; Load personality (2 bytes)
+	ld a, [hli]
+	ld [wTempMonPersonality], a
+	ld a, [hli]
+	ld [wTempMonPersonality + 1], a
+	
+	; Load DVs (3 bytes) - NEW
+	ld a, [hli]
+	ld [wTempMonDVs], a
+	ld a, [hli]
+	ld [wTempMonDVs + 1], a
+	ld a, [hli]
+	ld [wTempMonDVs + 2], a
+	
+	; Set up form/variant
+	ld hl, wTempMonForm
+	predef GetVariant
+	
+	; Clear screen
+	hlcoord 0, 0
+	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+	ld a, " "
+	rst ByteFill
+	
+	; Load backpic
+	ld de, vTiles2 tile $31
+	predef GetBackpic
+	ld a, $31
+	ldh [hGraphicStartTile], a
+	hlcoord 6, 6
+	lb bc, 6, 6
+	predef PlaceGraphic
+	
+	; Set up scrolling
+	ld a, $d0
+	ldh [hSCY], a
+	ld a, $90
+	ldh [hSCX], a
+	call ApplyTilemapInVBlank
+	xor a
+	ldh [hBGMapMode], a
+	
+	; Load color palette using the DVs for HP type coloring
+	push hl
+	ld hl, wTempMonDVs
+	ld a, [wTempMonSpecies]
+	ld b, a
+	call CopyDVsToColorVaryDVs
+	pop hl
+	
+	ld a, CGB_PLAYER_OR_MON_FRONTPIC_PALS
+	call GetCGBLayout
+	call SetPalettes
+	
+	; Animate the backpic
+	call HOF_SlideBackpic
+	
+	; Prepare frontpic
+	hlcoord 0, 0
+	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+	ld a, " "
+	rst ByteFill
+	hlcoord 6, 5
+	call PrepMonFrontpicFlipped
+	call ApplyTilemapInVBlank
+	xor a
+	ldh [hBGMapMode], a
+	ldh [hSCY], a
+	; fallthrough to HOF_SlideFrontpic
+
+; 5. Also update the temp structure definition
+; In your WRAM definitions, make sure you have:
+wHallOfFameTempMon1::
+	ds 1  ; species
+	ds 2  ; id
+	ds 2  ; personality
+	ds 3  ; dvs (NEW)
+	ds 1  ; level
+	ds MON_NAME_LENGTH - 1  ; nickname
+wHallOfFameTempMon1End::
+
+; And update the calculation for all temp mons
+wHallOfFameTempMon2:: ds wHallOfFameTempMon1End - wHallOfFameTempMon1
+wHallOfFameTempMon3:: ds wHallOfFameTempMon1End - wHallOfFameTempMon1
+wHallOfFameTempMon4:: ds wHallOfFameTempMon1End - wHallOfFameTempMon1
+wHallOfFameTempMon5:: ds wHallOfFameTempMon1End - wHallOfFameTempMon1
+wHallOfFameTempMon6:: ds wHallOfFameTempMon1End - wHallOfFameTempMon1
+wHallOfFameTempMonEnd::

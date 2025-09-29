@@ -158,7 +158,27 @@ endr
 	halloffame
 ;	warp ANARRES_DORMS, 4, 7
 	end
-	
+
+OverworldHallOfFame1: 
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot. the second index is 0 - 5, with 0 being the first party member, and 5 is the highest it can go for a party of 6 
+	readmem wCurPartySpecies  ;
+	opentext
+	writethistext ; font is in vtiles1?
+		text "lorem ipsum" ; Species name
+		line "lorem ipsum" ; nickname 
+		done
+	waitbutton
+	closetext
+	pokepic 0	; pokepic2, actually 
+	pause 60
+	closepokepic
+; repeat this 	for all the members of the party 
+	halloffame
+	end
+
+
 
 DebugInteraction2: 
 	refreshscreen
@@ -168,9 +188,9 @@ DebugInteraction2:
 	closepokepic
 	
 	; Set Fighting HP pattern for Mon1
-;	loadmem wPartyMon1DVs+0, $ff
-;	loadmem wPartyMon1DVs+1, $ee
-;	loadmem wPartyMon1DVs+2, $ee
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ee
 	
 	; Set normal DVs for Mon2 (if exists)
 ;	loadmem wPartyMon2DVs+0, $aa
@@ -180,7 +200,8 @@ DebugInteraction2:
 	
 	opentext
 	writethistext
-		text "DV change"
+		text "lorem ipsum" ; Species name
+		line "lorem ipsum" ; nickname 
 		done
 	waitbutton
 	closetext
@@ -189,7 +210,7 @@ DebugInteraction2:
 	refreshscreen
 	loadmem wCurForm, -1
 	loadmem wCurPartyMon, 0    ; Select first party slot
-	readmem wPartyMon1Species  ; or wCurPartySpecies
+	readmem wCurPartySpecies  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
 	closepokepic
@@ -221,6 +242,13 @@ endr
 for x, NUM_TMS + NUM_HMS
 	givetmhm x
 endr
+	; givepokes
+	givepoke CYNDAQUIL, 5
+	givepoke TOTODILE, 100
+	givepoke CHIKORITA, 100
+	givepoke LUGIA, 100
+	givepoke ENTEI, 100
+	givepoke RAIKOU, 100
 	; useful items
 	giveitem MASTER_BALL, 99
 	giveitem GEODE, 99;
@@ -309,7 +337,7 @@ endr
 	setflag ENGINE_FLYPOINT_CIANWOOD
 	setflag ENGINE_FLYPOINT_MAHOGANY
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
-; historic johto
+	; historic johto
 	setflag ENGINE_FLYPOINT_ANARRES_TOWN
 	setflag ENGINE_FLYPOINT_GAULDENROD
 	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL

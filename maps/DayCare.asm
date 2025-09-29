@@ -39,31 +39,36 @@ DayCareManScript_Inside:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
-	iftrue .AlreadyHaveEviolite
+	iftrue_jumpopenedtext DayCareText_GotEviolite
 	writetext DayCareManText_GiveEviolite
 	waitbutton
     giveitem EVIOLITE
-    iffalse .BagFull
     setevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
     writetext DayCareText_GotEviolite
-	promptbutton
-	special Special_DayCareMan
-	waitendtext
+	waitbutton
+	closetext
+	end
 
-.BagFull:
-    writetext DayCareText_BagFull
-    waitendtext
-
-
-.AlreadyHaveEviolite:
-	special Special_DayCareMan
-	waitendtext
 
 DayCareLadyScript:
 	faceplayer
 	opentext
-;	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG
-;	iftrue_jumpopenedtext Text_GrampsLookingForYou
+	writethistext
+		text "We're a bit too"
+		line "old to watch any"
+		cont "#mon, now."
+		
+		para "But I'll always"
+		line "cherish watching"
+		cont "#mon grow."
+		done
+	waitbutton
+	closetext
+	end
+
+DayCareLadyScript2:
+	faceplayer
+	opentext
 	special Special_DayCareLady
 	waitendtext
 
@@ -98,24 +103,11 @@ DayCareManText_GiveEviolite:
     line "Eviolite."
     done
 
-DayCareText_PartyAndBoxFull:
-	text "You have no room"
-	line "for this, even in"
-	cont "your box."
-	done
-
-DayCareText_BagFull:
-    text "Oh my, your Bag"
-    line "is full."
-    done
-	
 DayCareText_GotEviolite:
-    text "Wonderful! This"
-    line "Eviolite will"
-    para "boost the defenses"
-    line "of any #mon"
-    para "that can still"
-    line "evolve."
+    text "Eviolite raises"
+	line "the defenses of"
+	para "#mon that can"
+	line "still evolve."
     done
 
 DayCareManText_DeclinedEviolite:
@@ -126,15 +118,15 @@ DayCareManText_DeclinedEviolite:
     done
 
 DayCarePokeFanNoEggText:
-	text "We're not sure why"
-	line "but #mon won't"
-	para "produce eggs"
-	line "here anymore."
+	text "The noise from"
+	line "Ilex Loggers"
+	para "stresses out the"
+	line "#mon so they"
+	cont "won't lay eggs."
 	
-	para "I think it might"
-	line "be the stress of"
-	para "the loud logging"
-	line "equipment in the"
-	cont "Ilex Forest."
+	para "Fortunately, most"
+	line "egg moves and TMs"
+	para "can be found in"
+	line "Johto somewhere."
 	done
 	

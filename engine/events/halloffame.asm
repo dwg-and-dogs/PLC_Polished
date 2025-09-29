@@ -1,4 +1,4 @@
-HallOfFame::
+HallOfFame:: ;this stubs out all of the pokemon and just goes to the player. todo: set up a halloffame script in the overworld. 
 	call HallOfFame_FadeOutMusic
 	farcall InitDisplayForHallOfFame
 	ld a, [wStatusFlags]
@@ -11,7 +11,7 @@ HallOfFame::
 	ld b, a
 	farcall SetCreditsSpawn
 
-	; Enable the Pokégear map to cycle through all of Kanto
+	; Enable the PokÃ©gear map to cycle through all of Kanto
 	ld hl, wStatusFlags
 	set 6, [hl] ; hall of fame
 
@@ -68,56 +68,53 @@ HallOfFame_PlayMusicDE:
 	call DelayFrame
 	pop de
 	jmp PlayMusic
-
+	
 AnimateHallOfFame:
-	xor a
-	ld [wJumptableIndex], a
-	call LoadHOFTeam
-	jr c, .done
+	; Play the Hall of Fame music
 	ld de, MUSIC_HALL_OF_FAME
 	call HallOfFame_PlayMusicDE
+
+	; Initialize the party counter
 	xor a
-	ld [wHallOfFameMonCounter], a
+	ld [wCurPartyMon], a
+
 .loop
-	ld a, [wHallOfFameMonCounter]
+	; Check if we have displayed all Pokémon in the party
+	ld a, [wCurPartyMon]
 	cp PARTY_LENGTH
-	jr nc, .done
-	ld hl, wHallOfFameTempMon1
-	ld bc, wHallOfFameTempMon1End - wHallOfFameTempMon1
-	rst AddNTimes
+	jp nc, .done
+
+	; Check if the current party slot is valid and not an Egg
+	ld a, [wCurPartyMon]
+	ld hl, wPartySpecies
+	ld c, a
+	ld b, 0
+	add hl, bc
 	ld a, [hl]
-	cp -1
+	cp -1 ; empty slot
 	jr z, .done
-	push hl
-	call AnimateHOFMonEntrance
-	pop hl
-	call .DisplayNewHallOfFamer
-	jr c, .done
-	ld hl, wHallOfFameMonCounter
+	cp EGG
+	jr z, .next_mon ; Skip eggs
+
+	; TODO: Display Pokémon here
+	; For now, just skip with a short delay
+	ld c, 30
+	call DelayFrames
+
+.next_mon
+	; Move to the next Pokémon in the party
+	ld hl, wCurPartyMon
 	inc [hl]
-	jr .loop
+	jp .loop
 
 .done
+	; After displaying all party members, continue to the player picture animation
 	call HOF_AnimatePlayerPic
 	ld a, $4
 	ld [wMusicFade], a
 	farcall FadeOutPalettes
 	ld c, 8
 	jmp DelayFrames
-
-.DisplayNewHallOfFamer:
-	call DisplayHOFMon
-	ld de, .String_NewHallOfFamer
-	hlcoord 1, 2
-	rst PlaceString
-	call ApplyTilemapInVBlank
-	decoord 6, 5
-	ld c, $6
-	predef HOF_AnimateFrontpic
-	ld c, 60
-	call DelayFrames
-	and a
-	ret
 
 .String_NewHallOfFamer:
 	db "New Hall of Famer!@"
@@ -458,7 +455,7 @@ DisplayHOFMon:
 	bit MON_IS_EGG_F, a
 	jr nz, .print_id_no
 	hlcoord 1, 13
-	ld a, "№"
+	ld a, "â„–"
 	ld [hli], a
 	ld [hl], "."
 	hlcoord 3, 13
@@ -473,9 +470,9 @@ DisplayHOFMon:
 	farcall GetGender
 	ld a, " "
 	jr c, .got_gender
-	ld a, "♂"
+	ld a, "â™‚"
 	jr nz, .got_gender
-	ld a, "♀"
+	ld a, "â™€"
 
 .got_gender
 	hlcoord 18, 13
@@ -492,7 +489,7 @@ DisplayHOFMon:
 	hlcoord 7, 16
 	ld a, "<ID>"
 	ld [hli], a
-	ld a, "№"
+	ld a, "â„–"
 	ld [hli], a
 	ld [hl], "."
 	hlcoord 10, 16
@@ -501,6 +498,9 @@ DisplayHOFMon:
 	jmp PrintNum
 
 HOF_AnimatePlayerPic:
+	; Reload the font, which was overwritten by the PokÃ©mon's picture data.
+	call LoadStandardFont
+	; --- FIX ENDS HERE ---
 	call ClearBGPalettes
 	hlcoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
@@ -557,7 +557,7 @@ HOF_AnimatePlayerPic:
 	hlcoord 1, 6
 	ld a, "<ID>"
 	ld [hli], a
-	ld a, "№"
+	ld a, "â„–"
 	ld [hli], a
 	ld [hl], "."
 	hlcoord 4, 6
@@ -581,4 +581,3 @@ HOF_AnimatePlayerPic:
 
 .PlayTime:
 	db "Play Time@"
-

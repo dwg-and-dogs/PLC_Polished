@@ -67,14 +67,14 @@
 	db 4 percent ; encounter rate
 	wildmon 25, SEADRA
 	wildmon 30, CLOYSTER
-	wildmon 25, CLOYSTER
+	wildmon 25, GASTLY
 	end_water_wildmons
 
 	def_water_wildmons SEAFLUX_NEXUS
 	db 4 percent ; encounter rate
 	wildmon 25, SEADRA
 	wildmon 30, CLOYSTER
-	wildmon 25, CLOYSTER
+	wildmon 25, OCTILLERY
 	end_water_wildmons
 
 	def_water_wildmons SHELTERED_SHORES
@@ -100,9 +100,9 @@
 
 	def_water_wildmons TRANQUIL_TARN
 	db 1 percent ; encounter rate
-	wildmon 15, LAPRAS
-	wildmon 20, LAPRAS
 	wildmon 25, LAPRAS
+	wildmon 30, LAPRAS
+	wildmon 35, GYARADOS
 	end_water_wildmons
 
 	def_water_wildmons EMPIRES_EXTENT
@@ -120,5 +120,4 @@
 	end_water_wildmons
 
 	db -1 ; end
-	
 	
