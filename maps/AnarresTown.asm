@@ -15,6 +15,7 @@ AnarresTown_MapScriptHeader:
 	warp_event 21, 5, ANARRES_STOCKROOM, 1
 	warp_event 30, 9, MISTY_BASIN, 1
 
+
 	def_coord_events
 
 

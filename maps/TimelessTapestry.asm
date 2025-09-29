@@ -7,7 +7,9 @@ TimelessTapestry_MapScriptHeader:
 
 	def_warp_events
 	warp_event 3, 5, WHISPERS_TAPESTRY_GATE, 3
-
+	warp_event 4, 38, HOLLYS_HOLT, 9
+	warp_event 4, 39, HOLLYS_HOLT, 10
+	
 
 	def_coord_events
 ;	coord_event 9, 26, 0, TapestrySceneFinale
@@ -33,7 +35,10 @@ TimelessTapestry_MapScriptHeader:
 	object_event 12, 20, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestrySamaria, -1 ; SAMARIA
 	object_event 13, 20, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryShiji, -1
 	object_event 10, 17, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TapestryMorphea, -1
-
+	; southern NPCs
+	object_event 11, 39, SPRITE_AROMA_LADY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText1, EVENT_BEAT_KANNA
+	object_event  7, 38, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText2, EVENT_BEAT_KANNA
+	object_event 17, 40, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText3, EVENT_BEAT_KANNA
 
 	object_const_def
 	const TAPESTRY_SAMSARA
@@ -390,4 +395,45 @@ TapestryShiji:
 	line "becoming a ruins"
 	para "without proper"
 	line "upkeep!"
+	done
+
+TapestryText1:
+	text "I wish the Johto-"
+	line "Hisui festival"
+	para "could've gone on"
+	line "longer."
+	
+	para "Consul Urgaust is"
+	line "so uptight!"
+	para "He's so worried"
+	line "about outsiders"
+	cont "at the port."
+	done
+
+
+TapestryText2:
+	text "We brought along"
+	line "special #mon"
+	para "from Hisui for"
+	line "Johto trainers to"
+	cont "catch!"
+	
+	para "Oh, but you don't"
+	line "look like you're"
+	para "from Johto or"
+	line "from Hisui?"
+	done
+
+
+TapestryText3:
+	text "I spent weeks in"
+	line "that cavern on my"
+	para "panel, and the"
+	line "Consul orders it"
+	cont "closed!"
+	
+	para "How will anyone"
+	line "learn of Celebi"
+	para "if these temples"
+	line "are closed?"
 	done

@@ -110,6 +110,11 @@ AnimateHallOfFame:
 .done
 	; After displaying all party members, continue to the player picture animation
 	call HOF_AnimatePlayerPic
+	; new stuff
+	opentext
+	writetext halloffametext_1
+	waitbutton
+	closetext
 	ld a, $4
 	ld [wMusicFade], a
 	farcall FadeOutPalettes
@@ -581,3 +586,30 @@ HOF_AnimatePlayerPic:
 
 .PlayTime:
 	db "Play Time@"
+
+halloffametext_1:
+	text "If there's someone"
+	line "who shaped your"
+	cont "world for the"
+	cont "better,"
+	
+	para "Give them a call,"
+	line "or"
+	
+	para "send a letter,"
+	line "or message, or"
+	
+	para "even a prayer,"
+	
+	para "to let them know"
+	line "what they mean"
+	cont "to you."
+	
+	para "It may mean the"
+	line "world to them to"
+	para "know that their"
+	line "inheritance is"
+	cont "treasured."
+	done
+	
+	
