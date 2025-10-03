@@ -114,6 +114,7 @@ ENDM
 	map_const WHIRL_ISLAND_B2F,                           20, 18 ; 63
 	map_const WHIRL_ISLAND_B3F,                           10, 18 ; NEW 
 	map_const WHIRL_ISLAND_LUGIA_CHAMBER,                 10,  9 ; 64
+	map_const BURNED_TOWER_B1F_CREDIT,                           10,  9 ; 15
 
 
 	newgroup                                                     ;  4
@@ -150,7 +151,7 @@ ENDM
 	map_const ANARRES_HOUSE,  	                           4,  4 ;  10 traditional house
 	map_const ANARRES_HOLT_GATE,                           4,  4 ; sprout tower 
 	map_const HOLT_COAST_GATE,                             4,  4 ; sprout tower
-
+	map_const HOLLYS_HOLT_CREDITS, 								  17, 24 ;  1 forest
 
 	newgroup                                                     ;  6 ;gauldenrod and surrounding
 	map_const CALM_COAST,                                   10, 27 ;  1
@@ -174,6 +175,7 @@ ENDM
 	map_const STADIUM_BOX,                                    6, 6 ; traditional HOUSE
 	map_const STADIUM_CAPITAL_GATE, 						 4, 4 ; sprout tower
 	map_const STY_CAPITAL_GATE, 						     4, 4 ; sprout tower
+	map_const STADIUM_GROUNDS_CREDIT,                               27, 21 ; JOHTO traditional
 
 	newgroup        ; 7                                         
 	map_const EMPERORS_GARDEN,                               20, 20 ; johto traditional
@@ -205,6 +207,7 @@ ENDM
 	map_const TIN_TOWER_OLD_1F,                                8,  8 ; sprout tower
 	map_const TIN_TOWER_OLD_2F,                                8,  8 ; sprout tower
 	map_const TIN_TOWER_OLD_3F,                                8,  8 ; sprout tower
+	map_const EMPERORS_GARDEN_CREDIT,                               20, 20 ; johto traditional
 
 	newgroup                                                     ;  8
 	map_const AZALEA_POKECENTER_1F,                        6,  4 ;  1
@@ -310,6 +313,7 @@ ENDM
 	map_const SEAFLUX_NEXUS_B3F,                           10, 18 ; cave                       	
 	map_const LANDING_DOCKS,                              10, 10 ; port
 	map_const ARDUOUS_ANCHORAGE,                          20, 17 ; johto overcast
+	map_const ARDUOUS_ANCHORAGE_CREDIT,                          20, 17 ; johto overcast
 	
 
 	newgroup                                                     ; 15
@@ -330,6 +334,7 @@ ENDM
 	map_const WESTERN_GLACIER_1F,                             7, 10 ; ice path
 	map_const WESTERN_GLACIER_B1F,                           16, 16 ; ice path
 	map_const WESTERN_GLACIER_B2F,                            6,  6 ; ice path
+	map_const SINJOH_CROSSROADS_CREDIT,                             21, 12 ; johto overcast
 
 	newgroup                                                     ; 18
 	map_const EMPIRES_EXTENT_EERIE_HAMLET_GATE,               4, 4 ; sprout           
@@ -354,6 +359,7 @@ ENDM
 	map_const CLASTS_CRADLE_2F,                             10, 7  ; cave
 	map_const CLASTS_CRADLE_1F,                             20, 25 ; cave
 	map_const CLASTS_CRADLE_B1F,                            15, 15 ; cave
+	map_const CLASTS_CRADLE_B1F_CREDIT,                            15, 15 ; cave
 
 
 	newgroup                                                     ; 20

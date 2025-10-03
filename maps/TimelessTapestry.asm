@@ -204,6 +204,16 @@ TapestryTextAmos:
 	para "we will dissolve"
 	line "our union."
 	
+	para "Urgaust's generals"
+	line "haven't been seen,"
+	para "but I hear rumors"
+	line "that one of each"
+	para "of their #mon"
+	line "still roam Johto,"
+	para "reincarned by"
+	line "Ho-Oh to remind"
+	cont "us of that day."
+	
 	para "..."
 
 	para "What will you "

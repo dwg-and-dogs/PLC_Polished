@@ -35,10 +35,11 @@ WhirlIslandKurtLugiaScript:
 	writetext KurtLugiaText1
 	waitbutton
 	closetext
+	appear WHIRLISLANDLUGIACHAMBER_BALL
 	cry LUGIA
 	waitsfx
 	applymovement WHIRLISLANDLUGIACHAMBER_BALL, WhirlIslandBallMoves
-	clearevent EVENT_LUGIA_POKEBALL
+;	clearevent EVENT_LUGIA_POKEBALL
 	playsound SFX_THROW_BALL
 	waitsfx
 	playsound SFX_BALL_BOUNCE

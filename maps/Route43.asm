@@ -58,6 +58,10 @@ GenericTrainerSightseerFRosie:
 GenericTrainerSightseerMJaska:
 	generictrainer SIGHTSEERM, JASKA, EVENT_BEAT_SIGHTSEERM_JASKA, .SeenText5, .BeatenText5
 
+	text "Have you ever"
+	line "hiked Mt. Silver?"
+	done
+
 .BeatenText5:
 	text "Johto has such"
 	line "strong trainers."
@@ -71,6 +75,11 @@ GenericTrainerSightseerMJaska:
 
 GenericTrainerPokemaniacBrent:
 	generictrainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, .SeenText4, .BeatenText4
+
+	text "I heard there's"
+	line "a secret cabin"
+	cont "here somewhere."
+	done
 
 .BeatenText4:
 	text "I wonder what it"
@@ -92,6 +101,10 @@ GenericTrainerPokemaniacBrent:
 GenericTrainerPokemaniacAndrew:
 	generictrainer POKEMANIAC, ANDREW, EVENT_BEAT_POKEMANIAC_ANDREW, .SeenText3, .BeatenText3
 
+	text "#mon deserve"
+	line "their peace!"
+	done
+
 .BeatenText3:
 	text "Well, are you"
 	line "with me?"
@@ -107,6 +120,11 @@ GenericTrainerPokemaniacAndrew:
 GenericTrainerPokemaniacLarry:
 	generictrainer POKEMANIAC, LARRY, EVENT_BEAT_POKEMANIAC_LARRY, .SeenText2, .BeatenText2
 
+	text "I heard that some"
+	line "#mon have"
+	cont "unique colors."
+	done
+
 .BeatenText2:
 	text "You have such"
 	line "magnificent"
@@ -121,6 +139,14 @@ GenericTrainerPokemaniacLarry:
 
 GenericTrainerOfficerFJamie:
 	generictrainer OFFICERF, JAMIE, EVENT_BEAT_OFFICERF_JAMIE, .SeenText1, .BeatenText1
+
+	text "That #mon is"
+	line "bigger than any"
+	para "Ursaring I've"
+	line "ever seen."
+	
+	para "Watch out."
+	done
 
 .BeatenText1:
 	text "Carry on."

@@ -72,6 +72,11 @@ BrassTowerSwitchScript15F:
 GenericTrainerElderAkira:
     generictrainer ELDER, AKIRA, EVENT_BEAT_ELDER_AKIRA, AkiraSeenText, AkiraBeatenText
 
+	text "The stormclouds"
+	line "on the horizon"
+	para "are nothing to"
+	line "Consul Urgaust."
+	done
 
 AkiraBeatenText:
 	text "Oh, but I sense a"

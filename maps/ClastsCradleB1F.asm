@@ -430,6 +430,13 @@ CC_MejimiMoves2: ;; 4 D 5 raw
 GenericTrainerBrigader19: ; bugs dark 
 	generictrainer BRIGADER, 19, EVENT_BEAT_ROCKET_GRUNTM_19, Brigader19SeenText, Brigader19BeatenText  
 
+	text "Wait, it's not"
+	line "sulfur smell."
+	
+	para "I smell the pure"
+	line "aroma of Steel!"
+	done
+
 Brigader19BeatenText:
 	text "Maybe I smelled"
 	line "the sulfur..."
@@ -443,6 +450,15 @@ Brigader19SeenText:
 	
 GenericTrainerBrigader20: ; tyson nidos steelix
 	generictrainer BRIGADER, 20, EVENT_BEAT_ROCKET_GRUNTM_20, Brigader20SeenText, Brigader20BeatenText  
+
+	text "This is just a"
+	line "bump in my day."
+	
+	para "I would follow"
+	line "Adrinna to the"
+	para "furthest depths"
+	line "of the Earth."
+	done
 
 Brigader20BeatenText:
 	text "Unfathomable - I"

@@ -269,6 +269,11 @@ Route42CharcoalKilnBossText:
 GenericTrainerFisherKyle:
 	generictrainer FISHER, KYLE, EVENT_BEAT_FISHER_KYLE, .SeenText2, .BeatenText2
 
+	text "I've been itching"
+	line "to try this new"
+	cont "lure out."
+	done
+
 .BeatenText2:
 	text "Gotta re-cast"
 	line "my pole, now."
@@ -281,6 +286,13 @@ GenericTrainerFisherKyle:
 	
 GenericTrainerFisherArnold:
 	generictrainer FISHER, ARNOLD, EVENT_BEAT_FISHER_ARNOLD, .SeenText1, .BeatenText1
+
+	text "Mountain lakes"
+	line "are the only"
+	para "places left in"
+	line "Johto to fish,"
+	cont "I think."
+	done
 
 .BeatenText1:
 	text "Now I'm back to"
@@ -295,6 +307,16 @@ GenericTrainerFisherArnold:
 
 GenericTrainerAromaLadyHeather:
 	generictrainer AROMA_LADY, HEATHER, EVENT_BEAT_AROMA_LADY_HEATHER, .SeenText3, .BeatenText3
+
+	text "Our visa to enter"
+	line "Western Johto is"
+	para "only good for a"
+	line "few days."
+	
+	para "I hope my husband"
+	line "catches something"
+	cont "worthwhile."
+	done
 
 .BeatenText3:
 	text "I feel the winds"
@@ -311,6 +333,16 @@ GenericTrainerAromaLadyHeather:
 GenericTrainerAromaLadyHolly:
 	generictrainer AROMA_LADY, HOLLY, EVENT_BEAT_AROMA_LADY_HOLLY, .SeenText4, .BeatenText4
 
+	text "There's been dark"
+	line "clouds looming on"
+	cont "Mt Silver above"
+	cont "New Bark."
+	
+	para "Somehow, they"
+	line "won't let out"
+	cont "any rain."
+	done
+
 .BeatenText4:
 	text "It's so good to"
 	line "get some sun."
@@ -324,6 +356,17 @@ GenericTrainerAromaLadyHolly:
 
 GenericTrainerCamperDean:
 	generictrainer CAMPER, DEAN, EVENT_BEAT_CAMPER_DEAN, .SeenText5, .BeatenText5
+
+	text "The best hiking"
+	line "is on Mt. Silver."
+	
+	para "But Blackthorn"
+	line "won't let anyone"
+	para "into their water"
+	line "district, so I"
+	para "have to make do"
+	line "with Mt Mortar."
+	done
 
 .BeatenText5:
 	text "At least I can"
@@ -340,6 +383,12 @@ GenericTrainerCamperDean:
 
 GenericTrainerCamperSid:
 	generictrainer CAMPER, SID, EVENT_BEAT_CAMPER_SID, .SeenText6, .BeatenText6
+	
+	text "This is better"
+	line "camping than in"
+	para "National Park, "
+	line "at least."
+	done
 	
 .BeatenText6:
 	text "Seems like there"

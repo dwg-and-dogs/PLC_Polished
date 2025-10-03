@@ -83,45 +83,45 @@ NomadDaleBeatenText:
 GenericTrainerNomadFRin:
    generictrainer NOMAD_F, NOMAD_F_RIN, EVENT_BEAT_NOMAD_F_RIN, NomadRinSeenText, NomadRinBeatenText
 
-   text "There's a season"
-   line "for everything."
-   
-   para "Does the consul"
-   line "think he controls"
-   cont "the heavens?"
-   done
+	text "There's a season"
+	line "for everything."
+
+	para "Does the consul"
+	line "think he controls"
+	cont "the heavens?"
+	done
 
 NomadRinSeenText:
-   text "Our lives moved"
-   line "with seasons."
-   done
+	text "Our lives moved"
+	line "with seasons."
+	done
 
 NomadRinBeatenText:
-   text "We've been made"
-   line "stagnant, though."
-   done
+	text "We've been made"
+	line "stagnant, though."
+	done
 
 GenericTrainerNomadMJacob:
    generictrainer NOMAD_M, NOMAD_M_JACOB, EVENT_BEAT_NOMAD_M_JACOB, NomadJacobSeenText, NomadJacobBeatenText
 
-   text "They say their"
-   line "routes are safe."
-   para "But they don't"
-   line "know how to navig-"
-   cont "ate the fog."
-   done
+	text "They say their"
+	line "routes are safe."
+	para "But they don't"
+	line "know how to navig-"
+	cont "ate the fog."
+	done
 
 NomadJacobSeenText:
-   text "I knew every cove"
-   line "and inlet..."
-   para "Their maps make"
-   line "us worthless."
-   done
+	text "I knew every cove"
+	line "and inlet..."
+	para "Their maps make"
+	line "us worthless."
+	done
 
 NomadJacobBeatenText:
-   text "You battle like a"
-   line "true navigator."
-   done
+	text "You battle like a"
+	line "true navigator."
+	done
 
 CattleCull39SignText:
 	text "Consul's Road-"

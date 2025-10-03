@@ -558,3 +558,11 @@ ENDM
 
 	map_attributes RouteKajoRuinsOfAlphGate, ROUTE_KAJO_RUINS_OF_ALPH_GATE,  $0, 0
 	
+	map_attributes HollysHoltCredit, HOLLYS_HOLT_CREDIT, $0, 0 ; start of CREDITS
+	map_attributes StadiumGroundsCredit, STADIUM_GROUNDS_CREDIT, $0, 0 
+	map_attributes EmperorsGardenCredit, EMPERORS_GARDEN_CREDIT, $0, 0 
+	map_attributes ArduousAnchorageCredit, ARDUOUS_ANCHORAGE_CREDIT, $0, 0 
+	map_attributes SinjohCrossroadsCredit, SINJOH_CROSSROADS_CREDIT, $0, 0 
+	map_attributes ClastsCradleB1FCredit, CLASTS_CRADLE_B1F_CREDIT, $0, 0 
+	map_attributes BurnedTowerB1FCredit, BURNED_TOWER_B1F_CREDIT, $0, 0 	
+	

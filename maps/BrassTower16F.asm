@@ -65,6 +65,14 @@ GenericTrainerElderTadao:
     generictrainer ELDER, TADAO, EVENT_BEAT_ELDER_TADAO, TadaoSeenText, TadaoBeatenText
 
 
+	text "How did you see"
+	line "the doubt in my"
+	cont "heart?"
+
+	para "What have we done"
+	line "to Urgaust?"
+	done
+
 TadaoBeatenText:
 	text "Should I stay"
 	line "true to my oath"

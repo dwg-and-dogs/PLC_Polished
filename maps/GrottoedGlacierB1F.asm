@@ -66,6 +66,13 @@ GrottoedGlacierBoulders:
 GenericTrainerMediumEsther:
 	generictrainer MEDIUM, ESTHER, EVENT_BEAT_MEDIUM_ESTHER, .SeenText, .BeatenText
 
+	text "You'll be eaten by"
+	line "the ice."
+	
+	para "This is not your"
+	line "destiny."
+	done
+
 .BeatenText:
 	text "Elder Kanna will"
 	line "handle Adrinna."
@@ -84,6 +91,11 @@ GenericTrainerMediumEsther:
 
 GenericTrainerSageVirgil:
 	generictrainer SAGE, VIRGIL, EVENT_BEAT_SAGE_VIRGIL, .SeenText1, .BeatenText1
+
+	text "If you interrupt"
+	line "Kanna, you seal"
+	cont "your own fate."
+	done
 
 .BeatenText1:
 	text "I hope I held"

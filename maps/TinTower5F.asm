@@ -168,6 +168,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -191,6 +192,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -213,6 +215,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -235,6 +238,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -257,6 +261,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -279,6 +284,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -301,6 +307,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -323,6 +330,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -345,6 +353,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -367,6 +376,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -389,6 +399,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -411,6 +422,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -433,6 +445,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -455,6 +468,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -477,6 +491,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 
 	opentext
@@ -500,6 +515,7 @@ TinTower5FKimonoGirlScript:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -512,7 +528,6 @@ TinTower5FKimonoGirlScript:
 	writetext DVChangeConfirmedText
 	waitbutton
 	closetext
-	halloffame
 	end
 
 .UndoChanges:

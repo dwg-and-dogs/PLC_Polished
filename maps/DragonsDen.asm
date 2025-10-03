@@ -32,6 +32,16 @@ DragonsDen_MapScriptHeader:
 GenericTrainerDragonTamerDarin:
 	generictrainer DRAGON_TAMER, DARIN, EVENT_BEAT_DRAGON_TAMER_DARIN, .SeenText, .BeatenText
 
+	text "We train here to"
+	line "earn the consent"
+	para "to govern Eastern"
+	line "Johto and Western"
+	cont "Kanto."
+
+	para "The mountains will"
+	line "rise again!"
+	done
+
 .BeatenText:
 	text "Impressive!"
 	done
@@ -44,6 +54,16 @@ GenericTrainerDragonTamerDarin:
 
 GenericTrainerDragonTamerPaul:
 	generictrainer DRAGON_TAMER, PAUL, EVENT_BEAT_DRAGON_TAMER_PAUL, .Seen2Text, .Beaten2Text
+
+	text "Dragons shouldn't"
+	line "have their wings"
+	cont "clipped."
+	
+	para "In these times,"
+	line "we need to ride"
+	cont "the strongest"
+	cont "gales!"
+	done
 
 .Beaten2Text:
 	text "I should train"

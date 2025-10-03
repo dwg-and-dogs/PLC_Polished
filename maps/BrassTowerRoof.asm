@@ -354,14 +354,14 @@ AcceptedAdrinnaRoofScript:
 	turnobject BRASS_TOWER_ROOF_KURT, DOWN
 	showtext TowerRoofText2_13
 	special Special_CelebiShrineEvent 
-	appear BRASS_TOWER_ROOF_CELEBI
+;	appear BRASS_TOWER_ROOF_CELEBI
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_KURT, 10
 	showtext TinTowerRoofText2_Celebi
-	applyonemovement BRASS_TOWER_ROOF_CELEBI, slide_step_right
+;	applyonemovement BRASS_TOWER_ROOF_CELEBI, slide_step_right
 ;	setevent EVENT_YES_ADRINNA_BATTLE_KURT
 ; BATTLE MEJIMI 
 	winlosstext TowerRoofText2_16, 0
-	loadtrainer KURT, KURT13
+	loadtrainer KURT_FINAL, 1
 	startbattle
 	ifequal $1, .Continue2
 .Continue2:
@@ -640,11 +640,6 @@ TowerRoofText2_16_2:
 	cont "grandchild."
 
 	para "So long, <PLAYER>."
-	line "I know that deep"
-	para "down, there's a"
-	line "good person try-"
-	cont "ing to do the "
-	cont "right thing."
 	
 	para "I can't guide"
 	line "you any more."	

@@ -32,6 +32,10 @@ RebelsRedoubtB1F_MapScriptHeader:
 GenericTrainerNinja7: ; veil
 	generictrainer NINJA, NINJA7, EVENT_BEAT_NINJA7, .SeenText7, .BeatenText7
 
+	text "Amos will judge"
+	line "your soul."
+	done
+	
 .BeatenText7:
 	text "I couldn't"
 	line "pierce you."
@@ -44,6 +48,14 @@ GenericTrainerNinja7: ; veil
 
 GenericTrainerNinja8: ; shade 
 	generictrainer NINJA, NINJA8, EVENT_BEAT_NINJA8, .SeenText8, .BeatenText8
+
+	text "There's a time"
+	line "when everyone's"
+	para "will enters a"
+	line "crucible - "
+	
+	para "Will yours break?"
+	done
 
 .BeatenText8:
 	text "It's no offense."
@@ -59,6 +71,12 @@ GenericTrainerNinja8: ; shade
 	
 GenericTrainerNinja9: ; haze
 	generictrainer NINJA, NINJA9, EVENT_BEAT_NINJA9, .SeenText9, .BeatenText9
+
+	text "There's still time"
+	line "for you to change"
+	cont "into who you want"
+	cont "to be."
+	done
 
 .BeatenText9:
 	text "I've only seen"

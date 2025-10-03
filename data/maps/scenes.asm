@@ -79,4 +79,13 @@ MapScenes::
 	scene_var BRASS_TOWER_ROOF, 					  wBrassTowerRoofSceneID
 	scene_var TINDER_GARDEN_2, 						  wTinderGarden2SceneID
 	scene_var TINDER_GARDEN_3, 						  wTinderGarden3SceneID
+
+	scene_var HOLLYS_HOLT_CREDIT, 						  wHollysHoltCreditSceneID
+	scene_var STADIUM_GROUNDS_CREDIT, 						  wStadiumGroundsCreditSceneID
+	scene_var EMPERORS_GARDEN_CREDIT, 						  wEmperorsGardenCreditSceneID
+	scene_var ARDUOUS_ANCHORAGE_CREDIT, 						  wArduousAnchorageCreditSceneID
+	scene_var SINJOH_CROSSROADS_CREDIT, 						  wSinjohCrossroadsCreditSceneID
+	scene_var CLASTS_CRADLE_B1F_CREDIT, 						  wClastsCradleB1FCreditSceneID
+	scene_var BURNED_TOWER_B1F_CREDIT, 						  wBurnedTower1FCreditSceneID
+	
 	db -1

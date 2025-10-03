@@ -99,6 +99,10 @@ SpiritsChangedText:
 GenericTrainerElderNoboru:
     generictrainer ELDER, NOBORU, EVENT_BEAT_ELDER_NOBORU, NoboruSeenText, NoboruBeatenText
 
+	text "This tower will"
+	line "stand forever!"
+	done
+
 NoboruBeatenText:
     text "I fell to the"
 	line "ground..."
@@ -111,6 +115,10 @@ NoboruSeenText:
 
 GenericTrainerElderTakashi:
     generictrainer ELDER, TAKASHI, EVENT_BEAT_ELDER_TAKASHI, TakashiSeenText, TakashiBeatenText
+
+	text "The Consul will"
+	line "not be stopped."
+	done
 
 TakashiBeatenText:
     text "I should have"

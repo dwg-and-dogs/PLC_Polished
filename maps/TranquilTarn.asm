@@ -95,6 +95,11 @@ YesTimeTravelText_TT:
 GenericTrainerBirdKeeperHank:
 	generictrainer BIRD_KEEPER, HANK, EVENT_BEAT_BIRD_KEEPER_HANK, HankSeenText, HankBeatenText
 
+	text "Hisui birds are"
+	line "not suited to"
+	cont "Johto."
+	done
+
 HankBeatenText:
 	text "You whirled us"
 	line "out of the air!"
@@ -108,6 +113,12 @@ HankSeenText:
 GenericTrainerRuinManiacJones:
 	generictrainer RUIN_MANIAC, JONES, EVENT_BEAT_RUIN_MANIAC_JONES, RuinManiacJonesSeenText, RuinManiacJonesBeatenText
 
+	text "There's something"
+	line "magic about the"
+	para "ground under my"
+	line "feet in Johto."
+	done
+
 RuinManiacJonesBeatenText:
 	text "Rgh! You made me"
 	line "lose my temper!"
@@ -120,6 +131,12 @@ RuinManiacJonesSeenText:
 
 GenericTrainerRuinManiacLeland:
 	generictrainer RUIN_MANIAC, ROB, EVENT_BEAT_RUIN_MANIAC_ROB, RuinManiacLelandSeenText, RuinManiacLelandBeatenText
+
+	text "There's something"
+	line "more energized"
+	para "about Johto this"
+	line "trip."
+	done
 
 RuinManiacLelandBeatenText:
 	text "I couldn't"
@@ -136,6 +153,13 @@ RuinManiacLelandSeenText:
 
 GenericTrainerBugManiacRob:
 	generictrainer BUG_MANIAC, ROB, EVENT_BEAT_BUG_MANIAC_ROB, BugManiacRobSeenText, BugManiacRobBeatenText
+
+	text "Bug types were"
+	line "Elite in Hisui,"
+	para "but Elite means"
+	line "something else"
+	cont "in Johto."
+	done
 
 BugManiacRobBeatenText:
 	text "Hm, not quite"
@@ -214,132 +238,3 @@ TranquilTarnNPC2Text:
 GyaradosText:
 	text "Gayash!"
 	done
-
-;TranquilTarnDestructionScene:	; c.f. western capital  -- probably will cut, but leaving here in case I want to do it 
-;	special Special_FadeBlackQuickly
-;	special Special_ReloadSpritesNoPalettes
-;	disappear PLAYER
-;	showtext TarnScene_Text0 ; MEANWHILE, 
-;	pause 10
-;	special Special_FadeInQuickly
-;	showemote EMOTE_SHOCK, TRANQUIL_TARN_HANK, 10
-;	showtext TarnScene_Text1
-;	showtext TarnScene_Text2
-;	applyonemovement TRANQUIL_TARN_BRIGADER, step_down
-;	turnobject TRANQUIL_TARN_BRIGADER, UP
-;	applyonemovement TRANQUIL_TARN_HANK, step_right
-;	showemote EMOTE_BOLT, TRANQUIL_TARN_GYARADOS, 10
-;	applymovement TRANQUIL_TARN_GYARADOS, TarnGyarados_Movement1
-;	earthquake 30
-;	changeblock 28, 18, $CB
-;	reloadmappart
-;	turnobject TRANQUIL_TARN_HANK, UP
-;	showemote EMOTE_SHOCK, TRANQUIL_TARN_HANK, 10	
-;	showtext TarnScene_Text3
-;	applymovement TRANQUIL_TARN_GYARADOS, TarnGyarados_Movement2
-;	earthquake 30
-;	changeblock 28, 16, $CB
-;	reloadmappart
-;	applyonemovement TRANQUIL_TARN_BRIGADER, step_left
-;	applyonemovement TRANQUIL_TARN_BRIGADER, step_up	
-;	showemote EMOTE_BOLT, TRANQUIL_TARN_BRIGADER, 20		
-;	showtext TarnScene_Text4
-;	; DO ALL THE REST 
-;	special Special_FadeBlackQuickly
-;	disappear TRANQUIL_TARN_GYARADOS
-;	disappear PLAYER
-;	setevent EVENT_BEAT_KANNA
-;	; do all the blocks 
-;	changeblock 26, 8, $CB
-;	changeblock 32, 8, $CB 
-;	changeblock 26, 10, $CB 
-;	changeblock 32, 10, $CB 
-;	changeblock 24, 12, $CB 
-;	changeblock 32, 12, $CB 
-;	changeblock 24, 14, $CB 
-;	changeblock 30, 14, $CB 
-;	changeblock 22, 16, $CB 
-;	changeblock 28, 16, $CB 
-;	changeblock 22, 18, $CB 
-;	changeblock 28, 18, $CB 
-;	changeblock 24, 20, $CB 
-;	changeblock 26, 20, $CB 
-;	reloadmappart
-;	pause 10
-;	special Special_FadeInQuickly	
-;	turnobject TRANQUIL_TARN_HANK, LEFT
-;	showtext TarnScene_Text5
-;	turnobject TRANQUIL_TARN_BRIGADER, RIGHT	
-;	showtext TarnScene_Text6
-;	setscene $1
-;	setevent EVENT_BEAT_KANNA
-;	warp GROTTOED_GLACIER_B2F, 17, 5
-;	end
-	
-;TarnScene_Text0:
-;	text "Meanwhile, at the"
-;	line "Tranquil Tarn:"
-;	done
-;
-;TarnScene_Text1:
-;	text "Hank: Really? You"
-;	line "will let me Pilot"
-;	cont "this Gyarados?"
-;	done
-; hank gets a gyarados 
-;TarnScene_Text2:
-;	text "Brigader: Yes, "
-;	line "just get a taste"
-;	cont "of its power."
-;	done
-;brigader gives it to hank 
-;TarnScene_Text3:
-;	text "Hank: Wow! OK..."
-;	line "Wait, what's it-"
-;	
-;	para "Stop! Stop it!"
-;	line "Stop thrashing!"
-;	done
-;gyarados thrashes about, wrecking the ice and ruining the landscape 
-;TarnScene_Text4:
-;	text "Brigader: Look at"
-;	line "it crush the ice"
-;	cont "in one blow!"
-;	done
-;hank is conflicted, but intoxicated
-;TarnScene_Text5:
-;	text "Hank: Incredible."
-;	line "The Tarn, ruined,"
-;	cont "and yet..."
-;	
-;	para "their power is so"
-;	line "intoxicating..."
-;	
-;	para "Does the General"
-;	line "have any flying"
-;	cont "Dragons I can"
-;	cont "tame?"
-;	done
-;
-;TarnScene_Text6:
-;	text "Brigader: Come to"
-;	line "the mine and see"
-;	cont "for yourself!"
-;
-;	para "Join us and wield"  
-;	line "unrivaled might!"
-;	done
-;
-;TarnGyarados_Movement1:
-;	fix_facing
-;	fast_jump_step_up
-;	fast_jump_step_left
-;	fast_jump_step_up
-;	fast_jump_step_left
-;	step_end
-;
-;TarnGyarados_Movement2:
-;	fix_facing
-;	fast_jump_step_up
-;	fast_jump_step_up
-;	step_end

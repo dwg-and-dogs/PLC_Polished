@@ -37,6 +37,10 @@ EmpiresExtent_MapScriptHeader:
 GenericTrainerNinja1: ;shadow 
 	generictrainer NINJA, NINJA1, EVENT_BEAT_NINJA1, .SeenText1, .BeatenText1  
 
+	text "We've been warned"
+	line "about you."
+	done
+
 .BeatenText1:
 	text "You should go"
 	line "home."
@@ -48,6 +52,10 @@ GenericTrainerNinja1: ;shadow
 
 GenericTrainerNinja2: ; mist
 	generictrainer NINJA, NINJA2, EVENT_BEAT_NINJA2, .SeenText2, .BeatenText2  
+
+	text "I have nothing to"
+	line "say to traitors."
+	done
 
 .BeatenText2:
 	text "Our resolve is"
@@ -61,6 +69,15 @@ GenericTrainerNinja2: ; mist
 	
 GenericTrainerNinja3: ; twilight 
 	generictrainer NINJA, NINJA3, EVENT_BEAT_NINJA3, .SeenText3, .BeatenText3  
+
+	text "You ruined our"
+	line "ambush on Kanna,"
+	para "and now the Tarn"
+	line "is destroyed."
+	
+	para "You've set Johto"
+	line "on a bad path."
+	done
 
 .BeatenText3:
 	text "How do we get you"
@@ -76,6 +93,10 @@ GenericTrainerNinja3: ; twilight
 GenericTrainerNinja4: ; 
 	generictrainer NINJA, NINJA4, EVENT_BEAT_NINJA4, .SeenText4, .BeatenText4  
 
+	text "History may not"
+	line "judge you well."
+	done
+
 .BeatenText4:
 	text "I let myself"
 	line "down."
@@ -90,6 +111,11 @@ GenericTrainerNinja4: ;
 GenericTrainerNinja5: ; echo 
 	generictrainer NINJA, NINJA5, EVENT_BEAT_NINJA5, .SeenText5, .BeatenText5  
 
+	text "Your name will"
+	line "be held in infamy"
+	cont "for ages."
+	done
+
 .BeatenText5:
 	text "I've been"
 	line "silenced."
@@ -103,6 +129,10 @@ GenericTrainerNinja5: ; echo
 	
 GenericTrainerNinja6: ; dusk 
 	generictrainer NINJA, NINJA6, EVENT_BEAT_NINJA6, .SeenText6, .BeatenText6 
+
+	text "Your true colors"
+	line "are a mystery."
+	done
 
 .BeatenText6:
 	text "Your colors are"

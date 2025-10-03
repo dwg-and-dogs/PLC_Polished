@@ -142,6 +142,7 @@ GauldenrodTower3FClefairyReset:
 	yesorno
 	iffalse .Done
 	closetext
+	disappear GAULDENROD_TOWER_BOULDER
 	earthquake 80
 	clearevent EVENT_GAULDENROD_3F_BOULDER
 	moveobject GAULDENROD_TOWER_BOULDER, 9, 0

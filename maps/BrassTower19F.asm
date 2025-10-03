@@ -9,6 +9,7 @@ BrassTower19F_MapScriptHeader:
 	warp_event  6, 15, BRASS_TOWER_12F, 2
 	warp_event  7,  1, BRASS_TOWER_2F, 2
 
+
 	def_coord_events
 
 
@@ -74,6 +75,9 @@ BrassTower19FWarpMenu:
 	setevent EVENT_CRADLE_CUTSCENE_KURT
 	setevent EVENT_CRADLE_CUTSCENE_ADRINNA
 	setevent EVENT_ROOF_KURT
+	setevent EVENT_ROOF_ADRINNA
+	clearevent EVENT_ROOF_MEJIMI
+	clearevent EVENT_TAPESTRY_SAMSARA
 	warp BRASS_TOWER_2F, 8, 5
 	end 
 

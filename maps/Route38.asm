@@ -26,6 +26,11 @@ Route38_MapScriptHeader:
 GenericTrainerPokefanMRobert:
 	generictrainer POKEFANM, JOSHUA, EVENT_BEAT_POKEFANM_JOSHUA, PokefanMJoshuaSeenText, PokefanMJoshuaBeatenText
 
+	text "The ranchers at"
+	line "the farm don't"
+	cont "want us around."
+	done
+
 PokefanMJoshuaBeatenText:
 	text "Sorry, thought"
 	line "you were with the"
@@ -41,6 +46,10 @@ PokefanMJoshuaSeenText:
 
 GenericTrainerPokefanMCarter:
 	generictrainer POKEFANM, CARTER, EVENT_BEAT_POKEFANM_CARTER, PokefanMCarterSeenText, PokefanMCarterBeatenText
+
+	text "Moomoo miltanks"
+	line "deserve better!"
+	done
 
 PokefanMCarterBeatenText:
 	text "I heard that"
@@ -58,6 +67,11 @@ PokefanMCarterSeenText:
 GenericTrainerPokefanFRuth:
 	generictrainer POKEFANF, RUTH, EVENT_BEAT_POKEFANF_RUTH, PokefanFRuthSeenText, PokefanFRuthBeatenText
 
+	text "Would you want to"
+	line "live downstream"
+	cont "of Moomoo farms?"
+	done
+
 PokefanFRuthBeatenText:
 	text "The farm keeps"
 	line "expanding. Soon,"
@@ -74,6 +88,12 @@ PokefanFRuthSeenText:
 GenericTrainerPokefanFJaime:
 	generictrainer POKEFANF, JAIME, EVENT_BEAT_POKEFANF_JAIME, PokefanFJaimeSeenText, PokefanFJaimeBeatenText
 
+	text "The Olivine Desal"
+	line "plant can't even"
+	para "filter the water"
+	line "from the plant."
+	dont
+
 PokefanFJaimeBeatenText:
 	text "Where do you"
 	line "suppose all the"
@@ -86,6 +106,15 @@ PokefanFJaimeSeenText:
 
 GenericTrainerOfficerMDirk:
 	generictrainer OFFICERM, DIRK, EVENT_BEAT_OFFICER_DIRK, OfficerDirkSeenText, OfficerDirkBeatenText
+
+	text "My kids say that"
+	line "there's cows and"
+	cont "pigs on Route 38,"
+	
+	para "but the farm has"
+	line "only Miltank."
+	
+	done
 
 OfficerDirkBeatenText:
 	text "Ah, just a good"

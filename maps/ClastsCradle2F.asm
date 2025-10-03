@@ -89,6 +89,12 @@ Brigader15SeenText:
 GenericTrainerEngineerGoeth: ; goethite 
 	generictrainer ENGINEER, GOETH, EVENT_BEAT_ENGINEER_GOETH, GoethSeenText, GoethBeatenText
 	
+	text "The mountain is"
+	line "delicate - don't"
+	para "go deeper without"
+	line "a plan!"
+	done
+	
 GoethBeatenText:
 	text "You reduced me to"
 	line "rubble!"

@@ -436,6 +436,7 @@ BurnedTower1F_BlockData:
 	INCBIN "maps/BurnedTower1F.ablk.lz"
 
 SECTION "BurnedTowerB1F_BlockData", ROMX
+BurnedTowerB1FCredit_BlockData:
 BurnedTowerB1F_BlockData:
 	INCBIN "maps/BurnedTowerB1F.ablk.lz"
 
@@ -641,6 +642,7 @@ Route43Raining_BlockData:
 	INCBIN "maps/Route43Raining.ablk.lz"
 
 SECTION "HollysHolt_BlockData", ROMX
+HollysHoltCredit_BlockData:
 HollysHolt_BlockData:
 	INCBIN "maps/HollysHolt.ablk.lz"
 	
@@ -759,6 +761,7 @@ GauldenrodTower4F_BlockData:
 	INCBIN "maps/GauldenrodTower4F.ablk.lz"
 
 SECTION "StadiumGrounds_BlockData", ROMX
+StadiumGroundsCredit_BlockData:
 StadiumGrounds_BlockData:
 	INCBIN "maps/StadiumGrounds.ablk.lz"
 
@@ -800,6 +803,7 @@ UndergroundRadioTower_BlockData:
 	INCBIN "maps/UndergroundRadioTower.ablk.lz"
 
 SECTION "EmperorsGarden_BlockData", ROMX
+EmperorsGardenCredit_BlockData:
 EmperorsGarden_BlockData:
 	INCBIN "maps/EmperorsGarden.ablk.lz"
 
@@ -982,6 +986,7 @@ LandingDocks_BlockData:
 	INCBIN "maps/LandingDocks.ablk.lz"
 
 SECTION "ArduousAnchorage_BlockData", ROMX
+ArduousAnchorageCredit_BlockData:
 ArduousAnchorage_BlockData:
 	INCBIN "maps/ArduousAnchorage.ablk.lz"
 
@@ -1013,6 +1018,7 @@ TranquilTarn_BlockData:
 	INCBIN "maps/TranquilTarn.ablk.lz"
 
 SECTION "SinjohCrossroads_BlockData", ROMX
+SinjohCrossroadsCredit_BlockData:
 SinjohCrossroads_BlockData:
 	INCBIN "maps/SinjohCrossroads.ablk.lz"
 
@@ -1093,6 +1099,7 @@ ClastsCradle1F_BlockData:
 	INCBIN "maps/ClastsCradle1F.ablk.lz"
 
 SECTION "ClastsCradleB1F_BlockData", ROMX
+ClastsCradleB1FCredit_BlockData:
 ClastsCradleB1F_BlockData:
 	INCBIN "maps/ClastsCradleB1F.ablk.lz"
 

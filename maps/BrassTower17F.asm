@@ -37,6 +37,10 @@ BrassTower17FCallback:
 GenericTrainerElderSatoru:
     generictrainer ELDER, SATORU, EVENT_BEAT_ELDER_SATORU, SatoruSeenText, SatoruBeatenText
 
+	text "Will history call"
+	line "us wise or fools?"
+	done
+
 SatoruBeatenText:
 	text "Hm, but why does"
 	line "he act with such"

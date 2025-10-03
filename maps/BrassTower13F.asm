@@ -100,6 +100,10 @@ BrassTowerUnownText:
 GenericTrainerElderIsamu:
     generictrainer ELDER, ISAMU, EVENT_BEAT_ELDER_ISAMU, IsamuSeenText, IsamuBeatenText
 
+	text "I have no fear"
+	line "of the unknown."
+	done.
+
 IsamuBeatenText:
     text "Bravery is shown"
 	line "only when afraid."
@@ -113,6 +117,12 @@ IsamuSeenText:
 
 GenericTrainerElderKaito:
     generictrainer ELDER, KAITO, EVENT_BEAT_ELDER_KAITO, KaitoSeenText, KaitoBeatenText
+
+	text "The Consul will"
+	line "be known as the"
+	para "ruler of Johto"
+	line "everywhere!"
+	done
 
 KaitoBeatenText:
     text "Where I end,"

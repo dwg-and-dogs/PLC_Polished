@@ -566,6 +566,11 @@ WesleyMeowthText:
 GenericTrainerSightseerFKamila:
 	generictrainer SIGHTSEERF, KAMILA, EVENT_BEAT_SIGHTSEERF_KAMILA, .SeenText1, .BeatenText1
 
+	text "Baked Alaska is"
+	line "my favorite"
+	cont "camping food."
+	done
+
 .BeatenText1:
 	text "My #mon keep"
 	line "my food cold"
@@ -584,6 +589,15 @@ GenericTrainerSightseerFKamila:
 GenericTrainerSightseerFNoelle:
 	generictrainer SIGHTSEERF, NOELLE, EVENT_BEAT_SIGHTSEERF_NOELLE, .SeenText2, .BeatenText2
 
+	text "Do you know the"
+	line "compass arrows?"
+	
+	para "Never"
+	line "Enter"
+	cont "Spinarak"
+	cont "Webs!"
+	done	
+
 .BeatenText2:
 	text "You can find your"
 	line "own way!"
@@ -597,6 +611,11 @@ GenericTrainerSightseerFNoelle:
 GenericTrainerSightseerMBlaise:
 	generictrainer SIGHTSEERM, BLAISE, EVENT_BEAT_SIGHTSEERM_BLAISE, .SeenText3, .BeatenText3
 
+	text "Make sure you've"
+	line "got Ursaring"
+	cont "spray."
+	done
+	
 .BeatenText3:
 	text "You've got some"
 	line "power!"
@@ -610,6 +629,11 @@ GenericTrainerSightseerMBlaise:
 
 GenericTrainerSightseerMGareth:
 	generictrainer SIGHTSEERM, GARETH, EVENT_BEAT_SIGHTSEERM_GARETH, .SeenText4, .BeatenText4
+
+	text "You never know"
+	line "what's hidden"
+	cont "around you!"
+	done
 
 .BeatenText4:
 	text "You never know"
@@ -625,6 +649,12 @@ GenericTrainerSightseerMGareth:
 
 GenericTrainerPokemaniacCalvin:
 	generictrainer POKEMANIAC, CALVIN, EVENT_BEAT_POKEMANIAC_CALVIN, .SeenText5, .BeatenText5
+
+	text "The lake is so"
+	line "tranquil, without"
+	para "Gyarados thrash-"
+	line "ing about."
+	done
 
 .BeatenText5:
 	text "I wonder how the"
@@ -644,6 +674,11 @@ GenericTrainerPokemaniacCalvin:
 
 GenericTrainerPokemaniacShane:
 	generictrainer POKEMANIAC, SHANE, EVENT_BEAT_POKEMANIAC_SHANE, .SeenText6, .BeatenText6
+
+	text "The muddy bottom"
+	line "of the lake is"
+	cont "perfect for bugs!"
+	done
 
 .BeatenText6:
 	text "The lakebed is a"
@@ -759,10 +794,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText
@@ -813,10 +851,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -834,10 +875,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -854,10 +898,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -874,10 +921,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -894,10 +944,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -914,10 +967,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -934,10 +990,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -954,10 +1013,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -974,10 +1036,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -994,10 +1059,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -1014,10 +1082,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -1034,10 +1105,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -1054,12 +1128,14 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
-	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
 	yesorno
 	iffalse .UndoChanges
@@ -1074,10 +1150,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -1094,10 +1173,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
@@ -1114,10 +1196,13 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_LakeOfRage

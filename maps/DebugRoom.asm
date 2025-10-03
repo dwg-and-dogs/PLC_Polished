@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, ECRUTEAK_SHRINE_OUTSIDE, 1
+	warp_event  1, 8, BRASS_TOWER_19F, 2
 
 
 	def_coord_events
@@ -16,7 +16,7 @@ DebugRoom_MapScriptHeader:
 	def_bg_events
 	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
-	bg_event  0,  2, BGEVENT_UP, DebugInteraction2
+	bg_event  0,  2, BGEVENT_UP, DebugInteraction
 
 	def_object_events
 	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1
@@ -30,17 +30,17 @@ DebugRoom_MapScriptHeader:
 	const DEBUG_DWG
 
 DebugInteraction: 
-;	opentext
-;	givepoke CYNDAQUIL, 100
-;	givepoke WEEPINBELL, 100
-;	givepoke RAIKOU, 100
-;	givepoke POLITOED, 100
-;	givepoke LUGIA, 100
-;	givepoke HEATRAN, 100 
+	opentext
+	givepoke CYNDAQUIL, 100
+	givepoke WEEPINBELL, 100
+	givepoke RAIKOU, 100
+	givepoke POLITOED, 100
+	givepoke LUGIA, 100
+	givepoke HEATRAN, 100 
 	waitbutton
-;	setflag ENGINE_POKEGEAR
-;	setflag ENGINE_PHONE_CARD
-;	setflag ENGINE_MAP_CARD
+	setflag ENGINE_POKEGEAR
+	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_MAP_CARD
 	; pokedex
 	setflag ENGINE_POKEDEX
 for x, NUM_TMS + NUM_HMS
@@ -134,28 +134,28 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	refreshscreen
-	readmem wPartyMon1Species
-	pokepic 0
-	pause 60
-	closepokepic
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ee
-	loadmem wPartyMon1DVs+2, $ee
-	opentext
-	writethistext
-		text "DV change"
-		done
-	
-	waitbutton
-	closetext
-
-	refreshscreen
-	readmem wPartyMon1Species
-	pokepic 0
-	pause 60
-	closepokepic
-	halloffame
+;	refreshscreen
+;	readmem wPartyMon1Species
+;	pokepic 0
+;	pause 60
+;	closepokepic
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $ee
+;	loadmem wPartyMon1DVs+2, $ee
+;	opentext
+;	writethistext
+;		text "DV change"
+;		done
+;	
+;	waitbutton
+;	closetext
+;
+;	refreshscreen
+;	readmem wPartyMon1Species
+;	pokepic 0
+;	pause 60
+;	closepokepic
+;	halloffame
 ;	warp ANARRES_DORMS, 4, 7
 	end
 

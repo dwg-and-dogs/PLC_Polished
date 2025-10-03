@@ -132,6 +132,10 @@ CradleNinjaHelpText:
 GenericTrainerBrigader16: ; dragons 
 	generictrainer BRIGADER, 16, EVENT_BEAT_ROCKET_GRUNTM_16, Brigader16SeenText, Brigader16BeatenText  
 
+	text "You'll be cast out"
+	line "soon enough."
+	done
+
 Brigader16BeatenText:
 	text "We're getting so"
 	line "close. You can't"
@@ -145,6 +149,10 @@ Brigader16SeenText:
 	
 GenericTrainerBrigader17: ; poison
 	generictrainer BRIGADER, 17, EVENT_BEAT_ROCKET_GRUNTM_17, Brigader17SeenText, Brigader17BeatenText  
+
+	text "Your bravery will"
+	line "be your undoing."
+	done
 
 Brigader17BeatenText:
 	text "Don't hack up a"
@@ -160,6 +168,10 @@ Brigader17SeenText:
 GenericTrainerBrigader18: ; normal
 	generictrainer BRIGADER, 18, EVENT_BEAT_ROCKET_GRUNTM_18, Brigader18SeenText, Brigader18BeatenText  
 
+	text "Your strength is"
+	line "not normal!"
+	done
+
 Brigader18BeatenText:
 	text "You won't get any"
 	line "further."
@@ -173,6 +185,10 @@ Brigader18SeenText:
 	
 GenericTrainerEngineerNobel:
 	generictrainer ENGINEER, NOBEL, EVENT_BEAT_ENGINEER_NOBEL, NobelSeenText, NobelBeatenText  
+
+	text "What more do you"
+	line "want, a prize?"
+	done
 
 NobelBeatenText:
 	text "I'm on a short"
@@ -189,6 +205,10 @@ NobelSeenText:
 GenericTrainerEngineerIngsol:
 	generictrainer ENGINEER, INGSOL, EVENT_BEAT_ENGINEER_INGSOL, IngsolSeenText, IngsolBeatenText  
 
+	text "The magma will"
+	line "rise to the top!"
+	done
+
 IngsolBeatenText:
 	text "If you listen,"
 	line "you can hear the"
@@ -204,7 +224,6 @@ IngsolSeenText:
 
 GenericTrainerDragonTamerHank2:
 	generictrainer DRAGON_TAMER, HANK2, EVENT_BEAT_DRAGON_TAMER_HANK2, Hank2SeenText, Hank2BeatenText  
-
 
 	text "My dragons don't"
 	line "rule the ground."
@@ -224,6 +243,15 @@ Hank2SeenText:
 
 GenericTrainerDragonTamerJones2:
 	generictrainer DRAGON_TAMER, JONES2, EVENT_BEAT_DRAGON_TAMER_JONES2, Jones2SeenText, Jones2BeatenText  
+
+	text "I'll never return"
+	line "to Hisui."
+	
+	para "I'd rather crash"
+	line "out here than go"
+	cont "back with my tail"
+	cont "between my legs."
+	done
 
 Jones2BeatenText:
 	text "They don't have"

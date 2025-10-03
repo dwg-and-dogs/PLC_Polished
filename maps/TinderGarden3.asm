@@ -46,7 +46,6 @@ TinderGardernWatchTheLoggersScript:
 	waitsfx
 	changeblock 4, 0, $01 
 	reloadmappart
-	special Special_FadeOutMusic
 	pause 60
 	special Special_FadeOutMusic
 	disappear TINDER_GARDEN_3_CELEBI_2

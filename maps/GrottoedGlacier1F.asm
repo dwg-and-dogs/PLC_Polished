@@ -28,6 +28,11 @@ GrottoedGlacier1F_MapScriptHeader:
 GenericTrainerMediumGrace:
 	generictrainer MEDIUM, GRACE, EVENT_BEAT_MEDIUM_GRACE, .SeenText, .BeatenText
 
+	text "Kanna will show"
+	line "Adrinna how she"
+	cont "is wrong."
+	done
+
 .BeatenText:
 	text "It's not a big"
 	line "fish - there'll"
@@ -47,6 +52,14 @@ GenericTrainerMediumGrace:
 
 GenericTrainerSageUri:
 	generictrainer SAGE, URI, EVENT_BEAT_SAGE_URI, .SeenText1, .BeatenText1
+
+	text "What would your"
+	line "ancestors say,"
+	para "seeing you wreck"
+	line "our ceremony?"
+	
+	para "Turn back!"
+	done
 
 .BeatenText1:
 	text "I can't stop you"

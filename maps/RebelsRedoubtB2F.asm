@@ -52,6 +52,11 @@ RedoubtB2FDoorsCallback:
 GenericTrainerNinja10: ; wraith
 	generictrainer NINJA, NINJA10, EVENT_BEAT_NINJA10, .SeenText10, .BeatenText10
 
+	text "This area was dug"
+	line "right under the"
+	cont "Consul's nose!"
+	done
+
 .BeatenText10:
 	text "So you do have"
 	line "something to"
@@ -68,6 +73,14 @@ GenericTrainerNinja10: ; wraith
 GenericTrainerNinja11: ; vapor 
 	generictrainer NINJA, NINJA11, EVENT_BEAT_NINJA11, .SeenText11, .BeatenText11
 
+	text "Each day, I must"
+	line "recommit myself"
+	cont "to my duty."
+	
+	para "Do you have the"
+	line "same outlook?"
+	done
+
 .BeatenText11:
 	text "Amos will be"
 	line "impressed."
@@ -80,6 +93,11 @@ GenericTrainerNinja11: ; vapor
 	
 GenericTrainerNinja12: ; mirage 
 	generictrainer NINJA, NINJA12, EVENT_BEAT_NINJA12, .SeenText12, .BeatenText12
+
+	text "When you find a"
+	line "why, you can"
+	cont "handle any how."
+	done
 
 .BeatenText12:
 	text "Your ill aura was"

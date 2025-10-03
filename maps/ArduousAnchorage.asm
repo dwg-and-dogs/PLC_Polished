@@ -88,6 +88,11 @@ OverqwilText:
 GenericTrainerSailorEugene:
 	generictrainer SAILOR, EUGENE, EVENT_BEAT_SAILOR_EUGENE, SailorEugeneSeenText, SailorEugeneBeatenText
 
+	text "I should've"
+	line "mutinied a long"
+	cont "time ago!"
+	done
+
 SailorEugeneBeatenText:
 	text "Too clever."
 	done
@@ -99,6 +104,10 @@ SailorEugeneSeenText:
 
 GenericTrainerSailorTerrell:
 	generictrainer SAILOR, TERRELL, EVENT_BEAT_SAILOR_TERRELL, SailorTerrellSeenText, SailorTerrellBeatenText
+
+	text "I should've never"
+	line "left home."
+	done
 
 SailorTerrellBeatenText:
 	text "Sailing days are"
@@ -113,6 +122,11 @@ SailorTerrellSeenText:
 GenericTrainerSailorKent:
 	generictrainer SAILOR, KENT, EVENT_BEAT_SAILOR_KENT, SailorKentSeenText, SailorKentBeatenText
 
+	text "Do first mates"
+	line "have to go down"
+	cont "with the ship?"
+	done
+
 SailorKentBeatenText:
 	text "I'll never make"
 	line "admiral!"
@@ -120,11 +134,19 @@ SailorKentBeatenText:
 	
 SailorKentSeenText:
 	text "Time to prove"
-	line "my worht!"
+	line "my worth!"
 	done
 	
 GenericTrainerSailorErnest:
 	generictrainer SAILOR, ERNEST, EVENT_BEAT_SAILOR_ERNEST, SailorErnestSeenText, SailorErnestBeatenText
+
+	text "The colonel has a"
+	line "sparky persona."
+	
+	para "He gives us a"
+	line "Surge of energy"
+	cont "if morale is low."
+	done
 
 SailorErnestBeatenText:
 	text "Tch. The colonel"

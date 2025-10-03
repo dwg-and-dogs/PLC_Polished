@@ -284,6 +284,16 @@ SuicuneMovement:
 GenericTrainerTamerVince:
 	generictrainer TAMER, VINCE, EVENT_BEAT_TAMER_VINCE, .SeenText1, .BeatenText1
 
+	text "I raised some of"
+	line "these from eggs!"
+	
+	para "It's bittersweet,"
+	line "but then savory,"
+	
+	para "if you know what"
+	line "I mean."
+	done
+
 .BeatenText1:
 	text "Tending cows is"
 	line "hard work."
@@ -298,6 +308,13 @@ GenericTrainerTamerVince:
 
 GenericTrainerTamerOswald:
 	generictrainer TAMER, OSWALD, EVENT_BEAT_TAMER_OSWALD, .SeenText2, .BeatenText2
+
+	text "There's nothing"
+	line "more wholesome"
+	para "than nurturing a"
+	line "Miltank back to"
+	cont "health."
+	done
 
 .BeatenText2:
 	text "You skimmed me."

@@ -56,6 +56,10 @@ BrassTowerSwitchScript14F:
 GenericTrainerElderHiroshi:
     generictrainer ELDER, HIROSHI, EVENT_BEAT_ELDER_HIROSHI, HiroshiSeenText, HiroshiBeatenText
 
+	text "You cannot stop"
+	line "what's begun."
+	done
+
 HiroshiBeatenText:
 	text "What goes around"
 	line "will come around."

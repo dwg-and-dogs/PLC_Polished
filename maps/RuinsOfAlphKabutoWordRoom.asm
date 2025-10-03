@@ -179,10 +179,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -200,10 +203,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -220,10 +226,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -240,10 +249,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -260,10 +272,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -280,10 +295,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -300,10 +318,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -320,10 +341,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -340,10 +364,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -360,10 +387,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -380,10 +410,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -400,10 +433,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -420,10 +456,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -440,10 +479,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -460,10 +502,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -480,10 +525,13 @@ KabutoWordKimonoGirlScript:
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette
-	readmem wPartyMon1Species
-	pokepic 0
-	cry 0
-	waitsfx
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
 	closepokepic
 	opentext
 	writetext ConfirmDVChangeText_AlphRuins
@@ -499,8 +547,6 @@ KabutoWordKimonoGirlScript:
 	end
 
 .UndoChanges:
-;	writetext DebugStoringText
-;	waitbutton
 	; Store the original DVs in temporary memory locations
 	readmem wOriginalDV1       ; Writes hScriptVar to wOriginalDV1
 	writemem wPartyMon1DVs+0     ; Reads value into hScriptVar
