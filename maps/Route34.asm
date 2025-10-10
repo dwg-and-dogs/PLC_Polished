@@ -393,8 +393,10 @@ PicnickerGina1BeatenText:
 GenericOfficerfMaraScript:
     generictrainer OFFICERF, MARA, EVENT_BEAT_OFFICERF_MARA, OfficerfMaraSeenText, OfficerfMaraBeatenText
 
-    text "Stay out of"
-	line "mischief!"
+    text "Whatever you do,"
+	line "don't read those"
+	para "magazines I see"
+	line "in #centers."
     done
 
 OfficerfMaraSeenText:
@@ -404,8 +406,8 @@ OfficerfMaraSeenText:
     done
 
 OfficerfMaraBeatenText:
-    text "Just forget what"
-    line "you saw, OK?"
+    text "Stay out of"
+	line "trouble, kid."
     done
 
 GenericTrainerPokefanmBrandon:

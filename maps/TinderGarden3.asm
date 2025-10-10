@@ -57,7 +57,7 @@ TinderGardernWatchTheLoggersScript:
 	showtext GardenEngineerText4
 	closetext
 	pause 120
-	halloffame
+	warp HOLLYS_HOLT_CREDIT, 10, 25 
 	end
 	
 GardenEngineerText1:

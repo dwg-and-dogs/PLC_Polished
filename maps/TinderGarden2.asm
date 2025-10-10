@@ -73,7 +73,7 @@ TinderGarden2Script:
 	
 	pause 120
 
-	halloffame
+	warp HOLLYS_HOLT_CREDIT, 10, 25 
 	end
 
 

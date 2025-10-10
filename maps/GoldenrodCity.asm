@@ -72,9 +72,9 @@ GoldenrodCityFlyPointAndFloria:
 	endcallback
 
 GoldenrodCaveCallback:
-	checkevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
+	checkevent EVENT_BEAT_WHITNEY
 	iffalse .Done
-	changeblock 18, 02, $5A
+	changeblock 36, 04, $5A
 .Done:
 	endcallback
 

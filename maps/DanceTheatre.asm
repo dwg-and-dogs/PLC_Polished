@@ -170,8 +170,10 @@ KurtDanceTheatreText2:
 	para "summon Celebi to"
 	line "go back in time."
 	
-	para "Oh, I noticed"
-	line "<RIVAL> is here."
+	para "Then we can stop"
+	line "the modernizing"
+	para "technology from"
+	line "entering Johto!"
 	done
 
 DanceTheatreKurtBattleText:

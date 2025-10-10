@@ -92,7 +92,7 @@ GenericTrainerPokefanFJaime:
 	line "plant can't even"
 	para "filter the water"
 	line "from the plant."
-	dont
+	done
 
 PokefanFJaimeBeatenText:
 	text "Where do you"

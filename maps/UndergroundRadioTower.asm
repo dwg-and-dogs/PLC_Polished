@@ -13,7 +13,7 @@ UndergroundRadioTower_MapScriptHeader:
 
     def_object_events
     object_event  3,  5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UndergroundRadioTowerKurtScript, EVENT_KURT_UNDERGROUND
-    object_event 32,  7, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerBirdKeeperVance1, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
+    object_event 32,  7, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Vance1Text, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
     object_event 28,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 0, TrainerBlackbeltKenji, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
     object_event 20,  4, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBeautySamantha, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
     object_event  8,  6, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBeautyCassie, EVENT_FOUGHT_RADIO_TOWER_RIVAL;
@@ -118,9 +118,11 @@ BirdKeeperVance1BeatenText:
 	line "dependencies!"
     done
 
-BirdKeeperVance1AfterText:
-    text "We're too reliant"
-	line "on Silph."
+Vance1Text:
+	text "The trainers here"
+	line "all have a grudge"
+	cont "against Whitney"
+	cont "and Silph."	
     done
 
 BlackbeltKenjiSeenText:

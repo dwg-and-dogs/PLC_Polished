@@ -404,8 +404,8 @@ KurtsHouseKurtTurnedOutGreatText:
 	done
 	
 KurtsHouseKurtThatsALetdownText:
-	text "Too bad. Need"
-	line "to find some!"
+	text "Don't have any"
+	line "apricorns!"
 	done
 
 KurtsHouseKurtAskYouHaveAnApricornText:

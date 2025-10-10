@@ -102,7 +102,7 @@ GenericTrainerElderIsamu:
 
 	text "I have no fear"
 	line "of the unknown."
-	done.
+	done
 
 IsamuBeatenText:
     text "Bravery is shown"

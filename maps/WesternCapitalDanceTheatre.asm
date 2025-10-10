@@ -119,7 +119,7 @@ GenericTrainerKimono_girlMasako:
 	line "enchanting."
 	
 	para "Don't get"
-	line "burned."
+	line "consumed."
 	done
 
 Kimono_girl_1MasakoSeenText:
@@ -132,7 +132,7 @@ Kimono_girl_1MasakoBeatenText:
 	line "enchanting."
 	
 	para "Don't get"
-	line "burned."
+	line "consumed."
 	done
 
 GenericTrainerKimono_girlHaruko:
@@ -155,8 +155,6 @@ Kimono_girl_1HarukoBeatenText:
 	line "and any plant"
 	cont "would drown."
 	done
-
-
 
 GenericTrainerKimono_girlTamiko: ; BROWN 
 	generictrainer KIMONO_GIRL_5, TAMIKO, EVENT_BEAT_KIMONO_GIRL_TAMIKO, Kimono_girl_1TamikoSeenText, Kimono_girl_1TamikoBeatenText

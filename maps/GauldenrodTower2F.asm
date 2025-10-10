@@ -131,7 +131,7 @@ GenericTrainerVeteranFJoanne:
 
 VeteranFJoanneSeenText:
 	text "How deep is your"
-	line "conneciton with"
+	line "connection with"
 	cont "your #mon?"
 	done
 

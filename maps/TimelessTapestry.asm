@@ -7,8 +7,8 @@ TimelessTapestry_MapScriptHeader:
 
 	def_warp_events
 	warp_event 3, 5, WHISPERS_TAPESTRY_GATE, 3
-	warp_event 4, 38, HOLLYS_HOLT, 9
-	warp_event 4, 39, HOLLYS_HOLT, 10
+	warp_event 4, 38, HOLLYS_HOLT, 7
+	warp_event 4, 39, HOLLYS_HOLT, 8
 	
 
 	def_coord_events
@@ -172,8 +172,8 @@ TapestrySceneFinale:
 	special Special_FadeInQuickly
 	special HealParty
 	showtext TapestryTextAmos
-	pause 10
-	showemote EMOTE_HEART, TAPESTRY_SAMSARA, 10
+	pause 30
+;	showemote EMOTE_HEART, TAPESTRY_SAMSARA, 10
 	showtext TapestryTextSamsara		
 	closetext
 	turnobject TAPESTRY_SAMSARA, UP

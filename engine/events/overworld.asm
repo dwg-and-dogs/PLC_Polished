@@ -620,9 +620,9 @@ TrySurfOW::
 	call CheckDirection
 	jr c, .quit
 
-	ld de, ENGINE_BOULDERBADGE ; FOGBADGE
-	call CheckEngineFlag
-	jr c, .quit
+;	ld de, ENGINE_BOULDERBADGE ; FOGBADGE
+;	call CheckEngineFlag
+;	jr c, .quit
 
 	lb de, SURF, HM_SURF
 	call CheckPartyMove

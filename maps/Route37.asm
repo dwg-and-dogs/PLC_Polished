@@ -62,6 +62,7 @@ Route37ZapCannonScript:
 	setevent EVENT_LISTENED_TO_ZAP_CANNON_INTRO
 Route37TutorZapCannonScript:
 	writetext SunnyGivesGiftText ;;
+	waitbutton
 	writetext Text_Route37TutorQuestion ;;
 	yesorno
 	iffalse .TutorRefused

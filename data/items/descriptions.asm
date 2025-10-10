@@ -1116,8 +1116,8 @@ PearlDesc:
 	next "desire.@"
 
 BigPearlDesc:
-	db   "Spherical; trade"
-	next "with bohemians.@"
+	db   "Desired by"
+	next "artisans.@"
 
 PearlStringDesc:
 	db   "Big, shiny pearls."

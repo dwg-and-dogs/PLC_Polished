@@ -316,6 +316,7 @@ TL_Scene_2_R:
 	showtext TL_2_Text5
 	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
+	setflag ENGINE_FLYPOINT_OLIVINE
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_LANDING_KURT_2

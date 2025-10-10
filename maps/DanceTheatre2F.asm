@@ -89,8 +89,13 @@ GenericTrainerKimono_girlSayo:
 	cont "Consul,"
 	
 	para "the hero brought"
-	line "them together to"
-	cont "save the Forest."
+	line "them together."
+	
+	para "Though they'd"
+	line "lost their ritual"
+	para "they gained a new"
+	line "appreciation for"
+	cont "each other."
 	done
 
 Kimono_girl_1SayoSeenText:
@@ -103,8 +108,7 @@ Kimono_girl_1SayoBeatenText:
 	cont "Consul,"
 	
 	para "the hero brought"
-	line "them together to"
-	cont "save the Forest."
+	line "them together."
 	done
 
 
@@ -147,9 +151,18 @@ GenericTrainerKimono_girlIzumi:
 	text "A harsh storm"
 	line "destroyed the"
 	cont "Consul's port."
+	
+	para "Legend says that"
+	line "the storm was"
+	para "like an Aeroblast"
+	line "on the sea."
+	
 	para "Now, the Consul"
 	line "had to focus on"
-	cont "the East."
+	para "the East as his"
+	line "only source of"
+	para "metals to build"
+	line "his towers."
 	done
 
 

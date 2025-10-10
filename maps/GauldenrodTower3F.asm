@@ -9,31 +9,31 @@ GauldenrodTower3F_MapScriptHeader: ; need to make it go around a circle
 	def_warp_events
 	warp_event  11,  5, GAULDENROD_TOWER_2F, 2
 	warp_event  5, 11, GAULDENROD_TOWER_4F, 1
-	warp_event  10,  8, GAULDENROD_TOWER_1F, 1 ; HOLE 
-	warp_event  11,  8, GAULDENROD_TOWER_1F, 1 ; HOLE  ; 4
+	warp_event  10,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 
+	warp_event  11,  8, GAULDENROD_TOWER_3F, 1 ; HOLE  ; 4
 
-	warp_event   2,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   3,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   4,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   5,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   6,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   7,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   8,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   9,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 	12
-	warp_event  10,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event  11,  1, GAULDENROD_TOWER_1F, 1 ; HOLE 		14
-	warp_event   1,  2, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   1,  3, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   1,  4, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   1,  5, GAULDENROD_TOWER_1F, 1 ; HOLE 		
-	warp_event   1,  6, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   1,  7, GAULDENROD_TOWER_1F, 1 ; HOLE 	20
-	warp_event   2,  8, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   3,  8, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   4,  8, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   5,  8, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   6,  8, GAULDENROD_TOWER_1F, 1 ; HOLE 	
-	warp_event   7,  8, GAULDENROD_TOWER_1F, 1 ; HOLE 	26
+	warp_event   2,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   3,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   4,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   5,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   6,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   7,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   8,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   9,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	12
+	warp_event  10,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event  11,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 		14
+	warp_event   1,  2, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   1,  3, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   1,  4, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   1,  5, GAULDENROD_TOWER_3F, 1 ; HOLE 		
+	warp_event   1,  6, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   1,  7, GAULDENROD_TOWER_3F, 1 ; HOLE 	20
+	warp_event   2,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   3,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   4,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   5,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   6,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
+	warp_event   7,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	26
 
 
 	

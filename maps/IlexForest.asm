@@ -428,11 +428,12 @@ CamdenLeavingText:
 	
 	text "We will be back"
 	line "later. Progress"
+	cont "isn't all bad."
 	
-	para "isn't all bad,"
-	line "look at this pro-"
-	para "totype Silph is"
-	line "working on."
+	para "Take one of my"
+	line "abilitypatches,"
+	para "see if your mind"
+	line "changes."
 	done
 
 CamdenExitMovement:
@@ -493,17 +494,20 @@ KurtExplainsGSBallText2:
 
 	para "With the right"
 	line "inscription, we"
-	cont "can call Celebi."
+	cont "can call Celebi,"
 	
-	para "<PLAYER>, you"
-	line "need to go to"
-	para "the Ruins of"
-	line "Alph, get a copy"
-	para "of the ancient,"
-	line "holy words, so"
-	para "we can summon"
-	line "Celebi to go"
-	cont "back in time!"
+	para "then we can go"
+	line "back in time to"
+	para "stop Johto from"
+	line "modernizing!"
+	
+	para "<PLAYER>, all we"
+	line "need is a copy"
+	para "of the Unown"
+	line "Report to make"
+	para "the right inscri-"
+	line "ption on the"
+	cont "GS Ball."
 	done
 
 WantToHeal:
@@ -740,7 +744,7 @@ WhatIsNaturalText:
 	text_start 
 	text "An unnatural inv-"
 	line "ention destroys"
-	cont "my forest."
+	cont "the forest."
 	
 	para "If you decide"
 	line "to help me, it"

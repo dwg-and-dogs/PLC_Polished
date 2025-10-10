@@ -540,7 +540,7 @@ KabutoWordKimonoGirlScript:
 	sjump .ConfirmChanges
 
 .ConfirmChanges:
-	setevent EVENT_SET_DVS_3
+	setevent EVENT_SET_DVS_1
 	writetext DVChangeConfirmedText_AlphRuins
 	waitbutton
 	closetext

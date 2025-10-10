@@ -219,6 +219,7 @@ PickupDocksScene:
 	setevent EVENT_DOCKS_BARBEAU
 	setevent EVENT_DOCKS_SURGE
 	setevent EVENT_DOCKS_LUGIA
+	setevent EVENT_BEAT_KENSEY_PORT
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx

@@ -616,13 +616,13 @@ WigglytuffEvosAttacks:
 	db 0 ; no more level-up moves
 	
 ZubatEvosAttacks:
-	db EVOLVE_LEVEL, 16, GOLBAT
+	db EVOLVE_LEVEL, 22, GOLBAT
 	db 0 ; no more evolutions
 	db 1, ABSORB
 	db 5, SUPERSONIC
-	db 7, ASTONISH
+	db 7, GUST
 	db 11, BITE
-	db 13, GUST ; Wing Attack → egg move
+	db 13, ACID ; 
 	db 17, CONFUSE_RAY
 	db 19, WING_ATTACK ; Air Cutter → Wing Attack
 	db 23, SWIFT
@@ -677,6 +677,7 @@ CrobatEvosAttacks:
 	db 43, VENOSHOCK
 	db 48, AIR_SLASH
 	db 51, CRUNCH ; Quick Guard → new move
+	db 55, GUNK_SHOT
 	db 0 ; no more level-up moves
 
 GloomEvosAttacks:
@@ -1630,7 +1631,7 @@ OnixEvosAttacks:
 	db 8, ROCK_THROW
 	db 10, RAGE
 	db 13, ROCK_BLAST ; Rock Tomb → egg move
-	db 16, BODY_SLAM ; Stealth Rock → TM move
+	db 16, BULLDOZE ; Stealth Rock → TM move
 	db 19, SANDSTORM ; Rock Polish → Sandstorm
 	db 22, ANCIENTPOWER ; Smack Down → HGSS tutor move
 	db 25, DRAGONBREATH
@@ -1655,7 +1656,7 @@ SteelixEvosAttacks:
 	db 7, ROCK_THROW
 	db 10, RAGE
 	db 13, ROCK_BLAST ; Rock Tomb → egg move
-	db 16, BODY_SLAM ; Stealth Rock → TM move
+	db 16, BULLDOZE ; Stealth Rock → TM move
 	db 19, SANDSTORM ; Autotomize → Sandstorm
 	db 22, ANCIENTPOWER ; Smack Down → HGSS tutor move
 	db 25, DRAGONBREATH
@@ -3292,8 +3293,9 @@ YanmegaEvosAttacks:
 UnownEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HIDDEN_POWER
-	db 25, ANCIENTPOWER
-	db 50, PERISH_SONG
+	db 20, ANCIENTPOWER
+	db 40, TRANSFORM
+	db 60, PERISH_SONG
 	db 0 ; no more level-up moves
 
 GirafarigEvosAttacks:

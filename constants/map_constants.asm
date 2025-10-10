@@ -151,7 +151,7 @@ ENDM
 	map_const ANARRES_HOUSE,  	                           4,  4 ;  10 traditional house
 	map_const ANARRES_HOLT_GATE,                           4,  4 ; sprout tower 
 	map_const HOLT_COAST_GATE,                             4,  4 ; sprout tower
-	map_const HOLLYS_HOLT_CREDITS, 								  17, 24 ;  1 forest
+	map_const HOLLYS_HOLT_CREDIT, 								  17, 24 ;  1 forest
 
 	newgroup                                                     ;  6 ;gauldenrod and surrounding
 	map_const CALM_COAST,                                   10, 27 ;  1

@@ -53,7 +53,7 @@ EcruteakBlueMailScript: ; TRADE QUEST
 	writetext Text_BigMushroomQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext NoBigMushroom
-	takekeyitem BIG_MUSHROOM
+	takekeyitem BIG_MUSHROOM_K
 	verbosegivekeyitem LITEBLUEMAIL_K
 	setevent EVENT_GAVE_LITEBLUEMAIL
 	jumpopenedtext TextReadingTheTeaLeaves

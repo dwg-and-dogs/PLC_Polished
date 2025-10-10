@@ -740,6 +740,7 @@ TinderGardenRivalBattleScript1:
 	clearevent EVENT_KURTS_HOUSE_NOTEBOOK
 	clearevent EVENT_KILN_BOSS
 	setevent EVENT_ILEX_FOREST_RIVAL
+	special HealParty
 	playmapmusic
 	end
 	
@@ -948,10 +949,6 @@ TGRivalChallengeText:
 	done
 
 TGRivalLoseText:
-	text_high
-    text " <RIVAL>: "
-	next
-	text_start
 	text "Showed you."
 	
 	para "Oh, Kurt, I"
@@ -961,10 +958,6 @@ TGRivalLoseText:
 	done
 
 TGRivalWinText:
-	text_high
-    text " <RIVAL>: "
-	next
-	text_start
 	text "I'm only going"
 	line "to get stronger."
 	

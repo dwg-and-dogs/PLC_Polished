@@ -35,7 +35,7 @@ Route32_MapScriptHeader:
 	smashrock_event 6, 82
 	smashrock_event 7, 83
 	itemball_event  6, 83, GEODE, 5, EVENT_ROUTE_32_REPEL
-	itemball_event 10, 14, BUB_BALL, 5, EVENT_ROUTE_32_GREAT_BALL
+	itemball_event 10, 14, JEZE_BALL, 5, EVENT_ROUTE_32_GREAT_BALL
 	cuttree_event 10, 19, EVENT_ROUTE_32_CUT_TREE
 	fruittree_event 3, 31, FRUITTREE_ROUTE_32, FIXED_CHARGE, PAL_NPC_RED
 
