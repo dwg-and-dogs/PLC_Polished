@@ -671,6 +671,11 @@ FireSpinTrapText:
 	text "<TARGET>"
 	line "was trapped!"
 	prompt
+	
+MagmaStormTrapText:
+	text "<TARGET>"
+	line "was trapped!"
+	prompt
 
 WrappedByText:
 	text "<TARGET>"

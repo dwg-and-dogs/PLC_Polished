@@ -46,6 +46,8 @@ GoldenrodMuseum2FTrigger:
 	end
 
 LugiaPaintingScript:
+	checkevent EVENT_CIANWOODCITY_EUSINE
+	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
 	paintingpic LUGIA_PAINTING
 	waitbutton
@@ -57,6 +59,8 @@ LugiaPaintingScript:
 	done
 
 HoOhPaintingScript:
+	checkevent EVENT_BEAT_MEJIMI
+	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
 	paintingpic HO_OH_PAINTING
 	waitbutton
@@ -68,6 +72,8 @@ HoOhPaintingScript:
 	done
 
 BellTowerPaintingScript:
+	checkevent EVENT_BEAT_MEJIMI
+	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
 	paintingpic BELL_TOWER_PAINTING
 	waitbutton

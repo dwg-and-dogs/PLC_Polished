@@ -52,24 +52,26 @@ BurnedTower1FMortyScript:
 	showemote EMOTE_SHOCK, BURNED_TOWER_1F_MORTY, 15
 	jumpthisopenedtext
 
-	text "Sublime! But..."
-	line "That #mon."
+	text "Sublime!"
 
 	para "Its beauty is so"
-	line "simple and pure."
+	line "pure and simple."
+	
+	para "Like how even a"
+	line "raindrop refracts"
+	cont "the entire world."
+	
+	para "I've had an"
+	line "epiphany!"
+	
+	para "The sublime is in"
+	line "simplicity."
 
-	para "Like an elite"
-	line "gymnast who makes"
-	para "the extraordinary"
-	line "look routine."
-
-	para "The profound is a"
-	line "simple act."
-
-	para "It's the daily"
+	para "It's our daily"
 	line "routines that"
-	para "connect us to"
-	line "something bigger."
+	para "either connect us"
+	line "to greatness,"
+	cont "or pull us away."
 	
 	para "I will return"
 	line "to my Gym."
@@ -78,15 +80,14 @@ BurnedTower1FMortyScript:
 Morty1FIntroText:
 	text "Oh, have you come"
 	line "for my badge? The"
-	cont "gym is closed."
+	cont "gym is closed,"
 
-	para "I feel I need"
-	line "something drama-"
-	cont "tic to bring"
+	para "Until I find a"
+	line "way to bring"
 	para "people closer to"
 	line "the sublime."
 
-	para "A legendary"
+	para "Only a legendary"
 	line "#mon would do."
 	done
 
@@ -104,20 +105,19 @@ BurnedTower1FScientistText:
 
 	para "We consider it"
 	line "rare, not revered."
-	cont "These #mon"
-	cont "might be of use!"
+	para "These #mon"
+	line "might be of use!"
 	done
 	
 BurnedTower1FSageText:
 	text "The three #mon"
 	line "are meant to"
-	cont "inspire awe..."
+	cont "inspire awe!"
 
 	para "To study them"
-	line "would remove the"
-	para "mystery, even"
-	line "make you think you"
-	cont "can control them!"
+	line "like this would"
+	para "subvert their"
+	line "very purpose!"
 	done
 	
 GenericTrainerFirebreatherLyle:

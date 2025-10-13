@@ -117,6 +117,7 @@ KurtHouseEventScript:
 	step_down
 	step_left
 	step_left
+	step_left
 	step_down
 	step_down
 	step_down

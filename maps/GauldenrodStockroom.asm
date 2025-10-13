@@ -152,7 +152,7 @@ GSApricornBenchScript:
 	iftrue .GiveLoveBall
 	callasm .CheckHaveAnyApricorns
 	iftrue .AskApricorn
-	jumpopenedtext ASThatsALetdownText
+	jumpopenedtext GSThatsALetdownText
 
 .CheckHaveAnyApricorns:
 	xor a

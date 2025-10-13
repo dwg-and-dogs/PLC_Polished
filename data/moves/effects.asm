@@ -1240,6 +1240,7 @@ Trap:
 Wrap:
 Bind:
 FireSpin:
+MagmaStorm:
 ;Whirlpool:
 	checkobedience
 	usedmovetext

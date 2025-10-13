@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, HOLLYS_HOLT_CREDIT, 1
+	warp_event  1, 8, GOLDENROD_MUSEUM_1F, 1
 
 
 	def_coord_events
@@ -36,7 +36,7 @@ DebugInteraction:
 	givepoke RAIKOU, 100
 	givepoke POLITOED, 100
 	givepoke LUGIA, 100
-	givepoke HEATRAN, 100 
+	givepoke HEATRAN, 25 
 	waitbutton
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
@@ -134,29 +134,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-;	refreshscreen
-;	readmem wPartyMon1Species
-;	pokepic 0
-;	pause 60
-;	closepokepic
-;	loadmem wPartyMon1DVs+0, $ff
-;	loadmem wPartyMon1DVs+1, $ee
-;	loadmem wPartyMon1DVs+2, $ee
-;	opentext
-;	writethistext
-;		text "DV change"
-;		done
-;	
-;	waitbutton
-;	closetext
-;
-;	refreshscreen
-;	readmem wPartyMon1Species
-;	pokepic 0
-;	pause 60
-;	closepokepic
-;	halloffame
-;	warp ANARRES_DORMS, 4, 7
+	warp ROUTE_37, 15, 7
 	end
 
 OverworldHallOfFame1: 
