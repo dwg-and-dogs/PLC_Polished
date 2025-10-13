@@ -19,7 +19,7 @@ EerieHamlet_MapScriptHeader:
 	def_bg_events
 	bg_event  4,  6, BGEVENT_JUMPTEXT, HamletText
 	bg_event 14,  8, BGEVENT_JUMPTEXT, RedoubtSignText
-	bg_event  3, 13, BGEVENT_JUMPTEXT, HamletStockroomText
+	bg_event  3, 13, BGEVENT_JUMPTEXT, HamletDormsText
 	bg_event  6,  7, BGEVENT_ITEM + ENERGYPOWDER, EVENT_HAMLET_ENERGYPOWDER
 	bg_event  7,  7, BGEVENT_ITEM + IRON, EVENT_HAMLET_IRON
 
@@ -95,8 +95,8 @@ RedoubtSignText:
 	cont "allowed"
 	done
 
-HamletStockroomText:	
-	text "Hamlet Stockroom"
+HamletDormsText:	
+	text "Hamlet Dorms"
 	done
 
 EerieHamletRoadblockText1:

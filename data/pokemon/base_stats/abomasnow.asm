@@ -3,7 +3,7 @@
 
 	db GRASS, ICE ; type
 	db 60 ; catch rate
-	db 50 ; base exp
+	db 214 ; base exp
 	db NO_ITEM ; item 1
 	db NEVERMELTICE ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch

@@ -41,7 +41,7 @@ TrainerEngineerHugo:
 	generictrainer ENGINEER, HUGO, EVENT_BEAT_ENGINEER_HUGO, .Seen1Text, .Beaten1Text
 
 	text "Do you know why"
-	line "<RIVAL> looked
+	line "<RIVAL> looked"
 	para "so upset? He was"
 	line "really huffing on"
 	cont "his way out."

@@ -335,7 +335,7 @@ ENDM
 	map_attributes AnarresStockroom, ANARRES_STOCKROOM, $0, 0
 	map_attributes AnarresTower1F, ANARRES_TOWER_1F, $0, 0
 	map_attributes AnarresTower2F, ANARRES_TOWER_2F, $0, 0	
-	map_attributes AnarresTower3F, ANARRES_TOWER_3F, $0, 0
+	map_attributes AnarresTower3F, ANARRES_TOWER_3F, $1, 0
 	map_attributes AnarresCharcoalKiln, ANARRES_CHARCOAL_KILN, $0, 0
 	map_attributes AnarresHouse, ANARRES_HOUSE, $0, 0
 	

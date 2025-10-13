@@ -100,9 +100,15 @@ TowerKurtScript:
 	faceplayer
 	opentext
 	writetext KurtTowerText2
-	waitbutton
-	closetext
-	end
+	yesorno
+	iffalse_jumpopenedtext BT1F_SomeOtherTimes
+	winlosstext BT1F_KurtBattleText, BT1F_KurtBattleText
+	loadtrainer KURT, 13
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext BT1F_SomeOtherTimes
 
 KurtTowerText2:
 	text "Let's finish what"
@@ -117,7 +123,25 @@ KurtTowerText2:
 	para "We need to get"
 	line "to him before we"
 	para "get caught in the"
-	line "rainstorm."
+	line "coming rainstorm."
+	
+	para "If you need to"
+	line "train, we can"
+	cont "battle."
+	done
+
+BT1F_SomeOtherTimes:
+	text "Let's finish what"
+	line "we started!"
+	
+	para "The future is"
+	line "counting on us!"
+	done
+
+BT1F_KurtBattleText:
+	text "We can battle as"
+	line "many times as you"
+	cont "want."
 	done
 
 BrassTowerKurtJournalText:
