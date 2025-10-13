@@ -353,10 +353,10 @@ KurtGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 33, BASTIODON
-	db 35, LOPUNNY
-	db 37, DONPHAN
-	db 37, AZUMARILL
-	db 40, KIRLIA
+	db 34, LOPUNNY
+	db 35, DONPHAN
+	db 36, AZUMARILL
+	db 37, KIRLIA
 	db -1 ; end
 
 	; KURT11 ; AMOS
@@ -364,10 +364,10 @@ KurtGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 35, STARAVIA
-	db 38, DRAPION
-	db 43, ROSELIA
-	db 40, LUCARIO
-	db 43, H__BRAVIARY
+	db 36, DRAPION
+	db 37, ROSELIA
+	db 38, LUCARIO
+	db 39, H__BRAVIARY
 	db -1 ; end
 	
 	; KURT12 ; whispering way 
@@ -379,6 +379,18 @@ KurtGroup:
 	db 45, YANMEGA
 	db 45, URSARING
 	db 46, SNORLAX
+	db -1 ; end
+	
+	; KURT13 ; whispering way 
+	db "Kurt@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 45, BLISSEY
+	db 46, NIDOQUEEN
+	db 47, YANMEGA
+	db 48, URSARING
+	db 49, SNORLAX
+	db 50, BLISSEY
 	db -1 ; end
 
 ; ================
@@ -797,7 +809,7 @@ Rival1Group:
 	; party
 	db 37, ARCANINE, NO_ITEM, 20
 		db FLAME_CHARGE, BITE, ROAR, DOUBLE_KICK
-	db 33, SLOWPOKE, NO_ITEM, 20
+	db 38, SLOWBRO, NO_ITEM, 20
 		db WATER_PULSE, PSYBEAM, CURSE, THUNDER_WAVE
 	db 37, HONCHKROW, NO_ITEM, 20
 		db DRILL_PECK, DARK_PULSE, ROOST, WHIRLPOOL
@@ -817,7 +829,7 @@ Rival1Group:
 	; party
 	db 37, SLOWBRO, NO_ITEM, 20
 		db SURF, PSYCHIC_M, REST, SLEEP_TALK
-	db 33, TANGELA, NO_ITEM, 20
+	db 38, TANGROWTH, NO_ITEM, 20
 		db RAZOR_LEAF, POISONPOWDER, PROTECT, GIGA_DRAIN
 	db 37, YANMEGA, NO_ITEM, 20
 		db BUG_BUZZ, AIR_SLASH, ANCIENTPOWER, NO_MOVE
@@ -837,7 +849,7 @@ Rival1Group:
 	; party
 	db 37, TANGROWTH, NO_ITEM, 20
 		db RAZOR_LEAF, TOXIC, PROTECT, ROCK_SLIDE	
-	db 33, GROWLITHE, NO_ITEM, 20
+	db 38, ARCANINE, NO_ITEM, 20
 		db FLAMETHROWER, DOUBLE_KICK, BITE, ROAR
 	db 37, TOGETIC, NO_ITEM, 20
 		db THUNDER_WAVE, AIR_SLASH, CHARM, METRONOME
@@ -5718,21 +5730,21 @@ SageGroup:
 ; ================
 
 	; SAGE
-	db "Uri@"
+	db "Uri@" ; GROTTO GLACIER B1F
 	db TRAINERTYPE_NORMAL
 	; party
-	db 43, ABOMASNOW
-	db 45, H__AVALUGG
+	db 40, ABOMASNOW
+	db 42, H__AVALUGG
 	db -1 ; end
 
 ; ================
 
-	; SAGE
+	; SAGE GROTTO GLACIER B1F
 	db "Virgil@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 44, H__BRAVIARY
-	db 47, GALLADE
+	db 40, H__BRAVIARY
+	db 41, GALLADE
 	db -1 ; end
 	
 ; ================================
@@ -5755,8 +5767,8 @@ MediumGroup:
 	db "Grace@" ; grottoed glacier 1f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 45, MISDREAVUS
-	db 45, DUSKNOIR
+	db 42, MISDREAVUS
+	db 42, DUSKNOIR
 	db -1 ; end
 
 ; ================
@@ -5786,9 +5798,9 @@ MediumGroup:
 	db "Esther@" ; grottoed glacier b1f
 	db TRAINERTYPE_NORMAL
 	; party
-	db 47, SNEASEL
-	db 46, MISMAGIUS
-	db 48, SNEASLER
+	db 39, SNEASEL
+	db 41, MISMAGIUS
+	db 42, SNEASLER
 	db -1 ; end
 
 ; ================
@@ -5798,8 +5810,6 @@ MediumGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 23, ABRA
-	db 24, MISDREAVUS
-	db 25, KADABRA
 	db -1 ; end
 
 ; ================
@@ -5809,8 +5819,6 @@ MediumGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 53, HAUNTER
-	db 55, GENGAR
-	db 54, MISDREAVUS
 	db -1 ; end
 ; ================================
 
@@ -5822,7 +5830,7 @@ KimonoGirl1Group:
 	db "Sayo@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 30 FLAREON 
+	db 30, FLAREON 
 		db FLAME_CHARGE, DIG, DOUBLE_KICK, CHARM
 	db -1 ; end
 	
@@ -9443,7 +9451,7 @@ AmosGroup:
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 45, BRONZONG, NO_ITEM, DVS_HP_WATER, "Overtone@"
-		db ZEN_HEADBUTT, TELEPORT, MIRROR_COAT, RAIN_DANCE
+		db ZEN_HEADBUTT, THUNDER, MIRROR_COAT, RAIN_DANCE
 	db 48, H__ELECTRODE, LEFTOVERS,FAKE_PERFECT_DVS,  "EggStatic@"
 		db LEECH_SEED, THUNDER, GIGA_DRAIN, VOLT_SWITCH
 	db 49, H__TYPHLOSION, NO_ITEM,DVS_HP_BUG,  "Everbright@"
@@ -9882,13 +9890,13 @@ KenseyGroup:
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 38, FERALIGATR, NO_ITEM, DVS_HP_DRAGON, "Trapjaw@"
-		db CRUNCH, WATERFALL, SCARY_FACE, NO_MOVE
+		db CRUNCH, WATERFALL, SCARY_FACE, BULLDOZE
 	db 37, EMPOLEON, NO_ITEM, FAKE_PERFECT_DVS, "Waddleton@"
 		db SURF, DRILL_PECK, METAL_CLAW, NO_MOVE
 	db 37, SLOWKING, NO_ITEM, FAKE_PERFECT_DVS, "Hipocampus@"
 		db NASTY_PLOT, PSYCHIC_M, BUBBLE_BEAM, NO_MOVE
-	db 38, H__SLIGGOO, NO_ITEM, FAKE_PERFECT_DVS, "AcidTide@"
-		db DRAGON_PULSE, IRON_HEAD, PROTECT, ACID
+	db 38, H__SLIGGOO, NO_ITEM, DVS_HP_GROUND, "AcidTide@"
+		db HIDDEN_POWER, IRON_HEAD, PROTECT, SLUDGE_BOMB
 	db 40, VAPOREON, LEFTOVERS, DVS_HP_STEEL, "Tidechaser@"
 		db SCALD, REFLECT, ICE_BEAM, TOXIC
 	db -1 ; end
@@ -9905,8 +9913,8 @@ KenseyGroup:
 		db SURF, DRILL_PECK, IRON_HEAD, ROOST
 	db 56, SLOWKING, LIFE_ORB,FAKE_PERFECT_DVS,  "Hipocampus@"
 		db NASTY_PLOT, PSYCHIC_M, SURF, FLAMETHROWER
-	db 55, H__GOODRA, LEFTOVERS, FAKE_PERFECT_DVS, "AcidTide@"
-		db DRAGON_PULSE, IRON_HEAD, PROTECT, SLUDGE_BOMB
+	db 55, H__GOODRA, LEFTOVERS, DVS_HP_GROUND, "AcidTide@"
+		db DRAGON_PULSE, IRON_HEAD, HIDDEN_POWER, SLUDGE_BOMB
 	db 56, QUAGSIRE, LEFTOVERS, FAKE_PERFECT_DVS, "MudBud@"
 		db AQUA_JET, BELLY_DRUM, EARTHQUAKE, CURSE
 	db 57, VAPOREON, LEFTOVERS,DVS_HP_STEEL,  "Tidechaser@"

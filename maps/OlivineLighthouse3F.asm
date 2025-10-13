@@ -24,6 +24,12 @@ OlivineLighthouse3F_MapScriptHeader:
 TrainerScientistPiotr:
 	generictrainer SCIENTIST, PIOTR, EVENT_BEAT_SCIENTIST_PIOTR, .SeenText, .BeatenText
 
+	text "If we didn't make"
+	line "the OMLAS, then"
+	para "someone else"
+	line "would have."
+	done
+
 .BeatenText:
 	text "I'm proud of what"
 	line "we built."
@@ -38,6 +44,12 @@ TrainerScientistPiotr:
 TrainerEngineerHoward:
 	generictrainer ENGINEER, HOWARD, EVENT_BEAT_ENGINEER_HOWARD, .Seen1Text, .Beaten1Text
 
+	text "Whoever took the"
+	line "part must've been"
+	para "so familiar with"
+	line "the Desal plant."
+	done
+
 .Beaten1Text:
 	text "Blew my gasket."
 	done
@@ -51,6 +63,13 @@ TrainerEngineerHoward:
 	
 TrainerBattleGirlRonda:
 	generictrainer BATTLE_GIRL, RONDA, EVENT_BEAT_BATTLE_GIRL_RONDA, .Seen2Text, .Beaten2Text
+
+	text "The next floor is"
+	line "Chuck's."
+	
+	para "Not even I have"
+	line "been up there!"
+	done
 
 .Beaten2Text:
 	text "Now I was thrown"

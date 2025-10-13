@@ -376,8 +376,10 @@ Route32SlowpokeTailScript:
 	end
 
 Route32Slowpoketail2Text:
-	text "Try it with a"
-	line "dab of ketchup!"
+	text "Don't look at me"
+	line "like that!"
+	para "It's a lab-grown"
+	line "SlowpokeTail."
 	done
 
 Route32AmenitiesText:
@@ -397,5 +399,6 @@ Route32AmenitiesText:
 	para "that they will"
 	line "be on B2F soon."
 	
-	para "Hungry? Try this."
+	para "Hungry? Take one,"
+	line "I have many!"
 	done

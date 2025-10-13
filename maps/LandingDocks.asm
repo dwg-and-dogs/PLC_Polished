@@ -155,6 +155,7 @@ PickupDocksScene:
 	opentext
 	writetext Docks_Text12
 	waitbutton
+	writetext Docks_Text12_Badge
 	closetext
 	playsound SFX_GET_BADGE
 	waitsfx ; YOU GET THE BADGE AT THE END 
@@ -209,6 +210,8 @@ PickupDocksScene:
 	turnobject LANDING_DOCKS_KURT, UP
 	turnobject PLAYER, UP
 	showtext Docks_Text19
+	applyonemovement LANDING_DOCKS_BARBEAU, step_left
+	turnobject LANDING_DOCKS_BARBEAU, UP
 	special Special_CelebiShrineEvent
 	showtext Docks_Text20
 ; end 
@@ -346,9 +349,8 @@ Docks_Text6:
     text " Kensey: " 
 	next
 	text_start 
-	text "Kensey: I don't"
-	line "understand - isn't"
-	cont "she with Urgaust?"
+	text "But isn't Lugia"
+	line "with Urgaust?"
 	done
 
 
@@ -442,10 +444,17 @@ Docks_Text12:
 	para "did. But tradit-"
 	line "ion dictates that"
 	para "I must give you "
-	line "this badge,"
+	line "the vortex badge,"
 	para "marking you as"
-	line "worthy to lead"
-	cont "an expedition."
+	line "worthy to go on"
+	para "an expedition and"
+	line "be welcomed home"
+	cont "from one."
+	done
+
+Docks_Text12_Badge:
+	text "<PLAYER> received"
+	line "Vortex Badge!"
 	done
 
 Docks_Text12_2:

@@ -99,7 +99,7 @@ CianwoodEusineScript:
 	setevent EVENT_CIANWOODCITY_KURT
 	setevent EVENT_CIANWOODCITY_EUSINE
 	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
-	special Special_CelebiShrineEvent
+;	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	
@@ -141,9 +141,12 @@ CianwoodShpeelText:
 
 	
 CianwoodEusineNoLugiaText:
-	text "Perhaps we don't"
-	line "deserve nature's"
-	cont "beauty."
+	text_high
+    text " Eusine: " 
+	next
+	text_start 
+	text "Do we deserve"
+	line "nature's beauty?"
 	done
 
 CC_Move_Kurt:

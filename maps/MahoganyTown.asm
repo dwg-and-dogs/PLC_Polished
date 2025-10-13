@@ -12,7 +12,7 @@ MahoganyTown_MapScriptHeader:
 	warp_event  9,  1, ROUTE_43_MAHOGANY_GATE, 3
 
 	def_coord_events
-	coord_event 9, 2, 0, MahoganyTradeQuestTrigger
+	coord_event 7, 4, 0, MahoganyTradeQuestTrigger
 
 	def_bg_events
 	bg_event  1,  5, BGEVENT_JUMPTEXT, MahoganyTownSignText
@@ -23,11 +23,12 @@ MahoganyTown_MapScriptHeader:
 	def_object_events
 	object_event 11,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 	0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest
 	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, -1 ;
-	object_event  9, 2, 	SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
+	object_event  7, 5, 	SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
 	object_event  6,  7, 	SPRITE_FISHER, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
 	object_event 13, 15, 	SPRITE_CUTE_GIRL, 	SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, PAL_NPC_RED,	OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
 	object_event 10,  9, 	SPRITE_GRANNY, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownGrannyText, -1
-
+	object_event 19, 8 
+	object_event 19, 9, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyDragonTamerText, -1 
 	
 	object_const_def
 	const MAHOGANY_TOWN_GRAMPS
@@ -239,3 +240,16 @@ SilphSpringsAheadText:
 	para "for all of Johto"
 	line "and beyond!"
 	done
+
+MahoganyDragonTamerText:
+	text "Champion Lance"
+	line "forbids any entry"
+	para "to Eastern Johto"
+	line "to keep our water"
+	cont "in our region!"
+	
+	para "We will not allow"
+	line "Silph to destroy"
+	cont "our Den!"
+	done
+	

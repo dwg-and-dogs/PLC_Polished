@@ -61,7 +61,7 @@ KRIS EQU __trainer_class__
 	const KURT10 ; SINJOH , donphan azumarill bastiodon lopunny kirlia lv 40 
 	const KURT11 ; AMOS , starvia drapion roselia lucario hbraviary lv 43 
 	const KURT12 ; whispering way , nidoking nidoqueen yanmega ursaring snorlax lv 46 
-	const KURT13 ; TOP OF TIN TOWER , umbreon celebi heracross ursaluna wyrdeer kleavor  --> THIS IS MOVED TO THE KURTFINAL 
+	const KURT13 ; TOP OF TIN TOWER , in the bell tower, high exp yield pokemon 
 
 	trainerclass MEJIMI ; 93
 

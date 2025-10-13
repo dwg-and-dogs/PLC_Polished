@@ -322,6 +322,12 @@ GeneralsLeaveMovement:
 
 
 EmperorsGardenBobeshScene:
+
+	refreshscreen
+	trainerpic BOBESH
+	waitbutton
+	closepokepic
+
 	showemote EMOTE_BOLT, EMPERORS_GARDEN_ADRINNA_2, 10
 	opentext
 	writetext EG_Bobesh_Text1
@@ -397,6 +403,12 @@ AdrinnaMoves2:
 	step_end
 
 EmperorsGardenKenseyScene:
+
+	refreshscreen
+	trainerpic KENSEY
+	waitbutton
+	closepokepic
+
 	showemote EMOTE_SHOCK, PLAYER, 5
 	applymovement PLAYER, PlayerHidesFromKenseyMovement
 	pause 30
@@ -502,6 +514,12 @@ AdrinnaMoves4:
 	step_end
 
 EmperorsGardenAdrinnaScene:
+
+	refreshscreen
+	trainerpic ADRINNA
+	waitbutton
+	closepokepic
+
 	showemote EMOTE_HAPPY, EMPERORS_GARDEN_ADRINNA_4, 10
 	turnobject EMPERORS_GARDEN_ADRINNA_4, DOWN
 	applyonemovement EMPERORS_GARDEN_ADRINNA_4, step_down

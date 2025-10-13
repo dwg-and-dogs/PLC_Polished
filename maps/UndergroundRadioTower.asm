@@ -22,16 +22,6 @@ UndergroundRadioTower_MapScriptHeader:
 	object_const_def
 	const UNDERGROUND_KURT
 	
-TrainerBirdKeeperVance1:
-    trainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVance1SeenText, BirdKeeperVance1BeatenText, 0, .Script
-
-.Script:
-    endifjustbattled
-    opentext
-    writetext BirdKeeperVance1AfterText
-    waitbutton
-    closetext
-    end
 
 TrainerBlackbeltKenji:
     trainer BLACKBELT_T, KENJI1, EVENT_BEAT_BLACKBELT_KENJI, BlackbeltKenjiSeenText, BlackbeltKenjiBeatenText, 0, .Script
@@ -107,16 +97,6 @@ UndergroundRadioTowerKurtScript:
     closetext
     end
 
-
-BirdKeeperVance1SeenText:
-    text "We're fighting for"
-    line "fair competition!"
-    done
-
-BirdKeeperVance1BeatenText:
-    text "Silph just makes"
-	line "dependencies!"
-    done
 
 Vance1Text:
 	text "The trainers here"

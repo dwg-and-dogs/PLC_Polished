@@ -719,6 +719,7 @@ BellossomEvosAttacks:
 	db 1, HEAL_BELL ; new move
 	db 1, SUNNY_DAY
 	db 1, STUN_SPORE
+	db 30, GIGA_DRAIN
 	db 35, GROWTH ; Quiver Dance → Growth
 	db 40, MOONBLAST ; Petal Blizzard → Gloom move
 	db 45, PETAL_DANCE ; evolution move
@@ -797,11 +798,9 @@ VenomothEvosAttacks:
 	db 25, SLUDGE_BOMB ; Signal Beam → Stun Spore
 	db 29, SLEEP_POWDER
 	db 31, GUST
-	db 37, LEECH_LIFE
-	db 41, ZEN_HEADBUTT
+	db 37, BUG_BUZZ
+	db 41, PSYCHIC_M
 	db 47, BATON_PASS ; Poison Fang → egg move
-	db 55, PSYCHIC_M
-	db 59, BUG_BUZZ
 	db 0 ; no more level-up moves
 
 DiglettEvosAttacks:
@@ -2292,7 +2291,7 @@ PinsirEvosAttacks:
 	db 20, ROCK_THROW ; Brick Break → event move
 	db 26, ROCK_SMASH ; Vital Throw → TM move
 	db 29, X_SCISSOR
-	db 33, FEINT_ATTACK ; Submission → egg moves
+	db 33, KARATE_CHOP ; Submission → egg moves
 	db 36, OUTRAGE ; Storm Throw → Let's Go move
 	db 40, SWORDS_DANCE
 	db 43, THRASH
@@ -3229,11 +3228,10 @@ MismagiusEvosAttacks:
 	db 1, SHADOW_BALL ; Phantom Force → TM move
 	db 1, FLAMETHROWER ; Mystical Fire → TM move
 	db 1, DAZZLINGLEAM ; Magical Leaf → TM move ; evolution move
-	db 1, GROWL
-	db 1, PSYBEAM ; Psywave → new move
-	db 1, DISARM_VOICE ; new move
-	db 1, CONFUSION ; Spite → new move
-	db 1, ASTONISH
+	db 2, CONFUSE_RAY ; Spite → new move
+	db 2, PSYBEAM ; Psywave → new move
+	db 2, DISARM_VOICE ; new move
+	db 2, HEX
 	db 32, PAIN_SPLIT
 	db 37, DESTINY_BOND ; Payback → egg move
 	db 41, SHADOW_BALL
@@ -4468,6 +4466,7 @@ GardevoirEvosAttacks:
 	db 0 ; no more levelups
 
 GalladeEvosAttacks:
+	db 0 ; no more Evolutions
 	db 1, CONFUSION
 	db 1, DRAIN_KISS
 	db 18, HYPNOSIS

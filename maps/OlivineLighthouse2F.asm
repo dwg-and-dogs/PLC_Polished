@@ -20,6 +20,11 @@ OlivineLighthouse2F_MapScriptHeader:
 TrainerScientistNigel:
 	generictrainer SCIENTIST, NIGEL, EVENT_BEAT_SCIENTIST_NIGEL, .SeenText, .BeatenText
 
+	text "I don't get paid"
+	line "enough to stop"
+	cont "you anymore."
+	done
+
 .BeatenText:
 	text "Wait, are you"
 	line "even allowed in"
@@ -35,6 +40,13 @@ TrainerScientistNigel:
 TrainerEngineerHugo:
 	generictrainer ENGINEER, HUGO, EVENT_BEAT_ENGINEER_HUGO, .Seen1Text, .Beaten1Text
 
+	text "Do you know why"
+	line "<RIVAL> looked
+	para "so upset? He was"
+	line "really huffing on"
+	cont "his way out."
+	done
+
 .Beaten1Text:
 	text "Wait, are you"
 	line "even allowed in"
@@ -48,6 +60,15 @@ TrainerEngineerHugo:
 	
 TrainerBattleGirlNozomi:
 	generictrainer BATTLE_GIRL, NOZOMI, EVENT_BEAT_BATTLE_GIRL_NOZOMI, .Seen2Text, .Beaten2Text
+
+	text "Don't stare too"
+	line "deep into the"
+	para "eyes of the"
+	line "OMLAS Slowking."
+	
+	para "You may not be "
+	line "able to stop."
+	done
 
 .Beaten2Text:
 	text "I'm going to be"
