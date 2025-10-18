@@ -35,6 +35,10 @@ EmperorsGardenCreditScene:
 	applymovement PLAYER, EG_Credit_Move3 ; down 9 
 	pause 120
 	; hall of fame section 
+	ld a, 2 ; jumps if the party size is 2 (or less) 
+	cp PARTY_LENGTH
+	jp nc, .done
+
 	; CHECK FOR party of at least five mons 
 	; iffalse .done 
 	refreshscreen
@@ -45,7 +49,7 @@ EmperorsGardenCreditScene:
 	pause 120
 	waitbutton
 	closepokepic
-	; .done:
+.done:
 	pause 60
 	special FadeOutPalettes
 	warp ARDUOUS_ANCHORAGE_CREDIT, 6, 26

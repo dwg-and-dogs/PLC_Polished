@@ -29,8 +29,9 @@ SinjohCrossroadsCreditScene:
 	applymovement PLAYER, SC_Credit_Move2 ; 14 UP 
 	pause 120
 	; hall of fame section 
-	; CHECK FOR party of at least five mons 
-	; iffalse .done 
+	ld a, 4 ; jumps if the party size is 3 (or less) 
+	cp PARTY_LENGTH
+	jp nc, .done
 	refreshscreen
 	loadmem wCurForm, -1
 	loadmem wCurPartyMon, 4    ; Select party slot
@@ -39,7 +40,7 @@ SinjohCrossroadsCreditScene:
 	pause 120
 	waitbutton
 	closepokepic
-	; .done:
+.done:
 	pause 60
 	special FadeOutPalettes
 	warp CLASTS_CRADLE_B1F_CREDIT, 8, 6

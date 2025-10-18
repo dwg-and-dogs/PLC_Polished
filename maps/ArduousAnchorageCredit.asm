@@ -33,8 +33,9 @@ ArdudousAnchorageCreditScene:
 	applymovement PLAYER, AA_Credit_Move2
 	pause 120
 	; hall of fame section 
-	; CHECK FOR party of at least five mons 
-	; iffalse .done 
+	ld a, 3 ; jumps if the party size is 3 (or less) 
+	cp PARTY_LENGTH
+	jp nc, .done
 	refreshscreen
 	loadmem wCurForm, -1
 	loadmem wCurPartyMon, 3    ; Select party slot
@@ -43,7 +44,7 @@ ArdudousAnchorageCreditScene:
 	pause 120
 	waitbutton
 	closepokepic
-	; .done:
+.done:
 	pause 60
 	special FadeOutPalettes
 	warp SINJOH_CROSSROADS_CREDIT, 21, 19

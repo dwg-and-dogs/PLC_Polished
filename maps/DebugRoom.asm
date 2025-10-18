@@ -31,12 +31,12 @@ DebugRoom_MapScriptHeader:
 
 DebugInteraction: 
 	opentext
-	givepoke CYNDAQUIL, 100
-	givepoke WEEPINBELL, 100
-	givepoke RAIKOU, 100
-	givepoke POLITOED, 100
+;	givepoke ENTEI, 100
+;	givepoke VICTREEBEL, 100
+;	givepoke RAIKOU, 100
+;	givepoke POLITOED, 100
 	givepoke LUGIA, 100
-	givepoke HEATRAN, 25 
+;	givepoke HEATRAN, 25 
 	waitbutton
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
@@ -134,7 +134,8 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp ROUTE_37, 15, 7
+	setevent EVENT_BEAT_CHUCK
+	warp ECRUTEAK_CITY, 32, 27
 	end
 
 OverworldHallOfFame1: 

@@ -308,12 +308,12 @@ LakeRivalAfterText:
 	line "behind fake"
 	cont "altruism,"
 	
-	para "I can see my eff-"
-	line "ect. I walked aw-"
-	para "ay when it wasn't"
-	line "working."
+	para "I see my effect."
+	line "I walked away"
+	cont "when it wasn't"
+	cont "working."
 	
-	para "<PLAYER>, when"
+	para "<PLAYER>,"
 	line "will you?"
 	done
 

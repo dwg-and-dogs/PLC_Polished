@@ -5,8 +5,8 @@ Route42_MapScriptHeader:
 	callback MAPCALLBACK_TILES, Route42CavernCallback
 
 	def_warp_events
-	warp_event  4,  8, ROUTE_42_ECRUTEAK_GATE, 3
-	warp_event  4,  9, ROUTE_42_ECRUTEAK_GATE, 4
+	warp_event  0,  8, ROUTE_42_ECRUTEAK_GATE, 3
+	warp_event  0,  9, ROUTE_42_ECRUTEAK_GATE, 4
 	warp_event 46, 7, ENTEIS_CAVERN, 1
 ; entei's cavern 
 
@@ -15,7 +15,7 @@ Route42_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  8, 12, BGEVENT_JUMPTEXT, Route42Sign1Text
+;	bg_event  8, 12, BGEVENT_JUMPTEXT, Route42Sign1Text
 	bg_event  7,  7, BGEVENT_JUMPTEXT, MtMortarSign1Text
 	bg_event 45,  9, BGEVENT_JUMPTEXT, MtMortarSign2Text
 	bg_event 54,  8, BGEVENT_JUMPTEXT, Route42Sign2Text
@@ -39,9 +39,7 @@ Route42_MapScriptHeader:
 	object_event  27,  8, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 	PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptext, ChemistryText, -1
 	object_event  28,  8, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 	PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptext, ChemistryText, -1
 
-	object_event  6,  8, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_CHUCK
-	object_event  6,  9, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route42OfficerText, EVENT_BEAT_CHUCK
-	itemball_event  7, 13, ULTRA_BALL, 1, EVENT_ROUTE_42_ULTRA_BALL
+	itemball_event  7, 10, ULTRA_BALL, 1, EVENT_ROUTE_42_ULTRA_BALL
 	itemball_event 12, 15, HYPER_POTION, 1, EVENT_ROUTE_42_SUPER_POTION
 ;	tmhmball_event 10, 2, TM_SCALD, EVENT_GOT_TM_SCALD 
 	fruittree_event 25, 5, FRUITTREE_ROUTE_42, HOLLOW_ROCK, PAL_NPC_BLUE

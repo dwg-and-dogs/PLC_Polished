@@ -37,7 +37,6 @@ CradleB1FStonesCallback2:
 
 ClastsCradleB1FCreditScene: 
 	;MOVING CAMERA
-	; warp in at x, y 
 	applyonemovement PLAYER, hide_object
 	waitsfx
 	pause 120 
@@ -50,8 +49,9 @@ ClastsCradleB1FCreditScene:
 	applymovement PLAYER, CC_Credit_Move4 ; 9 up to 16 
 	pause 60
 	; hall of fame section 
-	; CHECK FOR party of at least five mons 
-	; iffalse .done 
+	ld a, 5 ; jumps if the party size is 5 (or less) 
+	cp PARTY_LENGTH
+	jp nc, .done 
 	refreshscreen
 	loadmem wCurForm, -1
 	loadmem wCurPartyMon, 5    ; Select first party slot
@@ -60,14 +60,18 @@ ClastsCradleB1FCreditScene:
 	pause 120
 	waitbutton
 	closepokepic
-	; .done:
-	; CHECKEVENT event_joined_adrinna
-	; iftrue .done2
+.done:
+	checkevent EVENT_ACCEPTED_ADRINNA
+	iftrue .done2
 	pause 60
 	special FadeOutPalettes
 	warp BURNED_TOWER_B1F_CREDIT, 9, 6
-	; .done2:
-	; halloffame
+	end
+
+.done2:
+	pause 60
+	special FadeOutPalettes
+	halloffame
 	end
 
 
