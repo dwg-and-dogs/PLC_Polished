@@ -29,9 +29,9 @@ SinjohCrossroadsCreditScene:
 	applymovement PLAYER, SC_Credit_Move2 ; 14 UP 
 	pause 120
 	; hall of fame section 
-	ld a, 4 ; jumps if the party size is 3 (or less) 
-	cp PARTY_LENGTH
-	jp nc, .done
+	readvar VAR_PARTYCOUNT
+	ifless $5, .done
+
 	refreshscreen
 	loadmem wCurForm, -1
 	loadmem wCurPartyMon, 4    ; Select party slot

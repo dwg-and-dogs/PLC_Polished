@@ -1,9 +1,0 @@
-08-29-25 meeting
-
-1) power budget for board - 200 mA (much higher than it called for) - Gordon will need to make sure that the battery board is designed to support the higher currents (won't get much beyond 100 mA) 
-	*This is a knob to improve the response time at the low end 
-	*Field testing, not sure how the tests will go 
-	*Won't stray from the design 
-
-
-*need the better setup and measuring the temperature! Quantificaitn of low response time is a risk we have! Need to beat that ! SHow a 

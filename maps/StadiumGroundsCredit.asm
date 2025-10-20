@@ -50,12 +50,10 @@ StadiumGroundsCreditScene:
 	applymovement PLAYER, SG_Credit_Move3
 	pause 120
 	; hall of fame section 
-	ld a, 1 ; jumps if the party size is 1 (or less) 
-	cp PARTY_LENGTH
-	jp nc, .done
+	readvar VAR_PARTYCOUNT
+	ifless $2, .done
+	
 
-	; CHECK FOR party of at least five mons 
-	; iffalse .done 
 	refreshscreen
 	loadmem wCurForm, -1
 	loadmem wCurPartyMon, 1    ; Select first party slot

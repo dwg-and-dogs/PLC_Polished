@@ -35,9 +35,8 @@ EmperorsGardenCreditScene:
 	applymovement PLAYER, EG_Credit_Move3 ; down 9 
 	pause 120
 	; hall of fame section 
-	ld a, 2 ; jumps if the party size is 2 (or less) 
-	cp PARTY_LENGTH
-	jp nc, .done
+	readvar VAR_PARTYCOUNT
+	ifless $3, .done
 
 	; CHECK FOR party of at least five mons 
 	; iffalse .done 

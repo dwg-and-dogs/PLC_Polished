@@ -1,0 +1,17 @@
+Type		Front Mon	Back Mon	Revise?
+Bug		Quilava		Typhlosion	Maybe
+Dark		Gengar		Haunter		No
+Dragon		Luxray		Luxio		No
+Electric	Clefairy	Clefable	Maybe
+Fighting	??		??		No
+Fire		??		Ninetales	No
+Flying		Dragonite	??		No
+Ghost		??		??		No
+Grass		??		??		Yes - double green
+Ground		??		??		Maybe
+Ice		??		??		No
+Poison		??		??		No
+Psychic		TTar		??		No
+Rock		??		??		No
+Steel		Vaporeon	??		No
+Water		??		??		No

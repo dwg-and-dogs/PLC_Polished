@@ -49,9 +49,8 @@ ClastsCradleB1FCreditScene:
 	applymovement PLAYER, CC_Credit_Move4 ; 9 up to 16 
 	pause 60
 	; hall of fame section 
-	ld a, 5 ; jumps if the party size is 5 (or less) 
-	cp PARTY_LENGTH
-	jp nc, .done 
+	readvar VAR_PARTYCOUNT
+	ifless $6, .done
 	refreshscreen
 	loadmem wCurForm, -1
 	loadmem wCurPartyMon, 5    ; Select first party slot

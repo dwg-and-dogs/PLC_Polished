@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, GOLDENROD_MUSEUM_1F, 1
+	warp_event  1, 8, HOLLYS_HOLT_CREDIT, 1
 
 
 	def_coord_events
