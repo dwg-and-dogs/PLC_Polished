@@ -99,9 +99,13 @@ KimonoCabin5Lass:
 	pause 10	
 	writetext KimonoCabin5LassText2
 	waitbutton
+	writetext KimonoCabin5GrannyText2
+	waitbutton
 	givepoke EEVEE, NO_FORM, 5, LUM_BERRY, LOVE_BALL, GROWTH
 	closetext
 	setevent EVENT_KIMONO_CABIN_EEVEE
+	clearevent EVENT_KIMONOS_AT_TAPESTRY
+	
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
@@ -182,9 +186,13 @@ WhoWouldntKimono5:
 	done
 
 KimonoCabin5GrannyText1:
-	text "Old Morphea: Oh!"
-	line "that's me, as"
-	cont "a young woman!"
+	text_high
+    text " Old Morphea: "
+	next
+	text_start 
+
+	text "That's me, as a"
+	line "young person!"
 	
 	para "That kimono, I"
 	line "remember it from"
@@ -195,26 +203,34 @@ KimonoCabin5GrannyText1:
 	cont "on the way to"
 	cont "the theatre."
 	
+	para "I wanted to run"
+	line "home and cry!"
+	
 	para "I trained with"
 	line "my parents so"
 	cont "much for it!"
 	done
 	
 KimonoCabin5LassText1:
-	text "Young Morphea:"
-	line "But Morphea!"
-	
-	para "We succeeded."
+	text_high
+    text " Young Morphea: "
+	next
+	text_start 
+
+	text "And we succeeded!"
 	line "The greatest gift"
 	para "we inherited was"
-	line "perseverance and"
-	cont "adaptability. "
+	line "adaptability. "
 	done
 	
 KimonoCabin5LassText2:
-	text "Young Morphea:"
-	line "<PLAYER> - take"
-	cont "this Eevee."
+	text_high
+    text " Young Morphea: "
+	next
+	text_start 
+
+	text "<PLAYER> - take"
+	line "this Eevee."
 	
 	para "It represents the"
 	line "Growth we earn"
@@ -225,6 +241,32 @@ KimonoCabin5LassText2:
 	para "How will you"
 	line "adapt? Who will"
 	cont "you grow to be?"
+	done
+
+KimonoCabin5GrannyText2:
+	text_high
+    text " Old Morphea: "
+	next
+	text_start 
+	
+	text "I've led my girls"
+	line "astray, hiding in"
+	para "the woods like we"
+	line "don't belong."
+	
+	para "It's time that we"
+	line "stood up against"
+	cont "Urgaust."
+	
+	para "We are strong. We"
+	line "can adapt to the"
+	para "challenges ahead"
+	line "of us!"
+	
+	para "What would my"
+	line "parents say if"
+	para "they saw me give"
+	line "up so easy?"
 	done
 	
 KimonoEeveeText:

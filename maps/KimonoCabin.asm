@@ -23,11 +23,11 @@ KimonoCabin_MapScriptHeader:
 
 
 	def_object_events ; sprites: cute_girl, lass, ace_trainer_f, matron, granny
-	object_event  3,  6, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin1Script, -1 ; "Vera" , revise dialogue to be a scared little girl
-	object_event  0,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2Script, -1 ; " Piper", a young girl who wants to save the garden
-	object_event  9,  4, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin3Script, -1 ; "Samaria" , a  woman who is ready to face fears
-	object_event  6,  3, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin4Script, -1 ; "Shiji" , an older woman who wants her vision to be accepted
-	object_event  3,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin5Script, -1
+	object_event  3,  6, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin1Script, EVENT_KIMONO_CABIN_EEVEE ; "Vera" , revise dialogue to be a scared little girl
+	object_event  0,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin2Script, EVENT_KIMONO_CABIN_EEVEE ; " Piper", a young girl who wants to save the garden
+	object_event  9,  4, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, KimonoCabin3Script, EVENT_KIMONO_CABIN_EEVEE ; "Samaria" , a  woman who is ready to face fears
+	object_event  6,  3, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin4Script, EVENT_KIMONO_CABIN_EEVEE ; "Shiji" , an older woman who wants her vision to be accepted
+	object_event  3,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin5Script, EVENT_KIMONO_CABIN_EEVEE
 
 	; books 
 	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, KimonoCabinShijiNotebook1, EVENT_KIMONO_CABIN_LAPRAS
@@ -38,7 +38,6 @@ KimonoCabin_MapScriptHeader:
 
 ;	object_event  2,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptext, KimonoCabinMorpheaNotebook1, EVENT_KIMONO_CABIN_MORPHEA_NOTEBOOK
 
-	object_const_def
 
 
 KimonoCabin1Script:
@@ -456,8 +455,6 @@ Kimono5ThanksForHelpingText:
 	cont "as I drift off..."
 	done
 
-; todos 
-
 KimonoCabinShijiNotebook1:
 	text "Shiji's Journal: "
 	line "Only a few months"
@@ -544,11 +541,6 @@ KimonoCabinMorpheaNotebook1:
 	cont "she navigating it"
 	cont "adeptly?"
 	
-	para "And now, this hum-"
-	line "ble holt seems to"
-	cont "be afflicted by "
-	cont "the same tyranny"
-	cont "as the capital."
 	done
 
 KimonoCabinBookshelfText:
