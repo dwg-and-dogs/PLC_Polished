@@ -64,8 +64,13 @@ TT_ChamberText:
 
 TapestryAmos:
 	faceplayer
+	checkevent EVENT_KIMONOS_AT_TAPESTRY
 	opentext
+	iftrue .NoKimonosText
 	writetext TapestryAmosText1
+.NoKimonosText:	
+	writetext TapestryAmosText0
+.pickup:
 	waitbutton
 	yesorno
 	iffalse_jumptext TapestryAmosNoText
@@ -135,6 +140,53 @@ TapestryAmosText1:
 	
 	para "Are you ready?"
 	done
+
+
+TapestryAmosText0:
+	text_high
+    text " Amos: "
+	next
+	text_start
+	
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at the mine."
+
+	para "I thought that"
+	line "the Kimono Girls"
+	para "would be here,"
+	
+	para "but they must be"
+	line "in the Holt."
+	
+	para "What's holding"
+	line "them up?"
+	
+	para "My sources say"
+	line "that Adrinna will"
+	para "usurp Urgaust"
+	line "at the ceremony."
+	
+	para "Even if she does"
+	line "not, the Consul"
+	para "plans to annex"
+	line "all of Johto."
+	
+	para "Our traditions"
+	line "will be replaced"
+	para "to honor a new"
+	line "emperor!"
+	
+	para "This is not the"
+	line "way to repel the"
+	cont "outsiders!"
+	
+	para "We must stop them"
+	line "at all costs."
+	
+	para "Are you ready?"
+	done
+
 
 TapestryAmosYesText:
 	text_high
@@ -254,8 +306,6 @@ TapestryVera:
 	done
 
 TapestryPiper:
-	checkevent EVENT_KIMONO_CABIN_EEVEE
-	iffalse_jumptextfaceplayer PiperNoEeveeText
 	checkevent EVENT_TAPESTRY_CELEBI
 	iftrue_jumptextfaceplayer PiperAfterText
 

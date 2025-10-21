@@ -31,20 +31,25 @@ DebugRoom_MapScriptHeader:
 
 DebugInteraction: 
 	opentext
-;	givepoke ENTEI, 100
-;	givepoke VICTREEBEL, 100
-;	givepoke RAIKOU, 100
-;	givepoke POLITOED, 100
+	givepoke ENTEI, 100
+	givepoke VICTREEBEL, 100
+	givepoke RAIKOU, 100
+	givepoke POLITOED, 100
 	givepoke LUGIA, 100
-;	givepoke HEATRAN, 25 
+	givepoke GOLEM, 25 
 	waitbutton
-	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
-	setflag ENGINE_MAP_CARD
+;	setflag ENGINE_POKEGEAR
+;	setflag ENGINE_PHONE_CARD
+;	setflag ENGINE_MAP_CARD
 	; pokedex
 	setflag ENGINE_POKEDEX
 for x, NUM_TMS + NUM_HMS
 	givetmhm x
+endr
+for x, NUM_KEY_ITEMS
+if x != MACHINE_PART
+	givekeyitem x
+endc
 endr
 	; useful items
 	giveitem MASTER_BALL, 99
@@ -96,22 +101,22 @@ endr
 	; max money
 	givemoney $0, 1000000
 	; all badges
-	setflag ENGINE_ZEPHYRBADGE
-	setflag ENGINE_HIVEBADGE
-	setflag ENGINE_PLAINBADGE
-	setflag ENGINE_FOGBADGE
-	setflag ENGINE_STORMBADGE
-	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_GLACIERBADGE
-	setflag ENGINE_RISINGBADGE
+;	setflag ENGINE_ZEPHYRBADGE
+;	setflag ENGINE_HIVEBADGE
+;	setflag ENGINE_PLAINBADGE
+;	setflag ENGINE_FOGBADGE
+;	setflag ENGINE_STORMBADGE
+;	setflag ENGINE_MINERALBADGE
+;	setflag ENGINE_GLACIERBADGE
+;	setflag ENGINE_RISINGBADGE
 	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
-	setflag ENGINE_VOLCANOBADGE
-	setflag ENGINE_EARTHBADGE
+;	setflag ENGINE_CASCADEBADGE
+;	setflag ENGINE_THUNDERBADGE
+;	setflag ENGINE_RAINBOWBADGE
+;	setflag ENGINE_MARSHBADGE
+;	setflag ENGINE_SOULBADGE
+;	setflag ENGINE_VOLCANOBADGE
+;	setflag ENGINE_EARTHBADGE
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_AZALEA
 	setflag ENGINE_FLYPOINT_GOLDENROD
@@ -134,8 +139,8 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	setevent EVENT_BEAT_CHUCK
-	warp ECRUTEAK_CITY, 32, 27
+;	setevent EVENT_BEAT_CHUCK
+	warp SINJOH_CROSSROADS, 10, 14
 	end
 
 OverworldHallOfFame1: 

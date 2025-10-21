@@ -861,7 +861,8 @@ Script_AutoWaterfall:
 	step_end
 
 TryWaterfallOW::
-	ld d, WATERFALL
+	lb de, WATERFALL, HM_WATERFALL
+;	ld d, WATERFALL
 	call CheckPartyMove
 	jr c, .failed
 	ld de, ENGINE_BOULDERBADGE ; RISING BADGE
@@ -1099,13 +1100,13 @@ StrengthFunction:
 
 .TryStrength:
 ; Strength
-	ld de, ENGINE_BOULDERBADGE ; PLAINBADGE
-	call CheckBadge
-	jr nc, .UseStrength
+;	ld de, ENGINE_BOULDERBADGE ; PLAINBADGE
+;	call CheckBadge
+;	jr nc, .UseStrength
 
-.Failed:
-	ld a, $80
-	ret
+;.Failed:
+;	ld a, $80
+;	ret
 
 .UseStrength:
 	ld hl, Script_StrengthFromMenu
@@ -1160,7 +1161,7 @@ AskStrengthScript:
 	endtext
 
 TryStrengthOW:
-	ld d, STRENGTH
+	lb de, STRENGTH, HM_STRENGTH
 	call CheckPartyMove
 	jr c, .nope
 
@@ -1310,7 +1311,8 @@ Script_AutoWhirlpool:
 	step_end
 
 TryWhirlpoolOW::
-	ld d, WHIRLPOOL
+	lb de, WHIRLPOOL, HM_WHIRLPOOL
+;	ld d, WHIRLPOOL
 	call CheckPartyMove
 	jr c, .failed
 	ld de, ENGINE_BOULDERBADGE ; GLACIER BADGE
@@ -1520,7 +1522,7 @@ AskRockSmashScript:
 	farjumptext _MaySmashText
 
 HasRockSmash:
-	ld d, ROCK_SMASH
+	lb de, ROCK_SMASH, TM_ROCK_SMASH
 	call CheckPartyMove
 	; a = carry ? 1 : 0
 	sbc a
@@ -1877,13 +1879,14 @@ Script_CantGetOffBike:
 	waitendtext
 
 HasCutAvailable::
-	ld d, CUT
+;	ld d, CUT
+	lb de, CUT, HM_CUT
 	call CheckPartyMove
 	jr c, .no
 
-	ld de, ENGINE_BOULDERBADGE ; HIVEBADGE
-	call CheckEngineFlag
-	jr c, .no
+;	ld de, ENGINE_BOULDERBADGE ; HIVEBADGE
+;	call CheckEngineFlag
+;	jr c, .no
 
 .yes
 	xor a
