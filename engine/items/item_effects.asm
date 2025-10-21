@@ -300,7 +300,7 @@ KeyItemEffects:
 	dw IsntTheTimeMessage ; SHINY_CHARM
 	dw IsntTheTimeMessage ; OVAL_CHARM
 	dw IsntTheTimeMessage ; CATCH_CHARM
-	dw NatuCallKeyItem		  ; Timepiece
+	dw NatuCallKeyItem		  ; natu fall 
 	dw KurtsMapKeyItem	  ; townmap
 	dw IsntTheTimeMessage ; MintLeafKIcon
 	dw IsntTheTimeMessage ; TinymushroomKIcon
@@ -1935,10 +1935,20 @@ KurtsMapKeyItem: ; c.f. typechart
 	farcall WaitBGMap_DrawPackGFX
 	farjp Pack_InitColors
 
-NatuCallKeyItem: 
+NatuCallKeyItem:
+;	call FadeToMenu
 	farcall FlyFunction
-	ret
-
+	ld a, [wFieldMoveSucceeded]
+	cp $81  ; checks if Fly is exectured 
+	ret z   ; 
+	; Otherwise restore pack interface
+	call FadeToMenu
+	call ExitMenu
+	xor a
+	ldh [hBGMapMode], a
+	farcall Pack_InitGFX
+	farcall WaitBGMap_DrawPackGFX
+	farjp Pack_InitColors 
 
 RestorePPEffect:
 	ld a, [wCurItem]

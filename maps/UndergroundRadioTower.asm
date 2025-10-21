@@ -79,12 +79,15 @@ UndergroundRadioTowerKurtScript:
     yesorno
     iffalse .NotReady
     writetext KurtReadyText
+    waitbutton
+    writetext KurtAfterFlyText
     promptbutton
     verbosegivetmhm HM_FLY
+	waitbutton
+	verbosegivekeyitem NATU_CALL 
     setevent EVENT_GOT_FLY_KURT
 	setevent EVENT_RIVAL_RADIO_TOWER
-    writetext KurtAfterFlyText
-    waitbutton
+	waitbutton
     closetext
 	applymovement UNDERGROUND_KURT, UndergroundKurtMoves
 	disappear UNDERGROUND_KURT
@@ -227,11 +230,14 @@ KurtReadyText:
 
 
 KurtAfterFlyText:
-	text "By the way, you"
-	line "should have this"
-	cont "now."
+	text "Oh, you should"
+	line "have these."
     para "This HM can help"
-    line "us escape."
+    line "us escape,"
+	
+	para "Or just call my"
+	line "Natu to fly you"
+	cont "around."
     done
 
 UndergroundKurtMoves:

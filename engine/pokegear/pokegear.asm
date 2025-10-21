@@ -398,7 +398,7 @@ PokegearClock_Joypad:
 	call .UpdateClock
 	ld hl, hJoyLast
 	ld a, [hl]
-	and A_BUTTON + B_BUTTON + START + SELECT ; maybe consider removing some of these to see which ones are getting the problem? 
+	and B_BUTTON + START + SELECT ; maybe consider removing some of these to see which ones are getting the problem? 
 	jr nz, .quit
 	ld a, [hl]
 	and D_RIGHT
@@ -1899,9 +1899,20 @@ _FlyMap:
 	call DelayFrame
 	jr .loop
 
-.pressedB
-	ld a, -1
-	jr .exit
+.pressedB ; TODO FIX THIS 
+	; Don't set any landmark value, just exit cleanly
+	pop af
+	ldh [hInMenu], a
+	call ClearBGPalettes
+	ld a, $90
+	ldh [hWY], a
+	xor a ; LOW(vBGMap0)
+	ldh [hBGMapAddress], a
+	ld a, HIGH(vBGMap0)
+	ldh [hBGMapAddress + 1], a
+	; Return with -1 in e to indicate cancellation
+	ld e, -1
+	ret
 
 .pressedA
 	ld a, [wTownMapPlayerIconLandmark]

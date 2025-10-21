@@ -9,9 +9,9 @@ SpawnPoints:
 	table_width 4, SpawnPoints
 
 	spawn KURTS_HOUSE,                 7,  1 ;  "YOUR HOUSE"
-
+; old johto ones work
 	spawn ANARRES_TOWN,               17, 10 ;
-	spawn GAULDENROD,                 18, 28 ; todo needs hardcode exception
+	spawn GAULDENROD,                 19, 28 ; todo needs hardcode exception
 	spawn WESTERN_CAPITAL,            21, 26 ; todo needs a hardcode exception 
 	spawn TRADERS_LANDING,            15, 17 ; todo needs a hardcode exception 
 	spawn SHELTERED_SHORES,           34, 20 ; todo needs a hardcode exception 

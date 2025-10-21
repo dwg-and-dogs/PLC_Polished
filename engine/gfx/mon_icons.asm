@@ -335,23 +335,34 @@ SetPartyMonIconAnimSpeed:
 .speeds
 	db $00, $40, $80
 
+Fly_PrepMonIcon_Original:
+	push de                     ; Save DE register pair onto the stack for later use
+	ld a, MON_FORM             ; Load the MON_FORM constant into accumulator A
+	call GetPartyParamLocation  ; Call function to get memory location of party parameter (returns address in HL)
+	and SPECIESFORM_MASK       ; Apply bitmask to isolate the form bits from the data at that location
+	ld [wCurIconForm], a       ; Store the masked form value in wCurIconForm variable
+	ld a, [wCurPartyMon]       ; Load the current party member index into A
+	ld hl, wPartySpecies       ; Load the base address of party species array into HL
+	ld e, a                    ; Copy party member index from A to E (lower byte of DE)
+	ld d, 0                    ; Clear D (upper byte of DE) to make DE = party member index
+	add hl, de                 ; Add offset (DE) to base address (HL) to get specific party member's species address
+	ld a, [hl]                 ; Load the species value from the calculated address into A
+	ld [wTempIconSpecies], a   ; Store species value in wTempIconSpecies variable
+	ld [wCurIcon], a           ; Also store species value in wCurIcon variable
+	pop de                     ; Restore the original DE register pair from the stack
+	ld a, e                    ; Copy E register value to A (return value)
+	ret                        ; Return from subroutine
+	
 Fly_PrepMonIcon:
-	push de
-	ld a, MON_FORM
-	call GetPartyParamLocation
-	and SPECIESFORM_MASK
-	ld [wCurIconForm], a
-	ld a, [wCurPartyMon]
-	ld hl, wPartySpecies
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld a, [hl]
-	ld [wTempIconSpecies], a
-	ld [wCurIcon], a
-	pop de
-	ld a, e
-	ret
+	push de                     ; Save DE register pair onto the stack for later use
+	ld a, 0                     ; Load 0 for default form (or specific form number if needed)
+	ld [wCurIconForm], a       ; Store the form value in wCurIconForm variable
+	ld a, NATU                  ; Load NATU species constant directly into A
+	ld [wTempIconSpecies], a   ; Store species value in wTempIconSpecies variable
+	ld [wCurIcon], a           ; Also store species value in wCurIcon variable
+	pop de                     ; Restore the original DE register pair from the stack
+	ld a, e                    ; Copy E register value to A (return value)
+	ret                        ; Return from subroutine
 
 PokegearFlyMap_GetMonIcon:
 ; Load species icon into VRAM at tile a
