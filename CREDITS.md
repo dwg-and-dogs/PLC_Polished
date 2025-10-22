@@ -25,7 +25,7 @@ Front Sprites
 * utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Zoroark
 * Bloodless (Rosie): Overqwil, Ursaluna, H__Electrode, Sneasler, H__Arcanine
 * u/Bread-Zeppelin: Ambipom
-* SageDeoxys: Basculegion, Beedrill, Crobat, Dratini, Dugtrio, Eevee, Forretress, Gastly, Gloom, Gyarados, Magcargo, Natu, Pikachu, Qwilfish, Scyther, Tangela, Weepinball, Xatu
+* SageDeoxys: Basculegion, Beedrill, Crobat, Dratini, Dugtrio, Eevee, Forretress, Gastly, Gloom, Gyarados, Magcargo, Natu, Pikachu, Qwilfish, Scyther, Tangela, Weepinbell, Xatu
 * ChanseyMedicine animated from Pokets3: HTyphlosion, Sneasler, 
 * Egg3ggEgg: H__Sliggoo, H__Goodra
 

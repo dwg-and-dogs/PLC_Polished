@@ -410,19 +410,93 @@ Breeder1SayNoText:
 
 dwgDebugScript:
 	faceplayer
-;	opentext
-;	writetext DWGIntroText
-;	waitbutton
-;	writetext DWGQuestionText
-;	yesorno
-;	iffalse_jumpopenedtext DWGRefusedText
-;	writetext DWGSeenText
-;	waitbutton
-;	closetext
+	opentext
+; BUG
+;	givepoke SUNFLORA, 50
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $fe
+;	loadmem wPartyMon1DVs+2, $fe
+; DARK 
+;	givepoke HAUNTER, 50
+;	loadmem wPartyMon2DVs+0, $fe
+;	loadmem wPartyMon2DVs+1, $ff
+;	loadmem wPartyMon2DVs+2, $ff
+; DRAGON 
+;	givepoke LUXIO, 50
+;	loadmem wPartyMon3DVs+0, $ff
+;	loadmem wPartyMon3DVs+1, $ef
+;	loadmem wPartyMon3DVs+2, $ff
+; ELECTRIC
+;	givepoke CLEFAIRY, 50
+;	loadmem wPartyMon4DVs+0, $ff
+;	loadmem wPartyMon4DVs+1, $ff
+;	loadmem wPartyMon4DVs+2, $ef
+; FIGHTING
+;	givepoke STARAPTOR, 50
+;	loadmem wPartyMon5DVs+0, $ff
+;	loadmem wPartyMon5DVs+1, $ee
+;	loadmem wPartyMon5DVs+2, $ee
+; FIRE 
+;	givepoke DRATINI, 50
+;	loadmem wPartyMon6DVs+0, $ff
+;	loadmem wPartyMon6DVs+1, $ee
+;	loadmem wPartyMon6DVs+2, $ef
+
+; FLYING
+;	givepoke EMPOLEON, 50
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $fe
+;	loadmem wPartyMon1DVs+2, $ee
+; GHOST 
+;	givepoke NINETALES, 50
+;	loadmem wPartyMon2DVs+0, $ff
+;	loadmem wPartyMon2DVs+1, $ef
+;	loadmem wPartyMon2DVs+2, $fe
+; GRASS 
+;	givepoke TANGELA, 50
+;	loadmem wPartyMon3DVs+0, $ff
+;	loadmem wPartyMon3DVs+1, $ef
+;	loadmem wPartyMon3DVs+2, $ef
+; GROUND
+;	givepoke WEEPINBELL, 50
+;	loadmem wPartyMon4DVs+0, $ff
+;	loadmem wPartyMon4DVs+1, $ff
+;	loadmem wPartyMon4DVs+2, $ee
+; ICE
+;	givepoke GYARADOS, 50
+;	loadmem wPartyMon5DVs+0, $ff
+;	loadmem wPartyMon5DVs+1, $fe
+;	loadmem wPartyMon5DVs+2, $ff
+; POISON 
+;	givepoke GRIMER, 50
+;	loadmem wPartyMon6DVs+0, $ff
+;	loadmem wPartyMon6DVs+1, $ef
+;	loadmem wPartyMon6DVs+2, $ee
+
+; PSYCHIC 
+	givepoke LUCARIO, 50
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ff
+; ROCK
+	givepoke ENTEI, 50
+	loadmem wPartyMon2DVs+0, $ff
+	loadmem wPartyMon2DVs+1, $ee
+	loadmem wPartyMon2DVs+2, $fe
+; STEEL
+	givepoke FORRETRESS, 50
+	loadmem wPartyMon3DVs+0, $ff
+	loadmem wPartyMon3DVs+1, $ff
+	loadmem wPartyMon3DVs+2, $fe
+; WATER 
+	givepoke NATU, 50
+	loadmem wPartyMon4DVs+0, $ff
+	loadmem wPartyMon4DVs+1, $fe
+	loadmem wPartyMon4DVs+2, $ef
+
 	winlosstext DWGWinText, DWGLossText
 	setlasttalked DEBUG_DWG
-;	loadtrainer ENGINEER, DWG
-	loadtrainer NOMAD_M, NOMAD_M_JOEL
+	loadtrainer ENGINEER, DWG
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap

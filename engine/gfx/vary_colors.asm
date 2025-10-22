@@ -664,14 +664,14 @@ endc
 
 .HPPoisonPalsLite:
 if !DEF(MONOCHROME)
-	RGB 17, 9, 19
+	RGB 30, 31, 11
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPPoisonPalsDark:
 if !DEF(MONOCHROME)
-	RGB 24, 6, 6
+	RGB 29, 6, 25
 else
 	RGB_MONOCHROME_DARK
 endc
@@ -777,28 +777,28 @@ endc
 
 .HPGrassPalsLite:
 if !DEF(MONOCHROME)
-	RGB 25, 16, 8
+	RGB 11, 30, 11
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPGrassPalsDark:
 if !DEF(MONOCHROME)
-	RGB 6, 25, 6
+	RGB 1, 15, 1
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPElectricPalsLite:
 if !DEF(MONOCHROME)
-	RGB 31, 26, 0
+	RGB 31, 31, 0
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPElectricPalsDark:
 if !DEF(MONOCHROME)
-	RGB 5, 3, 13
+	RGB 31, 12, 00
 else
 	RGB_MONOCHROME_DARK
 endc
