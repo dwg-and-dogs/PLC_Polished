@@ -1936,19 +1936,10 @@ KurtsMapKeyItem: ; c.f. typechart
 	farjp Pack_InitColors
 
 NatuCallKeyItem:
-;	call FadeToMenu
 	farcall FlyFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $81  ; checks if Fly is exectured 
-	ret z   ; 
-	; Otherwise restore pack interface
-	call FadeToMenu
-	call ExitMenu
-	xor a
-	ldh [hBGMapMode], a
-	farcall Pack_InitGFX
-	farcall WaitBGMap_DrawPackGFX
-	farjp Pack_InitColors 
+	ret
+
+
 
 RestorePPEffect:
 	ld a, [wCurItem]

@@ -53,12 +53,10 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	showemote EMOTE_SHOCK, PLAYER, 60
 	changeblock 4, 0, $25 ; open the door to the item room
 	reloadmappart
-	pause 60
 	showemote EMOTE_SHOCK, RUINS_SCIENTIST, 60
 	applymovement PLAYER, PlayerStepBack
-	pause 60
 	applymovement RUINS_SCIENTIST, RuinsScientistMovesToYou
-
+	clearevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 
 	opentext
 	writetext Scientist_TakeThisReport
 	promptbutton
@@ -93,7 +91,6 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 	waitbutton
 	closetext
 	setevent EVENT_GOT_UNOWN
-	clearevent EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 
 	end	
 
 .refusetotakeunown1

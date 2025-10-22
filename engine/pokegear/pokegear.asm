@@ -1880,7 +1880,7 @@ _FlyMap:
 	ldh [hBGMapMode], a
 	call ClearSpriteAnims
 	call LoadTownMapGFX
-	call FlyMap
+	call FlyMap ; also check that this is the same 
 	ld a, CGB_POKEGEAR_PALS
 	call GetCGBLayout
 	call SetPalettes
@@ -1900,19 +1900,8 @@ _FlyMap:
 	jr .loop
 
 .pressedB 
-	; Don't set any landmark value, just exit cleanly
-	pop af
-	ldh [hInMenu], a
-	call ClearBGPalettes
-	ld a, $90
-	ldh [hWY], a
-	xor a ; LOW(vBGMap0)
-	ldh [hBGMapAddress], a
-	ld a, HIGH(vBGMap0)
-	ldh [hBGMapAddress + 1], a
-	; Return with -1 in e to indicate cancellation
-	ld e, -1
-	ret
+	ld a, -1
+	jr .exit
 
 .pressedA
 	ld a, [wTownMapPlayerIconLandmark]
