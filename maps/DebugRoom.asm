@@ -443,10 +443,10 @@ dwgDebugScript:
 ;	loadmem wPartyMon6DVs+2, $ef
 
 ; FLYING
-;	givepoke EMPOLEON, 50
-;	loadmem wPartyMon1DVs+0, $ff
-;	loadmem wPartyMon1DVs+1, $fe
-;	loadmem wPartyMon1DVs+2, $ee
+	givepoke EMPOLEON, 50
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $ee
 ; GHOST 
 ;	givepoke NINETALES, 50
 ;	loadmem wPartyMon2DVs+0, $ff
@@ -474,25 +474,25 @@ dwgDebugScript:
 ;	loadmem wPartyMon6DVs+2, $ee
 
 ; PSYCHIC 
-	givepoke LUCARIO, 50
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ee
-	loadmem wPartyMon1DVs+2, $ff
+;	givepoke LUCARIO, 50
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $ee
+;	loadmem wPartyMon1DVs+2, $ff
 ; ROCK
 	givepoke ENTEI, 50
 	loadmem wPartyMon2DVs+0, $ff
 	loadmem wPartyMon2DVs+1, $ee
 	loadmem wPartyMon2DVs+2, $fe
 ; STEEL
-	givepoke FORRETRESS, 50
-	loadmem wPartyMon3DVs+0, $ff
-	loadmem wPartyMon3DVs+1, $ff
-	loadmem wPartyMon3DVs+2, $fe
+;	givepoke FORRETRESS, 50
+;	loadmem wPartyMon3DVs+0, $ff
+;	loadmem wPartyMon3DVs+1, $ff
+;	loadmem wPartyMon3DVs+2, $fe
 ; WATER 
 	givepoke NATU, 50
-	loadmem wPartyMon4DVs+0, $ff
-	loadmem wPartyMon4DVs+1, $fe
-	loadmem wPartyMon4DVs+2, $ef
+	loadmem wPartyMon3DVs+0, $ff
+	loadmem wPartyMon3DVs+1, $fe
+	loadmem wPartyMon3DVs+2, $ef
 
 	winlosstext DWGWinText, DWGLossText
 	setlasttalked DEBUG_DWG

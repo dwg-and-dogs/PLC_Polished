@@ -650,14 +650,14 @@ endc
 
 .HPFlyingPalsLite:
 if !DEF(MONOCHROME)
-	RGB 27, 28, 31
+	RGB 11, 25, 29
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPFlyingPalsDark:
 if !DEF(MONOCHROME)
-	RGB 0, 9, 21
+	RGB 13, 5, 18
 else
 	RGB_MONOCHROME_DARK
 endc
@@ -692,7 +692,7 @@ endc
 
 .HPRockPalsLite:
 if !DEF(MONOCHROME)
-	RGB 17, 14, 10
+	RGB 29, 9, 7
 
 else
 	RGB_MONOCHROME_DARK
@@ -700,7 +700,7 @@ endc
 
 .HPRockPalsDark:
 if !DEF(MONOCHROME)
-	RGB 6, 10, 10
+	RGB 7, 10, 18
 else
 	RGB_MONOCHROME_DARK
 endc
@@ -763,14 +763,14 @@ endc
 
 .HPWaterPalsLite: 
 if !DEF(MONOCHROME)
-	RGB 21, 29, 29
+	RGB 27, 28, 31 ; RGB 21, 29, 29
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPWaterPalsDark:
 if !DEF(MONOCHROME)
-	RGB 4, 18, 31
+	RGB 0, 9, 21
 else
 	RGB_MONOCHROME_DARK
 endc
