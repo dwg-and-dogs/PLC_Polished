@@ -1,11 +1,11 @@
 # To Do
 
 
-## Known Major Bugs, 03-21-25 
+## Known Major Bugs, 10-21-25 V0.0.6
 
-* Johto Flypoints don't load properly.  --> Hotfix: Only flypoint in modern Johto is in Azalea, sends you to the spawning basement. 
-* Whiteout doesn't always take you to the correct spawn.
-
+* Pokemon Icons on Fly Map
+* Upgraded pokedex planned for v0.1.0
+* Hall of Fame sequence doesn't show party pokemon names
 
 ## Content wishlist 
 
@@ -17,5 +17,6 @@
 	*Contact for more info
 * More music
    * Custom Theme for Emperor and Generals
-* Better cutscene implementation
+* Better cutscene implementation with 140x164 pixel art 
 * Signs tell you which pokemon are in a given area 
+* Pokedex footprint area shows the evolution methods 

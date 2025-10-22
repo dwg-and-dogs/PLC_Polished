@@ -1899,7 +1899,7 @@ _FlyMap:
 	call DelayFrame
 	jr .loop
 
-.pressedB ; TODO FIX THIS 
+.pressedB 
 	; Don't set any landmark value, just exit cleanly
 	pop af
 	ldh [hInMenu], a

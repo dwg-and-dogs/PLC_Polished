@@ -5421,7 +5421,7 @@ SchoolgirlGroup:
 	db "Imogen@"
 	db TRAINERTYPE_NICKNAME
 	; party
-	db 4, SNUBBULL, "ColdWater@"
+	db 3, SNUBBULL, "ColdWater@"
 	db -1 ; end
 
 ; ================

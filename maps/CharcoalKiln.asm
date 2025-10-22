@@ -57,6 +57,12 @@ CharcoalKilnGettingReadyTrigger:
 	step_end
 
 .CharcoalKilnLookingText
+
+	text_high
+    text " <RIVAL>'s Dad: " 
+	next
+	text_start 
+
 	text "Where is it? Why"
 	line "can't you ever"
 	para "clean your stupid"
