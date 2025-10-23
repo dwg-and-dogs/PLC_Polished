@@ -196,6 +196,11 @@ HH_KurtHasAPlan:
 	para "We have to find"
 	line "a way out of this"
 	cont "forest."
+	
+	para "Oh, I think if"
+	line "you need to go to"
+	para "our time, you can"
+	line "visit the shrine."
 	done
 
 	

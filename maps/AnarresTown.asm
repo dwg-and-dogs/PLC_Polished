@@ -119,8 +119,6 @@ AnarresNPC5Text:
 
 AnarresTowerSignText:
 	text "Anarres Tower"
-	line "honors all types"
-	cont "of #mon"
 	done
 
 AnarresStockroomSignText:

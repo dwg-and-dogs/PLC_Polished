@@ -48,8 +48,9 @@ BugCatcherAlBeatenText:
 GenericTrainerBugCatcherJosh:
 	generictrainer BUG_CATCHER, JOSH, EVENT_BEAT_BUG_CATCHER_JOSH, BugCatcherJoshSeenText, BugCatcherJoshBeatenText
 
-	text "Pinsir is"
-	line "mega-cool."
+	text "I'm working dawn"
+	line "to DUSK to evolve"
+	cont "my Pinsir!"
 	done
 
 BugCatcherJoshSeenText:
@@ -59,8 +60,9 @@ BugCatcherJoshSeenText:
 	done
 
 BugCatcherJoshBeatenText:
-	text "You're even"
-	line "stronger."
+	text "I'm working dawn"
+	line "to Dusk to evolve"
+	cont "my Pinsir!"
 	done
 
 

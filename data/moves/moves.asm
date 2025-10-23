@@ -26,7 +26,7 @@ Moves::
 	move NIGHT_SLASH,  EFFECT_NORMAL_HIT,         70, DARK,      100, 15,   0, PHYSICAL
 	move AIR_SLASH,    EFFECT_FLINCH_HIT,         75, FLYING,     95, 15,  30, SPECIAL
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,    100, 20,   0, STATUS
-	move CUT,          EFFECT_NORMAL_HIT,         60, STEEL,     95, 30,   0, PHYSICAL
+	move CUT,          EFFECT_NORMAL_HIT,         60, STEEL,     100, 30,   0, PHYSICAL
 	move GUST,         EFFECT_GUST,               40, FLYING,    100, 35,   0, SPECIAL
 	move WING_ATTACK,  EFFECT_NORMAL_HIT,         60, FLYING,    100, 35,   0, PHYSICAL
 	move SUCKER_PUNCH, EFFECT_SUCKER_PUNCH,       70, DARK,      100,  5,   0, PHYSICAL

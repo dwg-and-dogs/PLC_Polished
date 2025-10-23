@@ -10,7 +10,7 @@ INCLUDE "data/pokemon/evos_attacks_pointers.asm" ;done
 EvosAttacks::
 
 CyndaquilEvosAttacks:
-	db EVOLVE_LEVEL, 16, QUILAVA
+	db EVOLVE_LEVEL, 14, QUILAVA
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -2917,7 +2917,7 @@ TogekissEvosAttacks:
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:
-	db EVOLVE_LEVEL, 20, XATU
+	db EVOLVE_LEVEL, 25, XATU
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, LEER

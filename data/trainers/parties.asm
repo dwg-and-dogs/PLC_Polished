@@ -450,13 +450,13 @@ SandraGroup:
 	db "Sandra@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 21, WIGGLYTUFF, NO_ITEM, DVS_HP_PSYCHIC, "Crescendo@"
-		db COUNTER, SING, ROLLOUT, HYPER_VOICE
-	db 22, TOGETIC, NO_ITEM, DVS_HP_FLYING, "Clutch@"
-		db ROOST, DRAIN_KISS, EXTRASENSORY, METRONOME
-	db 23, GRANBULL, NO_ITEM, FAKE_PERFECT_DVS, "Rusty@"
+	db 18, WIGGLYTUFF, NO_ITEM, DVS_HP_PSYCHIC, "Crescendo@"
+		db DISARM_VOICE, SING, ROLLOUT, NO_MOVE
+	db 19, TOGETIC, NO_ITEM, DVS_HP_FLYING, "Clutch@"
+		db EXTRASENSORY, DRAIN_KISS, METRONOME, NO_MOVE
+	db 20, GRANBULL, NO_ITEM, FAKE_PERFECT_DVS, "Rusty@"
 		db PLAY_ROUGH, BITE, SCARY_FACE, SCREECH
-	db 23, CLEFAIRY, NO_ITEM, DVS_HP_ELECTRIC, "Supernova@"
+	db 21, CLEFAIRY, NO_ITEM, DVS_HP_ELECTRIC, "Supernova@"
 		db MOONBLAST, THUNDER_WAVE, ENCORE, TRI_ATTACK
 	db -1 ; end
 
@@ -605,13 +605,13 @@ HollisGroup:
 	db "Hollis@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 13, LEDIAN, NO_ITEM, DVS_HP_BUG, "Tinnire@"
+	db 15, LEDIAN, NO_ITEM, DVS_HP_BUG, "Tinnire@"
 		db AIR_SLASH, SUPERSONIC, FURY_STRIKES, BUG_BITE
-	db 13, SLOWPOKE, NO_ITEM, FAKE_PERFECT_DVS, "Speleo@"
+	db 15, SLOWPOKE, NO_ITEM, FAKE_PERFECT_DVS, "Speleo@"
 		db CURSE, WATER_GUN, RAIN_DANCE, REST
-	db 13, ARIADOS, NO_ITEM, DVS_HP_GHOST, "Inoscula@"
+	db 15, ARIADOS, NO_ITEM, DVS_HP_GHOST, "Inoscula@"
 		db SCARY_FACE, POISON_STING, BUG_BITE, BATON_PASS
-	db 14, KLEAVOR, METAL_COAT,FAKE_PERFECT_DVS,  "Logsidian@"
+	db 16, KLEAVOR, METAL_COAT,FAKE_PERFECT_DVS,  "Logsidian@"
 		db CUT, FOCUS_ENERGY, AGILITY, LEER
 	db -1 ; end
 
@@ -1787,9 +1787,9 @@ PicnickerGroup:
 	db "Gina@" ; GAULDENROD TOWER
 	db TRAINERTYPE_NORMAL
 	; party
-	db 14, CYNDAQUIL
-	db 15, MEOWTH
-	db 16, FURRET
+	db 12, CYNDAQUIL
+	db 13, MEOWTH
+	db 14, FURRET
 	db -1 ; end
 
 ; ================
@@ -2592,7 +2592,7 @@ BirdKeeperGroup:
 	db "Vance@" ; GAULDENROD TOWER
 	db TRAINERTYPE_NORMAL
 	; party
-	db 14, TOGETIC
+	db 10, TOGETIC
 	db 16, PIDGEOTTO
 	db -1 ; end
 
@@ -4912,9 +4912,8 @@ FirebreatherGroup:
 	db "Dan@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 15, QUILAVA
-	db 15, MAGCARGO
-	db 13, WEEZING
+	db 14, QUILAVA
+	db 13, MAGCARGO
 	db -1 ; end
 
 ; ================
@@ -7784,8 +7783,8 @@ BattleGirlGroup:
 	db "Subaru@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 12, OSHAWOTT
-	db 14, DEWOTT
+	db 10, OSHAWOTT
+	db 12, DEWOTT
 	db -1 ; end
 
 ; ================
@@ -7804,8 +7803,8 @@ BattleGirlGroup:
 	db "Kagami@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 11, POLIWAG
-	db 15, POLIWHIRL
+	db 10, POLIWAG
+	db 12, POLIWHIRL
 	db -1 ; end
 
 ; ================
@@ -8193,9 +8192,8 @@ AromaLadyGroup:
 	db "Bryony@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 16, JIGGLYPUFF
-	db 16, WIGGLYTUFF
-	db 16, CLEFAIRY
+	db 14, JIGGLYPUFF
+	db 14, WIGGLYTUFF
 	db -1 ; end
 
 ; ================
@@ -8223,7 +8221,7 @@ AromaLadyGroup:
 	db "Peony@"
 	db TRAINERTYPE_NORMAL
 	; PARTY
-	db 20, BAYLEEF
+	db 15, BAYLEEF
 	db -1 ; end
 
 ; ================
@@ -9164,7 +9162,7 @@ VeteranFGroup:
 	db "Joanne@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 12, MR__MIME, NO_ITEM, "Blanco@"
+	db 10, MR__MIME, NO_ITEM, "Blanco@"
 		db REFLECT, LIGHT_SCREEN, BATON_PASS, CONFUSION
 	db 10, SYLVEON, BIG_ROOT, "Sanguina@"
 		db DRAIN_KISS, NO_MOVE, NO_MOVE, NO_MOVE
@@ -9869,9 +9867,9 @@ TammyGroup:
 	; party
 	db 10, PINECO, ROCKY_HELMET, "Silky@"
 		db BUG_BITE, PROTECT, STRING_SHOT, NO_MOVE
-	db 10, HERACROSS, NO_ITEM, "Hercules@"
+	db 12, HERACROSS, NO_ITEM, "Hercules@"
 		db ENDURE, REVERSAL, NO_MOVE, NO_MOVE
-	db 12, FURRET, NO_ITEM, "Kitty@"
+	db 13, FURRET, NO_ITEM, "Kitty@"
 		db HEADBUTT, NO_MOVE, NO_MOVE, NO_MOVE
 	db -1 ; end
 

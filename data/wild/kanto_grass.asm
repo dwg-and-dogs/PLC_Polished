@@ -88,29 +88,57 @@
 	def_grass_wildmons CALM_COAST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 8, SNUBBULL
-	wildmon 9, MARILL
-	wildmon 10, PIDGEY
+	wildmon 10, SNUBBULL
 	wildmon 11, MARILL
-	wildmon 10, SKIPLOOM
-	wildmon 10, OSHAWOTT
+	wildmon 12, PIDGEY
+	wildmon 13, MARILL
+	wildmon 12, SKIPLOOM
+	wildmon 14, SKIPLOOM
 	wildmon 12, OSHAWOTT
 ;	; day
-	wildmon 8, SNUBBULL
-	wildmon 9, MARILL
-	wildmon 10, PIDGEY
+	wildmon 10, SNUBBULL
 	wildmon 11, MARILL
-	wildmon 10, SKIPLOOM
-	wildmon 10, OSHAWOTT
+	wildmon 12, PIDGEY
+	wildmon 13, MARILL
+	wildmon 12, SKIPLOOM
+	wildmon 14, SKIPLOOM
 	wildmon 12, OSHAWOTT
 ;	; nite
-	wildmon 8, SNUBBULL
-	wildmon 9, MARILL
-	wildmon 10, PIDGEY
+	wildmon 10, SNUBBULL
 	wildmon 11, MARILL
-	wildmon 10, SKIPLOOM
-	wildmon 10, OSHAWOTT
+	wildmon 12, PIDGEY
+	wildmon 13, MARILL
+	wildmon 12, SKIPLOOM
+	wildmon 14, SKIPLOOM
 	wildmon 12, OSHAWOTT
+	end_grass_wildmons
+
+	def_grass_wildmons GAULDENROD_UNDERGROUND
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+;	; morn
+	wildmon 12, GLIGAR
+	wildmon 10, GRIMER
+	wildmon 10, DONPHAN
+	wildmon 11, RHYHORN
+	wildmon 14, GLIGAR
+	wildmon 14, GRIMER
+	wildmon 10, DONPHAN
+;	; day
+	wildmon 12, GLIGAR
+	wildmon 10, GRIMER
+	wildmon 10, DONPHAN
+	wildmon 11, RHYHORN
+	wildmon 14, GLIGAR
+	wildmon 14, GRIMER
+	wildmon 10, DONPHAN
+;	; nite
+	wildmon 12, GLIGAR
+	wildmon 10, GRIMER
+	wildmon 10, DONPHAN
+	wildmon 11, RHYHORN
+	wildmon 14, GLIGAR
+	wildmon 14, GRIMER
+	wildmon 10, DONPHAN
 	end_grass_wildmons
 
 	def_grass_wildmons SERENE_SPRINGS
