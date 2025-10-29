@@ -20,7 +20,7 @@ MagnetTrainTunnel_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
-	object_event  15,  5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ROTOM, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MagnetTunnelRotom, EVENT_MAGNET_TUNNEL_ROTOM
+	object_event  15,  5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ROTOM, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MagnetTunnelRotom, EVENT_MAGNET_TUNNEL_ROTOM
 
 	object_const_def
 	const MAGNET_TUNNEL_ROTOM
@@ -29,7 +29,7 @@ MagnetTunnelRotom:
 	faceplayer
 	cry ROTOM
 	pause 60
-	loadwildmon ROTOM, 30
+	loadwildmon ROTOM, 25
 	startbattle
 	disappear MAGNET_TUNNEL_ROTOM
 	setevent EVENT_MAGNET_TUNNEL_ROTOM

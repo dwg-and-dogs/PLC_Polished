@@ -16,14 +16,13 @@ OlivineMart_BlockData:
 GenericMart_BlockData:: ; used by tilesets/palettes.asm:LoadSpecialMapPalette
 	INCBIN "maps/Mart.ablk.lz"
 
+Route43Gate_BlockData:
 Route34IlexForestGate_BlockData:
 Route35GoldenrodGate_BlockData:
 Route36RuinsOfAlphGate_BlockData:
 Route43MahoganyGate_BlockData:
 	INCBIN "maps/NorthSouthGate.ablk.lz"
 
-
-Route43Gate_BlockData:
 Route36VioletGate_BlockData:
 Route32RuinsOfAlphGate_BlockData:
 IlexForestAzaleaGate_BlockData:
@@ -75,6 +74,7 @@ AnarresHouse_BlockData:
 GauldenrodHouse_BlockData:
 LandingHouse1_BlockData:
 LandingHouse2_BlockData:
+SinjohEldersHouse_BlockData:
 SulfurStyHouse1_BlockData:
 SulfurStyHouse2_BlockData:
 	INCBIN "maps/TraditionalHouse.ablk.lz"
@@ -188,6 +188,10 @@ AzaleaGym_BlockData:
 SECTION "TinderGarden_BlockData", ROMX ;added 04.02.24
 TinderGarden_BlockData:
 	INCBIN "maps/TinderGarden.ablk.lz"
+	
+SECTION "TinderGarden3_BlockData", ROMX ;added 04.02.24
+TinderGarden3_BlockData:
+	INCBIN "maps/TinderGarden3.ablk.lz"
 
 SECTION "AzaleaTown_BlockData", ROMX
 AzaleaTown_BlockData:
@@ -207,7 +211,6 @@ AnarresCharcoalKiln_BlockData:
 
 SECTION "KurtsHouse_BlockData", ROMX
 KurtsHouse_BlockData:
-SinjohEldersHouse_BlockData:
 	INCBIN "maps/KurtsHouse.ablk.lz"
 
 SECTION "SlowpokeWellEntrance_BlockData", ROMX
@@ -433,6 +436,7 @@ BurnedTower1F_BlockData:
 	INCBIN "maps/BurnedTower1F.ablk.lz"
 
 SECTION "BurnedTowerB1F_BlockData", ROMX
+BurnedTowerB1FCredit_BlockData:
 BurnedTowerB1F_BlockData:
 	INCBIN "maps/BurnedTowerB1F.ablk.lz"
 
@@ -638,6 +642,7 @@ Route43Raining_BlockData:
 	INCBIN "maps/Route43Raining.ablk.lz"
 
 SECTION "HollysHolt_BlockData", ROMX
+HollysHoltCredit_BlockData:
 HollysHolt_BlockData:
 	INCBIN "maps/HollysHolt.ablk.lz"
 	
@@ -652,10 +657,6 @@ MistyBasin_BlockData:
 SECTION "MistyBasinB1F_BlockData", ROMX
 MistyBasinB1F_BlockData:
 	INCBIN "maps/MistyBasinB1F.ablk.lz"
-
-SECTION "AnarresDorms_BlockData", ROMX
-AnarresDorms_BlockData:
-	INCBIN "maps/AnarresDorms.ablk.lz"
 
 SECTION "AnarresStockroom_BlockData", ROMX
 AnarresStockroom_BlockData:
@@ -686,6 +687,7 @@ Gauldenrod_BlockData:
 	INCBIN "maps/Gauldenrod.ablk.lz"
 
 SECTION "GauldenrodDorms_BlockData", ROMX
+AnarresDorms_BlockData:
 GauldenrodDorms_BlockData:
 WesternCapitalDorms_BlockData:
 LandingDorms_BlockData:
@@ -759,6 +761,7 @@ GauldenrodTower4F_BlockData:
 	INCBIN "maps/GauldenrodTower4F.ablk.lz"
 
 SECTION "StadiumGrounds_BlockData", ROMX
+StadiumGroundsCredit_BlockData:
 StadiumGrounds_BlockData:
 	INCBIN "maps/StadiumGrounds.ablk.lz"
 
@@ -800,6 +803,7 @@ UndergroundRadioTower_BlockData:
 	INCBIN "maps/UndergroundRadioTower.ablk.lz"
 
 SECTION "EmperorsGarden_BlockData", ROMX
+EmperorsGardenCredit_BlockData:
 EmperorsGarden_BlockData:
 	INCBIN "maps/EmperorsGarden.ablk.lz"
 
@@ -864,16 +868,18 @@ BrassTower19F_BlockData:
 	INCBIN "maps/BrassTower19F.ablk.lz"
 
 SECTION "BrassTower2F_BlockData", ROMX
+BrassTower4F_BlockData:
+BrassTower3F_BlockData:
 BrassTower2F_BlockData:
 	INCBIN "maps/BrassTower2F.ablk.lz"
 
-SECTION "BrassTower3F_BlockData", ROMX
-BrassTower3F_BlockData:
-	INCBIN "maps/BrassTower3F.ablk.lz"
+;SECTION "BrassTower3F_BlockData", ROMX
+;BrassTower3F_BlockData:
+;	INCBIN "maps/BrassTower3F.ablk.lz"
 
-SECTION "BrassTower4F_BlockData", ROMX
-BrassTower4F_BlockData:
-	INCBIN "maps/BrassTower4F.ablk.lz"
+;SECTION "BrassTower4F_BlockData", ROMX
+;BrassTower4F_BlockData:
+;	INCBIN "maps/BrassTower4F.ablk.lz"
 
 SECTION "BrassTowerRoof_BlockData", ROMX
 BrassTowerRoof_BlockData:
@@ -980,6 +986,7 @@ LandingDocks_BlockData:
 	INCBIN "maps/LandingDocks.ablk.lz"
 
 SECTION "ArduousAnchorage_BlockData", ROMX
+ArduousAnchorageCredit_BlockData:
 ArduousAnchorage_BlockData:
 	INCBIN "maps/ArduousAnchorage.ablk.lz"
 
@@ -1011,6 +1018,7 @@ TranquilTarn_BlockData:
 	INCBIN "maps/TranquilTarn.ablk.lz"
 
 SECTION "SinjohCrossroads_BlockData", ROMX
+SinjohCrossroadsCredit_BlockData:
 SinjohCrossroads_BlockData:
 	INCBIN "maps/SinjohCrossroads.ablk.lz"
 
@@ -1091,6 +1099,7 @@ ClastsCradle1F_BlockData:
 	INCBIN "maps/ClastsCradle1F.ablk.lz"
 
 SECTION "ClastsCradleB1F_BlockData", ROMX
+ClastsCradleB1FCredit_BlockData:
 ClastsCradleB1F_BlockData:
 	INCBIN "maps/ClastsCradleB1F.ablk.lz"
 

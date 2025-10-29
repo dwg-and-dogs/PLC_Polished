@@ -263,30 +263,33 @@ KeyItemDescriptions:
 	dw SuperRodDesc
 	dw CoinCaseDesc
 	dw ItemfinderDesc
-	dw MysteryEggDesc
-	dw SquirtBottleDesc
 	dw UnownReportDesc
-	dw RedScaleDesc
-	dw CardKeyDesc
-	dw BasementKeyDesc
-	dw SSTicketDesc
-	dw PassDesc
-	dw MachinePartDesc
-	dw LostItemDesc
 	dw RainbowWingDesc
 	dw SilverWingDesc
 	dw ClearBellDesc
 	dw GSBallDesc
-	dw BlueCardDesc
-	dw OrangeTicketDesc
-	dw MysticTicketDesc
-	dw OldSeaMapDesc
+	dw PumiceHarpDesc
 	dw ShinyCharmDesc
 	dw OvalCharmDesc
 	dw CatchCharmDesc
-	dw SilphScope2Desc
+	dw NatuCallDesc
+	dw KurtsMapDesc
+	dw MintLeafDesc
+	dw TinyMushroomDesc
+	dw LemonadeDesc
+	dw BrickPieceDesc
+	dw RageCandyBarDesc
+	dw BigMushroomDesc
+	dw LiteBlueMailDesc
+	dw GoldLeafDesc
+	dw PearlDesc
+	dw SurfMailDesc
+	dw OldAmberDesc
+	dw SweetHoneyDesc
 	dw ApricornBoxDesc
 	dw TypeChartDesc
+	dw MachinePartDesc
+
 
 PokeBallDesc:
 	db   "An item for catch-"
@@ -1109,12 +1112,12 @@ BalmMushroomDesc:
 	next "Sell very high.@"
 
 PearlDesc:
-	db   "For attracting"
-	next "clams.@"
+	db   "Beachcomber's"
+	next "desire.@"
 
 BigPearlDesc:
-	db   "Spherical; trade"
-	next "with bohemians.@"
+	db   "Desired by"
+	next "artisans.@"
 
 PearlStringDesc:
 	db   "Big, shiny pearls."
@@ -1141,8 +1144,8 @@ SilverLeafDesc:
 	next "love these.@"
 
 GoldLeafDesc:
-	db   "For a dignif-"
-	next "ied sheen.@"
+	db   "For a dignified"
+	next "sheen.@"
 
 SlowpokeTailDesc:
 	db   "Very tasty. Sell"
@@ -1341,8 +1344,8 @@ ClearBellDesc:
 	next "ringing.@"
 
 GSBallDesc:
-	db   "The mysterious"
-	next "Ball.@"
+	db   "Mysterious ball"
+	next "from Ilex.@"
 
 BlueCardDesc:
 	db   "Card to save"
@@ -1353,9 +1356,9 @@ MysticTicketDesc:
 	db   "A ticket for the"
 	next "Seagallop Ferry.@"
 
-OldSeaMapDesc:
-	db   "A faded sea chart"
-	next "of a small island.@"
+PumiceHarpDesc: ; pumice harp 
+	db   "Resonates with"
+	next "volcanic rock.@"
 
 ShinyCharmDesc:
 	db   "A charm for find-"
@@ -1408,4 +1411,11 @@ HollowRockDesc:
 PnkApricornDesc:
 	db    "Lovely pink"
 	next  "Apricorn.@"
-	
+
+KurtsMapDesc:
+	db 	  "For when you've" 
+	next  "lost your way.@"
+
+NatuCallDesc:
+	db    "Call's Kurt's Natu"
+	next  "to fly away.@"

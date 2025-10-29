@@ -12,7 +12,8 @@ HollysHolt_MapScriptHeader:
 	warp_event  5,  6, HOLT_COAST_GATE, 2
 	warp_event  24,  46, KIMONO_CABIN, 1
 	warp_event  25,  46, KIMONO_CABIN, 1
-
+	warp_event 29, 40, TIMELESS_TAPESTRY, 2
+	warp_event 29, 41, TIMELESS_TAPESTRY, 3
 	
 	def_coord_events
 
@@ -186,15 +187,20 @@ HH_KurtHasAPlan:
     text " Kurt: "
 	next
 	text_start
-	text "<PLAYER>!"
-	line "Of course, the"
-	para "corruption comes"
-	line "from historic "
-	cont "Olivine."
+	text "<PLAYER>! Outside"
+	line "technology is"
+	para "being brought in"
+	line "through historic"
+	cont "Olivine City."
 	
 	para "We have to find"
 	line "a way out of this"
 	cont "forest."
+	
+	para "Oh, I think if"
+	line "you need to go to"
+	para "our time, you can"
+	line "visit the shrine."
 	done
 
 	
@@ -343,6 +349,7 @@ HollysHoltShrineScript:
 	writetext HHYesTimeTravelText
 	waitbutton
 	closetext
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
@@ -432,7 +439,7 @@ Text_HHTutorTaught:
 
 
 HollysHoltNPC6Text:
-	text "Tammy is showing"
+	text "Ursula is showing"
 	line "me how to use"
 	cont "Headbutt."
 

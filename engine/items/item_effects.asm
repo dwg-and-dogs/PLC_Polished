@@ -279,6 +279,9 @@ DoKeyItemEffect::
 	dec a
 	call StackJumpTable
 
+
+
+
 KeyItemEffects:
 ; entries correspond to key item ids (see constants/item_constants.asm)
 	table_width 2, KeyItemEffects
@@ -288,30 +291,32 @@ KeyItemEffects:
 	dw SuperRod           ; SUPER_ROD
 	dw CoinCase           ; COIN_CASE
 	dw Itemfinder         ; ITEMFINDER
-	dw IsntTheTimeMessage ; MYSTERY_EGG
-	dw SquirtBottle       ; SQUIRTBOTTLE
-	dw IsntTheTimeMessage ; SECRETPOTION and UNOWN REPORT
-	dw IsntTheTimeMessage ; RED_SCALE
-	dw CardKey            ; CARD_KEY
-	dw BasementKey        ; BASEMENT_KEY
-	dw IsntTheTimeMessage ; S_S_TICKET
-	dw IsntTheTimeMessage ; PASS
-	dw IsntTheTimeMessage ; MACHINE_PART
-	dw IsntTheTimeMessage ; LOST_ITEM
+	dw IsntTheTimeMessage ; UNOWN REPORT
 	dw IsntTheTimeMessage ; RAINBOW_WING
 	dw IsntTheTimeMessage ; SILVER_WING
 	dw IsntTheTimeMessage ; CLEAR_BELL
 	dw IsntTheTimeMessage ; GS_BALL
-	dw BlueCard           ; BLUE_CARD
-	dw IsntTheTimeMessage ; ORANGETICKET
-	dw IsntTheTimeMessage ; MYSTICTICKET
-	dw IsntTheTimeMessage ; OLD_SEA_MAP
+	dw IsntTheTimeMessage ; PUMICE_HARP
 	dw IsntTheTimeMessage ; SHINY_CHARM
 	dw IsntTheTimeMessage ; OVAL_CHARM
 	dw IsntTheTimeMessage ; CATCH_CHARM
-	dw IsntTheTimeMessage ; SILPHSCOPE2
+	dw NatuCallKeyItem		  ; natu fall 
+	dw KurtsMapKeyItem	  ; townmap
+	dw IsntTheTimeMessage ; MintLeafKIcon
+	dw IsntTheTimeMessage ; TinymushroomKIcon
+	dw IsntTheTimeMessage ; LemonadeKIcon
+	dw IsntTheTimeMessage ; BrickPieceKIcon
+	dw IsntTheTimeMessage ; RagecandybarKIcon
+	dw IsntTheTimeMessage ; BigMushroomKIcon
+	dw IsntTheTimeMessage ; LiteBlueMailKIcon
+	dw IsntTheTimeMessage ; GoldLeafKIcon
+	dw IsntTheTimeMessage ; PearlKIcon
+	dw IsntTheTimeMessage ; SurfMailKIcon
+	dw IsntTheTimeMessage ; OldAmberKIcon
+	dw IsntTheTimeMessage ; SweetHoneyKIcon		
 	dw ApricornBox        ; APRICORN_BOX
 	dw TypeChart          ; TYPE_CHART
+	dw IsntTheTimeMessage ; MACHINE_PART
 	assert_table_length NUM_KEY_ITEMS
 
 PokeBallEffect:
@@ -1919,6 +1924,22 @@ UseRod:
 
 Itemfinder:
 	farjp ItemFinder
+
+KurtsMapKeyItem: ; c.f. typechart 
+	call FadeToMenu
+	farcall _TownMap ; this is in pokegear 
+	call ExitMenu
+	xor a
+	ldh [hBGMapMode], a
+	farcall Pack_InitGFX
+	farcall WaitBGMap_DrawPackGFX
+	farjp Pack_InitColors
+
+NatuCallKeyItem:
+	farcall FlyFunction
+	ret
+
+
 
 RestorePPEffect:
 	ld a, [wCurItem]

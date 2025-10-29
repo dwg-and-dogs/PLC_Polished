@@ -9,7 +9,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal RED, PINK ; TYPHLOSION
 	iconpal RED, PURPLE ; HTYPHLOSION
 	iconpal GREEN, BROWN	;ROWLET	      ; 05 OK
-	iconpal BROWN, GREEN	;DARTRIX         ; 06 OK
+	iconpal GREEN, BROWN	;DARTRIX         ; 06 OK
 	iconpal BROWN, GREEN	;DECIDUEYE       ; 07
 	iconpal BROWN, RED		;H__DECIDUEYE    ; 08
 	iconpal BLUE, TEAL		;OSHAWOTT  ; 09
@@ -52,6 +52,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BROWN, RED ; PERSIAN	
 	iconpal BROWN, GREEN ; MANKEY
 	iconpal BROWN, GREEN ; PRIMEAPE
+	iconpal BROWN, BLUE ; ANNIHILAPE
 	iconpal RED, BLUE ; GROWLITHE
 	iconpal RED, BLUE ; ARCANINE
 	iconpal RED, BROWN ; H__ARCANINE
@@ -119,6 +120,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal RED, BROWN ; MAGMAR
 	iconpal RED, BROWN ; MAGMORTAR
 	iconpal BROWN, BLUE ; PINSIR
+	iconpal BLUE, PURPLE ; MINSIR
 	iconpal BROWN, RED ; TAUROS
 	iconpal RED, BROWN ; MAGIKARP
 	iconpal BLUE, BROWN ; GYARADOS
@@ -200,8 +202,8 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BROWN, TEAL ; STANTLER
 	iconpal TEAL, BROWN ; WYRDEER
 	iconpal PINK, BLUE ; MILTANK
-	iconpal GREEN, BROWN ; GROTLE
-	iconpal GREEN, BROWN ; TORTERRA
+	iconpal BROWN, GREEN ; GROTLE
+	iconpal BROWN, GREEN ; TORTERRA
 	iconpal RED, BROWN ; MONFERNO
 	iconpal RED, BROWN ; INFERNAPE
 	iconpal BLUE, TEAL ; PRINPLUP

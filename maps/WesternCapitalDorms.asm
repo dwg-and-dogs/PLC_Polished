@@ -10,19 +10,38 @@ WesternCapitalDorms_MapScriptHeader: ;	def_scene_scripts
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  2, BGEVENT_READ, WesternCapitalDormsBed
-	bg_event  0,  3, BGEVENT_READ, WesternCapitalDormsBed
-	bg_event  0,  4, BGEVENT_READ, WesternCapitalDormsBed
-	bg_event  0,  5, BGEVENT_READ, WesternCapitalDormsBed
+	bg_event  10,  2, BGEVENT_READ, WesternCapitalDormsBed
+	bg_event  10,  3, BGEVENT_READ, WesternCapitalDormsBed
+	bg_event  12,  2, BGEVENT_READ, WesternCapitalDormsBed
+	bg_event  12,  3, BGEVENT_READ, WesternCapitalDormsBed
 
 	def_object_events
-	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesternCapitalDormsKurtScript, EVENT_LANDING_SCENE_1_KENSEY
-	object_event 12, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, trade, NPC_TRADE_TIM, -1 ; 
-	object_event 15, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC1Text, -1
-	object_event 5, 3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC2Text, -1
-	object_event 3, 3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC3Text, -1
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesternCapitalDormsKurtScript, EVENT_LANDING_SCENE_1_KENSEY
+	object_event 5, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, trade, NPC_TRADE_TIM, -1 ; 
+	object_event 5, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC1Text, -1
+	object_event 2, 2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC2Text, -1
+	object_event 7, 6, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC3Text, -1
+	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptCapitalDorms, -1
 
-	object_const_def
+NatuScriptCapitalDorms:
+	blackoutmod WESTERN_CAPITAL
+	opentext
+	writetext Capital_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+Capital_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+
+
+	para "It also sets the"
+	line "waypoint here."
+	done
 
 WesternCapitalDormsNPC1Text:
 	text "My husband and I"
@@ -49,6 +68,7 @@ WesternCapitalDormsNPC3Text:
 
 WesternCapitalDormsBed:
 	showtext WesternCapitalBedText1
+	blackoutmod WESTERN_CAPITAL
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	special HealParty
@@ -56,6 +76,7 @@ WesternCapitalDormsBed:
 	pause 60
 	special RestartMapMusic
 	special Special_FadeInQuickly
+
 	showtext WesternCapitalBedText2
 	end
 
@@ -67,9 +88,13 @@ WesternCapitalBedText1:
 WesternCapitalBedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+
+	para "Waypoint set to"
+	line "Western Capital."
 	done
 
 WesternCapitalDormsKurtScript:
+	blackoutmod WESTERN_CAPITAL
 	faceplayer
 	opentext
 	writetext KurtWCDormsText
@@ -85,9 +110,8 @@ WesternCapitalDormsKurtScript:
 
 .WCKurtPC
 	writetext KurWCDormsText2
-	promptbutton
-	special PokemonCenterPC
-	endtext
+	waitbutton
+	closetext
 	end
 
 KurtWCDormsText:
@@ -104,10 +128,6 @@ KurtWCDormsText:
 	para "can help us get"
 	line "across the moat?"
 	
-	para "I can run back to"
-	line "our time for a PC"
-	cont "if you need."
-	
 	para "Oh! I found some"
 	line "neat #mon in"
 	cont "the wild areas"
@@ -117,9 +137,8 @@ KurtWCDormsText:
 	done
 	
 KurWCDormsText2:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
+	text "We must get to"
+	line "the port!"
 	done
 
 WCKurtBattleText:

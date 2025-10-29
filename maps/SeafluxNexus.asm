@@ -32,7 +32,7 @@ SeafluxNexus_MapScriptHeader:
 
 
 	def_object_events
-	object_event 10, 21, NOMAD_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NexusNomadScript, EVENT_NOMAD_NEXUS 
+	object_event 10, 21, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NexusNomadScript, EVENT_NOMAD_NEXUS 
 
 
 NexusNomadScript:

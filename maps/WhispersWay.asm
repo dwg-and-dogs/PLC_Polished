@@ -6,8 +6,8 @@ WhispersWay_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 0, 0, WHISPERS_TAPESTRY_GATE, 1
-	warp_event 0, 0, WHISPERS_TAPESTRY_GATE, 1
+	warp_event 9, 35, WHISPERS_TAPESTRY_GATE, 1
+	warp_event 10, 35, WHISPERS_TAPESTRY_GATE, 2
 
 	def_coord_events
 
@@ -21,18 +21,19 @@ WhispersWay_MapScriptHeader:
 	bg_event 17, 30, BGEVENT_ITEM + MAX_REVIVE, EVENT_WISHERS_HIDDEN_MAX_REVIVE
 
 	def_object_events
-	object_event 9, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhispersKurtScript, -1 ;
+	object_event 9, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhispersKurtScript, EVENT_SKIRMISH_STARTED 
+	object_event   10, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptWW, -1
 
 
-	object_const_def
 
 
 WhispersKurtScript: 
+	blackoutmod TIMELESS_TAPESTRY
 	faceplayer
 	opentext
 	writetext KurtWWText
 	yesorno
-	iffalse .KurtPC
+	iffalse_jumpopenedtext WW_SomeOtherTimes
 	winlosstext WWKurtBattleText, WWKurtBattleText
 	loadtrainer KURT, 12
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
@@ -40,13 +41,6 @@ WhispersKurtScript:
 	reloadmapafterbattle
 	opentext
 	jumpopenedtext WWKurtBattleText2
-
-.KurtPC
-	writetext KurtWWText2
-	promptbutton
-	special PokemonCenterPC
-	endtext
-	end
 
 KurtWWText:
 	text "This path is so"
@@ -56,16 +50,27 @@ KurtWWText:
 	line "close to taking"
 	cont "down Urgaust."
 	
+	para "Amos is South of"
+	line "here. We should"
+	para "make our final"
+	line "preparations,"
+	para "because the path"
+	line "to Urgaust up the"
+	para "Bell Tower may be"
+	line "long and arduous."
+	
+	para "But it's worth it"
+	line "because once we"
+	para "confront him, we"
+	line "can stop him from"
+	para "setting Johto on"
+	line "a path away from"
+	cont "its traditions."
+	
 	para "Want to battle,"
 	line "a quick spar?"
 	done
 	
-KurtWWText2:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
-	done
-
 WWKurtBattleText:
 	text "You've grown so"
 	line "much!"	
@@ -75,4 +80,28 @@ WWKurtBattleText2:
 	text "We can battle as"
 	line "many times as"
 	cont "you like."
+	done
+	
+WW_SomeOtherTimes:
+	text "Some other time."
+	done
+
+
+NatuScriptWW:
+	blackoutmod TIMELESS_TAPESTRY
+	opentext
+	writetext WW_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+WW_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+	
+	para "It also sets the"
+	line "waypoint here."
 	done

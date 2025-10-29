@@ -7,7 +7,8 @@ EerieHamletDorms_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 3, 9, EERIE_HAMLET, 4
+	warp_event  4,  7, EERIE_HAMLET, 4
+	warp_event  5,  7, EERIE_HAMLET, 4
 
 
 	def_coord_events
@@ -15,24 +16,39 @@ EerieHamletDorms_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  0,  2, BGEVENT_READ, HamletDormsBed
-	bg_event  0,  3, BGEVENT_READ, HamletDormsBed
-	bg_event  0,  4, BGEVENT_READ, HamletDormsBed
-	bg_event  0,  5, BGEVENT_READ, HamletDormsBed
+	bg_event  10,  2, BGEVENT_READ, HamletDormsBed
+	bg_event  10,  3, BGEVENT_READ, HamletDormsBed
+	bg_event  12,  2, BGEVENT_READ, HamletDormsBed
+	bg_event  12,  3, BGEVENT_READ, HamletDormsBed
 
 	def_object_events
-	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS ; event_talked_to_kurt_cc
+	object_event 2, 4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EerieDormsSleepTalkScript, -1 
+	object_event 5, 3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC1Text, -1
+	pokemon_event  6, 3, SNEASEL, -1, -1, PAL_NPC_RED, SneaselText, -1
+	object_event 2, 2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC2Text, -1
+	object_event 8, 6, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC3Text, -1
+	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptHamletDorms, -1
 	
-	object_event 6,  6, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EerieDormsSleepTalkScript, -1 
-	object_event 13, 3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC1Text, -1
-	pokemon_event  12, 3, SNEASEL, -1, -1, PAL_NPC_RED, SneaselText, -1
 
-	object_event 5, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC2Text, -1
-	object_event 3, 3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC3Text, -1
+NatuScriptHamletDorms:
+	blackoutmod EERIE_HAMLET
+	opentext
+	writetext Hamlet_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
 
+Hamlet_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
 
-	object_const_def
-
+	para "It also sets the"
+	line "waypoint here."
+	done
 
 HamletDormsNPC1Text:
 	text "Ever since the"
@@ -52,8 +68,8 @@ HamletDormsNPC2Text:
 HamletDormsNPC3Text:
 	text "Adrinna's workers"
 	line "don't really like"
-	cont "to spend time in"
-	cont "our Hamlet."
+	para "to spend time in"
+	line "our Hamlet."
 	
 	para "I hope that it"
 	line "stays that way."
@@ -64,14 +80,16 @@ SneaselText:
 	done
 
 HamletDormsBed:
-	showtext HamletBedText1
+	blackoutmod EERIE_HAMLET
+	showtext HamletBedText1	
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
-	special HealParty
 	playmusic MUSIC_HEAL
+	special HealParty
 	pause 60
-	special RestartMapMusic
 	special Special_FadeInQuickly
+	special RestartMapMusic
+
 	showtext HamletBedText2
 	end
 
@@ -83,6 +101,9 @@ HamletBedText1:
 HamletBedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+
+	para "Waypoint set to"
+	line "Eerie Hamlet."
 	done
 
 
@@ -122,14 +143,9 @@ Text_SleepTalkIntro:
 	
 	para "While we sleep,"
 	line "our deepest fears"
-	cont "and desires speak"
-	cont "through our sub-"
+	para "and desires speak"
+	line "through our sub-"
 	cont "conscious."
-	
-	para "Master this power"
-	line "and you control"
-	cont "what lies beneath"
-	cont "the waking mind!"	
 	done
 
 Text_EerieDormsTutorSleepTalk:
@@ -162,8 +178,8 @@ Text_EerieDormsTutorTaught:
 	cont "tutor."
 	done
 
-
 HamletDormsKurtScript:
+	blackoutmod EERIE_HAMLET
 	faceplayer
 	opentext
 	writetext KurtEHDormsText
@@ -179,9 +195,8 @@ HamletDormsKurtScript:
 
 .WCKurtPC
 	writetext KurEHDormsText2
-	promptbutton
-	special PokemonCenterPC 
-	endtext
+	waitbutton
+	closetext
 	end
 
 KurtEHDormsText:
@@ -195,15 +210,19 @@ KurtEHDormsText:
 	
 	para "But I believe "
 	line "Johto can still"
-	para "save its tradit-"
+	para "keep its tradit-"
 	line "ions from being"
 	cont "wiped away!"
+	
+	para "I found some good"
+	line "#mon in the"
+	cont "grass. Want to"
+	cont "battle?"
 	done
 	
 KurEHDormsText2:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
+	text "We must stop the"
+	line "mine's operation!"
 	done
 
 EHKurtBattleText:

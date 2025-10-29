@@ -25,9 +25,9 @@ BurnedTower1F_MapScriptHeader:
 	object_event 12,  3, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFirebreatherLyle, -1
 	object_event  0,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFirebreatherBill, -1
 
-	object_event  7, 7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FScientistText, EVENT_BURNED_TOWER_MORTY
-	object_event  8, 7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FSageText, EVENT_BURNED_TOWER_MORTY
-	object_event  6, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FSage2Text, -1
+	object_event  7, 7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FScientistText, -1
+	object_event  8, 7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FSageText, -1
+	object_event  11, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BurnedTower1FSage2Text, -1
 
 
 	object_const_def
@@ -52,41 +52,42 @@ BurnedTower1FMortyScript:
 	showemote EMOTE_SHOCK, BURNED_TOWER_1F_MORTY, 15
 	jumpthisopenedtext
 
-	text "Sublime! But..."
-	line "That #mon."
+	text "Sublime!"
 
-	para "It was just..."
-	line "being."
+	para "Its beauty is so"
+	line "pure and simple."
+	
+	para "Like how even a"
+	line "raindrop refracts"
+	cont "the entire world."
+	
+	para "I've had an"
+	line "epiphany!"
+	
+	para "The sublime is in"
+	line "simplicity."
 
-	para "Like an elite"
-	line "gymnast who makes"
-	para "the extraordinary"
-	line "look routine."
-
-	para "The profound is a"
-	line "simple act."
-
-	para "It's the daily"
+	para "It's our daily"
 	line "routines that"
-	para "connect us to"
-	line "something bigger."
+	para "either connect us"
+	line "to greatness,"
+	cont "or pull us away."
 	
 	para "I will return"
-	cont "to my Gym."
+	line "to my Gym."
 	done
 
 Morty1FIntroText:
 	text "Oh, have you come"
 	line "for my badge? The"
-	cont "gym is closed."
+	cont "gym is closed,"
 
-	para "I feel I need"
-	line "something drama-"
-	cont "tic to bring"
+	para "Until I find a"
+	line "way to bring"
 	para "people closer to"
 	line "the sublime."
 
-	para "A legendary"
+	para "Only a legendary"
 	line "#mon would do."
 	done
 
@@ -104,20 +105,19 @@ BurnedTower1FScientistText:
 
 	para "We consider it"
 	line "rare, not revered."
-	cont "These #mon"
-	cont "might be of use!"
+	para "These #mon"
+	line "might be of use!"
 	done
 	
 BurnedTower1FSageText:
 	text "The three #mon"
 	line "are meant to"
-	cont "inspire awe..."
+	cont "inspire awe!"
 
 	para "To study them"
-	line "would remove the"
-	para "mystery, even"
-	line "make you think you"
-	cont "can control them!"
+	line "like this would"
+	para "subvert their"
+	line "very purpose!"
 	done
 	
 GenericTrainerFirebreatherLyle:

@@ -126,6 +126,7 @@ SECTION "bank9", ROMX
 INCLUDE "engine/menus/menu.asm"
 INCLUDE "engine/items/update_item_description.asm"
 INCLUDE "engine/events/pokepic.asm"
+INCLUDE "engine/events/pokepic2.asm"
 INCLUDE "engine/menus/scrolling_menu.asm"
 INCLUDE "engine/items/switch_items.asm"
 INCLUDE "engine/menus/menu_2.asm"
@@ -255,6 +256,7 @@ INCLUDE "engine/events/squirtbottle.asm"
 INCLUDE "engine/events/card_key.asm"
 INCLUDE "engine/events/basement_key.asm"
 INCLUDE "engine/events/sacred_ash.asm"
+;INCLUDE "engine/events/dv_update.asm"
 
 
 SECTION "bank14", ROMX

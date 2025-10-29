@@ -5,7 +5,7 @@ RadioTower4F_MapScriptHeader:
 
 	def_warp_events
 	warp_event 12,  0, RADIO_TOWER_5F, 1
-	warp_event 17,  0, RADIO_TOWER_3F, 3
+	warp_event 17,  0, RADIO_TOWER_3F, 2
 
 	def_coord_events
 
@@ -31,17 +31,19 @@ RadioTower4FKurtScript:
     writetext RadioTower4FKurtHealText
     waitbutton
     closetext
+
 	playmusic MUSIC_HEAL
-    special HealParty
-	special SaveMusic	
-	playmusic MUSIC_NONE	
-	special RestoreMusic
+	special HealParty
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+
+
     opentext
     writetext RadioTower4KurtRemindText
     waitbutton
     closetext
 	setevent EVENT_BEAT_RADIO_TOWER_RIVAL
-	clearevent EVENT_BEAT_WHITNEY
     end
 
 RadioTower4FKurtHealText:
@@ -54,13 +56,14 @@ RadioTower4KurtRemindText:
     text "We're almost to"
     line "the top floor."
 	
-	para "We just have to"
-	line "get past Whitney"
-	para "and show everyone"
-	line "how bad she is."
+	para "Let's get Whitney's"
+	line "show off the air"
+	cont "for good!"
 	
-	para "Then, her show"
-	line "will be ruined!"	
+	para "Then, we'll sneak"
+	line "through the train"
+	cont "station to Violet"
+	cont "City."
     done
 
 WhitneysNoteScript:	

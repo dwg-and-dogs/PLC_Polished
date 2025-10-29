@@ -81,7 +81,9 @@ Text_RolloutTutor:
 
 Text_RolloutTutorNoSilverLeaf:
 	text "My lessons aren't"
-	line "free!"
+	line "free! Come back"
+	para "with a Silver"
+	line "Leaf."
 	
 	para "Check Ilex For-"
 	line "est, or the"
@@ -108,16 +110,15 @@ Text_RolloutTutorTaught:
 
 
 SlowpokeWellB1FText:
-	text "Water carved this"
-	line "cave! One tiny"
-	cont "change in the"
-
-	para "past: a shifted"
-	line "rock, a different"
-	para "current, would"
-	line "change its shape."
+	text "This whole cave"
+	line "was etched from"
+	para "running water,"
+	line "deep underground."
 	
-	para "All because water"
-	line "chose one path"
-	cont "over another!"
+	para "The shape of it"
+	line "could've been so"
+	para "different if one"
+	line "rock was in one"
+	para "place instead of"
+	line "another!"
 	done

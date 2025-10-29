@@ -22,9 +22,8 @@ GrottoedGlacierB1F_MapScriptHeader:
 	def_object_events
 	strengthboulder_event 3, 7, EVENT_BOULDER1_IN_GLACIER
 	strengthboulder_event 11, 12, EVENT_BOULDER2_IN_GLACIER
-	object_event 12,  9, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumEsther, EVENT_BEAT_KANNA
+	object_event 12,  9, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerMediumEsther, EVENT_BEAT_KANNA
 	object_event  4, 19, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageVirgil, EVENT_BEAT_KANNA
-	; TODO PLACE THESE ITEMS 
 	itemball_event 13, 14, NEVERMELTICE, 1, EVENT_GLACIER_B1F_ITEM_1
 	itemball_event 21, 15, REVIVAL_HERB, 1, EVENT_GLACIER_B1F_ITEM_2
 
@@ -67,6 +66,13 @@ GrottoedGlacierBoulders:
 GenericTrainerMediumEsther:
 	generictrainer MEDIUM, ESTHER, EVENT_BEAT_MEDIUM_ESTHER, .SeenText, .BeatenText
 
+	text "You'll be eaten by"
+	line "the ice."
+	
+	para "This is not your"
+	line "destiny."
+	done
+
 .BeatenText:
 	text "Elder Kanna will"
 	line "handle Adrinna."
@@ -78,13 +84,18 @@ GenericTrainerMediumEsther:
 .SeenText:
 	text "You're not from"
 	line "Hisui - are you"
-	cont "Adrinna's?"	
+	cont "with Adrinna?"	
 	done
 
 
 
 GenericTrainerSageVirgil:
 	generictrainer SAGE, VIRGIL, EVENT_BEAT_SAGE_VIRGIL, .SeenText1, .BeatenText1
+
+	text "If you interrupt"
+	line "Kanna, you seal"
+	cont "your own fate."
+	done
 
 .BeatenText1:
 	text "I hope I held"

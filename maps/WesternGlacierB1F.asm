@@ -7,7 +7,7 @@ WesternGlacierB1F_MapScriptHeader:  ;hint: only the bottom and the left boulders
 
 	def_warp_events
 	warp_event 3, 29, WESTERN_GLACIER_1F, 2
-	warp_event 15, 15, WESTERN_GLACIER_B2F, 2
+	warp_event 15, 15, WESTERN_GLACIER_B2F, 1
 
 
 	def_coord_events
@@ -25,5 +25,3 @@ WesternGlacierB1F_MapScriptHeader:  ;hint: only the bottom and the left boulders
 	strengthboulder_event 15,  3 
 	strengthboulder_event 28, 16 
 
-
-	object_const_def

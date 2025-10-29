@@ -33,7 +33,7 @@ IlexForest_MapScriptHeader:
 	object_event  9, 26, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestKurtScript, EVENT_ILEX_SHRINE_CELEBI 
 	object_event 11, 27, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EngineerCamdenScript, EVENT_LOGGERS_ILEX_FOREST 
 	object_event 10, 26, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GSBallScript, EVENT_LOGGERS_ILEX_FOREST
-	pokemon_event  9, 27, SHUCKLE, -1, -1, PAL_NPC_RED, IlexForestShuckleText, EVENT_LOGGERS_ILEX_FOREST
+	pokemon_event  9, 27, NATU, -1, -1, PAL_NPC_RED, IlexForestShuckleText, EVENT_LOGGERS_ILEX_FOREST
 	pokemon_event 10, 27, SCIZOR, -1, -1, PAL_NPC_RED, IlexForestScizorText, EVENT_LOGGERS_ILEX_FOREST
 	object_event 10, 21, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestCelebiScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4, 26, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestRivalScript, EVENT_ILEX_FOREST_RIVAL
@@ -260,14 +260,21 @@ IlexHealerScript:
 	opentext
 	writetext WantToHeal
 	waitbutton
+	closetext
+
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+
+	opentext
 	writetext IlexHealedPokemon
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end
 
 	
@@ -421,11 +428,12 @@ CamdenLeavingText:
 	
 	text "We will be back"
 	line "later. Progress"
+	cont "isn't all bad."
 	
-	para "isn't all bad,"
-	line "look at this pro-"
-	para "totype Silph is"
-	line "working on."
+	para "Take one of my"
+	line "abilitypatches,"
+	para "see if your mind"
+	line "changes."
 	done
 
 CamdenExitMovement:
@@ -486,17 +494,20 @@ KurtExplainsGSBallText2:
 
 	para "With the right"
 	line "inscription, we"
-	cont "can call Celebi."
+	cont "can call Celebi,"
 	
-	para "<PLAYER>, you"
-	line "need to go to"
-	para "the Ruins of"
-	line "Alph, get a copy"
-	para "of the ancient,"
-	line "holy words, so"
-	para "we can summon"
-	line "Celebi to go"
-	cont "back in time!"
+	para "then we can go"
+	line "back in time to"
+	para "stop Johto from"
+	line "modernizing!"
+	
+	para "<PLAYER>, all we"
+	line "need is a copy"
+	para "of the Unown"
+	line "Report to make"
+	para "the right inscri-"
+	line "ption on the"
+	cont "GS Ball."
 	done
 
 WantToHeal:
@@ -518,16 +529,15 @@ GSBallScript: ;shouldn't be able to access this
 	done
 	
 GSBallText: ;shouldn't be able to access this
-	text "A damaged"
-	line "artifact."
+	text "Object Event"
 	done
 
 IlexForestShuckleText: ; shouldn't be able to access this
-	text "Shucka shuck!"
+	text "Object Event"
 	done
 	
 IlexForestScizorText:
-	text "Snip"
+	text "Object Event"
 	done ; shouldn't be able to access this
 
 IlexForestCelebiEventScript:
@@ -542,7 +552,6 @@ IlexForestCelebiEventScript:
 	closetext ; start to appear celebi 
 	special Special_FadeOutMusic
 	pause 60
-
 	appear ILEX_RIVAL
 	applymovement ILEX_RIVAL, IlexRivalWalksToShrine
 	turnobject PLAYER, DOWN
@@ -647,6 +656,7 @@ IlexForestShrineScript:
 	writetext YesTimeTravelText
 	waitbutton
 	closetext
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
@@ -734,7 +744,7 @@ WhatIsNaturalText:
 	text_start 
 	text "An unnatural inv-"
 	line "ention destroys"
-	cont "my forest."
+	cont "the forest."
 	
 	para "If you decide"
 	line "to help me, it"

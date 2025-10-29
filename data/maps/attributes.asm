@@ -274,6 +274,7 @@ ENDM
 	map_attributes KurtsHouse, KURTS_HOUSE, $0, 0
 	map_attributes AzaleaGym, AZALEA_GYM, $0, 0
 	map_attributes TinderGarden, TINDER_GARDEN, $33, 0
+	map_attributes TinderGarden3, TINDER_GARDEN_3, $33, 0
 	map_attributes LakeOfRageHiddenPowerHouse, LAKE_OF_RAGE_HIDDEN_POWER_HOUSE, $0, 0
 	map_attributes LakeOfRageMagikarpHouse, LAKE_OF_RAGE_MAGIKARP_HOUSE, $0, 0
 	map_attributes Route43MahoganyGate, ROUTE_43_MAHOGANY_GATE, $0, 0
@@ -334,7 +335,7 @@ ENDM
 	map_attributes AnarresStockroom, ANARRES_STOCKROOM, $0, 0
 	map_attributes AnarresTower1F, ANARRES_TOWER_1F, $0, 0
 	map_attributes AnarresTower2F, ANARRES_TOWER_2F, $0, 0	
-	map_attributes AnarresTower3F, ANARRES_TOWER_3F, $0, 0
+	map_attributes AnarresTower3F, ANARRES_TOWER_3F, $1, 0
 	map_attributes AnarresCharcoalKiln, ANARRES_CHARCOAL_KILN, $0, 0
 	map_attributes AnarresHouse, ANARRES_HOUSE, $0, 0
 	
@@ -395,10 +396,10 @@ ENDM
 	map_attributes WesternCapitalCemetery, WESTERN_CAPITAL_CEMETERY, $0, 0
 
 	map_attributes WesternCapital, WESTERN_CAPITAL, $5, SOUTH 
-	connection south, WhispersWay, WHISPERS_WAY, 7
+	connection south, WhispersWay, WHISPERS_WAY, 4
 	
 	map_attributes WhispersWay, WHISPERS_WAY, $5, NORTH 
-	connection north, WesternCapital, WESTERN_CAPITAL, 7	; 
+	connection north, WesternCapital, WESTERN_CAPITAL, -4	; 
 
 	map_attributes TimelessTapestry, TIMELESS_TAPESTRY, $5, 0
 	
@@ -469,23 +470,16 @@ ENDM
 	map_attributes SeafluxNexusB3F, SEAFLUX_NEXUS_B3F, $9, 0
 	map_attributes LandingDocks, LANDING_DOCKS, $A, 0 
 
-	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, WEST | EAST ;
-;	connection north, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, -2
-;	connection south, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -2
-	connection west, SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, 0
-	connection east, SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, 0
+	map_attributes SlowpokeDreams, SLOWPOKE_DREAMS, $0, 0;WEST | EAST ;
+
 	
 	map_attributes SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, $0, 0;, SOUTH | NORTH
-;	connection south, SlowpokeDreams, SLOWPOKE_DREAMS, 2
-;	connection north, SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, -2
 
 	map_attributes SlowpokeDreamsBackgroundS, SLOWPOKE_DREAMS_BACKGROUND_S, $0, 0;, NORTH | SOUTH 
-;	connection north, SlowpokeDreams, SLOWPOKE_DREAMS, 2
-;	connection south, SlowpokeDreamsBackgroundN, SLOWPOKE_DREAMS_BACKGROUND_N, 0
+
 
 	map_attributes SlowpokeDreamsBackgroundE, SLOWPOKE_DREAMS_BACKGROUND_E, $0, WEST | EAST
-	connection west, SlowpokeDreams, SLOWPOKE_DREAMS, 0
-	connection east, SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, 0
+
 
 	map_attributes SlowpokeDreamsBackgroundW, SLOWPOKE_DREAMS_BACKGROUND_W, $0, WEST | EAST 
 	connection east, SlowpokeDreams, SLOWPOKE_DREAMS, 0
@@ -493,15 +487,15 @@ ENDM
 
 	map_attributes EnteisCavern, ENTEIS_CAVERN, $9, 0
 
-	map_attributes TranquilTarn, TRANQUIL_TARN, $0, NORTH | SOUTH ; 
+	map_attributes TranquilTarn, TRANQUIL_TARN, $5, NORTH | SOUTH ; 
 	connection north, SinjohCrossroads, SINJOH_CROSSROADS, 0
-	connection south, EmpiresExtent, EMPIRES_EXTENT, 0
+	connection south, EmpiresExtent, EMPIRES_EXTENT, 5
 	
 	map_attributes SinjohCrossroads, SINJOH_CROSSROADS, $5, SOUTH
 	connection south, TranquilTarn, TRANQUIL_TARN, 0
 	
 	map_attributes EmpiresExtent, EMPIRES_EXTENT, $5, NORTH | SOUTH
-	connection north, TranquilTarn, TRANQUIL_TARN, 0 
+	connection north, TranquilTarn, TRANQUIL_TARN, -5 
 	connection south, EerieHamlet, EERIE_HAMLET, 0
 
 	map_attributes SinjohDorms, SINJOH_DORMS, $0, 0
@@ -518,15 +512,15 @@ ENDM
 
 	map_attributes EmpiresExtentEerieHamletGate, EMPIRES_EXTENT_EERIE_HAMLET_GATE, $0, 0
 
-	map_attributes EmpiresExtentCavern, EMPIRES_EXTENT_CAVERN, $5, 0
+	map_attributes EmpiresExtentCavern, EMPIRES_EXTENT_CAVERN, $0, 0
 	map_attributes DragonsDen, DRAGONS_DEN, $0, 0
 
-	map_attributes EerieHamlet, EERIE_HAMLET, $5, NORTH | WEST
+	map_attributes EerieHamlet, EERIE_HAMLET, $71, NORTH | WEST
 	connection north, EmpiresExtent, EMPIRES_EXTENT, 0
-	connection west, SulfurSty, SULFUR_STY, -1
+	connection west, SulfurSty, SULFUR_STY, -8
 	
 	map_attributes SulfurSty, SULFUR_STY, $5, EAST
-	connection east, EerieHamlet, EERIE_HAMLET, 1
+	connection east, EerieHamlet, EERIE_HAMLET, 8
 
 	map_attributes EerieHamletDorms, EERIE_HAMLET_DORMS, $0, 0
 	map_attributes EerieHamletStockroom, EERIE_HAMLET_STOCKROOM, $0, 0
@@ -552,7 +546,7 @@ ENDM
 
 	map_attributes KimonoCabin3, KIMONO_CABIN_3, $0, 0
 	
-	map_attributes KimonoCabin4, KIMONO_CABIN_4, $19, 0
+	map_attributes KimonoCabin4, KIMONO_CABIN_4, $33, 0
 	
 	map_attributes KimonoCabin5, KIMONO_CABIN_5, $0, 0
 	
@@ -560,7 +554,15 @@ ENDM
 	
 	map_attributes ShimmerSaddle, SHIMMER_SADDLE,  $5, 0
 	
-	map_attributes VioletCatacombs, VIOLET_CATACOMBS,  $0, 0
+	map_attributes VioletCatacombs, VIOLET_CATACOMBS,  $09, 0
 
 	map_attributes RouteKajoRuinsOfAlphGate, ROUTE_KAJO_RUINS_OF_ALPH_GATE,  $0, 0
+	
+	map_attributes HollysHoltCredit, HOLLYS_HOLT_CREDIT, $0, 0 ; start of CREDITS
+	map_attributes StadiumGroundsCredit, STADIUM_GROUNDS_CREDIT, $0, 0 
+	map_attributes EmperorsGardenCredit, EMPERORS_GARDEN_CREDIT, $0, 0 
+	map_attributes ArduousAnchorageCredit, ARDUOUS_ANCHORAGE_CREDIT, $0, 0 
+	map_attributes SinjohCrossroadsCredit, SINJOH_CROSSROADS_CREDIT, $0, 0 
+	map_attributes ClastsCradleB1FCredit, CLASTS_CRADLE_B1F_CREDIT, $0, 0 
+	map_attributes BurnedTowerB1FCredit, BURNED_TOWER_B1F_CREDIT, $0, 0 	
 	

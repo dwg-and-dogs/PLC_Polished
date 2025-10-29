@@ -16,9 +16,9 @@ Route39_MapScriptHeader:
 	bg_event  5, 13, BGEVENT_ITEM + NUGGET, EVENT_ROUTE_39_HIDDEN_NUGGET
 
 	def_object_events
-	object_event  9, 26, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, MILTANK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39MiltankScript, EVENT_ROUTE39_MILTANK
-	object_event  0, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SUICUNE, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE39_MILTANK
-
+	object_event  8, 21, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, MILTANK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route39MiltankScript, EVENT_ROUTE39_MILTANK
+	object_event  4, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SUICUNE, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE39_MILTANK
+	
 	pokemon_event  3, 12, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
 	pokemon_event  6, 11, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
 	pokemon_event  4, 15, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
@@ -92,10 +92,6 @@ Route39LostMiltankText:
 	text "One of the Milt-"
 	line "ank went missin'."
 	
-	para "Well, it went a"
-	line "bit loopy lookin'"
-	cont "for its babe."
-	
 	para "But, uh, for now"
 	line "it needs to get"
 	cont "to milking."
@@ -105,8 +101,11 @@ Route39LostMiltankText:
 	done
 
 CowgirlThanksPlayer:
-	showtext CowgirlThanksPlayerText
+	opentext
+	writetext CowgirlThanksPlayerText
+	waitbutton
 	verbosegiveitem MOOMOO_MILK, 12
+	closetext
 	setevent EVENT_GAVE_MOOMOO_MILKS
 	end
 
@@ -158,42 +157,31 @@ Route39MiltankScript:
 	checkevent EVENT_MILTANK_COWGIRL
 	iftrue .MiltankCowgirl
 	showcrytext Text_Miltank39, MILTANK
-	checkevent EVENT_MILTANK_39_MOVED_ONCE
-	iftrue .LeftOrRight
-;	changeblock 8, 22, $37 
-	applymovement ROUTE_39_MILTANK, MiltankMovement1
-	waitsfx
-	playsound SFX_STOMP
-	applyonemovement PLAYER, step_up
-	applymovement ROUTE_39_MILTANK, MiltankMovement2		
-	setevent EVENT_MILTANK_39_MOVED_ONCE
-	end
-
-.MiltankCowgirl:
-	showcrytext Text_Miltank39Cowgirl, MILTANK
-	done
-
-.LeftOrRight:
-	readvar VAR_FACING ; player facing? 
-	ifequal LEFT, .SendToSuicune
+	readvar VAR_FACING 
+	showtext ExplainMiltankDecisionText
+	ifequal LEFT, .SendToSuicuneOption
+	; IF FACING RIGHT, SEND TO RANCHER 
 .SendToRancher:
-	showtext SpookToRancherText
+	opentext
+	writetext SpookToRancherText
 	yesorno
 	iffalse_jumptext NoSpookMiltankText
+	closetext
 	applymovement ROUTE_39_MILTANK, MiltankMovement3
 	setevent EVENT_MILTANK_COWGIRL
 	setevent EVENT_ROUTE39_MILTANK
 	end
-
-.SendToSuicune:
-	showtext SpookToSuicuneText
+	
+.SendToSuicuneOption:
+	opentext
+	writetext SpookToSuicuneText
 	yesorno
 	iffalse_jumptext NoSpookMiltankText
-	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT
-	applymovement PLAYER, PlayerFollowMiltank ; THREE left
-	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT
-	applymovement PLAYER, PlayerFollowMiltank ; THREE left
-	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; THREE LEFT
+	showtext SpookedToSuicuneText
+	applymovement ROUTE_39_MILTANK, MiltankMovement4 ; 
+	applyonemovement PLAYER, step_left
+	pause 30
+	showemote EMOTE_HAPPY, ROUTE_39_MILTANK, 60
 	applymovement ROUTE_39_SUICUNE, SuicuneMovement ; three right, down one 
 	opentext
 	writetext SuicuneText
@@ -209,18 +197,23 @@ Route39MiltankScript:
 	reloadmapafterbattle
 	end
 
+.MiltankCowgirl:
+	showcrytext Text_Miltank39Cowgirl, MILTANK
+	end
+
+ExplainMiltankDecisionText:
+	text "It's eyes dart"
+	line "between Suicune"
+	cont "and the rancher."
+	done
 
 Text_Miltank39Cowgirl:
 	text "Miltanks lets out"
 	line "a morose moo."
-	
-	para "Though it isn't"
-	line "harmed, it seems"
-	cont "diminished."
 	done
 	
 Text_Miltank39:
-	text "It's the lost"
+	text "It's a lost"
 	line "#mon! It looks"
 	cont "distressed."
 	done
@@ -236,8 +229,13 @@ SpookToSuicuneText:
 	line "to Suicune?"
 	done
 
+SpookedToSuicuneText:
+	text "Miltank is ready"
+	line "to run!"
+	done
+
 NoSpookMiltankText:
-	text "Not yet."
+	text "Oh, not yet."
 	done
 
 SuicuneText:
@@ -260,15 +258,12 @@ MiltankMovement2:
 MiltankMovement3:
 	fix_facing
 	fast_jump_step_right
-	fast_jump_step_right
-	fast_jump_step_right
 	fast_jump_step_up
-	fast_jump_step_up
+	fast_jump_step_right
 	step_end
 
 MiltankMovement4:
 	fix_facing
-	fast_jump_step_left
 	fast_jump_step_left
 	fast_jump_step_left
 	step_end
@@ -282,13 +277,22 @@ PlayerFollowMiltank:
 SuicuneMovement:
 	fix_facing
 	fast_jump_step_right
-	fast_jump_step_right
-	fast_jump_step_right
-	fast_jump_step_down
+	slide_step_down
+	slide_step_right
 	step_end
 
 GenericTrainerTamerVince:
 	generictrainer TAMER, VINCE, EVENT_BEAT_TAMER_VINCE, .SeenText1, .BeatenText1
+
+	text "I raised some of"
+	line "these from eggs!"
+	
+	para "It's bittersweet,"
+	line "but then savory,"
+	
+	para "if you know what"
+	line "I mean."
+	done
 
 .BeatenText1:
 	text "Tending cows is"
@@ -304,6 +308,13 @@ GenericTrainerTamerVince:
 
 GenericTrainerTamerOswald:
 	generictrainer TAMER, OSWALD, EVENT_BEAT_TAMER_OSWALD, .SeenText2, .BeatenText2
+
+	text "There's nothing"
+	line "more wholesome"
+	para "than nurturing a"
+	line "Miltank back to"
+	cont "health."
+	done
 
 .BeatenText2:
 	text "You skimmed me."

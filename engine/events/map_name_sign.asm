@@ -162,11 +162,53 @@ InitMapNameSign::
 .check_emperors_garden:
 	ld a, [wMapGroup]
 	cp GROUP_EMPERORS_GARDEN
-	jr nz, .check_clasts_cradle
+	jr nz, .check_slowpoke_dreams
 	ld a, [wMapNumber]
 	cp MAP_EMPERORS_GARDEN
 	ret z
-.check_clasts_cradle:
+.check_slowpoke_dreams:
+	ld a, [wMapGroup]
+	cp GROUP_SLOWPOKE_DREAMS
+	jr nz, .check_dragons_den
+	ld a, [wMapNumber]
+	cp MAP_SLOWPOKE_DREAMS
+	ret z
+.check_dragons_den:
+	ld a, [wMapGroup]
+	cp GROUP_DRAGONS_DEN
+	jr nz, .check_tinder_garden_2
+	ld a, [wMapNumber]
+	cp MAP_DRAGONS_DEN
+	ret z
+.check_tinder_garden_2:
+	ld a, [wMapGroup]
+	cp GROUP_TINDER_GARDEN_2
+	jr nz, .check_timeless_tapestry
+	ld a, [wMapNumber]
+	cp MAP_TINDER_GARDEN_2
+	ret z
+.check_timeless_tapestry:
+	ld a, [wMapGroup]
+	cp GROUP_TIMELESS_TAPESTRY
+	jr nz, .check_clasts_cradle_2f
+	ld a, [wMapNumber]
+	cp MAP_TIMELESS_TAPESTRY
+	ret z
+.check_clasts_cradle_2f:
+	ld a, [wMapGroup]
+	cp GROUP_CLASTS_CRADLE_2F
+	jr nz, .check_clasts_cradle_1f
+	ld a, [wMapNumber]
+	cp MAP_CLASTS_CRADLE_2F
+	ret z
+.check_clasts_cradle_1f:
+	ld a, [wMapGroup]
+	cp GROUP_CLASTS_CRADLE_1F
+	jr nz, .check_clasts_cradle_b1f
+	ld a, [wMapNumber]
+	cp MAP_CLASTS_CRADLE_1F
+	ret z
+.check_clasts_cradle_b1f:
 	ld a, [wMapGroup]
 	cp GROUP_CLASTS_CRADLE_B1F
 	ret nz

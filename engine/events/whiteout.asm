@@ -153,7 +153,7 @@ GetWhiteoutSpawn:
 	ld d, a
 	ld a, [wLastSpawnMapNumber]
 	ld e, a
-	farcall IsSpawnPoint
+	farcall IsSpawnPoint ;engine-overworld-spawn_points.asm
 	ld a, c
 	jr c, .yes
 	xor a ; SPAWN_HOME

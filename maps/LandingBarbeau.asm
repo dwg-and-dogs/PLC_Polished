@@ -18,7 +18,7 @@ LandingBarbeau_MapScriptHeader:
 
 
 	def_object_events
-	object_event 3, 3, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, KenseyOfficeKenseyText, EVENT_BEAT_KENSEY_PORT
+	object_event 3, 3, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptext, KenseyOfficeKenseyText, EVENT_BEAT_KENSEY_PORT
 	object_event 2, 3, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED,OBJECTTYPE_COMMAND, jumptext, KenseyOfficeSailorText, EVENT_BEAT_KENSEY_PORT
 	pokemon_event  1,  3, MACHAMP, -1, -1, PAL_NPC_RED, SailorMachampText, EVENT_BEAT_KENSEY_PORT
 	pokemon_event  4,  3, VAPOREON, -1, -1, PAL_NPC_BLUE, KenseyVaporeonText, EVENT_BEAT_KENSEY_PORT

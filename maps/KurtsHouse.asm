@@ -25,7 +25,7 @@ KurtsHouse_MapScriptHeader:
 	object_event    6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
 	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV5Script, EVENT_KURTS_HOUSE_NOTEBOOK
 	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FiddlerBookScript, -1	
-	pokemon_event  14,  4, SHUCKLE, -1, -1, PAL_NPC_RED, KurtsHouseShuckleText, -1
+	pokemon_event  14,  4, NATU, -1, -1, PAL_NPC_GREEN, KurtsHouseShuckleText, EVENT_GOT_A_POKEMON
 ; kurt's books 
 	object_event  0,  1, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal1Script, EVENT_KURTS_HOUSE_BOOK_1 ; INITIALLY SET  
 	object_event  0,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal2Script, EVENT_KURTS_HOUSE_BOOK_2 ; INITIALLY SET  
@@ -65,12 +65,15 @@ KurtHouseEventScript:
 	opentext
 	writetext KurtIntroText
 	promptbutton
+;	verbosegivekeyitem TIMEPIECE
+	verbosegivekeyitem KURTS_MAP
+	verbosegivekeyitem APRICORN_BOX
 	getstring GearName, $1
 	callstd receiveitem
 	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
+;	setflag ENGINE_PHONE_CARD
 ;	setflag ENGINE_MAP_CARD
-	addcellnum PHONE_MOM
+;	addcellnum PHONE_MOM
 	setscene $1 ; this should keep the event from playing in a loop?
 	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
 	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
@@ -98,7 +101,6 @@ KurtHouseEventScript:
 	promptbutton
 .NoInstructions:
 	promptbutton
-	givekeyitem APRICORN_BOX
 	writetext KurtOutroText0
 	promptbutton
 	special SpecialNameRival
@@ -113,6 +115,9 @@ KurtHouseEventScript:
 .kurt_walks_back:
 	step_down
 	step_down
+	step_left
+	step_left
+	step_left
 	step_down
 	step_down
 	step_down
@@ -126,43 +131,27 @@ KurtIntroText:
 	line "want to give you"
 	cont "a some gifts."
 	done
-	
-KurtShuckleText:
-	text "First of all, a"
-	line "mighty Shuckle!"
-	
-	para "It will be with"
-	line "you through"
-	cont "anything."
-	done
+
 
 MomPokegearText:
-	text "#mon Gear, or"
-	line "just #gear."
+	text "These gifts are"
+	line "an old timepiece"
+	para "passed down from"
+	line "my Grandpa, and"
+	para "a map of Johto"
+	line "if you get lost."
 
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
-	
 	para "I also threw in"
-	line "a new Apricorn"
-	cont "box."
+	line "an Apricorn box."
 	
 	para "You can use that"
-	line "Apricorn kit at"
-	cont "any bench."
+	line "at any bench."
 	
-	para "You're getting so"
-	line "good. I think you"
-	cont "could fashion a"
-	cont "ball from almost"
-	cont "anything!"
+	para "Try making balls"
+	line "from many things!"
 
-	para "Oh, the day of the"
-	line "week isn't set."
-
-	para "You mustn't forget"
-	line "that!"
+	para "Oh, say, what day"
+	line "is it today?"
 	done
 
 MomDSTText:
@@ -171,13 +160,10 @@ MomDSTText:
 	done
 
 GearName:
-	db "#gear@"
+	db "Watch@"
 
 MomRunningShoesText:
-	text "Isn't it so"
-	line "convenient?"
-
-	para "By the way, do"
+	text "By the way, do"
 	line "you know how to"
 
 	para "use your new"
@@ -191,19 +177,16 @@ MomInstructionsText:
 
 KurtOutroText0:
 	text "We're waiting on"
-	line "the charcoal fam-"
-	cont "ily. Do you know"
-	cont "the boy's name?"
+	line "the charcoal boy."
+	
+	para "What's his name"
+	line "again?"
 	done
 
 KurtOutroText:
-	text "Can you go see"
-	line "what is holding"
-	cont "up <RIVAL> and"
-	cont "his dad?"
-	
-	para "I'll go outside"
-	line "and wait."
+	text "What's holding up"
+	line "<RIVAL>? Go see."
+	cont "I'll wait outside."
 	done
 
 KurtHouseScript:
@@ -220,8 +203,8 @@ WhereIsCharcoalFamily:
 	done
 	
 KurtsHouseShuckleText:
-	text "Shuckle:"
-	line "Shucka!"
+	text "Natu:"
+	line "Atune!"
 	done
 	
 PokemonJournalProfWestwoodScript:
@@ -240,6 +223,9 @@ PokemonJournalProfWestwoodScript:
 	
 	para "used to catch"
 	line "rock types."
+	
+	para "Need to explore"
+	line "Union Cave!"
 	done
 
 KurtsHouseOakPhotoText:
@@ -250,8 +236,7 @@ KurtsHouseOakPhotoText:
 
 KurtsHouseCelebiStatueText:
 	text "It's a statue of"
-	line "the forest's pro-"
-	cont "tector."
+	line "Celebi."
 	done
 
 
@@ -420,8 +405,8 @@ KurtsHouseKurtTurnedOutGreatText:
 	done
 	
 KurtsHouseKurtThatsALetdownText:
-	text "Too bad. Need"
-	line "to find some!"
+	text "Don't have any"
+	line "apricorns!"
 	done
 
 KurtsHouseKurtAskYouHaveAnApricornText:
@@ -468,9 +453,8 @@ WeirdTextKurtsHouse:
 IlexExcelsiorV5Text:
 	text "Ilex Excelsior"
 	
-	para "When the tree"
-	line "rings, will"
-	cont "you answer"
+	para "If the tree rings"
+	line "will you answer"
 	
 	para "Fifth Edition"
 

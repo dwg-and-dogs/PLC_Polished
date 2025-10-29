@@ -49,7 +49,6 @@ AnarresTower3FEvent:
 	opentext
 	writetext HollisPastGuards
 	waitbutton
-	showemote EMOTE_SAD, ANARRES_TOWER_TAMMY, 60
 	writetext TammyExplains
 	waitbutton
 	closetext
@@ -61,15 +60,10 @@ AnarresTower3FEvent:
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
 	opentext
-	showemote EMOTE_HEART, ANARRES_TOWER_TAMMY, 60
 	applyonemovement ANARRES_TOWER_HOLLIS, step_down
 	turnobject PLAYER, DOWN
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	showtext TammyText2
-;	waitbutton
-	showemote EMOTE_QUESTION, ANARRES_TOWER_HOLLIS, 60
-;	showtext HollisHmm
-;	waitbutton
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
 	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
@@ -165,7 +159,7 @@ HollisChallengesText:
 
 TammyExplains:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "Listen! The Pine-"
@@ -190,7 +184,7 @@ HollisBeatenText:
 	
 TammyText2:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "You've managed"
@@ -212,7 +206,7 @@ TammyText2:
 
 TammyText3:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "The forest binds"
@@ -235,7 +229,7 @@ HollisAbuse:
 	
 TammyText4:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "We will review"
@@ -265,7 +259,7 @@ HollisHM:
 
 TammyThanks:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "Thank you! I'll"

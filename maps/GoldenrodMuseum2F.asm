@@ -46,6 +46,8 @@ GoldenrodMuseum2FTrigger:
 	end
 
 LugiaPaintingScript:
+	checkevent EVENT_CIANWOODCITY_EUSINE
+	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
 	paintingpic LUGIA_PAINTING
 	waitbutton
@@ -57,6 +59,8 @@ LugiaPaintingScript:
 	done
 
 HoOhPaintingScript:
+	checkevent EVENT_BEAT_MEJIMI
+	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
 	paintingpic HO_OH_PAINTING
 	waitbutton
@@ -68,6 +72,8 @@ HoOhPaintingScript:
 	done
 
 BellTowerPaintingScript:
+	checkevent EVENT_BEAT_MEJIMI
+	iffalse_jumptext UnsolvedPuzzleText
 	refreshscreen
 	paintingpic BELL_TOWER_PAINTING
 	waitbutton
@@ -146,42 +152,43 @@ GoldenrodMuseum2FNPC5Script:
     jumptextfaceplayer GoldenrodMuseum2FNPC5Text
 
 
+
+
 GoldenrodMuseum2FScientistScript:
     faceplayer
     opentext
+	checkevent EVENT_TRADED_RAGECANDYBAR
+	iftrue_jumpopenedtext GiveRageCandyBarText
 	writetext NeedBrickPieceText
 	waitbutton
-	checkitem BRICK_PIECE
+	checkkeyitem BRICK_PIECE_K
 	iffalse_jumpopenedtext Text_NoBrickPiece
 	writetext Text_BrickPieceQuestion
 	yesorno
 	iffalse_jumpopenedtext Text_NoBrickPiece
-	takeitem BRICK_PIECE
-	verbosegiveitem RAGECANDYBAR
-	setscene $1
-	iffalse_endtext
+	takekeyitem BRICK_PIECE_K
+	verbosegivekeyitem RAGECANDYBAR_K
+	setevent EVENT_TRADED_RAGECANDYBAR
 	jumpopenedtext GiveRageCandyBarText
 	
-
 NeedBrickPieceText:
     text "I tried to make"
     line "progress studying"
-    para "the sunken"
-    line "stadium but I"
-    para "can't find any"
-    line "samples."
-    para "Now I'm stuck"
-    line "writing reports"
-    para "about the Rocket"
-    line "Hideout."
+    para "the stadium ruins"
+    line "but I can't find"
+	cont "any samples."
+	
+	para "Now I'm stuck"
+	line "writing about the"
+	para "ruins by the Lake"
+	line "of Rage."
     done
 
 Text_BrickPieceQuestion:
-    text "Oh my --- is that"
-    line "a piece from the"
-    cont "old stadium?"
-    para "Would you please"
-    line "trade it to me?"
+    text "Hey, is that from"
+	line "the stadium?"
+    para "That Brick Piece"
+	line "is distinctive!"
     para "I would give you"
     line "a RageCandyBar."
     done
@@ -191,13 +198,16 @@ Text_NoBrickPiece:
 	line "historic sample"
 	para "from the old"
 	line "stadium."
+	
+	para "All of them get"
+	line "scooped up by"
+	cont "schoolkids!"
     done
 
 GiveRageCandyBarText:
-    text "Thank you so much."
-    line "That RageCandyBar"
-    para "will delight even"
-	line "a picky eater."
+    text "That RageCandyBar"
+    line "will delight even"
+	cont "a picky eater."
     done
 
 GoldenrodMuseum2FExhibit3:

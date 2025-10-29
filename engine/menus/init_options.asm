@@ -1,4 +1,4 @@
-NUM_INITIAL_OPTIONS EQU 8
+NUM_INITIAL_OPTIONS EQU 7
 
 SetInitialOptions:
 	ld a, $10
@@ -147,8 +147,8 @@ INCBIN "gfx/new_game/init_bg.2bpp"
 	db "            :<LNBRK>"
 	db "Exp. scaling<LNBRK>"
 	db "            :<LNBRK>"
-	db "IVs vary colors<LNBRK>"
-	db "best if YES:<LNBRK>"
+;	db "IVs vary colors<LNBRK>"
+;	db "best if YES:<LNBRK>"
 	db "Perfect stats<LNBRK>"
 	db "            :<LNBRK>"
 	db "Traded #mon<LNBRK>"
@@ -166,7 +166,7 @@ GetInitialOptionPointer:
 	dw InitialOptions_Abilities
 	dw InitialOptions_PSS
 	dw InitialOptions_ExpScaling
-	dw InitialOptions_ColorVariation ; todo, remove this option 
+;	dw InitialOptions_ColorVariation ; todo, remove this option 
 	dw InitialOptions_PerfectIVs ; todo, remove this option 
 	dw InitialOptions_TradedMon
 	dw InitialOptions_NuzlockeMode
@@ -311,7 +311,7 @@ InitialOptions_PerfectIVs:
 	set PERFECT_IVS_OPT, [hl]
 	ld de, YesString
 .Display:
-	hlcoord 15, 11
+	hlcoord 15, 9
 	rst PlaceString
 	and a
 	ret
@@ -335,7 +335,7 @@ InitialOptions_TradedMon:
 	set TRADED_AS_OT_OPT, [hl]
 	ld de, YesString
 .Display:
-	hlcoord 15, 14
+	hlcoord 15, 12
 	rst PlaceString
 	and a
 	ret
@@ -359,7 +359,7 @@ InitialOptions_NuzlockeMode:
 	set NUZLOCKE_MODE, [hl]
 	ld de, YesString
 .Display:
-	hlcoord 15, 16
+	hlcoord 15, 14
 	rst PlaceString
 	and a
 	ret
@@ -436,4 +436,4 @@ InitialOptions_UpdateCursorPosition:
 	ret
 
 .InitialOptions_CursorPositions:
-	db 0, 2, 4, 6, 8, 10, 12, 15, 17
+	db 0, 2, 4, 6, 8, 10, 13, 15

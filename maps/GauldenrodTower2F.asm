@@ -46,11 +46,8 @@ GenericTrainerAromaLadyRosa:
 	generictrainer AROMA_LADY, ROSA, EVENT_BEAT_AROMA_LADY_ROSA, AromaLadyRosaSeenText, AromaLadyRosaBeatenText
 
 	text "This tower is how"
-	line "people learn to"
-	cont "connect with"
-	cont "#mon. How will"
-	cont "they connect if"
-	cont "it is gone?"
+	line "people connect"
+	cont "with #mon."
 	done
 
 AromaLadyRosaSeenText:
@@ -61,7 +58,7 @@ AromaLadyRosaSeenText:
 
 AromaLadyRosaBeatenText:
 	text "I see something"
-	line "in you…"
+	line "in you!"
 	done
 
 GenericTrainerAromaLadyPeony:
@@ -69,14 +66,13 @@ GenericTrainerAromaLadyPeony:
 
 	text "A contribution can"
 	line "be made by even"
-	cont "the smallest"
-	cont "Jigglypuff."
+	para "the smallest"
+	line "Jigglypuff."
 	done
 
 AromaLadyPeonySeenText:
 	text "We find dignity in"
 	line "all #mon."
-	cont "Do you?"
 	done
 
 AromaLadyPeonyBeatenText:
@@ -85,27 +81,18 @@ AromaLadyPeonyBeatenText:
 	cont "#mon."
 	done
 
-
-
-
 GenericTrainerBirdKeeperVance:
 	generictrainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVanceSeenText, BirdKeeperVanceBeatenText
 
 	text "I heard that you"
 	line "organized against"
 	cont "the Anarres elder."
-	cont "He was getting too"
-	cont "power-hungry. I"
-	cont "hope you will join"
-	cont "our movement."
 	done
 
 BirdKeeperVanceSeenText:
-	text "When you let your"
-	line "feelings flow"
-	cont "through you, you"
-	cont "can get through"
-	cont "anything."
+	text "Have you come to"
+	line "stand in awe of"
+	cont "Ho-Oh?"
 	done
 
 BirdKeeperVanceBeatenText:
@@ -116,13 +103,8 @@ BirdKeeperVanceBeatenText:
 GenericTrainerFirebreatherNed:
 	generictrainer FIREBREATHER, NED, EVENT_BEAT_FIREBREATHER_NED, FirebreatherNedSeenText, FirebreatherNedBeatenText
 
-	text "If people learn to"
-	line "reject the stadium"
-	cont "as a distraction"
-	cont "then they will see"
-	cont "how their attent-"
-	cont "ions have been put"
-	cont "to awful things."
+	text "We must turn away"
+	line "from the Stadium."
 	done
 
 FirebreatherNedSeenText:
@@ -141,23 +123,21 @@ GenericTrainerVeteranFJoanne:
 	generictrainer VETERANF, JOANNE, EVENT_BEAT_VETERANF_JOANNE, VeteranFJoanneSeenText, VeteranFJoanneBeatenText
 
 	text "Sandra has been"
-	line "trying to coax the"
-	cont "rainbow bird"
+	line "trying to coax"
+	para "the rainbow bird"
 	cont "#mon back to"
-	cont "our roof for some"
-	cont "time."
+	cont "our roof."
 	done
 
 VeteranFJoanneSeenText:
-	text "My colleagues say"
-	line "that you have a"
-	cont "strong connection"
-	cont "to your #MON."
+	text "How deep is your"
+	line "connection with"
+	cont "your #mon?"
 	done
 
 VeteranFJoanneBeatenText:
 	text "Indeed, you are"
-	line "pure of heart…"
-	cont "you should see"
-	cont "the Elder Sandra."
+	line "pure of heart."
+	para "You should see"
+	line "the Elder Sandra."
 	done

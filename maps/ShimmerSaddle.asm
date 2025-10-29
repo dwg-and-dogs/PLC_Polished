@@ -93,7 +93,7 @@ ShimmerSaddleBoulders:
 	endcallback
 
 .BoulderTable:
-	stonetable 18, SHIMMER_BOULDER_1, .Disappear
+	stonetable 17, SHIMMER_BOULDER_1, .Disappear
 	db -1 ; end
 
 .Disappear:
@@ -119,9 +119,12 @@ ShimmerSaddleSignText:
 ShimmerSaddle_Scene1_ManHZ:
 	follow SHIMMER_GRAMPS_1, PLAYER
 	applymovement SHIMMER_GRAMPS_1, ShimmerGramps1Move
+	stopfollow
 	turnobject SHIMMER_GRAMPS_1, LEFT
 	showtext ShimmerGramps1Text
 	pause 10
+	playsound SFX_DITTO_TRANSFORM 
+	waitsfx
 	disappear SHIMMER_HZ_1
 	appear SHIMMER_MATRON_1
 	applyonemovement SHIMMER_MATRON_1, step_down
@@ -138,7 +141,6 @@ ShimmerSaddle_Scene1_ManHZ:
 	setevent EVENT_SHIMMER_HZ_1
 	setevent EVENT_SHIMMER_MATRON_1
 	showtext ShimmerGramps1Text2
-	stopfollow
 	applymovement SHIMMER_GRAMPS_1, ShimmerGramps1Move2
 	setscene $1
 	disappear SHIMMER_GRAMPS_1
@@ -146,13 +148,10 @@ ShimmerSaddle_Scene1_ManHZ:
 	end
 	
 ShimmerGramps1Text:
-	text "This mountain is"
-	line "just like I reme-"
-	cont "mbered, some 40 "
-	cont "years ago!"
-	
-	para "I bet my wife is"
-	line "on the ridge."
+	text "The ridge is as"
+	line "it was, 40 years"
+	cont "ago! My wife must"
+	cont "be up ahead."
 	done
 	
 ShimmerBeckon:
@@ -182,60 +181,82 @@ ShimmerGramps1Move2:
 	step_end
 
 ShimmerSaddle_Scene2_HZOnly:
-	pause 10
+	pause 30
 	applymovement SHIMMER_HZ_2, ShimmerHZ2_Stalks
-	showemote EMOTE_SHOCK, SHIMMER_MON_2, 10 ; RIP 
+	showemote EMOTE_SHOCK, SHIMMER_MON_2, 30 ; RIP 
 	playsound SFX_CUT
 	waitsfx
+	pause 30
+	cry MANKEY
 	disappear SHIMMER_MON_2
 	setevent EVENT_SHIMMER_MANKEY_2
+	pause 30
+	refreshscreen
+	pokepic H__ZOROARK
+	waitbutton
+	closepokepic
+	applymovement SHIMMER_HZ_2, ShimmerHZ2_Stalks2
 	disappear SHIMMER_HZ_2
 	setevent EVENT_SHIMMER_HZ_2
+	setscene $2
 	end
 
 ShimmerHZ2_Stalks:
 	fix_facing 
+	slide_step_down
 	fast_jump_step_down
-	fast_jump_step_down
-	fast_jump_step_down
+	step_end
+
+ShimmerHZ2_Stalks2:
+	fix_facing 
+	fast_jump_step_up
+	slide_step_up
 	step_end
 	
 ShimmerSaddle_Scene3_ManHZ:
+	showemote EMOTE_HAPPY, SHIMMER_GRAMPS_2, 30
 	applyonemovement PLAYER, step_right
 	turnobject PLAYER, LEFT
-	showemote EMOTE_HAPPY, SHIMMER_GRAMPS_2, 10
 	showtext ShimmerGramps2Text1
 	applyonemovement SHIMMER_GRAMPS_2, step_up
 	follow SHIMMER_GRAMPS_2, PLAYER
 	applymovement SHIMMER_GRAMPS_2, ShimmerGramps2Move1
 	showtext ShimmerGramps2Text2
 	applymovement SHIMMER_GRAMPS_2, ShimmerGramps2Move2
-	pause 10
-	showemote EMOTE_HEART, SHIMMER_GRAMPS_2, 10
+	stopfollow
+	pause 30
+	showemote EMOTE_HEART, SHIMMER_GRAMPS_2, 30
 	showtext ShimmerGramps2Text3
+	pause 20
 	applyonemovement SHIMER_MATRON_2, step_down
+	pause 20
 	applyonemovement SHIMER_MATRON_2, step_down
+	pause 20
+	playsound SFX_DITTO_TRANSFORM 
+	waitsfx
 	disappear SHIMER_MATRON_2
 	setevent EVENT_SHIMMER_MATRON_2
 	appear SHIMMER_HZ_3
 	showtext ShimmerHZText2
-	showemote EMOTE_SHOCK, SHIMMER_GRAMPS_2, 10
+	showemote EMOTE_SHOCK, SHIMMER_GRAMPS_2, 30
 	showtext ShimmerGramps2Text4
-	stopfollow
 	applyonemovement SHIMMER_GRAMPS_2, step_right
 	turnobject SHIMMER_GRAMPS_2, LEFT
-	applymovement PLAYER, step_up
-	setlasttalked SHIMMER_HZ_3
+	applyonemovement PLAYER, step_up
+;	setlasttalked SHIMMER_HZ_3
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon H__ZOROARK, 20
+	loadwildmon H__ZOROARK, 30
 	startbattle
 	disappear SHIMMER_HZ_3
-	reloadmapafterbattle
 	setevent EVENT_SHIMMER_HZ_3
-	setscene $2
+	reloadmapafterbattle
+	setscene $3
 	turnobject PLAYER, RIGHT
-	showtext ShimmerGramps2Text5
+	opentext
+	writetext ShimmerGramps2Text5
+	waitbutton
 	verbosegiveitem SHINY_STONE
+	closetext
 	warp GAULDENROD, 15, 17 
 	end
 	
@@ -290,6 +311,8 @@ ShimmerGramps2Move1:
 	step_up
 	step_left
 	step_left
+	step_left
+	step_up
 	step_up
 	turn_head_down
 	step_end
@@ -298,8 +321,6 @@ ShimmerGramps2Move2:
 	step_left
 	step_left
 	step_left
-	step_left
-	step_up
 	step_up
 	step_up
 	step_up
@@ -370,6 +391,7 @@ ShimmerText4:
 	done
 
 ShimmerSaddleGramps2Script:
+	setscene $2
 	jumptextfaceplayer SaddleGramps2Text
 	
 SaddleGramps2Text:

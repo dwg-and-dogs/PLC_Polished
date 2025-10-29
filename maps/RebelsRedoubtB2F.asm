@@ -10,9 +10,8 @@ RebelsRedoubtB2F_MapScriptHeader:
 	warp_event 3, 7, REBELS_REDOUBT_B3F, 1
 	warp_event 21, 15, REBELS_REDOUBT_B3F, 2
 	warp_event 27, 7, REBELS_REDOUBT_B3F, 3
-;HOLES 
-	warp_event 14, 1, REBELS_REDOUBT_B3F, 4
-	warp_event 15, 1, REBELS_REDOUBT_B3F, 5
+	warp_event 14, 1, REBELS_REDOUBT_B3F, 4 ; hole drop 
+	warp_event 15, 1, REBELS_REDOUBT_B3F, 5 ; hole drop 
 
 
 	def_coord_events
@@ -28,13 +27,9 @@ RebelsRedoubtB2F_MapScriptHeader:
 	def_object_events
 	object_event  3, 11, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedoubtKurtScript, EVENT_BEAT_AMOS;
 	object_event 21,  6, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedoubtAmosScript, EVENT_BEAT_AMOS;
-;done
-	object_event 25,  3, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerNinja10, EVENT_BEAT_AMOS;wraith
-	object_event  4,  1, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerNinja11, EVENT_BEAT_AMOS;vapor
-	object_event 22, 14, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNinja12, EVENT_BEAT_AMOS;mirage
-
-	object_const_def
-
+	object_event 25,  3, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerNinja10, EVENT_BEAT_AMOS
+	object_event  4,  1, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerNinja11, EVENT_BEAT_AMOS
+	object_event 22, 14, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNinja12, EVENT_BEAT_AMOS
 
 
 RedoubtB2FDoorsCallback:
@@ -57,6 +52,11 @@ RedoubtB2FDoorsCallback:
 GenericTrainerNinja10: ; wraith
 	generictrainer NINJA, NINJA10, EVENT_BEAT_NINJA10, .SeenText10, .BeatenText10
 
+	text "This area was dug"
+	line "right under the"
+	cont "Consul's nose!"
+	done
+
 .BeatenText10:
 	text "So you do have"
 	line "something to"
@@ -64,7 +64,7 @@ GenericTrainerNinja10: ; wraith
 	done
 
 .SeenText10:
-	text "It is uncouth of"
+	text "It was unwise of"
 	line "you to enter."
 	
 	para "Do you belong?"
@@ -73,20 +73,31 @@ GenericTrainerNinja10: ; wraith
 GenericTrainerNinja11: ; vapor 
 	generictrainer NINJA, NINJA11, EVENT_BEAT_NINJA11, .SeenText11, .BeatenText11
 
+	text "Each day, I must"
+	line "recommit myself"
+	cont "to my duty."
+	
+	para "Do you have the"
+	line "same outlook?"
+	done
+
 .BeatenText11:
 	text "Amos will be"
 	line "impressed."
 	done
 
 .SeenText11:
-	text "Our preparations"
-	line "are finished, and"
-	cont "you think now is"
-	cont "the time?"
+	text "Interruptions are"
+	line "not tolerated!"
 	done
 	
 GenericTrainerNinja12: ; mirage 
 	generictrainer NINJA, NINJA12, EVENT_BEAT_NINJA12, .SeenText12, .BeatenText12
+
+	text "When you find a"
+	line "why, you can"
+	cont "handle any how."
+	done
 
 .BeatenText12:
 	text "Your ill aura was"
@@ -94,7 +105,7 @@ GenericTrainerNinja12: ; mirage
 	done
 
 .SeenText12:
-	text "You are the ideal"
+	text "You are an ideal"
 	line "foil for Amos!"
 	done
 
@@ -108,14 +119,20 @@ RedoubtKurtScript:
 	opentext
 	writetext KurtHealRedoubtText
 	waitbutton
+	closetext
+	
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	
+	opentext
 	writetext KurtHealRedoubtText2
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end
 
 KurtHealRedoubtText:
@@ -130,10 +147,10 @@ KurtHealRedoubtText:
 	cont "end it for good,"
 	
 	para "and save Johto's"
-	line "heritage."
+	line "traditions."
 	
 	para "Here, let me heal"
-	line "your #mon."	
+	line "your #mon."
 	done
 
 KurtHealRedoubtText2:
@@ -169,7 +186,8 @@ RedoubtAmosScript:
 	setevent EVENT_BEAT_NINJA12
 	setevent EVENT_BEAT_NINJA12
 	writetext AmosText_LegacyBadgeSpeech
-	promptbutton
+	waitbutton
+	closetext
 	end
 
 
@@ -196,21 +214,20 @@ AmosText_Intro:
 	line "channels,"
 	
 	para "Vespera tells me"
-	line "you've impressed"
+	line "you impressed"
 	cont "the Tower's sages."
 	
 	para "But I still see a"
 	line "coin perched on"
 	cont "its edge, unsure"
 	
-	para "where it wants to"
-	line "fall."
+	para "unsure which way"
+	line "it wants to fall."
 	
 	para "Battle me, so I"
 	line "can see you!"
 	done
 
-	
 AmosText_Impressed:
 	text "You see the full"
 	line "potential of your"
@@ -233,8 +250,8 @@ AmosText_LegacyBadgeSpeech:
     text " Amos: " 
 	next
 	text_start
-	text "With it, our"
-	line "soldiers will see"
+	text "That badge shows"
+	line "our fighters that"
 	cont "you're one of us."
 
 	para "First, we need to"
@@ -254,4 +271,3 @@ AmosText_LegacyBadgeSpeech:
 
 	para "To the mine!"
 	done
-

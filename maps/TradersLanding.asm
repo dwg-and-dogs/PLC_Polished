@@ -1,5 +1,4 @@
 TradersLanding_MapScriptHeader: 
-
 	def_scene_scripts
 
 
@@ -32,7 +31,8 @@ TradersLanding_MapScriptHeader:
 	bg_event 16, 18, BGEVENT_JUMPTEXT, TL_OpenForBusinessSign
 	bg_event 14, 6, BGEVENT_JUMPTEXT, TL_KenseysOfficeSign
 	bg_event 22, 12, BGEVENT_READ, TL_AmosWantedSign
-;todo, shrine?
+	bg_event 5, 4, BGEVENT_READ, LandingTimeTravelScript ; todo 
+	bg_event 5, 4, BGEVENT_READ, LandingTimeTravelScript ; todo 
 	bg_event  13, 18, BGEVENT_ITEM + CALCIUM, EVENT_LANDING_HIDDEN_1
 
 
@@ -52,9 +52,9 @@ TradersLanding_MapScriptHeader:
 	object_event 34, 20, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Lighthouse_BrigaderText, -1
 	object_event 33, 27, SPRITE_BRIGADER, 	SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TL_Brigader_Script, -1
 	; NPCs
-	object_event 10, 19, SPRITE_FIREBREATHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingEggScript, EVENT_BEAT_KENSEY_PORT
-	object_event 21, 15, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1 ; todo 
-	object_event 19, 19, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LandingNomadFScript, -1 ; todo 
+	object_event 10, 19, SPRITE_FIREBREATHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LandingEggScript, EVENT_BEAT_KENSEY_PORT
+	object_event 21, 15, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1  
+	object_event 19, 19, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingNomadFScript, -1  
 	; sailboat 
 	object_event 15, 28, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_TOP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, EVENT_BEAT_KENSEY_PORT
 	object_event 15, 28, SPRITE_SAILBOAT, SPRITEMOVEDATA_SAILBOAT_BOTTOM, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, end, NULL, EVENT_BEAT_KENSEY_PORT
@@ -65,6 +65,47 @@ TradersLanding_MapScriptHeader:
 	const TRADERS_LANDING_KURT
 	const TRADERS_LANDING_BARBEAU_2
 	const TRADERS_LANDING_KURT_2
+
+LandingTimeTravelScript: ; todo 
+	opentext
+	checkevent EVENT_BEAT_KENSEY_PORT
+	iffalse_jumptext LandingNoTimeTravelYetText
+	writetext LandingAskToTimeTravelText
+	yesorno
+	iffalse_jumpopenedtext LandingNoTimeTravelText
+	writetext LandingYesTimeTravelText
+	waitbutton
+	closetext
+	special Special_CelebiShrineEvent
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx	
+	warp ROUTE_40, 7, 4
+	end
+
+LandingNoTimeTravelYetText:
+	text "It's the shrine"
+	line "they've built to"
+	cont "Celebi."
+	done
+
+LandingAskToTimeTravelText:
+	text "It's the shrine"
+	line "they've built to"
+	cont "Celebi."
+
+	para "Call Celebi to"
+	line "travel forward"
+	cont "in time?"
+	done
+
+LandingNoTimeTravelText:
+	text "Some other time."
+	done
+
+LandingYesTimeTravelText:
+	text "Time to go."
+	done
 
 TradesLandingFlyPoint:
 	setflag ENGINE_FLYPOINT_TRADERS_LANDING
@@ -128,6 +169,7 @@ TL_Scene_Part_1_Script:
 	setevent EVENT_LANDING_SCENE_1_KENSEY
 	setevent EVENT_LANDING_SCENE_1_KURT
 	setscene $1
+	blackoutmod TRADERS_LANDING
 	end
 
 TL_Text1:
@@ -252,11 +294,12 @@ TL_Text9:
 TL_Scene_2_L:
 	applyonemovement PLAYER, step_right
 TL_Scene_2_R:
+	blackoutmod TRADERS_LANDING
 	applymovement PLAYER, TL_2_PlayerMovesUp
 	turnobject PLAYER, LEFT
 	turnobject TRADERS_LANDING_BARBEAU_2, RIGHT
-	showtext TL_2_Text1 ; you've comE? 
-	pause 10
+	showtext TL_2_Text1 ; you've come? 
+	pause 30
 	appear TRADERS_LANDING_KURT_2
 	applymovement TRADERS_LANDING_KURT_2, TL_2_PlayerMovesUp
 	turnobject TRADERS_LANDING_BARBEAU_2, DOWN
@@ -270,11 +313,13 @@ TL_Scene_2_R:
 	turnobject PLAYER, UP
 	applyonemovement PLAYER, step_up
 	applymovement TRADERS_LANDING_KURT_2, TL_2_KurtMoves2
-	showtext TL_2_Text5 ; honor Lugia
+	showtext TL_2_Text5
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
-	setevent EVENT_BARBEAU_WARPED
+	setflag ENGINE_FLYPOINT_OLIVINE
 	special FadeOutPalettes
 	waitsfx
+	setevent EVENT_LANDING_KURT_2
 	warp ROUTE_40, 7, 4
 	end
 
@@ -383,12 +428,6 @@ TL_OpenForBusinessSign:
 TL_Brigader_Script:
 	faceplayer
 	opentext
-	; debug tech
-	setscene $1
-	setevent EVENT_NOMAD_NEXUS
-	clearevent EVENT_NOMAD_ISLANDS_HOUSE
-	giveitem LIGHT_BALL, 1
-	; end debug tech 
 	checkevent EVENT_BEAT_KENSEY_PORT
 	iftrue_jumptext TL_Brigader_AfterKenseyText
 	jumpthisopenedtext
@@ -398,6 +437,10 @@ TL_Brigader_Script:
 	
 	para "Go see Barbeau"
 	line "for assignment."
+	
+	para "Wait, you don't"
+	line "look like one of"
+	cont "the nomads?"
 	done
 
 TL_Brigader_AfterKenseyText:
@@ -501,9 +544,11 @@ LandingBarbeauScript:
 	writetext TL_2_Text5
 	waitbutton
 	closetext
+
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
-	waitsfx
+	waitsfx	
 	warp ROUTE_40, 7, 4
 	end
 
@@ -519,6 +564,10 @@ LandingBarbeauScript:
 	line "us. We must find"
 	para "ways to adapt"
 	line "without her."
+	
+	para "Please, pray at"
+	line "the shrine behind"
+	cont "me if you'd like."
 	done
 
 

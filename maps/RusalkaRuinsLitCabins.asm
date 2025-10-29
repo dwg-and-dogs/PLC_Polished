@@ -26,4 +26,14 @@ RusalkaRuinsLitCabins_MapScriptHeader:
 
 	def_object_events
 	itemball_event 16, 10, RAZOR_FANG, 1, EVENT_RUSALKA_RAZOR_FANG
+	pokemon_event  8,  2, FROSLASS, -1, -1, PAL_NPC_BLUE, FroslassText, -1
+	pokemon_event  9,  8, FROSLASS, -1, -1, PAL_NPC_BLUE, FroslassText, -1
+
+FroslassText:
+	text "Froslass beckons"
+	line "you to venture"
+	cont "further."
 	
+	para "You'll get used"
+	line "to the cold."
+	done

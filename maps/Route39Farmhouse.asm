@@ -23,7 +23,7 @@ Route39Farmhouse_MapScriptHeader:
 PokefanM_DairyFarmer:
 	faceplayer
 	opentext
-	checkevent EVENT_SAVED_MILTANK
+	checkevent EVENT_MILTANK_SUICUNE
 	iffalse FarmerMScript_SellMilk
 	writetext FarmerText_Rustler
 	waitbutton
@@ -31,8 +31,9 @@ PokefanM_DairyFarmer:
 	end
 
 FarmerMScript_SellMilk:
-	checkflag ENGINE_BOUGHT_MOOMOO_MILK
-	iftrue .Milking
+;	checkflag ENGINE_BOUGHT_MOOMOO_MILK
+;	iftrue .Milking
+	opentext
 	writetext FarmerMText_BuyMilk
 	special PlaceMoneyTopRight
 	loadmenu .MenuDataHeader
@@ -96,7 +97,7 @@ FarmerMScript_SellMilk:
 PokefanF_AcrobaticsFarmer:
 	faceplayer
 	opentext
-	checkevent EVENT_SAVED_MILTANK
+	checkevent EVENT_MILTANK_SUICUNE
 	iftrue_jumpopenedtext FarmerText_Rustler
 	jumpopenedtext FarmerFText_GreatCows
 
@@ -146,8 +147,7 @@ FarmerMText_NoSale:
 	done
 
 FarmerMText_Milking:
-	text "I best go do my"
-	line "milkin'."
+	text "Back to work!"
 	done
 
 FarmerFText_InTrouble:

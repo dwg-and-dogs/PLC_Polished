@@ -40,22 +40,23 @@ GoldLeafMotherText:
 	line "Olivine!"
 	done
 
+
+
 EcruteakGoldLeafScript:
 	faceplayer
 	opentext	
-	checkitem GOLD_LEAF
+	checkevent EVENT_GOT_GOLD_LEAF
 	iftrue_jumpopenedtext GiveGoldLeafText
 	writetext NeedALiteBlueMailText
 	waitbutton
-	checkitem LITEBLUEMAIL
+	checkkeyitem LITEBLUEMAIL_K
 	iffalse_jumpopenedtext NoLiteBlueMailText
 	writetext Text_LiteBlueMailQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext NoLiteBlueMailText
-	takeitem LITEBLUEMAIL
-	verbosegiveitem GOLD_LEAF
-	setscene $1
-	iffalse_endtext
+	takekeyitem LITEBLUEMAIL_K
+	verbosegivekeyitem GOLD_LEAF_K
+	setevent EVENT_GOT_GOLD_LEAF
 	jumpopenedtext GiveGoldLeafText 
 
 NeedALiteBlueMailText:
@@ -75,11 +76,13 @@ NoLiteBlueMailText:
 	done
 
 Text_LiteBlueMailQuestion:
-	text "Willickers! Is"
-	line "that LiteBlue-"
-	cont "Mail? How"
-	cont "ordinary! I simply"
+	text "Willickers! That"
+	line "Liteblue Mail is"
+	cont "so ordinary! I"
 	cont "must have it."
+	
+	para "I'll give you a"
+	line "bit of Gold Leaf."
 	done
 
 GiveGoldLeafText:

@@ -1,4 +1,4 @@
-TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the left of the uppermost pokeball. also, at the end of the battle, the scene needs to be set to something else. 
+TinderGarden_MapScriptHeader: 
 	def_scene_scripts
 	scene_script CelebiCeremonyIntroScript
 
@@ -17,7 +17,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	coord_event  5, 14, 1, TinderGardenTryToLeaveScript
 	coord_event  4, 14, 3, TinderGardenRivalBattleScript1
 	coord_event  5, 14, 3, TinderGardenRivalBattleScript2	;add text for the tree
-	coord_event  3, 3, 4, TinderGardernWatchTheLoggersScript
+;	coord_event  3, 3, 4, TinderGardernWatchTheLoggersScript ; this needs to have a different music, hah
 
 	def_bg_events
 	bg_event  4,  8, BGEVENT_JUMPTEXT, TGTreeText
@@ -36,10 +36,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	object_event  8, 12, SPRITE_WEIRD_TREE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RowletPokeBallScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4,  9, SPRITE_CELEBI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CelebiScript, EVENT_KURTS_HOUSE_KURT_0
 	object_event  4, 11, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScript, EVENT_TALKED_TO_PRYCE_TINDER_GARDEN 
-;for the cutscene if you choose adrinna
-	object_event  3, 0, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event  3, 1, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	pokemon_event  4, 3, CELEBI, -1, -1, PAL_NPC_GREEN, Celebi2Text, EVENT_TINDER_GARDEN_CELEBI_2
+
 
 
 	object_const_def
@@ -52,9 +49,7 @@ TinderGarden_MapScriptHeader: ;todo something weird happens when I stand to the 
 	const TINDER_GARDEN_POKE_BALL3	
 	const TINDER_GARDEN_CELEBI
 	const TINDER_GARDEN_PRYCE
-	const TINDER_GARDEN_ENGINEER_1
-	const TINDER_GARDEN_ENGINEER_2
-	const TINDER_GARDEN_CELEBI_2
+
 
 CelebiCeremonyIntroScript:
 	sdefer .Script
@@ -203,7 +198,7 @@ KurtText_Intro_3:
 	next
 	text_start 
 	text "Take a joke,"
-	line "spaz!"
+	line "kid!"
 	done
 	
 OakText_Pokedex:
@@ -224,9 +219,8 @@ OakText_Balls:
     text " Oak: "
 	next
 	text_start 
-	text "And you will"
-	line "want these to"
-	cont "fill it up."
+	text "You'll want these"
+	line "to fill it up."
 	done
 
 OakText_PokedexRival:
@@ -234,7 +228,7 @@ OakText_PokedexRival:
     text " Oak: "
 	next
 	text_start 
-	text "I brought one"
+	text "I brought them"
 	line "for you as well."
 	done
 
@@ -308,9 +302,8 @@ WasThatCelebiTextOak:
     text " Oak: "
 	next
 	text_start 
-	text "My #dex"
-	line "doesn't recognize"
-	cont "two of them."
+	text "Two of them are"
+	line "not from Johto!"
 	done
 
 WasThatCelebiTextKurt:
@@ -320,14 +313,14 @@ WasThatCelebiTextKurt:
 	text_start
 	text "Hold on, I"
 	line "know these from"
-	para "an old book."
-	line "These three were"
-	para "carried a hero"
-	line "from Hisui."
+	cont "an old book."
+	para "These three were"
+	line "carried by a hero"
+	cont "from Hisui."
 	
-	para "Kurt: Celebi"
+	para "Clearly, Celebi"
 	line "brought them for"
-	para "us. You both"
+	para "you both. You"
 	line "should pick one!"
 	done
 
@@ -398,7 +391,7 @@ TGKurtChecksBalls:
 	step_end
 
 TGWhereYouGoing:
-	text "Kurt: Wait! Where"
+	text "Wait! Where"
 	line "are you going?"
 	done
 
@@ -483,6 +476,7 @@ OshawottPokeBallScript:
 	writetext KurtGreatJobText
 	turnobject TINDER_GARDEN_KURT, RIGHT
 	writetext KurtDontLoseItText
+	waitbutton
 	turnobject TINDER_GARDEN_KURT, DOWN
 	closetext
 	setevent EVENT_KURT_HEARS_LOGGERS
@@ -526,6 +520,7 @@ RowletPokeBallScript:
 	writetext KurtGreatJobText
 	turnobject TINDER_GARDEN_KURT, RIGHT
 	writetext KurtDontLoseItText
+	waitbutton
 	turnobject TINDER_GARDEN_KURT, DOWN
 	closetext
 	setevent EVENT_KURT_HEARS_LOGGERS
@@ -538,8 +533,7 @@ TakeCyndaquilText:
 	next
 	text_start
 	text "So, you want"
-	line "Cyndaquil, the"
-	cont "fire #mon?"
+	line "Cyndaquil?"
 	
 	para "You know, that"
 	line "was your dad's"
@@ -552,8 +546,7 @@ TakeOshawottText:
 	next
 	text_start
 	text "So, you want"
-	line "Oshawott, the"
-	cont "water #mon?"
+	line "Oshawott?"
 	done
 
 TakeRowletText:
@@ -562,8 +555,7 @@ TakeRowletText:
 	next
 	text_start
 	text "So, you want"
-	line "Rowlet, the"
-	cont "grass #mon?"
+	line "Rowlet?"
 	done
 
 DidntChooseStarterText:
@@ -624,9 +616,8 @@ KurtDontLoseItText:
 	cont "this one in the"
 	cont "forest..."
 	
-	para "Now let's all"
-	line "go rebuild the"
-	cont "shrine!"
+	para "Now to go rebuild"
+	line "the shrine!"
 	done
 
 RivalPicksRowletMovement:
@@ -749,6 +740,7 @@ TinderGardenRivalBattleScript1:
 	clearevent EVENT_KURTS_HOUSE_NOTEBOOK
 	clearevent EVENT_KILN_BOSS
 	setevent EVENT_ILEX_FOREST_RIVAL
+	special HealParty
 	playmapmusic
 	end
 	
@@ -768,10 +760,9 @@ CelebiHeroText:
     text " Celebi: "
 	next
 	text_start 
-	text "Something unnat-"
-	line "ural threatens"
-	para "my forest!"
-	line "Help!"
+	text "An unnatural"
+	line "force threatens"
+	cont "my forest! Help!"
 	done
 
 OakScript:
@@ -825,13 +816,18 @@ PryceWatchKurtPleaseText3:
 	next
 	text_start
 	text "Kurt's always been"
-	line "steadfast, but I"
-	para "see a rigidity as"
-	line "he wields tradit-"
-	para "ion as a sword,"
-	line "rather than the"
-	para "bridge it should"
-	line "be, <PLAYER>."
+	line "steadfast."
+	
+	para "But now, he uses"
+	line "tradition like a"
+	para "weapon against"
+	line "anyone he disa-"
+	cont "grees with."
+	
+	para "Tradition should"
+	line "bring people in,"
+	para "not guard against"
+	line "newcomers!"
 	done
 
 PryceWatchKurtPleaseText4:
@@ -842,12 +838,12 @@ PryceWatchKurtPleaseText4:
 	text "He's not entirely"
 	line "wrong, mind you."
 	
-	para "Johto could use "
-	line "more people who "
+	para "Johto could use"
+	line "more people who"
 	para "care about their"
-	line "community's leg-"
-	cont "acy, not their"
-	cont "own legacy."
+	line "community's"
+	para "legacy, not just"
+	line "their own."
 	done
 
 
@@ -867,8 +863,8 @@ PrycePokemonText:
 
 	para "This gift is for"
 	line "you. This TM grows"
-	cont "stronger with"
-	cont "your bond!"
+	para "stronger with"
+	line "your bond!"
 	done
 
 PryceWatchKurtPleaseText2:
@@ -887,11 +883,10 @@ TGKurtScript:
 	jumpopenedtext TGKurtFirstPokemonText
 
 OakPokemonText:
-	text "What strange"
-	line "#mon. I"
-	cont "haven't had a"
-	cont "rush like that"
-	cont "in years!"
+	text "How strange!"
+	line "I haven't had a"
+	para "rush like that in"
+	line "over 20 years!"
 	done
 
 
@@ -933,8 +928,7 @@ RivalIndependentText:
     text " <RIVAL>: "
 	next
 	text_start
-	text "No one"
-	para "appreciates my"
+	text "No one see my"
 	line "ingenuity."
 	done
 
@@ -955,10 +949,6 @@ TGRivalChallengeText:
 	done
 
 TGRivalLoseText:
-	text_high
-    text " <RIVAL>: "
-	next
-	text_start
 	text "Showed you."
 	
 	para "Oh, Kurt, I"
@@ -968,10 +958,6 @@ TGRivalLoseText:
 	done
 
 TGRivalWinText:
-	text_high
-    text " <RIVAL>: "
-	next
-	text_start
 	text "I'm only going"
 	line "to get stronger."
 	
@@ -999,14 +985,13 @@ TGRivalText_YouLost:
     text " <RIVAL>: "
 	next
 	text_start
-	text "This is just"
-	line "the beginning."
+	text "This is the start"
+	line "of my story."
 	
-	para "I know I can"
-	line "reach my true"
-	cont "power without"
-	cont "you all hold-"
-	cont "ing me back."
+	para "I can reach my"
+	line "potential without"
+	para "you all holding"
+	line "me back."
 	done
 
 TGRivalGoodbyeText:
@@ -1014,7 +999,7 @@ TGRivalGoodbyeText:
     text " <RIVAL>: "
 	next
 	text_start
-	text "With my own"
+	text "Now, with my own"
 	line "#mon, I'm"
 	cont "leaving."
 	
@@ -1024,8 +1009,6 @@ TGRivalGoodbyeText:
 	para "Who put you in"
 	line "charge, anyway?"
 	done
-
-
 
 PlayerMovesForRivalBattle:
 	step_left
@@ -1079,87 +1062,14 @@ KurtLeavesInAHurryMovement:
 
 TGTreeText:
 	text "A beautiful"
-	line "blossoming "
-	cont "tree. "
+	line "blossoming tree."
 	
-	para "Its aromatic"
-	line "bark will att-"
-	cont "ract #mon."
+	para "Its aromatic bark"
+	line "beckons #mon."
 	done
 
 CelebiScript:
 	end
-	
-	
-TinderGardernWatchTheLoggersScript:
-;cf western capital scene 
-	turnobject PLAYER, UP
-	showemote EMOTE_QUESTION, TINDER_GARDEN_ENGINEER_1, 60
-	showtext GardenEngineerText1
-	pause 60
-	showemote EMOTE_BOLT, TINDER_GARDEN_ENGINEER_2, 60
-	showtext GardenEngineerText2		
-	closetext
-	turnobject TINDER_GARDEN_ENGINEER_1, RIGHT
-	pause 60
-	playsound SFX_CUT
-	waitsfx
-	changeblock 4, 0, $01 
-	reloadmappart
-	pause 60
-	disappear TINDER_GARDEN_CELEBI_2
-	pause 60
-	turnobject TINDER_GARDEN_ENGINEER_1, DOWN
-	pause 60
-	showtext GardenEngineerText3
-	turnobject TINDER_GARDEN_ENGINEER_2, UP
-	showtext GardenEngineerText4
-	pause 60
-	closetext
-	halloffame
-	end
-	
-GardenEngineerText1:
-	text "Is this the one?"
-	line "I couldn't find"
-	cont "any other blossom"
-	cont "trees."
-	done
-
-	
-GardenEngineerText2:
-	text "Yup, it may be the"
-	line "last one in"
-	cont "Johto."
-	done
-
-	
-Celebi2Text:
-	text "..."
-	done
-
-GardenEngineerText3:
-	text "What are we using"
-	line "this for, anyway?"
-	done
-
-GardenEngineerText4:
-	text "Hoenn wants the"
-	line "them for an extr-"
-	cont "avagant shrine."
-	
-	para "I'm glad Johto"
-	line "doesn't have such"
-	para "wasteful things"
-	line "ever since that"
-	para "kid toppled the"
-	line "Consul some"
-	cont "160 years ago."
-	
-	para "What was their"
-	line "name again?"
-	done
-
 
 LittleGiddingText:
 	text "We shalln't cease"

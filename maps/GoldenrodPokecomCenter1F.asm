@@ -19,10 +19,10 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	bg_event 24,  8, BGEVENT_RIGHT, JudgeMachineScript
 	bg_event 24,  9, BGEVENT_RIGHT, JudgeMachineScript
 	bg_event 24, 10, BGEVENT_RIGHT, JudgeMachineScript
-	bg_event 25, 11, BGEVENT_UP, JudgeMachineScript
-	bg_event 26, 11, BGEVENT_UP, JudgeMachineScript
-	bg_event 27, 11, BGEVENT_UP, JudgeMachineScript
-	bg_event 28, 11, BGEVENT_UP, JudgeMachineScript
+	bg_event 13,  9, BGEVENT_UP, JudgeMachineScript
+	bg_event 15,  9, BGEVENT_UP, JudgeMachineScript
+	bg_event 14,  9, BGEVENT_UP, JudgeMachineScript
+	bg_event 16,  9, BGEVENT_UP, JudgeMachineScript
 	bg_event 29,  5, BGEVENT_LEFT, JudgeMachineScript
 	bg_event 29,  6, BGEVENT_LEFT, JudgeMachineScript
 	bg_event 29,  7, BGEVENT_LEFT, JudgeMachineScript
@@ -37,7 +37,8 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	object_event  1,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MapNameNPC1Script, -1
 	object_event  9, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapNameNPC2Script, -1
 	object_event  3, 12, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MapNameNPC3Script, -1
-	object_event 16,  8, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WonderTradeReceptionistScript, -1
+	object_event 12, 10, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, JudgeScriptText, -1
+;	object_event 12, 10, SPRITE_LINK_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WonderTradeReceptionistScript, -1
 	object_event  12, 13, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV3Script, -1
 
 	object_const_def
@@ -53,7 +54,7 @@ PokecomKurtScript:
 	closetext
 	checkevent EVENT_GOT_BASEMENT_KEY
 	iftrue .end
-	givekeyitem BASEMENT_KEY
+;	givekeyitem BASEMENT_KEY
 	setevent EVENT_GOT_BASEMENT_KEY
 .end
 	end
@@ -259,6 +260,9 @@ KurtHasSomeFansText:
 
 	para "Meet me in the"
 	line "Underground."
+	
+	para "I'll go unlock"
+	line "the door."
     done
 
 IlexExcelsiorV3Script:
@@ -279,9 +283,8 @@ WeirdTextGoldenrodCenter:
 IlexExcelsiorV3Text:
 	text "Ilex Excelsior"
 	
-	para "When the tree"
-	line "rings, will"
-	cont "you answer"
+	para "If the tree rings"
+	line "will you answer"
 	
 	para "Third Edition"
 
@@ -289,4 +292,13 @@ IlexExcelsiorV3Text:
 	line "frequency radio"
 	cont "by going low"	
 	done
+
+JudgeScriptText:
+	text "Have your #mon"
+	line "training and"
+	cont "potential tested!"
 	
+	para "It's free to use"
+	line "at the terminals"
+	cont "next to me."
+	done

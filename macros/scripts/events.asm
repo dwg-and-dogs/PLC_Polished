@@ -570,6 +570,24 @@ closepokepic: MACRO
 	db closepokepic_command
 ENDM
 
+	const pokepic2_command
+pokepic2: MACRO
+	db pokepic2_command
+	db \1 ; pokemon
+	if \1 == 0
+		db -1 ; party mon
+	elif _NARG == 2
+		db \2 ; form
+	else
+		db 0
+	endc
+ENDM
+
+	const closepokepic2_command
+closepokepic2: MACRO
+	db closepokepic2_command
+ENDM
+
 	const _2dmenu_command
 _2dmenu: MACRO
 	db _2dmenu_command

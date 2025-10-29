@@ -1,4 +1,5 @@
-BrassTower3FWarp_MapScriptHeader: ;	def_scene_scripts
+BrassTower3FWarp_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -18,7 +19,7 @@ BrassTower3FWarp_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
-	object_event  5,  3, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrassTowerKensey, -1
+	object_event  5,  3, SPRITE_KENSEY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerKensey, -1
 
 
 	object_const_def
@@ -43,7 +44,7 @@ BrassTowerKensey:
 	text_start
 	text "Egad! How did the"
 	line "winds of fate"
-	cont "bring YOU here?"
+	cont "bring you here?"
 	
 	para "Were my traps not"
 	line "confusing enough?"
@@ -53,7 +54,7 @@ BrassTowerKensey:
 	cont "lift all boats!"
 	
 	para "I'll guide it."
-	cont "It's inevitable!"
+	line "It's inevitable!"
 	done
 
 
@@ -68,9 +69,9 @@ BrassTowerKensey:
 	next
 	text_start
 	text "I have no more"
-	line "ways to stop"
-	para "you. The arc"
-	line "of the universe"
+	line "ways to stop you."
+	para "But the arc of"
+	line "the universe"
 	para "will arrest you"
 	line "soon enough."
 	done

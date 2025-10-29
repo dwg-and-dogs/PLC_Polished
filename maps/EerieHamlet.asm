@@ -7,18 +7,19 @@ EerieHamlet_MapScriptHeader:
 
 	def_warp_events
 	warp_event 13, 7, REBELS_REDOUBT_1F, 1
-	warp_event 9, 3, EMPIRES_EXTENT_EERIE_HAMLET_GATE, 2
-	warp_event 5, 13, EERIE_HAMLET_STOCKROOM, 1
-	warp_event 15, 13, EERIE_HAMLET_DORMS, 1
+	warp_event 9, 3, EMPIRES_EXTENT_EERIE_HAMLET_GATE, 3
+	warp_event 15, 13, EERIE_HAMLET_STOCKROOM, 1
+	warp_event 5, 13, EERIE_HAMLET_DORMS, 1
+
 
 
 	def_coord_events
-	coord_event  9, 5, 0, EerieHamletTradeQuestScene
+	coord_event  9, 4, 0, EerieHamletTradeQuestScene
 
 	def_bg_events
 	bg_event  4,  6, BGEVENT_JUMPTEXT, HamletText
 	bg_event 14,  8, BGEVENT_JUMPTEXT, RedoubtSignText
-	bg_event  3, 13, BGEVENT_JUMPTEXT, HamletStockroomText
+	bg_event  3, 13, BGEVENT_JUMPTEXT, HamletDormsText
 	bg_event  6,  7, BGEVENT_ITEM + ENERGYPOWDER, EVENT_HAMLET_ENERGYPOWDER
 	bg_event  7,  7, BGEVENT_ITEM + IRON, EVENT_HAMLET_IRON
 
@@ -35,6 +36,7 @@ EerieHamlet_MapScriptHeader:
 
 EerieHamletTradeQuestScene:
 	showemote EMOTE_SLEEP, EERIE_HAMLET_ENGINEER, 30
+	setscene $1
 	end
 
 EerieHamletFlyPoint:
@@ -93,8 +95,8 @@ RedoubtSignText:
 	cont "allowed"
 	done
 
-HamletStockroomText:	
-	text "Hamlet Stockroom"
+HamletDormsText:	
+	text "Hamlet Dorms"
 	done
 
 EerieHamletRoadblockText1:
@@ -120,17 +122,18 @@ EerieHamletRoadblockText2:
 EerieHamletHoneyScript:
 	faceplayer
 	opentext	
+	checkevent EVENT_GOT_SWEET_HONEY
+	iftrue_jumpopenedtext GiveSweetHoneyText
 	writetext NeedAFossilText
 	waitbutton
-	checkitem OLD_AMBER
+	checkkeyitem OLD_AMBER_K
 	iffalse_jumpopenedtext Text_NoFossil
 	writetext Text_FossilQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext Text_NoFossil
-	takeitem OLD_AMBER
-	verbosegiveitem SWEET_HONEY
-	setscene $1
-	iffalse_endtext
+	takekeyitem OLD_AMBER_K
+	verbosegivekeyitem SWEET_HONEY_K
+	setevent EVENT_GOT_SWEET_HONEY
 	jumpopenedtext GiveSweetHoneyText 
 
 NeedAFossilText: 
@@ -147,10 +150,7 @@ NeedAFossilText:
 	line "artifact from the"
 	para "ground, that'd"
 	line "show that I was"
-	cont "working hard,"
-	
-	para "and get Adrinna"
-	line "off my back."
+	cont "working hard."
 	done
 
 Text_FossilQuestion:

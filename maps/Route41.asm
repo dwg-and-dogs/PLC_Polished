@@ -64,7 +64,7 @@ Route41SageScript:
 	disappear ROUTE41_SAGE_2
 	setevent EVENT_ROUTE_41_SAGE_1
 	setevent EVENT_ROUTE_41_SAGE_2
-	; teleports away
+	blackoutmod SHELTERED_SHORES
 	end
 
 Route41SageImpressedText:
@@ -171,6 +171,10 @@ GenericTrainerSwimmermBerke:
 GenericTrainerSwimmermKirk:
 	generictrainer SWIMMERM, KIRK, EVENT_BEAT_SWIMMERM_KIRK, .SeenText8, .BeatenText8
 
+	text "Cianwood is but a"
+	line "sandbar, now."
+	done
+	
 .BeatenText8:
 	text "Lots of stuff is"
 	line "still washing up"
@@ -188,6 +192,11 @@ GenericTrainerSwimmermKirk:
 
 GenericTrainerGentlemanCamus:
 	generictrainer GENTLEMAN, CAMUS, EVENT_BEAT_GENTLEMAN_CAMUS, .SeenText7, .BeatenText7
+
+	text "I hear there's a"
+	line "rare mineral in"
+	cont "Cianwood Cove."
+	done
 
 .BeatenText7:
 	text "I'm hoping to get"
@@ -208,14 +217,20 @@ Route41MatronScript:
 	opentext
 	writetext Route41WantToHeal
 	waitbutton
+	closetext
+	
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	
+	opentext
 	writetext Route41Healed
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end
 
 Route41WantToHeal:
@@ -231,6 +246,13 @@ Route41Healed:
 
 GenericTrainerBeautyOlivia:
 	generictrainer BEAUTY, OLIVIA, EVENT_BEAT_BEAUTY_OLIVIA, .SeenText6, .BeatenText6
+
+	text "I wish I had the"
+	line "courage to swim"
+	para "over to those"
+	line "workers south of"
+	cont "our beach!"
+	done
 
 .BeatenText6:
 	text "Oh, I lost. I'll"
@@ -248,6 +270,15 @@ GenericTrainerBeautyOlivia:
 GenericTrainerBeautyCharlotte:
 	generictrainer BEAUTY, CHARLOTTE, EVENT_BEAT_BEAUTY_CHARLOTTE, .SeenText5, .BeatenText5
 
+	text "Olivia doesn't"
+	line "know that those"
+	para "scientists are"
+	line "more nervous at"
+	para "the sight of her"
+	line "than she is of"
+	cont "them!"
+	done
+
 .BeatenText5:
 	text "Here's a little"
 	line "gossip: Olivia"
@@ -263,6 +294,10 @@ GenericTrainerBeautyCharlotte:
 GenericTrainerBeautyBridget:
 	generictrainer BEAUTY, BRIDGET, EVENT_BEAT_BEAUTY_BRIDGET, .SeenText4, .BeatenText4
 
+	text "Fine, stay, but"
+	line "don't linger."
+	done
+
 .BeatenText4:
 	text "We're just trying"
 	line "to get a tan."
@@ -275,6 +310,10 @@ GenericTrainerBeautyBridget:
 
 GenericTrainerScientistBraydon:
 	generictrainer SCIENTIST, BRAYDON, EVENT_BEAT_SCIENTIST_BRAYDON, .SeenText3, .BeatenText3
+
+	text "Why didn't you let"
+	line "me win to impress"
+	cont "those girls?"
 
 .BeatenText3:
 	text "I should stick"
@@ -290,6 +329,11 @@ GenericTrainerScientistBraydon:
 GenericTrainerScientistCarl:
 	generictrainer SCIENTIST, CARL, EVENT_BEAT_SCIENTIST_CARL, .SeenText2, .BeatenText2
 
+	text "Chuck's OMLAS"
+	line "needs terabytes"
+	cont "of weathere data."
+	done
+
 .BeatenText2:
 	text "This equipment"
 	line "costs more than"
@@ -304,6 +348,12 @@ GenericTrainerScientistCarl:
 
 GenericTrainerScientistDexter:
 	generictrainer SCIENTIST, DEXTER, EVENT_BEAT_SCIENTIST_DEXTER, .SeenText1, .BeatenText1
+
+	text "My battle skills"
+	line "are on a gradient"
+	cont "descent since I"
+	cont "started working."
+	done
 
 .BeatenText1:
 	text "We're collecting"

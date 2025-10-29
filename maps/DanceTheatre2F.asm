@@ -56,13 +56,14 @@ DanceTheatre2F_TryAgainLaterText:
 GenericTrainerKimono_girlNaoko: ; leafeon 
 	generictrainer KIMONO_GIRL_3, NAOKO, EVENT_BEAT_KIMONO_GIRL_NAOKO, Kimono_girl_1NaokoSeenText, Kimono_girl_1NaokoBeatenText
 
-	text "The hero of old"
-	line "hailed from"
-	cont "the South."
-	para "They united"
-	line "the town to"
-	cont "address a threat."
+	text "The hero hailed"
+	line "from the South."
+
+	para "They united the"
+	line "town to address"
+	cont "a threat."
 	done
+
 	
 Kimono_girl_1NaokoSeenText:
 	text "Our story starts"
@@ -71,26 +72,30 @@ Kimono_girl_1NaokoSeenText:
 	done
 
 Kimono_girl_1NaokoBeatenText:
-	text "The hero of old"
-	line "hailed from"
-	cont "the South."
-	para "They united"
-	line "the town to"
-	cont "address a threat."
+	text "The hero hailed"
+	line "from the South."
+
+	para "They united the"
+	line "town to address"
+	cont "a threat."
 	done
 
 
 GenericTrainerKimono_girlSayo:
 	generictrainer KIMONO_GIRL_1, SAYO, EVENT_BEAT_KIMONO_GIRL_SAYO, Kimono_girl_1SayoSeenText, Kimono_girl_1SayoBeatenText
 
-	text "When Gauld-"
-	cont "enrod was divided"
-	cont "by the power-"
-	cont "hungry Consul,"
-
-	para "the hero showed"
-	line "them their"
-	cont "similar needs."
+	text "When Gauldenrod"
+	line "was divied by the"
+	cont "Consul,"
+	
+	para "the hero brought"
+	line "them together."
+	
+	para "Though they'd"
+	line "lost their ritual"
+	para "they gained a new"
+	line "appreciation for"
+	cont "each other."
 	done
 
 Kimono_girl_1SayoSeenText:
@@ -98,14 +103,12 @@ Kimono_girl_1SayoSeenText:
 	done
 
 Kimono_girl_1SayoBeatenText:
-	text "When Gauld-"
-	cont "enrod was divided"
-	cont "by the power-"
-	cont "hungry Consul,"
-
-	para "the hero showed"
-	line "them their"
-	cont "similar needs."
+	text "When Gauldenrod"
+	line "was divied by the"
+	cont "Consul,"
+	
+	para "the hero brought"
+	line "them together."
 	done
 
 
@@ -148,9 +151,18 @@ GenericTrainerKimono_girlIzumi:
 	text "A harsh storm"
 	line "destroyed the"
 	cont "Consul's port."
+	
+	para "Legend says that"
+	line "the storm was"
+	para "like an Aeroblast"
+	line "on the sea."
+	
 	para "Now, the Consul"
 	line "had to focus on"
-	cont "the East."
+	para "the East as his"
+	line "only source of"
+	para "metals to build"
+	line "his towers."
 	done
 
 
@@ -172,11 +184,11 @@ Kimono_girl_1IzumiBeatenText:
 GenericTrainerKimono_girlKuni:
 	generictrainer KIMONO_GIRL_4, KUNI, EVENT_BEAT_KIMONO_GIRL_KUNI, Kimono_girl_1KuniSeenText, Kimono_girl_1KuniBeatenText
 
-	text "The hero made"
-	line "a coalition"
-	para "in the Northeast"
-	line "against the"
-	cont "Consul."
+	text "The hero made a"
+	line "a coalition in"
+	para "the Northeast to"
+	line "fight the consul."
+
 	done
 
 Kimono_girl_1KuniSeenText:
@@ -185,31 +197,23 @@ Kimono_girl_1KuniSeenText:
 	done
 
 Kimono_girl_1KuniBeatenText:
-	text "The hero made"
-	line "a coalition"
-	para "in the Northeast"
-	line "against the"
-	cont "Consul."
+	text "The hero made a"
+	line "a coalition in"
+	para "the Northeast to"
+	line "fight the consul."
 	done
 
 	
 GenericTrainerKimono_gir1Miki:
 	generictrainer KIMONO_GIRL_5, MIKI, EVENT_BEAT_KIMONO_GIRL_MIKI, Kimono_girl_1MikiSeenText, Kimono_girl_1MikiBeatenText
-	text "Back then, Mount"
-	line "Mortar's volcan-"
-	cont "ic activity was"
 
-	para "a lightningrod"
-	line "for the Consul's"
-	cont "delusions of"
-	cont "grandeur."
-
-	para "So the Consul's"
-	line "reach was cut"
-	cont "off from the"
-
-	para "south, the west,"
-	line "and the east."
+	text "The eastern mine"
+	line "was pillaged."
+	para "The Consul, cut"
+	line "off from all"
+	para "sides, had to "
+	line "make a daring"
+	cont "display."
 	done
 
 Kimono_girl_1MikiSeenText:
@@ -247,26 +251,24 @@ GenericTrainerKimono_girlAkari:
 	done
 
 Kimono_girl_1AkariSeenText:
-	text "Impressive to"
-	line "have made it"
-	cont "this far. Do"
-	cont "you know the"
-	cont "ending of the"
-	cont "story?"
+	text "Do you know the"
+	line "story's end?"
 	done
 
 Kimono_girl_1AkariBeatenText:
-	text "Flames filled"
-	line "the tower,"
-	para "undoing the"
-	line "Consul's work."
+
+	text "The tower was hit"
+	line "by lightning!"
+	
+	para "Flame consumed it"
+	line "and consumed the"
+	cont "Consul's plan."
+	
 	para "The legendary"
-	line "#mon refuse"
+	line "#mon refused"
 	cont "to put it out."
-	para "Your #mon are"
-	line "so strong, you"
-	cont "should visit"
-	para "the bell tower"
-	line "to find out"
-	cont "why…"
+
+	para "You should visit"
+	line "the bell tower"
+	cont "to find out why."
 	done

@@ -19,7 +19,7 @@ KurtPalette:             INCLUDE "gfx/trainers/kurt.pal" ; match falkner, done
 MejimiPalette:           INCLUDE "gfx/trainers/mejimi.pal" ; pruple and red
 BrunoPalette:            INCLUDE "gfx/trainers/bruno.pal"
 SandraPalette:           INCLUDE "gfx/trainers/sandra.pal" ; from karen; should be pink or red, check whitney palette
-ChampionPalette:         INCLUDE "gfx/trainers/champion.pal"
+KurtFinalPalette:        INCLUDE "gfx/trainers/kurtfinal.pal" ; from champion 
 BrockPalette:            INCLUDE "gfx/trainers/brock.pal"
 SamsaraPalette:          INCLUDE "gfx/trainers/samsara.pal" ;dark blue
 LtSurgePalette:          INCLUDE "gfx/trainers/lt_surge.pal"
@@ -108,6 +108,8 @@ SightseersPalette:       INCLUDE "gfx/trainers/sightseers.pal"
 CooltrainermPalette:     INCLUDE "gfx/trainers/cooltrainer_m.pal"
 CooltrainerfPalette:     INCLUDE "gfx/trainers/cooltrainer_f.pal"
 AceDuoPalette:           INCLUDE "gfx/trainers/ace_duo.pal"
+NomadMPalette:             INCLUDE "gfx/trainers/nomad_m.pal"
+NomadFPalette:          INCLUDE "gfx/trainers/nomad_f.pal"
 VeteranmPalette:         INCLUDE "gfx/trainers/veteran_m.pal"
 VeteranfPalette:         INCLUDE "gfx/trainers/veteran_f.pal"
 ProtonPalette:           INCLUDE "gfx/trainers/proton.pal"
@@ -129,12 +131,10 @@ CynthiaPalette:          INCLUDE "gfx/trainers/cynthia.pal"
 AmosPalette:             INCLUDE "gfx/trainers/amos.pal" ; plum?
 CherylPalette:           INCLUDE "gfx/trainers/cheryl.pal"
 RileyPalette:            INCLUDE "gfx/trainers/riley.pal"
-NomadMPalette:             INCLUDE "gfx/trainers/nomad_m.pal"
 MarleyPalette:           INCLUDE "gfx/trainers/marley.pal"
 MiraPalette:             INCLUDE "gfx/trainers/mira.pal"
 LannaPalette:            INCLUDE "gfx/trainers/lanna.pal" ; yellow light
 DarachPalette:           INCLUDE "gfx/trainers/darach.pal"
-NomadFPalette:          INCLUDE "gfx/trainers/nomad_f.pal"
 BobeshPalette:           INCLUDE "gfx/trainers/bobesh.pal" ; red
 AdrinnaPalette:          INCLUDE "gfx/trainers/adrinna.pal" ; yellow, dark
 BarbeauPalette:          INCLUDE "gfx/trainers/barbeau.pal" ; blue

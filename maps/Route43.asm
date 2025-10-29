@@ -25,7 +25,7 @@ Route43_MapScriptHeader:
 	object_event 10, 9,  SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSightseerFRosie, -1
 	object_event  9, 12,  SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSightseerMJaska, -1
 	object_event 5, 22,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacBrent, -1
-	object_event 7, 40,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPokemaniacAndrew, -1
+	object_event 7, 40,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPokemaniacAndrew, -1
 	object_event 14, 38,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacLarry, -1	
 	object_event  9,  47, SPRITE_OFFICER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerOfficerFJamie, -1
 	fruittree_event  1, 26, FRUITTREE_ROUTE_43, LUM_BERRY, PAL_NPC_RED
@@ -58,6 +58,10 @@ GenericTrainerSightseerFRosie:
 GenericTrainerSightseerMJaska:
 	generictrainer SIGHTSEERM, JASKA, EVENT_BEAT_SIGHTSEERM_JASKA, .SeenText5, .BeatenText5
 
+	text "Have you ever"
+	line "hiked Mt. Silver?"
+	done
+
 .BeatenText5:
 	text "Johto has such"
 	line "strong trainers."
@@ -71,6 +75,11 @@ GenericTrainerSightseerMJaska:
 
 GenericTrainerPokemaniacBrent:
 	generictrainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, .SeenText4, .BeatenText4
+
+	text "I heard there's"
+	line "a secret cabin"
+	cont "here somewhere."
+	done
 
 .BeatenText4:
 	text "I wonder what it"
@@ -92,6 +101,10 @@ GenericTrainerPokemaniacBrent:
 GenericTrainerPokemaniacAndrew:
 	generictrainer POKEMANIAC, ANDREW, EVENT_BEAT_POKEMANIAC_ANDREW, .SeenText3, .BeatenText3
 
+	text "#mon deserve"
+	line "their peace!"
+	done
+
 .BeatenText3:
 	text "Well, are you"
 	line "with me?"
@@ -107,6 +120,11 @@ GenericTrainerPokemaniacAndrew:
 GenericTrainerPokemaniacLarry:
 	generictrainer POKEMANIAC, LARRY, EVENT_BEAT_POKEMANIAC_LARRY, .SeenText2, .BeatenText2
 
+	text "I heard that some"
+	line "#mon have"
+	cont "unique colors."
+	done
+
 .BeatenText2:
 	text "You have such"
 	line "magnificent"
@@ -121,6 +139,14 @@ GenericTrainerPokemaniacLarry:
 
 GenericTrainerOfficerFJamie:
 	generictrainer OFFICERF, JAMIE, EVENT_BEAT_OFFICERF_JAMIE, .SeenText1, .BeatenText1
+
+	text "That #mon is"
+	line "bigger than any"
+	para "Ursaring I've"
+	line "ever seen."
+	
+	para "Watch out."
+	done
 
 .BeatenText1:
 	text "Carry on."
@@ -138,10 +164,10 @@ GenericTrainerOfficerFJamie:
 
 Route43UrsalunaScene:
 	pause 30
-	showemote EMOTE_SHOCK, PLAYER, 10
 	applymovement ROUTE_43_HURSALUNA, Route43HursalunaMove1
 	cry URSARING
 	earthquake 30
+	showemote EMOTE_SHOCK, PLAYER, 30
 	applyonemovement PLAYER, step_down
 	applyonemovement PLAYER, step_down
 	pause 30
@@ -152,7 +178,7 @@ Route43UrsalunaScene:
 
 Route43HursalunaMove1:
 	fix_facing
-	fast_jump_step_down
+	slide_step_down
 	step_end
 
 
@@ -161,6 +187,6 @@ Route43Sign2Text:
 	done
 
 Route43TrainerTipsText:
-	text "Si_ph Spr__gs"
-	line "Check___ ga__"
+	text "Silph Springgs"
+	line "Check-in gate"
 	done

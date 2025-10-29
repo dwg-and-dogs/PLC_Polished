@@ -12,10 +12,10 @@ TrainerClassNames::
 	li "Leader"           ; PRYCE
 	li "Leader"           ; CLAIR
 	li "Grandpa"		  ; KURT 
-	li "Consul"		  	; Urgaust
+	li "Consul"		  	  ; Urgaust
 	li "Elite Four"       ; BRUNO
 	li "Elder"            ; Sandra
-	li "Champion"         ; CHAMPION
+	li "Johto"            ; CHAMPION-kurt final 
 	li "Leader"           ; BROCK
 	li "Chronicler"       ; Vespera
 	li "Leader"           ; LT_SURGE
@@ -104,6 +104,8 @@ TrainerClassNames::
 	li "Ace Trainer"      ; COOLTRAINERM
 	li "Ace Trainer"      ; COOLTRAINERF
 	li "Ace Duo"          ; ACE_DUO
+	li "Nomad" 			  ; moved
+	li "Nomad"            ; moved 
 	li "Veteran"          ; VETERANM
 	li "Veteran"          ; VETERANF
 	li "Executive"        ; PROTON
@@ -125,23 +127,21 @@ TrainerClassNames::
 	li "Johto"            ; Amos / INVER
 	li "<PK><MN> Trainer" ; CHERYL / unused 
 	li "<PK><MN> Trainer" ; RILEY / unused 
-	li "Nomad" 			  ; formerly BUCK
 	li "<PK><MN> Trainer" ; MARLEY / unused 
 	li "<PK><MN> Trainer" ; MIRA / unused 
-	li "Anarres"          ; Lanna / ANABEL
+	li "Anarres"          ; Lanna / ANABEL unused 
 	li "Valet"            ; DARACH UNUSED 
-	li "Nomad"            ; formerly CAITLIN 
 	li "General"          ; bobesh / CANDELA
 	li "General"          ; adrinna / BLANCHE
 	li "Elder"            ; barbeau / SPARK_T
 	li "Trainer"          ; FLANNERY UNUSED 
-	li "Sinnoh"           ; MAYLENE UNUSED
+	li "Hisui"           ; Kanna UNUSED
 	li "Pilot"            ; SKYLA UNUSED
 	li "Designer"         ; VALERIE UNUSED 
 	li "<PK><MN> Trainer" ; KUKUI UNUSED 
 	li "Scavenger"        ; VICTOR 
 	li "#Maniac"          ; BILL_T UNUSED 
-	li "Anarres"          ; TAMMY (YELLOW), yup this is right
+	li "Anarres"          ; Tammy
 	li "<PK><MN> Trainer" ; SILVER FROM WALKER rival
 	li "Student"          ; IMAKUNI, UNUSED 
 	li "General"          ; Kensey  / LAWRENCE

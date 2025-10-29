@@ -48,6 +48,7 @@ FramesPointers:
 	dw PersianFrames
 	dw MankeyFrames
 	dw PrimeapeFrames
+	dw AnnihilapeFrames
 	dw GrowlitheFrames
 	dw ArcanineFrames
 	dw HarcanineFrames
@@ -115,6 +116,7 @@ FramesPointers:
 	dw MagmarFrames
 	dw MagmortarFrames
 	dw PinsirFrames
+	dw MinsirFrames
 	dw TaurosFrames
 	dw MagikarpFrames
 	dw GyaradosFrames

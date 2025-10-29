@@ -363,7 +363,7 @@ EitherHaircutBrotherScript_MuchHappier:
 BasementDoorScript::
 	checkevent EVENT_USED_BASEMENT_KEY
 	iftrue_jumptext GoldenrodUndergroundTheDoorIsOpenText
-	checkkeyitem BASEMENT_KEY
+	checkevent EVENT_GOT_BASEMENT_KEY
 	iffalse_jumptext GoldenrodUndergroundTheDoorsLockedText
 	opentext
 	playsound SFX_TRANSACTION
@@ -445,8 +445,7 @@ GoldenrodUndergroundTheDoorIsOpenText:
 	done
 
 GoldenrodUndergroundBasementKeyOpenedDoorText:
-	text "The Basement Key"
-	line "opened the door."
+	text "The door is open!"
 	done
 
 GoldenrodUndergroundOlderHaircutBrotherOfferHaircutText:

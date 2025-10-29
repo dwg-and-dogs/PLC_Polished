@@ -1,4 +1,4 @@
-RebelsRedoubt1F_MapScriptHeader: ; need a callback a la ruins of alph 
+RebelsRedoubt1F_MapScriptHeader: 
 	def_scene_scripts
 
 
@@ -39,23 +39,34 @@ RebelRedoubt1FCallback:
 	
 RedoubtKnockOffTutorScript:
 	faceplayer
+	opentext
 	checkevent EVENT_BEAT_AMOS
 	iffalse_jumptext SecretNinjaTechniqueText
 	checkevent EVENT_LISTENED_TO_KNOCK_OFF_INTRO
-	opentext
-	iftrue RedoubtTutorKnockOffScript
+	iftrue .RedoubtTutorKnockOffScript
 	writetext Text_KnockOffIntro
 	waitbutton
 	closetext
-	applymovement REDOUBT_1B_NINJA, KnockOffMovement
+	turnobject REDOUBT_1B_NINJA, UP
+	pause 10
+	turnobject REDOUBT_1B_NINJA, LEFT
+	pause 10
+	turnobject REDOUBT_1B_NINJA, DOWN
+	pause 10
+	turnobject REDOUBT_1B_NINJA, RIGHT
+	pause 10
 	applymovement REDOUBT_1F_POKEBALL, KnockOffMovement2
-	playsound SFX_SHARPEN ; crash! 
-	pause 60
+	pause 10
+	playsound SFX_BONE_CLUB ; crash! 
+	disappear REDOUBT_1F_POKEBALL
+	pause 10
+	showemote EMOTE_SHOCK, REDOUBT_1B_NINJA, 30
 	faceplayer
 	opentext
 	writetext Text_KnockOffIntro2
+	waitbutton
 	setevent EVENT_LISTENED_TO_KNOCK_OFF_INTRO
-RedoubtTutorKnockOffScript:
+.RedoubtTutorKnockOffScript:
 	writetext Text_RedoubtTutorKnockOff ;;
 	waitbutton
 	checkitem SILVER_LEAF
@@ -78,7 +89,7 @@ RedoubtTutorKnockOffScript:
 	jumpopenedtext Text_RedoubtTutorTaught ;;
 	
 Text_KnockOffIntro: 
-	text "Oh! YOu are here"
+	text "Oh! You are here"
 	line "to witness my"
 	cont "ninja technique!"
 	
@@ -86,8 +97,8 @@ Text_KnockOffIntro:
 	line "technique starts"
 	cont "with a spin, and"
 
-	para "ends with a str-"
-	line "ike at the ...."
+	para "ends with a big"
+	line "strike!"
 	done
 
 Text_KnockOffIntro2:
@@ -97,7 +108,7 @@ Text_KnockOffIntro2:
 	done	
 
 Text_RedoubtTutorKnockOff:
-	text "But I could teach"
+	text "I could teach"
 	line "your #mon to"
 	cont "Knock Off,"
 	
@@ -112,8 +123,7 @@ Text_RedoubtTutorNoSilverLeaf:
 
 Text_RedoubtTutorQuestion:
 	text "Shall I tutor you"
-	line "my elegant, mast-"
-	cont "erful Knock Off?"
+	line "Knock Off?"
 	done
 
 Text_RedoubtTutorRefused:
@@ -133,18 +143,20 @@ SecretNinjaTechniqueText:
 	text "I've got a secret"
 	line "ninja technique."
 	
-	para "But it's only"
-	line "available with"
-	cont "Amos' blessing."
+	para "As if I'd teach"
+	line "it to you!"
 	done
 
 KnockOffMovement:
+	turn_head_down
 	turn_head_left
+	turn_head_up
+	turn_head_right
 	step_end
 
 KnockOffMovement2:
 	fix_facing
-	step_up
+	slide_step_up
 	step_end
 
 RR_1F_BallText:
@@ -190,7 +202,7 @@ Redoubt1FScript:
 	reloadmappart
 	; sfx for changing the map part
 	showtext RR_1F_KurtText2
-	applyonemovement REDOUBT_1F_KURT, step_down
+	applyonemovement REDOUBT_1F_KURT, step_up
 	disappear REDOUBT_1F_KURT
 	setevent EVENT_REDOUBT_KURT
 	end
@@ -214,9 +226,17 @@ RR_1F_KurtText1:
 	done
 
 RR_1F_NinjaText2:
-	text "Hmm. others will"
-	line "battle you to get"
-	cont "a better look."
+	text "Hmm. They are the"
+	line "badges from the"
+	para "Holt, Gauldenrod,"
+	line "and the Landing."
+	
+	para "I suppose you can"
+	line "at least plead a"
+	cont "case to Amos."
+	
+	para "I'll open the"
+	line "trapdoor."
 	done
 
 

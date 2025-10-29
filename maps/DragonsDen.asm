@@ -14,14 +14,14 @@ DragonsDen_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  10, 14, BGEVENT_JUMPTEXT, DragonsDenSignText 
+;	bg_event  10, 14, BGEVENT_JUMPTEXT, DragonsDenSignText 
 
 
 	def_object_events
 	object_event  10, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerDragonTamerDarin, -1
 	object_event  13, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerDragonTamerPaul, -1
 ;warper 
-	object_event  9, 15, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenElder, -1	 
+	object_event  9, 14, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenElder, -1	 
 
 	object_event  11,  11, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ClairScript, -1
 	pokemon_event 12,  11, DRAGONAIR, -1, -1, PAL_NPC_BLUE, DragonairText, -1
@@ -31,6 +31,16 @@ DragonsDen_MapScriptHeader:
 
 GenericTrainerDragonTamerDarin:
 	generictrainer DRAGON_TAMER, DARIN, EVENT_BEAT_DRAGON_TAMER_DARIN, .SeenText, .BeatenText
+
+	text "We train here to"
+	line "earn the consent"
+	para "to govern Eastern"
+	line "Johto and Western"
+	cont "Kanto."
+
+	para "The mountains will"
+	line "rise again!"
+	done
 
 .BeatenText:
 	text "Impressive!"
@@ -44,6 +54,16 @@ GenericTrainerDragonTamerDarin:
 
 GenericTrainerDragonTamerPaul:
 	generictrainer DRAGON_TAMER, PAUL, EVENT_BEAT_DRAGON_TAMER_PAUL, .Seen2Text, .Beaten2Text
+
+	text "Dragons shouldn't"
+	line "have their wings"
+	cont "clipped."
+	
+	para "In these times,"
+	line "we need to ride"
+	cont "the strongest"
+	cont "gales!"
+	done
 
 .Beaten2Text:
 	text "I should train"
@@ -103,13 +123,13 @@ ClairScript:
 	checkevent EVENT_BEAT_CLAIR
 	iftrue_jumptextfaceplayer .AfterClairText
 	showtext .ClairText1
-	promptbutton
+	faceplayer
 	showtextfaceplayer .SeenText
 	winlosstext .BeatenText, 0
 	loadtrainer CLAIR, 1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_BUGSY
+	setevent EVENT_BEAT_CLAIR
 	opentext
 	writethistext
 		text "<PLAYER> received"
@@ -164,7 +184,7 @@ ClairScript:
 	para "ranks to become"
 	line "an Elite Four,"
 	
-	para "I falter. Is my "
+	para "I fall. Is my "
 	line "drive too much?"
 
 	para "You've earned the"
@@ -188,8 +208,4 @@ ClairScript:
 	para "even if they are"
 	line "not strong in the"
 	cont "ways I expect."
-
-	para "There's more than"
-	line "one way to reach"
-	cont "the summit."
 	done

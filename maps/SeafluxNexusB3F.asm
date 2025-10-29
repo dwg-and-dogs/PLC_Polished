@@ -32,8 +32,9 @@ Lugia:
 	startbattle
 	disappear NEXUSB3F_LUGIA
 	reloadmapafterbattle
+	setevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
 	end
 
 LugiaText:
-	text "Gyaaas!"
+	text "Gyaaa!"
 	done

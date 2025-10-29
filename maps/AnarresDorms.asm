@@ -6,26 +6,44 @@ AnarresDorms_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event  4,  5, ANARRES_TOWN, 6
-	warp_event  5,  5, ANARRES_TOWN, 6
+	warp_event  4,  7, ANARRES_TOWN, 6
+	warp_event  5,  7, ANARRES_TOWN, 6
 
 	def_coord_events
 
 
 	def_bg_events
-	bg_event  0,  2, BGEVENT_READ, AnarresDormsBed 
-	bg_event  0,  3, BGEVENT_READ, AnarresDormsBed 
-	bg_event  0,  4, BGEVENT_READ, AnarresDormsBed 
-	bg_event  0,  5, BGEVENT_READ, AnarresDormsBed 
+	bg_event  10,  2, BGEVENT_READ, AnarresDormsBed 
+	bg_event  10,  3, BGEVENT_READ, AnarresDormsBed 
+	bg_event  12,  2, BGEVENT_READ, AnarresDormsBed 
+	bg_event  12,  3, BGEVENT_READ, AnarresDormsBed 
 
 	def_object_events
-	object_event 2, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, EVENT_BEAT_SANDRA
-	object_event 5, 3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC2Text, -1 ;
-	object_event 3, 3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC3Text, -1 ;
-	
-	object_const_def
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresDormsKurtScript, EVENT_BEAT_HOLLIS
+	object_event 2, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC2Text, -1 ;
+	object_event 6, 3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresDormsNPC3Text, -1 ;
+	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptAnarresDorms, -1
 	
 
+NatuScriptAnarresDorms:
+	opentext
+	blackoutmod ANARRES_TOWN
+	writetext Anarres_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+Anarres_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+	
+	para "It also sets the"
+	line "waypoint here."
+	done	
+	
 	
 AnarresDormsNPC2Text:
 	text "The Pineco are"
@@ -41,7 +59,7 @@ AnarresDormsNPC2Text:
 	para "eat the whole"
 	line "forest, then"
 	para "they won't have"
-	line "anything to eat."
+	line "anything to eat!"
 	done
 	
 AnarresDormsNPC3Text:
@@ -51,19 +69,26 @@ AnarresDormsNPC3Text:
 
 	para "They keep a"
 	line "#mon as long"
-	para "as you continue"
-	line "to interact."
+	cont "as you interact."
+
+	para "If you stop, the"
+	line "#mon will get"
+	cont "bored and leave."
+	
+	para "But that'd take"
+	line "years, I bet."
 	done
 
 AnarresDormsBed:
 	showtext BedText1
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-	special HealParty
+
 	playmusic MUSIC_HEAL
+	special HealParty
 	pause 60
-	special RestartMapMusic
 	special Special_FadeInQuickly
+	special RestartMapMusic
+	blackoutmod ANARRES_TOWN
+
 	showtext BedText2
 	end
 
@@ -75,13 +100,15 @@ BedText1:
 BedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+	
+	para "Waypoint set to"
+	line "Anarres Town."
 	done
 
 AnarresDormsKurtScript:
+	blackoutmod ANARRES_TOWN
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_HOLLIS
-	iftrue .AnarresKurtPC2
 	writetext KurtAnarresDormsText
 	yesorno
 	iffalse .AnarresKurtPC
@@ -93,14 +120,11 @@ AnarresDormsKurtScript:
 	opentext
 	jumpopenedtext AnarresKurtBattleText2
 
-.AnarresKurtPC2
-	writetext AnarresDormsKurtAfterHollisText
-	waitbutton
+
 .AnarresKurtPC
 	writetext KurAnarresDormsText2
-	promptbutton
-	special PokemonCenterPC
-	endtext
+	waitbutton
+	closetext
 	end
 
 AnarresDormsKurtAfterHollisText:
@@ -120,12 +144,13 @@ KurtAnarresDormsText:
 	
 	para "We need to see"
 	line "the Elder about"
-	cont "the Cut HM, but"
-	cont "he's holed up!"
+	para "the Cut HM, but"
+	line "he's holed up!"
 	
-	para "I can run back to"
-	line "our time for a PC"
-	cont "if you need."
+	para "Natu can teleport"
+	line "to the present if"
+	para "you need to man-"
+	line "age your party."
 	
 	para "Oh! I found some"
 	line "neat #mon in"
@@ -136,9 +161,9 @@ KurtAnarresDormsText:
 	done
 	
 KurAnarresDormsText2:
-	text "I can run back"
-	line "to manage your"
-	cont "party."
+	text "We must convince"
+	line "Elder Hollis to"
+	cont "let us North!"
 	done
 
 AnarresKurtBattleText:

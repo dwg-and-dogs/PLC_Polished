@@ -4,16 +4,17 @@ LakeOfRage_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, LakeOfRageFlyPoint
+	callback MAPCALLBACK_TILES, LakeOfRageTreeCut
 
 
 	def_warp_events
-	warp_event  7,  3, LAKE_OF_RAGE_HIDDEN_POWER_HOUSE, 1 ; pryce's cabin 
+	warp_event  7,  3, LAKE_OF_RAGE_HIDDEN_POWER_HOUSE, 1 ; pryce's cabin
 	warp_event 27, 31, LAKE_OF_RAGE_MAGIKARP_HOUSE, 1
 	warp_event  6, 14, HIDDEN_TREE_GROTTO, 1
 
 	def_coord_events
 	coord_event 16, 18, 0, LakeHursalunaScript
-	coord_event 17, 4, 1, LakeRivalScript
+	coord_event 18, 4, 1, LakeRivalScript
 
 	def_bg_events
 	bg_event 21, 27, BGEVENT_JUMPTEXT, LakeOfRageSignText
@@ -25,27 +26,27 @@ LakeOfRage_MapScriptHeader:
 	bg_event  7, 13, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_LAKE_OF_RAGE
 
 	def_object_events
-	object_event 17, 3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
-	object_event 12, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_KURT ; INITIALIZE 
-	object_event 23, 3, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL ; INITIALIZE 
+	object_event 17, 4, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
+	object_event 13, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT
+	object_event 24, 5, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL
 ;HURSALUNA
-	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA 
+	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA
 ;trainers
-	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
-	pokemon_event 3,  4, MEOWTH, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
-	object_event  5, 23, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMBlaise, -1
-	object_event  3, 14, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMGareth, -1
-	object_event  23, 29, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFKamila, -1
-	object_event  28, 26, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFNoelle, -1
-	object_event  18, 30,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacCalvin, -1
-	object_event  33, 22,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacShane, -1
-	object_event 2, 30, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LakeOfRageKimonoGirlScript, EVENT_SET_DVS_6
+	object_event  	4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
+	pokemon_event 	3,  4, GIRAFARIG, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
+	object_event  	5, 22, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMBlaise, -1
+	object_event  	3, 14, SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerMGareth, -1
+	object_event  	23, 29, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFKamila, -1
+	object_event 	28, 26, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSightseerFNoelle, -1
+	object_event  	18, 30,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacCalvin, -1
+	object_event 	33, 22,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPokemaniacShane, -1
+	object_event 	2, 30, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, LakeOfRageKimonoGirlScript, EVENT_SET_DVS_6
+	object_event 	7, 27, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, LakeOfRageScientistText, -1
 ;itemballs
 	itemball_event  7,  10, ELIXIR, 1, EVENT_LAKE_OF_RAGE_ELIXIR
 	itemball_event 38,  14, ULTRA_BALL, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
-	tmhmball_event 31, 3, TM_WILD_CHARGE, EVENT_GOT_TM_WILD_CHARGE 
+	tmhmball_event 31, 3, TM_WILD_CHARGE, EVENT_GOT_TM_WILD_CHARGE
 	fruittree_event 32, 10, FRUITTREE_LAKE_OF_RAGE, TOUGH_LEAVES, PAL_NPC_GREEN
-
 
 	object_const_def
 	const LAKEOFRAGE_PRYCE
@@ -57,16 +58,23 @@ LakeOfRageFlyPoint:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 	endcallback
 
+LakeOfRageTreeCut:
+	checkevent EVENT_EXTENT_TREE
+	iffalse .Done ; needs to block if we are not cut the tree 
+	changeblock 4, 30, $65
+.Done:
+	endcallback
 
 LakeHursalunaScript:
+	appear LAKEOFRAGE_HURSALUNA
 	turnobject PLAYER, UP
 	earthquake 30
+	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement
+	earthquake 20
 	cry URSARING
 	pause 20
 	showemote PLAYER, EMOTE_SHOCK, 20
 	pause 20
-	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement
-	earthquake 20
 	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement2
 	earthquake 20	
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
@@ -77,27 +85,22 @@ LakeHursalunaScript:
 	setevent EVENT_LAKE_HURSALUNA
 	setscene $1
 	end
-
+	
 LakeHursalunaApproachesMovement:
 	fix_facing
-	fast_jump_step_down
 	fast_jump_step_down
 	step_end
 
 LakeHursalunaApproachesMovement2:
 	fix_facing
 	fast_jump_step_down
-	fast_jump_step_down
 	step_end
 
 LakeOfRageSignText:
-	text "Sil__ _pring_"
+	text "Silph Springs"
 	
-	para "Form___y kn__n"
-	line "L___ __ _a_e"
-	
-	para "The paint on the"
-	line "sign is faded."
+	para "Formerly known as"
+	line "Lake of Rage"
 	done
 
 LakeOfRageSignPryceText:
@@ -105,20 +108,31 @@ LakeOfRageSignPryceText:
 	done
 
 LakeRivalScript:
+	blackoutmod LAKE_OF_RAGE
     showemote EMOTE_SHOCK, PLAYER, 15
+
     special Special_FadeOutMusic
     pause 15
 	turnobject PLAYER, RIGHT
+	turnobject LAKEOFRAGE_PRYCE, RIGHT
     appear LAKEOFRAGE_RIVAL
  	applymovement LAKEOFRAGE_RIVAL, LakeRivalToPlayer
 	showtext LakeRivalText1
 	appear LAKEOFRAGE_KURT
  	applymovement LAKEOFRAGE_KURT, LakeKurtToPlayer
-	showtext LakeKurtText1
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	opentext
+	writetext LakeKurtText1
+	waitbutton
 	turnobject LAKEOFRAGE_RIVAL, DOWN
-	showtext LakeRivalText2
-	showemote EMOTE_BOLT, LAKEOFRAGE_RIVAL, 10
+	writetext LakeRivalText2
+	waitbutton
+	writetext LakeRivalText2_2
+	waitbutton
+	writetext LakeRivalText2_3
+	waitbutton
 	turnobject LAKEOFRAGE_RIVAL, LEFT
+	showemote EMOTE_BOLT, LAKEOFRAGE_RIVAL, 30
     scall LakeRivalBattleScript 
     applymovement LAKEOFRAGE_RIVAL, LakeRivalWalksAway
     setscene $2
@@ -126,10 +140,37 @@ LakeRivalScript:
 	disappear LAKEOFRAGE_RIVAL
     waitsfx
     playmapmusic
-    end
+	turnobject PLAYER, LEFT
+	applyonemovement LAKEOFRAGE_KURT, step_right
+	applyonemovement LAKEOFRAGE_KURT, step_up
+	turnobject LAKEOFRAGE_KURT, LEFT
+	turnobject LAKEOFRAGE_PRYCE, RIGHT
+	showemote EMOTE_QUESTION, LAKEOFRAGE_KURT, 30
+	opentext
+	writetext LakeKurtAfterRivalText
+	waitbutton
+	writetext LakePryceAfterRivalText
+	waitbutton
+	writetext LakeKurtAfterRivalText_2
+	waitbutton
+	writetext LakeShrineQuestion
+	yesorno
+	iffalse_jumptext LakeNoText
+	waitbutton
+	writetext LakePryceAfterRivalText_2
+	waitbutton
+	closetext
+	special Special_CelebiShrineEvent
+	special FadeOutPalettes
+	special HealParty
+	waitsfx
+	blackoutmod TRANQUIL_TARN
+	warp TRANQUIL_TARN, 12, 4
+	end
 
 LakeRivalBattleScript:
     playmusic MUSIC_RIVAL_ENCOUNTER
+	setevent EVENT_LAKE_KURT
     setevent EVENT_LAKE_RIVAL
     checkevent EVENT_GOT_OSHAWOTT
     iftrue .Oshawott
@@ -199,20 +240,19 @@ LakeRivalText2:
 	line "Silph any more."
 	done
 
-LakeRivalText2_2: ; todo 
+LakeRivalText2_2: 
 	text_high
     text " Kurt: "
 	next
 	text_start
-	para "Aha! So, you see"
+	text "Aha! So, you see"
 	line "inventions upset"
-	cont "the balance! You"
+	cont "the balance!"
 	
-	para "ought to head"
-	line "home."
+	para "You ought to"
+	line "head home."
 	done
 
-; fallthru 
 LakeRivalText2_3:
 	text_high
     text " <RIVAL>: "
@@ -268,56 +308,74 @@ LakeRivalAfterText:
 	line "behind fake"
 	cont "altruism,"
 	
-	para "I can see my eff-"
-	line "ect. I walked aw-"
-	para "ay when it wasn't"
-	line "working."
+	para "I see my effect."
+	line "I walked away"
+	cont "when it wasn't"
+	cont "working."
 	
-	para "<PLAYER>, when"
+	para "<PLAYER>,"
 	line "will you?"
 	done
 
-LakeKurtAfterRivalText: ; todo 
+LakeKurtAfterRivalText:
 	text_high
     text " Kurt: "
 	next
 	text_start
 
 	text "Is what he said"
-	line "true? I thought"
-	para "tradition meant"
-	line "repeating the"
-	cont "past."
+	line "true? Isn't trad-"
+	cont "ition repeating"
+	cont "the past?"
 	done
 
-LakePryceAfterRivalText: ; todo 
+LakePryceAfterRivalText:
 	text_high
-    text " Pyrce: "
+    text " Pryce: "
 	next
 	text_start	
 	
 	text "Nature goes in"
-	line "cycles. Before"
-	para "the rampaging"
-	line "Gyarados, this"
+	line "cycles. This area"
+	cont "is rarely static."
 	
-	para "was a muddy Tarn."
-	line "It took decades"
-	para "to learn methods"
-	line "that could rest-"
-	cont "ore balance."
+	para "It was once a"
+	line "tarn: the extent"
+	cont "of a glacier."
+
+	para "Ahead of me, a"
+	line "chasm dug by a"
+	cont "glacier long ago."
 	
-	para "Silph has changed"
-	line "it again, harming"
-	para "untold numbers of"
-	line "#mon. We"
-	para "can only try to"
-	line "restore natural"
-	para "cycles. That's our"
-	line "role as stewards."
+	para "Then a Gyarados"
+	line "rampage shaped"
+	para "the area into a"
+	line "lake."
+	
+	para "Surely the years"
+	line "after weren't easy"
+	para "as people sought"
+	line "balance with the"
+	cont "new system."
+	
+	para "Now, Silph has"
+	line "drained the lake."
+	para "Ironically, the"
+	line "future they crea-"
+	cont "ted gives us a"
+	para "glimpse into the"
+	line "past in the mud."
+
+	para "Now, it's up to"
+	line "the Mahogany Gym"
+	para "to find a new"
+	line "balance here."
+	
+	para "That's our role"
+	line "as stewards."
 	done
 
-LakeKurtAfterRivalText_2: ; todo 
+LakeKurtAfterRivalText_2:  
 	text_high
     text " Kurt: "
 	next
@@ -334,7 +392,7 @@ LakeKurtAfterRivalText_2: ; todo
 	cont "pray."
 	done
 	
-LakePryceAfterRivalText_2: ; todo 
+LakePryceAfterRivalText_2:
 	text_high
     text " Pryce: "
 	next
@@ -364,7 +422,7 @@ LakeRivalToPlayer:
 	step_left
 	step_left
 	step_left
-	step_down
+	step_up
 	step_left
 	step_left
 	step_end
@@ -374,34 +432,53 @@ LakeKurtToPlayer:
 	step_right
 	step_right
 	step_right
-	step_down
 	step_right
+	step_up
 	step_end
 
 LakeRivalWalksAway:
 	step_right
 	step_right
-	step_up
+	step_down
 	step_right
 	step_right	
 	step_right
 	step_end
 
 
-LakePryceScript:
-	showtext LakeShrineQuestion
+LakePryceScript: 
+	opentext
+	writetext LakeShrineQuestion
 	yesorno
 	iffalse_jumptext LakeNoText
 	showtext LakePrayerText
-	waitbutton
-	playsound SFX_WARP_TO
+	special Special_CelebiShrineEvent
 	special FadeOutPalettes
 	waitsfx
+	blackoutmod TRANQUIL_TARN
 	warp TRANQUIL_TARN, 12, 4
 	end
 
+LakePryceReactsText:
+	text "You and <RIVAL>"
+	line "have different"
+	para "ideas of what the"
+	line "future should be."
+	
+	para "I wish that it'd"
+	line "been possible to"
+	cont "fold him in."
+	
+	para "He was chosen by"
+	line "Celebi too, Kurt."
+	done
+
 LakeShrineQuestion:
-	text "Pryce: <PLAYER>,"
+	text_high
+    text " Pryce: "
+	next
+	text_start
+	text "<PLAYER>,"
 	line "would you like to"
 	cont "pray to Celebi"
 	cont "with me?"
@@ -426,7 +503,7 @@ LakePrayerText:
 	done
 
 WesleyScript:
-	checkevent EVENT_GOT_BLACK_BELT_FROM_WESLEY
+	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
 	iftrue_jumptextfaceplayer WesleyDynamicPunchText
 	faceplayer
 	opentext
@@ -436,7 +513,7 @@ WesleyScript:
 	promptbutton
 	verbosegivetmhm TM_DYNAMICPUNCH ; 
 	iffalse_endtext
-	setevent EVENT_GOT_BLACK_BELT_FROM_WESLEY
+	setevent EVENT_GOT_TM01_DYNAMICPUNCH
 	jumpopenedtext WesleyDynamicPunchText
 
 
@@ -483,16 +560,22 @@ WesleyDynamicPunchText:
 	done
 
 WesleyMeowthText:
-	text "Meeeowww!"
-	line "It's purring!"
+	text "Girafarig:"
+	line "Rafar!"
 	done
 
 GenericTrainerSightseerFKamila:
 	generictrainer SIGHTSEERF, KAMILA, EVENT_BEAT_SIGHTSEERF_KAMILA, .SeenText1, .BeatenText1
 
+	text "Baked Alaska is"
+	line "my favorite"
+	cont "camping food."
+	done
+
 .BeatenText1:
 	text "My #mon keep"
-	line "my foold cold."
+	line "my food cold"
+	cont "or warm it up."
 	
 	para "So I can carry"
 	line "whatever I like!"	
@@ -507,6 +590,15 @@ GenericTrainerSightseerFKamila:
 GenericTrainerSightseerFNoelle:
 	generictrainer SIGHTSEERF, NOELLE, EVENT_BEAT_SIGHTSEERF_NOELLE, .SeenText2, .BeatenText2
 
+	text "Do you know the"
+	line "compass arrows?"
+	
+	para "Never"
+	line "Enter"
+	cont "Spinarak"
+	cont "Webs!"
+	done	
+
 .BeatenText2:
 	text "You can find your"
 	line "own way!"
@@ -520,6 +612,11 @@ GenericTrainerSightseerFNoelle:
 GenericTrainerSightseerMBlaise:
 	generictrainer SIGHTSEERM, BLAISE, EVENT_BEAT_SIGHTSEERM_BLAISE, .SeenText3, .BeatenText3
 
+	text "Make sure you've"
+	line "got Ursaring"
+	cont "spray."
+	done
+	
 .BeatenText3:
 	text "You've got some"
 	line "power!"
@@ -533,6 +630,11 @@ GenericTrainerSightseerMBlaise:
 
 GenericTrainerSightseerMGareth:
 	generictrainer SIGHTSEERM, GARETH, EVENT_BEAT_SIGHTSEERM_GARETH, .SeenText4, .BeatenText4
+
+	text "You never know"
+	line "what's hidden"
+	cont "around you!"
+	done
 
 .BeatenText4:
 	text "You never know"
@@ -548,6 +650,12 @@ GenericTrainerSightseerMGareth:
 
 GenericTrainerPokemaniacCalvin:
 	generictrainer POKEMANIAC, CALVIN, EVENT_BEAT_POKEMANIAC_CALVIN, .SeenText5, .BeatenText5
+
+	text "The lake is so"
+	line "tranquil, without"
+	para "Gyarados thrash-"
+	line "ing about."
+	done
 
 .BeatenText5:
 	text "I wonder how the"
@@ -568,6 +676,11 @@ GenericTrainerPokemaniacCalvin:
 GenericTrainerPokemaniacShane:
 	generictrainer POKEMANIAC, SHANE, EVENT_BEAT_POKEMANIAC_SHANE, .SeenText6, .BeatenText6
 
+	text "The muddy bottom"
+	line "of the lake is"
+	cont "perfect for bugs!"
+	done
+
 .BeatenText6:
 	text "The lakebed is a"
 	line "perfect niche for"
@@ -580,12 +693,34 @@ GenericTrainerPokemaniacShane:
 	done
 
 
+LakeOfRageScientistText:
+	text "The best time to"
+	line "plant a tree is"
+	cont "20 years ago."
+	
+	para "The next best is"
+	line "right now."
+	
+	para "Just think, all"
+	line "of these trees"
+	para "were tiny little"
+	line "saplings just a"
+	cont "generation ago!"
+	done
+
+
 LakeOfRageKimonoGirlScript: 
 	faceplayer
+	; Store the original DVs in temporary memory locations
+	readmem wPartyMon1DVs+0     ; Reads value into hScriptVar
+	writemem wOriginalDV1       ; Writes hScriptVar to wOriginalDV1
+	readmem wPartyMon1DVs+1     ; Reads value into hScriptVar
+	writemem wOriginalDV2       ; Writes hScriptVar to wOriginalDV1
+	readmem wPartyMon1DVs+2     ; Reads value into hScriptVar
+	writemem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
 	opentext
 	checkevent EVENT_SET_DVS_6
 	iftrue_jumptext LakeOfRageGreatnessLiesWithinText 
-	opentext
 	writetext LakeOfRageWhatPotentialText
 	promptbutton
 	loadmenu .PhysicalOrSpecialMenuHeader
@@ -596,12 +731,85 @@ LakeOfRageKimonoGirlScript:
 	ifequal 3, .MaximumDVSetting
 	jumptext LakeOfRageDV_Setting_CancelText 
 
+.NoChange:
+	jumptext LakeOfRageDV_Setting_CancelText
+
+.EggChange:
+	jumptext LakeOfRageDV_Setting_EggText
+
+.PhysicalOrSpecialMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 
+	dw .PhysicalOrSpecialMenuData
+	db 1 ; default option
+
+.PhysicalDVsMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+	dw .PhysicalMenuData
+	db 1 ; default option
+
+.PhysicalOrSpecialMenuData:
+	db STATICMENU_CURSOR | STATICMENU_WRAP
+	db 3 ; items
+	db "Physical@"
+	db "Special@"
+	db "Maximum@"
+	db "Cancel@"
+
+.PhysicalMenuData:
+	db STATICMENU_CURSOR | STATICMENU_WRAP
+	db 8 ; items
+	db "FGT@"
+	db "FLY@"
+	db "PSN@"
+	db "GND@"
+	db "RCK@"
+	db "BUG@"
+	db "GHT@"
+	db "STL@"
+	
+.SpecialDVsMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+	dw .SpecialMenuData
+	db 1 ; default option
+
+.SpecialMenuData:
+	db STATICMENU_CURSOR | STATICMENU_WRAP
+	db 8 ; items
+	db "FIR@"
+	db "WTR@"
+	db "GRS@"
+	db "ELE@"
+	db "PSY@"
+	db "ICE@"
+	db "DGN@"
+	db "DRK@"
+
 .MaximumDVSetting:
-	setevent EVENT_SET_DVS_6
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveMaximumDVsText
+	writetext GaveMaximumDVsText_LakeOfRage
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	; Player confirms - make it permanent
+	setevent EVENT_SET_DVS_6
+	writetext DVChangeConfirmedText
 	waitbutton
 	closetext
 	end
@@ -634,216 +842,534 @@ LakeOfRageKimonoGirlScript:
 	ifequal 8, .GiveDarkDVs
 	jumptext LakeOfRageDV_Setting_CancelText
 
-.GiveFightingDVs:; 	db $ff, $ee, $ee
-	setevent EVENT_SET_DVS_6
+.GiveFightingDVs:	; todo: Make all of the other .Give__DVs: follow this format. Keep the original values after loadmem. FOr instance, flying should still have ff, ef, ee
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+; begin section to copy throughout 
+	opentext
+	writetext GaveDVsText_LakeOfRage_Fighting ; make new writetxt for ..._Flying, _Dark, etc 
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+; end 
 
-.GiveFlyingDVs: ; DVS_HP_FLYING   EQUS "$ff, $fe, $ee"
-	setevent EVENT_SET_DVS_6
+.GiveFlyingDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Flying
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GivePoisonDVs: ; DVS_HP_POISON   EQUS "$ff, $ef, $ee"
-	setevent EVENT_SET_DVS_6
+.GivePoisonDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Poison
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveGroundDVs: ; DVS_HP_GROUND   EQUS "$ff, $ff, $ee"
-	setevent EVENT_SET_DVS_6
+.GiveGroundDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Ground
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveRockDVs: ; DVS_HP_ROCK     EQUS "$ff, $ee, $fe"
-	setevent EVENT_SET_DVS_6
+.GiveRockDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Rock
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveBugDVs: ; DVS_HP_BUG      EQUS "$ff, $fe, $fe"
-	setevent EVENT_SET_DVS_6
+.GiveBugDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Bug
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveGhostDVs: ; DVS_HP_GHOST    EQUS "$ff, $ef, $fe"
-	setevent EVENT_SET_DVS_6
+.GiveGhostDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Ghost
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveSteelDVs: ;DVS_HP_STEEL    EQUS "$ff, $ff, $fe"
-	setevent EVENT_SET_DVS_6
+.GiveSteelDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Steel
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveFireDVs: ; EQUS "$ff, $ee, $ef"
-	setevent EVENT_SET_DVS_6
+.GiveFireDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Fire
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveWaterDVs:;DVS_HP_WATER    EQUS "$ff, $fe, $ef"
-	setevent EVENT_SET_DVS_6
+.GiveWaterDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Water
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveGrassDVs:;DVS_HP_GRASS    EQUS "$ff, $ef, $ef"
-	setevent EVENT_SET_DVS_6
+.GiveGrassDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Grass
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveElectricDVs:;DVS_HP_ELECTRIC EQUS "$ff, $ff, $ef"
-	setevent EVENT_SET_DVS_6
+.GiveElectricDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Electric
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GivePsychicDVs:;DVS_HP_PSYCHIC  EQUS "$ff, $ee, $ff"
-	setevent EVENT_SET_DVS_6
+.GivePsychicDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Psychic
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveIceDVs:;DVS_HP_ICE      EQUS "$ff, $fe, $ff"
-	setevent EVENT_SET_DVS_6
+.GiveIceDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Ice
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveDragonDVs:;DVS_HP_DRAGON   EQUS "$ff, $ef, $ff"
-	setevent EVENT_SET_DVS_6
+.GiveDragonDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Dragon
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveDarkDVs:;DVS_HP_DARK     EQUS "$fe, $ff, $ff"
-	setevent EVENT_SET_DVS_6
+.GiveDarkDVs:
 	loadmem wPartyMon1DVs+0, $fe
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_LakeOfRage_Dark
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText_LakeOfRage
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.ConfirmChanges:
+	setevent EVENT_SET_DVS_6
+	writetext DVChangeConfirmedText_LakeOfRage
 	waitbutton
 	closetext
 	end
 
-.PhysicalOrSpecialMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 ;todo proper size
-	dw .PhysicalOrSpecialMenuData
-	db 1 ; default option
+.UndoChanges:
+;	writetext DebugStoringText
+;	waitbutton
+	; Store the original DVs in temporary memory locations
+	readmem wOriginalDV1       ; Writes hScriptVar to wOriginalDV1
+	writemem wPartyMon1DVs+0     ; Reads value into hScriptVar
+	readmem wOriginalDV2       ; Writes hScriptVar to wOriginalDV1
+	writemem wPartyMon1DVs+1     ; Reads value into hScriptVar
+	readmem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
+	writemem wPartyMon1DVs+2     ; Reads value into hScriptVar
+	writetext DVChangeUndoneText_LakeOfRage
+	waitbutton
+	closetext
+	end
 
-.PhysicalDVsMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size
-;	menu_coords 0, 0, 15, TEXTBOX_Y - 1 ; alternate syntax
-	dw .PhysicalMenuData
-	db 1 ; default option
+GaveMaximumDVsText_LakeOfRage:
+	text "Intrinsic power"
+	line "maximized!"
+	done
 
-.PhysicalOrSpecialMenuData:
-	db STATICMENU_CURSOR | STATICMENU_WRAP
-	db 3 ; items
-	db "Physical@"
-	db "Special@"
-	db "Maximum@"
-	db "Cancel@"
+GaveDVsText_LakeOfRage:
+	text "DVs are set"
+	done
 
-.PhysicalMenuData:
-	db STATICMENU_CURSOR | STATICMENU_WRAP
-	db 8 ; items
-	db "FGT@"
-	db "FLY@"
-	db "PSN@"
-	db "GND@"
-	db "RCK@"
-	db "BUG@"
-	db "GHT@"
-	db "STL@"
+
+GaveDVsText_LakeOfRage_Fighting:
+	text "Maximized DVs for"
+	line "HP Fighting!"
+	done
+
+GaveDVsText_LakeOfRage_Flying:
+	text "Maximized DVs for"
+	line "HP Flying!"
+	done
+
+GaveDVsText_LakeOfRage_Poison:
+	text "Maximized DVs for"
+	line "HP Poison!"
+	done
+
+GaveDVsText_LakeOfRage_Ground:
+	text "Maximized DVs for"
+	line "HP Ground!"
+	done
+
+GaveDVsText_LakeOfRage_Rock:
+	text "Maximized DVs for"
+	line "HP Rock!"
+	done
+
+GaveDVsText_LakeOfRage_Bug:
+	text "Maximized DVs for"
+	line "HP Bug!"
+	done
+
+GaveDVsText_LakeOfRage_Ghost:
+	text "Maximized DVs for"
+	line "HP Ghost!"
+	done
+
+GaveDVsText_LakeOfRage_Steel:
+	text "Maximized DVs for"
+	line "HP Steel!"
+	done
+
+GaveDVsText_LakeOfRage_Fire:
+	text "Maximized DVs for"
+	line "HP Fire!"
+	done
+
+GaveDVsText_LakeOfRage_Water:
+	text "Maximized DVs for"
+	line "HP Water!"
+	done
+
+GaveDVsText_LakeOfRage_Grass:
+	text "Maximized DVs for"
+	line "HP Grass!"
+	done
+
+GaveDVsText_LakeOfRage_Electric:
+	text "Maximized DVs for"
+	line "HP Electric!"
+	done
+
+GaveDVsText_LakeOfRage_Psychic:
+	text "Maximized DVs for"
+	line "HP Psychic!"
+	done
+
+GaveDVsText_LakeOfRage_Ice:
+	text "Maximized DVs for"
+	line "HP Ice!"
+	done
+
+GaveDVsText_LakeOfRage_Dragon:
+	text "Maximized DVs for"
+	line "HP Dragon!"
+	done
+
+GaveDVsText_LakeOfRage_Dark:
+	text "Maximized DVs for"
+	line "HP Dark!"
+	done
+
+ConfirmDVChangeText_LakeOfRage:
+	text "This is how your"
+	line "#mon will"
+	cont "appear."
 	
-.SpecialDVsMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size 
-	dw .SpecialMenuData
-	db 1 ; default option
+	para "Do you wish to"
+	line "make this change"
+	cont "permanent?"
+	done
 
-.SpecialMenuData:
-	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
-	db 8 ; items
-	db "FIR@"
-	db "WTR@"
-	db "GRS@"
-	db "ELE@"
-	db "PSY@"
-	db "ICE@"
-	db "DGN@"
-	db "DRK@"
+DVChangeConfirmedText_LakeOfRage:
+	text "The transformation"
+	line "is complete!"
+	
+	para "Your #mon has"
+	line "unlocked its true"
+	cont "potential!"
+	done
+
+DVChangeUndoneText_LakeOfRage:
+	text "Your #mon has"
+	line "returned to its"
+	cont "original form."
+	
+	para "The potential"
+	line "remains dormant"
+	cont "for now."
+	done
+
+LakeOfRageDV_Setting_CancelText:
+	text "Greatness lies"
+	line "within - if you"
+	para "have the courage"
+	line "to show it!"
+	done
+
+LakeOfRageGreatnessLiesWithinText:
+	text "Greatness lies"
+	line "within!"
+	done
+
+LakeOfRageDV_Setting_EggText:
+	text "That's only an"
+	line "egg! Give it time"
+	cont "to grow."
+	done
+
 
 LakeOfRageWhatPotentialText:
 	text "So the legends"
@@ -854,8 +1380,8 @@ LakeOfRageWhatPotentialText:
 	
 	para "You never know"
 	line "what you may find"
-	para "when you dig aro-"
-	line "und in the muck."
+	para "when you dig in"
+	line "the muck."
 	
 	para "#mon can do"
 	line "the same - each"
@@ -873,27 +1399,20 @@ LakeOfRageWhatPotentialText:
 	cont "need to."
 	done
 
-LakeOfRageGaveMaximumDVsText:
-	text "Intrinsic power"
-	line "maximized!"
-	done
-
-LakeOfRageGaveDVsText:
-	text "Your #mon is"
-	line "now expressing"
-	para "that part of its"
-	line "lineage."
-	done
-
-LakeOfRageDV_Setting_CancelText:
-	text "Greatness lies"
-	line "within - if you"
-	para "have the courage"
-	line "to show it!"
-	done
-
-LakeOfRageGreatnessLiesWithinText: ; todo place five others 
-	text "Greatness lies"
-	line "within!"
-	done	
+LakeKurtScript:
+	faceplayer
+	opentext
+	writetext LakeKurtText2
+	waitbutton
+	closetext
+	end
 	
+LakeKurtText2:
+	text "Let's ask Pryce"
+	line "to pray to Celebi"
+	cont "here at the lake."
+	
+	para "We can go back to"
+	line "stop Adrinna and"
+	cont "Urgaust's mine!"
+	done

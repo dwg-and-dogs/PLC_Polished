@@ -15,13 +15,29 @@ Route36RuinsOfAlphGate_MapScriptHeader:
 
 	def_object_events
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36RuinsOfAlphGateOfficerText, -1
-	object_event  7,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route36RuinsOfAlphGateGrampsText, -1
+	object_event  7,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route36RuinsOfAlphGateGramps, -1
 
 Route36RuinsOfAlphGateOfficerText:
 	text "Don't you wonder"
 	line "who'd make some-"
 	cont "thing like this?"
 	cont "And why?"
+	done
+
+Route36RuinsOfAlphGateGramps:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_FALKNER
+	iftrue_jumptext Route36RuinsOfAlphGateGrampsText
+	jumpthistext
+	
+	text "I've been trying"
+	line "to go to Ecruteak"
+	para "but Falkner has"
+	line "the path blocked!"
+	
+	para "So much for his"
+	line "'progress'!"
 	done
 
 Route36RuinsOfAlphGateGrampsText:

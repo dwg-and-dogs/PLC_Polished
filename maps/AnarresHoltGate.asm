@@ -58,7 +58,7 @@ HollisExitMovement:
 
 TammyDialogue1:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "The pineco are an"
@@ -88,7 +88,7 @@ HollisDialogue1:
 
 TammyDialogue2:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "The mistake is"

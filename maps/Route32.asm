@@ -17,7 +17,7 @@ Route32_MapScriptHeader:
 	bg_event 13,  3, BGEVENT_JUMPTEXT, Route32SignText
 	bg_event  9,  1, BGEVENT_JUMPTEXT, Route32RuinsSignText
 	bg_event  6, 80, BGEVENT_JUMPTEXT, Route32UnionCaveSignText
-	bg_event  8, 10, BGEVENT_ITEM + SUPER_POTION, EVENT_ROUTE_32_HIDDEN_SUPER_POTION_2;
+	bg_event 11, 14, BGEVENT_ITEM + MAX_REVIVE, EVENT_ROUTE_32_HIDDEN_SUPER_POTION_2;
 	bg_event  4, 41, BGEVENT_ITEM + SILVER_LEAF, EVENT_ROUTE_32_HIDDEN_GOLD_LEAF
 	bg_event 13, 84, BGEVENT_ITEM + GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL_2 ; ok
 
@@ -35,7 +35,7 @@ Route32_MapScriptHeader:
 	smashrock_event 6, 82
 	smashrock_event 7, 83
 	itemball_event  6, 83, GEODE, 5, EVENT_ROUTE_32_REPEL
-	itemball_event 10, 14, BUB_BALL, 5, EVENT_ROUTE_32_GREAT_BALL
+	itemball_event 10, 14, JEZE_BALL, 5, EVENT_ROUTE_32_GREAT_BALL
 	cuttree_event 10, 19, EVENT_ROUTE_32_CUT_TREE
 	fruittree_event 3, 31, FRUITTREE_ROUTE_32, FIXED_CHARGE, PAL_NPC_RED
 
@@ -343,7 +343,7 @@ Route32SignText:
 	text "Route 32"
 
 	para "Violet City -"
-	line "Azalea Town"
+	line "Union Cave"
 	done
 
 Route32RuinsSignText:
@@ -376,8 +376,10 @@ Route32SlowpokeTailScript:
 	end
 
 Route32Slowpoketail2Text:
-	text "Try it with a"
-	line "dab of ketchup!"
+	text "Don't look at me"
+	line "like that!"
+	para "It's a lab-grown"
+	line "SlowpokeTail."
 	done
 
 Route32AmenitiesText:
@@ -397,5 +399,6 @@ Route32AmenitiesText:
 	para "that they will"
 	line "be on B2F soon."
 	
-	para "Hungry? Try this."
+	para "Hungry? Take one,"
+	line "I have many!"
 	done

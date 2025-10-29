@@ -6,7 +6,7 @@ CalmCoast_MapScriptHeader:
 	def_warp_events
 	warp_event 15, 49, HOLT_COAST_GATE, 3
 	warp_event 16, 49, HOLT_COAST_GATE, 4
-	warp_event 13, 15, CALM_COAST_COTTAGE, 1
+	warp_event 13, 17, CALM_COAST_COTTAGE, 1
 
 	def_coord_events
 
@@ -14,28 +14,31 @@ CalmCoast_MapScriptHeader:
 	def_bg_events
 	bg_event 13, 33, BGEVENT_JUMPTEXT, CalmCoastSign1Text
 	bg_event 12,  6, BGEVENT_JUMPTEXT, CalmCoastSign2Text
+	bg_event 14, 42, BGEVENT_JUMPTEXT, CalmCoastSign3Text
 	; hidden items: energypowder and pp_up, ADD TO EVENTS AND PLACE ON MAP 
 	bg_event 12, 38, BGEVENT_ITEM + ENERGYPOWDER, EVENT_CALM_COAST_HIDDEN_1
 	bg_event  6, 16, BGEVENT_ITEM + PP_UP, EVENT_CALM_COAST_HIDDEN_2
 
 	def_object_events
-	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterWarren, EVENT_BEAT_BOBESH_STADIUM ; 
-	object_event 13, 26, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
+	object_event 15, 42, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastKurtScript, EVENT_KURT_CALM_COAST
+	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterWarren, EVENT_BEAT_BOBESH_STADIUM ;
+	object_event 11, 21, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
 	object_event 11, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerYoungsterJimmy, -1
 	object_event 6, 50, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlSubaru, -1
 	object_event 7, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlDiane, -1
 	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlKagami, -1
 	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBrigader2, -1
-	object_event  9, 20, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastKurtScript, -1
 	tmhmball_event 4, 50, TM_ROAR, EVENT_GOT_TM05_ROAR
 	pokemon_event  14, 19, PIDGEOTTO, -1, -1, PAL_NPC_RED, CalmCoastPidgeottoText, -1
-	pokemon_event  17, 18, DARTRIX, -1, -1, PAL_NPC_GREEN, CalmCoastDartrixText, -1	
+	pokemon_event  17, 18, DARTRIX, -1, -1, PAL_NPC_GREEN, CalmCoastDartrixText, -1
 	fruittree_event 17, 14, FRUITTREE_CALM_COAST_1, SITRUS_BERRY, PAL_NPC_RED
 	fruittree_event 18, 14, FRUITTREE_CALM_COAST_2, LUM_BERRY, PAL_NPC_RED
 	fruittree_event 19, 12, FRUITTREE_CALM_COAST_3, PNK_APRICORN, PAL_NPC_RED
 	itemball_event 18, 20, SOOTHE_BELL, 1, EVENT_SOOTHE_BELL ;ok
 	itemball_event  3, 49, SOFT_SAND, 1, EVENT_CALM_COAST_SOFT_SAND ;ok
 
+	object_const_def
+	const CALM_COAST_KURT
 
 GenericTrainerYoungsterWarren:
 	generictrainer YOUNGSTER, WARREN, EVENT_BEAT_YOUNGSTER_WARREN, YoungsterWarrenSeenText, YoungsterWarrenBeatenText
@@ -62,8 +65,11 @@ YoungsterWarrenBeatenText:
 GenericTrainerCooltrainerMGaven:
 	generictrainer COOLTRAINERM, GAVEN1, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainerMGavenSeenText, CooltrainerMGavenBeatenText
 
-	text "I lost? Now that's"
-	line "bizarre."
+	text "The bazaar has so"
+	line "many vendors."
+	
+	para "You have to check"
+	line "it out!"
 	done
 
 CooltrainerMGavenBeatenText:
@@ -79,9 +85,13 @@ CooltrainerMGavenSeenText:
 GenericTrainerYoungsterJimmy:
 	generictrainer SCHOOLBOY, JACK1, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJackSeenText, SchoolboyJackBeatenText
 
-	text "Now I'll never"
-	line "make it as a"
-	cont "brigader."
+	text "The strongest"
+	line "#mon trainers"
+	cont "become brigaders."
+	
+	para "It's a brand new"
+	line "division started"
+	cont "by the Consul!"
 	done
 
 SchoolboyJackSeenText:
@@ -115,8 +125,9 @@ BattleGirlSubaruBeatenText:
 GenericTrainerBattleGirlDiane:
 	generictrainer BATTLE_GIRL, DIANE, EVENT_BEAT_BATTLE_GIRL_DIANE, BattleGirlDianeSeenText, BattleGirlDianeBeatenText
 
-	text "Crashed and"
-	line "burned."
+	text "We're training for"
+	line "an attack on the"
+	cont "Stadium."
 	done
 
 BattleGirlDianeSeenText:
@@ -177,13 +188,13 @@ BrigaderNAME7BeatenText:
 CalmCoastKurtScript:
 	faceplayer
 	opentext
-	writetext HearAStory_1Text
-	yesorno
-	iffalse SomeOtherTime_1Text
 	writetext CalmCoastKurtText
 	waitbutton
-	clearevent EVENT_KURTS_HOUSE_BOOK_1 ; now it appears 
 	closetext
+	applymovement CALM_COAST_KURT, CalmCoastKurtWalksAway
+	disappear CALM_COAST_KURT
+	clearevent EVENT_KURTS_HOUSE_BOOK_1 ; now it appears 
+	setevent EVENT_KURT_CALM_COAST	
 	end
 
 HearAStory_1Text:
@@ -208,24 +219,26 @@ CalmCoastKurtText:
 
 	para "Once, on the way"
 	line "back to Azalea, he"
-	cont "was playing with"
-	para "an apricorn and"
-	line "caught"
-	cont "a Cyndaquil."
+	para "was playing with"
+	line "an apricorn and"
+	para "accidentally got"
+	line "a Cyndaquil!"
 	
 	para "The apricorn had"
 	line "a soft glow in"
-	cont "his hands with the"
-	cont "#mon inside!"
-
-	para "It was so simple."
-	line "He caught it the"
-	cont "right way."
+	para "his hands with the"
+	line "#mon inside!"
 	
 	para "If you ever want"
 	line "to hear it again,"
 	para "check the journal"
 	line "in my house."
+	
+	para "Now, let's find a"
+	line "way to the port"
+	para "to stop outside"
+	line "tech from getting"
+	cont "into Johto!"
 	done
 
 CalmCoastDartrixText:
@@ -239,11 +252,23 @@ CalmCoastPidgeottoText:
 	done
 
 CalmCoastSign2Text:
-	text "Posted:"
-	line "Damaging Oshawott"
-	cont "dams is punishable"
-	cont "by imprisonment."
+	text "Posted: do not"
+	line "bother Oshawott"
+	cont "dams!"
+	done
 
 CalmCoastSign1Text:
 	text "The Calm Coast"
 	done
+
+CalmCoastSign3Text:
+	text "South to:"
+	line "Holly's Holt"
+	done
+
+CalmCoastKurtWalksAway:
+	step_up
+	step_up
+	step_up
+	step_up
+	

@@ -141,6 +141,8 @@ ScriptCommandTable:
 	dw Script_promptbutton               ; 52
 	dw Script_pokepic                    ; 53
 	dw Script_closepokepic               ; 54
+	dw Script_pokepic2                    ; 53
+	dw Script_closepokepic2               ; 54
 	dw Script__2dmenu                    ; 55
 	dw Script_verticalmenu               ; 56
 	dw Script_randomwildmon              ; 57
@@ -524,6 +526,20 @@ Script_pokepic:
 
 Script_closepokepic:
 	farjp ClosePokepic
+	
+Script_pokepic2:
+	call GetScriptByte
+	and a
+	jr nz, .ok
+	ldh a, [hScriptVar]
+.ok
+	ld [wCurPartySpecies], a
+	call GetScriptByte
+	ld [wCurForm], a
+	farjp Pokepic2
+
+Script_closepokepic2:
+	farjp ClosePokepic2
 
 Script_verticalmenu:
 	ld a, [wScriptBank]

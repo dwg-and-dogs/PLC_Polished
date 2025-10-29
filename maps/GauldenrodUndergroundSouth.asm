@@ -14,7 +14,7 @@ GauldenrodUndergroundSouth_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	strengthboulder_event 6, 4
+;	strengthboulder_event 6, 4
 	object_event  5,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundSouthGateScript, EVENT_GAULDENROD_TUNNELERS
 
 	object_const_def

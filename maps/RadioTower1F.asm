@@ -30,6 +30,7 @@ RadioTowerRivalTrigger1:
     waitsfx
     applymovement PLAYER, RadioTowerPlayerPushbackMovement
     applymovement RADIOTOWER_RIVAL, RadioTowerRivalApproachMovement
+	playmusic MUSIC_RIVAL_ENCOUNTER
     scall RadioTowerRivalBattleScript
 	; picks up back here 
     applymovement RADIOTOWER_RIVAL, RadioTowerRivalRetreatMovement
@@ -78,6 +79,7 @@ RadioTowerRivalBattleScript:
 .FinishRivalBattle:
     special DeleteSavedMusic
     playmusic MUSIC_RIVAL_AFTER
+	setevent EVENT_BEAT_RADIO_TOWER_RIVAL
     jumptext RadioTowerRivalAfterText
 
 RadioTowerRivalApproachMovement:

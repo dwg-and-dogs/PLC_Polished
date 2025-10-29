@@ -21,9 +21,9 @@ RuinsOfAlphHoOhChamber_MapScriptHeader: ; heatran
 
 
 RuinsOfAlphHoOhChamberHiddenDoorsCallback:
-	checkevent EVENT_WALL_OPENED_IN_HO_OH_CHAMBER
+	checkevent EVENT_SOLVED_HO_OH_PUZZLE
 	iftrue .WallOpen
-	changeblock 4, 0, $24
+	changeblock 4, 0, $25
 .WallOpen:
 	endcallback
 
@@ -68,7 +68,7 @@ MapRuinsofAlphHoOhChamberSignpost3Script:
 
 RuinsOfAlphHoOhChamberDescriptionText:
 	text "If unleashed from"
-	line "volcanic cradle,"
+	line "volcanic cradle"
 	
 	para "It will melt all"
 	line "to a blank slate"

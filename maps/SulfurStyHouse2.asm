@@ -1,4 +1,5 @@
-SulfurStyHouse2_MapScriptHeader: ;	def_scene_scripts
+SulfurStyHouse2_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks
@@ -12,16 +13,12 @@ SulfurStyHouse2_MapScriptHeader: ;	def_scene_scripts
 	def_coord_events
 
 
-
 	def_bg_events
 
 
-
 	def_object_events
-	object_event  2,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, SulfurStyHouse2Script, -1
-	pokemon_event 3,  4, TAUROS, -1, -1, PAL_NPC_BROWN, TaurosGigaText, -1
-
-	object_const_def
+	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, jumptextfaceplayer, SulfurStyHouse2Script, -1
+	pokemon_event 6,  4, TAUROS, -1, -1, PAL_NPC_BROWN, TaurosGigaText, -1
 
 
 SulfurStyHouse2Script: 
@@ -52,9 +49,7 @@ GiveGigaImpactText:
 	done
 	
 TaurosGigaText:
-	text "Auro! Auro!"
-	
-	para "It's rearing to"
-	line "go!"
+	text "Aroo! Aroo!"
+	para "It's ready to go!"
 	done
 	

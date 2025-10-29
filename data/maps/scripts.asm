@@ -34,6 +34,7 @@ INCLUDE "maps/StadiumUnderground.asm"
 INCLUDE "maps/StadiumBox.asm"
 INCLUDE "maps/StadiumCapitalGate.asm"
 INCLUDE "maps/StyCapitalGate.asm"
+INCLUDE "maps/StadiumGroundsCredit.asm"
 
 SECTION "Pokemon Center Scripts 4", ROMX
 
@@ -63,7 +64,7 @@ INCLUDE "maps/WesternCapital.asm"
 INCLUDE "maps/WhispersWay.asm"
 INCLUDE "maps/TimelessTapestry.asm"
 INCLUDE "maps/WhispersTapestryGate.asm"
-
+INCLUDE "maps/EmperorsGardenCredit.asm"
 
 SECTION "New Bark Scripts", ROMX 
 
@@ -80,6 +81,7 @@ INCLUDE "maps/AnarresStockroom.asm"
 INCLUDE "maps/AnarresCharcoalKiln.asm"
 INCLUDE "maps/AnarresHoltGate.asm"
 INCLUDE "maps/HoltCoastGate.asm"
+INCLUDE "maps/HollysHoltCredit.asm"
 
 SECTION "New Bark Scripts 2", ROMX
 
@@ -135,6 +137,7 @@ INCLUDE "maps/SeafluxNexusB2F.asm"
 INCLUDE "maps/SeafluxNexusB3F.asm"
 INCLUDE "maps/LandingDocks.asm"
 INCLUDE "maps/ArduousAnchorage.asm"
+INCLUDE "maps/ArduousAnchorageCredit.asm"
 
 
 
@@ -203,7 +206,7 @@ INCLUDE "maps/SinjohStockroom.asm"
 INCLUDE "maps/GrottoedGlacier1F.asm"
 INCLUDE "maps/GrottoedGlacierB1F.asm"
 INCLUDE "maps/GrottoedGlacierB2F.asm"
-
+INCLUDE "maps/SinjohCrossroadsCredit.asm"
 
 
 SECTION "Union Cave Scripts", ROMX
@@ -222,7 +225,9 @@ INCLUDE "maps/AzaleaGym.asm"
 INCLUDE "maps/CharcoalKiln.asm"
 INCLUDE "maps/KurtsHouse.asm"
 INCLUDE "maps/TinderGarden.asm"
+INCLUDE "maps/TinderGarden3.asm"
 INCLUDE "maps/TinderGarden2.asm"
+
 
 SECTION "Slowpoke Well Scripts", ROMX
 
@@ -358,6 +363,7 @@ INCLUDE "maps/TinTower10F.asm"
 INCLUDE "maps/TinTowerRoof.asm"
 INCLUDE "maps/BurnedTower1F.asm"
 INCLUDE "maps/BurnedTowerB1F.asm"
+INCLUDE "maps/BurnedTowerB1FCredit.asm"
 
 
 SECTION "Olivine Scripts", ROMX
@@ -416,6 +422,7 @@ INCLUDE "maps/ClastsCradle3F.asm"
 INCLUDE "maps/ClastsCradle2F.asm"
 INCLUDE "maps/ClastsCradle1F.asm"
 INCLUDE "maps/ClastsCradleB1F.asm"
+INCLUDE "maps/ClastsCradleB1FCredit.asm"
 
 SECTION "Quiet Cave Scripts", ROMX
 

@@ -21,11 +21,10 @@ ClastsCradle2F_MapScriptHeader:
 
 
 	def_object_events
- ;check which sound effects would be best? 
 	tmhmball_event 9, 6, TM_EXPLOSION, EVENT_GOT_TM_EXPLOSION
 ; ENGINEERS FACE AWAY FROM YOU BUT WILL BATTLE YOU 
 	object_event  16,  6, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerGoeth, -1
-	object_event   3,  5, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader15, -1
+	object_event   4,  5, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBrigader15, -1
 	
 	object_const_def
 
@@ -54,7 +53,7 @@ CC_2F_Switch:
 	
 CC_2F_SwitchBack:
 	changeblock 16,  8, $C8 
-	changeblock 4, 8, $C5
+	changeblock 4, 8, $B8
 	playsound SFX_THUNDER
 	waitsfx
 	clearevent EVENT_CRADLE_2F_CART_1
@@ -90,11 +89,21 @@ Brigader15SeenText:
 GenericTrainerEngineerGoeth: ; goethite 
 	generictrainer ENGINEER, GOETH, EVENT_BEAT_ENGINEER_GOETH, GoethSeenText, GoethBeatenText
 	
+	text "The mountain is"
+	line "delicate - don't"
+	para "go deeper without"
+	line "a plan!"
+	done
+	
 GoethBeatenText:
-	text "..."
+	text "You reduced me to"
+	line "rubble!"
 	done
 
 GoethSeenText:
-	text "..."
+	text "My battle skills"
+	line "are rusty, but I"
+	para "can still take"
+	line "you down!"
 	done
 	

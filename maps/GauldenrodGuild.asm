@@ -10,6 +10,8 @@ GauldenrodGuild_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
+	bg_event  0,  2, BGEVENT_READ, GSApricornBenchScript
+	bg_event  1,  2, BGEVENT_READ, GSApricornBenchScript
 
 
 	def_object_events

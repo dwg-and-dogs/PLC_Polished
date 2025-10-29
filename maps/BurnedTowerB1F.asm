@@ -121,45 +121,6 @@ UnknownScript_0x18622a:
 	waitsfx
 	end
 
-BurnedTowerRaikouMovement:
-	fix_facing
-	fast_jump_step_down
-	fast_jump_step_left
-	step_end
-
-BurnedTowerEnteiMovement:
-	fix_facing
-	fast_jump_step_right
-	fast_jump_step_down
-	fast_jump_step_right
-	step_end
-
-BurnedTowerSuicuneMovement1:
-	fix_facing
-	fast_jump_step_right
-	fast_jump_step_down
-	fast_jump_step_down
-	fast_jump_step_left
-	step_end
-
-BurnedTowerSuicuneMovement2:
-	fix_facing
-	fast_jump_step_left
-	fast_jump_step_up
-	run_step_up
-	fast_jump_step_right
-	step_end
-
-BurnedTowerSuicuneMovement3:
-	fix_facing
-	run_step_up
-	fast_jump_step_right
-	fast_jump_step_down
-	fast_jump_step_down
-	fast_jump_step_down
-	fast_jump_step_down
-	step_end
-
 BurnedTowerB1FEusineMovement2:
 	step_left
 	step_left

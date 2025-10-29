@@ -62,46 +62,78 @@ CheckBadge:
 	text_far _BadgeRequiredText
 	text_end
 
-CheckPartyMove:
-; Check if a monster in your party has move d.
+CheckPartyMove: ; from 9bit polished 
+; Check if a monster in your party has move d, or
+; can have move d and you have TM/HM e.
 
-	ld e, 0
 	xor a
 	ld [wCurPartyMon], a
-.loop
-	ld c, e
-	ld b, 0
-	ld hl, wPartySpecies
-	add hl, bc
-	ld a, [hl]
-	call IsAPokemon
-	jr c, .no
 
-	ld bc, PARTYMON_STRUCT_LENGTH
-	ld hl, wPartyMon1Form
 	ld a, e
-	rst AddNTimes
+	ld [wCurTMHM], a
+
+	ld e, 0
+.loop1
+	ld a, [wPartyCount]
+	cp e
+	jr z, .maybe
+	ld hl, wPartyMon1IsEgg
+	ld a, e
+	call GetPartyLocation
 	bit MON_IS_EGG_F, [hl]
-	jr nz, .next
+	jr nz, .next1
 	ld bc, MON_MOVES - MON_FORM
 	add hl, bc
 	ld b, NUM_MOVES
-.check
+.check1
 	ld a, [hli]
 	cp d
 	jr z, .yes
 	dec b
-	jr nz, .check
-
-.next
+	jr nz, .check1
+.next1
 	inc e
-	jr .loop
+	jr .loop1
+
+.maybe
+	ld a, d
+	ld [wPutativeTMHMMove], a
+	ld a, [wCurTMHM]
+	inc a
+	jr z, .no
+	call CheckTMHM
+	jr nc, .no
+	ld e, 0
+.loop2
+	ld a, [wPartyCount]
+	cp e
+	jr z, .no
+	ld hl, wPartyMon1IsEgg
+	ld a, e
+	call GetPartyLocation
+	bit MON_IS_EGG_F, [hl]
+	jr nz, .next2
+	ld a, [hl]
+	and SPECIESFORM_MASK
+	ld [wCurForm], a
+	ld bc, MON_SPECIES - MON_FORM
+	add hl, bc
+	ld a, [hl]
+	ld [wCurPartySpecies], a
+	predef CanLearnTMHMMove
+	ld a, c
+	and a
+	jr nz, .yes
+.next2
+	inc e
+	jr .loop2
 
 .yes
 	ld a, e
 	ld [wCurPartyMon], a ; which mon has the move
 	xor a
 	ret
+
 .no
 	scf
 	ret
@@ -588,11 +620,11 @@ TrySurfOW::
 	call CheckDirection
 	jr c, .quit
 
-	ld de, ENGINE_BOULDERBADGE ; FOGBADGE
-	call CheckEngineFlag
-	jr c, .quit
+;	ld de, ENGINE_BOULDERBADGE ; FOGBADGE
+;	call CheckEngineFlag
+;	jr c, .quit
 
-	ld d, SURF
+	lb de, SURF, HM_SURF
 	call CheckPartyMove
 	jr c, .quit
 
@@ -677,17 +709,6 @@ FlyFunction:
 	jr c, .nostormbadge
 	call CheckFlyAllowedOnMap
 	jr nz, .indoors
-;
-;	ld a, [wMapGroup]
-;	cp GROUP_SHAMOUTI_ISLAND
-;	jr z, .indoors
-;	cp GROUP_VALENCIA_ISLAND
-;	jr z, .indoors
-;	cp GROUP_SHAMOUTI_SHRINE_RUINS
-;	jr nz, .outdoors
-;	ld a, [wMapNumber]
-;	cp MAP_SHAMOUTI_SHRINE_RUINS
-;	jr z, .indoors
 
 .outdoors
 	xor a
@@ -736,7 +757,7 @@ FlyFunction:
 	callasm HideSprites
 	special UpdateTimePals
 	callasm PrepareOverworldMove
-	scall FieldMovePokepicScript
+;	scall FieldMovePokepicScript
 	callasm FlyFromAnim ; engine/events/field_moves.asm
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
@@ -829,7 +850,8 @@ Script_AutoWaterfall:
 	step_end
 
 TryWaterfallOW::
-	ld d, WATERFALL
+	lb de, WATERFALL, HM_WATERFALL
+;	ld d, WATERFALL
 	call CheckPartyMove
 	jr c, .failed
 	ld de, ENGINE_BOULDERBADGE ; RISING BADGE
@@ -1067,13 +1089,13 @@ StrengthFunction:
 
 .TryStrength:
 ; Strength
-	ld de, ENGINE_BOULDERBADGE ; PLAINBADGE
-	call CheckBadge
-	jr nc, .UseStrength
+;	ld de, ENGINE_BOULDERBADGE ; PLAINBADGE
+;	call CheckBadge
+;	jr nc, .UseStrength
 
-.Failed:
-	ld a, $80
-	ret
+;.Failed:
+;	ld a, $80
+;	ret
 
 .UseStrength:
 	ld hl, Script_StrengthFromMenu
@@ -1128,7 +1150,7 @@ AskStrengthScript:
 	endtext
 
 TryStrengthOW:
-	ld d, STRENGTH
+	lb de, STRENGTH, HM_STRENGTH
 	call CheckPartyMove
 	jr c, .nope
 
@@ -1278,7 +1300,8 @@ Script_AutoWhirlpool:
 	step_end
 
 TryWhirlpoolOW::
-	ld d, WHIRLPOOL
+	lb de, WHIRLPOOL, HM_WHIRLPOOL
+;	ld d, WHIRLPOOL
 	call CheckPartyMove
 	jr c, .failed
 	ld de, ENGINE_BOULDERBADGE ; GLACIER BADGE
@@ -1488,7 +1511,7 @@ AskRockSmashScript:
 	farjumptext _MaySmashText
 
 HasRockSmash:
-	ld d, ROCK_SMASH
+	lb de, ROCK_SMASH, TM_ROCK_SMASH
 	call CheckPartyMove
 	; a = carry ? 1 : 0
 	sbc a
@@ -1845,13 +1868,14 @@ Script_CantGetOffBike:
 	waitendtext
 
 HasCutAvailable::
-	ld d, CUT
+;	ld d, CUT
+	lb de, CUT, HM_CUT
 	call CheckPartyMove
 	jr c, .no
 
-	ld de, ENGINE_BOULDERBADGE ; HIVEBADGE
-	call CheckEngineFlag
-	jr c, .no
+;	ld de, ENGINE_BOULDERBADGE ; HIVEBADGE
+;	call CheckEngineFlag
+;	jr c, .no
 
 .yes
 	xor a

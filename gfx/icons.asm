@@ -318,6 +318,8 @@ Ho_OhIcon::    			INCBIN "gfx/icons/ho_oh.2bpp.lz"
 CelebiIcon::    		INCBIN "gfx/icons/celebi.2bpp.lz"
 EggIcon::          		INCBIN "gfx/icons/egg.2bpp.lz"
 NoctowlIcon::			INCBIN "gfx/icons/noctowl.2bpp.lz"
+AnnihilapeIcon:: 		INCBIN "gfx/icons/annihilape.2bpp.lz"  
+MinsirIcon::			INCBIN "gfx/icons/minsir.2bpp.lz" 
 
 SECTION "Mon Icons 17", ROMX
 

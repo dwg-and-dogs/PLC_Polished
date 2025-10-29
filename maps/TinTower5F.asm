@@ -17,14 +17,22 @@ TinTower5F_MapScriptHeader:
 
 	def_object_events
 	itemball_event  7,  9, HP_UP, 1, EVENT_TIN_TOWER_5F_RARE_CANDY
-	object_event 16, 3, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TinTower5FKimonoGirlScript, EVENT_SET_DVS_5
+	object_event 11, 6, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TinTower5FKimonoGirlScript, EVENT_SET_DVS_5
+
+
 
 TinTower5FKimonoGirlScript: 
 	faceplayer
+	; Store the original DVs in temporary memory locations
+	readmem wPartyMon1DVs+0     ; Reads value into hScriptVar
+	writemem wOriginalDV1       ; Writes hScriptVar to wOriginalDV1
+	readmem wPartyMon1DVs+1     ; Reads value into hScriptVar
+	writemem wOriginalDV2       ; Writes hScriptVar to wOriginalDV1
+	readmem wPartyMon1DVs+2     ; Reads value into hScriptVar
+	writemem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
 	opentext
 	checkevent EVENT_SET_DVS_5
 	iftrue_jumptext TinTower5FGreatnessLiesWithinText 
-	opentext
 	writetext TinTower5FWhatPotentialText
 	promptbutton
 	loadmenu .PhysicalOrSpecialMenuHeader
@@ -35,12 +43,85 @@ TinTower5FKimonoGirlScript:
 	ifequal 3, .MaximumDVSetting
 	jumptext TinTower5FDV_Setting_CancelText 
 
+.NoChange:
+	jumptext TinTower5FDV_Setting_CancelText
+
+.EggChange:
+	jumptext TinTower5FDV_Setting_EggText
+
+.PhysicalOrSpecialMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 
+	dw .PhysicalOrSpecialMenuData
+	db 1 ; default option
+
+.PhysicalDVsMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+	dw .PhysicalMenuData
+	db 1 ; default option
+
+.PhysicalOrSpecialMenuData:
+	db STATICMENU_CURSOR | STATICMENU_WRAP
+	db 3 ; items
+	db "Physical@"
+	db "Special@"
+	db "Maximum@"
+	db "Cancel@"
+
+.PhysicalMenuData:
+	db STATICMENU_CURSOR | STATICMENU_WRAP
+	db 8 ; items
+	db "FGT@"
+	db "FLY@"
+	db "PSN@"
+	db "GND@"
+	db "RCK@"
+	db "BUG@"
+	db "GHT@"
+	db "STL@"
+	
+.SpecialDVsMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+	dw .SpecialMenuData
+	db 1 ; default option
+
+.SpecialMenuData:
+	db STATICMENU_CURSOR | STATICMENU_WRAP
+	db 8 ; items
+	db "FIR@"
+	db "WTR@"
+	db "GRS@"
+	db "ELE@"
+	db "PSY@"
+	db "ICE@"
+	db "DGN@"
+	db "DRK@"
+
 .MaximumDVSetting:
-	setevent EVENT_SET_DVS_5
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveMaximumDVsText
+	writetext GaveMaximumDVsText_TT5F
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	; Player confirms - make it permanent
+	setevent EVENT_SET_DVS_5
+	writetext DVChangeConfirmedText
 	waitbutton
 	closetext
 	end
@@ -73,217 +154,398 @@ TinTower5FKimonoGirlScript:
 	ifequal 8, .GiveDarkDVs
 	jumptext TinTower5FDV_Setting_CancelText
 
-.GiveFightingDVs:; 	db $ff, $ee, $ee
-	setevent EVENT_SET_DVS_5
+.GiveFightingDVs:	; todo: Make all of the other .Give__DVs: follow this format. Keep the original values after loadmem. FOr instance, flying should still have ff, ef, ee
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+; begin section to copy throughout 
+	opentext
+	writetext GaveDVsText_TinTower_Fighting ; make new writetxt for ..._Flying, _Dark, etc 
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+; end 
 
-.GiveFlyingDVs: ; DVS_HP_FLYING   EQUS "$ff, $fe, $ee"
-	setevent EVENT_SET_DVS_5
+.GiveFlyingDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Flying
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GivePoisonDVs: ; DVS_HP_POISON   EQUS "$ff, $ef, $ee"
-	setevent EVENT_SET_DVS_5
+.GivePoisonDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Poison
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveGroundDVs: ; DVS_HP_GROUND   EQUS "$ff, $ff, $ee"
-	setevent EVENT_SET_DVS_5
+.GiveGroundDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ee
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Ground
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveRockDVs: ; DVS_HP_ROCK     EQUS "$ff, $ee, $fe"
-	setevent EVENT_SET_DVS_5
+.GiveRockDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Rock
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveBugDVs: ; DVS_HP_BUG      EQUS "$ff, $fe, $fe"
-	setevent EVENT_SET_DVS_5
+.GiveBugDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Bug
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveGhostDVs: ; DVS_HP_GHOST    EQUS "$ff, $ef, $fe"
-	setevent EVENT_SET_DVS_5
+.GiveGhostDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Ghost
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveSteelDVs: ;DVS_HP_STEEL    EQUS "$ff, $ff, $fe"
-	setevent EVENT_SET_DVS_5
+.GiveSteelDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $fe
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Steel
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveFireDVs: ; EQUS "$ff, $ee, $ef"
-	setevent EVENT_SET_DVS_5
+.GiveFireDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Fire
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveWaterDVs:;DVS_HP_WATER    EQUS "$ff, $fe, $ef"
-	setevent EVENT_SET_DVS_5
+.GiveWaterDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Water
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveGrassDVs:;DVS_HP_GRASS    EQUS "$ff, $ef, $ef"
-	setevent EVENT_SET_DVS_5
+.GiveGrassDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Grass
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveElectricDVs:;DVS_HP_ELECTRIC EQUS "$ff, $ff, $ef"
-	setevent EVENT_SET_DVS_5
+.GiveElectricDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ef
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Electric
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GivePsychicDVs:;DVS_HP_PSYCHIC  EQUS "$ff, $ee, $ff"
-	setevent EVENT_SET_DVS_5
+.GivePsychicDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Psychic
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveIceDVs:;DVS_HP_ICE      EQUS "$ff, $fe, $ff"
-	setevent EVENT_SET_DVS_5
+.GiveIceDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Ice
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
 
-.GiveDragonDVs:;DVS_HP_DRAGON   EQUS "$ff, $ef, $ff"
-	setevent EVENT_SET_DVS_5
+.GiveDragonDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ef
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Dragon
 	waitbutton
 	closetext
-	end
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
 
-.GiveDarkDVs:;DVS_HP_DARK     EQUS "$fe, $ff, $ff"
-	setevent EVENT_SET_DVS_5
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.GiveDarkDVs:
 	loadmem wPartyMon1DVs+0, $fe
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
-	writetext GaveDVsText
+	opentext
+	writetext GaveDVsText_TinTower_Dark
+	waitbutton
+	closetext
+	; Show the pokemon with new DVs/palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	waitbutton
+	closepokepic
+	opentext
+	writetext ConfirmDVChangeText
+	yesorno
+	iffalse .UndoChanges
+	sjump .ConfirmChanges
+
+.ConfirmChanges:
+	setevent EVENT_SET_DVS_5
+	writetext DVChangeConfirmedText
 	waitbutton
 	closetext
 	end
 
-.PhysicalOrSpecialMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 ;todo proper size
-	dw .PhysicalOrSpecialMenuData
-	db 1 ; default option
+.UndoChanges:
+	; Store the original DVs in temporary memory locations
+	readmem wOriginalDV1       ; Writes hScriptVar to wOriginalDV1
+	writemem wPartyMon1DVs+0     ; Reads value into hScriptVar
+	readmem wOriginalDV2       ; Writes hScriptVar to wOriginalDV1
+	writemem wPartyMon1DVs+1     ; Reads value into hScriptVar
+	readmem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
+	writemem wPartyMon1DVs+2     ; Reads value into hScriptVar
+	writetext DVChangeUndoneText
+	waitbutton
+	closetext
+	end
 
-.PhysicalDVsMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size
-;	menu_coords 0, 0, 15, TEXTBOX_Y - 1 ; alternate syntax
-	dw .PhysicalMenuData
-	db 1 ; default option
-
-.PhysicalOrSpecialMenuData:
-	db STATICMENU_CURSOR | STATICMENU_WRAP
-	db 3 ; items
-	db "Physical@"
-	db "Special@"
-	db "Maximum@"
-	db "Cancel@"
-
-.PhysicalMenuData:
-	db STATICMENU_CURSOR | STATICMENU_WRAP
-	db 8 ; items
-	db "FGT@"
-	db "FLY@"
-	db "PSN@"
-	db "GND@"
-	db "RCK@"
-	db "BUG@"
-	db "GHT@"
-	db "STL@"
-	
-.SpecialDVsMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 13, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1  ;todo proper size 
-	dw .SpecialMenuData
-	db 1 ; default option
-
-.SpecialMenuData:
-	db STATICMENU_CURSOR | STATICMENU_WRAP ; flags
-	db 8 ; items
-	db "FIR@"
-	db "WTR@"
-	db "GRS@"
-	db "ELE@"
-	db "PSY@"
-	db "ICE@"
-	db "DGN@"
-	db "DRK@"
-
+; Text strings
 TinTower5FWhatPotentialText:
 	text "A strong founda-"
 	line "tion withstands"
@@ -310,16 +572,123 @@ TinTower5FWhatPotentialText:
 	cont "need to."
 	done
 
-TinTower5FGaveMaximumDVsText:
+GaveMaximumDVsText_TT5F:
 	text "Intrinsic power"
 	line "maximized!"
 	done
 
-TinTower5FGaveDVsText:
-	text "Your #mon is"
-	line "now expressing"
-	para "that part of its"
-	line "lineage."
+GaveDVsText_TinTower:
+	text "DVs are set"
+	done
+
+
+GaveDVsText_TinTower_Fighting:
+	text "Maximized DVs for"
+	line "HP Fighting!"
+	done
+
+GaveDVsText_TinTower_Flying:
+	text "Maximized DVs for"
+	line "HP Flying!"
+	done
+
+GaveDVsText_TinTower_Poison:
+	text "Maximized DVs for"
+	line "HP Poison!"
+	done
+
+GaveDVsText_TinTower_Ground:
+	text "Maximized DVs for"
+	line "HP Ground!"
+	done
+
+GaveDVsText_TinTower_Rock:
+	text "Maximized DVs for"
+	line "HP Rock!"
+	done
+
+GaveDVsText_TinTower_Bug:
+	text "Maximized DVs for"
+	line "HP Bug!"
+	done
+
+GaveDVsText_TinTower_Ghost:
+	text "Maximized DVs for"
+	line "HP Ghost!"
+	done
+
+GaveDVsText_TinTower_Steel:
+	text "Maximized DVs for"
+	line "HP Steel!"
+	done
+
+GaveDVsText_TinTower_Fire:
+	text "Maximized DVs for"
+	line "HP Fire!"
+	done
+
+GaveDVsText_TinTower_Water:
+	text "Maximized DVs for"
+	line "HP Water!"
+	done
+
+GaveDVsText_TinTower_Grass:
+	text "Maximized DVs for"
+	line "HP Grass!"
+	done
+
+GaveDVsText_TinTower_Electric:
+	text "Maximized DVs for"
+	line "HP Electric!"
+	done
+
+GaveDVsText_TinTower_Psychic:
+	text "Maximized DVs for"
+	line "HP Psychic!"
+	done
+
+GaveDVsText_TinTower_Ice:
+	text "Maximized DVs for"
+	line "HP Ice!"
+	done
+
+GaveDVsText_TinTower_Dragon:
+	text "Maximized DVs for"
+	line "HP Dragon!"
+	done
+
+GaveDVsText_TinTower_Dark:
+	text "Maximized DVs for"
+	line "HP Dark!"
+	done
+
+ConfirmDVChangeText:
+	text "This is how your"
+	line "#mon will"
+	cont "appear."
+	
+	para "Do you wish to"
+	line "make this change"
+	cont "permanent?"
+	done
+
+DVChangeConfirmedText:
+	text "The transformation"
+	line "is complete!"
+	
+	para "Your #mon has"
+	line "unlocked its true"
+	cont "potential!"
+	done
+
+DVChangeUndoneText:
+	text "Your #mon has"
+	line "returned to its"
+	cont "original form."
+	
+	para "The potential"
+	line "remains dormant"
+	cont "for now."
 	done
 
 TinTower5FDV_Setting_CancelText:
@@ -329,8 +698,13 @@ TinTower5FDV_Setting_CancelText:
 	line "to show it!"
 	done
 
-TinTower5FGreatnessLiesWithinText: ; todo place five others 
+TinTower5FGreatnessLiesWithinText:
 	text "Greatness lies"
 	line "within!"
-	done	
-	
+	done
+
+TinTower5FDV_Setting_EggText:
+	text "That's only an"
+	line "egg! Give it time"
+	cont "to grow."
+	done

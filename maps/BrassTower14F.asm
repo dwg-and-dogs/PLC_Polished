@@ -14,18 +14,51 @@ BrassTower14F_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event 0, 8, BGEVENT_READ, BrassTowerSwitchScript  ;  cf warehouse entrance basement key .... 
+	bg_event 0, 8, BGEVENT_READ, BrassTowerSwitchScript14F  ;  cf warehouse entrance basement key .... 
 
 	def_object_events
-	object_event 14, 4, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderHiroshi, -1 ; generous
 	object_event  10,  8, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, FLAREON, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrassTower14FFlareonScript, EVENT_BRASS_TOWER_FLAREON
+	object_event 14, 4, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderHiroshi, -1 ; generous
+
 
 
 	object_const_def
 	const BRASS_TOWER_FLAREON
 
+
+
+BrassTowerSwitchScript14F:
+	checkevent EVENT_BRASS_TOWER_RIGHT_GUARD
+	iftrue .AskSwitchToLeft
+	opentext
+	writetext SwitchSpiritsTextLeft
+	yesorno
+	iffalse_jumpopenedtext NotSwitchingText
+	setevent EVENT_BRASS_TOWER_RIGHT_GUARD
+	clearevent EVENT_BRASS_TOWER_LEFT_GUARD
+	writetext SpiritsChangedText
+	waitbutton
+	closetext
+	end
+
+.AskSwitchToLeft:
+	opentext
+	writetext SwitchSpiritsTextRight
+	yesorno
+	iffalse_jumpopenedtext NotSwitchingText
+	setevent EVENT_BRASS_TOWER_LEFT_GUARD
+	clearevent EVENT_BRASS_TOWER_RIGHT_GUARD
+	writetext SpiritsChangedText
+	waitbutton
+	closetext
+	end
+
 GenericTrainerElderHiroshi:
     generictrainer ELDER, HIROSHI, EVENT_BEAT_ELDER_HIROSHI, HiroshiSeenText, HiroshiBeatenText
+
+	text "You cannot stop"
+	line "what's begun."
+	done
 
 HiroshiBeatenText:
 	text "What goes around"
@@ -49,6 +82,7 @@ BrassTower14FFlareonScript:
 	setevent EVENT_BRASS_TOWER_FLAREON
 	reloadmapafterbattle
 	end
+	
 	
 FlareonGuardianText:
 	text "It's a guardian"

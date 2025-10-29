@@ -17,7 +17,7 @@ TrainerGroups:
 	dba MejimiGroup ;;
 	dba BrunoGroup
 	dba SandraGroup
-	dba ChampionGroup
+	dba KurtFinalGroup
 	dba BrockGroup
 	dba SamsaraGroup
 	dba LtSurgeGroup
@@ -106,6 +106,8 @@ TrainerGroups:
 	dba CooltrainerMGroup
 	dba CooltrainerFGroup
 	dba AceDuoGroup
+	dba NomadMGroup
+	dba NomadFGroup
 	dba VeteranMGroup
 	dba VeteranFGroup
 	dba ProtonGroup
@@ -127,12 +129,10 @@ TrainerGroups:
 	dba AmosGroup
 	dba CherylGroup
 	dba RileyGroup
-	dba NomadMGroup
 	dba MarleyGroup
 	dba MiraGroup
 	dba LannaGroup
 	dba DarachGroup
-	dba NomadFGroup
 	dba BobeshGroup
 	dba AdrinnaGroup
 	dba BarbeauGroup

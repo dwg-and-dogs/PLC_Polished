@@ -9,32 +9,32 @@ EcruteakGym_MapScriptHeader:
 	warp_event  4, 17, ECRUTEAK_CITY, 10
 	warp_event  5, 17, ECRUTEAK_CITY, 10
 
-	warp_event  7,  6, ECRUTEAK_GYM, 3 ; 3 boulder 1
-	warp_event  2,  8, ECRUTEAK_GYM, 3	; 4 boulder 2 
+	warp_event  7,  6, ECRUTEAK_GYM, 5 ; 3 boulder 1
+	warp_event  2,  8, ECRUTEAK_GYM, 5	; 4 boulder 2 
 	
 	warp_event  4, 14, ECRUTEAK_GYM, 4
-	warp_event  2,  4, ECRUTEAK_GYM, 3
-	warp_event  2,  5, ECRUTEAK_GYM, 3
-	warp_event  2,  6, ECRUTEAK_GYM, 3
-	warp_event  2,  7, ECRUTEAK_GYM, 3	
+	warp_event  2,  4, ECRUTEAK_GYM, 5
+	warp_event  2,  5, ECRUTEAK_GYM, 5
+	warp_event  2,  6, ECRUTEAK_GYM, 5
+	warp_event  2,  7, ECRUTEAK_GYM, 5	
 
-	warp_event  2,  9, ECRUTEAK_GYM, 3
-	warp_event  2,  10, ECRUTEAK_GYM, 3	
-	warp_event  3,  10, ECRUTEAK_GYM, 3	
-	warp_event  4,  10, ECRUTEAK_GYM, 3	
-	warp_event  5,  10, ECRUTEAK_GYM, 3		
-	warp_event  6,  10, ECRUTEAK_GYM, 3		
-	warp_event  6,  11, ECRUTEAK_GYM, 3			
-	warp_event  6,  9, ECRUTEAK_GYM, 3			
-	warp_event  6,  8, ECRUTEAK_GYM, 3			
-	warp_event  4,  4, ECRUTEAK_GYM, 3			
-	warp_event  4,  5, ECRUTEAK_GYM, 3			
-	warp_event  4,  6, ECRUTEAK_GYM, 3			
-	warp_event  4,  7, ECRUTEAK_GYM, 3			
-	warp_event  5,  4, ECRUTEAK_GYM, 3			
-	warp_event  6,  4, ECRUTEAK_GYM, 3		
-	warp_event  6,  5, ECRUTEAK_GYM, 3			
-	warp_event  6,  6, ECRUTEAK_GYM, 3				
+	warp_event  2,  9, ECRUTEAK_GYM, 5
+	warp_event  2,  10, ECRUTEAK_GYM, 5	
+	warp_event  3,  10, ECRUTEAK_GYM, 5
+	warp_event  4,  10, ECRUTEAK_GYM, 5	
+	warp_event  5,  10, ECRUTEAK_GYM, 5		
+	warp_event  6,  10, ECRUTEAK_GYM, 5		
+	warp_event  6,  11, ECRUTEAK_GYM, 5			
+	warp_event  6,  9, ECRUTEAK_GYM, 5			
+	warp_event  6,  8, ECRUTEAK_GYM, 5			
+	warp_event  4,  4, ECRUTEAK_GYM, 5			
+	warp_event  4,  5, ECRUTEAK_GYM, 5			
+	warp_event  4,  6, ECRUTEAK_GYM, 5			
+	warp_event  4,  7, ECRUTEAK_GYM, 5			
+	warp_event  5,  4, ECRUTEAK_GYM, 5			
+	warp_event  6,  4, ECRUTEAK_GYM, 5		
+	warp_event  6,  5, ECRUTEAK_GYM, 5			
+	warp_event  6,  6, ECRUTEAK_GYM, 5				
 
 
 	def_coord_events
@@ -48,7 +48,7 @@ EcruteakGym_MapScriptHeader:
 	object_event  2, 15, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymBouldersResetScript, -1  
 	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1 
 	object_event  5, 13, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymPryceScript, EVENT_BURNED_TOWER_MORTY
-	pokemon_event  4, 13, MAMOSWINE, -1, -1, PAL_NPC_BLUE, EcruteakMamoswineText, EVENT_BURNED_TOWER_MORTY
+	pokemon_event  4, 13, MAMOSWINE, -1, -1, PAL_NPC_BROWN, EcruteakMamoswineText, EVENT_BURNED_TOWER_MORTY
 
 	object_event  2,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumRebecca, -1
 	object_event  7,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumDoris, -1
@@ -61,7 +61,7 @@ EcruteakGymBoulders:
 	usestonetable .BoulderTable
 	endcallback
 
-.BoulderTable: ; todo add all the possible warps 
+.BoulderTable:
 	; boulder 1 
 	stonetable 3, 	ECRUTEAK_GYM_BOULDER1, .Disappear1
 	; boulder 2 

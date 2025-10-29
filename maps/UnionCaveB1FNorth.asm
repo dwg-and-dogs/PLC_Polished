@@ -21,7 +21,7 @@ UnionCaveB1FNorth_MapScriptHeader:
 	tmhmball_event  7, 10, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND ;brick break
 	pokemon_event  5, 10, RAMPARDOS, -1, -1, PAL_NPC_BLUE, RampardosText, -1
 	pokemon_event  6, 10, BASTIODON, -1, -1, PAL_NPC_BLUE, BastiodonText, -1
-	itemball_event 4, 22, HARD_STONE, 1, EVENT_UNION_CAVE_HARD_STONE
+	itemball_event  7,  7, HARD_STONE, 1, EVENT_UNION_CAVE_HARD_STONE
 	fruittree_event 13, 4, FRUITTREE_UNION_CAVE_2, HOLLOW_ROCK, PAL_NPC_BLUE
 
 GenericTrainerHikerLeonard:

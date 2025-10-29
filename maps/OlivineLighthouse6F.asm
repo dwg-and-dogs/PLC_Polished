@@ -11,24 +11,34 @@ OlivineLighthouse6F_MapScriptHeader:
 	def_coord_events 
 	; 0 = go to the slowking
 	coord_event 13, 11, 0, Lighthouse6FScene0 
-	coord_event 13, 10, 0, Lighthouse6FScene
 	; after you warp, this'll have to be rewritten that you keep heading left until you see them 
-	coord_event  9, 10, 1, Lighthouse6FScene1
-	coord_event  9, 10, 1, Lighthouse6FScene2
-	coord_event  9, 10, 1, Lighthouse6FScene3
+	coord_event  8, 10, 1, Lighthouse6FScene1
+	coord_event  8, 11, 1, Lighthouse6FScene2
+
 
 	
 	def_bg_events
+	bg_event  6,  6, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event  6,  7, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event  6,  8, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event  6,  9, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event  7,  9, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event  8,  9, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event  9,  9, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event 10,  9, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event 11,  9, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event 11,  8, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event 11,  7, BGEVENT_JUMPTEXT, LighthousePoisonText
+	bg_event 11,  6, BGEVENT_JUMPTEXT, LighthousePoisonText
 
 	def_object_events
 	object_event 14, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LighthouseKurtScript, EVENT_BEAT_CHUCK
-	object_event 7, 10, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
-	object_event 8, 10, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
-
-	pokemon_event  9, 9, SLOWKING, -1, -1, PAL_NPC_RED, SlowkingLighthouseText, EVENT_SLOWKING_DREAMS
-	pokemon_event  9, 8, TENTACRUEL, -1, -1, PAL_NPC_BLUE, TentacruelLighthouseText, EVENT_SLOWKING_DREAMS
-
+	object_event 6, 10, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
+	object_event 7, 10, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_CHUCK	
+	pokemon_event 9, 9, SLOWKING, -1, -1, PAL_NPC_RED, SlowkingLighthouseText, EVENT_SLOWKING_DREAMS
+	pokemon_event 9, 8, TENTACRUEL, -1, -1, PAL_NPC_BLUE, TentacruelLighthouseText, EVENT_SLOWKING_DREAMS
 	object_event 18,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Lighthouse6FScientistScript, -1
+	object_event 14,  7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Lighthouse6FScientist2Text, EVENT_BEAT_CHUCK
 	itemball_event  2,  9, DUBIOUS_DISC, 1, EVENT_DUBIOUS_DISC
 
 	object_const_def
@@ -41,6 +51,7 @@ OlivineLighthouse6F_MapScriptHeader:
 Lighthouse6FScene0:
 	applyonemovement PLAYER, step_up
 Lighthouse6FScene:
+<<<<<<< HEAD
 	applyonemovement PLAYER, step_left
 	applyonemovement PLAYER, step_left
 	applyonemovement PLAYER, step_left ; now at 10, 10 
@@ -51,11 +62,28 @@ Lighthouse6FScene:
 	turnobject LIGHTHOUSE_KURT1, LEFT
 	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 10 
 	showtext LighthouseKurtText1
+=======
+	turnobject LIGHTHOUSE_KURT1, LEFT
+	applyonemovement PLAYER, step_left 
+	applyonemovement PLAYER, step_left 
+	applyonemovement PLAYER, step_left 
+	showemote EMOTE_SAD, LIGHTHOUSE_JASMINE, 30
+	opentext
+	writetext LighthouseJasmineText1
+	waitbutton
+	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 30
+	writetext LighthouseChuckText1
+	waitbutton
+	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 30 
+	writetext LighthouseKurtText1
+	waitbutton
+>>>>>>> newgame_works_072725_c8be725
 	closetext
 	applyonemovement PLAYER, step_left
 	turnobject PLAYER, UP
 	special HealParty
-	warp SLOWPOKE_DREAMS, 5, 8
+	showtext Lighthouse6F_FathomText
+	warpfacing UP, SLOWPOKE_DREAMS, 4, 5
 	end
 ;
 LighthouseJasmineText1:
@@ -94,22 +122,28 @@ LighthouseKurtText1:
 	line "something!"
 	done
 
-Lighthouse6FScene3:
-	applyonemovement PLAYER, step_up
+Lighthouse6F_FathomText:
+	text "Slowking: You"
+	line "fathom what I am"
+	cont "enduring for you."
+
+	para "Step inside."
+	done
+
 Lighthouse6FScene2:
-	applyonemovement PLAYER, step_left
-	applyonemovement PLAYER, step_left
-	applyonemovement PLAYER, step_left
-	applyonemovement PLAYER, step_left  
+	applyonemovement PLAYER, step_up
 Lighthouse6FScene1:
 	turnobject PLAYER, LEFT
 	turnobject LIGHTHOUSE_CHUCK, RIGHT
-	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 10
-	showtext LighthouseChuckText2
-	showemote EMOTE_QUESTION, LIGHTHOUSE_JASMINE, 10
-	showtext LighthouseJasmineText2
-	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 10
-	showtext LighthouseChuckText3
+	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 30
+	opentext
+	writetext LighthouseChuckText2
+	waitbutton
+	showemote EMOTE_QUESTION, LIGHTHOUSE_JASMINE, 30
+	writetext LighthouseJasmineText2
+	waitbutton
+	writetext LighthouseChuckText3
+	waitbutton
 	winlosstext ChuckLossText, 0
 	loadtrainer CHUCK, 1
 	startbattle
@@ -122,20 +156,22 @@ Lighthouse6FScene1:
 	setflag ENGINE_STORMBADGE
 	promptbutton
 	turnobject LIGHTHOUSE_CHUCK, LEFT
-	showtext LighthouseJasmineText3
-	promptbutton
+	opentext
+	writetext LighthouseJasmineText3
+	waitbutton
 	writetext LighthouseChuckText4
 	waitbutton
 	closetext
 	applymovement LIGHTHOUSE_CHUCK, LighthouseChuckLeavesMovement
 	disappear LIGHTHOUSE_CHUCK
 	applyonemovement LIGHTHOUSE_JASMINE, step_right
-	showemote EMOTE_HAPPY, LIGHTHOUSE_JASMINE, 10
+	showemote EMOTE_HAPPY, LIGHTHOUSE_JASMINE, 30
 	showtext LighthouseJasmineText4
-	waitbutton
-	closetext
 	applymovement LIGHTHOUSE_JASMINE, LighthouseChuckLeavesMovement
 	disappear LIGHTHOUSE_JASMINE
+	clearevent EVENT_JASMINE_GYM
+	setscene $2
+	end
 	
 	
 LighthouseChuckText2:
@@ -184,9 +220,8 @@ LighthouseChuckText3:
 	done
 	
 ChuckLossText:
-	text "Bested by you?"
-	line "I thought I knew"
-	cont "it all..."
+	text "I thought I knew"
+	line "it all?"
 	done
 
 GetStormBadgeText:
@@ -271,6 +306,8 @@ LighthouseKurtScript:
 	faceplayer
 	checkevent EVENT_BEAT_CHUCK
 	iftrue_jumptext LighthouseKurtAfterChuck
+	checkevent EVENT_SLOWKING_DREAMS
+	iftrue_jumptext LighthouseKurtAfterDreams
 	showtext LighthouseKurtText0
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
@@ -280,6 +317,14 @@ LighthouseKurtScript:
 	special RestartMapMusic
 	special Special_FadeInQuickly
 	end 
+
+LighthouseKurtAfterDreams:
+	text "The Slowking isn't"
+	line "in pain any more,"
+	
+	para "but Chuck needs"
+	line "to be stopped!"
+	done
 
 LighthouseKurtText0:
 	text_high
@@ -355,4 +400,21 @@ Lighthouse6FScientistText2:
 	line "of this? I hope"
 	cont "an infinity pool."
 	done
+
+Lighthouse6FScientist2Text:
+	text "I can't remember"
+	line "how this thing"
+	cont "goes together!"
 	
+	para "Knowledge is of"
+	line "no value, unless"
+	para "it can be used"
+	line "when occasion"
+	cont "demands!"
+	done
+
+LighthousePoisonText:
+	text "The water in the"
+	line "pool has a foul"
+	cont "odor. Stay clear!"
+	done

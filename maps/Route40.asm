@@ -1,4 +1,4 @@
-Route40_MapScriptHeader: ; todo revise the warp and move Kurt 
+Route40_MapScriptHeader: 
 	def_scene_scripts
 
 	def_callbacks
@@ -336,14 +336,20 @@ Route40MatronScript:
 	opentext
 	writetext Route40WantToHeal
 	waitbutton
+	closetext
+	
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	
+	opentext
 	writetext Route40Healed
 	waitbutton
 	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
 	end
 
 Route40WantToHeal:
@@ -371,6 +377,11 @@ Route40Lass2Text:
 GenericTrainerSwimmermHarold:
 	generictrainer SWIMMERM, HAROLD, EVENT_BEAT_SWIMMER_M_HAROLD, .SeenText1, .BeatenText1
 
+	text "It's important to"
+	line "hydrate, even if"
+	cont "you're diving!"
+	done
+
 .BeatenText1:
 	text "Back to diving!"
 	done
@@ -384,6 +395,11 @@ GenericTrainerSwimmermHarold:
 
 GenericTrainerSwimmermSimon:
 	generictrainer SWIMMERM, SIMON, EVENT_BEAT_SWIMMER_M_SIMON, .SeenText2, .BeatenText2
+
+	text "I'm training for"
+	line "a big dive in"
+	cont "Hoenn next year."
+	done
 
 .BeatenText2:
 	text "You should see it"
@@ -401,6 +417,14 @@ GenericTrainerSwimmermSimon:
 GenericTrainerSwimmermRandall:
 	generictrainer SWIMMERM, RANDALL, EVENT_BEAT_SWIMMER_M_RANDALL, .SeenText3, .BeatenText3
 
+	text "The cold water"
+	line "makes your body"
+	cont "work hard."
+	
+	para "Don't get caught"
+	line "exhausted!"
+	done
+
 .BeatenText3:
 	text "Diving is hard"
 	line "work."
@@ -416,6 +440,14 @@ GenericTrainerSwimmermRandall:
 
 GenericTrainerSwimmermCharlie:
 	generictrainer SWIMMERM, CHARLIE, EVENT_BEAT_SWIMMER_M_CHARLIE, .SeenText4, .BeatenText4
+
+	text "There's a wrecked"
+	line "ship from 160"
+	cont "years ago."
+	
+	para "It's the main"
+	line "draw here."
+	done
 
 .BeatenText4:
 	text "You brought me"

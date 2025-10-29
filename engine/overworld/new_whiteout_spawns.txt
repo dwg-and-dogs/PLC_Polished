@@ -1,0 +1,73 @@
+Problem: I want to set the spawn point at various locations that are not usin gthe pokecenter tileset and do not use a scene_script with blackoutmod
+
+; new code with hardcode exception: 
+.SetSpawn:
+	call GetMapEnvironment
+	call CheckOutdoorMap
+	ret nz
+	ld a, [wNextMapGroup]
+	ld b, a
+	ld a, [wNextMapNumber]
+	ld c, a
+	call GetAnyMapEnvironment
+	call CheckIndoorMap
+	ret nz
+	; Check for Pokecenter/Pokecom tilesets (original code)
+	ld a, [wNextMapGroup]
+	ld b, a
+	ld a, [wNextMapNumber]
+	ld c, a
+	call GetAnyMapTileset
+	ld a, c
+	cp TILESET_POKECENTER
+	jr z, .set_spawn
+	cp TILESET_POKECOM_CENTER
+	jr z, .set_spawn
+	
+	; Hardcode checks for historic region spawn points
+	ld a, [wNextMapGroup]
+	cp 5  ; ANARRES_TOWN group number 
+	jr nz, .check_gauldenrod
+	ld a, [wNextMapNumber]
+	cp 2  ; ANARRES_TOWN map number within the group 
+	jr z, .set_spawn
+	ret  ; If you reach here, you didn't update the spawn point 
+	
+	; repeat for all the towns...
+
+.set_spawn:
+	ld a, [wNextMapGroup]
+	ld [wLastSpawnMapGroup], a
+	ld a, [wNextMapNumber]
+	ld [wLastSpawnMapNumber], a
+	ret
+	
+	
+; Original code is below: 
+.SetSpawn:
+	call GetMapEnvironment
+	call CheckOutdoorMap
+	ret nz
+	ld a, [wNextMapGroup]
+	ld b, a
+	ld a, [wNextMapNumber]
+	ld c, a
+	call GetAnyMapEnvironment
+	call CheckIndoorMap
+	ret nz
+	ld a, [wNextMapGroup]
+	ld b, a
+	ld a, [wNextMapNumber]
+	ld c, a
+	call GetAnyMapTileset
+	ld a, c
+	cp TILESET_POKECENTER
+	jr z, .pokecenter_pokecom
+	cp TILESET_POKECOM_CENTER
+	ret nz
+.pokecenter_pokecom
+	ld a, [wPrevMapGroup]
+	ld [wLastSpawnMapGroup], a
+	ld a, [wPrevMapNumber]
+	ld [wLastSpawnMapNumber], a
+	ret

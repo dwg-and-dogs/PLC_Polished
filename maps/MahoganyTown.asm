@@ -12,7 +12,7 @@ MahoganyTown_MapScriptHeader:
 	warp_event  9,  1, ROUTE_43_MAHOGANY_GATE, 3
 
 	def_coord_events
-	coord_event 9, 2, 0, MahoganyTradeQuestTrigger
+	coord_event 7, 4, 0, MahoganyTradeQuestTrigger
 
 	def_bg_events
 	bg_event  1,  5, BGEVENT_JUMPTEXT, MahoganyTownSignText
@@ -21,19 +21,21 @@ MahoganyTown_MapScriptHeader:
 	bg_event  8,  2, BGEVENT_JUMPTEXT, SilphSpringsAheadText
 
 	def_object_events
-	object_event  11,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest 
-	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, -1 ; 
-	object_event  9, 3, 	SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
+	object_event 11,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 	0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest
+	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, -1 ;
+	object_event  7, 5, 	SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
 	object_event  6,  7, 	SPRITE_FISHER, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
-	object_event 12,  8, 	SPRITE_CUTE_GIRL, 	SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, PAL_NPC_RED,	OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
+	object_event 13, 15, 	SPRITE_CUTE_GIRL, 	SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, PAL_NPC_RED,	OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
 	object_event 10,  9, 	SPRITE_GRANNY, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownGrannyText, -1
-
+	object_event 19, 8, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyDragonTamerText, -1 
+	object_event 19, 9, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyDragonTamerText, -1 
 	
 	object_const_def
 	const MAHOGANY_TOWN_GRAMPS
 
 MahoganyTradeQuestTrigger:
 	showemote EMOTE_SAD, MAHOGANY_TOWN_GRAMPS, 30
+	setscene $1
 	end
 
 MahoganyTownFlyPoint:
@@ -58,17 +60,18 @@ MahoganyTownGrannyText:
 MahoganyTownGrampsScript:
 	faceplayer
 	opentext	
+	checkevent EVENT_GOT_OLD_AMBER
+	iftrue_jumpopenedtext GiveOldAmberText
 	writetext NeedASurfMailText
 	waitbutton
-	checkitem SURF_MAIL
+	checkkeyitem SURF_MAIL_K
 	iffalse_jumpopenedtext Text_NoSurfMail
 	writetext Text_SurfMailQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext Text_NoSurfMail
-	takeitem SURF_MAIL
-	verbosegiveitem OLD_AMBER
-	setscene $1
-	iffalse_endtext
+	takekeyitem SURF_MAIL_K
+	verbosegivekeyitem OLD_AMBER_K
+	setevent EVENT_GOT_OLD_AMBER
 	jumpopenedtext GiveOldAmberText 
 
 NeedASurfMailText: 
@@ -97,14 +100,12 @@ Text_SurfMailQuestion:
 	text "Hey! What're"
 	line "those doodles?"
 	
-	para "They look like"
-	line "the view from the"
-	cont "Olivine Pier."
+	para "They remind me of"
+	line "Olivine's pier."
 	
-	para "Could... Could I"
-	line "have it? I will"
-	para "give you a fossil"
-	line "I found."
+	para "Can I have it?"
+	line "I'll give you a"
+	cont "fossil I dug up."
 	done
 
 	
@@ -131,9 +132,18 @@ MahoganyTownFisherText:
 	done
 
 MahoganyTownLassText:
-	text "We have to ration"
-	line "water, now that"
-	cont "the lake is dry."
+	text "Blackthorn City"
+	line "radicals blocked"
+	cont "Route 44."
+	
+	para "They don't want"
+	line "Silph to get to"
+	cont "their water."
+	
+	para "But Mahogany has"
+	line "always welcomed"
+	cont "outside investors"
+	cont "even long ago."
 	done
 
 MahoganyTownSignText:
@@ -158,12 +168,14 @@ MahoganyKurtScript:
 	yesorno
 	iffalse DontHearHearStory5
 	writetext KurtMahoganyStoryText
+	waitbutton
 	clearevent EVENT_KURTS_HOUSE_BOOK_5
 	closetext
 	end
 
 DontHearHearStory5:
 	writetext SomeOtherTime_5Text
+	waitbutton
 	closetext
 	end
 
@@ -228,3 +240,16 @@ SilphSpringsAheadText:
 	para "for all of Johto"
 	line "and beyond!"
 	done
+
+MahoganyDragonTamerText:
+	text "Champion Lance"
+	line "forbids any entry"
+	para "to Eastern Johto"
+	line "to keep our water"
+	cont "in our region!"
+	
+	para "We will not allow"
+	line "Silph to destroy"
+	cont "our Den!"
+	done
+	

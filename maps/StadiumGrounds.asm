@@ -12,9 +12,9 @@ StadiumGrounds_MapScriptHeader:
 	warp_event  7, 39, SERENE_SPRINGS, 4
 	warp_event  49, 3, STADIUM_CAPITAL_GATE, 1
 	
-	def_coord_events ; todo: need to pan the camera over for changing the blocks, and then also have a condition depending on if you beat the toxicroak but lose to bobesh 
+	def_coord_events 
 	coord_event 26,  6, 0, StadiumGroundsToxicroakScene
-	coord_event 26,  6, 1, StadiumGroundsBobeshScene 
+	coord_event 26,  6, 1, StadiumGroundsBobeshScene
 
 	def_bg_events
 	bg_event  6, 34, BGEVENT_JUMPTEXT, Text_StadiumSign1
@@ -23,21 +23,22 @@ StadiumGrounds_MapScriptHeader:
 	bg_event 42, 36, BGEVENT_ITEM + ENERGY_ROOT, EVENT_STADIUM_HIDDEN_1
 	bg_event 33, 2, BGEVENT_ITEM + REVIVAL_HERB, EVENT_STADIUM_HIDDEN_2
 	bg_event  8, 14, BGEVENT_ITEM + HEAL_POWDER, EVENT_STADIUM_HIDDEN_3
+	bg_event 51,  7, BGEVENT_JUMPTEXT, Text_StadiumSign3
 
 	def_object_events
 	object_event 29,  9, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_BOBESH_STADIUM
 	object_event 30,  10, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandraScript, EVENT_BEAT_BOBESH_STADIUM
 	pokemon_event  28, 10, TOXICROAK, -1, -1, PAL_NPC_BLUE, ToxicroakChallengeText, EVENT_TOXICROAK_STADIUM
-	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, EVENT_STADIUM_GROUNDS_SANDRA	
-	object_event 49, 14, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
-	object_event 49, 11, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
-	object_event 42,  3, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader10, EVENT_BEAT_BOBESH_STADIUM
-	object_event 34, 37, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader11, EVENT_BEAT_BOBESH_STADIUM
-	object_event  7,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader12, EVENT_BEAT_BOBESH_STADIUM
-	object_event 49, 17, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader6, EVENT_BEAT_BOBESH_STADIUM 
-	object_event 48, 34, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader7, EVENT_BEAT_BOBESH_STADIUM
+	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, EVENT_STADIUM_GROUNDS_SANDRA
+	object_event 49, 14, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
+	object_event 49, 11, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
+	object_event 42,  3, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader10, EVENT_BEAT_BOBESH_STADIUM
+	object_event 34, 37, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader11, EVENT_BEAT_BOBESH_STADIUM
+	object_event  7,  9, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBrigader12, EVENT_BEAT_BOBESH_STADIUM
+	object_event 49, 17, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader6, EVENT_BEAT_BOBESH_STADIUM
+	object_event 48, 34, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader7, EVENT_BEAT_BOBESH_STADIUM
 	tmhmball_event 53, 35, TM_FLAME_CHARGE, EVENT_BURNED_TOWER_B1F_TM_FLAME_CHARGE
-	itemball_event 14,  8, BLACK_BELT, 1, EVENT_GOT_BLACK_BELT_FROM_WESLEY
+	itemball_event 15,  7, BLACK_BELT, 1, EVENT_GOT_BLACK_BELT_FROM_WESLEY
 
 	
 	object_const_def
@@ -168,7 +169,6 @@ PickupStadiumScene:
 	ifequal $1, .Continue2
 .Continue2:
 	reloadmapafterbattle
-	; todo: camera pans 	
 	pause 60
 	changeblock 24, 10, $35
 	changeblock 28, 10, $35
@@ -386,9 +386,9 @@ Brigader9SeenText:
 
 Brigader9BeatenText:
 	text "Your elder is in"
-	line "the stadium. I"
-	cont "don't think she's"
-	cont "going back…"
+	line "the stadium."
+	para "And she's not"
+	line "coming back!"
 	done
 
 GenericTrainerBrigader10: ; manolete, tauros 
@@ -456,6 +456,9 @@ Brigader12BeatenText:
 
 Text_StadiumSign1:
 	text "National Stadium"
+	
+	para "Managed by:"
+	line "General Bobesh"
 	done
 	
 Text_StadiumSign2:
@@ -464,11 +467,19 @@ Text_StadiumSign2:
 	cont "Consul Urgaust"
 	done
 
+Text_StadiumSign3:
+	text "North to Western"
+	line "Capital"
+	
+	para "Visa required for"
+	line "entry!"
+	done
+
 SandraInvitesToBoxText:
-	text "<PLAYER>. Excel-"
-	line "lent battle"
-	cont "against General"
-	cont "Bobesh."
+	text "<PLAYER>."
+	line "Excellent battle"
+	para "against General"
+	line "Bobesh."
 
 	para "I have much admir-"
 	line "ation for your"
@@ -499,7 +510,7 @@ StadiumGroundsSandra2Script:
 	writetext StadiumGroundsTimeTravel
 	waitbutton
 	closetext
-	playsound SFX_WARP_TO
+	special Special_CelebiShrineEvent
 	setevent EVENT_SANDRA_WARPED
 	setevent EVENT_WHITNEY_GYM
 	special FadeOutPalettes

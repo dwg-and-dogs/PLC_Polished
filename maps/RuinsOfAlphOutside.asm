@@ -75,20 +75,26 @@ RuinsOfAlphTeacherScript:
 	faceplayer
 	opentext
 	writetext WantToHeal2
-	promptbutton
+	waitbutton
+	closetext
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+
+	opentext
 	writetext AlphHealedPokemon
-	promptbutton
-	playmusic MUSIC_NONE	
-	special RestoreMusic
+	waitbutton
 	closetext
-	end ;endtext?
+	end
 	
 WantToHeal2:
 	text "We are here on"
-	line "a field trip."
+	line "a field trip!"
 	
 	para "I'll heal your"
 	line "#mon for you."
@@ -101,10 +107,9 @@ AlphHealedPokemon:
 GenericTrainerSchoolgirlMolly:
 	generictrainer SCHOOLGIRL, MOLLY, EVENT_BEAT_SCHOOLGIRL_MOLLY, SchoolgirlMollySeenText, SchoolgirlMollyBeatenText
 
-	text "My big brother"
-	line "says that these"
-	para "ruins contain"
-	line "portals."
+	text "My big bro says"
+	line "there's portals"
+	cont "inside the ruins."
 	
 	para "I wonder why?"
 	done

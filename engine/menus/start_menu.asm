@@ -160,7 +160,7 @@ StartMenu::
 .SaveString:     db "Save@"
 .OptionString:   db "Options@"
 .ExitString:     db "Exit@"
-.PokegearString: db "<PO><KE>gear@"
+.PokegearString: db "Watch@"
 .QuitString:     db "Quit@"
 
 .OpenMenu:

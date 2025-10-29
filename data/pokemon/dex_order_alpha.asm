@@ -7,6 +7,7 @@ AlphabeticalPokedexOrder:
 	db	ALAKAZAM
 	db	AMBIPOM
 	db	AMPHAROS
+	db  ANNIHILAPE
 	db	ARBOK
 	db	ARCANINE
 	db	ARIADOS
@@ -141,6 +142,7 @@ AlphabeticalPokedexOrder:
 	db	MEGANIUM
 	db	MEOWTH
 	db	MILTANK
+	db  MINSIR
 	db	MISDREAVUS
 	db	MISMAGIUS
 	db	MONFERNO

@@ -68,8 +68,6 @@ Many of these changes were made to Polished Crystal 3.0.0.
 * Maximum 30 items and 16 Balls in your bag pocket.
 
 
-
-
 ## Nuzlocke Mode
 
 * Available in the Option menu at any time.

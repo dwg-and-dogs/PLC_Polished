@@ -16,25 +16,21 @@ CianwoodCove_MapScriptHeader:
 
 
 	def_object_events
-	object_event 11, 16, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCoveKurtScript, EVENT_CIANWOOD_COVE_KURT
+	object_event 11, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCoveKurtScript, EVENT_BEAT_KENSEY_DOCKS
+	object_event   10, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptCianwoodCove, EVENT_BEAT_KENSEY_DOCKS
 	itemball_event 11, 21, PETAYA_BERRY, 3, EVENT_CIANWOODCOVE_BERRY_1
 	itemball_event 11, 26, LIECHI_BERRY, 3, EVENT_CIANWOODCOVE_BERRY_2
 	fruittree_event 16, 29, FRUITTREE_CIANWOOD_COVE, SHORE_FOAM, PAL_NPC_GREEN ;OK
 
-	object_const_def
-	const CIANWOOD_COVE_KURT
 
 
 CianwoodCoveKurtScript:
+	blackoutmod CIANWOOD_COVE
 	faceplayer
 	opentext
 	writetext KurtExplainsTheStormText
 	waitbutton
 	closetext
-	applymovement CIANWOOD_COVE_KURT, CC_Kurt_Moves_Away
-	disappear CIANWOOD_COVE_KURT
-	setevent EVENT_CIANWOOD_COVE_KURT
-	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
 	end
 	
 KurtExplainsTheStormText:
@@ -57,16 +53,27 @@ KurtExplainsTheStormText:
 	para "though it might"
 	line "not understand."
 	done
-	
-CC_Kurt_Moves_Away:
-	step_down
-	step_down
-	step_down
-	step_down
-	step_down
-	step_down
-	step_down
-	step_end
+
+
+NatuScriptCianwoodCove:
+	blackoutmod CIANWOOD_COVE
+	opentext
+	writetext Cianwood_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+Cianwood_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+
+	para "It also sets the"
+	line "waypoint here."
+	done
+
 
 CianwoodCovetimeTravelScript:
 	opentext
@@ -76,10 +83,12 @@ CianwoodCovetimeTravelScript:
 	writetext CCYesTimeTravelText
 	waitbutton
 	closetext
+	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
-	waitsfx
-	warp CIANWOOD_CITY, 14, 20
+	waitsfx	
+	blackoutmod CIANWOOD_CITY
+	warp CIANWOOD_CITY, 14, 20	
 	end
 
 CCAskToTimeTravelText:

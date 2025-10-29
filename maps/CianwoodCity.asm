@@ -62,12 +62,12 @@ CianwoodPharmacySignText:
 CianwoodEusineScript:
 	faceplayer
 	opentext
-	checkevent EVENT_HEARD_CIANWOOD_SHPEEL
-	iftrue .HeardShpeel
+;	checkevent EVENT_HEARD_CIANWOOD_SHPEEL
+;	iftrue .HeardShpeel
 	writetext CianwoodShpeelText
 	waitbutton
-	setevent EVENT_HEARD_CIANWOOD_SHPEEL
-.HeardShpeel	
+;	setevent EVENT_HEARD_CIANWOOD_SHPEEL
+;.HeardShpeel	
 	checkevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_KURT
 	iffalse_jumpopenedtext CianwoodEusineNoLugiaText
 	; music 
@@ -95,12 +95,15 @@ CianwoodEusineScript:
 	paintingpic LUGIA_PAINTING
 	waitbutton
 	closepokepic
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
 	setevent EVENT_CIANWOODCITY_LUGIA
 	setevent EVENT_CIANWOODCITY_KURT
 	setevent EVENT_CIANWOODCITY_EUSINE
+	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
+;	special Special_CelebiShrineEvent
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx	
+	blackoutmod CIANWOOD_COVE
 	warp CIANWOOD_COVE, 11, 15
 	end
 	
@@ -129,19 +132,21 @@ CianwoodShpeelText:
 	cont "seawall in time."
 	
 	para "Was I naive to"
-	line "only see beauty?"
+	line "only see beauty"
+	cont "in nature?"
 	
-	para "I long to see the"
-	line "sublime."
 	para "I want to hope"
 	line "again."
 	done
 
 	
 CianwoodEusineNoLugiaText:
-	text "Perhaps we don't"
-	line "deserve nature's"
-	cont "beauty."
+	text_high
+    text " Eusine: " 
+	next
+	text_start 
+	text "Do we deserve"
+	line "nature's beauty?"
 	done
 
 CC_Move_Kurt:
@@ -251,6 +256,7 @@ CianwoodCityShrineScript: ; revise: show painting of lugia
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
+	blackoutmod CIANWOOD_COVE
 	warp CIANWOOD_COVE, 10, 14
 	end
 

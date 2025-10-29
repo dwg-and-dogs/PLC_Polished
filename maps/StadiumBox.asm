@@ -123,6 +123,8 @@ KurtDialogueStadiumBox:
 	
 	para "always believing"
 	line "he was right."
+	
+	para "Can you imagine!"
 
 	para "Now, we need to"
 	line "get to the port"
@@ -147,6 +149,9 @@ SandraDialogueStadiumBox:
 	
 	para "However, the path"
 	line "is guarded."
+	
+	para "You'll need to"
+	line "sneak around."
 	done
 
 KurtDialogue2StadiumBox:
@@ -154,12 +159,12 @@ KurtDialogue2StadiumBox:
     text " Kurt: "
 	next
 	text_start
-	text "<PLAYER>."
-	line "We must get"
-	para "to Ecruteak."
-	line "Then we can pray"
-	para "to Celebi to take"
-	line "us back in time."
+	text "<PLAYER>. We must"
+	line "get to Ecruteak."
+
+	para "Then we can pray"
+	line "to Celebi to take"
+	cont "us back in time."
 	done
 
 SandraDialogue2StadiumBox:
@@ -189,12 +194,12 @@ AdrinnaDialogueStadium:
     text " Adrinna: "
 	next
 	text_start
-	line "Your victory was"
-	cont "extraordinary."
-
+	text "Your victory was"
+	line "extraordinary!"
+	
 	para "You achieved it"
-	line "through your own"
-	cont "merit."
+	line "by your own"
+	cont "Strength."
 
 	para "You have some"
 	line "potential, if you"
@@ -202,7 +207,6 @@ AdrinnaDialogueStadium:
 	line "misguided ideals."
 	done
 
-	
 StadiumBoxSandraWalksToPlayer:
 	step_up
 	step_up	

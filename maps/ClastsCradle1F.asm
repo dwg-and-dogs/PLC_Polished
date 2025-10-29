@@ -12,7 +12,7 @@ ClastsCradle1F_MapScriptHeader:
 	warp_event 3, 19, CLASTS_CRADLE_B1F, 1
 	; HOLES
 	warp_event 14, 21, CLASTS_CRADLE_B1F, 2 ; 3
-	warp_event 18, 27, CLASTS_CRADLE_B1F, 2 ; 4 
+	warp_event 18, 27, CLASTS_CRADLE_B1F, 2 ; 4
 	warp_event 16, 41, CLASTS_CRADLE_B1F, 2 ; 5
 
 
@@ -29,21 +29,16 @@ ClastsCradle1F_MapScriptHeader:
 	def_object_events
 	strengthboulder_event 22, 16, EVENT_BOULDER_CRADLE1F_1; goes to hole at 3
 	strengthboulder_event 30, 23, EVENT_BOULDER_CRADLE1F_2; goes to hole at 4
-	strengthboulder_event 23, 35, EVENT_BOULDER_CRADLE1F_3; goes to hole at 5	
-	
+	strengthboulder_event 23, 35, EVENT_BOULDER_CRADLE1F_3; goes to hole at 5
+	object_event  16,  6, SPRITE_NINJA, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, CradleNinjaHelpText, EVENT_BEAT_ADRINNA_MINE
 	object_event  22,  4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader16, EVENT_BEAT_ADRINNA_MINE
-	object_event  31, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader17, EVENT_BEAT_ADRINNA_MINE
+	object_event  31, 16, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBrigader17, EVENT_BEAT_ADRINNA_MINE
 	object_event   3, 22, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader18, EVENT_BEAT_ADRINNA_MINE
-
-	object_event  14, 28, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerNobel, EVENT_BEAT_ADRINNA_MINE	
-	object_event  11, 39, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerIngsol, EVENT_BEAT_ADRINNA_MINE
-
-	object_event  32, 11, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerHank2, EVENT_BEAT_ADRINNA_MINE	
-	object_event  31, 31, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerJones2, EVENT_BEAT_ADRINNA_MINE
+	object_event 14, 28, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerNobel, EVENT_BEAT_ADRINNA_MINE
+	object_event 23, 40, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerEngineerIngsol, EVENT_BEAT_ADRINNA_MINE
+	object_event  32, 11, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerHank2, EVENT_BEAT_ADRINNA_MINE
+	object_event 27, 24, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerJones2, EVENT_BEAT_ADRINNA_MINE
 	object_event  16, 13, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerDragonTamerLeland2, EVENT_BEAT_ADRINNA_MINE
-
-
-
 	itemball_event 9, 9, NUGGET, 1, EVENT_CRADLE_1F_NUGGET
 	itemball_event 28, 35, FULL_RESTORE, 1, EVENT_CRADLE_1F_FULL_RESTORE
 	itemball_event 19, 33, MAX_REVIVE, 1, EVENT_CRADLE_1F_MAX_REVIVE
@@ -58,7 +53,7 @@ ClastsCradle1F_MapScriptHeader:
 Cradle1FCartCallback:
 	checkevent EVENT_CRADLE_1F_CART
 	iffalse .Done
-	changeblock 30, 28, $C9
+	changeblock 30, 28, $C8
 	changeblock 14, 28, $C5
 .Done:
 	endcallback
@@ -69,18 +64,18 @@ Cradle1FBoulders:
 
 .BoulderTable:
 	stonetable 3, CRADLE1F_BOULDER1, .Disappear1
-	stonetable 4, CRADLE1F_BOULDER1, .Disappear2
-	stonetable 5, CRADLE1F_BOULDER1, .Disappear3
+	stonetable 4, CRADLE1F_BOULDER2, .Disappear2
+	stonetable 5, CRADLE1F_BOULDER3, .Disappear3
 	db -1 ; end
 
-.Disappear2:
+.Disappear1:
 	disappear CRADLE1F_BOULDER1
 	sjump .BouldersCradle1F
-	
-.Disappear1:
+
+.Disappear2:
 	disappear CRADLE1F_BOULDER2
 	sjump .BouldersCradle1F
-
+	
 .Disappear3:
 	disappear CRADLE1F_BOULDER3
 ;fallthru
@@ -93,13 +88,57 @@ Cradle1FBoulders:
 	text "The boulder fell"
 	line "through!"
 	done
+	
+
+CC_1F_Switch1:
+	opentext
+	writetext CartSwitchText
+	yesorno
+	iffalse_jumptext CartNoSwitchText
+	checkevent EVENT_CRADLE_1F_CART_1
+	iftrue CC_1F_SwitchBack
+	changeblock 30, 28, $C9
+	changeblock 14, 28, $C4
+	playsound SFX_THUNDER
+	waitsfx
+	setevent EVENT_CRADLE_1F_CART_1
+	reloadmappart
+	jumptext CartMovedText 
+	
+CC_1F_SwitchBack:
+	changeblock 30, 28, $C8 
+	changeblock 14, 28, $C5
+	playsound SFX_THUNDER
+	waitsfx
+	clearevent EVENT_CRADLE_1F_CART_1
+	reloadmappart
+	jumptext CartMovedText 
+
+
+CradleNinjaHelpText:
+	text "<PLAYER>. Amos is"
+	line "down below, but"
+	para "we can't get to"
+	line "Adrinna yet."
+	
+	para "We need to span"
+	line "three lava fields"
+	cont "to reach her."
+	
+	para "Hurry! There's"
+	line "not much time!"
+	done
 
 GenericTrainerBrigader16: ; dragons 
 	generictrainer BRIGADER, 16, EVENT_BEAT_ROCKET_GRUNTM_16, Brigader16SeenText, Brigader16BeatenText  
 
+	text "You'll be cast out"
+	line "soon enough."
+	done
+
 Brigader16BeatenText:
 	text "We're getting so"
-	line "close. You can't'"
+	line "close. You can't"
 	cont "stop us."
 	done
 
@@ -110,6 +149,10 @@ Brigader16SeenText:
 	
 GenericTrainerBrigader17: ; poison
 	generictrainer BRIGADER, 17, EVENT_BEAT_ROCKET_GRUNTM_17, Brigader17SeenText, Brigader17BeatenText  
+
+	text "Your bravery will"
+	line "be your undoing."
+	done
 
 Brigader17BeatenText:
 	text "Don't hack up a"
@@ -125,6 +168,10 @@ Brigader17SeenText:
 GenericTrainerBrigader18: ; normal
 	generictrainer BRIGADER, 18, EVENT_BEAT_ROCKET_GRUNTM_18, Brigader18SeenText, Brigader18BeatenText  
 
+	text "Your strength is"
+	line "not normal!"
+	done
+
 Brigader18BeatenText:
 	text "You won't get any"
 	line "further."
@@ -138,6 +185,10 @@ Brigader18SeenText:
 	
 GenericTrainerEngineerNobel:
 	generictrainer ENGINEER, NOBEL, EVENT_BEAT_ENGINEER_NOBEL, NobelSeenText, NobelBeatenText  
+
+	text "What more do you"
+	line "want, a prize?"
+	done
 
 NobelBeatenText:
 	text "I'm on a short"
@@ -153,6 +204,10 @@ NobelSeenText:
 
 GenericTrainerEngineerIngsol:
 	generictrainer ENGINEER, INGSOL, EVENT_BEAT_ENGINEER_INGSOL, IngsolSeenText, IngsolBeatenText  
+
+	text "The magma will"
+	line "rise to the top!"
+	done
 
 IngsolBeatenText:
 	text "If you listen,"
@@ -170,6 +225,10 @@ IngsolSeenText:
 GenericTrainerDragonTamerHank2:
 	generictrainer DRAGON_TAMER, HANK2, EVENT_BEAT_DRAGON_TAMER_HANK2, Hank2SeenText, Hank2BeatenText  
 
+	text "My dragons don't"
+	line "rule the ground."
+	done
+
 Hank2BeatenText:
 	text "They don't rule"
 	line "the caves..."
@@ -177,21 +236,35 @@ Hank2BeatenText:
 
 Hank2SeenText:
 	text "Dragons will rule"
-	line "the sky!"
+	line "the sky! From"
+	cont "Hisui to Johto!"
 	done
 
 
 GenericTrainerDragonTamerJones2:
 	generictrainer DRAGON_TAMER, JONES2, EVENT_BEAT_DRAGON_TAMER_JONES2, Jones2SeenText, Jones2BeatenText  
 
+	text "I'll never return"
+	line "to Hisui."
+	
+	para "I'd rather crash"
+	line "out here than go"
+	cont "back with my tail"
+	cont "between my legs."
+	done
+
 Jones2BeatenText:
-	text "Even dragons can"
-	line "melt, I see."
+	text "They don't have"
+	line "trainers like you"
+	cont "in Hisui."
 	done
 
 Jones2SeenText:
 	text "Can you damage my"
 	line "Steel dragons?"
+	para "They didn't have"
+	line "dragons like this"
+	cont "in Hisui!"
 	done
 
 
@@ -209,27 +282,3 @@ Leland2SeenText:
 	line "when I'm done"
 	cont "with you!"
 	done
-
-CC_1F_Switch1:
-	opentext
-	writetext CartSwitchText
-	yesorno
-	iffalse_jumptext CartNoSwitchText
-	checkevent EVENT_CRADLE_1F_CART_1
-	iftrue CC_1F_SwitchBack
-	changeblock 30, 28, $C9
-	changeblock 14, 28, $C4
-	playsound SFX_THUNDER
-	waitsfx
-	setevent EVENT_CRADLE_2F_CART_1
-	reloadmappart
-	jumptext CartMovedText 
-	
-CC_1F_SwitchBack:
-	changeblock 30, 28, $C8 
-	changeblock 14, 28, $C5
-	playsound SFX_THUNDER
-	waitsfx
-	clearevent EVENT_CRADLE_2F_CART_1
-	reloadmappart
-	jumptext CartMovedText 

@@ -144,14 +144,14 @@
 	db 2 percent ; encounter rate
 	wildmon 35, SLOWPOKE
 	wildmon 35, POLIWHIRL
-	wildmon 35, QUAGSIRE
+	wildmon 35, GYARADOS
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_43
 	db 2 percent ; encounter rate
-	wildmon 10, MAGIKARP
-	wildmon 20, MAGIKARP
-	wildmon 45, MAGIKARP
+	wildmon 10, WOOPER
+	wildmon 20, WOOPER
+	wildmon 45, QUAGSIRE
 	end_water_wildmons
 
 	def_water_wildmons VIOLET_CITY
@@ -191,9 +191,9 @@
 
 	def_water_wildmons LAKE_OF_RAGE
 	db 2 percent ; encounter rate
-	wildmon 10, MAGIKARP
-	wildmon 20, MAGIKARP
-	wildmon 45, MAGIKARP
+	wildmon 10, WOOPER
+	wildmon 20, WOOPER
+	wildmon 45, QUAGSIRE
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_KAJO

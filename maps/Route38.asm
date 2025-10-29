@@ -15,7 +15,7 @@ Route38_MapScriptHeader:
 
 	def_object_events
 	object_event  9,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMRobert, -1
-	object_event  7,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMCarter, -1
+	object_event  7,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanMCarter, -1
 
 	object_event 17, 14, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanFRuth, -1
 	object_event 17,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokefanFJaime, -1
@@ -25,6 +25,11 @@ Route38_MapScriptHeader:
 
 GenericTrainerPokefanMRobert:
 	generictrainer POKEFANM, JOSHUA, EVENT_BEAT_POKEFANM_JOSHUA, PokefanMJoshuaSeenText, PokefanMJoshuaBeatenText
+
+	text "The ranchers at"
+	line "the farm don't"
+	cont "want us around."
+	done
 
 PokefanMJoshuaBeatenText:
 	text "Sorry, thought"
@@ -42,6 +47,10 @@ PokefanMJoshuaSeenText:
 GenericTrainerPokefanMCarter:
 	generictrainer POKEFANM, CARTER, EVENT_BEAT_POKEFANM_CARTER, PokefanMCarterSeenText, PokefanMCarterBeatenText
 
+	text "Moomoo miltanks"
+	line "deserve better!"
+	done
+
 PokefanMCarterBeatenText:
 	text "I heard that"
 	line "Moomoo cows have"
@@ -57,6 +66,11 @@ PokefanMCarterSeenText:
 
 GenericTrainerPokefanFRuth:
 	generictrainer POKEFANF, RUTH, EVENT_BEAT_POKEFANF_RUTH, PokefanFRuthSeenText, PokefanFRuthBeatenText
+
+	text "Would you want to"
+	line "live downstream"
+	cont "of Moomoo farms?"
+	done
 
 PokefanFRuthBeatenText:
 	text "The farm keeps"
@@ -74,6 +88,12 @@ PokefanFRuthSeenText:
 GenericTrainerPokefanFJaime:
 	generictrainer POKEFANF, JAIME, EVENT_BEAT_POKEFANF_JAIME, PokefanFJaimeSeenText, PokefanFJaimeBeatenText
 
+	text "The Olivine Desal"
+	line "plant can't even"
+	para "filter the water"
+	line "from the plant."
+	done
+
 PokefanFJaimeBeatenText:
 	text "Where do you"
 	line "suppose all the"
@@ -86,6 +106,15 @@ PokefanFJaimeSeenText:
 
 GenericTrainerOfficerMDirk:
 	generictrainer OFFICERM, DIRK, EVENT_BEAT_OFFICER_DIRK, OfficerDirkSeenText, OfficerDirkBeatenText
+
+	text "My kids say that"
+	line "there's cows and"
+	cont "pigs on Route 38,"
+	
+	para "but the farm has"
+	line "only Miltank."
+	
+	done
 
 OfficerDirkBeatenText:
 	text "Ah, just a good"

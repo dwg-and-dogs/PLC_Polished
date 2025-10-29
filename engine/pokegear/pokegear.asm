@@ -1,4 +1,4 @@
-	const_def
+	const_def ; only going to get the clock card 
 	const CLOCK_CARD
 	const MAP_CARD
 	const PHONE_CARD
@@ -263,15 +263,15 @@ InitPokegearTilemap:
 	ld hl, ClockTilemapRLE
 	call Pokegear_LoadTilemapRLE
 	hlcoord 12, 1
-	ld de, .switch
+	ld de, .clocktext
 	rst PlaceString
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
 	jmp Pokegear_UpdateClock
 
-.switch
-	db " Switch▶@"
+.clocktext
+	db "+/-160yr@"
 
 .Map:
 	call PokegearMap
@@ -398,7 +398,7 @@ PokegearClock_Joypad:
 	call .UpdateClock
 	ld hl, hJoyLast
 	ld a, [hl]
-	and A_BUTTON + B_BUTTON + START + SELECT
+	and B_BUTTON + START + SELECT ; maybe consider removing some of these to see which ones are getting the problem? 
 	jr nz, .quit
 	ld a, [hl]
 	and D_RIGHT
@@ -1880,7 +1880,7 @@ _FlyMap:
 	ldh [hBGMapMode], a
 	call ClearSpriteAnims
 	call LoadTownMapGFX
-	call FlyMap
+	call FlyMap ; also check that this is the same 
 	ld a, CGB_POKEGEAR_PALS
 	call GetCGBLayout
 	call SetPalettes
@@ -1899,7 +1899,7 @@ _FlyMap:
 	call DelayFrame
 	jr .loop
 
-.pressedB
+.pressedB 
 	ld a, -1
 	jr .exit
 
@@ -2129,7 +2129,8 @@ FlyMap:
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_ANARRES
+	ld a, FLY_ANARRES;
+	ld [wTownMapPlayerIconLandmark], a
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
 	ld a, FLY_TIMELESS_TAPESTRY
@@ -2137,7 +2138,7 @@ FlyMap:
 ; Because Indigo Plateau is the first flypoint the player
 
 ; visits, it's made the default flypoint
-	ld [wTownMapPlayerIconLandmark], a
+
 ; Fill out the map
 	call FillKantoMap
 	call TownMapBubble

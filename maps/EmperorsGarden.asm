@@ -19,17 +19,19 @@ EmperorsGarden_MapScriptHeader:
 	def_bg_events
 	bg_event 20, 21, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_EMPERORS_GARDEN
 	bg_event 21, 21, BGEVENT_JUMPSTD, treegrotto, HIDDENGROTTO_EMPERORS_GARDEN
-
+	bg_event 28, 27, BGEVENT_READ, EmperorsGardenShrineScript
+	bg_event 29, 27, BGEVENT_READ, EmperorsGardenShrineScript
+	bg_event 29, 26, BGEVENT_READ, EmperorsGardenShrineScript
 
 	def_object_events
 	; scene 1
 	object_event  	26,	30, 	SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
 	object_event  	29,	32, 	SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
-	object_event  	28,	32,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
+	object_event  	28,	32,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
 	object_event  	27,	32,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_MEJIMI 
 	; other scenes 
 	object_event  	26,	12,		SPRITE_BOBESH, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_BOBESH 
-	object_event  	20,	6,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY 
+	object_event  	20,	6,	 	SPRITE_KENSEY, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY 
 	object_event  	27,	12,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_BOBESH 	
 	object_event  	21,	6,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_KENSEY 	
 	object_event  	13,	10,	 	SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 	0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EMPERORS_GARDEN_ADRINNA 	
@@ -59,6 +61,35 @@ EmperorsGarden_MapScriptHeader:
 	const EMPERORS_GARDEN_ADRINNA_4
 	const EMPERORS_GARDEN_AMOS
 	
+	
+EmperorsGardenShrineScript:
+	opentext
+	writetext AskToTimeTravelText_EG
+	yesorno
+	iffalse_jumpopenedtext NoTimeTravelText_EG
+	writetext YesTimeTravelText_EG
+	waitbutton
+	closetext
+	special Special_CelebiShrineEvent
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp BELLCHIME_TRAIL, 15, 6
+	end
+
+
+AskToTimeTravelText_EG:
+	text "Travel forward"
+	line "in time?"
+	done
+
+NoTimeTravelText_EG:
+	text "Back to it!"
+	done
+	
+YesTimeTravelText_EG:
+	text "Time to go!"
+	done
 
 EG_Brigader_Text2:
 	text "Brigader: No, I"
@@ -85,11 +116,11 @@ EG_KurtText:
 	line "from arriving!"
 	done
 
-EmperorsGardenMejimiScene: ; todo, add music 
+EmperorsGardenMejimiScene: 
 	;MOVING CAMERA
 	applyonemovement PLAYER, hide_object
 	waitsfx
-	applymovement PLAYER, EG_PanDownMovement ; to add 
+	applymovement PLAYER, EG_PanDownMovement
 	pause 60 
 	special Special_FadeOutMusic
 	pause 60
@@ -101,7 +132,6 @@ EmperorsGardenMejimiScene: ; todo, add music
 	closepokepic
 	pause 60
 	showtext EG_Text1
-;	waitbutton
 	applyonemovement EMPERORS_GARDEN_MEJIMI, step_right ; in front of bobesh
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
 	turnobject EMPERORS_GARDEN_BOBESH, UP
@@ -112,21 +142,24 @@ EmperorsGardenMejimiScene: ; todo, add music
 	applyonemovement EMPERORS_GARDEN_MEJIMI, step_left ; in front of kensey 
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
 	turnobject EMPERORS_GARDEN_KENSEY, UP
-	showtext EG_Text4
-;	waitbutton
-	showtext EG_Text4_2
-;	waitbutton
+	opentext
+	writetext EG_Text4
+	waitbutton
+	writetext EG_Text4_2
+	waitbutton
+	closetext
 	applyonemovement EMPERORS_GARDEN_MEJIMI, step_left ; in front of adrinna
 	turnobject EMPERORS_GARDEN_MEJIMI, DOWN
 	turnobject EMPERORS_GARDEN_ADRINNA, UP
-	showtext EG_Text5
-;	waitbutton
-	showtext EG_Text5_2	
-;	refreshscreen
-;	trainerpic MEJIMI
-	showtext EG_Text6
+	opentext
+	writetext EG_Text5
+	waitbutton
+	writetext EG_Text5_2	
+	waitbutton
+	writetext EG_Text6
+	waitbutton
+	closetext
 	pause 60
-;	waitbutton
 	applymovement EMPERORS_GARDEN_MEJIMI, MejimiLeavesMovement
 	disappear EMPERORS_GARDEN_MEJIMI
 	applymovement EMPERORS_GARDEN_BOBESH, GeneralsLeaveMovement
@@ -289,13 +322,21 @@ GeneralsLeaveMovement:
 
 
 EmperorsGardenBobeshScene:
+
+	refreshscreen
+	trainerpic BOBESH
+	waitbutton
+	closepokepic
+
 	showemote EMOTE_BOLT, EMPERORS_GARDEN_ADRINNA_2, 10
-	showtext EG_Bobesh_Text1
-;	waitbutton
-	showtext EG_Bobesh_Text1_2
-;	waitbutton
-	showtext EG_Bobesh_Text1_3
-;	closetext
+	opentext
+	writetext EG_Bobesh_Text1
+	waitbutton
+	writetext EG_Bobesh_Text1_2
+	waitbutton
+	writetext EG_Bobesh_Text1_3
+	waitbutton
+	closetext
 	applymovement EMPERORS_GARDEN_ADRINNA_2, AdrinnaMoves2
 	disappear EMPERORS_GARDEN_ADRINNA_2
 	playsound SFX_WARP_TO
@@ -325,9 +366,14 @@ EG_Bobesh_Text1_2:
     text " Bobesh: "
 	next
 	text_start
-	text "It was a white"
-	line "lie. It won't"
-	cont "happen again."
+	
+	text "I don't know how"
+	line "the HM got out of"
+	cont "our hands!"
+	
+	para "Gauldenrod will"
+	line "be brought back"
+	cont "to heel."
 	
 	para "If we had an even"
 	line "bigger stadium,"
@@ -339,10 +385,9 @@ EG_Bobesh_Text1_3:
     text " Adrinna: "
 	next
 	text_start
-	text "Enough. Your"
-	line "venue rotted"
-	cont "minds. Maybe"
-	cont "yours, too."
+	text "Enough. The venue"
+	line "rotted minds."
+	cont "Maybe yours, too."
 	done
 
 
@@ -358,16 +403,24 @@ AdrinnaMoves2:
 	step_end
 
 EmperorsGardenKenseyScene:
+
+	refreshscreen
+	trainerpic KENSEY
+	waitbutton
+	closepokepic
+
 	showemote EMOTE_SHOCK, PLAYER, 5
 	applymovement PLAYER, PlayerHidesFromKenseyMovement
 	pause 30
 	showemote EMOTE_QUESTION, EMPERORS_GARDEN_ADRINNA_3, 10
-	showtext EG_Kensey_Text_1
-;	waitbutton
-	showtext EG_Kensey_Text_1_2
-;	waitbutton
-	showtext EG_Kensey_Text_1_3	
-;	closetext
+	opentext
+	writetext EG_Kensey_Text_1
+	waitbutton
+	writetext EG_Kensey_Text_1_2
+	waitbutton
+	writetext EG_Kensey_Text_1_3	
+	waitbutton
+	closetext
 	applymovement EMPERORS_GARDEN_ADRINNA_3, AdrinnaMoves3
 	pause 15
 	opentext
@@ -461,6 +514,12 @@ AdrinnaMoves4:
 	step_end
 
 EmperorsGardenAdrinnaScene:
+
+	refreshscreen
+	trainerpic ADRINNA
+	waitbutton
+	closepokepic
+
 	showemote EMOTE_HAPPY, EMPERORS_GARDEN_ADRINNA_4, 10
 	turnobject EMPERORS_GARDEN_ADRINNA_4, DOWN
 	applyonemovement EMPERORS_GARDEN_ADRINNA_4, step_down

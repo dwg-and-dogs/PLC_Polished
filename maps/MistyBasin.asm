@@ -43,15 +43,8 @@ MistyBasonMatronScript:
 
 
 MatronYawnText:
-	text "A slowpoke yawn"
-	line "causes rain. Ten"
-	para "elders ago,"
-	line "there was a"
-	para "drought, and it"
-	line "broke once we"
-	para "revered the"
-	line "simple act of a"
-	cont "Slowpoke yawn."
+	text "Without water,"
+	line "there is no life!"
 	done
 
 MistyBasinGiveWaterPulse:
@@ -105,7 +98,7 @@ SageNicoBeatenText:
 GenericTrainerMediumMartha:
 	generictrainer MEDIUM, MARTHA, EVENT_BEAT_MEDIUM_MARTHA, MediumMarthaSeenText, MediumMarthaBeatenText
 
-	text "Tammy developed"
+	text "Ursula developed"
 	line "a method of"
 	para "hitting the"
 	line "trees to knock"
@@ -147,9 +140,9 @@ TammyScript:
 	disappear MISTY_BASIN_TAMMY
 	end
 
-TammyAfterBattleText: ; todo plot copy 
+TammyAfterBattleText:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "I invented a way"
@@ -171,7 +164,7 @@ TammyAfterBattleText: ; todo plot copy
 
 TammySeenText:
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "We're organized"
@@ -217,7 +210,7 @@ TammyMovementBasin:
 
 TammySeeYaText:	
 	text_high
-    text " Tammy: "
+    text " Ursula: "
 	next
 	text_start
 	text "See you at the"

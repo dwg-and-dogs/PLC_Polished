@@ -170,8 +170,10 @@ KurtDanceTheatreText2:
 	para "summon Celebi to"
 	line "go back in time."
 	
-	para "Oh, I noticed"
-	line "<RIVAL> is here."
+	para "Then we can stop"
+	line "the modernizing"
+	para "technology from"
+	line "entering Johto!"
 	done
 
 DanceTheatreKurtBattleText:
@@ -207,6 +209,8 @@ TheatreElderScript:
 	opentext
 	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI
 	iftrue_jumpopenedtext TheatreElderThanksYou
+	checkevent EVENT_BEAT_RIVAL_THEATRE
+	iffalse_jumpopenedtext TheatreElderDirectsToRivalText
 	writetext TheatreElderExplainsText
 	yesorno
 	iffalse_jumpopenedtext DanceTheatre_MaybeLater
@@ -240,7 +244,17 @@ TheatreElderThanksYou:
 	line "to an epilogue at"
 	cont "Bellchime Trail."
 	done
+
+TheatreElderDirectsToRivalText:
+	text "The Kimono Girls"
+	line "are still getting"
+	cont "ready to perform."
 	
+	para "You can chat with"
+	line "other guests"
+	cont "while you wait."
+	done
+
 TheatreElderExplainsText:
 	text "We have a very"
 	line "immersive dance"
@@ -250,7 +264,6 @@ TheatreElderExplainsText:
 	line "battle you back"
 	cont "to back, "
 	
-		
 	para "delivering the "
 	line "story of how"
 	para "Johto's unique"

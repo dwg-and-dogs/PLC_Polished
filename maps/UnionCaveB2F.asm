@@ -33,24 +33,22 @@ UnionCaveB2F_MapScriptHeader:
 	const UNIONCAVEB2F_RAMPARDOS
 
 UnionCaveBastiodon:
-	faceplayer
 	cry BASTIODON
+	setevent EVENT_UNION_CAVE_B2F_FOSSIL
 	loadwildmon BASTIODON, 25
 	startbattle
 	disappear UNIONCAVEB2F_BASTIODON
 	disappear UNIONCAVEB2F_RAMPARDOS
-	setevent EVENT_UNION_CAVE_B2F_FOSSIL
 	reloadmapafterbattle
 	end
 	
 UnionCaveRampardos:
-	faceplayer
 	cry RAMPARDOS
+	setevent EVENT_UNION_CAVE_B2F_FOSSIL
 	loadwildmon RAMPARDOS, 25
 	startbattle
 	disappear UNIONCAVEB2F_BASTIODON
 	disappear UNIONCAVEB2F_RAMPARDOS
-	setevent EVENT_UNION_CAVE_B2F_FOSSIL
 	reloadmapafterbattle
 	end
 

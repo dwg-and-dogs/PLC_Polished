@@ -19,6 +19,8 @@ StadiumUnderground_MapScriptHeader:
 	object_event  3,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC1Script, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
 	object_event  3,  1, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundNPC2Script, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
 	object_event  2,  2, SPRITE_MATRON, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, StadiumUndergroundHealerScript, EVENT_BOULDER_IN_STADIUM_UNDERGROUND
+	smashrock_event 4, 10
+	smashrock_event 2, 6
 
 	object_const_def
 	const STADIUMUNDERGROUND_BOULDER1
@@ -50,31 +52,28 @@ StadiumUndergroundBoulders:
 StadiumUndergroundNPC1Script:
 	faceplayer
 	checkevent EVENT_GOT_PROTECT_PADS_FROM_LIGHTHOUSE_LEADER
-	iftrue .AlreadyGotItem
+	iftrue_jumptext  StadiumUndergroundNPC1AfterText
 	opentext
 	writetext StadiumUndergroundNPC1Text
 	promptbutton
 	verbosegiveitem PROTECT_PADS
-	iffalse .BagFull
 	setevent EVENT_GOT_PROTECT_PADS_FROM_LIGHTHOUSE_LEADER
-	jumpthisopenedtext StadiumUndergroundNPC1GaveItemText
-.AlreadyGotItem:
-	jumptextfaceplayer StadiumUndergroundNPC1AfterText
-.BagFull:
-	jumpthisopenedtext StadiumUndergroundNPC1BagFullText
+	writetext StadiumUndergroundNPC1GaveItemText
+	waitbutton
+	closetext
+	end
+
 
 StadiumUndergroundNPC1Text:
 	text "Are you the new"
 	line "recruit?"
 	
-	para "Seems like you"
-	line "took the long way"
-	cont "here."
+	para "You took the long"
+	line "way here!"
 	
 	para "We've nearly"
 	line "finished divert-"
-	para "ing the under-"
-	line "ground river."
+	para "ing the springs."
 	
 	para "The rocks can be"
 	line "pretty rough on"
@@ -103,18 +102,13 @@ StadiumUndergroundNPC1AfterText:
 	cont "stadium."
 	done
 
-StadiumUndergroundNPC1BagFullText:
-	text "Oh? Your bag is"
-	line "full."
-	done
-
 StadiumUndergroundNPC2Script:
 	jumptextfaceplayer StadiumUndergroundNPC2Text
 
 StadiumUndergroundNPC2Text:
-	text "I don't know if I"
-	line "can go through"
-	cont "with this…"
+	text "Can we really do"
+	line "this? What if we"
+	cont "hurt Sandra?"
 	done
 
 StadiumUndergroundHealerScript:
@@ -123,10 +117,15 @@ StadiumUndergroundHealerScript:
 	writetext StadiumUndergroundHealerText
 	waitbutton
 	closetext
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	pause 30
+	pause 60
+	special Special_FadeInQuickly
 	special RestartMapMusic
+
 	opentext
 	writetext StadiumUndergroundHealedText
 	waitbutton
@@ -135,8 +134,7 @@ StadiumUndergroundHealerScript:
 
 StadiumUndergroundHealerText:
 	text "There may be a"
-	line "big battle up"
-	cont "ahead."
+	line "battle ahead."
 
 	para "Let me heal your"
 	line "#mon."

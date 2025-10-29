@@ -290,6 +290,7 @@ endc
 	call CheckDVsHPType
 	jp c, .HPDarkEffect
 
+<<<<<<< HEAD
 	; Check if POLYCHROME item is in use
 	push hl
 	push bc
@@ -302,499 +303,312 @@ endc
 	jp z, .PolychromeEffect
 ;	pop bc
 	pop hl
+=======
+>>>>>>> newgame_works_072725_c8be725
 	jp .StandardColors
 
 .HPFightingEffect:
-	push hl
-	push bc
-	ld hl, .HPFightingPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPFightingPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
-	ld [hli], a
-	ld a, d
-	ld [hl], a
-	pop af
-	ldh [rSVBK], a
-	ret
+	; Load light palette
+	ld de, .HPFightingPalsLite
+	ld a, [de]
+	ld [hli], a       ; Store first byte of light palette
+	inc de
+	ld a, [de]
+	ld [hli], a       ; Store second byte of light palette
+	
+	; Load dark palette
+	ld de, .HPFightingPalsDark
+	ld a, [de]
+	ld [hli], a       ; Store first byte of dark palette
+	inc de
+	ld a, [de]
+	ld [hl], a        ; Store second byte of dark palette
+	
+	pop af            ; Restore af (contains the original bank value)
+	ldh [rSVBK], a    ; Restore the original bank
+	ret               ; Return
+	
 
 .HPFlyingEffect:
-	push hl
-	push bc
-	ld hl, .HPFlyingPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPFlyingPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPFlyingPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPFlyingPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPPoisonEffect:
-	push hl
-	push bc
-	ld hl, .HPPoisonPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPPoisonPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPPoisonPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPPoisonPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPGroundEffect:
-	push hl
-	push bc
-	ld hl, .HPGroundPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPGroundPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPGroundPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPGroundPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPRockEffect:
-	push hl
-	push bc
-	ld hl, .HPRockPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPRockPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPRockPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPRockPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPBugEffect:
-	push hl
-	push bc
-	ld hl, .HPBugPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPBugPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPBugPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPBugPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPGhostEffect:
-	push hl
-	push bc
-	ld hl, .HPGhostPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPGhostPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPGhostPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPGhostPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPSteelEffect:
-	push hl
-	push bc
-	ld hl, .HPSteelPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPSteelPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPSteelPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPSteelPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPFireEffect:
-	push hl
-	push bc
-	ld hl, .HPFirePalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPFirePalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPFirePalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPFirePalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPWaterEffect:
-	push hl
-	push bc
-	ld hl, .HPWaterPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPWaterPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPWaterPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPWaterPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPGrassEffect:
-	push hl
-	push bc
-	ld hl, .HPGrassPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPGrassPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPGrassPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPGrassPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPElectricEffect:
-	push hl
-	push bc
-	ld hl, .HPElectricPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPElectricPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPElectricPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPElectricPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPPsychicEffect:
-	push hl
-	push bc
-	ld hl, .HPPsychicPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPPsychicPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPPsychicPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPPsychicPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPIceEffect:
-	push hl
-	push bc
-	ld hl, .HPIcePalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPIcePalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPIcePalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPIcePalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPDragonEffect:
-	push hl
-	push bc
-	ld hl, .HPDragonPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPDragonPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPDragonPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPDragonPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
 	ret
 
 .HPDarkEffect:
-	push hl
-	push bc
-	ld hl, .HPDarkPalsLite
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load light palette
+	ld de, .HPDarkPalsLite
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hli], a
-	push hl
-	push bc
-	ld hl, .HPDarkPalsDark
-	ld a, [hli]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	pop bc
-	pop hl
-	ld a, e
+	; Load dark palette
+	ld de, .HPDarkPalsDark
+	ld a, [de]
 	ld [hli], a
-	ld a, d
+	inc de
+	ld a, [de]
 	ld [hl], a
 	pop af
 	ldh [rSVBK], a
@@ -851,28 +665,28 @@ endc
 
 .HPFlyingPalsLite:
 if !DEF(MONOCHROME)
-	RGB 27, 28, 31
+	RGB 11, 25, 29
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPFlyingPalsDark:
 if !DEF(MONOCHROME)
-	RGB 0, 9, 21
+	RGB 13, 5, 18
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPPoisonPalsLite:
 if !DEF(MONOCHROME)
-	RGB 17, 9, 19
+	RGB 30, 31, 11
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPPoisonPalsDark:
 if !DEF(MONOCHROME)
-	RGB 24, 6, 6
+	RGB 29, 6, 25
 else
 	RGB_MONOCHROME_DARK
 endc
@@ -893,7 +707,7 @@ endc
 
 .HPRockPalsLite:
 if !DEF(MONOCHROME)
-	RGB 17, 14, 10
+	RGB 29, 9, 7
 
 else
 	RGB_MONOCHROME_DARK
@@ -901,7 +715,7 @@ endc
 
 .HPRockPalsDark:
 if !DEF(MONOCHROME)
-	RGB 6, 10, 10
+	RGB 7, 10, 18
 else
 	RGB_MONOCHROME_DARK
 endc
@@ -957,49 +771,49 @@ endc
 
 .HPFirePalsDark:
 if !DEF(MONOCHROME)
-	RGB 31, 21, 11 ; todo these should be orange 
+	RGB 31, 21, 11 
 else
 	RGB_MONOCHROME_DARK
 endc
 
-.HPWaterPalsLite: ; TODO ARE THESE WRONG?
+.HPWaterPalsLite: 
 if !DEF(MONOCHROME)
-	RGB 21, 29, 29
+	RGB 27, 28, 31 ; RGB 21, 29, 29
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPWaterPalsDark:
 if !DEF(MONOCHROME)
-	RGB 4, 18, 31
+	RGB 0, 9, 21
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPGrassPalsLite:
 if !DEF(MONOCHROME)
-	RGB 25, 16, 8
+	RGB 11, 30, 11
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPGrassPalsDark:
 if !DEF(MONOCHROME)
-	RGB 6, 25, 6
+	RGB 1, 15, 1
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPElectricPalsLite:
 if !DEF(MONOCHROME)
-	RGB 31, 26, 0
+	RGB 31, 31, 0
 else
 	RGB_MONOCHROME_DARK
 endc
 
 .HPElectricPalsDark:
 if !DEF(MONOCHROME)
-	RGB 5, 3, 13
+	RGB 31, 12, 00
 else
 	RGB_MONOCHROME_DARK
 endc

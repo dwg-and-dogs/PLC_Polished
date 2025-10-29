@@ -18,17 +18,17 @@ UnionCave1F_MapScriptHeader:
 	def_object_events
 	strengthboulder_event 12, 38
 	object_event  8, 31, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLowell, EVENT_BEAT_FALKNER
-	object_event  8, 29, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionHealerScript, -1
+	object_event  6, 35, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionHealerScript, -1
 	object_event  6, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherRay, EVENT_BEAT_FALKNER
 	object_event  6,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistDennett,EVENT_BEAT_FALKNER
 	
 	itemball_event   3, 41, ESCAPE_ROPE, 1, EVENT_UNION_CAVE_1F_GREAT_BALL
 	itemball_event   2,  8, X_ATTACK, 1, EVENT_UNION_CAVE_1F_X_ATTACK
-	itemball_event   3, 28, SUPER_POTION, 1, EVENT_UNION_CAVE_1F_POTION
+	itemball_event   3, 28, POTION, 3, EVENT_UNION_CAVE_1F_POTION
 	itemball_event  12, 45, FULL_HEAL, 1, EVENT_UNION_CAVE_1F_AWAKENING
 	fruittree_event 14, 40, FRUITTREE_UNION_CAVE, HOLLOW_ROCK, PAL_NPC_BLUE
-	tmhmball_event   2, 14, TM_BULLDOZE, EVENT_ROUTE_39_TM_BULLDOZE 
-	smashrock_event  3, 14 
+	tmhmball_event   2, 14, TM_BULLDOZE, EVENT_ROUTE_39_TM_BULLDOZE
+	smashrock_event  3, 14
 
 GenericTrainerScientistLowell:
 	generictrainer SCIENTIST, LOWELL, EVENT_BEAT_SCIENTIST_LOWELL, ScientistLowellSeenText, ScientistLowellBeatenText
@@ -85,17 +85,17 @@ ScientistDennettBeatenText:
 
 UnionHealerScript:
 	faceplayer
-	opentext
-	writetext .WantToHeal
-	waitbutton
+	showtext .WantToHeal
+
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
-	special SaveMusic	
-	writetext .HealedPokemon
-	waitbutton
-	closetext
-	playmusic MUSIC_NONE	
-	special RestoreMusic
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+
+	showtext .HealedPokemon
 	end
 	
 .WantToHeal:

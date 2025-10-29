@@ -137,22 +137,25 @@ PearlForFixedChargeText:
 	cont "would be screened"
 	para "out, so the train"
 	line "would crash!"
-
-	done
-
-PearlForFixedChargeQuestionText:
+	
 	text "I'm supposed to"
 	line "recycle them, "
 	para "but I would "
 	line "trade them for"
-	cont "a BIG PEARL."
+	cont "a Big Pearl."
+	done
+
+PearlForFixedChargeQuestionText:
+	text "Oh, you've got a"
+	line "Big Pearl!"
+	
+	para "I'll trade five"
+	line "fixed charge for"
+	cont "one Big Pearl."
 	done
 
 PearlForFixedChargeEndText:
-	text "<PLAYER> got 5"
-	line "FIXED CHARGE."
-	
-	para "Oh, your hair is"
+	text "Oh, your hair is"
 	line "standing up!"
 	done
 

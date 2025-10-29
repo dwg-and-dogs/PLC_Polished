@@ -27,20 +27,23 @@ GauldenrodHouseTradeQuestTrigger:
 	showemote EMOTE_HAPPY, LEMONADE_HOUSE_LADY, 30
 	setscene $1
 	end
+
 	
 LemonadeHouseLadyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_LEMONADE_FROM_LADY
+	iftrue_jumpopenedtext GivingLemonadeText
 	writetext WantLemonadeText
 	waitbutton
-	checkitem TINYMUSHROOM
+	checkkeyitem TINYMUSHROOM_K
 	iffalse_jumpopenedtext Text_NoMushroom
 	writetext Text_MushroomQuestion
 	yesorno
 	iffalse_jumpopenedtext Text_NoMushroom
-	takeitem TINYMUSHROOM
-	verbosegiveitem LEMONADE	
-	iffalse_endtext
+	takekeyitem TINYMUSHROOM_K
+	verbosegivekeyitem LEMONADE_K
+	setevent EVENT_GOT_LEMONADE_FROM_LADY
 	jumpopenedtext GivingLemonadeText 
 	
 

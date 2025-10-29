@@ -22,10 +22,10 @@ CattleCull38_MapScriptHeader:  ; todo this text is a little over the top
 
 
 	def_object_events 
-	object_event 28,  10, SPRITE_NOMAD_M, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadMJoel, -1
-	object_event 17,   5, SPRITE_NOMAD_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadMGlenn, -1
-	object_event 13,  9, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFReina, -1
-	object_event  4,  9, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFAlina, -1
+	object_event 28,  10, SPRITE_NOMAD_M, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadMJoel, -1
+	object_event 17,   5, SPRITE_NOMAD_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadMGlenn, -1
+	object_event 13,  9, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFReina, -1
+	object_event  4,  9, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFAlina, -1
 
 
 	object_const_def
@@ -45,9 +45,6 @@ GenericTrainerNomadMJoel:
 	line "guided our herds"
 	para "along the cliffs"
 	line "to the shores."
-	para "The Consul says"
-	line "progress needs"
-	cont "gates and guards."
 	done
 
 NomadJoelSeenText:
@@ -68,10 +65,7 @@ GenericTrainerNomadMGlenn:
 	generictrainer NOMAD_M, NOMAD_M_GLENN, EVENT_BEAT_NOMAD_M_GLENN, NomadGlennSeenText, NomadGlennBeatenText
 
 	text "The Consul's ships"
-	line "patrol our seas."
-	para "They say it keeps"
-	line "us safe, but it"
-	cont "feels like chains."
+	line "patrol our seas!"
 	done
 
 NomadGlennSeenText:
@@ -106,7 +100,7 @@ NomadReinaSeenText:
 
 NomadReinaBeatenText:
 	text "You move like"
-	line "you roam free."
+	line "a free wind."
 	done
 
 

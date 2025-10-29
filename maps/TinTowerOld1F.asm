@@ -23,7 +23,7 @@ TinTowerOld1F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  7,  11, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, MasterBallScript, -1
+	object_event  7,  11, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, MasterBallScript, -1
 	object_event 12,  7, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC1Text, -1 ; done
 	object_event 2, 2, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC2Text, -1 ; done
 	object_event 13, 2, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC3Text, -1 ; done
@@ -72,16 +72,14 @@ MasterBallScript:
 	iftrue_jumpopenedtext TextGaveMasterBall2
 	writetext NeedSweetHoneyText
 	waitbutton
-	checkitem SWEET_HONEY
+	checkkeyitem SWEET_HONEY_K
 	iffalse_jumpopenedtext Text_NoHoney
 	writetext Text_HoneyQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext Text_NoHoney
-	takeitem SWEET_HONEY
+	takekeyitem SWEET_HONEY
 	verbosegiveitem MASTER_BALL
 	setevent EVENT_GAVE_MASTER_BALL
-	setscene $1
-	iffalse_endtext
 	jumpopenedtext TextGaveMasterBall 
 
 NeedSweetHoneyText: 

@@ -16,12 +16,12 @@ MahoganyGym_MapScriptHeader:
 	def_object_events
 	object_event  5,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyGymPryceScript, EVENT_GOT_TM_CALM_MIND
 ;trainers feel proud of pryce
-	object_event  2, 16, SPRITE_SKIER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSkierRoxanne, -1
-	object_event  8,  2, SPRITE_SKIER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSkierClarissa, -1
+	object_event  6, 16, SPRITE_SKIER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSkierRoxanne, -1
+	object_event  8,  4, SPRITE_SKIER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSkierClarissa, -1
 	
-	object_event  2, 17, SPRITE_BOARDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderRonald, -1
+	object_event  2,  9, SPRITE_BOARDER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderRonald, -1
 	object_event  3, 12, SPRITE_BOARDER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderBrad, -1
-	object_event  0,  3, SPRITE_BOARDER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderDouglas, -1
+	object_event  0,  5, SPRITE_BOARDER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBoarderDouglas, -1
 
 MahoganyGymPryceScript:
 	faceplayer
@@ -137,6 +137,10 @@ SkierRoxanneBeatenText:
 SkierRoxanneSeenText:
 	text "This is no"
 	line "bunny slope!"
+	
+	para "Restoring the"
+	line "Lake isn't for"
+	cont "beginners!"
 	done
 
 
@@ -161,13 +165,15 @@ GenericTrainerBoarderDouglas:
 
 BoarderDouglasBeatenText:
 	text "He meditated in"
-	line "the lake in"
-	cont "Winter."
+	line "the lake in the"
+	cont "coldest winters."
 	done
 
 BoarderDouglasSeenText:
 	text "I know Pryce's"
-	line "secret."
+	line "secret. I've seen"
+	para "how we'll restore"
+	line "the Lake."
 	done
 
 
@@ -187,12 +193,19 @@ BoarderRonaldSeenText:
 	
 	para "Come to see what"
 	line "we're about?"
+	
+	para "It's not for the"
+	line "faint of heart!"
 	done
 
 
 GenericTrainerBoarderBrad:
 	generictrainer BOARDER, BRAD, EVENT_BEAT_BOARDER_BRAD, BoarderBradSeenText, BoarderBradBeatenText
 
+	text "The Lake needs"
+	line "attention. We're"
+	cont "going to fix it."
+	done
 
 BoarderBradBeatenText:
 	text "Do you see how"

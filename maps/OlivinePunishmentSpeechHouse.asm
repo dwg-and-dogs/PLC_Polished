@@ -86,24 +86,36 @@ OlivinePunishmentSpeechHouseDaughterText:
 OlivineLightBallScript:
 	faceplayer
 	opentext	
+	checkevent EVENT_GOT_PEARL_OLIVINE
+	iftrue_jumpopenedtext GiveLightBallText
 	writetext NeedAGoldLeafText
 	waitbutton
-	checkitem GOLD_LEAF
+	checkkeyitem GOLD_LEAF_K
 	iffalse_jumpopenedtext NoGoldLeafText
 	writetext Text_GoldLeafMailQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext NoGoldLeafText
-	takeitem GOLD_LEAF
-	verbosegiveitem LIGHT_BALL, 2
-	setscene $1
-	iffalse_endtext
+	takekeyitem GOLD_LEAF_K
+	verbosegivekeyitem PEARL_K
+	setevent EVENT_GOT_PEARL_OLIVINE
 	jumpopenedtext GiveLightBallText 
 
 NeedAGoldLeafText:
 	text "I need to impress"
 	line "my boyfriend's"
-	para "family."
-	line "They're so gaudy!"
+	para "family. But all I"
+	line "have are pearls."
+	
+	para "Each day, I go on"
+	line "the shore to get"
+	cont "all the pearls."
+	
+	para "But my boyfriend's"
+	line "mom thinks they're"
+	cont "tacky."
+	
+	para "I need something"
+	line "glittering!"
 	done
 
 NoGoldLeafText:
@@ -115,12 +127,8 @@ Text_GoldLeafMailQuestion:
 	text "Oh, Gold Leaf!"
 	line "What an idea!"
 	
-	para "I'll give you my"
-	line "best beach toy,"
-	
-	para "2 Light Balls to"
-	line "play volleyball"
-	cont "with!"
+	para "Would you trade"
+	line "it for a pearl?"
 	done
 
 GiveLightBallText:

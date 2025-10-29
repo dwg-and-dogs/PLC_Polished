@@ -3916,7 +3916,7 @@ BattleCommand_damagecalc:
 	call MultiplyAndDivide
 
 .no_crit
-	; Item boosts. TODO: move species items here
+	; Item boosts.
 	call GetUserItem
 
 	ld a, b
@@ -5573,7 +5573,8 @@ BattleCommand_traptarget:
 .Traps:
 	dbw WRAP,      WrappedByText     ; 'was WRAPPED by'
 	dbw FIRE_SPIN, FireSpinTrapText  ; 'was trapped!'
-	dbw WHIRLPOOL, WhirlpoolTrapText ; 'was trapped!'
+	dbw MAGMA_STORM, MagmaStormTrapText  ; 'was trapped!'
+;	dbw WHIRLPOOL, WhirlpoolTrapText ; 'was trapped!'
 
 BattleCommand_recoil:
 	ld a, BATTLE_VARS_MOVE_ANIM

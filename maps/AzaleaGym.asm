@@ -105,13 +105,14 @@ AzaleaGymBugsyScript:
 	cont "branched evol-"
 	cont "ution of Scyther?"
 
-	para "..."
+	para "...A rock-bug"
+	line "type, you say?"
 	
 	para "Incredible!" 
 	
-	para "I feel rejuven-"
-	line "ated, my resea-"
-	cont "rch was right!"
+	para "I'm rejuvenated!"
+	line "My hypothesis was"
+	cont "correct!"
 	
 	para "I'm ready to be a"
 	line "Gym Leader again!"

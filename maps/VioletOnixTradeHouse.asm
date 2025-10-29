@@ -95,11 +95,10 @@ VioletHisuiTraderScript:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
+	db 4 ; items
 	db "Dusclops@"
 	db "Kirlia@"
 	db "Snover@"
-	db "Cancel@"
 	db "CANCEL@"
 
 VioletHisuiTraderRememberText:

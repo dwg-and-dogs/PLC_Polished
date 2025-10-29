@@ -16,23 +16,25 @@ BrassTower13F_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event 2, 8, BGEVENT_READ, BrassTowerSwitchScript  ;  cf warehouse entrance basement key .... 
+	bg_event 2, 8, BGEVENT_READ, BrassTowerSwitchScript13F
 
 
 	def_object_events
-	object_event  10,  8, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, UNOWN, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BrassTower13FUnownScript, EVENT_BRASS_TOWER_13F_UNOWN
-
-	pokemon_event  3,  5, GENGAR, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
-	pokemon_event  11, 12, GENGAR, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
-
+	pokemon_event  3,  5, GENGAR, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
+	pokemon_event  11, 12, GENGAR, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
 	pokemon_event  10,  5, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
 	pokemon_event  2, 12, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
+	object_event  10,  8, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NOCTOWL, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BrassTower13FUnownScript, EVENT_BRASS_TOWER_13F_UNOWN
 
-	object_event  1, 6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderIsamu, -1 ; courage
-	object_event  12,6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderKaito, -1 ; sea, soar
+	object_event  1, 6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerElderIsamu, -1 ; courage
+	object_event  12,6, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerElderKaito, -1 ; sea, soar
 
 
 	object_const_def
+	const BRASS_TOWER_13F_RIGHT_GENGAR_1
+	const BRASS_TOWER_13F_RIGHT_GENGAR_2
+	const BRASS_TOWER_13F_LEFT_MISDREAVUS_1
+	const BRASS_TOWER_13F_LEFT_MISDREAVUS_2
 	const BRASS_TOWER_13F_UNOWN
 
 BrassTowerGuardText:
@@ -40,58 +42,67 @@ BrassTowerGuardText:
 	line "the path."
 	done
 
-BrassTowerSwitchScript:
+BrassTowerSwitchScript13F:
 	checkevent EVENT_BRASS_TOWER_RIGHT_GUARD
-	iftrue AskSwitchToLeft
+	iftrue .AskSwitchToLeft
 	opentext
-	writetext SwitchSpiritsText
-	yesorno
-	iffalse_jumpopenedtext NotSwitchingText
-	clearevent EVENT_BRASS_TOWER_RIGHT_GUARD
-	setevent EVENT_BRASS_TOWER_LEFT_GUARD
-	reloadmap
-	endtext
-
-AskSwitchToLeft:
-	opentext
-	writetext SwitchSpiritsText
+	writetext SwitchSpiritsTextLeft
 	yesorno
 	iffalse_jumpopenedtext NotSwitchingText
 	setevent EVENT_BRASS_TOWER_RIGHT_GUARD
+	disappear BRASS_TOWER_13F_RIGHT_GENGAR_1
+	disappear BRASS_TOWER_13F_RIGHT_GENGAR_2
 	clearevent EVENT_BRASS_TOWER_LEFT_GUARD
-	reloadmap
-	endtext
+	appear BRASS_TOWER_13F_LEFT_MISDREAVUS_1
+	appear BRASS_TOWER_13F_LEFT_MISDREAVUS_2	
+	writetext SpiritsChangedText
+	waitbutton
+	closetext
+	end
 
+.AskSwitchToLeft:
+	opentext
+	writetext SwitchSpiritsTextRight
+	yesorno
+	iffalse_jumpopenedtext NotSwitchingText
+	setevent EVENT_BRASS_TOWER_LEFT_GUARD
+	disappear BRASS_TOWER_13F_LEFT_MISDREAVUS_1
+	disappear BRASS_TOWER_13F_LEFT_MISDREAVUS_2
+	clearevent EVENT_BRASS_TOWER_RIGHT_GUARD
+	appear BRASS_TOWER_13F_RIGHT_GENGAR_1
+	appear BRASS_TOWER_13F_RIGHT_GENGAR_2
+	writetext SpiritsChangedText
+	waitbutton
+	closetext
+	end
 
-SwitchSpiritsText:
-	text "Change spirits?"
-	done
-
-NotSwitchingText:
-	text "Unchanged."
-	done
 
 BrassTower13FUnownScript:
-	showtext BrassTowerUnownText
+	opentext
+	writetext BrassTowerUnownText
+	waitbutton
 	cry UNOWN
 	pause 15
+	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon UNOWN, 50
+	loadwildmon NOCTOWL, 50
 	startbattle
 	disappear BRASS_TOWER_13F_UNOWN
 	setevent EVENT_BRASS_TOWER_13F_UNOWN
 	reloadmapafterbattle
 	end
 	
-
 BrassTowerUnownText:
-	text "The Unown proj-"
-	line "ects an aura on"
-	cont "the tower!"
+	text "Noctowl's aura"
+	line "guards the tower!"
 	done
 
 GenericTrainerElderIsamu:
     generictrainer ELDER, ISAMU, EVENT_BEAT_ELDER_ISAMU, IsamuSeenText, IsamuBeatenText
+
+	text "I have no fear"
+	line "of the unknown."
+	done
 
 IsamuBeatenText:
     text "Bravery is shown"
@@ -107,9 +118,15 @@ IsamuSeenText:
 GenericTrainerElderKaito:
     generictrainer ELDER, KAITO, EVENT_BEAT_ELDER_KAITO, KaitoSeenText, KaitoBeatenText
 
+	text "The Consul will"
+	line "be known as the"
+	para "ruler of Johto"
+	line "everywhere!"
+	done
+
 KaitoBeatenText:
     text "Where I end,"
-	line "another begins..."
+	line "another begins!"
     done
 	
 KaitoSeenText:

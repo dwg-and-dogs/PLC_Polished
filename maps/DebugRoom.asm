@@ -7,11 +7,10 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, BRASS_TOWER_ROOF, 1
+	warp_event  1, 8, HOLLYS_HOLT_CREDIT, 1
 
 
 	def_coord_events
-
 
 
 	def_bg_events
@@ -32,20 +31,25 @@ DebugRoom_MapScriptHeader:
 
 DebugInteraction: 
 	opentext
-	givepoke TYPHLOSION, 100
+	givepoke ENTEI, 100
+	givepoke VICTREEBEL, 100
 	givepoke RAIKOU, 100
 	givepoke POLITOED, 100
 	givepoke LUGIA, 100
-	givepoke HEATRAN, 100 
-	givepoke H__GOODRA, 100 
+	givepoke GOLEM, 25 
 	waitbutton
-	setflag ENGINE_POKEGEAR
+;	setflag ENGINE_POKEGEAR
 ;	setflag ENGINE_PHONE_CARD
-	setflag ENGINE_MAP_CARD
+;	setflag ENGINE_MAP_CARD
 	; pokedex
 	setflag ENGINE_POKEDEX
 for x, NUM_TMS + NUM_HMS
 	givetmhm x
+endr
+for x, NUM_KEY_ITEMS
+if x != MACHINE_PART
+	givekeyitem x
+endc
 endr
 	; useful items
 	giveitem MASTER_BALL, 99
@@ -97,22 +101,22 @@ endr
 	; max money
 	givemoney $0, 1000000
 	; all badges
-	setflag ENGINE_ZEPHYRBADGE
-	setflag ENGINE_HIVEBADGE
-	setflag ENGINE_PLAINBADGE
-	setflag ENGINE_FOGBADGE
-	setflag ENGINE_STORMBADGE
-	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_GLACIERBADGE
-	setflag ENGINE_RISINGBADGE
+;	setflag ENGINE_ZEPHYRBADGE
+;	setflag ENGINE_HIVEBADGE
+;	setflag ENGINE_PLAINBADGE
+;	setflag ENGINE_FOGBADGE
+;	setflag ENGINE_STORMBADGE
+;	setflag ENGINE_MINERALBADGE
+;	setflag ENGINE_GLACIERBADGE
+;	setflag ENGINE_RISINGBADGE
 	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
-	setflag ENGINE_VOLCANOBADGE
-	setflag ENGINE_EARTHBADGE
+;	setflag ENGINE_CASCADEBADGE
+;	setflag ENGINE_THUNDERBADGE
+;	setflag ENGINE_RAINBOWBADGE
+;	setflag ENGINE_MARSHBADGE
+;	setflag ENGINE_SOULBADGE
+;	setflag ENGINE_VOLCANOBADGE
+;	setflag ENGINE_EARTHBADGE
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_AZALEA
 	setflag ENGINE_FLYPOINT_GOLDENROD
@@ -135,19 +139,79 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp OLIVINE_DESAL_1F, 5, 4
+;	setevent EVENT_BEAT_CHUCK
+	warp SINJOH_CROSSROADS, 10, 14
+	end
+
+OverworldHallOfFame1: 
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot. the second index is 0 - 5, with 0 being the first party member, and 5 is the highest it can go for a party of 6 
+	readmem wCurPartySpecies  ;
+	opentext
+	writethistext ; font is in vtiles1?
+		text "lorem ipsum" ; Species name
+		line "lorem ipsum" ; nickname 
+		done
+	waitbutton
+	closetext
+	pokepic 0	; pokepic2, actually 
+	pause 60
+	closepokepic
+; repeat this 	for all the members of the party 
+	halloffame
+	end
+
+
+
+DebugInteraction2: 
+	refreshscreen
+	readmem wPartyMon1Species
+	pokepic 0
+	pause 60
+	closepokepic
+	
+	; Set Fighting HP pattern for Mon1
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ee
+	
+	; Set normal DVs for Mon2 (if exists)
+;	loadmem wPartyMon2DVs+0, $aa
+;	loadmem wPartyMon2DVs+1, $bb
+;	loadmem wPartyMon2DVs+2, $cc
+
+	
+	opentext
+	writethistext
+		text "lorem ipsum" ; Species name
+		line "lorem ipsum" ; nickname 
+		done
+	waitbutton
+	closetext
+	
+	; Show Mon1 with new palette
+	refreshscreen
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wCurPartySpecies  ; or wCurPartySpecies
+	pokepic 0	
+	pause 60
+	closepokepic
+	
+	halloffame
 	end
 
 DebugCPU:
 	opentext
 	writetext DebugCPUText
 	; time
-;	special Special_SetDayOfWeek
+	special Special_SetDayOfWeek
 ;	special Special_InitialClearDSTFlag
 	; full pokegear
 	setflag ENGINE_POKEGEAR
-	setflag ENGINE_PHONE_CARD
-	setflag ENGINE_MAP_CARD
+;	setflag ENGINE_PHONE_CARD
+;	setflag ENGINE_MAP_CARD
 ;	setflag ENGINE_RADIO_CARD
 ;	setflag ENGINE_EXPN_CARD
 	; pokedex
@@ -162,6 +226,13 @@ endr
 for x, NUM_TMS + NUM_HMS
 	givetmhm x
 endr
+	; givepokes
+	givepoke CYNDAQUIL, 5
+	givepoke TOTODILE, 100
+	givepoke CHIKORITA, 100
+	givepoke LUGIA, 100
+	givepoke ENTEI, 100
+	givepoke RAIKOU, 100
 	; useful items
 	giveitem MASTER_BALL, 99
 	giveitem GEODE, 99;
@@ -250,7 +321,7 @@ endr
 	setflag ENGINE_FLYPOINT_CIANWOOD
 	setflag ENGINE_FLYPOINT_MAHOGANY
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
-; historic johto
+	; historic johto
 	setflag ENGINE_FLYPOINT_ANARRES_TOWN
 	setflag ENGINE_FLYPOINT_GAULDENROD
 	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
@@ -275,11 +346,11 @@ Breeder1Script:
 	iffalse_jumpopenedtext Breeder1SayNoText
 	writetext Breeder1Text	
 	; good party
-;	givepoke H__TYPHLOSION, NO_FORM, 100, LEFTOVERS
-;	loadmem wPartyMon1Moves+0, FLAMETHROWER
-;	loadmem wPartyMon1Moves+1, SHADOW_BALL
-;	loadmem wPartyMon1Moves+2, EARTHQUAKE
-;	loadmem wPartyMon1Moves+3, THUNDERPUNCH
+	givepoke H__ZOROARK, NO_FORM, 50, LEFTOVERS
+	loadmem wPartyMon1Moves+0, NASTY_PLOT
+	loadmem wPartyMon1Moves+1, SHADOW_BALL
+	loadmem wPartyMon1Moves+2, PSYCHIC_M
+	loadmem wPartyMon1Moves+3, MOONBLAST
 	; hm mules
 ;	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
 ;	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
@@ -305,10 +376,15 @@ Breeder1Script:
 ;	loadmem wPartyMon3PP+1, 15
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
-	; trying to set DVs...HP_ATK_DV from POKEMON_DATA_CONSTANTS?
-	loadmem wPartyMon1DVs+0, $fe
+	; bug 
+	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+	loadtrainer CHUCK, 1
+	startbattle
+	reloadmap
+	showtext DWGTextAfter1
+	special HealPartyEvenForNuzlocke
 ;	callasm FillPokedex
 	closetext
 	end
@@ -334,19 +410,93 @@ Breeder1SayNoText:
 
 dwgDebugScript:
 	faceplayer
-;	opentext
-;	writetext DWGIntroText
-;	waitbutton
-;	writetext DWGQuestionText
-;	yesorno
-;	iffalse_jumpopenedtext DWGRefusedText
-;	writetext DWGSeenText
-;	waitbutton
-;	closetext
+	opentext
+; BUG
+;	givepoke SUNFLORA, 50
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $fe
+;	loadmem wPartyMon1DVs+2, $fe
+; DARK 
+;	givepoke HAUNTER, 50
+;	loadmem wPartyMon2DVs+0, $fe
+;	loadmem wPartyMon2DVs+1, $ff
+;	loadmem wPartyMon2DVs+2, $ff
+; DRAGON 
+;	givepoke LUXIO, 50
+;	loadmem wPartyMon3DVs+0, $ff
+;	loadmem wPartyMon3DVs+1, $ef
+;	loadmem wPartyMon3DVs+2, $ff
+; ELECTRIC
+;	givepoke CLEFAIRY, 50
+;	loadmem wPartyMon4DVs+0, $ff
+;	loadmem wPartyMon4DVs+1, $ff
+;	loadmem wPartyMon4DVs+2, $ef
+; FIGHTING
+;	givepoke STARAPTOR, 50
+;	loadmem wPartyMon5DVs+0, $ff
+;	loadmem wPartyMon5DVs+1, $ee
+;	loadmem wPartyMon5DVs+2, $ee
+; FIRE 
+;	givepoke DRATINI, 50
+;	loadmem wPartyMon6DVs+0, $ff
+;	loadmem wPartyMon6DVs+1, $ee
+;	loadmem wPartyMon6DVs+2, $ef
+
+; FLYING
+	givepoke EMPOLEON, 50
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $ee
+; GHOST 
+;	givepoke NINETALES, 50
+;	loadmem wPartyMon2DVs+0, $ff
+;	loadmem wPartyMon2DVs+1, $ef
+;	loadmem wPartyMon2DVs+2, $fe
+; GRASS 
+;	givepoke TANGELA, 50
+;	loadmem wPartyMon3DVs+0, $ff
+;	loadmem wPartyMon3DVs+1, $ef
+;	loadmem wPartyMon3DVs+2, $ef
+; GROUND
+;	givepoke WEEPINBELL, 50
+;	loadmem wPartyMon4DVs+0, $ff
+;	loadmem wPartyMon4DVs+1, $ff
+;	loadmem wPartyMon4DVs+2, $ee
+; ICE
+;	givepoke GYARADOS, 50
+;	loadmem wPartyMon5DVs+0, $ff
+;	loadmem wPartyMon5DVs+1, $fe
+;	loadmem wPartyMon5DVs+2, $ff
+; POISON 
+;	givepoke GRIMER, 50
+;	loadmem wPartyMon6DVs+0, $ff
+;	loadmem wPartyMon6DVs+1, $ef
+;	loadmem wPartyMon6DVs+2, $ee
+
+; PSYCHIC 
+;	givepoke LUCARIO, 50
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $ee
+;	loadmem wPartyMon1DVs+2, $ff
+; ROCK
+	givepoke ENTEI, 50
+	loadmem wPartyMon2DVs+0, $ff
+	loadmem wPartyMon2DVs+1, $ee
+	loadmem wPartyMon2DVs+2, $fe
+; STEEL
+;	givepoke FORRETRESS, 50
+;	loadmem wPartyMon3DVs+0, $ff
+;	loadmem wPartyMon3DVs+1, $ff
+;	loadmem wPartyMon3DVs+2, $fe
+; WATER 
+	givepoke NATU, 50
+	loadmem wPartyMon3DVs+0, $ff
+	loadmem wPartyMon3DVs+1, $fe
+	loadmem wPartyMon3DVs+2, $ef
+
 	winlosstext DWGWinText, DWGLossText
 	setlasttalked DEBUG_DWG
-;	loadtrainer ENGINEER, DWG
-	loadtrainer BOBESH, 2
+	loadtrainer ENGINEER, DWG
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -613,8 +763,7 @@ BreederText:
 DebugWonderTradeScript: 
 	faceplayer
 	opentext
-	givepoke NOCTOWL, 5
-;	giveitem POLYCHROME, 1
+	giveegg CYNDAQUIL
 	writetext DebugWonderTradeIntroText
 	waitbutton
 	writetext DebugWonderTradeExplanationText

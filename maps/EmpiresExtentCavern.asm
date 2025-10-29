@@ -27,6 +27,8 @@ EmpiresExtentCavern_MapScriptHeader:
 
 EECavernMysticScript:
 	faceplayer
+	checkevent EVENT_BEAT_CLAIR
+	iftrue_jumptext EE_Cavern_BeatClairText
 	opentext
 	writetext MysticText1
 	yesorno
@@ -35,7 +37,7 @@ EECavernMysticScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp DRAGONS_DEN, 6, 40
+	warp DRAGONS_DEN, 9, 16
 	end
 
 	
@@ -48,11 +50,9 @@ MysticText1:
 	para "These walls will"
 	line "hold the story."
 
-	para "The reliance on"
-	line "brute strength-"
-
-	para "It led only to"
-	line "ruin."
+	para "A reliance on"
+	line "brute strength"
+	cont "leads to ruin."
 
 	para "I pray that some-"
 	line "day, someone will"
@@ -75,4 +75,10 @@ MysticText3:
 	
 	para "tell the story"
 	line "far and wide."
+	done
+
+EE_Cavern_BeatClairText:
+	text "I hope the cavern"
+	line "will persist for"
+	cont "generations."
 	done

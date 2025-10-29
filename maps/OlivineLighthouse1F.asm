@@ -76,6 +76,7 @@ LigthouseRivalBattleScript:
 	waitbutton
 	closetext
     setevent EVENT_RIVAL_RADIO_TOWER
+	setevent EVENT_KURT_LIGHTHOUSE_1
     checkevent EVENT_GOT_OSHAWOTT
     iftrue .Oshawott
     checkevent EVENT_GOT_ROWLET
@@ -248,6 +249,11 @@ Kurt_LighthouseText1:
 TrainerScientistJoseph:
 	generictrainer SCIENTIST, JOSEPH, EVENT_BEAT_ENGINEER_JOSEPH, .SeenText1, .BeatenText1
 
+	text "The lighhouse had"
+	line "over one million"
+	cont "candlepower!"
+	done
+
 .BeatenText1:
 	text "My colleague is"
 	line "not so bright." 
@@ -261,6 +267,15 @@ TrainerScientistJoseph:
 
 TrainerBlackBeltWai:
 	generictrainer BLACKBELT_T, WAI, EVENT_BEAT_BLACKBELT_WAI, .SeenText2, .BeatenText2
+<<<<<<< HEAD
+=======
+	
+	text "If I hadn't left"
+	line "Cianwood, I'd have"
+	para "tried to hole up"
+	line "in the gym."
+	done
+>>>>>>> newgame_works_072725_c8be725
 	
 .BeatenText2:
 	text "I wonder if any-"
@@ -276,6 +291,16 @@ TrainerBlackBeltWai:
 
 TrainerEngineerLang:
 	generictrainer ENGINEER, LANG, EVENT_BEAT_ENGINEER_LANG, .SeenText3, .BeatenText3
+<<<<<<< HEAD
+=======
+
+	text "The light source"
+	line "emits Lumens!"
+	
+	para "The lenses focus"
+	line "it to candelas."
+	done
+>>>>>>> newgame_works_072725_c8be725
 
 .BeatenText3:
 	text "Unit conversion"

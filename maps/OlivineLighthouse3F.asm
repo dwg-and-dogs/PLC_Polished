@@ -13,9 +13,9 @@ OlivineLighthouse3F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerScientistPiotr, -1 ; drifblim 
-	object_event  6, 14, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBattleGirlRonda, -1
-	object_event 13,  5, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerEngineerHoward, -1
+	object_event  2,  7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerScientistPiotr, EVENT_BEAT_CHUCK ; drifblim 
+	object_event  6, 14, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBattleGirlRonda, EVENT_BEAT_CHUCK
+	object_event 13,  5, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerEngineerHoward, EVENT_BEAT_CHUCK
 
 	itemball_event  8,  2, FULL_RESTORE, 1, EVENT_OLIVINE_LIGHTHOUSE_3F_ETHER
 
@@ -23,6 +23,12 @@ OlivineLighthouse3F_MapScriptHeader:
 
 TrainerScientistPiotr:
 	generictrainer SCIENTIST, PIOTR, EVENT_BEAT_SCIENTIST_PIOTR, .SeenText, .BeatenText
+
+	text "If we didn't make"
+	line "the OMLAS, then"
+	para "someone else"
+	line "would have."
+	done
 
 .BeatenText:
 	text "I'm proud of what"
@@ -38,6 +44,12 @@ TrainerScientistPiotr:
 TrainerEngineerHoward:
 	generictrainer ENGINEER, HOWARD, EVENT_BEAT_ENGINEER_HOWARD, .Seen1Text, .Beaten1Text
 
+	text "Whoever took the"
+	line "part must've been"
+	para "so familiar with"
+	line "the Desal plant."
+	done
+
 .Beaten1Text:
 	text "Blew my gasket."
 	done
@@ -51,6 +63,13 @@ TrainerEngineerHoward:
 	
 TrainerBattleGirlRonda:
 	generictrainer BATTLE_GIRL, RONDA, EVENT_BEAT_BATTLE_GIRL_RONDA, .Seen2Text, .Beaten2Text
+
+	text "The next floor is"
+	line "Chuck's."
+	
+	para "Not even I have"
+	line "been up there!"
+	done
 
 .Beaten2Text:
 	text "Now I was thrown"

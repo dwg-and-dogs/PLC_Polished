@@ -14,7 +14,7 @@ GauldenrodSereneSpringsGate_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  5,  4, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodSereneSpringsGateNPCScript, -1
+	object_event  4,  4, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodSereneSpringsGateNPCScript, -1
 
 GauldenrodSereneSpringsGateNPCScript:
 	jumptextfaceplayer GauldenrodSereneSpringsGateNPCText

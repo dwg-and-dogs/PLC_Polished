@@ -427,27 +427,27 @@ NationalParkTrainerTipsText:
 	cont "and other treats."
 	done
 
+
+
 ThirstyCamperScript:
 	faceplayer
 	opentext
+	checkevent EVENT_TRADED_BRICK_PIECE
+	iftrue_jumpopenedtext GiveBrickPieceText
 	writetext ThirstyCamperIntroText
 	waitbutton
-	checkitem LEMONADE
+	checkkeyitem LEMONADE_K
 	iffalse_jumpopenedtext Text_NoLemonade
 	writetext Text_LemonadeQuestion
 	yesorno
 	iffalse_jumpopenedtext Text_NoLemonade
-	takeitem LEMONADE
-	verbosegiveitem BRICK_PIECE
-	setscene $1
-	iffalse_endtext
+	takekeyitem LEMONADE_K
+	verbosegivekeyitem BRICK_PIECE_K
+	setevent EVENT_TRADED_BRICK_PIECE
 	jumpopenedtext GiveBrickPieceText
 
 GiveBrickPieceText:
-	text "Ah, that hits the"
-	line "spot! Thanks!"
-
-	para "Hope you find a"
+	text "Hope you find a"
 	line "good use for that"
 	cont "old Brick Piece."
 	

@@ -10,20 +10,40 @@ GauldenrodDorms_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  2, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  0,  3, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  0,  4, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  0,  5, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  2,  4, BGEVENT_READ, GauldenrodDormsBed
-	bg_event  2,  5, BGEVENT_READ, GauldenrodDormsBed
+	bg_event  10,  2, BGEVENT_READ, GauldenrodDormsBed
+	bg_event  10,  3, BGEVENT_READ, GauldenrodDormsBed
+	bg_event  12,  2, BGEVENT_READ, GauldenrodDormsBed
+	bg_event  12,  3, BGEVENT_READ, GauldenrodDormsBed
+
 
 	def_object_events
-	object_event 1, 1, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GauldenrodDormsKurtScript, EVENT_BEAT_BOBESH_STADIUM
-	object_event 12, 3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC1Text, -1
-	object_event 12, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC2Text, -1
-	object_event 3, 3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC3Text, -1
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GauldenrodDormsKurtScript, EVENT_BEAT_BOBESH_STADIUM
+	object_event 2, 3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC1Text, -1
+	object_event 2, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC2Text, -1
+	object_event 7, 5, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, GauldenrodDormsNPC3Text, -1
+	object_event   9, 4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptGauldenrodDorms, -1
+	
 
-	object_const_def
+NatuScriptGauldenrodDorms:
+	blackoutmod GAULDENROD
+	opentext
+	writetext Gauldenrod_NatuText_1
+	promptbutton
+	special PokemonCenterPC
+	endtext
+	end
+
+Gauldenrod_NatuText_1:
+	text "It's Kurt's Natu!"
+	line "It can teleport"
+	para "to the present to"
+	line "manage the party."
+
+	para "It also sets the"
+	line "waypoint here."
+
+	done
+
 
 GauldenrodDormsNPC1Text:
 	text "I wish the protest"
@@ -65,6 +85,7 @@ GauldenrodDormsBed:
 	special RestartMapMusic
 	special Special_FadeInQuickly
 	showtext GauldenrodBedText2
+	blackoutmod GAULDENROD
 	end
 
 GauldenrodBedText1:
@@ -75,11 +96,13 @@ GauldenrodBedText1:
 GauldenrodBedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+
+	para "Waypoint set to"
+	line "Gauldenrod."
 	done
 
-
-
-GauldenrodDormsKurtScript: ; will this work?....
+GauldenrodDormsKurtScript:
+	blackoutmod GAULDENROD
 	faceplayer
 	opentext
 	writetext KurtGauldenrodDormsText
@@ -95,9 +118,8 @@ GauldenrodDormsKurtScript: ; will this work?....
 
 .GauldenrodKurtPC
 	writetext KurtGauldenrodDormsText2
-	promptbutton
-	special PokemonCenterPC ; per engine/events/std_scripts.asm this is how it should be done. 
-	endtext
+	waitbutton
+	closetext
 	end
 
 KurtGauldenrodDormsText:
@@ -115,10 +137,6 @@ KurtGauldenrodDormsText:
 	line "through whatever"
 	cont "used to be at the"
 	cont "National Park?"
-
-	para "I can run back to"
-	line "our time for a PC"
-	cont "if you need."
 	
 	para "Oh! I found some"
 	line "neat #mon in"
@@ -139,6 +157,6 @@ GauldenrodKurtBattleText2:
 	done
 
 KurtGauldenrodDormsText2:
-	text "Just let me know"
-	line "what you need."
+	text "We have to find a"
+	line "way north!"
 	done

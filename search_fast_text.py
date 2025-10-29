@@ -7,8 +7,6 @@ Created on Thu Apr 24 06:34:31 2025
 
 import os
 
-import os
-
 def search_directory(search_word):
     """
     Searches all .txt and .asm files within the current directory (and its subdirectories)

@@ -24,7 +24,7 @@ RuinsOfAlphAerodactylChamber_MapScriptHeader:
 
 
 RuinsOfAlphAerodactylChamberHiddenDoorsCallback:
-	checkevent EVENT_WALL_OPENED_IN_AERODACTYL_CHAMBER
+	checkevent EVENT_SOLVED_AERODACTYL_PUZZLE
 	iftrue .WallOpen
 	changeblock 4, 0, $24
 .WallOpen:

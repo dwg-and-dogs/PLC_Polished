@@ -6,8 +6,10 @@ WhispersTapestryGate_MapScriptHeader:
 
 
 	def_warp_events
-
-
+	warp_event 2, 0, WHISPERS_WAY, 1
+	warp_event 3, 0, WHISPERS_WAY, 2
+	warp_event 2, 7, TIMELESS_TAPESTRY, 1
+	warp_event 3, 7, TIMELESS_TAPESTRY, 1
 
 	def_coord_events
 
@@ -18,7 +20,7 @@ WhispersTapestryGate_MapScriptHeader:
 
 
 	def_object_events
-	object_event 	2, 	2, SPRITE_KIMONO_GIRL, 	SPRITEMOVEDATA_WANDER, 			1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TapestryBatonPassScript, -1 
+	object_event 	2, 	4, SPRITE_KIMONO_GIRL, 	SPRITEMOVEDATA_WANDER, 			1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TapestryBatonPassScript, -1 
 
 
 	object_const_def
@@ -44,12 +46,16 @@ TapestryBatonPassScript:
 .TeachMove
 	jumpopenedtext Text_TapestryTutorTaught ;;
 	
-Text_BatonPassIntro: 
+Text_BatonPassIntro:  
 	text "Ahead is the site"
-	line "where we pass al-"
-	cont "ong our knowledge"
-	cont "to future gener-"
-	cont "ations."
+	line "where we pass our"
+	para "knowledge to fut-"
+	line "ure generations."
+	
+	para "At least, we used"
+	line "to, before a self"
+	para "declared Emperor"
+	line "closed it up."
 	done
 
 Text_TapestryTutorBatonPass:
@@ -62,9 +68,6 @@ Text_TapestryTutorBatonPass:
 Text_TapestryTutorQuestion:
 	text "I can teach yours"
 	line "if you like."
-	
-	para "Baton Pass is a"
-	line "powerful move."
 	done
 
 Text_TapestryTutorRefused:
@@ -74,6 +77,6 @@ Text_TapestryTutorRefused:
 Text_TapestryTutorTaught:
 	text "It is our duty"
 	line "to pass the baton"
-	cont "to descendants."
+	cont "to the future."
 	done
 

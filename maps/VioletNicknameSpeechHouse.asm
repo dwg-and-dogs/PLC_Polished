@@ -100,22 +100,22 @@ ParasectVioletText:
 	cont "mushroom."
 	done
 	
+	
 VioletPickyEaterScript:
     faceplayer
     opentext
-	checkitem BIG_MUSHROOM
+	checkevent EVENT_GAVE_BIG_MUSHROOM
 	iftrue_jumpopenedtext GiveBigMushroomText
 	writetext NeedRageCandyBarText
 	waitbutton
-	checkitem RAGECANDYBAR
+	checkkeyitem RAGECANDYBAR_K
 	iffalse_jumpopenedtext Text_NoCandyBar
 	writetext Text_BarQuestion
 	yesorno
 	iffalse_jumpopenedtext Text_NoCandyBar
-	takeitem RAGECANDYBAR
-	verbosegiveitem BIG_MUSHROOM
-	setscene $1
-	iffalse_endtext
+	takekeyitem RAGECANDYBAR_K
+	verbosegivekeyitem BIG_MUSHROOM_K
+	setevent EVENT_GAVE_BIG_MUSHROOM
 	jumpopenedtext GiveBigMushroomText
 	
 
@@ -127,11 +127,6 @@ NeedRageCandyBarText:
 	line "grow crops, we"
 	para "might have to eat"
 	line "...MUSHROOMS."
-	
-	para "Falkner won't let"
-	line "anyone in, so I"
-	para "haven't had candy"
-	line "in ages."
     done
 
 Text_BarQuestion:
@@ -154,4 +149,11 @@ Text_NoCandyBar:
 GiveBigMushroomText:
     text "Don't tell my sis"
 	line "about that candy!"
+	
+	para "The mushroom has"
+	line "a bitter taste."
+	
+	para "Maybe some old"
+	line "man will want it"
+	cont "to make tea."
     done

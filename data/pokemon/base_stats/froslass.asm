@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/froslass/front.dimensions"
-	abilities_for FORRETRESS, STURDY, STURDY, OVERCOAT
+	abilities_for FROSLASS, SNOW_CLOAK, SNOW_CLOAK, CURSED_BODY
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_BUG, EGG_BUG ; egg groups
 

@@ -6,8 +6,8 @@ RuinsOfAlphResearchCenter_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event  2,  7, RUINS_OF_ALPH_OUTSIDE, 6
-	warp_event  3,  7, RUINS_OF_ALPH_OUTSIDE, 6
+	warp_event  2,  7, RUINS_OF_ALPH_OUTSIDE, 13
+	warp_event  3,  7, RUINS_OF_ALPH_OUTSIDE, 13
 
 	def_coord_events
 
@@ -29,6 +29,7 @@ RuinsOfAlphResearchCenterScientist3Script:
 	writetext ThatsABrandNewHarpText
 	waitbutton
 	closetext
+	end
 
 
 .RuinsOfAlphResearchCenterScientist3Text:

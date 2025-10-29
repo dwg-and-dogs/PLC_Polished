@@ -165,7 +165,7 @@ TilesetTowerAnim::
 	dw TowerPillarTilePointer4,  AnimateTowerPillarTile
 	dw TowerPillarTilePointer1,  AnimateTowerPillarTile
 	dw TowerPillarTilePointer2,  AnimateTowerPillarTile
-; todo add the fires 
+; 
 	dw NULL,  StandingTileFrame
 	dw NULL,  DoNothing
 	dw NULL,  DoNothing

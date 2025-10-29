@@ -18,8 +18,8 @@ GrottoedGlacier1F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  3, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumGrace, EVENT_BEAT_KANNA
-	object_event 12,  2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageUri, EVENT_BEAT_KANNA
+	object_event  3, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerMediumGrace, EVENT_BEAT_KANNA
+	object_event 12,  2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageUri, EVENT_BEAT_KANNA
 
 
 	object_const_def
@@ -27,6 +27,11 @@ GrottoedGlacier1F_MapScriptHeader:
 
 GenericTrainerMediumGrace:
 	generictrainer MEDIUM, GRACE, EVENT_BEAT_MEDIUM_GRACE, .SeenText, .BeatenText
+
+	text "Kanna will show"
+	line "Adrinna how she"
+	cont "is wrong."
+	done
 
 .BeatenText:
 	text "It's not a big"
@@ -47,6 +52,14 @@ GenericTrainerMediumGrace:
 
 GenericTrainerSageUri:
 	generictrainer SAGE, URI, EVENT_BEAT_SAGE_URI, .SeenText1, .BeatenText1
+
+	text "What would your"
+	line "ancestors say,"
+	para "seeing you wreck"
+	line "our ceremony?"
+	
+	para "Turn back!"
+	done
 
 .BeatenText1:
 	text "I can't stop you"

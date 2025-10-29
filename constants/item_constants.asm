@@ -583,10 +583,13 @@ NUM_APRICORNS EQU const_value - 1
 
 ; key item ids
 ; indexes for:
-; - KeyItemNames (see data/items/key_names.asm)
-; - KeyItemDescriptions (see data/items/descriptions.asm)
-; - KeyItemAttributes (see data/items/attributes.asm)
+; - KeyItemNames (see data/items/key_names.asm)..
+; - KeyItemDescriptions (see data/items/descriptions.asm)..
+; - KeyItemAttributes (see data/items/attributes.asm)..
 ; - KeyItemEffects (see engine/items/item_effects.asm)
+; icon pointers done 
+; gfx/items.asm  done
+; engine/gfx/palettes done
 	const_def
 	const BICYCLE      ; 00
 	const OLD_ROD      ; 01
@@ -594,28 +597,30 @@ NUM_APRICORNS EQU const_value - 1
 	const SUPER_ROD    ; 03
 	const COIN_CASE    ; 04
 	const ITEMFINDER   ; 05
-	const MYSTERY_EGG  ; 06
-	const SQUIRTBOTTLE ; 07
-	const UNOWNREPORT ; 08 WAS SECRETPOTION
-	const RED_SCALE    ; 09
-	const CARD_KEY     ; 0a
-	const BASEMENT_KEY ; 0b
-	const S_S_TICKET   ; 0c
-	const PASS         ; 0d
-	const MACHINE_PART ; 0e
-	const LOST_ITEM    ; 0f
-	const RAINBOW_WING ; 10
-	const SILVER_WING  ; 11
-	const CLEAR_BELL   ; 12
-	const GS_BALL      ; 13
-	const BLUE_CARD    ; 14
-	const ORANGETICKET ; 15
-	const MYSTICTICKET ; 16
-	const PUMICE_HARP  ; 17
-	const SHINY_CHARM  ; 18
-	const OVAL_CHARM   ; 19
-	const CATCH_CHARM  ; 1a
-	const SILPHSCOPE2  ; 1b
-	const APRICORN_BOX ; 1c
-	const TYPE_CHART   ; 1d
+	const UNOWNREPORT ; 06 WAS SECRETPOTION
+	const RAINBOW_WING ; 07
+	const SILVER_WING  ; 08
+	const CLEAR_BELL   ; 09
+	const GS_BALL      ; 0a
+	const PUMICE_HARP  ; 0b
+	const SHINY_CHARM  ; 0c
+	const OVAL_CHARM   ; 0d
+	const CATCH_CHARM  ; 0e
+	const NATU_CALL	   ; 0f
+	const KURTS_MAP	   ; 10
+	const MINT_LEAF_K   ; 11
+	const TINYMUSHROOM_K; 12
+	const LEMONADE_K; 13
+	const BRICK_PIECE_K; 14
+	const RAGECANDYBAR_K; 15
+	const BIG_MUSHROOM_K; 16
+	const LITEBLUEMAIL_K; 17
+	const GOLD_LEAF_K; 18
+	const PEARL_K; 19
+	const SURF_MAIL_K; 1a
+	const OLD_AMBER_K; 1b
+	const SWEET_HONEY_K; 1c
+	const APRICORN_BOX ; 1d
+	const TYPE_CHART   ; 1e-->not needed
+	const MACHINE_PART  ; 1F 
 NUM_KEY_ITEMS EQU const_value

@@ -11,14 +11,15 @@ WesternCapital_MapScriptHeader:
 	warp_event 9, 27, WESTERN_CAPITAL_CEMETERY, 1
 	warp_event 23, 17, WESTERN_CAPITAL_DANCE_THEATRE, 1
 	warp_event 21, 25, WESTERN_CAPITAL_DORMS, 1
-	warp_event 27, 23, WESTERN_CAPITAL_STOCKROOM, 1	
-	warp_event 4, 32, CAPITAL_CULL_GATE, 3
-	warp_event 4, 33, CAPITAL_CULL_GATE, 4
+	warp_event 27, 23, WESTERN_CAPITAL_STOCKROOM, 1
+	warp_event  4, 26, CAPITAL_CULL_GATE, 3
+	warp_event  4, 27, CAPITAL_CULL_GATE, 4
 	warp_event 35, 5, TIN_TOWER_OLD_1F, 1
 	warp_event 9, 31, STADIUM_CAPITAL_GATE, 3
 	warp_event 10, 31, STADIUM_CAPITAL_GATE, 4
 	warp_event 35, 26, STY_CAPITAL_GATE, 3
 	warp_event 35, 27, STY_CAPITAL_GATE, 4
+	warp_event 5, 5, BRASS_TOWER_1F, 2
 
 	def_coord_events
 
@@ -31,7 +32,7 @@ WesternCapital_MapScriptHeader:
 	bg_event 21, 11, BGEVENT_JUMPTEXT, WCGloryToMejimiText
 	bg_event 17, 23, BGEVENT_JUMPTEXT, WCSignText
 	bg_event 19, 19, BGEVENT_READ, WC_AmosWantedSign
-	bg_event 4, 28, BGEVENT_JUMPTEXT, WC_ToStadiumSign
+	bg_event  6, 28, BGEVENT_JUMPTEXT, WC_ToStadiumSign
 	; hidden items 
 	bg_event  14, 14, BGEVENT_ITEM + PP_UP, EVENT_WC_HIDDEN_1
 	bg_event  29, 27, BGEVENT_ITEM + SILVER_LEAF, EVENT_WC_HIDDEN_2
@@ -39,19 +40,26 @@ WesternCapital_MapScriptHeader:
 	def_object_events
 ; cutsceners
 	object_event 11, 21, SPRITE_MEJIMI, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_MEJIMI
-	object_event  9, 23, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA 
-	pokemon_event  8, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
-	pokemon_event  11, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;; 
+	object_event  9, 23, SPRITE_ADRINNA, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_PROLOGUE_ADRINNA
+	pokemon_event  8, 19, LUGIA, -1, -1, PAL_NPC_BLUE, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;;
+	pokemon_event  11, 19, HO_OH, -1, -1, PAL_NPC_RED, WC_pkmn_text, EVENT_PROLOGUE_MEJIMI ; by tammy  ;;;;
 ; civilians
 	object_event 16, 16, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC1Text, EVENT_WESTERN_CAPITAL_CIVILIAN
-	object_event 36, 7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalHisuiText1, EVENT_BEAT_ADRINNA_MINE
-	object_event 28, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC2Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
-	object_event 16, 21, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC3Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
-	object_event 18, 26, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC4Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
-	object_event 9, 17, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC5Text, EVENT_WESTERN_CAPITAL_CIVILIAN 
-	object_event 5, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderText, -1
-
+	object_event 36, 7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalHisuiText1, EVENT_BEAT_ADRINNA_MINE
+	object_event 28, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalNPC2Text, EVENT_WESTERN_CAPITAL_CIVILIAN
+	object_event 16, 21, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 		OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC3Text, EVENT_WESTERN_CAPITAL_CIVILIAN
+	object_event 18, 26, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC4Text, EVENT_WESTERN_CAPITAL_CIVILIAN
+	object_event 9, 17, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, 	OBJECTTYPE_SCRIPT, 0, WesternCapitalNPC5Text, EVENT_WESTERN_CAPITAL_CIVILIAN
+	object_event 5, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderText, EVENT_SKIRMISH_STARTED
+	object_event 17, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderTextTT, EVENT_BEAT_ADRINNA_MINE
+	object_event 18, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderTextTT, EVENT_BEAT_ADRINNA_MINE
 	fruittree_event 6, 6, FRUITTREE_WESTERN_CAPITAL, FIXED_CHARGE, PAL_NPC_RED
+; SKIRMISH 
+	object_event  5, 9, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, WCNinjaSkirmishText, EVENT_CAPITAL_SKIRMISHER ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
+	pokemon_event 4, 9, XATU, -1, -1, PAL_NPC_GREEN, SkirmishNinjaMonText, EVENT_CAPITAL_SKIRMISHER
+	object_event  4, 7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, WCBrigaderSkirmishText, EVENT_CAPITAL_SKIRMISHER ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
+	pokemon_event 4, 8, DONPHAN, -1, -1, PAL_NPC_BROWN, SkirmishBrigaderMonText, EVENT_CAPITAL_SKIRMISHER
+	
 
 
 	object_const_def
@@ -110,16 +118,12 @@ WesternCapitalCemeteryScene:
 	waitbutton
 	closetext
 	
-	; todo emotes 
-	
 	turnobject WESTERN_CAPITAL_MEJIMI, DOWN
 	
 	opentext
-	writetext Prologue_Text4 ; KENSEY DECEIVES!
+	writetext Prologue_Text4
 	waitbutton
 	closetext	
-	
-	; todo emotes 
 
 	opentext
 	writetext Prologue_Text5 ; eh adrinna?
@@ -358,6 +362,19 @@ WCBrigaderText:
 	line "the tower is"
 	cont "blessed."
 	done
+	
+
+WCBrigaderTextTT:
+	faceplayer
+	checkevent EVENT_BEAT_ADRINNA_MINE
+	iftrue_jumptext WCBrigaderText_2
+
+	jumpthistext
+	text "The temples are"
+	line "off-limits. The"
+	para "Consul will be"
+	line "renovating them."
+	done
 
 WCBrigaderText_2:
 	text "The tower is off-"
@@ -427,4 +444,21 @@ WC_ToStadiumSign:
 
 	para "West: To Trader's"
 	line "Landing"
+	done
+
+SkirmishNinjaMonText:
+	text "Xatu: Kazaa!"
+	done
+	
+SkirmishBrigaderMonText:
+	text "Donphan: Naphaa!"
+	done
+
+WCNinjaSkirmishText:
+	text "Xatu - Roost!"
+	done
+
+WCBrigaderSkirmishText:
+	text "Donphan - use"
+	line "ice shard!"
 	done

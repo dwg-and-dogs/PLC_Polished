@@ -109,7 +109,7 @@ BarnTutorIronHeadScript:
 	writetext Text_BarnTutorQuestion ;;
 	yesorno
 	iffalse .TutorRefused
-	setval ZEN_HEADBUTT
+	setval IRON_HEAD
 	writetext ClearText
 	special Special_MoveTutor
 	ifequal $0, .TeachMove
