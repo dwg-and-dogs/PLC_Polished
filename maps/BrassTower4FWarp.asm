@@ -25,6 +25,8 @@ BrassTowerAdrinna:
 	iftrue_jumptextfaceplayer AdrinnaAfterText
 	checkpoke CELEBI
 	iftrue .DeclinedDueToCelebi
+	checkevent EVENT_ACCEPTED_ADRINNA
+	iftrue_jumptextfaceplayer AdrinnaTakesOverText
 	faceplayer
 	opentext
 	writetext AdrinnaTowerSeenText

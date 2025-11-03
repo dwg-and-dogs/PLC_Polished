@@ -98,6 +98,7 @@ ShimmerSaddleBoulders:
 
 .Disappear:
 	disappear SHIMMER_BOULDER_1
+	setevent EVENT_SHIMMER_SADDLE_BOULDER
 	pause 30
 	playsound SFX_STRENGTH
 	earthquake 80

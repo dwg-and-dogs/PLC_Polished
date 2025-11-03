@@ -1,6 +1,6 @@
 TinTowerOld1F_MapScriptHeader: 
 	def_scene_scripts
-	scene_script TinTowerOldMasterBallTrigger ;she should have a happy emote t
+
 
 	def_callbacks
 
@@ -28,19 +28,6 @@ TinTowerOld1F_MapScriptHeader:
 	object_event 2, 2, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC2Text, -1 ; done
 	object_event 13, 2, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TinTowerOld1FNPC3Text, -1 ; done
 
-	object_const_def
-	const TIN_TOWER_OLD_1F_MASTER_BALL_SAGE 
-
-	
-TinTowerOldMasterBallTrigger:
-	sdefer .TradeScript
-	end
-	
-.TradeScript:
-	showemote EMOTE_HAPPY, TIN_TOWER_OLD_1F_MASTER_BALL_SAGE, 20
-	setscene $1
-	end
-
 TinTowerOld1FNPC1Text:
 	text "This tower was"
 	line "modernized with"
@@ -65,89 +52,3 @@ TinTowerOld1FNPC3Text:
 	line "Capital's moat."
 	done
 
-MasterBallScript:
-	faceplayer
-	opentext	
-	checkevent EVENT_GAVE_MASTER_BALL
-	iftrue_jumpopenedtext TextGaveMasterBall2
-	writetext NeedSweetHoneyText
-	waitbutton
-	checkkeyitem SWEET_HONEY_K
-	iffalse_jumpopenedtext Text_NoHoney
-	writetext Text_HoneyQuestion ;;
-	yesorno
-	iffalse_jumpopenedtext Text_NoHoney
-	takekeyitem SWEET_HONEY
-	verbosegiveitem MASTER_BALL
-	setevent EVENT_GAVE_MASTER_BALL
-	jumpopenedtext TextGaveMasterBall 
-
-NeedSweetHoneyText: 
-    text "I'm working on 2"
-    line "ideal apricorns."
-    
-    para "When complete,"
-    line "they'll surpass"
-    cont "any ever made!"
-    
-    para "But these old"
-    line "hands need some"
-    para "Honey to steady"
-    line "themselves."
-    done
-
-Text_HoneyQuestion:
-	text "Oh, you are the"
-	line "one Vespera told"
-	cont "me about!"
-	
-	para "And that aroma-"
-	line "you must have a"
-	cont "bit of honey!"
-	
-	para "Just what these"
-	line "old bones need"
-	para "to finish my"
-	line "project."
-    done
-
-Text_NoHoney:
-    text "Back to work..."
-    line "carefully now."
-    done
-
-TextGaveMasterBall: 
-    text "Now... Each"
-    line "piece must be"
-    cont "placed with great"
-    cont "care..."
-    
-    para "There! Perfect"
-    line "at last!"
-    
-    para "Young trainer, I"
-    line "want you to have"
-    cont "one. But first-"
-; drop through 
-
-TextGaveMasterBall2:
-    text "That ball will"
-    line "catch any"
-    cont "#mon, without"
-    cont "fail."
-    
-    para "Like a powerful"
-    line "technique, its"
-    cont "power demands"
-    cont "wisdom."
-    
-    para "That's why I've"
-    line "chosen to share"
-    cont "it with you, yet"
-    cont "make no more."
-	
-	para "Go on. What dream"
-	line "would you chase,"
-	cont "if you knew you"
-	cont "would catch it?"
-    done

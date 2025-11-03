@@ -9,7 +9,7 @@
 	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/htyphlosion/front.dimensions"
 	abilities_for H__TYPHLOSION, BLAZE, FLASH_FIRE, WHITE_SMOKE
-	db GROWTH_SLOW ; growth rate
+	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 
 	ev_yield   0,   2,   0,   0,   0,   0

@@ -1091,7 +1091,7 @@ wSproutTower3FSceneID:: db
 wTimelessTapestrySceneID:: db  
 wTinderGardenSceneID:: db  
 wTinTower1FSceneID:: db
-wTinTowerOld1FSceneID:: db 
+wGauldenrodGuildSceneID:: db 
 wTinTowerOld3FSceneID:: db 
 wTradeCenterSceneID:: db
 wTranquilTarnSceneID:: db 

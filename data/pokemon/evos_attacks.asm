@@ -3603,7 +3603,7 @@ SneaslerEvosAttacks:
 	db 0 ; no more level-up moves
 
 TeddiursaEvosAttacks:
-	db EVOLVE_LEVEL, 20, URSARING
+	db EVOLVE_LEVEL, 25, URSARING
 	db 0 ; no more evolutions
 	db 1, THIEF ; Covet → TM move
 	db 1, TACKLE
@@ -3755,10 +3755,12 @@ OctilleryEvosAttacks:
 	db 1, ROCK_BLAST
 	db 1, POWER_WHIP ; new move
 	db 1, WATER_GUN
+	db 5, SMOKESCREEN
+	db 5, WRAP
 	db 6, FORESIGHT ; Constrict → new move
-	db 10, PSYBEAM
+	db 10, EMBER
 	db 14, AURORA_BEAM
-	db 14, EMBER
+	db 16, PSYBEAM
 	db 18, BUBBLE_BEAM
 	db 22, FOCUS_ENERGY
 	db 26, WRAP ; Wring Out → new move

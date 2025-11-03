@@ -78,7 +78,7 @@ CooltrainerMGavenBeatenText:
 	done
 
 CooltrainerMGavenSeenText:
-	text "I lost? Now that's"
+	text "I lost? That's"
 	line "bizarre."
 	done
 

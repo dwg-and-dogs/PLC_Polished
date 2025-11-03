@@ -333,6 +333,7 @@ AcceptedAdrinnaRoofScript:
 .Continue:
 	reloadmapafterbattle
 	showemote EMOTE_SHOCK, BRASS_TOWER_ROOF_MEJIMI, 10
+	special HealParty
 	showtext TowerRoofText2_8_1
 	applymovement BRASS_TOWER_ROOF_MEJIMI, BTR_MejimiLeaves
 	disappear BRASS_TOWER_ROOF_MEJIMI

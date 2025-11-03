@@ -68,7 +68,7 @@ MapScenes::
 	scene_var OLIVINE_CAFE, 						  wOlivineCafeSceneID
 	scene_var EERIE_HAMLET, 						  wEerieHamletSceneID
 	scene_var MAHOGANY_TOWN,                          wMahoganyTownSceneID 
-	scene_var TIN_TOWER_OLD_1F, 					  wTinTowerOld1FSceneID 
+	scene_var GAULDENROD_GUILD, 					  wGauldenrodGuildSceneID 
 	scene_var TIN_TOWER_OLD_3F, 					  wTinTowerOld3FSceneID 
 	scene_var RUSALKA_RUINS_B1F, 					  wRusalkaRuinsB1FSceneID
 	scene_var STADIUM_BOX, 							  wStadiumBoxSceneID

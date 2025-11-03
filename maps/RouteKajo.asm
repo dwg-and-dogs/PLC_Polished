@@ -64,7 +64,7 @@ RouteKajo_MapScriptHeader:
 RouteKajoCallbackTiles:
 	checkevent EVENT_SHIMMER_SADDLE_BOULDER
 	iffalse .Done
-	changeblock 20, 1, $72
+	changeblock 40, 2, $72
 .Done:
 	endcallback
 
