@@ -4657,10 +4657,10 @@ TyranitarEvosAttacks:
 
 RaikouEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BITE
+	db 1, ROAR
 	db 1, LEER
 	db 8, THUNDERSHOCK
-	db 15, ROAR
+	db 15, BITE
 	db 22, QUICK_ATTACK
 	db 29, SPARK
 	db 36, REFLECT
@@ -4677,10 +4677,10 @@ RaikouEvosAttacks:
 
 EnteiEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BITE
+	db 1, ROAR
 	db 1, LEER
 	db 8, EMBER
-	db 15, ROAR
+	db 15, BITE
 	db 22, FIRE_SPIN
 	db 29, STOMP
 	db 36, FLAMETHROWER

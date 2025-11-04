@@ -88,13 +88,15 @@ EggGrannyAfterText:
     done
 
 EggGrannyRemindText:
-    text "How are your"
-    line "#mon, dearie?"
-    para "Remember, twelve"
-    line "eggs a day keeps"
-    cont "the doctor away!"
-    para "And wild #mon."
-    line "And the neighbors."
+    text "I eat 12 eggs"
+    line "every morning!"
+    para "And that's how I"
+    line "can churn butter"
+    para "by shaking a "
+    line "whole Miltank!"
+	para "Those Eggs will"
+	line "make your #mon"
+	cont "as strong as me!"
     done
 
 EggGrannyBagFullText:

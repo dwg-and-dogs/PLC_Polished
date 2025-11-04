@@ -138,7 +138,7 @@ PearlForFixedChargeText:
 	para "out, so the train"
 	line "would crash!"
 	
-	text "I'm supposed to"
+	para "I'm supposed to"
 	line "recycle them, "
 	para "but I would "
 	line "trade them for"

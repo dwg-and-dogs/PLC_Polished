@@ -230,26 +230,26 @@
 	wildmon 40, HAUNTER
 	wildmon 41, HAUNTER
 	wildmon 42, GOLBAT
-	wildmon 42, GOLBAT
+	wildmon 42, NOCTOWL
 	wildmon 43, KADABRA
 	wildmon 44, KADABRA
-	wildmon 44, KADABRA
+	wildmon 44, NOCTOWL
 	; day
 	wildmon 40, HAUNTER
 	wildmon 41, HAUNTER
 	wildmon 42, GOLBAT
-	wildmon 42, GOLBAT
+	wildmon 42, NOCTOWL
 	wildmon 43, KADABRA
 	wildmon 44, KADABRA
-	wildmon 44, KADABRA
+	wildmon 44, NOCTOWL
 	; nite
 	wildmon 40, HAUNTER
 	wildmon 41, HAUNTER
 	wildmon 42, GOLBAT
-	wildmon 42, GOLBAT
+	wildmon 42, NOCTOWL
 	wildmon 43, KADABRA
 	wildmon 44, KADABRA
-	wildmon 44, KADABRA
+	wildmon 44, NOCTOWL
 	end_grass_wildmons 
 
 	def_grass_wildmons BURNED_TOWER_1F

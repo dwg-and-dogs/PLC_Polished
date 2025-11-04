@@ -32,8 +32,8 @@ ShimmerSaddle_MapScriptHeader:
 
 	def_coord_events
 	coord_event 	 9,	33, 0, ShimmerSaddle_Scene1_ManHZ
-	coord_event 	45, 26, 1, ShimmerSaddle_Scene2_HZOnly
-	coord_event 	13, 20, 2, ShimmerSaddle_Scene3_ManHZ
+	coord_event 	45, 26, 2, ShimmerSaddle_Scene2_HZOnly
+	coord_event 	13, 20, 3, ShimmerSaddle_Scene3_ManHZ
 		
 
 	def_bg_events ; 3 hidden items and four imprints and one sign 
@@ -143,7 +143,7 @@ ShimmerSaddle_Scene1_ManHZ:
 	setevent EVENT_SHIMMER_MATRON_1
 	showtext ShimmerGramps1Text2
 	applymovement SHIMMER_GRAMPS_1, ShimmerGramps1Move2
-	setscene $1
+	setscene $2
 	disappear SHIMMER_GRAMPS_1
 	setevent EVENT_SHIMMER_GRAMPS_1
 	end
@@ -199,7 +199,7 @@ ShimmerSaddle_Scene2_HZOnly:
 	applymovement SHIMMER_HZ_2, ShimmerHZ2_Stalks2
 	disappear SHIMMER_HZ_2
 	setevent EVENT_SHIMMER_HZ_2
-	setscene $2
+	setscene $3
 	end
 
 ShimmerHZ2_Stalks:
@@ -251,7 +251,7 @@ ShimmerSaddle_Scene3_ManHZ:
 	disappear SHIMMER_HZ_3
 	setevent EVENT_SHIMMER_HZ_3
 	reloadmapafterbattle
-	setscene $3
+	setscene $4
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext ShimmerGramps2Text5

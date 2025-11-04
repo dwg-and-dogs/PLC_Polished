@@ -72,9 +72,8 @@ EcruteakPokeCenter1fPokefan2Text:
 	line "entertainment and"
 	cont "excitement."
 	
-	para "It's called ada-"
-	line "pting to the"
-	cont "times."
+	para "We're adapting to"
+	line "the times!"
 	done
 
 EcruteakPokeCenter1fElderText:
