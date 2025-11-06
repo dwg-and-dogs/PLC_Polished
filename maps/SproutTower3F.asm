@@ -116,7 +116,7 @@ FalknerIntroText:
 	para "Presumably, you're"
 	line "here for me."
 	
-	para "The Bronzong is"
+	para "My Bronzong is"
 	line "nearly unearthed."
 	para "Its tones will"
 	line "bring rains for"
@@ -134,20 +134,22 @@ FalknerWinLossText:
 	text "It's like your"
 	line "#mon knew"
 	cont "your thoughts!"
-	para "You must have"
-	line "trained deeply."
+	
+	para "What a strong"
+	line "foundation you"
+	cont "all have."
 
-	para "Maybe my renova-"
-	line "tions are mis-"
-	cont "guided." 
+	para "Maybe my method"
+	line "was misguided."
 	
 	para "Without a strong"
-	line "foundation, my"
-	para "project would be"
-	line "top-heavy and"
-	para "collapse. I was"
-	line "taking nature out"
-	cont "of balance."
+	line "base, this would"
+	para "be top-heavy and"
+	line "collapse."
+
+	para "I was doing more"
+	line "to take nature"
+	cont "out of balance."
 	done
 
 
@@ -157,8 +159,8 @@ ReceivedZephyrBadgeText:
 	done
 
 FalknerAfterText:
-	text "I need to recons-"
-	line "ider my approach."
+	text "I'll reconsider"
+	line "my approach."
 
 	para "I've destroyed so"	
     line "much of meaning"

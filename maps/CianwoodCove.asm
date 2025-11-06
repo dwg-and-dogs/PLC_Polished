@@ -16,8 +16,8 @@ CianwoodCove_MapScriptHeader:
 
 
 	def_object_events
-	object_event 11, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCoveKurtScript, EVENT_BEAT_KENSEY_DOCKS
-	object_event   10, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptCianwoodCove, EVENT_BEAT_KENSEY_DOCKS
+	object_event 11, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCoveKurtScript, EVENT_BEAT_KENSEY_PORT
+	object_event   10, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptCianwoodCove, -1
 	itemball_event 11, 21, PETAYA_BERRY, 3, EVENT_CIANWOODCOVE_BERRY_1
 	itemball_event 11, 26, LIECHI_BERRY, 3, EVENT_CIANWOODCOVE_BERRY_2
 	fruittree_event 16, 29, FRUITTREE_CIANWOOD_COVE, SHORE_FOAM, PAL_NPC_GREEN ;OK
@@ -83,7 +83,12 @@ CianwoodCovetimeTravelScript:
 	writetext CCYesTimeTravelText
 	waitbutton
 	closetext
-	special Special_CelebiShrineEvent
+
+	refreshscreen
+	paintingpic LUGIA_PAINTING
+	waitbutton
+	closepokepic
+
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	

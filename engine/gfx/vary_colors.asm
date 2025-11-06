@@ -290,21 +290,21 @@ endc
 	call CheckDVsHPType
 	jp c, .HPDarkEffect
 
-<<<<<<< HEAD
-	; Check if POLYCHROME item is in use
-	push hl
-	push bc
-	ld a, [wCurItem]
-	cp POLYCHROME
-	jp z, .PolychromeEffect
-	; If not POLYCHROME, check if species is Porygon
+;<<<<<<< HEAD
+;	; Check if POLYCHROME item is in use
+;	push hl
+;	push bc
+;	ld a, [wCurItem]
+;	cp POLYCHROME
+;	jp z, .PolychromeEffect
+;	; If not POLYCHROME, check if species is Porygon
 ;	ld a, [wColorVarySpecies]
 ;	cp PORYGON
-	jp z, .PolychromeEffect
+;	jp z, .PolychromeEffect
 ;	pop bc
-	pop hl
-=======
->>>>>>> newgame_works_072725_c8be725
+;	pop hl
+;=======
+;>>>>>>> newgame_works_072725_c8be725
 	jp .StandardColors
 
 .HPFightingEffect:

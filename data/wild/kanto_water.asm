@@ -65,9 +65,9 @@
 
 	def_water_wildmons PHANTOM_FJORD
 	db 4 percent ; encounter rate
-	wildmon 25, SEADRA
-	wildmon 30, CLOYSTER
-	wildmon 25, GASTLY
+	wildmon 35, SEADRA
+	wildmon 35, CLOYSTER
+	wildmon 24, GASTLY
 	end_water_wildmons
 
 	def_water_wildmons SEAFLUX_NEXUS
@@ -79,9 +79,9 @@
 
 	def_water_wildmons SHELTERED_SHORES
 	db 4 percent ; encounter rate
-	wildmon 20, TENTACRUEL
-	wildmon 25, MANTINE
-	wildmon 30, OCTILLERY
+	wildmon 30, TENTACRUEL
+	wildmon 31, MANTINE
+	wildmon 32, OCTILLERY
 	end_water_wildmons
 
 	def_water_wildmons LANDING_DOCKS

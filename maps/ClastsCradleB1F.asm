@@ -542,8 +542,8 @@ Cradle_Scene3Pickup:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	setscene $2
-	blackoutmod TIMELESS_TAPESTRY
+	setscene $3
+	blackoutmod WESTERN_CAPITAL
 	warp WHISPERS_WAY, 10, 4
 	end
 	

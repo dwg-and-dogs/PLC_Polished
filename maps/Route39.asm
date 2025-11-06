@@ -12,7 +12,7 @@ Route39_MapScriptHeader:
 	def_bg_events
 	bg_event  9,  5, BGEVENT_JUMPTEXT, MoomooFarmSignText
 	bg_event 15,  7, BGEVENT_JUMPTEXT, Route39SignText
-	bg_event  9, 37, BGEVENT_JUMPTEXT, HoldingPondsSignText
+	bg_event  8, 36, BGEVENT_JUMPTEXT, HoldingPondsSignText
 	bg_event  5, 13, BGEVENT_ITEM + NUGGET, EVENT_ROUTE_39_HIDDEN_NUGGET
 
 	def_object_events
@@ -24,7 +24,7 @@ Route39_MapScriptHeader:
 	pokemon_event  4, 15, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
 	pokemon_event  8, 13, MILTANK, -1, -1, PAL_NPC_RED, Route39MiltankText, -1
 	fruittree_event  9,  3, FRUITTREE_ROUTE_39, PNK_APRICORN, PAL_NPC_RED
-	object_event  13,19, SPRITE_COWGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39FarmerScript, -1  ; annie 
+	object_event  13,19, SPRITE_COWGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39FarmerScript, -1  ; annie
 	itemball_event 11, 32, BLACK_SLUDGE, 1, EVENT_ROUTE_39_SLUDGE ; TOP OF THE CAVE
 ; trainers 
 	object_event  3,  9, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerTamerVince, -1

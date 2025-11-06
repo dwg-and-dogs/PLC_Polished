@@ -126,7 +126,9 @@ KurtTowerText2:
 	line "coming rainstorm."
 	
 	para "If you need to"
-	line "train, we can"
+	line "train, I have a"
+	para "high-experience"
+	line "#mon you can"
 	cont "battle."
 	done
 

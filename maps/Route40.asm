@@ -35,8 +35,8 @@ Route40_MapScriptHeader:
 	object_event 12, 10, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route40MatronScript, -1 ; redo text and heal you 
 	object_event  10,  8, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
 ; roadblock NPCs, quarantine the city while they look for who took the part 
-	object_event 19, 4, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_DOCKS_KENSEY ; redo text and heal you 
-	object_event 19, 5, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_DOCKS_KENSEY ; redo text and heal you 
+;	object_event 19, 4, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_DOCKS_KENSEY ; redo text and heal you 
+;	object_event 19, 5, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_DOCKS_KENSEY ; redo text and heal you 
 
 
 	object_const_def
@@ -269,24 +269,20 @@ Route40TutorDoubleEdgeScript:
 Text_DoubleEdgeIntro: 
 	text "Technology is a"
 	line "double-edged"
-	cont "sword."
-		
-	para "Like a double-"
-	line "edged sword, it"
-	cont "cuts both ways."
+	cont "sword, it cuts"
+	cont "good and bad."
 
 	para "In Olivine, we"
 	line "sailors once"
 	cont "mended our own"
 	cont "vessels."
 
-	para "But now, complex"
-	line "new models demand"
-	cont "specialization."
+	para "But new models"
+	line "demand more spec-"
+	cont "ialized skills."
 
 	para "Ah, speaking of"
-	line "double-edged..."
-
+	line "double-edged."
 	done
 
 Text_Route40TutorDoubleEdge:
@@ -309,9 +305,7 @@ Text_Route40TutorQuestion:
 	done
 
 Text_Route40TutorRefused:
-	text "Wary of the cost?"
-	line "A prudent choice"
-	cont "for now, perhaps."
+	text "Possibly prudent."
 	done
 
 Text_Route40TutorTaught:

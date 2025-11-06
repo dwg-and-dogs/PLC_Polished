@@ -320,7 +320,9 @@ TL_Scene_2_R:
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_LANDING_KURT_2
+	setevent EVENT_LANDING_TIME_TRAVELED
 	warp ROUTE_40, 7, 4
+	setscene $2 
 	end
 
 TL_2_Text1:
@@ -544,7 +546,6 @@ LandingBarbeauScript:
 	writetext TL_2_Text5
 	waitbutton
 	closetext
-
 	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes

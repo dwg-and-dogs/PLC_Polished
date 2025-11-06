@@ -63,8 +63,8 @@ WhirlIslandKurtLugiaScript:
 	end
 	
 KurtLugiaText1:
-	text "Kurt: Lugia, give"
-	line "me your power!"
+	text "Lugia, give me"
+	line "your power!"
 	done
 
 KurtLugiaText2: ; need to have kurt go to the top floor and tell the player here to go 
@@ -80,6 +80,8 @@ KurtLugiaText2: ; need to have kurt go to the top floor and tell the player here
 	cont "at Cianwood."
 	
 	para "Let's go."
+	
+	para "..."
 	done
 
 KurtLeavesMovement:

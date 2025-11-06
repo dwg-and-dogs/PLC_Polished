@@ -105,7 +105,21 @@ GauldenrodDormsKurtScript:
 	blackoutmod GAULDENROD
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_SANDRA
+	iftrue .BeatSandra
 	writetext KurtGauldenrodDormsText
+	yesorno
+	iffalse .GauldenrodKurtPC
+	winlosstext GauldenrodKurtBattleText, GauldenrodKurtBattleText
+	loadtrainer KURT, 2 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	opentext
+	jumpopenedtext GauldenrodKurtBattleText2
+
+.BeatSandra:
+	writetext KurtGauldenrodDormsTextSandra
 	yesorno
 	iffalse .GauldenrodKurtPC
 	winlosstext GauldenrodKurtBattleText, GauldenrodKurtBattleText
@@ -129,10 +143,6 @@ KurtGauldenrodDormsText:
 	cont "will have to pass"
 	cont "through Ecruteak."
 
-	para "We need to find a"
-	line "way to get to"
-	cont "Ecruteak."
-
 	para "Maybe we can pass"
 	line "through whatever"
 	cont "used to be at the"
@@ -144,6 +154,21 @@ KurtGauldenrodDormsText:
 	line "around here."
 
 	para "Want to battle?"
+	done
+	
+KurtGauldenrodDormsTextSandra:
+	text "<PLAYER>, the"
+	line "Elder here was"
+	para "taken by General"
+	line "Bobesh's troops"
+	cont "to the stadium!"
+	
+	para "We have to help."
+	line "If you want to"
+	para "train, you can"
+	line "spar with me from"
+	para "#mon in the"
+	line "wild near here."
 	done
 
 GauldenrodKurtBattleText:

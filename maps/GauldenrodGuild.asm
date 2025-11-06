@@ -1,6 +1,6 @@
 GauldenrodGuild_MapScriptHeader:
 	def_scene_scripts
-	scene_script MasterBallTrigger ;she should have a happy emote t
+	scene_script MasterBallTrigger 
 
 	def_callbacks
 
@@ -25,7 +25,7 @@ GauldenrodGuild_MapScriptHeader:
 	object_const_def
 	const GUILD_SAGE
 
-TinTowerOldMasterBallTrigger:
+MasterBallTrigger:
 	sdefer .TradeScript
 	end
 	

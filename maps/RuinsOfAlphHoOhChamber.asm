@@ -23,7 +23,7 @@ RuinsOfAlphHoOhChamber_MapScriptHeader: ; heatran
 RuinsOfAlphHoOhChamberHiddenDoorsCallback:
 	checkevent EVENT_SOLVED_HO_OH_PUZZLE
 	iftrue .WallOpen
-	changeblock 4, 0, $25
+	changeblock 4, 0, $24
 .WallOpen:
 	endcallback
 

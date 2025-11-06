@@ -45,7 +45,7 @@ EcruteakBlueMailScript: ; TRADE QUEST
 	faceplayer
 	opentext	
 	checkevent EVENT_GAVE_LITEBLUEMAIL
-	iftrue_jumpopenedtext TextReadingTheTeaLeaves
+	iftrue_jumpopenedtext TextReadingTheTeaLeaves2
 	writetext NeedABigMushroomText
 	waitbutton
 	checkkeyitem BIG_MUSHROOM_K
@@ -53,10 +53,12 @@ EcruteakBlueMailScript: ; TRADE QUEST
 	writetext Text_BigMushroomQuestion ;;
 	yesorno
 	iffalse_jumpopenedtext NoBigMushroom
+	writetext TextReadingTheTeaLeaves
+	waitbutton
 	takekeyitem BIG_MUSHROOM_K
 	verbosegivekeyitem LITEBLUEMAIL_K
 	setevent EVENT_GAVE_LITEBLUEMAIL
-	jumpopenedtext TextReadingTheTeaLeaves
+	jumpopenedtext TextReadingTheTeaLeaves2
 
 
 NeedABigMushroomText:

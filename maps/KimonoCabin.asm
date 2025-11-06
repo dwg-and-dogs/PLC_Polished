@@ -270,7 +270,7 @@ Kimono3ThanksForHelpingText:
 KimonoCabin4Script: 
 	faceplayer
 	opentext
-	checkevent EVENT_KIMONO_CABIN_LAPRAS
+	checkevent EVENT_KIMONO_CABIN_4_LAPRAS_BATTLE
 	iftrue_jumpopenedtext Kimono4HelpedText
 	checkevent EVENT_BEAT_SAMSARA ; chronicler vespera 
 	iffalse_jumpopenedtext Kimono4NotStrongEnoughText
@@ -375,7 +375,7 @@ KimonoCabin5Script:
 	iftrue_jumpopenedtext Kimono5HelpedText
 	checkevent EVENT_BEAT_KENSEY_DOCKS 
 	iffalse_jumpopenedtext Kimono5NotStrongEnoughText
-	checkevent EVENT_KIMONO_CABIN_LAPRAS
+	checkevent EVENT_KIMONO_CABIN_4_LAPRAS_BATTLE
 	iffalse_jumpopenedtext Kimono5NotStrongEnoughText
 	writetext Kimono5AskHelpText
 	yesorno

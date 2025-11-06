@@ -14,7 +14,7 @@ DragonsDen_MapScriptHeader:
 
 
 	def_bg_events
-;	bg_event  10, 14, BGEVENT_JUMPTEXT, DragonsDenSignText 
+
 
 
 	def_object_events
@@ -201,9 +201,8 @@ ClairScript:
 	cont "in the right way."
 	
 	para "You showed me the"
-	line "power of belie-"
-	para "ving in my"
-	line "#mon,"
+	line "power of trusting"
+	cont "my #mon,"
 
 	para "even if they are"
 	line "not strong in the"

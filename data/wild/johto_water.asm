@@ -93,9 +93,9 @@
 
 	def_water_wildmons WHIRL_ISLAND_LUGIA_CHAMBER
 	db 2 percent ; encounter rate
-	wildmon 20, SEADRA
-	wildmon 25, TENTACRUEL
-	wildmon 30, OCTILLERY
+	wildmon 30, SEADRA
+	wildmon 35, TENTACRUEL
+	wildmon 40, OCTILLERY
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_32
@@ -128,16 +128,16 @@
 
 	def_water_wildmons ROUTE_40
 	db 2 percent ; encounter rate
-	wildmon 30, TENTACRUEL
+	wildmon 27, TENTACRUEL
 	wildmon 30, CORSOLA
 	wildmon 30, STARYU
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_41
 	db 2 percent ; encounter rate
-	wildmon 30, LANTURN
-	wildmon 30, MANTINE
-	wildmon 30, OCTILLERY
+	wildmon 27, LANTURN
+	wildmon 26, MANTINE
+	wildmon 28, OCTILLERY
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_42
@@ -150,7 +150,7 @@
 	def_water_wildmons ROUTE_43
 	db 2 percent ; encounter rate
 	wildmon 10, WOOPER
-	wildmon 20, WOOPER
+	wildmon 45, QUAGSIRE
 	wildmon 45, QUAGSIRE
 	end_water_wildmons
 

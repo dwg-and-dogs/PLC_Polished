@@ -102,29 +102,32 @@ KurtOlivineScript:
 	jumpopenedtext OlivineKurtBattleText2
 
 KurtOlivineText:
-	text "<PLAYER>! Nothing"
-	line "good can come of"
-	cont "Chuck's project."
+	text "<PLAYER>! Celebi"
+	line "was so upset with"
+	cont "what we did to"
+	cont "Lugia."
 	
-	para "Another example"
-	line "of Silph tech"
-	cont "run amok."
+	para "How was I so"
+	line "misguided?"
+
+	para "We have a chance"
+	line "for redemption-"
 	
-	para "It's putting the"
-	line "whole town out of"
-	cont "work, and using"
-	cont "a ton of water"
-	cont "and energy."
+	para "Chuck's OMLAS"
+	line "project destroys"
+	cont "the shoreline"
+	para "as he uses that"
+	line "#mon for his"
+	cont "own ends!"
 	
-	para "It seems like a"
-	line "few citizens"
-	cont "agree, as the"
-	cont "Desal Plant was"
-	cont "sabotaged."
+	para "Some ingenious"
+	line "engineer took out"
+	cont "a machine part,"
+	para "causing the whole"
+	line "thing to stop."
 	
-	para "Now's a chance"
-	line "to strike, and"
-	cont "take it offline!"
+	para "Now's a chance to"
+	line "take it offline!"
 	
 	para "Want to battle"
 	line "to train a bit?"

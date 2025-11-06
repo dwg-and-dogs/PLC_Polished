@@ -147,6 +147,11 @@ SkierRoxanneSeenText:
 GenericTrainerSkierClarissa:
 	generictrainer SKIER, CLARISSA, EVENT_BEAT_SKIER_CLARISSA, SkierClarissaSeenText, SkierClarissaBeatenText
 
+	text "You have to stay"
+	line "calm to ski out"
+	cont "of a tough slope."
+	done
+
 SkierClarissaBeatenText:
 	text "Don't let bumps"
 	line "throw you off"
@@ -162,6 +167,10 @@ SkierClarissaSeenText:
 GenericTrainerBoarderDouglas:
 	generictrainer BOARDER, DOUGLAS, EVENT_BEAT_BOARDER_DOUGLAS, BoarderDouglasSeenText, BoarderDouglasBeatenText
 
+	text "Pryce makes the"
+	line "bitter cold feel"
+	cont "bitter sweet."
+	done
 
 BoarderDouglasBeatenText:
 	text "He meditated in"

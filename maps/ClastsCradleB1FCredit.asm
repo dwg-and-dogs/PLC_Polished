@@ -53,7 +53,7 @@ ClastsCradleB1FCreditScene:
 	ifless $6, .done
 	refreshscreen
 	loadmem wCurForm, -1
-	loadmem wCurPartyMon, 5    ; Select first party slot
+	loadmem wCurPartyMon, 5    ; Select party slot
 	readmem wPartyMon6Species  ; or wCurPartySpecies
 	pokepic 0	
 	pause 120
@@ -70,6 +70,7 @@ ClastsCradleB1FCreditScene:
 .done2:
 	pause 60
 	special FadeOutPalettes
+	loadmem wCurForm, 0 ; hopefully this prevents the halloffame palette on the trainer sprite from being corrupted?
 	halloffame
 	end
 

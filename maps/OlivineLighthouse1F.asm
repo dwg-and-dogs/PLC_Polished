@@ -20,9 +20,9 @@ OlivineLighthouse1F_MapScriptHeader:
 	object_event 14, 9, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_RIVAL_LIGHTHOUSE 
 	object_event 11, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, 	ObjectEvent, EVENT_KURT_LIGHTHOUSE_1 
 
-	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerScientistJoseph, -1
-	object_event 13,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBlackBeltWai, -1
-	object_event  2,  4, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerEngineerLang, -1
+	object_event  5,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerScientistJoseph, EVENT_BEAT_CHUCK
+	object_event 13,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBlackBeltWai, EVENT_BEAT_CHUCK
+	object_event  2,  4, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerEngineerLang, EVENT_BEAT_CHUCK
 
 	object_const_def 
 	const LIGHTHOUSE_RIVAL
@@ -267,15 +267,13 @@ TrainerScientistJoseph:
 
 TrainerBlackBeltWai:
 	generictrainer BLACKBELT_T, WAI, EVENT_BEAT_BLACKBELT_WAI, .SeenText2, .BeatenText2
-<<<<<<< HEAD
-=======
 	
 	text "If I hadn't left"
 	line "Cianwood, I'd have"
 	para "tried to hole up"
 	line "in the gym."
 	done
->>>>>>> newgame_works_072725_c8be725
+
 	
 .BeatenText2:
 	text "I wonder if any-"
@@ -291,8 +289,6 @@ TrainerBlackBeltWai:
 
 TrainerEngineerLang:
 	generictrainer ENGINEER, LANG, EVENT_BEAT_ENGINEER_LANG, .SeenText3, .BeatenText3
-<<<<<<< HEAD
-=======
 
 	text "The light source"
 	line "emits Lumens!"
@@ -300,7 +296,6 @@ TrainerEngineerLang:
 	para "The lenses focus"
 	line "it to candelas."
 	done
->>>>>>> newgame_works_072725_c8be725
 
 .BeatenText3:
 	text "Unit conversion"

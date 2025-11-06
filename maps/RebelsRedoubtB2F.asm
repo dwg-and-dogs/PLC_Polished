@@ -117,6 +117,8 @@ RedoubtB2FStatue1Text:
 RedoubtKurtScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_AMOS 
+	iftrue_jumpopenedtext KurtRedoubtAfterAmosText
 	writetext KurtHealRedoubtText
 	waitbutton
 	closetext
@@ -134,6 +136,22 @@ RedoubtKurtScript:
 	waitbutton
 	closetext
 	end
+
+KurtRedoubtAfterAmosText:
+	text "You did it! Amos"
+	line "and the ninjas"
+	para "will attack"
+	line "General Adrinna's"
+	cont "mine to stop her"
+	para "from reaching the"
+	line "#mon at the"
+	cont "bottom."
+	
+	para "After we stop her"
+	line "we'll have to go"
+	para "right to Urgaust's"
+	line "coronation!"
+	done
 
 KurtHealRedoubtText:
 	text "<PLAYER>, there"

@@ -129,8 +129,10 @@ PickupDocksScene:
 	opentext 
 	writetext Docks_Text9
 	waitbutton
+	closetext
 	applyonemovement LANDING_DOCKS_KURT, step_left
 	turnobject LANDING_DOCKS_KURT, UP
+	opentext
 	writetext Docks_Text10
 	waitbutton
 	showemote EMOTE_BOLT, LANDING_DOCKS_BARBEAU, 30

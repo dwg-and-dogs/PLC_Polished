@@ -185,14 +185,18 @@ Text_ReceivedFogBadge:
 	done
 	
 MortyText_FogBadgeSpeech:
-	text "It shows that"
-	line "you can find a"
-	para "way on unfamil-"
-	line "iar paths."
+	text "It shows you can"
+	line "find a way on"
+	cont "unfamiliar paths."
 	
 	para "It also grants"
-	line "you acces to the"
+	line "you access to the"
 	cont "Tin Tower."
+	
+	para "I've seen Ho-Oh"
+	line "at the top with"
+	para "someone else I"
+	line "granted my badge."
 	done
 
 MortyFightDoneText:

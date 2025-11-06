@@ -30,16 +30,20 @@ RuinsOfAlphHoOhItemRoom_MapScriptHeader: ; HEATRAN
 PumiceHarpScript:
 	opentext
 	writetext HoldingAHarpText
-	promptbutton
 	yesorno
 	iffalse_jumpopenedtext LeaveItAloneText
-	verbosegivekeyitem PUMICE_HARP
-	; need a sfx for playing the harp
+	waitbutton
+	closetext
 	pause 10
 	showemote EMOTE_SHOCK, PLAYER, 10
 	disappear HOOH_ITEM_ROOM_STATUE
 	setevent EVENT_GOT_PUMICE_HARP
-	jumpopenedtext StatueDissolvesText
+	opentext
+	writetext StatueDissolvesText
+	waitbutton
+	verbosegivekeyitem PUMICE_HARP
+	closetext
+	end
 	
 LeaveItAloneText:
 	text "Better leave it"
@@ -66,5 +70,7 @@ StatueDissolvesText:
 	cont "the pumice."
 	
 	para "She's crumbled"
-	cont "to fine ash."
+	line "to fine ash,"
+	para "and only the harp"
+	line "remains."
 	done

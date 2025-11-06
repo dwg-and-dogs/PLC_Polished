@@ -51,18 +51,6 @@ OlivineLighthouse6F_MapScriptHeader:
 Lighthouse6FScene0:
 	applyonemovement PLAYER, step_up
 Lighthouse6FScene:
-<<<<<<< HEAD
-	applyonemovement PLAYER, step_left
-	applyonemovement PLAYER, step_left
-	applyonemovement PLAYER, step_left ; now at 10, 10 
-	showemote EMOTE_SAD, LIGHTHOUSE_JASMINE, 10
-	showtext LighthouseJasmineText1
-	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 10
-	showtext LighthouseChuckText1
-	turnobject LIGHTHOUSE_KURT1, LEFT
-	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 10 
-	showtext LighthouseKurtText1
-=======
 	turnobject LIGHTHOUSE_KURT1, LEFT
 	applyonemovement PLAYER, step_left 
 	applyonemovement PLAYER, step_left 
@@ -77,7 +65,6 @@ Lighthouse6FScene:
 	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 30 
 	writetext LighthouseKurtText1
 	waitbutton
->>>>>>> newgame_works_072725_c8be725
 	closetext
 	applyonemovement PLAYER, step_left
 	turnobject PLAYER, UP

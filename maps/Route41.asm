@@ -314,6 +314,7 @@ GenericTrainerScientistBraydon:
 	text "Why didn't you let"
 	line "me win to impress"
 	cont "those girls?"
+	done
 
 .BeatenText3:
 	text "I should stick"

@@ -19,25 +19,14 @@ VioletGym_MapScriptHeader:
 
 VioletGymPryceText:
 	text "Johto's Gyms once"
-	line "shared wisdom like"
-	cont "fruitful trees."
+	line "shared techniques"
+	para "like a wild grove"
+	line "of fruit trees."
 
-	para "Now Falkner hides"
-	line "in a walled"
-	cont "garden."
-
-	para "A Gym's strength"
-	line "lies in nurturing"
-	para "trainers, not in"
-	line "baffling them!"
-
-	para "I hoped to remind"
-	line "him, but he would"
-	para "rather rule over"
-	line "sand than admit"
-	cont "his mistakes."
+	para "But Falkner's is"
+	line "like a walled"
+	cont "garden!"
 	
-	para "Doesn't he know:"
-	line "sand is a poor"
-	cont "foundation."
+	para "He won't even let"
+	line "me talk to him!"
 	done

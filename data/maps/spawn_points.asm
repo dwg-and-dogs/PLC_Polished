@@ -19,7 +19,7 @@ SpawnPoints:
 	spawn TRANQUIL_TARN,              13,  4 ; todo
 	spawn EERIE_HAMLET,               11,  8 ; todo 
 	spawn SULFUR_STY,                 34,  8 ; todo 
-	spawn TIMELESS_TAPESTRY,           3,  6 ; todo 
+	spawn TIMELESS_TAPESTRY,          10, 34 ; todo 
 
 	spawn AZALEA_TOWN,                15, 10 ; works 
 	spawn GOLDENROD_CITY,             18, 28 ; works 

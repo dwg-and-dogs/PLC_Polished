@@ -14,21 +14,27 @@ WhispersWay_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event 2, 7, BGEVENT_ITEM + FULL_RESTORE, EVENT_WISHERS_HIDDEN_FULL_RESTORE
+	bg_event  7, 2, BGEVENT_JUMPTEXT, WhispersWaySign 
+	bg_event  2, 21, BGEVENT_ITEM + FULL_RESTORE, EVENT_WISHERS_HIDDEN_FULL_RESTORE
 	bg_event 17, 5, BGEVENT_ITEM + PETAYA_BERRY, EVENT_WISHERS_HIDDEN_BERRY_1
 	bg_event 17, 27, BGEVENT_ITEM + SALAC_BERRY, EVENT_WISHERS_HIDDEN_BERRY_2
 	bg_event  3, 24, BGEVENT_ITEM + BIG_NUGGET, EVENT_WISHERS_HIDDEN_BIG_NUGGET
 	bg_event 17, 30, BGEVENT_ITEM + MAX_REVIVE, EVENT_WISHERS_HIDDEN_MAX_REVIVE
 
 	def_object_events
-	object_event 9, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhispersKurtScript, EVENT_SKIRMISH_STARTED 
+	object_event 9, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhispersKurtScript, EVENT_SKIRMISH_STARTED
 	object_event   10, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptWW, -1
 
 
-
+WhispersWaySign:
+	text "Whispering Way"
+	line "North to Capital,"
+	para "South to Timeless"
+	line "Tapestry"
+	done
 
 WhispersKurtScript: 
-	blackoutmod TIMELESS_TAPESTRY
+	blackoutmod WESTERN_CAPITAL
 	faceplayer
 	opentext
 	writetext KurtWWText

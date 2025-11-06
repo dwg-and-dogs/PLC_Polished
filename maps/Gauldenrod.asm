@@ -47,8 +47,6 @@ Gauldenrod_MapScriptHeader:
 	mart_clerk_event  27, 25, MARTTYPE_STANDARD, MART_GAULDENROD_1
 	mart_clerk_event  27, 20, MARTTYPE_STANDARD, MART_GAULDENROD_2
 	object_event  34,  24, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_TM, MART_GAULDENROD_3, EVENT_GAULDENROD_CIVILIANS
-	; roadblocks 
-
 	; npcs 
 	object_event 31, 24, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, GauldenrodNPC1Script, EVENT_GAULDENROD_CIVILIANS
 	object_event 23, 6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, 			OBJECTTYPE_SCRIPT, 0, GauldenrodNPC2Script, EVENT_GAULDENROD_CIVILIANS
@@ -642,12 +640,17 @@ BobeshWalksAway:
 	
 GauldenrodNPC9Script:
 	faceplayer
+	opentext
+	checkevent EVENT_SHIMMER_HZ_3
+	iftrue_jumpopenedtext GauldenrodElderAfterQuest
 	checkevent EVENT_BEAT_SAMSARA
-	iffalse_jumptext GauldenrodElderNoSurf
-	showtext GauldenrodElderQuestText
+	iffalse_jumpopenedtext GauldenrodElderNoSurf
+	writetext GauldenrodElderQuestText
 	yesorno
-	iffalse_jumptext GauldenrodElderQuestNo
-	showtext GauldenrodElderThanks
+	iffalse_jumpopenedtext GauldenrodElderQuestNo
+	writetext GauldenrodElderThanks
+	waitbutton
+	closetext
 	setevent EVENT_GRAMPS_SADDLE 
 	warp SHIMMER_SADDLE, 7, 33
 	end
@@ -703,3 +706,15 @@ GauldenrodElderNoSurf:
 	cont "someone who can"
 	cont "navigate water."
 	done
+
+GauldenrodElderAfterQuest:
+	text "Thank you for"
+	line "indulging my"
+	cont "request..."
+	
+	para "Without you, I'd"
+	line "have followed an"
+	para "illusion until I"
+	line "joined her."
+	done
+	

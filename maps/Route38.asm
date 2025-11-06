@@ -68,7 +68,7 @@ GenericTrainerPokefanFRuth:
 	generictrainer POKEFANF, RUTH, EVENT_BEAT_POKEFANF_RUTH, PokefanFRuthSeenText, PokefanFRuthBeatenText
 
 	text "Would you want to"
-	line "live downstream"
+	line "live downwind"
 	cont "of Moomoo farms?"
 	done
 

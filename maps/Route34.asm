@@ -466,24 +466,22 @@ PearlForShoreFoamText:
 	para "It's just like"
 	line "homemade whipped"
 	cont "cream!"	
+	
+	para "You can have some"
+	line "if you trade me a"
+	cont "Big Pearl."
 	done
 
 PearlForShoreFoamQuestionText:
-	text "I've collected a"
-	line "few samples, if"
-	cont "you want some."
-	
-	para "All I ask is a"
-	line "Big Pearl."
+	text "What do you say?"
 	done
 
 PearlForShoreFoamEndText:
 	text "<PLAYER> got 5"
-	line "SHORE FOAM."
+	line "Shore Foam."
 	
-	para "Science is ever-"
-	line "ywhere, if you"
-	cont "look closely!"
+	para "Science is every-"
+	line "where!"
 	done
 
 NoPearlForShoreFoamText:

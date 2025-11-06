@@ -71,8 +71,8 @@ RouteKajoCallbackTiles:
 TrainerCamperBarryScript:
     generictrainer CAMPER, BARRY, EVENT_BEAT_CAMPER_BARRY, CamperBarrySeenText, CamperBarryBeatenText
 
-    text "Now I'm even more"
-    line "lost."
+    text "I'll never find"
+	line "my way down!"
     done
 
 TrainerPicnickerTiffanyScript:
@@ -122,11 +122,11 @@ TrainerVeteran_MMatthewScript:
 TrainerBreederJodyScript:
     generictrainer BREEDER, JODY, EVENT_BEAT_BREEDER_JODY, BreederJodySeenText, BreederJodyBeatenText
 
-    text "I left when the"
-    line "power went out."
-    para "I've never seen"
-    line "the coast from up"
-    cont "here before."
+    text "Lots of people"
+	line "are hiking. I"
+	para "even saw a little"
+	line "girl headed up"
+	cont "to the peak."
     done
 
 TrainerPokefan_MRobertScript:
@@ -144,8 +144,8 @@ TrainerSchoolgirlFaithScript:
 
     text "The ruins of Alph"
     line "are just below."
-    cont "You should check"
-    cont "them out."
+    para "You should check"
+    line "them out."
     done
 
 CamperBarrySeenText:

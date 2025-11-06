@@ -13,18 +13,12 @@ OlivineLighthouse2F_MapScriptHeader:
 
 	def_bg_events
 
-<<<<<<< HEAD
 
-	def_object_events 
-	object_event  15,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, 	TrainerScientistNigel, -1 
-	object_event  6, 14, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBattleGirlNozomi, -1
-	object_event  16,  9, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, 	TrainerEngineerHugo, -1
-=======
 	def_object_events ; scientists, engineers 
 	object_event  15,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, 	TrainerScientistNigel, EVENT_BEAT_CHUCK
 	object_event  6, 14, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, 	TrainerBattleGirlNozomi, EVENT_BEAT_CHUCK
 	object_event  16,  9, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, 	TrainerEngineerHugo, EVENT_BEAT_CHUCK
->>>>>>> newgame_works_072725_c8be725
+
 
 TrainerScientistNigel:
 	generictrainer SCIENTIST, NIGEL, EVENT_BEAT_SCIENTIST_NIGEL, .SeenText, .BeatenText

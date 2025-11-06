@@ -44,7 +44,7 @@ SinjohDormsNPC2Text:
 	line "wants us to join"
 	cont "his army."
 	
-	para "But I think he's"
+	para "But I think she's"
 	line "a power-hungry"
 	cont "narcissist."
 	done

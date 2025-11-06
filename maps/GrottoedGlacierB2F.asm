@@ -393,6 +393,11 @@ KannaWaterfallText:
 	done
 
 KannaTellAmosText:
+	text_high
+    text " Kanna: " 
+	next
+	text_start
+	
 	text "I'll be telling"
 	line "the Johto elders"
 	para "about your green"

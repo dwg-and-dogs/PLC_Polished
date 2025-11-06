@@ -447,6 +447,7 @@ LakeRivalWalksAway:
 
 
 LakePryceScript: 
+	faceplayer
 	opentext
 	writetext LakeShrineQuestion
 	yesorno
