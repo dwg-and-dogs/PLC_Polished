@@ -36,7 +36,7 @@ UnionCaveB2F_MapScriptHeader:
 UnionCaveBastiodon:
 	cry BASTIODON
 	setevent EVENT_UNION_CAVE_B2F_FOSSIL
-	loadwildmon BASTIODON, 25
+	loadwildmon BASTIODON, 35
 	startbattle
 	disappear UNIONCAVEB2F_BASTIODON
 	disappear UNIONCAVEB2F_RAMPARDOS
@@ -47,7 +47,7 @@ UnionCaveBastiodon:
 UnionCaveRampardos:
 	cry RAMPARDOS
 	setevent EVENT_UNION_CAVE_B2F_FOSSIL
-	loadwildmon RAMPARDOS, 25
+	loadwildmon RAMPARDOS, 35
 	startbattle
 	disappear UNIONCAVEB2F_BASTIODON
 	disappear UNIONCAVEB2F_RAMPARDOS

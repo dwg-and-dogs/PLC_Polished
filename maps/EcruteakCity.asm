@@ -40,8 +40,8 @@ EcruteakCity_MapScriptHeader:
 	object_event 34, 26, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityHikersText, EVENT_BEAT_CHUCK ; done
 	object_event 34, 27, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityHikersText, EVENT_BEAT_CHUCK ; done
 	
-	object_event 1, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_CHUCK ; done
-	object_event 1, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_CHUCK ; done
+;	object_event 1, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_KENSEY_PORT ; done
+;	object_event 1, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_KENSEY_PORT ; done
 	
 	object_event 26, 23, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps1Text, -1 ; done
 	object_event 20, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps2Text, -1 ; ok e

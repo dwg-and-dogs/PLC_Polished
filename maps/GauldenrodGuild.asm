@@ -47,6 +47,7 @@ GauldenrodGuildMasterBallScript:
 	writetext Text_HoneyQuestion ;;
 	takekeyitem SWEET_HONEY_K
 	setevent EVENT_GAVE_MASTER_BALL
+	waitbutton
 	writetext TextGaveMasterBall 
 	waitbutton
 	verbosegiveitem MASTER_BALL
@@ -93,34 +94,21 @@ TextGaveMasterBall:
     para "There! Perfect"
     line "at last!"
     
-    para "Young trainer, I"
-    line "want you to have"
-    cont "one as thanks."
+    para "I'll give you one"
+	line "as thanks."
 	done
-; drop through 
+
 
 TextGaveMasterBall2:
     text "That ball will"
     line "catch any"
-    cont "#mon, without"
-    cont "fail."
-    
-    para "Like a powerful"
-    line "technique, its"
-    cont "power demands"
-    cont "wisdom."
-    
-    para "That's why I've"
-    line "chosen to share"
-    cont "it with you, yet"
-    cont "make no more."
-	
+    cont "#mon."
+    	
 	para "Go on. What dream"
 	line "would you chase,"
-	cont "if you knew you"
-	cont "would catch it?"
+	para "if you knew you"
+	line "would catch it?"
     done
-
 
 GauldenrodGuildNPC1Script:
 	jumptextfaceplayer GauldenrodGuildNPC1Text
@@ -137,6 +125,7 @@ GauldenrodGuildNPC1Text:
 	done
 
 GauldenrodGuildNPC2Script:
+	faceplayer
 	opentext
 	writetext GuildNPC2IntroText
 	yesorno
@@ -146,6 +135,7 @@ GauldenrodGuildNPC2Script:
 .End:
 	writetext GuildNPC2OutroText
 	waitbutton
+	closetext
 	end
 
 
@@ -168,17 +158,17 @@ GuildNPC2BallsText:
 	line "make Geodes, for"
 	
 	para "Rock, Ground, "
-	line "and Steels types."
+	line "and Steels types,"
 	
 	para "Opals can make"
 	line "Jeze Balls, for"
 	para "Dark, Psychic,"
-	line "and Fairies."
+	line "and Fairy types,"
 	
 	para "Shore Foam can"
 	line "make Bub Balls"
 	para "for Water and"
-	line "Ice types."
+	line "Ice types,"
 	
 	para "Fixed Charges"
 	line "make Deci Balls"

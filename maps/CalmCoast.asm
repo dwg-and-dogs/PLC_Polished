@@ -73,13 +73,14 @@ GenericTrainerCooltrainerMGaven:
 	done
 
 CooltrainerMGavenBeatenText:
-	text "I just got back"
-	line "from the bazaar!"
-	done
-
-CooltrainerMGavenSeenText:
 	text "I lost? That's"
 	line "bizarre."
+	done
+
+
+CooltrainerMGavenSeenText:
+	text "I just got back"
+	line "from the bazaar!"
 	done
 
 GenericTrainerYoungsterJimmy:

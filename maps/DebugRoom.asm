@@ -32,11 +32,11 @@ DebugRoom_MapScriptHeader:
 DebugInteraction: 
 	opentext
 	givepoke ENTEI, 100
-	givepoke VICTREEBEL, 100
-	givepoke RAIKOU, 100
+;	givepoke VICTREEBEL, 100
+;	givepoke RAIKOU, 100
 	givepoke POLITOED, 100
 	givepoke LUGIA, 100
-	givepoke GOLEM, 25 
+;	givepoke GOLEM, 25 
 	waitbutton
 ;	setflag ENGINE_POKEGEAR
 ;	setflag ENGINE_PHONE_CARD
@@ -139,8 +139,8 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-;	setevent EVENT_BEAT_CHUCK
-	warp SINJOH_CROSSROADS, 10, 14
+;	givekeyitem SWEET_HONEY_K
+	warp GAULDENROD_GUILD, 3, 7
 	end
 
 OverworldHallOfFame1: 

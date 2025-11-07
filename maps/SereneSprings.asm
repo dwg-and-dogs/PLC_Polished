@@ -224,9 +224,6 @@ ReceptionistRefusedText:
 	done
 
 StadiumAheadSign:
-	jumptext StadiumAheadSignText
-
-StadiumAheadSignText:
 	text "Stadium Grounds"
 	line "Ahead"
 	
