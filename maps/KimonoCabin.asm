@@ -280,7 +280,7 @@ KimonoCabin4Script:
 	yesorno
 	iffalse_jumpopenedtext Kimono4DeclinedText
 	writetext Kimono4ThanksForHelpingText
-	clearevent EVENT_SOLVED_KIMONO_4_SUDOKU ; 
+;	clearevent EVENT_SOLVED_KIMONO_4_SUDOKU ; 
 	clearevent EVENT_EXPLAINED_SUDOKU
 	waitbutton
 	closetext

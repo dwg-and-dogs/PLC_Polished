@@ -7,6 +7,7 @@ KimonoCabin4_MapScriptHeader: ;REVISE THE TEXT
 	; red		green	blue		brown 
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, KimonoCabin4TilesCallback
 
 
 	def_warp_events
@@ -45,6 +46,28 @@ KimonoCabin4_MapScriptHeader: ;REVISE THE TEXT
 	object_const_def
 	const KIMONO_CABIN_4_GRANNY
 	const KIMONO_CABIN_4_LAPRAS
+
+KimonoCabin4TilesCallback:
+	checkevent EVENT_SOLVED_KIMONO_4_SUDOKU
+	iffalse .Done
+	changeblock 0, 0, $59 ; 00 
+	changeblock 2, 0, $86 ; 10 
+	changeblock 4, 0, $56 ; 20 
+
+	changeblock 0, 2, $87 ; 01 
+	changeblock 4, 2, $51 ; 21 
+	changeblock 6, 2, $55 ; 31 
+
+	changeblock 0, 4, $56 ; 02
+	changeblock 2, 4, $55 ; 12 
+
+	changeblock 0, 6, $51
+	changeblock 2, 6, $52	
+	changeblock 4, 6, $59
+	changeblock 6, 6, $5A
+.Done:
+	endcallback
+ 
 
 SwitchSetText:
 	text "This one is"
@@ -588,8 +611,8 @@ KimonoCabin44Script:
 	iftrue .CheckSudokuSolved
 	writetext ExplainSudokuText
 	waitbutton
-	setevent EVENT_EXPLAINED_SUDOKU
 	closetext
+	setevent EVENT_EXPLAINED_SUDOKU 
 	end
 
 	; fallthru 
@@ -633,6 +656,7 @@ KimonoCabin44Script:
 	turnobject KIMONO_CABIN_4_GRANNY, LEFT
 	showemote EMOTE_SHOCK, KIMONO_CABIN_4_GRANNY, 30 
 .CatchLapras:
+	setevent EVENT_SOLVED_KIMONO_4_SUDOKU
 	checkevent EVENT_KIMONO_CABIN_4_GAVE_BUB_BALL
 	iftrue_jumpopenedtext GoCatchThatLaprasText
 	appear KIMONO_CABIN_4_LAPRAS

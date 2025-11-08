@@ -32,11 +32,35 @@ DebugRoom_MapScriptHeader:
 DebugInteraction: 
 	opentext
 	givepoke ENTEI, 100
-;	givepoke VICTREEBEL, 100
-;	givepoke RAIKOU, 100
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ee
+	loadmem wPartyMon1DVs+2, $ee
+
+	givepoke VICTREEBEL, 100
+	loadmem wPartyMon2DVs+0, $ff
+	loadmem wPartyMon2DVs+1, $ee
+	loadmem wPartyMon2DVs+2, $ee
+	
+	givepoke RAIKOU, 100
+	loadmem wPartyMon3DVs+0, $ff
+	loadmem wPartyMon3DVs+1, $ee
+	loadmem wPartyMon3DVs+2, $ee
+	
 	givepoke POLITOED, 100
+	loadmem wPartyMon4DVs+0, $ff
+	loadmem wPartyMon4DVs+1, $ee
+	loadmem wPartyMon4DVs+2, $ee
+	
 	givepoke LUGIA, 100
-;	givepoke GOLEM, 25 
+	loadmem wPartyMon5DVs+0, $ff
+	loadmem wPartyMon5DVs+1, $ee
+	loadmem wPartyMon5DVs+2, $ee
+	
+	givepoke GOLEM, 25 
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ee
+	loadmem wPartyMon6DVs+2, $ee
+	
 	waitbutton
 ;	setflag ENGINE_POKEGEAR
 ;	setflag ENGINE_PHONE_CARD
@@ -139,7 +163,8 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp SHIMMER_SADDLE, 7, 33
+	setevent EVENT_ACCEPTED_ADRINNA
+	warp HOLLYS_HOLT_CREDIT, 10, 25
 	end
 
 OverworldHallOfFame1: 

@@ -21,10 +21,16 @@ CianwoodCave_MapScriptHeader:
 	tmhmball_event 17, 33, TM_DRAGON_PULSE, EVENT_DRAGON_PULSE ; ON ONE OF THE THINGS 
 	itemball_event 11, 21, REVIVE, 1, EVENT_CIANWOODCAVE_REVIVE
 	itemball_event 11, 29, HYPER_POTION, 1, EVENT_CIANWOODCAVE_HYPER_POTION 
+
 	smashrock_event  13, 5
 	smashrock_event  15, 5
 	smashrock_event  9, 13
 	smashrock_event  11, 13
+	smashrock_event  6, 16
+	smashrock_event  17, 16
+
+	strengthboulder_event 14, 9
+	strengthboulder_event 6, 17
 	strengthboulder_event 14, 5
 	strengthboulder_event 6, 9
 	strengthboulder_event 10, 9
