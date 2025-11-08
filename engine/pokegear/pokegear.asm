@@ -631,7 +631,7 @@ PokegearMap_InitPlayerIcon:
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
-	ld b, SPRITE_ANIM_INDEX_BLUE_WALK
+	ld b, SPRITE_ANIM_INDEX_RED_WALK
 .got_gender
 	ld a, b
 	call _InitSpriteAnimStruct
@@ -2708,7 +2708,7 @@ TownMapPlayerIcon:
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
-	ld b, SPRITE_ANIM_INDEX_BLUE_WALK ; Female
+	ld b, SPRITE_ANIM_INDEX_RED_WALK ; Female
 .got_gender
 	ld a, b
 	call _InitSpriteAnimStruct

@@ -139,8 +139,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-;	givekeyitem SWEET_HONEY_K
-	warp GAULDENROD_GUILD, 3, 7
+	warp SHIMMER_SADDLE, 7, 33
 	end
 
 OverworldHallOfFame1: 
