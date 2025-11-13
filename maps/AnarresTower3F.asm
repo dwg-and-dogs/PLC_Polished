@@ -308,6 +308,11 @@ HollisCongratulates:
 
 	para "Also, please,"
 	line "accept this HM."
+	
+	para "Any #mon that"
+	line "could learn it"
+	para "can use it in"
+	line "the field."
 	done
 
 

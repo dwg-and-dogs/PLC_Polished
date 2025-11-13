@@ -105,9 +105,9 @@ ENDM
 	connection north, Route39, ROUTE_39, 5
 	connection west, Route40, ROUTE_40, 7
 
-	map_attributes EcruteakCity, ECRUTEAK_CITY, $5, SOUTH | WEST | EAST
-	connection south, Route37, ROUTE_37, 5
-	connection west, Route38, ROUTE_38, 5
+	map_attributes EcruteakCity, ECRUTEAK_CITY, $5, SOUTH | EAST
+	connection south, Route37, ROUTE_37, 7
+;	connection west, Route38, ROUTE_38, 5
 	connection east, Route42, ROUTE_42, 9
 
 	map_attributes MahoganyTown, MAHOGANY_TOWN, $71, NORTH | WEST
@@ -139,12 +139,12 @@ ENDM
 	connection east, VioletCity, VIOLET_CITY, -2
 
 	map_attributes Route37, ROUTE_37, $5, NORTH | SOUTH
-	connection north, EcruteakCity, ECRUTEAK_CITY, -5
+	connection north, EcruteakCity, ECRUTEAK_CITY, -7
 	connection south, Route36, ROUTE_36, -12
 
-	map_attributes Route38, ROUTE_38, $5, WEST | EAST
+	map_attributes Route38, ROUTE_38, $5, WEST 
 	connection west, Route39, ROUTE_39, 0
-	connection east, EcruteakCity, ECRUTEAK_CITY, -5
+;	connection east, EcruteakCity, ECRUTEAK_CITY, -5
 
 	map_attributes Route39, ROUTE_39, $5, SOUTH | EAST
 	connection south, OlivineCity, OLIVINE_CITY, -5
@@ -514,6 +514,7 @@ ENDM
 
 	map_attributes EmpiresExtentCavern, EMPIRES_EXTENT_CAVERN, $0, 0
 	map_attributes DragonsDen, DRAGONS_DEN, $0, 0
+	map_attributes DragonsDenCredit, DRAGONS_DEN_CREDIT, $0, 0
 
 	map_attributes EerieHamlet, EERIE_HAMLET, $71, NORTH | WEST
 	connection north, EmpiresExtent, EMPIRES_EXTENT, 0

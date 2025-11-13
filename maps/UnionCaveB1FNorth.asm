@@ -20,7 +20,7 @@ UnionCaveB1FNorth_MapScriptHeader:
 	tmhmball_event  5, 22, TM_SWIFT, EVENT_UNION_CAVE_B1F_NORTH_TM_SWIFT
 	tmhmball_event  7, 10, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND ;brick break
 	pokemon_event  5, 10, RAMPARDOS, -1, -1, PAL_NPC_BLUE, RampardosText, EVENT_BEAT_FALKNER
-	pokemon_event  6, 10, BASTIODON, -1, -1, PAL_NPC_BLUE, BastiodonText, EVENT_BEAT_FALKNER
+	pokemon_event  6, 10, BASTIODON, -1, -1, PAL_NPC_BROWN, BastiodonText, EVENT_BEAT_FALKNER
 	itemball_event  7,  7, HARD_STONE, 1, EVENT_UNION_CAVE_HARD_STONE
 	fruittree_event 13, 4, FRUITTREE_UNION_CAVE_2, HOLLOW_ROCK, PAL_NPC_BLUE
 

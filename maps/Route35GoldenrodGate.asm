@@ -18,7 +18,7 @@ Route35GoldenrodGate_MapScriptHeader:
 	object_event  0,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RandyScript, -1
 	object_event  6,  4, SPRITE_BREEDER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route35GoldenrodGatePokefanFScript, -1
 	object_event  3,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route35GoldenrodGateFisherText, -1
-	object_event  7,  3, SPRITE_KURT,  SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtGoldenrodGateScript, -1
+	object_event  7,  3, SPRITE_KURT,  SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtGoldenrodGateScript, EVENT_GOT_BASEMENT_KEY
 
 
 WhitneyRadioShowScript:
@@ -28,9 +28,13 @@ WhitneyRadioShowScript:
 	end
 
 WhitneyRadioShowText:
-	text "Radio broadcast:"
-	line "Whitney's show is"
-	cont "taking charge!"
+	text_high
+    text " Radio: "
+	next
+	text_start
+
+	text "Whitney's show is"
+	line "taking charge!"
 	
 	para "ReArming Voice"
 	line "is new this week"

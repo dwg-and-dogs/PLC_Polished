@@ -163,8 +163,8 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	setevent EVENT_ACCEPTED_ADRINNA
-	warp HOLLYS_HOLT_CREDIT, 10, 25
+	setevent EVENT_BEAT_CHUCK
+	warp ECRUTEAK_CITY, 10, 25
 	end
 
 OverworldHallOfFame1: 

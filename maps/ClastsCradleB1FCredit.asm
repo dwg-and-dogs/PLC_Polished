@@ -70,9 +70,7 @@ ClastsCradleB1FCreditScene:
 .done2:
 	pause 60
 	special FadeOutPalettes
-	; warp DRAGONS_DEN, 19, 4
-	loadmem wCurForm, 1 ; hopefully this prevents the halloffame palette on the trainer sprite from being corrupted?
-	halloffame
+	warp DRAGONS_DEN_CREDIT, 11, 13
 	end
 
 

@@ -147,8 +147,8 @@ GenericTrainerYoungsterJoey:
 	generictrainer YOUNGSTER, JOEY1, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoeySeenText, YoungsterJoeyBeatenText
 
 	text "If I ever need"
-	line "money, pay day"
-	line "comes in handy."
+	line "money, Pay Day"
+	cont "comes in handy."
 	done
 	
 YoungsterJoeySeenText:
@@ -501,13 +501,14 @@ KurtExplainsGSBallText2:
 	para "stop Johto from"
 	line "modernizing!"
 	
-	para "<PLAYER>, all we"
-	line "need is a copy"
-	para "of the Unown"
-	line "Report to make"
-	para "the right inscri-"
-	line "ption on the"
-	cont "GS Ball."
+	para "The proper words"
+	line "are in the Unown"
+	cont "Report, which you"
+	para "can get at the"
+	line "Ruins of Alph."
+	
+	para "Can you go there"
+	line "and get a copy?"
 	done
 
 WantToHeal:
@@ -522,7 +523,6 @@ IlexHealedPokemon:
 	done
 
 EngineerCamdenScript: ;shouldn't be able to access this
-
 	done
 	
 GSBallScript: ;shouldn't be able to access this

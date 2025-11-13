@@ -172,29 +172,29 @@
 	def_grass_wildmons STADIUM_GROUNDS
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 11, SKIPLOOM
-	wildmon 12, MURKROW
-	wildmon 13, SUNFLORA
+	wildmon 16, SKIPLOOM
+	wildmon 17, MURKROW
+	wildmon 15, SUNFLORA
 	wildmon 14, CLEFAIRY
-	wildmon 13, CLEFAIRY
-	wildmon 12, CHIKORITA
-	wildmon 10, CHIKORITA
+	wildmon 18, CLEFAIRY
+	wildmon 14, CHIKORITA
+	wildmon 16, CHIKORITA
 ;	; day
-	wildmon 11, SKIPLOOM
-	wildmon 12, MURKROW
-	wildmon 13, SUNFLORA
+	wildmon 16, SKIPLOOM
+	wildmon 17, MURKROW
+	wildmon 15, SUNFLORA
 	wildmon 14, CLEFAIRY
-	wildmon 13, CLEFAIRY
-	wildmon 12, CHIKORITA
-	wildmon 10, CHIKORITA
+	wildmon 18, CLEFAIRY
+	wildmon 14, CHIKORITA
+	wildmon 16, CHIKORITA
 ;	; nite
-	wildmon 11, SKIPLOOM
-	wildmon 12, MURKROW
-	wildmon 13, SUNFLORA
+	wildmon 16, SKIPLOOM
+	wildmon 17, MURKROW
+	wildmon 15, SUNFLORA
 	wildmon 14, CLEFAIRY
-	wildmon 13, CLEFAIRY
-	wildmon 12, CHIKORITA
-	wildmon 10, CHIKORITA
+	wildmon 18, CLEFAIRY
+	wildmon 14, CHIKORITA
+	wildmon 16, CHIKORITA
 	end_grass_wildmons
 
 	def_grass_wildmons EMPERORS_GARDEN

@@ -30,7 +30,7 @@ Route32_MapScriptHeader:
 	object_event 13, 56, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherTully, -1 ; new fisher, add SCRIPT
 	object_event  4, 66, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperLloyd, -1 ; renamed to lloyd
 	object_event 12, 67, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FriedaScript, -1 ; venoshock
-	object_event  6, 68, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBird_keeperPeter, -1
+	object_event  6, 68, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBird_keeperPeter, -1
 	object_event 11, 84, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32SlowpokeTailScript, -1
 	smashrock_event 6, 82
 	smashrock_event 7, 83
@@ -56,8 +56,8 @@ Route32CooltrainermPetrieScript: ; fix
 	opentext
 	writetext PetrieAfterText
 	promptbutton
-	verbosegiveitem AIR_BALLOON, 5 
-	iffalse_endtext
+	verbosegiveitem ABILITYPATCH
+	waitbutton
 	setevent EVENT_GOT_AIR_BALLOONS_FROM_ROUTE_32_LEADER
 	jumpthisopenedtext
 
@@ -66,7 +66,6 @@ GotAirBalloonsText:
 	line "be a pop star"
 	cont "in Goldenrod."
 	done
-
 
 Route32QuestionText:
 	text "I'm so low since"
@@ -101,12 +100,16 @@ PetrieBeatenText:
 	done
 	
 PetrieAfterText:
-	text "Maybe Falkner"
-	line "was right."
-		
-	para "Maybe you can"
-	line "use these better"
-	cont "than me."
+	text "All my items,"
+	line "useless!"
+	
+	para "I need to change"
+	line "my ways."
+	
+	para "Here, take this"
+	line "item. You can use"
+	para "it to change your"
+	line "#mon ability."
 	done
 
 WannaGetMeText:

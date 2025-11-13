@@ -893,6 +893,8 @@ OakPokemonText:
 CharcoalScript:
 	faceplayer
 	opentext
+	checkevent EVENT_KURT_HEARS_LOGGERS
+	iftrue_jumpopenedtext CharcoalSadText
 	jumpopenedtext CharcoalCuttingText
 
 CharcoalCuttingText:
@@ -910,6 +912,20 @@ CharcoalCuttingText:
 	
 	para "How will we go"
 	line "on?"
+	done
+
+
+CharcoalSadText:
+	text "Really? <RIVAL>"
+	line "is going away on"
+	cont "his own?"
+	
+	para "I hope I wasn't"
+	line "too harsh on him."
+	
+	para "I wanted him to"
+	line "be able to have"
+	cont "a life, here."
 	done
 
 TGKurtFirstPokemonText:

@@ -24,27 +24,26 @@ GoldenrodGym_MapScriptHeader:
 GenericTrainerSrandjrJoandcath1:
     generictrainer SR_AND_JR, JOANDCATH1, EVENT_BEAT_SR_AND_JR_JO_AND_CATH, SrandjrJoandcath1SeenText, SrandjrJoandcath1BeatenText
 
-    text "Whitney made it"
-    line "all look so easy."
-    para "Maybe we need to"
-    line "rethink things."
+    text "At least we have"
+	line "each other."
     done
 
 SrandjrJoandcath1SeenText:
-    text "We thought we had"
-    line "it made!"
+    text "We won't give up"
+	line "the gym, even if"
+	cont "Whitney's gone!"
     done
 
 SrandjrJoandcath1BeatenText:
-    text "Huh. Didn't see"
-    line "that coming."
+    text "At least we have"
+	line "each other."
     done
 	
 GenericTrainerLassCathy:
     generictrainer LASS, CATHY, EVENT_BEAT_LASS_CATHY, LassCathySeenText, LassCathyBeatenText
 
-    text "We used to idolize"
-    line "Whitney, you know?"
+    text "Times change,"
+    line "don't they?"
     done
 
 LassCathySeenText:
@@ -62,20 +61,19 @@ LassCathyBeatenText:
 GenericTrainerBeautyVictoria:
     generictrainer BEAUTY, VICTORIA, EVENT_BEAT_BEAUTY_VICTORIA, BeautyVictoriaSeenText, BeautyVictoriaBeatenText
 
-    text "My little corner"
-    line "here is perfect."
-    done
-
+    text "I'd never leave"
+	line "my #mon."
+	done
+	
 BeautyVictoriaSeenText:
-    text "Welcome to our"
-    line "sanctuary."
-    cont "Care for a battle?"
-    done
+    text "I still love"
+	line "Normal #mon!"
+	done
 
 BeautyVictoriaBeatenText:
-    text "Defeat is just"
-    line "part of life."
-    done
+    text "I'd never leave"
+	line "my #mon."
+	done
 
 PryceScriptGoldenrod:
     faceplayer
@@ -98,7 +96,6 @@ PryceTextGoldenrod:
     cont "but she is in the"
     cont "Radio Tower."
     done
-
 
 WhitneyScript:
     faceplayer

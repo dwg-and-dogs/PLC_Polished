@@ -1088,7 +1088,7 @@ MagmarizerDesc:
 	next "magma energy.@"
 
 OddSouvenirDesc:
-	db   "Hold: Evokes new"
+	db   "Evokes new"
 	next "paths forward.@"
 
 NuggetDesc:

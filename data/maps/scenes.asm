@@ -88,4 +88,5 @@ MapScenes::
 	scene_var CLASTS_CRADLE_B1F_CREDIT, 						  wClastsCradleB1FCreditSceneID
 	scene_var BURNED_TOWER_B1F_CREDIT, 						  wBurnedTower1FCreditSceneID
 	
+	scene_var DRAGONS_DEN_CREDIT, wDragonsDenCreditSceneID
 	db -1

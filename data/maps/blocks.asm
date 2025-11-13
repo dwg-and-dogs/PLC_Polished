@@ -1060,6 +1060,7 @@ EmpiresExtentCavern_BlockData:
 
 SECTION "DragonsDen_BlockData", ROMX
 DragonsDen_BlockData:
+DragonsDenCredit_BlockData:
 	INCBIN "maps/DragonsDen.ablk.lz"
 
 SECTION "EerieHamlet_BlockData", ROMX

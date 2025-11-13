@@ -53,10 +53,7 @@ PokecomKurtScript:
 	waitbutton
 	closetext
 	checkevent EVENT_GOT_BASEMENT_KEY
-	iftrue .end
-;	givekeyitem BASEMENT_KEY
 	setevent EVENT_GOT_BASEMENT_KEY
-.end
 	end
 
 GoldenrodPokecenter1FNurseScript:

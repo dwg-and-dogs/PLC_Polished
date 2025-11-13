@@ -8,8 +8,8 @@ StadiumGrounds_MapScriptHeader:
 	def_warp_events
 	warp_event  4, 23, STADIUM_UNDERGROUND, 1
 	warp_event 26,  5, STADIUM_BOX, 1
-	warp_event  8, 39, SERENE_SPRINGS, 3
-	warp_event  7, 39, SERENE_SPRINGS, 4
+	warp_event 12, 39, SERENE_SPRINGS, 3
+	warp_event 11, 39, SERENE_SPRINGS, 4
 	warp_event  49, 3, STADIUM_CAPITAL_GATE, 1
 	
 	def_coord_events 
@@ -17,9 +17,9 @@ StadiumGrounds_MapScriptHeader:
 	coord_event 26,  6, 1, StadiumGroundsBobeshScene
 
 	def_bg_events
-	bg_event  6, 34, BGEVENT_JUMPTEXT, Text_StadiumSign1
+	bg_event  0, 40, BGEVENT_JUMPTEXT, Text_StadiumSign1
 	bg_event 20, 32, BGEVENT_JUMPTEXT, Text_StadiumSign2
-	bg_event  6, 34, BGEVENT_JUMPTEXT, Text_ToWCSign;
+	bg_event  0, 40, BGEVENT_JUMPTEXT, Text_ToWCSign;
 	bg_event 42, 36, BGEVENT_ITEM + ENERGY_ROOT, EVENT_STADIUM_HIDDEN_1
 	bg_event 33, 2, BGEVENT_ITEM + REVIVAL_HERB, EVENT_STADIUM_HIDDEN_2
 	bg_event  8, 14, BGEVENT_ITEM + HEAL_POWDER, EVENT_STADIUM_HIDDEN_3

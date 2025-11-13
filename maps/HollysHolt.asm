@@ -220,13 +220,8 @@ HollysHoltNPC1Text:
 	line "visit to honor"
 	cont "the new shrine?"
 	
-	para "We just built"
-	line "it to honor"
-	cont "Celebi."
-	
-	para "The visitors"
-	line "from the north"
-	cont "helped build it."
+	para "We built it with"
+	line "the Hisuians."
 	done
 
 HollysHoltNPC2Script:

@@ -253,7 +253,7 @@ INCLUDE "maps/EmpiresExtentEerieHamletGate.asm"
 INCLUDE "maps/EmpiresExtent.asm"
 INCLUDE "maps/EmpiresExtentCavern.asm"
 INCLUDE "maps/DragonsDen.asm"
-
+INCLUDE "maps/DragonsDenCredit.asm"
 
 SECTION "Goldenrod Scripts", ROMX
 

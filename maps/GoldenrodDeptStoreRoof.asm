@@ -20,7 +20,7 @@ GoldenrodDeptStoreRoof_MapScriptHeader:
 	object_event  2,  1, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofScientistScript, -1
 	pokemon_event  1, 1, WEEZING, -1, -1, PAL_NPC_BLUE, WeezingText, -1
 	object_event 10,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreRoofPokefanFText, -1
-	object_event 12,  4, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofSuperNerdScript, EVENT_GOLDENROD_SALE_ON
+;	object_event 12,  4, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodDeptStoreRoofSuperNerdScript, EVENT_GOLDENROD_SALE_ON
 	object_event  3,  4, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreRoofTwinText, EVENT_GOLDENROD_SALE_ON
 	object_event  1,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_ROOFTOP, 0, EVENT_GOLDENROD_SALE_OFF
 	object_event  7,  0, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStoreRoofPokefanMText, EVENT_GOLDENROD_SALE_OFF
@@ -54,27 +54,40 @@ WeezingText:
 	done
 
 GoldenrodDeptStoreRoofScientistScript:
-    checkevent EVENT_GOT_AIR_BALLOON_FROM_ROUTE_31_LEADER
-	iftrue_jumptextfaceplayer .ScientistAfterText
-    faceplayer
+	faceplayer
 	opentext
-	writetext .ScientistObservationText
-    promptbutton
-    verbosegiveitem AIR_BALLOON
-    iffalse .BagFull
-    setevent EVENT_GOT_AIR_BALLOON_FROM_ROUTE_31_LEADER
-    jumpthisopenedtext 
+	writetext GivingBalloonText
+	special PlaceMoneyTopRight
+	yesorno
+	iffalse_jumpopenedtext NoMoneyTextBalloon
+	checkmoney $0, 5000
+	ifequal $2, AirBalloonNotEnoughMoney 
+	promptbutton
+	giveitem AIR_BALLOON
+	playsound SFX_TRANSACTION
+	takemoney $0, 5000
+	special PlaceMoneyTopRight
+	writetext GotBalloonsText
+	waitbutton
+	closetext
+	end
 
+AirBalloonNotEnoughMoney:
+	jumptext NoMoneyTextBalloon
+
+GotBalloonsText:
     text "Principles of"
     line "buoyancy apply"
     cont "to #mon too!"
     done
 
-.BagFull
-    jumpthisopenedtext ScientistBagFullText
+NoMoneyTextBalloon:
+	text "Do you know how"
+	line "much Helium costs"
+	cont "these days?"
+	done
 
-
-.ScientistObservationText:
+GivingBalloonText:
     text "Ah, fascinating!"
 	
     para "See my Weezing?"
@@ -82,22 +95,12 @@ GoldenrodDeptStoreRoofScientistScript:
     para "the buoyant"
     line "force is zero."
     
-	para "Here, take this"
+	para "Just like this"
     line "Air Balloon. It"
     cont "works similarly."
-    done
-
-.ScientistAfterText:
-    text "Principles of"
-    line "buoyancy apply"
-    cont "to #mon too!"
-    done
-
-ScientistBagFullText:
-    text "Oh? Your bag is"
-    line "full. Maybe you"
-    cont "can float some"
-    cont "items away?"
+	
+	para "I'll sell to you"
+	line "for 5000."
     done
 	
 

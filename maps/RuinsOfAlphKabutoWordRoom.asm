@@ -81,7 +81,7 @@ KabutoWordKimonoGirlScript:
 
 .PhysicalOrSpecialMenuData:
 	db STATICMENU_CURSOR | STATICMENU_WRAP
-	db 3 ; items
+	db 4 ; items
 	db "Physical@"
 	db "Special@"
 	db "Maximum@"

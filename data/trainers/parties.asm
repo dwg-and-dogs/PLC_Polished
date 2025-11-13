@@ -1272,22 +1272,22 @@ YoungsterGroup:
 ; ================================
 ; ================
 
-	; YOUNGSTER
+	; YOUNGSTER ; ilex 
 	db "Joey@" 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME
 	; party
-	db 4, TEDDIURSA, NO_ITEM, "@"
-	db 4, MEOWTH, NO_ITEM, "@"
+	db 2, TEDDIURSA, NO_ITEM, "@"
+	db 2, MEOWTH, NO_ITEM, "@"
 	db -1 ; end
 
 ; ================
 
 	; YOUNGSTER
-	db "Mikey@"
+	db "Mikey@" ; ilex 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 5, EKANS
-	db 5, PIDGEY
+	db 3, EKANS
+	db 3, PIDGEY
 	db -1 ; end
 
 ; ================
@@ -1426,8 +1426,8 @@ BugCatcherGroup:
 	db "Wade@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 4, VENONAT
-	db 4, PARAS
+	db 2, VENONAT
+	db 2, PARAS
 	db -1 ; end
 
 ; ================
@@ -1436,8 +1436,8 @@ BugCatcherGroup:
 	db "Arnie@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 5, YANMA
-	db 5, PARAS	
+	db 3, YANMA
+	db 3, PARAS	
 	db -1 ; end
 
 ; ================
@@ -3766,8 +3766,8 @@ OfficerMGroup:
 	db "Keith@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 5, GROWLITHE
-	db 5, HOUNDOUR
+	db 3, GROWLITHE
+	db 3, HOUNDOUR
 	db -1 ; end
 
 ; ================
@@ -5645,7 +5645,6 @@ SageGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 8, ROWLET
-	db 8, DARTRIX
 	db 8, DUSCLOPS
 	db -1 ; end
 
@@ -6795,7 +6794,7 @@ SailorGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 20, MACHOP
-	db 22, MACHOKE
+	db 22, MACHOP
 	db -1 ; end
 
 ; ================
@@ -8171,9 +8170,8 @@ AromaLadyGroup:
 	db "Dahlia@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 16, DARTRIX
 	db 16, PARAS
-	db 17, EXEGGCUTE
+	db 16, DARTRIX
 	db -1 ; end
 
 ; ================
@@ -8547,11 +8545,14 @@ CooltrainerMGroup:
 
 	; COOLTRAINERM
 	db "Finch@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
+	db TRAINERTYPE_ITEM | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
 	; party
-	db 25, MAGNETON, AIR_BALLOON, 40, "Neody@"
-	db 25, MAGCARGO, AIR_BALLOON, 40, "Molly@"
+	db 30, MAGNETON, AIR_BALLOON, ABIL_MAGNETON_ANALYTIC | NAT_NEUTRAL, MALE
+		db THUNDERSHOCK, TRI_ATTACK, NO_MOVE, NO_MOVE
+	db 30, MAGCARGO, FOCUS_BAND, ABIL_MAGCARGO_WEAK_ARMOR | NAT_NEUTRAL, MALE
+		db ENDURE, FLAME_CHARGE, ROCK_THROW, NO_MOVE
 	db -1 ; end
+
 
 ; ================
 

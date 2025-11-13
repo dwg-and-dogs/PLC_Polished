@@ -272,13 +272,7 @@ GauldenrodGuildSignText:
 	cont "new again"
 	done
 
-BrigaderScript:
-	jumptextfaceplayer GauldenrodBrigaderText
-	
-GauldenrodBrigaderText:
-	text "Stay out of"
-	line "trouble."
-	done
+
 
 GauldenrodTunnelSign:
 	jumptext GauldenrodTunnelSignText
@@ -641,7 +635,7 @@ BobeshWalksAway:
 GauldenrodNPC9Script:
 	faceplayer
 	opentext
-	checkevent EVENT_SHIMMER_HZ_3
+	checkevent EVENT_SHIMMER_MATRON_2
 	iftrue_jumpopenedtext GauldenrodElderAfterQuest
 	checkevent EVENT_BEAT_SAMSARA
 	iffalse_jumpopenedtext GauldenrodElderNoSurf

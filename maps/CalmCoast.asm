@@ -15,12 +15,11 @@ CalmCoast_MapScriptHeader:
 	bg_event 13, 33, BGEVENT_JUMPTEXT, CalmCoastSign1Text
 	bg_event 12,  6, BGEVENT_JUMPTEXT, CalmCoastSign2Text
 	bg_event 14, 42, BGEVENT_JUMPTEXT, CalmCoastSign3Text
-	; hidden items: energypowder and pp_up, ADD TO EVENTS AND PLACE ON MAP 
 	bg_event 12, 38, BGEVENT_ITEM + ENERGYPOWDER, EVENT_CALM_COAST_HIDDEN_1
 	bg_event  6, 16, BGEVENT_ITEM + PP_UP, EVENT_CALM_COAST_HIDDEN_2
 
 	def_object_events
-	object_event 15, 42, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastKurtScript, EVENT_KURT_CALM_COAST
+	object_event 14, 40, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastKurtScript, EVENT_GAULDENROD_BRIGADER_CINDY
 	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterWarren, EVENT_BEAT_BOBESH_STADIUM ;
 	object_event 11, 21, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
 	object_event 11, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerYoungsterJimmy, -1
@@ -30,7 +29,7 @@ CalmCoast_MapScriptHeader:
 	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBrigader2, -1
 	tmhmball_event 4, 50, TM_ROAR, EVENT_GOT_TM05_ROAR
 	pokemon_event  14, 19, PIDGEOTTO, -1, -1, PAL_NPC_RED, CalmCoastPidgeottoText, -1
-	pokemon_event  17, 18, DARTRIX, -1, -1, PAL_NPC_GREEN, CalmCoastDartrixText, -1
+	pokemon_event  17, 19, DARTRIX, -1, -1, PAL_NPC_GREEN, CalmCoastDartrixText, -1
 	fruittree_event 17, 14, FRUITTREE_CALM_COAST_1, SITRUS_BERRY, PAL_NPC_RED
 	fruittree_event 18, 14, FRUITTREE_CALM_COAST_2, LUM_BERRY, PAL_NPC_RED
 	fruittree_event 19, 12, FRUITTREE_CALM_COAST_3, PNK_APRICORN, PAL_NPC_RED
@@ -38,7 +37,7 @@ CalmCoast_MapScriptHeader:
 	itemball_event  3, 49, SOFT_SAND, 1, EVENT_CALM_COAST_SOFT_SAND ;ok
 
 	object_const_def
-	const CALM_COAST_KURT
+;	const CALM_COAST_KURT
 
 GenericTrainerYoungsterWarren:
 	generictrainer YOUNGSTER, WARREN, EVENT_BEAT_YOUNGSTER_WARREN, YoungsterWarrenSeenText, YoungsterWarrenBeatenText
@@ -192,10 +191,10 @@ CalmCoastKurtScript:
 	writetext CalmCoastKurtText
 	waitbutton
 	closetext
-	applymovement CALM_COAST_KURT, CalmCoastKurtWalksAway
-	disappear CALM_COAST_KURT
+;	applymovement CALM_COAST_KURT, CalmCoastKurtWalksAway
+;	disappear CALM_COAST_KURT
 	clearevent EVENT_KURTS_HOUSE_BOOK_1 ; now it appears 
-	setevent EVENT_KURT_CALM_COAST	
+;	setevent EVENT_KURT_CALM_COAST	
 	end
 
 HearAStory_1Text:
@@ -272,4 +271,5 @@ CalmCoastKurtWalksAway:
 	step_up
 	step_up
 	step_up
+	step_end
 	

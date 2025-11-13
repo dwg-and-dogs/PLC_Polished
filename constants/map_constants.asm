@@ -126,7 +126,7 @@ ENDM
 	map_const ECRUTEAK_MART,                               6,  4 ;  6
 	map_const ECRUTEAK_GYM,                                5,  9 ;  7
 	map_const ECRUTEAK_ITEMFINDER_HOUSE,                   4,  4 ;  8
-	map_const ECRUTEAK_CITY,                              20, 18 ;  9
+	map_const ECRUTEAK_CITY,                              22, 18 ;  9
 	map_const ROUTE_36,                                   32,  9 ; 10
 	map_const ROUTE_36_RUINS_OF_ALPH_GATE,                 5,  4 ; 11
 	map_const ROUTE_36_VIOLET_GATE,                        5,  4 ; 12
@@ -348,7 +348,7 @@ ENDM
 	map_const REBELS_REDOUBT_B1F,                             15, 9 ; sproute tower
 	map_const REBELS_REDOUBT_B2F,                             15, 9 ; sproute tower
 	map_const REBELS_REDOUBT_B3F,                             15, 9 ; sproute tower
-	
+	map_const DRAGONS_DEN_CREDIT,                            13, 11 ; johto traditional	
 
 
 	newgroup                                                       ; 19

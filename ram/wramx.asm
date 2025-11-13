@@ -1114,7 +1114,7 @@ wArduousAnchorageCreditSceneID:: db
 wSinjohCrossroadsCreditSceneID:: db
 wClastsCradleB1FCreditSceneID:: db
 wBurnedTower1FCreditSceneID:: db
-wUnused6SceneID:: db
+wDragonsDenCreditSceneID:: db
 wUnused7SceneID:: db
 wUnused8SceneID:: db 
 wUnused9SceneID:: db ;

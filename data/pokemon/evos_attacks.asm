@@ -31,7 +31,7 @@ CyndaquilEvosAttacks:
 
 QuilavaEvosAttacks:
 	db EVOLVE_LEVEL, 36, TYPHLOSION
-	db EVOLVE_HOLDING, ODD_SOUVENIR, H__TYPHLOSION
+	db EVOLVE_ITEM, ODD_SOUVENIR, H__TYPHLOSION
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -106,7 +106,7 @@ RowletEvosAttacks:
 	
 DartrixEvosAttacks:
 	db EVOLVE_LEVEL, 34, DECIDUEYE
-	db EVOLVE_HOLDING, ODD_SOUVENIR,  H__DECIDUEYE
+	db EVOLVE_ITEM, ODD_SOUVENIR,  H__DECIDUEYE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -182,7 +182,7 @@ OshawottEvosAttacks:
 	
 DewottEvosAttacks:
 	db EVOLVE_LEVEL, 34, SAMUROTT
-	db EVOLVE_HOLDING, ODD_SOUVENIR, H__SAMUROTT
+	db EVOLVE_ITEM, ODD_SOUVENIR, H__SAMUROTT
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -449,10 +449,10 @@ NidoqueenEvosAttacks:
 	db 1, LEER ; Tail Whip → similar move
 	db 1, DOUBLE_KICK
 	db 1, POISON_STING
-	db 23, OUTRAGE ; Chip Away → HGSS tutor move
-	db 35, BODY_SLAM
-	db 43, EARTH_POWER
-	db 58, CLOSE_COMBAT ; Superpower → similar move
+	db 23, BODY_SLAM ; Chip Away → HGSS tutor move
+	db 35, EARTH_POWER
+	db 43, CLOSE_COMBAT
+	db 58, OUTRAGE ; Superpower → similar move
 	db 0 ; no more level-up moves
 
 NidorinoEvosAttacks:
@@ -480,10 +480,10 @@ NidokingEvosAttacks:
 	db 1, FOCUS_ENERGY
 	db 1, DOUBLE_KICK
 	db 1, POISON_STING
-	db 23, OUTRAGE ; Chip Away → HGSS tutor move
-	db 35, THRASH
-	db 43, EARTH_POWER
-	db 58, MEGAHORN
+	db 23, THRASH ; Chip Away → HGSS tutor move
+	db 35, EARTH_POWER
+	db 43, MEGAHORN
+	db 58, OUTRAGE
 	db 0 ; no more level-up moves
 	
 ClefairyEvosAttacks:
@@ -953,7 +953,7 @@ AnnihilapeEvosAttacks:
 	
 GrowlitheEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
-	db EVOLVE_HOLDING, ODD_SOUVENIR, H__ARCANINE
+	db EVOLVE_ITEM, ODD_SOUVENIR, H__ARCANINE
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, BITE
@@ -1672,7 +1672,7 @@ SteelixEvosAttacks:
 
 VoltorbEvosAttacks:
 	db EVOLVE_LEVEL, 25, ELECTRODE
-	db EVOLVE_HOLDING, ODD_SOUVENIR,  H__ELECTRODE
+	db EVOLVE_ITEM, ODD_SOUVENIR,  H__ELECTRODE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, THUNDERSHOCK ; Let's Go move
@@ -3133,7 +3133,7 @@ SunfloraEvosAttacks:
 	db 0 ; no more level-up moves
 	
 WooperEvosAttacks:
-	db EVOLVE_LEVEL, 16, QUAGSIRE
+	db EVOLVE_LEVEL, 20, QUAGSIRE
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 1, LEER ; Tail Whip → similar move
@@ -3457,7 +3457,7 @@ GranbullEvosAttacks:
 	db 0 ; no more level-up moves
 
 QwilfishEvosAttacks:
-	db EVOLVE_HOLDING, ODD_SOUVENIR,  OVERQWIL
+	db EVOLVE_ITEM, ODD_SOUVENIR,  OVERQWIL
 	db 0 ; no more evolutions	
 	db 1, WATER_GUN
 	db 1, SPIKES
@@ -3545,7 +3545,7 @@ HeracrossEvosAttacks:
 
 SneaselEvosAttacks:
 	db EVOLVE_HOLDING, RAZOR_CLAW, WEAVILE
-	db EVOLVE_HOLDING, ODD_SOUVENIR, SNEASLER
+	db EVOLVE_ITEM, ODD_SOUVENIR, SNEASLER
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -3876,7 +3876,7 @@ DonphanEvosAttacks:
 	db 0 ; no more level-up moves
 
 StantlerEvosAttacks:
-	db EVOLVE_HOLDING, ODD_SOUVENIR, WYRDEER
+	db EVOLVE_ITEM, ODD_SOUVENIR, WYRDEER
 	db 0 ; no more evolutions
 	db 1, HEADBUTT
 	db 1, HYPNOSIS
