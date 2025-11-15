@@ -962,29 +962,29 @@
 	def_grass_wildmons ROUTE_32
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 17, FURRET
-	wildmon 17, ARBOK
-	wildmon 19, WEEPINBELL
-	wildmon 19, FLAAFFY
-	wildmon 21, SKIPLOOM
-	wildmon 17, FLAAFFY
-	wildmon 22, SKIPLOOM
+	wildmon 23, FURRET
+	wildmon 23, ARBOK
+	wildmon 24, WEEPINBELL
+	wildmon 24, FLAAFFY
+	wildmon 24, SKIPLOOM
+	wildmon 26, FLAAFFY
+	wildmon 26, SKIPLOOM
 	; day
-	wildmon 17, FURRET
-	wildmon 17, ARBOK
-	wildmon 19, WEEPINBELL
-	wildmon 19, FLAAFFY
-	wildmon 21, SKIPLOOM
-	wildmon 17, FLAAFFY
-	wildmon 22, SKIPLOOM
+	wildmon 23, FURRET
+	wildmon 23, ARBOK
+	wildmon 24, WEEPINBELL
+	wildmon 24, FLAAFFY
+	wildmon 24, SKIPLOOM
+	wildmon 26, FLAAFFY
+	wildmon 26, SKIPLOOM
 	; nite
-	wildmon 17, FURRET
-	wildmon 17, ARBOK
-	wildmon 19, WEEPINBELL
-	wildmon 19, FLAAFFY
-	wildmon 21, SKIPLOOM
-	wildmon 17, FLAAFFY
-	wildmon 22, SKIPLOOM
+	wildmon 23, FURRET
+	wildmon 23, ARBOK
+	wildmon 24, WEEPINBELL
+	wildmon 24, FLAAFFY
+	wildmon 24, SKIPLOOM
+	wildmon 26, FLAAFFY
+	wildmon 26, SKIPLOOM
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_33

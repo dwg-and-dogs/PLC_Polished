@@ -68,14 +68,13 @@ Route41SageScript:
 	end
 
 Route41SageImpressedText:
-	text "Halt! Who approa-"
-	line "ches Lugia's"
-	cont "islands?"
+	text "Who approaches"
+	line "Lugia's islands?"
 	
 	para "..."
 	
-	para "Is that... Is it"
-	line "a Silver Wing?"
+	para "Is that..."
+	line "A Silver Wing?"
 	done
 
 Route41SageText2:

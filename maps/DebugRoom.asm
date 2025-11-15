@@ -36,30 +36,30 @@ DebugInteraction:
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
 
-	givepoke VICTREEBEL, 100
-	loadmem wPartyMon2DVs+0, $ff
-	loadmem wPartyMon2DVs+1, $ee
-	loadmem wPartyMon2DVs+2, $ee
+;	givepoke VICTREEBEL, 100
+;	loadmem wPartyMon2DVs+0, $ff
+;	loadmem wPartyMon2DVs+1, $ee
+;	loadmem wPartyMon2DVs+2, $ee
 	
-	givepoke RAIKOU, 100
-	loadmem wPartyMon3DVs+0, $ff
-	loadmem wPartyMon3DVs+1, $ee
-	loadmem wPartyMon3DVs+2, $ee
+;	givepoke RAIKOU, 100
+;	loadmem wPartyMon3DVs+0, $ff
+;	loadmem wPartyMon3DVs+1, $ee
+;	loadmem wPartyMon3DVs+2, $ee
 	
-	givepoke POLITOED, 100
-	loadmem wPartyMon4DVs+0, $ff
-	loadmem wPartyMon4DVs+1, $ee
-	loadmem wPartyMon4DVs+2, $ee
+;	givepoke POLITOED, 100
+;	loadmem wPartyMon4DVs+0, $ff
+;	loadmem wPartyMon4DVs+1, $ee
+;	loadmem wPartyMon4DVs+2, $ee
 	
-	givepoke LUGIA, 100
-	loadmem wPartyMon5DVs+0, $ff
-	loadmem wPartyMon5DVs+1, $ee
-	loadmem wPartyMon5DVs+2, $ee
+;	givepoke LUGIA, 100
+;	loadmem wPartyMon5DVs+0, $ff
+;	loadmem wPartyMon5DVs+1, $ee
+;	loadmem wPartyMon5DVs+2, $ee
 	
-	givepoke GOLEM, 25 
-	loadmem wPartyMon6DVs+0, $ff
-	loadmem wPartyMon6DVs+1, $ee
-	loadmem wPartyMon6DVs+2, $ee
+;	givepoke GOLEM, 25 
+;	loadmem wPartyMon6DVs+0, $ff
+;	loadmem wPartyMon6DVs+1, $ee
+;	loadmem wPartyMon6DVs+2, $ee
 	
 	waitbutton
 ;	setflag ENGINE_POKEGEAR
@@ -164,7 +164,7 @@ endr
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
 	setevent EVENT_BEAT_CHUCK
-	warp ECRUTEAK_CITY, 10, 25
+	warp RUINS_OF_ALPH_KABUTO_WORD_ROOM, 7, 7
 	end
 
 OverworldHallOfFame1: 

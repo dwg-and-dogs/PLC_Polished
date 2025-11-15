@@ -18,9 +18,9 @@ CianwoodCave_MapScriptHeader:
 	
 	def_object_events
 	itemball_event 3, 3, DRAGON_SCALE, 1, EVENT_CAVE_DRAGON_SCALE ; TOP OF THE CAVE
-	tmhmball_event 17, 33, TM_DRAGON_PULSE, EVENT_DRAGON_PULSE ; ON ONE OF THE THINGS 
+	tmhmball_event  3, 18, TM_DRAGON_PULSE, EVENT_DRAGON_PULSE ; ON ONE OF THE THINGS
 	itemball_event 11, 21, REVIVE, 1, EVENT_CIANWOODCAVE_REVIVE
-	itemball_event 11, 29, HYPER_POTION, 1, EVENT_CIANWOODCAVE_HYPER_POTION 
+	itemball_event 11, 29, HYPER_POTION, 1, EVENT_CIANWOODCAVE_HYPER_POTION
 
 	smashrock_event  13, 5
 	smashrock_event  15, 5

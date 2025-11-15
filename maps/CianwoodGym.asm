@@ -23,7 +23,7 @@ CianwoodGym_MapScriptHeader:
 	strengthboulder_event  6, 2
 	strengthboulder_event  4, 2
 	strengthboulder_event  7, 7
-	tmhmball_event 8, 12, TM_DYNAMICPUNCH, EVENT_GOT_TM01_DYNAMICPUNCH
+	itemball_event 8, 12, CHOICE_BAND, 1, EVENT_GOT_CHOICE_BAND
 	object_event  5,  13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymResetScript, -1
 
 	object_const_def
@@ -135,13 +135,14 @@ CianwoodGymResetScript:
 	end
 
 ResetCianwoodGymText:
-	text "We no longer rely"
-	line "on just brute"
-	cont "strength."
+	text "We've made a"
+	line "Choice to Band"
+	cont "together."
 	
-	para "If you are clever"
-	line "enough, you may"
-	cont "claim our TM."
+	para "If you can get"
+	line "past each of us,"
+	para "you can have our"
+	line "item."
 	
 	para "I'll instruct the"
 	line "blackbelts to"
@@ -152,8 +153,9 @@ ResetCianwoodGymText:
 	done
 
 CianwoodCongratulationsText:
-	text "Congratulations"
-	line "to have earned"
-	cont "our TM."
-	done
+	text "Make good choices"
+	line "out there."
 	
+	para "You can't always"
+	line "go back."
+	done

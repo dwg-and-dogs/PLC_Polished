@@ -321,6 +321,7 @@ TL_Scene_2_R:
 	waitsfx
 	setevent EVENT_LANDING_KURT_2
 	setevent EVENT_LANDING_TIME_TRAVELED
+	setmapscene ROUTE_40, 0
 	warp ROUTE_40, 7, 4
 	setscene $2 
 	end

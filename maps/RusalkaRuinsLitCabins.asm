@@ -28,6 +28,8 @@ RusalkaRuinsLitCabins_MapScriptHeader:
 	itemball_event 16, 10, RAZOR_FANG, 1, EVENT_RUSALKA_RAZOR_FANG
 	pokemon_event  8,  2, FROSLASS, -1, -1, PAL_NPC_BLUE, FroslassText, -1
 	pokemon_event  9,  8, FROSLASS, -1, -1, PAL_NPC_BLUE, FroslassText, -1
+	tmhmball_event 9, 10, TM_WILL_O_WISP, EVENT_RUSALKA_WILLOWISP
+
 
 FroslassText:
 	text "Froslass beckons"

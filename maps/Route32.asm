@@ -366,7 +366,7 @@ Route32UnionCaveSignText:
 
 Route32SlowpokeTailScript:
 	checkevent EVENT_GOT_SLOWPOKETAIL_ROUTE32
-	iftrue_jumptextfaceplayer Route32Slowpoketail2Text
+	iftrue Route32BerryVendor
 	faceplayer
 	opentext
 	writetext Route32AmenitiesText
@@ -375,8 +375,130 @@ Route32SlowpokeTailScript:
 	iffalse_endtext
 	setevent EVENT_GOT_SLOWPOKETAIL_ROUTE32
 	writetext Route32Slowpoketail2Text
-	closetext
-	end
+	waitbutton
+	; fallthru 
+Route32BerryVendor:
+	writetext Route32BerryVendorOptions
+	special PlaceMoneyTopRight
+	yesorno
+	waitbutton
+; revise from olivine stuff
+	iffalse_jumpopenedtext Route32Text4
+	checkmoney $0, 1000
+	ifequal $2, Route32NotEnoughMoney
+	promptbutton
+	loadmenu .BerryMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .GiveMagikarp
+	ifequal 2, .GiveChinchou
+	ifequal 3, .GiveCorsola
+	ifequal 4, .GiveShuckle
+	jumptext CafeNoFishText
+
+;	givepoke MAGIKARP, MAGIKARP_MASK_FORM, 10, EVIOLITE, ULTRA_BALL, DRAGON_RAGE
+.GiveMagikarp:
+	givepoke MAGIKARP, NO_FORM, 100, LEPPA_BERRY, POKE_BALL, REVERSAL
+	iffalse_jumpopenedtext Text_NoCarryRoute32
+	playsound SFX_TRANSACTION
+	takemoney $0, 1000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "Here you go, kid!"
+	line "Enjoy it!"
+	done
+
+.GiveChinchou:
+	givepoke CHINCHOU, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, PSYBEAM
+	iffalse_jumpopenedtext Text_NoCarryRoute32
+	playsound SFX_TRANSACTION
+	takemoney $0, 1000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "Here you go, kid!"
+	line "Enjoy it!"
+	done
+
+
+.GiveCorsola:
+	givepoke CORSOLA, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, AMNESIA
+	iffalse_jumpopenedtext Text_NoCarryRoute32
+	playsound SFX_TRANSACTION
+	takemoney $0, 1000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "Here you go, kid!"
+	line "Enjoy it!"
+	done
+
+
+.GiveShuckle:
+	givepoke SHUCKLE, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, SHELL_SMASH
+	iffalse_jumpopenedtext Text_NoCarryRoute32
+	playsound SFX_TRANSACTION
+	takemoney $0, 1000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "Here you go, kid!"
+	line "Enjoy it!"
+	done
+
+
+.BerryMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 15, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData: ; see data/items/desc4
+
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "Magikarp@"
+	db "Chinchou@"
+	db "Corsola@"
+	db "Shuckle@"
+	db "Cancel@"
+	
+Route32BerryVendorOptions:
+	text "My berries can"
+	line "get your EVs as"
+	para "low as you need!"
+	
+	para "Buy a dozen"
+	line "for ¥1000?"
+	done
+
+Route32Text4:
+	text "Suit yourself!"
+	done
+
+Route32NotEnoughMoney:
+	jumpthisopenedtext
+
+	text "You don't have"
+	line "enough money…"
+	done
+
+CafeNoFishText:
+	text "See you later."
+	done
+
+Text_NoCarryRoute32:
+	text "You can't carry"
+	line "it, kid."
+	done
+
+
+
+
+
+
+
 
 Route32Slowpoketail2Text:
 	text "Don't look at me"
@@ -395,12 +517,12 @@ Route32AmenitiesText:
 	para "making lunch for"
 	line "Silph workers!"
 	
-	para "They are getting"
-	line "so far into the"
-	cont "cave. I hear"
+	para "I've got a wide"
+	line "selection of EV-"
+	cont "reducing berries."
 	
-	para "that they will"
-	line "be on B2F soon."
+	para "But my specialty"
+	line "is Slowpoketail!"
 	
 	para "Hungry? Take one,"
 	line "I have many!"

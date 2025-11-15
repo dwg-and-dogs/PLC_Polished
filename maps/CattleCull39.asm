@@ -215,15 +215,9 @@ NomadF_GotHoneClaws:
 HoneClawsText:
 	text "We're adapting to"
 	line "living on these"
-	cont "cliffs for perpe-"
-	cont "tuity, not just"
-	cont "seasonal."
-	
-	para "Learning a new"
-	line "skill is a good"
-	cont "way to keep your"
-	para "mind and body"
-	line "on their toes!"
+	para "cliffs for perpe-"
+	line "tuity, not just"
+	cont "seasonally."
 	
 	para "Take this. Don't"
 	line "be afraid of lea-"

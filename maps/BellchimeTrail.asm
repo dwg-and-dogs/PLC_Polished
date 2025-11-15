@@ -17,7 +17,7 @@ BellchimeTrail_MapScriptHeader:
 
 	def_object_events
 	object_event 14,  4, SPRITE_REI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailEmiScript, -1
-	object_event 11,  4, SPRITE_KURT, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeTrailKurtText, EVENT_BEAT_KIMONO_GIRL_EMI
+	object_event 11,  4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeTrailKurtText, EVENT_BEAT_KIMONO_GIRL_EMI
 
 	
 

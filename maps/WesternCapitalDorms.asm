@@ -16,7 +16,7 @@ WesternCapitalDorms_MapScriptHeader: ;	def_scene_scripts
 	bg_event  12,  3, BGEVENT_READ, WesternCapitalDormsBed
 
 	def_object_events
-	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesternCapitalDormsKurtScript, EVENT_LANDING_SCENE_1_KENSEY
+	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesternCapitalDormsKurtScript, EVENT_BEAT_SAMSARA
 	object_event 5, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, trade, NPC_TRADE_TIM, -1 ; 
 	object_event 5, 3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC1Text, -1
 	object_event 2, 2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, WesternCapitalDormsNPC2Text, -1

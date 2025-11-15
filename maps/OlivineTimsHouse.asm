@@ -18,18 +18,9 @@ OlivineTimsHouse_MapScriptHeader:
 ChoiceBandScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_CHOICE_BAND
-	iftrue_jumpopenedtext AfterChoiceBandText
 	writetext OfferChoiceBandText
-	yesorno
-	iffalse_jumpopenedtext DontWantBandText
-	writetext GiveBandText1
-	promptbutton
-	verbosegiveitem CHOICE_BAND
-	writetext AfterChoiceBandText
 	waitbutton
 	closetext
-	setevent EVENT_GOT_CHOICE_BAND
 	end
 
 OfferChoiceBandText:
@@ -42,19 +33,6 @@ OfferChoiceBandText:
 	
 	para "could be so much"
 	line "more than a port."
-
-	para "Now, ships can't"
-	line "dock any more."
-	
-	para "That's the thing"
-	line "about choices-"
-	
-	para "it's hard to go"
-	line "back once you've"
-	cont "made one. Do you"
-	
-	para "have the courage"
-	line "to make a choice?"	
 	done
 
 GiveBandText1:
@@ -64,15 +42,3 @@ GiveBandText1:
 	cont "be done!"
 	done
 
-DontWantBandText:
-	text "Sooner or later"
-	line "destiny calls."
-	done
-
-AfterChoiceBandText:
-	text "Make good choices"
-	line "out there."
-	
-	para "You can't always"
-	line "go back."
-	done

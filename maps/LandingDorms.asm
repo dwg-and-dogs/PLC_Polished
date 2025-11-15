@@ -154,16 +154,16 @@ KurtTLDormsText:
 	
 	para "We should find a"
 	line "way to bring"
-	cont "Lugia from our"
-	cont "time backwards,"
+	para "Lugia from our"
+	line "time backwards,"
 	para "so it causes a"
 	line "storm, preventing"
 	cont "the shipment!"
 	
 	para "Oh! I found some"
 	line "neat #mon in"
-	cont "the wild areas"
-	cont "around here."
+	para "the wild areas"
+	line "around here."
 
 	para "Want to battle?"
 	done

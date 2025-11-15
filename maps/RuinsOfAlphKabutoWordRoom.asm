@@ -69,7 +69,7 @@ KabutoWordKimonoGirlScript:
 
 .PhysicalOrSpecialMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 
+	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 9 
 	dw .PhysicalOrSpecialMenuData
 	db 1 ; default option
 

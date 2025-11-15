@@ -158,6 +158,7 @@ PickupDocksScene:
 	writetext Docks_Text12
 	waitbutton
 	writetext Docks_Text12_Badge
+	waitbutton
 	closetext
 	playsound SFX_GET_BADGE
 	waitsfx ; YOU GET THE BADGE AT THE END 
