@@ -117,36 +117,26 @@ NationalParkGameboyKidScript:
 
 
 GameboyKidComplainText:
-    text "Ugh!"
-    line "These bugs keep"
-    cont "biting me!"
+    text "There's hordes of"
+	line "bugs here, but I"
+	para "don't get bothered"
+	line "at all."
 	
-    para "I'm trying to"
-    line "beat this level,"
-    para "but I can't"
-    line "focus!"
+	para "Why not? Because"
+	line "of Leech Life!"
 	
-    para "Hey, you're a"
-    line "#mon trainer,"
-    para "right? Take"
-    line "this!"
+    para "Try it out!"
     done
 
 GameboyKidGaveTMText:
-    text "That's Leech"
-    line "Life. Give those"
-    para "bugs a taste of"
-    line "their own"
-    cont "medicine!"
+    text "Give those bugs a"
+	line "taste of their"
+	cont "own medicine!"
     done
 
 GameboyKidAfterText:
-    text "The bugs aren't"
-    line "as bad now."
-
-    para "Maybe they"
-    line "learned their"
-    cont "lesson?"
+    text "Don't let the"
+	line "bed bugs bite."
     done
 
 GameboyKidBagFullText:

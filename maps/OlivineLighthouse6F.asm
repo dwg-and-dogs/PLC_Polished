@@ -157,6 +157,7 @@ Lighthouse6FScene1:
 	applymovement LIGHTHOUSE_JASMINE, LighthouseChuckLeavesMovement
 	disappear LIGHTHOUSE_JASMINE
 	clearevent EVENT_JASMINE_GYM
+	setevent EVENT_KILN_BOSS
 	setscene $2
 	end
 	

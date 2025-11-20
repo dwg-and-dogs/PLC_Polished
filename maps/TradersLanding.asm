@@ -13,8 +13,8 @@ TradersLanding_MapScriptHeader:
 	warp_event 9, 16, LANDING_TAVERN, 1
 	warp_event 25, 7, LANDING_HOUSE_1, 1
 	warp_event 29, 7, LANDING_HOUSE_2, 1
-	warp_event 20, 27, LANDING_DOCKS, 1 
-	warp_event 21, 27, LANDING_DOCKS, 1 
+	warp_event 20, 27, LANDING_DOCKS, 3 
+	warp_event 21, 27, LANDING_DOCKS, 4 
 
 
 	def_coord_events
@@ -49,8 +49,8 @@ TradersLanding_MapScriptHeader:
 	object_event 20, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TL_Brigader_Script, EVENT_BEAT_KENSEY_PORT
 	object_event 21, 25, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TL_Brigader_Script, EVENT_BEAT_KENSEY_PORT
 	; technically inaccessible 
-	object_event 34, 20, SPRITE_BRIGADER, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Lighthouse_BrigaderText, -1
-	object_event 33, 27, SPRITE_BRIGADER, 	SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TL_Brigader_Script, -1
+	object_event 34, 20, SPRITE_NOMAD_M, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Lighthouse_BrigaderText, -1
+	object_event 33, 27, SPRITE_NOMAD_F, 	SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TL_Brigader_Script, -1
 	; NPCs
 	object_event 10, 19, SPRITE_FIREBREATHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, LandingEggScript, EVENT_BEAT_KENSEY_PORT
 	object_event 21, 15, SPRITE_NOMAD_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LandingNomadMScript, -1  

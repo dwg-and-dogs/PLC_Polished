@@ -543,6 +543,7 @@ Cradle_Scene3Pickup:
 	special FadeOutPalettes
 	waitsfx
 	setscene $3
+	setevent EVENT_KURT_MINE_2
 	blackoutmod WESTERN_CAPITAL
 	warp WHISPERS_WAY, 10, 4
 	end

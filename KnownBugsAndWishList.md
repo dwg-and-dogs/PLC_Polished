@@ -1,22 +1,21 @@
 # To Do
 
-
-## Known Major Bugs, 10-21-25 V0.0.6
+## Known Major Bugs, 11-20-25 v0.0.9
 
 * Pokemon Icons on Fly Map
-* Upgraded pokedex planned for v0.1.0
+* Upgraded pokedex planned for v0.1.0 with most first-stage pokemon, minus babies
 * Hall of Fame sequence doesn't show party pokemon names
+* Graphical glitch in bug catching contest while using Park Ball 
 
 ## Content wishlist 
 
-* Trainer and #mon sprites
+* Trainer and pokemon sprites
 	*Trainer Wish list: Chuck, Morty, Clair, Kurt
-	*#mon wish list: Cyndaquil, Lugia, HoOh, Celebi, Heatran, Octillery, Sunflora, Vileplume, Jolteon + Vaporeon + Flareon, 
+	*pokemon wish list: Cyndaquil, Lugia, HoOh, Celebi, Heatran, Octillery, Sunflora, Jolteon, Vaporeon, Flareon
 	*Contact if you want to work together! 
 * 56x56 pixel art paintings
 	*Contact for more info
 * More music
    * Custom Theme for Emperor and Generals
-* Better cutscene implementation with 140x164 pixel art 
-* Signs tell you which pokemon are in a given area 
+* Better cutscene implementation with full-screen pixel art 
 * Pokedex footprint area shows the evolution methods 
