@@ -25,7 +25,7 @@ UnionCaveB2F_MapScriptHeader:
 
 	itemball_event 14, 19, GEODE, 5, EVENT_UNION_CAVE_B2F_ELIXIR ; 
 	itemball_event 15, 25, HYPER_POTION, 1, EVENT_UNION_CAVE_B2F_HYPER_POTION ; OK 
-	itemball_event 16, 31, ABILITYPATCH, 5, EVENT_UNION_CAVE_B2F_ABILITY; 
+	itemball_event 16, 31, ABILITYPATCH, 1, EVENT_UNION_CAVE_B2F_ABILITY; 
 
 
 	object_const_def
@@ -170,26 +170,16 @@ GenericTrainerRuin_maniacGlynn:
 	generictrainer RUIN_MANIAC, GLYN, EVENT_BEAT_RUIN_MANIAC_GLYN, RuinManiacGlynnSeenText, RuinManiacGlynnBeatenText
 
 	text "Uff. Maybe I'm"
-	line "too old for this"
-	cont "stuff."
+	line "too old for it."
 	
-	para "What am I fight-"
-	line "ing for, anyway?"
+	para "It's time to give"
+	line "up on battling."
 	
-	para "To make a few "
-	line "scars in the gro-"
-	cont "und? My poor"
-	cont "#mon. I will"
-	
-	para "release them. You"
-	line "can battle one,"
-	
-	para "but the other will"
-	line "probably run away."
-	
-	para "It's clear you"
-	line "would be a better"
-	cont "trainer than me."
+	para "I'll let you"
+	line "battle one of my"
+	cont "#mon, but the"
+	para "other one will"
+	line "probably run off."
 	done
 
 RuinManiacGlynnSeenText:
@@ -211,29 +201,14 @@ RuinManiacGlynnSeenText:
 
 RuinManiacGlynnBeatenText:
 	text "Uff. Maybe I'm"
-	line "too old for this"
-	cont "stuff."
+	line "too old for it."
 	
-	para "What am I fight-"
-	line "ing for, anyway?"
+	para "It's time to give"
+	line "up on battling."
 	
-	para "To make a few "
-	line "scars in the gro-"
-	cont "und? My poor"
-	cont "#mon. I will"
-	
-	para "release the"
-	line "youngest two."
-	
-	para "They deserve a "
-	line "chance."
-	
-	para "If you battle"
-	line "one, the other"
-	para "will probably be"
-	line "scared and flee."
-	
-	para "It's clear you"
-	line "would be a better"
-	cont "trainer than me."
+	para "I'll let you"
+	line "battle one of my"
+	cont "#mon, but the"
+	para "other one will"
+	line "probably run off."
 	done

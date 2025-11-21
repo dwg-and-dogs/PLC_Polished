@@ -123,14 +123,11 @@ TapestryAmosText1:
 	para "Even if she does"
 	line "not, the Consul"
 	para "plans to annex"
-	line "all of Johto at"
-	cont "the ceremony."
+	line "all of Johto."
 	
 	para "Our traditions"
-	line "will be replaced"
-	para "to honor a new"
-	line "emperor!"
-	
+	line "will be replaced!"
+
 	para "This is not the"
 	line "way to repel the"
 	cont "outsiders!"
@@ -154,7 +151,7 @@ TapestryAmosText0:
 
 	para "I thought that"
 	line "the Kimono Girls"
-	para "would be here,"
+	cont "would be here,"
 	
 	para "but they must be"
 	line "in the Holt."
@@ -173,10 +170,8 @@ TapestryAmosText0:
 	line "all of Johto."
 	
 	para "Our traditions"
-	line "will be replaced"
-	para "to honor a new"
-	line "emperor!"
-	
+	line "will be replaced!"
+
 	para "This is not the"
 	line "way to repel the"
 	cont "outsiders!"

@@ -22,9 +22,9 @@ MahoganyTown_MapScriptHeader:
 
 	def_object_events
 	object_event 11,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 	0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MahoganyTownGrampsScript, -1 ; trade quest
-	object_event  7, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, EVENT_BEAT_PRYCE ;
+	object_event  5, 14, 	SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_SCRIPT, 0, MahoganyKurtScript, EVENT_BEAT_PRYCE ;
 	object_event  7, 5, 	SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 	0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownOfficerText, EVENT_BEAT_PRYCE
-	object_event  6,  7, 	SPRITE_FISHER, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
+	object_event  5, 6, 	SPRITE_FISHER, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownFisherText, -1
 	object_event 13, 15, 	SPRITE_CUTE_GIRL, 	SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, PAL_NPC_RED,	OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownLassText, -1
 	object_event 10,  9, 	SPRITE_GRANNY, 		SPRITEMOVEDATA_WANDER, 	1, 1, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyTownGrannyText, -1
 	object_event 19, 8, SPRITE_DRAGON_TAMER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, MahoganyDragonTamerText, -1 
