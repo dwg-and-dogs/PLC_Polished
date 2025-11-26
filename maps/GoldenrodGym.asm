@@ -132,10 +132,6 @@ WhitneyTextFacade:
 	line "up a false im-"
 	para "age of myself"
 	line "with that show."
-
-	para "For your candid"
-	line "thoughts, please"
-	cont "take this TM."
 	done
 
 

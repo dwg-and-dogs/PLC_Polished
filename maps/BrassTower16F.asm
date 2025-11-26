@@ -6,11 +6,11 @@ BrassTower16F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 1, 15, BRASS_TOWER_15F, 1
-	warp_event 15, 15, BRASS_TOWER_15F, 2
-	warp_event 4, 15, BRASS_TOWER_13F, 4
-	warp_event 14, 0, BRASS_TOWER_17F, 1
-	warp_event 14, 6, BRASS_TOWER_17F, 2
+	warp_event 1, 15, BRASS_TOWER_15F, 1 ; checked 
+	warp_event 15, 15, BRASS_TOWER_15F, 2 ; checked 
+	warp_event 4, 15, BRASS_TOWER_13F, 4 ; checked 
+	warp_event 14, 0, BRASS_TOWER_17F, 1 ; checked 
+	warp_event 14, 6, BRASS_TOWER_17F, 2 ; checked 
 
 	def_coord_events
 
@@ -21,8 +21,8 @@ BrassTower16F_MapScriptHeader:
 	bg_event 10, 12, BGEVENT_READ, BrassTowerSwitchScript16F
 
 	def_object_events
-	pokemon_event   9, 2, GENGAR, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
-	pokemon_event  8,  8, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD	
+	pokemon_event   9, 2, GENGAR, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
+	pokemon_event  8,  8, MISDREAVUS, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD	
 	object_event  2, 12, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderTadao, -1 ; loyal
 	
 	object_const_def

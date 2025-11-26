@@ -25,7 +25,7 @@ CattleCull39_MapScriptHeader:
 	object_event 13, 20, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerNomadMJacob, -1
 	object_event 7,  7, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFMarlene, -1
 	object_event 5,  29, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerNomadFRin, -1
-	object_event 13, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CattleCullKurtScript, -1
+	object_event 13, 10, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CattleCullKurtScript, EVENT_LANDING_TIME_TRAVELED
 	pokemon_event  5, 10, TAUROS, -1, -1, PAL_NPC_BROWN, TaurosText, -1;
 	pokemon_event  4, 11, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
 	pokemon_event  9, 12, MILTANK, -1, -1, PAL_NPC_RED, Miltank39Text, -1;
@@ -53,8 +53,7 @@ NomadMarleneSeenText:
 
 NomadMarleneBeatenText:
    text "One day we will"
-   line "be free from the"
-   cont "Consul."
+   line "be free!"
    done
 
 
@@ -67,8 +66,8 @@ GenericTrainerNomadMDale:
 
 NomadDaleSeenText:
    text "The winds speak"
-   line "to wanderers."
-   para "The brigaders"
+   line "to us. But:"
+   para "the brigaders"
    line "are deaf!"
    done
 
@@ -77,7 +76,6 @@ NomadDaleBeatenText:
    line "wind will blow"
    cont "our way."
    done
-
 
 
 GenericTrainerNomadFRin:
@@ -93,12 +91,15 @@ GenericTrainerNomadFRin:
 
 NomadRinSeenText:
 	text "Our lives moved"
-	line "with seasons."
+	line "with seasons - "
+	
+	para "Can you move with"
+	line "them as well?"
 	done
 
 NomadRinBeatenText:
 	text "We've been made"
-	line "stagnant, though."
+	line "stagnant."
 	done
 
 GenericTrainerNomadMJacob:
@@ -113,9 +114,9 @@ GenericTrainerNomadMJacob:
 
 NomadJacobSeenText:
 	text "I knew every cove"
-	line "and inlet..."
+	line "and inlet!"
 	para "Their maps make"
-	line "us worthless."
+	line "me worthless!"
 	done
 
 NomadJacobBeatenText:

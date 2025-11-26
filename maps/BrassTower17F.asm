@@ -6,10 +6,10 @@ BrassTower17F_MapScriptHeader:
 	callback MAPCALLBACK_TILES, BrassTower17FCallback  
 
 	def_warp_events
-	warp_event 13, 5, BRASS_TOWER_17F, 4
-	warp_event 13, 9, BRASS_TOWER_17F, 5
-	warp_event 2, 14, BRASS_TOWER_18F, 1
-	warp_event 10, 15, BRASS_TOWER_14F, 1
+	warp_event 13, 5, BRASS_TOWER_16F, 4 ; checked
+	warp_event 13, 9, BRASS_TOWER_16F, 5 ; checked 
+	warp_event 2, 14, BRASS_TOWER_18F, 1 ; checked 
+	warp_event 10, 15, BRASS_TOWER_14F, 1 ; checked 
 
 
 	def_coord_events
@@ -23,7 +23,7 @@ BrassTower17F_MapScriptHeader:
 
 	def_object_events
 	object_event  5, 3, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerElderSatoru, -1 ; wise
-	pokemon_event  6,  8, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD	
+	pokemon_event  6,  8, MISDREAVUS, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD	
 
 	object_const_def
 

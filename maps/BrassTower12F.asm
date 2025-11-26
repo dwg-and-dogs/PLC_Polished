@@ -6,10 +6,10 @@ BrassTower12F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event  9,  1, BRASS_TOWER_1F, 1
-	warp_event  6,  1, BRASS_TOWER_19F, 1
-	warp_event  3,  3, BRASS_TOWER_13F, 1
-	warp_event 13,  3, BRASS_TOWER_13F, 2
+	warp_event  9,  1, BRASS_TOWER_1F, 1 ; checked 
+	warp_event  6,  1, BRASS_TOWER_19F, 1 ; checked 
+	warp_event  3,  3, BRASS_TOWER_13F, 1 ; checked 
+	warp_event 13,  3, BRASS_TOWER_13F, 2 ; checked 
 
 	def_coord_events
 

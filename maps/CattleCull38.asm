@@ -48,17 +48,15 @@ GenericTrainerNomadMJoel:
 	done
 
 NomadJoelSeenText:
-	text "The consul can't"
+	text "The Consul can't"
 	line "keep us caged"
 	cont "forever!"
 	done
 
 NomadJoelBeatenText:
-	text "The Consul says"
-	line "progress needs"
-	cont "gates and guards."
+	text "We won't be fenced"
+	line "in like Miltank!"
 	done
-
 
 
 GenericTrainerNomadMGlenn:
@@ -69,16 +67,18 @@ GenericTrainerNomadMGlenn:
 	done
 
 NomadGlennSeenText:
-	text "We used to roam"
-	line "between shores"
-	cont "and the cliffs."
+	text "I've climbed these"
+	line "cliffs hundreds"
+	cont "of times!"
+	
+	para "You think you can"
+	line "roam like me?"
 	done
 
 NomadGlennBeatenText:
-	text "We're running out"
+	text "I'm running out"
 	line "of road."
 	done
-
 
 
 GenericTrainerNomadFReina:
@@ -89,9 +89,7 @@ GenericTrainerNomadFReina:
 	done
 	
 NomadReinaSeenText:
-	text "We used to adapt"
-	line "to changing winds"
-	cont "or eroded slopes."
+	text "Here's a riddle:"
 
 	para "What good is a"
 	line "map to a changing"
@@ -99,8 +97,9 @@ NomadReinaSeenText:
 	done
 
 NomadReinaBeatenText:
-	text "You move like"
-	line "a free wind."
+	text "Ha! You've got"
+	line "the wind behind"
+	cont "your back!"
 	done
 
 

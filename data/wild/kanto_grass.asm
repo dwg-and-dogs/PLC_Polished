@@ -733,28 +733,28 @@
 	def_grass_wildmons SHIMMER_SADDLE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 22, RHYHORN
-	wildmon 23, MANKEY
-	wildmon 24, SKARMORY
+	wildmon 22, HIPPOWDON
+	wildmon 23, DRAPION
+	wildmon 24, SKUNTANK
 	wildmon 25, HITMONLEE
 	wildmon 24, HITMONCHAN
 	wildmon 23, HITMONTOP
-	wildmon 22, PINSIR
+	wildmon 22, H__BRAVIARY
 ;	; day
-	wildmon 22, RHYHORN
-	wildmon 23, MANKEY
-	wildmon 24, SKARMORY
+	wildmon 22, HIPPOWDON
+	wildmon 23, DRAPION
+	wildmon 24, SKUNTANK
 	wildmon 25, HITMONLEE
 	wildmon 24, HITMONCHAN
 	wildmon 23, HITMONTOP
-	wildmon 22, PINSIR
+	wildmon 22, H__BRAVIARY
 ;	; nite
-	wildmon 22, RHYHORN
-	wildmon 23, MANKEY
-	wildmon 24, SKARMORY
+	wildmon 22, HIPPOWDON
+	wildmon 23, DRAPION
+	wildmon 24, SKUNTANK
 	wildmon 25, HITMONLEE
 	wildmon 24, HITMONCHAN
 	wildmon 23, HITMONTOP
-	wildmon 22, PINSIR
+	wildmon 22, H__BRAVIARY
 	end_grass_wildmons
 	db -1 ; end	

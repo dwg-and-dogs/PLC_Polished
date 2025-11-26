@@ -109,9 +109,16 @@ GauldenrodNPC2Script:
 	iftrue_jumptextfaceplayer .Text2
 	jumpthistextfaceplayer
 
-	text "If you need some"
-	line "food, they offer"
-	cont "it at the stadium."
+	text "The forest North"
+	line "of Gauldenrod was"
+	para "cleared to make"
+	line "space for Bobesh's"
+	cont "Stadium."
+	
+	para "Lots of Flying-"
+	line "type #mon"
+	para "had to find a new"
+	line "place to nest."
 	done
 
 .Text2: 

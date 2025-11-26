@@ -6,9 +6,9 @@ BrassTower18F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 3,  3, BRASS_TOWER_17F, 3
-	warp_event 6, 11, BRASS_TOWER_14F, 2
-	warp_event 12, 15, BRASS_TOWER_12F, 1
+	warp_event 3,  3, BRASS_TOWER_17F, 3 ; checked 
+	warp_event 6, 11, BRASS_TOWER_14F, 2 ; checked 
+	warp_event 12, 15, BRASS_TOWER_12F, 1 ; ez return 
 
 	def_coord_events
 
@@ -18,8 +18,8 @@ BrassTower18F_MapScriptHeader:
 
 
 	def_object_events
-	pokemon_event   3, 6, GENGAR, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
-	pokemon_event  8,  12, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD	
+	pokemon_event   3, 6, GENGAR, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
+	pokemon_event  8,  12, MISDREAVUS, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD	
 	object_event  12, 11, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, JOLTEON, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BrassTower18FJolteonScript, EVENT_BRASS_TOWER_JOLTEON
 	object_event  8, 1, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderYoshi, -1 ; virtuous
 	itemball_event 12, 7, FULL_RESTORE, 1, EVENT_BRASS_TOWER_18F_ITEM

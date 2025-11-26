@@ -53,14 +53,8 @@ GoldenrodBikeShopClerkIntroText:
 	para "from my very"
 	line "first shipment."
 
-	para "But now... Well,"
-	line "I need to keep"
-	para "up with the"
-	line "times, you know?"
-	
-	para "That old bike..."
-	line "I can't just"
-	cont "toss it."
+	para "Now, everyone wants"
+	line "an E-Bike!"
 
 	para "Say, would you"
 	line "take it? Give it"
@@ -69,16 +63,10 @@ GoldenrodBikeShopClerkIntroText:
 
 GoldenrodBikeShopClerkAgreedText:
 	text "Really? Great!"
-
-	para "I hope you have"
-	line "some great ad-"
-	cont "ventures on it."
 	done
 
 GoldenrodBikeShopClerkRefusedText:
-	text "…sigh… Oh, for"
-	line "the kindness of"
-	cont "people…"
+	text "…sigh…"
 	done
 
 GoldenrodBikeShopBicycleText:
@@ -94,5 +82,5 @@ GoldenrodBikeShopJustReleasedCompactBikeText:
 	text "Just released!"
 
 	para "First-rate compact"
-	line "Bicycles!"
+	line "E-Bicycles!"
 	done

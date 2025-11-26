@@ -1,4 +1,5 @@
-BrassTowerB1F_MapScriptHeader: ;	def_scene_scripts
+BrassTowerB1F_MapScriptHeader: 
+	def_scene_scripts
 
 
 	def_callbacks

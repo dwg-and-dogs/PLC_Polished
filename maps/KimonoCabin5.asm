@@ -27,7 +27,7 @@ KimonoCabin5_MapScriptHeader: ; should be like  "BurnedTowerB1F_MapScriptHeader"
 	object_event 17,  0, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin5Lass, -1
 	object_event  9, 16, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, KimonoCabin55Script, -1
 	pokemon_event  16, 0, EEVEE, -1, -1, PAL_NPC_BROWN, KimonoEeveeText, -1
-	tmhmball_event 24, 33, TM_SUBSTITUTE, EVENT_KIMONO_TM_SUBSTITUTE
+	tmhmball_event 6, 8, TM_SUBSTITUTE, EVENT_KIMONO_TM_SUBSTITUTE
 
 	object_const_def
 	const KIMONO_CABIN_5_GRANNY1

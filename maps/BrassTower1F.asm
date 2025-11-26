@@ -6,7 +6,7 @@ BrassTower1F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 8, 2, BRASS_TOWER_12F, 1
+	warp_event 8, 2, BRASS_TOWER_12F, 1 ; checked
 	warp_event 7, 15, WESTERN_CAPITAL, 14
 	warp_event 8, 15, WESTERN_CAPITAL, 14
 
@@ -24,7 +24,6 @@ BrassTower1F_MapScriptHeader:
 	object_event   7, 2, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptBT, -1
 
 	object_event 7, 13, SPRITE_AMOS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerAmosScript, -1 ; done
-;	object_event  5,  13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_WESTERN_CAPITAL_PREP, -1
 	object_event 9, 13, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, BrassTowerHealScript, -1 ; done
 
 

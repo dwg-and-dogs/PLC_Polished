@@ -24,8 +24,6 @@ CapitalCullGate_MapScriptHeader:
 	object_event 3, 4, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CapitalCullNomadFNPCScript, -1
 
 
-	object_const_def
-
 
 CapitalCullNomadFNPCScript:
 	jumptextfaceplayer CapitalCullGateNPCText

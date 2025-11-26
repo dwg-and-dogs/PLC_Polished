@@ -26,25 +26,57 @@ CianwoodCove_MapScriptHeader:
 
 CianwoodCoveKurtScript:
 	blackoutmod CIANWOOD_COVE
+	special HealParty
 	faceplayer
 	opentext
 	writetext KurtExplainsTheStormText
+	yesorno
+	iffalse .KurtPC
+	winlosstext CCoveKurtBattleText, CCoveKurtBattleText
+	loadtrainer KURT, KURT7
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmapafterbattle
+	special HealParty	
+	opentext
+	jumpopenedtext TLKurtBattleText2
+
+.KurtPC
+	writetext KurTLDormsText2
 	waitbutton
 	closetext
 	end
 	
+KurTLDormsText2:
+	text "We must stop that"
+	line "General Kensey!"
+	done
+
+CCoveKurtBattleText:
+	text "Impressive!"
+	done
+
+TLKurtBattleText2:
+	text "We can battle as"
+	line "many times as"
+	cont "you like."
+	
+	para "We must stop that"
+	line "General Kensey!"
+	done	
+
 KurtExplainsTheStormText:
 	text "So this is Cian-"
 	line "wood long ago."
 	
 	para "I'm commanding"
 	line "Lugia to summon"
-	cont "a monsoon."
+	cont "a monsoon,"
 	
-	para "Surely it will"
-	line "wreck any boats"
-	para "holding steel for"
-	line "the Consul."
+	para "wrecking any out-"
+	line "sider's boat laden"
+	cont "with corrupting"
+	cont "technology!"
 	
 	para "Come, <PLAYER>."
 	line "We must use this"
@@ -52,6 +84,13 @@ KurtExplainsTheStormText:
 	line "for good, even"
 	para "though it might"
 	line "not understand."
+	
+	para "I'll heal your"
+	line "#mon for the"
+	cont "battles ahead."
+	
+	para "We can spar, if"
+	line "you'd like."
 	done
 
 

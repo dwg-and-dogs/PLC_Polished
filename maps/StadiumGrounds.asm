@@ -512,7 +512,6 @@ StadiumGroundsSandra2Script:
 	closetext
 	special Special_CelebiShrineEvent
 	setevent EVENT_SANDRA_WARPED
-	setevent EVENT_WHITNEY_GYM
 	special FadeOutPalettes
 	waitsfx
 	warp ROUTE_36, 22, 4

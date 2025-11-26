@@ -22,7 +22,7 @@ Route32_MapScriptHeader:
 	bg_event 13, 84, BGEVENT_ITEM + GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL_2 ; ok
 
 	def_object_events
-	object_event 19,  8, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32CooltrainermPetrieScript, -1
+	object_event 19,  8, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, Route32CooltrainermPetrieTrainer, -1
 	object_event 16, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterAlbert, -1
 	object_event  4, 36, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterGordon, -1
 	object_event 11, 45, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerFisherJustin, -1
@@ -40,106 +40,26 @@ Route32_MapScriptHeader:
 	fruittree_event 3, 31, FRUITTREE_ROUTE_32, FIXED_CHARGE, PAL_NPC_RED
 
 
-Route32CooltrainermPetrieScript: ; fix 
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_AIR_BALLOONS_FROM_ROUTE_32_LEADER
-	iftrue_jumpopenedtext GotAirBalloonsText
-	checkitem SLOWPOKETAIL
-	iffalse_jumpopenedtext WannaGetMeText
-	showtext Route32QuestionText
-	winlosstext PetrieBeatenText, 0
-	loadtrainer COOLTRAINERM, PETRIE 
-	startbattle
-	reloadmapafterbattle	
-	setevent EVENT_BEAT_COOLTRAINERM_PETRIE
-	opentext
-	writetext PetrieAfterText
-	promptbutton
-	verbosegiveitem ABILITYPATCH
-	waitbutton
-	setevent EVENT_GOT_AIR_BALLOONS_FROM_ROUTE_32_LEADER
-	jumpthisopenedtext
+Route32CooltrainermPetrieTrainer: ; fix 
+	generictrainer COOLTRAINERM, PETRIE, EVENT_BEAT_COOLTRAINERM_PETRIE, PetrieSeenText, PetrieBeatenText
 
-GotAirBalloonsText:
 	text "Maybe I'll"
 	line "be a pop star"
 	cont "in Goldenrod."
 	done
 
-Route32QuestionText:
-	text "I'm so low since"
-	line "being rejected"
-	cont "by Falkner."
-	
-	para "The only thing"
-	line "that would raise"
-	para "them is a tasty"
-	line "SlowpokeTail..."
-	
-	para "Oh! I smell it!"
-	
-	para "I feel invigor-"
-	line "ated already!"
-	
-	para "I'll battle you"
-	line "for it!"
+PetrieSeenText:
+	text "I'm going to show"
+	line "Falkner that I"
+	para "deserve to train"
+	line "with him!"
 	done
 
-.SeenText:
-	text "My training in"
-	line "Sprout Tower over-"
-	cont "came even Falkner."
-
-	para "Let's see how you"
-	line "compare!"
-	done
 
 PetrieBeatenText:
 	text "I'm so deflated!"
 	done
 	
-PetrieAfterText:
-	text "All my items,"
-	line "useless!"
-	
-	para "I need to change"
-	line "my ways."
-	
-	para "Here, take this"
-	line "item. You can use"
-	para "it to change your"
-	line "#mon ability."
-	done
-
-WannaGetMeText:
-	text "I wanted to be"
-	line "a trainer in"
-	cont "Falkner's Gym."
-	
-	para "But he said my"
-	line "#mon weren't"
-	para "real flying-"
-	line "types!"
-	
-	para "I came here to"
-	line "get some comfort"
-	para "food - a tasty"
-	line "SlowpokeTail."
-	
-	para "But the vendor"
-	line "is so far away."
-	
-	para "If you go to"
-	line "get me one, it"
-	para "would raise my"
-	line "spirits!"
-	
-	para "I heard you can"
-	line "get one at the"
-	para "end of this"
-	line "route."
-	done
 
 GenericTrainerCamperLloyd:
 	generictrainer CAMPER, LLOYD, EVENT_BEAT_CAMPER_LLOYD, CamperLloydSeenText, CamperLloydBeatenText
@@ -394,7 +314,7 @@ Route32BerryVendor:
 	ifequal 2, .GiveChinchou
 	ifequal 3, .GiveCorsola
 	ifequal 4, .GiveShuckle
-	jumptext CafeNoFishText
+	jumptext Route32NoFishText
 
 ;	givepoke MAGIKARP, MAGIKARP_MASK_FORM, 10, EVIOLITE, ULTRA_BALL, DRAGON_RAGE
 .GiveMagikarp:
@@ -455,7 +375,6 @@ Route32BerryVendor:
 	db 1 ; default option
 
 .MenuData: ; see data/items/desc4
-
 	db STATICMENU_CURSOR ; flags
 	db 5 ; items
 	db "Magikarp@"
@@ -484,7 +403,7 @@ Route32NotEnoughMoney:
 	line "enough money…"
 	done
 
-CafeNoFishText:
+Route32NoFishText:
 	text "See you later."
 	done
 

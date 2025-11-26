@@ -6,26 +6,22 @@ BrassTower15F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 0, 14, BRASS_TOWER_16F, 1
-	warp_event 12, 12, BRASS_TOWER_16F, 2
-	warp_event 6, 1, BRASS_TOWER_13F, 3 ; good 
-
-
+	warp_event 0, 14, BRASS_TOWER_16F, 1 ; checked 
+	warp_event 12, 12, BRASS_TOWER_16F, 2 ; checked 
+	warp_event 6, 1, BRASS_TOWER_13F, 3 ; checked  
 
 	def_coord_events
 
 
-
 	def_bg_events
-	bg_event 6, 4, BGEVENT_READ, BrassTowerSwitchScript15F
-;switch 
+	bg_event 6, 4, BGEVENT_READ, BrassTowerSwitchScript15F ;switch 
 
 
 	def_object_events
 	object_event   9, 12, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, VAPOREON, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BrassTower15FVaporeonScript, EVENT_BRASS_TOWER_VAPOREON
-	pokemon_event  13, 6, GENGAR, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
-	pokemon_event  0,  6, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
-	pokemon_event  6,  6, MISDREAVUS, -1, -1, PAL_NPC_RED, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
+	pokemon_event  13, 6, GENGAR, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_RIGHT_GUARD
+	pokemon_event  0,  6, MISDREAVUS, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
+	pokemon_event  6,  6, MISDREAVUS, -1, -1, PAL_NPC_PURPLE, BrassTowerGuardText, EVENT_BRASS_TOWER_LEFT_GUARD
 	object_event  13, 2, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerElderAkira, -1 ; bright
 	object_event   6,  8, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CHANSEY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BrassTower15FChanseyScript, -1
 	itemball_event 5, 13, HYPER_POTION, 1, EVENT_BRASS_TOWER_HYPER_POTION

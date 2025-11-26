@@ -6,9 +6,9 @@ BrassTower14F_MapScriptHeader:
 
 
 	def_warp_events
-	warp_event 2, 1, BRASS_TOWER_17F, 4
-	warp_event 0, 15, BRASS_TOWER_18F, 2
-	warp_event 10, 5, BRASS_TOWER_12F, 1
+	warp_event 2, 1, BRASS_TOWER_17F, 4 ; checked 
+	warp_event 0, 15, BRASS_TOWER_18F, 2 ; checked 
+	warp_event 10, 5, BRASS_TOWER_12F, 1 ; return teleport 
 	
 	def_coord_events
 

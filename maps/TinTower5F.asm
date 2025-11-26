@@ -51,7 +51,7 @@ TinTower5FKimonoGirlScript:
 
 .PhysicalOrSpecialMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 10 
+	menu_coords 9, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 9 
 	dw .PhysicalOrSpecialMenuData
 	db 1 ; default option
 
@@ -63,7 +63,7 @@ TinTower5FKimonoGirlScript:
 
 .PhysicalOrSpecialMenuData:
 	db STATICMENU_CURSOR | STATICMENU_WRAP
-	db 3 ; items
+	db 4 ; items
 	db "Physical@"
 	db "Special@"
 	db "Maximum@"

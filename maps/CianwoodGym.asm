@@ -26,7 +26,7 @@ CianwoodGym_MapScriptHeader:
 	itemball_event 8, 12, CHOICE_BAND, 1, EVENT_GOT_CHOICE_BAND
 	object_event  5,  13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymResetScript, -1
 
-	object_const_def
+	
 
 
 CianwoodGymStatue:

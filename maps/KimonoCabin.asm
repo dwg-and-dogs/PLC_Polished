@@ -32,7 +32,6 @@ KimonoCabin_MapScriptHeader:
 	; books 
 	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptext, KimonoCabinShijiNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinSamariaNotebook1, EVENT_KIMONO_CABIN_LAPRAS
-
 	object_event  1,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinPiperNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 	object_event  2,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, KimonoCabinVeraNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 
@@ -373,7 +372,7 @@ KimonoCabin5Script:
 	opentext
 	checkevent EVENT_KIMONO_CABIN_EEVEE
 	iftrue_jumpopenedtext Kimono5HelpedText
-	checkevent EVENT_BEAT_KENSEY_DOCKS 
+	checkevent EVENT_BEAT_KENSEY_PORT 
 	iffalse_jumpopenedtext Kimono5NotStrongEnoughText
 	checkevent EVENT_KIMONO_CABIN_4_LAPRAS_BATTLE
 	iffalse_jumpopenedtext Kimono5NotStrongEnoughText

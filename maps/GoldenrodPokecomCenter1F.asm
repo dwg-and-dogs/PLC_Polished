@@ -52,7 +52,6 @@ PokecomKurtScript:
 	writetext KurtHasSomeFansText
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_BASEMENT_KEY
 	setevent EVENT_GOT_BASEMENT_KEY
 	end
 
