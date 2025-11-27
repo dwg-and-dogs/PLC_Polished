@@ -64,13 +64,17 @@ SinjohDormsNPC3Text:
 
 SinjohDormsBed:
 	showtext SinjohBedText1
+	blackoutmod TRANQUIL_TARN
+	
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
-	special HealParty
 	playmusic MUSIC_HEAL
+	special HealParty
 	pause 60
-	special RestartMapMusic
 	special Special_FadeInQuickly
+	special RestartMapMusic
+
+
 	showtext SinjohBedText2
 	end
 
@@ -82,6 +86,9 @@ SinjohBedText1:
 SinjohBedText2:
 	text "Ah, refreshed and"
 	line "restored!"
+	
+	para "Waypoint set to"
+	line "Tranquil Tarn."
 	done
 
 SinjohDormsKurtScript:
@@ -150,6 +157,7 @@ NatuScriptSinjohDorms:
 	promptbutton
 	special PokemonCenterPC
 	endtext
+	blackoutmod TRANQUIL_TARN
 	end
 
 Sinjoh_NatuText_1:
@@ -157,4 +165,7 @@ Sinjoh_NatuText_1:
 	line "It can teleport"
 	para "to the present to"
 	line "manage the party."
+
+	para "It also sets the"
+	line "waypoint here."
 	done

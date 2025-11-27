@@ -82,6 +82,7 @@ SneaselText:
 HamletDormsBed:
 	blackoutmod EERIE_HAMLET
 	showtext HamletBedText1	
+
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL

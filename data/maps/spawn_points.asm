@@ -11,15 +11,15 @@ SpawnPoints:
 	spawn KURTS_HOUSE,                 7,  1 ;  "YOUR HOUSE"
 ; old johto ones work
 	spawn ANARRES_TOWN,               17, 10 ;
-	spawn GAULDENROD,                 19, 28 ; todo needs hardcode exception
-	spawn WESTERN_CAPITAL,            21, 26 ; todo needs a hardcode exception 
-	spawn TRADERS_LANDING,            15, 17 ; todo needs a hardcode exception 
-	spawn SHELTERED_SHORES,           34, 20 ; todo needs a hardcode exception 
-	spawn CIANWOOD_COVE,              11, 14 ; todo needs a hardcode 
-	spawn TRANQUIL_TARN,              13,  4 ; todo
-	spawn EERIE_HAMLET,               11,  8 ; todo 
-	spawn SULFUR_STY,                 34,  8 ; todo 
-	spawn TIMELESS_TAPESTRY,          10, 34 ; todo 
+	spawn GAULDENROD,                 19, 28 ; 
+	spawn WESTERN_CAPITAL,            21, 26 ; 
+	spawn TRADERS_LANDING,            15, 17 ; 
+	spawn SHELTERED_SHORES,           34, 20 ;
+	spawn CIANWOOD_COVE,              11, 14 ;  
+	spawn TRANQUIL_TARN,              13,  4 ; 
+	spawn EERIE_HAMLET,               11,  8 ;  
+	spawn SULFUR_STY,                 34,  8 ;  
+	spawn TIMELESS_TAPESTRY,          10, 34 ;  
 
 	spawn AZALEA_TOWN,                15, 10 ; works 
 	spawn GOLDENROD_CITY,             18, 28 ; works 

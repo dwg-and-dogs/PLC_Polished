@@ -101,13 +101,15 @@ LandingDormsNPC3Text:
 TradersLandingDormsBed:
 	blackoutmod TRADERS_LANDING
 	showtext TradersLandingBedText1
+
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
-	special HealParty
 	playmusic MUSIC_HEAL
+	special HealParty
 	pause 60
-	special RestartMapMusic
 	special Special_FadeInQuickly
+	special RestartMapMusic
+
 	showtext TradersLandingBedText2
 	end
 

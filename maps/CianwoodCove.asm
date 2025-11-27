@@ -39,15 +39,15 @@ CianwoodCoveKurtScript:
 	reloadmapafterbattle
 	special HealParty	
 	opentext
-	jumpopenedtext TLKurtBattleText2
+	jumpopenedtext CCoveKurtBattleText2
 
 .KurtPC
-	writetext KurTLDormsText2
+	writetext KurtCCoveDormsText2
 	waitbutton
 	closetext
 	end
 	
-KurTLDormsText2:
+KurtCCoveDormsText2:
 	text "We must stop that"
 	line "General Kensey!"
 	done
@@ -56,7 +56,7 @@ CCoveKurtBattleText:
 	text "Impressive!"
 	done
 
-TLKurtBattleText2:
+CCoveKurtBattleText2:
 	text "We can battle as"
 	line "many times as"
 	cont "you like."

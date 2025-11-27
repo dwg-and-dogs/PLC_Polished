@@ -94,8 +94,36 @@ BURNEDTOWERB1F_CREDITCreditScene:
 	pause 20
 	cry SUICUNE
 	disappear BURNEDTOWERB1F_CREDIT_SUICUNE1
+	pause 60
+	special FadeOutPalettes
+	opentext
+	writetext halloffametext_2
+	waitbutton
+	closetext
 	halloffame
 	end
+
+halloffametext_2:
+	text "If there's someone"
+	line "who shaped your"
+	cont "world for the"
+	cont "better,"
+	
+	para "Give them a call,"
+	line "send a letter,"
+	cont "a message, or"
+	para "even a prayer,"
+	
+	para "to let them know"
+	line "what they mean"
+	cont "to you."
+	
+	para "It may mean the"
+	line "world to them to"
+	para "know that their"
+	line "inheritance is"
+	cont "treasured."
+	done
 
 HoOhMovesBT1FC:
 	fix_facing

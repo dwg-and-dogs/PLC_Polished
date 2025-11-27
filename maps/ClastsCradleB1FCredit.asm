@@ -33,8 +33,6 @@ CradleB1FStonesCallback2:
 .Done:
 	endcallback
 
-
-
 ClastsCradleB1FCreditScene: 
 	;MOVING CAMERA
 	applyonemovement PLAYER, hide_object
@@ -70,10 +68,36 @@ ClastsCradleB1FCreditScene:
 .done2:
 	pause 60
 	special FadeOutPalettes
-	warp DRAGONS_DEN_CREDIT, 11, 13
+	opentext
+	writetext halloffametext_1
+	waitbutton
+	closetext
+;	warp DRAGONS_DEN_CREDIT, 11, 13
+	halloffame
 	end
 
-
+halloffametext_1:
+	text "If there's someone"
+	line "who shaped your"
+	cont "world for the"
+	cont "better,"
+	
+	para "Give them a call,"
+	line "send a letter,"
+	cont "a message, or"
+	para "even a prayer,"
+	
+	para "to let them know"
+	line "what they mean"
+	cont "to you."
+	
+	para "It may mean the"
+	line "world to them to"
+	para "know that their"
+	line "inheritance is"
+	cont "treasured."
+	done
+	
 CC_Credit_Move1:
 	step_right
 	step_right

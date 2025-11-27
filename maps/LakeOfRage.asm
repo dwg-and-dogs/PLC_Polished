@@ -1138,6 +1138,7 @@ LakeOfRageKimonoGirlScript:
 	pause 60
 	waitbutton
 	closepokepic
+	opentext
 	writetext ConfirmDVChangeText_LakeOfRage
 	yesorno
 	iffalse .UndoChanges

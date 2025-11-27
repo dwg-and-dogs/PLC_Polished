@@ -285,10 +285,10 @@ Route32UnionCaveSignText:
 	done
 
 Route32SlowpokeTailScript:
-	checkevent EVENT_GOT_SLOWPOKETAIL_ROUTE32
-	iftrue Route32BerryVendor
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_SLOWPOKETAIL_ROUTE32
+	iftrue Route32BerryVendor
 	writetext Route32AmenitiesText
 	promptbutton
 	verbosegiveitem SLOWPOKETAIL
@@ -301,7 +301,7 @@ Route32BerryVendor:
 	writetext Route32BerryVendorOptions
 	special PlaceMoneyTopRight
 	yesorno
-	waitbutton
+;	waitbutton
 ; revise from olivine stuff
 	iffalse_jumpopenedtext Route32Text4
 	checkmoney $0, 1000
@@ -310,77 +310,110 @@ Route32BerryVendor:
 	loadmenu .BerryMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .GiveMagikarp
-	ifequal 2, .GiveChinchou
-	ifequal 3, .GiveCorsola
-	ifequal 4, .GiveShuckle
+	ifequal 1, .GivePomeg ; pomeg
+	ifequal 2, .GiveKelpsy ; kelpsy 
+	ifequal 3, .GiveQualot ; qualot 
+	ifequal 4, .GiveHondew ; hondew, grepa, tamato
+	ifequal 5, .GiveGrepa ; hondew, grepa, tamato
+	ifequal 6, .GiveTamato ; hondew, grepa, tamato
+
 	jumptext Route32NoFishText
 
 ;	givepoke MAGIKARP, MAGIKARP_MASK_FORM, 10, EVIOLITE, ULTRA_BALL, DRAGON_RAGE
-.GiveMagikarp:
-	givepoke MAGIKARP, NO_FORM, 100, LEPPA_BERRY, POKE_BALL, REVERSAL
+.GivePomeg:
+	giveitem POMEG_BERRY, 12
 	iffalse_jumpopenedtext Text_NoCarryRoute32
 	playsound SFX_TRANSACTION
 	takemoney $0, 1000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "Here you go, kid!"
-	line "Enjoy it!"
+	text "It's never too"
+	line "late to make a"
+	cont "change!"
 	done
 
-.GiveChinchou:
-	givepoke CHINCHOU, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, PSYBEAM
+.GiveKelpsy:
+	giveitem KELPSY_BERRY, 12
 	iffalse_jumpopenedtext Text_NoCarryRoute32
 	playsound SFX_TRANSACTION
 	takemoney $0, 1000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "Here you go, kid!"
-	line "Enjoy it!"
+	text "It's never too"
+	line "late to make a"
+	cont "change!"
 	done
 
-
-.GiveCorsola:
-	givepoke CORSOLA, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, AMNESIA
+.GiveQualot:
+	giveitem QUALOT_BERRY, 12
 	iffalse_jumpopenedtext Text_NoCarryRoute32
 	playsound SFX_TRANSACTION
 	takemoney $0, 1000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "Here you go, kid!"
-	line "Enjoy it!"
+	text "It's never too"
+	line "late to make a"
+	cont "change!"
 	done
 
-
-.GiveShuckle:
-	givepoke SHUCKLE, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, SHELL_SMASH
+.GiveHondew:
+	giveitem HONDEW_BERRY, 12
 	iffalse_jumpopenedtext Text_NoCarryRoute32
 	playsound SFX_TRANSACTION
 	takemoney $0, 1000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "Here you go, kid!"
-	line "Enjoy it!"
+	text "It's never too"
+	line "late to make a"
+	cont "change!"
+	done
+
+.GiveGrepa:
+	giveitem GREPA_BERRY, 12
+	iffalse_jumpopenedtext Text_NoCarryRoute32
+	playsound SFX_TRANSACTION
+	takemoney $0, 1000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "It's never too"
+	line "late to make a"
+	cont "change!"
+	done
+
+.GiveTamato:
+	giveitem TAMATO_BERRY, 12
+	iffalse_jumpopenedtext Text_NoCarryRoute32
+	playsound SFX_TRANSACTION
+	takemoney $0, 1000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "It's never too"
+	line "late to make a"
+	cont "change!"
 	done
 
 
 .BerryMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, TEXTBOX_Y - 1
-	dw .MenuData
+	menu_coords 10, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 2
+	dw .BerryMenuData
 	db 1 ; default option
 
-.MenuData: ; see data/items/desc4
+.BerryMenuData: ; see data/items/desc4
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
-	db "Magikarp@"
-	db "Chinchou@"
-	db "Corsola@"
-	db "Shuckle@"
+	db 7 ; items
+	db "Pomeg@"
+	db "Kelpsy@"
+	db "Qualot@"
+	db "Hondew@"
+	db "Grepa@"
+	db "Tamato@"	
 	db "Cancel@"
 	
 Route32BerryVendorOptions:

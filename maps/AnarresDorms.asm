@@ -82,11 +82,14 @@ AnarresDormsNPC3Text:
 AnarresDormsBed:
 	showtext BedText1
 
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
 	pause 60
 	special Special_FadeInQuickly
 	special RestartMapMusic
+
 	blackoutmod ANARRES_TOWN
 
 	showtext BedText2

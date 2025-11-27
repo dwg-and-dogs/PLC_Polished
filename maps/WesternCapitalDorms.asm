@@ -69,13 +69,14 @@ WesternCapitalDormsNPC3Text:
 WesternCapitalDormsBed:
 	showtext WesternCapitalBedText1
 	blackoutmod WESTERN_CAPITAL
+
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
-	special HealParty
 	playmusic MUSIC_HEAL
+	special HealParty
 	pause 60
-	special RestartMapMusic
 	special Special_FadeInQuickly
+	special RestartMapMusic
 
 	showtext WesternCapitalBedText2
 	end
