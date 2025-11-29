@@ -445,18 +445,16 @@ Text_NoCarryRoute32:
 	line "it, kid."
 	done
 
-
-
-
-
-
-
-
 Route32Slowpoketail2Text:
 	text "Don't look at me"
 	line "like that!"
 	para "It's a lab-grown"
 	line "SlowpokeTail."
+	
+	para "I hear there's a"
+	line "#mon trader in"
+	para "Violet City who"
+	line "loves them!"
 	done
 
 Route32AmenitiesText:

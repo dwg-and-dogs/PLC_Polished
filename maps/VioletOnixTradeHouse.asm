@@ -16,78 +16,95 @@ VioletOnixTradeHouse_MapScriptHeader:
 	object_event  6,  5, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletHisuiTraderScript, -1
 
 VioletKylesHousePokefanMText:
-	text "There's no substi-"
-	line "tute for the smell"
-	para "of freshly fallen"
-	line "rain."
+	text "My son has made a"
+	line "career out of"
+	cont "#mon trading!"
 	done
 
 VioletHisuiTraderScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_VIOLET_POKEMON
-	iftrue .AlreadyGotPokemon
-	writetext VioletHisuiTraderText
+	checkitem SLOWPOKETAIL
+	iffalse .NoTail
+
+	writetext VioletHisuiTraderText ; Ah, someone with a slowpoke tail! todo 
+	special PlaceMoneyTopRight
+	yesorno
+	iffalse_jumpopenedtext VioletHisuiText4
+	checkmoney $0, 50000
+	ifequal $2, VioletHisuiNotEnoughMoney ; todo pick up here 
 	promptbutton
-	loadmenu .HisuiPokemonMenuHeader
+	loadmenu .PokemonMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .GiveDusclops
-	ifequal 2, .GiveKirlia
-	ifequal 3, .GiveSnover
-	ifequal 4, .GiveLapras
-	jumptext VioletHisuiTraderNoThanksText
+	ifequal 1, .GiveHBraviary
+	ifequal 2, .GiveDrapion
+	ifequal 3, .GiveSkuntank
+	ifequal 4, .GiveLopunny
+	ifequal 5, .GiveSnover
+	jumptext CafeNoFishText
 
-.AlreadyGotPokemon
-	writetext VioletHisuiTraderRememberText
-	waitbutton
-	closetext
-	end
+.GiveHBraviary:
+	givepoke H__BRAVIARY, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	iffalse_jumpopenedtext Text_NoCarry
+	playsound SFX_TRANSACTION
+	takemoney $0, 50000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
 
-.GiveDusclops:
-	givepoke DUSCLOPS, 27
-	iffalse .PartyFull
-	setevent EVENT_GOT_VIOLET_POKEMON
-	writetext VioletHisuiTraderDusclopsText
-	waitbutton
-	closetext
-	end
+	text "Watch out for its"
+	line "loud squawks."
+	done
 
-.GiveKirlia:
-	givepoke KIRLIA, 27
-	iffalse .PartyFull
-	setevent EVENT_GOT_VIOLET_POKEMON
-	writetext VioletHisuiTraderKirliaText
-	waitbutton
-	closetext
-	end
+.GiveDrapion:
+	givepoke DRAPION, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	iffalse_jumpopenedtext Text_NoCarry
+	playsound SFX_TRANSACTION
+	takemoney $0, 50000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
 
+	text "Wear gloves when"
+	line "you handle it."
+	done
+	
+.GiveSkuntank:
+	givepoke SKUNTANK, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	iffalse_jumpopenedtext Text_NoCarry
+	playsound SFX_TRANSACTION
+	takemoney $0, 50000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "I never got used"
+	line "to its smell."
+	done
+	
+.GiveLopunny:
+	givepoke LOPUNNY, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	iffalse_jumpopenedtext Text_NoCarry
+	playsound SFX_TRANSACTION
+	takemoney $0, 50000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "That one was a"
+	line "pain to raise."
+	done
+	
 .GiveSnover:
-	givepoke SNOVER, 27
-	iffalse .PartyFull
-	setevent EVENT_GOT_VIOLET_POKEMON
-	writetext VioletHisuiTraderSnoverText
-	waitbutton
-	closetext
-	end
+	givepoke SNOVER, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	iffalse_jumpopenedtext Text_NoCarry
+	playsound SFX_TRANSACTION
+	takemoney $0, 50000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
 
-.GiveLapras:
-	givepoke LAPRAS, 27
-	iffalse .PartyFull
-	setevent EVENT_GOT_VIOLET_POKEMON
-	writetext VioletHisuiTraderLaprasText
-	waitbutton
-	closetext
-	end
+	text "That one is very"
+	line "curious."
+	done
 
-
-.PartyFull:
-	writetext VioletHisuiTraderPartyFullText
-	waitbutton
-	closetext
-	end
-
-.HisuiPokemonMenuHeader:
+.PokemonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 0, 15, TEXTBOX_Y - 1
 	dw .MenuData
@@ -95,69 +112,61 @@ VioletHisuiTraderScript:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
-	db "Dusclops@"
-	db "Kirlia@"
+	db 6 ; items
+	db "Magikarp@"
+	db "Drapion@"
+	db "Skuntank@"
+	db "Lopunny@"
 	db "Snover@"
-	db "CANCEL@"
-
-VioletHisuiTraderRememberText:
-	text "I really miss"
-	line "that #mon, but"
-	para "I know it was"
-	line "for the best."
-	done
-
-VioletHisuiTraderText:
-	text "Are you a"
-	line "#mon trainer?"
+	db "Cancel@"
 	
-	para "I rescued these"
-	line "#mon from bad"
-	para "situations, and"
-	line "can't take care"
-	cont "of them all."
-	
-	para "Would you take"
-	line "one? Please?"
-	done
-
-VioletHisuiTraderDusclopsText:
-	text "Oh, Dusclops?"
-	
-	para "It must have"
-	line "beckoned to you."
-
-	done
-
-VioletHisuiTraderKirliaText:
-	text "Kirlia! Its power"
-	line "will grow as it"
-	cont "bonds to you."	
-	done
-
-VioletHisuiTraderSnoverText:
-	text "Snover!"
-	
-	para "A great companion"
-	line "in the winter."
-	done
-	
-VioletHisuiTraderLaprasText:
-	text "Oh Lapras!"
-
-	para "It has such a"
-	line "lovely song."
-	
-	done
+.NoTail:
+	writetext VioletHisuiTraderNoTailText
+	waitbutton
+	closetext
+	end
 
 VioletHisuiTraderPartyFullText:
 	text "Oh! Your party is"
 	line "full."
 	done
 
-VioletHisuiTraderNoThanksText:
-	text "You won't? But"
-	line "they really need"
-	cont "your help."
+VioletHisuiTraderNoTailText:
+	text "You could say I'm"
+	line "in the #mon"
+	para "trading business."
+	line "If you can prove"
+	para "you lack scruples"
+	line "by showing me a"
+	cont "Slowpoketail,"
+	cont "then we can talk."
+
+	para "You can get them"
+	line "on Route 32 from"
+	para "a former Team"
+	line "Rocket Grunt."
 	done
+
+VioletHisuiTraderText:
+	text "A Slowpoketail!"
+	line "You're just the"
+	para "type of person I"
+	line "look for."
+	
+	para "I've got the most"
+	line "variety of any"
+	para "#mon trader in"
+	line "the region."
+	
+	para "For 50k, you can"
+	line "walk away with"
+	para "one of these rare"
+	line "#mon."
+	done
+	
+VioletHisuiText4:
+	text "This wasn't a"
+	line "Beedrill Sting,"
+	cont "was it?"
+	done
+	

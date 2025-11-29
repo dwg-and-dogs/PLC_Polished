@@ -31,7 +31,7 @@ DebugRoom_MapScriptHeader:
 
 DebugInteraction: 
 	opentext
-	givepoke ENTEI, 100
+	givepoke MAGIKARP, 5
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
@@ -163,9 +163,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-;	setevent EVENT_BEAT_KENSEY_PORT
-;	setevent EVENT_KIMONO_CABIN_4_LAPRAS_BATTLE
-	warp CLASTS_CRADLE_B1F_CREDIT, 7, 5
+	warp OLIVINE_CITY, 13, 18
 	end
 
 OverworldHallOfFame1: 

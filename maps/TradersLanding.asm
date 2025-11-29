@@ -76,7 +76,7 @@ LandingTimeTravelScript: ; todo
 	writetext LandingYesTimeTravelText
 	waitbutton
 	closetext
-	special Special_CelebiShrineEvent
+;	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	
@@ -314,16 +314,17 @@ TL_Scene_2_R:
 	applyonemovement PLAYER, step_up
 	applymovement TRADERS_LANDING_KURT_2, TL_2_KurtMoves2
 	showtext TL_2_Text5
-	special Special_CelebiShrineEvent
+;	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	setflag ENGINE_FLYPOINT_OLIVINE
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_LANDING_KURT_2
 	setevent EVENT_LANDING_TIME_TRAVELED
-	setmapscene ROUTE_40, 0
-	warp ROUTE_40, 7, 4
 	setscene $2 
+	setmapscene ROUTE_40, 0
+	givepoke MAGIKARP, 5
+	warp ROUTE_40, 7, 4
 	end
 
 TL_2_Text1:
@@ -547,7 +548,7 @@ LandingBarbeauScript:
 	writetext TL_2_Text5
 	waitbutton
 	closetext
-	special Special_CelebiShrineEvent
+;	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	

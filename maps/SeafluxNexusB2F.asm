@@ -18,12 +18,12 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 	bg_event 21, 16, BGEVENT_READ, SeafluxNexusB2F_MasterSwitch  ;  cf warehouse entrance basement key .... 
 	bg_event 19, 24, BGEVENT_READ, SeafluxNexusB2F_ResetSwitch  ;  cf warehouse entrance basement key .... 
 
-	bg_event  7, 14, BGEVENT_READ, SeafluxNexusB2F_Switch1 ; controls w2, w3
-	bg_event 29, 14, BGEVENT_READ, SeafluxNexusB2F_Switch2 ; controls w3, w4
-	bg_event  7, 22, BGEVENT_READ, SeafluxNexusB2F_Switch3 ; controls w1, w2, w4
-	bg_event 29, 22, BGEVENT_READ, SeafluxNexusB2F_Switch4 ; controls w3
-	bg_event 15, 24, BGEVENT_READ, SeafluxNexusB2F_Switch5 ; controls w2, w4, DONE 
-; correct order: switch 5 - 4 - 3 - 1 - 2
+	bg_event  7, 14, BGEVENT_READ, SeafluxNexusB2F_Switch1 ; toggles w4 only (revised) 
+	bg_event 29, 14, BGEVENT_READ, SeafluxNexusB2F_Switch2 ; toggles w3, w4
+	bg_event  7, 22, BGEVENT_READ, SeafluxNexusB2F_Switch3 ; toggles w1, w4 only (revised) 
+	bg_event 29, 22, BGEVENT_READ, SeafluxNexusB2F_Switch4 ; toggles w3
+	bg_event 15, 24, BGEVENT_READ, SeafluxNexusB2F_Switch5 ; toggles w2, w4, DONE 
+; correct order: switch 5 - 4 - 3 - 1
 
 	def_object_events
 	itemball_event  6,  8, GEODE, 1, EVENT_NEXUSB2F_ITEM1
@@ -146,7 +146,7 @@ SeafluxNexusB2F_ResetSwitch: ; option for a hint
 	reloadmap ; should be the end of it
 	end
 
-SeafluxNexusB2F_Switch1: ; controls w2, w3
+SeafluxNexusB2F_Switch1: ; controls w2, w3 --> todo: revise to only toggle w4
 	checkevent EVENT_NEXUS_B2F_FALLS_SWITCH
 	iftrue_jumptext MasterSwitchSetText
 	opentext
@@ -156,25 +156,26 @@ SeafluxNexusB2F_Switch1: ; controls w2, w3
 	writetext SwitchPressedText
 	waitbutton
 	closetext
-.Switch1Waterfall2:
-	checkevent EVENT_NEXUS_WATERFALL_2 ; waterfall event true == waterfall is accessible 
-	iftrue .Switch1Waterfall2Clear
-	setevent EVENT_NEXUS_WATERFALL_2
+.Switch1Waterfall4:
+	checkevent EVENT_NEXUS_WATERFALL_4 ; waterfall event true == waterfall is accessible 
+	iftrue .Switch1Waterfall4Clear
+	setevent EVENT_NEXUS_WATERFALL_4
 	playsound SFX_FORESIGHT
-	sjump .Switch1Waterfall3
-.Switch1Waterfall2Clear:
-	clearevent EVENT_NEXUS_WATERFALL_2
+;	sjump .Switch1Waterfall3
+	sjump .DoneSwitch1
+.Switch1Waterfall4Clear:
+	clearevent EVENT_NEXUS_WATERFALL_4
 	playsound SFX_HYDRO_PUMP
 	
-.Switch1Waterfall3:
-	checkevent EVENT_NEXUS_WATERFALL_3
-	iftrue .Switch1Waterfall3Clear
-	setevent EVENT_NEXUS_WATERFALL_3
-	playsound SFX_FORESIGHT
-	sjump .DoneSwitch1
-.Switch1Waterfall3Clear:
-	clearevent EVENT_NEXUS_WATERFALL_3
-	playsound SFX_HYDRO_PUMP
+;.Switch1Waterfall3:
+;	checkevent EVENT_NEXUS_WATERFALL_3
+;	iftrue .Switch1Waterfall3Clear
+;	setevent EVENT_NEXUS_WATERFALL_3
+;	playsound SFX_FORESIGHT
+;	sjump .DoneSwitch1
+;.Switch1Waterfall3Clear:
+;	clearevent EVENT_NEXUS_WATERFALL_3
+;	playsound SFX_HYDRO_PUMP
 .DoneSwitch1:
 	reloadmap
 	end
@@ -213,7 +214,7 @@ SeafluxNexusB2F_Switch2: ; controls w3, w4
 	end
 
 
-SeafluxNexusB2F_Switch3: ; controls w1, w2, w4
+SeafluxNexusB2F_Switch3: ; toggles w1, w4 (removed w2) 
 	checkevent EVENT_NEXUS_B2F_FALLS_SWITCH
 	iftrue_jumptext MasterSwitchSetText
 	opentext
@@ -228,20 +229,20 @@ SeafluxNexusB2F_Switch3: ; controls w1, w2, w4
 	iftrue .Switch3Waterfall1Clear
 	setevent EVENT_NEXUS_WATERFALL_1
 	playsound SFX_FORESIGHT
-	sjump .Switch3Waterfall2
+	sjump .Switch3Waterfall4
 .Switch3Waterfall1Clear:
 	clearevent EVENT_NEXUS_WATERFALL_1
 	playsound SFX_HYDRO_PUMP
 	
-.Switch3Waterfall2:
-	checkevent EVENT_NEXUS_WATERFALL_2
-	iftrue .Switch3Waterfall2Clear
-	setevent EVENT_NEXUS_WATERFALL_2
-	playsound SFX_FORESIGHT
-	sjump .Switch3Waterfall4
-.Switch3Waterfall2Clear:
-	clearevent EVENT_NEXUS_WATERFALL_2
-	playsound SFX_HYDRO_PUMP
+;.Switch3Waterfall2:
+;	checkevent EVENT_NEXUS_WATERFALL_2
+;	iftrue .Switch3Waterfall2Clear
+;	setevent EVENT_NEXUS_WATERFALL_2
+;	playsound SFX_FORESIGHT
+;	sjump .Switch3Waterfall4
+;.Switch3Waterfall2Clear:
+;	clearevent EVENT_NEXUS_WATERFALL_2
+;	playsound SFX_HYDRO_PUMP
 	
 .Switch3Waterfall4:
 	checkevent EVENT_NEXUS_WATERFALL_4
@@ -326,9 +327,9 @@ SwitchesResetText:
 	text "All waterfalls"
 	line "are reset."
 	
-	para "Hint: solution"
-	line "has each block"
-	cont "hit one time."
+;	para "Hint: solution"
+;	line "has each block"
+;	cont "hit one time."
 	done
 
 Switch1Text:
