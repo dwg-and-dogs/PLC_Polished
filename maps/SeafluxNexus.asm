@@ -3,6 +3,7 @@ SeafluxNexus_MapScriptHeader:
 
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, SeaFluxNexusOpenCallback
 
 
 	def_warp_events
@@ -33,6 +34,16 @@ SeafluxNexus_MapScriptHeader:
 
 	def_object_events
 	object_event 10, 21, SPRITE_NOMAD_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NexusNomadScript, EVENT_NOMAD_NEXUS 
+	object_event  27, 7, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ShoresSageScript, -1
+	object_event  31,  7, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ShoresSageScript, -1
+
+SeaFluxNexusOpenCallback:
+	checkevent EVENT_CIANWOODCITY_EUSINE ; normally open, but if not, then 
+	iftrue .Done ; if you've gone back in time once, then these stay open 
+	changeblock 28,  8, $02 ; warp carpet block
+	changeblock 28, 10, $05 ; open cave 
+.Done:
+	endcallback
 
 
 NexusNomadScript:

@@ -101,7 +101,7 @@ Route41SageScript2:
 	showtext Route41WaitText
 	special FadeOutPalettes
 	waitsfx
-	warp SHELTERED_SHORES, 34, 20
+	warp SEAFLUX_NEXUS, 30, 6
 	end
 
 Route41AskToTimeTravel:

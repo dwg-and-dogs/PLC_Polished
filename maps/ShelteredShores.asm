@@ -24,8 +24,7 @@ ShelteredShores_MapScriptHeader:
 	itemball_event 17, 32, SILVER_LEAF, 3, EVENT_SHORES_ITEM_2
 	itemball_event 40, 38, MAX_REPEL, 1, EVENT_SHORES_ITEM_3
 	itemball_event 43, 16, PETAYA_BERRY, 1, EVENT_SHORES_ITEM_4
-	object_event  30, 19, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ShoresSageScript, -1
-	object_event  36, 21, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ShoresSageScript, -1
+
 	object_event 12, 19, SPRITE_NOMAD_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ShoresIcyWindTutorScript, -1
 	object_event 9, 42, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, ShoresSailorText, -1
 
