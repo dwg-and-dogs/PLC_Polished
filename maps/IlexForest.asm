@@ -261,6 +261,7 @@ IlexHealerScript:
 	writetext WantToHeal
 	waitbutton
 	closetext
+
 	special Special_FadeBlackQuickly
 	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL

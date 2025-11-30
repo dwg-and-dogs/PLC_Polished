@@ -13,7 +13,7 @@ VioletOnixTradeHouse_MapScriptHeader:
 
 	def_object_events
 	object_event  2,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, VioletKylesHousePokefanMText, -1
-	object_event  6,  5, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletHisuiTraderScript, -1
+	object_event  6,  5, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletHisuiTraderScript, -1
 
 VioletKylesHousePokefanMText:
 	text "My son has made a"
@@ -24,10 +24,13 @@ VioletKylesHousePokefanMText:
 VioletHisuiTraderScript:
 	faceplayer
 	opentext
+	checkevent EVENT_VIOLET_TRADER_SAW_SLOWPOKETAIL
+	iftrue .SawTail
 	checkitem SLOWPOKETAIL
 	iffalse .NoTail
-
+.SawTail:
 	writetext VioletHisuiTraderText ; Ah, someone with a slowpoke tail! todo 
+	setevent EVENT_VIOLET_TRADER_SAW_SLOWPOKETAIL
 	special PlaceMoneyTopRight
 	yesorno
 	iffalse_jumpopenedtext VioletHisuiText4
@@ -42,10 +45,10 @@ VioletHisuiTraderScript:
 	ifequal 3, .GiveSkuntank
 	ifequal 4, .GiveLopunny
 	ifequal 5, .GiveSnover
-	jumptext CafeNoFishText
+	jumptext VioletTraderCancelText
 
 .GiveHBraviary:
-	givepoke H__BRAVIARY, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	givepoke H__BRAVIARY, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
 	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 50000
@@ -57,7 +60,7 @@ VioletHisuiTraderScript:
 	done
 
 .GiveDrapion:
-	givepoke DRAPION, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	givepoke DRAPION, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
 	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 50000
@@ -69,7 +72,7 @@ VioletHisuiTraderScript:
 	done
 	
 .GiveSkuntank:
-	givepoke SKUNTANK, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	givepoke SKUNTANK, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
 	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 50000
@@ -81,7 +84,7 @@ VioletHisuiTraderScript:
 	done
 	
 .GiveLopunny:
-	givepoke LOPUNNY, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	givepoke LOPUNNY, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
 	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 50000
@@ -93,7 +96,7 @@ VioletHisuiTraderScript:
 	done
 	
 .GiveSnover:
-	givepoke SNOVER, NO_FORM, 25, NO_ITEM, POKE_BALL, CONFUSION
+	givepoke SNOVER, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
 	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 50000
@@ -106,14 +109,14 @@ VioletHisuiTraderScript:
 
 .PokemonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, TEXTBOX_Y - 1
+	menu_coords 0, 0, 12, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 6 ; items
-	db "Magikarp@"
+	db 5 ; items
+	db "HBraviary@"
 	db "Drapion@"
 	db "Skuntank@"
 	db "Lopunny@"
@@ -126,9 +129,21 @@ VioletHisuiTraderScript:
 	closetext
 	end
 
+VioletHisuiNotEnoughMoney:
+	jumpthisopenedtext
+
+	text "Don't waste my"
+	line "time."
+	done
+
 VioletHisuiTraderPartyFullText:
 	text "Oh! Your party is"
 	line "full."
+	done
+
+VioletTraderCancelText:
+	text "Not unique enough"
+	line "for you?"
 	done
 
 VioletHisuiTraderNoTailText:

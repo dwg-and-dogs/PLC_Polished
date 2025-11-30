@@ -4185,26 +4185,26 @@ LopunnyEvosAttacks:
 	db 1, QUICK_ATTACK
 	db 1, CHARM
 	db 1, DRAIN_KISS
-	db 35, PLAY_ROUGH
-	db 40, DRAIN_PUNCH
-	db 45, DOUBLE_EDGE
-	db 52, HI_JUMP_KICK
-	db 55, AGILITY
-	db 60, BATON_PASS
+	db 30, PLAY_ROUGH
+	db 35, DRAIN_PUNCH
+	db 40, DOUBLE_EDGE
+	db 46, HI_JUMP_KICK
+	db 50, AGILITY
+	db 55, BATON_PASS
 	db 0 ; no more level-up moves
 	
 SkuntankEvosAttacks:
 	db 0 ; no more Evolutions
-	db 1, VENOSHOCK
+	db 1, FLAMETHROWER
 	db 1, POISONPOWDER
 	db 1, BITE
-	db 1, SCREECH
-	db 34, FLAMETHROWER
-	db 38, DARK_PULSE
-	db 45, SUCKER_PUNCH
-	db 52, EXPLOSION
-	db 55, TOXIC
-	db 60, FIRE_BLAST
+	db 1, SMOKESCREEN
+	db 1, VENOSHOCK
+	db 27, TOXIC
+	db 30, SUCKER_PUNCH
+	db 38, NIGHT_SLASH
+	db 43, FLAMETHROWER
+	db 48, EXPLOSION
 	db 0 ; no more level-up moves
 	
 BronzorEvosAttacks:
@@ -4299,15 +4299,18 @@ HippowdonEvosAttacks:
 
 DrapionEvosAttacks:
 	db 0 ; no more Evolutions
-	db 1, VENOSHOCK
-	db 1, POISONPOWDER
-	db 1, BITE
 	db 1, SWORDS_DANCE
-	db 34, X_SCISSOR
-	db 38, DARK_PULSE
-	db 40, POISON_JAB
-	db 45, CRUNCH
-	db 52, KNOCK_OFF
+	db 1, SCARY_FACE
+	db 1, BITE
+	db 1, TOXIC_SPIKES
+	db 1, BUG_BITE	
+	db 26, VENOSHOCK
+	db 30, PIN_MISSILE
+	db 33, TOXIC
+	db 36, NIGHT_SLASH
+	db 39, POISON_JAB
+	db 44, X_SCISSOR
+	db 49, CRUNCH
 	db 0 ; no more level-up moves
 	
 ToxicroakEvosAttacks:
@@ -4429,12 +4432,16 @@ BasculegionEvosAttacks:
 HbraviaryEvosAttacks:;lv 45
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
-	db 1, NIGHT_SLASH
-	db 1, PSYBEAM
-	db 1, AIR_SLASH
-	db 46, ROOST
-	db 36, BRAVE_BIRD
-	db 44, PSYCHIC_M
+	db 1, SCREECH
+	db 1, ROOST
+	db 1, CONFUSION
+	db 26, HYPER_VOICE
+	db 29, PSYBEAM
+	db 32, AIR_SLASH
+	db 35, ROOST
+	db 39, NIGHT_SLASH
+	db 43, BRAVE_BIRD
+	db 47, PSYCHIC_M
 	db 50, HURRICANE
 	db 55, AGILITY
 	db 0 ; no more level-up moves

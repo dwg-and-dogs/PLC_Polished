@@ -31,7 +31,7 @@ DebugRoom_MapScriptHeader:
 
 DebugInteraction: 
 	opentext
-	givepoke MAGIKARP, 5
+	givepoke PIDGEOT, 5
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
@@ -46,10 +46,10 @@ DebugInteraction:
 ;	loadmem wPartyMon3DVs+1, $ee
 ;	loadmem wPartyMon3DVs+2, $ee
 	
-;	givepoke POLITOED, 100
-;	loadmem wPartyMon4DVs+0, $ff
-;	loadmem wPartyMon4DVs+1, $ee
-;	loadmem wPartyMon4DVs+2, $ee
+	givepoke POLITOED, 100
+	loadmem wPartyMon4DVs+0, $ff
+	loadmem wPartyMon4DVs+1, $ee
+	loadmem wPartyMon4DVs+2, $ee
 	
 ;	givepoke LUGIA, 100
 ;	loadmem wPartyMon5DVs+0, $ff
@@ -163,7 +163,8 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp OLIVINE_CITY, 13, 18
+	setevent EVENT_TALKED_TO_LOST_KAJO_GIRL
+	warp KAJO_CABIN, 5, 5
 	end
 
 OverworldHallOfFame1: 

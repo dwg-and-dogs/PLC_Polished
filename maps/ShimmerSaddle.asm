@@ -215,7 +215,7 @@ ShimmerHZ2_Stalks2:
 	step_end
 	
 ShimmerSaddle_Scene3_ManHZ:
-	showemote EMOTE_HAPPY, SHIMMER_GRAMPS_2, 30
+;	showemote EMOTE_HAPPY, SHIMMER_GRAMPS_2, 30
 	applyonemovement PLAYER, step_right
 	turnobject PLAYER, LEFT
 	showtext ShimmerGramps2Text1

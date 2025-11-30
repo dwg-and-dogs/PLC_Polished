@@ -1,4 +1,4 @@
-KajoCabin_MapScriptHeader: ;	def_scene_scripts
+KajoCabin_MapScriptHeader: 
 	def_scene_scripts
 
 	def_callbacks
@@ -16,10 +16,10 @@ KajoCabin_MapScriptHeader: ;	def_scene_scripts
 
 
 	def_object_events
-    object_event 2, 3, SPRITE_SCHOOLGIRL, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, KajoCabinSchoolgirlScript, EVENT_KAJO_SCHOOLGIRL_CABIN ; should be disappeared until you talk to her dad
+    object_event 4, 5, SPRITE_SCHOOLGIRL, 	SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, KajoCabinSchoolgirlScript, EVENT_KAJO_SCHOOLGIRL_CABIN ; should be disappeared until you talk to her dad
     object_event 5, 3, SPRITE_POKEFAN_M, 	SPRITEMOVEDATA_STANDING_LEFT, 	0, 0, -1, -1, PAL_NPC_PURPLE, 	OBJECTTYPE_SCRIPT, 0, KajoCabinDadScript, -1 ; 	
 	object_event 1, 5, SPRITE_MATRON, 		SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, 0, 				OBJECTTYPE_SCRIPT, 0, KaJoHealerScript, -1
-    object_event 2, 3, SPRITE_HIKER, 		SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, KajoCabinHikerText, EVENT_TALKED_TO_LOST_KAJO_GIRL ; 	
+    object_event 2, 3, SPRITE_HIKER, 		SPRITEMOVEDATA_STANDING_RIGHT, 	0, 0, -1, -1, PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptextfaceplayer, KajoCabinHikerText, -1 ; 	
 
 
 KajoCabinHikerText:
@@ -60,6 +60,8 @@ KaJoHealerScript:
 	waitbutton
 	closetext
 	
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
 	pause 60
@@ -89,18 +91,9 @@ KajoCabinDadScript:
     opentext
 	checkevent EVENT_GOT_BRIGHTPOWDER_KAJO
 	iftrue_jumpopenedtext KajoCabinDadAfterText
-    checkevent EVENT_TALKED_TO_CABIN_DAD
-    iftrue .CheckLostGirl
-    writetext KajoCabinDadIntroText
-    waitbutton
-    setevent EVENT_TALKED_TO_CABIN_DAD
-    sjump .AskForHelp
-
-.CheckLostGirl
-    checkevent EVENT_TALKED_TO_LOST_KAJO_GIRL
-    iftrue .GiveReward
-.AskForHelp
-    writetext KajoCabinDadAskHelpText
+	checkevent EVENT_TALKED_TO_LOST_KAJO_GIRL
+	iftrue .GiveReward
+	writetext KajoCabinDadIntroText
     waitbutton
     closetext
     end
@@ -138,13 +131,7 @@ KajoCabinDadIntroText:
     line "to the acquifer to"
     para "gather water, but"
     line "she's lost."
-    done
-
-KajoCabinDadAskHelpText:
-    text "Oh, won't someone"
-    line "find my daughter?"
-    para "She went out for"
-    line "water."
+	cont "I hope she's OK."
     done
 
 KajoCabinDadThankYouText:
@@ -163,9 +150,8 @@ KajoCabinDadAfterText:
     line "glitter might"
     cont "never come off,"
     para "but the bright-"
-    line "powder will keep"
-    para "the hits off of"
-    line "you!"
+    line "powder keeps hits"
+	cont "off of you!"
     done
 
 KajoCabinDadBagFullText:

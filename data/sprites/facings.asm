@@ -82,14 +82,6 @@ FacingStepDown3: ; revised this for keeping the hair looking OK For main charact
 	db  8,  8, 2 | X_FLIP, $82
 	db  8,  0, 2 | X_FLIP, $83
 
-; FacingStepDown3: ; walking down 2
-; 	db 4 ; #
-;-	db  0,  8, X_FLIP, $80
-;-	db  0,  0, X_FLIP, $81
-;+	db  0,  0, 0, $80
-;+	db  0,  8, 0, $81
-; 	db  8,  8, RELATIVE_ATTRIBUTES | X_FLIP, $82
-; 	db  8,  0, RELATIVE_ATTRIBUTES | X_FLIP, $83
 
 FacingStepUp0:
 FacingStepUp2:

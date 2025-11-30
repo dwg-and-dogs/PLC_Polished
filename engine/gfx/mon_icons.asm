@@ -366,11 +366,11 @@ Fly_PrepMonIcon:
 
 PokegearFlyMap_GetMonIcon:
 ; Load species icon into VRAM at tile a
-	call Fly_PrepMonIcon
+	call Fly_PrepMonIcon_Original
 	jr GetIconGFX
 
 FlyFunction_GetMonIcon:
-	call Fly_PrepMonIcon
+	call Fly_PrepMonIcon_Original
 	jr GetIcon_a
 
 LoadTradeAnimationMonIcon:
