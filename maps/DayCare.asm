@@ -128,5 +128,9 @@ DayCarePokeFanNoEggText:
 	line "egg moves and TMs"
 	para "can be found in"
 	line "Johto somewhere."
+
+	para "Maybe the Day"
+	line "Care will be open"
+	cont "at a later date!"
 	done
 	

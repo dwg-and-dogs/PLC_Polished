@@ -5,7 +5,7 @@
 * Pokemon Icons on Fly Map
 * Upgraded pokedex planned for v0.1.0 with most first-stage pokemon, minus babies
 * Hall of Fame sequence doesn't show party pokemon names
-* Graphical glitch in bug catching contest while using Park Ball 
+* Graphical glitch in bug catching contest while using Park Ball  
 
 ## Content wishlist 
 

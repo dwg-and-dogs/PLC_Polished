@@ -30,11 +30,38 @@ DebugRoom_MapScriptHeader:
 	const DEBUG_DWG
 
 DebugInteraction: 
+	applyonemovement PLAYER, hide_object
+
+
 	opentext
 	givepoke PIDGEOT, 5
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
+	waitbutton
+	closetext
+
+
+;	refreshscreen
+	; from here, we get a 
+	special FadeOutPalettes
+
+	loadmem wCurForm, -1
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	opentext
+	pokepic2 0	
+	writethistext
+		text "quick brown fox"
+		line "jumps over the"
+		done
+	pause 120
+	waitbutton
+	closetext
+	warp HOLLYS_HOLT_CREDIT, 10, 25
+	end
+;	waitbutton
+;	closepokepic2
 
 ;	givepoke VICTREEBEL, 100
 ;	loadmem wPartyMon2DVs+0, $ff
@@ -46,10 +73,10 @@ DebugInteraction:
 ;	loadmem wPartyMon3DVs+1, $ee
 ;	loadmem wPartyMon3DVs+2, $ee
 	
-	givepoke POLITOED, 100
-	loadmem wPartyMon4DVs+0, $ff
-	loadmem wPartyMon4DVs+1, $ee
-	loadmem wPartyMon4DVs+2, $ee
+;	givepoke POLITOED, 100
+;	loadmem wPartyMon4DVs+0, $ff
+;	loadmem wPartyMon4DVs+1, $ee
+;	loadmem wPartyMon4DVs+2, $ee
 	
 ;	givepoke LUGIA, 100
 ;	loadmem wPartyMon5DVs+0, $ff
@@ -164,7 +191,7 @@ endr
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
 	setevent EVENT_TALKED_TO_LOST_KAJO_GIRL
-	warp KAJO_CABIN, 5, 5
+	warp HOLLYS_HOLT_CREDIT, 10, 25
 	end
 
 OverworldHallOfFame1: 
