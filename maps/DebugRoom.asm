@@ -29,18 +29,29 @@ DebugRoom_MapScriptHeader:
 	object_const_def
 	const DEBUG_DWG
 
-LoadSlot1Names:
-    ; --- STEP 1: LOAD SPECIES NAME INTO BUFFER 1 ---
-    ld a, [wPartyMon1Species]   ; Load the Species ID of the 1st Pokemon
-    ld [wNamedObjectIndex], a   ; Set it as the object to look up
-    call GetPokemonName         ; Standard routine: Writes name to wStringBuffer1
-                                ; (Note: If GetPokemonName is missing, try GetBasePokemonName)
+LoadSlot1Data:
+    ; --- 1. SPECIES NAME -> wStringBuffer1 ---
+    ld a, [wPartyMon1Species]   ; Load Species ID
+    ld [wNamedObjectIndex], a   ; Set for lookup
+    call GetPokemonName         ; Writes "PIDGEY@" to wStringBuffer1
 
-    ; --- STEP 2: LOAD NICKNAME INTO BUFFER 2 ---
-    ld hl, wPartyMonNicknames   ; Point to the start of the nickname list (Slot 1)
-    ld de, wStringBuffer2       ; Destination: Buffer 2 (so we don't overwrite Buffer 1)
-    ld bc, MON_NAME_LENGTH      ; Length of nickname (11 bytes)
-    rst CopyBytes               ; Copy the bytes
+    ; --- 2. NICKNAME -> wStringBuffer2 ---
+    ld hl, wPartyMonNicknames   ; Slot 1 Nickname source
+    ld de, wStringBuffer2       ; Destination
+    ld bc, MON_NAME_LENGTH      ; Copy 11 bytes
+    rst CopyBytes
+
+    ; --- 3. LEVEL -> wStringBuffer3 ---
+    ; PrintNum expects:
+    ; HL = Destination (Where to write the text)
+    ; DE = Source (Where the number is stored in memory)
+    ; BC = Flags (Bytes to read, Digits to print)
+    
+    ld hl, wStringBuffer3       ; Destination: Buffer 3
+    ld de, wPartyMon1Level      ; Source: The Level byte in Party Struct
+    lb bc, 1, 3                 ; 1 Byte (0-255), 3 Digits (padding)
+    call PrintNum               ; Converts number to text "  5"
+    ld [hl], "@"                ; Manually add the string terminator!
     ret
 
 DebugInteraction: 
@@ -64,16 +75,18 @@ DebugInteraction:
 	loadmem wCurPartyMon, 0    ; Select first party slot
 	readmem wPartyMon1Species  ; or wCurPartySpecies... seems to work either way 
 
-	callasm LoadSlot1Names     ; <--- Calls the routine we wrote above
-
-	opentext
-	pokepic2 0	; draws a pokepic of the first party slot 
-	writethistext ; can also point to something else, but... 
-		text_ram wStringBuffer1 ; Prints the Species Name (e.g. "PIDGEY")
-        line " "                ; Starts a new line (with a space)
-        text_ram wStringBuffer2 ; Prints the Nickname (e.g. "BIRDY")
+	callasm LoadSlot1Data       ; Load all 3 buffers
+    
+    opentext
+    pokepic2 0
+    writethistext
+        text_ram wStringBuffer1 ; "PIDGEY"
+        text " Lv."             ; " Lv."
+        text_ram wStringBuffer3 ; "  5"
+        line " "                ; New line
+        text_ram wStringBuffer2 ; "BIRDY"
         done
-	pause 120
+    pause 120
 	waitbutton
 	closetext
 	warp HOLLYS_HOLT_CREDIT, 10, 25
