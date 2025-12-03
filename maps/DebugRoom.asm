@@ -29,9 +29,15 @@ DebugRoom_MapScriptHeader:
 	object_const_def
 	const DEBUG_DWG
 
+CopyFirstSlotName:
+    ld hl, wPartyMonNicknames  ; Point to the start of the nickname list (Slot 1)
+    ld de, wStringBuffer1      ; Point to the text buffer
+    ld bc, MON_NAME_LENGTH     ; Number of bytes to copy (usually 11 in Gen 2)
+    rst CopyBytes              ; Copy the bytes
+    ret
+
 DebugInteraction: 
 	applyonemovement PLAYER, hide_object
-
 
 	opentext
 	givepoke PIDGEOT, 5
@@ -42,18 +48,23 @@ DebugInteraction:
 	closetext
 
 
+
 ;	refreshscreen
-	; from here, we get a 
+	; need to adapt from here 
 	special FadeOutPalettes
 
-	loadmem wCurForm, -1
+	loadmem wCurForm, -1 ; force
 	loadmem wCurPartyMon, 0    ; Select first party slot
-	readmem wPartyMon1Species  ; or wCurPartySpecies
+	readmem wPartyMon1Species  ; or wCurPartySpecies... seems to work either way 
+
+	callasm CopyFirstSlotName  ; <--- This loads the name into memory
+
 	opentext
-	pokepic2 0	
-	writethistext
-		text "quick brown fox"
-		line "jumps over the"
+	pokepic2 0	; draws a pokepic of the first party slot 
+	writethistext ; can also point to something else, but... 
+		text_ram wStringBuffer1 ; <--- This prints the name from memory
+		text " is the"          ; <--- Continues the sentence
+		line "first member!"
 		done
 	pause 120
 	waitbutton

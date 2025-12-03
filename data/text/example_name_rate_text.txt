@@ -1,0 +1,49 @@
+SECTION "_NameRaterBetterNameText", ROMX
+_NameRaterBetterNameText::
+	text "Hm… "
+	text_ram wStringBuffer1
+	text "…"
+	line "That's a fairly"
+	cont "decent name."
+
+	para "But, how about a"
+	line "slightly better"
+	cont "nickname?"
+
+	para "Want me to give it"
+	line "a better name?"
+	done
+
+SECTION "_NameRaterWhatNameText", ROMX
+_NameRaterWhatNameText::
+	text "All right. What"
+	line "name should we"
+	cont "give it, then?"
+	prompt
+
+SECTION "_NameRaterFinishedText", ROMX
+_NameRaterFinishedText::
+	text "That's a better"
+	line "name than before!"
+
+	para "Well done!"
+	done
+
+SECTION "_NameRaterComeAgainText", ROMX
+_NameRaterComeAgainText::
+	text "OK, then. Come"
+	line "again sometime."
+	done
+
+SECTION "_NameRaterPerfectNameText", ROMX
+_NameRaterPerfectNameText::
+	text "Hm… "
+	text_ram wStringBuffer1
+	text "?"
+	line "What a great name!"
+	cont "It's perfect."
+
+	para "Treat "
+	text_ram wStringBuffer1
+	line "with loving care."
+	done

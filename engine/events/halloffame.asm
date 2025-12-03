@@ -588,4 +588,86 @@ HOF_AnimatePlayerPic:
 	db "Play Time@"
 
 
+;DisplayHOFMon:
+;    xor a                           ; Clear the Accumulator (A = 0)
+;    ldh [hBGMapMode], a             ; [cite_start]Disable auto-transfer of the BG Map to VRAM (safe for drawing) [cite: 3]
+;    ld a, [hli]                     ; Load the Species byte from [hl] into A, then increment hl
+;    ld [wTempMonSpecies], a         ; Store the species in wTempMonSpecies variable
+;    ld a, [hli]                     ; Load the first byte of ID (Low) from [hl], increment hl
+;    ld [wTempMonID], a              ; Store it in wTempMonID
+;    ld a, [hli]                     ; Load the second byte of ID (High) from [hl], increment hl
+;    ld [wTempMonID + 1], a          ; Store it in wTempMonID + 1
+;    ld a, [hli]                     ; Load the first byte of Personality (Low), increment hl
+;    ld [wTempMonPersonality], a     ; Store it in wTempMonPersonality
+;    ld a, [hli]                     ; Load the second byte of Personality (High), increment hl
+;    ld [wTempMonPersonality + 1], a ; Store it in wTempMonPersonality + 1
+;    ld a, [hli]                     ; Load the Level byte, increment hl
+;    ld [wTempMonLevel], a           ; Store it in wTempMonLevel
+;    ld de, wStringBuffer2           ; Set destination pointer (de) to the string buffer
+;    ld bc, MON_NAME_LENGTH - 1      ; Set byte count (bc) to name length (usually 10)
+;    rst CopyBytes                   ; Copy the Nickname from [hl] to [de] (StringBuffer2)
+;    ld a, "@"                       ; Load the string terminator character into A
+;    ld [wStringBuffer2 + 10], a     ; Ensure the string in the buffer is terminated correctly
+;    hlcoord 0, 0                    ; Point hl to the top-left tile of the screen buffer
+;    ld bc, SCREEN_WIDTH * SCREEN_HEIGHT ; Load total screen size into bc
+;    ld a, " "                       ; Load a "Space" tile character into A
+;    rst ByteFill                    ; Fill the entire screen buffer with spaces (clear screen)
+;    hlcoord 0, 0                    ; Point hl to top-left again
+;    lb bc, 3, SCREEN_WIDTH - 2      ; Load height (3) and width (Screen Width - 2) for box
+;    call Textbox                    ; Draw the top textbox border
+;    hlcoord 0, 12                   ; Point hl to the bottom area (row 12)
+;    lb bc, 4, SCREEN_WIDTH - 2      ; Load height (4) and width for bottom box
+;    call Textbox                    ; Draw the bottom textbox border
+;    ld a, [wTempMonSpecies]         ; Reload the species from variable to A
+;    ld [wCurPartySpecies], a        ; Store species in wCurPartySpecies (needed for sprite loading)
+;    ld [wTextDecimalByte], a        ; Store species in wTextDecimalByte (for printing the Dex number later)
+;    ld hl, wTempMonForm             ; Point hl to wTempMonForm
+;    predef GetVariant               ; Call function to determine form (e.g., Unown letter)
+;    hlcoord 6, 5                    ; Point hl to screen coordinates (6,5)
+;    call PrepMonFrontpicFlipped     ; Load and draw the Pokemon's front sprite (flipped for HOF style)
+;    ld a, [wTempMonIsEgg]           ; Check the "Is Egg" flag
+;    bit MON_IS_EGG_F, a             ; Test the specific bit for Egg
+;    jr nz, .print_id_no             ; If it is an Egg (Non-Zero), jump to .print_id_no (skip name/gender)
+;    hlcoord 1, 13                   ; Point hl to row 13, column 1
+;    ld a, "№"                       ; Load the "No." symbol
+;    ld [hli], a                     ; Place symbol, increment hl
+;    ld [hl], "."                    ; Place period
+;    hlcoord 3, 13                   ; Point hl to row 13, column 3
+;    ld de, wTextDecimalByte         ; Point de to the Species number stored earlier
+;    lb bc, PRINTNUM_LEADINGZEROS | 1, 3 ; Set formatting (Leading Zeros, 1 byte, 3 digits)
+;    call PrintNum                   ; Print the Dex Number
+;    call GetBasePokemonName         ; Look up the species name (e.g., "PIKACHU")
+;    hlcoord 7, 13                   ; Point hl to row 13, column 7
+;    rst PlaceString                 ; Print the Species Name string
+;    ld a, TEMPMON                   ; Load constant TEMPMON (tells GetGender to look at wTempMon struct)
+;    ld [wMonType], a                ; Store in wMonType
+;    farcall GetGender               ; Calculate gender based on DVs/Personality
+;    ld a, " "                       ; Default to Space (Genderless)
+;    jr c, .got_gender               ; If Carry flag set (Genderless), jump to print
+;    ld a, "♂"                       ; Load Male symbol
+;    jr nz, .got_gender              ; If Not Zero (Male), jump to print
+;    ld a, "♀"                       ; Load Female symbol (Fallthrough if Zero)
+;
+;.got_gender
+;    hlcoord 18, 13                  ; Point hl to row 13, column 18
+;    ld [hli], a                     ; Print the gender symbol
+;    hlcoord 8, 14                   ; Point hl to row 14, column 8
+;    ld a, "/"                       ; Load slash character
+;    ld [hli], a                     ; Print slash
+;    ld de, wStringBuffer2           ; Point de to the Nickname buffer
+;    rst PlaceString                 ; Print the Nickname
+;    hlcoord 1, 16                   ; Point hl to row 16, column 1
+;    call PrintLevel                 ; Print the "Lv." string and the level number
+;
+;.print_id_no
+;    hlcoord 7, 16                   ; Point hl to row 16, column 7
+;    ld a, "<ID>"                    ; Load ID symbol
+;    ld [hli], a                     ; Print ID symbol
+;    ld a, "№"                       ; Load "No." symbol
+;    ld [hli], a                     ; Print "No."
+;    ld [hl], "."                    ; Print period
+;    hlcoord 10, 16                  ; Point hl to row 16, column 10
+;    ld de, wTempMonID               ; Point de to the ID variable
+;    lb bc, PRINTNUM_LEADINGZEROS | 2, 5 ; Set formatting (Leading zeros, 2 bytes, 5 digits)
+;    jmp PrintNum                    ; Print the ID Number and return (jmp is like call+ret)
 	
