@@ -29,11 +29,18 @@ DebugRoom_MapScriptHeader:
 	object_const_def
 	const DEBUG_DWG
 
-CopyFirstSlotName:
-    ld hl, wPartyMonNicknames  ; Point to the start of the nickname list (Slot 1)
-    ld de, wStringBuffer1      ; Point to the text buffer
-    ld bc, MON_NAME_LENGTH     ; Number of bytes to copy (usually 11 in Gen 2)
-    rst CopyBytes              ; Copy the bytes
+LoadSlot1Names:
+    ; --- STEP 1: LOAD SPECIES NAME INTO BUFFER 1 ---
+    ld a, [wPartyMon1Species]   ; Load the Species ID of the 1st Pokemon
+    ld [wNamedObjectIndex], a   ; Set it as the object to look up
+    call GetPokemonName         ; Standard routine: Writes name to wStringBuffer1
+                                ; (Note: If GetPokemonName is missing, try GetBasePokemonName)
+
+    ; --- STEP 2: LOAD NICKNAME INTO BUFFER 2 ---
+    ld hl, wPartyMonNicknames   ; Point to the start of the nickname list (Slot 1)
+    ld de, wStringBuffer2       ; Destination: Buffer 2 (so we don't overwrite Buffer 1)
+    ld bc, MON_NAME_LENGTH      ; Length of nickname (11 bytes)
+    rst CopyBytes               ; Copy the bytes
     ret
 
 DebugInteraction: 
@@ -57,15 +64,15 @@ DebugInteraction:
 	loadmem wCurPartyMon, 0    ; Select first party slot
 	readmem wPartyMon1Species  ; or wCurPartySpecies... seems to work either way 
 
-	callasm CopyFirstSlotName  ; <--- This loads the name into memory
+	callasm LoadSlot1Names     ; <--- Calls the routine we wrote above
 
 	opentext
 	pokepic2 0	; draws a pokepic of the first party slot 
 	writethistext ; can also point to something else, but... 
-		text_ram wStringBuffer1 ; <--- This prints the name from memory
-		text " is the"          ; <--- Continues the sentence
-		line "first member!"
-		done
+		text_ram wStringBuffer1 ; Prints the Species Name (e.g. "PIDGEY")
+        line " "                ; Starts a new line (with a space)
+        text_ram wStringBuffer2 ; Prints the Nickname (e.g. "BIRDY")
+        done
 	pause 120
 	waitbutton
 	closetext
