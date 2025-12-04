@@ -19,7 +19,6 @@ HollysHoltCredit_MapScriptHeader:
 	object_event  8, 25, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event 18, 38, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
 	object_event 17, 37, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1 
-	tmhmball_event 24, 33, TM_X_SCISSOR, EVENT_GOT_TM_X_SCISSOR
 
 LoadSelectedMonData::
     ; --- 1. FIND ADDRESS OF CHOSEN MON'S STRUCT ---
@@ -78,21 +77,17 @@ HollyHoltCreditScene:
 	pause 120
 	applymovement PLAYER, HH_Credit_Move1
 	pause 120
-	applymovement PLAYER, HH_Credit_Move2 ; todo, revise the path that is taken so that it ends up on the kimono house 
-	pause 120
-	applymovement PLAYER, HH_Credit_Move3
+	applymovement PLAYER, HH_Credit_Move2
 	pause 120
 	; hall of fame section 
 	special FadeOutPalettes
-
 	loadmem wCurForm, -1 ; force
 	loadmem wCurPartyMon, 0    ; Select first party slot
 	readmem wPartyMon1Species  ; or wCurPartySpecies... seems to work either way 
-
 	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
-
     opentext
 	loadmem wCurForm, -1
+
 	loadmem wCurPartyMon, 1    ; Select first party slot
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic2 0	
@@ -106,9 +101,7 @@ HollyHoltCreditScene:
     pause 120
 	waitbutton
 	closetext
-
-
-
+; need the following for later cutscenes 
 	setevent EVENT_BURNED_TOWER_B1F_BEASTS_1
 	clearevent EVENT_BURNED_TOWER_B1F_BEASTS_2
 	setevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
@@ -117,9 +110,7 @@ HollyHoltCreditScene:
 	end
 
 
-HH_Credit_Move1:
-	step_right
-	step_right
+HH_Credit_Move1: ; goes to 21 25
 	step_right
 	step_right
 	step_right
@@ -133,7 +124,7 @@ HH_Credit_Move1:
 	step_right
 	step_end
 
-HH_Credit_Move2:
+HH_Credit_Move2: ; goes to 21 43
 	step_down
 	step_down
 	step_down
@@ -150,16 +141,6 @@ HH_Credit_Move2:
 	step_down
 	step_down
 	step_down
-	step_end
-
-HH_Credit_Move3:
-	step_left
-	step_left
-	step_up
-	step_left
-	step_up
-	step_left
-	step_up
-	step_left
-	step_left
+	step_down
+	step_down
 	step_end

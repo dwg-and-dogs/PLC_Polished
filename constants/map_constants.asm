@@ -395,7 +395,7 @@ ENDM
 	map_const KIMONO_CABIN_5,                               9,  9
 
 	newgroup                                                     ; 24
-
+	
 
 	newgroup                                                     ; 25
 

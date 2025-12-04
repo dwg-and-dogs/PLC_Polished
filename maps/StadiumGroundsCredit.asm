@@ -53,15 +53,32 @@ StadiumGroundsCreditScene:
 	readvar VAR_PARTYCOUNT
 	ifless $2, .done
 	
-
-	refreshscreen
+	
+	
+	special FadeOutPalettes
+	loadmem wCurForm, -1 ; force
+	loadmem wCurPartyMon, 0    ; Select first party slot
+	readmem wPartyMon2Species  ; or wCurPartySpecies... seems to work either way 
+	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
+    opentext
 	loadmem wCurForm, -1
+
 	loadmem wCurPartyMon, 1    ; Select first party slot
-	readmem wPartyMon2Species  ; or wCurPartySpecies
-	pokepic 0	
-	pause 120
+	readmem wPartyMon1Species  ; or wCurPartySpecies
+	pokepic2 0	
+    writethistext
+        text_ram wStringBuffer1 ; "PIDGEY"
+        text " Lv."             ; " Lv."
+        text_ram wStringBuffer3 ; "  5"
+        line " "                ; New line
+        text_ram wStringBuffer2 ; "BIRDY"
+        done
+    pause 120
 	waitbutton
-	closepokepic
+	closetext
+
+
+
 .done:
 	pause 60
 	special FadeOutPalettes
