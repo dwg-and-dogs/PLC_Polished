@@ -1147,4 +1147,7 @@ ShimmerSaddle_BlockData:
 SECTION "VioletCatacombs_BlockData", ROMX
 VioletCatacombs_BlockData:
 	INCBIN "maps/VioletCatacombs.ablk.lz"
-	
+
+SECTION "CreditsPokemonAll_BlockData", ROMX
+CreditsPokemonAll_BlockData:
+	INCBIN "maps/CreditsPokemonAll.ablk.lz"

@@ -89,4 +89,5 @@ MapScenes::
 	scene_var BURNED_TOWER_B1F_CREDIT, 						  wBurnedTower1FCreditSceneID
 	
 	scene_var DRAGONS_DEN_CREDIT, wDragonsDenCreditSceneID
+	scene_var CREDITS_POKEMON_ALL, wCreditsPokemonAllSceneID
 	db -1

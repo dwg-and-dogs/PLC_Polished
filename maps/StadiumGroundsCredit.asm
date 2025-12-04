@@ -42,13 +42,13 @@ StadiumGroundsFloodCallback2:
 StadiumGroundsCreditScene: 
 	;MOVING CAMERA
 	applyonemovement PLAYER, hide_object
-	pause 120
+	pause 30
 	applymovement PLAYER, SG_Credit_Move1
-	pause 120
+	pause 30
 	applymovement PLAYER, SG_Credit_Move2
-	pause 120
+	pause 30
 	applymovement PLAYER, SG_Credit_Move3
-	pause 120
+	pause 30
 	; hall of fame section 
 	readvar VAR_PARTYCOUNT
 	ifless $2, .done
@@ -73,14 +73,14 @@ StadiumGroundsCreditScene:
         line " "                ; New line
         text_ram wStringBuffer2 ; "BIRDY"
         done
-    pause 120
+    pause 30
 	waitbutton
 	closetext
 
 
 
 .done:
-	pause 60
+	pause 30
 	special FadeOutPalettes
 	warp EMPERORS_GARDEN_CREDIT, 29, 28
 	end

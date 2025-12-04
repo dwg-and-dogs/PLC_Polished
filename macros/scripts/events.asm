@@ -1340,4 +1340,12 @@ micrtypeface: MACRO
 	db micrtypeface_command
 ENDM
 
+	const warphide_command
+warphide: MACRO
+	db warphide_command
+	map_id \1 ; map
+	db \2 ; x
+	db \3 ; y
+ENDM
+
 NUM_EVENT_COMMANDS EQU const_value

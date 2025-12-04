@@ -395,7 +395,7 @@ ENDM
 	map_const KIMONO_CABIN_5,                               9,  9
 
 	newgroup                                                     ; 24
-	
+
 
 	newgroup                                                     ; 25
 
@@ -435,6 +435,8 @@ ENDM
 	map_const TINDER_GARDEN_2, 							   	 5,  5
 	map_const SHIMMER_SADDLE, 								30, 20
 	map_const VIOLET_CATACOMBS, 							10, 15 ; TUNNEL 
+	map_const CREDITS_POKEMON_ALL, 							  5, 5
+	
 
 	newgroup                                                     ; 32
 

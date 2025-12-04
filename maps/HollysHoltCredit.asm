@@ -74,39 +74,41 @@ HollyHoltCreditScene:
 	; warp in at 10, 25
 	applyonemovement PLAYER, hide_object
 	waitsfx
-	pause 120
+	pause 30
 	applymovement PLAYER, HH_Credit_Move1
-	pause 120
+	pause 30
 	applymovement PLAYER, HH_Credit_Move2
-	pause 120
+	pause 30
 	; hall of fame section 
 	special FadeOutPalettes
-	loadmem wCurForm, -1 ; force
-	loadmem wCurPartyMon, 0    ; Select first party slot
-	readmem wPartyMon1Species  ; or wCurPartySpecies... seems to work either way 
-	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
-    opentext
-	loadmem wCurForm, -1
-
-	loadmem wCurPartyMon, 1    ; Select first party slot
-	readmem wPartyMon1Species  ; or wCurPartySpecies
-	pokepic2 0	
-    writethistext
-        text_ram wStringBuffer1 ; "PIDGEY"
-        text " Lv."             ; " Lv."
-        text_ram wStringBuffer3 ; "  5"
-        line " "                ; New line
-        text_ram wStringBuffer2 ; "BIRDY"
-        done
-    pause 120
-	waitbutton
-	closetext
+;	loadmem wCurForm, -1 ; force
+;	loadmem wCurPartyMon, 0    ; Select first party slot
+;	readmem wPartyMon1Species  ; or wCurPartySpecies... seems to work either way 
+;	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
+;    opentext
+;	loadmem wCurForm, -1
+;
+;	loadmem wCurPartyMon, 1    ; Select first party slot
+;	readmem wPartyMon1Species  ; or wCurPartySpecies
+;	pokepic2 0	
+;    writethistext
+;        text_ram wStringBuffer1 ; "PIDGEY"
+;        text " Lv."             ; " Lv."
+;        text_ram wStringBuffer3 ; "  5"
+;        line " "                ; New line
+;        text_ram wStringBuffer2 ; "BIRDY"
+;        done
+;    pause 30
+;	waitbutton
+;	closetext
 ; need the following for later cutscenes 
 	setevent EVENT_BURNED_TOWER_B1F_BEASTS_1
 	clearevent EVENT_BURNED_TOWER_B1F_BEASTS_2
 	setevent EVENT_STADIUM_GROUNDS_FIRST_FLOOD
 	setevent EVENT_STADIUM_GROUNDS_SECOND_FLOOD
-	warp STADIUM_GROUNDS_CREDIT, 8, 35
+	warp CREDITS_POKEMON_ALL, 4, 5 
+	applyonemovement PLAYER, hide_object
+
 	end
 
 

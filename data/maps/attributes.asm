@@ -567,3 +567,4 @@ ENDM
 	map_attributes ClastsCradleB1FCredit, CLASTS_CRADLE_B1F_CREDIT, $0, 0 
 	map_attributes BurnedTowerB1FCredit, BURNED_TOWER_B1F_CREDIT, $0, 0 	
 	
+	map_attributes CreditsPokemonAll, CREDITS_POKEMON_ALL, $4D, 0

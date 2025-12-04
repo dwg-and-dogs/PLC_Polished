@@ -70,7 +70,7 @@ DebugInteraction:
     pause 120
 	waitbutton
 	closetext
-	warp HOLLYS_HOLT_CREDIT, 10, 25
+	warphide HOLLYS_HOLT_CREDIT, 10, 25
 	end
 ;	waitbutton
 ;	closepokepic2

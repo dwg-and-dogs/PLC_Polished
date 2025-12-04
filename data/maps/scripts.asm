@@ -471,6 +471,7 @@ INCLUDE "maps/RouteKajoRuinsOfAlphGate.asm"
 INCLUDE "maps/UndergroundRadioTower.asm"
 INCLUDE "maps/ShimmerSaddle.asm"
 INCLUDE "maps/VioletCatacombs.asm"
+INCLUDE "maps/CreditsPokemonAll.asm"
 
 SECTION "Blackthorn Scripts", ROMX
 

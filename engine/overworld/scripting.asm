@@ -267,6 +267,7 @@ ScriptCommandTable:
 	dw Script_checkbp                    ; ce
 	dw Script_italictypeface              ; cf	
 	dw Script_micrtypeface              ; cf		
+	dw Script_warphide    				; d0
 	assert_table_length NUM_EVENT_COMMANDS
 
 StartScript:
@@ -2668,3 +2669,35 @@ Script_keyitemnotify:
 	ld b, BANK(_PutItemInPocketText)
 	ld hl, _PutItemInPocketText
 	jmp MapTextbox
+
+Script_warphide:
+; This seems to be some sort of error handling case.
+	call GetScriptByte
+	and a
+	jr z, .not_ok
+	ld [wMapGroup], a
+	call GetScriptByte
+	ld [wMapNumber], a
+	call GetScriptByte
+	ld [wXCoord], a
+	call GetScriptByte
+	ld [wYCoord], a
+	ld a, -1
+	ld [wDefaultSpawnpoint], a
+	ld a, MAPSETUP_WARPHIDE
+	ldh [hMapEntryMethod], a
+	ld a, 1
+	ld [wMapStatus], a
+	jmp StopScript
+
+.not_ok
+	call GetScriptByte
+	call GetScriptByte
+	call GetScriptByte
+	ld a, -1
+	ld [wDefaultSpawnpoint], a
+	ld a, MAPSETUP_BADWARP
+	ldh [hMapEntryMethod], a
+	ld a, 1
+	ld [wMapStatus], a
+	jmp StopScript
