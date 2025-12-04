@@ -47,9 +47,9 @@ BURNEDTOWERB1F_CREDITCreditScene:
 	applyonemovement PLAYER, hide_object
 	playmusic MUSIC_NONE
 	
-	pause 120
-	applymovement BURNEDTOWERB1F_CREDIT_HOOH, HoOhMovesBT1FC
 	pause 60
+	applymovement BURNEDTOWERB1F_CREDIT_HOOH, HoOhMovesBT1FC
+	pause 30
 	cry HO_OH
 	waitsfx
 
@@ -100,7 +100,8 @@ BURNEDTOWERB1F_CREDITCreditScene:
 	writetext halloffametext_2
 	waitbutton
 	closetext
-	halloffame
+	warphide CREDITS_POKEMON_ALL, 4, 5
+;	halloffame
 	end
 
 halloffametext_2:

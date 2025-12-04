@@ -229,7 +229,7 @@ PickupDocksScene:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp CLASTS_CRADLE_B1F, 21, 11
+	warphide CLASTS_CRADLE_B1F, 21, 11
 	end
 
 Docks_Text1:

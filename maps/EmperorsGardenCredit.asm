@@ -27,31 +27,31 @@ EmperorsGardenCreditScene:
 	;MOVING CAMERA
 	; warp in at x, y 
 	applyonemovement PLAYER, hide_object
-	pause 120
+	pause 30
 	applymovement PLAYER, EG_Credit_Move1 ; up 20 
-	pause 120
+	pause 30
 	applymovement PLAYER, EG_Credit_Move2 ; left 16 
-	pause 120
+	pause 30
 	applymovement PLAYER, EG_Credit_Move3 ; down 9 
-	pause 120
-	; hall of fame section 
-	readvar VAR_PARTYCOUNT
-	ifless $3, .done
-
-	; CHECK FOR party of at least five mons 
-	; iffalse .done 
-	refreshscreen
-	loadmem wCurForm, -1
-	loadmem wCurPartyMon, 2    ; Select first party slot
-	readmem wPartyMon3Species  ; or wCurPartySpecies
-	pokepic 0	
-	pause 120
-	waitbutton
-	closepokepic
-.done:
-	pause 60
-	special FadeOutPalettes
-	warp ARDUOUS_ANCHORAGE_CREDIT, 6, 26
+	pause 30
+;	; hall of fame section 
+;	readvar VAR_PARTYCOUNT
+;	ifless $3, .done
+;
+;	; CHECK FOR party of at least five mons 
+;	; iffalse .done 
+;	refreshscreen
+;	loadmem wCurForm, -1
+;	loadmem wCurPartyMon, 2    ; Select first party slot
+;	readmem wPartyMon3Species  ; or wCurPartySpecies
+;	pokepic 0	
+;	pause 120
+;	waitbutton
+;	closepokepic
+;.done:
+;	pause 30
+;	special FadeOutPalettes
+	warphide ARDUOUS_ANCHORAGE_CREDIT, 6, 26
 	end
 
 

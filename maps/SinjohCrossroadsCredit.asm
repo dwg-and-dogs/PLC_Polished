@@ -21,29 +21,29 @@ SinjohCrossroadsCredit_MapScriptHeader:
 SinjohCrossroadsCreditScene: 
 	;MOVING CAMERA
 	; warp in at x, y 
-	applyonemovement PLAYER, hide_object
-	waitsfx
-	pause 120 
+;	applyonemovement PLAYER, hide_object
+;	waitsfx
+	pause 30 
 	applymovement PLAYER, SC_Credit_Move1 ; 6 LEFT 
-	pause 120
+	pause 30
 	applymovement PLAYER, SC_Credit_Move2 ; 14 UP 
-	pause 120
-	; hall of fame section 
-	readvar VAR_PARTYCOUNT
-	ifless $5, .done
-
-	refreshscreen
-	loadmem wCurForm, -1
-	loadmem wCurPartyMon, 4    ; Select party slot
-	readmem wPartyMon5Species  ; or wCurPartySpecies
-	pokepic 0	
-	pause 120
-	waitbutton
-	closepokepic
-.done:
-	pause 60
-	special FadeOutPalettes
-	warp CLASTS_CRADLE_B1F_CREDIT, 8, 6
+	pause 30
+;	; hall of fame section 
+;	readvar VAR_PARTYCOUNT
+;	ifless $5, .done
+;
+;	refreshscreen
+;	loadmem wCurForm, -1
+;	loadmem wCurPartyMon, 4    ; Select party slot
+;	readmem wPartyMon5Species  ; or wCurPartySpecies
+;	pokepic 0	
+;	pause 120
+;	waitbutton
+;	closepokepic
+;.done:
+;	pause 60
+;	special FadeOutPalettes
+	warphide CLASTS_CRADLE_B1F_CREDIT, 8, 6
 	end
 
 

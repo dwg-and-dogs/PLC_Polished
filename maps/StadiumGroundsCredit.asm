@@ -50,39 +50,36 @@ StadiumGroundsCreditScene:
 	applymovement PLAYER, SG_Credit_Move3
 	pause 30
 	; hall of fame section 
-	readvar VAR_PARTYCOUNT
-	ifless $2, .done
-	
-	
-	
-	special FadeOutPalettes
-	loadmem wCurForm, -1 ; force
-	loadmem wCurPartyMon, 0    ; Select first party slot
-	readmem wPartyMon2Species  ; or wCurPartySpecies... seems to work either way 
-	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
-    opentext
-	loadmem wCurForm, -1
+;	readvar VAR_PARTYCOUNT
+;	ifless $2, .done	
+;	special FadeOutPalettes
+;	loadmem wCurForm, -1 ; force
+;	loadmem wCurPartyMon, 0    ; Select first party slot
+;	readmem wPartyMon2Species  ; or wCurPartySpecies... seems to work either way 
+;	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
+;    opentext
+;	loadmem wCurForm, -1
 
-	loadmem wCurPartyMon, 1    ; Select first party slot
-	readmem wPartyMon1Species  ; or wCurPartySpecies
-	pokepic2 0	
-    writethistext
-        text_ram wStringBuffer1 ; "PIDGEY"
-        text " Lv."             ; " Lv."
-        text_ram wStringBuffer3 ; "  5"
-        line " "                ; New line
-        text_ram wStringBuffer2 ; "BIRDY"
-        done
-    pause 30
-	waitbutton
-	closetext
-
-
-
-.done:
-	pause 30
-	special FadeOutPalettes
-	warp EMPERORS_GARDEN_CREDIT, 29, 28
+;	loadmem wCurPartyMon, 1    ; Select first party slot
+;	readmem wPartyMon1Species  ; or wCurPartySpecies
+;	pokepic2 0	
+;    writethistext
+;        text_ram wStringBuffer1 ; "PIDGEY"
+;        text " Lv."             ; " Lv."
+;        text_ram wStringBuffer3 ; "  5"
+;        line " "                ; New line
+;        text_ram wStringBuffer2 ; "BIRDY"
+;        done
+;    pause 30
+;	waitbutton
+;	closetext
+;
+;
+;
+;.done:
+;	pause 30
+;	special FadeOutPalettes
+	warphide EMPERORS_GARDEN_CREDIT, 29, 28
 	end
 
 

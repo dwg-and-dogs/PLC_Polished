@@ -209,10 +209,10 @@ MapSetupScript_WarpHide:
 	mapsetup LoadMapPalettes
 	mapsetup SpawnInFacingDown
 	mapsetup RefreshMapSprites
-	mapsetup PlayMapMusicBike
-	mapsetup FadeInToMusic
+;	mapsetup PlayMapMusicBike
+;	mapsetup FadeInToMusic
 	mapsetup FadeInPalettes
-	mapsetup ActivateMapAnims
+;	mapsetup ActivateMapAnims
 	mapsetup LoadWildMonData
 	db -1 ; end
 	

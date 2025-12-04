@@ -15,7 +15,6 @@ ClastsCradleB1FCredit_MapScriptHeader:
 
 
 	def_object_events
-	tmhmball_event 25, 23, TM_FOCUS_BLAST, EVENT_GOT_TM_FOCUS_BLAST 
 
 
 CradleB1FStonesCallback2:
@@ -37,43 +36,42 @@ ClastsCradleB1FCreditScene:
 	;MOVING CAMERA
 	applyonemovement PLAYER, hide_object
 	waitsfx
-	pause 120 
+	pause 30 
 	applymovement PLAYER, CC_Credit_Move1 ; 13 RIGHT to 21 
-	pause 60
+	pause 30
 	applymovement PLAYER, CC_Credit_Move2 ; 15 DOWN to 25
-	pause 60
+	pause 30
 	applymovement PLAYER, CC_Credit_Move3 ; 16 left to 5
-	pause 60
+	pause 30
 	applymovement PLAYER, CC_Credit_Move4 ; 9 up to 16 
-	pause 60
+	pause 30
 	; hall of fame section 
-	readvar VAR_PARTYCOUNT
-	ifless $6, .done
-	refreshscreen
-	loadmem wCurForm, -1
-	loadmem wCurPartyMon, 5    ; Select party slot
-	readmem wPartyMon6Species  ; or wCurPartySpecies
-	pokepic 0	
-	pause 120
-	waitbutton
-	closepokepic
-.done:
+;	readvar VAR_PARTYCOUNT
+;	ifless $6, .done
+;	refreshscreen
+;	loadmem wCurForm, -1
+;	loadmem wCurPartyMon, 5    ; Select party slot
+;	readmem wPartyMon6Species  ; or wCurPartySpecies
+;	pokepic 0	
+;	pause 120
+;	waitbutton
+;	closepokepic
+;.done:
 	checkevent EVENT_ACCEPTED_ADRINNA
 	iftrue .done2
-	pause 60
-	special FadeOutPalettes
-	warp BURNED_TOWER_B1F_CREDIT, 9, 6
+	pause 30
+;	special FadeOutPalettes
+	warphide BURNED_TOWER_B1F_CREDIT, 9, 6
 	end
 
 .done2:
-	pause 60
+	pause 30
 	special FadeOutPalettes
 	opentext
 	writetext halloffametext_1
 	waitbutton
 	closetext
-;	warp DRAGONS_DEN_CREDIT, 11, 13
-	halloffame
+	warphide CREDITS_POKEMON_ALL, 4, 5
 	end
 
 halloffametext_1:

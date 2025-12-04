@@ -27,28 +27,28 @@ ArdudousAnchorageCreditScene:
 	; warp in at x, y 
 	applyonemovement PLAYER, hide_object
 	waitsfx
-	pause 120
+	pause 30
 	applymovement PLAYER, AA_Credit_Move1
-	pause 120
+	pause 30
 	applymovement PLAYER, AA_Credit_Move2
-	pause 120
+	pause 30
 	; hall of fame section 
 
-	readvar VAR_PARTYCOUNT
-	ifless $4, .done
+;	readvar VAR_PARTYCOUNT
+;	ifless $4, .done
 
-	refreshscreen
-	loadmem wCurForm, -1
-	loadmem wCurPartyMon, 3    ; Select party slot
-	readmem wPartyMon4Species  ; or wCurPartySpecies
-	pokepic 0	
-	pause 120
-	waitbutton
-	closepokepic
-.done:
-	pause 60
+;	refreshscreen
+;	loadmem wCurForm, -1
+;	loadmem wCurPartyMon, 3    ; Select party slot
+;	readmem wPartyMon4Species  ; or wCurPartySpecies
+;	pokepic 0	
+;	pause 120
+;	waitbutton
+;	closepokepic
+;.done:
+;	pause 60
 	special FadeOutPalettes
-	warp SINJOH_CROSSROADS_CREDIT, 21, 19
+	warphide SINJOH_CROSSROADS_CREDIT, 21, 19
 	end
 
 
