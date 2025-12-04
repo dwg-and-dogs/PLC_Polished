@@ -45,6 +45,7 @@ AzaleaTown_MapScriptHeader:
 	object_event 32,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 	object_event 15, 15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 	fruittree_event  8,  2, FRUITTREE_AZALEA_TOWN, WHT_APRICORN, PAL_NPC_SILVER
+	object_event 7, 5, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, AzaleaTownKimonoGirlScript, EVENT_AZALEA_KIMONO_GIRL
 
 
 	object_const_def
@@ -593,7 +594,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	yesorno
 	iffalse .UndoChanges
 	; Player confirms - make it permanent
-	writetext DVChangeConfirmedText
+	writetext DVChangeConfirmedTextAzalea
 	waitbutton
 	closetext
 	end
@@ -998,7 +999,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	sjump .ConfirmChanges
 
 .ConfirmChanges:
-	writetext DVChangeConfirmedText
+	writetext DVChangeConfirmedTextAzalea
 	waitbutton
 	closetext
 	end
@@ -1011,7 +1012,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	writemem wPartyMon1DVs+1     ; Reads value into hScriptVar
 	readmem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
 	writemem wPartyMon1DVs+2     ; Reads value into hScriptVar
-	writetext DVChangeUndoneText
+	writetext DVChangeUndoneTextAzalea
 	waitbutton
 	closetext
 	end
@@ -1143,7 +1144,7 @@ ConfirmDVChangeTextAzalea: ; todo why don't these crash in other maps?....
 	cont "permanent?"
 	done
 
-DVChangeConfirmedText:
+DVChangeConfirmedTextAzalea:
 	text "The transformation"
 	line "is complete!"
 	
@@ -1152,7 +1153,7 @@ DVChangeConfirmedText:
 	cont "potential!"
 	done
 
-DVChangeUndoneText:
+DVChangeUndoneTextAzalea:
 	text "Your #mon has"
 	line "returned to its"
 	cont "original form."

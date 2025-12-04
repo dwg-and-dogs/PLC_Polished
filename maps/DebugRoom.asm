@@ -43,8 +43,6 @@ DebugInteraction:
 	waitbutton
 	closetext
 
-
-
 ;	refreshscreen
 	; need to adapt from here 
 ;	special FadeOutPalettes

@@ -6,7 +6,7 @@ StadiumGroundsCredit_MapScriptHeader:
 	callback MAPCALLBACK_TILES, StadiumGroundsFloodCallback2
 
 	def_warp_events
-	warp_event 21, 28, DEBUG_ROOM, 1
+	warp_event 8, 35, DEBUG_ROOM, 1
 
 	def_coord_events
 

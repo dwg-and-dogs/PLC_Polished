@@ -16,17 +16,9 @@ CreditsPokemonAll_MapScriptHeader:
 
 	def_object_events
 
-; for some reason, checking events does not work. 
-; 
-
-; I will need to revise it to work with 
-
-
 
 CreditsPokemonAllScene: 
 	special FadeOutPalettes
-;	checkevent EVENT_HALL_OF_FAME_POKEMON_1
-;	iftrue .CreditsPokemon2
 ;CreditsPokemon1:
 	loadmem wCurForm, -1 ; force
 	loadmem wCurPartyMon, 0    ; Select first party slot
@@ -47,14 +39,9 @@ CreditsPokemonAllScene:
     pause 30
 	waitbutton
 	closetext
-;	setevent EVENT_HALL_OF_FAME_POKEMON_1
-	warphide STADIUM_GROUNDS_CREDIT, 8, 35
-;	sjump .done
-
+;.CreditsPokemon2:
 	readvar VAR_PARTYCOUNT
 	ifless $2, .done
-
-;.CreditsPokemon2:
 	loadmem wCurForm, -1 ; force
 	loadmem wCurPartyMon, 1    ; Select first party slot
 	readmem wPartyMon2Species  ; or wCurPartySpecies... seems to work either way 
@@ -75,10 +62,100 @@ CreditsPokemonAllScene:
     pause 30
 	waitbutton
 	closetext
-	setevent EVENT_HALL_OF_FAME_POKEMON_2
-	warphide STADIUM_GROUNDS_CREDIT, 8, 35
+;.CreditsPokemon3:
+	readvar VAR_PARTYCOUNT
+	ifless $3, .done
+	loadmem wCurForm, -1 ; force
+	loadmem wCurPartyMon, 2    ; Select first party slot
+	readmem wPartyMon3Species  ; or wCurPartySpecies... seems to work either way 
+	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
+    opentext
+	loadmem wCurForm, -1
+
+	loadmem wCurPartyMon, 2    ; Select first party slot
+	readmem wPartyMon3Species  ; or wCurPartySpecies
+	pokepic2 0	
+    writethistext
+        text_ram wStringBuffer1 ; "PIDGEY"
+        text " Lv."             ; " Lv."
+        text_ram wStringBuffer3 ; "  5"
+        line " "                ; New line
+        text_ram wStringBuffer2 ; "BIRDY"
+        done
+    pause 30
+	waitbutton
+	closetext
+;.CreditsPokemon4:
+	readvar VAR_PARTYCOUNT
+	ifless $4, .done
+	loadmem wCurForm, -1 ; force
+	loadmem wCurPartyMon, 4    ; Select first party slot
+	readmem wPartyMon4Species  ; or wCurPartySpecies... seems to work either way 
+	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
+    opentext
+	loadmem wCurForm, -1
+
+	loadmem wCurPartyMon, 4    ; Select first party slot
+	readmem wPartyMon4Species  ; or wCurPartySpecies
+	pokepic2 0	
+    writethistext
+        text_ram wStringBuffer1 ; "PIDGEY"
+        text " Lv."             ; " Lv."
+        text_ram wStringBuffer3 ; "  5"
+        line " "                ; New line
+        text_ram wStringBuffer2 ; "BIRDY"
+        done
+    pause 30
+	waitbutton
+	closetext
+;.CreditsPokemon5:
+	readvar VAR_PARTYCOUNT
+	ifless $5, .done
+	loadmem wCurForm, -1 ; force
+	loadmem wCurPartyMon, 4    ; Select first party slot
+	readmem wPartyMon5Species  ; or wCurPartySpecies... seems to work either way 
+	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
+    opentext
+	loadmem wCurForm, -1
+
+	loadmem wCurPartyMon, 4    ; Select first party slot
+	readmem wPartyMon5Species  ; or wCurPartySpecies
+	pokepic2 0	
+    writethistext
+        text_ram wStringBuffer1 ; "PIDGEY"
+        text " Lv."             ; " Lv."
+        text_ram wStringBuffer3 ; "  5"
+        line " "                ; New line
+        text_ram wStringBuffer2 ; "BIRDY"
+        done
+    pause 30
+	waitbutton
+	closetext
+;.CreditsPokemon6:
+	readvar VAR_PARTYCOUNT
+	ifless $6, .done
+	loadmem wCurForm, -1 ; force
+	loadmem wCurPartyMon, 5    ; Select first party slot
+	readmem wPartyMon6Species  ; or wCurPartySpecies... seems to work either way 
+	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
+    opentext
+	loadmem wCurForm, -1
+
+	loadmem wCurPartyMon, 5    ; Select first party slot
+	readmem wPartyMon6Species  ; or wCurPartySpecies
+	pokepic2 0	
+    writethistext
+        text_ram wStringBuffer1 ; "PIDGEY"
+        text " Lv."             ; " Lv."
+        text_ram wStringBuffer3 ; "  5"
+        line " "                ; New line
+        text_ram wStringBuffer2 ; "BIRDY"
+        done
+    pause 30
+	waitbutton
+	closetext
 .done:
-;	halloffame ; todo, uncommment this when done testing 
+	halloffame  
 	end
 
 
