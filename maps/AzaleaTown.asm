@@ -45,7 +45,7 @@ AzaleaTown_MapScriptHeader:
 	object_event 32,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 	object_event 15, 15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SLOWPOKE, -1, -1, PAL_NPC_RED, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownSlowpokeScript, -1
 	fruittree_event  8,  2, FRUITTREE_AZALEA_TOWN, WHT_APRICORN, PAL_NPC_SILVER
-	object_event 7, 5, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, AzaleaTownKimonoGirlScript, EVENT_AZALEA_KIMONO_GIRL
+	object_event 7, 5, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, AzaleaTownKimonoGirlScript, EVENT_AZALEA_KIMONO_GIRL
 
 
 	object_const_def
@@ -506,8 +506,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	readmem wPartyMon1DVs+2     ; Reads value into hScriptVar
 	writemem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
 	opentext
-	iftrue_jumptext AzaleaTownGreatnessLiesWithinText 
-	writetext AzaleaTownWhatPotentialText
+	writetext AzaleaTownWhatPotentialText ; TODO 
 	promptbutton
 	loadmenu .PhysicalOrSpecialMenuHeader
 	verticalmenu
@@ -590,7 +589,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	; Player confirms - make it permanent
@@ -646,7 +645,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -670,7 +669,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -693,7 +692,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -716,7 +715,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -739,7 +738,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -762,7 +761,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -785,7 +784,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -808,7 +807,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -831,7 +830,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -854,7 +853,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -877,7 +876,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -900,7 +899,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -923,7 +922,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -946,7 +945,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -970,7 +969,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	closepokepic
 
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -993,7 +992,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeTextAzalea
 	yesorno
 	iffalse .UndoChanges
 	sjump .ConfirmChanges
@@ -1017,31 +1016,23 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	closetext
 	end
 
-; Text strings
 AzaleaTownWhatPotentialText:
-	text "A strong founda-"
-	line "tion withstands"
-	para "stress from any"
-	line "angle."
+	text "I heard that a"
+	line "young person from"
+	para "Azalea Town had"
+	line "been called to a"
+	cont "quest by Celebi."
 	
-	para "I know you have"
-	line "cultivated many"
-	cont "experiences."
+	para "Naturally, I want"
+	line "to assist in any"
+	cont "way I can."
 	
-	para "#mon can do"
-	line "the same - each"
-	para "one contains"
-	line "multitudes."
-	
-	para "What potential"
-	line "would you like to"
-	para "express within"
-	line "the first #mon"
-	cont "in your party?"
-	
-	para "Reorganize your"
-	line "party, if you"
-	cont "need to."
+	para "For instance, I"
+	line "can help the 1st"
+	cont "#mon in your"
+	para "party express a"
+	line "different part of"
+	cont "its lineage."
 	done
 
 GaveMaximumDVsText_TTTown:

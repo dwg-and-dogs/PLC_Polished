@@ -18,7 +18,7 @@ AnarresTower3F_MapScriptHeader:
 
 	def_object_events
 	object_event  6,  6, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FHollisScript, -1
-	object_event  7,  3, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FTammyScript, EVENT_BEAT_TAMMY
+	object_event  7,  3, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FTammyScript, EVENT_TAMMY_ANARRES_TOWER
 	object_event  5,  6, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FAmosScript, EVENT_BEAT_HOLLIS
 	pokemon_event  14, 19, KLEAVOR, -1, -1, PAL_NPC_RED, KleavorText, EVENT_BEAT_SANDRA
 
@@ -39,7 +39,6 @@ AnarresTower3FEvent:
 	applymovement ANARRES_TOWER_AMOS, AmosWalksAwayMovement
 	disappear ANARRES_TOWER_AMOS
 	clearevent EVENT_BEAT_HOLLIS ; this flag randomly gets set somehow. This is a workaround, i think 
-	setscene $1
 	setevent EVENT_SAW_KLEAVOR
 	pause 60
 	appear ANARRES_TOWER_TAMMY

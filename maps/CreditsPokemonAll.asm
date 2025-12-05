@@ -26,7 +26,7 @@ CreditsPokemonAllScene:
 	callasm LoadSelectedMonData ; Calculates everything for Slot automatically    
     opentext
 	loadmem wCurForm, -1
-	loadmem wCurPartyMon, 1    ; Select first party slot
+	loadmem wCurPartyMon, 0    ; Select first party slot
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic2 0	
     writethistext
@@ -89,13 +89,13 @@ CreditsPokemonAllScene:
 	readvar VAR_PARTYCOUNT
 	ifless $4, .done
 	loadmem wCurForm, -1 ; force
-	loadmem wCurPartyMon, 4    ; Select first party slot
+	loadmem wCurPartyMon, 3    ; Select first party slot
 	readmem wPartyMon4Species  ; or wCurPartySpecies... seems to work either way 
 	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
     opentext
 	loadmem wCurForm, -1
 
-	loadmem wCurPartyMon, 4    ; Select first party slot
+	loadmem wCurPartyMon, 3    ; Select first party slot
 	readmem wPartyMon4Species  ; or wCurPartySpecies
 	pokepic2 0	
     writethistext

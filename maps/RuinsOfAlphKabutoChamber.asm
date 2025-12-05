@@ -135,7 +135,7 @@ Scientist_TakeThisReport:
 	
 ScientistDescribesUnownReport:
 	text "It contains all"
-	line "of the unown we"
+	line "of the Unown we"
 	cont "have encountered."
 	
 	para "Of course, the"

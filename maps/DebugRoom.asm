@@ -32,21 +32,28 @@ DebugRoom_MapScriptHeader:
 
 
 DebugInteraction: 
-	applyonemovement PLAYER, hide_object
+	setmapscene ANARRES_TOWER_3F, $0
+	setevent EVENT_TAMMY_ANARRES_TOWER
+	warp ANARRES_TOWER_2F, 9, 8 
+	end
+;	applyonemovement PLAYER, hide_object
 
-	opentext
-	givepoke PIDGEOT, 5
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ee
-	loadmem wPartyMon1DVs+2, $ee
-	givepoke POLITOED, 50
-	waitbutton
-	closetext
+;	opentext
+;	givepoke PIDGEOT, 5
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $fe
+;	loadmem wPartyMon1DVs+2, $ee
+;	
+;	loadmem wPartyMon6DVs+0, $ff
+;	loadmem wPartyMon6DVs+1, $fe
+;	loadmem wPartyMon6DVs+2, $ef
+;	givepoke POLITOED, 50
+;	waitbutton
+;	closetext
 
 ;	refreshscreen
 	; need to adapt from here 
 ;	special FadeOutPalettes
-
 ;	loadmem wCurForm, -1 ; force
 ;	loadmem wCurPartyMon, 0    ; Select first party slot
 ;	readmem wPartyMon1Species  ; or wCurPartySpecies... seems to work either way 
@@ -55,8 +62,8 @@ DebugInteraction:
 ;
 ;    opentext
 ;	loadmem wCurForm, -1
-;	loadmem wCurPartyMon, 1    ; Select first party slot
-;	readmem wPartyMon2Species  ; or wCurPartySpecies
+;	loadmem wCurPartyMon, 0    ; Select first party slot
+;	readmem wPartyMon1Species  ; or wCurPartySpecies
 ;	pokepic2 0	
 ;    writethistext
 ;        text_ram wStringBuffer1 ; "PIDGEY"
@@ -68,8 +75,12 @@ DebugInteraction:
 ;    pause 120
 ;	waitbutton
 ;	closetext
-	warphide HOLLYS_HOLT_CREDIT, 10, 25
-	end
+;	setevent EVENT_ACCEPTED_ADRINNA
+;	warphide HOLLYS_HOLT_CREDIT, 10, 25
+;	end
+
+DebugRoomExtraScript:
+;	end
 ;	waitbutton
 ;	closepokepic2
 
@@ -200,8 +211,9 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	setevent EVENT_TALKED_TO_LOST_KAJO_GIRL
-	warphide HOLLYS_HOLT_CREDIT, 10, 25
+;	halloffame
+;	setevent EVENT_TALKED_TO_LOST_KAJO_GIRL
+;	warphide HOLLYS_HOLT_CREDIT, 10, 25
 	end
 
 OverworldHallOfFame1: 

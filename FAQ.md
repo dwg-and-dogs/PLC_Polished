@@ -6,7 +6,9 @@ You can report bugs on the discord or to me on Reddit by DM, u/dwg6m9.
 
 ### Which file do I need to play?
 
-This is the ROM you should use for patching:
+Version 0.1.0 is released as a pre-patched gbc file. 
+
+For earlier versions, the ROM you should use for patching:
 
 * Pokémon - Crystal Version (UE) (V1.0) [C][!].gbc
   (`md5: 9f2922b235a5eeb78d65594e82ef5dde`)
@@ -19,6 +21,7 @@ Many first forms were removed to make room for more evolutionary lines.
 
 Evolution lines whose types were already overrepresented (normal-flying, for example) were cut.
 
+There are plans to re-work the Dex to restore first forms. 
 
 ### Is there documentation for all the {Pokémon, items, moves, etc}?
 
@@ -38,13 +41,14 @@ A route-by-route encounter table is posted at ___ (insert screenshot or excel ta
 
 There's a 1 in 1,024 chance to encounter a shiny Pokémon, and they'll be marked with a star next to their name. You're probably noticing the effect of the **IVs vary colors** option (see below).
 
+There is also a 1 in 1,048,576 change to encounter a Pokémon with maximum DVs for a given hidden power. These are special Pokémon that have wildly varying color palettes. 
+
 ### What are the options at the start of a new game?
 
 * **Natures:** Enables [natures](https://bulbapedia.bulbagarden.net/wiki/Nature) from Gen 3 onward.
 * **Abilities:** Enables [abilities](https://bulbapedia.bulbagarden.net/wiki/Ability) from Gen 3 onward.
 * **Phys/Spcl split:** Enables the [Physical/Special split](https://bulbapedia.bulbagarden.net/wiki/Damage_category) from Gen 4 onward.
 * **Exp. scaling:** Enables the [experience formula](https://bulbapedia.bulbagarden.net/wiki/Experience#Gain_formula) from Gen 5, 7 and 8, which scales experience by the ratio of the opponent's level to your level.
-* **IVs vary colors:** Enables color variation [inspired by Stadium](https://bulbapedia.bulbagarden.net/wiki/List_of_alternately_colored_Pok%C3%A9mon_in_the_games#Pok.C3.A9mon_Stadium). DVs will subtly vary Pokémon colors. This applies to normal and shiny Pokémon.
 * **Perfect stats:** All Pokémon stats, for you and the opponent, are calculated as if they had maximum IVs. The actual IVs are still random, so color variation and Hidden Power type are not affected.
 * **Traded Pokémon treat you as OT:** All differences in traded Pokémon go away: they always obey you, don't gain boosted experience, and can be nicknamed.
 * **Nuzlocke mode:** Enables a [Nuzlocke challenge](https://bulbapedia.bulbagarden.net/wiki/Nuzlocke_Challenge); see [FEATURES.md](FEATURES.md) for detailed clauses.
@@ -62,15 +66,14 @@ There's only room for 255 moves, including Struggle. I wanted to fit in as many 
 
 ### How do I evolve my Pokémon?
 
-* Most weak first forms evolve at Lv. 12 (e.g. starters, wooper, ... ) 
-* Pokemon evolve into Hisui forms while holding the Hisui Stone from a standard pre-evolution (Hisuian forms: Typhlosion, Samurott, Decidueye, Arcanine, Electrode, Overqwil (from standard Qwilfish), Sneasler (from standard Sneasel), Wyrdeer (from Stantler))
+* Pokemon evolve into Hisui forms by using the Hisui Stone from a standard pre-evolution (Hisuian forms: Typhlosion, Samurott, Decidueye, Arcanine, Electrode, Overqwil (from standard Qwilfish), Sneasler (from standard Sneasel), Wyrdeer (from Stantler))
 * Kadabra, Graveler, Machoke, Haunter evolve at Lv. 40 
 * Ponyta, Grimer, Rhydon evolve at Lv. 25
 * Item trade evolutions (like Seadra into Kingdra while holding a Dragon Scale) now evolve while holding the item.
-* Magneton evoles with a Thunderstone. 
+* Magneton evoles with a Thunderstone
 * Ursaring evolves with a Moon Stone 
-* Yanma, Tangela, and Piloswine evolve while knowing AncientPower.
-* Eevee evoles into Espeon with Sun Stone; Umbreon with Dusk Stone, Leafeon with Leaf Stone, Glaceon with Ice Stone, Sylveon with Shiny Stone. 
+* Yanma, Tangela, and Piloswine evolve while knowing AncientPower
+* Eevee evoles into Espeon with Sun Stone; Umbreon with Dusk Stone, Leafeon with Leaf Stone, Glaceon with Ice Stone, Sylveon with Shiny Stone
 
 
 ### Where do I get this item?
@@ -126,20 +129,10 @@ Final Boss:
 
 
 
-### Wait, what's going on in historic Johto?
 
-The plot is partially inspired by the time of the Meiji Restoration in Japan ca. 1860. 
 
-Outsiders have landed at the western port, demanding free access. 
-It is known to the Emperor and his generals that Kanto surrendered to the outsiders and is in danger of becoming completely subsumed by the outsiders. 
 
-Emperor Mejimi is influenced by General Adrinna to form an empire in Johto that will be united in its resistance to the outsiders. 
-General Adrinna believes that the traditional attitudes of Johto are holding it back. 
-Emperor Mejimi will assume a divine role to make his status unquestionable. 
-Over time, General Adrinna grows more frustrated with Emperor Mejimi as she sees that he is not truly reforming Johto. 
-
-The emperor's plan is opposed by the leaders of various towns in Johto. 
-The resistance is organized by the character of Amos. 
+### Seriously, spoilers below!
 
 
 ### Wait, who is this character?
@@ -162,54 +155,77 @@ Kanna: Hisuian expedition leader.
 
 ### Where do I get the legendary Pokémon?
 
-Legendary pokemon not encountered as part of the plot are found in the locations below: 
+Legendary pokemon are found in the locations below: 
 
 *Entei: Solve the last Alph puzzle and use the item obtained on the rock indent on the eastern half of Route 42. 
 *Suicune: Save the Miltank on Route 39. 
-*Raikou: Top of Lighthouse with Lugia or Politoed in the party 
+*Raikou: Top of Lighthouse (beyond the room with Jasmine and the scientists) with Lugia or Politoed in the party. 
 *Lugia: Historic Whirl Islands (Sheltered Shores), requires waterfall
-*Ho-Oh: Show Morty any of the legendary beasts, defeat him, to get Rainbow Wing; acquire Clear Bell from Pryce; ascend Tin Tower. 
+*Ho-Oh: Show Morty any of the legendary beasts, defeat him, then ascend Tin Tower. 
 *Celebi: Timeless Tapestry
+*Heatran: Clast's Cradle, bottom floor
 
 Legendary pokemon cannot be reset. 
+
+
+### Wait, what's going on in historic Johto?
+
+The plot is partially inspired by the time of the Meiji Restoration in Japan ca. 1860. 
+
+Outsiders have landed at the western port, demanding free access. 
+It is known to the Emperor and his generals that Kanto surrendered to the outsiders and is in danger of becoming completely subsumed by the outsiders. 
+
+Emperor Mejimi is influenced by General Adrinna to form an empire in Johto that will be united in its resistance to the outsiders. 
+General Adrinna believes that the traditional attitudes of Johto are holding it back. 
+Emperor Mejimi will assume a divine role to make his status unquestionable. 
+Over time, General Adrinna grows more frustrated with Emperor Mejimi as she sees that he is not truly reforming Johto. 
+
+The emperor's plan is opposed by the leaders of various cities in Johto. 
+The resistance is organized by the character of Amos. 
+
+
+### Wait, what's going on in modern Johto?
+
+There is a severe drought taking hold. Kurt believes the drought is due to the region going against its traditions that held it close to nature, especially because of the influence of Silph Co. 
+
+Silph has installed several water-generating plants throughout Johto to disastrous effect, from building a water tower in Violet, to a distillation plant in Olivine, and a water project at the Lake of Rage. 
+
+The drought is so severe that the region is essentially split in two, with the entire Eastern half being guarded by Dragon Tamers to prevent Silph from accessing the water in Mt. Silver. 
+
+Johto's gym leaders have given in to cynicism that prevents them from addressing the drought, except for Pryce. Pryce is going around to each of the gym leaders to convince them to help their cities. 
+
+Your Rival feels bitter about the way he has been treated in Azalea and joins Silph with his inventions. Over time, he becomes disillusioned. 
+
+
 
 ### I'm stuck on the trade quest for the master ball!
 
 0. Mint Leaf in Azalea Pokecenter
-1. TInymushroom in Anarres North House
+1. Tinymushroom in Anarres North House
 2. Lemonade in Gauldenrod Southwest House
 3. Brick Piece in National Park
 4. Ragecandybar in Goldenrod Museum 2F
 5. Big Mushroom in Violet West House
 6. Liteblue Mail in Ecruteak West House
 7. Gold Leaf in Ecruteak Central House
-8. Light Ball in Olivine City
-9. Pearl in Trader's Landing
+9. Pearl in Olivine City, Northeast House
 10. Surf Mail in Olivine City 
-11. Old Amber in Mahogany
+11. Old Amber in Mahogany Town
 12. Sweet Honey in Eerie Hamlet
-13. Master Ball in historic Tin Tower 1F
+13. Master Ball in Gauldenrod Guild
 
 ### I can't figure out this puzzle!
-
-Puzzle solutions are posted on youtube: (TODO)
 
 Ruins of Alph Puzzles: 
 
 Kimono puzzles:
-	Kimono 1:
-	Kimono 2:
-	Kimono 3:
-	Kimono 4:
+	Kimono 1: <link>
+	Kimono 2: Talk to the hedgehog from the south, then east, then north, then south, then east. 
+	Kimono 3: <link>
+	Kimono 4: 
 	Kimono 5: 
 
-Historic Tin Tower: 
-
-Whirl Island + Sheltered Shores:
-
-Clast's Cradle (historic Mt Mortar): 
-
-Grottoed Glacier:
+Sheltered shores: Hit switches in order 5-4-3-1, then hit the center switch. 
 
 Western Glacier:
 

@@ -688,10 +688,10 @@ YesTimeTravelText:
 RuinsOfAlphText:
 	text "The GS Ball needs"
 	line "an inscription"
-	para "of ancient wri-"
-	line "ting. I need a"
-	para "sample from the"
-	line "Ruins of Alph."
+	cont "of ancient words."
+	para "We can get a copy"
+	line "at the Ruins of"
+	cont "Alph."
 	done
 
 GotTheUnownReport:

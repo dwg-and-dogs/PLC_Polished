@@ -33,10 +33,10 @@ UnionCave1F_MapScriptHeader:
 GenericTrainerScientistLowell:
 	generictrainer SCIENTIST, LOWELL, EVENT_BEAT_SCIENTIST_LOWELL, ScientistLowellSeenText, ScientistLowellBeatenText
 
-	text "Poison type"
-	line "#mon help"
-	para "us leach the"
-	line "precious metals."
+	text "We use poison"
+	line "type #mon to"
+	para "leach precious"
+	line "metals."
 	done
 
 ScientistLowellSeenText:

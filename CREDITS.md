@@ -10,7 +10,7 @@ Credits from Polished Crystal are located at the end of this document.
 
 ## Pokemon Front and Back sprites
 
-Many sprites were adapted to the Gen 2 format. Credits are for the original source. If you believe your work was used and is not credited, please let me know by reddit! DM: u/dwg6m9
+Many sprites were adapted to the Gen 2 format. Credits are for the original source. If you believe your work was used and is not credited, please let me know by reddit or Discord! DM: u/dwg6m9
 
 Front Sprites
 
@@ -41,23 +41,20 @@ Back Sprites if different from above, using Deviantart handles:
 * Theymadememakethisac: H__Decidueye
 * utytft: Decidueye
 
-
 ## Pokemon Menu icons
 
 * Azure Keys: Dewott, Samurott, Drapion, Lucario, Roserade, Roselia, Drifblim, Toxicroak, Froslass, Gardevoir, Gallade, Oshawott
 * DWG: H__Arcanine, Hippowdon, Heatran, Grotle, Sneasler, Overqwil, Basculegion, H__Avalugg, Skuntank
 * Pokewilds: wyrdeer, hgoodra, hzoroark, hsliggoo, spiritomb, jumpluff, monferno, infernape, prinplup, bastiodon, gabite, garchomp, rotom, dusclops, dusknoir, rampardos, ambipom, empoleon, lopunny, snover, abomasnow, hbraviary, htyphlosion, hsamurott, kleavor, luxio, luxray, helectrode, rowlet, hdecidueye, skiploom, stantler, staraptor, torterra, staravia, ursaluna, vespiquen
 
-
 ## Trainer Sprites
 
-* Pokets3: Emperor Mejimi
+* Pokets3: Emperor Mejimi and Generals Adrinna, Bobesh, and Kensey
 * DWG: Brigader (adapted from beta Falkner)
 * Bronzeswagger: Samsara 
 * Justinnuggets: Scavenger (diver)  
 * Justin8964: Nomad_F (Phoebe) and Hollis
 * Ferropexola: Ninja
-
 
 ## Other Art
 
@@ -71,7 +68,6 @@ Back Sprites if different from above, using Deviantart handles:
 * Ferropexola ("Johto Legends") 
 * r/PokemonROMhacks
 * Feedback at Crystal Inheritance Discord
-* 
 
 ## Tools used
 
