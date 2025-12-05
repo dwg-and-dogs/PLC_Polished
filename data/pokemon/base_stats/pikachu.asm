@@ -5,7 +5,7 @@
 	db 190 ; catch rate
 	db 82 ; base exp
 	db ORAN_BERRY ; item 1
-	db SITRUS_BERRY ; item 2
+	db LIGHT_BALL ; item 2
 	dn GENDER_F50, 1 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/pikachu/front.dimensions"
 	abilities_for PIKACHU, STATIC, STATIC, LIGHTNING_ROD

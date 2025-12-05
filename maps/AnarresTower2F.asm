@@ -90,10 +90,16 @@ BugCatcherKenBeatenText:
 GenericTrainerBugCatcherWayne:
 	generictrainer BUG_CATCHER, WAYNE, EVENT_BEAT_BUG_CATCHER_WAYNE, BugCatcherWayneSeenText, BugCatcherWayneBeatenText
 
-	text "I wonder if any"
-	line "#mon are"
-	cont "related across"
-	cont "regions."
+	text "Ha! It's my job to"
+	line "stop anyone from"
+	cont "getting thru!"
+	
+	para "Hey, will you ask"
+	line "my boss if I'm"
+	cont "done yet?"
+	
+	para "The BlackBelt on"
+	line "the first floor."
 	done
 
 BugCatcherWayneSeenText:
@@ -103,6 +109,14 @@ BugCatcherWayneSeenText:
 	done
 
 BugCatcherWayneBeatenText:
-	text "Maybe I should"
-	line "do a tradeback."
+	text "Ha! It's my job to"
+	line "stop anyone from"
+	cont "getting thru!"
+	
+	para "Hey, will you ask"
+	line "my boss if I'm"
+	cont "done yet?"
+
+	para "The BlackBelt on"
+	line "the first floor."
 	done
