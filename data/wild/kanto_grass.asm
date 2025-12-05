@@ -705,7 +705,7 @@
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
 	wildmon 4, STARAVIA
-	wildmon 4, ROSELIA
+	wildmon 4, BRONZOR
 	wildmon 5, DUSCLOPS
 	wildmon 6, KIRLIA
 	wildmon 5, GROTLE
@@ -713,7 +713,7 @@
 	wildmon 5, MONFERNO
 ;	; day
 	wildmon 4, STARAVIA
-	wildmon 4, ROSELIA
+	wildmon 4, BRONZOR
 	wildmon 5, DUSCLOPS
 	wildmon 6, KIRLIA
 	wildmon 5, GROTLE
@@ -721,7 +721,7 @@
 	wildmon 5, MONFERNO
 ;	; nite7
 	wildmon 4, STARAVIA
-	wildmon 4, ROSELIA
+	wildmon 4, BRONZOR
 	wildmon 5, DUSCLOPS
 	wildmon 6, KIRLIA
 	wildmon 5, GROTLE

@@ -707,7 +707,8 @@ VileplumeEvosAttacks:
 	db 1, HEAL_BELL ; Aromatherapy → similar move
 	db 1, POISONPOWDER
 	db 1, STUN_SPORE
-	db 35, GROWTH
+	db 30, GROWTH
+	db 35, DARK_PULSE
 	db 40, MOONBLAST ; Petal Blizzard → Gloom move
 	db 45, PETAL_DANCE
 	db 50, SOLAR_BEAM

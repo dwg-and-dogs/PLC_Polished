@@ -92,6 +92,6 @@ LandingTavernSailorText:
 
 LandingTavernSailorText2:
 	text "This port drags."
-	line "I wish we were"
-	cont "back in Lilycove!"
+	line "Lilycove is so"
+	cont "much better!"
 	done

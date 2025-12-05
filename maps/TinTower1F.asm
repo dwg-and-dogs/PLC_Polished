@@ -51,6 +51,6 @@ TinTower1FSage2Text:
 	
 TinTower1FSage3Text:
 	text "This tower has "
-	line "stood for over"
-	cont "180 years."
+	line "stood for many"
+	cont "generations."
 	done

@@ -165,9 +165,8 @@ BurnedTower1FSage2Text:
 	line "innocent #mon"
 	para "to roam the"
 	line "land, where"
-	cont "they could"
-
-	para "inspire people"
-	line "to revere the"
-	cont "natural world."
+	para "they could"
+	line "inspire people"
+	para "to revere the"
+	line "natural world."
 	done

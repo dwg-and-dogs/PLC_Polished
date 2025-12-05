@@ -223,8 +223,8 @@ GiveSurfMailText:
 	done
 
 Text_NoPearl:
-	text "You won't?"
-	line "That's sad."
+	text "If you have a"
+	line "Pearl, tell me!"
 	done
 
 OlivineCafe2Script: ; 25000 
@@ -271,7 +271,7 @@ OlivineCafe2Script: ; 25000
 
 
 .GiveQwilfish:
-	givepoke CORSOLA, NO_FORM, 20, SITRUS_BERRY, ULTRA_BALL, EXPLOSION
+	givepoke QWILFISH, NO_FORM, 20, SITRUS_BERRY, ULTRA_BALL, EXPLOSION
 	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 25000

@@ -84,7 +84,7 @@ AromaLadyPeonyBeatenText:
 GenericTrainerBirdKeeperVance:
 	generictrainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVanceSeenText, BirdKeeperVanceBeatenText
 
-	text "I heard that you"
+	text "I heard someone"
 	line "organized against"
 	cont "the Anarres elder."
 	done

@@ -202,7 +202,7 @@ TL_Text3:
 	line "difficult."
 	
 	para "Lugia now serves"
-	line "the Consul."
+	line "Consul Urgaust."
 	done
 
 TL_Text4:
@@ -315,15 +315,16 @@ TL_Scene_2_R:
 	applymovement TRADERS_LANDING_KURT_2, TL_2_KurtMoves2
 	showtext TL_2_Text5
 ;	special Special_CelebiShrineEvent
+	; SOMETHING TRIPPY HAPPENED HERE? .. 
 	playsound SFX_WARP_TO
 	setflag ENGINE_FLYPOINT_OLIVINE
+	blackoutmod OLIVINE_CITY ; 
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_LANDING_KURT_2
 	setevent EVENT_LANDING_TIME_TRAVELED
 	setscene $2 
-	setmapscene ROUTE_40, 0
-	givepoke MAGIKARP, 5
+;	setmapscene ROUTE_40, 0
 	warp ROUTE_40, 7, 4
 	end
 
@@ -421,6 +422,10 @@ TL_ReportForWorkSign:
 	text "Coastal Nomads:"
 	line "Report for work"
 	cont "at lighthouse!"
+	
+	para "Johto needs more"
+	line "#balls!"
+	
 	para "-General Kensey"
 	done
 
@@ -464,13 +469,13 @@ LandingEggScript: ;cf the cafe script
 	special PlaceMoneyTopRight
 	yesorno
 	iffalse_jumpopenedtext NoMoneyText
-	checkmoney $0, 10000
+	checkmoney $0, 50000
 	ifequal $2, .NoMoney 
 	promptbutton
 	givepoke H__SLIGGOO, 5
 	iffalse_jumpopenedtext NoRoomText
 	playsound SFX_TRANSACTION
-	takemoney $0, 10000
+	takemoney $0, 50000
 	special PlaceMoneyTopRight
 	setevent EVENT_GOT_HSLIGGOO_EGG
 	writetext GotHSliggooEggText
@@ -488,7 +493,7 @@ GivingHSliggooEggText:
 	para "I smuggled that"
 	line "#mon outta"
 	para "Hisui, like I"
-	line "told ya. 10k."
+	line "told ya. 50k."
 	done
 	
 GotHSliggooEggText:

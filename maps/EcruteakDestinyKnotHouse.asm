@@ -14,8 +14,8 @@ EcruteakDestinyKnotHouse_MapScriptHeader: ; herbalist, part of trade quest
 	bg_event  2,  1, BGEVENT_JUMPSTD, radio2
 
 	def_object_events
-	object_event  2,  3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakBlueMailScript, -1
-	object_event  5,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HerbalistWifeText, -1
+	object_event  5,  4, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakBlueMailScript, -1
+	object_event  2,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, HerbalistWifeText, -1
 
 	object_const_def
 	const ECRUTEAK_DESTINY_HOUSE_SAGE
@@ -98,16 +98,6 @@ TextReadingTheTeaLeaves:
 	line "in the broth..."
 
 	para "Oh? It's blank."
-
-	para "The spirits have"
-	line "spoken! Your"
-	para "future is"
-	line "undecided!"
-
-	para "My Litebluemail"
-	line "is perfect if you"
-	para "aren't sure what"
-	line "the future holds."
 	done
 
 TextReadingTheTeaLeaves2:

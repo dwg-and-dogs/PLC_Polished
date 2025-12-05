@@ -177,9 +177,8 @@ PsychicGregBeatenText:
 
 
 BeautyCallieSeenText:
-	text "Do you know"
-	line "where the Bell"
-	cont "Tower is?"
+	text "I'm going to see"
+	line "the Bell Tower!"
 	done
 
 BeautyCallieBeatenText:
@@ -187,8 +186,8 @@ BeautyCallieBeatenText:
 	done
 
 BeautyCassandraSeenText:
-	text "I want to visit"
-	line "the Burned Tower!"
+	text "Have you been to"
+	line "the Burned Tower?"
 	done
 
 BeautyCassandraBeatenText:
