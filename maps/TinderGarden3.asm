@@ -61,6 +61,11 @@ TinderGardernWatchTheLoggersScript:
 	end
 	
 GardenEngineerText1:
+	text_high
+    text "180 yrs later:"
+	next
+	text_start
+
 	text "Is this the one?"
 	line "I couldn't find"
 	cont "any other blossom"
@@ -73,7 +78,6 @@ GardenEngineerText2:
 	line "last one in"
 	cont "Johto."
 	done
-
 	
 Celebi2Text:
 	text "..."

@@ -25,13 +25,10 @@ SecondClassCabin_MapScriptHeader:
 
 	
 SecondClassCabinMatronText:
-	text "There, there..."
+	text "There, there..."	
+	line "It'll be OK."
 	
-	para "It'll be OK."
-	
-	para "There's nothing"
-	line "to be afraid"
-	cont "of."
+	para "Don't be afraid."
 	
 	para "The clown can't"
 	line "hurt you."	
@@ -66,12 +63,8 @@ SecondClassCabinJuggler2Text:
 	line "to be a clown"
 	cont "so bad."
 	
-	para "He really wants"
-	line "to make a ball-"
-	para "oon animal for"
-	line "that kid, but"
-	para "we don't have"
-	line "any helium to"
-	cont "fill 'em up."
+	para "He wants to make"
+	line "a balloon for the"
+	para "kid, but doesn't"
+	line "have any gas."
 	done
-

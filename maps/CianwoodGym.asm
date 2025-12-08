@@ -122,7 +122,7 @@ BlackbeltLungBeatenText:
 CianwoodGymResetScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
+	checkevent EVENT_GOT_CHOICE_BAND
 	iftrue_jumptext CianwoodCongratulationsText
 	writetext ResetCianwoodGymText
 	promptbutton

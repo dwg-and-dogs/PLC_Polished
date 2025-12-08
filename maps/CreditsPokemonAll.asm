@@ -155,6 +155,7 @@ CreditsPokemonAllScene:
 	waitbutton
 	closetext
 .done:
+	loadmem wCurForm, 0
 	halloffame  
 	end
 

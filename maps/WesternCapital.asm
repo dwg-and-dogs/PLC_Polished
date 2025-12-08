@@ -53,6 +53,7 @@ WesternCapital_MapScriptHeader:
 	object_event 5, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderText, EVENT_SKIRMISH_STARTED
 	object_event 17, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderTextTT, EVENT_BEAT_ADRINNA_MINE
 	object_event 18, 33, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WCBrigaderTextTT, EVENT_BEAT_ADRINNA_MINE
+	object_event 19, 9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WesternCapitalFishingGuruScript, EVENT_GOT_OLD_ROD
 	fruittree_event 6, 6, FRUITTREE_WESTERN_CAPITAL, FIXED_CHARGE, PAL_NPC_RED
 ; SKIRMISH 
 	object_event  5, 9, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, WCNinjaSkirmishText, EVENT_CAPITAL_SKIRMISHER ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
@@ -462,3 +463,49 @@ WCBrigaderSkirmishText:
 	text "Donphan - use"
 	line "ice shard!"
 	done
+
+WesternCapitalFishingGuruScript:
+	checkevent EVENT_GOT_OLD_ROD
+	iftrue_jumptextfaceplayer .DoneText
+	faceplayer
+	opentext
+	writetext .IntroText
+	promptbutton
+	verbosegivekeyitem OLD_ROD
+	writetext .AfterText
+	waitbutton
+	closetext
+	setevent EVENT_GOT_OLD_ROD
+	end
+
+
+.IntroText:
+	text "Outsiders?"
+	line "Brigaders?"
+	
+	para "I just put that"
+	line "behind me when I"
+	cont "go fishing."
+	
+	para "Take this,"
+	line "I insist."
+	done
+
+
+
+.AfterText:
+	text "When you're not"
+	line "sure how to get"
+	para "out of a problem,"
+	line "just toss a line"
+	para "and let the solu-"
+	line "tion come to you."
+	done
+
+
+.DoneText:
+	text "Every morning's a"
+	line "good morning if"
+	cont "I'm fishing."
+	done
+	

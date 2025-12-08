@@ -32,12 +32,6 @@ DebugRoom_MapScriptHeader:
 
 
 DebugInteraction: 
-	setmapscene ANARRES_TOWER_3F, $0
-	setevent EVENT_TAMMY_ANARRES_TOWER
-	warp ANARRES_TOWER_2F, 9, 8 
-	end
-;	applyonemovement PLAYER, hide_object
-
 ;	opentext
 ;	givepoke PIDGEOT, 5
 ;	loadmem wPartyMon1DVs+0, $ff
@@ -75,9 +69,9 @@ DebugInteraction:
 ;    pause 120
 ;	waitbutton
 ;	closetext
-;	setevent EVENT_ACCEPTED_ADRINNA
-;	warphide HOLLYS_HOLT_CREDIT, 10, 25
-;	end
+;	clearevent EVENT_KIMONOS_AT_TAPESTRY
+	warp STADIUM_GROUNDS, 11, 36
+	end
 
 DebugRoomExtraScript:
 ;	end

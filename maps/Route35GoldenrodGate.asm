@@ -243,7 +243,7 @@ KurtGoldenrodGateText:
 	cont "popular."
 	
 	para "If you ever want"
-	line "to hear it again,"
-	para "check the journal"
-	line "in my house."
+	line "to hear my story"
+	cont "again, check the"
+	cont "journals at home."
 	done

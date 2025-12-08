@@ -7,7 +7,7 @@ OlivineDesal1F_MapScriptHeader:
 
 	def_warp_events
 	warp_event  4,  0, OLIVINE_CITY, 9
-	warp_event  5,  0, OLIVINE_CITY, 10	
+	warp_event  5,  0, OLIVINE_CITY, 10
 	warp_event  5,  12, OLIVINE_DESAL_B1F, 1
 
 
@@ -21,7 +21,7 @@ OlivineDesal1F_MapScriptHeader:
 	object_event  4,  1, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_JASMINE
 	object_event  5,  1, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DESAL_1F_CHUCK
 ;	object_event  7,  1, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Desal1FNPCText, -1
-	object_event  5, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtOlivineScript, EVENT_RIVAL_LIGHTHOUSE ;
+	object_event  6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtOlivineScript, EVENT_RIVAL_LIGHTHOUSE ;
 
 	object_const_def
 	const DESAL_JASMINE

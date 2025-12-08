@@ -1,0 +1,19 @@
+
+Anarres:  16
+Azalea Gym (Optional): 16
+Gauldenrod: 21
+Stadium Grounds: 25
+Goldenrod: 29
+Violet: 33
+Western Capital: 36
+Trader's Landing Docks: 40
+Lighthouse: 43
+Mahogany: 45
+Olivine Gym (Optional): 45
+Ecruteak Gym (Optional): 46
+Sinjoh: 48
+Extent Temple (Optional): 50
+Eerie Hamlet: 51
+Clast's Cradle: 52
+Final Gauntlet: 57
+Final Boss: 60

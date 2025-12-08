@@ -315,7 +315,6 @@ TL_Scene_2_R:
 	applymovement TRADERS_LANDING_KURT_2, TL_2_KurtMoves2
 	showtext TL_2_Text5
 ;	special Special_CelebiShrineEvent
-	; SOMETHING TRIPPY HAPPENED HERE? .. 
 	playsound SFX_WARP_TO
 	setflag ENGINE_FLYPOINT_OLIVINE
 	blackoutmod OLIVINE_CITY ; 
@@ -324,7 +323,6 @@ TL_Scene_2_R:
 	setevent EVENT_LANDING_KURT_2
 	setevent EVENT_LANDING_TIME_TRAVELED
 	setscene $2 
-;	setmapscene ROUTE_40, 0
 	warp ROUTE_40, 7, 4
 	end
 

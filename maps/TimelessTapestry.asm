@@ -31,10 +31,10 @@ TimelessTapestry_MapScriptHeader:
 	pokemon_event 17, 15, BRONZONG, -1, -1, PAL_NPC_BLUE, TT_BronzongText, EVENT_TAPESTRY_BRONZONG
 	; interactables  
 	object_event  6,  8, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryVera, EVENT_KIMONOS_AT_TAPESTRY ; VERA
-	object_event  9, 17, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, EVENT_KIMONOS_AT_TAPESTRY ; piper 
+	object_event  8, 17, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, EVENT_KIMONOS_AT_TAPESTRY ; piper
 	object_event 14, 19, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestrySamaria, EVENT_KIMONOS_AT_TAPESTRY ; SAMARIA
 	object_event 15, 19, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryShiji, EVENT_KIMONOS_AT_TAPESTRY
-	object_event 10, 17, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TapestryMorphea, EVENT_KIMONOS_AT_TAPESTRY
+	object_event  9, 17, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TapestryMorphea, EVENT_KIMONOS_AT_TAPESTRY
 	; southern NPCs
 	object_event 11, 39, SPRITE_AROMA_LADY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText1, EVENT_BEAT_KANNA
 	object_event  7, 38, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText2, EVENT_BEAT_KANNA
@@ -64,10 +64,11 @@ TT_ChamberText:
 
 TapestryAmos:
 	faceplayer
-	checkevent EVENT_KIMONOS_AT_TAPESTRY
 	opentext
+	checkevent EVENT_KIMONOS_AT_TAPESTRY
 	iftrue .NoKimonosText
 	writetext TapestryAmosText1
+	sjump .pickup
 .NoKimonosText:	
 	writetext TapestryAmosText0
 .pickup:
@@ -75,7 +76,6 @@ TapestryAmos:
 	yesorno
 	iffalse_jumptext TapestryAmosNoText
 	showtext TapestryAmosYesText
-	
 	disappear TAPESTRY_BRONZONG
 	setevent EVENT_TAPESTRY_BRONZONG
 	pause 20
@@ -446,10 +446,8 @@ TapestryShiji:
 	para "to return to the"
 	line "Capital."
 	
-	para "The templeas are"
-	line "becoming a ruins"
-	para "without proper"
-	line "upkeep!"
+	para "The temples are"
+	line "becoming ruins!"
 	done
 
 TapestryText1:

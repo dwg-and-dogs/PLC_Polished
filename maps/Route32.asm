@@ -34,8 +34,8 @@ Route32_MapScriptHeader:
 	object_event 11, 84, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32SlowpokeTailScript, -1
 	smashrock_event 6, 82
 	smashrock_event 7, 83
-	itemball_event  6, 83, GEODE, 5, EVENT_ROUTE_32_REPEL
-	itemball_event 10, 14, JEZE_BALL, 5, EVENT_ROUTE_32_GREAT_BALL
+	itemball_event  6, 83, GEODE, 1, EVENT_ROUTE_32_REPEL
+	itemball_event 10, 14, MACHO_BRACE, 1, EVENT_ROUTE_32_GREAT_BALL
 	cuttree_event 10, 19, EVENT_ROUTE_32_CUT_TREE
 	fruittree_event 3, 31, FRUITTREE_ROUTE_32, FIXED_CHARGE, PAL_NPC_RED
 
@@ -419,7 +419,7 @@ Route32BerryVendor:
 Route32BerryVendorOptions:
 	text "My berries can"
 	line "get your EVs as"
-	para "low as you need!"
+	cont "low as you need!"
 	
 	para "Buy a dozen"
 	line "for ¥1000?"

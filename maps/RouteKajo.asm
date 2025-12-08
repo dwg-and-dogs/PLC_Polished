@@ -47,7 +47,7 @@ RouteKajo_MapScriptHeader:
     object_event 42, 15, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, TrainerBreederJodyScript, -1;
     object_event 57,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerPokefan_MRobertScript, -1;
     object_event 54, 17, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerSchoolgirlFaithScript, -1;
-	; NEED TO PLACE THESE?
+
 	itemball_event  7, 27, REVIVE, 1, EVENT_KAJO_REVIVE2 ;ok
 	itemball_event 41, 24, SUPER_POTION, 1, EVENT_KAJO_POTION2 ;ok
 	itemball_event 32,  6, ETHER, 1, EVENT_KAJO_ETHER ;ok
@@ -132,11 +132,11 @@ TrainerBreederJodyScript:
 TrainerPokefan_MRobertScript:
     generictrainer POKEFANM, ROBERT, EVENT_BEAT_POKEFANM_ROBERT, Pokefan_MRobertSeenText, Pokefan_MRobertBeatenText
 
-    text "I didn't realize"
-    line "how out of shape"
-    cont "I was. I need to"
-    cont "come out here"
-    cont "more often."
+    text "These rocks have"
+	line "been here since"
+	para "they rolled down,"
+	line "probably hundreds"
+	cont "of years ago."
     done
 
 TrainerSchoolgirlFaithScript:
@@ -228,8 +228,11 @@ Pokefan_MRobertSeenText:
     done
 
 Pokefan_MRobertBeatenText:
-    text "I need to do more"
-    line "cardio."
+    text "These rocks have"
+	line "been here since"
+	para "they rolled down,"
+	line "probably hundreds"
+	cont "of years ago."
     done
 
 SchoolgirlFaithSeenText:

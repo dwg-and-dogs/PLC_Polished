@@ -77,9 +77,9 @@ HeatranText:
 
 CradleScene1_Mejimi:	
 ;cf western capital
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-	disappear PLAYER
+;	special Special_FadeBlackQuickly
+;	special Special_ReloadSpritesNoPalettes
+;	disappear PLAYER
 
 	opentext
 	writetext CradleCutscene_Text0 ; MEANWHILE, 

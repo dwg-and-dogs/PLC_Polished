@@ -53,10 +53,8 @@ BirdKeeperRodBeatenText:
     done
 
 BirdKeeperAbeSeenText:
-    text "If you want to"
-	line "talk to Falkner,"
-	para "you've got to get"
-	line "through me!"
+    text "I'm the tip of"
+	line "the spear here!"
     done
 
 BirdKeeperAbeBeatenText:

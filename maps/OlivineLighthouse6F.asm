@@ -62,7 +62,7 @@ Lighthouse6FScene:
 	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 30
 	writetext LighthouseChuckText1
 	waitbutton
-	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 30 
+;	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 30 
 	writetext LighthouseKurtText1
 	waitbutton
 	closetext
@@ -110,11 +110,12 @@ LighthouseKurtText1:
 	done
 
 Lighthouse6F_FathomText:
-	text "Slowking: You"
-	line "fathom what I am"
-	cont "enduring for you."
+	text "You could never"
+	line "fathom what I"
+	cont "endure for you."
 
-	para "Step inside."
+	para "Take a deep breath"
+	line "and come below."
 	done
 
 Lighthouse6FScene2:
@@ -122,11 +123,11 @@ Lighthouse6FScene2:
 Lighthouse6FScene1:
 	turnobject PLAYER, LEFT
 	turnobject LIGHTHOUSE_CHUCK, RIGHT
-	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 30
+;	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 30
 	opentext
 	writetext LighthouseChuckText2
 	waitbutton
-	showemote EMOTE_QUESTION, LIGHTHOUSE_JASMINE, 30
+;	showemote EMOTE_QUESTION, LIGHTHOUSE_JASMINE, 30
 	writetext LighthouseJasmineText2
 	waitbutton
 	writetext LighthouseChuckText3
@@ -217,10 +218,11 @@ GetStormBadgeText:
     text " Chuck: "
 	next
 	text_start
-	text "Cianwood washed"
-	line "away, but not my"
-	cont "duty. You deserve"
-	cont "this badge."
+	text "Cianwood is gone,"
+	line "but not my honor."
+	
+	para "You deserve the"
+	line "Storm Badge."
 	done
 	
 LighthouseJasmineText3:

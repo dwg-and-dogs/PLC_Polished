@@ -35,7 +35,7 @@ The game's [data files](data/) do a fairly good job of listing things you'll wan
 * [Wild Pokémon](data/wild/)
 * TODO: Trainer Parties and movesets (Spoilers!)
 
-A route-by-route encounter table is posted at ___ (insert screenshot or excel table)
+A route-by-route encounter table is posted at [encounters](datascreenshots/documentation/encounters.pdf)
 
 ### My Pokémon is a different color, is it shiny?
 
@@ -66,6 +66,8 @@ There's only room for 255 moves, including Struggle. I wanted to fit in as many 
 
 ### How do I evolve my Pokémon?
 
+You can find all evolution methods at [evos-attacks](datascreenshots/documentation/evolutions_attacks.txt)
+
 * Pokemon evolve into Hisui forms by using the Hisui Stone from a standard pre-evolution (Hisuian forms: Typhlosion, Samurott, Decidueye, Arcanine, Electrode, Overqwil (from standard Qwilfish), Sneasler (from standard Sneasel), Wyrdeer (from Stantler))
 * Kadabra, Graveler, Machoke, Haunter evolve at Lv. 40 
 * Ponyta, Grimer, Rhydon evolve at Lv. 25
@@ -78,13 +80,7 @@ There's only room for 255 moves, including Struggle. I wanted to fit in as many 
 
 ### Where do I get this item?
 
-*...
-
-Full spreadsheet is at: TODO 
-
-### Where do I get this TM/HM or move tutor?
-
-TODO: Post spreadsheet
+You can find all items locations at [items](datascreenshots/documentation/items.pdf)
 
 ### What do photographs do?
 
@@ -108,21 +104,24 @@ White Apricorn 	-- Fast Ball 	-- Vanilla behavior
 
 ### What are suggested level caps?
 
-TODO
-
-Anarres: 
-Gauldenrod: 
-Goldenrod:
-Violet:
-Dance Theatre:
-Western Capital: 
-Trader's Landing Port:
-Lighthouse:
-Mahogany:
-Sinjoh:
-Eerie Hamlet:
-Final Gauntlet:
-Final Boss:
+Anarres:  16
+Azalea Gym (Optional): 16
+Gauldenrod: 21
+Stadium Grounds: 25
+Goldenrod: 29
+Violet: 33
+Western Capital: 36
+Trader's Landing Docks: 40
+Lighthouse: 43
+Mahogany: 45
+Olivine Gym (Optional): 45
+Ecruteak Gym (Optional): 46
+Sinjoh: 48
+Extent Temple (Optional): 50
+Eerie Hamlet: 51
+Clast's Cradle: 53
+Final Gauntlet: 57
+Final Boss: 60
 
 
 ### Spoilers below!
@@ -215,6 +214,8 @@ Your Rival feels bitter about the way he has been treated in Azalea and joins Si
 13. Master Ball in Gauldenrod Guild
 
 ### I can't figure out this puzzle!
+
+TODO
 
 Ruins of Alph Puzzles: 
 

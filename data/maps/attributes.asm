@@ -351,11 +351,11 @@ ENDM
 	connection north, Gauldenrod, GAULDENROD, -7 ; NOT SURE IF IT WILL WORK, cf route above
 	
 	map_attributes SereneSprings, SERENE_SPRINGS, $5, NORTH | SOUTH
-	connection north, StadiumGrounds, STADIUM_GROUNDS, 0 
+	connection north, StadiumGrounds, STADIUM_GROUNDS, -2 
 	connection south, Gauldenrod, GAULDENROD, -7 
 
 	map_attributes StadiumGrounds, STADIUM_GROUNDS, $5, SOUTH	
-	connection south, SereneSprings, SERENE_SPRINGS, 0 
+	connection south, SereneSprings, SERENE_SPRINGS, 2 
 	
 	map_attributes Gauldenrod, GAULDENROD, $5, NORTH | SOUTH
 	connection north, SereneSprings, SERENE_SPRINGS, 7 

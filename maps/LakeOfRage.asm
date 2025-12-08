@@ -265,21 +265,19 @@ LakeRivalText2_3:
 	para "Your adherence to"
 	line "tradition is like"
 	
-	para "a Pineco infest-"
-	line "ation, unaware"
+	para "an infestation of"
+	line "Pineco, unaware"
 	
-	para "that their insti-"
-	line "ncts kill their"
-	cont "own habitat."
+	para "that they destroy"
+	line "their habitat."
 	
 	para "We are part of"
 	line "nature. Our niche"
 	para "is to be reflect-"
 	line "ive stewards."
 	
-	para "I'll show you how"
-	line "strong I am with-"
-	cont "out you!"
+	para "I'm much stronger"
+	line "without you!"
 	done
 
 LakeRivalWinText:
@@ -300,7 +298,8 @@ LakeRivalAfterText:
 	cont "years. Unlike a"
 	
 	para "Pineco hiding in"
-	line "a shell, "
+	line "a shell,"
+	
 	para "Or you hiding in"
 	line "righteousness,"
 	
@@ -314,7 +313,7 @@ LakeRivalAfterText:
 	cont "working."
 	
 	para "<PLAYER>,"
-	line "will you?"
+	line "what will you do?"
 	done
 
 LakeKurtAfterRivalText:

@@ -1130,57 +1130,57 @@
 	def_grass_wildmons ROUTE_38
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 32, GRANBULL
-	wildmon 35, PERSIAN
-	wildmon 32, MAGNEMITE
-	wildmon 34, PIDGEOTTO
-	wildmon 32, TAUROS
-	wildmon 32, MILTANK
-	wildmon 35, MILTANK
+	wildmon 31, GRANBULL
+	wildmon 34, PERSIAN
+	wildmon 31, MAGNEMITE
+	wildmon 33, PIDGEOTTO
+	wildmon 31, TAUROS
+	wildmon 31, MILTANK
+	wildmon 34, MILTANK
 	; day
-	wildmon 32, GRANBULL
-	wildmon 35, PERSIAN
-	wildmon 32, MAGNEMITE
-	wildmon 34, PIDGEOTTO
-	wildmon 32, TAUROS
-	wildmon 32, MILTANK
-	wildmon 35, MILTANK
+	wildmon 31, GRANBULL
+	wildmon 34, PERSIAN
+	wildmon 31, MAGNEMITE
+	wildmon 33, PIDGEOTTO
+	wildmon 31, TAUROS
+	wildmon 31, MILTANK
+	wildmon 34, MILTANK
 	; nite
-	wildmon 32, GRANBULL
-	wildmon 35, PERSIAN
-	wildmon 32, MAGNEMITE
-	wildmon 34, PIDGEOTTO
-	wildmon 32, TAUROS
-	wildmon 32, MILTANK
-	wildmon 35, MILTANK
+	wildmon 31, GRANBULL
+	wildmon 34, PERSIAN
+	wildmon 31, MAGNEMITE
+	wildmon 33, PIDGEOTTO
+	wildmon 31, TAUROS
+	wildmon 31, MILTANK
+	wildmon 34, MILTANK
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_39
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 32, GRANBULL
-	wildmon 35, PERSIAN
-	wildmon 32, MAGNEMITE
-	wildmon 34, PIDGEOTTO
-	wildmon 32, TAUROS
-	wildmon 32, MILTANK
-	wildmon 35, MILTANK
+	wildmon 31, GRANBULL
+	wildmon 34, PERSIAN
+	wildmon 31, MAGNEMITE
+	wildmon 33, PIDGEOTTO
+	wildmon 31, TAUROS
+	wildmon 31, MILTANK
+	wildmon 34, MILTANK
 	; day
-	wildmon 32, GRANBULL
-	wildmon 35, PERSIAN
-	wildmon 32, MAGNEMITE
-	wildmon 34, PIDGEOTTO
-	wildmon 32, TAUROS
-	wildmon 32, MILTANK
-	wildmon 35, MILTANK
+	wildmon 31, GRANBULL
+	wildmon 34, PERSIAN
+	wildmon 31, MAGNEMITE
+	wildmon 33, PIDGEOTTO
+	wildmon 31, TAUROS
+	wildmon 31, MILTANK
+	wildmon 34, MILTANK
 	; nite
-	wildmon 32, GRANBULL
-	wildmon 35, PERSIAN
-	wildmon 32, MAGNEMITE
-	wildmon 34, PIDGEOTTO
-	wildmon 32, TAUROS
-	wildmon 32, MILTANK
-	wildmon 35, MILTANK
+	wildmon 31, GRANBULL
+	wildmon 34, PERSIAN
+	wildmon 31, MAGNEMITE
+	wildmon 33, PIDGEOTTO
+	wildmon 31, TAUROS
+	wildmon 31, MILTANK
+	wildmon 34, MILTANK
 	end_grass_wildmons
 	
 	def_grass_wildmons ROUTE_42

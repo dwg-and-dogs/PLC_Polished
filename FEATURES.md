@@ -2,6 +2,17 @@
 
 Many of these changes were made to Polished Crystal 3.0.0. 
 
+
+
+## Custom Features to Inheritance
+
+* New region: Historic Johto
+* Custom Pokédex of 254 includes Sinnoh and Hisui Pokémon, including 2 fakemon: Noctowl and Minsir 
+* New apricorn system to craft new Pokéballs
+* Emphasis on overworld puzzles exploiting time travel mechanic 
+* "Trick House" in historic Ilex Forest
+* Two possible endings
+
 ## Pokémon
 
 * The entire Pokédex can be caught in one game. 
@@ -15,6 +26,108 @@ Many of these changes were made to Polished Crystal 3.0.0.
 ## Graphics Mechanics
 
 * Pokemon with the highest possible DVs for each hidden power type will take on a unique sprite palette. There are six NPCs who can change the DVs of the first Pokemon in your party: The Celebi Puzzle Word Room (unlocked when you solve the puzzle); National Park; Violet City; Whirl Islands; Tin Tower; and Lake of Rage. 
+
+
+
+## Custom Features to Inheritance
+
+* New region: Historic Johto
+* Custom Pokédex of 254 includes Sinnoh and Hisui Pokémon, including 2 fakemon: Noctowl and Minsir 
+* New apricorn system to craft new Pokéballs
+* Emphasis on overworld puzzles exploiting time travel mechanic 
+* "Trick House" in historic Ilex Forest
+* Two possible endings
+
+## Notable features carried from Polished Crystal 3.0.0
+
+* Modern techniques
+* New mechanics, including the Fairy type, Physical/Special split, Natures, unlimited TMs, Running Shoes, and continuous Repel.
+* Music and graphics devamped from other versions.
+* Nuzlocke mode in the Option menu, enabling the basic rules of the [Nuzlocke Challenge](http://bulbapedia.bulbagarden.net/wiki/Nuzlocke_Challenge).
+* Learnsets have been updated close to Gen VI, with missing moves replaced by similar, egg, TM, or event-exclusive moves. See data/pokemon/evos_attacks or data/pokemon/base_stats/<name> for level-up and TMHM learnsets.
+* HM moves do not require move deleter to overwrite.
+* Hold B to use Running Shoes, or turn on the Option to always use them.
+* Continuous Repel system.
+* Cure poison when it reaches 1 HP outside a battle.
+* Eggs hatch at level 1.
+* Surf at Bicycle/Running Shoes speed.
+* Maximum $9,999,999 money and 50,000 coins.
+* Maximum 30 items and 16 Balls in your bag pocket.
+
+
+## Screenshots
+
+![TradersLanding](screenshots/Inheritance_BoxArt/back/title_screen_093024.png)
+
+![StarterSelection](screenshots/Inheritance_BoxArt/back/screenshot_tg.png)
+
+![ApricornCrafting1](screenshots/Inheritance_Publish/Features/apricorns/fixed_charge.png) 
+
+![ApricornCrafting2](screenshots/Inheritance_Publish/Features/apricorns/hollow_rock.png) 
+
+![ApricornCrafting3](screenshots/Inheritance_Publish/Features/apricorns/radiant_opal.png) 
+
+![ApricornCrafting4](screenshots/Inheritance_Publish/Features/apricorns/shore_foam.png) 
+
+![ApricornCrafting5](screenshots/Inheritance_Publish/Features/apricorns/tough_leaves.png) 
+
+![Minsir](screenshots/Inheritance_Publish/Features/minsir.png) 
+
+![generals](screenshots/Inheritance_Publish/Plot/consuls_garden.png) 
+
+![Badges](screenshots/Inheritance_Publish/Plot/historic_johto_badges_011025.png) 
+
+![Excelsior](screenshots/Inheritance_Publish/Plot/ilex_excelsior.png) 
+
+![Ilex](screenshots/Inheritance_Publish/Plot/ilex_forest.png) 
+
+![Landing](screenshots/Inheritance_Publish/Plot/traders_landing.png) 
+
+![Captain](screenshots/Inheritance_Publish/Plot/rusalka_ruins_captain_072325.png) 
+
+![Route39](screenshots/Inheritance_Publish/Plot/route39.png) 
+
+![Adrinna](screenshots/Inheritance_Publish/Plot/Adrinna_Mine.png) 
+
+![Capital](screenshots/Inheritance_Publish/Plot/capital_palette.png) 
+
+![Kanna](screenshots/Inheritance_Publish/Plot/kanna_080225.png) 
+
+
+; todo 
+New Colors
+
+Debug Room (Spoiler)
+
+Example format below: 
+![seafoam-islands](screenshots/seafoam-islands.png) ; (screenshots/gameplay/<file_name>.png)
+
+
+## New Hidden Power Colors
+
+![Bug](screenshots/Inheritance_Publish/Features/hp_colors/hp_bug.png) 
+![Dark](screenshots/Inheritance_Publish/Features/hp_colors/hp_dark.png) 
+![Dragon](screenshots/Inheritance_Publish/Features/hp_colors/hp_dragon.png) 
+![Electric](screenshots/Inheritance_Publish/Features/hp_colors/hp_electric.png) 
+![Fighting](screenshots/Inheritance_Publish/Features/hp_colors/hp_fighting.png) 
+![Fire](screenshots/Inheritance_Publish/Features/hp_colors/hp_fire.png) 
+![Flying](screenshots/Inheritance_Publish/Features/hp_colors/hp_flying.png) 
+![Ghost](screenshots/Inheritance_Publish/Features/hp_colors/hp_ghost.png) 
+![Grass](screenshots/Inheritance_Publish/Features/hp_colors/hp_grass.png) 
+![Ground](screenshots/Inheritance_Publish/Features/hp_colors/hp_ground.png) 
+![Ice](screenshots/Inheritance_Publish/Features/hp_colors/hp_ice.png) 
+![Poison](screenshots/Inheritance_Publish/Features/hp_colors/hp_poison.png) 
+![Psychic](screenshots/Inheritance_Publish/Features/hp_colors/hp_psychic.png) 
+![Rock](screenshots/Inheritance_Publish/Features/hp_colors/hp_rock.png) 
+![Steel](screenshots/Inheritance_Publish/Features/hp_colors/hp_steel.png) 
+![Water](screenshots/Inheritance_Publish/Features/hp_colors/hp_water.png) 
+
+
+## Spotify Playlist
+
+Curated playlist: https://open.spotify.com/playlist/1yUCVhCgMnO10MIXvMtyh4?si=fc0b8107a7724a80
+
+##Features from Polished Crystal 3.0.0
 
 ## Battle Mechanics
 

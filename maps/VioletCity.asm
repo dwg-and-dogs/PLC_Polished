@@ -134,9 +134,10 @@ SproutTowerSignText:
 	done
 
 EarlsPokemonAcademySignText:
-	text "#mon Academy"
+	text "Sprout Tower"
+	line "Passageway"
 	
-	para "Management by"
+	para "Manged by"
 	line "Elder Li"
 	done
 

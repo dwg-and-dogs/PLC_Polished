@@ -46,6 +46,7 @@ BrassTowerAdrinna:
 	end
 
 .DeclinedDueToCelebi:
+	faceplayer
 	showtext AdrinnaSeenText0
 	sjump .Declined
 	end
@@ -67,13 +68,13 @@ AdrinnaSeenText0:
 	next
 	text_start
 	text "I knew your tal-"
-	line "ents would rise"
+	line "ents would take"
 	cont "you to the top."
 	
 	para "<PLAYER>. You"
 	line "could be so much"
 	para "more without your"
-	line "grandfather."
+	line "grandfather!"
 	
 	para "If you shed those"
 	line "antiquated bonds,"
@@ -81,14 +82,11 @@ AdrinnaSeenText0:
 	line "around the world!"
 	
 	para "What do you say?"
-	line "Join with"
-	para "me. We only need"
-	line "a cult of self."
+	line "Join me."
 	
-	para "Hm? I can see in"
-	line "your eyes, you're"
-	cont "as weak as your"
-	cont "Grandfather."
+	para "...? You take the"
+	line "side of the Kami?"
+	cont "I misjudged you!"
 	done
 
 
@@ -112,9 +110,7 @@ AdrinnaTowerSeenText:
 	line "around the world!"
 	
 	para "What do you say?"
-	line "Join me. We only"
-	cont "need a cult of"
-	cont "the self."
+	line "Join me."
 	done
 
 
@@ -154,10 +150,9 @@ AdrinnaTakesOverText:
 	text_start
 	text "Excellent. Meet"
 	line "me on the roof."
-	para "We will show"
-	line "Johto how little"
-	cont "it needs Consul"
-	cont "Urgaust."
+	para "We'll show Johto"
+	line "how it needs not"
+	cont "Consul Urgaust."
 	done
 
 AreYouSureAdrinna:
