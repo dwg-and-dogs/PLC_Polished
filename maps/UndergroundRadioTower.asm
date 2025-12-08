@@ -84,10 +84,10 @@ UndergroundRadioTowerKurtScript:
     promptbutton
     verbosegivetmhm HM_FLY
 	waitbutton
-	verbosegivekeyitem NATU_CALL 
+;	verbosegivekeyitem NATU_CALL 
     setevent EVENT_GOT_FLY_KURT
 	setevent EVENT_RIVAL_RADIO_TOWER
-	waitbutton
+;	waitbutton
     closetext
 	applymovement UNDERGROUND_KURT, UndergroundKurtMoves
 	disappear UNDERGROUND_KURT

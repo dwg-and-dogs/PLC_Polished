@@ -256,7 +256,7 @@ PokemonCries::
 	mon_cry CRY_RAIKOU,      $22e,  $120 ; Raikou
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; Entei
 	mon_cry CRY_MAGCARGO,    $000,  $180 ; Suicune
-	mon_cry CRY_RAICHU,      $0f8,  $0c0 ; HEATRAN
+	mon_cry CRY_ENTEI,       $000,  $1a0 ; HEATRAN
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; Lugia
 	mon_cry CRY_TYROGUE,     $000,  $180 ; HoOh
 	mon_cry CRY_ENTEI,       $14a,  $111 ; Celebi

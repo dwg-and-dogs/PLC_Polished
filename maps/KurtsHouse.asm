@@ -405,7 +405,7 @@ KurtsHouseKurtTurnedOutGreatText:
 	
 KurtsHouseKurtThatsALetdownText:
 	text "Don't have any"
-	line "apricorns!"
+	line "materials!"
 	done
 
 KurtsHouseKurtAskYouHaveAnApricornText:
@@ -510,11 +510,11 @@ KurtsJournal1Text: ; calm coast
 	para "Once, on the way"
 	line "back to Azalea, he"
 	cont "was playing with"
-	para "an apricorn and"
+	para "an Apricorn and"
 	line "caught"
 	cont "a Cyndaquil."
 	
-	para "The apricorn had"
+	para "The Apricorn had"
 	line "a soft glow in"
 	cont "his hands with the"
 	cont "#mon inside!"
@@ -560,7 +560,7 @@ KurtsJournal2Text: ; route 35 gate?
 
 	para "We got some funny"
 	line "looks for having"
-	cont "an apricorn - "
+	cont "an Apricorn - "
 	para "#balls were just"
 	line "becoming common."
 	
@@ -596,7 +596,7 @@ KurtsJournal3Text: ; earls academy
 	line "walking side by"
 	para "side with his"
 	line "partner, holding"
-	cont "his apricorn."
+	cont "his Apricorn."
 
 	para "The other kids had"
 	line "#seals for their"
@@ -701,7 +701,7 @@ KurtsJournal5Text: ; mahogany town
 	para "When I got home,"
 	line "I noticed some "
 	para "paint was wearing"
-	line "off the apricorn."
+	line "off the Apricorn."
 	done
 
 	
@@ -752,7 +752,7 @@ KurtsJournal6Text: ; tinder garden 2
 	para "While I waited,"
 	line "I looked in the "
 	para "bag and found his"
-	line "apricorn."
+	line "Apricorn."
 	
 	para "The paint was ne-"
 	line "arly all chipped"
@@ -799,7 +799,7 @@ KurtsJournal6Text: ; tinder garden 2
 	para "I still think of"
 	line "those good days"
 	cont "whenever I see"
-	cont "an apricorn,"
+	cont "an Apricorn,"
 
 	para "but now I also"
 	line "think of all the"

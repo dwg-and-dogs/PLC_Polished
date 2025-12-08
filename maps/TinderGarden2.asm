@@ -73,7 +73,7 @@ TinderGarden2Script:
 	
 	pause 120
 
-	warp HOLLYS_HOLT_CREDIT, 10, 25 
+	warphide HOLLYS_HOLT_CREDIT, 10, 25 
 	end
 
 
@@ -209,7 +209,7 @@ TG2_Text_Kurt5_2:
 	para "I still think of"
 	line "those good days"
 	cont "whenever I see"
-	cont "an apricorn,"
+	cont "an Apricorn,"
 
 	para "but now I also"
 	line "think of all the"

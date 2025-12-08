@@ -4062,6 +4062,7 @@ LuxioEvosAttacks:
 	
 LuxrayEvosAttacks:
 	db 0 ; no more Evolutions
+	db 1, DRAGONBREATH
 	db 1, QUICK_ATTACK
 	db 1, THUNDERSHOCK
 	db 1, BITE
@@ -4071,7 +4072,7 @@ LuxrayEvosAttacks:
 	db 35, WILD_CHARGE
 	db 40, IRON_TAIL
 	db 45, PLAY_ROUGH
-	db 50, SUCKER_PUNCH
+	db 50, OUTRAGE
 	db 0 ; no more level-up moves
 	
 RoseliaEvosAttacks:
@@ -4733,6 +4734,7 @@ HeatranEvosAttacks: ;encounter at lv 50
 	db 1, EARTH_POWER
 	db 55, FIRE_BLAST
 	db 60, FLASH_CANNON
+	db 0 ; no more moves 
 
 LugiaEvosAttacks: ;ENCOUUNTER AT LEVEL 40
 	db 0 ; no more evolutions

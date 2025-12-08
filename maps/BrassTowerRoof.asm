@@ -125,7 +125,7 @@ BrassTowerRoofScript:
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_BEAT_MEJIMI
-	warp TIMELESS_TAPESTRY,  9, 26
+	warphide TIMELESS_TAPESTRY,  9, 26
 	end
 
 BTR_PlayerStepsDownMovement:

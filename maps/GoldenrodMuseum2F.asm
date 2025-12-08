@@ -219,9 +219,9 @@ GoldenrodMuseum2FExhibit4:
 GoldenrodMuseum2FNPC3Text:
     text "If I had to do"
     line "the challenge, I"
-    cont "could definitely"
-    cont "bring back a lot"
-    cont "of unown."
+    para "could definitely"
+    line "bring back a lot"
+    cont "of Unown."
     done
 
 GoldenrodMuseum2FNPC4Text:

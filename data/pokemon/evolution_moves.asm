@@ -207,7 +207,7 @@ EvolutionMoves::
 	db NO_MOVE		;STARAVIA ; ca
 	db CLOSE_COMBAT	;STARAPTOR  ; cb
 	db NO_MOVE		;LUXIO     ; cc
-	db CRUNCH		;LUXRAY    ; cd
+	db DRAGON_CLAW		;LUXRAY    ; cd
 	db NO_MOVE		;ROSELIA    ; ce
 	db SLUDGE_BOMB	;ROSERADE   ; cf
 	db NO_MOVE		;RAMPARDOS   ; d0
