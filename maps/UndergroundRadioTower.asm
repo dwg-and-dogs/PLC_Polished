@@ -231,13 +231,7 @@ KurtReadyText:
 
 KurtAfterFlyText:
 	text "Oh, you should"
-	line "have these."
-    para "This HM can help"
-    line "us escape,"
-	
-	para "Or just call my"
-	line "Natu to fly you"
-	cont "around."
+	line "have this HM."
     done
 
 UndergroundKurtMoves:

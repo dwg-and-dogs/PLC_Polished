@@ -32,45 +32,76 @@ DebugRoom_MapScriptHeader:
 
 
 DebugInteraction: 
-;	opentext
-;	givepoke PIDGEOT, 5
+	opentext
+	; useful items
+for x, POKE_BALL, CHERISH_BALL + 1
+if x != PARK_BALL && x != SAFARI_BALL
+	giveitem x, 99
+endc
+endr
+	giveitem MAX_POTION, 99
+	giveitem FULL_RESTORE, 99
+	giveitem MAX_REVIVE, 99
+	giveitem MAX_ELIXIR, 99
+	giveitem RARE_CANDY, 99
+	giveitem PP_UP, 99
+	giveitem PP_MAX, 99
+	giveitem SACRED_ASH, 99
+	giveitem MAX_REPEL, 99
+	giveitem ESCAPE_ROPE, 99
+	giveitem ABILITY_CAP, 99
+	giveitem LEAF_STONE, 99
+	giveitem EXP_SHARE, 1
+	
+	givemoney $0, 1000000
+	givecoins 50000
+	; good party
+	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
+;	loadmem wPartyMon1EVs+0, 252
+;	loadmem wPartyMon1EVs+1, 252
+;	loadmem wPartyMon1EVs+2, 252
+;	loadmem wPartyMon1EVs+3, 252
+;	loadmem wPartyMon1EVs+4, 252
+;	loadmem wPartyMon1EVs+5, 252
 ;	loadmem wPartyMon1DVs+0, $ff
-;	loadmem wPartyMon1DVs+1, $fe
-;	loadmem wPartyMon1DVs+2, $ee
-;	
-;	loadmem wPartyMon6DVs+0, $ff
-;	loadmem wPartyMon6DVs+1, $fe
-;	loadmem wPartyMon6DVs+2, $ef
-;	givepoke POLITOED, 50
-;	waitbutton
-;	closetext
-
-;	refreshscreen
-	; need to adapt from here 
-;	special FadeOutPalettes
-;	loadmem wCurForm, -1 ; force
-;	loadmem wCurPartyMon, 0    ; Select first party slot
-;	readmem wPartyMon1Species  ; or wCurPartySpecies... seems to work either way 
-;
-;	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
-;
-;    opentext
-;	loadmem wCurForm, -1
-;	loadmem wCurPartyMon, 0    ; Select first party slot
-;	readmem wPartyMon1Species  ; or wCurPartySpecies
-;	pokepic2 0	
-;    writethistext
-;        text_ram wStringBuffer1 ; "PIDGEY"
-;        text " Lv."             ; " Lv."
-;        text_ram wStringBuffer3 ; "  5"
-;        line " "                ; New line
-;        text_ram wStringBuffer2 ; "BIRDY"
-;        done
-;    pause 120
-;	waitbutton
-;	closetext
-;	clearevent EVENT_KIMONOS_AT_TAPESTRY
-	warp STADIUM_GROUNDS, 11, 36
+;	loadmem wPartyMon1DVs+1, $ff
+;	loadmem wPartyMon1DVs+2, $ff
+	loadmem wPartyMon1Moves+0, FLAMETHROWER
+	loadmem wPartyMon1Moves+1, EXPLOSION
+	loadmem wPartyMon1Moves+2, SHADOW_BALL
+	loadmem wPartyMon1Moves+3, THUNDERPUNCH
+;	loadmem wPartyMon1Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
+;	loadmem wPartyMon1Stats+0, HIGH(999)
+;	loadmem wPartyMon1Stats+1, LOW(999)
+;	loadmem wPartyMon1Stats+2, HIGH(999)
+;	loadmem wPartyMon1Stats+3, LOW(999)
+;	loadmem wPartyMon1Stats+4, HIGH(999)
+;	loadmem wPartyMon1Stats+5, LOW(999)
+;	loadmem wPartyMon1Stats+6, HIGH(999)
+;	loadmem wPartyMon1Stats+7, LOW(999)
+;	loadmem wPartyMon1Stats+8, HIGH(999)
+;	loadmem wPartyMon1Stats+9, LOW(999)
+;	; hm slaves
+;	givepoke FERALIGATR, NO_FORM, 100, LEFTOVERS
+;	givepoke MEGANIUM, NO_FORM, 100, LEFTOVERS
+;	loadmem wPartyMon2Moves+0, EXPLOSION
+;	loadmem wPartyMon2Moves+1, WATERFALL
+;	loadmem wPartyMon2Moves+2, STRENGTH
+;	loadmem wPartyMon2Moves+3, ICE_PUNCH
+;	loadmem wPartyMon2PP+0, 15
+;	loadmem wPartyMon2PP+1, 15
+;	loadmem wPartyMon2PP+2, 15
+;	loadmem wPartyMon2PP+3, 30
+;	loadmem wPartyMon3Moves+0, EXPLOSION
+;	loadmem wPartyMon3Moves+1, ANCIENTPOWER
+;	loadmem wPartyMon3Moves+2, SHADOW_BALL
+;	loadmem wPartyMon3Moves+3, ROCK_SLIDE
+;	loadmem wPartyMon3PP+0, 20
+;	loadmem wPartyMon3PP+1, 15
+;	loadmem wPartyMon3PP+2, 15
+;	loadmem wPartyMon3PP+3, 15
+	closetext
+	warp ROUTE_36, 38, 9 
 	end
 
 DebugRoomExtraScript:

@@ -13,8 +13,14 @@ OlivineGym_MapScriptHeader:
 
 
 	def_object_events
+	pokemon_event  4, 13, STEELIX, -1, -1, PAL_NPC_RED, JasmineSteelixText, EVENT_JASMINE_GYM
 	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, EVENT_JASMINE_GYM ; NOT HERE UNTIL AFTER BEATING CHUCK 
 	object_event  4,  13, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScriptOlivine, EVENT_BEAT_CHUCK 
+
+JasmineSteelixText:
+	text "ShinyHulud:"
+	line "Eelix!"
+	done
 
 PryceScriptOlivine:
     faceplayer
@@ -22,7 +28,6 @@ PryceScriptOlivine:
     writetext PryceTextOlivine
 	waitbutton
     closetext
-	givekeyitem PUMICE_HARP 
     end
 
 PryceTextOlivine:

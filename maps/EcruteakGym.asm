@@ -49,6 +49,7 @@ EcruteakGym_MapScriptHeader:
 	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1 
 	object_event  5, 13, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymPryceScript, EVENT_BURNED_TOWER_MORTY
 	pokemon_event  4, 13, MAMOSWINE, -1, -1, PAL_NPC_BROWN, EcruteakMamoswineText, EVENT_BURNED_TOWER_MORTY
+	pokemon_event  4, 13, GENGAR, -1, -1, PAL_NPC_BLUE, MortyGengarText, -1
 
 	object_event  2,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumRebecca, -1
 	object_event  7,  3, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerMediumDoris, -1
@@ -56,6 +57,11 @@ EcruteakGym_MapScriptHeader:
 	object_const_def
 	const ECRUTEAK_GYM_BOULDER1
 	const ECRUTEAK_GYM_BOULDER2	
+
+MortyGengarText:
+	text "Jung-Gar:"
+	line "Gang!"
+	done
 	
 EcruteakGymBoulders:
 	usestonetable .BoulderTable

@@ -54,6 +54,7 @@ AnarresTower3FEvent:
 	applymovement ANARRES_TOWER_HOLLIS, HollisToYou
 	turnobject PLAYER, RIGHT
 	showtext HollisChallengesText
+	setevent EVENT_TAMMY_ANARRES_TOWER
 	winlosstext HollisBeatenText, 0
 	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
 	startbattle
@@ -65,7 +66,7 @@ AnarresTower3FEvent:
 	showtext TammyText2
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
-	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
+;	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
 	showtext TammyText3
 ;	waitbutton
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 60
@@ -75,7 +76,7 @@ AnarresTower3FEvent:
 	turnobject ANARRES_TOWER_HOLLIS, RIGHT
 	applyonemovement ANARRES_TOWER_HOLLIS, step_right
 	showtext HollisHM
-	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
+;	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
 	showtext TammyThanks
 	closetext
 	applymovement ANARRES_TOWER_TAMMY, TammyWalksOutMovement

@@ -21,16 +21,13 @@ HoltCoastGate_MapScriptHeader:
 HoltCoastGateWarpScene: ; C.F. bellchimetrail.asm on polished crystal clean
 	special Special_FadeOutMusic
 	special FadeOutPalettes
-	playsound SFX_EXIT_BUILDING
-	applyonemovement PLAYER, hide_object
-	waitsfx
-	disappear PLAYER
-	pause 10
-	special Special_FadeOutMusic
-	special FadeOutPalettes
-	pause 15
-	disappear PLAYER
-	waitsfx
+;	playsound SFX_EXIT_BUILDING
+;	applyonemovement PLAYER, hide_object
+;	waitsfx
+;	disappear PLAYER
+;	pause 15
+;	disappear PLAYER
+;	waitsfx
 	setscene $1
 	warphide WESTERN_CAPITAL, 10, 22
 	end

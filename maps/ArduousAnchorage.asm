@@ -60,26 +60,30 @@ Overqwil1:
 	writetext OverqwilText
 	waitbutton
 	closetext
-	setevent EVENT_ANCHORAGE_OVERQWIL_1
+
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon OVERQWIL, 30
 	startbattle
+	ifequal $1, .Continue
 	disappear ANCHORAGE_OVERQWIL_1
+.Continue:
 	reloadmapafterbattle
 	end
-	
+
 Overqwil2:
 	opentext
 	writetext OverqwilText
 	waitbutton
 	closetext
-	setevent EVENT_ANCHORAGE_OVERQWIL_2
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon OVERQWIL, 30
 	startbattle
+	ifequal $1, .Continue
 	disappear ANCHORAGE_OVERQWIL_2
+.Continue:
 	reloadmapafterbattle
 	end
+
 
 OverqwilText:
 	text "Baruu!"

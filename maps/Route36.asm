@@ -150,12 +150,15 @@ Route36KurtBattleText:
 Route36BronzongScript:
 	cry BRONZONG
 	pause 15
+	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon BRONZONG, 30
 	startbattle
+	ifequal $1, .Continue
 	disappear ROUTE_36_BRONZONG
-	setevent EVENT_ROUTE_36_BRONZONG
+.Continue:
 	reloadmapafterbattle
 	end
+
 
 Route36MatronAskHealText:
 	text "You look tired"

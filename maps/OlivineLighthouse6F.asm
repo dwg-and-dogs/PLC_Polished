@@ -69,6 +69,7 @@ Lighthouse6FScene:
 	applyonemovement PLAYER, step_left
 	turnobject PLAYER, UP
 	special HealParty
+	pause 30 
 	showtext Lighthouse6F_FathomText
 	warpfacing UP, SLOWPOKE_DREAMS, 4, 5
 	end
@@ -110,6 +111,11 @@ LighthouseKurtText1:
 	done
 
 Lighthouse6F_FathomText:
+	text_high
+    text " OMLAS: "
+	next
+	text_start
+	
 	text "You could never"
 	line "fathom what I"
 	cont "endure for you."

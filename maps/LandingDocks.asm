@@ -424,9 +424,11 @@ Docks_Text11_2:
 	next
 	text_start 
 	text "Lugia is mine."
-	line "<PLAYER>, please"
-	para "address his con-"
-	line "cern."
+	line "I brought her!"
+	cont "I deserve her!"
+	
+	para "<PLAYER>, please"
+	line "address him."
 
 	para "I'll heal your"
 	line "#mon."
@@ -447,7 +449,7 @@ Docks_Text12:
 	para "did. But tradit-"
 	line "ion dictates that"
 	para "I must give you "
-	line "the vortex badge,"
+	line "the Vortex Badge,"
 	para "marking you as"
 	line "worthy to go on"
 	para "an expedition and"

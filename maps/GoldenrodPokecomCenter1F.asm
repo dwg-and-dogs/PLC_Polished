@@ -32,7 +32,7 @@ GoldenrodPokecomCenter1F_MapScriptHeader:
 	bg_event 24,  3, BGEVENT_ITEM + RARE_CANDY, EVENT_GOLDENROD_POKECOM_CENTER_1F_HIDDEN_RARE_CANDY
 
 	def_object_events
-	object_event  5, 12, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokecomKurtScript, EVENT_GOT_BASEMENT_KEY
+	object_event  6,  9, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PokecomKurtScript, EVENT_GOT_BASEMENT_KEY
 	object_event  7,  7, SPRITE_BOWING_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodPokecenter1FNurseScript, -1
 	object_event  1,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MapNameNPC1Script, -1
 	object_event  9, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MapNameNPC2Script, -1
@@ -52,8 +52,24 @@ PokecomKurtScript:
 	writetext KurtHasSomeFansText
 	waitbutton
 	closetext
+	readvar VAR_FACING
+	; if you're looking up, he has to step right, otherwise just steps down 
+	ifnotequal UP, .KurtLeavesDown
+	applyonemovement POKECOM_KURT, step_right
+.KurtLeavesDown:
+	applymovement POKECOM_KURT, KurtLeavesPokecomDownMovement
+	disappear POKECOM_KURT
 	setevent EVENT_GOT_BASEMENT_KEY
 	end
+
+KurtLeavesPokecomDownMovement:
+	step_down
+	step_down
+	step_down
+	step_down
+	step_down
+	step_end
+	
 
 GoldenrodPokecenter1FNurseScript:
 	setevent EVENT_WELCOMING_TO_POKECOM_CENTER

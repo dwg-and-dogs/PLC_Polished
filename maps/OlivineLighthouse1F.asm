@@ -62,6 +62,7 @@ LighthouseRivalTrigger2:
 	applymovement LIGHTHOUSE_KURT, LighthouseKurtGoesUpMovement
 	disappear LIGHTHOUSE_KURT
 	setevent EVENT_KURT_LIGHTHOUSE_1
+	setevent EVENT_KURT_OLIVINE_POKECENTER
     end
 
 LigthouseRivalBattleScript:

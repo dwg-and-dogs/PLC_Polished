@@ -115,6 +115,7 @@ LoRChanseyText:
 
 
 LakeOfRageHealerScript:
+	blackoutmod LAKE_OF_RAGE
 	faceplayer
 	opentext
 	writetext LoRHealText

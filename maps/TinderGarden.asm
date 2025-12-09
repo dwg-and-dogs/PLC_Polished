@@ -825,9 +825,7 @@ PryceWatchKurtPleaseText3:
 	cont "grees with."
 	
 	para "Tradition should"
-	line "bring people in,"
-	para "not guard against"
-	line "newcomers!"
+	line "bring people in!"
 	done
 
 PryceWatchKurtPleaseText4:

@@ -588,12 +588,9 @@ BobeshText4:
 	next
 	text_start
 	
-    text "Brigader! Take"
-	line "her away to the"
-	cont "stadium."
-	
-	para "I've heard"
-	line "enough."
+    text "Take her to the"
+	line "stadium! I've"
+	cont "heard enough."
     done
 
 PlayerMovesToWatchScene:

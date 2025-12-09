@@ -83,6 +83,17 @@ StadiumGroundsBobeshScene:
 	turnobject STADIUMGROUNDS_SANDRA, LEFT
 	sjump PickupStadiumScene
 	
+		cry BRONZONG
+	pause 15
+	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
+	loadwildmon BRONZONG, 30
+	startbattle
+	ifequal $1, .Continue
+	disappear ROUTE_36_BRONZONG
+.Continue:
+	reloadmapafterbattle
+	end
+	
 StadiumGroundsToxicroakScene:
 	applymovement PLAYER, PlayerWalksDownMovement
 	pause 60
@@ -108,12 +119,15 @@ StadiumGroundsToxicroakScene:
 	writetext ToxicroakChallengeText
 	waitbutton
 	closetext
+	; cf route 36 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon TOXICROAK, 20
 	startbattle
 	ifequal $1, .Continue
-.Continue:
 	disappear STADIUMGROUNDS_TOXICROAK
+.Continue:
+	reloadmapafterbattle
+; end cf route 36
 	special Special_FadeOutMusic
 	pause 60
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW

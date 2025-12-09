@@ -93,11 +93,13 @@ BrassTower15FVaporeonScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon VAPOREON, 50
 	startbattle
+	ifequal $1, .Continue
 	disappear BRASSTOWER_VAPOREON
-	setevent EVENT_BRASS_TOWER_VAPOREON
+.Continue:
 	reloadmapafterbattle
 	end
-	
+
+
 VaporeonGuardianText:
 	text "It's a guardian"
 	line "Vaporeon!"

@@ -27,8 +27,8 @@ TrainerClassNames::
 	li "<PK><MN> Trainer" ; RED
 	li "<PK><MN> Trainer" ; LEAF
 	li "Woodcutter"       ; RIVAL0
-	li "Woodcutter"       ; RIVAL1
-	li "Woodcutter"       ; RIVAL2
+	li "Chemist"       ; RIVAL1
+	li "Chemist"       ; RIVAL2
 	li "Ninja"			  ; LYRA1
 	li "<PK><MN> Trainer" ; LYRA2
 	li "Youngster"        ; YOUNGSTER

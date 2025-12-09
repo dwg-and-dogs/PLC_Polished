@@ -81,16 +81,20 @@ BrassTower13FUnownScript:
 	opentext
 	writetext BrassTowerUnownText
 	waitbutton
-	cry UNOWN
+	cry NOCTOWL
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon NOCTOWL, 50
 	startbattle
+	ifequal $1, .Continue
 	disappear BRASS_TOWER_13F_UNOWN
-	setevent EVENT_BRASS_TOWER_13F_UNOWN
+.Continue:
 	reloadmapafterbattle
 	end
+	
+
+	
 	
 BrassTowerUnownText:
 	text "Noctowl's aura"

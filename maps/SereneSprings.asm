@@ -34,7 +34,12 @@ BrigaderScript:
 	
 GauldenrodBrigaderText:
 	text "Stay out of"
-	line "trouble."
+	line "trouble - "
+	
+	para "especially avoid"
+	line "the troublemakers"
+	cont "who gather in the"
+	cont "tunnels."
 	done
 
 GenericTrainerBrigader3:

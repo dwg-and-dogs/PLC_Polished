@@ -78,11 +78,11 @@ BrassTower14FFlareonScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon FLAREON, 50
 	startbattle
+	ifequal $1, .Continue
 	disappear BRASS_TOWER_FLAREON
-	setevent EVENT_BRASS_TOWER_FLAREON
+.Continue:
 	reloadmapafterbattle
 	end
-	
 	
 FlareonGuardianText:
 	text "It's a guardian"

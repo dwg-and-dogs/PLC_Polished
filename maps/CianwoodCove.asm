@@ -50,6 +50,13 @@ CianwoodCoveKurtScript:
 KurtCCoveDormsText2:
 	text "We must stop that"
 	line "General Kensey!"
+	
+	para "If you need to go"
+	line "back to our time,"
+	
+	para "just visit that"
+	line "engraving on the"
+	cont "cliff again."
 	done
 
 CCoveKurtBattleText:

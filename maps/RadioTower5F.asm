@@ -149,8 +149,8 @@ WhitneyAttractText:
 	next
 	text_start
 	text "<PLAYER>, please,"
-	line "take this badge"
-	cont "and TM."
+	line "take this TM and"
+	cont "the Plain Badge."
 	
 	para "You reminded me"
 	line "that I should"

@@ -160,7 +160,8 @@ FalknerWinLossText:
 
 ReceivedZephyrBadgeText:
 	text "Please, take this"
-	line "TM and badge."
+	line "TM and the"
+	cont "Zephyr Badge."
 	done
 
 FalknerAfterText:

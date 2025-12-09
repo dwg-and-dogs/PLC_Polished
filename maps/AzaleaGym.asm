@@ -17,7 +17,11 @@ AzaleaGym_MapScriptHeader: ;removed benny josh amy+may trainers
 
 	def_object_events
 	object_event  5, 7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
+	pokemon_event  6,  7, SCYTHER, -1, -1, PAL_NPC_GREEN, ScytherBugsyText, -1
 
+ScytherBugsyText:
+	text "Manny: Scy!"
+	done
 
 AzaleaGymStatue:
 	gettrainername BUGSY, 1, $1

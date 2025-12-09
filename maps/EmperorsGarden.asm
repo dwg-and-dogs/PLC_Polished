@@ -404,14 +404,16 @@ AdrinnaMoves2:
 
 EmperorsGardenKenseyScene:
 
-	refreshscreen
-	trainerpic KENSEY
-	waitbutton
-	closepokepic
+
 
 	showemote EMOTE_SHOCK, PLAYER, 5
 	applymovement PLAYER, PlayerHidesFromKenseyMovement
 	pause 30
+	refreshscreen
+	trainerpic KENSEY
+	waitbutton
+	closepokepic
+	
 	showemote EMOTE_QUESTION, EMPERORS_GARDEN_ADRINNA_3, 10
 	opentext
 	writetext EG_Kensey_Text_1
@@ -545,6 +547,7 @@ EmperorsGardenAdrinnaScene:
 	setscene $4 ; no more scenes 
 	special HealParty
 	end
+
 
 EG_AdrinnaMove3:
 	step_down
@@ -694,9 +697,8 @@ AdrinnaWinText:
 	done
 	
 AdrinnaLossText:
-	text "I can tell you"
-	line "are pushing your-"
-	cont "self. Keep at it."
+	text "Keep pushing"
+	line "yourself."
 	done
 
 EG_PanDownMovement:
@@ -716,7 +718,7 @@ AmosGardenScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
-	reloadmapafterbattle
+	reloadmap
 	showtext AmosGardenAfterBattleText
 	playsound SFX_WARP_TO
 	applyonemovement EMPERORS_GARDEN_AMOS, teleport_from
@@ -724,12 +726,6 @@ AmosGardenScript:
 	setevent EVENT_BATTLED_AMOS_GARDEN
 	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
 	setmapscene WESTERN_CAPITAL, $1
-;	reloadmap
-;	pause 60
-;	special Special_FadeOutMusic
-;	special FadeOutPalettes
-;	pause 60
-;	warpfacing RIGHT, EMPERORS_GARDEN, 15, 17
 	end
 
 AmosWalksAwayMovement_EG:
