@@ -280,7 +280,7 @@ HollysHoltNPC3Text:
 	line "get on a tree,"
 	cont "they destroy it."
 	
-	para "The pinecos"
+	para "The Pinecos"
 	line "can't help but"
 	para "reproduce this"
 	line "way. We have to"

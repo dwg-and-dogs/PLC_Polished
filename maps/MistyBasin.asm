@@ -146,7 +146,7 @@ TammyAfterBattleText:
 	next
 	text_start
 	text "I invented a way"
-	line "to shake pineco"
+	line "to shake Pineco"
 	para "off, without"
 	line "hurting the"
 	para "tree. Hollis"

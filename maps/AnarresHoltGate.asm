@@ -61,7 +61,7 @@ TammyDialogue1:
     text " Ursula: "
 	next
 	text_start
-	text "The pineco are an"
+	text "The Pineco are an"
 	line "infestation! The"
 	para "predators from"
 	line "the north aren't"
