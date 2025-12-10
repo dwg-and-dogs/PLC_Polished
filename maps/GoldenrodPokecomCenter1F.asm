@@ -247,23 +247,22 @@ WonderTradeForGSBallPichuText2:
 	done
 
 KurtHasSomeFansText:
-    text "<PLAYER>, I have"
-	line "some contacts."
-	
-	para "They can get us"
-	line "east of the city"
-	cont "if we help them."
+    text "<PLAYER>, I've"
+	line "met some trainers"
+	para "who can help us"
+	line "get closer to"
+	cont "Ecruteak."
 
 	para "They're concerned"
 	line "with Whitney's"
-	cont "show."
+	cont "radio show."
 	
-	para "It's so divisive."
-	line "She tells them"
-	para "that their"
-	line "families and ne-"
-	para "ighbors aren't"
-	line "like them."
+	para "It's tearing the"
+	line "city apart."
+	
+	para "It's replacing"
+	line "traditions with"
+	cont "division!"
 
 	para "So, my contacts"
 	line "would like our"

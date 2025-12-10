@@ -474,6 +474,13 @@ Brigader20SeenText:
 	done
 
 
+	startbattle
+	ifequal $1, .Continue
+	disappear ANCHORAGE_OVERQWIL_1
+.Continue:
+	reloadmapafterbattle
+	end
+
 CradleScene2_Adrinna:
 	applymovement PLAYER, Player_CCB1F_Move1
 	sjump Cradle_Scene3Pickup
@@ -497,10 +504,8 @@ CradleScene2_Heatran:
 	loadwildmon HEATRAN, 50
 	startbattle
 	ifequal $1, .Continue
-.Continue:
-	setscene $2
 	disappear CRADLE_HEATRAN
-	setevent EVENT_CC_HEATRAN
+.Continue:
 	reloadmapafterbattle
 	turnobject PLAYER, RIGHT
 	showtext CradleAdrinnaText2
@@ -517,6 +522,7 @@ CradleScene2_Heatran:
 	special HealParty
 	pause 60
 	special RestartMapMusic
+	setscene $2
 Cradle_Scene3Pickup:  
 	turnobject PLAYER, RIGHT
 	turnobject CRADLE_ADRINNA_2, LEFT

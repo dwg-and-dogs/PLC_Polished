@@ -59,6 +59,13 @@ GrottoedGlacierB1FScene1:
 	applyonemovement PLAYER, step_up
 	sjump PickupGlacierScene
 
+	startbattle
+	ifequal $1, .Continue
+	disappear ANCHORAGE_OVERQWIL_1
+.Continue:
+	reloadmapafterbattle
+	end
+
 GrottoedGlacierB1FScene0:
 	applyonemovement PLAYER, step_up
 	pause 30
@@ -90,12 +97,13 @@ GrottoedGlacierB1FScene0:
 	turnobject GLACIER_B2F_ADRINNA, LEFT
 	applymovement GLACIER_B2F_BASCULEGION_ALIVE, GlacierBasc_Move2
 	showtext BasculegionText
+	clearevent EVENT_BASCULEGION_SLEEPS
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon BASCULEGION, 45
 	startbattle
 	ifequal $1, .Continue
-.Continue:
 	disappear GLACIER_B2F_BASCULEGION_ALIVE
+.Continue:
 	reloadmapafterbattle
 	setscene $1
 	setevent EVENT_BATTLED_BASCULEGION

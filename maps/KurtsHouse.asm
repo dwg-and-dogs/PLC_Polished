@@ -12,7 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
@@ -817,3 +818,124 @@ KurtsJournal6Text: ; tinder garden 2
 	para "<PLAYER> than I"
 	line "did with you."
 	done
+
+DebugRadioScriptKurt:
+	opentext
+	; time
+	special Special_SetDayOfWeek
+	special Special_InitialClearDSTFlag
+	; pokedex
+	setflag ENGINE_POKEDEX
+	; judge machine
+	setflag ENGINE_JUDGE_MACHINE
+	; all key items
+for x, NUM_KEY_ITEMS
+if x != NATU_CALL
+	givekeyitem x
+endc
+endr
+	; all tms+hms
+for x, NUM_TMS + NUM_HMS
+	givetmhm x
+endr
+	; useful items
+for x, POKE_BALL, CHERISH_BALL + 1
+if x != PARK_BALL && x != SAFARI_BALL
+	giveitem x, 99
+endc
+endr
+	giveitem MAX_POTION, 99
+	giveitem FULL_RESTORE, 99
+	giveitem MAX_REVIVE, 99
+	giveitem MAX_ELIXIR, 99
+	giveitem HP_UP, 99
+	giveitem PROTEIN, 99
+	giveitem IRON, 99
+	giveitem CARBOS, 99
+	giveitem CALCIUM, 99
+	giveitem ZINC, 99
+	giveitem RARE_CANDY, 99
+	giveitem PP_UP, 99
+	giveitem PP_MAX, 99
+	giveitem SACRED_ASH, 99
+	giveitem MAX_REPEL, 99
+	giveitem MAX_REPEL, 99
+	giveitem ESCAPE_ROPE, 99
+	giveitem ABILITY_CAP, 99
+	giveitem LEAF_STONE, 99
+	giveitem FIRE_STONE, 99
+	giveitem WATER_STONE, 99
+	giveitem THUNDERSTONE, 99
+	giveitem MOON_STONE, 99
+	giveitem SUN_STONE, 99
+	giveitem DUSK_STONE, 99
+	giveitem DAWN_STONE, 99
+	giveitem SHINY_STONE, 99
+	giveitem EXP_SHARE, 99
+	giveitem LEFTOVERS, 99
+	giveitem BIG_NUGGET, 99
+	giveitem SILVER_LEAF, 99
+	; all decorations except Diploma
+for x, EVENT_DECO_BED_1, EVENT_DECO_BIG_LAPRAS_DOLL + 1
+	setevent x
+endr
+	; max money
+	givemoney $0, 1000000
+	givemoney $0, 1000000
+	givemoney $0, 1000000
+	givemoney $0, 1000000
+	givemoney $0, 1000000
+	givemoney $0, 1000000
+	givemoney $0, 1000000
+	givemoney $0, 1000000
+	givemoney $0, 1000000
+	givemoney $0, 999999
+	givecoins 50000
+	; all badges -- REMOVED 
+	; fly anywhere -- REMOVED
+	; good party
+	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
+	loadmem wPartyMon1EVs+0, 252
+	loadmem wPartyMon1EVs+1, 252
+	loadmem wPartyMon1EVs+2, 252
+	loadmem wPartyMon1EVs+3, 252
+	loadmem wPartyMon1EVs+4, 252
+	loadmem wPartyMon1EVs+5, 252
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ff
+	loadmem wPartyMon1Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon1Stats+0, HIGH(999)
+	loadmem wPartyMon1Stats+1, LOW(999)
+	loadmem wPartyMon1Stats+2, HIGH(999)
+	loadmem wPartyMon1Stats+3, LOW(999)
+	loadmem wPartyMon1Stats+4, HIGH(999)
+	loadmem wPartyMon1Stats+5, LOW(999)
+	loadmem wPartyMon1Stats+6, HIGH(999)
+	loadmem wPartyMon1Stats+7, LOW(999)
+	loadmem wPartyMon1Stats+8, HIGH(999)
+	loadmem wPartyMon1Stats+9, LOW(999)
+	; hm slaves
+	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
+	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
+	loadmem wPartyMon2Moves+0, FLY
+	loadmem wPartyMon2Moves+1, SURF
+	loadmem wPartyMon2Moves+2, STRENGTH
+	loadmem wPartyMon2Moves+3, CUT
+	loadmem wPartyMon2PP+0, 15
+	loadmem wPartyMon2PP+1, 15
+	loadmem wPartyMon2PP+2, 15
+	loadmem wPartyMon2PP+3, 30
+	loadmem wPartyMon3Moves+0, FLASH
+	loadmem wPartyMon3Moves+1, ROCK_SMASH
+	loadmem wPartyMon3Moves+2, HEADBUTT
+	loadmem wPartyMon3Moves+3, WATERFALL
+	loadmem wPartyMon3PP+0, 20
+	loadmem wPartyMon3PP+1, 15
+	loadmem wPartyMon3PP+2, 15
+	loadmem wPartyMon3PP+3, 15
+	; fill pokedex
+	callasm FillPokedex
+	; intro events
+	closetext
+	end

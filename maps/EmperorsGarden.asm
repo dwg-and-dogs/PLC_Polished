@@ -726,6 +726,7 @@ AmosGardenScript:
 	setevent EVENT_BATTLED_AMOS_GARDEN
 	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
 	setmapscene WESTERN_CAPITAL, $1
+	special HealParty
 	end
 
 AmosWalksAwayMovement_EG:

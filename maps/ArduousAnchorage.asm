@@ -17,7 +17,6 @@ ArduousAnchorage_MapScriptHeader:
 	def_bg_events
 	bg_event  4,  5, BGEVENT_ITEM + ENERGY_ROOT, EVENT_ANCHORAGE_HIDDEN_1
 	bg_event 13, 13, BGEVENT_ITEM + REVIVAL_HERB, EVENT_ANCHORAGE_HIDDEN_2
-	bg_event 29, 19, BGEVENT_READ, DebugAA
 
 	def_object_events
 	object_event 26, 25, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, OVERQWIL, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, Overqwil1, EVENT_ANCHORAGE_OVERQWIL_1
@@ -33,9 +32,6 @@ ArduousAnchorage_MapScriptHeader:
 	const ANCHORAGE_OVERQWIL_1
 	const ANCHORAGE_OVERQWIL_2
 	
-DebugAA:
-	warp PHANTOM_FJORD, 5, 8
-	end
 	
 AnchorageNomadMText:
 	text "Oh, you're not a"

@@ -57,6 +57,7 @@ TinderGardernWatchTheLoggersScript:
 	showtext GardenEngineerText4
 	closetext
 	pause 120
+	applyonemovement PLAYER, hide_object
 	warphide HOLLYS_HOLT_CREDIT, 10, 25 
 	end
 	

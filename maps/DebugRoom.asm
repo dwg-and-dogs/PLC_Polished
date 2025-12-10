@@ -68,7 +68,7 @@ endr
 ;	loadmem wPartyMon1DVs+2, $ff
 	loadmem wPartyMon1Moves+0, FLAMETHROWER
 	loadmem wPartyMon1Moves+1, EXPLOSION
-	loadmem wPartyMon1Moves+2, SHADOW_BALL
+	loadmem wPartyMon1Moves+2, SURF
 	loadmem wPartyMon1Moves+3, THUNDERPUNCH
 ;	loadmem wPartyMon1Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
 ;	loadmem wPartyMon1Stats+0, HIGH(999)
@@ -84,10 +84,10 @@ endr
 ;	; hm slaves
 ;	givepoke FERALIGATR, NO_FORM, 100, LEFTOVERS
 ;	givepoke MEGANIUM, NO_FORM, 100, LEFTOVERS
-;	loadmem wPartyMon2Moves+0, EXPLOSION
+;	loadmem wPartyMon2Moves+0, SURF
 ;	loadmem wPartyMon2Moves+1, WATERFALL
 ;	loadmem wPartyMon2Moves+2, STRENGTH
-;	loadmem wPartyMon2Moves+3, ICE_PUNCH
+;	loadmem wPartyMon2Moves+3, EXPLOSION
 ;	loadmem wPartyMon2PP+0, 15
 ;	loadmem wPartyMon2PP+1, 15
 ;	loadmem wPartyMon2PP+2, 15
@@ -101,7 +101,7 @@ endr
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
 	closetext
-	warp ROUTE_36, 38, 9 
+	warp ANARRES_TOWN, 5, 10
 	end
 
 DebugRoomExtraScript:

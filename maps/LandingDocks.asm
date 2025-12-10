@@ -14,10 +14,10 @@ LandingDocks_MapScriptHeader:
 	def_coord_events
 	coord_event 14, 16, 0, LandingDocksScene
 	coord_event 14, 16, 1, LandingDocksScene_AfterCaptainLeaves
+	coord_event 14, 16, 2, LandingDocksScene_AfterBeatBarbeau
 
 
 	def_bg_events
-
 
 
 	def_object_events
@@ -48,6 +48,11 @@ LandinDocksCallback_MoveNPCs:
 .Skip:
 	endcallback
 
+LandingDocksScene_AfterBeatBarbeau:
+	applymovement PLAYER, PlayerMovesForDocksScene1
+	; apply movements for kurt, barbeau, and kensey 
+	sjump PickupDocksScene2
+	
 LandingDocksScene_AfterCaptainLeaves:
 	applymovement PLAYER, PlayerMovesForDocksScene1
 	sjump PickupDocksScene
@@ -161,6 +166,7 @@ PickupDocksScene:
 	waitbutton
 	closetext
 	playsound SFX_GET_BADGE
+	setflag ENGINE_RAINBOWBADGE
 	waitsfx ; YOU GET THE BADGE AT THE END 
 	applyonemovement LANDING_DOCKS_BARBEAU, step_up
 	turnobject LANDING_DOCKS_BARBEAU, DOWN
@@ -172,6 +178,8 @@ PickupDocksScene:
 	special SaveMusic	
 	playmusic MUSIC_NONE	
 	special RestoreMusic
+	setscene $2
+PickupDocksScene2:
 	special Special_FadeOutMusic
 	pause 30
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
@@ -218,8 +226,7 @@ PickupDocksScene:
 	special Special_CelebiShrineEvent
 	showtext Docks_Text20
 ; end 
-	setscene $2
-	setflag ENGINE_RAINBOWBADGE
+	setscene $3
 	setevent EVENT_DOCKS_KURT
 	setevent EVENT_DOCKS_KENSEY
 	setevent EVENT_DOCKS_BARBEAU
@@ -227,8 +234,9 @@ PickupDocksScene:
 	setevent EVENT_DOCKS_LUGIA
 	setevent EVENT_BEAT_KENSEY_PORT
 	playsound SFX_WARP_TO
-	special FadeOutPalettes
+;	special FadeOutPalettes
 	waitsfx
+	applyonemovement PLAYER, hide_object
 	warphide CLASTS_CRADLE_B1F, 21, 11
 	end
 
