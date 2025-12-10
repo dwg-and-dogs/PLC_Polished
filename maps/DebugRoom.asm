@@ -56,7 +56,7 @@ endr
 	givemoney $0, 1000000
 	givecoins 50000
 	; good party
-	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
+;	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
 ;	loadmem wPartyMon1EVs+0, 252
 ;	loadmem wPartyMon1EVs+1, 252
 ;	loadmem wPartyMon1EVs+2, 252
@@ -66,10 +66,10 @@ endr
 ;	loadmem wPartyMon1DVs+0, $ff
 ;	loadmem wPartyMon1DVs+1, $ff
 ;	loadmem wPartyMon1DVs+2, $ff
-	loadmem wPartyMon1Moves+0, FLAMETHROWER
-	loadmem wPartyMon1Moves+1, EXPLOSION
-	loadmem wPartyMon1Moves+2, SURF
-	loadmem wPartyMon1Moves+3, THUNDERPUNCH
+;	loadmem wPartyMon1Moves+0, FLAMETHROWER
+;	loadmem wPartyMon1Moves+1, EXPLOSION
+;	loadmem wPartyMon1Moves+2, SURF
+;	loadmem wPartyMon1Moves+3, THUNDERPUNCH
 ;	loadmem wPartyMon1Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
 ;	loadmem wPartyMon1Stats+0, HIGH(999)
 ;	loadmem wPartyMon1Stats+1, LOW(999)
@@ -101,6 +101,15 @@ endr
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
 	closetext
+	setevent EVENT_BEAT_BUG_CATCHER_AL
+	setevent EVENT_BEAT_BUG_CATCHER_JOSH
+	setevent EVENT_BEAT_BUG_CATCHER_KEN
+	setevent EVENT_BEAT_BUG_CATCHER_WAYNE
+	setevent EVENT_BEAT_BUG_CATCHER_BENNY
+	setevent EVENT_BEAT_BUG_CATCHER_DON
+	setevent EVENT_BEAT_SAGE_CHOW
+	setevent EVENT_BEAT_SAGE_NICO
+	setevent EVENT_BEAT_MEDIUM_MARTHA
 	warp ANARRES_TOWN, 5, 10
 	end
 
