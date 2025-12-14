@@ -152,12 +152,12 @@ SinjohRuinsArrowGFX:
 INCBIN "gfx/town_map/arrow.2bpp.lz"
 
 InitPokegearModeIndicatorArrow:
-;	depixel 4, 2, 4, 0
-;	ld a, SPRITE_ANIM_INDEX_POKEGEAR_MODE_ARROW
-;	call _InitSpriteAnimStruct
-;	ld hl, SPRITEANIMSTRUCT_TILE_ID
-;	add hl, bc
-;	ld [hl], $0
+	depixel 4, 2, 4, 0
+	ld a, SPRITE_ANIM_INDEX_POKEGEAR_MODE_ARROW
+	call _InitSpriteAnimStruct
+	ld hl, SPRITEANIMSTRUCT_TILE_ID
+	add hl, bc
+	ld [hl], $0
 	ret
 
 AnimatePokegearModeIndicatorArrow:
@@ -327,7 +327,19 @@ Pokegear_FinishTilemap:
 	ld bc, $8
 	ld a, $4f
 	rst ByteFill
-	ret    
+	ld de, wPokegearFlags
+	ld a, [de]
+	bit 0, a
+	call nz, .PlaceMapIcon
+	ld a, [de]
+	bit 2, a
+	call nz, .PlacePhoneIcon
+	ld a, [de]
+	bit 1, a
+	call nz, .PlaceRadioIcon
+	hlcoord 0, 0
+	ld a, $46
+	jr .PlacePokegearCardIcon
 
 .PlaceMapIcon:
 	hlcoord 2, 0
@@ -357,36 +369,33 @@ Pokegear_FinishTilemap:
 PokegearJumptable:
 	call StandardStackJumpTable
 
-.Jumptable: ;  OK to have all but the first two commented out 
+.Jumptable:
 	dw PokegearClock_Init
 	dw PokegearClock_Joypad
-;	dw PokegearMap_CheckRegion
-;	dw PokegearMap_Init
-;	dw PokegearMap_JohtoMap
-;	dw PokegearMap_Init
-;	dw PokegearMap_KantoMap
-;	dw PokegearMap_Init
-;	dw PokegearMap_OrangeMap
-;	dw PokegearPhone_Init
-;	dw PokegearPhone_Joypad
-;	dw PokegearPhone_MakePhoneCall
-;	dw PokegearPhone_FinishPhoneCall
-;	dw PokegearRadio_Init
-;	dw PokegearRadio_Joypad
+	dw PokegearMap_CheckRegion
+	dw PokegearMap_Init
+	dw PokegearMap_JohtoMap
+	dw PokegearMap_Init
+	dw PokegearMap_KantoMap
+	dw PokegearMap_Init
+	dw PokegearMap_OrangeMap
+	dw PokegearPhone_Init
+	dw PokegearPhone_Joypad
+	dw PokegearPhone_MakePhoneCall
+	dw PokegearPhone_FinishPhoneCall
+	dw PokegearRadio_Init
+	dw PokegearRadio_Joypad
 
 PokegearClock_Init:
 	call InitPokegearTilemap
-	hlcoord 1, 14          ; Inside the textbox (row 14 is first text row)
-	lb bc, 2, 18           ; 2 rows, 18 columns (the text area)
-	call ClearBox
 	ld hl, PokegearText_PressAnyButtonToExit
 	call PrintText
 	ld hl, wJumptableIndex
 	inc [hl]
 	jmp ExitPokegearRadio_HandleMusic
 
-PokegearClock_Joypad: ; the bad text is in here somewhere... 
-	call .UpdateClock ; update clock is where the bad text seems to be coming from 
+PokegearClock_Joypad:
+	call .UpdateClock
 	ld hl, hJoyLast
 	ld a, [hl]
 	and B_BUTTON + START + SELECT ; maybe consider removing some of these to see which ones are getting the problem? 
@@ -421,19 +430,12 @@ PokegearClock_Joypad: ; the bad text is in here somewhere...
 	ret
 
 .UpdateClock:
-    xor a
-    ldh [hBGMapMode], a
-    call Pokegear_UpdateClock
-    ; Overwrite garbage with your preferred text
-    hlcoord 1, 16
-    ld de, .line15text
-    rst PlaceString
-    ld a, $1
-    ldh [hBGMapMode], a
-    ret
-
-.line15text:
-    db "Button to exit.@"    ; or whatever text you want
+	xor a
+	ldh [hBGMapMode], a
+	call Pokegear_UpdateClock
+	ld a, $1
+	ldh [hBGMapMode], a
+	ret
 
 Pokegear_UpdateClock:
 	hlcoord 3, 5
@@ -457,7 +459,6 @@ Pokegear_UpdateClock:
 .DayText:
 	text_far _GearTodayText
 	text_end
-
 
 PokegearMap_CheckRegion:
 	ld a, [wPokegearMapPlayerIconLandmark]

@@ -131,7 +131,6 @@ StadiumGroundsToxicroakScene:
 	special Special_FadeOutMusic
 	pause 60
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
-	reloadmapafterbattle
 	playsound SFX_EGG_CRACK
 	waitsfx
 	changeblock 26, 12, $86

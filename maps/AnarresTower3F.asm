@@ -20,7 +20,6 @@ AnarresTower3F_MapScriptHeader:
 	object_event  6,  6, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FHollisScript, -1
 	object_event  7,  3, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FTammyScript, EVENT_TAMMY_ANARRES_TOWER
 	object_event  5,  6, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FAmosScript, EVENT_BEAT_HOLLIS
-	pokemon_event  14, 19, KLEAVOR, -1, -1, PAL_NPC_RED, KleavorText, EVENT_BEAT_SANDRA
 
 	object_const_def
 	const ANARRES_TOWER_HOLLIS

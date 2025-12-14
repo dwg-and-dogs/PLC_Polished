@@ -165,7 +165,6 @@ StadiumUndergroundWarpNPCScript:
 	applyonemovement STADIUMUNDERGROUND_NPC, step_left
 	turnobject STADIUMUNDERGROUND_NPC, RIGHT
 	setevent EVENT_STADIUM_UNDERGROUND_MOVED_ASIDE
-	setevent EVENT_STADIUM_BOX_ADRINNA
 	end
 
 .MovedAside:

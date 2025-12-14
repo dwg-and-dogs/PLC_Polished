@@ -49,12 +49,14 @@ LandinDocksCallback_MoveNPCs:
 	endcallback
 
 LandingDocksScene_AfterBeatBarbeau:
-	applymovement PLAYER, PlayerMovesForDocksScene1
-	; apply movements for kurt, barbeau, and kensey 
+	applymovement PLAYER, PlayerMovesForDocksScene2
+	turnobject LANDING_DOCKS_KURT, UP	
 	sjump PickupDocksScene2
 	
 LandingDocksScene_AfterCaptainLeaves:
 	applymovement PLAYER, PlayerMovesForDocksScene1
+	turnobject LANDING_DOCKS_KENSEY, DOWN
+	turnobject LANDING_DOCKS_BARBEAU, DOWN
 	sjump PickupDocksScene
 
 LandingDocksScene:
@@ -196,7 +198,7 @@ PickupDocksScene2:
 	winlosstext KenseyBeaten1, 0
 	loadtrainer KENSEY, 1 
 	startbattle
-	reloadmapafterbattle ; OBJECTS IN THE RIGHT SPOT?
+	reloadmapafterbattle
 	special RestartMapMusic
 	showtext Docks_Text14
 	applyonemovement LANDING_DOCKS_KENSEY, step_right
@@ -475,9 +477,9 @@ Docks_Text12_2:
     text " Kurt: " 
 	next
 	text_start 
-	text "Excellent battle,"
-	line "<PLAYER>. I'll"
-	cont "heal you again."
+	text "Excellent battle."
+	line "I'll heal your"
+	cont "#mon."
 
 	para "We've stopped the"
 	line "outsiders' boats!"
@@ -632,4 +634,9 @@ Docks_Text20:
 
 PlayerMovesForDocksScene1:
 	step_up
+	step_end
+
+PlayerMovesForDocksScene2:
+	step_up
+	step_up	
 	step_end

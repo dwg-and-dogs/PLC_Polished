@@ -138,6 +138,7 @@ CianwoodCovetimeTravelScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	
+;	warp LANDING_DOCKS, 2, 19 ; debug! 
 	blackoutmod CIANWOOD_CITY
 	warp CIANWOOD_CITY, 14, 20	
 	end

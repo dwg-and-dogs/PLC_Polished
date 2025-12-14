@@ -1,30 +1,78 @@
 AnarresStockroom_MapScriptHeader:
 	def_scene_scripts
+	scene_script AnarresStockroomTrigger
 
 
 	def_callbacks
 
 
 	def_warp_events 
-	warp_event  3,  7, ANARRES_TOWN, 7
-	warp_event  4,  7, ANARRES_TOWN, 7
+	warp_event  6,  7, ANARRES_TOWN, 7
+	warp_event  5,  7, ANARRES_TOWN, 7
 
 	def_coord_events
 
 
 	def_bg_events 
-	bg_event  10,  2, BGEVENT_READ, ASApricornBenchScript ; this is really inefficient, maybe clean up some time 
+	bg_event  10,  2, BGEVENT_READ, ASApricornBenchScript ; this is really inefficient, maybe clean up some time
 
 	def_object_events 
+	object_event  6,  5, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresStockroomNPC3Text, -1
 	mart_clerk_event  2,  3, MARTTYPE_STANDARD, MART_ANARRES
 	object_event  2,  5, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresStockroomNPC1Script, -1
 	object_event  5,  2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresStockroomNPC2Text, -1
-	object_event  7,  2, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresStockroomNPC3Text, -1
+
 
 
 	object_const_def
-	const ANARRES_STOCKROOM_BERRY_GRAMPS
+	const ANARRES_STOCKROOM_MATRON
 
+AnarresStockroomTrigger:
+	showemote EMOTE_HAPPY, ANARRES_STOCKROOM_MATRON, 10
+	applyonemovement PLAYER, step_up
+	opentext
+	writetext AnanressStockroomBeforeWalkingText
+	waitbutton
+	closetext
+	follow ANARRES_STOCKROOM_MATRON, PLAYER
+	applymovement ANARRES_STOCKROOM_MATRON, Movement_AnarresStockroom
+	turnobject ANARRES_STOCKROOM_MATRON, RIGHT
+	turnobject PLAYER, LEFT
+	showtext AnarresStockroomAfterWalkingText
+	stopfollow
+	setscene $1
+	end
+
+Movement_AnarresStockroom:
+	step_right
+	step_right
+	step_right
+	step_right
+	step_up
+	step_up
+	step_left
+	step_end
+
+AnanressStockroomBeforeWalkingText:
+	text "Welcome to our"
+	line "Stockroom!"
+	para "Warm up by the"
+	line "fireplace, get"
+	cont "more supplies, or"
+	para "you can craft"
+	line "Apricorns at the"
+	cont "table over here."
+	done
+
+AnarresStockroomAfterWalkingText:
+	text "I've crafted many"
+	line "Apricorns here,"
+	para "from all sorts of"
+	line "materials!"
+	
+	para "Enjoy your time"
+	line "in Anarres!"
+	done
 
 AnarresStockroomNPC1Script:
 	checkevent EVENT_GOT_ANARRES_BERRY
@@ -67,14 +115,9 @@ AnarresStockroomNPC2Text:
 	done
 
 AnarresStockroomNPC3Text:
-	text "Why does Hollis"
-	line "train bugs?"
-	
-	para "To remind us that"
-	line "nature isn't just"
-	para "cute Pikachus,"
-	line "but also scary"
-	cont "Ariados."
+	text "Use the crafting"
+	line "table whenever"
+	cont "you like!"
 	done
 
 ASApricornBenchScript:

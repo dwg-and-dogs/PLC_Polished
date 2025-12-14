@@ -7,14 +7,14 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, HOLLYS_HOLT_CREDIT, 1
+	warp_event  1, 8, ANARRES_TOWN, 1
 
 
 	def_coord_events
 
 
 	def_bg_events
-	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
+;	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
 	bg_event  0,  2, BGEVENT_UP, DebugInteraction
 
@@ -56,104 +56,17 @@ endr
 	givemoney $0, 1000000
 	givecoins 50000
 	; good party
-;	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
-;	loadmem wPartyMon1EVs+0, 252
-;	loadmem wPartyMon1EVs+1, 252
-;	loadmem wPartyMon1EVs+2, 252
-;	loadmem wPartyMon1EVs+3, 252
-;	loadmem wPartyMon1EVs+4, 252
-;	loadmem wPartyMon1EVs+5, 252
-;	loadmem wPartyMon1DVs+0, $ff
-;	loadmem wPartyMon1DVs+1, $ff
-;	loadmem wPartyMon1DVs+2, $ff
-;	loadmem wPartyMon1Moves+0, FLAMETHROWER
-;	loadmem wPartyMon1Moves+1, EXPLOSION
-;	loadmem wPartyMon1Moves+2, SURF
-;	loadmem wPartyMon1Moves+3, THUNDERPUNCH
-;	loadmem wPartyMon1Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
-;	loadmem wPartyMon1Stats+0, HIGH(999)
-;	loadmem wPartyMon1Stats+1, LOW(999)
-;	loadmem wPartyMon1Stats+2, HIGH(999)
-;	loadmem wPartyMon1Stats+3, LOW(999)
-;	loadmem wPartyMon1Stats+4, HIGH(999)
-;	loadmem wPartyMon1Stats+5, LOW(999)
-;	loadmem wPartyMon1Stats+6, HIGH(999)
-;	loadmem wPartyMon1Stats+7, LOW(999)
-;	loadmem wPartyMon1Stats+8, HIGH(999)
-;	loadmem wPartyMon1Stats+9, LOW(999)
-;	; hm slaves
-;	givepoke FERALIGATR, NO_FORM, 100, LEFTOVERS
-;	givepoke MEGANIUM, NO_FORM, 100, LEFTOVERS
-;	loadmem wPartyMon2Moves+0, SURF
-;	loadmem wPartyMon2Moves+1, WATERFALL
-;	loadmem wPartyMon2Moves+2, STRENGTH
-;	loadmem wPartyMon2Moves+3, EXPLOSION
-;	loadmem wPartyMon2PP+0, 15
-;	loadmem wPartyMon2PP+1, 15
-;	loadmem wPartyMon2PP+2, 15
-;	loadmem wPartyMon2PP+3, 30
-;	loadmem wPartyMon3Moves+0, EXPLOSION
-;	loadmem wPartyMon3Moves+1, ANCIENTPOWER
-;	loadmem wPartyMon3Moves+2, SHADOW_BALL
-;	loadmem wPartyMon3Moves+3, ROCK_SLIDE
-;	loadmem wPartyMon3PP+0, 20
-;	loadmem wPartyMon3PP+1, 15
-;	loadmem wPartyMon3PP+2, 15
-;	loadmem wPartyMon3PP+3, 15
-	closetext
-	setevent EVENT_BEAT_BUG_CATCHER_AL
-	setevent EVENT_BEAT_BUG_CATCHER_JOSH
-	setevent EVENT_BEAT_BUG_CATCHER_KEN
-	setevent EVENT_BEAT_BUG_CATCHER_WAYNE
-	setevent EVENT_BEAT_BUG_CATCHER_BENNY
-	setevent EVENT_BEAT_BUG_CATCHER_DON
-	setevent EVENT_BEAT_SAGE_CHOW
-	setevent EVENT_BEAT_SAGE_NICO
-	setevent EVENT_BEAT_MEDIUM_MARTHA
-	warp ANARRES_TOWN, 5, 10
-	end
-
-DebugRoomExtraScript:
-;	end
-;	waitbutton
-;	closepokepic2
-
-;	givepoke VICTREEBEL, 100
-;	loadmem wPartyMon2DVs+0, $ff
-;	loadmem wPartyMon2DVs+1, $ee
-;	loadmem wPartyMon2DVs+2, $ee
-	
-;	givepoke RAIKOU, 100
-;	loadmem wPartyMon3DVs+0, $ff
-;	loadmem wPartyMon3DVs+1, $ee
-;	loadmem wPartyMon3DVs+2, $ee
-	
-;	givepoke POLITOED, 100
-;	loadmem wPartyMon4DVs+0, $ff
-;	loadmem wPartyMon4DVs+1, $ee
-;	loadmem wPartyMon4DVs+2, $ee
-	
-;	givepoke LUGIA, 100
-;	loadmem wPartyMon5DVs+0, $ff
-;	loadmem wPartyMon5DVs+1, $ee
-;	loadmem wPartyMon5DVs+2, $ee
-	
-;	givepoke GOLEM, 25 
-;	loadmem wPartyMon6DVs+0, $ff
-;	loadmem wPartyMon6DVs+1, $ee
-;	loadmem wPartyMon6DVs+2, $ee
-	
-	waitbutton
-;	setflag ENGINE_POKEGEAR
-;	setflag ENGINE_PHONE_CARD
-;	setflag ENGINE_MAP_CARD
-	; pokedex
+	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
+	loadmem wPartyMon1Moves+0, FLAMETHROWER
+	loadmem wPartyMon1Moves+1, EXPLOSION
+	loadmem wPartyMon1Moves+2, SURF
+	loadmem wPartyMon1Moves+3, THUNDERPUNCH
 	setflag ENGINE_POKEDEX
 for x, NUM_TMS + NUM_HMS
 	givetmhm x
 endr
 for x, NUM_KEY_ITEMS
-if x != MACHINE_PART
+if x != NATU_CALL
 	givekeyitem x
 endc
 endr
@@ -207,22 +120,22 @@ endr
 	; max money
 	givemoney $0, 1000000
 	; all badges
-;	setflag ENGINE_ZEPHYRBADGE
-;	setflag ENGINE_HIVEBADGE
-;	setflag ENGINE_PLAINBADGE
-;	setflag ENGINE_FOGBADGE
-;	setflag ENGINE_STORMBADGE
-;	setflag ENGINE_MINERALBADGE
-;	setflag ENGINE_GLACIERBADGE
-;	setflag ENGINE_RISINGBADGE
+	setflag ENGINE_ZEPHYRBADGE
+	setflag ENGINE_HIVEBADGE
+	setflag ENGINE_PLAINBADGE
+	setflag ENGINE_FOGBADGE
+	setflag ENGINE_STORMBADGE
+	setflag ENGINE_MINERALBADGE
+	setflag ENGINE_GLACIERBADGE
+	setflag ENGINE_RISINGBADGE
 	setflag ENGINE_BOULDERBADGE
-;	setflag ENGINE_CASCADEBADGE
-;	setflag ENGINE_THUNDERBADGE
-;	setflag ENGINE_RAINBOWBADGE
-;	setflag ENGINE_MARSHBADGE
-;	setflag ENGINE_SOULBADGE
-;	setflag ENGINE_VOLCANOBADGE
-;	setflag ENGINE_EARTHBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
+	setflag ENGINE_VOLCANOBADGE
+	setflag ENGINE_EARTHBADGE
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_AZALEA
 	setflag ENGINE_FLYPOINT_GOLDENROD
@@ -245,69 +158,8 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-;	halloffame
-;	setevent EVENT_TALKED_TO_LOST_KAJO_GIRL
-;	warphide HOLLYS_HOLT_CREDIT, 10, 25
 	end
 
-OverworldHallOfFame1: 
-	refreshscreen
-	loadmem wCurForm, -1
-	loadmem wCurPartyMon, 0    ; Select first party slot. the second index is 0 - 5, with 0 being the first party member, and 5 is the highest it can go for a party of 6 
-	readmem wCurPartySpecies  ;
-	opentext
-	writethistext ; font is in vtiles1?
-		text "lorem ipsum" ; Species name
-		line "lorem ipsum" ; nickname 
-		done
-	waitbutton
-	closetext
-	pokepic 0	; pokepic2, actually 
-	pause 60
-	closepokepic
-; repeat this 	for all the members of the party 
-	halloffame
-	end
-
-
-
-DebugInteraction2: 
-	refreshscreen
-	readmem wPartyMon1Species
-	pokepic 0
-	pause 60
-	closepokepic
-	
-	; Set Fighting HP pattern for Mon1
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ee
-	loadmem wPartyMon1DVs+2, $ee
-	
-	; Set normal DVs for Mon2 (if exists)
-;	loadmem wPartyMon2DVs+0, $aa
-;	loadmem wPartyMon2DVs+1, $bb
-;	loadmem wPartyMon2DVs+2, $cc
-
-	
-	opentext
-	writethistext
-		text "lorem ipsum" ; Species name
-		line "lorem ipsum" ; nickname 
-		done
-	waitbutton
-	closetext
-	
-	; Show Mon1 with new palette
-	refreshscreen
-	loadmem wCurForm, -1
-	loadmem wCurPartyMon, 0    ; Select first party slot
-	readmem wCurPartySpecies  ; or wCurPartySpecies
-	pokepic 0	
-	pause 60
-	closepokepic
-	
-	halloffame
-	end
 
 DebugCPU:
 	opentext
@@ -453,46 +305,36 @@ Breeder1Script:
 	iffalse_jumpopenedtext Breeder1SayNoText
 	writetext Breeder1Text	
 	; good party
-	givepoke H__ZOROARK, NO_FORM, 50, LEFTOVERS
-	loadmem wPartyMon1Moves+0, NASTY_PLOT
+	givepoke H__ZOROARK, NO_FORM, 100, LEFTOVERS
+	loadmem wPartyMon1Moves+0, MOONBLAST
 	loadmem wPartyMon1Moves+1, SHADOW_BALL
 	loadmem wPartyMon1Moves+2, PSYCHIC_M
-	loadmem wPartyMon1Moves+3, MOONBLAST
+	loadmem wPartyMon1Moves+3, EXPLOSION
 	; hm mules
-;	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
-;	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
-;	givepoke ALAKAZAM, NO_FORM, 100, LEFTOVERS
-;	givepoke PIDGEY, NO_FORM, 5, NO_ITEM ; CHECK FAINTING BEHAVIOR 
+	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
+	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
+	givepoke ALAKAZAM, NO_FORM, 100, LEFTOVERS
+	givepoke PIDGEY, NO_FORM, 5, NO_ITEM ; CHECK FAINTING BEHAVIOR 
 ;SPRITE CHECKS 
 ;	givepoke QWILFISH, NO_FORM, 5
 ;	givepoke VILEPLUME, NO_FORM, 5
 ; END SPRITE CHECKS 
-;	loadmem wPartyMon2Moves+0, SURF
-;	loadmem wPartyMon2Moves+1, CRUNCH
-;	loadmem wPartyMon2Moves+2, STRENGTH
-;	loadmem wPartyMon2Moves+3, WATERFALL
-;	loadmem wPartyMon2PP+0, 15
-;	loadmem wPartyMon2PP+1, 15
-;	loadmem wPartyMon2PP+2, 15
-;	loadmem wPartyMon2PP+3, 30
-;	loadmem wPartyMon3Moves+0, ENERGY_BALL
-;	loadmem wPartyMon3Moves+1, ROCK_SMASH
-;	loadmem wPartyMon3Moves+2, CUT
-;	loadmem wPartyMon3Moves+3, FLY
-;	loadmem wPartyMon3PP+0, 20
-;	loadmem wPartyMon3PP+1, 15
-;	loadmem wPartyMon3PP+2, 15
-;	loadmem wPartyMon3PP+3, 15
-	; bug 
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ff
-	loadmem wPartyMon1DVs+2, $ff
-	loadtrainer CHUCK, 1
-	startbattle
-	reloadmap
-	showtext DWGTextAfter1
-	special HealPartyEvenForNuzlocke
-;	callasm FillPokedex
+	loadmem wPartyMon2Moves+0, SURF
+	loadmem wPartyMon2Moves+1, CRUNCH
+	loadmem wPartyMon2Moves+2, STRENGTH
+	loadmem wPartyMon2Moves+3, WATERFALL
+	loadmem wPartyMon2PP+0, 15
+	loadmem wPartyMon2PP+1, 15
+	loadmem wPartyMon2PP+2, 15
+	loadmem wPartyMon2PP+3, 30
+	loadmem wPartyMon3Moves+0, ENERGY_BALL
+	loadmem wPartyMon3Moves+1, ROCK_SMASH
+	loadmem wPartyMon3Moves+2, CUT
+	loadmem wPartyMon3Moves+3, FLY
+	loadmem wPartyMon3PP+0, 20
+	loadmem wPartyMon3PP+1, 15
+	loadmem wPartyMon3PP+2, 15
+	loadmem wPartyMon3PP+3, 15
 	closetext
 	end
 
@@ -518,6 +360,12 @@ Breeder1SayNoText:
 dwgDebugScript:
 	faceplayer
 	opentext
+	writetext DWGIntroText
+	waitbutton
+	writetext DWGQuestionText
+	yesorno
+	iffalse_jumpopenedtext DWGRefusedText
+	writetext DWGSeenText
 ; BUG
 ;	givepoke SUNFLORA, 50
 ;	loadmem wPartyMon1DVs+0, $ff
@@ -550,10 +398,10 @@ dwgDebugScript:
 ;	loadmem wPartyMon6DVs+2, $ef
 
 ; FLYING
-	givepoke EMPOLEON, 50
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $fe
-	loadmem wPartyMon1DVs+2, $ee
+;	givepoke EMPOLEON, 50
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $fe
+;	loadmem wPartyMon1DVs+2, $ee
 ; GHOST 
 ;	givepoke NINETALES, 50
 ;	loadmem wPartyMon2DVs+0, $ff
@@ -586,20 +434,20 @@ dwgDebugScript:
 ;	loadmem wPartyMon1DVs+1, $ee
 ;	loadmem wPartyMon1DVs+2, $ff
 ; ROCK
-	givepoke ENTEI, 50
-	loadmem wPartyMon2DVs+0, $ff
-	loadmem wPartyMon2DVs+1, $ee
-	loadmem wPartyMon2DVs+2, $fe
+;	givepoke ENTEI, 50
+;	loadmem wPartyMon2DVs+0, $ff
+;	loadmem wPartyMon2DVs+1, $ee
+;	loadmem wPartyMon2DVs+2, $fe
 ; STEEL
 ;	givepoke FORRETRESS, 50
 ;	loadmem wPartyMon3DVs+0, $ff
 ;	loadmem wPartyMon3DVs+1, $ff
 ;	loadmem wPartyMon3DVs+2, $fe
 ; WATER 
-	givepoke NATU, 50
-	loadmem wPartyMon3DVs+0, $ff
-	loadmem wPartyMon3DVs+1, $fe
-	loadmem wPartyMon3DVs+2, $ef
+;	givepoke NATU, 50
+;	loadmem wPartyMon3DVs+0, $ff
+;	loadmem wPartyMon3DVs+1, $fe
+;	loadmem wPartyMon3DVs+2, $ef
 
 	winlosstext DWGWinText, DWGLossText
 	setlasttalked DEBUG_DWG
@@ -623,24 +471,33 @@ DWGIntroText:
 	line "the patrons"
 	cont "below to get a"
 	cont "solid team,"
-	para "wonder trade,"
-	line "or get all the"
-	cont "base forms of"
-	cont "#mon."
-	para "The generator"
-	line "to the left has"
-	cont "all the items"
-	para "and flags if"
-	line "you want them."
+	
+	para "The NPC to the"
+	line "right to do a"
+	cont "Wonder Trade,"
+	
+	para "The NPC to the"
+	line "left to get a"
+	cont "solid team,"
+	
+	para "The left turbine"
+	line "gives items and"
+	cont "sets flypoints,"
+
+	para "The stairs below"
+	line "take you back in"
+	cont "time to Anarres,"
+
 	para "The computer"
 	line "next to me"
 	cont "works to access"
 	cont "your boxes."
+
 	para "If you ever"
 	line "encounter"
 	cont "issues, you can"
 	para "contact me on"
-	line "reddit,"
+	line "Reddit,"
 	cont "u/dwg6m9."
 	done
 

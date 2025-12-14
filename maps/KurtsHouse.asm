@@ -135,14 +135,12 @@ KurtIntroText:
 
 MomPokegearText:
 	text "These gifts are"
-	line "an old timepiece"
-	para "passed down from"
-	line "my Grandpa, and"
+	line "a new watch and"
 	para "a map of Johto"
 	line "if you get lost."
 
-	para "I also threw in"
-	line "an Apricorn box."
+	para "There's also an"
+	line "Apricorn box."
 	
 	para "You can use that"
 	line "at any bench."

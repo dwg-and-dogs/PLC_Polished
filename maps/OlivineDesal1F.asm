@@ -67,6 +67,7 @@ OlivineDesal1FScene:
 	waitsfx
 	disappear DESAL_JASMINE
 	setevent EVENT_DESAL_1F_JASMINE
+	clearevent EVENT_KURT_OLIVINE_POKECENTER
 	setscene $1
 	end
 	

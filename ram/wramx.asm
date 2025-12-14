@@ -1116,7 +1116,7 @@ wClastsCradleB1FCreditSceneID:: db
 wBurnedTower1FCreditSceneID:: db
 wDragonsDenCreditSceneID:: db ; UNUSED 
 wCreditsPokemonAllSceneID:: db
-wUnused8SceneID:: db 
+wAnarresStockroomSceneID:: db 
 wUnused9SceneID:: db ;
 ;sceneids should only go through 1117 line. 
 ; fight counts, these are essentially unused but could be annoying to scrap 

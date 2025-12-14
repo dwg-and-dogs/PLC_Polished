@@ -70,10 +70,16 @@ ClastsCradleCallback_AfterHeatran:
 	moveobject CRADLE_KURT, 4, 16
 .Skip:
 	endcallback
+
+CradleScene2_Adrinna:
+	applymovement PLAYER, Player_CCB1F_Move1
+	sjump Cradle_Scene3Pickup
 	
 HeatranText:
 	text "Object"
 	done
+
+
 
 CradleScene1_Mejimi:	
 ;cf western capital
@@ -474,16 +480,7 @@ Brigader20SeenText:
 	done
 
 
-	startbattle
-	ifequal $1, .Continue
-	disappear ANCHORAGE_OVERQWIL_1
-.Continue:
-	reloadmapafterbattle
-	end
 
-CradleScene2_Adrinna:
-	applymovement PLAYER, Player_CCB1F_Move1
-	sjump Cradle_Scene3Pickup
 
 CradleScene2_Heatran:
 	blackoutmod SULFUR_STY
@@ -532,8 +529,8 @@ Cradle_Scene3Pickup:
 	winlosstext CradleAdrinnaText4, 0
 	loadtrainer ADRINNA, ADRINNA2
 	startbattle
-	ifequal $1, .Continue2
-.Continue2:
+;	ifequal $1, .Continue2
+;.Continue2:
 	reloadmapafterbattle
 	opentext
 	writetext CradleAdrinnaText5

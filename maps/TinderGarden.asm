@@ -1051,9 +1051,11 @@ KurtThinksTheyreCuttingTreesText:
 	para "<PLAYER>, we"
 	line "need to stop them!"
 	
-	para "With a #mon,"
-	line "you can catch"
-	cont "more nearby."
+	para "Now that you have"
+	line "a #mon, you"
+	para "should catch more"
+	line "from Route 33 or"
+	cont "Slowpoke Well."
 	
 	para "Hang on, Ilex!"
 	line "I'm on my way!"
