@@ -13,6 +13,15 @@ WhirlIslandB2F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
+	object_event 6, 26, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, WhirlIslandSDiverText, -1
 
 
-
+WhirlIslandSDiverText:
+	text "I've been swimming"
+	line "in these currents"
+	cont "for hours!"
+	
+	para "There's gotta be a"
+	line "way reach the"
+	cont "cavern center!"
+	done

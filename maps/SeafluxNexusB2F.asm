@@ -327,9 +327,11 @@ SwitchesResetText:
 	text "All waterfalls"
 	line "are reset."
 	
-;	para "Hint: solution"
-;	line "has each block"
-;	cont "hit one time."
+	para "Hint: to access"
+	line "center block,"
+	
+	para "not all blocks"
+	line "will be used!"
 	done
 
 Switch1Text:

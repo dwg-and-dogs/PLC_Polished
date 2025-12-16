@@ -74,7 +74,7 @@ Landmarks:
 	landmark 144,  66, RebelsRedoubtName
 	landmark 120,  68, SulfurStyName
 	landmark 112,  56, ClastsCradleName
-	landmark  92,  92, TimelessTapestryName
+	landmark 100, 116, TimelessTapestryName
 	assert_table_length SHAMOUTI_LANDMARK
 	landmark  76,  68, ShamoutiIslandName ; dummy 
 	assert_table_length NUM_LANDMARKS
