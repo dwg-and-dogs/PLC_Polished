@@ -21,6 +21,7 @@ BrassTower4FWarp_MapScriptHeader:
 
 
 BrassTowerAdrinna:
+	faceplayer
 	checkevent EVENT_BEAT_ADRINNA_TOWER
 	iftrue_jumptextfaceplayer AdrinnaAfterText
 	checkpoke CELEBI
@@ -46,8 +47,9 @@ BrassTowerAdrinna:
 	end
 
 .DeclinedDueToCelebi:
-	faceplayer
-	showtext AdrinnaSeenText0
+	opentext
+	writetext AdrinnaSeenText0
+	waitbutton
 	sjump .Declined
 	end
 

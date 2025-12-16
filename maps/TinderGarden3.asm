@@ -3,7 +3,7 @@ TinderGarden3_MapScriptHeader:
 	scene_script TinderGardernWatchTheLoggersScript
 
 	def_callbacks
-
+	callback MAPCALLBACK_TILES, TinderGarden3Callback
 	
 	def_warp_events
 
@@ -27,7 +27,12 @@ TinderGarden3_MapScriptHeader:
 	const TINDER_GARDEN_3_ENGINEER_2
 	const TINDER_GARDEN_3_CELEBI_2
 
-	
+TinderGarden3Callback:
+;	checkevent EVENT_TINDER_GARDEN_3_TREE
+;	iffalse .done
+;	changeblock 4, 8, $01 
+;.done:
+	endcallback
 	
 TinderGardernWatchTheLoggersScript:
 ;cf western capital scene 
@@ -44,8 +49,9 @@ TinderGardernWatchTheLoggersScript:
 	pause 60
 	playsound SFX_CUT
 	waitsfx
-	changeblock 4, 0, $01 
+	changeblock 4, 8, $3B 
 	reloadmappart
+;	setevent EVENT_TINDER_GARDEN_3_TREE
 	pause 60
 	special Special_FadeOutMusic
 	disappear TINDER_GARDEN_3_CELEBI_2
@@ -58,6 +64,7 @@ TinderGardernWatchTheLoggersScript:
 	closetext
 	pause 120
 	applyonemovement PLAYER, hide_object
+;	clearevent EVENT_TINDER_GARDEN_3_TREE
 	warphide HOLLYS_HOLT_CREDIT, 10, 25 
 	end
 	

@@ -540,6 +540,7 @@ Cradle_Scene3Pickup:
 	applyonemovement CRADLE_ADRINNA_2, teleport_from	
 	disappear CRADLE_ADRINNA_2
 	showemote EMOTE_SHOCK, CRADLE_KURT, 30
+	turnobject PLAYER, LEFT
 	showtext CradleKurtText2
 	special HealParty
 	playsound SFX_WARP_TO

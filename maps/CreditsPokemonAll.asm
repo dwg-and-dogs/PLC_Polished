@@ -48,7 +48,6 @@ CreditsPokemonAllScene:
 	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
     opentext
 	loadmem wCurForm, -1
-
 	loadmem wCurPartyMon, 1    ; Select first party slot
 	readmem wPartyMon2Species  ; or wCurPartySpecies
 	pokepic2 0	
@@ -140,7 +139,6 @@ CreditsPokemonAllScene:
 	callasm LoadSelectedMonData ; Calculates everything for Slot 2 automatically    
     opentext
 	loadmem wCurForm, -1
-
 	loadmem wCurPartyMon, 5    ; Select first party slot
 	readmem wPartyMon6Species  ; or wCurPartySpecies
 	pokepic2 0	
@@ -155,7 +153,13 @@ CreditsPokemonAllScene:
 	waitbutton
 	closetext
 .done:
-	loadmem wCurForm, 0
+;	loadmem wCurPartyMon, 0    ; Select first party slot
+	loadmem wCurForm, 0 ; this can sometimes cause the player sprite to have some funny colors - may need to do wcurform 1 or something, or a dummy pokepic. 
+	; WCURFORM0 w no special pal in trainer party causes hooh palette to show up. 
+	; tried w lv255 typhlo andcouldnt get the issue to show up to go ??
+	; SAME ERROR W USING PLUS 1
+	; how to trigger: warp to brass tower roof with two pokemon without any special IVs and then beat urgaust. 
+	; new: adding wcurpartymon0 bc I didn't see this error when there was just 1 mon, a lv 255 typhlosion-- result: no improvement 
 	halloffame  
 	end
 

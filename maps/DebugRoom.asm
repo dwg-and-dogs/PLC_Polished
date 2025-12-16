@@ -56,7 +56,7 @@ endr
 	givemoney $0, 1000000
 	givecoins 50000
 	; good party
-	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
+	givepoke H__SAMUROTT, NO_FORM, 100, BRIGHTPOWDER
 	loadmem wPartyMon1Moves+0, FLAMETHROWER
 	loadmem wPartyMon1Moves+1, EXPLOSION
 	loadmem wPartyMon1Moves+2, SURF
@@ -158,6 +158,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
+	warp BRASS_TOWER_ROOF, 9, 5
 	end
 
 

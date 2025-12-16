@@ -14,8 +14,8 @@ GauldenrodTower1F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  5, 10, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower1FBrigader1Script, EVENT_BEAT_SANDRA
-	object_event  6, 10, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower1FBrigader2Script, EVENT_BEAT_SANDRA
+	object_event  5, 10, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodTower1FBrigader1Script, EVENT_BEAT_SANDRA
+	object_event  6, 10, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodTower1FBrigader2Script, EVENT_BEAT_SANDRA
 
 GauldenrodTower1FBrigader1Script:
 	setevent EVENT_4F_BRIGADER

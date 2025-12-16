@@ -485,7 +485,7 @@ TowerRoofText2_7:
 	text_start
 	text "Traitor!"
 	para "I'll start with"
-	line "you, <PLAYER>!"
+	line "you, child!"
 	done
 
 TowerRoofMejimiText2_8: 

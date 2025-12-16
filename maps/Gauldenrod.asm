@@ -439,6 +439,7 @@ GauldenrodBobeshScene:
 	applyonemovement PLAYER, step_up
 	applyonemovement PLAYER, step_up
 	applyonemovement PLAYER, step_up	
+	blackoutmod GAULDENROD
 	pause 10
 
     showemote GAULDENROD_BRIGADER, EMOTE_BOLT, 10

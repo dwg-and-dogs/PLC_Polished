@@ -245,9 +245,8 @@ GenericTrainerKimono_girlAkari:
 	para "Your #mon are"
 	line "so strong, you"
 	cont "should visit"
-	para "the bell tower"
-	line "to find out"
-	cont "why…"
+	para "the Bell Tower"
+	line "to learn why."
 	done
 
 Kimono_girl_1AkariSeenText:

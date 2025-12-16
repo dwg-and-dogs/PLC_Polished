@@ -913,7 +913,7 @@ endr
 	loadmem wPartyMon1Stats+7, LOW(999)
 	loadmem wPartyMon1Stats+8, HIGH(999)
 	loadmem wPartyMon1Stats+9, LOW(999)
-	; hm slaves
+	; hm 
 	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
 	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
 	loadmem wPartyMon2Moves+0, FLY

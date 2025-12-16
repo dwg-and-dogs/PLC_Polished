@@ -76,45 +76,40 @@ AnimateHallOfFame:
 
 	; Initialize the party counter
 	xor a
-	ld [wCurPartyMon], a
-
-.loop
-	; Check if we have displayed all Pokémon in the party
-	ld a, [wCurPartyMon]
-	cp PARTY_LENGTH
-	jp nc, .done
-
-	; Check if the current party slot is valid and not an Egg
-	ld a, [wCurPartyMon]
-	ld hl, wPartySpecies
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	cp -1 ; empty slot
-	jr z, .done
-	cp EGG
-	jr z, .next_mon ; Skip eggs
-
-	; TODO: Display Pokémon here
-	; For now, just skip with a short delay
-	ld c, 30
-	call DelayFrames
-
-.next_mon
-	; Move to the next Pokémon in the party
-	ld hl, wCurPartyMon
-	inc [hl]
-	jp .loop
-
-.done
+;	ld [wCurPartyMon], a
+;
+;.loop
+;	; Check if we have displayed all Pokémon in the party
+;	ld a, [wCurPartyMon]
+;	cp PARTY_LENGTH
+;	jp nc, .done
+;
+;	; Check if the current party slot is valid and not an Egg
+;	ld a, [wCurPartyMon]
+;	ld hl, wPartySpecies
+;	ld c, a
+;	ld b, 0
+;	add hl, bc
+;	ld a, [hl]
+;	cp -1 ; empty slot
+;	jr z, .done
+;	cp EGG
+;	jr z, .next_mon ; Skip eggs
+;
+;	; TODO: Display Pokémon here
+;	; For now, just skip with a short delay
+;	ld c, 30
+;	call DelayFrames
+;
+;.next_mon
+;	; Move to the next Pokémon in the party
+;	ld hl, wCurPartyMon
+;	inc [hl]
+;	jp .loop
+;
+;.done
 	; After displaying all party members, continue to the player picture animation
 	call HOF_AnimatePlayerPic
-	; new stuff
-;	opentext
-;	writetext halloffametext_1
-;	waitbutton
-;	closetext
 	ld a, $4
 	ld [wMusicFade], a
 	farcall FadeOutPalettes
