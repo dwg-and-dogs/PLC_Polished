@@ -56,11 +56,35 @@ endr
 	givemoney $0, 1000000
 	givecoins 50000
 	; good party
-	givepoke H__SAMUROTT, NO_FORM, 100, BRIGHTPOWDER
-	loadmem wPartyMon1Moves+0, FLAMETHROWER
-	loadmem wPartyMon1Moves+1, EXPLOSION
-	loadmem wPartyMon1Moves+2, SURF
-	loadmem wPartyMon1Moves+3, THUNDERPUNCH
+	givepoke SUNFLORA, 100
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $fe
+	loadmem wPartyMon1DVs+2, $fe
+; DARK 
+	givepoke HAUNTER, 100
+	loadmem wPartyMon2DVs+0, $fe
+	loadmem wPartyMon2DVs+1, $ff
+	loadmem wPartyMon2DVs+2, $ff
+; DRAGON 
+	givepoke LUXIO, 100
+	loadmem wPartyMon3DVs+0, $ff
+	loadmem wPartyMon3DVs+1, $ef
+	loadmem wPartyMon3DVs+2, $ff
+; ELECTRIC
+	givepoke CLEFAIRY, 100
+	loadmem wPartyMon4DVs+0, $ff
+	loadmem wPartyMon4DVs+1, $ff
+	loadmem wPartyMon4DVs+2, $ef
+; FIGHTING
+	givepoke STARAPTOR, 100
+	loadmem wPartyMon5DVs+0, $ff
+	loadmem wPartyMon5DVs+1, $ee
+	loadmem wPartyMon5DVs+2, $ee
+; FIRE 
+	givepoke DRATINI, 100
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ee
+	loadmem wPartyMon6DVs+2, $ef
 	setflag ENGINE_POKEDEX
 for x, NUM_TMS + NUM_HMS
 	givetmhm x

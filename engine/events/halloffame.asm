@@ -25,8 +25,8 @@ HallOfFame:: ;this stubs out all of the pokemon and just goes to the player. tod
 .ok
 	farcall SaveGameData
 	farcall SaveCurrentVersion
-	call GetHallOfFameParty
-	farcall AddHallOfFameEntry
+;	call GetHallOfFameParty
+;	farcall AddHallOfFameEntry
 
 	xor a
 	ld [wGameLogicPaused], a
