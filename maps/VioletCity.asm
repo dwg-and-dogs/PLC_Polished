@@ -296,6 +296,7 @@ VioletKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+	opentext
 	writetext GaveMaximumDVsText_VioletCity
 	waitbutton
 	closetext
@@ -309,12 +310,12 @@ VioletKimonoGirlScript:
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeText_VioletCity
 	yesorno
 	iffalse .UndoChanges
 	; Player confirms - make it permanent
 	setevent EVENT_SET_DVS_3
-	writetext DVChangeConfirmedText
+	writetext DVChangeConfirmedText_VioletCity
 	waitbutton
 	closetext
 	end
