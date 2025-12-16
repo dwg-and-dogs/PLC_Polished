@@ -25,3 +25,4 @@ I'm going to be adding in the unown (cosmetic) and galarian ponyta line and hisu
 First error with just editing constants is in variant forms.asm 
 
 I edit data/pokemon/variant forms to match the format of the polished, uncommenting the cosmetic for unown and adding in ponyta rapidash nd voltob. 
+There's also the data/pokemon/valid_variants to edit 
