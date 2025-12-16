@@ -291,3 +291,8 @@ INCLUDE "data/pokemon/base_stats/ho_oh.asm"
 INCLUDE "data/pokemon/base_stats/celebi.asm"
 	assert_table_length NUM_POKEMON 
 INCLUDE "data/pokemon/base_stats/egg.asm" ; no change to this since originl 
+
+INCLUDE "data/pokemon/base_stats/ponyta_galarian.asm"
+INCLUDE "data/pokemon/base_stats/rapidash_galarian.asm"
+INCLUDE "data/pokemon/base_stats/voltorb_hisuian.asm"
+	assert_table_length NUM_EXT_POKEMON

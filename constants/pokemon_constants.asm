@@ -1,6 +1,6 @@
 ; pokemon ids
 ; indexes for:
-; - PokemonNames (see data/pokemon/names.asm) ->done
+; - PokemonNames (see data/pokemon/names.asm) ->done, variant 
 ; - BaseData (see data/pokemon/base_stats.asm) ->done
 ; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm) ->done, fury_attack_users.asm->done, legendary_mons.asm->done, unique_wild_moves.asm->done, 
 ; - EggMovePointers (see data/pokemon/egg_move_pointers.asm) ->done, egg_moves.asm->done
@@ -282,8 +282,8 @@ CANCEL EQU -1
 
 ; form values
 ; related to:
-; - CosmeticSpeciesAndFormTable (see data/pokemon/variant_forms.asm)
-; - ValidVariantRanges (see data/pokemon/valid_variants.asm)
+; - CosmeticSpeciesAndFormTable (see data/pokemon/variant_forms.asm), done for variant
+; - ValidVariantRanges (see data/pokemon/valid_variants.asm), done for variant 
 
 ext_const_def: MACRO
 	if _NARG >= 1
