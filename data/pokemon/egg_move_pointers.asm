@@ -256,4 +256,10 @@ EggMovePointers::
 	dw NoEggMoves
 	assert_table_length NUM_POKEMON
 
-	dw NoEggMoves
+	dw NoEggMoves ; egg 
+
+
+	dw NoEggMoves ; gponyta
+	dw NoEggMoves ; grapidash 
+	dw NoEggMoves ; hvoltorb 
+	assert_table_length NUM_EXT_POKEMON

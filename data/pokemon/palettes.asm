@@ -1042,10 +1042,18 @@ INCLUDE "gfx/pokemon/ho_oh/normal.pal"
 INCLUDE "gfx/pokemon/ho_oh/shiny.pal"
 INCLUDE "gfx/pokemon/celebi/normal.pal"
 INCLUDE "gfx/pokemon/celebi/shiny.pal"
-
 	assert_table_length NUM_POKEMON + 1
 
 INCLUDE "gfx/pokemon/egg/normal.pal"
 INCLUDE "gfx/pokemon/egg/shiny.pal"
+
+
+INCLUDE "gfx/pokemon/ponyta_galarian/normal.pal"
+INCLUDE "gfx/pokemon/ponyta_galarian/shiny.pal"
+INCLUDE "gfx/pokemon/rapidash_galarian/normal.pal"
+INCLUDE "gfx/pokemon/rapidash_galarian/shiny.pal"
+INCLUDE "gfx/pokemon/voltorb_hisuian/normal.pal"
+INCLUDE "gfx/pokemon/voltorb_hisuian/shiny.pal"
+	assert_table_length NUM_EXT_POKEMON + 1
 
 endc

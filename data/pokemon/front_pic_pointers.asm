@@ -256,32 +256,39 @@ FrontPicPointers::
 	dba	CelebiFrontpic
 	assert_table_length	NUM_POKEMON
 	
-	dba	EggPic
-	
-	dba	UnownBFrontpic
-	dba	UnownCFrontpic
-	dba	UnownDFrontpic
-	dba	UnownEFrontpic
-	dba	UnownFFrontpic
-	dba	UnownGFrontpic
-	dba	UnownHFrontpic
-	dba	UnownIFrontpic
-	dba	UnownJFrontpic
-	dba	UnownKFrontpic
-	dba	UnownLFrontpic
-	dba	UnownMFrontpic
-	dba	UnownNFrontpic
-	dba	UnownOFrontpic
-	dba	UnownPFrontpic
-	dba	UnownQFrontpic
-	dba	UnownRFrontpic
-	dba	UnownSFrontpic
-	dba	UnownTFrontpic
-	dba	UnownUFrontpic
-	dba	UnownVFrontpic
-	dba	UnownWFrontpic
-	dba	UnownXFrontpic
-	dba	UnownYFrontpic
-	dba	UnownZFrontpic
-	dba	UnownExclamationFrontpic
-	dba	UnownQuestionFrontpic
+	dba EggPic
+
+	dba UnownBFrontpic
+	dba UnownCFrontpic
+	dba UnownDFrontpic
+	dba UnownEFrontpic
+	dba UnownFFrontpic
+	dba UnownGFrontpic
+	dba UnownHFrontpic
+	dba UnownIFrontpic
+	dba UnownJFrontpic
+	dba UnownKFrontpic
+	dba UnownLFrontpic
+	dba UnownMFrontpic
+	dba UnownNFrontpic
+	dba UnownOFrontpic
+	dba UnownPFrontpic
+	dba UnownQFrontpic
+	dba UnownRFrontpic
+	dba UnownSFrontpic
+	dba UnownTFrontpic
+	dba UnownUFrontpic
+	dba UnownVFrontpic
+	dba UnownWFrontpic
+	dba UnownXFrontpic
+	dba UnownYFrontpic
+	dba UnownZFrontpic
+	dba UnownExclamationFrontpic
+	dba UnownQuestionFrontpic
+
+
+	dba PonytaGalarianFrontpic
+	dba RapidashGalarianFrontpic
+	dba VoltorbHisuianFrontpic
+
+	assert_table_length NUM_UNIQUE_POKEMON

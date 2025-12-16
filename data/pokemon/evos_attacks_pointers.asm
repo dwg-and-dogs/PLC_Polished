@@ -260,3 +260,9 @@ EvosAttacksPointers::
 	dw CelebiEvosAttacks
 	assert_table_length NUM_POKEMON
 	dw EggEvosAttacks
+
+	dw PonytaGalarianEvosAttacks
+	dw RapidashGalarianEvosAttacks
+	dw VoltorbHisuianEvosAttacks
+	assert_table_length NUM_EXT_POKEMON
+	

@@ -1,4 +1,4 @@
-; Every Pokémon sorted in New Pokédex Order.
+; Every Pokémon sorted in New Pokédex Order. no change for variants 
 
 NewPokedexOrder:
 	table_width 1, NewPokedexOrder

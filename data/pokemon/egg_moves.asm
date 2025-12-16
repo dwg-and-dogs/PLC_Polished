@@ -1,4 +1,4 @@
-INCLUDE "constants.asm"
+INCLUDE "constants.asm" ; no change 
 
 
 SECTION "Egg Moves", ROMX

@@ -296,3 +296,4 @@ INCLUDE "data/pokemon/base_stats/ponyta_galarian.asm"
 INCLUDE "data/pokemon/base_stats/rapidash_galarian.asm"
 INCLUDE "data/pokemon/base_stats/voltorb_hisuian.asm"
 	assert_table_length NUM_EXT_POKEMON
+	

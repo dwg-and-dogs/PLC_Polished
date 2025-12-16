@@ -1,4 +1,4 @@
-FuryAttackUsers:
+FuryAttackUsers: ; no change 
 ; "Fury Strikes" = Fury Attack + Fury Swipes
 	db BEEDRILL
 	db NIDORINO

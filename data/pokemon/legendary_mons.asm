@@ -1,4 +1,4 @@
-LegendaryMons::
+LegendaryMons:: ; no change for variants 
 	db RAIKOU
 	db ENTEI
 	db SUICUNE

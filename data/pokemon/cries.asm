@@ -262,4 +262,4 @@ PokemonCries::
 	mon_cry CRY_ENTEI,       $14a,  $111 ; Celebi
 	assert_table_length NUM_POKEMON
 	mon_cry CRY_NIDORAN_M,      0,     0 ; Egg
-;	assert_table_length NUM_SPECIES
+	assert_table_length NUM_SPECIES

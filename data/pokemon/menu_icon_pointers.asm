@@ -257,32 +257,40 @@ IconPointers:
 	dba Ho_OhIcon ;HO_OH      ; fa
 	dba CelebiIcon ;CELEBI     ; fb
 	assert_table_length NUM_POKEMON + 1
+
 	dba EggIcon
 
-;	dba UnownBIcon
-;	dba UnownCIcon
-;	dba UnownDIcon
-;	dba UnownEIcon
-;	dba UnownFIcon
-;	dba UnownGIcon
-;	dba UnownHIcon
-;	dba UnownIIcon
-;	dba UnownJIcon
-;	dba UnownKIcon
-;	dba UnownLIcon
-;	dba UnownMIcon
-;	dba UnownNIcon
-;	dba UnownOIcon
-;	dba UnownPIcon
-;	dba UnownQIcon
-;	dba UnownRIcon
-;	dba UnownSIcon
-;	dba UnownTIcon
-;	dba UnownUIcon
-;	dba UnownVIcon
-;	dba UnownWIcon
-;	dba UnownXIcon
-;	dba UnownYIcon
-;	dba UnownZIcon
-;	dba UnownExclamationIcon
-;	dba UnownQuestionIcon
+	dba UnownBIcon
+	dba UnownCIcon
+	dba UnownDIcon
+	dba UnownEIcon
+	dba UnownFIcon
+	dba UnownGIcon
+	dba UnownHIcon
+	dba UnownIIcon
+	dba UnownJIcon
+	dba UnownKIcon
+	dba UnownLIcon
+	dba UnownMIcon
+	dba UnownNIcon
+	dba UnownOIcon
+	dba UnownPIcon
+	dba UnownQIcon
+	dba UnownRIcon
+	dba UnownSIcon
+	dba UnownTIcon
+	dba UnownUIcon
+	dba UnownVIcon
+	dba UnownWIcon
+	dba UnownXIcon
+	dba UnownYIcon
+	dba UnownZIcon
+	dba UnownExclamationIcon
+	dba UnownQuestionIcon
+
+
+	dba PonytaIcon ; galarian 
+	dba RapidashIcon ; galarian
+	dba VoltorbIcon ; hisuian 
+
+	assert_table_length NUM_UNIQUE_POKEMON + 1

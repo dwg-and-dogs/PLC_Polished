@@ -1,4 +1,4 @@
-INCLUDE "constants.asm" ;;11-26 line 406
+INCLUDE "constants.asm" ; no change for the variant 
 
 
 SECTION "CyndaquilPokedexEntry", ROMX

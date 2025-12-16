@@ -259,8 +259,15 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal RED, GREEN ; HO_OH
 	iconpal GREEN, RED ; CELEBI
 	assert_table_length NUM_POKEMON
+
 	iconpal RED, BLUE ; EGG
 
-;rept NUM_UNOWN - 1
-;	iconpal GRAY, BLUE
-;endr
+rept NUM_UNOWN - 1
+	iconpal GRAY, BLUE
+endr
+
+	iconpal BLUE, PURPLE ; PONYTA, GALARIAN_FORM
+	iconpal BLUE, PURPLE ; RAPIDASH, GALARIAN_FORM
+	iconpal GREEN, BROWN ; VOLTORB, HISUIAN 
+
+	assert_table_length NUM_UNIQUE_POKEMON

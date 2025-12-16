@@ -1,5 +1,5 @@
 PokedexDataPointerTable:
-; entries correspond to constants/pokemon_constants.asm
+; entries correspond to constants/pokemon_constants.asm, no change for variants 
 	table_width 3, PokedexDataPointerTable
 	dba	CyndaquilPokedexEntry
 	dba	QuilavaPokedexEntry

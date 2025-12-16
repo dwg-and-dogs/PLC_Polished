@@ -1322,6 +1322,26 @@ PonytaEvosAttacks:
 	db 49, FLARE_BLITZ
 	db 0 ; no more level-up moves
 
+
+PonytaGalarianEvosAttacks:
+	db EVOLVE_LEVEL, 40, RAPIDASH
+	db 0 ; no more evolutions
+	db 1, GROWL
+	db 1, TACKLE
+	db 4, LEER ; Tail Whip → similar move
+	db 9, CONFUSION
+	db 13, DISARM_VOICE ; Fairy Wind → similar move
+	db 17, STOMP
+	db 21, HEALINGLIGHT ; Heal Pulse → similar move
+	db 25, PSYBEAM
+	db 29, TAKE_DOWN
+	db 33, DAZZLINGLEAM
+	db 37, AGILITY
+	db 41, PSYCHIC_M
+	db 45, EXTREMESPEED ; Bounce → new move
+	db 49, MOONBLAST ; Healing Wish → new move
+	db 0 ; no more level-up moves
+
 RapidashEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PLAY_ROUGH ; evolution move
@@ -1342,7 +1362,28 @@ RapidashEvosAttacks:
 	db 45, EXTREMESPEED ; Bounce → new move
 	db 49, FLARE_BLITZ
 	db 0 ; no more level-up moves
-	
+
+
+RapidashGalarianEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, PLAY_ROUGH ; evolution move
+	db 1, MEGAHORN
+	db 1, GROWL
+	db 1, TACKLE
+	db 4, LEER ; Tail Whip → similar move
+	db 9, CONFUSION
+	db 13, DISARM_VOICE ; Fairy Wind → similar move
+	db 17, STOMP
+	db 21, HEALINGLIGHT ; Heal Pulse → similar move
+	db 25, PSYBEAM
+	db 29, TAKE_DOWN
+	db 33, DAZZLINGLEAM
+	db 37, AGILITY
+	db 41, PSYCHIC_M
+	db 45, EXTREMESPEED ; Bounce → new move
+	db 49, MOONBLAST ; Healing Wish → new move
+	db 0 ; no more level-up moves
+
 SlowpokeEvosAttacks:
 	db EVOLVE_HOLDING, KINGS_ROCK, SLOWKING
 	db EVOLVE_LEVEL, 37, SLOWBRO
@@ -1672,6 +1713,29 @@ SteelixEvosAttacks:
 	db 0 ; no more level-up moves
 
 VoltorbEvosAttacks:
+	db EVOLVE_LEVEL, 25, ELECTRODE
+	db EVOLVE_ITEM, ODD_SOUVENIR,  H__ELECTRODE
+	db 0 ; no more evolutions
+	db 1, TACKLE
+	db 1, THUNDERSHOCK ; Let's Go move
+	db 4, ROLLOUT
+	db 6, AGILITY ; Eerie Impulse → event move
+	db 9, SPARK
+	db 11, SONIC_BOOM
+	db 13, SCREECH
+	db 16, THUNDER_WAVE ; Charge Beam → TM move
+	db 20, SWIFT
+	db 22, THUNDERBOLT ; Electro Ball → TM move
+	db 26, REFLECT ; Self-Destruct → TM move
+	db 29, LIGHT_SCREEN
+	db 34, EXPLOSION ; Magnet Rise → Explosion
+	db 37, THUNDER ; Discharge → TM move
+	db 41, BUG_BUZZ ; Explosion → new move
+	db 46, GYRO_BALL
+	db 48, MIRROR_COAT
+	db 0 ; no more level-up moves
+
+VoltorbHisuianEvosAttacks: ; TODO REVISE 
 	db EVOLVE_LEVEL, 25, ELECTRODE
 	db EVOLVE_ITEM, ODD_SOUVENIR,  H__ELECTRODE
 	db 0 ; no more evolutions

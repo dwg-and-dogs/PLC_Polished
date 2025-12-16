@@ -257,3 +257,8 @@ EvolutionMoves::
 	assert_table_length NUM_POKEMON
 
 	db NO_MOVE      ; EGG
+
+	db NO_MOVE      ; PONYTA, GALARIAN_FORM
+	db PLAY_ROUGH   ; RAPIDASH, GALARIAN_FORM
+	db ENERGY_BALL      ; VOLTORB, HISUIAN FORM 
+	assert_table_length NUM_EXT_POKEMON

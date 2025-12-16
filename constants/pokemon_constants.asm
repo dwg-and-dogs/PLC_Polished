@@ -1,21 +1,30 @@
 ; pokemon ids
-; indexes for:
+; indexes for: ; variant == first set of variants adding ponyta and rapidash and voltorb 
+; data files: 
 ; - PokemonNames (see data/pokemon/names.asm) ->done, variant 
-; - BaseData (see data/pokemon/base_stats.asm) ->done
-; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm) ->done, fury_attack_users.asm->done, legendary_mons.asm->done, unique_wild_moves.asm->done, 
-; - EggMovePointers (see data/pokemon/egg_move_pointers.asm) ->done, egg_moves.asm->done
-; - EvolutionMoves (see data/pokemon/evolution_moves.asm) ->done
-; - PokemonCries (see data/pokemon/cries.asm)->done
-; - IconPointers (see data/pokemon/menu_icon_pointers.asm) ->done
-; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)->done
-; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)->done
-; - BackPicPointers (see data/pokemon/back_pic_pointers.asm)->done
-; - PokemonPalettes (see data/pokemon/palettes.asm); 
-; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)->done, also need to write the dex entries
-; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)->done
-; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)->done
-; - ValidPokemonLevels (see data/pokemon/valid_levels.asm)->done, valid_variants.asm->done
-; - Footprints (see gfx/pokemon/footprints.asm)->done, gfx/pokemon/anims.asm->done
+; - BaseData (see data/pokemon/base_stats.asm) ->done, variant
+; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm) ->done, variant 
+;			fury_attack_users.asm->done, variant 
+;			legendary_mons.asm->done, variant 
+;			unique_wild_moves.asm->done, variant 
+; - EggMovePointers (see data/pokemon/egg_move_pointers.asm) ->done, variant 
+;			egg_moves.asm->done, variant 
+; - EvolutionMoves (see data/pokemon/evolution_moves.asm) ->done, variant 
+; - PokemonCries (see data/pokemon/cries.asm)->done, variant
+; - IconPointers (see data/pokemon/menu_icon_pointers.asm) ->done, variant 
+; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)->done, variant 
+; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)->done, variant
+; - BackPicPointers (see data/pokemon/back_pic_pointers.asm)->done, variant 
+; - PokemonPalettes (see data/pokemon/palettes.asm); done, variant 
+; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)->done, no change for any variants 
+; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)->done, no change for any variants 
+; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)->done, no change for any variants 
+; - ValidPokemonLevels (see data/pokemon/valid_levels.asm)->done, variant 
+; 			valid_variants.asm->done (below) 
+
+; gfx files: 
+; - Footprints (see gfx/pokemon/footprints.asm)->done
+; 			gfx/pokemon/anims.asm->done
 ; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)->done, gfx/pokemon/extra_pointers.asm->done, gfx/pokemon/extras.asm
 ; - AnimationIdlePointers (see gfx/pokemon/idle_pointers.asm) did not find
 ; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)->done, gfx/pokemon/bitmasks.asm->done, unown_words.asm->done

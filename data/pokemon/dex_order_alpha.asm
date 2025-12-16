@@ -1,4 +1,4 @@
-; Every Pokémon sorted alphabetically by name.
+; Every Pokémon sorted alphabetically by name. no change for variants 
 
 AlphabeticalPokedexOrder:
 	table_width 1, AlphabeticalPokedexOrder
