@@ -11,3 +11,17 @@ ALOLAN_FORM EQU 2
 	...
 
 Some things are there for making sure there is a constant number of these 
+
+New lines I'm uncommenting:
+
+; these constants include EGG as a species
+;NUM_UNIQUE_POKEMON EQU const_value - 1 ; 150
+;NUM_EXT_POKEMON EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS ; 11c
+;NUM_SPECIES EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS - NUM_VARIANT_FORMS ; ff
+ I have a feeling the lines above are related to why I can't get any of the eggs to work. 
+
+I'm going to be adding in the unown (cosmetic) and galarian ponyta line and hisuian voltorb. 
+
+First error with just editing constants is in variant forms.asm 
+
+I edit data/pokemon/variant forms to match the format of the polished, uncommenting the cosmetic for unown and adding in ponyta rapidash nd voltob. 

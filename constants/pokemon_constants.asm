@@ -275,8 +275,7 @@
 	const LUGIA      ; f9
 	const HO_OH      ; fa
 	const CELEBI     ; fb
-NUM_POKEMON EQU const_value - 1 ; fc
-	; room for up to two more? 
+NUM_POKEMON EQU const_value - 1 ; fe const_value is like an incrementer, every time we say const then this goes up by one 
 	const EGG        ; ff? seems to be the same as polished 
 
 CANCEL EQU -1
@@ -307,7 +306,7 @@ ENDM
 NO_FORM EQU 0
 PLAIN_FORM EQU 1
 
-FIRST_COSMETIC_FORM_MON EQU const_value ; 100
+FIRST_COSMETIC_FORM_MON EQU const_value ; 100 we're past 255 now boys. 100 = 255, we're at the first cosmetic mon if we have this 
 
 ; unown
 	ext_const_def 1, UNOWN_A_FORM    ;     (01)
@@ -338,19 +337,28 @@ FIRST_COSMETIC_FORM_MON EQU const_value ; 100
 	ext_const UNOWN_Z_FORM           ; 118 (1a)
 	ext_const UNOWN_EXCLAMATION_FORM ; 119 (1b)
 	ext_const UNOWN_QUESTION_FORM    ; 11a (1c)
-NUM_UNOWN EQU ext_const_value - 1
+NUM_UNOWN EQU ext_const_value - 1 ; 1c, 28 decimal 
 
-NUM_COSMETIC_FORMS EQU const_value - FIRST_COSMETIC_FORM_MON ; 34
+NUM_COSMETIC_FORMS EQU const_value - FIRST_COSMETIC_FORM_MON ; 27 decimal for the variants of unown 
 
-FIRST_VARIANT_FORM_MON EQU const_value ; 134
+FIRST_VARIANT_FORM_MON EQU const_value ; 11b, no variants
 
-NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; 1d
+; galarian forms
+GALARIAN_FORM EQU 2
+	const_skip ; ponyta
+	const_skip ; rapidash
 
-FIRST_EXT_MON EQU const_value ; 151
+; hisuian forms as a practice 
+HISUIAN_FORM EQU 2
+	const_skip ; ?? voltorb
 
-NUM_EXT_SPECIES EQU const_value - FIRST_EXT_MON ; 0
+NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; as of now, 0 
 
-; these constants include EGG as a species
-;NUM_UNIQUE_POKEMON EQU const_value - 1 ; 150
-;NUM_EXT_POKEMON EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS ; 11c
-;NUM_SPECIES EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS - NUM_VARIANT_FORMS ; ff
+FIRST_EXT_MON EQU const_value ; 11b
+
+NUM_EXT_SPECIES EQU const_value - FIRST_EXT_MON ; 0 
+
+; these constants include EGG as a species.
+NUM_UNIQUE_POKEMON EQU const_value - 1 ; 11a (282 decimal)
+NUM_EXT_POKEMON EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS ; includes varieants 
+NUM_SPECIES EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS - NUM_VARIANT_FORMS ; should be 255 
