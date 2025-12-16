@@ -359,7 +359,7 @@ GALARIAN_FORM EQU 2
 
 ; hisuian forms as a practice 
 HISUIAN_FORM EQU 2
-	const_skip ; ?? voltorb
+	const_skip ; voltorb
 
 NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; as of now, 0 
 

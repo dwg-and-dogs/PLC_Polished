@@ -157,7 +157,5 @@ AzumarillFrames:   		INCLUDE "gfx/pokemon/azumarill/frames.asm"
 
 
 PonytaGalarianFrames: INCLUDE "gfx/pokemon/ponyta_galarian/frames.asm"
-
 RapidashGalarianFrames: INCLUDE "gfx/pokemon/rapidash_galarian/frames.asm"
-
 VoltorbHisuianFrames: INCLUDE "gfx/pokemon/voltorb_hisuian/frames.asm"
