@@ -343,6 +343,7 @@ Route35KimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+	opentext
 	writetext GaveMaximumDVsText_Route35
 	waitbutton
 	closetext
@@ -356,12 +357,12 @@ Route35KimonoGirlScript:
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeText_Route35
 	yesorno
 	iffalse .UndoChanges
 	; Player confirms - make it permanent
 	setevent EVENT_SET_DVS_2
-	writetext DVChangeConfirmedText
+	writetext DVChangeConfirmedText_Route35
 	waitbutton
 	closetext
 	end

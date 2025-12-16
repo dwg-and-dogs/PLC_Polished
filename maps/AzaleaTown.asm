@@ -576,6 +576,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+	opentext
 	writetext GaveMaximumDVsText_TTTown
 	waitbutton
 	closetext

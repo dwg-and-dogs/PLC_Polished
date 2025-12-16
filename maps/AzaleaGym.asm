@@ -24,12 +24,16 @@ ScytherBugsyText:
 	done
 
 AzaleaGymStatue:
-	gettrainername BUGSY, 1, $1
-	checkflag ENGINE_HIVEBADGE
-	iftrue .Beaten
-	jumpstd gymstatue1
-.Beaten:
-	jumpstd gymstatue2
+	opentext
+	writethistext
+		text "Azalea Gym"
+		line "Leader: Bugsy"
+		para "The expert in"
+		line "bug #mon!"
+		done
+	waitbutton
+	closetext
+	end
 
 DebugRoomPortal:
 	opentext

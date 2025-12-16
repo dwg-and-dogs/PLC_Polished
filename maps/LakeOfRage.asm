@@ -791,6 +791,7 @@ LakeOfRageKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+	opentext
 	writetext GaveMaximumDVsText_LakeOfRage
 	waitbutton
 	closetext
@@ -804,12 +805,12 @@ LakeOfRageKimonoGirlScript:
 	waitbutton
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeText_LakeOfRage
 	yesorno
 	iffalse .UndoChanges
 	; Player confirms - make it permanent
 	setevent EVENT_SET_DVS_6
-	writetext DVChangeConfirmedText
+	writetext DVChangeConfirmedText_LakeOfRage
 	waitbutton
 	closetext
 	end

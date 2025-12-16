@@ -103,6 +103,7 @@ TinTower5FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+	opentext
 	writetext GaveMaximumDVsText_TT5F
 	waitbutton
 	closetext

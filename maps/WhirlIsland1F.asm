@@ -111,6 +111,7 @@ WhirlIsland1FKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+	opentext
 	writetext GaveMaximumDVsText_WhirlIsland
 	waitbutton
 	closetext
@@ -121,12 +122,12 @@ WhirlIsland1FKimonoGirlScript:
 	waitsfx
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeText_WhirlIsland
 	yesorno
 	iffalse .UndoChanges
 	; Player confirms - make it permanent
 	setevent EVENT_SET_DVS_4
-	writetext DVChangeConfirmedText
+	writetext DVChangeConfirmedText_WhirlIsland
 	waitbutton
 	closetext
 	end

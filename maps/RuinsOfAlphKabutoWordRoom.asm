@@ -121,6 +121,7 @@ KabutoWordKimonoGirlScript:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+	opentext
 	writetext GaveMaximumDVsText_AlphRuins
 	waitbutton
 	closetext
@@ -131,12 +132,12 @@ KabutoWordKimonoGirlScript:
 	waitsfx
 	closepokepic
 	opentext
-	writetext ConfirmDVChangeText
+	writetext ConfirmDVChangeText_AlphRuins
 	yesorno
 	iffalse .UndoChanges
 	; Player confirms - make it permanent
 	setevent EVENT_SET_DVS_1
-	writetext DVChangeConfirmedText
+	writetext DVChangeConfirmedText_AlphRuins
 	waitbutton
 	closetext
 	end
