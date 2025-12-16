@@ -288,6 +288,6 @@ BackPicPointers::
 
 	dba PonytaGalarianBackpic
 	dba RapidashGalarianBackpic
-	dba VoltorbHisuainBackpic
+	dba VoltorbHisuianBackpic
 
 	assert_table_length NUM_UNIQUE_POKEMON

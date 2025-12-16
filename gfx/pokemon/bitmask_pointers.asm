@@ -255,33 +255,40 @@ BitmasksPointers:
 	dw Ho_OhBitmasks
 	dw CelebiBitmasks
 	assert_table_length NUM_POKEMON
+
 	dw EggBitmasks
 
-;	dw UnownBBitmasks
-;	dw UnownCBitmasks
-;	dw UnownDBitmasks
-;	dw UnownEBitmasks
-;	dw UnownFBitmasks
-;	dw UnownGBitmasks
-;	dw UnownHBitmasks
-;	dw UnownIBitmasks
-;	dw UnownJBitmasks
-;	dw UnownKBitmasks
-;	dw UnownLBitmasks
-;	dw UnownMBitmasks
-;	dw UnownNBitmasks
-;	dw UnownOBitmasks
-;	dw UnownPBitmasks
-;	dw UnownQBitmasks
-;	dw UnownRBitmasks
-;	dw UnownSBitmasks
-;	dw UnownTBitmasks
-;	dw UnownUBitmasks
-;	dw UnownVBitmasks
-;	dw UnownWBitmasks
-;	dw UnownXBitmasks
-;	dw UnownYBitmasks
-;	dw UnownZBitmasks
-;	dw UnownExclamationBitmasks
-;	dw UnownQuestionBitmasks
-;	assert_table_length NUM_UNIQUE_POKEMON
+	dw UnownBBitmasks
+	dw UnownCBitmasks
+	dw UnownDBitmasks
+	dw UnownEBitmasks
+	dw UnownFBitmasks
+	dw UnownGBitmasks
+	dw UnownHBitmasks
+	dw UnownIBitmasks
+	dw UnownJBitmasks
+	dw UnownKBitmasks
+	dw UnownLBitmasks
+	dw UnownMBitmasks
+	dw UnownNBitmasks
+	dw UnownOBitmasks
+	dw UnownPBitmasks
+	dw UnownQBitmasks
+	dw UnownRBitmasks
+	dw UnownSBitmasks
+	dw UnownTBitmasks
+	dw UnownUBitmasks
+	dw UnownVBitmasks
+	dw UnownWBitmasks
+	dw UnownXBitmasks
+	dw UnownYBitmasks
+	dw UnownZBitmasks
+	dw UnownExclamationBitmasks
+	dw UnownQuestionBitmasks
+
+
+	dw PonytaGalarianBitmasks
+	dw RapidashGalarianBitmasks
+	dw VoltorbHisuianBitmasks
+
+	assert_table_length NUM_UNIQUE_POKEMON

@@ -23,8 +23,8 @@
 ; 			valid_variants.asm->done (below) 
 
 ; gfx files: 
-; - Footprints (see gfx/pokemon/footprints.asm)->done
-; 			gfx/pokemon/anims.asm->done
+; - Footprints (see gfx/pokemon/footprints.asm)->done, variant 
+; 			gfx/pokemon/anims.asm->done, variants 
 ; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)->done, gfx/pokemon/extra_pointers.asm->done, gfx/pokemon/extras.asm
 ; - AnimationIdlePointers (see gfx/pokemon/idle_pointers.asm) did not find
 ; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)->done, gfx/pokemon/bitmasks.asm->done, unown_words.asm->done

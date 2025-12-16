@@ -252,8 +252,9 @@ HeatranBitmasks: 		INCLUDE "gfx/pokemon/heatran/bitmask.asm"
 LugiaBitmasks: 			INCLUDE "gfx/pokemon/lugia/bitmask.asm"
 Ho_OhBitmasks: 			INCLUDE "gfx/pokemon/ho_oh/bitmask.asm"
 CelebiBitmasks: 		INCLUDE "gfx/pokemon/celebi/bitmask.asm"
-EggBitmasks:        	INCLUDE "gfx/pokemon/egg/bitmask.asm"
+EggBitmasks:        INCLUDE "gfx/pokemon/egg/bitmask.asm"
 
+UnownABitmasks: INCLUDE "gfx/pokemon/unown_a/bitmask.asm"
 UnownBBitmasks: INCLUDE "gfx/pokemon/unown_b/bitmask.asm"
 UnownCBitmasks: INCLUDE "gfx/pokemon/unown_c/bitmask.asm"
 UnownDBitmasks: INCLUDE "gfx/pokemon/unown_d/bitmask.asm"
@@ -281,3 +282,11 @@ UnownYBitmasks: INCLUDE "gfx/pokemon/unown_y/bitmask.asm"
 UnownZBitmasks: INCLUDE "gfx/pokemon/unown_z/bitmask.asm"
 UnownExclamationBitmasks: INCLUDE "gfx/pokemon/unown_exclamation/bitmask.asm"
 UnownQuestionBitmasks:    INCLUDE "gfx/pokemon/unown_question/bitmask.asm"
+
+
+PonytaGalarianBitmasks: INCLUDE "gfx/pokemon/ponyta_galarian/bitmask.asm"
+
+RapidashGalarianBitmasks: INCLUDE "gfx/pokemon/rapidash_galarian/bitmask.asm"
+
+VoltorbHisuianBitmasks: INCLUDE "gfx/pokemon/voltorb_hisuian/bitmask.asm"
+

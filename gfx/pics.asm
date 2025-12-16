@@ -646,7 +646,6 @@ CelebiBackpic: 				INCBIN "gfx/pokemon/celebi/back.2bpp.lz"
 EggPic:                   	INCBIN "gfx/pokemon/egg/front.animated.2bpp.lz"
 NoctowlFrontpic: 			INCBIN "gfx/pokemon/noctowl/front.animated.2bpp.lz"
 NoctowlBackpic: 			INCBIN "gfx/pokemon/noctowl/back.2bpp.lz"
-
 AnnihilapeFrontpic: 		INCBIN "gfx/pokemon/annihilape/front.animated.2bpp.lz"
 AnnihilapeBackpic: 			INCBIN "gfx/pokemon/annihilape/back.2bpp.lz"
 MinsirFrontpic: 			INCBIN "gfx/pokemon/minsir/front.animated.2bpp.lz"
@@ -728,6 +727,14 @@ UnownExclamationBackpic:  INCBIN "gfx/pokemon/unown_exclamation/back.2bpp.lz"
 UnownQuestionFrontpic:    INCBIN "gfx/pokemon/unown_question/front.animated.2bpp.lz"
 UnownQuestionBackpic:     INCBIN "gfx/pokemon/unown_question/back.2bpp.lz"
 
+SECTION "VariantForms Pics", ROMX
+
+PonytaGalarianFrontpic:   INCBIN "gfx/pokemon/ponyta_galarian/front.animated.2bpp.lz"
+PonytaGalarianBackpic:    INCBIN "gfx/pokemon/ponyta_galarian/back.2bpp.lz"
+RapidashGalarianFrontpic: INCBIN "gfx/pokemon/rapidash_galarian/front.animated.2bpp.lz"
+RapidashGalarianBackpic:  INCBIN "gfx/pokemon/rapidash_galarian/back.2bpp.lz"
+VoltorbHisuianFrontpic:   INCBIN "gfx/pokemon/voltorb_hisuian/front.animated.2bpp.lz"
+VoltorbHisuianBackpic:    INCBIN "gfx/pokemon/voltorb_hisuian/back.2bpp.lz"
 
 SECTION "Trainer Pics 1", ROMX
 

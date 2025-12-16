@@ -254,7 +254,7 @@ HeatranAnimation:		INCLUDE "gfx/pokemon/heatran/anim0.asm"
 LugiaAnimation:			INCLUDE "gfx/pokemon/lugia/anim0.asm"
 Ho_OhAnimation:			INCLUDE "gfx/pokemon/ho_oh/anim0.asm"
 CelebiAnimation:		INCLUDE "gfx/pokemon/celebi/anim0.asm"
-EggAnimation:       	INCLUDE "gfx/pokemon/egg/anim0.asm"
+EggAnimation:        INCLUDE "gfx/pokemon/egg/anim0.asm"
 
 UnownAAnimation: INCLUDE "gfx/pokemon/unown_a/anim0.asm"
 UnownBAnimation: INCLUDE "gfx/pokemon/unown_b/anim0.asm"
@@ -284,3 +284,12 @@ UnownYAnimation: INCLUDE "gfx/pokemon/unown_y/anim0.asm"
 UnownZAnimation: INCLUDE "gfx/pokemon/unown_z/anim0.asm"
 UnownExclamationAnimation: INCLUDE "gfx/pokemon/unown_exclamation/anim0.asm"
 UnownQuestionAnimation:    INCLUDE "gfx/pokemon/unown_question/anim0.asm"
+
+; possible bug: the plain and variant forms are located near each other in the polished version. 
+PonytaGalarianAnimation: INCLUDE "gfx/pokemon/ponyta_galarian/anim0.asm"
+
+RapidashGalarianAnimation: INCLUDE "gfx/pokemon/rapidash_galarian/anim0.asm"
+
+VoltorbHisuianAnimation:   INCLUDE "gfx/pokemon/voltorb_hisuian/anim0.asm"
+
+
