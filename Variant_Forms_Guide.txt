@@ -29,3 +29,4 @@ There's also the data/pokemon/valid_variants to edit
 
 I'm working through the files and copying in the polished version that follows the num_pokemon const so that it matches as close as possible 
 
+successful build 121625 push ca. 2PM 
