@@ -430,6 +430,7 @@ CyndaquilPokeBallScript:
 	applymovement TINDER_GARDEN_RIVAL, RivalAfterOshawottMovement
 	opentext
 	writetext KurtGreatJobText
+	waitbutton
 	turnobject TINDER_GARDEN_KURT, RIGHT
 	writetext KurtDontLoseItText
 	waitbutton
@@ -942,7 +943,7 @@ RivalIndependentText:
     text " <RIVAL>: "
 	next
 	text_start
-	text "No one see my"
+	text "No one sees my"
 	line "ingenuity."
 	done
 

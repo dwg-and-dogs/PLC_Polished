@@ -33,7 +33,7 @@ ProfOaksAide2Script:
 .HereYouGo
 	writetext ProfOaksAide2HereYouGoText
 	waitbutton
-	verbosegiveitem SHINY_CHARM
+	verbosegivekeyitem SHINY_CHARM
 	iffalse .NoRoom
 	setevent EVENT_GOT_SHINY_CHARM_FROM_PROF_OAKS_AIDE
 .Explain

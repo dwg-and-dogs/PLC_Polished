@@ -908,7 +908,7 @@ MankeyEvosAttacks:
 	db 0 ; no more level-up moves
 
 PrimeapeEvosAttacks:
-	db EVOLVE_MOVE, OUTRAGE, PRIMEAPE
+	db EVOLVE_MOVE, OUTRAGE, ANNIHILAPE
 	db 0 ; no more evolutions
 	db 1, RAGE
 	db 1, TACKLE
