@@ -16,9 +16,10 @@ SlowpokeWellB2F_MapScriptHeader:
 
 
 	def_object_events
-	object_event 5, 2, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB2FGuardScript, SLOWPOKE_WELL_MOVED_ASIDE
-	strengthboulder_event   6, 2
-	strengthboulder_event  4, 2
+	object_event 6, 2, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, SlowpokeWellB2FHikerText, EVENT_LOGGERS_ILEX_FOREST
+	pokemon_event  5, 2, GEODUDE, -1, -1, PAL_NPC_BROWN, SlowpokeWellGeodudeText, EVENT_LOGGERS_ILEX_FOREST
+	pokemon_event 4, 2, GRIMER, -1, -1, PAL_NPC_BLUE, SlowpokeWellGrimerText, EVENT_LOGGERS_ILEX_FOREST
+	object_event 3, 2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, SlowpokeWellB2FScientistText, EVENT_LOGGERS_ILEX_FOREST
 
 
 	object_const_def
@@ -32,52 +33,32 @@ SlowpokeWellB2FCallBack:
 .Done:
 	endcallback
 
-SlowpokeWellB2FGuardScript:
-	faceplayer
-	opentext
-	checkevent SLOWPOKE_WELL_MOVED_ASIDE
-	iftrue .MovedAside
-	checkevent EVENT_LOGGERS_ILEX_FOREST
-	iftrue .MovesAside
-	writetext SlowpokeWellImGuardingText
-	waitbutton
-	closetext
-	end 
+SlowpokeWellB2FHikerText:
+	text "This battle is"
+	line "taking forever!"
 	
-.MovesAside:
-	writetext SlowpokeWellMovesAsideText
-	waitbutton
-	closetext
-	applyonemovement PLAYER, step_down
-	turnobject PLAYER, UP
-	applymovement SLOWPOKE_WELL_B2F_SCHOOLBOY, MovesAsideMovement
-	setevent SLOWPOKE_WELL_MOVED_ASIDE
-	end
-
-.MovedAside:
-	writetext SlowpokeWellMovesAsideText
-	waitbutton
-	closetext
-	end
-
-SlowpokeWellImGuardingText:
-	text "The miners in Un-"
-	line "ion cave want to"
-	para "exploit Slowpoke"
-	line "well. I won't let"
-	cont "anyone do that!"
+	para "I'll never get"
+	line "back to work"
+	cont "on time!"
 	done
 
-MovesAsideMovement:
-	step_down
-	step_right
-	turn_head_left
-	step_end
-
-SlowpokeWellMovesAsideText:
-	text "Oh, you stopped"
-	line "the Ilex loggers?"
+SlowpokeWellB2FScientistText:
+	text "This battle is"
+	line "taking forever!"
 	
-	para "Cool! You can"
-	line "pass through."
+	para "I'll never get"
+	line "back to work"
+	cont "on time!"
 	done
+	
+
+SlowpokeWellGeodudeText:
+	text "Geodude used"
+	line "Defense Curl!"
+	done
+
+SlowpokeWellGrimerText:
+	text "Grimer used"
+	line "Defense Curl!"
+	done
+	
