@@ -53,12 +53,12 @@ GoldenrodBikeShopClerkIntroText:
 	para "from my very"
 	line "first shipment."
 
-	para "Now, everyone wants"
-	line "an E-Bike!"
+	para "Now, everyone"
+	line "wants an E-Bike!"
 
 	para "Say, would you"
 	line "take it? Give it"
-	cont "a new adventure?"
+	cont "an adventure?"
 	done
 
 GoldenrodBikeShopClerkAgreedText:
@@ -73,9 +73,9 @@ GoldenrodBikeShopBicycleText:
 	text "It's a retro"
 	line "Bicycle!"
 	
-	para "Need to remember"
-	line "to ask Kurt how"
-	cont "the brakes work."
+	para "Need to ask Kurt"
+	line "how to shift the"
+	cont "gears."
 	done
 
 GoldenrodBikeShopJustReleasedCompactBikeText:

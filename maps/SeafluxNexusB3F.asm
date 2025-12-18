@@ -13,7 +13,7 @@ SeafluxNexusB3F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  7, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LUGIA, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Lugia, EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
+	object_event  7, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LUGIA, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Lugia, EVENT_NEXUS_LUGIA
 
 
 	object_const_def
@@ -32,7 +32,7 @@ Lugia:
 	startbattle
 	disappear NEXUSB3F_LUGIA
 	reloadmapafterbattle
-	setevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_LUGIA
+	setevent EVENT_NEXUS_LUGIA
 	end
 
 LugiaText:

@@ -100,10 +100,9 @@ AnarresTower3FEvent:
 	setscene $1
 	jumpthisopenedtext
 
-	text "You can use"
-	line "that HM to clear"
-	cont "trees in the"
-	cont "forest."
+	text "You can use that"
+	line "HM to clear trees"
+	cont "in the forest."
 	done
 
 PlayerStepsToHollisMovement:
