@@ -184,7 +184,7 @@ Route35GoldenrodGatePlayerReceivedAMonWithMailText:
 	done
 
 Route35GoldenrodGateRandyWeirdTreeBlockingRoadText:
-	para "My brother is"
+	text "My brother is"
 	line "a fancy guy in"
 	cont "red clothes."
 
@@ -236,6 +236,7 @@ KurtGoldenrodGateScript:
 	
 DontHearHearStory2:
 	writetext SomeOtherTime_2Text
+	waitbutton
 	closetext
 	end
 
@@ -280,4 +281,9 @@ KurtGoldenrodGateText:
 	line "to hear my story"
 	cont "again, check the"
 	cont "journals at home."
+	
+	para "By the way, the"
+	line "gate agent looks"
+	para "a little nervous"
+	line "don't you think?"
 	done

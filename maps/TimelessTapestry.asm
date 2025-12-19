@@ -211,7 +211,7 @@ TapestryAmosNoText:
 
 TapestrySceneFinale: 
 	;cf western capital scene ;
-	checkevent EVENT_BEAT_MEJIMI
+	checkevent EVENT_TAPESTRY_SCENE
 	iffalse .NoScene
 	disappear PLAYER
 	special Special_FadeBlackQuickly
@@ -220,7 +220,6 @@ TapestrySceneFinale:
 	special HealParty
 	showtext TapestryTextAmos
 	pause 30
-;	showemote EMOTE_HEART, TAPESTRY_SAMSARA, 10
 	showtext TapestryTextSamsara		
 	closetext
 	turnobject TAPESTRY_SAMSARA, UP

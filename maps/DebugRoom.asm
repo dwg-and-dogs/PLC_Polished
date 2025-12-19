@@ -182,7 +182,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp AZALEA_POKECENTER_1F, 5,7 
+	warp ROUTE_35, 13,30 
 	end
 
 
