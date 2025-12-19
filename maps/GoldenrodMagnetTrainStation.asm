@@ -34,7 +34,6 @@ GoldenrodMagnetTrainStationOfficerScript:
 GoldenrodMagnetTrainStationGentlemanScript:
     faceplayer
     opentext
-	checkevent EVENT_
 	checkevent EVENT_GENTLEMAN_READ_TRAIN_MAIL
 	iftrue_jumpopenedtext GentlemanAfterReadMailText ; todo 
     checkevent EVENT_GOT_KENYA

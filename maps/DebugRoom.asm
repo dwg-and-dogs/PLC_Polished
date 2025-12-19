@@ -61,30 +61,30 @@ endr
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
 ; DARK 
-	givepoke HAUNTER, 100
-	loadmem wPartyMon2DVs+0, $fe
-	loadmem wPartyMon2DVs+1, $ff
-	loadmem wPartyMon2DVs+2, $ff
+;	givepoke HAUNTER, 100
+;	loadmem wPartyMon2DVs+0, $fe
+;	loadmem wPartyMon2DVs+1, $ff
+;	loadmem wPartyMon2DVs+2, $ff
 ; DRAGON 
-	givepoke LUXIO, 100
-	loadmem wPartyMon3DVs+0, $ff
-	loadmem wPartyMon3DVs+1, $ef
-	loadmem wPartyMon3DVs+2, $ff
+;	givepoke LUXIO, 100
+;	loadmem wPartyMon3DVs+0, $ff
+;	loadmem wPartyMon3DVs+1, $ef
+;	loadmem wPartyMon3DVs+2, $ff
 ; ELECTRIC
-	givepoke CLEFAIRY, 100
-	loadmem wPartyMon4DVs+0, $ff
-	loadmem wPartyMon4DVs+1, $ff
-	loadmem wPartyMon4DVs+2, $ef
+;	givepoke CLEFAIRY, 100
+;	loadmem wPartyMon4DVs+0, $ff
+;	loadmem wPartyMon4DVs+1, $ff
+;	loadmem wPartyMon4DVs+2, $ef
 ; FIGHTING
-	givepoke STARAPTOR, 100
-	loadmem wPartyMon5DVs+0, $ff
-	loadmem wPartyMon5DVs+1, $ee
-	loadmem wPartyMon5DVs+2, $ee
+;	givepoke STARAPTOR, 100
+;	loadmem wPartyMon5DVs+0, $ff
+;	loadmem wPartyMon5DVs+1, $ee
+;	loadmem wPartyMon5DVs+2, $ee
 ; FIRE 
-	givepoke DRATINI, 100
-	loadmem wPartyMon6DVs+0, $ff
-	loadmem wPartyMon6DVs+1, $ee
-	loadmem wPartyMon6DVs+2, $ef
+;	givepoke DRATINI, 100
+;	loadmem wPartyMon6DVs+0, $ff
+;	loadmem wPartyMon6DVs+1, $ee
+;	loadmem wPartyMon6DVs+2, $ef
 	setflag ENGINE_POKEDEX
 for x, NUM_TMS + NUM_HMS
 	givetmhm x
@@ -182,7 +182,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	closetext
-	warp ANARRES_TOWER_3F, 7,3 
+	warp AZALEA_POKECENTER_1F, 5,7 
 	end
 
 
