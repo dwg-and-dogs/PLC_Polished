@@ -58,10 +58,10 @@ AnarresTower3FEvent:
 	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
-	opentext
 	applyonemovement ANARRES_TOWER_HOLLIS, step_down
 	turnobject PLAYER, DOWN
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
+	opentext
 	showtext TammyText2
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
@@ -230,10 +230,8 @@ TammyText4:
     text " Ursula: "
 	next
 	text_start
-	text "We will review"
-	line "at yearly"
-	para "rituals that you"
-	line "could lead."
+	text "We can review at"
+	line "annual rituals!"
 	done
 
 

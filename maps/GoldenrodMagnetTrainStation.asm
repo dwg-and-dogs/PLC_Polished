@@ -34,19 +34,102 @@ GoldenrodMagnetTrainStationOfficerScript:
 GoldenrodMagnetTrainStationGentlemanScript:
     faceplayer
     opentext
+	checkevent EVENT_
+	checkevent EVENT_GENTLEMAN_READ_TRAIN_MAIL
+	iftrue_jumpopenedtext GentlemanAfterReadMailText ; todo 
     checkevent EVENT_GOT_KENYA
-    iftrue .GotKenya
-    writetext GentlemanNormalText
-    waitbutton
-    closetext
-    end
+    iftrue .TryGiveKenya
+    jumpopenedtext GentlemanNormalText
 
-.GotKenya
-    writetext GentlemanReadMailText
-    waitbutton
-    closetext
-    setevent EVENT_GENTLEMAN_READ_TRAIN_MAIL
-    end
+
+.TryGiveKenya:
+	writetext Text_TrainStationSleepyManGotMail ;  
+	promptbutton
+	checkpokemail ReceivedFarfetch_dMailText ; attached to the sudowoodo 
+	ifequal $0, .WrongMail ; 
+	ifequal $2, .Refused ;  
+	ifequal $3, .NoMail ;  
+	ifequal $4, .LastMon ;  
+	writetext Text_TrainStationHandOverMailMon ;   
+	setevent EVENT_GENTLEMAN_READ_TRAIN_MAIL
+	setevent EVENT_GENTLEMAN_GOT_MAIL
+	promptbutton
+	jumpopenedtext Text_TrainStationReadingMail ; todo fix 
+
+.WrongMail:
+	jumpopenedtext Text_TrainStationWrongMail
+
+.NoMail:
+	jumpopenedtext Text_TrainStationMissingMail
+
+.Refused:
+	jumpopenedtext Text_TrainStationDeclinedToHandOverMail
+
+.LastMon:
+	jumpopenedtext Text_TrainStationCantTakeLastMon
+
+
+Text_TrainStationHandOverMailMon:
+	text "<PLAYER> handed"
+	line "over the #mon"
+	cont "holding the Mail."
+	done
+
+Text_TrainStationReadingMail:
+	text "Let's see…"
+
+	para "…Don't ride the"
+	line "train today…"
+
+	para "Ugh! Why did he"
+	line "choose today?!"
+	
+	para "...Er-hem..."
+	
+	para "Sorry for the"
+	line "angry outburst."
+
+	para "Thanks for bring-"
+	line "ing this to me."
+
+	para "If anyone asks,"
+	line "please don't say"
+	para "where you found"
+	line "that letter, OK?"
+	done
+
+
+Text_TrainStationWrongMail:
+	text "Oh, that's not"
+	line "my mail."
+	done
+
+Text_TrainStationMissingMail:
+	text "Oh, that #mon"
+	line "has no mail."
+	done
+
+Text_TrainStationDeclinedToHandOverMail:
+	text "Ugh. My brother"
+	line "never screens his"
+	cont "couriers!"
+	done
+
+Text_TrainStationCantTakeLastMon:
+	text "Oh, that's your"
+	line "last #mon."
+	
+	para "I can't take it."
+	done
+
+GentlemanAfterReadMailText:
+	text "Thank you for the"
+	line "delivery."
+	done
+
+ReceivedFarfetch_dMailText:
+	db   "Don't ride the"
+	next "train today@"
 
 GoldenrodMagnetTrainStationCooltrainerf1Script:
     jumptextfaceplayer GoldenrodMagnetTrainStationCooltrainerf1Text
@@ -79,18 +162,12 @@ TrainStationNoPower:
 GentlemanNormalText:
     text "The trains run on"
     line "geothermal energy"
-    cont "from the under-"
-    cont "ground."
-    para "It's so clean!"
+    cont "from underground."
     done
 
-GentlemanReadMailText:
+Text_TrainStationSleepyManGotMail:
     text "Oh, you have mail"
     line "for me?"
-    para "… What does it"
-    line "say?"
-    para "… Well, thank you"
-    line "for telling me."
     done
 
 GoldenrodMagnetTrainStationCooltrainerf1Text:

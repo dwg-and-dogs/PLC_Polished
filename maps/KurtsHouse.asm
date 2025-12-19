@@ -559,10 +559,10 @@ KurtsJournal2Text: ; route 35 gate?
 
 	para "We got some funny"
 	line "looks for having"
-	cont "an Apricorn - "
-	para "#balls were just"
-	line "becoming common."
-	
+	cont "an Apricorn, as"
+	para "#balls were"
+	line "just becoming"
+	cont "widely used."
 	done
 
 
@@ -598,8 +598,8 @@ KurtsJournal3Text: ; earls academy
 	cont "his Apricorn."
 
 	para "The other kids had"
-	line "#seals for their"
-	cont "#balls,"
+	line "#seals for"
+	cont "their #balls,"
 
 	para "So we decorated"
 	line "the Apricorn with"
@@ -775,17 +775,16 @@ KurtsJournal6Text: ; tinder garden 2
 	line "of that part of"
 	cont "my life."
 
-	para "Now, looking back, I"
+	para "Looking back, I"
 	line "had been so rigid"
 	para "in my thinking."
 
-	para "I should have said,"
-	line "'I am sorry.' I"
-	para "should have said,"
-	line "'I support your"
-	cont "dreams.'"
+	para "I should've said,"
+	line "'I am sorry.'"
+	para "I should've said,"
+	line "'I support you.'"
 
-	para "I should have said,"
+	para "I should've said,"
 	line "'I love you and"
 	para "accept you as"
 	line "you are.'"
@@ -806,8 +805,8 @@ KurtsJournal6Text: ; tinder garden 2
 	line "have had if I'd"
 	cont "been wiser."
 
-	para "If you're listening,"
-	line "I hope you"
+	para "If you're reading"
+	line "this I hope you"
 	para "can forgive a"
 	line "stubborn old man."
 
