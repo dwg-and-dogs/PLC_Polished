@@ -219,8 +219,6 @@ SamurottEvosAttacks:
 	db 0 ; no more level-up moves
 	
 HsamurottEvosAttacks:
-	db EVOLVE_LEVEL, 34, DECIDUEYE
-	db EVOLVE_ITEM, ODD_SOUVENIR, H__DECIDUEYE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER

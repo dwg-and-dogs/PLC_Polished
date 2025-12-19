@@ -258,11 +258,8 @@ ArthurScript:
 	endtext
 
 MeetArthurText:
-	text "Arthur: Who are"
-	line "you?"
-
-	para "I'm Arthur of"
-	line "Thursday."
+	text "Hoho, howdy'a"
+	line "do! I'm Arthur."
 	
 	para "The ruins are all"
 	line "collapsed in a"

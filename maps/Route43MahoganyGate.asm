@@ -60,13 +60,10 @@ ROUTE42GATE_TutorSuckerPunchScript:
 	jumpopenedtext Text_ROUTE42GATE_TutorTaught ;;
 	
 Text_SuckerPunchIntro:
-	text "Santos: Hey."
-	line "I'm Santos of"
-	cont "Saturday."
+	text "Hey. I'm Santos."
 		
 	para "I don't let the"
-	line "future surprise"
-	cont "me."
+	line "future scare me."
 	
 	para "With my Sucker"
 	line "Punch, I can have"
