@@ -60,6 +60,10 @@ endr
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
+	loadmem wPartyMon1Moves+0, RAZOR_LEAF
+	loadmem wPartyMon1Moves+1, SHADOW_BALL
+	loadmem wPartyMon1Moves+2, PSYCHIC_M
+	loadmem wPartyMon1Moves+3, EXPLOSION
 ; DARK 
 ;	givepoke HAUNTER, 100
 ;	loadmem wPartyMon2DVs+0, $fe
@@ -181,8 +185,10 @@ endr
 	setflag ENGINE_FLYPOINT_EERIE_HAMLET
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
+	readvar VAR_PARTYCOUNT
+	giveegg CYNDAQUIL
 	closetext
-	warp ROUTE_35, 13,30 
+	warp GAULDENROD_TOWER_3F, 9,10 
 	end
 
 
