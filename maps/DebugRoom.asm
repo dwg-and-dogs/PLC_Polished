@@ -56,7 +56,7 @@ endr
 	givemoney $0, 1000000
 	givecoins 50000
 	; good party
-	givepoke SUNFLORA, 100
+	givepoke POLITOED, 100
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $fe
 	loadmem wPartyMon1DVs+2, $fe
@@ -80,12 +80,12 @@ endr
 ;	loadmem wPartyMon4DVs+1, $ff
 ;	loadmem wPartyMon4DVs+2, $ef
 ; FIGHTING
-;	givepoke STARAPTOR, 100
+	givepoke STARAPTOR, 100
 ;	loadmem wPartyMon5DVs+0, $ff
 ;	loadmem wPartyMon5DVs+1, $ee
 ;	loadmem wPartyMon5DVs+2, $ee
 ; FIRE 
-;	givepoke DRATINI, 100
+	givepoke FERALIGATR, 100
 ;	loadmem wPartyMon6DVs+0, $ff
 ;	loadmem wPartyMon6DVs+1, $ee
 ;	loadmem wPartyMon6DVs+2, $ef
@@ -188,7 +188,7 @@ endr
 	readvar VAR_PARTYCOUNT
 	giveegg CYNDAQUIL
 	closetext
-	warp GAULDENROD_TOWER_3F, 9,10 
+	warp OLIVINE_LIGHTHOUSE_ROOF, 10, 15 
 	end
 
 
