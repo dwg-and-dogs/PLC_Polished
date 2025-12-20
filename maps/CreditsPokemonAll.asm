@@ -18,6 +18,26 @@ CreditsPokemonAll_MapScriptHeader:
 
 
 CreditsPokemonAllScene: 
+; reset all legendaries
+; entei
+	clearevent EVENT_FOUGHT_ENTEI ; need to check 
+; raikou 
+	clearevent EVENT_BATTLED_RAIKOU ; need to check 
+; suicune
+	clearevent EVENT_ROUTE39_MILTANK
+	clearevent EVENT_MILTANK_COWGIRL
+	clearevent EVENT_ROUTE39_MILTANK ; need to check 
+; lugia 
+	clearevent EVENT_NEXUS_LUGIA ; need to check 
+; ho oh
+	clearevent EVENT_FOUGHT_HO_OH ; need to check 
+; celebi
+	clearevent EVENT_TAPESTRY_CELEBI ; need to check 
+; heatran 
+	clearevent EVENT_CC_HEATRAN_2 ; need to check 
+; initialize postgame teaster
+	setmapscene AZALEA_TOWN, $2 ; need to check 
+; begin credits 
 	special FadeOutPalettes
 ;CreditsPokemon1:
 	loadmem wCurForm, -1 ; force

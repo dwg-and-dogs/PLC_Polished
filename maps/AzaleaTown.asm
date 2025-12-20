@@ -22,6 +22,8 @@ AzaleaTown_MapScriptHeader:
 	coord_event  5, 11, 0, Azalea_PokefanStopsYouTrigger2
 	coord_event 20, 10, 0, Azalea_GrampsStopsYouTrigger1
 	coord_event 20, 11, 0, Azalea_GrampsStopsYouTrigger2
+	coord_event  8,  8, 2, Azalea_BlackBeltStopsYou1
+	coord_event  9,  8, 2, Azalea_BlackBeltStopsYou2
 
 	def_bg_events
 	bg_event 22,  8, BGEVENT_JUMPTEXT, AzaleaTownSignText
@@ -111,6 +113,13 @@ Azalea_GrampsStopsYouTrigger2:
 	stopfollow
 	showtext Text_ItsDangerousToGoAlone
 	special RestartMapMusic
+	end
+
+Azalea_BlackBeltStopsYou1:
+; fallthru 
+Azalea_BlackBeltStopsYou2:
+	pause 30
+	setscene $1
 	end
 
 AzaleaTownSignText:

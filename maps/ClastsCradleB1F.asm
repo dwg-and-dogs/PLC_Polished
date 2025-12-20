@@ -32,9 +32,10 @@ ClastsCradleB1F_MapScriptHeader:
 	object_event   6,  16, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BEAT_ADRINNA_MINE
 	pokemon_event  5,  14, HEATRAN, -1, -1, PAL_NPC_RED, HeatranText, EVENT_CC_HEATRAN
 	object_event   5,  21, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2 ; initialize 
+; heatran re-battle 
+	object_event  10, 5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HeatranScript, EVENT_CC_HEATRAN_2
+; other NPCs
 	object_event 8, 5, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosScriptCC, EVENT_BEAT_ADRINNA_MINE
-
-; TRAINERS
 	object_event  22,  20, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader19, EVENT_BEAT_ADRINNA_MINE
 	object_event  17,  24, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader20, EVENT_BEAT_ADRINNA_MINE
 	tmhmball_event 25, 23, TM_FOCUS_BLAST, EVENT_GOT_TM_FOCUS_BLAST 
@@ -47,7 +48,7 @@ ClastsCradleB1F_MapScriptHeader:
 	const CRADLE_ADRINNA_2
 	const CRADLE_HEATRAN
 	const CRADLE_KURT
-
+	const CRADLE_HEATRAN_2
 
 CradleB1FStonesCallback:
 	checkevent EVENT_BOULDER_CRADLE1F_1
@@ -75,8 +76,21 @@ CradleScene2_Adrinna:
 	applymovement PLAYER, Player_CCB1F_Move1
 	sjump Cradle_Scene3Pickup
 	
-HeatranText:
-	text "Object"
+HeatranText: ; todo redo this textg
+	text "What do you see"
+	line "in the Rorschach"
+	para "patterns of its"
+	line "melting steel:"
+	
+	para "An urge to raze"
+	line "your life and"
+	cont "begin anew, or"
+	para "a destructive"
+	line "tendency that"
+	cont "must be tempered?"
+	
+	para "It lies within"
+	line "all of us!"
 	done
 
 
@@ -766,3 +780,18 @@ AmosCradleText2:
 	line "you to disrupt"
 	cont "her plans!"
 	done
+
+HeatranScript:
+	opentext
+	writetext HeatranText
+	waitbutton
+	cry HEATRAN
+	pause 60
+	closetext
+	setevent EVENT_CC_HEATRAN_2
+	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
+	loadwildmon HEATRAN, 50
+	startbattle
+	disappear CRADLE_HEATRAN_2
+	reloadmapafterbattle
+	end
