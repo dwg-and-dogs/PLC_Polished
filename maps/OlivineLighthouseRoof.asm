@@ -66,7 +66,6 @@ RaikouAppears:
 	disappear LIGHTHOUSE_RAIKOU
 	setevent EVENT_LIGHTHOUSE_RAIKOU
 	reloadmapafterbattle
-	warphide CREDITS_POKEMON_ALL, 4, 5
 	end
 
 .RaikouBattleRight:

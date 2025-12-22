@@ -37,6 +37,8 @@ CreditsPokemonAllScene:
 	clearevent EVENT_CC_HEATRAN_2 ; need to check 
 ; initialize postgame teaster
 	setmapscene AZALEA_TOWN, $2 ; need to check 
+	setevent EVENT_KILN_BOSS
+	clearevent EVENT_AZALEA_BLACKBELT_POSTGAME
 ; begin credits 
 	special FadeOutPalettes
 ;CreditsPokemon1:

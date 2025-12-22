@@ -33,7 +33,7 @@ ClastsCradleB1F_MapScriptHeader:
 	pokemon_event  5,  14, HEATRAN, -1, -1, PAL_NPC_RED, HeatranText, EVENT_CC_HEATRAN
 	object_event   5,  21, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_KURT_MINE_2 ; initialize 
 ; heatran re-battle 
-	object_event  10, 5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HeatranScript, EVENT_CC_HEATRAN_2
+	object_event   5, 15, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, HEATRAN, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HeatranScript, EVENT_CC_HEATRAN_2
 ; other NPCs
 	object_event 8, 5, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AmosScriptCC, EVENT_BEAT_ADRINNA_MINE
 	object_event  22,  20, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBrigader19, EVENT_BEAT_ADRINNA_MINE
@@ -77,20 +77,10 @@ CradleScene2_Adrinna:
 	sjump Cradle_Scene3Pickup
 	
 HeatranText: ; todo redo this textg
-	text "What do you see"
-	line "in the Rorschach"
-	para "patterns of its"
-	line "melting steel:"
+	text "Molten steel is"
+	line "like a Rorschach,"
 	
-	para "An urge to raze"
-	line "your life and"
-	cont "begin anew, or"
-	para "a destructive"
-	line "tendency that"
-	cont "must be tempered?"
-	
-	para "It lies within"
-	line "all of us!"
+	para "Placeholder text."
 	done
 
 
