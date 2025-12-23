@@ -518,8 +518,7 @@ WesleyScript:
 
 
 MeetWesleyText:
-	text "I am Wesley"
-	line "Wednesday."
+	text "I am Wesley."
 
 	para "Wednesday is the"
 	line "exact middle of"

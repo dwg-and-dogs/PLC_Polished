@@ -207,9 +207,8 @@ MonicaDoneScript:
 	end
 
 MonicaGivesGiftText:
-	text "Monica: Glad to"
-	line "meet you. I'm"
-	cont "Monica of Monday."
+	text "Glad to meet you,"
+	line "I'm Monica."
 
 	para "I wish I was like"
 	line "a bird, dancing"

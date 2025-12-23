@@ -58,10 +58,10 @@ AnarresTower3FEvent:
 	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
-	opentext
 	applyonemovement ANARRES_TOWER_HOLLIS, step_down
 	turnobject PLAYER, DOWN
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
+	opentext
 	showtext TammyText2
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
@@ -100,10 +100,9 @@ AnarresTower3FEvent:
 	setscene $1
 	jumpthisopenedtext
 
-	text "You can use"
-	line "that HM to clear"
-	cont "trees in the"
-	cont "forest."
+	text "You can use that"
+	line "HM to clear trees"
+	cont "in the forest."
 	done
 
 PlayerStepsToHollisMovement:
@@ -231,10 +230,8 @@ TammyText4:
     text " Ursula: "
 	next
 	text_start
-	text "We will review"
-	line "at yearly"
-	para "rituals that you"
-	line "could lead."
+	text "We can review at"
+	line "annual rituals!"
 	done
 
 

@@ -32,130 +32,121 @@ DebugRoom_MapScriptHeader:
 
 
 DebugInteraction: 
-	opentext
+;	opentext
 	; useful items
-for x, POKE_BALL, CHERISH_BALL + 1
-if x != PARK_BALL && x != SAFARI_BALL
-	giveitem x, 99
-endc
-endr
-	giveitem MAX_POTION, 99
-	giveitem FULL_RESTORE, 99
-	giveitem MAX_REVIVE, 99
-	giveitem MAX_ELIXIR, 99
-	giveitem RARE_CANDY, 99
-	giveitem PP_UP, 99
-	giveitem PP_MAX, 99
-	giveitem SACRED_ASH, 99
-	giveitem MAX_REPEL, 99
-	giveitem ESCAPE_ROPE, 99
-	giveitem ABILITY_CAP, 99
-	giveitem LEAF_STONE, 99
-	giveitem EXP_SHARE, 1
+;for x, POKE_BALL, CHERISH_BALL + 1
+;if x != PARK_BALL && x != SAFARI_BALL
+;	giveitem x, 99
+;endc
+;endr
+;	giveitem MAX_POTION, 99
+;	giveitem FULL_RESTORE, 99
+;	giveitem MAX_REVIVE, 99
+;	giveitem MAX_ELIXIR, 99
+;	giveitem RARE_CANDY, 99
+;	giveitem PP_UP, 99
+;	giveitem PP_MAX, 99
+;	giveitem SACRED_ASH, 99
+;	giveitem MAX_REPEL, 99
+;	giveitem ESCAPE_ROPE, 99
+;	giveitem ABILITY_CAP, 99
+;	giveitem LEAF_STONE, 99
+;	giveitem EXP_SHARE, 1
 	
-	givemoney $0, 1000000
-	givecoins 50000
+;	givemoney $0, 1000000
+;	givecoins 50000
 	; good party
-	givepoke VOLTORB, HISUIAN_FORM, 50, BRIGHTPOWDER
-	giveegg CYNDAQUIL
-	setflag ENGINE_POKEDEX
-for x, NUM_TMS + NUM_HMS
-	givetmhm x
-endr
-for x, NUM_KEY_ITEMS
-if x != NATU_CALL
-	givekeyitem x
-endc
-endr
 	; useful items
-	giveitem MASTER_BALL, 99
-	giveitem GEODE, 99;
-	giveitem JEZE_BALL, 99;
-	giveitem HERB_BALL, 99;
-	giveitem BUB_BALL, 99;
-	giveitem DECI_BALL, 99;
-	giveapricorn FIXED_CHARGE, 5
-	giveapricorn SHORE_FOAM, 5
-	giveapricorn RADIANT_OPAL, 5
-	giveapricorn HOLLOW_ROCK, 5
-	giveapricorn TOUGH_LEAVES, 5
-	giveitem MAX_POTION, 99
-	giveitem FULL_RESTORE, 99
-	giveitem MAX_REVIVE, 99
-	giveitem MAX_ELIXIR, 99
-	giveitem HP_UP, 99
-	giveitem PROTEIN, 99
-	giveitem IRON, 99
-	giveitem CARBOS, 99
-	giveitem CALCIUM, 99
-	giveitem ZINC, 99
-	giveitem RARE_CANDY, 99
-	giveitem PP_UP, 99
-	giveitem PP_MAX, 99
-	giveitem SACRED_ASH, 99
-	giveitem MAX_REPEL, 99
-	giveitem MAX_REPEL, 99
-	giveitem ESCAPE_ROPE, 99
-	giveitem ABILITY_CAP, 99
-	giveitem LEAF_STONE, 99
-	giveitem FIRE_STONE, 99
-	giveitem WATER_STONE, 99
-	giveitem THUNDERSTONE, 99
-	giveitem MOON_STONE, 99
-	giveitem SUN_STONE, 99
-	giveitem DUSK_STONE, 99
-	giveitem DAWN_STONE, 99
-	giveitem SHINY_STONE, 99
-	giveitem EXP_SHARE, 99
-	giveitem LEFTOVERS, 99
-	giveitem BIG_NUGGET, 99
-	giveitem SILVER_LEAF, 99
-	giveitem GOLD_LEAF, 99
-	giveitem ODD_SOUVENIR, 99
-	giveitem BIG_PEARL, 99
-	giveitem FLOWER_MAIL, 1
+;	giveitem MASTER_BALL, 99
+;	giveitem GEODE, 99;
+;	giveitem JEZE_BALL, 99;
+;	giveitem HERB_BALL, 99;
+;	giveitem BUB_BALL, 99;
+;	giveitem DECI_BALL, 99;
+;	giveapricorn FIXED_CHARGE, 5
+;	giveapricorn SHORE_FOAM, 5
+;	giveapricorn RADIANT_OPAL, 5
+;	giveapricorn HOLLOW_ROCK, 5
+;	giveapricorn TOUGH_LEAVES, 5
+;	giveitem MAX_POTION, 99
+;	giveitem FULL_RESTORE, 99
+;	giveitem MAX_REVIVE, 99
+;	giveitem MAX_ELIXIR, 99
+;	giveitem HP_UP, 99
+;	giveitem PROTEIN, 99
+;	giveitem IRON, 99
+;	giveitem CARBOS, 99
+;	giveitem CALCIUM, 99
+;	giveitem ZINC, 99
+;	giveitem RARE_CANDY, 99
+;	giveitem PP_UP, 99
+;	giveitem PP_MAX, 99
+;	giveitem SACRED_ASH, 99
+;	giveitem MAX_REPEL, 99
+;	giveitem MAX_REPEL, 99
+;	giveitem ESCAPE_ROPE, 99
+;	giveitem ABILITY_CAP, 99
+;	giveitem LEAF_STONE, 99
+;	giveitem FIRE_STONE, 99
+;	giveitem WATER_STONE, 99
+;	giveitem THUNDERSTONE, 99
+;	giveitem MOON_STONE, 99
+;	giveitem SUN_STONE, 99
+;	giveitem DUSK_STONE, 99
+;	giveitem DAWN_STONE, 99
+;	giveitem SHINY_STONE, 99
+;	giveitem EXP_SHARE, 99
+;	giveitem LEFTOVERS, 99
+;	giveitem BIG_NUGGET, 99
+;	giveitem SILVER_LEAF, 99
+;	giveitem GOLD_LEAF, 99
+;	giveitem ODD_SOUVENIR, 99
+;	giveitem BIG_PEARL, 99
+;	giveitem FLOWER_MAIL, 1
 	; max money
-	givemoney $0, 1000000
+;	givemoney $0, 1000000
 	; all badges
-	setflag ENGINE_ZEPHYRBADGE
-	setflag ENGINE_HIVEBADGE
-	setflag ENGINE_PLAINBADGE
-	setflag ENGINE_FOGBADGE
-	setflag ENGINE_STORMBADGE
-	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_GLACIERBADGE
-	setflag ENGINE_RISINGBADGE
-	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
-	setflag ENGINE_VOLCANOBADGE
-	setflag ENGINE_EARTHBADGE
+;	setflag ENGINE_ZEPHYRBADGE
+;	setflag ENGINE_HIVEBADGE
+;	setflag ENGINE_PLAINBADGE
+;	setflag ENGINE_FOGBADGE
+;	setflag ENGINE_STORMBADGE
+;	setflag ENGINE_MINERALBADGE
+;	setflag ENGINE_GLACIERBADGE
+;	setflag ENGINE_RISINGBADGE
+;	setflag ENGINE_BOULDERBADGE
+;	setflag ENGINE_CASCADEBADGE
+;	setflag ENGINE_THUNDERBADGE
+;	setflag ENGINE_RAINBOWBADGE
+;	setflag ENGINE_MARSHBADGE
+;	setflag ENGINE_SOULBADGE
+;	setflag ENGINE_VOLCANOBADGE
+;	setflag ENGINE_EARTHBADGE
 	; fly anywhere
-	setflag ENGINE_FLYPOINT_AZALEA
-	setflag ENGINE_FLYPOINT_GOLDENROD
-	setflag ENGINE_FLYPOINT_VIOLET
-	setflag ENGINE_FLYPOINT_UNION_CAVE
-	setflag ENGINE_FLYPOINT_ECRUTEAK
-	setflag ENGINE_FLYPOINT_OLIVINE
-	setflag ENGINE_FLYPOINT_CIANWOOD
-	setflag ENGINE_FLYPOINT_MAHOGANY
-	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
+;	setflag ENGINE_FLYPOINT_AZALEA
+;	setflag ENGINE_FLYPOINT_GOLDENROD
+;	setflag ENGINE_FLYPOINT_VIOLET
+;	setflag ENGINE_FLYPOINT_UNION_CAVE
+;	setflag ENGINE_FLYPOINT_ECRUTEAK
+;	setflag ENGINE_FLYPOINT_OLIVINE
+;	setflag ENGINE_FLYPOINT_CIANWOOD
+;	setflag ENGINE_FLYPOINT_MAHOGANY
+;	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 ; historic johto
-	setflag ENGINE_FLYPOINT_ANARRES_TOWN
-	setflag ENGINE_FLYPOINT_GAULDENROD
-	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
-	setflag ENGINE_FLYPOINT_TRADERS_LANDING
-	setflag ENGINE_FLYPOINT_SHELTERED_SHORES
-	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
-	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
-	setflag ENGINE_FLYPOINT_EERIE_HAMLET
-	setflag ENGINE_FLYPOINT_SULFUR_STY
-	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
-	closetext
-	warp SEAFLUX_NEXUS_B2F, 20, 24
+;	setflag ENGINE_FLYPOINT_ANARRES_TOWN
+;	setflag ENGINE_FLYPOINT_GAULDENROD
+;	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
+;	setflag ENGINE_FLYPOINT_TRADERS_LANDING
+;	setflag ENGINE_FLYPOINT_SHELTERED_SHORES
+;	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
+;	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
+;	setflag ENGINE_FLYPOINT_EERIE_HAMLET
+;	setflag ENGINE_FLYPOINT_SULFUR_STY
+;	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
+;	readvar VAR_PARTYCOUNT
+;	giveegg CYNDAQUIL
+;	closetext
+	warp ROUTE_39, 12, 18 
 	end
 
 

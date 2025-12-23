@@ -703,9 +703,9 @@ AlphRuinsDV_Setting_EggText:
 	done
 
 KromaExplainsHiddenPowerText:
-	text "Congratulations"
-	line "to discover this"
-	cont "chamber."
+	text "Well done to have"
+	line "discovered this"
+	cont "secret chamber."
 	
 	para "Some would rather"
 	line "turn away from"

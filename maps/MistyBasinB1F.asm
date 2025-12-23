@@ -56,5 +56,5 @@ MistyBasinB1F_MoveBoulderText:
 MistyBasinB1FText3:
 	text "That's right!"
 	line "I'll do it one"
-	cont "inch a a time!"
+	cont "inch at a time!"
 	done

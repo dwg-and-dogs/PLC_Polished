@@ -227,14 +227,13 @@ Bird_keeperPeterBeatenText:
 	done
 
 MeetFriedaText:
-	text "I'm Frieda of"
-	line "Friday!"
+	text "My name is"
+	line "Freida!"
 
 	para "There's a saying:"
 	line "When the going is"
 	cont "tough, the tough"
 	cont "get going."
-	
 	done
 
 FriedaGivesGiftText:

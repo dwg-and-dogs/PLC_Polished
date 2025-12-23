@@ -92,6 +92,7 @@ UndergroundRadioTowerKurtScript:
 	applymovement UNDERGROUND_KURT, UndergroundKurtMoves
 	disappear UNDERGROUND_KURT
 	setevent EVENT_KURT_UNDERGROUND
+	setevent EVENT_GENTLEMAN_READ_TRAIN_MAIL ; disappear this guy in the station 
     end
 	
 .NotReady

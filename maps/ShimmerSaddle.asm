@@ -32,8 +32,8 @@ ShimmerSaddle_MapScriptHeader:
 
 	def_coord_events
 	coord_event 	 9,	33, 0, ShimmerSaddle_Scene1_ManHZ
-	coord_event 	45, 26, 2, ShimmerSaddle_Scene2_HZOnly
-	coord_event 	13, 20, 3, ShimmerSaddle_Scene3_ManHZ
+	coord_event 	45, 26, 1, ShimmerSaddle_Scene2_HZOnly
+	coord_event 	13, 20, 2, ShimmerSaddle_Scene3_ManHZ
 		
 
 	def_bg_events ; 3 hidden items and four imprints and one sign 
@@ -51,14 +51,14 @@ ShimmerSaddle_MapScriptHeader:
 
 	def_object_events ; 5 items, the Hzoroark, and Mankey, and three instances of the old man 
 ; FIRST SET 
-	object_event  10, 33, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT,0, ObjectEvent, EVENT_SHIMMER_GRAMPS_1 ;
+	object_event  10, 33, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT,0, ObjectEvent, EVENT_SHIMMER_GRAMPS_1 ;
 	object_event  15, 32, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_1 
 	object_event  15, 32, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_MATRON_1 ; initialize 
 ; SECOND SET 
 	object_event  44, 21, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_2 
 	object_event  45, 24, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, MANKEY, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_MANKEY_2
 ; THIRD SET 
-	object_event  13, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ShimmerSaddleGramps2Script, EVENT_SHIMMER_GRAMPS_2 ;
+	object_event  13, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ShimmerSaddleGramps2Script, EVENT_SHIMMER_GRAMPS_2 ;
 	object_event  12, 5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_3 ; initialize
 	object_event  12, 3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_MATRON_2 ;	
 ; boulder 
@@ -143,7 +143,7 @@ ShimmerSaddle_Scene1_ManHZ:
 	setevent EVENT_SHIMMER_MATRON_1
 	showtext ShimmerGramps1Text2
 	applymovement SHIMMER_GRAMPS_1, ShimmerGramps1Move2
-	setscene $2
+	setscene $1
 	disappear SHIMMER_GRAMPS_1
 	setevent EVENT_SHIMMER_GRAMPS_1
 	end
@@ -199,7 +199,7 @@ ShimmerSaddle_Scene2_HZOnly:
 	applymovement SHIMMER_HZ_2, ShimmerHZ2_Stalks2
 	disappear SHIMMER_HZ_2
 	setevent EVENT_SHIMMER_HZ_2
-	setscene $3
+	setscene $2
 	end
 
 ShimmerHZ2_Stalks:
@@ -251,13 +251,23 @@ ShimmerSaddle_Scene3_ManHZ:
 	disappear SHIMMER_HZ_3
 	setevent EVENT_SHIMMER_HZ_3
 	reloadmapafterbattle
-	setscene $4
+	setscene $3
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext ShimmerGramps2Text5
 	waitbutton
 	verbosegiveitem SHINY_STONE
 	closetext
+; clear all NPCs
+	setevent EVENT_SHIMMER_GRAMPS_1
+	setevent EVENT_SHIMMER_HZ_1
+	setevent EVENT_SHIMMER_MATRON_1
+	setevent EVENT_SHIMMER_HZ_2
+	setevent EVENT_SHIMMER_MANKEY_2
+	setevent EVENT_SHIMMER_GRAMPS_2
+	setevent EVENT_SHIMMER_HZ_3
+	setevent EVENT_SHIMMER_MATRON_2
+; end 
 	warp GAULDENROD, 15, 17 
 	end
 	
@@ -392,7 +402,6 @@ ShimmerText4:
 	done
 
 ShimmerSaddleGramps2Script:
-	setscene $2
 	jumptextfaceplayer SaddleGramps2Text
 	
 SaddleGramps2Text:

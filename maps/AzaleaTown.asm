@@ -22,6 +22,8 @@ AzaleaTown_MapScriptHeader:
 	coord_event  5, 11, 0, Azalea_PokefanStopsYouTrigger2
 	coord_event 20, 10, 0, Azalea_GrampsStopsYouTrigger1
 	coord_event 20, 11, 0, Azalea_GrampsStopsYouTrigger2
+	coord_event  8,  8, 2, Azalea_BlackBeltStopsYou1
+	coord_event  9,  8, 2, Azalea_BlackBeltStopsYou2
 
 	def_bg_events
 	bg_event 22,  8, BGEVENT_JUMPTEXT, AzaleaTownSignText
@@ -35,6 +37,8 @@ AzaleaTown_MapScriptHeader:
 	def_object_events
 	object_event 18, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, 			OBJECTTYPE_SCRIPT, 0, AzaleaTownGrampsScript, -1
 	object_event  7, 10, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BLUE, 		OBJECTTYPE_SCRIPT, 0, AzaleaTownPokefanFScript, -1
+; post game tease
+	object_event 12, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BLUE, 		OBJECTTYPE_SCRIPT, 0, AzaleaBlackbeltScript, EVENT_AZALEA_BLACKBELT_POSTGAME
 ; others 
 	object_event 26,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 			PAL_NPC_BLUE, 		OBJECTTYPE_SCRIPT, 0, PokemonMemoriesNPCScript, -1
 	object_event 11, 16, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, 						OBJECTTYPE_SCRIPT, 0, AzaleaTownMatronScript, -1
@@ -51,7 +55,7 @@ AzaleaTown_MapScriptHeader:
 	object_const_def
 	const AZALEATOWN_GRAMPS
 	const AZALEATOWN_POKEFAN_F
-
+	const AZALEATOWN_BLACKBELT
 
 AzaleaTownFlypointCallback:
 	setflag ENGINE_FLYPOINT_AZALEA
@@ -111,6 +115,13 @@ Azalea_GrampsStopsYouTrigger2:
 	stopfollow
 	showtext Text_ItsDangerousToGoAlone
 	special RestartMapMusic
+	end
+
+Azalea_BlackBeltStopsYou1:
+; fallthru 
+Azalea_BlackBeltStopsYou2:
+	pause 30
+	showemote EMOTE_SAD, AZALEATOWN_BLACKBELT, 30
 	end
 
 AzaleaTownSignText:
@@ -1171,4 +1182,31 @@ AzaleaTownDV_Setting_EggText:
 	text "That's only an"
 	line "egg! Give it time"
 	cont "to grow."
+	done
+
+AzaleaBlackbeltScript:
+	jumpthistextfaceplayer
+
+AzaleaBlackbeltPostgateText:
+	text_high
+    text " <RIVAL>'s Dad: " 
+	next
+	text_start 
+	
+	text "<PLAYER>, I think"
+	line "<RIVAL> is in"
+	cont "trouble."
+	
+	para "I got mail from"
+	line "Prof. Elm that he"
+	para "had made it to"
+	line "New Bark Town and"
+	para "<RIVAL> was help-"
+	line "ing on a project"
+	cont "with the Dragon"
+	cont "Tamers, but"
+	
+	para "<RIVAL> hasn't"
+	line "been seen in two"
+	cont "weeks now."
 	done

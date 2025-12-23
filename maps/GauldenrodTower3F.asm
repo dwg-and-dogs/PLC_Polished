@@ -7,47 +7,41 @@ GauldenrodTower3F_MapScriptHeader: ; need to make it go around a circle
 
 
 	def_warp_events
-	warp_event  11,  5, GAULDENROD_TOWER_2F, 2
-	warp_event  5, 11, GAULDENROD_TOWER_4F, 1
-	warp_event  10,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 
-	warp_event  11,  8, GAULDENROD_TOWER_3F, 1 ; HOLE  ; 4
+	warp_event  9, 11, GAULDENROD_TOWER_2F, 2
+	warp_event  3, 11, GAULDENROD_TOWER_4F, 1
+	warp_event  2,  4, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  3,  4, GAULDENROD_TOWER_3F, 1 ; HOLE  ; 4
+	warp_event  2,  6, GAULDENROD_TOWER_3F, 1 ; HOLE
 
-	warp_event   2,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   3,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   4,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   5,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   6,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   7,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   8,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   9,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	12
-	warp_event  10,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event  11,  1, GAULDENROD_TOWER_3F, 1 ; HOLE 		14
-	warp_event   1,  2, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   1,  3, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   1,  4, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   1,  5, GAULDENROD_TOWER_3F, 1 ; HOLE 		
-	warp_event   1,  6, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   1,  7, GAULDENROD_TOWER_3F, 1 ; HOLE 	20
-	warp_event   2,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   3,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   4,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   5,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   6,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	
-	warp_event   7,  8, GAULDENROD_TOWER_3F, 1 ; HOLE 	26
-
-
+	warp_event  2,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  3,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  4,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  5,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  6,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  7,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  8,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  9,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event 10,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event 11,  7, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  4,  4, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  4,  5, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  6,  5, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  7,  6, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  9,  4, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event  9,  5, GAULDENROD_TOWER_3F, 1 ; HOLE
+	
 	
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	strengthboulder_event 9, 0, EVENT_GAULDENROD_3F_BOULDER
-	object_event  6,  4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepRight, EVENT_GAULDENROD_3F_CLEFAIRY
-	object_event  5,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepUp, EVENT_GAULDENROD_3F_CLEFAIRY
-	object_event  3,  5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepLeft, EVENT_GAULDENROD_3F_CLEFAIRY
-	object_event  4,  6, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepDown, EVENT_GAULDENROD_3F_CLEFAIRY
-	object_event  3,  3, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyReset, EVENT_GAULDENROD_3F_CLEFAIRY
+	strengthboulder_event 10,  4, EVENT_GAULDENROD_3F_BOULDER
+	object_event  5,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepUp, EVENT_GAULDENROD_3F_CLEFAIRY
+	object_event  7,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepRight, EVENT_GAULDENROD_3F_CLEFAIRY
+	object_event  4,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepLeft, EVENT_GAULDENROD_3F_CLEFAIRY
+	object_event  6,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepDown, EVENT_GAULDENROD_3F_CLEFAIRY
+	object_event  8,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyReset, EVENT_GAULDENROD_3F_CLEFAIRY
 	
 	object_const_def
 	const GAULDENROD_TOWER_BOULDER
@@ -89,6 +83,23 @@ GauldenrodTowerBoulders:
 	stonetable 25, GAULDENROD_TOWER_BOULDER, .Disappear2
 	stonetable 26, GAULDENROD_TOWER_BOULDER, .Disappear2		
 
+	stonetable 27, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 28, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 29, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 30, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 31, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 32, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 33, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 34, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 35, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 36, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 37, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 38, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 39, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 40, GAULDENROD_TOWER_BOULDER, .Disappear2			
+
+
+
 	db -1 ; end
 	
 .Disappear1:
@@ -108,7 +119,7 @@ GauldenrodTowerBoulders:
 	pause 30
 	playsound SFX_STRENGTH
 	earthquake 80
-	changeblock 8,  6, $09
+	changeblock 2,  8, $09
 	reloadmappart
 	jumpthistext
 
@@ -131,7 +142,7 @@ GauldenrodTowerBoulders:
 GauldenrodTowerBoulderCallback:
 	checkevent EVENT_GAULDENROD_3F_BOULDER
 	iffalse .Done
-	changeblock 8,  6, $09
+	changeblock 2,  8, $09
 .Done:
 	endcallback
 
@@ -145,7 +156,7 @@ GauldenrodTower3FClefairyReset:
 	disappear GAULDENROD_TOWER_BOULDER
 	earthquake 80
 	clearevent EVENT_GAULDENROD_3F_BOULDER
-	moveobject GAULDENROD_TOWER_BOULDER, 9, 0
+	moveobject GAULDENROD_TOWER_BOULDER, 10, 4
 	appear GAULDENROD_TOWER_BOULDER
 .Done:
 	closetext

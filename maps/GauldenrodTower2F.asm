@@ -125,7 +125,7 @@ GenericTrainerVeteranFJoanne:
 	text "Sandra has been"
 	line "trying to coax"
 	para "the rainbow bird"
-	cont "#mon back to"
+	line "#mon back to"
 	cont "our roof."
 	done
 

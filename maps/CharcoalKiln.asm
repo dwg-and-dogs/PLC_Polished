@@ -41,8 +41,10 @@ CharcoalKilnGettingReadyTrigger:
 	opentext
 	writetext .CharcoalKilnLookingText
 	waitbutton
+	closetext
 	applymovement CHARCOAL_BLACK_BELT, .Movement2
 	applymovement CHARCOAL_RIVAL, .Movement3
+	opentext
 	writetext .CharcoalKilnSoonText
 	waitbutton
 	closetext

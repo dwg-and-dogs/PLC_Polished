@@ -125,6 +125,7 @@ BrassTowerRoofScript:
 	special FadeOutPalettes
 	waitsfx
 	setevent EVENT_BEAT_MEJIMI
+	setevent EVENT_TAPESTRY_SCENE
 	applyonemovement PLAYER, hide_object
 	warphide TIMELESS_TAPESTRY,  9, 26
 	end

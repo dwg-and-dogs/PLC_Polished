@@ -60,6 +60,7 @@ TinderGarden2Script:
 	clearevent EVENT_KURTS_HOUSE_BOOK_4
 	clearevent EVENT_KURTS_HOUSE_BOOK_5
 	clearevent EVENT_KURTS_HOUSE_BOOK_6
+	clearevent EVENT_TAPESTRY_SCENE
 	
 	applyonemovement TINDER_GARDEN_2_PRYCE, step_up
 	turnobject TINDER_GARDEN_2_PRYCE, DOWN

@@ -79,11 +79,8 @@ Route37TutorZapCannonScript:
 
 
 MeetSunnyText:
-	text "Sunny: Who are"
-	line "you?"
-
-	para "I'm Sunny of"
-	line "Sunday."
+	text "Cheers! I'm"
+	line "Sunny."
 	done
 
 SunnyGivesGiftText:

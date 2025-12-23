@@ -63,8 +63,14 @@ WhitneyRadioShowText:
 RandyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_GUYS_NUGGET
+	iftrue_jumpopenedtext RandyAfterGentlemanReadMailText
+	checkevent EVENT_GENTLEMAN_GOT_MAIL
+	iftrue .GuysGivesNugget
 	checkevent EVENT_GOT_KENYA
 	iftrue .alreadyhavekenya
+	checkevent EVENT_KURT_UNDERGROUND ; you're here if you cut off the power to the tower and didn't get the mail. 
+	iftrue_jumpopenedtext GoldenrodGateNoTroubleText
 	writetext Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText
 	yesorno
 	iffalse .refused
@@ -90,6 +96,24 @@ RandyScript:
 
 .bagfull
 	endtext
+
+.GuysGivesNugget:
+	writetext RandyAfterGentlemanReadMailText
+	waitbutton
+	writethistext
+		text "Take this as a"
+		line "thanks."
+		done
+	waitbutton
+	verbosegiveitem BIG_NUGGET
+	setevent EVENT_GOT_GUYS_NUGGET
+	waitbutton
+	jumpopenedtext GoldenrodGateNoTroubleText
+
+GoldenrodGateNoTroubleText:
+	text "Stay out of"
+	line "trouble, OK?"
+	done
 
 GiftFarfetch_dMail:
 	db   FLOWER_MAIL
@@ -129,7 +153,12 @@ Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText:
 	
 	para "He's about to"
 	line "board on the"
-	cont "magnet train."
+	cont "Magnet Train."
+	done
+
+RandyAfterGentlemanReadMailText:
+	text "Thanks for your"
+	line "help, kid."
 	done
 
 Route35GoldenrodGateRandyThanksText:
@@ -155,7 +184,7 @@ Route35GoldenrodGatePlayerReceivedAMonWithMailText:
 	done
 
 Route35GoldenrodGateRandyWeirdTreeBlockingRoadText:
-	para "My brother is"
+	text "My brother is"
 	line "a fancy guy in"
 	cont "red clothes."
 
@@ -207,6 +236,7 @@ KurtGoldenrodGateScript:
 	
 DontHearHearStory2:
 	writetext SomeOtherTime_2Text
+	waitbutton
 	closetext
 	end
 
@@ -219,6 +249,11 @@ HearAStory_2Text:
 
 SomeOtherTime_2Text:
 	text "Some other time."
+	
+	para "By the way, the"
+	line "gate agent looks"
+	para "a little nervous"
+	line "don't you think?"
 	done
 
 KurtGoldenrodGateText:
@@ -246,4 +281,9 @@ KurtGoldenrodGateText:
 	line "to hear my story"
 	cont "again, check the"
 	cont "journals at home."
+	
+	para "By the way, the"
+	line "gate agent looks"
+	para "a little nervous"
+	line "don't you think?"
 	done
