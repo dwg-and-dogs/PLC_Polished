@@ -1,264 +1,295 @@
 EvolutionMoves::
 	table_width 1, EvolutionMoves
-	db NO_MOVE		;CYNDAQUIL		  ; 01
-	db NO_MOVE		;QUILAVA  		  ; 02
-	db FIRE_PUNCH	;TYPHLOSION  	  ; 03
-	db SHADOW_CLAW	;H__TYPHLOSION   ; 04
-	db NO_MOVE		;ROWLET	      ; 05
-	db NO_MOVE		;DARTRIX         ; 06
-	db SHADOW_CLAW	;DECIDUEYE       ; 07
-	db HI_JUMP_KICK	;H__DECIDUEYE    ; 08
-	db NO_MOVE		;OSHAWOTT  ; 09
-	db NO_MOVE		;DEWOTT   ; 0a
-	db REVERSAL		;SAMUROTT    ; 0b
-	db NIGHT_SLASH	;H__SAMUROTT ; 0c
-	db GUST			;BUTTERFREE     ; 0d
-	db POISON_JAB	;BEEDRILL     ; 0e
-	db NO_MOVE		;PIDGEY   ; 0f
-	db NO_MOVE		;PIDGEOTTO     ; 10
-	db HURRICANE	;PIDGEOT  ; 11
-	db NO_MOVE	    ;NOCTOWL  ; 11
-	db NO_MOVE		;EKANS    ; 12
-	db GLARE		;ARBOK    ; 13
-	db NO_MOVE		;PIKACHU   ; 14
-	db NO_MOVE		;RAICHU     ; 15
-	db NO_MOVE		;NIDORINA  ; 16
-	db BODY_SLAM	;NIDOQUEEN      ; 17
-	db NO_MOVE		;NIDORINO      ; 18
-	db THRASH		;NIDOKING    ; 19
-	db NO_MOVE		;CLEFAIRY     ; 1a
-	db MOONBLAST	;CLEFABLE  ; 1b
-	db NO_MOVE		;VULPIX  ; 1c
-	db SHADOW_BALL	;NINETALES  ; 1d
-	db NO_MOVE		;JIGGLYPUFF   ; 1e
-	db NO_MOVE		;WIGGLYTUFF  ; 1f
-	db NO_MOVE		;ZUBAT  ; 20
-	db NO_MOVE		;GOLBAT   ; 21
-	db SLUDGE_BOMB	;CROBAT   ; 22
-	db NO_MOVE		;GLOOM   ; 23
-	db DARK_PULSE	;VILEPLUME   ; 24
-	db PETAL_DANCE	;BELLOSSOM     ; 25
-	db NO_MOVE		;PARAS  ; 26
-	db SWORDS_DANCE	;PARASECT ; 27
-	db NO_MOVE		;VENONAT ; 28
-	db NO_MOVE		;VENOMOTH      ; 29
-	db NO_MOVE		;DIGLETT     ; 2a
-	db NO_MOVE		;DUGTRIO     ; 2b
-	db NO_MOVE		;MEOWTH      ; 2c
-	db HYPNOSIS		;PERSIAN  ; 2d
-	db NO_MOVE		;MANKEY      ; 2e
-	db NO_MOVE		;PRIMEAPE   ; 2f
-	db NO_MOVE		;ANNIHILAPE   ; 2f
-	db NO_MOVE		;GROWLITHE    ; 30
-	db EXTREMESPEED	;ARCANINE   ; 31
-	db EXTREMESPEED	;H__ARCANINE    ; 32
-	db NO_MOVE		;POLIWAG    ; 33
-	db NO_MOVE		;POLIWHIRL     ; 34
-	db DYNAMICPUNCH	;POLIWRATH    ; 35
-	db NO_MOVE		;POLITOED    ; 36
-	db NO_MOVE		;ABRA    ; 37
-	db NO_MOVE		;KADABRA     ; 38
-	db NO_MOVE		;ALAKAZAM   ; 39
-	db NO_MOVE		;MACHOP  ; 3a
-	db NO_MOVE		;MACHOKE   ; 3b
-	db CROSS_CHOP	;MACHAMP    ; 3c
-	db NO_MOVE		;WEEPINBELL  ; 3d
-	db SWORDS_DANCE	;VICTREEBEL  ; 3e
-	db NO_MOVE		;TENTACRUEL       ; 3f
-	db NO_MOVE		;GEODUDE    ; 40
-	db NO_MOVE		;GRAVELER   ; 41
-	db NO_MOVE		;GOLEM     ; 42
-	db NO_MOVE		;PONYTA    ; 43
-	db NO_MOVE		;RAPIDASH    ; 44
-	db NO_MOVE		;SLOWPOKE ; 45
-	db NO_MOVE		;SLOWBRO ; 46
-	db NO_MOVE		;SLOWKING ; 47
-	db NO_MOVE		;MAGNEMITE  ; 48
-	db TRI_ATTACK	;MAGNETON ; 49
-	db NO_MOVE		;MAGNEZONE    ; 4a
-	db NO_MOVE		;FARFETCH_D   ; 4b
-	db NO_MOVE		;GRIMER      ; 4c
-	db NO_MOVE		;MUK     ; 4d
-	db NO_MOVE		;CLOYSTER   ; 4e
-	db NO_MOVE		;GASTLY   ; 4f
-	db NO_MOVE		;HAUNTER    ; 50
-	db DESTINY_BOND	;GENGAR  ; 51
-	db NO_MOVE		;ONIX   ; 52
-	db IRON_TAIL	;STEELIX ; 53
-	db NO_MOVE		;VOLTORB      ; 54
-	db VOLT_SWITCH	;ELECTRODE     ; 55
-	db LEECH_SEED	;H__ELECTRODE       ; 56
-	db NO_MOVE		;EXEGGCUTE    ; 57
-	db NO_MOVE		;EXEGGUTOR     ; 58
-	db NO_MOVE		;HITMONLEE        ; 59
-	db NO_MOVE		;HITMONCHAN   ; 5a
-	db NO_MOVE		;HITMONTOP   ; 5b
-	db NO_MOVE		;WEEZING     ; 5c
-	db NO_MOVE		;MR__MIME    ; 5d
-	db NO_MOVE		;RHYHORN     ; 5e
-	db NO_MOVE		;RHYDON       ; 5f
-	db NO_MOVE		;RHYPERIOR    ; 60
-	db NO_MOVE		;CHANSEY      ; 61
-	db NO_MOVE		;BLISSEY     ; 62
-	db NO_MOVE		;TANGELA    ; 63
-	db NO_MOVE		;TANGROWTH    ; 64
-	db NO_MOVE		;KANGASKHAN  ; 65
-	db NO_MOVE		;SEADRA  ; 66
-	db DRAGON_PULSE	;KINGDRA  ; 67
-	db NO_MOVE		;STARYU     ; 68
-	db NO_MOVE		;STARMIE    ; 69
-	db NO_MOVE		;SCYTHER  ; 6a
-	db BULLET_PUNCH	;SCIZOR ; 6b
-	db ROCK_BLAST	;KLEAVOR    ; 6c
-	db NO_MOVE		;JYNX    ; 6d
-	db NO_MOVE		;ELECTABUZZ    ; 6e
-	db CROSS_CHOP	;ELECTIVIRE     ; 6f
-	db NO_MOVE		;MAGMAR    ; 70
-	db FLASH_CANNON	;MAGMORTAR    ; 71
-	db NO_MOVE		;PINSIR ; 72
-	db CRUNCH		;MINSIR ; 72
-	db NO_MOVE		;TAUROS     ; 73
-	db NO_MOVE		;MAGIKARP     ; 74
-	db AQUA_TAIL	;GYARADOS     ; 75
-	db NO_MOVE		;LAPRAS    ; 76
-	db NO_MOVE		;EEVEE   ; 77
-	db WATER_PULSE	;VAPOREON     ; 78
-	db SPARK		;JOLTEON    ; 79
-	db FLAME_CHARGE	;FLAREON   ; 7a
-	db PSYBEAM		;ESPEON    ; 7b
-	db CURSE		;UMBREON       ; 7c
-	db RAZOR_LEAF	;LEAFEON ; 7d
-	db ICY_WIND		;GLACEON     ; 7e
-	db DAZZLINGLEAM	;SYLVEON     ; 7f
-	db NO_MOVE		;PORYGON     ; 80
-	db NO_MOVE		;PORYGON2   ; 81
-	db NO_MOVE		;PORYGON_Z   ; 82
-	db NO_MOVE		;SNORLAX     ; 83
-	db NO_MOVE		;CHIKORITA      ; 84
-	db NO_MOVE		;BAYLEEF      ; 85
-	db RECOVER		;MEGANIUM   ; 86
-	db NO_MOVE		;TOTODILE    ; 87
-	db NO_MOVE		;CROCONAW    ; 88
-	db CRUNCH		;FERALIGATR    ; 89
-	db NO_MOVE		;FURRET    ; 8a
-	db NO_MOVE		;LEDIAN    ; 8b
-	db NO_MOVE		;ARIADOS     ; 8c
-	db NO_MOVE		;CHINCHOU   ; 8d
-	db NO_MOVE		;LANTURN ; 8e
-	db NO_MOVE		;TOGETIC    ; 8f
-	db NO_MOVE		;TOGEKISS   ; 90
-	db NO_MOVE		;NATU     ; 91
-	db NO_MOVE		;XATU    ; 92
-	db NO_MOVE		;MAREEP    ; 93
-	db NO_MOVE		;FLAAFFY  ; 94
-	db NO_MOVE		;AMPHAROS  ; 95
-	db NO_MOVE		;MARILL     ; 96
-	db NO_MOVE		;AZUMARILL        ; 97
-	db NO_MOVE		;SUDOWOODO  ; 98
-	db NO_MOVE		;SKIPLOOM    ; 99
-	db NO_MOVE		;JUMPLUFF   ; 9a
-	db NO_MOVE		;SUNFLORA  ; 9b
-	db NO_MOVE		;WOOPER    ; 9c
-	db NO_MOVE		;QUAGSIRE ; 9d
-	db NO_MOVE		;MURKROW   ; 9e
-	db NO_MOVE		;HONCHKROW   ; 9f
-	db NO_MOVE		;MISDREAVUS ; a0
-	db NO_MOVE		;MISMAGIUS    ; a1
-	db NO_MOVE		;YANMA     ; a2
-	db DRAGONBREATH	;YANMEGA   ; a3
-	db NO_MOVE		;UNOWN    ; a4
-	db NO_MOVE		;GIRAFARIG     ; a5
-	db NO_MOVE		;PINECO     ; a6
-	db GYRO_BALL	;FORRETRESS   ; a7
-	db NO_MOVE		;DUNSPARCE    ; a8
-	db NO_MOVE		;GLIGAR     ; a9
-	db NO_MOVE		;GLISCOR   ; aa
-	db NO_MOVE		;SNUBBULL    ; ab
-	db NO_MOVE		;GRANBULL      ; ac
-	db NO_MOVE		;QWILFISH   ; ad
-	db EXPLOSION	;OVERQWIL  ; ae
-	db NO_MOVE		;SHUCKLE  ; af
-	db NO_MOVE		;HERACROSS  ; b0
-	db NO_MOVE		;SNEASEL       ; b1
-	db NIGHT_SLASH	;WEAVILE       ; b2
-	db POISON_JAB	;SNEASLER     ; b3
-	db NO_MOVE		;TEDDIURSA    ; b4
-	db NO_MOVE		;URSARING   ; b5
-	db NO_MOVE		;URSALUNA  ; b6
-	db NO_MOVE		;MAGCARGO  ; b7
-	db NO_MOVE		;PILOSWINE   ; b8
-	db NO_MOVE		;MAMOSWINE    ; b9
-	db NO_MOVE		;CORSOLA   ; ba
-	db NO_MOVE		;OCTILLERY      ; bb
-	db NO_MOVE		;MANTINE    ; bc
-	db NO_MOVE		;SKARMORY     ; bd
-	db NO_MOVE		;HOUNDOUR   ; be
-	db NO_MOVE		;HOUNDOOM     ; bf
-	db NO_MOVE		;DONPHAN    ; c0
-	db NO_MOVE		;STANTLER    ; c1
-	db PSYCHIC		;WYRDEER  ; c2
-	db NO_MOVE		;MILTANK   ; c3
-	db NO_MOVE		;GROTLE ; c4
-	db EARTHQUAKE	;TORTERRA  ; c5
-	db NO_MOVE		;MONFERNO      ; c6
-	db FLARE_BLITZ	;INFERNAPE  ; c7
-	db NO_MOVE		;PRINPLUP  ; c8
-	db IRON_HEAD	;EMPOLEON     ; c9
-	db NO_MOVE		;STARAVIA ; ca
-	db CLOSE_COMBAT	;STARAPTOR  ; cb
-	db NO_MOVE		;LUXIO     ; cc
-	db DRAGON_CLAW		;LUXRAY    ; cd
-	db NO_MOVE		;ROSELIA    ; ce
-	db SLUDGE_BOMB	;ROSERADE   ; cf
-	db NO_MOVE		;RAMPARDOS   ; d0
-	db NO_MOVE		;BASTIODON   ; d1
-	db NO_MOVE		;VESPIQUEN     ; d2
-	db NO_MOVE		;AMBIPOM    ; d3
-	db NO_MOVE		;DRIFBLIM  ; d4
-	db NO_MOVE		;LOPUNNY    ; d5
-	db NO_MOVE		;SKUNTANK    ; d6
-	db NO_MOVE		;BRONZOR  ; d7
-	db PERISH_SONG	;BRONZONG   ; d8
-	db NO_MOVE		;SPIRITOMB     ; d9
-	db NO_MOVE		;GABITE   ; da
-	db NO_MOVE		;GARCHOMP     ; db
-	db NO_MOVE		;LUCARIO  ; dc
-	db NO_MOVE		;HIPPOWDON  ; dd
-	db NO_MOVE		;DRAPION    ; de
-	db NO_MOVE		;TOXICROAK   ; df
-	db NO_MOVE		;SNOVER  ; e0
-	db NO_MOVE		;ABOMASNOW    ; e1
-	db NO_MOVE		;DUSCLOPS   ; e2
-	db SHADOW_CLAW	;DUSKNOIR   ; e3
-	db NO_MOVE		;FROSLASS   ; e4
-	db NO_MOVE		;ROTOM    ; e5
-	db NO_MOVE		;H__AVALUGG     ; e6
-	db NO_MOVE		;BASCULEGION    ; e7
-	db NO_MOVE		;H__BRAVIARY   ; e8
-	db NO_MOVE		;KIRLIA  ; e9
-	db DAZZLINGLEAM	;GARDEVOIR   ; ea
-	db CLOSE_COMBAT	;GALLADE    ; eb
-	db NO_MOVE		;H__SLIGGOO  ; ec
-	db NO_MOVE		;H__GOODRA     ; ed
-	db NO_MOVE		;H__ZOROARK ; ee
-	db NO_MOVE		;DRATINI      ; ef
-	db NO_MOVE		;DRAGONAIR  ; f0
-	db NO_MOVE		;DRAGONITE    ; f1
-	db NO_MOVE		;LARVITAR    ; f2
-	db NO_MOVE		;PUPITAR     ; f3
-	db NO_MOVE		;TYRANITAR      ; f4
-	db NO_MOVE		;RAIKOU    ; f5
-	db NO_MOVE		;ENTEI   ; f6
-	db NO_MOVE		;SUICUNE    ; f7
-	db NO_MOVE		;HEATRAN  ; f8
-	db NO_MOVE		;LUGIA      ; f9
-	db NO_MOVE		;HO_OH      ; fa
-	db NO_MOVE		;CELEBI     ; fb
+	db NO_MOVE       ; CYNDAQUIL       ; 01
+	db NO_MOVE       ; QUILAVA         ; 02
+	db FIRE_PUNCH    ; TYPHLOSION      ; 03
+	db NO_MOVE       ; ROWLET          ; 04
+	db NO_MOVE       ; DARTRIX         ; 05
+	db SHADOW_CLAW   ; DECIDUEYE       ; 06
+	db NO_MOVE       ; OSHAWOTT        ; 07
+	db NO_MOVE       ; DEWOTT          ; 08
+	db REVERSAL      ; SAMUROTT        ; 09
+	db NO_MOVE       ; PIDGEY          ; 0a
+	db NO_MOVE       ; PIDGEOTTO       ; 0b
+	db HURRICANE     ; PIDGEOT         ; 0c
+	db NO_MOVE       ; HOOTHOOT        ; 0d
+	db NO_MOVE       ; NOCTOWL         ; 0e
+	db NO_MOVE       ; SENTRET         ; 0f
+	db NO_MOVE       ; FURRET          ; 10
+	db NO_MOVE       ; PIKACHU         ; 11
+	db NO_MOVE       ; RAICHU          ; 12
+	db NO_MOVE       ; LEDYBA          ; 13
+	db NO_MOVE       ; LEDIAN          ; 14
+	db NO_MOVE       ; SPINARAK        ; 15
+	db NO_MOVE       ; ARIADOS         ; 16
+	db NO_MOVE       ; GEODUDE         ; 17
+	db NO_MOVE       ; GRAVELER        ; 18
+	db NO_MOVE       ; GOLEM           ; 19
+	db NO_MOVE       ; ZUBAT           ; 1a
+	db NO_MOVE       ; GOLBAT          ; 1b
+	db SLUDGE_BOMB   ; CROBAT          ; 1c
+	db NO_MOVE       ; CLEFAIRY        ; 1d
+	db MOONBLAST     ; CLEFABLE        ; 1e
+	db NO_MOVE       ; TOGETIC         ; 1f
+	db NO_MOVE       ; TOGEKISS        ; 20
+	db NO_MOVE       ; DUNSPARCE       ; 21
+	db NO_MOVE       ; DUDUNSPARCE     ; 22
+	db NO_MOVE       ; MAREEP          ; 23
+	db NO_MOVE       ; FLAAFFY         ; 24
+	db NO_MOVE       ; AMPHAROS        ; 25
+	db NO_MOVE       ; WOOPER          ; 26
+	db NO_MOVE       ; QUAGSIRE        ; 27
+	db NO_MOVE       ; GASTLY          ; 28
+	db NO_MOVE       ; HAUNTER         ; 29
+	db DESTINY_BOND  ; GENGAR          ; 2a
+	db NO_MOVE       ; UNOWN           ; 2b
+	db NO_MOVE       ; ONIX            ; 2c
+	db IRON_TAIL     ; STEELIX         ; 2d
+	db NO_MOVE       ; BELLSPROUT      ; 2e
+	db NO_MOVE       ; WEEPINBELL      ; 2f
+	db SWORDS_DANCE  ; VICTREEBEL      ; 30
+	db NO_MOVE       ; SKIPLOOM        ; 31
+	db NO_MOVE       ; JUMPLUFF        ; 32
+	db NO_MOVE       ; PARAS           ; 33
+	db SWORDS_DANCE  ; PARASECT        ; 34
+	db NO_MOVE       ; POLIWAG         ; 35
+	db NO_MOVE       ; POLIWHIRL       ; 36
+	db DYNAMICPUNCH  ; POLIWRATH       ; 37
+	db NO_MOVE       ; POLITOED        ; 38
+	db NO_MOVE       ; MAGIKARP        ; 39
+	db AQUA_TAIL     ; GYARADOS        ; 3a
+	db NO_MOVE       ; SLOWPOKE        ; 3b
+	db NO_MOVE       ; SLOWBRO         ; 3c
+	db NO_MOVE       ; SLOWKING        ; 3d
+	db NO_MOVE       ; ODDISH          ; 3e
+	db NO_MOVE       ; GLOOM           ; 3f
+	db DARK_PULSE    ; VILEPLUME       ; 40
+	db PETAL_DANCE   ; BELLOSSOM       ; 41
+	db NO_MOVE       ; ABRA            ; 42
+	db CONFUSION       ; KADABRA         ; 43
+	db NO_MOVE       ; ALAKAZAM        ; 44
+	db NO_MOVE       ; PINECO          ; 45
+	db GYRO_BALL     ; FORRETRESS      ; 46
+	db NO_MOVE       ; NIDORAN         ; 47
+	db NO_MOVE       ; NIDORINA        ; 48
+	db BODY_SLAM     ; NIDOQUEEN       ; 49
+	db NO_MOVE       ; NIDORINO        ; 4a
+	db THRASH        ; NIDOKING        ; 4b
+	db NO_MOVE       ; YANMA           ; 4c
+	db DRAGONBREATH  ; YANMEGA         ; 4d
+	db NO_MOVE       ; SUNFLORA        ; 4e
+	db NO_MOVE       ; EXEGGCUTE       ; 4f
+	db NO_MOVE       ; EXEGGUTOR       ; 50
+	db NO_MOVE       ; SUDOWOODO       ; 51
+	db NO_MOVE       ; SCYTHER         ; 52
+	db BULLET_PUNCH  ; SCIZOR          ; 53
+	db ROCK_BLAST    ; KLEAVOR         ; 54
+	db NO_MOVE       ; PINSIR          ; 55
+	db CRUNCH        ; MINSIR          ; 56
+	db NO_MOVE       ; HERACROSS       ; 57
+	db NO_MOVE       ; KOFFING         ; 58
+	db NO_MOVE       ; WEEZING         ; 59
+	db NO_MOVE       ; GRIMER          ; 5a
+	db NO_MOVE       ; MUK             ; 5b
+	db NO_MOVE       ; MAGNEMITE       ; 5c
+	db TRI_ATTACK    ; MAGNETON        ; 5d
+	db NO_MOVE       ; MAGNEZONE       ; 5e
+	db NO_MOVE       ; VOLTORB         ; 5f
+	db VOLT_SWITCH   ; ELECTRODE       ; 60
+	db NO_MOVE       ; AIPOM           ; 61
+	db NO_MOVE       ; AMBIPOM         ; 62
+	db NO_MOVE       ; SNUBBULL        ; 63
+	db NO_MOVE       ; GRANBULL        ; 64
+	db NO_MOVE       ; VULPIX          ; 65
+	db PSYCHIC   ; NINETALES       ; 66
+	db NO_MOVE       ; GROWLITHE       ; 67
+	db EXTREMESPEED  ; ARCANINE        ; 68
+	db NO_MOVE       ; STANTLER        ; 69
+	db PSYCHIC       ; WYRDEER         ; 6a
+	db NO_MOVE       ; MARILL          ; 6b
+	db NO_MOVE       ; AZUMARILL       ; 6c
+	db NO_MOVE       ; MANKEY          ; 6d
+	db NO_MOVE       ; PRIMEAPE        ; 6e
+	db NO_MOVE       ; ANNIHILAPE      ; 6f
+	db NO_MOVE       ; MACHOP          ; 70
+	db NO_MOVE       ; MACHOKE         ; 71
+	db CROSS_CHOP    ; MACHAMP         ; 72
+	db NO_MOVE       ; HITMONLEE       ; 73
+	db NO_MOVE       ; HITMONCHAN      ; 74
+	db NO_MOVE       ; HITMONTOP       ; 75
+	db NO_MOVE       ; GIRAFARIG       ; 76
+	db NO_MOVE       ; FARIGIRAF       ; 77
+	db NO_MOVE       ; TAUROS          ; 78
+	db NO_MOVE       ; MILTANK         ; 79
+	db NO_MOVE       ; MAGMAR          ; 7a
+	db FLASH_CANNON  ; MAGMORTAR       ; 7b
+	db NO_MOVE       ; JYNX            ; 7c
+	db NO_MOVE       ; ELECTABUZZ      ; 7d
+	db CROSS_CHOP    ; ELECTIVIRE      ; 7e
+	db NO_MOVE       ; NATU            ; 80
+	db NO_MOVE       ; XATU            ; 81
+	db NO_MOVE       ; QWILFISH        ; 82
+	db EXPLOSION     ; OVERQWIL        ; 83
+	db NO_MOVE       ; TENTACOOL       ; 84
+	db NO_MOVE       ; TENTACRUEL      ; 85
+	db NO_MOVE       ; SHUCKLE         ; 86
+	db NO_MOVE       ; CORSOLA         ; 87
+	db NO_MOVE       ; REMORAID        ; 88
+	db NO_MOVE       ; OCTILLERY       ; 89
+	db NO_MOVE       ; CHINCHOU        ; 8a
+	db NO_MOVE       ; LANTURN         ; 8b
+	db NO_MOVE       ; TANGELA         ; 8c
+	db NO_MOVE       ; TANGROWTH       ; 8d
+	db NO_MOVE       ; EEVEE           ; 8e
+	db WATER_PULSE   ; VAPOREON        ; 8f
+	db SPARK         ; JOLTEON         ; 90
+	db FLAME_CHARGE  ; FLAREON         ; 91
+	db PSYBEAM       ; ESPEON          ; 92
+	db CURSE         ; UMBREON         ; 93
+	db RAZOR_LEAF    ; LEAFEON         ; 94
+	db ICY_WIND      ; GLACEON         ; 95
+	db DAZZLINGLEAM  ; SYLVEON         ; 96
+	db NO_MOVE       ; SEADRA          ; 97
+	db DRAGON_PULSE  ; KINGDRA         ; 98
+	db NO_MOVE       ; GLIGAR          ; 99
+	db NO_MOVE       ; GLISCOR         ; 9a
+	db NO_MOVE       ; SWINUB          ; 9b
+	db NO_MOVE       ; PILOSWINE       ; 9c
+	db NO_MOVE       ; MAMOSWINE       ; 9d
+	db NO_MOVE       ; TEDDIURSA       ; 9e
+	db NO_MOVE       ; URSARING        ; 9f
+	db NO_MOVE       ; URSALUNA        ; a0
+	db NO_MOVE       ; PHANPY          ; a1
+	db NO_MOVE       ; DONPHAN         ; a2
+	db NO_MOVE       ; MANTINE         ; a3
+	db NO_MOVE       ; SKARMORY        ; a4
+	db NO_MOVE       ; PONYTA          ; a5
+	db NO_MOVE       ; RAPIDASH        ; a6
+	db NO_MOVE       ; RHYHORN         ; a7
+	db NO_MOVE       ; RHYDON          ; a8
+	db NO_MOVE       ; RHYPERIOR       ; a9
+	db NO_MOVE       ; MURKROW         ; aa
+	db NO_MOVE       ; HONCHKROW       ; ab
+	db NO_MOVE       ; HOUNDOUR        ; ac
+	db NO_MOVE       ; HOUNDOOM        ; ad
+	db NO_MOVE       ; SLUGMA          ; ae
+	db NO_MOVE       ; MAGCARGO        ; af
+	db NO_MOVE       ; SNEASEL         ; b0
+	db NIGHT_SLASH   ; WEAVILE         ; b1
+	db POISON_JAB    ; SNEASLER        ; b2
+	db NO_MOVE       ; MISDREAVUS      ; b3
+	db NO_MOVE       ; MISMAGIUS       ; b4
+	db NO_MOVE       ; PORYGON         ; b5
+	db NO_MOVE       ; PORYGON2        ; b6
+	db NO_MOVE       ; PORYGON-Z       ; b7
+	db NO_MOVE       ; CHANSEY         ; b8
+	db NO_MOVE       ; BLISSEY         ; b9
+	db NO_MOVE       ; LAPRAS          ; ba
+	db NO_MOVE       ; SNORLAX         ; bb
+	db NO_MOVE       ; CHIKORITA       ; bc
+	db NO_MOVE       ; BAYLEEF         ; bd
+	db RECOVER       ; MEGANIUM        ; be
+	db NO_MOVE       ; TOTODILE        ; bf
+	db NO_MOVE       ; CROCONAW        ; c0
+	db CRUNCH        ; FERALIGATR      ; c1
+	db NO_MOVE       ; GROTLE          ; c2
+	db EARTHQUAKE    ; TORTERRA        ; c3
+	db NO_MOVE       ; MONFERNO        ; c4
+	db FLARE_BLITZ   ; INFERNAPE       ; c5
+	db NO_MOVE       ; PRINPLUP        ; c6
+	db IRON_HEAD     ; EMPOLEON        ; c7
+	db NO_MOVE       ; STARAVIA        ; c8
+	db CLOSE_COMBAT  ; STARAPTOR       ; c9
+	db NO_MOVE       ; SHINX           ; ca
+	db NO_MOVE       ; LUXIO           ; cb
+	db DRAGON_CLAW   ; LUXRAY          ; cc
+	db NO_MOVE       ; CRANIDOS        ; cd
+	db MIRROR_COAT       ; RAMPARDOS       ; ce
+	db NO_MOVE       ; SHIELDON        ; cf
+	db NO_MOVE       ; BASTIODON       ; d0
+	db NO_MOVE       ; VESPIQUEN       ; d1
+	db NO_MOVE       ; DRIFLOON        ; d2
+	db NO_MOVE       ; DRIFBLIM        ; d3
+	db NO_MOVE       ; BRONZOR         ; d4
+	db PERISH_SONG   ; BRONZONG        ; d5
+	db NO_MOVE       ; SPIRITOMB       ; d6
+	db NO_MOVE       ; LUCARIO         ; d7
+	db NO_MOVE       ; HIPPOPOTAS      ; d8
+	db NO_MOVE       ; HIPPOWDON       ; d9
+	db NO_MOVE       ; CROAGUNK        ; da
+	db DRAIN_PUNCH       ; TOXICROAK       ; db
+	db NO_MOVE       ; SNOVER          ; dc
+	db NO_MOVE       ; ABOMASNOW       ; dd
+	db NO_MOVE       ; DUSKULL         ; de
+	db NO_MOVE       ; DUSCLOPS        ; df
+	db SHADOW_CLAW   ; DUSKNOIR        ; e0
+	db NO_MOVE       ; FROSLASS        ; e1
+	db NO_MOVE       ; ROTOM           ; e2
+	db NO_MOVE       ; BERGMITE        ; e3
+	db AVALANCHE       ; AVALUGG         ; e4
+	db NO_MOVE       ; BASCULEGION     ; e5
+	db NO_MOVE       ; BRAVIARY        ; e6
+	db NO_MOVE       ; RALTS           ; e7
+	db NO_MOVE       ; KIRLIA          ; e8
+	db DAZZLINGLEAM  ; GARDEVOIR       ; e9
+	db CLOSE_COMBAT  ; GALLADE         ; ea
+	db NO_MOVE       ; GOOMY           ; eb
+	db NO_MOVE       ; SLIGGOO         ; ec
+	db NO_MOVE       ; GOODRA          ; ed
+	db NO_MOVE       ; ZORUA           ; ee
+	db NASTY_PLOT       ; ZOROARK         ; ef
+	db NO_MOVE       ; GIBLE           ; f0
+	db NO_MOVE       ; GABITE          ; f1
+	db NO_MOVE       ; GARCHOMP        ; f2
+	db NO_MOVE       ; DRATINI         ; f3
+	db NO_MOVE       ; DRAGONAIR       ; f4
+	db NO_MOVE       ; DRAGONITE       ; f5
+	db NO_MOVE       ; LARVITAR        ; f6
+	db NO_MOVE       ; PUPITAR         ; f7
+	db NO_MOVE       ; TYRANITAR       ; f8
+	db NO_MOVE       ; RAIKOU          ; f9
+	db NO_MOVE       ; ENTEI           ; fa
+	db NO_MOVE       ; SUICUNE         ; fb
+	db NO_MOVE       ; HEATRAN         ; fc
+	db NO_MOVE       ; LUGIA           ; fd
+	db NO_MOVE       ; HO-OH           ; fe
+	db NO_MOVE       ; CELEBI          ; ff
 	assert_table_length NUM_POKEMON
 
-	db NO_MOVE      ; EGG
+	db NO_MOVE       ; EGG
 
-	db NO_MOVE      ; PONYTA, GALARIAN_FORM
-	db PLAY_ROUGH   ; RAPIDASH, GALARIAN_FORM
-	db ENERGY_BALL      ; VOLTORB, HISUIAN FORM 
+; Alolan Forms
+	db NO_MOVE       ; RAICHU (Alolan)
+	db NO_MOVE       ; VULPIX (Alolan)
+	db NO_MOVE       ; NINETALES (Alolan)
+	db NO_MOVE       ; GEODUDE (Alolan)
+	db NO_MOVE       ; GRAVELER (Alolan)
+	db NO_MOVE       ; GOLEM (Alolan)
+	db NO_MOVE       ; GRIMER (Alolan)
+	db NO_MOVE       ; MUK (Alolan)
+	db DRAGON_PULSE       ; EXEGGUTOR (Alolan)
+
+; Galarian Forms
+	db NO_MOVE       ; PONYTA (Galarian)
+	db PLAY_ROUGH    ; RAPIDASH (Galarian)
+	db NO_MOVE       ; SLOWPOKE (Galarian)
+	db NO_MOVE       ; SLOWBRO (Galarian)
+	db NO_MOVE       ; SLOWKING (Galarian)
+	db NO_MOVE       ; WEEZING (Galarian)
+	db NO_MOVE       ; CORSOLA (Galarian)
+
+; Hisuian Forms
+	db NO_MOVE       ; GROWLITHE (Hisuian)
+	db EXTREMESPEED  ; ARCANINE (Hisuian)
+	db NO_MOVE   ; VOLTORB (Hisuian)
+	db LEECH_SEED    ; ELECTRODE (Hisuian)
+	db SHADOW_CLAW   ; TYPHLOSION (Hisuian)
+	db NO_MOVE       ; QWILFISH (Hisuian)
+	db NO_MOVE       ; SNEASEL (Hisuian)
+	db NIGHT_SLASH   ; SAMUROTT (Hisuian)
+	db HI_JUMP_KICK  ; DECIDUEYE (Hisuian)
+
+; Other Forms
+	db SHADOW_CLAW       ; NOCTOWL (Immortal)
+	db NO_MOVE       ; URSALUNA (Bloodmoon)
 	assert_table_length NUM_EXT_POKEMON

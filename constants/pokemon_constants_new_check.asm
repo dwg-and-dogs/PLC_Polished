@@ -1,39 +1,34 @@
 ; pokemon ids
-; indexes for: 
+; indexes for: ; variant == first set of variants adding ponyta and rapidash and voltorb 
 ; data files: 
-; - PokemonNames (see data/pokemon/names.asm) -> done 
-; - BaseData (see data/pokemon/base_stats.asm) -> done 
-; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm) -> done 
-;			fury_attack_users.asm-> done 
-;			legendary_mons.asm-> done 
-;			unique_wild_moves.asm-> done 
-; - EggMovePointers (see data/pokemon/egg_move_pointers.asm) -> done 
-;			egg_moves.asm-> todo, eventually 
-; - EvolutionMoves (see data/pokemon/evolution_moves.asm) -> DONE 
-; - PokemonCries (see data/pokemon/cries.asm)-> done 
-; - IconPointers (see data/pokemon/menu_icon_pointers.asm) -> 
-; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)-> 
-; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)-> 
-; - BackPicPointers (see data/pokemon/back_pic_pointers.asm)-> 
-; - PokemonPalettes (see data/pokemon/palettes.asm);  
-; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)-> 
-; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)-> 
-; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)-> 
-; - ValidPokemonLevels (see data/pokemon/valid_levels.asm)-> 
-; 			valid_variants.asm-> done 
+; - PokemonNames (see data/pokemon/names.asm) ->done, variant 
+; - BaseData (see data/pokemon/base_stats.asm) ->done, variant
+; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm) ->done, variant 
+;			fury_attack_users.asm->done, variant 
+;			legendary_mons.asm->done, variant 
+;			unique_wild_moves.asm->done, variant 
+; - EggMovePointers (see data/pokemon/egg_move_pointers.asm) ->done, variant 
+;			egg_moves.asm->done, variant 
+; - EvolutionMoves (see data/pokemon/evolution_moves.asm) ->done, variant 
+; - PokemonCries (see data/pokemon/cries.asm)->done, variant
+; - IconPointers (see data/pokemon/menu_icon_pointers.asm) ->done, variant 
+; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)->done, variant 
+; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)->done, variant
+; - BackPicPointers (see data/pokemon/back_pic_pointers.asm)->done, variant 
+; - PokemonPalettes (see data/pokemon/palettes.asm); done, variant 
+; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)->done, no change for any variants 
+; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)->done, no change for any variants 
+; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)->done, no change for any variants 
+; - ValidPokemonLevels (see data/pokemon/valid_levels.asm)->done, variant 
+; 			valid_variants.asm->done (below) 
 
 ; gfx files: 
-; - Footprints (see gfx/pokemon/footprints.asm)-> 
-; 			gfx/pokemon/anims.asm-> 
-; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)->done, gfx/pokemon/extra_pointers.asm-> 
-		; gfx/pokemon/extras.asm
+; - Footprints (see gfx/pokemon/footprints.asm)->done, variant 
+; 			gfx/pokemon/anims.asm->done, variants 
+; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)->done, gfx/pokemon/extra_pointers.asm->done, gfx/pokemon/extras.asm
 ; - AnimationIdlePointers (see gfx/pokemon/idle_pointers.asm) did not find
-; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)->done, gfx/pokemon/bitmasks.asm->
-		;, unown_words.asm->
-; - FramesPointers (see gfx/pokemon/frame_pointers.asm)->
-;  pic_animations.asm->, 
-; kanto_frames.asm and johto_frames.asm-> 
-; gfx/pics.asm-->t.d.
+; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)->done, gfx/pokemon/bitmasks.asm->done, unown_words.asm->done
+; - FramesPointers (see gfx/pokemon/frame_pointers.asm)->done, pic_animations.asm->done, kanto_frames.asm and johto_frames.asm->done ; gfx/pics.asm-->t.d.
 	const_def 1
 	const CYNDAQUIL       ; 01
 	const QUILAVA         ; 02
@@ -105,10 +100,10 @@
 	const ALAKAZAM        ; 44
 	const PINECO          ; 45
 	const FORRETRESS      ; 46
-	const NIDORAN         ; 47
+	const NIDORAN_F       ; 47
 	const NIDORINA        ; 48
 	const NIDOQUEEN       ; 49
-	const NIDORINO        ; 4a
+	const NIDORAN_M       ; 4a
 	const NIDOKING        ; 4b
 	const YANMA           ; 4c
 	const YANMEGA         ; 4d
@@ -161,6 +156,7 @@
 	const JYNX            ; 7c
 	const ELECTABUZZ      ; 7d
 	const ELECTIVIRE      ; 7e
+	const MR__MIME        ; 7f ; GMR__MIME -> GALAR FORM
 	const NATU            ; 80
 	const XATU            ; 81
 	const QWILFISH        ; 82 ; HQWILFISH -> HISUI FORM
@@ -261,20 +257,19 @@
 	const FROSLASS        ; e1
 	const ROTOM           ; e2
 	const BERGMITE        ; e3
-	const AVALUGG      ; e4
+	const H__AVALUGG      ; e4
 	const BASCULEGION     ; e5
-	const BRAVIARY     ; e6
+	const H__BRAVIARY     ; e6
 	const RALTS           ; e7
 	const KIRLIA          ; e8
 	const GARDEVOIR       ; e9
 	const GALLADE         ; ea
 	const GOOMY           ; eb
-	const SLIGGOO      ; ec
-	const GOODRA       ; ed
-	const ZORUA 			; SHIFTED FROM MRMIME ,
-	const ZOROARK      ; ee
-	const GIBLE           ; f0
+	const H__SLIGGOO      ; ec
+	const H__GOODRA       ; ed
+	const H__ZOROARK      ; ee
 	const GABITE          ; ef
+	const GIBLE           ; f0
 	const GARCHOMP        ; f1
 	const DRATINI         ; f2
 	const DRAGONAIR       ; f3
@@ -296,8 +291,8 @@ CANCEL EQU -1
 
 ; form values
 ; related to:
-; - CosmeticSpeciesAndFormTable (see data/pokemon/variant_forms.asm)-->DONE 
-; - ValidVariantRanges (see data/pokemon/valid_variants.asm)--> done  
+; - CosmeticSpeciesAndFormTable (see data/pokemon/variant_forms.asm), done for variant
+; - ValidVariantRanges (see data/pokemon/valid_variants.asm), done for variant 
 
 ext_const_def: MACRO
 	if _NARG >= 1
@@ -376,6 +371,7 @@ GALARIAN_FORM EQU 2
 	const_skip ; slowbro
 	const_skip ; slowking 
 	const_skip ; weezing
+	const_skip ; mr_mime
 	const_skip ; corsola 
 
 ; hisuian forms as a practice 
@@ -391,7 +387,7 @@ HISUIAN_FORM EQU 2
 	const_skip ; DECIDUEYE
 
 ; other forms 
-OTHER_FORMS EQU 2 
+OTHER_FORMS
 	const_skip ; NOCTOWL
 	const_skip ; BLOODMOON 
 ;	const_skip ; rotom 1
@@ -399,14 +395,15 @@ OTHER_FORMS EQU 2
 ;	const_skip ; rotom 3
 ;	const_skip ; rotom 4 
 	
+	
 
-NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; 
+NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; as of now, 0 
 
-FIRST_EXT_MON EQU const_value ; 
+FIRST_EXT_MON EQU const_value ; 11b
 
-NUM_EXT_SPECIES EQU const_value - FIRST_EXT_MON ; 
+NUM_EXT_SPECIES EQU const_value - FIRST_EXT_MON ; 0 
 
 ; these constants include EGG as a species.
-NUM_UNIQUE_POKEMON EQU const_value - 1 ; 
-NUM_EXT_POKEMON EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS ; includes variants  
-NUM_SPECIES EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS - NUM_VARIANT_FORMS ; 
+NUM_UNIQUE_POKEMON EQU const_value - 1 ; 11a (282 decimal)
+NUM_EXT_POKEMON EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS ; includes varieants 
+NUM_SPECIES EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS - NUM_VARIANT_FORMS ; should be 255
