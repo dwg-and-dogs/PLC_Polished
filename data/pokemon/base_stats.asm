@@ -327,3 +327,4 @@ INCLUDE "data/pokemon/base_stats/decidueye_hisuian.asm"
 INCLUDE "data/pokemon/base_stats/noctowl_immortal.asm"
 INCLUDE "data/pokemon/base_stats/ursaluna_bloodmoon.asm"
 	assert_table_length NUM_EXT_POKEMON
+	
