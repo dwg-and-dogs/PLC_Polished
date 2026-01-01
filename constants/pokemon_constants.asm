@@ -19,7 +19,7 @@
 ; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)-> done 
 ; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)-> done 
 ; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)-> done 
-; - ValidPokemonLevels (see data/pokemon/valid_levels.asm)-> 
+; - ValidPokemonLevels (see data/pokemon/valid_levels.asm)-> done 
 ; 			valid_variants.asm-> done 
 
 ; gfx files: 
