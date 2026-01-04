@@ -21,19 +21,20 @@
 ; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)-> done 
 ; - ValidPokemonLevels (see data/pokemon/valid_levels.asm)-> done 
 ; 			valid_variants.asm-> done 
-
+; data/pokemon/dex_entries: todo
 ; gfx files: 
-; - Footprints (see gfx/pokemon/footprints.asm)-> 
-; 			gfx/pokemon/anims.asm-> 
-; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)->done, gfx/pokemon/extra_pointers.asm-> 
-		; gfx/pokemon/extras.asm
+; - Footprints (see gfx/pokemon/footprints.asm)-> done 
+; 			gfx/pokemon/anims.asm-> done 
+; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)->done, gfx/pokemon/extra_pointers.asm-> done
+		; gfx/pokemon/extras.asm->done 
 ; - AnimationIdlePointers (see gfx/pokemon/idle_pointers.asm) did not find
-; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)->done, gfx/pokemon/bitmasks.asm->
-		;, unown_words.asm->
+; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)->done, 
+; gfx/pokemon/bitmasks.asm->
+		;, unown_words.asm-> no change 
 ; - FramesPointers (see gfx/pokemon/frame_pointers.asm)->
 ;  pic_animations.asm->, 
 ; kanto_frames.asm and johto_frames.asm-> 
-; gfx/pics.asm-->t.d.
+; gfx/pics.asm-->todo
 	const_def 1
 	const CYNDAQUIL       ; 01
 	const QUILAVA         ; 02

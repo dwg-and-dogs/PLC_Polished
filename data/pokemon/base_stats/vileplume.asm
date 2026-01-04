@@ -1,7 +1,7 @@
 	db  75,  80,  85,  50, 110,  90 ; 490 BST
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, DARK ; type
+	db GRASS, POISON ; type
 	db 45 ; catch rate
 	db 184 ; base exp
 	db ALWAYS_ITEM_2 ; item 1

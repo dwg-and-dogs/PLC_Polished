@@ -17,11 +17,9 @@ It's identical to the one built by the [pokecrystal](https://github.com/pret/pok
 
 ### Where did this Pokémon go?
 
-Many first forms were removed to make room for more evolutionary lines. 
+Some first forms, especially babies, were removed to make room for more evolutionary lines. 
+Missing babies: 
 
-Evolution lines whose types were already overrepresented (normal-flying, for example) were cut.
-
-There are plans to re-work the Dex to restore first forms. 
 
 ### Is there documentation for all the {Pokémon, items, moves, etc}?
 

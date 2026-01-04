@@ -3,124 +3,143 @@ AnimationExtraPointers:
 	dw CyndaquilAnimationExtra
 	dw QuilavaAnimationExtra
 	dw TyphlosionAnimationExtra
-	dw HtyphlosionAnimationExtra
 	dw RowletAnimationExtra
 	dw DartrixAnimationExtra
 	dw DecidueyeAnimationExtra
-	dw HdecidueyeAnimationExtra
 	dw OshawottAnimationExtra
 	dw DewottAnimationExtra
 	dw SamurottAnimationExtra
-	dw HsamurottAnimationExtra
-	dw ButterfreeAnimationExtra
-	dw BeedrillAnimationExtra
 	dw PidgeyAnimationExtra
 	dw PidgeottoAnimationExtra
 	dw PidgeotAnimationExtra
+	dw HoothootAnimationExtra
 	dw NoctowlAnimationExtra
-	dw EkansAnimationExtra
-	dw ArbokAnimationExtra
+	dw SentretAnimationExtra
+	dw FurretAnimationExtra
 	dw PikachuAnimationExtra
 	dw RaichuAnimationExtra
-	dw NidorinaAnimationExtra
-	dw NidoqueenAnimationExtra
-	dw NidorinoAnimationExtra
-	dw NidokingAnimationExtra
-	dw ClefairyAnimationExtra
-	dw ClefableAnimationExtra
-	dw VulpixAnimationExtra
-	dw NinetalesAnimationExtra
-	dw JigglypuffAnimationExtra
-	dw WigglytuffAnimationExtra
+	dw LedybaAnimationExtra
+	dw LedianAnimationExtra
+	dw SpinarakAnimationExtra
+	dw AriadosAnimationExtra
+	dw GeodudeAnimationExtra
+	dw GravelerAnimationExtra
+	dw GolemAnimationExtra
 	dw ZubatAnimationExtra
 	dw GolbatAnimationExtra
 	dw CrobatAnimationExtra
-	dw GloomAnimationExtra
-	dw VileplumeAnimationExtra
-	dw BellossomAnimationExtra
+	dw ClefairyAnimationExtra
+	dw ClefableAnimationExtra
+	dw TogeticAnimationExtra
+	dw TogekissAnimationExtra
+	dw DunsparceAnimationExtra
+	dw DudunsparceAnimationExtra
+	dw MareepAnimationExtra
+	dw FlaaffyAnimationExtra
+	dw AmpharosAnimationExtra
+	dw WooperAnimationExtra
+	dw QuagsireAnimationExtra
+	dw GastlyAnimationExtra
+	dw HaunterAnimationExtra
+	dw GengarAnimationExtra
+	dw UnownAnimationExtra
+	dw OnixAnimationExtra
+	dw SteelixAnimationExtra
+	dw BellsproutAnimationExtra
+	dw WeepinbellAnimationExtra
+	dw VictreebelAnimationExtra
+	dw SkiploomAnimationExtra
+	dw JumpluffAnimationExtra
 	dw ParasAnimationExtra
 	dw ParasectAnimationExtra
-	dw VenonatAnimationExtra
-	dw VenomothAnimationExtra
-	dw DiglettAnimationExtra
-	dw DugtrioAnimationExtra
-	dw MeowthAnimationExtra
-	dw PersianAnimationExtra
-	dw MankeyAnimationExtra
-	dw PrimeapeAnimationExtra
-	dw AnnihilapeAnimationExtra
-	dw GrowlitheAnimationExtra
-	dw ArcanineAnimationExtra
-	dw HarcanineAnimationExtra
 	dw PoliwagAnimationExtra
 	dw PoliwhirlAnimationExtra
 	dw PoliwrathAnimationExtra
 	dw PolitoedAnimationExtra
-	dw AbraAnimationExtra
-	dw KadabraAnimationExtra
-	dw AlakazamAnimationExtra
-	dw MachopAnimationExtra
-	dw MachokeAnimationExtra
-	dw MachampAnimationExtra
-	dw WeepinbellAnimationExtra
-	dw VictreebelAnimationExtra
-	dw TentacruelAnimationExtra
-	dw GeodudeAnimationExtra
-	dw GravelerAnimationExtra
-	dw GolemAnimationExtra
-	dw PonytaAnimationExtra
-	dw RapidashAnimationExtra
+	dw MagikarpAnimationExtra
+	dw GyaradosAnimationExtra
 	dw SlowpokeAnimationExtra
 	dw SlowbroAnimationExtra
 	dw SlowkingAnimationExtra
-	dw MagnemiteAnimationExtra
-	dw MagnetonAnimationExtra
-	dw MagnezoneAnimationExtra
-	dw Farfetch_DAnimationExtra
-	dw GrimerAnimationExtra
-	dw MukAnimationExtra
-	dw CloysterAnimationExtra
-	dw GastlyAnimationExtra
-	dw HaunterAnimationExtra
-	dw GengarAnimationExtra
-	dw OnixAnimationExtra
-	dw SteelixAnimationExtra
-	dw VoltorbAnimationExtra
-	dw ElectrodeAnimationExtra
-	dw HelectrodeAnimationExtra
+	dw OddishAnimationExtra
+	dw GloomAnimationExtra
+	dw VileplumeAnimationExtra
+	dw BellossomAnimationExtra
+	dw AbraAnimationExtra
+	dw KadabraAnimationExtra
+	dw AlakazamAnimationExtra
+	dw PinecoAnimationExtra
+	dw ForretressAnimationExtra
+	dw NidoranAnimationExtra
+	dw NidorinaAnimationExtra
+	dw NidoqueenAnimationExtra
+	dw NidorinoAnimationExtra
+	dw NidokingAnimationExtra
+	dw YanmaAnimationExtra
+	dw YanmegaAnimationExtra
+	dw SunfloraAnimationExtra
 	dw ExeggcuteAnimationExtra
 	dw ExeggutorAnimationExtra
-	dw HitmonleeAnimationExtra
-	dw HitmonchanAnimationExtra
-	dw HitmontopAnimationExtra
-	dw WeezingAnimationExtra
-	dw MrmimeAnimationExtra
-	dw RhyhornAnimationExtra
-	dw RhydonAnimationExtra
-	dw RhyperiorAnimationExtra
-	dw ChanseyAnimationExtra
-	dw BlisseyAnimationExtra
-	dw TangelaAnimationExtra
-	dw TangrowthAnimationExtra
-	dw KangaskhanAnimationExtra
-	dw SeadraAnimationExtra
-	dw KingdraAnimationExtra
-	dw StaryuAnimationExtra
-	dw StarmieAnimationExtra
+	dw SudowoodoAnimationExtra
 	dw ScytherAnimationExtra
 	dw ScizorAnimationExtra
 	dw KleavorAnimationExtra
+	dw PinsirAnimationExtra
+	dw MinsirAnimationExtra
+	dw HeracrossAnimationExtra
+	dw KoffingAnimationExtra
+	dw WeezingAnimationExtra
+	dw GrimerAnimationExtra
+	dw MukAnimationExtra
+	dw MagnemiteAnimationExtra
+	dw MagnetonAnimationExtra
+	dw MagnezoneAnimationExtra
+	dw VoltorbAnimationExtra
+	dw ElectrodeAnimationExtra
+	dw AipomAnimationExtra
+	dw AmbipomAnimationExtra
+	dw SnubbullAnimationExtra
+	dw GranbullAnimationExtra
+	dw VulpixAnimationExtra
+	dw NinetalesAnimationExtra
+	dw GrowlitheAnimationExtra
+	dw ArcanineAnimationExtra
+	dw StantlerAnimationExtra
+	dw WyrdeerAnimationExtra
+	dw MarillAnimationExtra
+	dw AzumarillAnimationExtra
+	dw MankeyAnimationExtra
+	dw PrimeapeAnimationExtra
+	dw AnnihilapeAnimationExtra
+	dw MachopAnimationExtra
+	dw MachokeAnimationExtra
+	dw MachampAnimationExtra
+	dw HitmonleeAnimationExtra
+	dw HitmonchanAnimationExtra
+	dw HitmontopAnimationExtra
+	dw GirafarigAnimationExtra
+	dw FarigirafAnimationExtra
+	dw TaurosAnimationExtra
+	dw MiltankAnimationExtra
+	dw MagmarAnimationExtra
+	dw MagmortarAnimationExtra
 	dw JynxAnimationExtra
 	dw ElectabuzzAnimationExtra
 	dw ElectivireAnimationExtra
-	dw MagmarAnimationExtra
-	dw MagmortarAnimationExtra
-	dw PinsirAnimationExtra
-	dw MinsirAnimationExtra
-	dw TaurosAnimationExtra
-	dw MagikarpAnimationExtra
-	dw GyaradosAnimationExtra
-	dw LaprasAnimationExtra
+	dw NatuAnimationExtra
+	dw XatuAnimationExtra
+	dw QwilfishAnimationExtra
+	dw OverqwilAnimationExtra
+	dw TentacoolAnimationExtra
+	dw TentacruelAnimationExtra
+	dw ShuckleAnimationExtra
+	dw CorsolaAnimationExtra
+	dw RemoraidAnimationExtra
+	dw OctilleryAnimationExtra
+	dw ChinchouAnimationExtra
+	dw LanturnAnimationExtra
+	dw TangelaAnimationExtra
+	dw TangrowthAnimationExtra
 	dw EeveeAnimationExtra
 	dw VaporeonAnimationExtra
 	dw JolteonAnimationExtra
@@ -130,9 +149,42 @@ AnimationExtraPointers:
 	dw LeafeonAnimationExtra
 	dw GlaceonAnimationExtra
 	dw SylveonAnimationExtra
+	dw SeadraAnimationExtra
+	dw KingdraAnimationExtra
+	dw GligarAnimationExtra
+	dw GliscorAnimationExtra
+	dw SwinubAnimationExtra
+	dw PiloswineAnimationExtra
+	dw MamoswineAnimationExtra
+	dw TeddiursaAnimationExtra
+	dw UrsaringAnimationExtra
+	dw UrsalunaAnimationExtra
+	dw PhanpyAnimationExtra
+	dw DonphanAnimationExtra
+	dw MantineAnimationExtra
+	dw SkarmoryAnimationExtra
+	dw PonytaAnimationExtra
+	dw RapidashAnimationExtra
+	dw RhyhornAnimationExtra
+	dw RhydonAnimationExtra
+	dw RhyperiorAnimationExtra
+	dw MurkrowAnimationExtra
+	dw HonchkrowAnimationExtra
+	dw HoundourAnimationExtra
+	dw HoundoomAnimationExtra
+	dw SlugmaAnimationExtra
+	dw MagcargoAnimationExtra
+	dw SneaselAnimationExtra
+	dw WeavileAnimationExtra
+	dw SneaslerAnimationExtra
+	dw MisdreavusAnimationExtra
+	dw MismagiusAnimationExtra
 	dw PorygonAnimationExtra
 	dw Porygon2AnimationExtra
-	dw Porygon_ZAnimationExtra
+	dw Porygon_zAnimationExtra
+	dw ChanseyAnimationExtra
+	dw BlisseyAnimationExtra
+	dw LaprasAnimationExtra
 	dw SnorlaxAnimationExtra
 	dw ChikoritaAnimationExtra
 	dw BayleefAnimationExtra
@@ -140,64 +192,6 @@ AnimationExtraPointers:
 	dw TotodileAnimationExtra
 	dw CroconawAnimationExtra
 	dw FeraligatrAnimationExtra
-	dw FurretAnimationExtra
-	dw LedianAnimationExtra
-	dw AriadosAnimationExtra
-	dw ChinchouAnimationExtra
-	dw LanturnAnimationExtra
-	dw TogeticAnimationExtra
-	dw TogekissAnimationExtra
-	dw NatuAnimationExtra
-	dw XatuAnimationExtra
-	dw MareepAnimationExtra
-	dw FlaaffyAnimationExtra
-	dw AmpharosAnimationExtra
-	dw MarillAnimationExtra
-	dw AzumarillAnimationExtra
-	dw SudowoodoAnimationExtra
-	dw SkiploomAnimationExtra
-	dw JumpluffAnimationExtra
-	dw SunfloraAnimationExtra
-	dw WooperAnimationExtra
-	dw QuagsireAnimationExtra
-	dw MurkrowAnimationExtra
-	dw HonchkrowAnimationExtra
-	dw MisdreavusAnimationExtra
-	dw MismagiusAnimationExtra
-	dw YanmaAnimationExtra
-	dw YanmegaAnimationExtra
-	dw UnownAnimationExtra
-	dw GirafarigAnimationExtra
-	dw PinecoAnimationExtra
-	dw ForretressAnimationExtra
-	dw DunsparceAnimationExtra
-	dw GligarAnimationExtra
-	dw GliscorAnimationExtra
-	dw SnubbullAnimationExtra
-	dw GranbullAnimationExtra
-	dw QwilfishAnimationExtra
-	dw OverqwilAnimationExtra
-	dw ShuckleAnimationExtra
-	dw HeracrossAnimationExtra
-	dw SneaselAnimationExtra
-	dw WeavileAnimationExtra
-	dw SneaslerAnimationExtra
-	dw TeddiursaAnimationExtra
-	dw UrsaringAnimationExtra
-	dw UrsalunaAnimationExtra
-	dw MagcargoAnimationExtra
-	dw PiloswineAnimationExtra
-	dw MamoswineAnimationExtra
-	dw CorsolaAnimationExtra
-	dw OctilleryAnimationExtra
-	dw MantineAnimationExtra
-	dw SkarmoryAnimationExtra
-	dw HoundourAnimationExtra
-	dw HoundoomAnimationExtra
-	dw DonphanAnimationExtra
-	dw StantlerAnimationExtra
-	dw WyrdeerAnimationExtra
-	dw MiltankAnimationExtra
 	dw GrotleAnimationExtra
 	dw TorterraAnimationExtra
 	dw MonfernoAnimationExtra
@@ -206,41 +200,47 @@ AnimationExtraPointers:
 	dw EmpoleonAnimationExtra
 	dw StaraviaAnimationExtra
 	dw StaraptorAnimationExtra
+	dw ShinxAnimationExtra
 	dw LuxioAnimationExtra
 	dw LuxrayAnimationExtra
-	dw RoseliaAnimationExtra
-	dw RoseradeAnimationExtra
+	dw CranidosAnimationExtra
 	dw RampardosAnimationExtra
+	dw ShieldonAnimationExtra
 	dw BastiodonAnimationExtra
 	dw VespiquenAnimationExtra
-	dw AmbipomAnimationExtra
+	dw DrifloonAnimationExtra
 	dw DrifblimAnimationExtra
-	dw LopunnyAnimationExtra
-	dw SkuntankAnimationExtra
 	dw BronzorAnimationExtra
 	dw BronzongAnimationExtra
 	dw SpiritombAnimationExtra
-	dw GabiteAnimationExtra
-	dw GarchompAnimationExtra
 	dw LucarioAnimationExtra
+	dw HippopotasAnimationExtra
 	dw HippowdonAnimationExtra
-	dw DrapionAnimationExtra
+	dw CroagunkAnimationExtra
 	dw ToxicroakAnimationExtra
 	dw SnoverAnimationExtra
 	dw AbomasnowAnimationExtra
+	dw DuskullAnimationExtra
 	dw DusclopsAnimationExtra
 	dw DusknoirAnimationExtra
 	dw FroslassAnimationExtra
 	dw RotomAnimationExtra
-	dw HavaluggAnimationExtra
+	dw BergmiteAnimationExtra
+	dw AvaluggAnimationExtra
 	dw BasculegionAnimationExtra
-	dw HbraviaryAnimationExtra
+	dw BraviaryAnimationExtra
+	dw RaltsAnimationExtra
 	dw KirliaAnimationExtra
 	dw GardevoirAnimationExtra
 	dw GalladeAnimationExtra
-	dw HsliggooAnimationExtra
-	dw HgoodraAnimationExtra
-	dw HzoroarkAnimationExtra
+	dw GoomyAnimationExtra
+	dw SliggooAnimationExtra
+	dw GoodraAnimationExtra
+	dw ZoruaAnimationExtra
+	dw ZoroarkAnimationExtra
+	dw GibleAnimationExtra
+	dw GabiteAnimationExtra
+	dw GarchompAnimationExtra
 	dw DratiniAnimationExtra
 	dw DragonairAnimationExtra
 	dw DragoniteAnimationExtra
@@ -252,8 +252,9 @@ AnimationExtraPointers:
 	dw SuicuneAnimationExtra
 	dw HeatranAnimationExtra
 	dw LugiaAnimationExtra
-	dw Ho_OhAnimationExtra
+	dw Ho_ohAnimationExtra
 	dw CelebiAnimationExtra
+
 	assert_table_length NUM_POKEMON
 
 	dw EggAnimationExtra
@@ -286,9 +287,40 @@ AnimationExtraPointers:
 	dw UnownExclamationAnimationExtra
 	dw UnownQuestionAnimationExtra
 
-	dw PonytaGalarianAnimationExtra
-	dw RapidashGalarianAnimationExtra
-	dw VoltorbHisuianAnimationExtra
+	dw Raichu_alolanAnimationExtra
+	dw Vulpix_alolanAnimationExtra
+	dw Ninetales_alolanAnimationExtra
+	dw Geodude_alolanAnimationExtra
+	dw Graveler_alolanAnimationExtra
+	dw Golem_alolanAnimationExtra
+	dw Grimer_alolanAnimationExtra
+	dw Muk_alolanAnimationExtra
+	dw Exeggutor_alolanAnimationExtra
+
+
+	dw Ponyta_galarianAnimationExtra
+	dw Rapidash_galarianAnimationExtra
+	dw Slowpoke_galarianAnimationExtra
+	dw Slowbro_galarianAnimationExtra
+	dw Slowking_galarianAnimationExtra
+	dw Weezing_galarianAnimationExtra
+	dw Corsola_galarianAnimationExtra
+
+
+	dw Growlithe_hisuianAnimationExtra
+	dw Arcanine_hisuianAnimationExtra
+	dw Voltorb_hisuianAnimationExtra
+	dw Electrode_hisuianAnimationExtra
+	dw Typhlosion_hisuianAnimationExtra
+	dw Qwilfish_hisuianAnimationExtra
+	dw Sneasel_hisuianAnimationExtra
+	dw Samurott_hisuianAnimationExtra
+	dw Decidueye_hisuianAnimationExtra
+
+
+	dw Noctowl_immortalAnimationExtra
+	dw Ursaluna_bloodmoonAnimationExtra
+
 
 	assert_table_length NUM_UNIQUE_POKEMON
 
