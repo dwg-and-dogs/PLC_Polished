@@ -87,8 +87,8 @@ LandingDormsNPC2Text:
 LandingDormsNPC3Text:
 	text "Don't try to use"
 	line "a map to find"
-	para "your way in the"
-	line "whirlpools."
+	para "your way amidst"
+	line "the vortices!"
 	
 	para "Our histories are"
 	line "full of fools who"

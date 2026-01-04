@@ -152,7 +152,7 @@ CaptainsLog09Text:
 	para "Took heavy"
 	line "losses getting"
 	para "through the"
-	line "whirlpools and"
+	line "vortices and"
 	para "now crash inside"
 	line "this cave."
 	

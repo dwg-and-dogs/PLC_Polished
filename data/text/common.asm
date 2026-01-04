@@ -3596,16 +3596,15 @@ SECTION "_HerbShopLadyIntroText", ROMX
 _HerbShopLadyIntroText::
 	text "Hello, dear."
 
-	para "I sell inexpensive"
-	line "herbal medicine."
-
-	para "They're good, but"
-	line "a trifle bitter."
-
-	para "Your #mon may"
-	line "not like them."
-
-	para "Hehehehe…"
+	para "My items can make"
+	line "your #mon grow"
+	para "more quickly, but"
+	line "they'll have half"
+	para "the speed as they"
+	line "normally do."
+	
+	para "Ironic, isn't it!"
+	
 	done
 
 SECTION "_HerbalLadyHowManyText", ROMX
