@@ -67,8 +67,9 @@ Text_MushroomQuestion:
 	line "tinymushroom?"
 
 	para "I would give you"
-	line "a fresh lemonade"
-	cont "from my garden."
+	line "Pink Lemonade I"
+	para "squeezed fresh"
+	line "from my garden."
 	done
 
 GivingLemonadeText:

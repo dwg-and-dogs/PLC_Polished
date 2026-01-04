@@ -446,7 +446,7 @@ GiveBrickPieceText:
 
 Text_NoLemonade:
 	text "You don't have"
-	line "any Lemonade?"
+	line "Pink Lemonade?"
 
 	para "That's too bad."
 	line "I'm so thirsty."
@@ -461,8 +461,8 @@ ThirstyCamperIntroText:
 Text_LemonadeQuestion:
 	text "Hey, you wouldn't"
 	line "happen to have a"
-	para "Lemonade, would"
-	line "you?"
+	para "Pink Lemonade,"
+	line "would you?"
 
 	para "I found this old"
 	line "Brick Piece while"
