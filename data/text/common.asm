@@ -2163,13 +2163,13 @@ SECTION "_UseWhirlpoolText", ROMX
 _UseWhirlpoolText::
 	text_ram wStringBuffer2
 	text " used"
-	line "Whirlpool!"
+	line "Vortex!"
 	prompt
 
 SECTION "_MayPassWhirlpoolText", ROMX
 _MayPassWhirlpoolText::
 	text "It's a vicious"
-	line "whirlpool!"
+	line "Vortex!"
 
 	para "A #mon may be"
 	line "able to pass it."
@@ -2177,11 +2177,11 @@ _MayPassWhirlpoolText::
 
 SECTION "_AskWhirlpoolText", ROMX
 _AskWhirlpoolText::
-	text "A whirlpool is in"
+	text "A Vortex is in"
 	line "the way."
 
 	para "Want to use"
-	line "Whirlpool?"
+	line "Vortex?"
 	done
 
 SECTION "_UseHeadbuttText", ROMX

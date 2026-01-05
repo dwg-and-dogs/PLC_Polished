@@ -302,8 +302,8 @@ Route35KimonoGirlScript:
 .PhysicalOrSpecialMenuData:
 	db STATICMENU_CURSOR | STATICMENU_WRAP
 	db 4 ; items
-	db "Physical@"
-	db "Special@"
+	db "Types 1@"
+	db "Types 2@"
 	db "Maximum@"
 	db "Cancel@"
 
