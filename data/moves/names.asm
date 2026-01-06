@@ -254,7 +254,7 @@ if DEF(FAITHFUL)
 else
 	li "Brick Break"
 endc
-	li "Whirlpool"
+	li "Vortex"
 	li "Dark Pulse"
 	li "Moonblast"
 	li "Play Rough"

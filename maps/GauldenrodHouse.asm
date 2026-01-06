@@ -30,6 +30,58 @@ GauldenrodHouseTradeQuestTrigger:
 
 	
 LemonadeHouseLadyScript:
+	checkevent EVENT_GOT_MINT_LEAF
+	iftrue .GotMintLeaf
+	setmapscene AZALEA_POKECENTER_1F, $0 
+.GotMintLeaf:
+	checkevent EVENT_GAVE_TINYMUSHROOM
+	iftrue .GotTinyMushroom
+	setmapscene ANARRES_HOUSE, $0
+.GotTinyMushroom: 
+	checkevent EVENT_GOT_LEMONADE_FROM_LADY
+	iftrue .GotLemonade
+	setmapscene GAULDENROD_HOUSE, $0
+.GotLemonade:
+	checkevent EVENT_TRADED_BRICK_PIECE
+	iftrue .GotBrick
+	setmapscene NATIONAL_PARK, $0
+.GotBrick:
+	checkevent EVENT_TRADED_RAGECANDYBAR
+	iftrue .GotRagecandybar
+	setmapscene GOLDENROD_MUSEUM_2F, $0
+.GotRagecandybar:
+	checkevent EVENT_GAVE_BIG_MUSHROOM
+	iftrue .GotMushroom
+	setmapscene VIOLET_NICKNAME_SPEECH_HOUSE, $0
+.GotMushroom:
+	checkevent EVENT_GAVE_LITEBLUEMAIL
+	iftrue .GotBlueMail
+	setmapscene ECRUTEAK_DESTINY_KNOT_HOUSE, $0
+.GotBlueMail:
+	checkevent EVENT_GOT_GOLD_LEAF
+	iftrue .GotGoldLeaf
+	setmapscene ECRUTEAK_CHERISH_BALL_HOUSE, $0
+.GotGoldLeaf:
+	checkevent EVENT_GOT_PEARL_OLIVINE
+	iftrue .GotPearl
+	setmapscene OLIVINE_PUNISHMENT_SPEECH_HOUSE, $0
+.GotPearl:
+	checkevent EVENT_GOT_SURF_MAIL
+	iftrue .GotSurfMail
+	setmapscene OLIVINE_CAFE, $0
+.GotSurfMail:
+	checkevent EVENT_GOT_OLD_AMBER
+	iftrue .GotOldAmber
+	setmapscene MAHOGANY_TOWN, $0
+.GotOldAmber:
+	checkevent EVENT_GOT_SWEET_HONEY
+	iftrue .GotHoney
+	setmapscene EERIE_HAMLET, $0
+.GotHoney:
+	checkevent EVENT_GAVE_MASTER_BALL
+	iftrue .DoneWithChecks
+	setmapscene GAULDENROD_GUILD, $0
+.DoneWithChecks:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_LEMONADE_FROM_LADY
@@ -67,8 +119,9 @@ Text_MushroomQuestion:
 	line "tinymushroom?"
 
 	para "I would give you"
-	line "a fresh lemonade"
-	cont "from my garden."
+	line "Pink Lemonade I"
+	para "squeezed fresh"
+	line "from my garden."
 	done
 
 GivingLemonadeText:

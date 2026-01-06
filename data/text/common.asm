@@ -2163,13 +2163,13 @@ SECTION "_UseWhirlpoolText", ROMX
 _UseWhirlpoolText::
 	text_ram wStringBuffer2
 	text " used"
-	line "Whirlpool!"
+	line "Vortex!"
 	prompt
 
 SECTION "_MayPassWhirlpoolText", ROMX
 _MayPassWhirlpoolText::
 	text "It's a vicious"
-	line "whirlpool!"
+	line "Vortex!"
 
 	para "A #mon may be"
 	line "able to pass it."
@@ -2177,11 +2177,11 @@ _MayPassWhirlpoolText::
 
 SECTION "_AskWhirlpoolText", ROMX
 _AskWhirlpoolText::
-	text "A whirlpool is in"
+	text "A Vortex is in"
 	line "the way."
 
 	para "Want to use"
-	line "Whirlpool?"
+	line "Vortex?"
 	done
 
 SECTION "_UseHeadbuttText", ROMX
@@ -3596,16 +3596,15 @@ SECTION "_HerbShopLadyIntroText", ROMX
 _HerbShopLadyIntroText::
 	text "Hello, dear."
 
-	para "I sell inexpensive"
-	line "herbal medicine."
-
-	para "They're good, but"
-	line "a trifle bitter."
-
-	para "Your #mon may"
-	line "not like them."
-
-	para "Hehehehe…"
+	para "My items can make"
+	line "your #mon grow"
+	para "more quickly, but"
+	line "they'll have half"
+	para "the speed as they"
+	line "normally do."
+	
+	para "Ironic, isn't it!"
+	
 	done
 
 SECTION "_HerbalLadyHowManyText", ROMX

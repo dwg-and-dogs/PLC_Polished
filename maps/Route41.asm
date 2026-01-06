@@ -69,7 +69,11 @@ Route41SageScript:
 
 Route41SageImpressedText:
 	text "Who approaches"
-	line "Lugia's islands?"
+	line "Lugia's islands,"
+	
+	para "with Whirlpools"
+	line "sustained by her"
+	cont "Psychic power?"
 	
 	para "..."
 	
@@ -132,6 +136,7 @@ Route41TimeTravel:
 Route41WaitText:
 	text "Egad! What is"
 	line "happening to us?"
+	
 	done
 
 GenericTrainerSwimmermMathew:

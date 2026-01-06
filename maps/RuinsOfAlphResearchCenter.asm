@@ -40,7 +40,7 @@ RuinsOfAlphResearchCenterScientist3Script:
 	
 	para "There's a mini"
 	line "tremor causing"
-	cont "that whirlpool."
+	cont "that vortex."
 	
 	para "My instruments go"
 	line "haywire near it."
