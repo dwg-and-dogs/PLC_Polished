@@ -136,9 +136,9 @@ AzaleaPokeCenter1FPokefanScript:
 	verbosegivekeyitem MINT_LEAF_K
 	setevent EVENT_GOT_MINT_LEAF
 ; reset events 
-	checkevent EVENT_GOT_MINT_LEAF
-	iftrue .GotMintLeaf
-	setmapscene AZALEA_POKECENTER_1F, $0 
+;	checkevent EVENT_GOT_MINT_LEAF
+;	iftrue .GotMintLeaf
+;	setmapscene AZALEA_POKECENTER_1F, $0 
 .GotMintLeaf:
 	checkevent EVENT_GAVE_TINYMUSHROOM
 	iftrue .GotTinyMushroom
