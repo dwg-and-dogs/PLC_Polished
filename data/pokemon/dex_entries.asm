@@ -1,7 +1,9 @@
 INCLUDE "constants.asm" ; no change for the variant 
 
 ; to add to data/pokemon/dex_entries: 
-; hoothoot, sentret, ledyba, spinarak, dudunsparce, bellsprout, oddish, nidoran, koffing, aipom, farigiraf, tentacool, remoraid, swinub, phanpy, slugma, shinx, cranidos, shieldon, drifloon, hippopotas, croagunk, duskull, bergmite, ralts, goomy, zorua, zoroark, gible
+
+; cranidos, shieldon, drifloon, hippopotas, croagunk, duskull, bergmite, 
+; ralts, goomy, zorua, zoroark, gible
 
 
 SECTION "CyndaquilPokedexEntry", ROMX
@@ -18,15 +20,15 @@ INCLUDE "data/pokemon/dex_entries/157.asm"
 
 SECTION "RowletPokedexEntry", ROMX
 RowletPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/302.asm";;
+INCLUDE "data/pokemon/dex_entries/302.asm"
 
 SECTION "DartrixPokedexEntry", ROMX
 DartrixPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/303.asm";;
+INCLUDE "data/pokemon/dex_entries/303.asm"
 
 SECTION "DecidueyePokedexEntry", ROMX
 DecidueyePokedexEntry::
-INCLUDE "data/pokemon/dex_entries/304.asm";;
+INCLUDE "data/pokemon/dex_entries/304.asm"
 
 SECTION "OshawottPokedexEntry", ROMX
 OshawottPokedexEntry::
@@ -46,19 +48,19 @@ INCLUDE "data/pokemon/dex_entries/016.asm";;
 
 SECTION "PidgeottoPokedexEntry", ROMX
 PidgeottoPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/017.asm";;
+INCLUDE "data/pokemon/dex_entries/017.asm"
 
 SECTION "PidgeotPokedexEntry", ROMX
 PidgeotPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/018.asm";;
+INCLUDE "data/pokemon/dex_entries/018.asm"
 
 SECTION "HoothootPokedexEntry", ROMX
 HoothootPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/hoothoot.asm";;
+INCLUDE "data/pokemon/dex_entries/163.asm"
 
 SECTION "NoctowlPokedexEntry", ROMX
 NoctowlPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/019.asm";;
+INCLUDE "data/pokemon/dex_entries/019.asm"; new 
 
 SECTION "PikachuPokedexEntry", ROMX
 PikachuPokedexEntry::
@@ -638,7 +640,7 @@ INCLUDE "data/pokemon/dex_entries/206.asm"
 
 SECTION "DudunsparcePokedexEntry", ROMX
 DudunsparcePokedexEntry::
-INCLUDE "data/pokemon/dex_entries/dudunsparce.asm"
+INCLUDE "data/pokemon/dex_entries/dudunsparce.asm" ; done  
 
 SECTION "GligarPokedexEntry", ROMX
 GligarPokedexEntry::
@@ -799,7 +801,6 @@ INCLUDE "data/pokemon/dex_entries/327.asm";;
 SECTION "ShinxPokedexEntry", ROMX
 ShinxPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/shinx.asm"
-
 
 SECTION "LuxioPokedexEntry", ROMX
 LuxioPokedexEntry::

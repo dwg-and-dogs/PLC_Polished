@@ -11,11 +11,11 @@
 ;			egg_moves.asm-> todo, eventually 
 ; - EvolutionMoves (see data/pokemon/evolution_moves.asm) -> DONE 
 ; - PokemonCries (see data/pokemon/cries.asm)-> done
-; - IconPointers (see data/pokemon/menu_icon_pointers.asm) -> done with TODOs
-; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)-> done with TODOs
+; - IconPointers (see data/pokemon/menu_icon_pointers.asm) -> done
+; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)-> done
 ; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)-> done
 ; - BackPicPointers (see data/pokemon/back_pic_pointers.asm)-> done 
-; - PokemonPalettes (see data/pokemon/palettes.asm) --> done , may have an error related to hgss variants not in the table? 
+; - PokemonPalettes (see data/pokemon/palettes.asm) --> done , may have an error related to hgss variants not in the table, Watch out for it  
 ; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)-> done 
 ; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)-> done 
 ; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)-> done 
