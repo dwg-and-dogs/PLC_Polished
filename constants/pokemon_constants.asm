@@ -10,7 +10,7 @@
 ; - EggMovePointers (see data/pokemon/egg_move_pointers.asm) -> done 
 ;			egg_moves.asm-> todo, eventually 
 ; - EvolutionMoves (see data/pokemon/evolution_moves.asm) -> DONE 
-; - PokemonCries (see data/pokemon/cries.asm)-> done with TODOs
+; - PokemonCries (see data/pokemon/cries.asm)-> done
 ; - IconPointers (see data/pokemon/menu_icon_pointers.asm) -> done with TODOs
 ; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)-> done with TODOs
 ; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)-> done
@@ -410,4 +410,4 @@ NUM_EXT_SPECIES EQU const_value - FIRST_EXT_MON ;
 ; these constants include EGG as a species.
 NUM_UNIQUE_POKEMON EQU const_value - 1 ; 
 NUM_EXT_POKEMON EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS ; includes variants  
-NUM_SPECIES EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS - NUM_VARIANT_FORMS ; 
+NUM_SPECIES EQU NUM_UNIQUE_POKEMON - NUM_COSMETIC_FORMS - NUM_VARIANT_FORMS 
