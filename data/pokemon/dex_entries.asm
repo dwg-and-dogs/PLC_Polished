@@ -2,8 +2,7 @@ INCLUDE "constants.asm" ; no change for the variant
 
 ; to add to data/pokemon/dex_entries: 
 
-; cranidos, shieldon, drifloon, hippopotas, croagunk, duskull, bergmite, 
-; ralts, goomy, zorua, zoroark, gible
+; duskull, bergmite, ralts, goomy, zorua, zoroark, gible
 
 
 SECTION "CyndaquilPokedexEntry", ROMX
@@ -821,7 +820,6 @@ INCLUDE "data/pokemon/dex_entries/332.asm"
 SECTION "ShieldonPokedexEntry", ROMX
 ShieldonPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/shieldon.asm";;
-
 
 SECTION "BastiodonPokedexEntry", ROMX
 BastiodonPokedexEntry::
