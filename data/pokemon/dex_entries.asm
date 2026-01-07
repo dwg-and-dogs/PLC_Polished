@@ -2,7 +2,7 @@ INCLUDE "constants.asm" ; no change for the variant
 
 ; to add to data/pokemon/dex_entries: 
 
-; duskull, bergmite, ralts, goomy, zorua, zoroark, gible
+;   gible
 
 
 SECTION "CyndaquilPokedexEntry", ROMX
@@ -857,8 +857,8 @@ SECTION "SpiritombPokedexEntry", ROMX
 SpiritombPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/341.asm"
 
-SECTION "GabitePokedexEntry", ROMX
-GabitePokedexEntry::
+SECTION "GiblePokedexEntry", ROMX
+GiblePokedexEntry::
 INCLUDE "data/pokemon/dex_entries/gible.asm"
 
 SECTION "GabitePokedexEntry", ROMX
@@ -950,7 +950,7 @@ GalladePokedexEntry::
 INCLUDE "data/pokemon/dex_entries/359.asm";;
 
 SECTION "GoomyPokedexEntry", ROMX
-SliggooPokedexEntry::
+GoomyPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/goomy.asm";;
 
 SECTION "SliggooPokedexEntry", ROMX

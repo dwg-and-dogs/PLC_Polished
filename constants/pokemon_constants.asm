@@ -21,7 +21,7 @@
 ; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)-> done 
 ; - ValidPokemonLevels (see data/pokemon/valid_levels.asm)-> done 
 ; 			valid_variants.asm-> done 
-; data/pokemon/dex_entries: todo
+; data/pokemon/dex_entries: todo, 7 remain
 ; gfx files: 
 ; - Footprints (see gfx/pokemon/footprints.asm)-> done 
 ; 			gfx/pokemon/anims.asm-> done 
