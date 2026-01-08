@@ -3,6 +3,7 @@
 ; data files: 
 ; - PokemonNames (see data/pokemon/names.asm) -> done 
 ; - BaseData (see data/pokemon/base_stats.asm) -> done 
+; 		; todos noted in the data/pokemon/base stats
 ; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm) -> done 
 ;			fury_attack_users.asm-> done 
 ;			legendary_mons.asm-> done 
@@ -12,18 +13,21 @@
 ; - EvolutionMoves (see data/pokemon/evolution_moves.asm) -> DONE 
 ; - PokemonCries (see data/pokemon/cries.asm)-> done
 ; - IconPointers (see data/pokemon/menu_icon_pointers.asm) -> done
+; 			need todo add all the new icons and rename all the hforms 
 ; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)-> done
 ; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)-> done
+; 			need todo add all the new icons and rename all the hforms 
 ; - BackPicPointers (see data/pokemon/back_pic_pointers.asm)-> done 
-; - PokemonPalettes (see data/pokemon/palettes.asm) --> done , may have an error related to hgss variants not in the table, Watch out for it  
+; - PokemonPalettes (see data/pokemon/palettes.asm) --> done , may have an error related to hgss variants not in the table?, watch out for it  
 ; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)-> done 
 ; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)-> done 
 ; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)-> done 
 ; - ValidPokemonLevels (see data/pokemon/valid_levels.asm)-> done 
 ; 			valid_variants.asm-> done 
-; data/pokemon/dex_entries: todo, 7 remain
+; data/pokemon/dex_entries: done, need to check them all after building 
 ; gfx files: 
-; - Footprints (see gfx/pokemon/footprints.asm)-> done 
+; - Footprints (see gfx/pokemon/footprints.asm)-> done,
+; footprint pngs: todo
 ; 			gfx/pokemon/anims.asm-> done 
 ; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)->done, gfx/pokemon/extra_pointers.asm-> done
 		; gfx/pokemon/extras.asm->done 
@@ -34,7 +38,7 @@
 ; - FramesPointers (see gfx/pokemon/frame_pointers.asm)->
 ;  pic_animations.asm->, 
 ; kanto_frames.asm and johto_frames.asm-> 
-; gfx/pics.asm-->todo
+; gfx/pics.asm-->done
 	const_def 1
 	const CYNDAQUIL       ; 01
 	const QUILAVA         ; 02
