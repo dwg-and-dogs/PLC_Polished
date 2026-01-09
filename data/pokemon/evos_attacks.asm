@@ -1840,7 +1840,6 @@ SteelixEvosAttacks:
 
 VoltorbEvosAttacks:
 	db EVOLVE_LEVEL, 25, ELECTRODE
-	db EVOLVE_ITEM, ODD_SOUVENIR,  H__ELECTRODE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, THUNDERSHOCK ; Let's Go move
@@ -5029,29 +5028,35 @@ GalladeEvosAttacks:
 	db 0 ; no more levelups
 
 GoomyEvosAttacks:
-	db EVOLVE_LEVEL, 50, H__GOODRA
+	db EVOLVE_LEVEL, 25, SLIGGOO ; reduced 
 	db 0 ; no more Evolutions
-	db 1, WATER_PULSE
-	db 1, PROTECT
-	db 1, IRON_HEAD
-	db 1, DRAGON_PULSE
+	db 1, TACKLE
+	db 1, DEFENSE_CURL
+	db 10, DRAGONBREATH
+	db 15, PROTECT
+	db 20, WATER_PULSE
+	db 25, RAIN_DANCE
+	db 30, DRAGON_PULSE
+	db 35, CURSE
 	db 40, SCALD
-	db 43, CURSE
-	db 46, IRON_TAIL
+	db 45, BODY_SLAM
 	db 51, HYDRO_PUMP
 	db 53, OUTRAGE
-	db 55, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 SliggooEvosAttacks:
-	db EVOLVE_LEVEL, 50, H__GOODRA
+	db EVOLVE_LEVEL, 50, GOODRA
 	db 0 ; no more Evolutions
-	db 1, WATER_PULSE
-	db 1, PROTECT
 	db 1, IRON_HEAD
-	db 1, DRAGON_PULSE
+	db 1, TACKLE
+	db 1, DEFENSE_CURL
+	db 10, DRAGONBREATH
+	db 15, PROTECT
+	db 20, WATER_PULSE
+	db 25, RAIN_DANCE
+	db 30, DRAGON_PULSE
+	db 35, CURSE
 	db 40, SCALD
-	db 43, CURSE
 	db 46, IRON_TAIL
 	db 51, HYDRO_PUMP
 	db 53, OUTRAGE
@@ -5063,7 +5068,14 @@ GoodraEvosAttacks:
 	db 1, WATER_PULSE
 	db 1, PROTECT
 	db 1, IRON_HEAD
-	db 1, DRAGON_PULSE
+	db 1, DRAGON_PULSE	
+	db 10, DRAGONBREATH
+	db 15, PROTECT
+	db 20, WATER_PULSE
+	db 25, RAIN_DANCE
+	db 30, DRAGON_PULSE
+	db 35, CURSE
+	db 40, SCALD	
 	db 40, SCALD
 	db 43, CURSE
 	db 46, IRON_TAIL
