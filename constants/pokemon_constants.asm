@@ -3,7 +3,7 @@
 ; data files: 
 ; - PokemonNames (see data/pokemon/names.asm) -> done 
 ; - BaseData (see data/pokemon/base_stats.asm) -> done 
-; 		; todos noted in the data/pokemon/base stats
+; 		; eventually need todo egg cycles and egg groups for anything not native polished 
 ; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm) -> done 
 ;			fury_attack_users.asm-> done 
 ;			legendary_mons.asm-> done 
@@ -39,6 +39,9 @@
 ;  pic_animations.asm->, 
 ; kanto_frames.asm and johto_frames.asm-> 
 ; gfx/pics.asm-->done
+
+; next set of todos: 
+; 
 	const_def 1
 	const CYNDAQUIL       ; 01
 	const QUILAVA         ; 02

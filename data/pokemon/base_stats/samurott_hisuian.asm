@@ -7,8 +7,8 @@
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/hsamurott/front.dimensions"
-	abilities_for ARCANINE, TORRENT, SHELL_ARMOR, TECHNICIAN
+	INCBIN "gfx/pokemon/samurott_hisuian/front.dimensions"
+	abilities_for SAMUROTT_HISUIAN, TORRENT, SHELL_ARMOR, TECHNICIAN
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

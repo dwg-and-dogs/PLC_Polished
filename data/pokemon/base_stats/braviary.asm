@@ -7,8 +7,8 @@
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/hbraviary/front.dimensions"
-	abilities_for H__BRAVIARY, KEEN_EYE, KEEN_EYE, SHEER_FORCE
+	INCBIN "gfx/pokemon/braviary/front.dimensions"
+	abilities_for BRAVIARY, KEEN_EYE, KEEN_EYE, SHEER_FORCE
 	db GROWTH_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

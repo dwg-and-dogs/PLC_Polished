@@ -7,8 +7,8 @@
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F25, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/harcanine/front.dimensions"
-	abilities_for H__ARCANINE, INTIMIDATE, FLASH_FIRE, JUSTIFIED
+	INCBIN "gfx/pokemon/arcanine_hisuian/front.dimensions"
+	abilities_for ARCANINE_HISUIAN, INTIMIDATE, FLASH_FIRE, JUSTIFIED
 	db GROWTH_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

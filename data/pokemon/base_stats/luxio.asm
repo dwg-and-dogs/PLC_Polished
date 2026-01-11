@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 15 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/luxio/front.dimensions"
-	abilities_for LUXIO, INTIMIDATE, INTIMIDATE, RIVALRY
+	abilities_for LUXIO, RIVALRY, INTIMIDATE, GUTS
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

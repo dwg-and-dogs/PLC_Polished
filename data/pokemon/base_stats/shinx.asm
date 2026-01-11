@@ -2,17 +2,17 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type
-	db 120 ; catch rate
-	db 127 ; base exp
+	db 235 ; catch rate
+	db 53 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_F50, 15 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/luxio/front.dimensions"
-	abilities_for LUXIO, INTIMIDATE, INTIMIDATE, RIVALRY
+	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
+	INCBIN "gfx/pokemon/shinx/front.dimensions"
+	abilities_for SHINX, RIVALRY, INTIMIDATE, GUTS
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 
-	ev_yield   0,   2,   0,   0,   0,   0
+	ev_yield   0,   1,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset

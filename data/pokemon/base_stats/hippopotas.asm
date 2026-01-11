@@ -1,4 +1,4 @@
-	db 108, 112, 118,  47,  68,  72 ; 455 BST
+	db 68, 72, 78,  32,  38,  42
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, GROUND ; type
@@ -7,8 +7,8 @@
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/hippowdon/front.dimensions"
-	abilities_for HIPPOWDON, SAND_STREAM, SAND_STREAM, SAND_FORCE
+	INCBIN "gfx/pokemon/hippopotas/front.dimensions"
+	abilities_for HIPPOPOTAS, SAND_STREAM, SAND_STREAM, SAND_FORCE
 	db GROWTH_SLOW ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
 

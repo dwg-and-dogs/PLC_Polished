@@ -1,4 +1,4 @@
-	db  55,  47,  52,  41,  40,  40 ; 275 BST
+	db  50,  52,  46,  45,  40,  40 ; 273 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, POISON ; type
@@ -6,9 +6,9 @@
 	db 59 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_F100, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/nidoran_f/front.dimensions"
-	abilities_for NIDORAN_F, POISON_POINT, RIVALRY, HUSTLE
+	dn GENDER_UNKNOWN, 3 ; gender ratio, step cycles to hatch
+	INCBIN "gfx/pokemon/nidoran/front.dimensions"
+	abilities_for NIDORAN, POISON_POINT, POISON_POINT, HUSTLE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_MONSTER, EGG_GROUND ; egg groups
 

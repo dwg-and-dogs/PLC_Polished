@@ -1,4 +1,4 @@
-	db  60,  50,  70, 150,  80,  80 ; 555 BST
+	db  60,  50,  70, 150,  80,  80 ; 490 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, GRASS ; type
@@ -7,8 +7,8 @@
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_UNKNOWN, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/helectrode/front.dimensions"
-	abilities_for H__ELECTRODE, STATIC, STATIC, AFTERMATH
+	INCBIN "gfx/pokemon/electrode_hisuian/front.dimensions"
+	abilities_for ELECTRODE_HISUIAN, STATIC, STATIC, AFTERMATH
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

@@ -776,7 +776,7 @@ ParasectEvosAttacks:
 	db 0 ; no more level-up moves
 	
 MankeyEvosAttacks:
-	db EVOLVE_LEVEL, 19, PRIMEAPE
+	db EVOLVE_LEVEL, 24, PRIMEAPE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LOW_KICK
@@ -992,17 +992,17 @@ PolitoedEvosAttacks:
 	db 0 ; no more level-up moves
 
 AbraEvosAttacks:
-	db EVOLVE_LEVEL, 12, KADABRA
+	db EVOLVE_LEVEL, 15, KADABRA
 	db 0 ; no more evolutions
-	db 1, PSYBEAM
+	db 1, CONFUSION
 	db 0 ; no more level-up moves
 
 KadabraEvosAttacks:
 	db EVOLVE_LEVEL, 40, ALAKAZAM
 	db 0 ; no more evolutions
-	db 1, PSYBEAM
+	db 1, CONFUSION
 	db 1, FORESIGHT ; evolution move
-	db 16, CONFUSION
+	db 16, PSYBEAM
 	db 18, DISABLE
 	db 21, PSYBEAM
 	db 23, NIGHT_SHADE ; Miracle Eye → Let's Go move
@@ -1153,7 +1153,7 @@ VictreebelEvosAttacks:
 	db 0 ; no more level-up moves
 
 TentacoolEvosAttacks:
-	db EVOLVE_LEVEL, 30, TENTACRUEL
+	db EVOLVE_LEVEL, 28, TENTACRUEL
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 4, SUPERSONIC
@@ -1280,7 +1280,7 @@ GeodudeAlolanEvosAttacks:
 	db 0 ; no more level-up moves
 
 GravelerAlolanEvosAttacks:
-	db EVOLVE_EVS, MON_DEF_EV, GOLEM
+	db EVOLVE_LEVEL, 40, GOLEM
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
@@ -1342,7 +1342,7 @@ PonytaEvosAttacks:
 
 
 PonytaGalarianEvosAttacks:
-	db EVOLVE_LEVEL, 40, RAPIDASH
+	db EVOLVE_LEVEL, 25, RAPIDASH
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -1404,7 +1404,7 @@ RapidashGalarianEvosAttacks:
 
 SlowpokeEvosAttacks:
 	db EVOLVE_HOLDING, KINGS_ROCK, SLOWKING
-	db EVOLVE_LEVEL, 37, SLOWBRO
+	db EVOLVE_LEVEL, 31, SLOWBRO
 	db 0 ; no more evolutions
 	db 1, CURSE
 	db 1, TACKLE
@@ -1470,7 +1470,7 @@ SlowkingEvosAttacks:
 
 SlowpokeGalarianEvosAttacks:
 	db EVOLVE_HOLDING, KINGS_ROCK, SLOWKING
-	db EVOLVE_LEVEL, 37, SLOWBRO
+	db EVOLVE_LEVEL, 31, SLOWBRO
 	db 0 ; no more evolutions
 	db 1, CURSE
 	db 1, TACKLE
@@ -1644,7 +1644,7 @@ MukEvosAttacks:
 	db 0 ; no more level-up moves
 
 GrimerAlolanEvosAttacks:
-	db EVOLVE_LEVEL, 38, MUK
+	db EVOLVE_LEVEL, 25, MUK
 	db 0 ; no more evolutions
 	db 1, TACKLE ; Pound → similar move
 	db 1, ACID ; Poison Gas → new move
@@ -1988,7 +1988,7 @@ HitmontopEvosAttacks:
 	db 0 ; no more level-up moves
 
 KoffingEvosAttacks:
-	db EVOLVE_LEVEL, 35, WEEZING
+	db EVOLVE_LEVEL, 30, WEEZING
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, ACID ; Smog → new move
@@ -2044,7 +2044,7 @@ WeezingGalarianEvosAttacks:
 	db 0 ; no more level-up moves
 
 RhyhornEvosAttacks:
-	db EVOLVE_LEVEL, 25, RHYDON
+	db EVOLVE_LEVEL, 30, RHYDON
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, MUD_SLAP ; Sand-Attack → similar move
@@ -2770,7 +2770,7 @@ SnorlaxEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChikoritaEvosAttacks:
-	db EVOLVE_LEVEL, 12, BAYLEEF
+	db EVOLVE_LEVEL, 16, BAYLEEF
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2836,7 +2836,7 @@ MeganiumEvosAttacks:
 	db 0 ; no more level-up moves
 	
 TotodileEvosAttacks:
-	db EVOLVE_LEVEL, 12, CROCONAW
+	db EVOLVE_LEVEL, 18, CROCONAW
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -2858,7 +2858,7 @@ TotodileEvosAttacks:
 	db 0 ; no more level-up moves
 
 CroconawEvosAttacks:
-	db EVOLVE_LEVEL, 30, FERALIGATR
+	db EVOLVE_LEVEL, 32, FERALIGATR
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -2981,7 +2981,7 @@ LedianEvosAttacks:
 
 
 SpinarakEvosAttacks:
-	db EVOLVE_LEVEL, 18, ARIADOS
+	db EVOLVE_LEVEL, 14, ARIADOS
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, STRING_SHOT
@@ -3139,7 +3139,7 @@ XatuEvosAttacks:
 	db 0 ; no more level-up moves
 	
 MareepEvosAttacks:
-	db EVOLVE_LEVEL, 12, FLAAFFY
+	db EVOLVE_LEVEL, 16, FLAAFFY
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -3203,7 +3203,7 @@ AmpharosEvosAttacks:
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:
-	db EVOLVE_LEVEL, 12, AZUMARILL
+	db EVOLVE_LEVEL, 18, AZUMARILL
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 2, GROWL ; Tail Whip → new move
@@ -3712,7 +3712,7 @@ QwilfishEvosAttacks:
 	db 0 ; no more level-up moves
 
 QwilfishHisuianEvosAttacks:
-	db EVOLVE_ITEM, ODD_SOUVENIR,  OVERQWIL
+	db EVOLVE_MOVE, CRUNCH, OVERQWIL
 	db 0 ; no more evolutions	
 	db 1, AQUA_JET
 	db 1, SPIKES

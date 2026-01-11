@@ -7,8 +7,8 @@
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/havalugg/front.dimensions"
-	abilities_for H__AVALUGG, ICE_BODY, ICE_BODY, SLUSH_RUSH
+	INCBIN "gfx/pokemon/avalugg/front.dimensions"
+	abilities_for AVALUGG, ICE_BODY, ICE_BODY, SLUSH_RUSH
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

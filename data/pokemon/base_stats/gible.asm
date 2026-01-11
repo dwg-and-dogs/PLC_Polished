@@ -1,18 +1,18 @@
-	db  68,  90,  65,  82,  50,  55 ; 410 BST
+	db  58,  70,  45,  42,  40,  45 ; 410 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db DRAGON, GROUND ; type
 	db 45 ; catch rate
-	db 144 ; base exp
+	db 60 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/gabite/front.dimensions"
-	abilities_for GABITE, SAND_RUSH, SAND_RUSH, DRY_SKIN
+	INCBIN "gfx/pokemon/gible/front.dimensions"
+	abilities_for GIBLE, SAND_RUSH, SAND_RUSH, DRY_SKIN
 	db GROWTH_SLOW ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 
-	ev_yield   0,   2,   0,   0,   0,   0
+	ev_yield   0,   1,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset

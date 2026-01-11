@@ -1,18 +1,18 @@
-	db  95, 127, 184,  38,  34,  36 ; 555 BST
+	db  55, 69, 85,  28,  32,  35 ; 304 BST
 	;   hp  atk  def  spd  sat  sdf
 
-	db ICE, ROCK ; type
-	db 55 ; catch rate
-	db 180 ; base exp
-	db NO_ITEM ; item 1
+	db ICE, ICE ; type
+	db 190 ; catch rate
+	db 61 ; base exp
+	db NEVERMELTICE ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/havalugg/front.dimensions"
-	abilities_for H__AVALUGG, ICE_BODY, ICE_BODY, SLUSH_RUSH
+	INCBIN "gfx/pokemon/bergmite/front.dimensions"
+	abilities_for BERGMITE, OWN_TEMPO, ICE_BODY, SLUSH_RUSH
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 
-	ev_yield   0,   0,   2,   0,   0,   0
+	ev_yield   0,   0,   1,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset

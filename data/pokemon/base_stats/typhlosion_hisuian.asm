@@ -7,12 +7,12 @@
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/htyphlosion/front.dimensions"
-	abilities_for H__TYPHLOSION, BLAZE, FLASH_FIRE, WHITE_SMOKE
+	INCBIN "gfx/pokemon/typhlosion_hisuian/front.dimensions"
+	abilities_for TYPHLOSION_HISUIAN, BLAZE, FLASH_FIRE, WHITE_SMOKE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 
-	ev_yield   0,   2,   0,   0,   0,   0
+	ev_yield   0,   0,   0,   0,   3,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset

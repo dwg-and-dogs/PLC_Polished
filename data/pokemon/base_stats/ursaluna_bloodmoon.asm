@@ -1,14 +1,14 @@
-	db 130, 140, 105,  50,  45,  80 ; 550 BST
+	db 113,  70, 120,  52, 135,  65 ; 555 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, NORMAL ; type
 	db 20 ; catch rate
 	db 209 ; base exp
 	db ALWAYS_ITEM_2 ; item 1
-	db SITRUS_BERRY ; item 2
+	db LUM_BERRY ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/ursaluna/front.dimensions"
-	abilities_for URSALUNA, GUTS, QUICK_FEET, TOUGH_CLAWS
+	INCBIN "gfx/pokemon/ursaluna_bloodmoon/front.dimensions"
+	abilities_for URSALUNA_BLOODMOON, GUTS, QUICK_FEET, TOUGH_CLAWS
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 
