@@ -20,7 +20,7 @@ Front Sprites
 * Pokets3: H__Braviary
 * Nuukie: Wyrdeer, Roselia, Drifblim, Lopunny, Toxicroak, Snover, Abomasnow, Froslass, Kirlia, Gardevoir, Gallade
 * Pokewilds: Kleavor, Torterra, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott
-* DWG: H__Avalugg
+* DWG: Avalugg 
 * Sour Crystal: Quilava, Butterfree, Pidgeotto, Sunflora, Dragonite, Celebi, Xatu
 * utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Zoroark
 * Bloodless (Rosie): Overqwil, Ursaluna, H__Electrode, Sneasler, H__Arcanine
@@ -44,7 +44,7 @@ Back Sprites if different from above, using Deviantart handles:
 ## Pokemon Menu icons
 
 * Azure Keys: Dewott, Samurott, Drapion, Lucario, Roserade, Roselia, Drifblim, Toxicroak, Froslass, Gardevoir, Gallade, Oshawott
-* DWG: H__Arcanine, Hippowdon, Heatran, Grotle, Sneasler, Overqwil, Basculegion, H__Avalugg, Skuntank
+* DWG: H__Arcanine, Hippowdon, Heatran, Grotle, Sneasler, Overqwil, Basculegion, H__Avalugg, Skuntank, Bergmite
 * Pokewilds: wyrdeer, hgoodra, hzoroark, hsliggoo, spiritomb, jumpluff, monferno, infernape, prinplup, bastiodon, gabite, garchomp, rotom, dusclops, dusknoir, rampardos, ambipom, empoleon, lopunny, snover, abomasnow, hbraviary, htyphlosion, hsamurott, kleavor, luxio, luxray, helectrode, rowlet, hdecidueye, skiploom, stantler, staraptor, torterra, staravia, ursaluna, vespiquen
 
 ## Trainer Sprites

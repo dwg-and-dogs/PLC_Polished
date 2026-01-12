@@ -13,10 +13,10 @@
 ; - EvolutionMoves (see data/pokemon/evolution_moves.asm) -> DONE 
 ; - PokemonCries (see data/pokemon/cries.asm)-> done
 ; - IconPointers (see data/pokemon/menu_icon_pointers.asm) -> done
-; 			need todo add all the new icons and rename all the hforms 
+; 			may need todo for v3?  
 ; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)-> done
 ; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)-> done
-; 			need todo add all the new icons and rename all the hforms 
+; 			need todo add all the new pics front and back 
 ; - BackPicPointers (see data/pokemon/back_pic_pointers.asm)-> done 
 ; - PokemonPalettes (see data/pokemon/palettes.asm) --> done , may have an error related to hgss variants not in the table?, watch out for it  
 ; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)-> done 
@@ -27,7 +27,7 @@
 ; data/pokemon/dex_entries: done, need to check them all after building 
 ; gfx files: 
 ; - Footprints (see gfx/pokemon/footprints.asm)-> done,
-; footprint pngs: todo
+; footprint pngs: blanked, done 
 ; 			gfx/pokemon/anims.asm-> done 
 ; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)->done, gfx/pokemon/extra_pointers.asm-> done
 		; gfx/pokemon/extras.asm->done 
