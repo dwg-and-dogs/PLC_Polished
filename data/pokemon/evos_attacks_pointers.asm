@@ -13,9 +13,9 @@ EvosAttacksPointers::
 	dw OshawottEvosAttacks        ; 07
 	dw DewottEvosAttacks          ; 08
 	dw SamurottEvosAttacks        ; 09
-	dw PidgeyEvosAttacks          ; 0a
-	dw PidgeottoEvosAttacks       ; 0b
-	dw PidgeotEvosAttacks         ; 0c
+	dw RuffletEvosAttacks          ; 0a
+	dw StarlyEvosAttacks       ; 0b
+	dw SnoruntEvosAttacks         ; 0c
 	dw HoothootEvosAttacks        ; 0d
 	dw NoctowlEvosAttacks         ; 0e
 	dw SentretEvosAttacks         ; 0f
@@ -196,12 +196,12 @@ EvosAttacksPointers::
 	dw TotodileEvosAttacks        ; bf
 	dw CroconawEvosAttacks        ; c0
 	dw FeraligatrEvosAttacks      ; c1
-	dw GrotleEvosAttacks          ; c2
-	dw TorterraEvosAttacks        ; c3
-	dw MonfernoEvosAttacks        ; c4
-	dw InfernapeEvosAttacks       ; c5
-	dw PrinplupEvosAttacks        ; c6
-	dw EmpoleonEvosAttacks        ; c7
+	dw RioluEvosAttacks          ; c2
+	dw HorseaEvosAttacks        ; c3
+	dw GlalieEvosAttacks        ; c4
+	dw BasculinEvosAttacks       ; c5
+	dw HoppipEvosAttacks        ; c6
+	dw SunkernEvosAttacks        ; c7
 	dw StaraviaEvosAttacks        ; c8
 	dw StaraptorEvosAttacks       ; c9
 	dw ShinxEvosAttacks           ; ca
@@ -211,7 +211,7 @@ EvosAttacksPointers::
 	dw RampardosEvosAttacks       ; ce
 	dw ShieldonEvosAttacks        ; cf
 	dw BastiodonEvosAttacks       ; d0
-	dw VespiquenEvosAttacks       ; d1
+	dw DittoEvosAttacks       ; d1
 	dw DrifloonEvosAttacks        ; d2
 	dw DrifblimEvosAttacks        ; d3
 	dw BronzorEvosAttacks         ; d4
@@ -295,5 +295,10 @@ EvosAttacksPointers::
 ; Other Forms
 	dw NoctowlImmortalEvosAttacks
 	dw UrsalunaBloodmoonEvosAttacks
+	
+	dw FeraligatrAncestorEvosAttacks
+	dw MeganiumAncestorEvosAttacks
+	dw MagcargoAncestorEvosAttacks
+	dw XatuAncestorEvosAttacks
 	assert_table_length NUM_EXT_POKEMON
 	

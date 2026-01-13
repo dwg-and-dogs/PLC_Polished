@@ -9,9 +9,9 @@ EvolutionMoves::
 	db NO_MOVE       ; OSHAWOTT        ; 07
 	db NO_MOVE       ; DEWOTT          ; 08
 	db REVERSAL      ; SAMUROTT        ; 09
-	db NO_MOVE       ; PIDGEY          ; 0a
-	db NO_MOVE       ; PIDGEOTTO       ; 0b
-	db HURRICANE     ; PIDGEOT         ; 0c
+	db NO_MOVE       ; RUFFLET          ; 0a
+	db NO_MOVE       ; STARLY       ; 0b
+	db NO_MOVE       ; SNORUNT         ; 0c
 	db NO_MOVE       ; HOOTHOOT        ; 0d
 	db NO_MOVE       ; NOCTOWL         ; 0e
 	db NO_MOVE       ; SENTRET         ; 0f
@@ -192,12 +192,12 @@ EvolutionMoves::
 	db NO_MOVE       ; TOTODILE        ; bf
 	db NO_MOVE       ; CROCONAW        ; c0
 	db CRUNCH        ; FERALIGATR      ; c1
-	db NO_MOVE       ; GROTLE          ; c2
-	db EARTHQUAKE    ; TORTERRA        ; c3
-	db NO_MOVE       ; MONFERNO        ; c4
-	db FLARE_BLITZ   ; INFERNAPE       ; c5
-	db NO_MOVE       ; PRINPLUP        ; c6
-	db IRON_HEAD     ; EMPOLEON        ; c7
+	db NO_MOVE       ; RIOLU          ; c2
+	db NO_MOVE    ; HORSEA        ; c3
+	db NO_MOVE       ; GLALIE        ; c4
+	db NO_MOVE   ; BASCULIN       ; c5
+	db NO_MOVE       ; HOPPIP        ; c6
+	db NO_MOVE     ; SUNKERN        ; c7
 	db NO_MOVE       ; STARAVIA        ; c8
 	db CLOSE_COMBAT  ; STARAPTOR       ; c9
 	db NO_MOVE       ; SHINX           ; ca
@@ -207,7 +207,7 @@ EvolutionMoves::
 	db MIRROR_COAT       ; RAMPARDOS       ; ce
 	db NO_MOVE       ; SHIELDON        ; cf
 	db NO_MOVE       ; BASTIODON       ; d0
-	db NO_MOVE       ; VESPIQUEN       ; d1
+	db NO_MOVE       ; DITTO       ; d1
 	db NO_MOVE       ; DRIFLOON        ; d2
 	db NO_MOVE       ; DRIFBLIM        ; d3
 	db NO_MOVE       ; BRONZOR         ; d4

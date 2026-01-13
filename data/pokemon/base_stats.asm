@@ -44,9 +44,9 @@ INCLUDE "data/pokemon/base_stats/decidueye.asm"       ; 06
 INCLUDE "data/pokemon/base_stats/oshawott.asm"        ; 07
 INCLUDE "data/pokemon/base_stats/dewott.asm"          ; 08
 INCLUDE "data/pokemon/base_stats/samurott.asm"        ; 09
-INCLUDE "data/pokemon/base_stats/pidgey.asm"          ; 0a
-INCLUDE "data/pokemon/base_stats/pidgeotto.asm"       ; 0b
-INCLUDE "data/pokemon/base_stats/pidgeot.asm"         ; 0c
+INCLUDE "data/pokemon/base_stats/rufflet.asm"          ; 0a
+INCLUDE "data/pokemon/base_stats/starly.asm"       ; 0b
+INCLUDE "data/pokemon/base_stats/snorunt.asm"         ; 0c
 INCLUDE "data/pokemon/base_stats/hoothoot.asm"        ; 0d
 INCLUDE "data/pokemon/base_stats/noctowl.asm"         ; 0e
 INCLUDE "data/pokemon/base_stats/sentret.asm"         ; 0f
@@ -227,12 +227,12 @@ INCLUDE "data/pokemon/base_stats/meganium.asm"        ; be
 INCLUDE "data/pokemon/base_stats/totodile.asm"        ; bf
 INCLUDE "data/pokemon/base_stats/croconaw.asm"        ; c0
 INCLUDE "data/pokemon/base_stats/feraligatr.asm"      ; c1
-INCLUDE "data/pokemon/base_stats/grotle.asm"          ; c2
-INCLUDE "data/pokemon/base_stats/torterra.asm"        ; c3
-INCLUDE "data/pokemon/base_stats/monferno.asm"        ; c4
-INCLUDE "data/pokemon/base_stats/infernape.asm"       ; c5
-INCLUDE "data/pokemon/base_stats/prinplup.asm"        ; c6
-INCLUDE "data/pokemon/base_stats/empoleon.asm"        ; c7
+INCLUDE "data/pokemon/base_stats/riolu.asm"          ; c2
+INCLUDE "data/pokemon/base_stats/horsea.asm"        ; c3
+INCLUDE "data/pokemon/base_stats/glalie.asm"        ; c4
+INCLUDE "data/pokemon/base_stats/basculin.asm"       ; c5
+INCLUDE "data/pokemon/base_stats/hoppip.asm"        ; c6
+INCLUDE "data/pokemon/base_stats/sunkern.asm"        ; c7
 INCLUDE "data/pokemon/base_stats/staravia.asm"        ; c8
 INCLUDE "data/pokemon/base_stats/staraptor.asm"       ; c9
 INCLUDE "data/pokemon/base_stats/shinx.asm"           ; ca
@@ -242,7 +242,7 @@ INCLUDE "data/pokemon/base_stats/cranidos.asm"        ; cd
 INCLUDE "data/pokemon/base_stats/rampardos.asm"       ; ce
 INCLUDE "data/pokemon/base_stats/shieldon.asm"        ; cf
 INCLUDE "data/pokemon/base_stats/bastiodon.asm"       ; d0
-INCLUDE "data/pokemon/base_stats/vespiquen.asm"       ; d1
+INCLUDE "data/pokemon/base_stats/ditto.asm"       ; d1
 INCLUDE "data/pokemon/base_stats/drifloon.asm"        ; d2
 INCLUDE "data/pokemon/base_stats/drifblim.asm"        ; d3
 INCLUDE "data/pokemon/base_stats/bronzor.asm"         ; d4
@@ -326,5 +326,10 @@ INCLUDE "data/pokemon/base_stats/decidueye_hisuian.asm"
 ; Other Forms
 INCLUDE "data/pokemon/base_stats/noctowl_immortal.asm"
 INCLUDE "data/pokemon/base_stats/ursaluna_bloodmoon.asm"
+
+INCLUDE "data/pokemon/base_stats/feraligatr_ancestor.asm"
+INCLUDE "data/pokemon/base_stats/meganium_ancestor.asm"
+INCLUDE "data/pokemon/base_stats/magcargo_ancestor.asm"
+INCLUDE "data/pokemon/base_stats/xatu_ancestor.asm"
 	assert_table_length NUM_EXT_POKEMON
 	

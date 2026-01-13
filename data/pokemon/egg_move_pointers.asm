@@ -9,9 +9,9 @@ EggMovePointers::
 	dw NoEggMoves ; Oshawott        ; 07
 	dw NoEggMoves ; Dewott          ; 08
 	dw NoEggMoves ; Samurott        ; 09
-	dw NoEggMoves ; Pidgey          ; 0a
-	dw NoEggMoves ; Pidgeotto       ; 0b
-	dw NoEggMoves ; Pidgeot         ; 0c
+	dw NoEggMoves ; rufflet          ; 0a
+	dw NoEggMoves ; starly       ; 0b
+	dw NoEggMoves ; snorunt         ; 0c
 	dw NoEggMoves ; Hoothoot        ; 0d
 	dw NoEggMoves ; Noctowl         ; 0e
 	dw NoEggMoves ; Sentret         ; 0f
@@ -192,12 +192,12 @@ EggMovePointers::
 	dw NoEggMoves ; Totodile        ; bf
 	dw NoEggMoves ; Croconaw        ; c0
 	dw NoEggMoves ; Feraligatr      ; c1
-	dw NoEggMoves ; Grotle          ; c2
-	dw NoEggMoves ; Torterra        ; c3
-	dw NoEggMoves ; Monferno        ; c4
-	dw NoEggMoves ; Infernape       ; c5
-	dw NoEggMoves ; Prinplup        ; c6
-	dw NoEggMoves ; Empoleon        ; c7
+	dw NoEggMoves ; riolu          ; c2
+	dw NoEggMoves ; horsea        ; c3
+	dw NoEggMoves ; glalie        ; c4
+	dw NoEggMoves ; basculin       ; c5
+	dw NoEggMoves ; hoppip        ; c6
+	dw NoEggMoves ; sunkern        ; c7
 	dw NoEggMoves ; Staravia        ; c8
 	dw NoEggMoves ; Staraptor       ; c9
 	dw NoEggMoves ; Shinx           ; ca
@@ -207,7 +207,7 @@ EggMovePointers::
 	dw NoEggMoves ; Rampardos       ; ce
 	dw NoEggMoves ; Shieldon        ; cf
 	dw NoEggMoves ; Bastiodon       ; d0
-	dw NoEggMoves ; Vespiquen       ; d1
+	dw NoEggMoves ; ditto       ; d1
 	dw NoEggMoves ; Drifloon        ; d2
 	dw NoEggMoves ; Drifblim        ; d3
 	dw NoEggMoves ; Bronzor         ; d4
@@ -292,4 +292,9 @@ EggMovePointers::
 ; Other Forms
 	dw NoEggMoves ; Noctowl (Immortal)
 	dw NoEggMoves ; Ursaluna (Bloodmoon)
+	
+	dw NoEggMoves ; feraligatr ancestor 
+	dw NoEggMoves ; meganium ancestor 
+	dw NoEggMoves ; magcargo ancestor 
+	dw NoEggMoves ; xatu ancestor 
 	assert_table_length NUM_EXT_POKEMON

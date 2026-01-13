@@ -10,9 +10,9 @@ PokemonNames::
 	rawchar "Oshawott@@" ; 07
 	rawchar "Dewott@@@@" ; 08
 	rawchar "Samurott@@" ; 09
-	rawchar "Pidgey@@@@" ; 0a
-	rawchar "Pidgeotto@" ; 0b
-	rawchar "Pidgeot@@@" ; 0c
+	rawchar "Rufflet@@@" ; 0a
+	rawchar "Starly@@@@" ; 0b
+	rawchar "Snorunt@@@" ; 0c
 	rawchar "Hoothoot@@" ; 0d
 	rawchar "Noctowl@@@" ; 0e
 	rawchar "Sentret@@@" ; 0f
@@ -193,12 +193,12 @@ PokemonNames::
 	rawchar "Totodile@@" ; bf
 	rawchar "Croconaw@@" ; c0
 	rawchar "Feraligatr" ; c1
-	rawchar "Grotle@@@@" ; c2
-	rawchar "Torterra@@" ; c3
-	rawchar "Monferno@@" ; c4
-	rawchar "Infernape@" ; c5
-	rawchar "Prinplup@@" ; c6
-	rawchar "Empoleon@@" ; c7
+	rawchar "Riolu@@@@@" ; c2
+	rawchar "Horsea@@@@" ; c3
+	rawchar "Glalie@@@@" ; c4
+	rawchar "Basculin@@" ; c5
+	rawchar "Hoppip@@@@" ; c6
+	rawchar "Sunkern@@@" ; c7
 	rawchar "Staravia@@" ; c8
 	rawchar "Staraptor@" ; c9
 	rawchar "Shinx@@@@@" ; ca
@@ -208,7 +208,7 @@ PokemonNames::
 	rawchar "Rampardos@" ; ce
 	rawchar "Shieldon@@" ; cf
 	rawchar "Bastiodon@" ; d0
-	rawchar "Vespiquen@" ; d1
+	rawchar "Ditto@@@@@" ; d1
 	rawchar "Drifloon@@" ; d2
 	rawchar "Drifblim@@" ; d3
 	rawchar "Bronzor@@@" ; d4

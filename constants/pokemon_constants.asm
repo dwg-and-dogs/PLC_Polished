@@ -52,9 +52,9 @@
 	const OSHAWOTT        ; 07
 	const DEWOTT          ; 08
 	const SAMUROTT        ; 09 ; HSAMUROTT -> HISUI FORM
-	const PIDGEY          ; 0a
-	const PIDGEOTTO       ; 0b
-	const PIDGEOT         ; 0c
+	const RUFFLET          ; 0a
+	const STARLY       ; 0b
+	const SNORUNT         ; 0c
 	const HOOTHOOT        ; 0d
 	const NOCTOWL         ; 0e ; HNOCTOWL -> HISUI FORM
 	const SENTRET         ; 0f
@@ -235,12 +235,12 @@
 	const TOTODILE        ; bf
 	const CROCONAW        ; c0
 	const FERALIGATR      ; c1
-	const GROTLE          ; c2
-	const TORTERRA        ; c3
-	const MONFERNO        ; c4
-	const INFERNAPE       ; c5
-	const PRINPLUP        ; c6
-	const EMPOLEON        ; c7
+	const RIOLU          ; c2
+	const HORSEA        ; c3
+	const GLALIE        ; c4
+	const BASCULIN       ; c5
+	const HOPPIP        ; c6
+	const SUNKERN        ; c7
 	const STARAVIA        ; c8
 	const STARAPTOR       ; c9
 	const SHINX           ; ca
@@ -250,7 +250,7 @@
 	const RAMPARDOS       ; ce
 	const SHIELDON        ; cf
 	const BASTIODON       ; d0
-	const VESPIQUEN       ; d1
+	const DITTO       ; d1
 	const DRIFLOON        ; d2
 	const DRIFBLIM        ; d3
 	const BRONZOR         ; d4
@@ -402,6 +402,10 @@ HISUIAN_FORM EQU 2
 OTHER_FORMS EQU 2 
 	const_skip ; NOCTOWL
 	const_skip ; BLOODMOON 
+	const_skip ; feraligatr 
+	const_skip ; meganium
+	const_skip ; MAGCARGO
+	const_skip ; XATU 
 ;	const_skip ; rotom 1
 ;	const_skip ; rotom 2
 ;	const_skip ; rotom 3

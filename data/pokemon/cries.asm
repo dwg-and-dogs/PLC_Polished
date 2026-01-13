@@ -15,9 +15,9 @@ PokemonCries::
 	mon_cry CRY_SQUIRTLE,    $060,  $0c0 ; Oshawott        ; 07
 	mon_cry CRY_SQUIRTLE,    $020,  $0c0 ; Dewott          ; 08
 	mon_cry CRY_BLASTOISE,   $000,  $100 ; Samurott        ; 09
-	mon_cry CRY_PIDGEY,      $0df,  $084 ; Pidgey          ; 0a
-	mon_cry CRY_PIDGEOTTO,   $028,  $140 ; Pidgeotto       ; 0b
-	mon_cry CRY_PIDGEOTTO,   $011,  $17f ; Pidgeot         ; 0c
+	mon_cry CRY_FARFETCH_D,  $000,  $100 ; Rufflet          ; 0a ;  cf spearow 
+	mon_cry CRY_PIDGEY,      $0df,  $084 ; Starly       ; 0b ;  cf pidgey 
+	mon_cry CRY_MARILL,      $11b,  $120 ; Snorunt         ; 0c ;  cf azurill 
 	mon_cry CRY_HOOTHOOT,    $091,  $0d8 ; Hoothoot
 	mon_cry CRY_HOOTHOOT,    $000,  $1a0 ; Noctowl
 	mon_cry CRY_SENTRET,     $08a,  $0b8 ; Sentret
@@ -198,55 +198,55 @@ PokemonCries::
 	mon_cry CRY_TOTODILE,    $46c,  $0e8 ; Totodile        ; bf
 	mon_cry CRY_TOTODILE,    $440,  $110 ; Croconaw        ; c0
 	mon_cry CRY_TOTODILE,    $3fc,  $180 ; Feraligatr      ; c1
-	mon_cry CRY_BULBASAUR,   $020,  $100 ; Grotle          ; c2
-	mon_cry CRY_BULBASAUR,   $000,  $140 ; Torterra        ; c3
-	mon_cry CRY_CHARMANDER,  $020,  $0c0 ; Monferno        ; c4
-	mon_cry CRY_CHARMANDER,  $000,  $100 ; Infernape       ; c5
-	mon_cry CRY_SQUIRTLE,    $020,  $0c0 ; Prinplup        ; c6
-	mon_cry CRY_BLASTOISE,   $000,  $100 ; Empoleon        ; c7
-	mon_cry CRY_DIGLETT,     $0bb,  $081 ; Staravia        ; c8
-	mon_cry CRY_DIGLETT,     $099,  $0a0 ; Staraptor       ; c9
-	mon_cry CRY_CLEFAIRY,    $077,  $090 ; Shinx           ; ca ok 
-	mon_cry CRY_CLEFAIRY,    $077,  $090 ; Luxio           ; cb
-	mon_cry CRY_CLEFAIRY,    $099,  $17f ; Luxray          ; cc
-	mon_cry CRY_CLEFAIRY,    $000,  $100 ; Cranidos        ; cd ok 
-	mon_cry CRY_CLEFAIRY,    $000,  $100 ; Rampardos       ; ce
-	mon_cry CRY_ODDISH,      $04f,  $0e0 ; Shieldon        ; cf ok 
-	mon_cry CRY_ODDISH,      $04f,  $0e0 ; Bastiodon       ; d0
-	mon_cry CRY_BLASTOISE,   $060,  $100 ; Vespiquen       ; d1
-	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; Drifloon        ; d2 ok 
-	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; Drifblim        ; d3
-	mon_cry CRY_METAPOD,     $020,  $140 ; Bronzor         ; d4
-	mon_cry CRY_METAPOD,     $020,  $140 ; Bronzong        ; d5
-	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; Spiritomb       ; d6
-	mon_cry CRY_TYROGUE,     $02c,  $108 ; Lucario         ; d7
-	mon_cry CRY_TOGEPI,      $010,  $100 ; Hippopotas      ; d8 ok 
-	mon_cry CRY_TOGEPI,      $010,  $100 ; Hippowdon       ; d9
-	mon_cry CRY_RATTATA,     $020,  $17f ; Croagunk        ; da ok 
-	mon_cry CRY_RATTATA,     $020,  $17f ; Toxicroak       ; db
-	mon_cry CRY_CYNDAQUIL,   $1fe,  $140 ; Snover          ; dc
-	mon_cry CRY_CYNDAQUIL,   $1fe,  $140 ; Abomasnow       ; dd
-	mon_cry CRY_METAPOD,     $000,  $100 ; Duskull         ; de 
-	mon_cry CRY_METAPOD,     $000,  $100 ; Dusclops        ; df
-	mon_cry CRY_METAPOD,     $000,  $100 ; Dusknoir        ; e0
-	mon_cry CRY_METAPOD,     $000,  $100 ; Froslass        ; e1
-	mon_cry CRY_METAPOD,     $020,  $140 ; Rotom           ; e2
-	mon_cry CRY_EKANS,       $0ff,  $140 ; Bergmite        ; e3 
-	mon_cry CRY_EKANS,       $0ff,  $140 ; Avalugg         ; e4
-	mon_cry CRY_EKANS,       $000,  $100 ; Basculegion     ; e5
-	mon_cry CRY_DIGLETT,     $099,  $0a0 ; Braviary        ; e6
-	mon_cry CRY_PSYDUCK,     $020,  $0e0 ; Ralts           ; e7 
-	mon_cry CRY_PSYDUCK,     $020,  $0e0 ; Kirlia          ; e8
-	mon_cry CRY_PSYDUCK,     $0ff,  $0c0 ; Gardevoir       ; e9
-	mon_cry CRY_PSYDUCK,     $0ff,  $0c0 ; Gallade         ; ea
-	mon_cry CRY_HOOTHOOT,    $091,  $0d8 ; Goomy           ; eb 
-	mon_cry CRY_HOOTHOOT,    $091,  $0d8 ; Sliggoo         ; ec
-	mon_cry CRY_HOOTHOOT,    $000,  $1a0 ; Goodra          ; ed
-	mon_cry CRY_NATU,       -$0a7,  $168 ; Zorua           ; ee ok 
-	mon_cry CRY_NATU,       -$0a7,  $168 ; Zoroark         ; ef
-	mon_cry CRY_SHELLDER,    $0ee,  $081 ; Gible           ; f0 ok 
-	mon_cry CRY_SHELLDER,    $0ee,  $081 ; Gabite          ; f1
-	mon_cry CRY_SHELLDER,    $0ee,  $081 ; Garchomp        ; f2
+	mon_cry CRY_TYROGUE,     $02c,  $108 ; riolu          ; c2 ;  cf tyrogue 
+	mon_cry CRY_CLEFAIRY,    $099,  $090 ; Horsea
+	mon_cry CRY_SEEL,        $000,  $100 ; glalie        ; c4 ;  cf lickitung 
+	mon_cry CRY_CATERPIE,    $080,  $0c0 ; basculin       ; c5 ;  cf goldeen 
+	mon_cry CRY_BELLOSSOM,   $03b,  $0c8  ; hoppip        ; c6  
+	mon_cry CRY_MARILL,      $12b,  $0b8 ; Sunkern
+	mon_cry CRY_DIGLETT,     $0bb,  $081 ; Staravia        ; c8 cf doduo 
+	mon_cry CRY_DIGLETT,     $099,  $0a0 ; Staraptor       ; c9 cf dodrio 
+	mon_cry CRY_CYNDAQUIL,   $039,  $140 ; Shinx           ; ca cf houndour 
+	mon_cry CRY_CYNDAQUIL,   $039,  $140 ; Luxio           ; cb cf houndour 
+	mon_cry CRY_TOTODILE,   -$10a,  $100 ; Luxray          ; cc cf houndoom 
+	mon_cry CRY_CLEFAIRY,    $000,  $100 ; Cranidos        ; cd cf cubone   
+	mon_cry CRY_ODDISH,      $04f,  $0e0 ; Rampardos       ; ce cf marowak  
+	mon_cry CRY_GROWLITHE,   $0f0,  $081 ; Shieldon        ; cf cf omanyte  
+	mon_cry CRY_GROWLITHE,   $0ff,  $0c0 ; Bastiodon       ; d0 cf omastar 
+	mon_cry CRY_BLASTOISE,   $060,  $100 ; ditto        ; d1 ok 
+	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; Drifloon        ; d2 cf misdreavus 
+	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; Drifblim        ; d3 cf mismagius 
+	mon_cry CRY_METAPOD,     $080,  $0e0 ; Bronzor         ; d4 cf magnemite 
+	mon_cry CRY_METAPOD,     $020,  $140 ; Bronzong        ; d5 cf magnezone  
+	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; Spiritomb       ; d6 ok 
+	mon_cry CRY_TYROGUE,     $02c,  $108 ; Lucario         ; d7 cf tyrogue   
+	mon_cry CRY_CATERPIE,    $0bb,  $0c0 ; Hippopotas      ; d8 cf kabuto  
+	mon_cry CRY_SHELLDER,    $0ee,  $081 ; Hippowdon       ; d9 cf kabutops  
+	mon_cry CRY_DROWZEE,     $088,  $0a0 ; Croagunk        ; da cf drowzee 
+	mon_cry CRY_DROWZEE,     $0ee,  $0c0 ; Toxicroak       ; db cf hypno  
+	mon_cry CRY_BULBASAUR,   $020,  $100 ; Snover          ; dc cf ivysaur  
+	mon_cry CRY_BULBASAUR,   $000,  $140 ; Abomasnow       ; dd cf venusaur  
+	mon_cry CRY_METAPOD,     $000,  $100 ; Duskull         ; de  cf gastly  
+	mon_cry CRY_METAPOD,     $030,  $0c0 ; Dusclops        ; df cf haunter  
+	mon_cry CRY_MUK,         $000,  $17f ; Dusknoir        ; e0 cf gengar  
+	mon_cry CRY_SEEL,        $023,  $17f ; Froslass        ; e1 cf dewgong  
+	mon_cry CRY_VOLTORB,     $0a8,  $110 ; Rotom           ; e2 cf electrode  
+	mon_cry CRY_SHELLDER,    $000,  $100 ; Bergmite        ; e3  cf shellder  
+	mon_cry CRY_SHELLDER,    $06f,  $160 ; Avalugg         ; e4 cf cloyster  
+	mon_cry CRY_RAICHU,      $080,  $0c0 ; Basculegion     ; e5 cf articuno  
+	mon_cry CRY_SHELLDER,    $040,  $120 ; Braviary        ; e6 cf fearow 
+	mon_cry CRY_METAPOD,     $0c0,  $081 ; Ralts           ; e7 cf abra  
+	mon_cry CRY_METAPOD,     $0a8,  $140 ; Kirlia          ; e8 cf kadabra  
+	mon_cry CRY_METAPOD,     $098,  $17f ; Gardevoir       ; e9 cf alakazam   
+	mon_cry CRY_KRABBY,      $008,  $0c0 ; Gallade         ; ea cf mrmime  
+	mon_cry CRY_PARAS,       $002,  $0a0 ; Goomy           ; eb cf staryu 
+	mon_cry CRY_PARAS,       $002,  $0a0 ; Sliggoo         ; ec cf staryu 
+	mon_cry CRY_PARAS,       $000,  $100 ; Goodra          ; ed cf starmie  
+	mon_cry CRY_DROWZEE,     $0ee,  $0c0 ; Zorua           ; ee cf hypno 
+	mon_cry CRY_DROWZEE,     $0ee,  $0c0 ; Zoroark         ; ef cf hypno  
+	mon_cry CRY_RATTATA,     $020,  $17f ; Gible           ; f0 cf raticate   
+	mon_cry CRY_VILEPLUME,   $020,  $170 ; Gabite          ; f1 cf aerodactyl
+	mon_cry CRY_VILEPLUME,   $020,  $170 ; Garchomp        ; f2 cf aerodactyl  
 	mon_cry CRY_BULBASAUR,   $060,  $0c0 ; Dratini         ; f3
 	mon_cry CRY_BULBASAUR,   $040,  $100 ; Dragonair       ; f4
 	mon_cry CRY_BULBASAUR,   $03c,  $140 ; Dragonite       ; f5

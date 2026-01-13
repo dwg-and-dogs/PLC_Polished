@@ -31,4 +31,8 @@ ValidVariantRanges: ; for Wonder Trade
 	; others 
 	db NOCTOWL, 2
 	db URSALUNA, 2
+	db FERALIGATR, 2
+	db MEGANIUM, 2
+	db MAGCARGO, 2
+	db XATU, 2
 	db -1

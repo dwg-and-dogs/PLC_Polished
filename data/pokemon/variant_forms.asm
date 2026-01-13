@@ -66,6 +66,10 @@ VariantSpeciesAndFormTable: ; as many variants as we have
 	; OTHERS
 	dp NOCTOWL, IMMORTAL_FORM
 	dp URSALUNA, BLOODMOON_FORM
+	dp FERALIGAR, ANCESTOR_FORM
+	dp MEGANIUM, ANCESTOR_FORM
+	dp MAGCARGO, ANCESTOR_FORM
+	dp XATU, ANCESTOR_FORM
 	assert_table_length NUM_VARIANT_FORMS
 	; fallthrough
 
