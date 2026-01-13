@@ -9,9 +9,9 @@ FramesPointers:
 	dw OshawottFrames
 	dw DewottFrames
 	dw SamurottFrames
-	dw PidgeyFrames
-	dw PidgeottoFrames
-	dw PidgeotFrames
+	dw RuffletFrames
+	dw StarlyFrames
+	dw SnoruntFrames
 	dw HoothootFrames
 	dw NoctowlFrames
 	dw SentretFrames
@@ -192,12 +192,12 @@ FramesPointers:
 	dw TotodileFrames
 	dw CroconawFrames
 	dw FeraligatrFrames
-	dw GrotleFrames
-	dw TorterraFrames
-	dw MonfernoFrames
-	dw InfernapeFrames
-	dw PrinplupFrames
-	dw EmpoleonFrames
+	dw RioluFrames
+	dw HorseaFrames
+	dw GlalieFrames
+	dw BasculinFrames
+	dw HoppipFrames
+	dw SunkernFrames
 	dw StaraviaFrames
 	dw StaraptorFrames
 	dw ShinxFrames
@@ -207,7 +207,7 @@ FramesPointers:
 	dw RampardosFrames
 	dw ShieldonFrames
 	dw BastiodonFrames
-	dw VespiquenFrames
+	dw DittoFrames
 	dw DrifloonFrames
 	dw DrifblimFrames
 	dw BronzorFrames
