@@ -136,8 +136,6 @@ UnownZFrames: INCLUDE "gfx/pokemon/unown_z/frames.asm"
 UnownExclamationFrames: INCLUDE "gfx/pokemon/unown_exclamation/frames.asm"
 UnownQuestionFrames:    INCLUDE "gfx/pokemon/unown_question/frames.asm"
 
-
-
 Raichu_alolanFrames: INCLUDE "gfx/pokemon/raichu_alolan/frames.asm"
 Vulpix_alolanFrames: INCLUDE "gfx/pokemon/vulpix_alolan/frames.asm"
 Ninetales_alolanFrames: INCLUDE "gfx/pokemon/ninetales_alolan/frames.asm"

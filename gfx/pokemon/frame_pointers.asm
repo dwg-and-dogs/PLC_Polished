@@ -321,4 +321,9 @@ FramesPointers:
 	dw Noctowl_immortalFrames
 	dw Ursaluna_bloodmoonFrames
 
+	dw Feraligatr_ancestorFrames
+	dw Meganium_ancestorFrames
+	dw Magcargo_ancestorFrames
+	dw Xatu_ancestorFrames
+
 	assert_table_length NUM_UNIQUE_POKEMON

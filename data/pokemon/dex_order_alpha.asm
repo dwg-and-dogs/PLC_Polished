@@ -1,4 +1,4 @@
-; Every Pokémon sorted alphabetically by name. no change for variants 
+; Every Pokémon sorted alphabetically by name. no change for variants. revised for dexv3
 
 AlphabeticalPokedexOrder:
 	table_width 1, AlphabeticalPokedexOrder
@@ -14,6 +14,7 @@ AlphabeticalPokedexOrder:
 	db     AVALUGG
 	db     AZUMARILL
 	db     BASCULEGION
+	db     BASCULIN ;  
 	db     BASTIODON
 	db     BAYLEEF
 	db     BELLOSSOM
@@ -38,6 +39,7 @@ AlphabeticalPokedexOrder:
 	db     DARTRIX
 	db     DECIDUEYE
 	db     DEWOTT
+	db     DITTO  ;  
 	db     DONPHAN
 	db     DRAGONAIR
 	db     DRAGONITE
@@ -53,7 +55,6 @@ AlphabeticalPokedexOrder:
 	db     ELECTABUZZ
 	db     ELECTIVIRE
 	db     ELECTRODE
-	db     EMPOLEON
 	db     ENTEI
 	db     ESPEON
 	db     EXEGGCUTE
@@ -75,6 +76,7 @@ AlphabeticalPokedexOrder:
 	db     GIBLE
 	db     GIRAFARIG
 	db     GLACEON
+	db     GLALIE ;  
 	db     GLIGAR
 	db     GLISCOR
 	db     GLOOM
@@ -85,7 +87,6 @@ AlphabeticalPokedexOrder:
 	db     GRANBULL
 	db     GRAVELER
 	db     GRIMER
-	db     GROTLE
 	db     GROWLITHE
 	db     GYARADOS
 	db     HAUNTER
@@ -99,9 +100,10 @@ AlphabeticalPokedexOrder:
 	db     HO_OH
 	db     HONCHKROW
 	db     HOOTHOOT
+	db     HOPPIP ;  
+	db     HORSEA ;  
 	db     HOUNDOOM
 	db     HOUNDOUR
-	db     INFERNAPE
 	db     JOLTEON
 	db     JUMPLUFF
 	db     JYNX
@@ -140,7 +142,6 @@ AlphabeticalPokedexOrder:
 	db     MINSIR
 	db     MISDREAVUS
 	db     MISMAGIUS
-	db     MONFERNO
 	db     MUK
 	db     MURKROW
 	db     NATU
@@ -159,9 +160,6 @@ AlphabeticalPokedexOrder:
 	db     PARAS
 	db     PARASECT
 	db     PHANPY
-	db     PIDGEOT
-	db     PIDGEOTTO
-	db     PIDGEY
 	db     PIKACHU
 	db     PILOSWINE
 	db     PINECO
@@ -175,7 +173,6 @@ AlphabeticalPokedexOrder:
 	db     PORYGON_Z
 	db     PORYGON2
 	db     PRIMEAPE
-	db     PRINPLUP
 	db     PUPITAR
 	db     QUAGSIRE
 	db     QUILAVA
@@ -189,8 +186,10 @@ AlphabeticalPokedexOrder:
 	db     RHYDON
 	db     RHYHORN
 	db     RHYPERIOR
+	db     RIOLU ;  
 	db     ROTOM
 	db     ROWLET
+	db     RUFFLET ;  
 	db     SAMUROTT
 	db     SCIZOR
 	db     SCYTHER
@@ -209,6 +208,7 @@ AlphabeticalPokedexOrder:
 	db     SNEASEL
 	db     SNEASLER
 	db     SNORLAX
+	db     SNORUNT ;  
 	db     SNOVER
 	db     SNUBBULL
 	db     SPINARAK
@@ -216,10 +216,12 @@ AlphabeticalPokedexOrder:
 	db     STANTLER
 	db     STARAPTOR
 	db     STARAVIA
+	db     STARLY ;  
 	db     STEELIX
 	db     SUDOWOODO
 	db     SUICUNE
 	db     SUNFLORA
+	db     SUNKERN ;  
 	db     SWINUB
 	db     SYLVEON
 	db     TANGELA
@@ -230,7 +232,6 @@ AlphabeticalPokedexOrder:
 	db     TENTACRUEL
 	db     TOGEKISS
 	db     TOGETIC
-	db     TORTERRA
 	db     TOTODILE
 	db     TOXICROAK
 	db     TYPHLOSION
@@ -240,7 +241,6 @@ AlphabeticalPokedexOrder:
 	db     URSALUNA
 	db     URSARING
 	db     VAPOREON
-	db     VESPIQUEN
 	db     VICTREEBEL
 	db     VILEPLUME
 	db     VOLTORB

@@ -9,9 +9,9 @@ AnimationExtraPointers:
 	dw OshawottAnimationExtra
 	dw DewottAnimationExtra
 	dw SamurottAnimationExtra
-	dw PidgeyAnimationExtra
-	dw PidgeottoAnimationExtra
-	dw PidgeotAnimationExtra
+	dw RuffletAnimationExtra
+	dw StarlyAnimationExtra
+	dw SnoruntAnimationExtra
 	dw HoothootAnimationExtra
 	dw NoctowlAnimationExtra
 	dw SentretAnimationExtra
@@ -192,12 +192,12 @@ AnimationExtraPointers:
 	dw TotodileAnimationExtra
 	dw CroconawAnimationExtra
 	dw FeraligatrAnimationExtra
-	dw GrotleAnimationExtra
-	dw TorterraAnimationExtra
-	dw MonfernoAnimationExtra
-	dw InfernapeAnimationExtra
-	dw PrinplupAnimationExtra
-	dw EmpoleonAnimationExtra
+	dw RioluAnimationExtra
+	dw HorseaAnimationExtra
+	dw GlalieAnimationExtra
+	dw BasculinAnimationExtra
+	dw HoppipAnimationExtra
+	dw SunkernAnimationExtra
 	dw StaraviaAnimationExtra
 	dw StaraptorAnimationExtra
 	dw ShinxAnimationExtra
@@ -207,7 +207,7 @@ AnimationExtraPointers:
 	dw RampardosAnimationExtra
 	dw ShieldonAnimationExtra
 	dw BastiodonAnimationExtra
-	dw VespiquenAnimationExtra
+	dw DittoAnimationExtra
 	dw DrifloonAnimationExtra
 	dw DrifblimAnimationExtra
 	dw BronzorAnimationExtra
@@ -320,6 +320,11 @@ AnimationExtraPointers:
 
 	dw Noctowl_immortalAnimationExtra
 	dw Ursaluna_bloodmoonAnimationExtra
+
+	dw Feraligatr_ancestorAnimationExtra
+	dw Meganium_ancestorAnimationExtra
+	dw Magcargo_ancestorAnimationExtra
+	dw Xatu_ancestorAnimationExtra
 
 
 	assert_table_length NUM_UNIQUE_POKEMON
