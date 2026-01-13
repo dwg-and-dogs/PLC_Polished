@@ -9,9 +9,9 @@ BitmasksPointers:
 	dw OshawottBitmasks
 	dw DewottBitmasks
 	dw SamurottBitmasks
-	dw PidgeyBitmasks
-	dw PidgeottoBitmasks
-	dw PidgeotBitmasks
+	dw RuffletBitmasks
+	dw StarlyBitmasks
+	dw SnoruntBitmasks
 	dw HoothootBitmasks
 	dw NoctowlBitmasks
 	dw SentretBitmasks
@@ -192,12 +192,12 @@ BitmasksPointers:
 	dw TotodileBitmasks
 	dw CroconawBitmasks
 	dw FeraligatrBitmasks
-	dw GrotleBitmasks
-	dw TorterraBitmasks
-	dw MonfernoBitmasks
-	dw InfernapeBitmasks
-	dw PrinplupBitmasks
-	dw EmpoleonBitmasks
+	dw RioluBitmasks
+	dw HorseaBitmasks
+	dw GlalieBitmasks
+	dw BasculinBitmasks
+	dw HoppipBitmasks
+	dw SunkernBitmasks
 	dw StaraviaBitmasks
 	dw StaraptorBitmasks
 	dw ShinxBitmasks
@@ -207,7 +207,7 @@ BitmasksPointers:
 	dw RampardosBitmasks
 	dw ShieldonBitmasks
 	dw BastiodonBitmasks
-	dw VespiquenBitmasks
+	dw DittoBitmasks
 	dw DrifloonBitmasks
 	dw DrifblimBitmasks
 	dw BronzorBitmasks
@@ -320,6 +320,12 @@ BitmasksPointers:
 
 	dw Noctowl_immortalBitmasks
 	dw Ursaluna_bloodmoonBitmasks
+
+	dw Feraligatr_ancestorBitmasks
+	dw Meganium_ancestorBitmasks
+	dw Magcargo_ancestorBitmasks
+	dw Xatu_ancestorBitmasks
+
 
 
 	assert_table_length NUM_UNIQUE_POKEMON

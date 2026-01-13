@@ -11,9 +11,6 @@ NewPokedexOrder:
 	db     OSHAWOTT
 	db     DEWOTT
 	db     SAMUROTT
-	db     PIDGEY
-	db     PIDGEOTTO
-	db     PIDGEOT
 	db     HOOTHOOT
 	db     NOCTOWL
 	db     SENTRET
@@ -50,6 +47,7 @@ NewPokedexOrder:
 	db     BELLSPROUT
 	db     WEEPINBELL
 	db     VICTREEBEL
+	db     HOPPIP
 	db     SKIPLOOM
 	db     JUMPLUFF
 	db     PARAS
@@ -70,6 +68,7 @@ NewPokedexOrder:
 	db     ABRA
 	db     KADABRA
 	db     ALAKAZAM
+	db     DITTO 
 	db     PINECO
 	db     FORRETRESS
 	db     NIDORAN
@@ -79,6 +78,7 @@ NewPokedexOrder:
 	db     NIDOKING
 	db     YANMA
 	db     YANMEGA
+	db     SUNKERN 
 	db     SUNFLORA
 	db     EXEGGCUTE
 	db     EXEGGUTOR
@@ -151,6 +151,7 @@ NewPokedexOrder:
 	db     LEAFEON
 	db     GLACEON
 	db     SYLVEON
+	db     HORSEA
 	db     SEADRA
 	db     KINGDRA
 	db     GLIGAR
@@ -194,12 +195,7 @@ NewPokedexOrder:
 	db     TOTODILE
 	db     CROCONAW
 	db     FERALIGATR
-	db     GROTLE
-	db     TORTERRA
-	db     MONFERNO
-	db     INFERNAPE
-	db     PRINPLUP
-	db     EMPOLEON
+	db     STARLY
 	db     STARAVIA
 	db     STARAPTOR
 	db     SHINX
@@ -209,12 +205,12 @@ NewPokedexOrder:
 	db     RAMPARDOS
 	db     SHIELDON
 	db     BASTIODON
-	db     VESPIQUEN
 	db     DRIFLOON
 	db     DRIFBLIM
 	db     BRONZOR
 	db     BRONZONG
 	db     SPIRITOMB
+	db     RIOLU 
 	db     LUCARIO
 	db     HIPPOPOTAS
 	db     HIPPOWDON
@@ -225,11 +221,15 @@ NewPokedexOrder:
 	db     DUSKULL
 	db     DUSCLOPS
 	db     DUSKNOIR
+	db 	   SNORUNT
+	db     GLALIE 
 	db     FROSLASS
 	db     ROTOM
 	db     BERGMITE
 	db     AVALUGG
+	db     BASCULIN 
 	db     BASCULEGION
+	db     RUFFLET
 	db     BRAVIARY
 	db     RALTS
 	db     KIRLIA

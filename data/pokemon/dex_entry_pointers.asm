@@ -10,9 +10,9 @@ PokedexDataPointerTable:
 	dba     OshawottPokedexEntry
 	dba     DewottPokedexEntry
 	dba     SamurottPokedexEntry
-	dba     PidgeyPokedexEntry
-	dba     PidgeottoPokedexEntry
-	dba     PidgeotPokedexEntry
+	dba     RuffletPokedexEntry
+	dba     StarlyPokedexEntry
+	dba     SnoruntPokedexEntry
 	dba     HoothootPokedexEntry
 	dba     NoctowlPokedexEntry
 	dba     SentretPokedexEntry
@@ -193,12 +193,12 @@ PokedexDataPointerTable:
 	dba     TotodilePokedexEntry
 	dba     CroconawPokedexEntry
 	dba     FeraligatrPokedexEntry
-	dba     GrotlePokedexEntry
-	dba     TorterraPokedexEntry
-	dba     MonfernoPokedexEntry
-	dba     InfernapePokedexEntry
-	dba     PrinplupPokedexEntry
-	dba     EmpoleonPokedexEntry
+	dba     RioluPokedexEntry
+	dba     HorseaPokedexEntry
+	dba     GlaliePokedexEntry
+	dba     BasculinPokedexEntry
+	dba     HoppipPokedexEntry
+	dba     SunkernPokedexEntry
 	dba     StaraviaPokedexEntry
 	dba     StaraptorPokedexEntry
 	dba     ShinxPokedexEntry
@@ -208,7 +208,7 @@ PokedexDataPointerTable:
 	dba     RampardosPokedexEntry
 	dba     ShieldonPokedexEntry
 	dba     BastiodonPokedexEntry
-	dba     VespiquenPokedexEntry
+	dba     DittoPokedexEntry
 	dba     DrifloonPokedexEntry
 	dba     DrifblimPokedexEntry
 	dba     BronzorPokedexEntry

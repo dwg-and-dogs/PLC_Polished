@@ -9,9 +9,9 @@ FrontPicPointers::
 	dba OshawottFrontpic        ; OSHAWOTT        ; 07
 	dba DewottFrontpic          ; DEWOTT          ; 08
 	dba SamurottFrontpic        ; SAMUROTT        ; 09
-	dba PidgeyFrontpic          ; PIDGEY          ; 0a
-	dba PidgeottoFrontpic       ; PIDGEOTTO       ; 0b
-	dba PidgeotFrontpic         ; PIDGEOT         ; 0c
+	dba RuffletFrontpic          ;           ; 0a
+	dba StarlyFrontpic       ;        ; 0b
+	dba SnoruntFrontpic         ;          ; 0c
 	dba HoothootFrontpic        ; HOOTHOOT        ; 0d
 	dba NoctowlFrontpic         ; NOCTOWL         ; 0e
 	dba SentretFrontpic         ; SENTRET         ; 0f
@@ -192,12 +192,12 @@ FrontPicPointers::
 	dba TotodileFrontpic        ; TOTODILE        ; bf
 	dba CroconawFrontpic        ; CROCONAW        ; c0
 	dba FeraligatrFrontpic      ; FERALIGATR      ; c1
-	dba GrotleFrontpic          ; GROTLE          ; c2
-	dba TorterraFrontpic        ; TORTERRA        ; c3
-	dba MonfernoFrontpic        ; MONFERNO        ; c4
-	dba InfernapeFrontpic       ; INFERNAPE       ; c5
-	dba PrinplupFrontpic        ; PRINPLUP        ; c6
-	dba EmpoleonFrontpic        ; EMPOLEON        ; c7
+	dba RioluFrontpic          ; GROTLE          ; c2
+	dba HorseaFrontpic        ;         ; c3
+	dba GlalieFrontpic        ;         ; c4
+	dba BasculinFrontpic       ;        ; c5
+	dba HoppipFrontpic        ;         ; c6
+	dba SunkernFrontpic        ;         ; c7
 	dba StaraviaFrontpic        ; STARAVIA        ; c8
 	dba StaraptorFrontpic       ; STARAPTOR       ; c9
 	dba ShinxFrontpic           ; SHINX           ; ca
@@ -207,7 +207,7 @@ FrontPicPointers::
 	dba RampardosFrontpic       ; RAMPARDOS       ; ce
 	dba ShieldonFrontpic        ; SHIELDON        ; cf
 	dba BastiodonFrontpic       ; BASTIODON       ; d0
-	dba VespiquenFrontpic       ; VESPIQUEN       ; d1
+	dba DittoFrontpic       ;        ; d1
 	dba DrifloonFrontpic        ; DRIFLOON        ; d2
 	dba DrifblimFrontpic        ; DRIFBLIM        ; d3
 	dba BronzorFrontpic         ; BRONZOR         ; d4
@@ -320,6 +320,13 @@ FrontPicPointers::
 ; Other Forms
 	dba NoctowlImmortalFrontpic
 	dba UrsalunaBloodmoonFrontpic
+
+	dba FeraligatrAncestorFrontpic
+	dba MeganiumAncestorFrontpic
+	dba MagcargoAncestorFrontpic
+	dba XatuAncestorFrontpic
+
+
 
 	assert_table_length NUM_UNIQUE_POKEMON
 	

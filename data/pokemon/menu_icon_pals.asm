@@ -15,7 +15,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BLUE, TEAL      ; SAMUROTT        ; 09
 	iconpal GRAY, BROWN     ; rufflet        ; c8
 	iconpal GRAY, BROWN     ; starly        ; c8
-	iconpal BROWN, RED      ; PIDGEOT         ; 0c
+	iconpal BROWN, GRAY      ; snorunt          ; 0c  
 	iconpal BROWN, RED ; HOOTHOOT
 	iconpal BROWN, GREEN ; NOCTOWL
 	iconpal BROWN, PURPLE ; SENTRET
@@ -196,12 +196,12 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BLUE, TEAL      ; TOTODILE        ; bf
 	iconpal BLUE, TEAL      ; CROCONAW        ; c0
 	iconpal BLUE, TEAL      ; FERALIGATR      ; c1
-	iconpal BROWN, GREEN    ; GROTLE          ; c2
-	iconpal BROWN, GREEN    ; TORTERRA        ; c3
-	iconpal RED, BROWN      ; MONFERNO        ; c4
-	iconpal RED, BROWN      ; INFERNAPE       ; c5
-	iconpal BLUE, TEAL      ; PRINPLUP        ; c6
-	iconpal BLUE, TEAL      ; EMPOLEON        ; c7
+	iconpal TEAL, GRAY    ; riolu          ; c2  
+	iconpal BLUE, RED    ; horsea        ; c3  
+	iconpal TEAL, PURPLE      ; glalie        ; c4  
+	iconpal BLUE, RED      ; basculin       ; c5  
+	iconpal RED, GREEN      ; hoppip        ; c6  
+	iconpal BLUE, TEAL      ; sunkern        ; c7
 	iconpal GRAY, BROWN     ; STARAVIA        ; c8
 	iconpal GRAY, RED       ; STARAPTOR       ; c9
 	iconpal BLUE, BROWN     ; SHINX           ; ca 
@@ -211,7 +211,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BROWN, RED      ; RAMPARDOS       ; ce
 	iconpal BROWN, RED      ; SHIELDON        ; cf 
 	iconpal BROWN, RED      ; BASTIODON       ; d0
-	iconpal BROWN, RED      ; VESPIQUEN       ; d1
+	iconpal PURPLE, BLUE      ; ditto       ; d1  
 	iconpal PURPLE, BROWN   ; DRIFLOON        ; d2 
 	iconpal PURPLE, BROWN   ; DRIFBLIM        ; d3
 	iconpal TEAL, BROWN     ; BRONZOR         ; d4

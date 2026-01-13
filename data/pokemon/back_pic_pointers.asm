@@ -321,4 +321,9 @@ BackPicPointers::
 	dba NoctowlImmortalBackpic
 	dba UrsalunaBloodmoonBackpic
 
+	dba FeraligatrAncestorBackpic
+	dba MeganiumAncestorBackpic
+	dba MagcargoAncestorBackpic
+	dba XatuAncestorBackpic
+
 	assert_table_length NUM_UNIQUE_POKEMON
