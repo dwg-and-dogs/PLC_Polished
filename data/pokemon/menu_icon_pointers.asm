@@ -11,9 +11,9 @@ IconPointers:
 	dba OshawottIcon        ; OSHAWOTT        ; 07
 	dba DewottIcon          ; DEWOTT          ; 08
 	dba SamurottIcon        ; SAMUROTT        ; 09
-	dba PidgeyIcon          ; PIDGEY          ; 0a
-	dba PidgeottoIcon       ; PIDGEOTTO       ; 0b
-	dba PidgeotIcon         ; PIDGEOT         ; 0c
+	dba RuffletIcon          ;           ; 0a
+	dba StarlyIcon       ;        ; 0b
+	dba SnoruntIcon         ;          ; 0c
 	dba HoothootIcon        ; HOOTHOOT        ; 0d TODO
 	dba NoctowlIcon         ; NOCTOWL         ; 0e
 	dba SentretIcon         ; SENTRET         ; 0f TODO
@@ -194,12 +194,12 @@ IconPointers:
 	dba TotodileIcon        ; TOTODILE        ; bf
 	dba CroconawIcon        ; CROCONAW        ; c0
 	dba FeraligatrIcon      ; FERALIGATR      ; c1
-	dba GrotleIcon          ; GROTLE          ; c2
-	dba TorterraIcon        ; TORTERRA        ; c3
-	dba MonfernoIcon        ; MONFERNO        ; c4
-	dba InfernapeIcon       ; INFERNAPE       ; c5
-	dba PrinplupIcon        ; PRINPLUP        ; c6
-	dba EmpoleonIcon        ; EMPOLEON        ; c7
+	dba RioluIcon          ;           ; c2
+	dba HorseaIcon        ;         ; c3
+	dba GlalieIcon        ;         ; c4
+	dba BasculinIcon       ;        ; c5
+	dba HoppipIcon        ;         ; c6
+	dba SunkernIcon        ;         ; c7
 	dba StaraviaIcon        ; STARAVIA        ; c8
 	dba StaraptorIcon       ; STARAPTOR       ; c9
 	dba ShinxIcon           ; SHINX           ; ca TODO
@@ -209,7 +209,7 @@ IconPointers:
 	dba RampardosIcon       ; RAMPARDOS       ; ce
 	dba ShieldonIcon        ; SHIELDON        ; cf TODO
 	dba BastiodonIcon       ; BASTIODON       ; d0
-	dba VespiquenIcon       ; VESPIQUEN       ; d1
+	dba DittoIcon       ;        ; d1
 	dba DrifloonIcon        ; DRIFLOON        ; d2 TODO
 	dba DrifblimIcon        ; DRIFBLIM        ; d3
 	dba BronzorIcon         ; BRONZOR         ; d4

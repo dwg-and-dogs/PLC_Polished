@@ -13,8 +13,8 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BLUE, TEAL      ; OSHAWOTT        ; 07
 	iconpal BLUE, TEAL      ; DEWOTT          ; 08
 	iconpal BLUE, TEAL      ; SAMUROTT        ; 09
-	iconpal BROWN, RED      ; PIDGEY          ; 0a
-	iconpal BROWN, RED      ; PIDGEOTTO       ; 0b
+	iconpal GRAY, BROWN     ; rufflet        ; c8
+	iconpal GRAY, BROWN     ; starly        ; c8
 	iconpal BROWN, RED      ; PIDGEOT         ; 0c
 	iconpal BROWN, RED ; HOOTHOOT
 	iconpal BROWN, GREEN ; NOCTOWL
