@@ -1,4 +1,4 @@
-	db  55,  75,  50,  80,  40,  40 ; 340 BST
+	db  40,  55,  30,  60,  30,  30 ; 340 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FLYING ; type
@@ -7,8 +7,8 @@
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/staravia/front.dimensions"
-	abilities_for STARAVIA, INTIMIDATE, INTIMIDATE, RECKLESS
+	INCBIN "gfx/pokemon/starly/front.dimensions"
+	abilities_for STARLY, KEEN_EYE, KEEN_EYE, RECKLESS
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
 

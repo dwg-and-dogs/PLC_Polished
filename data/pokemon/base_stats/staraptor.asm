@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/staraptor/front.dimensions"
 	abilities_for STARAPTOR, INTIMIDATE, INTIMIDATE, RECKLESS
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
+	dn EGG_FLYING, EGG_FLYING ; egg groups
 
 	ev_yield   0,   3,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

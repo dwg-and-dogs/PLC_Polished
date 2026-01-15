@@ -5,12 +5,12 @@
 	db 25 ; catch rate
 	db 168 ; base exp
 	db NO_ITEM ; item 1
-	db SHARP_BEAK ; item 2
-	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
+	db NO_ITEM ; item 2
+	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/skiploom/front.dimensions"
 	abilities_for SKIPLOOM, CHLOROPHYLL, CHLOROPHYLL, INFILTRATOR
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_FLYING, EGG_FLYING ; egg groups
+	dn EGG_FAIRY, EGG_PLANT  ; egg groups
 
 	ev_yield   0,   0,   0,   2,   0,   0
 	;         hp  atk  def  spd  sat  sdf

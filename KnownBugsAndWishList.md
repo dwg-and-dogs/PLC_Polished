@@ -5,6 +5,7 @@
 * Pokemon Icons on Fly Map sometimes don't display properly 
 * Graphical glitch in bug catching contest while using Park Ball  
 * Sometimes the player sprite palette is bugged in the halloffame. 
+* Evolution methods that require gender (Froslass, Gallade, ...) may change gender upon evolution. 
 
 ## Content wishlist 
 

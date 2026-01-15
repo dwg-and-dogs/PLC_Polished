@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/basculegion/front.dimensions"
 	abilities_for BASCULEGION, SWIFT_SWIM, SWIFT_SWIM, MOLD_BREAKER
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_MONSTER, EGG_PLANT ; egg groups
+	dn EGG_WATER_2, EGG_WATER_2 ; egg groups
 
 	ev_yield   3,   0,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

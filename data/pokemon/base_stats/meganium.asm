@@ -1,7 +1,7 @@
 	db  80,  82, 100,  80,  83, 100 ; 525 BST
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, FAIRY ; type
+	db GRASS, GRASS ; type
 	db 45 ; catch rate
 	db 208 ; base exp
 	db NO_ITEM ; item 1

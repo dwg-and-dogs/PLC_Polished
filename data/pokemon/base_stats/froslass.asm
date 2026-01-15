@@ -3,14 +3,14 @@
 
 	db GHOST, ICE ; type
 	db 75 ; catch rate
-	db 118 ; base exp
+	db 168 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
+	dn GENDER_F100, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/froslass/front.dimensions"
 	abilities_for FROSLASS, SNOW_CLOAK, SNOW_CLOAK, CURSED_BODY
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_BUG, EGG_BUG ; egg groups
+	dn EGG_FAIRY, EGG_MINERAL ; egg groups
 
 	ev_yield   0,   0,   2,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf
