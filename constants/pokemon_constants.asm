@@ -41,7 +41,7 @@
 ; gfx/pics.asm-->done
 
 ; next set of todos: 
-; 
+; finish gfx/pokemon/todo_<name>.asm 
 	const_def 1
 	const CYNDAQUIL       ; 01
 	const QUILAVA         ; 02
@@ -279,7 +279,7 @@
 	const GOOMY           ; eb
 	const SLIGGOO      ; ec
 	const GOODRA       ; ed
-	const ZORUA 			; SHIFTED FROM MRMIME ,
+	const ZORUA 			; 
 	const ZOROARK      ; ee
 	const GIBLE           ; f0
 	const GABITE          ; ef
