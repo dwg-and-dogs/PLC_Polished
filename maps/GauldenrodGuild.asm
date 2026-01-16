@@ -17,9 +17,9 @@ GauldenrodGuild_MapScriptHeader:
 
 
 	def_object_events
-	object_event 2, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 1, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildMasterBallScript, -1
+	object_event 2, 3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildMasterBallScript, -1
 	object_event 7, 2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildNPC1Script, -1
-	object_event 1, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildNPC2Script, -1
+	object_event 5, 4, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildNPC2Script, -1
 	object_event 8, 5, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodGuildNPC3Script, -1
 
 	object_const_def
