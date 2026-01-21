@@ -239,7 +239,7 @@ PokemonNames::
 	rawchar "Goodra@@@@" ; ed
 	rawchar "Zorua@@@@@" ; 7f fr. mrmime 
 	rawchar "Zoroark@@@" ; ee
-	rawchar "Gible@@@@" ; f0
+	rawchar "Gible@@@@@" ; f0
 	rawchar "Gabite@@@@" ; ef
 	rawchar "Garchomp@@" ; f1
 	rawchar "Dratini@@@" ; f2
@@ -257,4 +257,4 @@ PokemonNames::
 	rawchar "Celebi@@@@" ; fe
 	assert_table_length NUM_POKEMON + 1
 	rawchar "Egg@@@@@@@" ; ff
-	assert_table_length NUM_SPECIES + 1
+	assert_table_length NUM_SPECIES + 1 ; no issue with the length here - we have a problem instead with the constants file 

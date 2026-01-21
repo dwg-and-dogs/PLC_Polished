@@ -322,5 +322,9 @@ IconPointers:
 ; Other Forms
 	dba NoctowlIcon         ; Noctowl (Immortal) - should be Immortal Noctowl
 	dba UrsalunaIcon        ; Ursaluna (Bloodmoon) - should be Bloodmoon Ursaluna
+	dba FeraligatrIcon
+	dba MeganiumIcon
+	dba MagcargoIcon
+	dba XatuIcon
 
 	assert_table_length NUM_UNIQUE_POKEMON + 1

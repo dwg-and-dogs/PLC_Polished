@@ -292,4 +292,11 @@ EvolutionMoves::
 ; Other Forms
 	db SHADOW_CLAW       ; NOCTOWL (Immortal)
 	db NO_MOVE       ; URSALUNA (Bloodmoon)
+	db THUNDERPUNCH       ; FERALIGATR ancestor
+	db X_SCISSOR       ; MEGANIUM ancestor
+	db SLUDGE_BOMB       ; MAGCARGO ancestor
+	db ANCIENTPOWER       ; XATU ancestor
+
+
+
 	assert_table_length NUM_EXT_POKEMON

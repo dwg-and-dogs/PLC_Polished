@@ -1,5 +1,5 @@
 PicAnimations:
-
+; BulbasaurAnimation:  INCLUDE "gfx/pokemon/bulbasaur/anim0.asm"
 CyndaquilAnimation: INCLUDE "gfx/pokemon/cyndaquil/anim0.asm"
 QuilavaAnimation: INCLUDE "gfx/pokemon/quilava/anim0.asm"
 TyphlosionAnimation: INCLUDE "gfx/pokemon/typhlosion/anim0.asm"
