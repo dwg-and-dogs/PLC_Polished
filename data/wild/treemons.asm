@@ -18,106 +18,106 @@ TreeMons:
 ;	db  %, species, level
 
 TreeMonSet_City:
-	db 50, PIDGEY,     10
-	db 15, PIDGEY,     10
-	db 15, PIDGEY,     10
-	db 10, PIDGEY,     10
-	db  5, MEOWTH,     10
-	db  5, MEOWTH,     10
+	db 50, HOOTHOOT,     10
+	db 15, AIPOM,     10
+	db 15, AIPOM,     10
+	db 10, AIPOM,     10
+	db  5, HERACROSS,     10
+	db  5, HERACROSS,     10
 	db -1
 	; rare
-	db 50, PIDGEY,     10
+	db 50, HOOTHOOT,     10
 	db 15, HERACROSS,  10
 	db 15, HERACROSS,  10
-	db 10, PIDGEY,     10
-	db  5, MEOWTH,     10
-	db  5, MEOWTH,     10
+	db 10, AIPOM,     10
+	db  5, AIPOM,     10
+	db  5, AIPOM,     10
 	db -1
 
 TreeMonSet_Canyon:
 	db 30, MANKEY,     20
 	db 30, GLIGAR,     20
-	db 10, GOLBAT,     20
-	db 20, NATU,       20
+	db 10, NATU,     20
+	db 20, MANKEY,       20
 	db  5, SKARMORY,   20
 	db  5, SKARMORY,   20
 	db -1
 	; rare
 	db 30, MANKEY,     20
 	db 30, GLIGAR,     20
-	db 10, GOLBAT,     20
-	db 20, NATU,       20
+	db 10, SKARMORY,     20
+	db 20, SKARMORY,       20
 	db  5, SKARMORY,   20
 	db  5, SKARMORY,   20
 	db -1
 
 
 TreeMonSet_Town:
-	db 50, PIDGEY,     10
-	db 15, EKANS,      10
-	db 15, EKANS,      10
-	db 10, PIDGEY,     10
-	db  5, MEOWTH,     10
-	db  5, MEOWTH,     10
+	db 50, EXEGGCUTE,     10
+	db 15, AIPOM,      10
+	db 15, AIPOM,      10
+	db 10, AIPOM,     10
+	db  5, HERACROSS,     10
+	db  5, HERACROSS,     10
 	db -1
 	; rare
-	db 50, PIDGEY,     10
-	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
-	db 10, PIDGEY,     10
-	db  5, MEOWTH,     10
-	db  5, MEOWTH,     10
+	db 50, AIPOM,     10
+	db 15, AIPOM,      10
+	db 15, HERACROSS,      10
+	db 10, HERACROSS,     10
+	db  5, HERACROSS,     10
+	db  5, HERACROSS,     10
 	db -1
 
 TreeMonSet_Route:
 	db 50, ARIADOS,   10
-	db 15, ARIADOS,   10
-	db 15, LEDIAN,     10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 15, LEDIAN,   10
+	db 15, EXEGGCUTE,     10
+	db 10, MURKROW,  10
+	db  5, MURKROW,  10
+	db  5, PINECO,  10
 	db -1
 	; rare
-	db 40, MURKROW,    10
-	db 20, PINECO,     10
-	db 20, PINECO,     10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 50, MURKROW,   10
+	db 15, LEDIAN,   10
+	db 15, EXEGGCUTE,     10
+	db 10, MURKROW,  10
+	db  5, ARIADOS,  10
+	db  5, PINECO,  10
 	db -1
 
 TreeMonSet_Kanto:
 	db 50, ARIADOS,   10
-	db 15, EKANS,      10
-	db 15, ARIADOS,   10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 15, AIPOM,   10
+	db 15, EXEGGCUTE,     10
+	db 10, MURKROW,  10
+	db  5, MURKROW,  10
+	db  5, PINECO,  10
 	db -1
 	; rare
-	db 40, MURKROW,    10
-	db 20, PINECO,     10
-	db 20, PINECO,     10
-	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db 50, MURKROW,   10
+	db 15, AIPOM,   10
+	db 15, EXEGGCUTE,     10
+	db 10, MURKROW,  10
+	db  5, ARIADOS,  10
+	db  5, PINECO,  10
 	db -1
 
 TreeMonSet_Lake:
 	db 50, ARIADOS,   10
-	db 15, VENONAT,    10
-	db 15, ARIADOS,   10
+	db 15, AIPOM,    10
+	db 15, EXEGGCUTE,   10
 	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db  5, PINECO,  10
+	db  5, PINECO,  10
 	db -1
 	; rare
 	db 50, ARIADOS,   10
-	db 15, PINECO,     10
-	db 15, PINECO,     10
+	db 15, AIPOM,    10
+	db 15, EXEGGCUTE,   10
 	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db  5, PINECO,  10
+	db  5, PINECO,  10
 	db -1
 
 TreeMonSet_Forest:;only for ilex forest and hollys holt
@@ -144,6 +144,6 @@ TreeMonSet_Rock:
 	db -1
 	
 TreeMonSet_Ice: ;used for boulders near the glaciers
-	db 50, H__AVALUGG, 40
-	db 50, H__AVALUGG, 45
+	db 50, BERGMITE, 20
+	db 50, AVALUGG, 40
 	db -1

@@ -56,21 +56,21 @@
 	wildmon 15, POLIWHIRL
 	end_water_wildmons
 
-	def_water_wildmons MOUNT_MORTAR_1F_OUTSIDE
+	def_water_wildmons MOUNT_MORTAR_1F_OUTSIDE ; NOT AVAILABLE 
 	db 2 percent ; encounter rate
 	wildmon 40, POLIWRATH
 	wildmon 40, AZUMARILL
 	wildmon 40, POLITOED
 	end_water_wildmons
 
-	def_water_wildmons MOUNT_MORTAR_2F_INSIDE
+	def_water_wildmons MOUNT_MORTAR_2F_INSIDE ; NOT AVAILABLE 
 	db 2 percent ; encounter rate
 	wildmon 40, POLIWRATH
 	wildmon 40, AZUMARILL
 	wildmon 40, POLITOED
 	end_water_wildmons
 
-	def_water_wildmons MOUNT_MORTAR_B1F
+	def_water_wildmons MOUNT_MORTAR_B1F ; NOT AVAILABLE 
 	db 2 percent ; encounter rate
 	wildmon 40, POLIWRATH
 	wildmon 40, AZUMARILL
@@ -121,23 +121,23 @@
 
 	def_water_wildmons ROUTE_39 
 	db 2 percent ; encounter rate
-	wildmon 25, MUK
+	wildmon 25, GRIMER
 	wildmon 25, MUK
 	wildmon 30, MUK
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_40
 	db 2 percent ; encounter rate
-	wildmon 27, TENTACRUEL
-	wildmon 30, CORSOLA
-	wildmon 30, STARYU
+	wildmon 27, TENTACOOL
+	wildmon 30, CORSOLA, GALARIAN_FORM
+	wildmon 30, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_41
 	db 2 percent ; encounter rate
-	wildmon 27, LANTURN
-	wildmon 26, MANTINE
-	wildmon 28, OCTILLERY
+	wildmon 27, TENTACOOL
+	wildmon 26, CORSOLA
+	wildmon 28, MANTINE
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_42
@@ -149,9 +149,9 @@
 
 	def_water_wildmons ROUTE_43
 	db 2 percent ; encounter rate
-	wildmon 10, WOOPER
-	wildmon 45, QUAGSIRE
-	wildmon 45, QUAGSIRE
+	wildmon 30, WOOPER
+	wildmon 30, WOOPER
+	wildmon 35, QUAGSIRE
 	end_water_wildmons
 
 	def_water_wildmons VIOLET_CITY
@@ -163,23 +163,23 @@
 
 	def_water_wildmons CIANWOOD_CITY
 	db 6 percent ; encounter rate
-	wildmon 30, TENTACRUEL
+	wildmon 30, LANTURN
+	wildmon 30, CORSOLA
 	wildmon 30, MANTINE
-	wildmon 30, OCTILLERY
 	end_water_wildmons
 
 	def_water_wildmons GOLDENROD_CITY
 	db 2 percent ; encounter rate
 	wildmon 20, TENTACRUEL
-	wildmon 15, TENTACRUEL
+	wildmon 15, TENTACOOL
 	wildmon 20, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons OLIVINE_CITY
 	db 0 percent ; encounter rate
-	wildmon 30, TENTACRUEL
+	wildmon 30, CORSOLA, GALARIAN_FORM
 	wildmon 35, TENTACRUEL
-	wildmon 30, TENTACRUEL
+	wildmon 30, TENTACOOL
 	end_water_wildmons
 
 	def_water_wildmons ECRUTEAK_CITY
@@ -191,9 +191,9 @@
 
 	def_water_wildmons LAKE_OF_RAGE
 	db 2 percent ; encounter rate
-	wildmon 10, WOOPER
-	wildmon 20, WOOPER
-	wildmon 45, QUAGSIRE
+	wildmon 30, WOOPER
+	wildmon 30, WOOPER
+	wildmon 35, QUAGSIRE
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_KAJO

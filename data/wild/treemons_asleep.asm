@@ -1,26 +1,16 @@
 ; Used by CheckSleepingTreeMon
 
 AsleepTreeMonsNite:
-	db BUTTERFREE
-	db BEEDRILL
-	db PIDGEY
-	db EKANS
+	db NATU
 	db EXEGGCUTE
-	db LEDIAN
+	db AIPOM
 	db -1 ; end
 
 AsleepTreeMonsDay:
-	db VENONAT
-	db LEDIAN
-	db LEDIAN
-	db ARIADOS
-	db HERACROSS
+	db HOOTHOOT
+	db MURKROW
 	db -1 ; end
 
 AsleepTreeMonsMorn:
-	db VENONAT
-	db LEDIAN
-	db LEDIAN
-	db ARIADOS
 	db HERACROSS
 	db -1 ; end

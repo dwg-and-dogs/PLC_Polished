@@ -23,24 +23,24 @@ FishGroups:
 	assert_table_length NUM_FISHGROUPS
 
 .Shore_Old:
-	db  70 percent + 1, MAGIKARP,   5
-	db  85 percent + 1, MAGIKARP,   5
-	db 100 percent,     MAGIKARP,   5
+	db  70 percent + 1, REMORAID,   5
+	db  85 percent + 1, HORSEA,   5
+	db 100 percent,     HORSEA,   5
 .Shore_Good:
-	db  35 percent,     STARYU,   20
-	db  70 percent,     STARYU,     20
-	db  90 percent + 1, STARYU,     20
+	db  35 percent,     TENTACOOL,   20
+	db  70 percent,     HORSEA,     20
+	db  90 percent + 1, HORSEA,     20
 	db 100 percent,     0, 0
 .Shore_Super:
-	db  40 percent,     CLOYSTER,     40
+	db  40 percent,     TENTACRUEL,     40
 	db  70 percent,     0, 1
-	db  90 percent + 1, CLOYSTER,   40
-	db 100 percent,     CLOYSTER,   40
+	db  90 percent + 1, TENTACRUEL,   50
+	db 100 percent,     TENTACRUEL,   50
 
 .Ocean_Old:
 	db  70 percent + 1, CHINCHOU,   5
-	db  85 percent + 1, CHINCHOU,   5
-	db 100 percent,     CHINCHOU,   5
+	db  85 percent + 1, TENTACOOL,   5
+	db 100 percent,     TENTACOOL,   5
 .Ocean_Good:
 	db  35 percent,     LANTURN,   20
 	db  70 percent,     LANTURN,    20
@@ -80,22 +80,22 @@ FishGroups:
 	db  40 percent,     POLIWHIRL,   40
 	db  70 percent,     0, 7
 	db  90 percent + 1, POLIWHIRL,   40
-	db 100 percent,     POLIWHIRL,   40
+	db 100 percent,     POLITOED,   40
 
 .Dratini_Old: ;alpine lake on route KaJo
 	db  70 percent + 1, MAGIKARP,   5
 	db  85 percent + 1, MAGIKARP,   5
 	db 100 percent,     MAGIKARP,   5
 .Dratini_Good:
-	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     MAGIKARP,   20
-	db  90 percent + 1, PRINPLUP,   20
+	db  35 percent,     TOTODILE,   20
+	db  70 percent,     TOTODILE,   20
+	db  90 percent + 1, TOTODILE,   20
 	db 100 percent,     0, 8
 .Dratini_Super:
-	db  40 percent,     PRINPLUP,   40
+	db  40 percent,     CROCONAW,   40
 	db  70 percent,     0, 9
-	db  90 percent + 1, PRINPLUP,   40
-	db 100 percent,     PRINPLUP,   40
+	db  90 percent + 1, CROCONAW,   40
+	db 100 percent,     CROCONAW,   40
 
 .Qwilfish_Swarm_Old: ;unused
 	db  70 percent + 1, MAGIKARP,   5
@@ -141,9 +141,9 @@ FishGroups:
 	db 100 percent,     GYARADOS,   40
 
 .Dratini_2_Old: ;ROUTE 38 39
-	db  70 percent + 1, MUK,        5
-	db  85 percent + 1, MUK,        5
-	db 100 percent,     MUK,        5
+	db  70 percent + 1, GRIMER,        5
+	db  85 percent + 1, GRIMER,        5
+	db 100 percent,     GRIMER,        5
 .Dratini_2_Good:
 	db  35 percent,     MUK,        5
 	db  70 percent,     MUK,        5
