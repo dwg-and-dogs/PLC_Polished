@@ -285,7 +285,7 @@ INCLUDE "data/pokemon/base_stats/tyranitar.asm"
 INCLUDE "data/pokemon/base_stats/raikou.asm"
 INCLUDE "data/pokemon/base_stats/entei.asm"
 INCLUDE "data/pokemon/base_stats/suicune.asm"
-INCLUDE "data/pokemon/base_stats/heatran.asm";;
+INCLUDE "data/pokemon/base_stats/heatran.asm"
 INCLUDE "data/pokemon/base_stats/lugia.asm"
 INCLUDE "data/pokemon/base_stats/ho_oh.asm"
 INCLUDE "data/pokemon/base_stats/celebi.asm"
