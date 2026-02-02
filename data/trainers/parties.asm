@@ -77,13 +77,13 @@ FalknerGroup:
 ; ================================
 ; ================
 
-	; FALKNER
+	; FALKNER  revised 
 	db "Falkner@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 31, MANTINE, FOCUS_SASH, FAKE_PERFECT_DVS, "Catalina@"
 		db RAIN_DANCE, WATER_PULSE, HURRICANE, ROOST
-	db 33, PIDGEOTTO, EVIOLITE, DVS_HP_FLYING,"Hawker@"
+	db 33, NOCTOWL, SCOPE_LENS, DVS_HP_FLYING,"Hawker@"
 		db AERIAL_ACE, MUD_SLAP, ROOST, HURRICANE
 	db 32, GLIGAR, NO_ITEM, FAKE_PERFECT_DVS,"Stratofor@"
 		db PROTECT, AERIAL_ACE, BULLDOZE, TOXIC
@@ -100,15 +100,13 @@ BugsyGroup:
 	db "Bugsy@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 14, BUTTERFREE, NO_ITEM, FAKE_PERFECT_DVS, "Petra@"
-		db U_TURN, POISONPOWDER, SLEEP_POWDER, CONFUSION
-	db 14, BEEDRILL, NO_ITEM, FAKE_PERFECT_DVS, "Vesper@"
-		db POISON_STING, STRING_SHOT, U_TURN, FURY_STRIKES
-	db 14, PARASECT, NO_ITEM, DVS_HP_BUG, "Mickey@" ; GREEN 
+	db 16, YANMA, NO_ITEM, FAKE_PERFECT_DVS, "Sonic@"
+		db SONIC_BOOM, CONFUSE_RAY, GUST, U_TURN
+	db 16, PARASECT, NO_ITEM, DVS_HP_BUG, "Mickey@" ; GREEN 
 		db SLEEP_POWDER, SLASH, ABSORB, GROWTH
-	db 14, MAGCARGO, NO_ITEM, FAKE_PERFECT_DVS, "Helix@"
+	db 20, SLUGMA, NO_ITEM, FAKE_PERFECT_DVS, "Helix@"
 		db EMBER, ROCK_THROW, AMNESIA, RECOVER
-	db 16, SCYTHER, SITRUS_BERRY,DVS_HP_BUG,  "Manny@"
+	db 18, SCYTHER, SITRUS_BERRY,DVS_HP_BUG,  "Manny@"
 		db QUICK_ATTACK, SWORDS_DANCE, PURSUIT, U_TURN
 	db -1 ; end
 
@@ -122,7 +120,7 @@ WhitneyGroup:
 	db "Whitney@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 27, WIGGLYTUFF, SITRUS_BERRY, FAKE_PERFECT_DVS, "Resonator@"
+	db 27, CLEFAIRY, SITRUS_BERRY, FAKE_PERFECT_DVS, "Resonator@"
 		db ATTRACT, HYPER_VOICE, METRONOME, SING
 	db 28, NIDOQUEEN, CHESTO_BERRY, DVS_HP_POISON, "BriarRose@"
 		db ATTRACT, REST, BODY_SLAM, BULLDOZE
@@ -145,8 +143,8 @@ MortyGroup:
 		db SUCKER_PUNCH, ICE_PUNCH, SHADOW_CLAW, CURSE
 	db 43, MISMAGIUS, SITRUS_BERRY,  FAKE_PERFECT_DVS,"Melisandre@"
 		db ATTRACT, NASTY_PLOT, MOONBLAST, SHADOW_BALL
-	db 44, VENOMOTH, SILVERPOWDER,  FAKE_PERFECT_DVS,"BeetleJuce@"
-		db SLEEP_POWDER, BUG_BUZZ, DREAM_EATER, PSYBEAM
+	db 44, PARASECT, SILVERPOWDER,  FAKE_PERFECT_DVS,"BeetleJuce@"
+		db SPORE, X_SCISSOR, GIGA_DRAIN, NIGHT_SHADE
 	db 44, WYRDEER, BLACK_BELT, FAKE_PERFECT_DVS, "NecroDancr@"
 		db ZEN_HEADBUTT, DOUBLE_EDGE, AGILITY, DOUBLE_KICK	
 	db 46, GENGAR, WIDE_LENS,  DVS_HP_DARK,"Jung-Gar@"
@@ -209,8 +207,8 @@ PryceGroup:
 	db "Pryce@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 43, CLOYSTER, FOCUS_SASH, FAKE_PERFECT_DVS, "Aperifrizo@"
-		db SPIKES, EXPLOSION, HAIL, NO_MOVE
+	db 43, GLALIE, FOCUS_SASH, FAKE_PERFECT_DVS, "Aperifrizo@"
+		db SPIKES, EXPLOSION, HAIL, ICY_WIND
 	db 43, LAPRAS, NO_ITEM,  DVS_HP_PSYCHIC,"Raspberry@"
 		db CALM_MIND, SURF, THUNDERBOLT, ICE_BEAM
 	db 45, SNEASEL, NEVERMELTICE,  FAKE_PERFECT_DVS,"SneaSalt@"
@@ -236,8 +234,8 @@ ClairGroup:
 		db EARTHQUAKE, STRENGTH, WATERFALL, FLY
 	db 50, KINGDRA, CHESTO_BERRY, DVS_HP_DRAGON, "DarkGin@"
 		db DRAGON_DANCE, OUTRAGE, WATERFALL, REST
-	db 46, KANGASKHAN, CHOICE_SCARF, FAKE_PERFECT_DVS, "ShankKanga@"
-		db SLASH, NO_MOVE, NO_MOVE, NO_MOVE
+	db 46, TAUROS, CHOICE_BAND, FAKE_PERFECT_DVS, "RoastU@"
+		db EARTHQUAKE, DOUBLE_EDGE, FLAME_CHARGE, NO_MOVE
 	db 50, DRAGONAIR, EVIOLITE,  DVS_HP_ICE,"RaidGroan@"
 		db DRAGON_DANCE, REST, SLEEP_TALK, DRAGON_CLAW
 	db -1 ; end
@@ -301,7 +299,7 @@ KurtGroup:
 	db 26, STANTLER
 	db 27, GROWLITHE
 	db 27, POLIWHIRL
-	db 28, DUGTRIO
+	db 28, DONPHAN
 	db -1 ; end
 
 	; KURT6 SAMSARA
@@ -320,7 +318,7 @@ KurtGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 31, TAUROS
-	db 33, GROTLE
+	db 33, BAYLEEF
 	db 34, GIRAFARIG
 	db 35, GLIGAR
 	db 35, SLOWPOKE
@@ -332,7 +330,7 @@ KurtGroup:
 	; party
 	db 32, FROSLASS
 	db 35, DRIFBLIM
-	db 36, PERSIAN
+	db 36, FURRET
 	db 37, SEADRA
 	db 35, SHUCKLE
 	db -1 ; end
@@ -352,8 +350,8 @@ KurtGroup:
 	db "Kurt@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 39, BASTIODON
-	db 39, LOPUNNY
+	db 39, RHYDON
+	db 39, TAUROS
 	db 40, DONPHAN
 	db 40, AZUMARILL
 	db 42, KIRLIA
@@ -364,10 +362,10 @@ KurtGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 40, STARAPTOR
-	db 41, DRAPION
-	db 42, ROSERADE
+	db 41, TOXICROAK
+	db 42, VILEPLUME
 	db 40, LUCARIO
-	db 41, H__BRAVIARY
+	db 41, BRAVIARY
 	db -1 ; end
 	
 	; KURT12 ; whispering way and top of clasts cradle 
@@ -450,8 +448,8 @@ SandraGroup:
 	db "Sandra@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 18, WIGGLYTUFF, NO_ITEM, DVS_HP_PSYCHIC, "Crescendo@"
-		db DISARM_VOICE, SING, ROLLOUT, NO_MOVE
+	db 18, MARILL, NO_ITEM, DVS_HP_PSYCHIC, "Efferve@"
+		db BUBBLE_BEAM, ROLLOUT, CHARM, NO_MOVE
 	db 19, TOGETIC, NO_ITEM, DVS_HP_FLYING, "Clutch@"
 		db EXTRASENSORY, DRAIN_KISS, METRONOME, NO_MOVE
 	db 20, SNUBBULL, NO_ITEM, FAKE_PERFECT_DVS, "Rusty@"
@@ -465,8 +463,8 @@ SandraGroup:
 	db "Sandra@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
-	db 48, WIGGLYTUFF, NO_ITEM, DVS_HP_PSYCHIC, "Crescendo@"
-		db COUNTER, BLIZZARD, FIRE_BLAST, HYPER_VOICE
+	db 48, AZUMARILL, NO_ITEM, DVS_HP_PSYCHIC, "Efferve@"
+		db SURF, MOONBLAST, AQUA_JET, ROLLOUT
 	db 49, TOGEKISS, NO_ITEM,DVS_HP_FLYING,  "Clutch@"
 		db ROOST, AIR_SLASH, EXTRASENSORY, METRONOME
 	db 50, GRANBULL, NO_ITEM, FAKE_PERFECT_DVS, "Rusty@"
@@ -522,19 +520,20 @@ SamsaraGroup:
 ; ================================
 ; ================
 
-	; Samsara renamed to vespera 
+
+	; Samsara renamed to vespera , attempted to copy the form of karen 
 	db "Vespera@"
-	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
+	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY |  TRAINERTYPE_NICKNAME |TRAINERTYPE_MOVES
 	; party
-	db 32, DUSKNOIR, LEFTOVERS,FAKE_PERFECT_DVS, "Yamaduta@"
+	db 32, DUSKNOIR, LEFTOVERS, 60, FAKE_PERFECT_DVS,ABILITY_1 | NAT_NEUTRAL, FEMALE "Yamaduta@"
 		db SHADOW_CLAW, WILL_O_WISP, CURSE, PAIN_SPLIT
-	db 30, GENGAR, LUM_BERRY, FAKE_PERFECT_DVS,"Te No Me@"
+	db 30, GENGAR, LUM_BERRY, FAKE_PERFECT_DVS,ABILITY_1 | NAT_NEUTRAL, FEMALE"Te No Me@"
 		db SHADOW_CLAW, DESTINY_BOND, MEAN_LOOK, SUCKER_PUNCH
-	db 33, MISDREAVUS, NO_ITEM, DVS_HP_ELECTRIC, "Sabrina@"
+	db 33, MISDREAVUS, NO_ITEM, DVS_HP_ELECTRIC,ABILITY_1 | NAT_NEUTRAL, FEMALE "Sabrina@"
 		db THUNDER_WAVE, PSYCHIC_M, SHADOW_BALL, HEX
-	db 33, STANTLER, ZOOM_LENS,FAKE_PERFECT_DVS, "Pallbearer@"
+	db 33, STANTLER, ZOOM_LENS,FAKE_PERFECT_DVS,ABILITY_1 | NAT_NEUTRAL, FEMALE "Pallbearer@"
 		db HI_JUMP_KICK, HYPNOSIS, STOMP, U_TURN
-	db 36, H__TYPHLOSION, SPELL_TAG,FAKE_PERFECT_DVS, "Charon@"
+	db 36, TYPHLOSION, SPELL_TAG, FAKE_PERFECT_DVS,ABILITY_1 | NAT_NEUTRAL, FEMALE | HISUIAN_FORM,  "Charon@"
 		db FLAME_CHARGE, SHADOW_BALL, SWIFT, CALM_MIND
 	db -1 ; end
 
@@ -1256,7 +1255,7 @@ Lyra2Group:
 	db "Lyra@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME
 	; party
-	db 69, PIDGEOT, NO_ITEM, "@"
+	db 69, NOCTOWL, NO_ITEM, "@"
 	db 70, ARCANINE, NO_ITEM, "@"
 	db 70, AZUMARILL, NO_ITEM, "@"
 	db 71, AMPHAROS, NO_ITEM, "@"
@@ -1287,7 +1286,7 @@ YoungsterGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 3, EKANS
-	db 3, PIDGEY
+	db 3, HOOTHOOT
 	db -1 ; end
 
 ; ================
@@ -1330,7 +1329,7 @@ YoungsterGroup:
 	; party
 	db 10, CYNDAQUIL
 	db 10, EKANS
-	db 12, DIGLETT
+	db 12, PHANPY
 	db -1 ; end
 
 ; ================
@@ -1447,8 +1446,8 @@ BugCatcherGroup:
 	db "Don@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 10, BEEDRILL
-	db 10, BUTTERFREE
+	db 10, SPINARAK
+	db 10, LEDYBA
 	db -1 ; end
 
 ; ================
@@ -1487,7 +1486,7 @@ BugCatcherGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 13, PINECO
-	db 13, BEEDRILL
+	db 13, SPINARAK
 	db -1 ; end
 
 ; ================
@@ -1496,7 +1495,7 @@ BugCatcherGroup:
 	db "Wayne@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 12, VESPIQUEN
+	db 12, CROAGUNK
 	db -1 ; end
 
 ; ================
@@ -1630,9 +1629,9 @@ CamperGroup:
 	db "Lloyd@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 22, ARBOK
+	db 22, QUILAVA
 	db 23, WEEPINBELL
-	db 26, PIDGEOTTO
+	db 26, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -1703,7 +1702,7 @@ CamperGroup:
 	db "Quentin@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 30, PIDGEOTTO
+	db 30, NOCTOWL
 	db 30, PRIMEAPE
 	db 30, TAUROS
 	db -1 ; end
@@ -1724,7 +1723,7 @@ CamperGroup:
 	db "Craig@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 25, PIDGEOTTO
+	db 25, NOCTOWL
 	db 25, MANKEY
 	db 26, DUGTRIO
 	db -1 ; end
@@ -2423,10 +2422,10 @@ FisherGroup:
 	db "Jonah@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 44, CLOYSTER
+	db 44, OCTILLERY
 	db 46, OCTILLERY
 	db 44, OCTILLERY
-	db 46, CLOYSTER
+	db 46, OCTILLERY
 	db -1 ; end
 
 ; ================
@@ -2593,7 +2592,7 @@ BirdKeeperGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 10, TOGETIC
-	db 16, PIDGEOTTO
+	db 16, HOOTHOOT
 	db -1 ; end
 
 ; ================
@@ -2602,8 +2601,8 @@ BirdKeeperGroup:
 	db "Vance@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 40, PIDGEOTTO
-	db 40, PIDGEOTTO
+	db 40, NOCTOWL
+	db 40, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2612,9 +2611,9 @@ BirdKeeperGroup:
 	db "Vance@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 45, PIDGEOT
+	db 45, NOCTOWL
 		db TOXIC, QUICK_ATTACK, ROAR, FLY
-	db 45, PIDGEOT
+	db 45, NOCTOWL
 		db SWIFT, PROTECT, STEEL_WING, FLY
 	db -1 ; end
 
@@ -2625,7 +2624,7 @@ BirdKeeperGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 18, TOGETIC
-	db 21, PIDGEOTTO
+	db 21, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2653,8 +2652,8 @@ BirdKeeperGroup:
 	db "Rod@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 25, PIDGEOTTO
-	db 28, PIDGEOTTO
+	db 24, NOCTOWL
+	db 28, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2725,9 +2724,9 @@ BirdKeeperGroup:
 	db "Boris@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 56, PIDGEOTTO
-	db 55, PIDGEOTTO
-	db 58, PIDGEOT
+	db 56, NOCTOWL
+	db 55, NOCTOWL
+	db 58, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2736,7 +2735,7 @@ BirdKeeperGroup:
 	db "Bob@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 59, PIDGEOTTO
+	db 59, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2764,7 +2763,7 @@ BirdKeeperGroup:
 	db "Bret@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 57, PIDGEOTTO
+	db 57, NOCTOWL
 	db 57, FARFETCH_D
 	db -1 ; end
 
@@ -2774,9 +2773,9 @@ BirdKeeperGroup:
 	db "Mick@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 62, PIDGEOT
+	db 62, NOCTOWL
 	db 60, MURKROW
-	db 60, PIDGEOTTO
+	db 60, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2785,7 +2784,7 @@ BirdKeeperGroup:
 	db "Powell@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 28, PIDGEOT
+	db 28, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2794,9 +2793,9 @@ BirdKeeperGroup:
 	db "Tony@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 24, PIDGEOTTO
+	db 24, NOCTOWL
 		db GUST, QUICK_ATTACK, RAGE, MUD_SLAP
-	db 24, PIDGEOTTO
+	db 24, NOCTOWL
 		db GUST, QUICK_ATTACK, RAGE, DOUBLE_TEAM
 	db 27, CROCONAW
 		db SURF, DISABLE, SCREECH, ZEN_HEADBUTT
@@ -2808,8 +2807,8 @@ BirdKeeperGroup:
 	db "Julian@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 20, PIDGEY
-	db 24, PIDGEOTTO
+	db 20, HOOTHOOT
+	db 24, NOCTOWL
 	db 25, MURKROW
 	db -1 ; end
 
@@ -2820,7 +2819,7 @@ BirdKeeperGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 57, XATU
-	db 50, PIDGEOTTO
+	db 50, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2829,8 +2828,8 @@ BirdKeeperGroup:
 	db "Gail@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 56, PIDGEOT
-	db 53, PIDGEOTTO
+	db 56, NOCTOWL
+	db 53, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2839,7 +2838,7 @@ BirdKeeperGroup:
 	db "Josh@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 55, PIDGEOT
+	db 55, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2849,7 +2848,7 @@ BirdKeeperGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 60, SKARMORY
-	db 57, PIDGEOT
+	db 57, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2858,7 +2857,7 @@ BirdKeeperGroup:
 	db "Ernie@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 61, PIDGEOT
+	db 61, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2868,8 +2867,8 @@ BirdKeeperGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 58, FARFETCH_D
-	db 58, PIDGEOT
-	db 58, PIDGEOTTO
+	db 58, NOCTOWL
+	db 58, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2878,10 +2877,10 @@ BirdKeeperGroup:
 	db "Easton@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 57, PIDGEOTTO
-	db 57, PIDGEOTTO
-	db 59, PIDGEOT
-	db 59, PIDGEOT
+	db 57, NOCTOWL
+	db 57, NOCTOWL
+	db 59, NOCTOWL
+	db 59, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2890,8 +2889,8 @@ BirdKeeperGroup:
 	db "Bryan@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 16, PIDGEY
-	db 18, PIDGEOTTO
+	db 16, HOOTHOOT
+	db 18, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -2900,9 +2899,9 @@ BirdKeeperGroup:
 	db "Trent@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 33, PIDGEY
-	db 44, PIDGEOTTO
-	db 55, PIDGEOT
+	db 33, HOOTHOOT
+	db 44, NOCTOWL
+	db 55, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -3455,7 +3454,7 @@ BrigaderGroup:
 	db "Suzuki@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Fire focus
-	db 40, MONFERNO
+	db 40, QUILAVA
 	db 45, MAGCARGO
 	db 42, HOUNDOOM
 	db -1 ; end
@@ -3473,7 +3472,7 @@ BrigaderGroup:
 	db "Lee@" ; trainer name
 	db TRAINERTYPE_NORMAL
 	; party - Poison focus
-	db 40, ARBOK
+	db 40, VILEPLUME
 	db 43, MUK
 	db 46, WEEZING
 	db -1 ; end
@@ -4345,8 +4344,6 @@ endc
 	db TRAINERTYPE_NORMAL
 	; party
 	db 57, GLOOM
-	db 60, ARBOK
-	db 57, GLOOM
 	db -1 ; end
 
 ; ================
@@ -4387,7 +4384,7 @@ endc
 	db TRAINERTYPE_ITEM
 	; party
 	db 52, GLOOM, SITRUS_BERRY
-	db 54, PIDGEOTTO, NO_ITEM
+	db 54, NOCTOWL, NO_ITEM
 	db 54, BELLOSSOM, NO_ITEM
 	db -1 ; end
 
@@ -4559,8 +4556,8 @@ BeautyGroup:
 	db "Cassie@"; UNDERGROUND
 	db TRAINERTYPE_NORMAL
 	; party
-	db 22, VENOMOTH
-	db 22, BUTTERFREE
+	db 22, SNUBBULL
+	db 22, LEDIAN
 	db -1 ; end
 
 ; ================
@@ -4691,8 +4688,8 @@ BugManiacGroup:
 	; party
 	db 18, YANMA
 		db BUG_BITE, QUICK_ATTACK, DOUBLE_TEAM, SONIC_BOOM
-	db 18, BUTTERFREE
-		db CONFUSION, SUPERSONIC, GUST, DEFENSE_CURL
+	db 18, LEDIAN
+		db MACH_PUNCH, SUPERSONIC, BUG_BITE, AGILITY
 	db -1 ; end
 
 ; ================
@@ -4712,8 +4709,6 @@ BugManiacGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 61, YANMA
-	db 62, BEEDRILL
-	db 62, BUTTERFREE
 	db -1 ; end
 
 ; ================
@@ -4722,7 +4717,6 @@ BugManiacGroup:
 	db "Doug@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 59, BUTTERFREE
 	db 57, ARIADOS
 	db -1 ; end
 
@@ -4732,8 +4726,7 @@ BugManiacGroup:
 	db "Dane@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 59, BEEDRILL
-	db 61, BUTTERFREE
+	db 59, ARIADOS
 	db -1 ; end
 
 ; ================
@@ -4752,8 +4745,6 @@ BugManiacGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 60, PARAS
-	db 62, PARAS
-	db 64, PARAS
 	db -1 ; end
 
 ; ================
@@ -4763,8 +4754,6 @@ BugManiacGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 58, PARAS
-	db 60, VENONAT
-	db 62, BEEDRILL
 	db -1 ; end
 
 ; ================
@@ -4773,7 +4762,7 @@ BugManiacGroup:
 	db "Abner@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 59, BUTTERFREE
+	db 59, PARAS
 	db -1 ; end
 
 ; ================
@@ -4782,7 +4771,7 @@ BugManiacGroup:
 	db "Kenta@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 60, BEEDRILL
+	db 60, PARAS
 	db -1 ; end
 
 ; ================
@@ -4791,7 +4780,7 @@ BugManiacGroup:
 	db "Robby@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 60, BUTTERFREE
+	db 60, PARAS
 	db -1 ; end
 
 ; ================
@@ -4818,7 +4807,7 @@ BugManiacGroup:
 	db "Kai@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 58, VENONAT
+	db 58, PARAS
 	db -1 ; end
 
 ; ================
@@ -4842,7 +4831,7 @@ RuinManiacGroup:
 	db "Lloyd@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 36, TORTERRA
+	db 36, MEGANIUM
 	db 40, HIPPOWDON
 	db -1 ; end
 
@@ -4914,7 +4903,7 @@ FirebreatherGroup:
 	; party
 	db 16, PONYTA
 	db 17, MAGMAR
-;	db 16, MONFERNO
+	db 16, QUILAVA
 	db -1 ; end
 
 ; ================
@@ -4923,7 +4912,7 @@ FirebreatherGroup:
 	db "Burt@" ; ROUTE 36 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 26, ARBOK
+	db 26, KOFFING
 	db 28, GRIMER
 	db 28, NIDORINO
 	db -1 ; end
@@ -5314,7 +5303,7 @@ SchoolboyGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 59, FURRET
-	db 61, PIDGEOT
+	db 61, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -5403,7 +5392,7 @@ SchoolgirlGroup:
 	db TRAINERTYPE_NICKNAME
 	; party
 	db 25, POLIWAG, "Turtle@"
-	db 23, PIDGEY, "@"
+	db 23, HOOTHOOT, "@"
 	db 24, PIKACHU, "@"
 	db -1 ; end
 
@@ -5555,7 +5544,7 @@ PsychicGroup:
 	db "Leon@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, PIDGEOTTO
+	db 54, NOCTOWL
 	db 55, KADABRA
 	db 53, GIRAFARIG
 	db -1 ; end
@@ -5843,8 +5832,8 @@ KimonoGirl1Group:
 	db "Masako@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 28, MONFERNO 
-		db MACH_PUNCH, FLAME_CHARGE, NASTY_PLOT, SWIFT
+	db 28, QUILAVA 
+		db DIG, FLAME_CHARGE, SMOKESCREEN, SWIFT
 	db 30, MAGMAR 
 		db FIRE_PUNCH, SMOKESCREEN, CONFUSE_RAY, DOUBLE_EDGE	
 	db 32, H__ARCANINE 
@@ -5935,8 +5924,8 @@ KimonoGirl4Group:
 	db "Haruko@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 28, PRINPLUP 
-		db METAL_CLAW, BUBBLE_BEAM, CHARM, PECK
+	db 28, CROCONAW 
+		db SWORDS_DANCE, SLASH, BUBBLE_BEAM, ICE_PUNCH
 	db 30, JYNX 
 		db ICE_PUNCH, CONFUSION, HYPNOSIS, REFLECT	
 	db 32, FERALIGATR 
@@ -5995,7 +5984,7 @@ ElderGroup:
 	db "Gaku@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 37, PIDGEOTTO
+	db 37, NOCTOWL
 	db 38, FLAREON
 	db 38, WEEPINBELL
 	db -1 ; end
@@ -6006,7 +5995,7 @@ ElderGroup:
 	db "Masa@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 37, PIDGEOTTO
+	db 37, NOCTOWL
 	db 38, JOLTEON
 	db 38, POLIWHIRL
 	db -1 ; end
@@ -6017,7 +6006,7 @@ ElderGroup:
 	db "Koji@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 37, PIDGEOTTO
+	db 37, NOCTOWL
 	db 38, VAPOREON
 	db 38, NINETALES
 	db -1 ; end
@@ -6028,7 +6017,7 @@ ElderGroup:
 	db "Noboru@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 43, PIDGEOT
+	db 43, NOCTOWL
 	db 44, GLISCOR
 	db 44, JUMPLUFF	
 	db 46, MANTINE
@@ -6215,7 +6204,7 @@ CoupleGroup:
 	db "Gail & Eli@"
 	db TRAINERTYPE_PERSONALITY
 	; party
-	db 13, DIGLETT, ABILITY_1 | NAT_NEUTRAL, MALE
+	db 13, ONIX, ABILITY_1 | NAT_NEUTRAL, MALE
 	db 15, MARILL, ABILITY_1 | NAT_NEUTRAL, MALE
 	db 15, PIKACHU, ABILITY_1 | NAT_NEUTRAL, FEMALE
 	db 13, POLIWAG, ABILITY_1 | NAT_NEUTRAL, FEMALE
@@ -6229,7 +6218,7 @@ CoupleGroup:
 	; party
 	db 15, PIKACHU, ABILITY_1 | NAT_NEUTRAL, FEMALE
 	db 13, POLIWAG, ABILITY_1 | NAT_NEUTRAL, FEMALE
-	db 13, DIGLETT, ABILITY_1 | NAT_NEUTRAL, MALE
+	db 13, ONIX, ABILITY_1 | NAT_NEUTRAL, MALE
 	db 15, MARILL, ABILITY_1 | NAT_NEUTRAL, MALE
 	db -1 ; end
 
@@ -6239,7 +6228,7 @@ CoupleGroup:
 	db "Duff & Eda@"
 	db TRAINERTYPE_PERSONALITY
 	; party
-	db 25, CLOYSTER, ABILITY_1 | NAT_NEUTRAL, FEMALE
+	db 25, ONIX, ABILITY_1 | NAT_NEUTRAL, FEMALE
 	db 25, ONIX, ABILITY_1 | NAT_NEUTRAL, MALE
 	db -1 ; end
 
@@ -6250,7 +6239,7 @@ CoupleGroup:
 	db TRAINERTYPE_PERSONALITY
 	; party
 	db 25, ONIX, ABILITY_1 | NAT_NEUTRAL, MALE
-	db 25, CLOYSTER, ABILITY_1 | NAT_NEUTRAL, FEMALE
+	db 25, ONIX, ABILITY_1 | NAT_NEUTRAL, FEMALE
 	db -1 ; end
 
 ; ================
@@ -6340,7 +6329,7 @@ CoupleGroup:
 	db TRAINERTYPE_PERSONALITY
 	; party
 	db 56, ALAKAZAM, ABILITY_1 | NAT_NEUTRAL, MALE
-	db 52, BUTTERFREE, ABILITY_1 | NAT_NEUTRAL, FEMALE
+	db 52, PARASECT, ABILITY_1 | NAT_NEUTRAL, FEMALE
 	db -1 ; end
 
 ; ================
@@ -6349,7 +6338,7 @@ CoupleGroup:
 	db "Joe & Jo@"
 	db TRAINERTYPE_PERSONALITY
 	; party
-	db 52, BUTTERFREE, ABILITY_1 | NAT_NEUTRAL, FEMALE
+	db 52, PARASECT, ABILITY_1 | NAT_NEUTRAL, FEMALE
 	db 56, ALAKAZAM, ABILITY_1 | NAT_NEUTRAL, MALE
 	db -1 ; end
 
@@ -6393,7 +6382,7 @@ GentlemanGroup:
 	db "Alfred@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 26, PIDGEOTTO
+	db 26, NOCTOWL
 	db -1 ; end
 
 ; ================
@@ -6437,7 +6426,7 @@ RichBoyGroup:
 	db "Winston@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 46, PIDGEOT
+	db 46, NOCTOWL
 	db 44, FURRET
 	db 45, AMPHAROS
 	db -1 ; end
@@ -6833,7 +6822,7 @@ SwimmerMGroup: ; scavengers
 	db "Randall@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 30, CLOYSTER
+	db 30, TENTACRUEL
 	db 32, FORRETRESS
 	db 34, ELECTRODE
 	db -1 ; end
@@ -6922,8 +6911,7 @@ SwimmerMGroup: ; scavengers
 	db "Tucker@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 59, CLOYSTER
-	db 61, CLOYSTER
+	db 59, SLOWPOKE
 	db -1 ; end
 
 ; ================
@@ -7053,9 +7041,7 @@ SwimmerMGroup: ; scavengers
 	db "Malcolm@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, CLOYSTER
-	db 55, LAPRAS
-	db 54, CLOYSTER
+	db 54, LAPRAS
 	db -1 ; end
 
 ; ================
@@ -7065,7 +7051,6 @@ SwimmerMGroup: ; scavengers
 	db TRAINERTYPE_NORMAL
 	; party
 	db 55, FERALIGATR
-	db 55, CLOYSTER
 	db -1 ; end
 
 ; ================
@@ -7085,7 +7070,6 @@ SwimmerMGroup: ; scavengers
 	db TRAINERTYPE_NORMAL
 	; party
 	db 60, SEADRA
-	db 56, QUAGSIRE
 	db -1 ; end
 
 ; ================
@@ -7095,7 +7079,6 @@ SwimmerMGroup: ; scavengers
 	db TRAINERTYPE_NORMAL
 	; party
 	db 60, POLIWHIRL
-	db 56, TENTACRUEL
 	db -1 ; end
 
 ; ================
@@ -7105,7 +7088,6 @@ SwimmerMGroup: ; scavengers
 	db TRAINERTYPE_NORMAL
 	; party
 	db 60, FERALIGATR
-	db 60, CORSOLA
 	db -1 ; end
 
 ; ================
@@ -7115,7 +7097,6 @@ SwimmerMGroup: ; scavengers
 	db TRAINERTYPE_NORMAL
 	; party
 	db 58, CROCONAW
-	db 58, POLIWRATH
 	db -1 ; end
 
 ; ================
@@ -7125,7 +7106,6 @@ SwimmerMGroup: ; scavengers
 	db TRAINERTYPE_NORMAL
 	; party
 	db 52, SEADRA
-	db 56, KINGDRA
 	db -1 ; end
 
 ; ================
@@ -7135,7 +7115,6 @@ SwimmerMGroup: ; scavengers
 	db TRAINERTYPE_NORMAL
 	; party
 	db 63, POLITOED
-	db 63, POLIWRATH
 	db -1 ; end
 
 ; ================
@@ -7159,7 +7138,7 @@ SwimmerFGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 19, STARYU
-	db 19, CLOYSTER
+	db 19, REMORAID
 	db -1 ; end
 
 ; ================
@@ -7291,7 +7270,7 @@ SwimmerFGroup:
 	db "Viola@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 58, CLOYSTER
+	db 58, REMORAID
 	db -1 ; end
 
 ; ================
@@ -7548,7 +7527,7 @@ BoarderGroup:
 
 ; ================
 
-	; BOARDER ; pryce gym 
+	; BOARDER ; pryce gym ; TODO ADD ALOLAN NINETALES 
 	db "Brad@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -7563,7 +7542,7 @@ BoarderGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 39, ABOMASNOW
-	db 40, CLOYSTER
+	db 40, JYNX
 	db -1 ; end
 
 ; ================
@@ -7572,7 +7551,6 @@ BoarderGroup:
 	db "Shaun@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 65, CLOYSTER
 	db 60, LAPRAS
 	db -1 ; end
 
@@ -8239,16 +8217,16 @@ WaitressGroup:
 ; ================
 ; ================================
 
-SightseerMGroup:
+SightseerMGroup: ; TODO: ADD NEW FORMS TO THESE 
 ; ================================
 ; ================
 
-	; SIGHTSEERM ; route 43 
+	; SIGHTSEERM ; route 43 ; 
 	db "Jaska@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 40, MONFERNO
-	db 40, GROTLE
+	db 40, FURRET
+	db 40, FURRET
 	db 40, FURRET
 	db -1 ; end
 
@@ -8277,7 +8255,7 @@ SightseerMGroup:
 ; ================
 ; ================================
 
-SightseerFGroup:
+SightseerFGroup: ; TODO ADD NEW FORMS TO THESE 
 ; ================================
 ; ================
 
@@ -8285,8 +8263,8 @@ SightseerFGroup:
 	db "Rosie@"
 	db TRAINERTYPE_NORMAL
 	; PARTY 
-	db 40, PRINPLUP
-	db 40, LOPUNNY
+	db 40, CROCONAW
+	db 40, FURRET
 	db -1 ; end
 
 ; ================
@@ -8318,9 +8296,6 @@ SightseerFGroup:
 	db TRAINERTYPE_PERSONALITY | TRAINERTYPE_NICKNAME
 	; party
 	db 60, MAGMAR, ABILITY_1 | NAT_NEUTRAL, FEMALE, "Antorcha@"
-	db 61, DIGLETT, ABILITY_1 | NAT_NEUTRAL, MALE, "Huesitos@"
-	db 64, ESPEON, ABILITY_1 | NAT_NEUTRAL, FEMALE, "Luna@"
-	db 65, LANTURN, ABILITY_1 | NAT_NEUTRAL, FEMALE, "Linterna@"
 	db -1 ; end
 
 ; ================
@@ -8436,7 +8411,7 @@ CooltrainerMGroup:
 	db "Ryan@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 35, PIDGEOT
+	db 35, NOCTOWL
 		db MUD_SLAP, QUICK_ATTACK, ROAR, AERIAL_ACE
 	db 37, ELECTABUZZ
 		db THUNDERPUNCH, LIGHT_SCREEN, SWIFT, SCREECH
@@ -8573,7 +8548,7 @@ CooltrainerMGroup:
 	db "Corey@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party
-	db 63, PIDGEOT, QUICK_CLAW, 192, "@"
+	db 63, NOCTOWL, QUICK_CLAW, 192, "@"
 	db 62, RHYDON, ROCKY_HELMET, 192, "@"
 	db 62, SCYTHER, EVIOLITE, 192, "@"
 	db 62, HITMONLEE, FOCUS_SASH, 192, "@"
@@ -8831,11 +8806,11 @@ endc
 
 ; ================
 
-	; COOLTRAINERF
+	; COOLTRAINERF ; UNUSED? 
 	db "Cybil@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 35, BUTTERFREE
+	db 35, PARASECT
 		db SUPERSONIC, PSYBEAM, HYPNOSIS, HEALINGLIGHT
 	db 36, BELLOSSOM
 		db ACID, SLEEP_POWDER, GIGA_DRAIN, HEALINGLIGHT
@@ -8847,8 +8822,8 @@ endc
 	db "Jenn@" ; route 34 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 30, STARYU
-	db 35, STARMIE
+	db 30, SLOWPOKE
+	db 35, SLOWKING
 	db -1 ; end
 
 ; ================
@@ -8940,7 +8915,7 @@ NomadMGroup:
 	db "Dale@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 25, PIDGEOTTO
+	db 25, NOCTOWL
 	db 27, QWILFISH
 	db 28, GLIGAR
 	db -1 ; end
@@ -9034,9 +9009,9 @@ NomadFGroup:
 	db "Marlene@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 20, PIDGEOTTO
-	db 28, PIDGEOTTO	
-	db 36, PIDGEOT	
+	db 20, NOCTOWL
+	db 28, NOCTOWL	
+	db 36, NOCTOWL	
 	db -1 ; end
 
 	db "Rin@"
@@ -9264,7 +9239,7 @@ ArianaGroup:
 	db "Ariana@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
 	; party
-	db 40, ARBOK, POISON_BARB, ABILITY_1 | NAT_NEUTRAL, FEMALE 
+	db 40, GLOOM, POISON_BARB, ABILITY_1 | NAT_NEUTRAL, FEMALE 
 		db GLARE, SCREECH, ACID, CRUNCH
 	db -1 ; end
 
@@ -9324,7 +9299,7 @@ ProfIvyGroup:
 	db "Ivy@"
 	db TRAINERTYPE_NORMAL
 	; party ; unused 
-	db 65, BUTTERFREE
+	db 65, PARASECT
 	db -1 ; end
 
 ; ================
