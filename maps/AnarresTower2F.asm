@@ -35,7 +35,7 @@ GenericTrainerBugCatcherAl: ; Scott
 
 BugCatcherAlSeenText:
 	text "Behold, my"
-	line "psychic-flying"
+	line "bug-ghost"
 	cont "#mon!"
 	done
 
