@@ -8195,7 +8195,7 @@ SightseerFGroup:
 
 ; ================
 
-	; SIGHTSEERF ; todo add to ruins of alph 
+	; SIGHTSEERF
 	db "Pilar@"
 	db TRAINERTYPE_PERSONALITY
 	db 6, SLOWPOKE, ABILITY_1 | NAT_NEUTRAL, FEMALE | GALARIAN_FORM	
@@ -8204,8 +8204,8 @@ SightseerFGroup:
 
 ; ================
 
-	; SIGHTSEERF ; TODO ADD TO THE RUINS OF ALPH 
-	db "Anita@"
+	; SIGHTSEERF 
+	db "Lanie@"
 	db TRAINERTYPE_PERSONALITY
 	db 7, VULPIX, ABILITY_1 | NAT_NEUTRAL, MALE | ALOLAN_FORM	
 	db 8, GRIMER, ABILITY_1 | NAT_NEUTRAL, MALE | ALOLAN_FORM	

@@ -21,7 +21,7 @@ VioletKylesHousePokefanMText:
 	cont "#mon trading!"
 	done
 
-VioletHisuiTraderScript:
+VioletHisuiTraderScript: ; todo fix all the texts 
 	faceplayer
 	opentext
 	checkevent EVENT_VIOLET_TRADER_SAW_SLOWPOKETAIL
@@ -40,72 +40,33 @@ VioletHisuiTraderScript:
 	loadmenu .PokemonMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .GiveHBraviary
-	ifequal 2, .GiveDrapion
-	ifequal 3, .GiveSkuntank
-	ifequal 4, .GiveLopunny
-	ifequal 5, .GiveSnover
+	ifequal 1, .GiveCranidosEgg
+	ifequal 2, .GiveShieldonEgg
 	jumptext VioletTraderCancelText
 
-.GiveHBraviary:
-	givepoke H__BRAVIARY, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
-	iffalse_jumpopenedtext Text_NoCarry
-	playsound SFX_TRANSACTION
+.GiveCranidosEgg:
+	givepoke CRANIDOS, NO_FORM, 5, NO_ITEM, POKE_BALL, HEADBUTT
+	iffalse_jumpopenedtext .PartyAndBoxFullText 
 	takemoney $0, 50000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "Watch out for its"
-	line "loud squawks."
+	text "Come back any"
+	line "time."
 	done
 
-.GiveDrapion:
-	givepoke DRAPION, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
-	iffalse_jumpopenedtext Text_NoCarry
+.GiveShieldonEgg:
+	givepoke SHIELDON, NO_FORM, 5, NO_ITEM, POKE_BALL, MIRROR_COAT
+	iffalse_jumpopenedtext .PartyAndBoxFullText 
 	playsound SFX_TRANSACTION
 	takemoney $0, 50000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "Wear gloves when"
-	line "you handle it."
-	done
-	
-.GiveSkuntank:
-	givepoke SKUNTANK, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
-	iffalse_jumpopenedtext Text_NoCarry
-	playsound SFX_TRANSACTION
-	takemoney $0, 50000
-	special PlaceMoneyTopRight
-	jumpthisopenedtext
-
-	text "I never got used"
-	line "to its smell."
+	text "Come back any"
+	line "time."
 	done
 	
-.GiveLopunny:
-	givepoke LOPUNNY, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
-	iffalse_jumpopenedtext Text_NoCarry
-	playsound SFX_TRANSACTION
-	takemoney $0, 50000
-	special PlaceMoneyTopRight
-	jumpthisopenedtext
-
-	text "That one was a"
-	line "pain to raise."
-	done
-	
-.GiveSnover:
-	givepoke SNOVER, NO_FORM, 25, NO_ITEM, POKE_BALL, NO_MOVE
-	iffalse_jumpopenedtext Text_NoCarry
-	playsound SFX_TRANSACTION
-	takemoney $0, 50000
-	special PlaceMoneyTopRight
-	jumpthisopenedtext
-
-	text "That one is very"
-	line "curious."
-	done
 
 .PokemonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -115,12 +76,9 @@ VioletHisuiTraderScript:
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
-	db "HBraviary@"
-	db "Drapion@"
-	db "Skuntank@"
-	db "Lopunny@"
-	db "Snover@"
+	db 3 ; items
+	db "Cranidos@"
+	db "Shieldon@"
 	db "Cancel@"
 	
 .NoTail:
@@ -142,19 +100,28 @@ VioletHisuiTraderPartyFullText:
 	done
 
 VioletTraderCancelText:
-	text "Not unique enough"
-	line "for you?"
+	text "You think raising"
+	line "these #mon"
+	cont "is cheap?"
 	done
 
 VioletHisuiTraderNoTailText:
 	text "You could say I'm"
 	line "in the #mon"
-	para "trading business."
-	line "If you can prove"
-	para "you lack scruples"
-	line "by showing me a"
-	cont "Slowpoketail,"
-	cont "then we can talk."
+	cont "trading business."
+	
+	para "It's right under"
+	line "the nose of a big"
+	para "mining operation"
+	line "in Union Cave."
+	
+	para "If you bring me a"
+	line "Slowpoketail to"
+	para "prove you won't"
+	line "snitch on me,"
+	
+	para "we can get in"
+	line "business."
 
 	para "You can get them"
 	line "on Route 32 from"
@@ -168,15 +135,14 @@ VioletHisuiTraderText:
 	para "type of person I"
 	line "look for."
 	
-	para "I've got the most"
-	line "variety of any"
-	para "#mon trader in"
-	line "the region."
+	para "I've been taking"
+	line "these #mon"
+	para "from one of the"
+	line "scientists in the"
+	cont "Union Cave mine."
 	
-	para "For 50k, you can"
-	line "walk away with"
-	para "one of these rare"
-	line "#mon."
+	para "I'll let you have"
+	line "one for 50k."
 	done
 	
 VioletHisuiText4:

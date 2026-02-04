@@ -3346,7 +3346,7 @@ else
 	ld a, [hl]
 	pop hl
 endc
-	cp H__ZOROARK
+	cp DITTO
 	ret nz
 
 	push bc

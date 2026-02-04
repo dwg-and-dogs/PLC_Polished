@@ -316,8 +316,8 @@
 	wildmon 18, SUNKERN
 	wildmon 18, YANMA
 	wildmon 16, PIKACHU
-	wildmon 15, PIKACHU
-	wildmon 19, MURKROW
+	wildmon 15, MURKROW
+	wildmon 10, DRIFLOON
 	; day
 	wildmon 16, NIDORINO
 	wildmon 17, NIDORINA
@@ -332,8 +332,8 @@
 	wildmon 18, SUNKERN
 	wildmon 18, YANMA
 	wildmon 16, PIKACHU
-	wildmon 15, PIKACHU
-	wildmon 19, MURKROW
+	wildmon 15, MURKROW
+	wildmon 10, DRIFLOON
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE

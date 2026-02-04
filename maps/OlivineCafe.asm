@@ -295,6 +295,7 @@ OlivineCafe2Script: ; 25000
 	ifequal 1, .GiveOctillery
 	ifequal 2, .GiveMantine
 	ifequal 3, .GiveQwilfish
+	ifequal 4, .GiveBasculin
 	jumptext CafeNoFishText
 ; Octillery FLASH CANNON, Mantine MIRROR COAT, Qwilfish EXPLOSION, with sitrus_berry and in ultra_balls ; 25000 
 .GiveOctillery:
@@ -334,6 +335,18 @@ OlivineCafe2Script: ; 25000
 	line "Enjoy it!"
 	done
 
+.GiveBasculin:
+	givepoke BASCULIN, NO_FORM, 20, BERSERK_GENE, ULTRA_BALL, THRASH
+	iffalse_jumpopenedtext Text_NoCarry
+	playsound SFX_TRANSACTION
+	takemoney $0, 25000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "Here you go, kid!"
+	line "Enjoy it!"
+	done
+
 .Cafe2PokemonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 0, 15, TEXTBOX_Y - 1
@@ -342,10 +355,11 @@ OlivineCafe2Script: ; 25000
 
 .MenuData2:
 	db STATICMENU_CURSOR ; flags
-	db 4 ; items
+	db 5 ; items
 	db "Octillery@"
 	db "Mantine@"
 	db "Qwilfish@"
+	db "Basculin@"	
 	db "Cancel@"
 	
 OlivineCafe2Text:
@@ -362,10 +376,15 @@ OlivineCafe2Text:
 	line "to take home."
 	
 	para "Flashy Octillery,"
+
 	para "Mirror-coated"
 	line "Mantine,"
-	para "Or a Qwilfish"
-	line "that's the bomb."
+
+	para "a Qwilfish"
+	line "that's the bomb,"
+
+	para "or the angriest"
+	line "fish in Unova!"
 	
 	para "Buy for ¥25000?"
 	done

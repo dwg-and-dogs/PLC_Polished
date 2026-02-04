@@ -691,11 +691,11 @@ DayCare_GenerateEgg:
 	ld a, $3
 	ld [wMonType], a
 	ld a, [wBreedMon1Species]
-	cp H__ZOROARK
+	cp DITTO
 	ld a, 1
 	jr z, .LoadWhichBreedmonIsTheMother
 	ld a, [wBreedMon2Species]
-	cp H__ZOROARK
+	cp DITTO
 	ld a, 0
 	jr z, .LoadWhichBreedmonIsTheMother
 	farcall GetGender

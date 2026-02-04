@@ -21,6 +21,7 @@ UnionCave1F_MapScriptHeader:
 	object_event  6, 35, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, UnionHealerScript, EVENT_BEAT_FALKNER
 	object_event  6, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherRay, EVENT_BEAT_FALKNER
 	object_event  6,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistDennett,EVENT_BEAT_FALKNER
+	object_event  16, 8, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 5, UnionCaveEggGiverScript, EVENT_GOT_EGG_FROM_SCIENTIST
 	
 	itemball_event   3, 41, ESCAPE_ROPE, 1, EVENT_UNION_CAVE_1F_GREAT_BALL
 	itemball_event   2,  8, X_ATTACK, 1, EVENT_UNION_CAVE_1F_X_ATTACK
@@ -29,6 +30,7 @@ UnionCave1F_MapScriptHeader:
 	fruittree_event 14, 40, FRUITTREE_UNION_CAVE, HOLLOW_ROCK, PAL_NPC_BLUE
 	tmhmball_event   2, 14, TM_BULLDOZE, EVENT_ROUTE_39_TM_BULLDOZE
 	smashrock_event  3, 14
+	smashrock_event  6, 10
 
 GenericTrainerScientistLowell:
 	generictrainer SCIENTIST, LOWELL, EVENT_BEAT_SCIENTIST_LOWELL, ScientistLowellSeenText, ScientistLowellBeatenText
@@ -110,4 +112,121 @@ UnionHealerScript:
 .HealedPokemon:
 	text "Your #mon"
 	line "were healed!"
+	done
+
+UnionCaveEggGiverScript:
+	faceplayer
+	checkevent EVENT_GOT_EGG_FROM_SCIENTIST
+	iftrue_jumptext UnionCaveEggGiverGaveEggText
+	opentext
+	writetext UnionCaveEggGiverIntroText
+	waitbutton
+	yesorno
+	iffalse_jumptext UnionCaveEggGiverDeniedText
+	writetext UnionCaveEggGiverChoiceText
+	promptbutton
+	loadmenu .CaveEggPokemonMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .GiveCranidosEgg
+	ifequal 2, .GiveShieldonEgg
+	jumptext UnionCaveEggGiverDeniedText
+
+.GiveCranidosEgg:
+	readvar VAR_PARTYCOUNT
+	giveegg CRANIDOS
+	iffalse_jumpopenedtext .PartyAndBoxFullText 
+	setevent EVENT_GOT_EGG_FROM_SCIENTIST
+	writetext UnionCaveCranidosEggText  
+	waitbutton
+	closetext
+	end
+
+.GiveShieldonEgg:
+	readvar VAR_PARTYCOUNT
+	giveegg SHIELDON
+	iffalse_jumpopenedtext .PartyAndBoxFullText 
+	setevent EVENT_GOT_EGG_FROM_SCIENTIST
+	writetext UnionCaveShieldonEggText
+	waitbutton
+	closetext
+	end
+
+.CaveEggPokemonMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 15, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "Cranidos@"
+	db "Shieldon@"
+	db "Cancel@"
+
+.PartyAndBoxFullText:
+	text "Come back when"
+	line "you have room for"
+	cont "this egg."
+	done
+
+UnionCaveEggGiverGaveEggText:
+	text "Give that #mon"
+	line "an adventure,"
+	cont "will you?"
+	done
+	
+UnionCaveEggGiverIntroText:
+	text "What've I done!"
+	line "I've been so fo-"
+	cont "cused on if I"
+	para "could, I never"
+	line "stopped to think"
+	cont "if I should!"
+	
+	para "I restored those"
+	line "fossil #mon"
+	cont "for Petry, but"
+	
+	para "he makes them"
+	line "tear up the cave"
+	cont "all day long."
+	
+	para "It's not fair to"
+	line "them, or to the"
+	cont "#mon here."
+	
+	para "Would you take an"
+	line "egg and give it"
+	cont "an adventure?"
+	done
+
+UnionCaveEggGiverDeniedText:
+	text "No? Well I'll have"
+	line "to find a way to"
+	para "get these out of"
+	line "here, maybe up to"
+	cont "Violet City."
+	done
+
+UnionCaveEggGiverChoiceText:
+	text "Great! Which one"
+	line "will you take?"
+	done
+
+UnionCaveCranidosEggText:
+	text "Cranidos! Make"
+	line "sure you give it"
+	para "lots of time to"
+	line "practice its"
+	cont "headbutts!"
+	done
+	
+UnionCaveShieldonEggText:
+	text "Shieldon! Such a"
+	line "peaceful creature"
+	para "doesn't deserve"
+	line "a harsh life in"
+	cont "Petry's mine."
 	done

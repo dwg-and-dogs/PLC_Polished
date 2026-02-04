@@ -10,7 +10,7 @@ SpecialGiveShinyDitto:
 	rst CopyBytes
 	
 	ld hl, wTempMonSpecies
-	ld a, H__ZOROARK
+	ld a, DITTO
 	ld [hli], a
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a

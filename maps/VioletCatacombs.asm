@@ -68,7 +68,7 @@ CatacombsNoctowl:	; eventually, crypt noctowl
 	cry NOCTOWL
 	pause 15
 	closetext
-	loadwildmon NOCTOWL, 25
+	loadwildmon NOCTOWL, IMMORTAL_FORM, 25
 	startbattle
 	disappear CATACOMBS_NOCTOWL
 	setevent EVENT_CATACOMBS_NOCTOWL

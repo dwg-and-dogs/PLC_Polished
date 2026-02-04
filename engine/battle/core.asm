@@ -386,7 +386,7 @@ GetSpeed::
 	jr z, .got_species
 	ld hl, wEnemyMonSpecies
 .got_species
-	cp H__ZOROARK
+	cp DITTO
 	jr nz, .done
 	ln a, 2, 1 ; x2
 .apply_item_mod

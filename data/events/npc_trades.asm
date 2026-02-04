@@ -6,7 +6,7 @@ NPCTrades:
 	dw 37460
 	rawchar "Mike@@@@", $00
 ; NPC_TRADE_KYLE in Second Class Cabin 
-	rawchar 0, GASTLY,    MR__MIME,    "Pagliacci@@" ; Pagliacci
+	rawchar 0, GASTLY,    DRIFLOON,    "Pennywise@" ; Pagliacci
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN,   MALE,   JEZE_BALL,   PERSIM_BERRY
 	dw 48926
 	rawchar "Kyle@@@@", $00
@@ -20,23 +20,23 @@ NPCTrades:
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   FEMALE, FAST_BALL,    SITRUS_BERRY
 	dw 00283
 	rawchar "Ted@@@@@", $00
-; NPC_TRADE_CHRIS in Pewter City
+; NPC_TRADE_CHRIS unused 
 	rawchar 2, PINSIR,     HERACROSS,  "Paul@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_SATK_DOWN,  MALE,   PARK_BALL,    SILVERPOWDER
 	dw 15616
 	rawchar "Chris@@@", $00
-; NPC_TRADE_KIM in Route 14
+; NPC_TRADE_KIM unused
 	rawchar 3, CHANSEY,  CHANSEY,    "Chance@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SDEF_UP_ATK_DOWN,  FEMALE, HEAL_BALL,    LUCKY_EGG
 	dw 26491
 	rawchar "Kim@@@@@", $00
-; NPC_TRADE_JACQUES in Goldenrod Harbor
+; NPC_TRADE_JACQUES unused
 	rawchar 1, GRIMER,  GRIMER,     "Gail@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SDEF_UP_SATK_DOWN, FEMALE, BUB_BALL,    EVIOLITE
 	dw 50082
 	rawchar "Jacques@", $00
-; NPC_TRADE_HARI in Ecruteak City
-	rawchar 0, FARFETCH_D, PIDGEY,      "Clarence@@@"
+; NPC_TRADE_HARI unused
+	rawchar 0, STARLY, HOOTHOOT,      "Clarence@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_DEF_DOWN,   MALE,   FAST_BALL,    SITRUS_BERRY
 	dw 43972
 	rawchar "Hari@@@@", $00

@@ -89,7 +89,7 @@ CheckBreedmonCompatibility:
 ; Ditto is automatically compatible with everything.
 ; If not Ditto, load the breeding groups into b/c and d/e.
 	ld a, [wBreedMon2Species]
-	cp H__ZOROARK
+	cp DITTO
 	jr z, .Compatible
 	ld [wCurSpecies], a
 	ld a, [wBreedMon2Form]
@@ -106,7 +106,7 @@ CheckBreedmonCompatibility:
 	ld c, a
 
 	ld a, [wBreedMon1Species]
-	cp H__ZOROARK
+	cp DITTO
 	jr z, .Compatible
 	ld [wCurSpecies], a
 	ld a, [wBreedMon1Form]
@@ -146,7 +146,7 @@ CheckBreedmonCompatibility:
 
 .SetGenderData:
 	ld a, [wCurPartySpecies]
-	cp H__ZOROARK
+	cp DITTO
 	ld a, 1 << BREEDGEN_DITTO
 	ret z
 	ld a, TEMPMON
