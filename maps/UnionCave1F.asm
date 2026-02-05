@@ -179,12 +179,7 @@ UnionCaveEggGiverGaveEggText:
 	
 UnionCaveEggGiverIntroText:
 	text "What've I done!"
-	line "I've been so fo-"
-	cont "cused on if I"
-	para "could, I never"
-	line "stopped to think"
-	cont "if I should!"
-	
+
 	para "I restored those"
 	line "fossil #mon"
 	cont "for Petry, but"
@@ -192,7 +187,7 @@ UnionCaveEggGiverIntroText:
 	para "he makes them"
 	line "tear up the cave"
 	cont "all day long."
-	
+
 	para "It's not fair to"
 	line "them, or to the"
 	cont "#mon here."

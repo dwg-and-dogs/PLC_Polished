@@ -52,14 +52,14 @@ ShimmerSaddle_MapScriptHeader:
 	def_object_events ; 5 items, the Hzoroark, and Mankey, and three instances of the old man 
 ; FIRST SET 
 	object_event  10, 33, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT,0, ObjectEvent, EVENT_SHIMMER_GRAMPS_1 ;
-	object_event  15, 32, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_1 
+	object_event  15, 32, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_1 
 	object_event  15, 32, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_MATRON_1 ; initialize 
 ; SECOND SET 
-	object_event  44, 21, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_2 
+	object_event  44, 21, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_2 
 	object_event  45, 24, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, MANKEY, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_MANKEY_2
 ; THIRD SET 
 	object_event  13, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ShimmerSaddleGramps2Script, EVENT_SHIMMER_GRAMPS_2 ;
-	object_event  12, 5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, H__ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_3 ; initialize
+	object_event  12, 5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ZOROARK, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_HZ_3 ; initialize
 	object_event  12, 3, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SHIMMER_MATRON_2 ;	
 ; boulder 
 	strengthboulder_event 42, 1, EVENT_SHIMMER_SADDLE_BOULDER
@@ -193,7 +193,7 @@ ShimmerSaddle_Scene2_HZOnly:
 	setevent EVENT_SHIMMER_MANKEY_2
 	pause 30
 	refreshscreen
-	pokepic H__ZOROARK
+	pokepic ZOROARK
 	waitbutton
 	closepokepic
 	applymovement SHIMMER_HZ_2, ShimmerHZ2_Stalks2
@@ -246,7 +246,7 @@ ShimmerSaddle_Scene3_ManHZ:
 	applyonemovement PLAYER, step_up
 ;	setlasttalked SHIMMER_HZ_3
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon H__ZOROARK, 30
+	loadwildmon ZOROARK, 30
 	startbattle
 	disappear SHIMMER_HZ_3
 	setevent EVENT_SHIMMER_HZ_3

@@ -50,7 +50,7 @@ DayCareManScript_Inside:
 	end
 
 
-DayCareLadyScript:
+DayCareLadyScript: ; check if you've got the eviolite 
 	faceplayer
 	opentext
 	writethistext

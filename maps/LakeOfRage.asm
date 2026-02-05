@@ -13,7 +13,7 @@ LakeOfRage_MapScriptHeader:
 	warp_event  6, 14, HIDDEN_TREE_GROTTO, 1
 
 	def_coord_events
-	coord_event 16, 18, 0, LakeHursalunaScript
+	coord_event 16, 18, 0, LakeURSALUNAScript
 	coord_event 18, 4, 1, LakeRivalScript
 
 	def_bg_events
@@ -29,7 +29,7 @@ LakeOfRage_MapScriptHeader:
 	object_event 17, 4, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT,0, LakePryceScript, -1 ;
 	object_event 13, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT
 	object_event 24, 5, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL
-;HURSALUNA
+;URSALUNA
 	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA
 ;trainers
 	object_event  	4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
@@ -52,7 +52,7 @@ LakeOfRage_MapScriptHeader:
 	const LAKEOFRAGE_PRYCE
 	const LAKEOFRAGE_KURT
 	const LAKEOFRAGE_RIVAL 
-	const LAKEOFRAGE_HURSALUNA
+	const LAKEOFRAGE_URSALUNA
 
 LakeOfRageFlyPoint:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
@@ -65,33 +65,33 @@ LakeOfRageTreeCut:
 .Done:
 	endcallback
 
-LakeHursalunaScript:
-	appear LAKEOFRAGE_HURSALUNA
+LakeURSALUNAScript:
+	appear LAKEOFRAGE_URSALUNA
 	turnobject PLAYER, UP
 	earthquake 30
-	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement
+	applymovement LAKEOFRAGE_URSALUNA, LakeURSALUNAApproachesMovement
 	earthquake 20
 	cry URSARING
 	pause 20
 	showemote PLAYER, EMOTE_SHOCK, 20
 	pause 20
-	applymovement LAKEOFRAGE_HURSALUNA, LakeHursalunaApproachesMovement2
+	applymovement LAKEOFRAGE_URSALUNA, LakeURSALUNAApproachesMovement2
 	earthquake 20	
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon URSALUNA, 45
+	loadwildmon URSALUNA, BLOODMOON_FORM, 45
 	startbattle
-	disappear LAKEOFRAGE_HURSALUNA
+	disappear LAKEOFRAGE_URSALUNA
 	reloadmapafterbattle
 	setevent EVENT_LAKE_HURSALUNA
 	setscene $1
 	end
 	
-LakeHursalunaApproachesMovement:
+LakeURSALUNAApproachesMovement:
 	fix_facing
 	fast_jump_step_down
 	step_end
 
-LakeHursalunaApproachesMovement2:
+LakeURSALUNAApproachesMovement2:
 	fix_facing
 	fast_jump_step_down
 	step_end
