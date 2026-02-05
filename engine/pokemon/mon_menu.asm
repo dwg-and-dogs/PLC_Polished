@@ -436,7 +436,7 @@ TakePartyItem:
 	ld a, [hl]
 	ld [wNamedObjectIndex], a
 	ld [hl], NO_ITEM
-	call UpdateMewtwoForm
+;	call UpdateMewtwoForm
 	call GetItemName
 	ld hl, TookFromText
 	jmp MenuTextboxBackup
@@ -450,25 +450,25 @@ TakePartyItem:
 	jmp MenuTextboxBackup
 
 UpdateMewtwoForm:
-	ld d, h
-	ld e, l
-	ld a, MON_FORM
-	call GetPartyParamLocation
+;	ld d, h
+;	ld e, l
+;	ld a, MON_FORM
+;	call GetPartyParamLocation
 _UpdateMewtwoForm:
-	ld a, [wCurPartySpecies]
-	cp HEATRAN
-	ret nz
-	ld a, [de]
-	cp ARMOR_SUIT
-	ld a, HEATRAN
-	jr z, .got_form
-	dec a ; PLAIN_FORM
-.got_form
-	ld d, a
-	ld a, [hl]
-	and $ff - SPECIESFORM_MASK
-	or d
-	ld [hl], a
+;	ld a, [wCurPartySpecies]
+;	cp HEATRAN
+;	ret nz
+;	ld a, [de]
+;	cp ARMOR_SUIT
+;	ld a, HEATRAN
+;	jr z, .got_form
+;	dec a ; PLAIN_FORM
+;.got_form
+;	ld d, a
+;	ld a, [hl]
+;	and $ff - SPECIESFORM_MASK
+;	or d
+;	ld [hl], a
 	ret
 
 GiveTakeItemMenuData:

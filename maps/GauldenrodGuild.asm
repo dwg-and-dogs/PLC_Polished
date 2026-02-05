@@ -84,9 +84,9 @@ GauldenrodGuildMasterBallScript:
 	iftrue .GotHoney
 	setmapscene EERIE_HAMLET, $0
 .GotHoney:
-	checkevent EVENT_GAVE_MASTER_BALL
-	iftrue .DoneWithChecks
-	setmapscene GAULDENROD_GUILD, $0
+;	checkevent EVENT_GAVE_MASTER_BALL
+;	iftrue .DoneWithChecks
+;	setmapscene GAULDENROD_GUILD, $0
 .DoneWithChecks:
 	faceplayer
 	opentext	

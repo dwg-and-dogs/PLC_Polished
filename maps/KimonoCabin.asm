@@ -480,7 +480,7 @@ KimonoCabinSamariaNotebook1:
 	line "manual labor is,"
 	
 	para "prior to the new"
-	line "comforts he emp-"
+	line "comforts the emp-"
 	cont "eror delivered."
 	
 	para "Perhaps Shiji has"

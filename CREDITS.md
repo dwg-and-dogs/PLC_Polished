@@ -19,7 +19,7 @@ Front Sprites
 * Rowlet: Matdemo
 * Pokets3: H__Braviary
 * Nuukie: Wyrdeer, Roselia, Drifblim, Lopunny, Toxicroak, Snover, Abomasnow, Froslass, Kirlia, Gardevoir, Gallade
-* Pokewilds: Kleavor, Torterra, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott
+* Pokewilds: Kleavor, Torterra, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott, 
 * DWG: H__Avalugg
 * Sour Crystal: Quilava, Butterfree, Pidgeotto, Sunflora, Dragonite, Celebi, Xatu
 * utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Zoroark
