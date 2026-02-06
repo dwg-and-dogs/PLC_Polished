@@ -125,11 +125,14 @@ Text_MushroomQuestion:
 	done
 
 GivingLemonadeText:
-	text "Oh, wonderful!"
-	line "Thank you so much!"
-
-	para "Here, take this"
-	line "lemonade!"
+	text "Thank you for the"
+	line "Tinymushroom!"
+	
+	para "Enjoy that Pink"
+	line "Lemonade, it hits"
+	para "the spot when I'm"
+	line "out on a hike"
+	cont "north of here."
 	done
 
 Text_NoMushroom:

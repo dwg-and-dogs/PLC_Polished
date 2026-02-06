@@ -153,7 +153,7 @@ AdrinnaTakesOverText:
 	line "me on the roof."
 	para "We'll show Johto"
 	line "how it needs not"
-	cont "Consul Urgaust."
+	cont "Emperor Urgaust."
 	done
 
 AreYouSureAdrinna:
@@ -175,5 +175,5 @@ NoToAdrinnaText:
 	text "Disappointing."
 	line "No matter - I'll"
 	cont "destroy you, and"
-	cont "then the Consul!"
+	cont "then the Emperor!"
 	done

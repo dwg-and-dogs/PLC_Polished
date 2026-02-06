@@ -26,7 +26,7 @@ WesternCapitalStockroomNPC1Text:
 	para "the port corrupts"
 	line "us with fear."
 	
-	para "The Consul is"
+	para "The Emperor is"
 	line "the only one who"
 	cont "stays true!"	
 	done

@@ -5446,9 +5446,9 @@ SuicuneEvosAttacks:
 	db 92, BLIZZARD
 	db 99, HIDDEN_POWER ; TM move
 	db 0 ; no more level-up moves
-
-HeatranEvosAttacks: ;encounter at lv 50
-	db 0 ; no more Evolutions
+	
+HeatranEvosAttacks:
+	db 0 ; no more evolutions
 	db 1, CRUNCH
 	db 1, METAL_CLAW
 	db 1, FLASH_CANNON
@@ -5457,7 +5457,7 @@ HeatranEvosAttacks: ;encounter at lv 50
 	db 1, EARTH_POWER
 	db 55, FIRE_BLAST
 	db 60, FLASH_CANNON
-	db 0 ; no more moves 
+	db 0 ; no more level-up moves
 
 LugiaEvosAttacks: ;ENCOUUNTER AT LEVEL 40
 	db 0 ; no more evolutions

@@ -117,11 +117,11 @@ TapestryAmosText1:
 	para "But my sources"
 	line "say that Adrinna"
 	para "plans to usurp"
-	line "the Consul at his"
+	line "the Emperor at his"
 	cont "coronation."
 	
 	para "Even if she does"
-	line "not, the Consul"
+	line "not, the Emperor"
 	para "plans to annex"
 	line "all of Johto."
 	
@@ -165,7 +165,7 @@ TapestryAmosText0:
 	line "at the ceremony."
 	
 	para "Even if she does"
-	line "not, the Consul"
+	line "not, the Emperor"
 	para "plans to annex"
 	line "all of Johto."
 	
@@ -455,8 +455,8 @@ TapestryText1:
 	para "could've gone on"
 	line "longer."
 	
-	para "Consul Urgaust is"
-	line "so uptight!"
+	para "Emperor Urgaust"
+	line "is so uptight!"
 	para "He's so worried"
 	line "about outsiders"
 	cont "at the port."
@@ -481,7 +481,7 @@ TapestryText3:
 	text "I spent weeks in"
 	line "that cavern on my"
 	para "panel, and the"
-	line "Consul orders it"
+	line "Emperor orders it"
 	cont "closed!"
 	
 	para "How will anyone"

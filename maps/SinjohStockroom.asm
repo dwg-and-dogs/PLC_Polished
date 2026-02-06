@@ -37,7 +37,7 @@ SinjohStockroomNPC2Text:
 	line "gather in peace"
 	cont "with Johto-"
 	
-	para "Now the Consul"
+	para "Now the Emperor"
 	line "sends soldiers?"
 	done
 

@@ -57,7 +57,7 @@ SinjohDormsNPC3Text:
 	line "don't see much"
 	cont "daylight between"
 	
-	para "Consul Urgaust"
+	para "Emperor Urgaust"
 	line "and the outsiders"
 	cont "at your port."
 	done

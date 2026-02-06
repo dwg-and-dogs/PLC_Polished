@@ -200,5 +200,5 @@ BarbeauJournal:
 	para "Amos' plan really"
 	line "enough to repel"
 	para "both barbarians"
-	line "and the Consul?"
+	line "and the Emperor?"
 	done

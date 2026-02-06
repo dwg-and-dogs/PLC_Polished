@@ -142,7 +142,7 @@ Kimono2NotStrongEnoughText:
 	para "about to be prom-"
 	line "oted, but now I'm"
 	para "here thanks to"
-	line "that dumb Consul."
+	line "that emperor."
 
 	para "Why does grandma"
 	line "even bother?"
@@ -163,7 +163,7 @@ Kimono2AskHelpText:
 	para "about to be prom-"
 	line "oted, but now I'm"
 	para "here thanks to"
-	line "that dumb Consul."
+	line "that emperor."
 
 	para "Why does grandma"
 	line "even bother?"
@@ -480,7 +480,7 @@ KimonoCabinSamariaNotebook1:
 	line "manual labor is,"
 	
 	para "prior to the new"
-	line "comforts he emp-"
+	line "comforts the emp-"
 	cont "eror delivered."
 	
 	para "Perhaps Shiji has"
@@ -490,7 +490,7 @@ KimonoCabinSamariaNotebook1:
 	
 KimonoCabinPiperNotebook1:
 	text "Piper's Journal:"
-	line "Ugh! The Consul!"
+	line "Ugh! The emperor!"
 	para "I was just about"
 	line "to be promoted!"
 	

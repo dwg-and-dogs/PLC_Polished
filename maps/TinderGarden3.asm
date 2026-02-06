@@ -106,7 +106,7 @@ GardenEngineerText4:
 	para "wasteful things"
 	line "ever since that"
 	para "kid toppled the"
-	line "Consul some"
+	line "Emperor some"
 	cont "180 years ago."
 	
 	para "What was their"

@@ -32,7 +32,7 @@ CattleCull38_MapScriptHeader:  ; todo this text is a little over the top
 
 
 CattleCull38SignText:
-	text "Consul's Road-"
+	text "Emperor's Road-"
 	line "Follow through"
 	para "Cattle Cull to"
 	line "Trader's Landing"
@@ -48,7 +48,7 @@ GenericTrainerNomadMJoel:
 	done
 
 NomadJoelSeenText:
-	text "The Consul can't"
+	text "The Emperor can't"
 	line "keep us caged"
 	cont "forever!"
 	done
@@ -62,7 +62,7 @@ NomadJoelBeatenText:
 GenericTrainerNomadMGlenn:
 	generictrainer NOMAD_M, NOMAD_M_GLENN, EVENT_BEAT_NOMAD_M_GLENN, NomadGlennSeenText, NomadGlennBeatenText
 
-	text "The Consul's ships"
+	text "The Emperor's ships"
 	line "patrol our seas!"
 	done
 

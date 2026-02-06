@@ -390,7 +390,7 @@ GenericTrainerBrigader9:
 	line "a plan to change"
 	cont "Gauldenrod tradi-"
 	cont "tions to favor"
-	cont "Consul Urgaust."
+	cont "Emperor Urgaust."
 	done
 
 Brigader9SeenText:
@@ -431,7 +431,7 @@ GenericTrainerBrigader11:
 	text "The gladiators are"
 	line "usually rebels"
 	para "against the"
-	line "Consul. We make"
+	line "Emperor. We make"
 	para "sure they're weak,"
 	line "so that they just"
 	para "sound crazy to the"
@@ -477,7 +477,7 @@ Text_StadiumSign1:
 Text_StadiumSign2:
 	text "Stadium brought"
 	line "to you by"
-	cont "Consul Urgaust"
+	cont "Emperor Urgaust"
 	done
 
 Text_StadiumSign3:

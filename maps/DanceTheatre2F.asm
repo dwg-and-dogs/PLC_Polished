@@ -85,8 +85,8 @@ GenericTrainerKimono_girlSayo:
 	generictrainer KIMONO_GIRL_1, SAYO, EVENT_BEAT_KIMONO_GIRL_SAYO, Kimono_girl_1SayoSeenText, Kimono_girl_1SayoBeatenText
 
 	text "When Gauldenrod"
-	line "was divied by the"
-	cont "Consul,"
+	line "was divided by the"
+	cont "Emperor,"
 	
 	para "the hero brought"
 	line "them together."
@@ -104,8 +104,8 @@ Kimono_girl_1SayoSeenText:
 
 Kimono_girl_1SayoBeatenText:
 	text "When Gauldenrod"
-	line "was divied by the"
-	cont "Consul,"
+	line "was divided by the"
+	cont "Emperor,"
 	
 	para "the hero brought"
 	line "them together."
@@ -119,7 +119,7 @@ GenericTrainerKimono_girlZuki:
 	line "into the Western"
 	cont "Capital, and"
 	para "learned of the"
-	line "Consul's plans"
+	line "Emperor's plans"
 	cont "without his"
 	cont "knowing."
 	para "At that time,"
@@ -128,7 +128,7 @@ GenericTrainerKimono_girlZuki:
 	para "Lugia and Ho-Oh,"
 	line "but Ho-Oh was"
 	cont "growing restless"
-	para "from the Consul's"
+	para "from the Emperor's"
 	line "drumbeat of war."
 	done
 
@@ -141,7 +141,7 @@ Kimono_girl_1ZukiBeatenText:
 	text "Our hero slipped"
 	line "into the Capital,"
 	para "and learned the"
-	line "Consul's plans."
+	line "Emperor's plans."
 	done
 
 
@@ -150,14 +150,14 @@ GenericTrainerKimono_girlIzumi:
 
 	text "A harsh storm"
 	line "destroyed the"
-	cont "Consul's port."
+	cont "Emperor's port."
 	
 	para "Legend says that"
 	line "the storm was"
 	para "like an Aeroblast"
 	line "on the sea."
 	
-	para "Now, the Consul"
+	para "Now, the Emperor"
 	line "had to focus on"
 	para "the East as his"
 	line "only source of"
@@ -174,8 +174,8 @@ Kimono_girl_1IzumiSeenText:
 Kimono_girl_1IzumiBeatenText:
 	text "A harsh storm"
 	line "destroyed the"
-	cont "Consul's port."
-	para "Now, the consul"
+	cont "Emperor's port."
+	para "Now, the Emperor"
 	line "had to expand to"
 	cont "the East."
 	done
@@ -187,7 +187,7 @@ GenericTrainerKimono_girlKuni:
 	text "The hero made a"
 	line "a coalition in"
 	para "the Northeast to"
-	line "fight the consul."
+	line "fight the Emperor."
 
 	done
 
@@ -200,7 +200,8 @@ Kimono_girl_1KuniBeatenText:
 	text "The hero made a"
 	line "a coalition in"
 	para "the Northeast to"
-	line "fight the consul."
+	line "oppose the "
+	cont "Emperor."
 	done
 
 	
@@ -209,7 +210,7 @@ GenericTrainerKimono_gir1Miki:
 
 	text "The eastern mine"
 	line "was pillaged."
-	para "The Consul, cut"
+	para "The Emperor, cut"
 	line "off from all"
 	para "sides, had to "
 	line "make a daring"
@@ -224,7 +225,7 @@ Kimono_girl_1MikiSeenText:
 Kimono_girl_1MikiBeatenText:
 	text "The eastern mine"
 	line "was pillaged."
-	para "The Consul, cut"
+	para "The Emperor, cut"
 	line "off from all"
 	para "sides, had to "
 	line "make a daring"
@@ -238,7 +239,7 @@ GenericTrainerKimono_girlAkari:
 	text "Flames filled"
 	line "the tower,"
 	cont "undoing the"
-	cont "Consul's work."
+	cont "Emperor's work."
 	para "The legendary"
 	line "#mon refuse"
 	cont "to put it out."
@@ -261,7 +262,7 @@ Kimono_girl_1AkariBeatenText:
 	
 	para "Flame consumed it"
 	line "and consumed the"
-	cont "Consul's plan."
+	cont "Emperor's plan."
 	
 	para "The legendary"
 	line "#mon refused"

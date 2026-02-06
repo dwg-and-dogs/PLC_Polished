@@ -71,7 +71,7 @@ GenericTrainerElderAkira:
 	text "The stormclouds"
 	line "on the horizon"
 	para "are nothing to"
-	line "Consul Urgaust."
+	line "Emperor Urgaust."
 	done
 
 AkiraBeatenText:
@@ -81,7 +81,7 @@ AkiraBeatenText:
 	done
 	
 AkiraSeenText:
-    text "The Consul will"
+    text "The Emperor will"
 	line "clear the sky, a"
 	cont "bright new dawn!"
     done

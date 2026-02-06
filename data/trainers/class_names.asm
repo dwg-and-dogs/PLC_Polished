@@ -12,7 +12,7 @@ TrainerClassNames::
 	li "Leader"           ; PRYCE
 	li "Leader"           ; CLAIR
 	li "Grandpa"		  ; KURT 
-	li "Consul"		  	  ; Urgaust
+	li "Emperor"		  	  ; Urgaust
 	li "Elite Four"       ; BRUNO
 	li "Elder"            ; Sandra
 	li "Johto"            ; CHAMPION-kurt final 

@@ -7,14 +7,14 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, GOLDENROD_MUSEUM_2F, 1
+	warp_event  1, 8, GAULDENROD, 1
 
 
 	def_coord_events
 
 
 	def_bg_events
-;	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
+	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
 	bg_event  0,  2, BGEVENT_UP, DebugInteraction
 
@@ -175,7 +175,7 @@ for x, NUM_TMS + NUM_HMS
 	givetmhm x
 endr
 	; givepokes
-	givepoke CYNDAQUIL, 5
+	givepoke HEATRAN, 50
 	givepoke TOTODILE, 100
 	givepoke CHIKORITA, 100
 	givepoke LUGIA, 100

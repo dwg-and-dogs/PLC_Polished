@@ -49,7 +49,7 @@ GateNPC_MineText:
 	line "trying to get out"
 	cont "of Johto, with"
 
-	para "all the Consul"
+	para "all the Emperor"
 	line "is doing."
 
 	para "Wonder if they'll"

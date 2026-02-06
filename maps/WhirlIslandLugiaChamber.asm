@@ -73,7 +73,7 @@ KurtLugiaText2: ; need to have kurt go to the top floor and tell the player here
 	
 	para "Now it can wreak"
 	line "havoc at the"
-	cont "Consul's port."
+	cont "Emperor's port."
 	
 	para "There may be a"
 	line "shrine we can use"

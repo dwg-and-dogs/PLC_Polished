@@ -56,7 +56,7 @@ BrassTowerAmosText1:
     text " Amos: "
 	next
 	text_start
-	text "Consul Urgaust"
+	text "Emperor Urgaust"
 	line "is on the top of"
 	cont "the tower."
 	
@@ -114,7 +114,7 @@ KurtTowerText2:
 	line "we started."
 	
 	para "If we let the"
-	line "Consul reign,"
+	line "Emperor reign,"
 	para "Johto will be"
 	line "on a path to"
 	cont "destruction."

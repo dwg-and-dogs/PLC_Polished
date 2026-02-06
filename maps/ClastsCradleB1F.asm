@@ -298,7 +298,7 @@ CradleCutscene_Text9:
     text " Adrinna: " 
 	next
 	text_start 
-	text "Consul, I- Er,"
+	text "Emperor, I- Er,"
 	line "you told me that"
 	para "traditions should"
 	line "be wiped clean?"
@@ -383,7 +383,7 @@ CradleCutscene_Text15:
 	line "destiny for Johto."
 	
 	para "With or without"
-	line "the Consul..."
+	line "the Emperor!"
 	done
 
 
@@ -684,7 +684,7 @@ CradleAdrinnaText5:
 	text "This changes"
 	line "nothing."
 	
-	para "The Consul has"
+	para "The Emperor has"
 	line "no idea what's"
 
 	para "coming at his"
