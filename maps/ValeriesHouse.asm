@@ -44,7 +44,7 @@ Valerie_GotCurse:
 ValerieCurseText:
 	text "Do you know the"
 	line "legend of our"
-	para "Consul, 160"
+	para "Emperor, 160"
 	line "years ago?"
 
 	para "He took the throne"

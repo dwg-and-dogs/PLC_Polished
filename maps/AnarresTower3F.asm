@@ -374,7 +374,7 @@ AmosSaysHelloText:
 	para "I'm Amos. I've"
 	line "been trying to"
 	para "get Hollis to"
-	line "take the Consul's"
+	line "take the Emperor's"
 	cont "threat seriously."
 
 	para "But he's stuck in"

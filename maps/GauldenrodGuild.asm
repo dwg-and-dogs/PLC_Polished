@@ -170,7 +170,7 @@ GauldenrodGuildNPC1Text:
 	line "people repair"
 	cont "their wood homes."
 
-	para "If the Consul's"
+	para "If the emperor's"
 	line "plan to import"
 	para "Steel happens,"
 	line "what'll I do?"
@@ -253,7 +253,7 @@ GauldenrodGuildNPC3Text:
 	
 	para "But now we have to"
 	line "pay taxes to the"
-	cont "Consul."
+	cont "Emperor."
 	
 	para "The brigade makes"
 	line "sure no one tries"

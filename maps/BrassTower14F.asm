@@ -67,7 +67,7 @@ HiroshiBeatenText:
 	
 HiroshiSeenText:
     text "Give yourself to"
-	line "the Consul!"
+	line "the Emperor!"
     done
 
 

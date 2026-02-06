@@ -523,7 +523,7 @@ TowerRoofText2_10:
 	text "See! Johto!"
 	line "Anyone can rise"
 	para "to the level of"
-	line "the Consul, with"
+	line "the Emperor, with"
 	cont "the right skills!"
 
 	para "The barbarians"

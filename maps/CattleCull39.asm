@@ -39,11 +39,10 @@ GenericTrainerNomadFMarlene:
    generictrainer NOMAD_F, NOMAD_F_MARLENE, EVENT_BEAT_NOMAD_F_MARLENE, NomadMarleneSeenText, NomadMarleneBeatenText
 
 
-   text "The Consul never"
+   text "The Emperor never"
    line "let us try to"
-   para "repel on our own"
-   line "to repel the"
-   cont "outsiders."
+   para "to repel the"
+   line "outsiders."
    done
 
 NomadMarleneSeenText:
@@ -84,7 +83,7 @@ GenericTrainerNomadFRin:
 	text "There's a season"
 	line "for everything."
 
-	para "Does the consul"
+	para "Does the Emperor"
 	line "think he controls"
 	cont "the heavens?"
 	done
@@ -125,7 +124,7 @@ NomadJacobBeatenText:
 	done
 
 CattleCull39SignText:
-	text "Consul's Road-"
+	text "Emperor's Road-"
 	line "Follow through"
 	para "Cattle Cull to"
 	line "Trader's Landing"

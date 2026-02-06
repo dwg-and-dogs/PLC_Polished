@@ -152,9 +152,10 @@ GauldenrodNPC4Script:
 	jumpthistextfaceplayer
 
 	text "I used to resent"
-	line "the Consul taking"
-	para "over, but the"
-	line "stadium is cool."
+	line "the bridgaders"
+	para "taking over, but"
+	line "the stadium is"
+	cont "nice to have."
 	done
 
 .Text4: 
@@ -264,7 +265,7 @@ AmosWantedSign:
 	text "WANTED: This man"
 	line "is wanted for"
 	para "crimes against"
-	line "the Consul!"
+	line "the emperor!"
 
 	para "Known alias:"
 	line "Amos."

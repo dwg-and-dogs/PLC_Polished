@@ -179,8 +179,8 @@ KimonoGirlEmiRewardText:
 	
 	para "It struck the"
 	line "Brass tower as"
-	para "the Consul raised"
-	line "his hands."
+	para "the Emperor"
+	line "raised his hands."
 
 	para "His ambitions"
 	line "to rise above"

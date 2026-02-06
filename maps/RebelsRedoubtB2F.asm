@@ -54,7 +54,7 @@ GenericTrainerNinja10: ; wraith
 
 	text "This area was dug"
 	line "right under the"
-	cont "Consul's nose!"
+	cont "Emperor's nose!"
 	done
 
 .BeatenText10:
@@ -157,7 +157,7 @@ KurtHealRedoubtText:
 	text "<PLAYER>, there"
 	line "is one source"
 	cont "of Steel left for"
-	para "Consul Urgaust:"
+	para "Emperor Urgaust:"
 	line "in the mine."
 	
 	para "If we join forces"
@@ -285,7 +285,7 @@ AmosText_LegacyBadgeSpeech:
 	para "After that, we"
 	line "will disrupt the"
 	para "coronation of"
-	line "Consul Urgaust."
+	line "Emperor Urgaust."
 
 	para "To the mine!"
 	done

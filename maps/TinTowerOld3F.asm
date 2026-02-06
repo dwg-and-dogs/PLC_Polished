@@ -260,7 +260,7 @@ GenericTrainerSagePing:
     done
 
 SagePingSeenText:
-    text "The Consul has"
+    text "The Emperor has"
 	line "always been a "
 	para "sacred bridge"
 	line "between heaven"
@@ -439,7 +439,7 @@ SamsaraWinLossText:
 SamsaraAfterText:
 	text "There is still"
 	line "time to change"
-	cont "the Consul."
+	cont "the Emperor."
 	
 	para "Please, we are"
 	line "counting on you."

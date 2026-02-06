@@ -116,7 +116,7 @@ NoboruSeenText:
 GenericTrainerElderTakashi:
     generictrainer ELDER, TAKASHI, EVENT_BEAT_ELDER_TAKASHI, TakashiSeenText, TakashiBeatenText
 
-	text "The Consul will"
+	text "The Emperor will"
 	line "not be stopped."
 	done
 
@@ -126,6 +126,6 @@ TakashiBeatenText:
     done
 	
 TakashiSeenText:
-    text "The Consul must"
+    text "The Emperor must"
 	line "be revered!"
 	done

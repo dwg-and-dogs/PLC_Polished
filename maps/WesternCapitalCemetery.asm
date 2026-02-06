@@ -50,13 +50,13 @@ WesternCapitalCemetery_MapScriptHeader:
 
 
 CemeteryNPC1Text:
-	text "Consul Urgaust"
+	text "Emperor Urgaust"
 	line "has not visited"
 	cont "in some time."
 	done
 
 CemeteryNPC2Text:
-	text "When Consul"
+	text "When Emperor"
 	line "Urgaust's grand-"
 	cont "father died,"
 	
@@ -94,14 +94,14 @@ CemeteryNPC3Text:
 	
 WC_Cemetery0Text:
 	text "Glory to"
-	line "Consul Urgaust!"
+	line "Emperor Urgaust!"
 	
 	para "Builder of Tin"
 	line "and Brass Towers"
 	done
 
 WC_Cemetery1Text:
-	text "For Consul"
+	text "For Emperor"
 	line "Ambrosia,"
 	para "Father of "
 	cont "Urgaust,"
@@ -112,7 +112,7 @@ WC_Cemetery1Text:
 	done
 	
 WC_Cemetery2Text:
-	text "For Consul"
+	text "For Emperor"
 	line "Fabian,"
 	para "Father of "
 	line "Ambrosia,"
@@ -122,7 +122,7 @@ WC_Cemetery2Text:
 	done
 	
 WC_Cemetery3Text:
-	text "For Consul"
+	text "For Emperor"
 	line "Bronte,"
 	para "Father of "
 	line "Fabian,"
@@ -133,7 +133,7 @@ WC_Cemetery3Text:
 	done
 	
 WC_Cemetery4Text:
-	text "For Consul"
+	text "For Emperor"
 	line "Mansour,"
 	para "Father of "
 	line "Bronte,"
@@ -144,7 +144,7 @@ WC_Cemetery4Text:
 	done
 	
 WC_Cemetery5Text:
-	text "For Consul"
+	text "For Emperor"
 	line "Oscar,"
 	para "Father of "
 	line "Mansour,"
@@ -155,7 +155,7 @@ WC_Cemetery5Text:
 	done
 
 WC_Cemetery6Text:
-	text "For Consul"
+	text "For Emperor"
 	line "Leigh,"
 	para "Father of "
 	line "Oscar,"
@@ -168,7 +168,7 @@ WC_Cemetery6Text:
 	done
 	
 WC_Cemetery7Text:
-	text "For Consul"
+	text "For Emperor"
 	line "Faron,"
 	para "Father of "
 	line "Leigh,"
@@ -179,7 +179,7 @@ WC_Cemetery7Text:
 	done
 	
 WC_Cemetery8Text:
-	text "For Consul"
+	text "For Emperor"
 	line "Fiora,"
 	para "Father of "
 	line "Faron,"

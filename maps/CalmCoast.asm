@@ -91,7 +91,7 @@ GenericTrainerYoungsterJimmy:
 	
 	para "It's a brand new"
 	line "division started"
-	cont "by the Consul!"
+	cont "by the Emperor!"
 	done
 
 SchoolboyJackSeenText:

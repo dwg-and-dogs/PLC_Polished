@@ -206,7 +206,7 @@ EG_Text2:
     text " Bobesh: "
 	next
 	text_start
-	text "Consul Urgaust."
+	text "Emperor Urgaust."
 	line "The stadium... It"
 	para "fell into a"
 	line "sinkhole."

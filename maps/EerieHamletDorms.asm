@@ -52,7 +52,7 @@ Hamlet_NatuText_1:
 
 HamletDormsNPC1Text:
 	text "Ever since the"
-	line "Consul started"
+	line "Emperor started"
 	cont "occupying cities,"
 	
 	para "trainers have"

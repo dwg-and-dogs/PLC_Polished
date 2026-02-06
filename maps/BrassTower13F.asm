@@ -122,7 +122,7 @@ IsamuSeenText:
 GenericTrainerElderKaito:
     generictrainer ELDER, KAITO, EVENT_BEAT_ELDER_KAITO, KaitoSeenText, KaitoBeatenText
 
-	text "The Consul will"
+	text "The Emperor will"
 	line "be known as the"
 	para "ruler of Johto"
 	line "everywhere!"

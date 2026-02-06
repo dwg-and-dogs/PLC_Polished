@@ -157,7 +157,7 @@ Prologue_Text1:
 
 	text "Guide me, father."
 
-	para "Being the Consul"
+	para "Being the Emperor"
 	line "of Johto is a"
 	cont "heavy role."
 		
@@ -201,7 +201,7 @@ Prologue_Text2_3:
 	
 	text "What do you mean?"
 	line "The office of the"
-	para "Consul is not for"
+	para "Emperor is not for"
 	line "coercion."
 	done
 
@@ -291,7 +291,7 @@ WesternCapitalNPC2Text:
 	text "The towers are"
 	line "so tall!"
 	
-	para "Hail Consul"
+	para "Hail Emperor"
 	line "Urgaust!"
 	done
 
@@ -308,7 +308,7 @@ WesternCapitalNPC3Text:
 	done
 
 WesternCapitalNPC3Text_2:
-	text "Glory to Consul"
+	text "Glory to Emperor"
 	line "Urgaust! He will"
 	cont "protect Johto!"
 	done
@@ -373,20 +373,20 @@ WCBrigaderTextTT:
 	jumpthistext
 	text "The temples are"
 	line "off-limits. The"
-	para "Consul will be"
+	para "Emperor will be"
 	line "renovating them."
 	done
 
 WCBrigaderText_2:
 	text "The tower is off-"
 	line "limits! Glory to"
-	cont "the Consul!"
+	cont "the Emperor!"
 	done
 
 WCBrassTowerText:
 	text "Brass Tower"
 	line "Devoted to"
-	cont "Consul Urgaust"
+	cont "Emperor Urgaust"
 	done
 
 WCTinTowerText:
@@ -396,7 +396,7 @@ WCTinTowerText:
 	done
 
 WCGardenText:
-	text "Consul's Garden"
+	text "Emperor's Garden"
 	line "Home to refined"
 	cont "#mon"
 	done
@@ -410,7 +410,7 @@ WCDanceText:
 WCGloryToMejimiText:
 	text "Welcome the new"
 	line "age - Glory to"
-	cont "Consul Urgaust!"
+	cont "Emperor Urgaust!"
 	done
 	
 WCSignText:
@@ -430,7 +430,7 @@ WC_AmosWantedSign:
 	text "WANTED: This man"
 	line "is wanted for"
 	para "crimes against"
-	line "the Consul."
+	line "the Emperor."
 
 	para "If you see him,"
 	line "please notify a"

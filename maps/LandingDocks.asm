@@ -511,7 +511,7 @@ KenseyBeaten1:
 	para "last of new tech"
 	line "just yet."
 	
-	para "The Consul has a"
+	para "The Emperor has a"
 	line "mine to the East"
 	para "where we are dev-"
 	line "eloping tech that"
@@ -584,7 +584,7 @@ Docks_Text18:
 	line "will learn maps!"
 	
 	para "I need to tell"
-	line "Consul Urgaust"
+	line "Emperor Urgaust"
 	para "how these two"
 	line "stole his Lugia!"
 	done

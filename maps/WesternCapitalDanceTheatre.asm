@@ -89,7 +89,7 @@ WC_DT_NPC2_Text3:
 	done
 	
 WC_DT_NPC2_Text2:
-	text "The Consul's"
+	text "The Emperor's"
 	line "generals have"
 	cont "taken a heavy"
 	para "hand with the Ki-"
