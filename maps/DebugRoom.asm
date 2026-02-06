@@ -294,16 +294,16 @@ Breeder1Script:
 	iffalse_jumpopenedtext Breeder1SayNoText
 	writetext Breeder1Text	
 	; good party
-	givepoke H__ZOROARK, NO_FORM, 100, LEFTOVERS
+	givepoke ZOROARK, NO_FORM, 100, LEFTOVERS
 	loadmem wPartyMon1Moves+0, MOONBLAST
 	loadmem wPartyMon1Moves+1, SHADOW_BALL
 	loadmem wPartyMon1Moves+2, PSYCHIC_M
 	loadmem wPartyMon1Moves+3, EXPLOSION
 	; hm mules
-	givepoke H__SAMUROTT, NO_FORM, 100, LEFTOVERS
-	givepoke H__DECIDUEYE, NO_FORM, 100, LEFTOVERS
+	givepoke SAMUROTT, NO_FORM, 100, LEFTOVERS
+	givepoke DECIDUEYE, NO_FORM, 100, LEFTOVERS
 	givepoke ALAKAZAM, NO_FORM, 100, LEFTOVERS
-	givepoke PIDGEY, NO_FORM, 5, NO_ITEM ; CHECK FAINTING BEHAVIOR 
+	givepoke HOOTHOOT, NO_FORM, 5, NO_ITEM ; CHECK FAINTING BEHAVIOR 
 ;SPRITE CHECKS 
 ;	givepoke QWILFISH, NO_FORM, 5
 ;	givepoke VILEPLUME, NO_FORM, 5
@@ -387,7 +387,7 @@ dwgDebugScript:
 ;	loadmem wPartyMon6DVs+2, $ef
 
 ; FLYING
-;	givepoke EMPOLEON, 50
+;	givepoke TOTODILE, 50
 ;	loadmem wPartyMon1DVs+0, $ff
 ;	loadmem wPartyMon1DVs+1, $fe
 ;	loadmem wPartyMon1DVs+2, $ee
@@ -542,36 +542,26 @@ Breeder2Script:
 	givepoke CYNDAQUIL, 5
 	givepoke ROWLET, 5	
 	givepoke OSHAWOTT, 5	
-	givepoke BUTTERFREE, 5	
-	givepoke BEEDRILL, 5	
-	givepoke PIDGEY, 5	
-	givepoke EKANS, 5	
 	givepoke PIKACHU, 5	
 	givepoke NIDORINA, 5	
 	givepoke NIDORINO, 5	
 	givepoke CLEFAIRY, 5	
 	givepoke VULPIX, 5	
-	givepoke JIGGLYPUFF, 5	
 	givepoke ZUBAT, 5	
-	givepoke GLOOM, 5	
+	givepoke ODDISH, 5	
 	givepoke PARAS, 5	
-	givepoke VENONAT, 5	
-	givepoke DIGLETT, 5	
-	givepoke MEOWTH, 5
 	givepoke MANKEY, 5
 	givepoke GROWLITHE, 5
 	givepoke POLIWAG, 5	
 	givepoke ABRA, 5	
 	givepoke MACHOP, 5	
-	givepoke WEEPINBELL, 5	
-	givepoke TENTACRUEL, 5	
+	givepoke BELLSPROUT, 5	
+	givepoke TENTACOOL, 5	
 	givepoke GEODUDE, 5	
 	givepoke PONYTA, 5	
 	givepoke SLOWPOKE, 5	
 	givepoke MAGNEMITE, 5	
-	givepoke FARFETCH_D, 5	
 	givepoke GRIMER, 5	
-	givepoke CLOYSTER, 5	
 	givepoke GASTLY, 5	
 	givepoke ONIX, 5	
 	givepoke VOLTORB, 5	
@@ -579,17 +569,13 @@ Breeder2Script:
 	givepoke HITMONLEE, 5	
 	givepoke HITMONCHAN, 5
 	givepoke HITMONTOP, 5
-	givepoke WEEZING, 5
-	givepoke MR__MIME, 5	
+	givepoke KOFFING, 5
 	givepoke RHYHORN, 5	
 	givepoke CHANSEY, 5	
 	givepoke TANGELA, 5	
-	givepoke KANGASKHAN, 5	
-	givepoke SEADRA, 5	
-	givepoke STARYU, 5	
+	givepoke HORSEA, 5	
 	givepoke SCYTHER, 5	
 	givepoke JYNX, 5	
-	givepoke FARFETCH_D, 5	
 	givepoke MAGMAR, 5	
 	givepoke PINSIR, 5	
 	givepoke TAUROS, 5	
@@ -611,17 +597,17 @@ Breeder5Script:
 	writetext BreederText	
 	; a buncha mons
 	givepoke TOTODILE, 5
-	givepoke FURRET, 5	
-	givepoke LEDIAN, 5	
-	givepoke ARIADOS, 5	
+	givepoke SENTRET, 5	
+	givepoke LEDYBA, 5	
+	givepoke SPINARAK, 5	
 	givepoke CHINCHOU, 5	
 	givepoke TOGETIC, 5	
 	givepoke NATU, 5	
 	givepoke MAREEP, 5	
 	givepoke MARILL, 5	
 	givepoke SUDOWOODO, 5	
-	givepoke SKIPLOOM, 5	
-	givepoke SUNFLORA, 5	
+	givepoke HOPPIP, 5	
+	givepoke SUNKERN, 5	
 	givepoke WOOPER, 5	
 	givepoke MURKROW, 5	
 	givepoke MISDREAVUS, 5	
@@ -637,46 +623,38 @@ Breeder5Script:
 	givepoke HERACROSS, 5	
 	givepoke SNEASEL, 5	
 	givepoke TEDDIURSA, 5	
-	givepoke MAGCARGO, 5	
-	givepoke PILOSWINE, 5	
+	givepoke SLUGMA, 5	
+	givepoke SWINUB, 5	
 	givepoke CORSOLA, 5	
-	givepoke OCTILLERY, 5	
+	givepoke REMORAID, 5	
 	givepoke MANTINE, 5	
 	givepoke SKARMORY, 5	
 	givepoke HOUNDOUR, 5	
-	givepoke DONPHAN, 5	
+	givepoke PHANPY, 5	
 	givepoke STANTLER, 5	
 	givepoke MILTANK, 5	
-	givepoke GROTLE, 5	
-	givepoke MONFERNO, 5
-	givepoke PRINPLUP, 5
 	givepoke STARAVIA, 5
 	givepoke LUXIO, 5	
-	givepoke ROSELIA, 5	
-	givepoke RAMPARDOS, 5	
-	givepoke BASTIODON, 5	
-	givepoke VESPIQUEN, 5	
+	givepoke CRANIDOS, 5	
+	givepoke SHIELDON, 5	
 	givepoke AMBIPOM, 5	
 	givepoke DRIFBLIM, 5	
-	givepoke LOPUNNY, 5	
-	givepoke SKUNTANK, 5	
 	givepoke BRONZOR, 5	
 	givepoke SPIRITOMB, 5	
-	givepoke GABITE, 5	
-	givepoke LUCARIO, 5	
-	givepoke HIPPOWDON, 5	
-	givepoke DRAPION, 5	
-	givepoke TOXICROAK, 5	
+	givepoke GIBLE, 5	
+	givepoke RIOLU, 5	
+	givepoke HIPPOPOTAS, 5	
+	givepoke CROAGUNK, 5	
 	givepoke SNOVER, 5	
 	givepoke DUSCLOPS, 5
 	givepoke FROSLASS, 5
 	givepoke ROTOM, 5
-	givepoke H__AVALUGG, 5	
+	givepoke BERGMITE, 5	
 	givepoke BASCULEGION, 5	
-	givepoke H__BRAVIARY, 5	
-	givepoke KIRLIA, 5	
-	givepoke H__SLIGGOO, 5	
-	givepoke H__ZOROARK, 5	
+	givepoke RUFFLET, 5	
+	givepoke RALTS, 5	
+	givepoke GOOMY, 5	
+	givepoke ZORUA, 5	
 	givepoke DRATINI, 5	
 	givepoke LARVITAR, 5	
 	givepoke RAIKOU, 5	

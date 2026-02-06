@@ -17,11 +17,11 @@ SproutTower3F_MapScriptHeader:
 	object_event  5, 14, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ElderHealsScript, EVENT_BEAT_FALKNER
 	object_event 11, 10, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperToby, -1
 	object_event  7,  1, SPRITE_FALKNER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
-	pokemon_event  6,  1, PIDGEOTTO, -1, -1, PAL_NPC_BLUE, PidgeottoTowerText, -1
+	pokemon_event  6,  1, NOCTOWL, -1, -1, PAL_NPC_BLUE, HawkerTowerText, -1
 
 	object_const_def
 
-PidgeottoTowerText:
+HawkerTowerText:
 	text "Hawker: "
 	line "Skrrraw!"
 	done

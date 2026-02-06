@@ -54,7 +54,7 @@ GoldenrodPokefanMScript:
     promptbutton
 .CheckPokemon
     checkevent EVENT_GAVE_METAL_COAT_GOLDENROD
-    iftrue .CheckPrinplup
+    iftrue .CheckSwinub
     writetext PokefanMAskOnixText
     promptbutton
     checkpoke ONIX
@@ -71,12 +71,12 @@ GoldenrodPokefanMScript:
     iffalse .BagFull
     setevent EVENT_GAVE_METAL_COAT_GOLDENROD
 
-.CheckPrinplup
+.CheckSwinub
     checkevent EVENT_GAVE_NEVERMELTICE_GOLDENROD
     iftrue .CheckYanma
-    writetext PokefanMAskPrinplupText
+    writetext PokefanMAskSwinubText
     promptbutton
-    checkpoke PRINPLUP
+    checkpoke SWINUB
     iftrue .GiveNevermeltice
     writetext PokefanMNoPrinplupText
     waitbutton
@@ -148,23 +148,23 @@ PokefanMGiveMetalCoatText:
     line "Here, take this."
     done
 
-PokefanMAskPrinplupText:
-    text "Do you have any"
-    line "#mon that look"
-    para "like they're"
-    line "dressed for a"
-    para "formal dance on"
-    line "an iceberg?"
+PokefanMAskSwinubText:
+    text "Do you have the"
+	line "ice-type #mon"
+	para "that rubs its"
+	line "snout on the"
+	para "ground to find"
+	line "food and hot"
+	cont "springs?"
     done
 
-PokefanMNoPrinplupText:
+PokefanMNoSwinubText:
     text "Oh darn!"
     done
 
 PokefanMGiveNevermelticeText:
-    text "A Prinplup! How"
-    line "elegant! Here's"
-    cont "a gift for you."
+    text "A Swinub! Here's"
+    line "a gift for you."
     done
 
 PokefanMAskYanmaText:

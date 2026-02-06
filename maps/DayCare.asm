@@ -18,7 +18,7 @@ DayCare_MapScriptHeader: ; expected behavior: no eggs
 	def_object_events
 	object_event  5,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DayCareLadyScript, -1
 	object_event  2,  3, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Inside, -1
-	object_event  2,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, DayCarePokeFanNoEggText, -1
+;	object_event  2,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, DayCarePokeFanNoEggText, -1
 
 	object_const_def
 	const DAYCARE_GRANNY
@@ -35,36 +35,28 @@ DayCareEggCheckCallback:
 	clearevent EVENT_DAYCARE_MAN_ON_ROUTE_34
 	endcallback
 
-DayCareManScript_Inside:
+DayCareManScript_Inside: ; todo will need to check this 
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
-	iftrue_jumpopenedtext DayCareText_GotEviolite
+	iftrue .GotEvioliteDayCareMan 
 	writetext DayCareManText_GiveEviolite
 	waitbutton
     giveitem EVIOLITE
     setevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
     writetext DayCareText_GotEviolite
 	waitbutton
-	closetext
-	end
+.GotEvioliteDayCareMan:
+	special Special_DayCareMan
+	waitendtext
 
-
-DayCareLadyScript: ; check if you've got the eviolite 
+DayCareLadyScript: ; todo check her 
 	faceplayer
 	opentext
-	writethistext
-		text "We're a bit too"
-		line "old to watch any"
-		cont "#mon, now."
-		
-		para "But I'll always"
-		line "cherish watching"
-		cont "#mon grow."
-		done
-	waitbutton
-	closetext
-	end
+	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG
+	iftrue_jumpopenedtext Text_GrampsLookingForYou
+	special Special_DayCareLady
+	waitendtext
 
 DayCareLadyScript2:
 	faceplayer

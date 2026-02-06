@@ -267,7 +267,7 @@ Binoculars1Text:
 	cont "train route!"
 	
 	para "Wait, are those"
-	line "Prinplup playing"
+	line "Totodile playing"
 	cont "at the peak?"
 	done
 

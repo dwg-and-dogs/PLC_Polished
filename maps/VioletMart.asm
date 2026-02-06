@@ -21,7 +21,7 @@ VioletMartGrannyText:
 	line "for miles away."
 	
 	para "Falkner uses his"
-	line "Pidgeotto to blow"
+	line "Noctowl to blow"
 	para "clouds from all"
 	line "over to rain on"
 	cont "our city."

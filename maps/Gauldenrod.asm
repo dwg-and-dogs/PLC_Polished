@@ -309,10 +309,10 @@ GauldenrodHisuiTraderScript:
 	loadmenu .HisuiPokemonMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .GiveLuxio
-	ifequal 2, .GiveRoselia
-	ifequal 3, .GiveStaravia
-	ifequal 4, .GiveVespiquen
+	ifequal 1, .GiveGoomy
+	ifequal 2, .GiveGible
+	ifequal 3, .GiveZorua
+	ifequal 4, .GiveRiolu
 	jumptext GauldenrodHisuiTraderNoThanksText
 
 .AlreadyGotPokemon
@@ -321,38 +321,38 @@ GauldenrodHisuiTraderScript:
 	closetext
 	end
 
-.GiveLuxio:
-	givepoke LUXIO, 15
+.GiveGoomy:
+	givepoke GOOMY, 10
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
-	writetext GauldenrodHisuiTraderLuxioText
+	writetext GauldenrodHisuiTraderGoomyText
 	waitbutton
 	closetext
 	end
 
-.GiveRoselia:
-	givepoke ROSELIA, 15
+.GiveGible:
+	givepoke GIBLE, 10
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
-	writetext GauldenrodHisuiTraderRoseliaText
+	writetext GauldenrodHisuiTraderGibleText
 	waitbutton
 	closetext
 	end
 
-.GiveStaravia:
-	givepoke STARAVIA, 15
+.GiveZorua:
+	givepoke ZORUA, 10
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
-	writetext GauldenrodHisuiTraderStaraviaText
+	writetext GauldenrodHisuiTraderZoruaText
 	waitbutton
 	closetext
 	end
 
-.GiveVespiquen:
-	givepoke VESPIQUEN, 15
+.GiveRiolu:
+	givepoke RIOLU, 5
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
-	writetext GauldenrodHisuiTraderVespiquenText
+	writetext GauldenrodHisuiTraderRioluText
 	waitbutton
 	closetext
 	end
@@ -370,13 +370,13 @@ GauldenrodHisuiTraderScript:
 	dw .MenuData
 	db 1 ; default option
 
-.MenuData:
+.MenuData: ; goomy, gible, zorua, riolu
 	db STATICMENU_CURSOR ; flags
 	db 5 ; items
-	db "LUXIO@"
-	db "ROSELIA@"
-	db "STARAVIA@"
-	db "VESPIQUEN@"
+	db "Stamina@" ; goomy 
+	db "Strength@" ; gible 
+	db "Malice@" ; zorua 
+	db "Friendship@" ; riolu 
 	db "CANCEL@"
 
 GauldenrodHisuiTraderRememberText:
@@ -393,34 +393,42 @@ GauldenrodHisuiTraderRememberText:
 	done
 
 GauldenrodHisuiTraderText:
-	text "Hello! Rare"
-	line "#mon! Gifts"
-	para "from Hisui. Which"
-	line "would you like?"
+	text "A strapping young"
+	line "trainer! Ready"
+	para "to try your hand"
+	line "at the stadium?"
+	
+	para "I come from Hisui"
+	line "with a #mon"
+	para "suited just for"
+	line "your style!"
+
+	para "Tell me. How do"
+	line "you seek victory?"
 	done
 
-GauldenrodHisuiTraderLuxioText:
-	text "Ah, Luxio!"
+GauldenrodHisuiTraderGoomyText: ; TODO
+	text "Ah, Goomy!"
 	line "Its static dis-"
 	para "charge can light"
 	line "up the dark!"
 	done
 
-GauldenrodHisuiTraderRoseliaText:
-	text "Roselia, lovely!"
+GauldenrodHisuiTraderGibleText: ; TODO
+	text "Gible, lovely!"
 	line "It'll be a thorn"
 	para "in your foe's"
 	line "side!"
 	done
 
-GauldenrodHisuiTraderStaraviaText:
-	text "Staravia, excel-"
+GauldenrodHisuiTraderZoruaText: ; TODO
+	text "Zorua, excel-"
 	line "lent! One of the"
 	cont "bravest birds!"
 	done
 	
-GauldenrodHisuiTraderVespiquenText:
-	text "Oh, Vespiquen!"
+GauldenrodHisuiTraderRioluText: ; TODO
+	text "Oh, Riolu!"
 	line "There's a buzz"
 	cont "about its honey!"
 	done

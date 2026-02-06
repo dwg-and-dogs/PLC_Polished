@@ -25,7 +25,7 @@ CalmCoastCottageDayCareManText:
 	text "A Hisuian left me"
 	line "a Dartrix. It is"
 	para "interested in my"
-	line "wife's Pidgeotto."
+	line "wife's Staravia."
 	
 	para "If they will"
 	line "made an egg,"
@@ -38,7 +38,7 @@ CalmCoastCottageChildScript:
 	jumptextfaceplayer CalmCoastCottageChildText
 
 CalmCoastCottageChildText:
-	text "Pidgey kept eat-"
+	text "#mon kept eat-"
 	line "ing our berries."
 	para "So my parents"
 	line "hired a kid"

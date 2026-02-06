@@ -341,7 +341,7 @@ PokemonMemoriesNPCScript:
     faceplayer
     opentext
     checkevent EVENT_GOT_SILK_SCARF_FROM_MEMORIES_NPC
-    iftrue .CheckPidgey
+    iftrue .CheckHoothoot
 	writetext AzaleaUsedToBeATrainerText
 	waitbutton
     writetext AskForTeddiursaText
@@ -359,16 +359,16 @@ PokemonMemoriesNPCScript:
     verbosegiveitem SILK_SCARF
     iffalse .BagFull
     setevent EVENT_GOT_SILK_SCARF_FROM_MEMORIES_NPC
-    sjump .CheckPidgey
+    sjump .CheckHoothoot
 
-.CheckPidgey:
+.CheckHoothoot:
     checkevent EVENT_GOT_SHARP_BEAK_FROM_MEMORIES_NPC
     iftrue .CheckEkans
-    writetext AskForPidgeyText
+    writetext AskForHoothootText
     promptbutton
-    checkpoke PIDGEY
+    checkpoke HOOTHOOT
     iftrue .GiveSharpBeak
-    writetext DontHavePidgeyText
+    writetext DontHaveHoothootText
     waitbutton
     closetext
     end
@@ -450,20 +450,21 @@ GiveSilkScarfText:
     line "Silk Scarf!"
     done
 
-AskForPidgeyText:
+AskForHoothootText:
     text "Next, can you show"
-    line "me the little bird"
-    para "#mon that kicks"
-    line "up dust?"
+    line "me the owl"
+    para "#mon that"
+	line "stands on one"
+	cont "leg?"
     done
 
-DontHavePidgeyText:
+DontHaveHoothootText:
     text "No? That's"
     line "alright"
     done
 
 GiveSharpBeakText:
-    text "Ah, Pidgey! It"
+    text "Ah, Hoothoot! It"
     line "brings back so"
     para "many memories!"
     line "Here's a Sharp"

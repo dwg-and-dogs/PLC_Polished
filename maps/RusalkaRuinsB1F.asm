@@ -76,7 +76,7 @@ CaptainsLog02Text:
 	text "Captain's Log 2"
 	line "March 16"
 	
-	para "More Pidgey mail"
+	para "More Starly mail"
 	line "cluttering my"
 	cont "desk."
 	

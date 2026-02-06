@@ -3004,8 +3004,8 @@ HikerGroup:
 	db "Leonard@" ; union cave 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, RHYHORN
-	db 10, PHANPY
+	db 5, RHYHORN
+	db 7, PHANPY
 	db -1 ; end
 
 ; ================
@@ -4790,10 +4790,10 @@ RuinManiacGroup:
 	db "Petry@"
 	db TRAINERTYPE_MOVES
 	; party
-	db 12, RAMPARDOS
-		db ROCK_SMASH, SCARY_FACE, SCREECH, NO_MOVE
+	db 12, CRANIDOS
+		db ROCK_SMASH, SCARY_FACE, SCREECH, HEADBUTT
 	db 12, BASTIODON
-		db MIRROR_COAT, TACKLE, SCREECH, NO_MOVE
+		db MIRROR_COAT, TACKLE, SCREECH, ROCK_SMASH
 	db -1 ; end
 
 ; ================
@@ -4830,8 +4830,8 @@ FirebreatherGroup:
 	db "Otis@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 6, MAGMAR
-	db 7, PONYTA
+	db 5, MAGMAR
+	db 6, PONYTA
 	db -1 ; end
 
 ; ================
@@ -7308,9 +7308,9 @@ ScientistGroup:
 	db "Lowell@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 7, GRIMER
-	db 4, WEEPINBELL
-	db 4, GLOOM
+	db 6, GRIMER
+	db 5, BELLSPROUT
+	db 5, ODDISH
 	db -1 ; end
 
 ; ================

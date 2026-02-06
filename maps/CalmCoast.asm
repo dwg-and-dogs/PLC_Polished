@@ -28,7 +28,7 @@ CalmCoast_MapScriptHeader:
 	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlKagami, -1
 	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBrigader2, EVENT_BEAT_BOBESH_STADIUM
 	tmhmball_event 4, 50, TM_ROAR, EVENT_GOT_TM05_ROAR
-	pokemon_event  14, 19, PIDGEOTTO, -1, -1, PAL_NPC_RED, CalmCoastPidgeottoText, -1
+	pokemon_event  14, 19, STARAVIA, -1, -1, PAL_NPC_RED, CalmCoastPidgeottoText, -1
 	pokemon_event  17, 19, DARTRIX, -1, -1, PAL_NPC_GREEN, CalmCoastDartrixText, -1
 	fruittree_event 17, 14, FRUITTREE_CALM_COAST_1, SITRUS_BERRY, PAL_NPC_RED
 	fruittree_event 18, 14, FRUITTREE_CALM_COAST_2, LUM_BERRY, PAL_NPC_RED
@@ -52,7 +52,7 @@ GenericTrainerYoungsterWarren:
 
 YoungsterWarrenSeenText:
 	text "I'm on the lookout"
-	line "for pidgeys!"
+	line "for hoothoot!"
 	done
 
 YoungsterWarrenBeatenText:
@@ -247,7 +247,7 @@ CalmCoastDartrixText:
 	done
 	
 CalmCoastPidgeottoText:
-	text "Pidgeotto:"
+	text "Staravia:"
 	line "Cheep!"
 	done
 

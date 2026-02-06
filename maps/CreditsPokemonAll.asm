@@ -52,7 +52,7 @@ CreditsPokemonAllScene:
 	readmem wPartyMon1Species  ; or wCurPartySpecies
 	pokepic2 0	
     writethistext
-        text_ram wStringBuffer1 ; "PIDGEY"
+        text_ram wStringBuffer1 ; "Hoothoot"
         text " Lv."             ; " Lv."
         text_ram wStringBuffer3 ; "  5"
         line " "                ; New line
@@ -74,7 +74,7 @@ CreditsPokemonAllScene:
 	readmem wPartyMon2Species  ; or wCurPartySpecies
 	pokepic2 0	
     writethistext
-        text_ram wStringBuffer1 ; "PIDGEY"
+        text_ram wStringBuffer1 ; "Hoothoot"
         text " Lv."             ; " Lv."
         text_ram wStringBuffer3 ; "  5"
         line " "                ; New line
@@ -97,7 +97,7 @@ CreditsPokemonAllScene:
 	readmem wPartyMon3Species  ; or wCurPartySpecies
 	pokepic2 0	
     writethistext
-        text_ram wStringBuffer1 ; "PIDGEY"
+        text_ram wStringBuffer1 ; "Hoothoot"
         text " Lv."             ; " Lv."
         text_ram wStringBuffer3 ; "  5"
         line " "                ; New line
@@ -120,7 +120,7 @@ CreditsPokemonAllScene:
 	readmem wPartyMon4Species  ; or wCurPartySpecies
 	pokepic2 0	
     writethistext
-        text_ram wStringBuffer1 ; "PIDGEY"
+        text_ram wStringBuffer1 ; "Hoothoot"
         text " Lv."             ; " Lv."
         text_ram wStringBuffer3 ; "  5"
         line " "                ; New line
@@ -143,7 +143,7 @@ CreditsPokemonAllScene:
 	readmem wPartyMon5Species  ; or wCurPartySpecies
 	pokepic2 0	
     writethistext
-        text_ram wStringBuffer1 ; "PIDGEY"
+        text_ram wStringBuffer1 ; "Hoothoot"
         text " Lv."             ; " Lv."
         text_ram wStringBuffer3 ; "  5"
         line " "                ; New line
@@ -165,7 +165,7 @@ CreditsPokemonAllScene:
 	readmem wPartyMon6Species  ; or wCurPartySpecies
 	pokepic2 0	
     writethistext
-        text_ram wStringBuffer1 ; "PIDGEY"
+        text_ram wStringBuffer1 ; "Hoothoot"
         text " Lv."             ; " Lv."
         text_ram wStringBuffer3 ; "  5"
         line " "                ; New line
