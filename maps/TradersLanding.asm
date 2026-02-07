@@ -460,26 +460,56 @@ TL_Brigader_AfterKenseyText:
 
 LandingEggScript: ;cf the cafe script 
 	checkevent EVENT_GOT_HSLIGGOO_EGG
-	iftrue_jumptextfaceplayer GotHSliggooEggText
+	iffalse .SellEgg ; didn't sell the goomy egg
+	checkevent EVENT_GOT_GIBLE_EGG
+	iftrue .SoldEggs ; jump here if you've sold the goomy egg and gible egg 
+.SellEgg:
 	faceplayer
 	opentext
 	writetext GivingHSliggooEggText
+	waitbutton
+	checkevent EVENT_GOT_HSLIGGOO_EGG 
+	iftrue .SellGibleEgg ; skip selling the goomy egg if he already has 
+	writetext OptionToBuyGoomyEggText
 	special PlaceMoneyTopRight
 	yesorno
-	iffalse_jumpopenedtext NoMoneyText
+	iffalse .SellGibleEgg ; jump to sell gible egg if you don't want the goomy egg 
 	checkmoney $0, 50000
 	ifequal $2, .NoMoney 
 	promptbutton
-	givepoke H__SLIGGOO, 5
+	readvar VAR_PARTYCOUNT
+	giveegg GOOMY
 	iffalse_jumpopenedtext NoRoomText
 	playsound SFX_TRANSACTION
 	takemoney $0, 50000
 	special PlaceMoneyTopRight
 	setevent EVENT_GOT_HSLIGGOO_EGG
-	writetext GotHSliggooEggText
+	writetext GotGoomyEggText
+	waitbutton
+	checkevent EVENT_GOT_GIBLE_EGG
+	iftrue_jumptext GotBothEggsText
+.SellGibleEgg
+	writetext OptionToBuyGibleEggText
+	special PlaceMoneyTopRight
+	yesorno
+	iffalse_jumpopenedtext DeclinedSecondEggText ; getting cheap on me now? 
+	checkmoney $0, 50000
+	ifequal $2, .NoMoney 
+	promptbutton
+	readvar VAR_PARTYCOUNT
+	giveegg GIBLE
+	iffalse_jumpopenedtext NoRoomText
+	playsound SFX_TRANSACTION
+	takemoney $0, 50000
+	special PlaceMoneyTopRight
+	setevent EVENT_GOT_GIBLE_EGG
+	writetext GotGibleEggText
 	waitbutton
 	closetext
 	end
+
+.SoldEggs:
+	jumptextfaceplayer GotBothEggsText
 
 .NoMoney:
 	jumpopenedtext NoMoneyText
@@ -488,14 +518,47 @@ GivingHSliggooEggText:
 	text "Hey, you my"
 	line "contact?"
 	
-	para "I smuggled that"
+	para "I smuggled those"
 	line "#mon outta"
 	para "Hisui, like I"
-	line "told ya. 50k."
+	line "told your boss."
 	done
+
+OptionToBuyGoomyEggText:
+	text "First up is this"
+	line "purple, slimy"
+	cont "#mon egg."
 	
-GotHSliggooEggText:
-	text "That egg is a"
+	para "So, 50k? Don't"
+	line "leave me hanging."
+	done
+
+GotGoomyEggText:
+	text "Glad to get that"
+	line "slimy egg out of"
+	cont "my bag."
+	done
+
+OptionToBuyGibleEggText:
+	text "Here's the second"
+	line "#mon egg."
+	
+	para "I think I can see"
+	line "the sharp teeth"
+	para "trying to poke"
+	line "through already."
+	
+	para "This one is a"
+	line "fighter!"
+	done
+
+DeclinedSecondEggText:
+	text "Getting cheap on"
+	line "me now?"
+	done
+
+GotBothEggsText:
+	text "Those eggs are"
 	line "rare #mon."
 
 	para "Now, I just need"

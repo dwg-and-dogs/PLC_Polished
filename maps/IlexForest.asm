@@ -184,7 +184,7 @@ GenericTrainerYoungsterMikey:
 	generictrainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText
 	text "I always carry"
 	line "antidotes when"
-	cont "training Ekans."
+	cont "training here."
 	done
 	
 YoungsterMikeySeenText:

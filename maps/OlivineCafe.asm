@@ -292,14 +292,14 @@ OlivineCafe2Script: ; 25000
 	loadmenu .Cafe2PokemonMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .GiveOctillery
+	ifequal 1, .GiveRemoraid
 	ifequal 2, .GiveMantine
 	ifequal 3, .GiveQwilfish
 	ifequal 4, .GiveBasculin
 	jumptext CafeNoFishText
 ; Octillery FLASH CANNON, Mantine MIRROR COAT, Qwilfish EXPLOSION, with sitrus_berry and in ultra_balls ; 25000 
-.GiveOctillery:
-	givepoke OCTILLERY, NO_FORM, 20, SITRUS_BERRY, ULTRA_BALL, FLASH_CANNON
+.GiveRemoraid:
+	givepoke REMORAID, NO_FORM, 20, SITRUS_BERRY, ULTRA_BALL, FLASH_CANNON
 	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 25000
@@ -356,7 +356,7 @@ OlivineCafe2Script: ; 25000
 .MenuData2:
 	db STATICMENU_CURSOR ; flags
 	db 5 ; items
-	db "Octillery@"
+	db "Remoraid@"
 	db "Mantine@"
 	db "Qwilfish@"
 	db "Basculin@"	
@@ -375,7 +375,7 @@ OlivineCafe2Text:
 	para "They cost ¥25000"
 	line "to take home."
 	
-	para "Flashy Octillery,"
+	para "Flashy Remoraid,"
 
 	para "Mirror-coated"
 	line "Mantine,"
@@ -406,7 +406,7 @@ OlivineCafe3Script: ; 50000
 	closewindow
 	ifequal 1, .GiveDratini
 	ifequal 2, .GiveSeadra
-	ifequal 3, .GiveStaryu
+	ifequal 3, .GiveTentacool
 	jumptext CafeNoFishText
 ; Dratini EXTREMESPEED liechi, Seadra POISON JAB salac, Staryu transform petaya, with pinch berry and in bub_ball 50000 
 .GiveDratini:
@@ -434,8 +434,8 @@ OlivineCafe3Script: ; 50000
 	done
 
 
-.GiveStaryu:
-	givepoke STARYU, NO_FORM, 25, PETAYA_BERRY, BUB_BALL, TRANSFORM
+.GiveTentacool:
+	givepoke TENTACOOL, NO_FORM, 25, LUM_BERRY, BUB_BALL, RECOVER
 	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 50000
@@ -476,8 +476,8 @@ OlivineCafe3Text:
 	
 	para "Speedy Dratini,"
 	line "Jabbing Seadra,"
-	cont "Or a Staryu that"
-	cont "isn't as it seems."
+	cont "Or a Tentacool"
+	cont "with stamina."
 	
 	para "Buy for ¥50000?"
 	done

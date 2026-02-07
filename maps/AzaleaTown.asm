@@ -363,7 +363,7 @@ PokemonMemoriesNPCScript:
 
 .CheckHoothoot:
     checkevent EVENT_GOT_SHARP_BEAK_FROM_MEMORIES_NPC
-    iftrue .CheckEkans
+    iftrue .CheckNidoran
     writetext AskForHoothootText
     promptbutton
     checkpoke HOOTHOOT
@@ -379,16 +379,16 @@ PokemonMemoriesNPCScript:
     verbosegiveitem SHARP_BEAK
     iffalse .BagFull
     setevent EVENT_GOT_SHARP_BEAK_FROM_MEMORIES_NPC
-    sjump .CheckEkans
+    sjump .CheckNidoran
 
-.CheckEkans:
+.CheckNidoran:
     checkevent EVENT_GOT_POISON_BARB_FROM_MEMORIES_NPC
     iftrue .AllDone
-    writetext AskForEkansText
+    writetext AskForNidoranText
     promptbutton
-    checkpoke EKANS
+    checkpoke NIDORAN
     iftrue .GivePoisonBarb
-    writetext DontHaveEkansText
+    writetext DontHaveNidoranText
     waitbutton
     closetext
     end
@@ -471,27 +471,24 @@ GiveSharpBeakText:
     cont "Beak for you!"
     done
 
-AskForEkansText:
+AskForNidoranText:
     text "Lastly, can you"
     line "show me the"
-    para "#mon whose name"
-    line "is evoked by this"
-    cont "phrase:"
-    para "A man, a plan,"
-    line "a canal, Panama!"
+    para "Poison Point"
+	line "#mon that"
+	para "evolves based on"
+	line "its Attack and"
+	cont "Defense stats?"
     done
 
-DontHaveEkansText:
-    text "No? It's a"
-    line "tricky one! Come"
-    para "back when you've"
-    line "caught one!"
+DontHaveNidoranText:
+    text "Try looking on"
+	line "Route 33 during"
+	cont "the day!"
     done
 
 GivePoisonBarbText:
-    text "Ekans! You got it!"
-    line "Quite the"
-    para "palindrome, eh?"
+    text "Nidoran! So cute!"
     line "Here's a Poison"
     cont "Barb for you!"
     done

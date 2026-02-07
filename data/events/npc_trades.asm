@@ -10,23 +10,23 @@ NPCTrades:
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN,   MALE,   JEZE_BALL,   PERSIM_BERRY
 	dw 48926
 	rawchar "Kyle@@@@", $00
-; NPC_TRADE_TIM
+; NPC_TRADE_TIM; western capital dorms 
 	rawchar 1, SNUBBULL,    HITMONLEE, "Geri@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   MALE,   FAST_BALL,   SITRUS_BERRY
 	dw 29189
 	rawchar "Jerry@@@", $00
-; NPC_TRADE_EMY in Blackthorn City
+; NPC_TRADE_EMY; western capital dorms 
 	rawchar 3, CLEFAIRY,       HITMONCHAN,   "Zuki@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   FEMALE, FAST_BALL,    SITRUS_BERRY
 	dw 00283
 	rawchar "Ted@@@@@", $00
-; NPC_TRADE_CHRIS unused 
-	rawchar 2, PINSIR,     HERACROSS,  "Paul@@@@@@@"
-	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SPD_UP_SATK_DOWN,  MALE,   PARK_BALL,    SILVERPOWDER
+; NPC_TRADE_CHRIS gauldenrod dorms todo check  
+	rawchar 2, PARAS,     BERGMITE,  "Bert@@@@@@@"
+	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_DEF_UP_SATK_DOWN,  MALE,   NET_BALL,    BRIGHTPOWDER
 	dw 15616
 	rawchar "Chris@@@", $00
-; NPC_TRADE_KIM unused
-	rawchar 3, CHANSEY,  CHANSEY,    "Chance@@@@@"
+; NPC_TRADE_KIM
+	rawchar 3, CHANSEY,  SNORUNT,    "Chance@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SDEF_UP_ATK_DOWN,  FEMALE, HEAL_BALL,    LUCKY_EGG
 	dw 26491
 	rawchar "Kim@@@@@", $00

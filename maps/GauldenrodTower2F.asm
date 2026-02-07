@@ -67,7 +67,7 @@ GenericTrainerAromaLadyPeony:
 	text "A contribution can"
 	line "be made by even"
 	para "the smallest"
-	line "Jigglypuff."
+	line "Clefairy."
 	done
 
 AromaLadyPeonySeenText:
