@@ -1,4 +1,4 @@
-	db  55,  70,  45,  60,  70,  50 ; 350 BST ; TODO 
+	db  60,  75,  45,  55,  65,  50 ; 350 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE ; type

@@ -1,4 +1,4 @@
-	db  55,  55,  45,  45,  63,  45 ; 385 BST
+	db  55,  55,  45,  45,  63,  45 ; 308 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

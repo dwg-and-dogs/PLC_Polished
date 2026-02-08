@@ -1,4 +1,4 @@
-	db  80,  80,  80,  80,  80,  80
+	db  80,  80,  80,  80,  80,  80 ; 480 bst 
 	;   hp  atk  def  spd  sat  sdf
 
 	db ICE, ICE ; type

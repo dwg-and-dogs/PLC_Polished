@@ -1,4 +1,4 @@
-	db  30,  42, 118,  30,  42, 88
+	db  30,  42, 118,  30,  42, 88 ; 350 bst 
 	;   hp  atk  def  spd  sat  sdf
 
 	db ROCK, STEEL ; type

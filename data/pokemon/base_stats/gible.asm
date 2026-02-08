@@ -1,4 +1,4 @@
-	db  58,  70,  45,  42,  40,  45 ; 410 BST
+	db  58,  70,  45,  42,  40,  45 ; 300 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db DRAGON, GROUND ; type

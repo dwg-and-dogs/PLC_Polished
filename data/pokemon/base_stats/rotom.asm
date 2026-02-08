@@ -1,4 +1,4 @@
-	db  50,  50,  77,  91,  95,  77 ; 500 BST
+	db  50,  50,  77,  91,  95,  77 ; 440 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, ELECTRIC ; type

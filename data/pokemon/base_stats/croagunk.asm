@@ -1,4 +1,4 @@
-	db  48, 61,  40,  50,  61,  40 ; 314 BST
+	db  48, 61,  40,  50,  61,  40 ; 300 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, FIGHTING ; type

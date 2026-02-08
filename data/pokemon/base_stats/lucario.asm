@@ -1,4 +1,4 @@
-	db  70, 110,  70,  90, 115,  70 ; 680 BST
+	db  70, 110,  70,  90, 115,  70 ; 525 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIGHTING, STEEL ; type

@@ -1,4 +1,4 @@
-	db 120, 112, 65,  78,  80,  75 ; 405 BST
+	db 120, 112, 65,  78,  80,  75 ; 530 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, GHOST ; type

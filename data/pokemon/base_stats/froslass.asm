@@ -1,4 +1,4 @@
-	db  70,  80,  70,  110,  80,  70
+	db  70,  80,  70,  110,  80,  70 ; 480 bst 
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, ICE ; type

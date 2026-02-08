@@ -1,4 +1,4 @@
-	db  65,  80, 140,  70,  40,  70 ; 465 BST
+	db  55,  80, 50,  80,  45,  65 ; 340 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, FLYING ; type

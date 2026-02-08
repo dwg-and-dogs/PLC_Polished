@@ -1,4 +1,4 @@
-	db  67, 125,  40,  58,  30,  30 ; 580 BST
+	db  67, 125,  40,  58,  30,  30 ; 350 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db ROCK, ROCK ; type

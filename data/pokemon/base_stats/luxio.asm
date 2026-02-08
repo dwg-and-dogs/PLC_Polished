@@ -1,4 +1,4 @@
-	db  60,  85,  49,  60,  60,  49 ;  BST
+	db  60,  85,  49,  60,  60,  49 ; 363 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type

@@ -1,4 +1,4 @@
-	db  95, 100, 85,  70,  108,  70 ; 500 BST
+	db  95, 100, 85,  70,  108,  70 ; 528 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

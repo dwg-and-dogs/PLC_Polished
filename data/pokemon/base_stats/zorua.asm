@@ -1,4 +1,4 @@
-	db  35, 60,  40, 70, 85,  40 ; 510 BST
+	db  35, 60,  40, 70, 85,  40 ; 330 BST ; hisuian 
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, GHOST ; type

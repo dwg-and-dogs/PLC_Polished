@@ -1,4 +1,4 @@
-	db  40, 70,  40,  60, 35,  40 ; 680 BST
+	db  40, 70,  40,  60, 35,  40 ; 285 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIGHTING, FIGHTING ; type

@@ -1,4 +1,4 @@
-	db  80, 120,  79,  70,  95,  79 ; na BST
+	db  80, 120,  79,  70,  95,  79 ; 523 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, DRAGON ; type

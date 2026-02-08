@@ -1,4 +1,4 @@
-	db 150,  80,  44,  80,  90,  54 ; 328 BST
+	db 150,  80,  44,  80,  90,  54 ; 498 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, FLYING ; type

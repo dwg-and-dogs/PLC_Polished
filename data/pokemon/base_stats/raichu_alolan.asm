@@ -1,18 +1,9 @@
-if DEF(FAITHFUL)
 	db  60,  85,  50, 110,  95,  80 ; 480 BST
 	;   hp  atk  def  spd  sat  sdf
-else
-	db  60,  95,  50, 121, 105,  85 ; 516 BST
-	;   hp  atk  def  spd  sat  sdf
-endc
 
 	db ELECTRIC, PSYCHIC ; type
 	db 75 ; catch rate
-if DEF(FAITHFUL)
-	db 122 ; base exp
-else
 	db 179 ; base exp
-endc
 	db ORAN_BERRY ; item 1
 	db LIGHT_BALL ; item 2
 	dn GENDER_F50, 1 ; gender ratio, step cycles to hatch

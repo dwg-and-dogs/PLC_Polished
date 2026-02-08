@@ -1,4 +1,4 @@
-	db  83, 106,  65,  85,  86,  65 ; 314 BST
+	db  83, 106,  65,  85,  86,  65 ; 490 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, FIGHTING ; type

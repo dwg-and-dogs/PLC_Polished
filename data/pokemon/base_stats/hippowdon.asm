@@ -1,4 +1,4 @@
-	db 108, 112, 118,  47,  68,  72 ; 455 BST
+	db 108, 112, 118,  47,  68,  72 ; 525 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, GROUND ; type

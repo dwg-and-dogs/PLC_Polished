@@ -1,4 +1,4 @@
-	db  70,  90,  70,  80,  60,  70 ; 400 BST
+	db  70,  90,  70,  80,  60,  70 ; 440 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, POISON ; type

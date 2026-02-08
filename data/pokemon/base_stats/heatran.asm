@@ -1,4 +1,4 @@
-	db  91,  90, 106,  77, 130, 106 ; 405 BST
+	db  91,  90, 106,  77, 130, 106 ; 600 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, STEEL ; type

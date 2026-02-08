@@ -1,4 +1,4 @@
-	db  45, 100, 135,  45,  65,  135 ; 325 BST
+	db  45, 100, 135,  45,  65,  135 ; 525 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, GHOST ; type
