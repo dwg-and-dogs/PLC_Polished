@@ -76,11 +76,8 @@ CradleScene2_Adrinna:
 	applymovement PLAYER, Player_CCB1F_Move1
 	sjump Cradle_Scene3Pickup
 	
-HeatranText: ; todo redo this textg
-	text "Molten steel is"
-	line "like a Rorschach,"
-	
-	para "Placeholder text."
+HeatranText:
+	text "Heatran: Arraaa!"
 	done
 
 

@@ -31,8 +31,8 @@ TradersLanding_MapScriptHeader:
 	bg_event 16, 18, BGEVENT_JUMPTEXT, TL_OpenForBusinessSign
 	bg_event 14, 6, BGEVENT_JUMPTEXT, TL_KenseysOfficeSign
 	bg_event 22, 12, BGEVENT_READ, TL_AmosWantedSign
-	bg_event 5, 4, BGEVENT_READ, LandingTimeTravelScript ; todo 
-	bg_event 5, 4, BGEVENT_READ, LandingTimeTravelScript ; todo 
+	bg_event 5, 4, BGEVENT_READ, LandingTimeTravelScript  
+	bg_event 5, 5, BGEVENT_READ, LandingTimeTravelScript  
 	bg_event  13, 18, BGEVENT_ITEM + CALCIUM, EVENT_LANDING_HIDDEN_1
 
 
@@ -66,7 +66,7 @@ TradersLanding_MapScriptHeader:
 	const TRADERS_LANDING_BARBEAU_2
 	const TRADERS_LANDING_KURT_2
 
-LandingTimeTravelScript: ; todo 
+LandingTimeTravelScript: 
 	opentext
 	checkevent EVENT_BEAT_KENSEY_PORT
 	iffalse_jumptext LandingNoTimeTravelYetText
@@ -76,7 +76,6 @@ LandingTimeTravelScript: ; todo
 	writetext LandingYesTimeTravelText
 	waitbutton
 	closetext
-;	special Special_CelebiShrineEvent
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	

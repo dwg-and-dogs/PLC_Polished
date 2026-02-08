@@ -3,17 +3,17 @@
 ; data files: 
 ; - PokemonNames (see data/pokemon/names.asm) -> done 
 ; - BaseData (see data/pokemon/base_stats.asm) -> done 
-; 		; eventually need todo egg cycles and egg groups for anything not native polished 
+; 		; eventually need 
 ; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm) -> done 
 ;			fury_attack_users.asm-> done 
 ;			legendary_mons.asm-> done 
 ;			unique_wild_moves.asm-> done 
 ; - EggMovePointers (see data/pokemon/egg_move_pointers.asm) -> done 
-;			egg_moves.asm-> todo, eventually 
+;			egg_moves.asm-> eventually 
 ; - EvolutionMoves (see data/pokemon/evolution_moves.asm) -> DONE 
 ; - PokemonCries (see data/pokemon/cries.asm)-> done
 ; - IconPointers (see data/pokemon/menu_icon_pointers.asm) -> done
-; 			may need todo for v3?  
+;
 ; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)-> done
 ; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)-> done
 ; 			need todo add all the new pics front and back 
@@ -40,8 +40,7 @@
 ; kanto_frames.asm and johto_frames.asm-> 
 ; gfx/pics.asm-->done
 
-; next set of todos: 
-; finish gfx/pokemon/todo_<name>.asm 
+
 	const_def 1
 	const CYNDAQUIL       ; 01
 	const QUILAVA         ; 02

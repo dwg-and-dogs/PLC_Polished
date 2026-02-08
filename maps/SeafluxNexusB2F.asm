@@ -146,7 +146,7 @@ SeafluxNexusB2F_ResetSwitch: ; option for a hint
 	reloadmap ; should be the end of it
 	end
 
-SeafluxNexusB2F_Switch1: ; controls w2, w3 --> todo: revise to only toggle w4
+SeafluxNexusB2F_Switch1: ; controls w4
 	checkevent EVENT_NEXUS_B2F_FALLS_SWITCH
 	iftrue_jumptext MasterSwitchSetText
 	opentext

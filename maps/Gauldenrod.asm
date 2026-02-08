@@ -407,30 +407,32 @@ GauldenrodHisuiTraderText:
 	line "you seek victory?"
 	done
 
-GauldenrodHisuiTraderGoomyText: ; TODO
+GauldenrodHisuiTraderGoomyText:
 	text "Ah, Goomy!"
-	line "Its static dis-"
-	para "charge can light"
-	line "up the dark!"
+	line "Once it evolves,"
+	para "it becomes tough to"
+	line "bring down!"
 	done
 
-GauldenrodHisuiTraderGibleText: ; TODO
-	text "Gible, lovely!"
-	line "It'll be a thorn"
-	para "in your foe's"
-	line "side!"
+GauldenrodHisuiTraderGibleText: 
+	text "Gible, aha!"
+	line "Watch out, it can"
+	para "cause quite a"
+	line "rampage!"
 	done
 
-GauldenrodHisuiTraderZoruaText: ; TODO
-	text "Zorua, excel-"
-	line "lent! One of the"
-	cont "bravest birds!"
+GauldenrodHisuiTraderZoruaText:
+	text "Zorua, a fine"
+	line "choice! Don't"
+	para "let its looks"
+	line "deceive you!"
 	done
 	
-GauldenrodHisuiTraderRioluText: ; TODO
+GauldenrodHisuiTraderRioluText:
 	text "Oh, Riolu!"
-	line "There's a buzz"
-	cont "about its honey!"
+	line "If you are pure"
+	para "of heart, it will"
+	line "remain loyal!"
 	done
 
 GauldenrodHisuiTraderPartyFullText:

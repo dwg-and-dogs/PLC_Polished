@@ -20,7 +20,7 @@ NPCTrades:
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   FEMALE, FAST_BALL,    SITRUS_BERRY
 	dw 00283
 	rawchar "Ted@@@@@", $00
-; NPC_TRADE_CHRIS gauldenrod dorms todo check  
+; NPC_TRADE_CHRIS gauldenrod dorms  
 	rawchar 2, PARAS,     BERGMITE,  "Bert@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_DEF_UP_SATK_DOWN,  MALE,   NET_BALL,    BRIGHTPOWDER
 	dw 15616

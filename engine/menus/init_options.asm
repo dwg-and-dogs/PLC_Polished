@@ -166,8 +166,8 @@ GetInitialOptionPointer:
 	dw InitialOptions_Abilities
 	dw InitialOptions_PSS
 	dw InitialOptions_ExpScaling
-;	dw InitialOptions_ColorVariation ; todo, remove this option 
-	dw InitialOptions_PerfectIVs ; todo, remove this option 
+;	dw InitialOptions_ColorVariation ;
+	dw InitialOptions_PerfectIVs 
 	dw InitialOptions_TradedMon
 	dw InitialOptions_NuzlockeMode
 	dw InitialOptions_Done

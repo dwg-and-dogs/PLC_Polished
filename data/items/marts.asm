@@ -150,7 +150,7 @@ Goldenrod5FTMMart:
 	dbw TM_HYPER_BEAM,    50000
 	db -1
 
-GoldenrodBallsMart: ; todo PLACE ON ONE OF THE FLOORS  
+GoldenrodBallsMart: 
 	db 7 ; # items
 	db REPEAT_BALL
 	db NET_BALL

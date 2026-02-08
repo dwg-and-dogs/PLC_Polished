@@ -155,7 +155,7 @@ TinTower5FKimonoGirlScript:
 	ifequal 8, .GiveDarkDVs
 	jumptext TinTower5FDV_Setting_CancelText
 
-.GiveFightingDVs:	; todo: Make all of the other .Give__DVs: follow this format. Keep the original values after loadmem. FOr instance, flying should still have ff, ef, ee
+.GiveFightingDVs:	
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee

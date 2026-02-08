@@ -842,13 +842,13 @@ LakeOfRageKimonoGirlScript:
 	ifequal 8, .GiveDarkDVs
 	jumptext LakeOfRageDV_Setting_CancelText
 
-.GiveFightingDVs:	; todo: Make all of the other .Give__DVs: follow this format. Keep the original values after loadmem. FOr instance, flying should still have ff, ef, ee
+.GiveFightingDVs:
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
 ; begin section to copy throughout 
 	opentext
-	writetext GaveDVsText_LakeOfRage_Fighting ; make new writetxt for ..._Flying, _Dark, etc 
+	writetext GaveDVsText_LakeOfRage_Fighting 
 	waitbutton
 	closetext
 	; Show the pokemon with new DVs/palette

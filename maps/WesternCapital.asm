@@ -112,8 +112,6 @@ WesternCapitalCemeteryScene:
 	waitbutton
 	closetext
 
-	; todo emotes 
-	
 	opentext
 	writetext Prologue_Text3
 	waitbutton

@@ -228,30 +228,46 @@ RuinsOfAlphResearchCenterSignText:
 GenericTrainerSightseerFLenie: ; vulpix, grimer alolan 
 	generictrainer SIGHTSEERF, LENIE, EVENT_BEAT_SIGHTSEERF_ANITA, SightseerFLenieSeenText, SightseerFLenieBeatenText
 
-	text "todo"
+	text "My #mon and "
+	line "I traveled all"
+	para "the way from the"
+	line "Alola region to"
+	cont "learn about these"
+	cont "ruins!"
 	done
 
 SightseerFLenieSeenText:
-	text "todo"
+	text "A trainer! That's"
+	line "what I'd expect"
+	para "to see at these"
+	line "ruins!"
 	done
 
 SightseerFLenieBeatenText:
-	text "todo"
+	text "Johto trainers"
+	line "are tough!"
 	done
-
-
 
 GenericTrainerSightseerFAnita:; slowpoke, ponyta galar
 	generictrainer SIGHTSEERF, PILAR, EVENT_BEAT_SIGHTSEERF_PILAR, SightseerFPilarSeenText, SightseerFPilarBeatenText
 
-	text "todo"
+	text "I've heard that"
+	line "markings like the"
+	para "ones inside the"
+	line "Ruins are found"
+	para "in Sinnoh too!"
 	done
 
 SightseerFPilarSeenText:
-	text "todo"
+	text "If I can't see"
+	line "the Ruins, I'll"
+	cont "see your #mon!"
 	done
 
 SightseerFPilarBeatenText:
-	text "todo"
+	text "Will you at least"
+	line "tell me what the"
+	para "symbols on the"
+	line "floor say?"
 	done
 		

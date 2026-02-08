@@ -505,7 +505,7 @@ BagFullText:
     line "full!"
     done
 
-AzaleaTownKimonoGirlScript: ; todo revise her text 
+AzaleaTownKimonoGirlScript:
 	faceplayer
 	; Store the original DVs in temporary memory locations
 	readmem wPartyMon1DVs+0     ; Reads value into hScriptVar
@@ -515,7 +515,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	readmem wPartyMon1DVs+2     ; Reads value into hScriptVar
 	writemem wOriginalDV3       ; Writes hScriptVar to wOriginalDV1
 	opentext
-	writetext AzaleaTownWhatPotentialText ; TODO 
+	writetext AzaleaTownWhatPotentialText 
 	promptbutton
 	loadmenu .PhysicalOrSpecialMenuHeader
 	verticalmenu
@@ -636,7 +636,7 @@ AzaleaTownKimonoGirlScript: ; todo revise her text
 	ifequal 8, .GiveDarkDVs
 	jumptext AzaleaTownDV_Setting_CancelText
 
-.GiveFightingDVs:	; todo: Make all of the other .Give__DVs: follow this format. Keep the original values after loadmem. FOr instance, flying should still have ff, ef, ee
+.GiveFightingDVs:	
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ee
 	loadmem wPartyMon1DVs+2, $ee
@@ -1135,7 +1135,7 @@ GaveDVsText_Azalea_Dark:
 	line "HP Dark!"
 	done
 
-ConfirmDVChangeTextAzalea: ; todo why don't these crash in other maps?....
+ConfirmDVChangeTextAzalea:
 	text "This is how your"
 	line "#mon will"
 	cont "appear."

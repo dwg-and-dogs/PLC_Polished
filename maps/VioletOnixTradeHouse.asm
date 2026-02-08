@@ -21,7 +21,7 @@ VioletKylesHousePokefanMText:
 	cont "#mon trading!"
 	done
 
-VioletHisuiTraderScript: ; todo fix all the texts 
+VioletHisuiTraderScript:
 	faceplayer
 	opentext
 	checkevent EVENT_VIOLET_TRADER_SAW_SLOWPOKETAIL
@@ -34,8 +34,8 @@ VioletHisuiTraderScript: ; todo fix all the texts
 	special PlaceMoneyTopRight
 	yesorno
 	iffalse_jumpopenedtext VioletHisuiText4
-	checkmoney $0, 50000
-	ifequal $2, VioletHisuiNotEnoughMoney ; todo pick up here 
+	checkmoney $0, 30000
+	ifequal $2, VioletHisuiNotEnoughMoney 
 	promptbutton
 	loadmenu .PokemonMenuHeader
 	verticalmenu
@@ -47,7 +47,7 @@ VioletHisuiTraderScript: ; todo fix all the texts
 .GiveCranidosEgg:
 	givepoke CRANIDOS, NO_FORM, 5, NO_ITEM, POKE_BALL, HEADBUTT
 	iffalse_jumpopenedtext .PartyAndBoxFullText 
-	takemoney $0, 50000
+	takemoney $0, 30000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
@@ -59,14 +59,18 @@ VioletHisuiTraderScript: ; todo fix all the texts
 	givepoke SHIELDON, NO_FORM, 5, NO_ITEM, POKE_BALL, MIRROR_COAT
 	iffalse_jumpopenedtext .PartyAndBoxFullText 
 	playsound SFX_TRANSACTION
-	takemoney $0, 50000
+	takemoney $0, 30000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
 	text "Come back any"
 	line "time."
 	done
-	
+
+.PartyAndBoxFullText:
+	text "You have no room"
+	line "for it."
+	done
 
 .PokemonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -90,8 +94,9 @@ VioletHisuiTraderScript: ; todo fix all the texts
 VioletHisuiNotEnoughMoney:
 	jumpthisopenedtext
 
-	text "Don't waste my"
-	line "time."
+	text "You think raising"
+	line "these #mon"
+	cont "is cheap?"
 	done
 
 VioletHisuiTraderPartyFullText:
@@ -135,14 +140,18 @@ VioletHisuiTraderText:
 	para "type of person I"
 	line "look for."
 	
-	para "I've been taking"
-	line "these #mon"
-	para "from one of the"
-	line "scientists in the"
-	cont "Union Cave mine."
-	
+	para "A scientist in"
+	line "the mine has been"
+	para "smuggling these"
+	line "out of those"
+	cont "tough conditions."
+
+	para "I'm fostering them"
+	line "but it's not easy"
+	cont "work."
+		
 	para "I'll let you have"
-	line "one for 50k."
+	line "one for 30k."
 	done
 	
 VioletHisuiText4:

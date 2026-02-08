@@ -1,4 +1,4 @@
-CattleCull38_MapScriptHeader:  ; todo this text is a little over the top 
+CattleCull38_MapScriptHeader:
 
 	def_scene_scripts
 
@@ -49,12 +49,12 @@ GenericTrainerNomadMJoel:
 
 NomadJoelSeenText:
 	text "The Emperor can't"
-	line "keep us caged"
+	line "keep us fenced in"
 	cont "forever!"
 	done
 
 NomadJoelBeatenText:
-	text "We won't be fenced"
+	text "We won't be kept"
 	line "in like Miltank!"
 	done
 
@@ -70,9 +70,6 @@ NomadGlennSeenText:
 	text "I've climbed these"
 	line "cliffs hundreds"
 	cont "of times!"
-	
-	para "You think you can"
-	line "roam like me?"
 	done
 
 NomadGlennBeatenText:
@@ -84,8 +81,9 @@ NomadGlennBeatenText:
 GenericTrainerNomadFReina:
 	generictrainer NOMAD_F, NOMAD_F_REINA, EVENT_BEAT_NOMAD_F_REINA, NomadReinaSeenText, NomadReinaBeatenText
 
-	text "You move like"
-	line "you roam free."
+	text "Close your eyes"
+	line "and let the wind"
+	cont "guide you!"
 	done
 	
 NomadReinaSeenText:
@@ -106,15 +104,17 @@ NomadReinaBeatenText:
 GenericTrainerNomadFAlina:
 	generictrainer NOMAD_F, NOMAD_F_ALINA, EVENT_BEAT_NOMAD_F_ALINA, NomadAlinaSeenText, NomadAlinaBeatenText
 
-	text "When the trips to"
-	line "the islands were"
-	cont "too taxing,"
-	
-	para "older members"
-	line "would stay at the"
-	para "cliffs and tend"
-	line "crops, waiting"
-	cont "for our return."
+	text "Older members"
+	line "stayed back when"
+	para "the trips to the"
+	line "islands became"
+	cont "too taxing."
+
+	para "They tended the"
+	line "crops and awaited"
+	para "our return with"
+	line "the rewards from"
+	cont "our hunt."
 	done
 
 NomadAlinaSeenText:

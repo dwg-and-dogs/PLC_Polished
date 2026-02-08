@@ -14,15 +14,15 @@ IconPointers:
 	dba RuffletIcon          ;           ; 0a
 	dba StarlyIcon       ;        ; 0b
 	dba SnoruntIcon         ;          ; 0c
-	dba HoothootIcon        ; HOOTHOOT        ; 0d TODO
+	dba HoothootIcon        ; HOOTHOOT        ; 0d  
 	dba NoctowlIcon         ; NOCTOWL         ; 0e
-	dba SentretIcon         ; SENTRET         ; 0f TODO
+	dba SentretIcon         ; SENTRET         ; 0f  
 	dba FurretIcon          ; FURRET          ; 10
 	dba PikachuIcon         ; PIKACHU         ; 11
 	dba RaichuIcon          ; RAICHU          ; 12
-	dba LedybaIcon          ; LEDYBA          ; 13 TODO
+	dba LedybaIcon          ; LEDYBA          ; 13  
 	dba LedianIcon          ; LEDIAN          ; 14
-	dba SpinarakIcon        ; SPINARAK        ; 15 TODO
+	dba SpinarakIcon        ; SPINARAK        ; 15  
 	dba AriadosIcon         ; ARIADOS         ; 16
 	dba GeodudeIcon         ; GEODUDE         ; 17
 	dba GravelerIcon        ; GRAVELER        ; 18
@@ -35,7 +35,7 @@ IconPointers:
 	dba TogeticIcon         ; TOGETIC         ; 1f
 	dba TogekissIcon        ; TOGEKISS        ; 20
 	dba DunsparceIcon       ; DUNSPARCE       ; 21
-	dba DudunsparceIcon     ; DUDUNSPARCE     ; 22 TODO
+	dba DudunsparceIcon     ; DUDUNSPARCE     ; 22  
 	dba MareepIcon          ; MAREEP          ; 23
 	dba FlaaffyIcon         ; FLAAFFY         ; 24
 	dba AmpharosIcon        ; AMPHAROS        ; 25
@@ -47,7 +47,7 @@ IconPointers:
 	dba UnownAIcon          ; UNOWN           ; 2b
 	dba OnixIcon            ; ONIX            ; 2c
 	dba SteelixIcon         ; STEELIX         ; 2d
-	dba BellsproutIcon      ; BELLSPROUT      ; 2e TODO
+	dba BellsproutIcon      ; BELLSPROUT      ; 2e  
 	dba WeepinbellIcon      ; WEEPINBELL      ; 2f
 	dba VictreebelIcon      ; VICTREEBEL      ; 30
 	dba SkiploomIcon        ; SKIPLOOM        ; 31
@@ -63,7 +63,7 @@ IconPointers:
 	dba SlowpokeIcon        ; SLOWPOKE        ; 3b
 	dba SlowbroIcon         ; SLOWBRO         ; 3c
 	dba SlowkingIcon        ; SLOWKING        ; 3d
-	dba OddishIcon          ; ODDISH          ; 3e TODO
+	dba OddishIcon          ; ODDISH          ; 3e  
 	dba GloomIcon           ; GLOOM           ; 3f
 	dba VileplumeIcon       ; VILEPLUME       ; 40
 	dba BellossomIcon       ; BELLOSSOM       ; 41
@@ -72,7 +72,7 @@ IconPointers:
 	dba AlakazamIcon        ; ALAKAZAM        ; 44
 	dba PinecoIcon          ; PINECO          ; 45
 	dba ForretressIcon      ; FORRETRESS      ; 46
-	dba NidoranIcon         ; NIDORAN         ; 47 TODO
+	dba NidoranIcon         ; NIDORAN         ; 47  
 	dba NidorinaIcon        ; NIDORINA        ; 48
 	dba NidoqueenIcon       ; NIDOQUEEN       ; 49
 	dba NidorinoIcon        ; NIDORINO        ; 4a
@@ -89,7 +89,7 @@ IconPointers:
 	dba PinsirIcon          ; PINSIR          ; 55
 	dba MinsirIcon          ; MINSIR          ; 56
 	dba HeracrossIcon       ; HERACROSS       ; 57
-	dba KoffingIcon         ; KOFFING         ; 58 TODO
+	dba KoffingIcon         ; KOFFING         ; 58  
 	dba WeezingIcon         ; WEEZING         ; 59
 	dba GrimerIcon          ; GRIMER          ; 5a
 	dba MukIcon             ; MUK             ; 5b
@@ -98,7 +98,7 @@ IconPointers:
 	dba MagnezoneIcon       ; MAGNEZONE       ; 5e
 	dba VoltorbIcon         ; VOLTORB         ; 5f
 	dba ElectrodeIcon       ; ELECTRODE       ; 60
-	dba AipomIcon           ; AIPOM           ; 61 TODO
+	dba AipomIcon           ; AIPOM           ; 61  
 	dba AmbipomIcon         ; AMBIPOM         ; 62
 	dba SnubbullIcon        ; SNUBBULL        ; 63
 	dba GranbullIcon        ; GRANBULL        ; 64
@@ -120,7 +120,7 @@ IconPointers:
 	dba HitmonchanIcon      ; HITMONCHAN      ; 74
 	dba HitmontopIcon       ; HITMONTOP       ; 75
 	dba GirafarigIcon       ; GIRAFARIG       ; 76
-	dba FarigirafIcon       ; FARIGIRAF       ; 77 TODO
+	dba FarigirafIcon       ; FARIGIRAF       ; 77  
 	dba TaurosIcon          ; TAUROS          ; 78
 	dba MiltankIcon         ; MILTANK         ; 79
 	dba MagmarIcon          ; MAGMAR          ; 7a
@@ -132,11 +132,11 @@ IconPointers:
 	dba XatuIcon            ; XATU            ; 81
 	dba QwilfishIcon        ; QWILFISH        ; 82
 	dba OverqwilIcon        ; OVERQWIL        ; 83
-	dba TentacoolIcon       ; TENTACOOL       ; 84 TODO
+	dba TentacoolIcon       ; TENTACOOL       ; 84  
 	dba TentacruelIcon      ; TENTACRUEL      ; 85
 	dba ShuckleIcon         ; SHUCKLE         ; 86
 	dba CorsolaIcon         ; CORSOLA         ; 87
-	dba RemoraidIcon        ; REMORAID        ; 88 TODO
+	dba RemoraidIcon        ; REMORAID        ; 88  
 	dba OctilleryIcon       ; OCTILLERY       ; 89
 	dba ChinchouIcon        ; CHINCHOU        ; 8a
 	dba LanturnIcon         ; LANTURN         ; 8b
@@ -155,13 +155,13 @@ IconPointers:
 	dba KingdraIcon         ; KINGDRA         ; 98
 	dba GligarIcon          ; GLIGAR          ; 99
 	dba GliscorIcon         ; GLISCOR         ; 9a
-	dba SwinubIcon          ; SWINUB          ; 9b TODO
+	dba SwinubIcon          ; SWINUB          ; 9b  
 	dba PiloswineIcon       ; PILOSWINE       ; 9c
 	dba MamoswineIcon       ; MAMOSWINE       ; 9d
 	dba TeddiursaIcon       ; TEDDIURSA       ; 9e
 	dba UrsaringIcon        ; URSARING        ; 9f
 	dba UrsalunaIcon        ; URSALUNA        ; a0
-	dba PhanpyIcon          ; PHANPY          ; a1 TODO
+	dba PhanpyIcon          ; PHANPY          ; a1  
 	dba DonphanIcon         ; DONPHAN         ; a2
 	dba MantineIcon         ; MANTINE         ; a3
 	dba SkarmoryIcon        ; SKARMORY        ; a4
@@ -174,7 +174,7 @@ IconPointers:
 	dba HonchkrowIcon       ; HONCHKROW       ; ab
 	dba HoundourIcon        ; HOUNDOUR        ; ac
 	dba HoundoomIcon        ; HOUNDOOM        ; ad
-	dba SlugmaIcon          ; SLUGMA          ; ae TODO
+	dba SlugmaIcon          ; SLUGMA          ; ae  
 	dba MagcargoIcon        ; MAGCARGO        ; af
 	dba SneaselIcon         ; SNEASEL         ; b0
 	dba WeavileIcon         ; WEAVILE         ; b1
@@ -202,45 +202,45 @@ IconPointers:
 	dba SunkernIcon        ;         ; c7
 	dba StaraviaIcon        ; STARAVIA        ; c8
 	dba StaraptorIcon       ; STARAPTOR       ; c9
-	dba ShinxIcon           ; SHINX           ; ca TODO
+	dba ShinxIcon           ; SHINX           ; ca  
 	dba LuxioIcon           ; LUXIO           ; cb
 	dba LuxrayIcon          ; LUXRAY          ; cc
-	dba CranidosIcon        ; CRANIDOS        ; cd TODO
+	dba CranidosIcon        ; CRANIDOS        ; cd  
 	dba RampardosIcon       ; RAMPARDOS       ; ce
-	dba ShieldonIcon        ; SHIELDON        ; cf TODO
+	dba ShieldonIcon        ; SHIELDON        ; cf  
 	dba BastiodonIcon       ; BASTIODON       ; d0
 	dba DittoIcon       ;        ; d1
-	dba DrifloonIcon        ; DRIFLOON        ; d2 TODO
+	dba DrifloonIcon        ; DRIFLOON        ; d2  
 	dba DrifblimIcon        ; DRIFBLIM        ; d3
 	dba BronzorIcon         ; BRONZOR         ; d4
 	dba BronzongIcon        ; BRONZONG        ; d5
 	dba SpiritombIcon       ; SPIRITOMB       ; d6
 	dba LucarioIcon         ; LUCARIO         ; d7
-	dba HippopotasIcon      ; HIPPOPOTAS      ; d8 TODO
+	dba HippopotasIcon      ; HIPPOPOTAS      ; d8  
 	dba HippowdonIcon       ; HIPPOWDON       ; d9
-	dba CroagunkIcon        ; CROAGUNK        ; da TODO
+	dba CroagunkIcon        ; CROAGUNK        ; da  
 	dba ToxicroakIcon       ; TOXICROAK       ; db
 	dba SnoverIcon          ; SNOVER          ; dc
 	dba AbomasnowIcon       ; ABOMASNOW       ; dd
-	dba DuskullIcon         ; DUSKULL         ; de TODO
+	dba DuskullIcon         ; DUSKULL         ; de  
 	dba DusclopsIcon        ; DUSCLOPS        ; df
 	dba DusknoirIcon        ; DUSKNOIR        ; e0
 	dba FroslassIcon        ; FROSLASS        ; e1
 	dba RotomIcon           ; ROTOM           ; e2
-	dba BergmiteIcon        ; BERGMITE        ; e3 TODO
+	dba BergmiteIcon        ; BERGMITE        ; e3  
 	dba AvaluggIcon         ; AVALUGG         ; e4
 	dba BasculegionIcon     ; BASCULEGION     ; e5
 	dba BraviaryIcon        ; BRAVIARY        ; e6
-	dba RaltsIcon           ; RALTS           ; e7 TODO
+	dba RaltsIcon           ; RALTS           ; e7  
 	dba KirliaIcon          ; KIRLIA          ; e8
 	dba GardevoirIcon       ; GARDEVOIR       ; e9
 	dba GalladeIcon         ; GALLADE         ; ea
-	dba GoomyIcon           ; GOOMY           ; eb TODO
+	dba GoomyIcon           ; GOOMY           ; eb  
 	dba SliggooIcon         ; SLIGGOO         ; ec
 	dba GoodraIcon          ; GOODRA          ; ed
-	dba ZoruaIcon           ; ZORUA           ; ee TODO
+	dba ZoruaIcon           ; ZORUA           ; ee  
 	dba ZoroarkIcon         ; ZOROARK         ; ef
-	dba GibleIcon           ; GIBLE           ; f0 TODO
+	dba GibleIcon           ; GIBLE           ; f0  
 	dba GabiteIcon          ; GABITE          ; f1
 	dba GarchompIcon        ; GARCHOMP        ; f2
 	dba DratiniIcon         ; DRATINI         ; f3

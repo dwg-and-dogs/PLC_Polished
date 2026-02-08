@@ -1,4 +1,4 @@
-	db  40,  30,  50, 100,  55,  55 ; 330 BST ; TODO: FILL THIS OUT, RIGHT NOW JUST VOLTORB 
+	db  40,  30,  50, 100,  55,  55 ; 330 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, GRASS ; type

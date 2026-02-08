@@ -35,7 +35,7 @@ GoldenrodMagnetTrainStationGentlemanScript:
     faceplayer
     opentext
 	checkevent EVENT_GENTLEMAN_READ_TRAIN_MAIL
-	iftrue_jumpopenedtext GentlemanAfterReadMailText ; todo 
+	iftrue_jumpopenedtext GentlemanAfterReadMailText 
     checkevent EVENT_GOT_KENYA
     iftrue .TryGiveKenya
     jumpopenedtext GentlemanNormalText
@@ -53,7 +53,7 @@ GoldenrodMagnetTrainStationGentlemanScript:
 	setevent EVENT_GENTLEMAN_READ_TRAIN_MAIL
 	setevent EVENT_GENTLEMAN_GOT_MAIL
 	promptbutton
-	jumpopenedtext Text_TrainStationReadingMail ; todo fix 
+	jumpopenedtext Text_TrainStationReadingMail
 
 .WrongMail:
 	jumpopenedtext Text_TrainStationWrongMail

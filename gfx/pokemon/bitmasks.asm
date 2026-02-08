@@ -7,7 +7,7 @@ DecidueyeBitmasks: INCLUDE "gfx/pokemon/decidueye/bitmask.asm"
 OshawottBitmasks: INCLUDE "gfx/pokemon/oshawott/bitmask.asm"
 DewottBitmasks: INCLUDE "gfx/pokemon/dewott/bitmask.asm"
 SamurottBitmasks: INCLUDE "gfx/pokemon/samurott/bitmask.asm"
-RuffletBitmasks: INCLUDE "gfx/pokemon/rufflet/bitmask.asm" ; todo from here 
+RuffletBitmasks: INCLUDE "gfx/pokemon/rufflet/bitmask.asm"
 StarlyBitmasks: INCLUDE "gfx/pokemon/starly/bitmask.asm"
 SnoruntBitmasks: INCLUDE "gfx/pokemon/snorunt/bitmask.asm"
 HoothootBitmasks: INCLUDE "gfx/pokemon/hoothoot/bitmask.asm"
