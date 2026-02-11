@@ -26,7 +26,7 @@ CalmCoast_MapScriptHeader:
 	object_event 6, 50, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlSubaru, -1
 	object_event 7, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlDiane, -1
 	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlKagami, -1
-	object_event 8, 51, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastMatronIceMonGiftScript, -1
+;	object_event 8, 51, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastMatronIceMonGiftScript, -1
 	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBrigader2, EVENT_BEAT_BOBESH_STADIUM
 	tmhmball_event 9, 49, TM_ROAR, EVENT_GOT_TM05_ROAR
 	pokemon_event  14, 19, STARAVIA, -1, -1, PAL_NPC_RED, CalmCoastPidgeottoText, -1
@@ -230,6 +230,9 @@ CalmCoastKurtText:
 	para "his hands with the"
 	line "#mon inside!"
 	
+	para "He nicknamed the"
+	line "Cyndaquil Puff."
+	
 	para "If you ever want"
 	line "to hear my story"
 	cont "again, check the"
@@ -274,5 +277,5 @@ CalmCoastKurtWalksAway:
 	step_up
 	step_end
 
-CalmCoastMatronIceMonGiftScript:
+;CalmCoastMatronIceMonGiftScript:
 	

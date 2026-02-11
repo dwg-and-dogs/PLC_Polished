@@ -35,6 +35,10 @@ CreditsPokemonAllScene:
 	clearevent EVENT_TAPESTRY_CELEBI ; need to check 
 ; heatran 
 	clearevent EVENT_CC_HEATRAN_2 ; need to check 
+; rotom 
+	clearevent EVENT_MAGNET_TUNNEL_ROTOM ; need to check 
+; spiritomb 
+	clearevent EVENT_RUSALKA_SPIRITOMB ; need to check 
 ; initialize postgame teaster
 	setmapscene AZALEA_TOWN, $2 ; need to check 
 	setevent EVENT_KILN_BOSS
