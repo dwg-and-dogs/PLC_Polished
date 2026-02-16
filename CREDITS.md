@@ -1,8 +1,8 @@
 # Credits
 
-The vision for Crystal Inheritance was a game that took place in Johto with modern mechanics. 
+The vision for Crystal Inheritance was a game that took place in Johto using with modern mechanics. 
 
-The most natural base for this was Polished Crystal. This game would not be possible without the developers of Polished Crystal. 
+The most natural base for this was Polished Crystal. This game would not be possible without the developers of Polished Crystal. At the time I started, 3.0.0 was the latest release. 
 
 Credits from Polished Crystal are located at the end of this document. 
 
@@ -14,27 +14,29 @@ Many sprites were adapted to the Gen 2 format. Credits are for the original sour
 
 Front Sprites
 
-* Azure Keys: Dewott, Samurott, Spiritomb
-* E-SY (From PiaCRT Deviantart): Monferno, Infernape, Prinplup, Roserade, Hippowdon, Heatran, Grotle, Empoleon, Bronzor, Bronzong, Skuntank, Staraptor
+* PeanutellaX: Ancestor Meganium, Ancestor Xatu, Ancestor Magcargo, H__Sliggoo, Goomy, 
+* Azure Keys: Dewott, Samurott, Spiritomb, Glalie
+* E-SY (From PiaCRT Deviantart): Monferno, Infernape, Prinplup, Roserade, Hippowdon, Heatran, Grotle, Empoleon, Bronzor, Bronzong, Skuntank, Staraptor, Hippopotas, 
 * Rowlet: Matdemo
 * Pokets3: H__Braviary
 * Nuukie: Wyrdeer, Roselia, Drifblim, Lopunny, Toxicroak, Snover, Abomasnow, Froslass, Kirlia, Gardevoir, Gallade
-* Pokewilds: Kleavor, Torterra, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott
+* Pokewilds: Kleavor, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott, Shinx, Shieldon, Croagunk, Ralts, H__Zorua, 
 * DWG: Avalugg 
 * Sour Crystal: Quilava, Butterfree, Pidgeotto, Sunflora, Dragonite, Celebi, Xatu
-* utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Zoroark
+* utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Zoroark, Bergmite, H__Braviary
 * Bloodless (Rosie): Overqwil, Ursaluna, H__Electrode, Sneasler, H__Arcanine
 * u/Bread-Zeppelin: Ambipom
 * SageDeoxys: Basculegion, Beedrill, Crobat, Dratini, Dugtrio, Eevee, Forretress, Gastly, Gloom, Gyarados, Magcargo, Natu, Pikachu, Qwilfish, Scyther, Tangela, Weepinbell, Xatu
 * ChanseyMedicine animated from Pokets3: HTyphlosion, Sneasler, 
-* Egg3ggEgg: H__Sliggoo, H__Goodra
-* Accad501: Noctowl 
+* Egg3ggEgg: H__Goodra
+* Accad501: Immortal Noctowl, Ancestor Feraligatr
+* Prism: Cranidos , Croagunk, Drifloon, Duskull, Gible, 
 
 Back Sprites if different from above, using Deviantart handles:
 
 * LennyOliviera: H__Arcanine (adapted by dwg)
 * Azure Keys: Dewott, Lucario
-* PKMNTrainerRick: Ursaluna, Sneasler, H__Braviary, H__Typlosion, H__Zoroark, H__Goodra, Overqwil, H__Samurott, H__Sliggoo
+* PKMNTrainerRick: Ursaluna, Sneasler, H__Braviary, H__Typlosion, H__Zoroark, H__Goodra, Overqwil, H__Samurott
 * RiseOfReina: Basculegion
 * DWG: Skuntank
 * Sirwhibbles: Rowlet
@@ -44,7 +46,7 @@ Back Sprites if different from above, using Deviantart handles:
 ## Pokemon Menu icons
 
 * Azure Keys: Dewott, Samurott, Drapion, Lucario, Roserade, Roselia, Drifblim, Toxicroak, Froslass, Gardevoir, Gallade, Oshawott
-* DWG: H__Arcanine, Hippowdon, Heatran, Grotle, Sneasler, Overqwil, Basculegion, H__Avalugg, Skuntank, Bergmite
+* DWG: H__Arcanine, Hippowdon, Heatran, Grotle, Sneasler, Overqwil, Basculegion, H__Avalugg
 * Pokewilds: wyrdeer, hgoodra, hzoroark, hsliggoo, spiritomb, jumpluff, monferno, infernape, prinplup, bastiodon, gabite, garchomp, rotom, dusclops, dusknoir, rampardos, ambipom, empoleon, lopunny, snover, abomasnow, hbraviary, htyphlosion, hsamurott, kleavor, luxio, luxray, helectrode, rowlet, hdecidueye, skiploom, stantler, staraptor, torterra, staravia, ursaluna, vespiquen
 
 ## Trainer Sprites

@@ -131,10 +131,17 @@ SchoolgirlMollyBeatenText:
 GenericTrainerSchoolgirlEliza:
 	generictrainer SCHOOLGIRL, ELIZA, EVENT_BEAT_SCHOOLGIRL_ELIZA, SchoolgirlElizaSeenText, SchoolgirlElizaBeatenText
 
-	text "I wonder how"
-	line "long it would"
-	cont "to collect all"
-	cont "the shiny Unown."
+	text "All around the"
+	line "Apricorn bush,"
+	
+	para "The Mankey chased"
+	line "the Buizel, "
+	
+	para "Mankey thought it"
+	line "was all in fun,"
+	
+	para "POP! Goes the"
+	line "Buizel!"
 	done
 
 SchoolgirlElizaSeenText:

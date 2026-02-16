@@ -405,7 +405,7 @@ MejimiGroup:
 ; ================
 
 	; MEJIMI 
-	db "Urgaust@" ; fka mejimi 
+	db "Vesper@" ; fka mejimi , urgaust 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 60, LUGIA, NO_ITEM, DVS_HP_DARK, "Galegift@"
@@ -522,7 +522,7 @@ SamsaraGroup:
 
 
 	; Samsara renamed to vespera , attempted to copy the form of karen 
-	db "Vespera@"
+	db "Sybil@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY |  TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 32, DUSKNOIR, LEFTOVERS, 60, FAKE_PERFECT_DVS,ABILITY_1 | NAT_NEUTRAL, FEMALE "Yamaduta@"
@@ -601,7 +601,7 @@ HollisGroup:
 ; ================
 
 	; Hollis 
-	db "Hollis@"
+	db "Silas@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 15, LEDIAN, NO_ITEM, DVS_HP_BUG, "Tinnire@"
@@ -615,7 +615,7 @@ HollisGroup:
 	db -1 ; end
 
 	; Hollis  at the redoubt 
-	db "Hollis@"
+	db "Silas@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 48, LEDIAN, NO_ITEM,  DVS_HP_BUG, "Tinnire@"
@@ -5301,7 +5301,7 @@ SchoolgirlGroup:
 	; party
 	db 8, EEVEE, SILVER_LEAF, "Silver@"
 	db 6, EXEGGCUTE, NO_ITEM, "SunnySide@"
-	db 7, CHIKORITA, ORAN_BERRY, "Chica@"
+	db 7, MANKEY, ORAN_BERRY, "Pop@"
 	db -1 ; end
 
 ; ================
@@ -9446,7 +9446,7 @@ BobeshGroup:
 ; ================
 
 	; Bobesh stadium
-	db "Bobesh@"
+	db "Tyrus@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 21, MAGMAR, NO_ITEM,FAKE_PERFECT_DVS, "Culverin@"
@@ -9460,7 +9460,7 @@ BobeshGroup:
 	db -1 ; end
 	
 	; Bobesh e4
-	db "Bobesh@"
+	db "Tyrus@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_PERSONALITY |  TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 51, NINETALES, FOCUS_SASH, FAKE_PERFECT_DVS, ABILITY_1 | NAT_NEUTRAL, MALE, "NineLives@"
@@ -9485,7 +9485,7 @@ AdrinnaGroup:
 ; ================
 
 	; ADRINNA garden
-	db "Adrinna@"
+	db "Andrea@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 30, FORRETRESS, FOCUS_SASH,  FAKE_PERFECT_DVS, "KiloJaal@" ; net or trap 
@@ -9498,7 +9498,7 @@ AdrinnaGroup:
 		db SPARK, DOUBLE_KICK, THUNDER_WAVE, THUNDERSHOCK
 	db -1 ; end
 
-	db "Adrinna@" ; at the mine 
+	db "Andrea@" ; at the mine 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 48, FORRETRESS, FOCUS_SASH, FAKE_PERFECT_DVS, "KiloJaal@"
@@ -9517,7 +9517,7 @@ AdrinnaGroup:
 
 
 	; Adrinna TOWER ; DARK, STEEL, ELECTRIC, DRAGON
-	db "Adrinna@"
+	db "Andrea@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 57, MAGNEZONE, SITRUS_BERRY, FAKE_PERFECT_DVS, "Yogauss@" ; union , gauss 
@@ -9542,7 +9542,7 @@ BarbeauGroup:
 ; ================
 
 	; Barbeau_T
-	db "Barbeau@" 
+	db "Remy@" 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 39, AMPHAROS, NO_ITEM, DVS_HP_WATER, "Neonovis@"
@@ -9560,7 +9560,7 @@ BarbeauGroup:
 ; ================
 
 	; Barbeau_T
-	db "Barbeau@" ; at redoubt 
+	db "Remy@" ; at redoubt 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 49, AMPHAROS, NO_ITEM,  DVS_HP_WATER, "Neonovis@"
@@ -9599,7 +9599,7 @@ KannaGroup:
 ; ================
 
 	; Kanna
-	db "Kanna@" 
+	db "Petra@" 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 44, ABOMASNOW, CHOICE_SCARF, FAKE_PERFECT_DVS, "Everest@" ; CONTROL WEATHER
@@ -9766,7 +9766,7 @@ KenseyGroup:
 ; ================
 
 	; Kensey
-	db "Kensey@" ; AT THE PORT 
+	db "Nemo@" ; AT THE PORT 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 38, FERALIGATR, NO_ITEM, DVS_HP_DRAGON, "Trapjaw@"
@@ -9784,7 +9784,7 @@ KenseyGroup:
 ; ================
 
 	; Kensey
-	db "Kensey@" ; AT THE TOWER 
+	db "Nemo@" ; AT THE TOWER 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
 	; party
 	db 53, FERALIGATR, EXPERT_BELT,DVS_HP_DRAGON,  "Trapjaw@"

@@ -1,2 +1,0 @@
-C:\Users\dwg11\PLC_Polished\data\pokemon\base_stats\girafarig.asm:
-  Line 18: ; tm/hm learnset ; TODO: REVISE TO ADD SOME DARK COVERAGE

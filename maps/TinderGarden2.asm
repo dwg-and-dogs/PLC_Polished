@@ -156,12 +156,12 @@ TG2_Text_Kurt5_2:
 	line "ind him of his "
 	cont "first #mon,"
 	
-	para "since he was abo-"
-	line "ut to have you."
+	para "since you were"
+	line "about to be born." 
 	
 	para "While I waited,"
 	line "I looked in the "
-	para "bag and found his"
+	para "bag and found the"
 	line "Apricorn."
 	
 	para "The one that we'd"
@@ -190,33 +190,30 @@ TG2_Text_Kurt5_2:
 	cont "my life."
 
 	para "Now, looking back"
-	line "I'd been so rigid"
-	cont "in my thinking."
+	line "I see all of my"
+	cont "mistakes."
 
-	para "I should've said,"
-	line "'I am sorry.' I"
-	para "should have said,"
-	line "'I support you.'"
-
-	para "I should've said,"
-	line "'I accept you as"
-	cont "you are'."
+	para "You could've had"
+	line "an inheritance"
+	cont "of belonging, of"
+	cont "belief that you"
+	cont "could build a"
+	cont "future here,"
 
 	para "Instead of trying"
-	line "to make you into"
-	para "what I thought"
-	line "you should be."
-
+	line "to force you to"
+	cont "live the way I"
+	cont "wanted."
+	
 	para "I still think of"
 	line "those good days"
 	cont "whenever I see"
 	cont "an Apricorn,"
 
-	para "but now I also"
-	line "think of all the"
-	para "good days we could"
-	line "have had if I'd"
-	cont "been wiser."
+	para "and how I never"
+	line "know when my last"
+	cont "chance to make it"
+	cont "up to you was."
 
 	para "If you read this,"
 	line "I hope you can"
