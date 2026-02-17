@@ -852,7 +852,7 @@ ArcanineEvosAttacks:
 	db 49, FLARE_BLITZ
 	db 0 ; no more level-up moves
 
-ArcanineHisuainEvosAttacks:
+ArcanineHisuianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DRAGON_DANCE ; new move
 	db 1, GROWL
@@ -1806,7 +1806,7 @@ ElectrodeEvosAttacks:
 	db 58, MIRROR_COAT
 	db 0 ; no more level-up moves
 	
-ElectrodeHisuainEvosAttacks:
+ElectrodeHisuianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEECH_SEED
 	db 1, TACKLE
@@ -3888,7 +3888,7 @@ SneaselEvosAttacks:
 SneaselHisuianEvosAttacks:
 	db EVOLVE_HOLDING, RAZOR_CLAW, SNEASLER
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 1, BITE ; Taunt → egg move
 	db 8, QUICK_ATTACK
@@ -3929,7 +3929,7 @@ WeavileEvosAttacks:
 
 SneaslerEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER
 	db 1, BITE ; Taunt → egg move
 	db 8, QUICK_ATTACK
@@ -4605,7 +4605,7 @@ BastiodonEvosAttacks:
 AipomEvosAttacks:
 	db EVOLVE_MOVE, DOUBLE_SLAP, AMBIPOM
 	db 0 ; no more Evolutions
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, LEER ; Tail Whip → similar move
 	db 4, MUD_SLAP ; Sand Attack → similar move
 	db 8, ASTONISH
@@ -5219,7 +5219,7 @@ ZoruaEvosAttacks:
 	db EVOLVE_LEVEL, 30, ZOROARK
 	db 0 ; no more Evolutions
 	db 1, ASTONISH
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, GROWL
 	db 1, TRANSFORM
 	db 8, HONE_CLAWS
@@ -5238,7 +5238,7 @@ ZoruaEvosAttacks:
 ZoroarkEvosAttacks: ; fought at Lv 30 
 	db 0 ; no more Evolutions
 	db 1, ASTONISH
-	db 1, SCRATCH
+	db 1, TACKLE
 	db 1, GROWL
 	db 1, TRANSFORM
 	db 8, HONE_CLAWS

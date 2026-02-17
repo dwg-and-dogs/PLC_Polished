@@ -679,8 +679,8 @@ Ho_ohFrontpic: INCBIN "gfx/pokemon/ho_oh/front.animated.2bpp.lz"
 Ho_ohBackpic:  INCBIN "gfx/pokemon/ho_oh/back.2bpp.lz"
 CelebiFrontpic: INCBIN "gfx/pokemon/celebi/front.animated.2bpp.lz"
 CelebiBackpic:  INCBIN "gfx/pokemon/celebi/back.2bpp.lz"
-EggFrontpic: INCBIN "gfx/pokemon/egg/front.animated.2bpp.lz"
-EggBackpic:  INCBIN "gfx/pokemon/egg/back.2bpp.lz"
+EggPic: INCBIN "gfx/pokemon/egg/front.animated.2bpp.lz"
+;EggBackpic:  INCBIN "gfx/pokemon/egg/back.2bpp.lz" not used 
 Raichu_alolanFrontpic: INCBIN "gfx/pokemon/raichu_alolan/front.animated.2bpp.lz"
 Raichu_alolanBackpic:  INCBIN "gfx/pokemon/raichu_alolan/back.2bpp.lz"
 

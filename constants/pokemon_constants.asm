@@ -398,7 +398,7 @@ HISUIAN_FORM EQU 2
 	const_skip ; DECIDUEYE
 
 ; other forms 
-OTHER_FORMS EQU 2 
+OTHER_FORM EQU 2 
 	const_skip ; NOCTOWL
 	const_skip ; BLOODMOON 
 	const_skip ; feraligatr 

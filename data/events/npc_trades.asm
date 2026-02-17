@@ -6,7 +6,7 @@ NPCTrades:
 	dw 37460
 	rawchar "Mike@@@@", $00
 ; NPC_TRADE_KYLE in Second Class Cabin 
-	rawchar 0, GASTLY,    DRIFLOON,    "Pennywise@" ; Pagliacci
+	rawchar 0, GASTLY,    DRIFLOON,    "Pennywise@@" ; Pagliacci
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN,   MALE,   JEZE_BALL,   PERSIM_BERRY
 	dw 48926
 	rawchar "Kyle@@@@", $00
