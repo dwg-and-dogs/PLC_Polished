@@ -252,7 +252,7 @@ BackPicPointers::
 	dba SuicuneBackpic         ; SUICUNE         ; fb
 	dba HeatranBackpic         ; HEATRAN         ; fc
 	dba LugiaBackpic           ; LUGIA           ; fd
-	dba Ho_OhBackpic           ; HO-OH           ; fe
+	dba Ho_ohBackpic           ; HO-OH           ; fe
 	dba CelebiBackpic          ; CELEBI          ; ff
 	assert_table_length NUM_POKEMON
 

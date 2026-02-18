@@ -205,10 +205,10 @@ FishGroups:
 
 TimeFishGroups:
 	;  day              nite
-	db CORSOLA,    20,  STARYU,     20
-	db CORSOLA,    40,  STARYU,     40
-	db CLOYSTER,   20,  CLOYSTER,   20
-	db CLOYSTER,   40,  CLOYSTER,   40
+	db CORSOLA,    20,  MANTINE,     20
+	db CORSOLA,    40,  MANTINE,     40
+	db CORSOLA,   20,  MANTINE,   20
+	db CORSOLA,   40,  MANTINE,   40
 	db WOOPER,     20,  WOOPER,     20
 	db QUAGSIRE,   40,  QUAGSIRE,   40
 	db POLIWAG,    20,  POLIWAG,    20

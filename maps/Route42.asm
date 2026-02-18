@@ -232,11 +232,9 @@ EusineFoughtEnteiText:
 	done
 
 Route42FarfetchdScript:
-	faceplayer
-	showcrytext .Text, FARFETCH_D
-	end
+	jumptextfaceplayer Route42FarfetcheText
 
-.Text:
+Route42FarfetchdText:
 	text "Farfetch'd: Kwaa!"
 	done
 

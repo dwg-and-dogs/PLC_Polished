@@ -1,80 +1,7 @@
-error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(327) -> maps/NationalPark.asm(34) -> macros/scripts/maps.asm::pokemon_event(154) -> macros/scripts/maps.asm::object_event(107): Unknown symbol "NationalParkPersianTextNationalParkPersianText"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(9792): Unknown symbol "EMPOLEON"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(9774): Unknown symbol "EMPOLEON"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(6850): Unknown symbol "HORSSEA"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(6639): Unknown symbol "EMPOLEON"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(6472): Unknown symbol "WIGGLYTUFF"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(5907): Unknown symbol "IMMORTAL_FORM"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(4651): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(4597): Unknown symbol "WIGGLYTUFF"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(4557): Unknown symbol "WIGGLYTUFF"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(4380): Unknown symbol "WIGGLYTUFF"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(3705): Unknown symbol "WIGGLYTUFF"
-error: main.asm(184) -> engine/battle/read_trainer_party.asm(410) -> data/trainers/parties.asm(2713): Unknown symbol "EMPOLEON"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(327) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "XatuAncestorBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(327) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "XatuAncestorBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(326) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "MagcargoAncestorBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(326) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "MagcargoAncestorBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(325) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "MeganiumAncestorBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(325) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "MeganiumAncestorBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(324) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "FeraligatrAncestorBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(324) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "FeraligatrAncestorBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(322) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "UrsalunaBloodmoonBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(322) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "UrsalunaBloodmoonBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(321) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "NoctowlImmortalBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(321) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "NoctowlImmortalBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(318) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "DecidueyeHisuianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(318) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "DecidueyeHisuianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(317) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SamurottHisuianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(317) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SamurottHisuianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(316) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SneaselHisuianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(316) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SneaselHisuianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(315) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "QwilfishHisuianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(315) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "QwilfishHisuianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(314) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "TyphlosionHisuianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(314) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "TyphlosionHisuianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(313) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ElectrodeHisuianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(313) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ElectrodeHisuianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(312) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "VoltorbHisuianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(312) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "VoltorbHisuianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(311) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ArcanineHisuianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(311) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ArcanineHisuianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(310) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GrowlitheHisuianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(310) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GrowlitheHisuianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(307) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "CorsolaGalarianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(307) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "CorsolaGalarianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(306) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "WeezingGalarianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(306) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "WeezingGalarianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(305) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SlowkingGalarianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(305) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SlowkingGalarianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(304) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SlowbroGalarianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(304) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SlowbroGalarianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(303) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SlowpokeGalarianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(303) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SlowpokeGalarianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(302) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "RapidashGalarianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(302) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "RapidashGalarianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(301) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "PonytaGalarianBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(301) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PonytaGalarianBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(298) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ExeggutorAlolanBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(298) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ExeggutorAlolanBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(297) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "MukAlolanBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(297) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "MukAlolanBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(296) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GrimerAlolanBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(296) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GrimerAlolanBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(295) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GolemAlolanBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(295) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GolemAlolanBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(294) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GravelerAlolanBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(294) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GravelerAlolanBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(293) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GeodudeAlolanBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(293) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GeodudeAlolanBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(292) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "NinetalesAlolanBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(292) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "NinetalesAlolanBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(291) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "VulpixAlolanBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(291) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "VulpixAlolanBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(290) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "RaichuAlolanBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(290) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "RaichuAlolanBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(255) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "Ho_OhBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(255) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "Ho_OhBackpic", which was not found
+02.17 START 440 ERRORS
+02.17 1030AM 311 ERROR 
+02.18 
+
 error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(210) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "VespiquenBackpic"
 error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(210) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "VespiquenBackpic", which was not found
 error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(200) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "EmpoleonBackpic"
@@ -97,136 +24,11 @@ error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(13) -> macros/data.
 error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(13) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PidgeottoBackpic", which was not found
 error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(12) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "PidgeyBackpic"
 error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(12) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PidgeyBackpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(327) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "XatuAncestorFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(327) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "XatuAncestorFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(326) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "MagcargoAncestorFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(326) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "MagcargoAncestorFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(325) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "MeganiumAncestorFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(325) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "MeganiumAncestorFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(324) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "FeraligatrAncestorFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(324) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "FeraligatrAncestorFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(322) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "UrsalunaBloodmoonFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(322) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "UrsalunaBloodmoonFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(321) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "NoctowlImmortalFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(321) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "NoctowlImmortalFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(318) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "DecidueyeHisuianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(318) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "DecidueyeHisuianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(317) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SamurottHisuianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(317) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SamurottHisuianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(316) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SneaselHisuianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(316) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SneaselHisuianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(315) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "QwilfishHisuianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(315) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "QwilfishHisuianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(314) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "TyphlosionHisuianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(314) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "TyphlosionHisuianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(313) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ElectrodeHisuianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(313) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ElectrodeHisuianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(312) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "VoltorbHisuianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(312) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "VoltorbHisuianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(311) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ArcanineHisuianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(311) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ArcanineHisuianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(310) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GrowlitheHisuianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(310) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GrowlitheHisuianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(307) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "CorsolaGalarianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(307) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "CorsolaGalarianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(306) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "WeezingGalarianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(306) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "WeezingGalarianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(305) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SlowkingGalarianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(305) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SlowkingGalarianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(304) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SlowbroGalarianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(304) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SlowbroGalarianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(303) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SlowpokeGalarianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(303) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SlowpokeGalarianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(302) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "RapidashGalarianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(302) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "RapidashGalarianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(301) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "PonytaGalarianFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(301) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PonytaGalarianFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(298) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ExeggutorAlolanFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(298) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ExeggutorAlolanFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(297) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "MukAlolanFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(297) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "MukAlolanFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(296) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GrimerAlolanFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(296) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GrimerAlolanFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(295) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GolemAlolanFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(295) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GolemAlolanFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(294) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GravelerAlolanFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(294) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GravelerAlolanFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(293) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GeodudeAlolanFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(293) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GeodudeAlolanFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(292) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "NinetalesAlolanFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(292) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "NinetalesAlolanFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(291) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "VulpixAlolanFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(291) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "VulpixAlolanFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(290) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "RaichuAlolanFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(290) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "RaichuAlolanFrontpic", which was not found
 error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(255) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "Ho_OhFrontpic"
 error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(255) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "Ho_OhFrontpic", which was not found
 error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(184) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "Porygon_ZFrontpic"
 error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(184) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "Porygon_ZFrontpic", which was not found
-error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(225) -> maps/CharcoalKiln.asm(131) -> macros/scripts/events.asm::showcrytext(1227): Unknown symbol "FARFETCH_D"
-error: main.asm(172) -> engine/battle/effect_commands.asm(1133): Unknown symbol "FARFETCH_D"
-error: main.asm(172) -> engine/battle/effect_commands.asm(7) -> data/pokemon/withdraw_harden_users.asm(14): Unknown symbol "STARMIE"
-error: main.asm(172) -> engine/battle/effect_commands.asm(7) -> data/pokemon/withdraw_harden_users.asm(13): Unknown symbol "STARYU"
-error: main.asm(172) -> engine/battle/effect_commands.asm(7) -> data/pokemon/withdraw_harden_users.asm(6): Unknown symbol "CLOYSTER"
-error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(473) -> maps/VioletCatacombs.asm(71) -> macros/scripts/events.asm::loadwildmon(616): Unknown symbol "IMMORTAL_FORM"
-error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(450) -> maps/LakeOfRage.asm(81) -> macros/scripts/events.asm::loadwildmon(616): Unknown symbol "BLOODMOON_FORM"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(1095): Unknown symbol "ABIL_CLOYSTER_SKILL_LINK"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(1091) -> macros/data.asm::dp(82): Unknown symbol "CLOYSTER"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(1091) -> macros/data.asm::dp(82): Unknown symbol "CLOYSTER"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(827): Unknown symbol "ABIL_CLOYSTER_OVERCOAT"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(823) -> macros/data.asm::dp(82): Unknown symbol "CLOYSTER"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(823) -> macros/data.asm::dp(82): Unknown symbol "CLOYSTER"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(821): Unknown symbol "ABIL_STARMIE_ANALYTIC"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(817) -> macros/data.asm::dp(84): Unknown symbol "STARMIE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(817) -> macros/data.asm::dp(84): Unknown symbol "STARMIE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(809): Unknown symbol "ABIL_MR__MIME_SOUNDPROOF"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(805) -> macros/data.asm::dp(82): Unknown symbol "MR__MIME"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(805) -> macros/data.asm::dp(82): Unknown symbol "MR__MIME"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(587): Unknown symbol "ABIL_BEEDRILL_ADAPTABILITY"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(583) -> macros/data.asm::dp(82): Unknown symbol "BEEDRILL"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(583) -> macros/data.asm::dp(82): Unknown symbol "BEEDRILL"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(523): Unknown symbol "ABIL_KANGASKHAN_EARLY_BIRD"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(519) -> macros/data.asm::dp(82): Unknown symbol "KANGASKHAN"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(519) -> macros/data.asm::dp(82): Unknown symbol "KANGASKHAN"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(481): Unknown symbol "ABIL_CLOYSTER_SKILL_LINK"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(477) -> macros/data.asm::dp(82): Unknown symbol "CLOYSTER"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(477) -> macros/data.asm::dp(82): Unknown symbol "CLOYSTER"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(475): Unknown symbol "ABIL_STARMIE_NATURAL_CURE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(471) -> macros/data.asm::dp(84): Unknown symbol "STARMIE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(471) -> macros/data.asm::dp(84): Unknown symbol "STARMIE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(445): Unknown symbol "ABIL_FARFETCH_D_INNER_FOCUS"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(441) -> macros/data.asm::dp(82): Unknown symbol "FARFETCH_D"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(441) -> macros/data.asm::dp(82): Unknown symbol "FARFETCH_D"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(439): Unknown symbol "ABIL_MR__MIME_FILTER"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(435) -> macros/data.asm::dp(82): Unknown symbol "MR__MIME"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(435) -> macros/data.asm::dp(82): Unknown symbol "MR__MIME"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(367): Unknown symbol "ABIL_PERSIAN_TECHNICIAN"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(363) -> macros/data.asm::dp(82): Unknown symbol "PERSIAN"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(363) -> macros/data.asm::dp(82): Unknown symbol "PERSIAN"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(301): Unknown symbol "ABIL_VENOMOTH_TINTED_LENS"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(297) -> macros/data.asm::dp(82): Unknown symbol "VENOMOTH"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(297) -> macros/data.asm::dp(82): Unknown symbol "VENOMOTH"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(181): Unknown symbol "ABIL_WIGGLYTUFF_COMPETITIVE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(177) -> macros/data.asm::dp(82): Unknown symbol "WIGGLYTUFF"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(177) -> macros/data.asm::dp(82): Unknown symbol "WIGGLYTUFF"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(157): Unknown symbol "ABIL_BEEDRILL_ADAPTABILITY"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(153) -> macros/data.asm::dp(82): Unknown symbol "BEEDRILL"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(153) -> macros/data.asm::dp(82): Unknown symbol "BEEDRILL"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(151): Unknown symbol "ABIL_BUTTERFREE_COMPOUND_EYES"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(147) -> macros/data.asm::dp(82): Unknown symbol "BUTTERFREE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(147) -> macros/data.asm::dp(82): Unknown symbol "BUTTERFREE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(145): Unknown symbol "ABIL_PIDGEOT_NO_GUARD"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(141) -> macros/data.asm::dp(82): Unknown symbol "PIDGEOT"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(141) -> macros/data.asm::dp(82): Unknown symbol "PIDGEOT"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(87): Unknown symbol "ABIL_PERSIAN_TECHNICIAN"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(83) -> macros/data.asm::dp(82): Unknown symbol "PERSIAN"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(83) -> macros/data.asm::dp(82): Unknown symbol "PERSIAN"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(39): Unknown symbol "ABIL_BUTTERFREE_TINTED_LENS"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(35) -> macros/data.asm::dp(82): Unknown symbol "BUTTERFREE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(35) -> macros/data.asm::dp(82): Unknown symbol "BUTTERFREE"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(21): Unknown symbol "ABIL_PIDGEOT_TANGLED_FEET"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(17) -> macros/data.asm::dp(82): Unknown symbol "PIDGEOT"
-error: main.asm(548) -> engine/events/battle_tower/load_trainer.asm(909) -> data/battle_tower/parties.asm(17) -> macros/data.asm::dp(82): Unknown symbol "PIDGEOT"
+error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(473) -> maps/VioletCatacombs.asm(71) -> macros/scripts/events.asm::loadwildmon(616): Unknown symbol "OTHER"
 error: main.asm(217) -> engine/pokedex/pokedex_2.asm(327) -> data/pokemon/dex_entry_pointers.asm(256) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "Ho_ohPokedexEntry"
 error: main.asm(217) -> engine/pokedex/pokedex_2.asm(327) -> data/pokemon/dex_entry_pointers.asm(256) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "Ho_ohPokedexEntry", which was not found
 error: main.asm(217) -> engine/pokedex/pokedex_2.asm(327) -> data/pokemon/dex_entry_pointers.asm(211) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "DittoPokedexEntry"
@@ -251,10 +53,6 @@ error: main.asm(217) -> engine/pokedex/pokedex_2.asm(327) -> data/pokemon/dex_en
 error: main.asm(217) -> engine/pokedex/pokedex_2.asm(327) -> data/pokemon/dex_entry_pointers.asm(14) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "StarlyPokedexEntry", which was not found
 error: main.asm(217) -> engine/pokedex/pokedex_2.asm(327) -> data/pokemon/dex_entry_pointers.asm(13) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "RuffletPokedexEntry"
 error: main.asm(217) -> engine/pokedex/pokedex_2.asm(327) -> data/pokemon/dex_entry_pointers.asm(13) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "RuffletPokedexEntry", which was not found
-error: main.asm(216) -> engine/events/hidden_grottoes.asm(149) -> data/events/hidden_grottoes/grottoes.asm(5): Unknown symbol "GROTLE"
-error: main.asm(216) -> engine/events/hidden_grottoes.asm(149) -> data/events/hidden_grottoes/grottoes.asm(5): Unknown symbol "MONFERNO"
-error: main.asm(270) -> engine/gfx/load_pics.asm(25): Unknown symbol "ARBOK"
-error: main.asm(270) -> engine/gfx/load_pics.asm(12): Unknown symbol "ARBOK"
 error: main.asm(86) -> engine/events/bug_contest/contest.asm(213) -> data/events/bug_contest_winners.asm(74) -> macros/data.asm::dbw(14): Unknown symbol "BEEDRILL"
 error: main.asm(86) -> engine/events/bug_contest/contest.asm(213) -> data/events/bug_contest_winners.asm(72) -> macros/data.asm::dbw(14): Unknown symbol "VENONAT"
 error: main.asm(86) -> engine/events/bug_contest/contest.asm(213) -> data/events/bug_contest_winners.asm(68) -> macros/data.asm::dbw(14): Unknown symbol "BUTTERFREE"
@@ -278,107 +76,22 @@ error: main.asm(86) -> engine/events/bug_contest/contest.asm(213) -> data/events
 error: main.asm(86) -> engine/events/bug_contest/contest.asm(213) -> data/events/bug_contest_winners.asm(20) -> macros/data.asm::dbw(14): Unknown symbol "BUTTERFREE"
 error: main.asm(86) -> engine/events/bug_contest/contest.asm(213) -> data/events/bug_contest_winners.asm(19) -> macros/data.asm::dbw(14): Unknown symbol "BUTTERFREE"
 error: main.asm(86) -> engine/events/bug_contest/contest.asm(213) -> data/events/bug_contest_winners.asm(18) -> macros/data.asm::dbw(14): Unknown symbol "BEEDRILL"
-error: main.asm(331) -> engine/events/fish.asm(144) -> data/wild/fish.asm(211): Unknown symbol "CLOYSTER"
-error: main.asm(331) -> engine/events/fish.asm(144) -> data/wild/fish.asm(211): Unknown symbol "CLOYSTER"
-error: main.asm(331) -> engine/events/fish.asm(144) -> data/wild/fish.asm(210): Unknown symbol "CLOYSTER"
-error: main.asm(331) -> engine/events/fish.asm(144) -> data/wild/fish.asm(210): Unknown symbol "CLOYSTER"
-error: main.asm(331) -> engine/events/fish.asm(144) -> data/wild/fish.asm(209): Unknown symbol "STARYU"
-error: main.asm(331) -> engine/events/fish.asm(144) -> data/wild/fish.asm(208): Unknown symbol "STARYU"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(243) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GibleIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(243) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GibleIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(242) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ZoroarkIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(242) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ZoroarkIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(241) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ZoruaIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(241) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ZoruaIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(240) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GoodraIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(240) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GoodraIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(239) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SliggooIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(239) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SliggooIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(238) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GoomyIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(238) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GoomyIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(234) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "RaltsIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(234) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "RaltsIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(233) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "BraviaryIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(233) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "BraviaryIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(231) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "AvaluggIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(231) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "AvaluggIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(230) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "BergmiteIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(230) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "BergmiteIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(225) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "DuskullIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(225) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "DuskullIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(221) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "CroagunkIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(221) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "CroagunkIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(219) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "HippopotasIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(219) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "HippopotasIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(213) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "DrifloonIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(213) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "DrifloonIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(212) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "DittoIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(212) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "DittoIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(210) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ShieldonIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(210) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ShieldonIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(208) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "CranidosIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(208) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "CranidosIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(205) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "ShinxIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(205) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "ShinxIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(202) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SunkernIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(202) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SunkernIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(201) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "HoppipIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(201) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "HoppipIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(200) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "BasculinIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(200) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "BasculinIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(199) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GlalieIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(199) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GlalieIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(198) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "HorseaIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(198) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "HorseaIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(197) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "RioluIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(197) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "RioluIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(177) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SlugmaIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(177) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SlugmaIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(164) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "PhanpyIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(164) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PhanpyIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(158) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SwinubIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(158) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SwinubIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(139) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "RemoraidIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(139) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "RemoraidIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(135) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "TentacoolIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(135) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "TentacoolIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(123) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "FarigirafIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(123) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "FarigirafIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(101) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "AipomIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(101) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "AipomIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(92) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "KoffingIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(92) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "KoffingIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(75) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "NidoranIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(75) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "NidoranIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(66) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "OddishIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(66) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "OddishIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(50) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "BellsproutIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(50) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "BellsproutIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(38) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "DudunsparceIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(38) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "DudunsparceIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(25) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SpinarakIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(25) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SpinarakIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(23) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "LedybaIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(23) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "LedybaIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(19) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SentretIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(19) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SentretIcon", which was not found
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(17) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "HoothootIcon"
-error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(17) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "HoothootIcon", which was not found
+error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(261) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "EggIcon"
+error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(261) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "EggIcon", which was not found
+error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(257) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "Ho_OhIcon"
+error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(257) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "Ho_OhIcon", which was not found
+error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(186) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "PorygonzIcon"
+error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(186) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PorygonzIcon", which was not found
 error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(16) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "SnoruntIcon"
 error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(16) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "SnoruntIcon", which was not found
 error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(15) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "StarlyIcon"
 error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(15) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "StarlyIcon", which was not found
 error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(14) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "RuffletIcon"
 error: main.asm(323) -> data/pokemon/menu_icon_pointers.asm(14) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "RuffletIcon", which was not found
-error: main.asm(322) -> engine/gfx/mon_icons.asm(1) -> data/pokemon/menu_icon_pals.asm(291) -> data/pokemon/menu_icon_pals.asm::iconpal(2) -> macros/data.asm::dn(19) -> macros/data.asm::dn::REPT~1(20): Unknown symbol "PAL_OW_ORANGE"
-error: main.asm(138) -> engine/overworld/decorations.asm(509) -> data/decorations/attributes.asm(67) -> data/decorations/attributes.asm::decoration(3): Unknown symbol "MEOWTH"
-error: main.asm(138) -> engine/overworld/decorations.asm(509) -> data/decorations/attributes.asm(45) -> data/decorations/attributes.asm::decoration(3): Unknown symbol "JIGGLYPUFF"
 error: main.asm(413) -> gfx/pokemon/bitmask_pointers.asm(327): Unknown symbol "Xatu_ancestorBitmasks"
 error: main.asm(413) -> gfx/pokemon/bitmask_pointers.asm(326): Unknown symbol "Magcargo_ancestorBitmasks"
 error: main.asm(413) -> gfx/pokemon/bitmask_pointers.asm(325): Unknown symbol "Meganium_ancestorBitmasks"
 error: main.asm(413) -> gfx/pokemon/bitmask_pointers.asm(324): Unknown symbol "Feraligatr_ancestorBitmasks"
-error: main.asm(209) -> engine/pokemon/evolve.asm(402): Unknown symbol "EKANS"
-error: main.asm(209) -> engine/pokemon/evolve.asm(400): Unknown symbol "EKANS"
 error: main.asm(407) -> gfx/pokemon/extra_pointers.asm(327): Unknown symbol "Xatu_ancestorAnimationExtra"
 error: main.asm(407) -> gfx/pokemon/extra_pointers.asm(326): Unknown symbol "Magcargo_ancestorAnimationExtra"
 error: main.asm(407) -> gfx/pokemon/extra_pointers.asm(325): Unknown symbol "Meganium_ancestorAnimationExtra"
@@ -386,17 +99,6 @@ error: main.asm(407) -> gfx/pokemon/extra_pointers.asm(324): Unknown symbol "Fer
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(283) -> maps/GoldenrodPPSpeechHouse.asm(81) -> macros/scripts/events.asm::writetext(501): Unknown symbol "PokefanMNoPrinplupText"
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(173) -> maps/RuinsOfAlphOutside.asm(236) -> macros/scripts/maps.asm::generictrainer(175): Unknown symbol "EVENT_BEAT_SIGHTSEERF_ANITA"
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(173) -> maps/RuinsOfAlphOutside.asm(41) -> macros/scripts/maps.asm::object_event(107): Unknown symbol "GenericTrainerSightseerFPilar"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1250) -> data/wild/kanto_grass.asm(701) -> macros/asserts.asm::wildmon(70) -> macros/data.asm::dp(82): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1250) -> data/wild/kanto_grass.asm(693) -> macros/asserts.asm::wildmon(70) -> macros/data.asm::dp(82): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1250) -> data/wild/kanto_grass.asm(685) -> macros/asserts.asm::wildmon(70) -> macros/data.asm::dp(82): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1250) -> data/wild/kanto_grass.asm(561) -> macros/asserts.asm::wildmon(70) -> macros/data.asm::dp(82): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1250) -> data/wild/kanto_grass.asm(553) -> macros/asserts.asm::wildmon(70) -> macros/data.asm::dp(82): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1250) -> data/wild/kanto_grass.asm(545) -> macros/asserts.asm::wildmon(70) -> macros/data.asm::dp(82): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1250) -> data/wild/kanto_grass.asm(393) -> macros/asserts.asm::wildmon(70) -> macros/data.asm::dp(82): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1250) -> data/wild/kanto_grass.asm(385) -> macros/asserts.asm::wildmon(70) -> macros/data.asm::dp(82): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1250) -> data/wild/kanto_grass.asm(377) -> macros/asserts.asm::wildmon(70) -> macros/data.asm::dp(82): Unknown symbol "ANCESTOR_FORM"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1247) -> data/wild/johto_water.asm(203) -> macros/asserts.asm::wildmon(73) -> macros/data.asm::dp(84): Unknown symbol "PRINPLUP"
-error: main.asm(153) -> engine/overworld/wildmons.asm(1247) -> data/wild/johto_water.asm(203) -> macros/asserts.asm::wildmon(73) -> macros/data.asm::dp(84): Unknown symbol "PRINPLUP"
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(115) -> maps/TradersLanding.asm(505) -> macros/scripts/events.asm::writetext(501): Unknown symbol "GotGibleEggText"
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(115) -> maps/TradersLanding.asm(504) -> macros/scripts/events.asm::setevent(361): Unknown symbol "EVENT_GOT_GIBLE_EGG"
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(115) -> maps/TradersLanding.asm(488) -> macros/scripts/events.asm::checkevent(349): Unknown symbol "EVENT_GOT_GIBLE_EGG"
@@ -405,4 +107,4 @@ error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(214) -> maps/UnionCav
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(214) -> maps/UnionCave1F.asm(139) -> macros/scripts/events.asm::setevent(361): Unknown symbol "EVENT_GOT_EGG_FROM_SCIENTIST"
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(214) -> maps/UnionCave1F.asm(119) -> macros/scripts/events.asm::checkevent(349): Unknown symbol "EVENT_GOT_EGG_FROM_SCIENTIST"
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(214) -> maps/UnionCave1F.asm(24) -> macros/scripts/maps.asm::object_event(108): Unknown symbol "EVENT_GOT_EGG_FROM_SCIENTIST"
-error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(775) -> maps/Route42.asm(236) -> macros/scripts/events.asm::showcrytext(1227): Unknown symbol "FARFETCH_D"
+error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(775) -> maps/Route42.asm(235) -> macros/scripts/events.asm::jumptextfaceplayer(530): Unknown symbol "Route42FarfetcheText"

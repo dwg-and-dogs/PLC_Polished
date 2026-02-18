@@ -200,7 +200,7 @@
 	db 2 percent ; encounter rate
 	wildmon 20, POLIWHIRL
 	wildmon 20, POLIWHIRL
-	wildmon 20, PRINPLUP
+	wildmon 20, BASCULIN
 	end_water_wildmons
 
 	def_water_wildmons KAJO_ACQUIFER

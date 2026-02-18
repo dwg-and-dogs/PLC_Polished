@@ -78,7 +78,7 @@ LakeURSALUNAScript:
 	applymovement LAKEOFRAGE_URSALUNA, LakeURSALUNAApproachesMovement2
 	earthquake 20	
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon URSALUNA, BLOODMOON_FORM, 45
+	loadwildmon URSALUNA, OTHER_FORM, 45
 	startbattle
 	disappear LAKEOFRAGE_URSALUNA
 	reloadmapafterbattle

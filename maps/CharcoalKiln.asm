@@ -128,11 +128,15 @@ CharcoalKilnApprentice:
 
 CharcoalKilnFarfetchdScript:
 	faceplayer
-	showcrytext .Text, FARFETCH_D
+	showcrytext .Text, NOCTOWL
 	end
 
 .Text:
 	text "Farfetch'd: Kwaa!"
+	
+	para "It's one of the"
+	line "last Farfetch'd"
+	cont "in Johto!"
 	done
 
 CharcoalKilnStillText:

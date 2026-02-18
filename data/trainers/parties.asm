@@ -2709,8 +2709,8 @@ BirdKeeperGroup:
 	db "Roy@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 39, BRAVIARY
-	db 40, EMPOLEON
+	db 39, RUFFLET
+	db 41, TOGETIC
 	db -1 ; end
 
 ; ================
@@ -3702,7 +3702,6 @@ PokefanFGroup:
 	db TRAINERTYPE_ITEM
 	; party
 	db 57, FURRET, SITRUS_BERRY
-	db 55, WIGGLYTUFF, SITRUS_BERRY
 	db -1 ; end
 
 ; ================
@@ -4377,7 +4376,6 @@ endc
 	db "Ellen@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 52, WIGGLYTUFF
 	db 54, GRANBULL
 	db -1 ; end
 
@@ -4554,7 +4552,7 @@ BeautyGroup:
 	db TRAINERTYPE_NORMAL
 	; party
 	db 26, CLEFABLE
-	db 26, WIGGLYTUFF
+	db 26, TOGETIC
 	db -1 ; end
 
 ; ================
@@ -4594,7 +4592,7 @@ BeautyGroup:
 	db "Veronica@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, WIGGLYTUFF
+	db 54, FURRET
 	db -1 ; end
 
 ; ================
@@ -6469,8 +6467,6 @@ BreederGroup:
 	db TRAINERTYPE_ITEM
 	; party
 	db 55, CLEFABLE
-	db 54, WIGGLYTUFF
-	db 56, SNORLAX
 	db -1 ; end
 
 ; ================
@@ -6636,7 +6632,7 @@ SailorGroup:
 	; party
 	db 34, MANTINE
 	db 36, URSARING
-	db 38, EMPOLEON
+	db 38, FERALIGATR
 	db -1 ; end
 
 ; ================
@@ -6847,7 +6843,7 @@ SwimmerMGroup: ; scavengers
 	; party
 	db 13, POLIWAG
 	db 18, POLIWHIRL
-	db 16, HORSSEA
+	db 16, HORSEA
 	db -1 ; end
 
 ; ================
@@ -9771,8 +9767,8 @@ KenseyGroup:
 	; party
 	db 38, FERALIGATR, NO_ITEM, DVS_HP_DRAGON, "Trapjaw@"
 		db CRUNCH, WATERFALL, SCARY_FACE, BULLDOZE
-	db 37, EMPOLEON, NO_ITEM, FAKE_PERFECT_DVS, "Waddleton@"
-		db SURF, DRILL_PECK, METAL_CLAW, NO_MOVE
+	db 40, RUFFLET, NO_ITEM, FAKE_PERFECT_DVS, "Polly@"
+		db FLY, WING_ATTACK, DOUBLE_EDGE, CHARM
 	db 37, SLOWKING, NO_ITEM, FAKE_PERFECT_DVS, "Hipocampus@"
 		db NASTY_PLOT, PSYCHIC_M, BUBBLE_BEAM, NO_MOVE
 	db 38, SLIGGOO, NO_ITEM, DVS_HP_GROUND, "AcidTide@"
@@ -9789,8 +9785,8 @@ KenseyGroup:
 	; party
 	db 53, FERALIGATR, EXPERT_BELT,DVS_HP_DRAGON,  "Trapjaw@"
 		db CRUNCH, WATERFALL, ICE_PUNCH, DRAGON_DANCE
-	db 55, EMPOLEON, SITRUS_BERRY,FAKE_PERFECT_DVS,  "Waddleton@"
-		db SURF, DRILL_PECK, IRON_HEAD, ROOST
+	db 55, BRAVIARY, SITRUS_BERRY,FAKE_PERFECT_DVS,  "Polly@"
+		db PSYCHIC_M, DRILL_PECK, CALM_MIND, ROOST
 	db 56, SLOWKING, LIFE_ORB,FAKE_PERFECT_DVS,  "Hipocampus@"
 		db NASTY_PLOT, PSYCHIC_M, SURF, FLAMETHROWER
 	db 55, GOODRA, LEFTOVERS, DVS_HP_GROUND, "AcidTide@"

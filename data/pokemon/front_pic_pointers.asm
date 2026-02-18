@@ -252,7 +252,7 @@ FrontPicPointers::
 	dba SuicuneFrontpic         ; SUICUNE         ; fb
 	dba HeatranFrontpic         ; HEATRAN         ; fc
 	dba LugiaFrontpic           ; LUGIA           ; fd
-	dba Ho_OhFrontpic           ; HO-OH           ; fe
+	dba Ho_ohFrontpic           ; HO-OH           ; fe
 	dba CelebiFrontpic          ; CELEBI          ; ff
 	assert_table_length NUM_POKEMON
 

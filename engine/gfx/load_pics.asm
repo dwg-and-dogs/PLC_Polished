@@ -8,23 +8,23 @@ GetVariant:
 	and SPECIESFORM_MASK
 	jr nz, .ok
 
-	ld a, [wCurPartySpecies]
-	cp ARBOK
-	jr nz, .not_kanto_arbok
-; NPC trainers should appear to have Kantonian Arbok without explicitly
-; giving them all a personality, so form 0 becomes 1 (Johto) or 2 (Kanto)
-	push bc
-	push de
-	call RegionCheck
-	ld a, e
-	pop de
-	pop bc
-	and a
-	jr z, .not_kanto_arbok
-.kanto_arbok
-	ld a, ARBOK;_PLAIN_FORM
-	jr .ok
-.not_kanto_arbok
+	ld a, [wCurPartySpecies] ; JUMP TO .not_kanto_arbok
+;	cp ARBOK
+;	jr nz, .not_kanto_arbok
+;; NPC trainers should appear to have Kantonian Arbok without explicitly
+;; giving them all a personality, so form 0 becomes 1 (Johto) or 2 (Kanto)
+;	push bc
+;	push de
+;	call RegionCheck
+;	ld a, e
+;	pop de
+;	pop bc
+;	and a
+;	jr z, .not_kanto_arbok
+;.kanto_arbok
+;	ld a, ARBOK;_PLAIN_FORM
+;	jr .ok
+;.not_kanto_arbok
 	ld a, PLAIN_FORM ; safeguard: form 0 becomes variant 1
 
 .ok

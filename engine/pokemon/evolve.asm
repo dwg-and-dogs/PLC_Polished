@@ -394,12 +394,12 @@ endr
 	call nz, RestartMapMusic
 	ret
 
-ChangeFormOnLevelEvolution: ;TRIED COMMENTING THIS OUT BUT CAUSES MORE PROBLEMS
+ChangeFormOnLevelEvolution: ;TRIED COMMENTING THIS OUT BUT CAUSES MORE PROBLEMS - may need to check 
 ; These Pokémon evolve into plain forms by level.
 	ld a, [wTempMonSpecies]
-	cp EKANS
+	cp LEDIAN
 	jr z, _PlainFormOnEvolution
-	cp EKANS
+	cp LEDIAN
 	ret nz
 
 _PlainFormOnEvolution:

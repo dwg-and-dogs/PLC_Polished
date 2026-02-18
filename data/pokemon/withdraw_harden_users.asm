@@ -3,15 +3,12 @@
 WithdrawUsers:
 ; Defense Curl += Withdraw
 	db SLOWBRO
-	db CLOYSTER
 	db -1
 
 HardenUsers:
 ; Defense Curl += Harden
 	db ONIX
 	db STEELIX
-	db STARYU
-	db STARMIE
 	db HERACROSS
 	db GLIGAR
 	db GLISCOR
