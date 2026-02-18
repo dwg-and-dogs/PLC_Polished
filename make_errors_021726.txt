@@ -1,32 +1,7 @@
 02.17 START 440 ERRORS
 02.17 1030AM 311 ERROR 
-02.18 
+02.18 81 errors 
 
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(210) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "VespiquenBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(210) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "VespiquenBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(200) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "EmpoleonBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(200) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "EmpoleonBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(199) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "PrinplupBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(199) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PrinplupBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(198) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "InfernapeBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(198) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "InfernapeBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(197) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "MonfernoBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(197) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "MonfernoBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(196) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "TorterraBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(196) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "TorterraBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(195) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "GrotleBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(195) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "GrotleBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(184) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "Porygon_ZBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(184) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "Porygon_ZBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(14) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "PidgeotBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(14) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PidgeotBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(13) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "PidgeottoBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(13) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PidgeottoBackpic", which was not found
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(12) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "PidgeyBackpic"
-error: gfx/pics.asm(7) -> data/pokemon/back_pic_pointers.asm(12) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "PidgeyBackpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(255) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "Ho_OhFrontpic"
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(255) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "Ho_OhFrontpic", which was not found
-error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(184) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "Porygon_ZFrontpic"
 error: gfx/pics.asm(6) -> data/pokemon/front_pic_pointers.asm(184) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(14): Requested BANK() of symbol "Porygon_ZFrontpic", which was not found
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(473) -> maps/VioletCatacombs.asm(71) -> macros/scripts/events.asm::loadwildmon(616): Unknown symbol "OTHER"
 error: main.asm(217) -> engine/pokedex/pokedex_2.asm(327) -> data/pokemon/dex_entry_pointers.asm(256) -> macros/data.asm::dba(51) -> macros/data.asm::dba::REPT~1(52) -> macros/data.asm::dbw(15): Unknown symbol "Ho_ohPokedexEntry"
@@ -107,4 +82,3 @@ error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(214) -> maps/UnionCav
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(214) -> maps/UnionCave1F.asm(139) -> macros/scripts/events.asm::setevent(361): Unknown symbol "EVENT_GOT_EGG_FROM_SCIENTIST"
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(214) -> maps/UnionCave1F.asm(119) -> macros/scripts/events.asm::checkevent(349): Unknown symbol "EVENT_GOT_EGG_FROM_SCIENTIST"
 error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(214) -> maps/UnionCave1F.asm(24) -> macros/scripts/maps.asm::object_event(108): Unknown symbol "EVENT_GOT_EGG_FROM_SCIENTIST"
-error: data/maps/map_data.asm(13) -> data/maps/scripts.asm(775) -> maps/Route42.asm(235) -> macros/scripts/events.asm::jumptextfaceplayer(530): Unknown symbol "Route42FarfetcheText"

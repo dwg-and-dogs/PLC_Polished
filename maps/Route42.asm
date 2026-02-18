@@ -232,7 +232,7 @@ EusineFoughtEnteiText:
 	done
 
 Route42FarfetchdScript:
-	jumptextfaceplayer Route42FarfetcheText
+	jumptextfaceplayer Route42FarfetchdText
 
 Route42FarfetchdText:
 	text "Farfetch'd: Kwaa!"
