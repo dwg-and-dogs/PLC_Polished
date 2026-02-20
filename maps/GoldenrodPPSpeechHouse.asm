@@ -78,7 +78,7 @@ GoldenrodPokefanMScript:
     promptbutton
     checkpoke SWINUB
     iftrue .GiveNevermeltice
-    writetext PokefanMNoPrinplupText
+    writetext PokefanMNoSwinubText
     waitbutton
     closetext
     end

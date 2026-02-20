@@ -317,3 +317,7 @@ Decidueye_hisuianAnimationExtra: INCLUDE "gfx/pokemon/decidueye_hisuian/anim1.as
 
 Noctowl_immortalAnimationExtra: INCLUDE "gfx/pokemon/noctowl_immortal/anim1.asm"
 Ursaluna_bloodmoonAnimationExtra: INCLUDE "gfx/pokemon/ursaluna_bloodmoon/anim1.asm"
+Feraligatr_ancestorAnimationExtra: INCLUDE "gfx/pokemon/feraligatr_ancestor/anim1.asm"
+Meganium_ancestorAnimationExtra: INCLUDE "gfx/pokemon/meganium_ancestor/anim1.asm"
+Magcargo_ancestorAnimationExtra: INCLUDE "gfx/pokemon/magcargo_ancestor/anim1.asm"
+Xatu_ancestorAnimationExtra: INCLUDE "gfx/pokemon/xatu_ancestor/anim1.asm"

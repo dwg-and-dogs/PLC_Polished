@@ -233,7 +233,7 @@ RuinsOfAlphResearchCenterSignText:
 
 
 GenericTrainerSightseerFLenie: ; vulpix, grimer alolan 
-	generictrainer SIGHTSEERF, LENIE, EVENT_BEAT_SIGHTSEERF_ANITA, SightseerFLenieSeenText, SightseerFLenieBeatenText
+	generictrainer SIGHTSEERF, LENIE, EVENT_BEAT_SIGHTSEERF_LENIE, SightseerFLenieSeenText, SightseerFLenieBeatenText
 
 	text "My #mon and "
 	line "I traveled all"
@@ -255,7 +255,7 @@ SightseerFLenieBeatenText:
 	line "are tough!"
 	done
 
-GenericTrainerSightseerFAnita:; slowpoke, ponyta galar
+GenericTrainerSightseerFPilar:; slowpoke, ponyta galar
 	generictrainer SIGHTSEERF, PILAR, EVENT_BEAT_SIGHTSEERF_PILAR, SightseerFPilarSeenText, SightseerFPilarBeatenText
 
 	text "I've heard that"

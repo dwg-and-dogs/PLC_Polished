@@ -233,7 +233,7 @@ endc
 	li "Magmarizer"
 	li "Razor Fang"
 	li "Razor Claw"
-	li "Hisui Stone" ; odd souvenir
+	li "Odd Souvenir" ; formerly hisui stone 
 	li "Nugget"
 	li "Big Nugget"
 	li "TinyMushroom"

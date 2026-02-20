@@ -297,6 +297,7 @@ NoctowlImmortalEvosAttacks: ; encountered first at level 25
 	
 PikachuEvosAttacks:
 	db EVOLVE_ITEM, THUNDERSTONE, RAICHU
+	db EVOLVE_ITEM, ODD_SOUVENIR, RAICHU
 	db 0 ; no more evolutions
 	db 1, THUNDERSHOCK
 	db 1, LEER ; Tail Whip → similar move
@@ -1271,6 +1272,7 @@ GolemAlolanEvosAttacks:
 	
 PonytaEvosAttacks:
 	db EVOLVE_LEVEL, 25, RAPIDASH
+	db EVOLVE_ITEM, ODD_SOUVENIR, RAPIDASH
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -1291,6 +1293,7 @@ PonytaEvosAttacks:
 
 PonytaGalarianEvosAttacks:
 	db EVOLVE_LEVEL, 25, RAPIDASH
+	db EVOLVE_ITEM, ODD_SOUVENIR, RAPIDASH
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -1830,6 +1833,7 @@ ElectrodeHisuianEvosAttacks:
 	
 ExeggcuteEvosAttacks:
 	db EVOLVE_ITEM, LEAF_STONE, EXEGGUTOR
+	db EVOLVE_ITEM, ODD_SOUVENIR, EXEGGUTOR
 	db 0 ; no more evolutions
 	db 1, TACKLE ; Barrage → new move
 	db 1, HYPNOSIS

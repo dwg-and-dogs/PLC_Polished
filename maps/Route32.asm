@@ -8,6 +8,7 @@ Route32_MapScriptHeader:
 	warp_event 11, 73, ROUTE_32_POKECENTER_1F, 1
 	warp_event  4,  2, ROUTE_32_RUINS_OF_ALPH_GATE, 3
 	warp_event  4,  3, ROUTE_32_RUINS_OF_ALPH_GATE, 4
+	warp_event  6,  79, UNION_CAVE_1F, 4
 
 
 	def_coord_events
@@ -16,7 +17,7 @@ Route32_MapScriptHeader:
 	def_bg_events
 	bg_event 13,  3, BGEVENT_JUMPTEXT, Route32SignText
 	bg_event  9,  1, BGEVENT_JUMPTEXT, Route32RuinsSignText
-	bg_event  6, 80, BGEVENT_JUMPTEXT, Route32UnionCaveSignText
+	bg_event  8, 80, BGEVENT_JUMPTEXT, Route32UnionCaveSignText
 	bg_event 11, 14, BGEVENT_ITEM + MAX_REVIVE, EVENT_ROUTE_32_HIDDEN_SUPER_POTION_2;
 	bg_event  4, 41, BGEVENT_ITEM + SILVER_LEAF, EVENT_ROUTE_32_HIDDEN_GOLD_LEAF
 	bg_event 13, 84, BGEVENT_ITEM + GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL_2 ; ok
@@ -31,7 +32,7 @@ Route32_MapScriptHeader:
 	object_event  4, 66, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCamperLloyd, -1 ; renamed to lloyd
 	object_event 12, 67, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FriedaScript, -1 ; venoshock
 	object_event  6, 68, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBird_keeperPeter, -1
-	object_event 11, 84, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32SlowpokeTailScript, -1
+	object_event  9, 82, SPRITE_BAKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32SlowpokeTailScript, -1
 	smashrock_event 6, 82
 	smashrock_event 7, 83
 	itemball_event  6, 83, GEODE, 1, EVENT_ROUTE_32_REPEL
@@ -40,7 +41,7 @@ Route32_MapScriptHeader:
 	fruittree_event 3, 31, FRUITTREE_ROUTE_32, FIXED_CHARGE, PAL_NPC_RED
 
 
-Route32CooltrainermPetrieTrainer: ; fix 
+Route32CooltrainermPetrieTrainer: 
 	generictrainer COOLTRAINERM, PETRIE, EVENT_BEAT_COOLTRAINERM_PETRIE, PetrieSeenText, PetrieBeatenText
 
 	text "Maybe I'll"

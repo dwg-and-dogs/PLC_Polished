@@ -394,12 +394,12 @@ endr
 	call nz, RestartMapMusic
 	ret
 
-ChangeFormOnLevelEvolution: ;TRIED COMMENTING THIS OUT BUT CAUSES MORE PROBLEMS - may need to check 
+ChangeFormOnLevelEvolution:
 ; These Pokémon evolve into plain forms by level.
 	ld a, [wTempMonSpecies]
-	cp LEDIAN
+	cp GRIMER
 	jr z, _PlainFormOnEvolution
-	cp LEDIAN
+	cp KOFFING
 	ret nz
 
 _PlainFormOnEvolution:
@@ -416,16 +416,18 @@ ChangeFormOnItemEvolution:
 ; These Pokémon evolve into different forms with different items.
 	ld a, [wTempMonSpecies]
 	cp PIKACHU
-	jr z, .ok
+	jr z, .ok_alolan
+	cp RAICHU
+	jr z, .ok_alolan
 	cp EXEGGCUTE
-	jr z, .ok
-	cp PONYTA
+;	jr z, .ok
+;	cp PONYTA
 	ret nz
 
-.ok
+.ok_alolan
 	ld a, [wCurItem]
-	cp ODD_SOUVENIR ; HOPEFULLY THIS ITEM IS JUST NOT AVAILABLE?
-	ld a, PLAIN_FORM
+	cp ODD_SOUVENIR
+	ld a, ALOLAN_FORM
 	jr z, _ChangeFormOnEvolution
 	jr _PlainFormOnEvolution
 

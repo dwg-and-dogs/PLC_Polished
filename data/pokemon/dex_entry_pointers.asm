@@ -182,7 +182,7 @@ PokedexDataPointerTable:
 	dba     MismagiusPokedexEntry
 	dba     PorygonPokedexEntry
 	dba     Porygon2PokedexEntry
-	dba     Porygon_zPokedexEntry
+	dba     Porygon_ZPokedexEntry
 	dba     ChanseyPokedexEntry
 	dba     BlisseyPokedexEntry
 	dba     LaprasPokedexEntry
@@ -253,6 +253,6 @@ PokedexDataPointerTable:
 	dba     SuicunePokedexEntry
 	dba     HeatranPokedexEntry
 	dba     LugiaPokedexEntry
-	dba     Ho_ohPokedexEntry
+	dba     Ho_OhPokedexEntry
 	dba     CelebiPokedexEntry
 	assert_table_length NUM_POKEMON

@@ -14,9 +14,9 @@ DecidueyeIcon::            INCBIN "gfx/icons/decidueye.2bpp.lz" ; decidueye
 OshawottIcon::            INCBIN "gfx/icons/oshawott.2bpp.lz" ; oshawott
 DewottIcon::            INCBIN "gfx/icons/dewott.2bpp.lz" ; dewott
 SamurottIcon::            INCBIN "gfx/icons/samurott.2bpp.lz" ; samurott
-PidgeyIcon::            INCBIN "gfx/icons/pidgey.2bpp.lz" ; pidgey
-PidgeottoIcon::            INCBIN "gfx/icons/pidgeotto.2bpp.lz" ; pidgeotto
-PidgeotIcon::            INCBIN "gfx/icons/pidgeot.2bpp.lz" ; pidgeot
+RuffletIcon::            INCBIN "gfx/icons/rufflet.2bpp.lz" ; 
+StarlyIcon::            INCBIN "gfx/icons/starly.2bpp.lz" ; 
+SnoruntIcon::            INCBIN "gfx/icons/snorunt.2bpp.lz" ; 
 HoothootIcon::            INCBIN "gfx/icons/hoothoot.2bpp.lz" ; hoothoot
 NoctowlIcon::            INCBIN "gfx/icons/noctowl.2bpp.lz" ; noctowl
 SentretIcon::            INCBIN "gfx/icons/sentret.2bpp.lz" ; sentret
@@ -240,7 +240,7 @@ MisdreavusIcon::            INCBIN "gfx/icons/misdreavus.2bpp.lz" ; misdreavus
 MismagiusIcon::            INCBIN "gfx/icons/mismagius.2bpp.lz" ; mismagius
 PorygonIcon::            INCBIN "gfx/icons/porygon.2bpp.lz" ; porygon
 Porygon2Icon::            INCBIN "gfx/icons/porygon2.2bpp.lz" ; porygon2
-Porygon_zIcon::            INCBIN "gfx/icons/porygon_z.2bpp.lz" ; porygon_z
+PorygonzIcon::            INCBIN "gfx/icons/porygon_z.2bpp.lz" ; porygon_z
 ChanseyIcon::            INCBIN "gfx/icons/chansey.2bpp.lz" ; chansey
 BlisseyIcon::            INCBIN "gfx/icons/blissey.2bpp.lz" ; blissey
 LaprasIcon::            INCBIN "gfx/icons/lapras.2bpp.lz" ; lapras
@@ -331,9 +331,9 @@ EnteiIcon::            INCBIN "gfx/icons/entei.2bpp.lz" ; entei
 SuicuneIcon::            INCBIN "gfx/icons/suicune.2bpp.lz" ; suicune
 HeatranIcon::            INCBIN "gfx/icons/heatran.2bpp.lz" ; heatran
 LugiaIcon::            INCBIN "gfx/icons/lugia.2bpp.lz" ; lugia
-Ho_ohIcon::            INCBIN "gfx/icons/ho_oh.2bpp.lz" ; ho_oh
+Ho_OhIcon::            INCBIN "gfx/icons/ho_oh.2bpp.lz" ; ho_oh
 CelebiIcon::            INCBIN "gfx/icons/celebi.2bpp.lz" ; celebi
-
+EggIcon::          INCBIN "gfx/icons/egg.2bpp.lz"
 
 SECTION "Mon Icons 17", ROMX
 

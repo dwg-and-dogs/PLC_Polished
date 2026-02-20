@@ -7,6 +7,7 @@ UnionCave1F_MapScriptHeader:
 	warp_event  3,  3, UNION_CAVE_B1F_NORTH, 2
 	warp_event  3, 45, UNION_CAVE_B1F_SOUTH, 1
 	warp_event 17, 43, ROUTE_33, 1
+	warp_event 17, 13, ROUTE_32, 4
 
 	def_coord_events
 
@@ -31,6 +32,8 @@ UnionCave1F_MapScriptHeader:
 	tmhmball_event   2, 14, TM_BULLDOZE, EVENT_ROUTE_39_TM_BULLDOZE
 	smashrock_event  3, 14
 	smashrock_event  6, 10
+	strengthboulder_event  16, 12, EVENT_BEAT_WHITNEY
+	strengthboulder_event  17, 12, EVENT_BEAT_WHITNEY
 
 GenericTrainerScientistLowell:
 	generictrainer SCIENTIST, LOWELL, EVENT_BEAT_SCIENTIST_LOWELL, ScientistLowellSeenText, ScientistLowellBeatenText

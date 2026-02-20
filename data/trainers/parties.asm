@@ -8201,7 +8201,7 @@ SightseerFGroup:
 ; ================
 
 	; SIGHTSEERF 
-	db "Lanie@"
+	db "Lenie@"
 	db TRAINERTYPE_PERSONALITY
 	db 7, VULPIX, ABILITY_1 | NAT_NEUTRAL, MALE | ALOLAN_FORM	
 	db 8, GRIMER, ABILITY_1 | NAT_NEUTRAL, MALE | ALOLAN_FORM	

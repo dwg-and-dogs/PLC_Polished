@@ -357,6 +357,10 @@ SECTION "TangrowthPokedexEntry", ROMX
 TangrowthPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/465.asm"
 
+SECTION "HorseaPokedexEntry", ROMX
+HorseaPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/116.asm"
+
 SECTION "SeadraPokedexEntry", ROMX
 SeadraPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/117.asm";;
@@ -420,6 +424,10 @@ INCLUDE "data/pokemon/dex_entries/130.asm";;
 SECTION "LaprasPokedexEntry", ROMX
 LaprasPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/131.asm"
+
+SECTION "DittoPokedexEntry", ROMX
+DittoPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/132.asm"
 
 SECTION "EeveePokedexEntry", ROMX
 EeveePokedexEntry::
@@ -569,6 +577,10 @@ SECTION "SudowoodoPokedexEntry", ROMX
 SudowoodoPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/185.asm"
 
+SECTION "HoppipPokedexEntry", ROMX
+HoppipPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/hoppip.asm"
+
 SECTION "SkiploomPokedexEntry", ROMX
 SkiploomPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/313.asm"
@@ -576,6 +588,10 @@ INCLUDE "data/pokemon/dex_entries/313.asm"
 SECTION "JumpluffPokedexEntry", ROMX
 JumpluffPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/314.asm";;
+
+SECTION "SunkernPokedexEntry", ROMX
+SunkernPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/191.asm"
 
 SECTION "SunfloraPokedexEntry", ROMX
 SunfloraPokedexEntry::
@@ -663,7 +679,7 @@ INCLUDE "data/pokemon/dex_entries/211.asm"
 
 SECTION "OverqwilPokedexEntry", ROMX
 OverqwilPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/315.asm";;
+INCLUDE "data/pokemon/dex_entries/315.asm" ; done 
 
 SECTION "ShucklePokedexEntry", ROMX
 ShucklePokedexEntry::
@@ -789,6 +805,10 @@ SECTION "EmpoleonPokedexEntry", ROMX
 EmpoleonPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/325.asm";;
 
+SECTION "StarlyPokedexEntry", ROMX
+StarlyPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/starly.asm"
+
 SECTION "StaraviaPokedexEntry", ROMX
 StaraviaPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/326.asm"
@@ -869,6 +889,10 @@ SECTION "GarchompPokedexEntry", ROMX
 GarchompPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/343.asm";;
 
+SECTION "RioluPokedexEntry", ROMX
+RioluPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/riolu.asm"
+
 SECTION "LucarioPokedexEntry", ROMX
 LucarioPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/344.asm"
@@ -909,6 +933,14 @@ SECTION "DusknoirPokedexEntry", ROMX
 DusknoirPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/351.asm";;
 
+SECTION "SnoruntPokedexEntry", ROMX
+SnoruntPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/snorunt.asm"
+
+SECTION "GlaliePokedexEntry", ROMX
+GlaliePokedexEntry::
+INCLUDE "data/pokemon/dex_entries/glalie.asm"
+
 SECTION "FroslassPokedexEntry", ROMX
 FroslassPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/353.asm"
@@ -925,9 +957,17 @@ SECTION "AvaluggPokedexEntry", ROMX
 AvaluggPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/354.asm";;
 
+SECTION "BasculinPokedexEntry", ROMX
+BasculinPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/basculin.asm";;
+
 SECTION "BasculegionPokedexEntry", ROMX
 BasculegionPokedexEntry::
 INCLUDE "data/pokemon/dex_entries/355.asm";;
+
+SECTION "RuffletPokedexEntry", ROMX
+RuffletPokedexEntry::
+INCLUDE "data/pokemon/dex_entries/rufflet.asm";;
 
 SECTION "BraviaryPokedexEntry", ROMX
 BraviaryPokedexEntry::

@@ -1,0 +1,20 @@
+Notes:
+1. Pikachu, Exeggcute, and Cubone are all able to evolve into their form change by giving evolution stone to evolve into another pokemon with the odd souvenir. I should check if this is still true in my case that they will evolve into araichu, etc. 
+----> Result: These pokemon do not form change with odd souvenir evolution. 
+
+
+C:\Users\dwg11\PLC_Polished\engine\pokemon\evolve.asm:
+  Line 427: cp ODD_SOUVENIR ; HOPEFULLY THIS ITEM IS JUST NOT AVAILABLE?
+
+#################Clean
+
+C:\Users\dwg11\polishedcrystal_clean\data\pokemon\evos_attacks.asm:
+  Line 446: db EVOLVE_ITEM, ODD_SOUVENIR, RAICHU
+  Line 2289: db EVOLVE_ITEM, ODD_SOUVENIR, EXEGGUTOR
+  Line 2334: db EVOLVE_ITEM, ODD_SOUVENIR, MAROWAK
+
+C:\Users\dwg11\polishedcrystal_clean\engine\items\item_effects.asm:
+  Line 236: dw EvoStoneEffect     ; ODD_SOUVENIR
+
+C:\Users\dwg11\polishedcrystal_clean\engine\pokemon\evolve.asm:
+  Line 427: cp ODD_SOUVENIR

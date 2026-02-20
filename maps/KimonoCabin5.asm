@@ -101,7 +101,7 @@ KimonoCabin5Lass:
 	waitbutton
 	writetext KimonoCabin5GrannyText2
 	waitbutton
-	givepoke EEVEE, NO_FORM, 5, LUM_BERRY, LOVE_BALL, GROWTH
+	givepoke EEVEE, NO_FORM, 5, LUM_BERRY, LOVE_BALL, SKETCH
 	closetext
 	setevent EVENT_KIMONO_CABIN_EEVEE
 	clearevent EVENT_KIMONOS_AT_TAPESTRY

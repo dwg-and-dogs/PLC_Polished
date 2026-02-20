@@ -1,5 +1,5 @@
 	db "Balloon@" ; species name
-	dw 802, 133 ; height, width
+	dw 802, 133 ; height, width ; qwilfish? 
 
 	db   "Its spikes and"
 	next "savage temperament"

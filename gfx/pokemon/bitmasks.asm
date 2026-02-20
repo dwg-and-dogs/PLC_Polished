@@ -318,3 +318,8 @@ Decidueye_hisuianBitmasks: INCLUDE "gfx/pokemon/decidueye_hisuian/bitmask.asm"
 
 Noctowl_immortalBitmasks: INCLUDE "gfx/pokemon/noctowl_immortal/bitmask.asm"
 Ursaluna_bloodmoonBitmasks: INCLUDE "gfx/pokemon/ursaluna_bloodmoon/bitmask.asm"
+Feraligatr_ancestorBitmasks: INCLUDE "gfx/pokemon/feraligatr_ancestor/bitmask.asm"
+Meganium_ancestorBitmasks: INCLUDE "gfx/pokemon/meganium_ancestor/bitmask.asm"
+Magcargo_ancestorBitmasks: INCLUDE "gfx/pokemon/magcargo_ancestor/bitmask.asm"
+Xatu_ancestorBitmasks: INCLUDE "gfx/pokemon/xatu_ancestor/bitmask.asm"
+

@@ -502,7 +502,7 @@ LandingEggScript: ;cf the cafe script
 	takemoney $0, 50000
 	special PlaceMoneyTopRight
 	setevent EVENT_GOT_GIBLE_EGG
-	writetext GotGibleEggText
+	writetext GotBothEggsText
 	waitbutton
 	closetext
 	end
