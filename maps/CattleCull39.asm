@@ -238,5 +238,5 @@ TradersLandingAheadText:
 	text "Trader's Landing"
 	line "ahead: Managed"
 	para "by the cerebral"
-	line "General Kensey"
+	line "General Nemo"
 	done

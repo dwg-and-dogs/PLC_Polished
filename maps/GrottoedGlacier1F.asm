@@ -28,8 +28,8 @@ GrottoedGlacier1F_MapScriptHeader:
 GenericTrainerMediumGrace:
 	generictrainer MEDIUM, GRACE, EVENT_BEAT_MEDIUM_GRACE, .SeenText, .BeatenText
 
-	text "Kanna will show"
-	line "Adrinna how she"
+	text "Petra will show"
+	line "Andrea how she"
 	cont "is wrong."
 	done
 
@@ -44,7 +44,7 @@ GenericTrainerMediumGrace:
 	line "doing here?"
 	
 	para "Do not disturb"
-	line "Elder Kanna's"
+	line "Elder Petra's"
 	cont "meeting!"
 	done
 

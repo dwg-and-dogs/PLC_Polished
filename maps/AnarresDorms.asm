@@ -165,7 +165,7 @@ KurtAnarresDormsText:
 	
 KurAnarresDormsText2:
 	text "We must convince"
-	line "Elder Hollis to"
+	line "Elder Silas to"
 	cont "let us North!"
 	done
 

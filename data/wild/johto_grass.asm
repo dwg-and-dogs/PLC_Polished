@@ -336,6 +336,35 @@
 	wildmon 10, DRIFLOON
 	end_grass_wildmons
 
+; RuinsOfAlphKabutoWordRoom
+	def_grass_wildmons RUINS_OF_ALPH_KABUTO_WORD_ROOM
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	; day
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	; nite
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	wildmon 5, UNOWN
+	end_grass_wildmons
+
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
@@ -429,7 +458,7 @@
 	wildmon 5, MACHOP
 	wildmon 4, KOFFING
 	wildmon 3, GRIMER
-	wildmon 2, MACHOP
+	wildmon 2, GROWLITHE, HISUIAN_FORM
 	; day
 	wildmon 2, SLUGMA
 	wildmon 3, GEODUDE
@@ -437,7 +466,7 @@
 	wildmon 5, MACHOP
 	wildmon 4, KOFFING
 	wildmon 3, GRIMER
-	wildmon 2, MACHOP
+	wildmon 2, GROWLITHE, HISUIAN_FORM
 	; nite
 	wildmon 2, SLUGMA
 	wildmon 3, GEODUDE
@@ -445,7 +474,7 @@
 	wildmon 5, MACHOP
 	wildmon 4, KOFFING
 	wildmon 3, GRIMER
-	wildmon 2, MACHOP
+	wildmon 2, GROWLITHE, HISUIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B2F

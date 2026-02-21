@@ -54,14 +54,14 @@ KurtWWText:
 	
 	para "We are getting"
 	line "close to taking"
-	cont "down Urgaust."
+	cont "down Vesper."
 	
 	para "Amos is South of"
 	line "here. We should"
 	para "make our final"
 	line "preparations,"
 	para "because the path"
-	line "to Urgaust up the"
+	line "to Vesper up the"
 	para "Bell Tower may be"
 	line "long and arduous."
 	

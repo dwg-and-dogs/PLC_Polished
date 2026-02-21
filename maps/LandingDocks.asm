@@ -261,17 +261,17 @@ Docks_Text1:
 
 Docks_Text1_2:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start 
 	text "We are trying!"
-	line "Right, Barbeau?"
+	line "Right, Remy?"
 	done
 
 
 Docks_Text2:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "I still believe"
@@ -313,7 +313,7 @@ Docks_LugiaMove1:
 
 Docks_Text4:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "The guardian of"
@@ -350,26 +350,26 @@ Docks_CaptainMove1:
 
 Docks_Text5:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "See! I told you"
-	line "so, Kensey!"
+	line "so, Nemo!"
 	done
 
 Docks_Text6:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start 
 	text "But isn't Lugia"
-	line "with Urgaust?"
+	line "with Vesper?"
 	done
 
 
 Docks_Text6_2:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "She chose us!"
@@ -377,7 +377,7 @@ Docks_Text6_2:
 
 Docks_Text7:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start 
 	text "No, she chose this"
@@ -402,7 +402,7 @@ Docks_Text8:
 
 Docks_Text9:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "CAPTURED Lugia?"
@@ -418,7 +418,7 @@ Docks_Text10:
 
 Docks_Text11:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "She is sacred!"
@@ -451,7 +451,7 @@ BarbeauBeatenText1:
 
 Docks_Text12:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "<PLAYER>, I cannot"
@@ -492,12 +492,12 @@ Docks_Text12_2:
 
 Docks_Text13:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start 
 	text "You are useless!"
 	line "You fight without"
-	cont "thought, Barbeau!"
+	cont "thought, Remy!"
 	
 	para "I'll wipe them"
 	line "off the docks!"
@@ -521,7 +521,7 @@ KenseyBeaten1:
 
 Docks_Text14:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start 
 	text "Fools. There is"
@@ -543,7 +543,7 @@ Docks_Text14:
 
 Docks_Text15:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "why don't you"
@@ -561,7 +561,7 @@ Docks_Text16:
 
 Docks_Text17:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "She dove beneath"
@@ -575,7 +575,7 @@ Docks_Text17:
 
 Docks_Text18:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start 
 	text "Maybe now you"
@@ -584,7 +584,7 @@ Docks_Text18:
 	line "will learn maps!"
 	
 	para "I need to tell"
-	line "Emperor Urgaust"
+	line "Emperor Vesper"
 	para "how these two"
 	line "stole his Lugia!"
 	done
@@ -601,7 +601,7 @@ Docks_KenseyMoves1:
 
 Docks_Text19: 
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "Kurt, you did"

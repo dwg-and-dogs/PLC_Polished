@@ -163,7 +163,7 @@ KurtGauldenrodDormsTextSandra:
 	text "<PLAYER>, the"
 	line "Elder here was"
 	para "taken by General"
-	line "Bobesh's troops"
+	line "Tyrus's troops"
 	cont "to the stadium!"
 	
 	para "We have to help."

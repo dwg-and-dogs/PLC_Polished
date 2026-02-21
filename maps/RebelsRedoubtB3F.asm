@@ -53,7 +53,7 @@ RedoubtHollisScript:
 
 HollisRedoubtText_Intro:
 	text_high
-    text " Hollis: " 
+    text " Silas: " 
 	next
 	text_start
 	text "<PLAYER>, you're"
@@ -69,7 +69,7 @@ HollisRedoubtText_Intro:
 	
 	para "why does Amos say"
 	line "you would help"
-	para "Adrinna entrench"
+	para "Andrea entrench"
 	line "herself?"
 	
 	para "Are you true to"
@@ -85,7 +85,7 @@ HollisRedoubtText_Impressed:
 
 Text_HollisRedoubt2:
 	text_high
-    text " Hollis: " 
+    text " Silas: " 
 	next
 	text_start
 	text "I'll tell Amos"
@@ -149,7 +149,7 @@ SandraRedoubtText_Intro:
 	
 	para "back control of"
 	line "the region from"
-	cont "Emperor Urgaust."
+	cont "Emperor Vesper."
 	
 	para "We must know if"
 	line "you would do the"
@@ -199,7 +199,7 @@ RedoubtBarbeauScript:
 
 BarbeauRedoubtText_Intro:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start
 	text "<PLAYER>, you and"
@@ -240,7 +240,7 @@ BarbeauRedoubtText_Impressed:
 
 Text_BarbeauRedoubt2:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start
 	text "I'll tell Amos"

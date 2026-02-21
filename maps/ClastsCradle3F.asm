@@ -49,7 +49,7 @@ KurtCradleText1:
 	text "<PLAYER>, Amos is"
 	line "in the mine."
 	
-	para "Adrinna is after"
+	para "Andrea is after"
 	line "a powerful"
 	cont "#mon."
 

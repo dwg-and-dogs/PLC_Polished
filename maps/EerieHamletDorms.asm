@@ -66,7 +66,7 @@ HamletDormsNPC2Text:
 	done
 
 HamletDormsNPC3Text:
-	text "Adrinna's workers"
+	text "Andrea's workers"
 	line "don't really like"
 	para "to spend time in"
 	line "our Hamlet."

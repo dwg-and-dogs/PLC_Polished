@@ -33,7 +33,7 @@ StyCapitalGateText:
 	line "were so close to"
 	cont "rich ore seams!"
 	
-	para "Adrinna's digging"
+	para "Andrea's digging"
 	line "at a staggering"
 	cont "pace."
 	done

@@ -63,7 +63,7 @@ BrassTowerSwitchScript18F:
 GenericTrainerElderYoshi:
     generictrainer ELDER, YOSHI_SAGE, EVENT_BEAT_ELDER_YOSHI, YoshiSeenText, YoshiBeatenText
 
-	text "Perhaps Urgaust"
+	text "Perhaps Vesper"
 	line "has gone rogue."
 	
 	para "I should've been"
@@ -76,7 +76,7 @@ YoshiBeatenText:
 	done
 	
 YoshiSeenText:
-    text "We follow Urgaust"
+    text "We follow Vesper"
 	line "as a model of"
 	cont "virtue!"
     done

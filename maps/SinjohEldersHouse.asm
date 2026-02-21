@@ -39,7 +39,7 @@ GotBulkUp:
 	
 GiveBulkUpText:
 	text "The Hisui Elder"
-	line "Kanna says that"
+	line "Petra says that"
 	para "she gets her str-"
 	line "ength from cold"
 	cont "plunges."

@@ -149,7 +149,7 @@ Prologue_Text0:
 
 Prologue_Text1:
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start
 
@@ -166,18 +166,18 @@ Prologue_Text1:
 
 Prologue_Text2:
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start
 	text "Ah --  General"
-	line "Adrinna! I had"
+	line "Andrea! I had"
 	para "two meetings"
 	line "before yours."
 	done
 
 Prologue_Text2_2:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start	
 	
@@ -193,7 +193,7 @@ Prologue_Text2_2:
 
 Prologue_Text2_3:	
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start
 	
@@ -205,7 +205,7 @@ Prologue_Text2_3:
 
 Prologue_Text3:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start	
 	
@@ -225,7 +225,7 @@ Prologue_Text3:
 
 Prologue_Text4:
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start	
 	text "This is true…"
@@ -237,7 +237,7 @@ Prologue_Text4:
 
 Prologue_Text5:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start	
 	
@@ -290,7 +290,7 @@ WesternCapitalNPC2Text:
 	line "so tall!"
 	
 	para "Hail Emperor"
-	line "Urgaust!"
+	line "Vesper!"
 	done
 
 WesternCapitalNPC3Text:
@@ -307,7 +307,7 @@ WesternCapitalNPC3Text:
 
 WesternCapitalNPC3Text_2:
 	text "Glory to Emperor"
-	line "Urgaust! He will"
+	line "Vesper! He will"
 	cont "protect Johto!"
 	done
 
@@ -328,7 +328,7 @@ WesternCapitalNPC4Text_2:
 	text "Something weird"
 	line "is going on."
 	
-	para "Adrinna's briga-"
+	para "Andrea's briga-"
 	line "ders aren't here"
 	cont "for some reason."
 	done
@@ -384,7 +384,7 @@ WCBrigaderText_2:
 WCBrassTowerText:
 	text "Brass Tower"
 	line "Devoted to"
-	cont "Emperor Urgaust"
+	cont "Emperor Vesper"
 	done
 
 WCTinTowerText:
@@ -408,14 +408,13 @@ WCDanceText:
 WCGloryToMejimiText:
 	text "Welcome the new"
 	line "age - Glory to"
-	cont "Emperor Urgaust!"
+	cont "Emperor Vesper!"
 	done
 	
 WCSignText:
 	text "Western Capital"
 	line "Protected by"
-	para "Chronicler"
-	line "Vespera"
+	cont "Chronicler Sybil!"
 	done
 	
 WC_AmosWantedSign:

@@ -49,7 +49,7 @@ CianwoodCoveKurtScript:
 	
 KurtCCoveDormsText2:
 	text "We must stop that"
-	line "General Kensey!"
+	line "General Nemo!"
 	
 	para "If you need to go"
 	line "back to our time,"
@@ -69,7 +69,7 @@ CCoveKurtBattleText2:
 	cont "you like."
 	
 	para "We must stop that"
-	line "General Kensey!"
+	line "General Nemo!"
 	done	
 
 KurtExplainsTheStormText:

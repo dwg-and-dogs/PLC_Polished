@@ -40,7 +40,7 @@ ChikoritaText:
 	done
 
 SinjohDormsNPC2Text:
-	text "General Adrinna"
+	text "General Andrea"
 	line "wants us to join"
 	cont "his army."
 	
@@ -57,7 +57,7 @@ SinjohDormsNPC3Text:
 	line "don't see much"
 	cont "daylight between"
 	
-	para "Emperor Urgaust"
+	para "Emperor Vesper"
 	line "and the outsiders"
 	cont "at your port."
 	done
@@ -138,7 +138,7 @@ KurtSCDormsText:
 	
 KurSCDormsText2:
 	text "We have to stop"
-	line "General Adrinna!"
+	line "General Andrea!"
 	done
 
 SCKurtBattleText:

@@ -141,7 +141,7 @@ KurtRedoubtAfterAmosText:
 	text "You did it! Amos"
 	line "and the ninjas"
 	para "will attack"
-	line "General Adrinna's"
+	line "General Andrea's"
 	cont "mine to stop her"
 	para "from reaching the"
 	line "#mon at the"
@@ -149,7 +149,7 @@ KurtRedoubtAfterAmosText:
 	
 	para "After we stop her"
 	line "we'll have to go"
-	para "right to Urgaust's"
+	para "right to Vesper's"
 	line "coronation!"
 	done
 
@@ -157,7 +157,7 @@ KurtHealRedoubtText:
 	text "<PLAYER>, there"
 	line "is one source"
 	cont "of Steel left for"
-	para "Emperor Urgaust:"
+	para "Emperor Vesper:"
 	line "in the mine."
 	
 	para "If we join forces"
@@ -221,7 +221,7 @@ AmosText_Intro:
 	para "I've been trying"
 	line "to organize an"
 	para "opposition to "
-	line "Urgaust."
+	line "Vesper."
 	
 	para "You've convinced"
 	line "the Elders from"
@@ -231,7 +231,7 @@ AmosText_Intro:
 	para "And through my"
 	line "channels,"
 	
-	para "Vespera tells me"
+	para "Sybil tells me"
 	line "you impressed"
 	cont "the Tower's sages."
 	
@@ -285,7 +285,7 @@ AmosText_LegacyBadgeSpeech:
 	para "After that, we"
 	line "will disrupt the"
 	para "coronation of"
-	line "Emperor Urgaust."
+	line "Emperor Vesper."
 
 	para "To the mine!"
 	done

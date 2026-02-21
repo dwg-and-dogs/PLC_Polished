@@ -180,7 +180,7 @@ PickupGlacierScene:
 
 GlacierB2F_Text1:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 
@@ -194,7 +194,7 @@ GlacierB2F_Text1:
 
 GlacierB2F_Text2:
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start 
 	text "Our culture is"
@@ -205,7 +205,7 @@ GlacierB2F_Text2:
 
 GlacierB2F_Text3:
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start 
 	text "We admire the"
@@ -224,7 +224,7 @@ GlacierB2F_Text3:
 
 GlacierB2F_Text3_2:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start 
 	text "So wrong! I find"
@@ -236,7 +236,7 @@ GlacierB2F_Text3_2:
 
 GlacierB2F_Text4:
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start 
 	text "General, it's time"
@@ -249,7 +249,7 @@ GlacierB2F_Text4:
 
 GlacierB2F_Text5:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Well done,"
@@ -258,7 +258,7 @@ GlacierB2F_Text5:
 
 GlacierB2F_Text6::
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start
 	text "Who are you? You"
@@ -266,12 +266,12 @@ GlacierB2F_Text6::
 
 	para "I'll take you out,"
 	line "then deal with"
-	cont "General Adrinna!"
+	cont "General Andrea!"
 	done
 
 GlacierB2F_Text7_2:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Let me heal you."
@@ -281,7 +281,7 @@ GlacierB2F_Text7_2:
 
 GlacierB2F_Text7_3:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Make me proud,"
@@ -299,7 +299,7 @@ KannaWinText:
 
 Text_ReceivedKannaBadge:
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start
 	text "A-hem. Having"
@@ -312,7 +312,7 @@ Text_ReceivedKannaBadge:
 
 GlacierB2F_Text8:
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start
 	text "Whoa! What's"
@@ -323,7 +323,7 @@ GlacierB2F_Text8:
 
 GlacierB2F_Text8_2:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Oh, it's just my"
@@ -337,7 +337,7 @@ GlacierB2F_Text8_2:
 
 GlacierB2F_Text8_3:
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start
 	text "Without glaciers"
@@ -351,7 +351,7 @@ GlacierB2F_Text8_3:
 
 GlacierB2F_Text8_4:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "You know, it was"
@@ -371,7 +371,7 @@ GlacierB2F_Text8_4:
 
 GlacierB2F_Text9:
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start
 	text "Heavens! We have"
@@ -385,12 +385,12 @@ GlacierB2F_Text9:
 	line "would think if"
 	para "they saw you,"
 	line "joining forces"
-	cont "with Adrinna."
+	cont "with Andrea."
 	done
 	
 KannaWaterfallText:
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start
 	text "I regret that you"
@@ -403,14 +403,14 @@ KannaWaterfallText:
 
 KannaTellAmosText:
 	text_high
-    text " Kanna: " 
+    text " Petra: " 
 	next
 	text_start
 	
 	text "I'll be telling"
 	line "the Johto elders"
 	para "about your green"
-	line "minion, Adrinna."
+	line "minion, Andrea."
 	done
 
 GlacierBasc_Move1: ; just in front of adrinna

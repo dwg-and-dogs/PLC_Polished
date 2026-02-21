@@ -97,7 +97,7 @@ StadiumUndergroundNPC1GaveItemText:
 StadiumUndergroundNPC1AfterText:
 	text "I can't wait to"
 	line "see the look on"
-	para "Bobesh's face when"
+	para "Tyrus's face when"
 	line "we flood his"
 	cont "stadium."
 	done
@@ -197,7 +197,7 @@ StadiumUndergroundMovesAsideText:
 	
 	para "Soon, we will"
 	line "flush out that"
-	cont "General Bobesh!"
+	cont "General Tyrus!"
 	
 	para "Let's go save"
 	line "Sandra!"

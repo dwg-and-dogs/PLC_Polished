@@ -18,6 +18,7 @@ BellchimeTrail_MapScriptHeader:
 	def_object_events
 	object_event 14,  4, SPRITE_REI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BellchimeTrailEmiScript, -1
 	object_event 11,  4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeTrailKurtText, EVENT_BEAT_KIMONO_GIRL_EMI
+	object_event  8,  5, SPRITE_SAGE, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BellchimeTrailOddSouvenirText, -1
 
 	
 
@@ -265,3 +266,27 @@ BellchimeTrailKurtText:
 	line "see if she will"
 	cont "pray with us."
 	done
+
+BellchimeTrailOddSouvenirText:
+	text "There are stones"
+	line "buried under the"
+	para "towers brought by"
+	line "travelers from"
+	cont "far away."
+	
+	para "#mon that can"
+	line "still evolve have"
+	para "quite a strange"
+	line "response to them!"
+	
+	para "For instance,"
+	line "Geodude, Slowpoke,"
+	cont "and Quilava."
+	
+	para "I've even seen a"
+	line "Natu try to steal"
+	para "one from my bag."
+	
+	para "I wonder why?"
+	done
+	

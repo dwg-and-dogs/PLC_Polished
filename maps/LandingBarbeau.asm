@@ -43,7 +43,7 @@ KenseyOfficeSailorText:
 	
 	para "The safety of the"
 	line "port depends on"
-	cont "you, Kensey."
+	cont "you, Nemo."
 	done
 
 SailorMachampText:

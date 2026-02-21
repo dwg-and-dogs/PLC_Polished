@@ -256,7 +256,7 @@ KimonoCabin5GrannyText2:
 	
 	para "It's time that we"
 	line "stood up against"
-	cont "Urgaust."
+	cont "Vesper."
 	
 	para "We are strong. We"
 	line "can adapt to the"

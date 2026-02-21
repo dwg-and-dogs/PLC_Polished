@@ -31,6 +31,7 @@ CyndaquilEvosAttacks:
 
 QuilavaEvosAttacks:
 	db EVOLVE_LEVEL, 36, TYPHLOSION
+	db EVOLVE_ITEM, ODD_SOUVENIR, TYPHLOSION
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -105,6 +106,7 @@ RowletEvosAttacks:
 	
 DartrixEvosAttacks:
 	db EVOLVE_LEVEL, 34, DECIDUEYE
+	db EVOLVE_ITEM, ODD_SOUVENIR, DECIDUEYE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -180,6 +182,7 @@ OshawottEvosAttacks:
 	
 DewottEvosAttacks:
 	db EVOLVE_LEVEL, 34, SAMUROTT
+	db EVOLVE_ITEM, ODD_SOUVENIR, SAMUROTT
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -235,6 +238,7 @@ SamurottHisuianEvosAttacks:
 	
 HoothootEvosAttacks:
 	db EVOLVE_LEVEL, 18, NOCTOWL
+	db EVOLVE_ITEM, ODD_SOUVENIR, NOCTOWL
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -470,6 +474,7 @@ ClefableEvosAttacks:
 
 VulpixEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, NINETALES
+	db EVOLVE_ITEM, ODD_SOUVENIR, NINETALES
 	db 0 ; no more evolutions
 	db 1, EMBER
 	db 4, GROWL ; Tail Whip → new move
@@ -788,6 +793,7 @@ AnnihilapeEvosAttacks:
 	
 GrowlitheEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
+	db EVOLVE_ITEM, ODD_SOUVENIR, ARCANINE
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, BITE
@@ -1145,6 +1151,7 @@ TentacruelEvosAttacks:
 
 GeodudeEvosAttacks:
 	db EVOLVE_LEVEL, 20, GRAVELER
+	db EVOLVE_ITEM, ODD_SOUVENIR, GRAVELER
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
@@ -1166,6 +1173,7 @@ GeodudeEvosAttacks:
 
 GravelerEvosAttacks:
 	db EVOLVE_LEVEL, 40, GOLEM
+	db EVOLVE_ITEM, ODD_SOUVENIR, GOLEM
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
@@ -1208,7 +1216,7 @@ GolemEvosAttacks:
 
 
 GeodudeAlolanEvosAttacks:
-	db EVOLVE_LEVEL, 25, GRAVELER
+	db EVOLVE_LEVEL, 20, GRAVELER
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
@@ -1293,7 +1301,7 @@ PonytaEvosAttacks:
 
 PonytaGalarianEvosAttacks:
 	db EVOLVE_LEVEL, 25, RAPIDASH
-	db EVOLVE_ITEM, ODD_SOUVENIR, RAPIDASH
+;	db EVOLVE_ITEM, ODD_SOUVENIR, RAPIDASH
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -1356,6 +1364,7 @@ RapidashGalarianEvosAttacks:
 SlowpokeEvosAttacks:
 	db EVOLVE_HOLDING, KINGS_ROCK, SLOWKING
 	db EVOLVE_LEVEL, 31, SLOWBRO
+	db EVOLVE_ITEM, ODD_SOUVENIR, SLOWBRO
 	db 0 ; no more evolutions
 	db 1, CURSE
 	db 1, TACKLE
@@ -1556,6 +1565,7 @@ MagnezoneEvosAttacks:
 
 GrimerEvosAttacks:
 	db EVOLVE_LEVEL, 25, MUK
+	db EVOLVE_ITEM, ODD_SOUVENIR, MUK
 	db 0 ; no more evolutions
 	db 1, TACKLE ; Pound → similar move
 	db 1, ACID ; Poison Gas → new move
@@ -1746,6 +1756,7 @@ SteelixEvosAttacks:
 
 VoltorbEvosAttacks:
 	db EVOLVE_LEVEL, 25, ELECTRODE
+	db EVOLVE_ITEM, ODD_SOUVENIR, ELECTRODE
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, THUNDERSHOCK ; Let's Go move
@@ -1766,7 +1777,7 @@ VoltorbEvosAttacks:
 	db 48, MIRROR_COAT
 	db 0 ; no more level-up moves
 
-VoltorbHisuianEvosAttacks: ;  REVISE 
+VoltorbHisuianEvosAttacks:  
 	db EVOLVE_LEVEL, 25, ELECTRODE
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1941,6 +1952,7 @@ HitmontopEvosAttacks:
 
 KoffingEvosAttacks:
 	db EVOLVE_LEVEL, 30, WEEZING
+	db EVOLVE_ITEM, ODD_SOUVENIR, WEEZING
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, ACID ; Smog → new move
@@ -2762,6 +2774,7 @@ ChikoritaEvosAttacks:
 
 BayleefEvosAttacks:
 	db EVOLVE_LEVEL, 32, MEGANIUM
+	db EVOLVE_ITEM, ODD_SOUVENIR, MEGANIUM
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, GROWL
@@ -2844,6 +2857,7 @@ TotodileEvosAttacks:
 
 CroconawEvosAttacks:
 	db EVOLVE_LEVEL, 32, FERALIGATR
+	db EVOLVE_ITEM, ODD_SOUVENIR, FERALIGATR
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -3105,6 +3119,7 @@ TogekissEvosAttacks:
 
 NatuEvosAttacks:
 	db EVOLVE_LEVEL, 25, XATU
+	db EVOLVE_ITEM, ODD_SOUVENIR, XATU
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, LEER
@@ -3762,6 +3777,7 @@ GranbullEvosAttacks:
 	db 0 ; no more level-up moves
 
 QwilfishEvosAttacks:
+	db EVOLVE_ITEM, ODD_SOUVENIR, OVERQWIL
 	db 0 ; no more evolutions	
 	db 1, WATER_GUN
 	db 1, SPIKES
@@ -3871,6 +3887,7 @@ HeracrossEvosAttacks:
 
 SneaselEvosAttacks:
 	db EVOLVE_HOLDING, RAZOR_CLAW, WEAVILE
+	db EVOLVE_ITEM, ODD_SOUVENIR, SNEASLER
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -3973,6 +3990,7 @@ TeddiursaEvosAttacks:
 
 UrsaringEvosAttacks:
 	db EVOLVE_ITEM, MOON_STONE, URSALUNA
+;	db EVOLVE_ITEM, ODD_SOUVENIR, URSALUNA
 	db 0 ; no more evolutions
 	db 1, GUNK_SHOT ; HGSS tutor move
 	db 1, THIEF ; Covet → TM move
@@ -4036,6 +4054,7 @@ UrsalunaBloodmoonEvosAttacks:
 
 
 SlugmaEvosAttacks:
+	db EVOLVE_ITEM, ODD_SOUVENIR, MAGCARGO
 	db EVOLVE_LEVEL, 24, MAGCARGO
 	db 0 ; no more evolutions
 	db 1, MUD_SLAP ; Smog → TM move

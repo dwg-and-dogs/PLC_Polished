@@ -170,7 +170,7 @@ GenericTrainerBrigader2:
 
 BrigaderNAME7SeenText:
 	text "In the name of"
-	line "General Bobesh,"
+	line "General Tyrus,"
 	cont "Halt! Show me"
 	cont "your #mon!"
 	done

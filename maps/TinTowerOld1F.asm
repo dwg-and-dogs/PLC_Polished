@@ -38,12 +38,12 @@ TinTowerOld1FNPC1Text:
 TinTowerOld1FNPC2Text:
 	text "The towers are a"
 	line "veritable maze"
-	para "from Vespera's"
+	para "from Sybil's"
 	line "#mon powers."
 	done
 
 TinTowerOld1FNPC3Text:
-	text "Vespera is the"
+	text "Sybil is the"
 	line "chief priestess."
 	
 	para "She determines "

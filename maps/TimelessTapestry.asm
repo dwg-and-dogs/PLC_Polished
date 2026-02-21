@@ -115,7 +115,7 @@ TapestryAmosText1:
 	cont "at the mine."
 	
 	para "But my sources"
-	line "say that Adrinna"
+	line "say that Andrea"
 	para "plans to usurp"
 	line "the Emperor at his"
 	cont "coronation."
@@ -160,8 +160,8 @@ TapestryAmosText0:
 	line "them up?"
 	
 	para "My sources say"
-	line "that Adrinna will"
-	para "usurp Urgaust"
+	line "that Andrea will"
+	para "usurp Vesper"
 	line "at the ceremony."
 	
 	para "Even if she does"
@@ -204,7 +204,7 @@ TapestryAmosNoText:
 	next
 	text_start
 	text "Quickly prepare!"
-	line "Urgaust will soon"
+	line "Vesper will soon"
 	para "declare himself"
 	line "the Emperor!"
 	done
@@ -250,7 +250,7 @@ TapestryTextAmos:
 	para "we will dissolve"
 	line "our union."
 	
-	para "Urgaust's generals"
+	para "Vesper's generals"
 	line "haven't been seen,"
 	para "but I hear rumors"
 	line "that one of each"
@@ -269,7 +269,7 @@ TapestryTextAmos:
 	
 TapestryTextSamsara:
 	text_high
-    text " Vespera: " 
+    text " Sybil: " 
 	next
 	text_start
 	text "The events of the"
@@ -427,13 +427,13 @@ MorpheaAfterText:
 	line "Celebi has joined"
 	para "you! Now, Amos is"
 	line "waiting: You must"
-	cont "stop Urgaust!"
+	cont "stop Vesper!"
 	done
 
 TapestrySamaria:
 	text "Samaria: Will our"
 	line "plans be enough"
-	cont "to stop Urgaust?"
+	cont "to stop Vesper?"
 	
 	para "Maybe we should"
 	line "have stayed away."
@@ -455,7 +455,7 @@ TapestryText1:
 	para "could've gone on"
 	line "longer."
 	
-	para "Emperor Urgaust"
+	para "Emperor Vesper"
 	line "is so uptight!"
 	para "He's so worried"
 	line "about outsiders"

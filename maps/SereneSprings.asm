@@ -235,7 +235,7 @@ StadiumAheadSign:
 	line "Ahead"
 	
 	para "Brought to you by"
-	line "Emperor Urgaust!"
+	line "Emperor Vesper!"
 	done
 
 SereneSpringsSign:

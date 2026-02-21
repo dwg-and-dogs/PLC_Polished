@@ -180,13 +180,13 @@ CradleScene1_Mejimi:
 	end
 
 CradleCutscene_Text0:
-	text "Meanwhile, Urgaust"
+	text "Meanwhile, Vesper"
 	line "visits his mine:"
 	done
 
 CradleCutscene_Text1:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start 
 	text "Brigader Tyson,"
@@ -212,7 +212,7 @@ CradleCutscene_Text2:
 	
 CradleCutscene_Text3:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start 
 	text "The Hisuians are"
@@ -227,29 +227,29 @@ CradleCutscene_Text3:
 
 CradleCutscene_Text4:
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start 
 	text "Shoo!"
 	
-	para "Adrinna, your"
+	para "Andrea, your"
 	line "soldiers are more"
 	para "lively than"
-	line "Kensey's."
+	line "Nemo's."
 	done
 
 CradleCutscene_Text5:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start 
 	text "Say, how is"
-	line "General Kensey?"
+	line "General Nemo?"
 	done
 	
 CradleCutscene_Text6:
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start 
 	text "His port - it"
@@ -265,7 +265,7 @@ CradleCutscene_Text6:
 
 CradleCutscene_Text7:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start 
 	text "Another project,"
@@ -277,7 +277,7 @@ CradleCutscene_Text7:
 
 CradleCutscene_Text8:
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start 
 	text "What's worse, I"
@@ -292,7 +292,7 @@ CradleCutscene_Text8:
 
 CradleCutscene_Text9:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start 
 	text "Emperor, I- Er,"
@@ -303,7 +303,7 @@ CradleCutscene_Text9:
 
 CradleCutscene_Text10:
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start 
 	text "They'll be updated"
@@ -316,7 +316,7 @@ CradleCutscene_Text10:
 
 CradleCutscene_Text11:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start 
 	text "Your majesty. We"
@@ -329,7 +329,7 @@ CradleCutscene_Text11:
 
 CradleCutscene_Text12:
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start 
 	text "Hold off on those"
@@ -343,10 +343,10 @@ CradleCutscene_Text12:
 
 CradleCutscene_Text13: 
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start 
-	text "Urgaust, how I"
+	text "Vesper, how I"
 	line "misjudged you..."
 	done
 
@@ -361,7 +361,7 @@ CradleCutscene_Text14:
 
 CradleCutscene_Text15: 
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start 
 	text "We will temper"
@@ -462,7 +462,7 @@ GenericTrainerBrigader20: ; tyson nidos steelix
 	line "bump in my day."
 	
 	para "I would follow"
-	line "Adrinna to the"
+	line "Andrea to the"
 	para "furthest depths"
 	line "of the Earth."
 	done
@@ -577,7 +577,7 @@ CradleKurtMovesToYou:
 
 CradleAdrinnaText1:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "<PLAYER>, I knew"
@@ -586,7 +586,7 @@ CradleAdrinnaText1:
 	para "We are held back"
 	line "by tradition."
 	
-	para "Consider: Hollis"
+	para "Consider: Silas"
 	line "holds back his"
 	cont "best trainers."
 	
@@ -594,7 +594,7 @@ CradleAdrinnaText1:
 	line "youth with the"
 	cont "sick and lame."
 	
-	para "Barbeau rejects"
+	para "Remy rejects"
 	line "maps for his own"
 	cont "memories."
 	
@@ -618,7 +618,7 @@ CradleAdrinnaText1:
 
 CradleAdrinnaText2:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "<PLAYER>, I knew"
@@ -654,14 +654,14 @@ CradleKurtText1:
 	line "I was scared. But"
 	para "I forgot that I"
 	line "was doing it for"
-	para "you. Show Adrinna"
+	para "you. Show Andrea"
 	line "that she's wrong!"
 	done
 	
 
 CradleAdrinnaText3: 
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Come at me! I'm"
@@ -675,7 +675,7 @@ CradleAdrinnaText4:
 	
 CradleAdrinnaText5:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "This changes"
@@ -736,7 +736,7 @@ AmosCradleText1:
 	next
 	text_start
 	text "<PLAYER>, I can"
-	line "hear Adrinna up"
+	line "hear Andrea up"
 	cont "ahead."
 	
 	para "It sounds like a"
@@ -760,7 +760,7 @@ AmosCradleText2:
     text " Amos: " 
 	next
 	text_start
-	text "Adrinna is deep"
+	text "Andrea is deep"
 	line "within the mine."
 	
 	para "We're counting on"

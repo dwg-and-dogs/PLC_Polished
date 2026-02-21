@@ -228,7 +228,7 @@ GenericTrainerSageJeffrey:
     done
 
 SageJeffreySeenText:
-    text "Urgaust says his"
+    text "Vesper says his"
 	line "ascension will"
 	cont "bring a new era"
 	cont "of progress."
@@ -293,7 +293,7 @@ GenericTrainerSageJin:
     done
 
 SageJinSeenText:
-    text "Urgaust's ambition"
+    text "Vesper's ambition"
 	line "to rise above"
 	cont "nature itself - "
 	
@@ -382,7 +382,7 @@ ReceivedHeavensBadgeText:
 	
 SamsaraIntroText:
 	text "So, you're here"
-	line "to stop Urgaust"
+	line "to stop Vesper"
 	cont "and preserve"
 	cont "Johto's culture?"
 	
@@ -402,7 +402,7 @@ SamsaraIntroText:
 	
 	para "I prayed to the"
 	line "heavens! Why does"
-	para "Urgaust deny the"
+	para "Vesper deny the"
 	line "next day its"
 	para "light in his"
 	line "quest for Godli-"
@@ -426,7 +426,7 @@ SamsaraWinLossText:
 	line "que talents."
 
 	para "This is what"
-	line "Urgaust forgot."
+	line "Vesper forgot."
 	
 	para "His ancestors"
 	line "were not revered"

@@ -56,7 +56,7 @@ LandingTavernNomad2:
 	iftrue_jumpopenedtext TavernGladThatsOverText2
 	jumpthisopenedtext
 	
-	text "Barbeau thinks"
+	text "Remy thinks"
 	line "he can strong-"
 	para "arm us into"
 	line "helping guide the"

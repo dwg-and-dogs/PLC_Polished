@@ -207,7 +207,7 @@ BrigaderExplanationText:
 	text_start
 	text "You'll see!"
 	
-	para "General Bobesh"
+	para "General Tyrus"
 	line "summons you!"
 	done
 
@@ -246,12 +246,12 @@ AmosText:
 	para "Oh, right! You"
 	line "were interrupting"
 	cont "my conversation"
-	cont "with Hollis."
+	cont "with Silas."
 	
 	para "..."
 
 	para "I'd better leave"
-	line "before Bobesh's"
+	line "before Tyrus's"
 	cont "Brigaders see me."
 	done
 
@@ -338,19 +338,19 @@ GauldenrodClefairyText:
 
 AdrinnaGauldenrodTowerText:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "My spies are all"
 	line "worked up about"
 	para "you. My name is"
-	line "General Adrinna."
+	line "General Andrea."
 
 	para "I'm not here to"
 	line "fight."
 
 	para "What say you of"
-	line "Bobesh's stadium?"
+	line "Tyrus's stadium?"
 	
 	para "Do strong"
 	line "trainers watch?"

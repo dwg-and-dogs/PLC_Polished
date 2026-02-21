@@ -72,7 +72,7 @@ TammyDialogue1:
 
 HollisDialogue1:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 	text "Of course I see."
@@ -102,7 +102,7 @@ TammyDialogue2:
 
 HollisDialogue2:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 	text "Such disrespect!"

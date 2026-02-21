@@ -56,7 +56,7 @@ BrassTowerAmosText1:
     text " Amos: "
 	next
 	text_start
-	text "Emperor Urgaust"
+	text "Emperor Vesper"
 	line "is on the top of"
 	cont "the tower."
 	

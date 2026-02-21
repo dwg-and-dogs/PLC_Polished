@@ -65,7 +65,7 @@ BrassTowerAdrinna:
 
 AdrinnaSeenText0:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "I knew your tal-"
@@ -93,7 +93,7 @@ AdrinnaSeenText0:
 
 AdrinnaTowerSeenText:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "I knew your tal-"
@@ -129,7 +129,7 @@ BeatenTextAdrinnaWarp:
 
 AdrinnaAfterText:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Goodbye <PLAYER>."
@@ -146,19 +146,19 @@ AdrinnaAfterText:
 
 AdrinnaTakesOverText:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Excellent. Meet"
 	line "me on the roof."
 	para "We'll show Johto"
 	line "how it needs not"
-	cont "Emperor Urgaust."
+	cont "Emperor Vesper."
 	done
 
 AreYouSureAdrinna:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Really? You will"
@@ -169,7 +169,7 @@ AreYouSureAdrinna:
 
 NoToAdrinnaText:
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Disappointing."

@@ -65,6 +65,7 @@ endr
 	giveitem HERB_BALL, 99;
 	giveitem BUB_BALL, 99;
 	giveitem DECI_BALL, 99;
+	giveitem KINGS_ROCK, 99
 ;	giveapricorn FIXED_CHARGE, 5
 ;	giveapricorn SHORE_FOAM, 5
 ;	giveapricorn RADIANT_OPAL, 5
@@ -80,23 +81,23 @@ endr
 ;	giveitem CARBOS, 99
 ;	giveitem CALCIUM, 99
 ;	giveitem ZINC, 99
-;	giveitem RARE_CANDY, 99
+	giveitem RARE_CANDY, 99
 ;	giveitem PP_UP, 99
 ;	giveitem PP_MAX, 99
 ;	giveitem SACRED_ASH, 99
+	giveitem MAX_REPEL, 99
 ;	giveitem MAX_REPEL, 99
-;	giveitem MAX_REPEL, 99
-;	giveitem ESCAPE_ROPE, 99
-;	giveitem ABILITY_CAP, 99
-;	giveitem LEAF_STONE, 99
-;	giveitem FIRE_STONE, 99
-;	giveitem WATER_STONE, 99
-;	giveitem THUNDERSTONE, 99
-;	giveitem MOON_STONE, 99
-;	giveitem SUN_STONE, 99
-;	giveitem DUSK_STONE, 99
-;	giveitem DAWN_STONE, 99
-;	giveitem SHINY_STONE, 99
+	giveitem ESCAPE_ROPE, 99
+	giveitem ABILITY_CAP, 99
+	giveitem LEAF_STONE, 99
+	giveitem FIRE_STONE, 99
+	giveitem WATER_STONE, 99
+	giveitem THUNDERSTONE, 99
+	giveitem MOON_STONE, 99
+	giveitem SUN_STONE, 99
+	giveitem DUSK_STONE, 99
+	giveitem DAWN_STONE, 99
+	giveitem SHINY_STONE, 99
 ;	giveitem EXP_SHARE, 99
 ;	giveitem LEFTOVERS, 99
 ;	giveitem BIG_NUGGET, 99
@@ -145,17 +146,17 @@ endr
 	setflag ENGINE_FLYPOINT_EERIE_HAMLET
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
-	givepoke PIKACHU, NO_FORM, 100, LEFTOVERS
+	givepoke QWILFISH, NO_FORM, 50, LEFTOVERS
 	loadmem wPartyMon1Moves+0, MOONBLAST
 	loadmem wPartyMon1Moves+1, SHADOW_BALL
 	loadmem wPartyMon1Moves+2, PSYCHIC_M
 	loadmem wPartyMon1Moves+3, EXPLOSION
 	; hm mules
-	givepoke EXEGGCUTE, NO_FORM, 100, LEFTOVERS
-	givepoke PONYTA, NO_FORM, 100, LEFTOVERS
-	givepoke RAICHU, NO_FORM, 100, LEFTOVERS
-	givepoke UNOWN, 5 ; CHECK FAINTING BEHAVIOR 
-	givepoke UNOWN, 5 ; CHECK FAINTING BEHAVIOR 
+	givepoke SNEASEL, NO_FORM, 50
+	givepoke DEWOTT, NO_FORM, 50
+	givepoke DEWOTT, NO_FORM, 50
+	givepoke DARTRIX, NO_FORM, 50  
+	givepoke DARTRIX, NO_FORM, 50 
 ;SPRITE CHECKS 
 ;	givepoke QWILFISH, NO_FORM, 5
 ;	givepoke VILEPLUME, NO_FORM, 5

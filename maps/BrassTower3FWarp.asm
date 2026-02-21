@@ -39,7 +39,7 @@ BrassTowerKensey:
 
 .SeenText:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start
 	text "Egad! How did the"
@@ -65,7 +65,7 @@ BrassTowerKensey:
 
 .AfterText:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start
 	text "I have no more"

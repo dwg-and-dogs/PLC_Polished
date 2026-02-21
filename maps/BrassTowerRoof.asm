@@ -145,7 +145,7 @@ BTR_KurtStepsDownMovement:
 
 TowerRoofMejimiText1_0: 
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start
 	text "Johto! We will be"
@@ -166,7 +166,7 @@ TowerRoofMejimiText1_0:
 
 TowerRoofMejimiText1_1:
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start
 	text "Hm? How did my"
@@ -189,7 +189,7 @@ TowerRoofMejimiText1_4:
 
 TowerRoofMejimiText1_5:
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start
 	text "Silence at once!"
@@ -211,7 +211,7 @@ TowerRoofMejimiText1_6:
 
 TowerRoofMejimiText1_7: 
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start
 	text "I'll end you"
@@ -224,7 +224,7 @@ TowerRoofMejimiText1_8:
 
 TowerRoofMejimiText1_9: 
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start
 	text "Lugia, put out"
@@ -234,7 +234,7 @@ TowerRoofMejimiText1_9:
 
 TowerRoofMejimiText1_9_2:
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start
 	text "This is absurd!"
@@ -441,10 +441,10 @@ BTR_PlayerToFrontMovement:
 
 TowerRoofMejimiText2_0: 
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start
-	text "Adrinna, why are"
+	text "Andrea, why are"
 	line "you here with"
 	cont "this child?"
 	done
@@ -460,7 +460,7 @@ TowerRoofText2_4:
 
 TowerRoofText2_5: 
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Johto is done"
@@ -476,12 +476,12 @@ TowerRoofText2_5:
 	cont "on these towers."
 	
 	para "I'm coming for"
-	line "you, Urgaust!"
+	line "you, Vesper!"
 	done
 
 TowerRoofText2_7: 
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start
 	text "Traitor!"
@@ -496,7 +496,7 @@ TowerRoofMejimiText2_8:
 	
 TowerRoofText2_8_1: 
 	text_high
-    text " Urgaust: " 
+    text " Vesper: " 
 	next
 	text_start
 	text "I must convene"
@@ -517,7 +517,7 @@ TowerRoofText2_9:
 
 TowerRoofText2_10: 
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "See! Johto!"
@@ -573,7 +573,7 @@ TowerRoofText2_11:
 
 TowerRoofText2_12: 
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "That's enough."
@@ -650,7 +650,7 @@ TowerRoofText2_16_2:
 
 TowerRoofText2_18: 
 	text_high
-    text " Adrinna: " 
+    text " Andrea: " 
 	next
 	text_start
 	text "Thank you,"

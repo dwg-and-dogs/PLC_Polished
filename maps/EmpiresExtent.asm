@@ -71,7 +71,7 @@ GenericTrainerNinja3: ; twilight
 	generictrainer NINJA, NINJA3, EVENT_BEAT_NINJA3, .SeenText3, .BeatenText3  
 
 	text "You ruined our"
-	line "ambush on Kanna,"
+	line "ambush on Petra,"
 	para "and now the Tarn"
 	line "is destroyed."
 	
@@ -155,7 +155,7 @@ ExtentNPCText1:
 	line "beautiful."
 	
 	para "I'm following"
-	line "Adrinna to have"
+	line "Andrea to have"
 	cont "that power."
 	done
 

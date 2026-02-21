@@ -71,13 +71,13 @@ GenericTrainerElderAkira:
 	text "The stormclouds"
 	line "on the horizon"
 	para "are nothing to"
-	line "Emperor Urgaust."
+	line "Emperor Vesper."
 	done
 
 AkiraBeatenText:
 	text "Oh, but I sense a"
 	line "stormcloud in"
-	cont "Urgaust's heart."
+	cont "Vesper's heart."
 	done
 	
 AkiraSeenText:

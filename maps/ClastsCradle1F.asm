@@ -119,7 +119,7 @@ CradleNinjaHelpText:
 	text "<PLAYER>. Amos is"
 	line "down below, but"
 	para "we can't get to"
-	line "Adrinna yet."
+	line "Andrea yet."
 	
 	para "We need to span"
 	line "three lava fields"
@@ -179,7 +179,7 @@ Brigader18BeatenText:
 
 Brigader18SeenText:
 	text "I've trained with"
-	line "Adrinna, I can"
+	line "Andrea, I can"
 	cont "beat you!"
 	done
 	

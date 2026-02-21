@@ -173,7 +173,7 @@ TL_Scene_Part_1_Script:
 
 TL_Text1:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start 
 	text "Your navigators"
@@ -184,7 +184,7 @@ TL_Text1:
 
 TL_Text2:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "How? They refuse."
@@ -194,19 +194,19 @@ TL_Text2:
 
 TL_Text3:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start 
 	text "You're being so"
 	line "difficult."
 	
 	para "Lugia now serves"
-	line "Emperor Urgaust."
+	line "Emperor Vesper."
 	done
 
 TL_Text4:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "When the time"
@@ -217,7 +217,7 @@ TL_Text4:
 
 TL_Text5:
 	text_high
-    text " Kensey: " 
+    text " Nemo: " 
 	next
 	text_start 
 	text "You fool! If they"
@@ -233,7 +233,7 @@ TL_Text5:
 
 TL_Text6:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "(sigh)"
@@ -256,7 +256,7 @@ TL_Text7:
 
 TL_Text8:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "Wait… is that a"
@@ -327,7 +327,7 @@ TL_Scene_2_R:
 
 TL_2_Text1:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "Oh, where's your"
@@ -356,7 +356,7 @@ TL_2_Text2:
 	
 TL_2_Text3:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 
@@ -392,7 +392,7 @@ TL_2_Text4:
 	
 TL_2_Text5:
 	text_high
-    text " Barbeau: " 
+    text " Remy: " 
 	next
 	text_start 
 	text "Very well. Let us"
@@ -412,7 +412,7 @@ TL_2_Text5:
 	
 
 TL_KenseysOfficeSign:
-	text "Kensey's Office"
+	text "Nemo's Office"
 	done
 
 TL_ReportForWorkSign:
@@ -423,7 +423,7 @@ TL_ReportForWorkSign:
 	para "Johto needs more"
 	line "#balls!"
 	
-	para "-General Kensey"
+	para "-General Nemo"
 	done
 
 TL_OpenForBusinessSign:
@@ -441,7 +441,7 @@ TL_Brigader_Script:
 	text "Port is open only"
 	line "to workers."
 	
-	para "Go see Barbeau"
+	para "Go see Remy"
 	line "for assignment."
 	
 	para "Wait, you don't"
@@ -679,7 +679,7 @@ LandingNomadMScript:
 	iftrue_jumptext LandingNomadMTextAfter
 	jumpthistext
 	
-	text "Before Kensey,"
+	text "Before Nemo,"
 	line "most of us would"
 	para "set sail to the"
 	line "Sheltered Shores"
@@ -706,7 +706,7 @@ LandingNomadFScript:
 	iftrue_jumptext LandingNomadFTextAfter
 	jumpthistext
 	
-	text "Kensey won't let"
+	text "Nemo won't let"
 	line "us sail anymore."
 	
 	para "It used to be"

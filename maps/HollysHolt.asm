@@ -402,7 +402,7 @@ Text_HeadbuttIntro:
 	text "Hi, <PLAYER>."
 	line "Thanks again for"
 	para "your help talking"
-	line "to Hollis."
+	line "to Silas."
 	
 	para "Now, I can teach"
 	line "everyone how to"

@@ -47,7 +47,7 @@ SinjohBrigader1Script:
 	done
 
 Brigader1Text1:
-	text "General Adrinna"
+	text "General Andrea"
 	line "has been in there"
 	cont "so long."
 	
@@ -65,7 +65,7 @@ SinjohBrigader2Script:
 	cont "join forces."
 	
 	para "But enough did"
-	line "that Kanna won't"
+	line "that Petra won't"
 	para "try to mess with"
 	line "us again."
 	done
@@ -95,8 +95,8 @@ SinjohNPC2Text:
 	done
 	
 SinjohNPC3Text:
-	text "Elder Kanna and"
-	line "General Adrinna"
+	text "Elder Petra and"
+	line "General Andrea"
 	
 	para "are negotiating"
 	line "inside."

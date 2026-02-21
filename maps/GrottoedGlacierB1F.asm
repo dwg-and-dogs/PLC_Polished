@@ -74,8 +74,8 @@ GenericTrainerMediumEsther:
 	done
 
 .BeatenText:
-	text "Elder Kanna will"
-	line "handle Adrinna."
+	text "Elder Petra will"
+	line "handle Andrea."
 	
 	para "You don't need to"
 	line "be here."
@@ -84,7 +84,7 @@ GenericTrainerMediumEsther:
 .SeenText:
 	text "You're not from"
 	line "Hisui - are you"
-	cont "with Adrinna?"	
+	cont "with Andrea?"	
 	done
 
 
@@ -93,7 +93,7 @@ GenericTrainerSageVirgil:
 	generictrainer SAGE, VIRGIL, EVENT_BEAT_SAGE_VIRGIL, .SeenText1, .BeatenText1
 
 	text "If you interrupt"
-	line "Kanna, you seal"
+	line "Petra, you seal"
 	cont "your own fate."
 	done
 

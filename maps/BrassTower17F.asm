@@ -48,7 +48,7 @@ SatoruBeatenText:
 	done
 	
 SatoruSeenText:
-    text "Urgaust has the"
+    text "Vesper has the"
 	line "wisdom of the"
 	cont "ages!"	
     done

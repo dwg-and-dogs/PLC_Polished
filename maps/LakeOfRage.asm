@@ -1416,5 +1416,5 @@ LakeKurtText2:
 	
 	para "We can go back to"
 	line "stop Adrinna and"
-	cont "Urgaust's mine!"
+	cont "Vesper's mine!"
 	done

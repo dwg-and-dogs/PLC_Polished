@@ -189,7 +189,7 @@ EerieHamletHoneyScript:
 	jumpopenedtext GiveSweetHoneyText 
 
 NeedAFossilText: 
-	text "Cripes, Adrinna"
+	text "Cripes, Andrea"
 	line "will be so mad"
 	para "at me. I should"
 	line "be digging at the"

@@ -172,7 +172,7 @@ KurtTLDormsText:
 	
 KurTLDormsText2:
 	text "We must stop that"
-	line "General Kensey!"
+	line "General Nemo!"
 	done
 
 TLKurtBattleText:
@@ -193,7 +193,7 @@ LandingDormsBarbeauJournalScript:
 	end
 
 BarbeauJournal:
-	text "Barbeau's Journal"
+	text "Remy's Journal"
 	
 	para "The people grow"
 	line "restless... Is"

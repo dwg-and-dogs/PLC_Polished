@@ -107,8 +107,8 @@ AnarresNPC4Text:
 	done
 
 AnarresNPC5Text:
-	text "Hollis closed"
-	line "the temple."
+	text "Silas closed"
+	line "the Tower."
 	
 	para "He shouldn't be"
 	line "bothered while he"

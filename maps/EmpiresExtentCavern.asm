@@ -45,7 +45,7 @@ EECavernMysticScript:
 
 MysticText1:
 	text "We must remember" 
-	line "what Adrinna did."
+	line "what Andrea did."
 
 	para "These walls will"
 	line "hold the story."

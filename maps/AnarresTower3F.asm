@@ -17,7 +17,7 @@ AnarresTower3F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  6,  6, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FHollisScript, -1
+	object_event  6,  6, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FSilasScript, -1
 	object_event  7,  3, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FTammyScript, EVENT_TAMMY_ANARRES_TOWER
 	object_event  5,  6, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AnarresTower3FAmosScript, EVENT_BEAT_HOLLIS
 
@@ -41,20 +41,20 @@ AnarresTower3FEvent:
 	setevent EVENT_SAW_KLEAVOR
 	pause 60
 	appear ANARRES_TOWER_TAMMY
-	applymovement ANARRES_TOWER_TAMMY, TammyMovesToHollis
+	applymovement ANARRES_TOWER_TAMMY, TammyMovesToSilas
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 60
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
 	opentext
-	writetext HollisPastGuards
+	writetext SilasPastGuards
 	waitbutton
 	writetext TammyExplains
 	waitbutton
 	closetext
-	applymovement ANARRES_TOWER_HOLLIS, HollisToYou
+	applymovement ANARRES_TOWER_HOLLIS, SilasToYou
 	turnobject PLAYER, RIGHT
-	showtext HollisChallengesText
+	showtext SilasChallengesText
 	setevent EVENT_TAMMY_ANARRES_TOWER
-	winlosstext HollisBeatenText, 0
+	winlosstext SilasBeatenText, 0
 	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
@@ -69,12 +69,12 @@ AnarresTower3FEvent:
 	showtext TammyText3
 ;	waitbutton
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 60
-	showtext HollisAbuse
+	showtext SilasAbuse
 	pause 5
 	showtext TammyText4
 	turnobject ANARRES_TOWER_HOLLIS, RIGHT
 	applyonemovement ANARRES_TOWER_HOLLIS, step_right
-	showtext HollisHM
+	showtext SilasHM
 ;	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
 	showtext TammyThanks
 	closetext
@@ -84,7 +84,7 @@ AnarresTower3FEvent:
 	applyonemovement ANARRES_TOWER_HOLLIS, step_left
 	turnobject ANARRES_TOWER_HOLLIS, UP
 	opentext
-	writetext HollisCongratulates
+	writetext SilasCongratulates
 	waitbutton
 	verbosegivetmhm HM_CUT
 	setevent EVENT_GOT_HM01_CUT
@@ -105,7 +105,7 @@ AnarresTower3FEvent:
 	cont "in the forest."
 	done
 
-PlayerStepsToHollisMovement:
+PlayerStepsToSilasMovement:
 	step_left
 	step_left
 	step_down
@@ -116,7 +116,7 @@ PlayerStepsDownMovement:
 	step_down
 	step_end
 
-TammyMovesToHollis:
+TammyMovesToSilas:
 	step_left
 	step_left
 	step_left
@@ -126,9 +126,9 @@ TammyMovesToHollis:
 	turn_head_right
 	step_end
 
-HollisPastGuards:
+SilasPastGuards:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 	text "How'd you two get"
@@ -138,9 +138,9 @@ HollisPastGuards:
 	line "us safe so far."
 	done
 
-HollisChallengesText:
+SilasChallengesText:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 	
@@ -169,12 +169,12 @@ TammyExplains:
 	done
 
 
-HollisToYou:
+SilasToYou:
 	step_up
 	turn_head_left
 	step_end
 
-HollisBeatenText:
+SilasBeatenText:
 	text "Fine. I'll listen"
 	line "for a moment."
 	done
@@ -193,7 +193,7 @@ TammyText2:
 	done
 
 
-;HollisHmm:
+;SilasHmm:
 ;	text_high
 ;    text " HOllis: "
 ;	next
@@ -216,9 +216,9 @@ TammyText3:
 	done
 
 
-HollisAbuse:
+SilasAbuse:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 	text "But what if"
@@ -235,9 +235,9 @@ TammyText4:
 	done
 
 
-HollisHM:
+SilasHM:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 	text "I've been selfish"
@@ -271,9 +271,9 @@ TammyWalksOutMovement:
 	step_right
 	step_end
 
-HollisCongratulates:
+SilasCongratulates:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 	text "Congratulations"
@@ -320,7 +320,7 @@ AnarresTowerTammyScript:
 	line "your help!"
 	done
 
-TextHollisAfterBattle:
+TextSilasAfterBattle:
 	text "You've opened"
 	line "my eyes."
 
@@ -373,7 +373,7 @@ AmosSaysHelloText:
 
 	para "I'm Amos. I've"
 	line "been trying to"
-	para "get Hollis to"
+	para "get Silas to"
 	line "take the Emperor's"
 	cont "threat seriously."
 
@@ -390,10 +390,10 @@ AmosSaysHelloText:
 	done
 
 
-AnarresTower3FHollisScript:
+AnarresTower3FSilasScript:
 	faceplayer
 	opentext
-	writetext TextHollisAfterBattle
+	writetext TextSilasAfterBattle
 	waitbutton
 	closetext
 	end

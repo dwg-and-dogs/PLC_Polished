@@ -186,11 +186,11 @@ TranquilTarnBrigaderScript:
 	line "your #mon."
 	
 	para "Go find General"
-	line "Adrinna if so."
+	line "Andrea if so."
 	done
 	
 TarnBrigaderText2:
-	text "General Adrinna's"
+	text "General Andrea's"
 	line "plan worked!"
 	
 	para "Some of the His-"

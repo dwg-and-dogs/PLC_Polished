@@ -112,7 +112,7 @@ GauldenrodNPC2Script:
 	text "The forest North"
 	line "of Gauldenrod was"
 	para "cleared to make"
-	line "space for Bobesh's"
+	line "space for Tyrus's"
 	cont "Stadium."
 	
 	para "Lots of Flying-"
@@ -141,7 +141,7 @@ GauldenrodNPC3Script:
 	done
 
 .Text3: 
-	text "Without Bobesh,"
+	text "Without Tyrus,"
 	line "will the bazaar"
 	cont "close?"
 	done 
@@ -245,7 +245,7 @@ GauldenrodCitySign:
 
 	text "Gauldenrod City"
 	line "Overseen by"
-	cont "General Bobesh"
+	cont "General Tyrus"
 	done
 
 GauldenrodBazaarSign:
@@ -504,7 +504,7 @@ CindyText1:
 
 BobeshText1:
 	text_high
-    text " Bobesh: "
+    text " Tyrus: "
 	next
 	text_start
 
@@ -531,7 +531,7 @@ CindyText2:
 
 BobeshText2:
 	text_high
-    text " Bobesh: "
+    text " Tyrus: "
 	next
 	text_start
     text "Such claims!"
@@ -562,7 +562,7 @@ CindyText3:
 
 BobeshText3:
 	text_high
-    text " Bobesh: "
+    text " Tyrus: "
 	next
 	text_start
 	
@@ -596,7 +596,7 @@ CindyText4:
 
 BobeshText4:
 	text_high
-    text " Bobesh: "
+    text " Tyrus: "
 	next
 	text_start
 	

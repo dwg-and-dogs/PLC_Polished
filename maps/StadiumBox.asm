@@ -116,7 +116,7 @@ KurtDialogueStadiumBox:
 	text_start
 	text "<PLAYER>, nice"
 	line "work."
-	para "General Bobesh"
+	para "General Tyrus"
 	line "was such a tyrant"
 	para "to force everyone"
 	line "to follow him,"
@@ -191,7 +191,7 @@ StadiumBoxKurtScript:
 
 AdrinnaDialogueStadium:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "Your victory was"

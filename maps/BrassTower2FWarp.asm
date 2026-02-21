@@ -39,7 +39,7 @@ BrassTowerBobesh:
 
 .SeenText:
 	text_high
-    text " Bobesh: " 
+    text " Tyrus: " 
 	next
 	text_start
 	text "You! Here, in"
@@ -64,7 +64,7 @@ BrassTowerBobesh:
 
 .AfterText:
 	text_high
-    text " Bobesh: " 
+    text " Tyrus: " 
 	next
 	text_start
 	text "Without absolute"
@@ -73,7 +73,7 @@ BrassTowerBobesh:
 	
 	para "I have no right"
 	line "to history, now."
-	para "But Kensey will"
+	para "But Nemo will"
 	line "succeed where I"
 	cont "failed."
 	done

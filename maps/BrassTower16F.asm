@@ -70,7 +70,7 @@ GenericTrainerElderTadao:
 	cont "heart?"
 
 	para "What have we done"
-	line "to Urgaust?"
+	line "to Vesper?"
 	done
 
 TadaoBeatenText:

@@ -9,7 +9,7 @@
 	wildmon 7, LEDYBA
 	wildmon 6, ODDISH
 	wildmon 6, TANGELA
-	wildmon 9, CYNDAQUIL
+	wildmon 9, VOLTOB, HISUIAN_FORM
 ;	; day
 	wildmon 4, YANMA
 	wildmon 7, PINECO
@@ -25,7 +25,7 @@
 	wildmon 7, LEDYBA
 	wildmon 6, ODDISH
 	wildmon 6, TANGELA
-	wildmon 9, CYNDAQUIL
+	wildmon 9, VOLTOB, HISUIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons MISTY_BASIN
@@ -36,24 +36,24 @@
 	wildmon 6, WOOPER
 	wildmon 8, WOOPER
 	wildmon 5, SLOWPOKE
-	wildmon 5, ZUBAT
-	wildmon 7, TOTODILE
+	wildmon 5, TOTODILE
+	wildmon 7, SLOWPOKE, GALARIAN_FORM
 ;	; day
 	wildmon 8, SLOWPOKE
 	wildmon 7, ZUBAT
 	wildmon 6, WOOPER
 	wildmon 8, WOOPER
 	wildmon 5, SLOWPOKE
-	wildmon 5, ZUBAT
-	wildmon 7, TOTODILE
+	wildmon 5, TOTODILE
+	wildmon 7, SLOWPOKE, GALARIAN_FORM
 ;	; nite7
 	wildmon 8, SLOWPOKE
 	wildmon 7, ZUBAT
 	wildmon 6, WOOPER
 	wildmon 8, WOOPER
 	wildmon 5, SLOWPOKE
-	wildmon 5, ZUBAT
-	wildmon 7, TOTODILE
+	wildmon 5, TOTODILE
+	wildmon 7, SLOWPOKE, GALARIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons MISTY_BASIN_B1F
@@ -63,25 +63,25 @@
 	wildmon 7, ZUBAT
 	wildmon 6, WOOPER
 	wildmon 8, WOOPER
-	wildmon 5, SLOWPOKE
-	wildmon 5, ZUBAT
-	wildmon 7, SNORUNT
+	wildmon 7, SLOWPOKE, GALARIAN_FORM
+	wildmon 5, SNORUNT
+	wildmon 7, VULPIX, ALOLAN_FORM
 ;	; day
 	wildmon 8, SLOWPOKE
 	wildmon 7, ZUBAT
 	wildmon 6, WOOPER
 	wildmon 8, WOOPER
-	wildmon 5, SLOWPOKE
-	wildmon 5, ZUBAT
-	wildmon 7, SNORUNT
+	wildmon 7, SLOWPOKE, GALARIAN_FORM
+	wildmon 5, SNORUNT
+	wildmon 7, VULPIX, ALOLAN_FORM
 ;	; nite7
 	wildmon 8, SLOWPOKE
 	wildmon 7, ZUBAT
 	wildmon 6, WOOPER
 	wildmon 8, WOOPER
-	wildmon 5, SLOWPOKE
-	wildmon 5, ZUBAT
-	wildmon 7, SNORUNT
+	wildmon 7, SLOWPOKE, GALARIAN_FORM
+	wildmon 5, SNORUNT
+	wildmon 7, VULPIX, ALOLAN_FORM
 	end_grass_wildmons
 
 

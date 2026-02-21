@@ -186,7 +186,7 @@ MejimiWalksInMovement:
 
 EG_Text1:
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start
 	text "Ah, my generals."
@@ -194,7 +194,7 @@ EG_Text1:
 
 EG_Text11:
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start
 	text "How goes it in"
@@ -203,10 +203,10 @@ EG_Text11:
 
 EG_Text2:
 	text_high
-    text " Bobesh: "
+    text " Tyrus: "
 	next
 	text_start
-	text "Emperor Urgaust."
+	text "Emperor Vesper."
 	line "The stadium... It"
 	para "fell into a"
 	line "sinkhole."
@@ -214,7 +214,7 @@ EG_Text2:
 
 EG_Text3:
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start
 	text "Disastrous! But"
@@ -225,7 +225,7 @@ EG_Text3:
 
 EG_Text4:
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start
 	text "And the port?"
@@ -234,7 +234,7 @@ EG_Text4:
 
 EG_Text4_2:
 	text_high
-    text " Kensey: "
+    text " Nemo: "
 	next
 	text_start
 	text "My liege, we have"
@@ -248,7 +248,7 @@ EG_Text4_2:
 	
 EG_Text5:
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start
 	text "What about the"
@@ -258,7 +258,7 @@ EG_Text5:
 
 EG_Text5_2:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "The locals are"
@@ -269,11 +269,11 @@ EG_Text5_2:
 
 EG_Text6:
 	text_high
-    text " Urgaust: "
+    text " Vesper: "
 	next
 	text_start
 	text "Excellent news."
-	line "General Adrinna,"
+	line "General Andrea,"
 
 	para "please review"
 	line "their plans."
@@ -348,7 +348,7 @@ EmperorsGardenBobeshScene:
 
 EG_Bobesh_Text1:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "You lied to him."
@@ -363,7 +363,7 @@ EG_Bobesh_Text1:
 	
 EG_Bobesh_Text1_2:
 	text_high
-    text " Bobesh: "
+    text " Tyrus: "
 	next
 	text_start
 	
@@ -382,7 +382,7 @@ EG_Bobesh_Text1_2:
 
 EG_Bobesh_Text1_3:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "Enough. The venue"
@@ -450,7 +450,7 @@ PlayerHidesFromKenseyMovement:
 
 EG_Kensey_Text_1:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "Trading with"
@@ -459,7 +459,7 @@ EG_Kensey_Text_1:
 	
 EG_Kensey_Text_1_2:
 	text_high
-    text " Kensey: "
+    text " Nemo: "
 	next
 	text_start
 	text "We trade our"
@@ -475,7 +475,7 @@ EG_Kensey_Text_1_2:
 
 EG_Kensey_Text_1_3:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "Your plan lacks"
@@ -556,7 +556,7 @@ EG_AdrinnaMove3:
 
 EG_AdrinnaText1:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "<PLAYER>!"
@@ -584,7 +584,7 @@ EG_AdrinnaText1:
 
 EG_AdrinnaText2:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "For entertaining"
@@ -596,7 +596,7 @@ EG_AdrinnaText2:
 
 EG_AdrinnaText3:
 	text_high
-    text " Adrinna: "
+    text " Andrea: "
 	next
 	text_start
 	text "Now, please"
@@ -646,7 +646,7 @@ Text_SeedBombIntro:
 	line "the spicy seeds"
 	cont "in my hands?"
 	
-	para "When Bobesh asked"
+	para "When Tyrus asked"
 	line "me to make some"
 	cont "seed bombs for"
 	cont "the army,"
@@ -743,11 +743,11 @@ AmosSuspectsYouText:
 	next
 	text_start
 	text "You! You've been"
-	line "with Hollis, then"
+	line "with Silas, then"
 	cont "Sandra, "
 	
 	para "And you meet"
-	line "General Adrinna"
+	line "General Andrea"
 	cont "in secret?"
 	
 	para "Battle me, so I"

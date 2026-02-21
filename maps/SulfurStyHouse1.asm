@@ -46,7 +46,7 @@ GotStoneEdgeText:
 GiveStoneEdgeText:
 	text "Work, work work!"
 	line "That's all that"
-	cont "General Adrinna"
+	cont "General Andrea"
 	cont "can say!"
 	
 	para "My poor Machamp"

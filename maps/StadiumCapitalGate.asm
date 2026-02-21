@@ -72,7 +72,7 @@ MovedStadiumGateScript:
 StadiumGateCheckBadgeText:
 	text "Halt! Do you have"
 	line "a visa from Chro-"
-	cont "nicler Vespera?"
+	cont "nicler Sybil?"
 	done
 
 StadiumGateNoSamsaraText:

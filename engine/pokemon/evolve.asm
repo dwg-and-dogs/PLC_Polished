@@ -415,21 +415,86 @@ _ChangeFormOnEvolution:
 ChangeFormOnItemEvolution:
 ; These Pokémon evolve into different forms with different items.
 	ld a, [wTempMonSpecies]
-	cp PIKACHU
-	jr z, .ok_alolan
-	cp RAICHU
-	jr z, .ok_alolan
-	cp EXEGGCUTE
-;	jr z, .ok
-;	cp PONYTA
+	cp PIKACHU ; checked both 
+	jp z, .ok_alolan
+	cp VULPIX ; checked both 
+	jp z, .ok_alolan
+	cp GEODUDE ; checked both 
+	jp z, .ok_alolan
+	cp GRAVELER ; checked both 
+	jp z, .ok_alolan
+	cp GRIMER ; checked both 
+	jp z, .ok_alolan
+	cp EXEGGCUTE ; checked both  
+	jp z, .ok_alolan
+
+	cp PONYTA ; checked both 
+	jp z, .ok_galarian
+	cp SLOWPOKE ; checked all   
+	jp z, .ok_galarian
+	cp KOFFING ; checked both 
+	jp z, .ok_galarian
+
+
+	cp GROWLITHE ; CHECKED BOTH 
+	jp z, .ok_hisuiain
+	cp VOLTORB  ; CHECKED BOTH 
+	jp z, .ok_hisuiain
+	cp QUILAVA ; CHECKED BOTH 
+	jp z, .ok_hisuiain
+	cp QWILFISHA ; CHECKED BOTH 
+	jp z, .ok_hisuiain
+	cp SNEASELA ; CHECKED BOTH 
+	jp z, .ok_hisuiain
+	cp DEWOTT ;CHECKED BOTH 
+	jp z, .ok_hisuiain
+	cp DARTRIX ;CHECKED BOTH 
+	jp z, .ok_hisuiain
+
+	cp HOOTHOOT ;CHECKED BOTH 
+	jp z, .ok_other
+	cp CROCONAW ;CHECKED BOTH 
+	jp z, .ok_other
+	cp BAYLEEF ;CHECKED BOTH 
+	jp z, .ok_other
+	cp SLUGMA ; CHECKED BOTH 
+	jp z, .ok_other
+	cp NATU ; CHECKED BOTH 
+;	jp z, .ok_other
+;	cp URSARING ; fallthru for ursaring 
+;	jr z, .ok_other
 	ret nz
+
+.ok_other
+	ld a, [wCurItem]
+	cp ODD_SOUVENIR
+	ld a, OTHER_FORM
+	jp z, _ChangeFormOnEvolution
+	jp _PlainFormOnEvolution
 
 .ok_alolan
 	ld a, [wCurItem]
 	cp ODD_SOUVENIR
 	ld a, ALOLAN_FORM
-	jr z, _ChangeFormOnEvolution
-	jr _PlainFormOnEvolution
+	jp z, _ChangeFormOnEvolution
+	jp _PlainFormOnEvolution
+
+.ok_galarian
+	ld a, [wCurItem]
+	cp ODD_SOUVENIR
+	ld a, GALARIAN_FORM
+	jp z, _ChangeFormOnEvolution
+	jp _PlainFormOnEvolution
+
+.ok_hisuiain
+	ld a, [wCurItem]
+	cp ODD_SOUVENIR
+	ld a, HISUIAN_FORM
+	jp z, _ChangeFormOnEvolution
+	jp _PlainFormOnEvolution
+
+
+
 
 UpdateSpeciesNameIfNotNicknamed:
 	ld a, [wEvolutionOldSpecies]

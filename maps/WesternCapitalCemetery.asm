@@ -50,14 +50,14 @@ WesternCapitalCemetery_MapScriptHeader:
 
 
 CemeteryNPC1Text:
-	text "Emperor Urgaust"
+	text "Emperor Vesper"
 	line "has not visited"
 	cont "in some time."
 	done
 
 CemeteryNPC2Text:
 	text "When Emperor"
-	line "Urgaust's grand-"
+	line "Vesper's grand-"
 	cont "father died,"
 	
 	para "Ho-Oh graced us"
@@ -68,7 +68,7 @@ CemeteryNPC2Text:
 	line "fell into the"
 	cont "casket."
 	
-	para "When Urgaust was"
+	para "When Vesper was"
 	line "born one year"
 	cont "afterward,"
 	
@@ -94,7 +94,7 @@ CemeteryNPC3Text:
 	
 WC_Cemetery0Text:
 	text "Glory to"
-	line "Emperor Urgaust!"
+	line "Emperor Vesper!"
 	
 	para "Builder of Tin"
 	line "and Brass Towers"
@@ -104,7 +104,7 @@ WC_Cemetery1Text:
 	text "For Emperor"
 	line "Ambrosia,"
 	para "Father of "
-	cont "Urgaust,"
+	cont "Vesper,"
 	
 	para "Withering as he"
 	line "guided Johto"

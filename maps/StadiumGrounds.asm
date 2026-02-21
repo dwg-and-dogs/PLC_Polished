@@ -264,13 +264,13 @@ SandraExitMovement:
 
 BobeshIntroText:
 	text_high
-    text " Bobesh: "
+    text " Tyrus: "
 	next
 	text_start
 	text "Eh? Who are you?"
 	
 	para "I am General"
-	line "Bobesh, sent to"
+	line "Tyrus, sent to"
 	para "bring order by"
 	line "my strength."
 
@@ -327,7 +327,7 @@ SandraNegotiateText:
 
 BobeshBattleText:
 	text_high
-    text " Bobesh: "
+    text " Tyrus: "
 	next
 	text_start
 	text "Grr, I thought"
@@ -350,7 +350,7 @@ BobeshWinText:
 
 BobeshDefeatText:
 	text_high
-    text " Bobesh: "
+    text " Tyrus: "
 	next
 	text_start
 	text "Grr, I wish I"
@@ -386,11 +386,11 @@ Brigader8BeatenText:
 GenericTrainerBrigader9:
 	generictrainer BRIGADER, 9, EVENT_BEAT_ROCKET_GRUNTM_9, Brigader9SeenText, Brigader9BeatenText
 
-	text "General Bobesh has"
+	text "General Tyrus has"
 	line "a plan to change"
 	cont "Gauldenrod tradi-"
 	cont "tions to favor"
-	cont "Emperor Urgaust."
+	cont "Emperor Vesper."
 	done
 
 Brigader9SeenText:
@@ -471,13 +471,13 @@ Text_StadiumSign1:
 	text "National Stadium"
 	
 	para "Managed by:"
-	line "General Bobesh"
+	line "General Tyrus"
 	done
 	
 Text_StadiumSign2:
 	text "Stadium brought"
 	line "to you by"
-	cont "Emperor Urgaust"
+	cont "Emperor Vesper"
 	done
 
 Text_StadiumSign3:
@@ -492,7 +492,7 @@ SandraInvitesToBoxText:
 	text "<PLAYER>."
 	line "Excellent battle"
 	para "against General"
-	line "Bobesh."
+	line "Tyrus."
 
 	para "I have much admir-"
 	line "ation for your"
