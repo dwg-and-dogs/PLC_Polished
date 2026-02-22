@@ -180,7 +180,7 @@ endr
 ;	readvar VAR_PARTYCOUNT
 ;	giveegg CYNDAQUIL
 	closetext
-	warp ROUTE_32,  6, 80 
+;	warp RUINS_OF_ALPH_KABUTO_CHAMBER,  5, 6 
 	end
 
 

@@ -9,7 +9,7 @@
 	wildmon 7, LEDYBA
 	wildmon 6, ODDISH
 	wildmon 6, TANGELA
-	wildmon 9, VOLTOB, HISUIAN_FORM
+	wildmon 9, VOLTORB, HISUIAN_FORM
 ;	; day
 	wildmon 4, YANMA
 	wildmon 7, PINECO
@@ -25,7 +25,7 @@
 	wildmon 7, LEDYBA
 	wildmon 6, ODDISH
 	wildmon 6, TANGELA
-	wildmon 9, VOLTOB, HISUIAN_FORM
+	wildmon 9, VOLTORB, HISUIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons MISTY_BASIN

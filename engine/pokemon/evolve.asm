@@ -442,9 +442,9 @@ ChangeFormOnItemEvolution:
 	jp z, .ok_hisuiain
 	cp QUILAVA ; CHECKED BOTH 
 	jp z, .ok_hisuiain
-	cp QWILFISHA ; CHECKED BOTH 
+	cp QWILFISH ; CHECKED BOTH 
 	jp z, .ok_hisuiain
-	cp SNEASELA ; CHECKED BOTH 
+	cp SNEASEL ; CHECKED BOTH 
 	jp z, .ok_hisuiain
 	cp DEWOTT ;CHECKED BOTH 
 	jp z, .ok_hisuiain

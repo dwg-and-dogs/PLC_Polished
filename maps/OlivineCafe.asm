@@ -324,7 +324,7 @@ OlivineCafe2Script: ; 25000
 
 
 .GiveQwilfish:
-	givepoke QWILFISH, NO_FORM, 20, SITRUS_BERRY, ULTRA_BALL, EXPLOSION
+	givepoke QWILFISH, HISUIAN_FORM, 20, SITRUS_BERRY, ULTRA_BALL, EXPLOSION
 	iffalse_jumpopenedtext Text_NoCarry
 	playsound SFX_TRANSACTION
 	takemoney $0, 25000
@@ -457,7 +457,7 @@ OlivineCafe3Script: ; 50000
 	db 4 ; items
 	db "Dratini@"
 	db "Seadra@"
-	db "Staryu@"
+	db "Tentacool@"
 	db "Cancel@"
 	
 OlivineCafe3Text:

@@ -18,6 +18,8 @@ AzaleaGym_MapScriptHeader: ;removed benny josh amy+may trainers
 	def_object_events
 	object_event  5, 7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
 	pokemon_event  6,  7, SCYTHER, -1, -1, PAL_NPC_GREEN, ScytherBugsyText, -1
+	object_event 1, 10, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugCollectorScript, -1
+
 
 ScytherBugsyText:
 	text "Manny: Scy!"
@@ -170,4 +172,133 @@ BranchedEvoText:
 EndTextBugsy:
 	text "Ah, forget it."
 	line "Who would care?"
+	done
+
+
+AzaleaGymBugCollectorScript: ; 5000 
+	faceplayer
+	opentext
+	writetext AzaleaGym1Text
+	special PlaceMoneyTopRight
+	yesorno
+	iffalse_jumpopenedtext AzaleaGymText4
+	checkmoney $0, 5000
+	ifequal $2, AzaleaGymNotEnoughMoney
+	promptbutton
+	loadmenu .AzaleaGym1PokemonMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .GiveLedyba
+	ifequal 2, .GiveSpinarak
+	ifequal 3, .GiveParas
+	ifequal 4, .GiveYanma
+	jumptext AzaleaGymNoFishText
+
+.GiveLedyba:
+	givepoke LEDYBA, NO_FORM, 5, SITRUS_BERRY, POKE_BALL, COUNTER
+	iffalse_jumpopenedtext Text_NoCarry_AzaleaGym
+	playsound SFX_TRANSACTION
+	takemoney $0, 5000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "You can count on"
+	line "that one!"
+	done
+
+.GiveSpinarak:
+	givepoke SPINARAK, NO_FORM, 5, LUM_BERRY, POKE_BALL, MEGA_DRAIN
+	iffalse_jumpopenedtext Text_NoCarry_AzaleaGym
+	playsound SFX_TRANSACTION
+	takemoney $0, 5000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "Don't let this"
+	line "bed bug bite!"
+	done
+
+
+.GiveParas:
+	givepoke PARAS, NO_FORM, 5, SITRUS_BERRY, POKE_BALL, AGILITY
+	iffalse_jumpopenedtext Text_NoCarry_AzaleaGym
+	playsound SFX_TRANSACTION
+	takemoney $0, 5000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "That's my fastest"
+	line "Paras!"
+	done
+
+
+.GiveYanma:
+	givepoke YANMA, NO_FORM, 5, LUM_BERRY, POKE_BALL, REVERSAL
+	iffalse_jumpopenedtext Text_NoCarry_AzaleaGym
+	playsound SFX_TRANSACTION
+	takemoney $0, 5000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "Turn the tables"
+	line "with this Yanma!"
+	done
+
+
+.AzaleaGym1PokemonMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 11, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "Ledyba@"
+	db "Spinarak@"
+	db "Paras@"
+	db "Yanma@"
+	db "Cancel@"
+	
+AzaleaGym1Text:
+	text "I've been learning"
+	line "from Bugsy all"
+	para "about Bug-type"
+	line "#mon!"
+	
+	para "I've even found a"
+	line "way to teach them"
+	cont "unique moves."
+	
+	para "A reflective"
+	line "Ledyba,"
+	
+	para "Mega Spinarak,"
+	line "An agile Paras,"
+	para "And a Yanma that"
+	line "flies backwards!"
+	
+	para "See what I mean"
+	line "for ¥5000?"
+	done
+
+AzaleaGymText4:
+	text "Come back any"
+	line "time!"
+	done
+
+AzaleaGymNotEnoughMoney:
+	jumpthisopenedtext
+
+	text "You don't have"
+	line "enough money…"
+	done
+
+AzaleaGymNoFishText:
+	text "See you later."
+	done
+
+Text_NoCarry_AzaleaGym:
+	text "You don't have"
+	line "room."
 	done

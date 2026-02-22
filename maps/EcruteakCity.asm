@@ -27,6 +27,7 @@ EcruteakCity_MapScriptHeader:
 
 	def_bg_events
 	bg_event 19, 21, BGEVENT_JUMPTEXT, EcruteakCitySignText
+	bg_event 19, 11, BGEVENT_JUMPTEXT, EcruteakShrineSignText	
 	bg_event 12, 28, BGEVENT_JUMPTEXT, EcruteakGymSignText
 	bg_event 25, 21, BGEVENT_JUMPTEXT, EcruteakDanceTheaterSignText
 	bg_event  6, 10, BGEVENT_JUMPTEXT, BurnedTowerSignText
@@ -50,11 +51,11 @@ EcruteakCity_MapScriptHeader:
 	object_event 15, 16, SPRITE_FISHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityYoungsterText, -1
 	object_event  7,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps3Text, EVENT_ECRUTEAK_CITY_GRAMPS ; keep
 	object_event 15, 11, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityCuteGirlText, -1
-	; what is this? 
 	object_event 19,  9, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_ARCH_TREE_LEFT, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_COMMAND, end, NULL, -1
 	object_event 20,  9, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_ARCH_TREE_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_COMMAND, end, NULL, -1
 	object_event 23,  9, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_ARCH_TREE_UP, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_COMMAND, end, NULL, -1
 	object_event 24,  9, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_ARCH_TREE_RIGHT, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_COMMAND, end, NULL, -1
+	object_event 23, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, EcruteakCityPsyShopScript, -1
 
 EcruteakCityFlyPoint:
 	setflag ENGINE_FLYPOINT_ECRUTEAK
@@ -119,6 +120,11 @@ EcruteakCityGramps3Text:
 	text "The burned tower"
 	line "is falling beyond"
 	cont "disrepair."
+	done
+
+EcruteakShrineSignText:
+	text "Ecruteak City"
+	line "Shrine"
 	done
 
 EcruteakCitySignText:
@@ -188,4 +194,133 @@ EcruteakCityHikersText:
 	line "all unnecessary"
 	cont "travel is post-"
 	cont "poned."
+	done
+
+; todo 
+EcruteakCityPsyShopScript: ; 20000 
+	faceplayer
+	opentext
+	writetext EcruteakCity1Text
+	special PlaceMoneyTopRight
+	yesorno
+	iffalse_jumpopenedtext EcruteakCityText4
+	checkmoney $0, 20000
+	ifequal $2, EcruteakCityNotEnoughMoney
+	promptbutton
+	loadmenu .PsyShop1PokemonMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .GiveGastly
+	ifequal 2, .GiveGPonyta
+	ifequal 3, .GiveMisdreavus
+	ifequal 4, .GiveDrifloon
+	jumptext PsyShopNoFishText
+
+.GiveGastly:
+	givepoke GASTLY, NO_FORM, 15, PETAYA_BERRY, JEZE_BALL, SUCKER_PUNCH
+	iffalse_jumpopenedtext Text_NoCarry_PsyShop
+	playsound SFX_TRANSACTION
+	takemoney $0, 20000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "..."
+	done
+
+.GiveGPonyta:
+	givepoke SPINARAK, NO_FORM, 15, APICOT_BERRY, JEZE_BALL, HYPNOSIS
+	iffalse_jumpopenedtext Text_NoCarry_PsyShop
+	playsound SFX_TRANSACTION
+	takemoney $0, 20000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "..."
+	done
+
+
+.GiveMisdreavus:
+	givepoke PARAS, NO_FORM, 15, GANLON_BERRY, JEZE_BALL, NASTY_PLOT
+	iffalse_jumpopenedtext Text_NoCarry_PsyShop
+	playsound SFX_TRANSACTION
+	takemoney $0, 20000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "..."
+	done
+
+
+.GiveDrifloon:
+	givepoke YANMA, NO_FORM, 15, LEPPA_BERRY, JEZE_BALL, FLAME_CHARGE
+	iffalse_jumpopenedtext Text_NoCarry_PsyShop
+	playsound SFX_TRANSACTION
+	takemoney $0, 20000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "..."
+	done
+
+
+.PsyShop1PokemonMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 15, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "Ledyba@"
+	db "Spinarak@"
+	db "Paras@"
+	db "Yanma@"
+	db "Cancel@"
+	
+EcruteakCity1Text:
+	text "Are you enjoying"
+	line "historic Ecruteak"
+	cont "City?"
+	
+	para "Bring home one of"
+	line "these #mon to"
+	para "remember your"
+	line "visit!"
+	
+	para "A high-priority"
+	line "Gastly,"
+	
+	para "A hypnotizing"
+	line "Galarian Ponyta,"
+	
+	para "A mischievous"
+	line "Misdreavus,"
+	
+	para "and a Drifloon"
+	line "that's rising up,"
+	cont "up, and away!"
+	
+	para "Just ¥20000!"
+	line "What do you say?"
+	done
+
+EcruteakCityText4:
+	text "Have a nice day!"
+	done
+
+EcruteakCityNotEnoughMoney:
+	jumpthisopenedtext
+
+	text "You don't have"
+	line "enough money…"
+	done
+
+PsyShopNoFishText:
+	text "See you later."
+	done
+
+Text_NoCarry_PsyShop:
+	text "You don't have"
+	line "room."
 	done
