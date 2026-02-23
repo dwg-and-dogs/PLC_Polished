@@ -1,260 +1,260 @@
 PokemonNames::
 	table_width MON_NAME_LENGTH - 1, PokemonNames
 	rawchar "?????@@@@@" ; 00
-	rawchar "Cyndaquil@" ; 01
-	rawchar "Quilava@@@" ; 02
-	rawchar "Typhlosion" ; 03
-	rawchar "Rowlet@@@@" ; 04
-	rawchar "Dartrix@@@" ; 05
-	rawchar "Decidueye@" ; 06
-	rawchar "Oshawott@@" ; 07
-	rawchar "Dewott@@@@" ; 08
-	rawchar "Samurott@@" ; 09
-	rawchar "Rufflet@@@" ; 0a
-	rawchar "Starly@@@@" ; 0b
-	rawchar "Snorunt@@@" ; 0c
-	rawchar "Hoothoot@@" ; 0d
-	rawchar "Noctowl@@@" ; 0e
-	rawchar "Sentret@@@" ; 0f
-	rawchar "Furret@@@@" ; 10
-	rawchar "Pikachu@@@" ; 11
-	rawchar "Raichu@@@@" ; 12
-	rawchar "Ledyba@@@@" ; 13
-	rawchar "Ledian@@@@" ; 14
-	rawchar "Spinarak@@" ; 15
-	rawchar "Ariados@@@" ; 16
-	rawchar "Geodude@@@" ; 17
-	rawchar "Graveler@@" ; 18
-	rawchar "Golem@@@@@" ; 19
-	rawchar "Zubat@@@@@" ; 1a
-	rawchar "Golbat@@@@" ; 1b
-	rawchar "Crobat@@@@" ; 1c
-	rawchar "Clefairy@@" ; 1d
-	rawchar "Clefable@@" ; 1e
-	rawchar "Togetic@@@" ; 1f
-	rawchar "Togekiss@@" ; 20
-	rawchar "Dunsparce@" ; 21
-	rawchar "Dudunsparc" ; 22
-	rawchar "Mareep@@@@" ; 23
-	rawchar "Flaaffy@@@" ; 24
-	rawchar "Ampharos@@" ; 25
-	rawchar "Wooper@@@@" ; 26
-	rawchar "Quagsire@@" ; 27
-	rawchar "Gastly@@@@" ; 28
-	rawchar "Haunter@@@" ; 29
-	rawchar "Gengar@@@@" ; 2a
-	rawchar "Unown@@@@@" ; 2b
-	rawchar "Onix@@@@@@" ; 2c
-	rawchar "Steelix@@@" ; 2d
-	rawchar "Bellsprout" ; 2e
-	rawchar "Weepinbell" ; 2f
-	rawchar "Victreebel" ; 30
-	rawchar "Skiploom@@" ; 31
-	rawchar "Jumpluff@@" ; 32
-	rawchar "Paras@@@@@" ; 33
-	rawchar "Parasect@@" ; 34
-	rawchar "Poliwag@@@" ; 35
-	rawchar "Poliwhirl@" ; 36
-	rawchar "Poliwrath@" ; 37
-	rawchar "Politoed@@" ; 38
-	rawchar "Magikarp@@" ; 39
-	rawchar "Gyarados@@" ; 3a
-	rawchar "Slowpoke@@" ; 3b
-	rawchar "Slowbro@@@" ; 3c
-	rawchar "Slowking@@" ; 3d
-	rawchar "Oddish@@@@" ; 3e
-	rawchar "Gloom@@@@@" ; 3f
-	rawchar "Vileplume@" ; 40
-	rawchar "Bellossom@" ; 41
-	rawchar "Abra@@@@@@" ; 42
-	rawchar "Kadabra@@@" ; 43
-	rawchar "Alakazam@@" ; 44
-	rawchar "Pineco@@@@" ; 45
-	rawchar "Forretress" ; 46
-	rawchar "Nidoran@@@" ; 47
-	rawchar "Nidorina@@" ; 48
-	rawchar "Nidoqueen@" ; 49
-	rawchar "Nidorino@@" ; 4a
-	rawchar "Nidoking@@" ; 4b
-	rawchar "Yanma@@@@@" ; 4c
-	rawchar "Yanmega@@@" ; 4d
-	rawchar "Sunflora@@" ; 4e
-	rawchar "Exeggcute@" ; 4f
-	rawchar "Exeggutor@" ; 50
-	rawchar "Sudowoodo@" ; 51
-	rawchar "Scyther@@@" ; 52
-	rawchar "Scizor@@@@" ; 53
-	rawchar "Kleavor@@@" ; 54
-	rawchar "Pinsir@@@@" ; 55
-	rawchar "Minsir@@@@" ; 56
-	rawchar "Heracross@" ; 57
-	rawchar "Koffing@@@" ; 58
-	rawchar "Weezing@@@" ; 59
-	rawchar "Grimer@@@@" ; 5a
-	rawchar "Muk@@@@@@@" ; 5b
-	rawchar "Magnemite@" ; 5c
-	rawchar "Magneton@@" ; 5d
-	rawchar "Magnezone@" ; 5e
-	rawchar "Voltorb@@@" ; 5f
-	rawchar "Electrode@" ; 60
-	rawchar "Aipom@@@@@" ; 61
-	rawchar "Ambipom@@@" ; 62
-	rawchar "Snubbull@@" ; 63
-	rawchar "Granbull@@" ; 64
-	rawchar "Vulpix@@@@" ; 65
-	rawchar "Ninetales@" ; 66
-	rawchar "Growlithe@" ; 67
-	rawchar "Arcanine@@" ; 68
-	rawchar "Stantler@@" ; 69
-	rawchar "Wyrdeer@@@" ; 6a
-	rawchar "Marill@@@@" ; 6b
-	rawchar "Azumarill@" ; 6c
-	rawchar "Mankey@@@@" ; 6d
-	rawchar "Primeape@@" ; 6e
-	rawchar "Annihilape" ; 6f
-	rawchar "Machop@@@@" ; 70
-	rawchar "Machoke@@@" ; 71
-	rawchar "Machamp@@@" ; 72
-	rawchar "Hitmonlee@" ; 73
-	rawchar "Hitmonchan" ; 74
-	rawchar "Hitmontop@" ; 75
-	rawchar "Girafarig@" ; 76
-	rawchar "Farigiraf@" ; 77
-	rawchar "Tauros@@@@" ; 78
-	rawchar "Miltank@@@" ; 79
-	rawchar "Magmar@@@@" ; 7a
-	rawchar "Magmortar@" ; 7b
-	rawchar "Jynx@@@@@@" ; 7c
-	rawchar "Electabuzz" ; 7d
-	rawchar "Electivire" ; 7e
-	rawchar "Natu@@@@@@" ; 80
-	rawchar "Xatu@@@@@@" ; 81
-	rawchar "Qwilfish@@" ; 82
-	rawchar "Overqwil@@" ; 83
-	rawchar "Tentacool@" ; 84
-	rawchar "Tentacruel" ; 85
-	rawchar "Shuckle@@@" ; 86
-	rawchar "Corsola@@@" ; 87
-	rawchar "Remoraid@@" ; 88
-	rawchar "Octillery@" ; 89
-	rawchar "Chinchou@@" ; 8a
-	rawchar "Lanturn@@@" ; 8b
-	rawchar "Tangela@@@" ; 8c
-	rawchar "Tangrowth@" ; 8d
-	rawchar "Eevee@@@@@" ; 8e
-	rawchar "Vaporeon@@" ; 8f
-	rawchar "Jolteon@@@" ; 90
-	rawchar "Flareon@@@" ; 91
-	rawchar "Espeon@@@@" ; 92
-	rawchar "Umbreon@@@" ; 93
-	rawchar "Leafeon@@@" ; 94
-	rawchar "Glaceon@@@" ; 95
-	rawchar "Sylveon@@@" ; 96
-	rawchar "Seadra@@@@" ; 97
-	rawchar "Kingdra@@@" ; 98
-	rawchar "Gligar@@@@" ; 99
-	rawchar "Gliscor@@@" ; 9a
-	rawchar "Swinub@@@@" ; 9b
-	rawchar "Piloswine@" ; 9c
-	rawchar "Mamoswine@" ; 9d
-	rawchar "Teddiursa@" ; 9e
-	rawchar "Ursaring@@" ; 9f
-	rawchar "Ursaluna@@" ; a0
-	rawchar "Phanpy@@@@" ; a1
-	rawchar "Donphan@@@" ; a2
-	rawchar "Mantine@@@" ; a3
-	rawchar "Skarmory@@" ; a4
-	rawchar "Ponyta@@@@" ; a5
-	rawchar "Rapidash@@" ; a6
-	rawchar "Rhyhorn@@@" ; a7
-	rawchar "Rhydon@@@@" ; a8
-	rawchar "Rhyperior@" ; a9
-	rawchar "Murkrow@@@" ; aa
-	rawchar "Honchkrow@" ; ab
-	rawchar "Houndour@@" ; ac
-	rawchar "Houndoom@@" ; ad
-	rawchar "Slugma@@@@" ; ae
-	rawchar "Magcargo@@" ; af
-	rawchar "Sneasel@@@" ; b0
-	rawchar "Weavile@@@" ; b1
-	rawchar "Sneasler@@" ; b2
-	rawchar "Misdreavus" ; b3
-	rawchar "Mismagius@" ; b4
-	rawchar "Porygon@@@" ; b5
-	rawchar "Porygon2@@" ; b6
-	rawchar "Porygon-Z@" ; b7
-	rawchar "Chansey@@@" ; b8
-	rawchar "Blissey@@@" ; b9
-	rawchar "Lapras@@@@" ; ba
-	rawchar "Snorlax@@@" ; bb
-	rawchar "Chikorita@" ; bc
-	rawchar "Bayleef@@@" ; bd
-	rawchar "Meganium@@" ; be
-	rawchar "Totodile@@" ; bf
-	rawchar "Croconaw@@" ; c0
-	rawchar "Feraligatr" ; c1
-	rawchar "Riolu@@@@@" ; c2
-	rawchar "Horsea@@@@" ; c3
-	rawchar "Glalie@@@@" ; c4
-	rawchar "Basculin@@" ; c5
-	rawchar "Hoppip@@@@" ; c6
-	rawchar "Sunkern@@@" ; c7
-	rawchar "Staravia@@" ; c8
-	rawchar "Staraptor@" ; c9
-	rawchar "Shinx@@@@@" ; ca
-	rawchar "Luxio@@@@@" ; cb
-	rawchar "Luxray@@@@" ; cc
-	rawchar "Cranidos@@" ; cd
-	rawchar "Rampardos@" ; ce
-	rawchar "Shieldon@@" ; cf
-	rawchar "Bastiodon@" ; d0
-	rawchar "Ditto@@@@@" ; d1
-	rawchar "Drifloon@@" ; d2
-	rawchar "Drifblim@@" ; d3
-	rawchar "Bronzor@@@" ; d4
-	rawchar "Bronzong@@" ; d5
-	rawchar "Spiritomb@" ; d6
-	rawchar "Lucario@@@" ; d7
-	rawchar "Hippopotas" ; d8
-	rawchar "Hippowdon@" ; d9
-	rawchar "Croagunk@@" ; da
-	rawchar "Toxicroak@" ; db
-	rawchar "Snover@@@@" ; dc
-	rawchar "Abomasnow@" ; dd
-	rawchar "Duskull@@@" ; de
-	rawchar "Dusclops@@" ; df
-	rawchar "Dusknoir@@" ; e0
-	rawchar "Froslass@@" ; e1
-	rawchar "Rotom@@@@@" ; e2
-	rawchar "Bergmite@@" ; e3
-	rawchar "Avalugg@@@" ; e4
-	rawchar "Basculegon" ; e5
-	rawchar "Braviary@@" ; e6
-	rawchar "Ralts@@@@@" ; e7
-	rawchar "Kirlia@@@@" ; e8
-	rawchar "Gardevoir@" ; e9
-	rawchar "Gallade@@@" ; ea
-	rawchar "Goomy@@@@@" ; eb
-	rawchar "Sliggoo@@@" ; ec
-	rawchar "Goodra@@@@" ; ed
-	rawchar "Zorua@@@@@" ; 7f fr. mrmime 
-	rawchar "Zoroark@@@" ; ee
-	rawchar "Gible@@@@@" ; f0
-	rawchar "Gabite@@@@" ; ef
-	rawchar "Garchomp@@" ; f1
-	rawchar "Dratini@@@" ; f2
-	rawchar "Dragonair@" ; f3
-	rawchar "Dragonite@" ; f4
-	rawchar "Larvitar@@" ; f5
-	rawchar "Pupitar@@@" ; f6
-	rawchar "Tyranitar@" ; f7
-	rawchar "Raikou@@@@" ; f8
-	rawchar "Entei@@@@@" ; f9
-	rawchar "Suicune@@@" ; fa
-	rawchar "Heatran@@@" ; fb
-	rawchar "Lugia@@@@@" ; fc
-	rawchar "Ho-Oh@@@@@" ; fd
-	rawchar "Celebi@@@@" ; fe
+	rawchar "Cyndaquil@" ;01
+	rawchar "Quilava@@@" ;02
+	rawchar "Typhlosion" ;03
+	rawchar "Rowlet@@@@" ;04
+	rawchar "Dartrix@@@" ;05
+	rawchar "Decidueye@" ;06
+	rawchar "Oshawott@@" ;07
+	rawchar "Dewott@@@@" ;08
+	rawchar "Samurott@@" ;09
+	rawchar "Hoothoot@@" ;10
+	rawchar "Noctowl@@@" ;11
+	rawchar "Sentret@@@" ;12
+	rawchar "Furret@@@@" ;13
+	rawchar "Pikachu@@@" ;14
+	rawchar "Raichu@@@@" ;15
+	rawchar "Ledyba@@@@" ;16
+	rawchar "Ledian@@@@" ;17
+	rawchar "Spinarak@@" ;18
+	rawchar "Ariados@@@" ;19
+	rawchar "Geodude@@@" ;20
+	rawchar "Graveler@@" ;21
+	rawchar "Golem@@@@@" ;22
+	rawchar "Zubat@@@@@" ;23
+	rawchar "Golbat@@@@" ;24
+	rawchar "Crobat@@@@" ;25
+	rawchar "Clefairy@@" ;26
+	rawchar "Clefable@@" ;27
+	rawchar "Togetic@@@" ;28
+	rawchar "Togekiss@@" ;29
+	rawchar "Dunsparce@" ;30
+	rawchar "Dudunsprce@" ;31
+	rawchar "Mareep@@@@" ;32
+	rawchar "Flaaffy@@@" ;33
+	rawchar "Ampharos@@" ;34
+	rawchar "Wooper@@@@" ;35
+	rawchar "Quagsire@@" ;36
+	rawchar "Gastly@@@@" ;37
+	rawchar "Haunter@@@" ;38
+	rawchar "Gengar@@@@" ;39
+	rawchar "Unown@@@@@" ;40
+	rawchar "Onix@@@@@@" ;41
+	rawchar "Steelix@@@" ;42
+	rawchar "Bellsprout" ;43
+	rawchar "Weepinbell" ;44
+	rawchar "Victreebel" ;45
+	rawchar "Hoppip@@@@" ;46
+	rawchar "Skiploom@@" ;47
+	rawchar "Jumpluff@@" ;48
+	rawchar "Paras@@@@@" ;49
+	rawchar "Parasect@@" ;50
+	rawchar "Poliwag@@@" ;51
+	rawchar "Poliwhirl@" ;52
+	rawchar "Poliwrath@" ;53
+	rawchar "Politoed@@" ;54
+	rawchar "Magikarp@@" ;55
+	rawchar "Gyarados@@" ;56
+	rawchar "Slowpoke@@" ;57
+	rawchar "Slowbro@@@" ;58
+	rawchar "Slowking@@" ;59
+	rawchar "Oddish@@@@" ;60
+	rawchar "Gloom@@@@@" ;61
+	rawchar "Vileplume@" ;62
+	rawchar "Bellossom@" ;63
+	rawchar "Abra@@@@@@" ;64
+	rawchar "Kadabra@@@" ;65
+	rawchar "Alakazam@@" ;66
+	rawchar "Ditto@@@@@" ;67
+	rawchar "Pineco@@@@" ;68
+	rawchar "Forretress" ;69
+	rawchar "Nidoran@@@" ;70
+	rawchar "Nidorina@@" ;71
+	rawchar "Nidoqueen@" ;72
+	rawchar "Nidorino@@" ;73
+	rawchar "Nidoking@@" ;74
+	rawchar "Yanma@@@@@" ;75
+	rawchar "Yanmega@@@" ;76
+	rawchar "Sunkern@@@" ;77
+	rawchar "Sunflora@@" ;78
+	rawchar "Exeggcute@" ;79
+	rawchar "Exeggutor@" ;80
+	rawchar "Sudowoodo@" ;81
+	rawchar "Scyther@@@" ;82
+	rawchar "Scizor@@@@" ;83
+	rawchar "Kleavor@@@" ;84
+	rawchar "Pinsir@@@@" ;85
+	rawchar "Minsir@@@@" ;86
+	rawchar "Heracross@" ;87
+	rawchar "Koffing@@@" ;88
+	rawchar "Weezing@@@" ;89
+	rawchar "Grimer@@@@" ;90
+	rawchar "Muk@@@@@@@" ;91
+	rawchar "Magnemite@" ;92
+	rawchar "Magneton@@" ;93
+	rawchar "Magnezone@" ;94
+	rawchar "Voltorb@@@" ;95
+	rawchar "Electrode@" ;96
+	rawchar "Aipom@@@@@" ;97
+	rawchar "Ambipom@@@" ;98
+	rawchar "Snubbull@@" ;99
+	rawchar "Granbull@@" ;100
+	rawchar "Vulpix@@@@" ;101
+	rawchar "Ninetales@" ;102
+	rawchar "Growlithe@" ;103
+	rawchar "Arcanine@@" ;104
+	rawchar "Stantler@@" ;105
+	rawchar "Wyrdeer@@@" ;106
+	rawchar "Marill@@@@" ;107
+	rawchar "Azumarill@" ;108
+	rawchar "Mankey@@@@" ;109
+	rawchar "Primeape@@" ;110
+	rawchar "Annihilape" ;111
+	rawchar "Machop@@@@" ;112
+	rawchar "Machoke@@@" ;113
+	rawchar "Machamp@@@" ;114
+	rawchar "Hitmonlee@" ;115
+	rawchar "Hitmonchan" ;116
+	rawchar "Hitmontop@" ;117
+	rawchar "Girafarig@" ;118
+	rawchar "Farigiraf@" ;119
+	rawchar "Tauros@@@@" ;120
+	rawchar "Miltank@@@" ;121
+	rawchar "Magmar@@@@" ;122
+	rawchar "Magmortar@" ;123
+	rawchar "Jynx@@@@@@" ;124
+	rawchar "Electabuzz" ;125
+	rawchar "Electivire" ;126
+	rawchar "Natu@@@@@@" ;127
+	rawchar "Xatu@@@@@@" ;128
+	rawchar "Qwilfish@@" ;129
+	rawchar "Overqwil@@" ;130
+	rawchar "Tentacool@" ;131
+	rawchar "Tentacruel" ;132
+	rawchar "Shuckle@@@" ;133
+	rawchar "Corsola@@@" ;134
+	rawchar "Remoraid@@" ;135
+	rawchar "Octillery@" ;136
+	rawchar "Chinchou@@" ;137
+	rawchar "Lanturn@@@" ;138
+	rawchar "Tangela@@@" ;139
+	rawchar "Tangrowth@" ;140
+	rawchar "Eevee@@@@@" ;141
+	rawchar "Vaporeon@@" ;142
+	rawchar "Jolteon@@@" ;143
+	rawchar "Flareon@@@" ;144
+	rawchar "Espeon@@@@" ;145
+	rawchar "Umbreon@@@" ;146
+	rawchar "Leafeon@@@" ;147
+	rawchar "Glaceon@@@" ;148
+	rawchar "Sylveon@@@" ;149
+	rawchar "Horsea@@@@" ;150
+	rawchar "Seadra@@@@" ;151
+	rawchar "Kingdra@@@" ;152
+	rawchar "Gligar@@@@" ;153
+	rawchar "Gliscor@@@" ;154
+	rawchar "Swinub@@@@" ;155
+	rawchar "Piloswine@" ;156
+	rawchar "Mamoswine@" ;157
+	rawchar "Teddiursa@" ;158
+	rawchar "Ursaring@@" ;159
+	rawchar "Ursaluna@@" ;160
+	rawchar "Phanpy@@@@" ;161
+	rawchar "Donphan@@@" ;162
+	rawchar "Mantine@@@" ;163
+	rawchar "Skarmory@@" ;164
+	rawchar "Ponyta@@@@" ;165
+	rawchar "Rapidash@@" ;166
+	rawchar "Rhyhorn@@@" ;167
+	rawchar "Rhydon@@@@" ;168
+	rawchar "Rhyperior@" ;169
+	rawchar "Murkrow@@@" ;170
+	rawchar "Honchkrow@" ;171
+	rawchar "Houndour@@" ;172
+	rawchar "Houndoom@@" ;173
+	rawchar "Slugma@@@@" ;174
+	rawchar "Magcargo@@" ;175
+	rawchar "Sneasel@@@" ;176
+	rawchar "Weavile@@@" ;177
+	rawchar "Sneasler@@" ;178
+	rawchar "Misdreavus" ;179
+	rawchar "Mismagius@" ;180
+	rawchar "Porygon@@@" ;181
+	rawchar "Porygon2@@" ;182
+	rawchar "PorygonZ@@" ;183
+	rawchar "Chansey@@@" ;184
+	rawchar "Blissey@@@" ;185
+	rawchar "Lapras@@@@" ;186
+	rawchar "Snorlax@@@" ;187
+	rawchar "Chikorita@" ;188
+	rawchar "Bayleef@@@" ;189
+	rawchar "Meganium@@" ;190
+	rawchar "Totodile@@" ;191
+	rawchar "Croconaw@@" ;192
+	rawchar "Feraligatr" ;193
+	rawchar "Starly@@@@" ;194
+	rawchar "Staravia@@" ;195
+	rawchar "Staraptor@" ;196
+	rawchar "Shinx@@@@@" ;197
+	rawchar "Luxio@@@@@" ;198
+	rawchar "Luxray@@@@" ;199
+	rawchar "Cranidos@@" ;200
+	rawchar "Rampardos@" ;201
+	rawchar "Shieldon@@" ;202
+	rawchar "Bastiodon@" ;203
+	rawchar "Drifloon@@" ;204
+	rawchar "Drifblim@@" ;205
+	rawchar "Bronzor@@@" ;206
+	rawchar "Bronzong@@" ;207
+	rawchar "Spiritomb@" ;208
+	rawchar "Riolu@@@@@" ;209
+	rawchar "Lucario@@@" ;210
+	rawchar "Hippopotas" ;211
+	rawchar "Hippowdon@" ;212
+	rawchar "Croagunk@@" ;213
+	rawchar "Toxicroak@" ;214
+	rawchar "Snover@@@@" ;215
+	rawchar "Abomasnow@" ;216
+	rawchar "Duskull@@@" ;217
+	rawchar "Dusclops@@" ;218
+	rawchar "Dusknoir@@" ;219
+	rawchar "Snorunt@@@" ;220
+	rawchar "Glalie@@@@" ;221
+	rawchar "Froslass@@" ;222
+	rawchar "Rotom@@@@@" ;223
+	rawchar "Bergmite@@" ;224
+	rawchar "Avalugg@@@" ;225
+	rawchar "Basculin@@" ;226
+	rawchar "Basculegon" ;227
+	rawchar "Rufflet@@@" ;228
+	rawchar "Braviary@@" ;229
+	rawchar "Ralts@@@@@" ;230
+	rawchar "Kirlia@@@@" ;231
+	rawchar "Gardevoir@" ;232
+	rawchar "Gallade@@@" ;233
+	rawchar "Goomy@@@@@" ;234
+	rawchar "Sliggoo@@@" ;235
+	rawchar "Goodra@@@@" ;236
+	rawchar "Zorua@@@@@" ;237
+	rawchar "Zoroark@@@" ;238
+	rawchar "Gible@@@@@" ;239
+	rawchar "Gabite@@@@" ;240
+	rawchar "Garchomp@@" ;241
+	rawchar "Dratini@@@" ;242
+	rawchar "Dragonair@" ;243
+	rawchar "Dragonite@" ;244
+	rawchar "Larvitar@@" ;245
+	rawchar "Pupitar@@@" ;246
+	rawchar "Tyranitar@" ;247
+	rawchar "Raikou@@@@" ;248
+	rawchar "Entei@@@@@" ;249
+	rawchar "Suicune@@@" ;250
+	rawchar "Heatran@@@" ;251
+	rawchar "Lugia@@@@@" ;252
+	rawchar "Ho_Oh@@@@@" ;253
+	rawchar "Celebi@@@@" ;254
 	assert_table_length NUM_POKEMON + 1
 	rawchar "Egg@@@@@@@" ; ff
 	assert_table_length NUM_SPECIES + 1 ; no issue with the length here - we have a problem instead with the constants file 
