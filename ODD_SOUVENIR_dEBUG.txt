@@ -1,3 +1,21 @@
+#############
+Notes on the issues
+Known issues: Snubbull enemy anim0 and anim1
+The datafiles that need to be in lists are the ones that are in order, so the ordering is not an issue
+have already ran a make clean 
+Tried porting over the clean version of snubbull assets from polished crystal to see if that's glitchy. The result: 
+I also looked at whether the dimensions are somehow getting corrupted somewhere else. Marill, a known bad, has a dimension file of U (40?) which matches the dimension file of Para (40?) which is OK. 
+
+One possible issue is that certain banks are overflowing and that's why the graphics are bad? gfx/pics.asm? I should double check that this file is properly ordered. 
+
+There are two big clusters of bad mons mostly sudowdoodo to teddiursa 
+
+Part of the problem is that shieldon was calling frames it didn't have. It should have had empty anim0 anim1. That's an easy issue to fix, and when I delete the animation lines, then the result is: 
+
+
+
+
+
 Notes:
 1. Pikachu, Exeggcute, and Cubone are all able to evolve into their form change by giving evolution stone to evolve into another pokemon with the odd souvenir. I should check if this is still true in my case that they will evolve into araichu, etc. 
 ----> Result: These pokemon do not form change with odd souvenir evolution. 

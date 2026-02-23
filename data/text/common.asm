@@ -1331,15 +1331,17 @@ _NPCTradeIntroText2::
 	line "my "
 	text_ram wStringBuffer2
 	text "?"
+	
+	para "It would really"
+	line "help my clown"
+	cont "routine!"
 	done
 
 SECTION "_NPCTradeCancelText2", ROMX
 _NPCTradeCancelText2::
-	text "You don't have"
-	line "one either?"
-
-	para "Gee, that's really"
-	line "disappointing…"
+	text "Now I'll never"
+	line "make my career"
+	cont "dreams happen..."
 	done
 
 SECTION "_NPCTradeWrongText2", ROMX
@@ -1428,15 +1430,15 @@ _NPCTradeAfterText3::
 
 SECTION "_NPCTradeCompleteText4", ROMX
 _NPCTradeCompleteText4::
-	text "Uh? What happened?"
+	text "That's exactly"
+	line "the #mon I"
+	cont "wanted!"
 	done
 
 SECTION "_NPCTradeAfterText4", ROMX
 _NPCTradeAfterText4::
-	text "Trading is so odd…"
-
-	para "I still have a lot"
-	line "to learn about it."
+	text "I'm glad I'm a"
+	line "bug catcher."
 	done
 
 SECTION "_MomLeavingText1", ROMX

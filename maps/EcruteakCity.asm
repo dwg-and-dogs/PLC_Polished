@@ -224,58 +224,65 @@ EcruteakCityPsyShopScript: ; 20000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "..."
+	text "This Gastly packs"
+	line "a punch!"
 	done
 
 .GiveGPonyta:
-	givepoke SPINARAK, NO_FORM, 15, APICOT_BERRY, JEZE_BALL, HYPNOSIS
+	givepoke PONYTA, GALARIAN_FORM, 15, APICOT_BERRY, JEZE_BALL, HYPNOSIS
 	iffalse_jumpopenedtext Text_NoCarry_PsyShop
 	playsound SFX_TRANSACTION
 	takemoney $0, 20000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "..."
+	text "This G. Ponyta"
+	line "loves to snuggle!"
 	done
 
 
 .GiveMisdreavus:
-	givepoke PARAS, NO_FORM, 15, GANLON_BERRY, JEZE_BALL, NASTY_PLOT
+	givepoke MISDREAVUS, NO_FORM, 15, GANLON_BERRY, JEZE_BALL, NASTY_PLOT
 	iffalse_jumpopenedtext Text_NoCarry_PsyShop
 	playsound SFX_TRANSACTION
 	takemoney $0, 20000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "..."
+	text "This Misdreavus"
+	line "is always up to"
+	cont "something!"
 	done
 
 
 .GiveDrifloon:
-	givepoke YANMA, NO_FORM, 15, LEPPA_BERRY, JEZE_BALL, FLAME_CHARGE
+	givepoke DRIFLOON, NO_FORM, 15, LEPPA_BERRY, JEZE_BALL, FLAME_CHARGE
 	iffalse_jumpopenedtext Text_NoCarry_PsyShop
 	playsound SFX_TRANSACTION
 	takemoney $0, 20000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "..."
+	text "That Drifloon has"
+	line "a little extra"
+	para "fire in its"
+	line "belly!"
 	done
 
 
 .PsyShop1PokemonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, TEXTBOX_Y - 1
+	menu_coords 0, 0, 12, TEXTBOX_Y - 1
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 5 ; items
-	db "Ledyba@"
-	db "Spinarak@"
-	db "Paras@"
-	db "Yanma@"
+	db "Gastly@"
+	db "G.Ponyta@"
+	db "Misdreavus@"
+	db "Drifloon@"
 	db "Cancel@"
 	
 EcruteakCity1Text:

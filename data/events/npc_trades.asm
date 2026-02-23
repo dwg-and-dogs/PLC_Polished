@@ -1,26 +1,26 @@
 NPCTrades:
 	table_width NPCTRADE_STRUCT_LENGTH, NPCTrades
-; NPC_TRADE_MIKE in Goldenrod City -- yes implemented 
+; NPC_TRADE_MIKE in Goldenrod City -- CHECKED 
 	rawchar 0, ABRA,       MISDREAVUS,     "Flutter@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN,  FEMALE, DUSK_BALL,   SITRUS_BERRY
 	dw 37460
 	rawchar "Mike@@@@", $00
-; NPC_TRADE_KYLE in Second Class Cabin 
+; NPC_TRADE_KYLE in Second Class Cabin CHECKED
 	rawchar 0, GASTLY,    DRIFLOON,    "Pennywise@@" ; Pagliacci
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN,   MALE,   JEZE_BALL,   PERSIM_BERRY
 	dw 48926
 	rawchar "Kyle@@@@", $00
-; NPC_TRADE_TIM; western capital dorms 
+; NPC_TRADE_TIM; western capital dorms CHECKED
 	rawchar 1, SNUBBULL,    HITMONLEE, "Geri@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   MALE,   FAST_BALL,   SITRUS_BERRY
 	dw 29189
 	rawchar "Jerry@@@", $00
-; NPC_TRADE_EMY; western capital dorms 
+; NPC_TRADE_EMY; western capital stockroom CHECKED
 	rawchar 3, CLEFAIRY,       HITMONCHAN,   "Zuki@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_ATK_UP_SPD_DOWN,   FEMALE, FAST_BALL,    SITRUS_BERRY
 	dw 00283
 	rawchar "Ted@@@@@", $00
-; NPC_TRADE_CHRIS gauldenrod dorms  
+; NPC_TRADE_CHRIS gauldenrod dorms  CHECKED 
 	rawchar 2, PARAS,     BERGMITE,  "Bert@@@@@@@"
 	db $EE, $EE, $EE, HIDDEN_ABILITY | NAT_DEF_UP_SATK_DOWN,  MALE,   NET_BALL,    BRIGHTPOWDER
 	dw 15616
