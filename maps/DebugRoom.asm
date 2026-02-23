@@ -625,79 +625,85 @@ Breeder2Script:
 Breeder5Script:
 	faceplayer
 	opentext
-	writetext BreederQuestionText
-	yesorno
-	iffalse_jumpopenedtext BreederSayNoText
-	writetext BreederText	
-	; a buncha mons
-	givepoke TOTODILE, 5
-	givepoke SENTRET, 5	
-	givepoke LEDYBA, 5	
-	givepoke SPINARAK, 5	
-	givepoke CHINCHOU, 5	
-	givepoke TOGETIC, 5	
-	givepoke NATU, 5	
-	givepoke MAREEP, 5	
-	givepoke MARILL, 5	
-	givepoke SUDOWOODO, 5	
-	givepoke HOPPIP, 5	
-	givepoke SUNKERN, 5	
-	givepoke WOOPER, 5	
-	givepoke MURKROW, 5	
-	givepoke MISDREAVUS, 5	
-	givepoke YANMA, 5	
-	givepoke UNOWN, 5	
-	givepoke GIRAFARIG, 5	
-	givepoke PINECO, 5
-	givepoke DUNSPARCE, 5
-	givepoke GLIGAR, 5
-	givepoke SNUBBULL, 5	
-	givepoke QWILFISH, 5	
-	givepoke SHUCKLE, 5	
-	givepoke HERACROSS, 5	
-	givepoke SNEASEL, 5	
-	givepoke TEDDIURSA, 5	
-	givepoke SLUGMA, 5	
-	givepoke SWINUB, 5	
-	givepoke CORSOLA, 5	
-	givepoke REMORAID, 5	
-	givepoke MANTINE, 5	
-	givepoke SKARMORY, 5	
-	givepoke HOUNDOUR, 5	
-	givepoke PHANPY, 5	
-	givepoke STANTLER, 5	
-	givepoke MILTANK, 5	
-	givepoke STARAVIA, 5
-	givepoke LUXIO, 5	
-	givepoke CRANIDOS, 5	
-	givepoke SHIELDON, 5	
-	givepoke AMBIPOM, 5	
-	givepoke DRIFBLIM, 5	
-	givepoke BRONZOR, 5	
-	givepoke SPIRITOMB, 5	
-	givepoke GIBLE, 5	
-	givepoke RIOLU, 5	
-	givepoke HIPPOPOTAS, 5	
-	givepoke CROAGUNK, 5	
-	givepoke SNOVER, 5	
-	givepoke DUSCLOPS, 5
-	givepoke FROSLASS, 5
-	givepoke ROTOM, 5
-	givepoke BERGMITE, 5	
-	givepoke BASCULEGION, 5	
-	givepoke RUFFLET, 5	
-	givepoke RALTS, 5	
-	givepoke GOOMY, 5	
-	givepoke ZORUA, 5	
-	givepoke DRATINI, 5	
-	givepoke LARVITAR, 5	
-	givepoke RAIKOU, 5	
-	givepoke ENTEI, 5	
-	givepoke SUICUNE, 5	
-	givepoke HEATRAN, 5	
-	givepoke LUGIA, 5	
-	givepoke HO_OH, 5	
-	givepoke CELEBI, 5	
+	; GIVE ALL MONS?
+for x, CYNDAQUIL, LUGIA + 1
+	givepoke x, 50
+endr
+;
+;	opentext
+;	writetext BreederQuestionText
+;	yesorno
+;	iffalse_jumpopenedtext BreederSayNoText
+;	writetext BreederText	
+;	; a buncha mons
+;	givepoke TOTODILE, 5
+;	givepoke SENTRET, 5	
+;	givepoke LEDYBA, 5	
+;	givepoke SPINARAK, 5	
+;	givepoke CHINCHOU, 5	
+;	givepoke TOGETIC, 5	
+;	givepoke NATU, 5	
+;	givepoke MAREEP, 5	
+;	givepoke MARILL, 5	
+;	givepoke SUDOWOODO, 5	
+;	givepoke HOPPIP, 5	
+;	givepoke SUNKERN, 5	
+;	givepoke WOOPER, 5	
+;	givepoke MURKROW, 5	
+;	givepoke MISDREAVUS, 5	
+;	givepoke YANMA, 5	
+;	givepoke UNOWN, 5	
+;	givepoke GIRAFARIG, 5	
+;	givepoke PINECO, 5
+;	givepoke DUNSPARCE, 5
+;	givepoke GLIGAR, 5
+;	givepoke SNUBBULL, 5	
+;	givepoke QWILFISH, 5	
+;	givepoke SHUCKLE, 5	
+;	givepoke HERACROSS, 5	
+;	givepoke SNEASEL, 5	
+;	givepoke TEDDIURSA, 5	
+;	givepoke SLUGMA, 5	
+;	givepoke SWINUB, 5	
+;	givepoke CORSOLA, 5	
+;	givepoke REMORAID, 5	
+;	givepoke MANTINE, 5	
+;	givepoke SKARMORY, 5	
+;	givepoke HOUNDOUR, 5	
+;	givepoke PHANPY, 5	
+;	givepoke STANTLER, 5	
+;	givepoke MILTANK, 5	
+;	givepoke STARAVIA, 5
+;	givepoke LUXIO, 5	
+;	givepoke CRANIDOS, 5	
+;	givepoke SHIELDON, 5	
+;	givepoke AMBIPOM, 5	
+;	givepoke DRIFBLIM, 5	
+;	givepoke BRONZOR, 5	
+;	givepoke SPIRITOMB, 5	
+;	givepoke GIBLE, 5	
+;	givepoke RIOLU, 5	
+;	givepoke HIPPOPOTAS, 5	
+;	givepoke CROAGUNK, 5	
+;	givepoke SNOVER, 5	
+;	givepoke DUSCLOPS, 5
+;	givepoke FROSLASS, 5
+;	givepoke ROTOM, 5
+;	givepoke BERGMITE, 5	
+;	givepoke BASCULEGION, 5	
+;	givepoke RUFFLET, 5	
+;	givepoke RALTS, 5	
+;	givepoke GOOMY, 5	
+;	givepoke ZORUA, 5	
+;	givepoke DRATINI, 5	
+;	givepoke LARVITAR, 5	
+;	givepoke RAIKOU, 5	
+;	givepoke ENTEI, 5	
+;	givepoke SUICUNE, 5	
+;	givepoke HEATRAN, 5	
+;	givepoke LUGIA, 5	
+;	givepoke HO_OH, 5	
+;	givepoke CELEBI, 5	
 	closetext
 	end
 

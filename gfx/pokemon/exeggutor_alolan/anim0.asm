@@ -8,3 +8,4 @@
 	frame 0, 06
 	frame 9, 08
 	endanim
+	

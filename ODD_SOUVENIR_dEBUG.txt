@@ -8,11 +8,13 @@ I also looked at whether the dimensions are somehow getting corrupted somewhere 
 
 One possible issue is that certain banks are overflowing and that's why the graphics are bad? gfx/pics.asm? I should double check that this file is properly ordered. 
 
-There are two big clusters of bad mons mostly sudowdoodo to teddiursa 
+There are two big clusters of bad mons mostly sudowdoodo to teddiursa.
 
-Part of the problem is that shieldon was calling frames it didn't have. It should have had empty anim0 anim1. That's an easy issue to fix, and when I delete the animation lines, then the result is: 
+Part of the problem is that shieldon was calling frames it didn't have. It should have had empty anim0 anim1. That's an easy issue to fix, and when I delete the animation lines, then the result is that shieldon is OK now. The problem with nearby cranidos is probably due to a bad anim file, so I commented those lines out. 
 
+I noticed that the scythe file is really big. So I commented out the anim0. The result is that sudowoodo is still bad. I also commented out the kleavor animation since that's big and still get problems with sudowoodo. 
 
+Everything else in the section should be OK. So I'm not sure what I can do other than run a make clean and see what happens. Make clean still shows a problem with sudowoodo, even though all the other members of its section seem OK. 
 
 
 

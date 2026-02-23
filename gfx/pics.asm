@@ -82,9 +82,6 @@ GravelerFrontpic: INCBIN "gfx/pokemon/graveler/front.animated.2bpp.lz"
 GravelerBackpic:  INCBIN "gfx/pokemon/graveler/back.2bpp.lz"
 
 
-
-
-
 SECTION "Pokemon Pics 4", ROMX
 
 GolemFrontpic: INCBIN "gfx/pokemon/golem/front.animated.2bpp.lz"
