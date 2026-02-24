@@ -313,16 +313,16 @@ INCLUDE "data/pokemon/base_stats/weezing_galarian.asm"       ; 00
 INCLUDE "data/pokemon/base_stats/corsola_galarian.asm"       ; 00
 
 
-
-INCLUDE "data/pokemon/base_stats/growlithe_hisuain.asm"       ; 00
-INCLUDE "data/pokemon/base_stats/arcanine_hisuinin.asm"       ; 00
-INCLUDE "data/pokemon/base_stats/voltorb_  hisuain.asm"       ; 00
-INCLUDE "data/pokemon/base_stats/electrode_hisuain.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/growlithe_hisuian.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/arcanine_hisuian.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/voltorb_hisuian.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/electrode_hisuian.asm"       ; 00
 INCLUDE "data/pokemon/base_stats/typhlosion_hisiin.asm"       ; 00
-INCLUDE "data/pokemon/base_stats/qwilfish_hisuinin.asm"       ; 00
-INCLUDE "data/pokemon/base_stats/sneasel_hisuia_in.asm"       ; 00
-INCLUDE "data/pokemon/base_stats/samurott_hisuinin.asm"       ; 00
-INCLUDE "data/pokemon/base_stats/decidueye_hisuain.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/qwilfish_hisuian.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/sneasel_hisuian.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/samurott_hisuian.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/decidueye_hisuian.asm"       ; 00
+
 
 
 

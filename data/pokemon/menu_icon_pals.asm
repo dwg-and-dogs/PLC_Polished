@@ -13,9 +13,6 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BLUE, TEAL      ; OSHAWOTT        ; 07
 	iconpal BLUE, TEAL      ; DEWOTT          ; 08
 	iconpal BLUE, TEAL      ; SAMUROTT        ; 09
-	iconpal GRAY, BROWN     ; rufflet        ; c8
-	iconpal GRAY, BROWN     ; starly        ; c8
-	iconpal BROWN, GRAY      ; snorunt          ; 0c  
 	iconpal BROWN, RED ; HOOTHOOT
 	iconpal BROWN, GREEN ; NOCTOWL
 	iconpal BROWN, PURPLE ; SENTRET
@@ -52,6 +49,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal GREEN, BROWN    ; BELLSPROUT      ; 2e
 	iconpal GREEN, BROWN    ; WEEPINBELL      ; 2f
 	iconpal GREEN, BROWN    ; VICTREEBEL      ; 30
+	iconpal RED, GREEN      ; hoppip        ; c6  
 	iconpal GREEN, BROWN    ; SKIPLOOM        ; 31
 	iconpal BLUE, BROWN     ; JUMPLUFF        ; 32
 	iconpal RED, PINK       ; PARAS           ; 33
@@ -72,15 +70,17 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BROWN, RED      ; ABRA            ; 42
 	iconpal BROWN, RED      ; KADABRA         ; 43
 	iconpal BROWN, RED      ; ALAKAZAM        ; 44
+	iconpal PURPLE, BLUE      ; ditto       ; d1  
 	iconpal GRAY, RED       ; PINECO          ; 45
 	iconpal PURPLE, BROWN   ; FORRETRESS      ; 46
-	iconpal TEAL, PURPLE ; NIDORAN_F
+	iconpal TEAL, PURPLE ; NIDORAN
 	iconpal TEAL, PURPLE    ; NIDORINA        ; 48
 	iconpal TEAL, PURPLE    ; NIDOQUEEN       ; 49
 	iconpal PURPLE, TEAL    ; NIDORINO        ; 4a
 	iconpal PURPLE, TEAL    ; NIDOKING        ; 4b
 	iconpal RED, BLUE       ; YANMA           ; 4c
 	iconpal RED, BLUE       ; YANMEGA         ; 4d
+	iconpal BLUE, TEAL      ; sunkern        ; c7
 	iconpal GREEN, BROWN    ; SUNFLORA        ; 4e
 	iconpal PINK, TEAL      ; EXEGGCUTE       ; 4f
 	iconpal BROWN, TEAL     ; EXEGGUTOR       ; 50
@@ -153,6 +153,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal GREEN, BROWN    ; LEAFEON         ; 94
 	iconpal BLUE, BLUE      ; GLACEON         ; 95
 	iconpal PINK, BLUE      ; SYLVEON         ; 96
+	iconpal BLUE, RED    ; horsea        ; c3  
 	iconpal BLUE, PURPLE    ; SEADRA          ; 97
 	iconpal BLUE, PURPLE    ; KINGDRA         ; 98
 	iconpal PURPLE, GRAY    ; GLIGAR          ; 99
@@ -196,12 +197,7 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BLUE, TEAL      ; TOTODILE        ; bf
 	iconpal BLUE, TEAL      ; CROCONAW        ; c0
 	iconpal BLUE, TEAL      ; FERALIGATR      ; c1
-	iconpal TEAL, GRAY    ; riolu          ; c2  
-	iconpal BLUE, RED    ; horsea        ; c3  
-	iconpal TEAL, PURPLE      ; glalie        ; c4  
-	iconpal BLUE, RED      ; basculin       ; c5  
-	iconpal RED, GREEN      ; hoppip        ; c6  
-	iconpal BLUE, TEAL      ; sunkern        ; c7
+	iconpal GRAY, BROWN     ; starly        ; c8
 	iconpal GRAY, BROWN     ; STARAVIA        ; c8
 	iconpal GRAY, RED       ; STARAPTOR       ; c9
 	iconpal BLUE, BROWN     ; SHINX           ; ca 
@@ -211,12 +207,12 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BROWN, RED      ; RAMPARDOS       ; ce
 	iconpal BROWN, RED      ; SHIELDON        ; cf 
 	iconpal BROWN, RED      ; BASTIODON       ; d0
-	iconpal PURPLE, BLUE      ; ditto       ; d1  
 	iconpal PURPLE, BROWN   ; DRIFLOON        ; d2 
 	iconpal PURPLE, BROWN   ; DRIFBLIM        ; d3
 	iconpal TEAL, BROWN     ; BRONZOR         ; d4
 	iconpal TEAL, RED       ; BRONZONG        ; d5
 	iconpal PURPLE, GREEN   ; SPIRITOMB       ; d6
+	iconpal TEAL, GRAY    ; riolu          ; c2  
 	iconpal TEAL, GRAY      ; LUCARIO         ; d7
 	iconpal BROWN, RED      ; HIPPOPOTAS      ; d8 
 	iconpal BROWN, RED      ; HIPPOWDON       ; d9
@@ -227,11 +223,15 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal GRAY, RED       ; DUSKULL         ; de 
 	iconpal GRAY, RED       ; DUSCLOPS        ; df
 	iconpal GRAY, BROWN     ; DUSKNOIR        ; e0
+	iconpal BROWN, GRAY      ; snorunt          ; 0c  
+	iconpal TEAL, PURPLE      ; glalie        ; c4  
 	iconpal TEAL, PURPLE    ; FROSLASS        ; e1
 	iconpal BROWN, TEAL     ; ROTOM           ; e2
 	iconpal TEAL, GRAY      ; BERGMITE        ; e3 
 	iconpal TEAL, GRAY      ; AVALUGG         ; e4
+	iconpal BLUE, RED      ; basculin       ; c5  
 	iconpal RED, BLUE       ; BASCULEGION     ; e5
+	iconpal GRAY, BROWN     ; rufflet        ; c8
 	iconpal GRAY, PURPLE    ; BRAVIARY        ; e6
 	iconpal GREEN, RED      ; RALTS           ; e7 
 	iconpal GREEN, RED      ; KIRLIA          ; e8

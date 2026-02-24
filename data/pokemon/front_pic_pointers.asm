@@ -1,259 +1,259 @@
 FrontPicPointers::
 	table_width 3, FrontPicPointers
-	dba CyndaquilFrontpic       ; CYNDAQUIL       ; 01
-	dba QuilavaFrontpic         ; QUILAVA         ; 02
-	dba TyphlosionFrontpic      ; TYPHLOSION      ; 03
-	dba RowletFrontpic          ; ROWLET          ; 04
-	dba DartrixFrontpic         ; DARTRIX         ; 05
-	dba DecidueyeFrontpic       ; DECIDUEYE       ; 06
-	dba OshawottFrontpic        ; OSHAWOTT        ; 07
-	dba DewottFrontpic          ; DEWOTT          ; 08
-	dba SamurottFrontpic        ; SAMUROTT        ; 09
-	dba RuffletFrontpic          ;           ; 0a
-	dba StarlyFrontpic       ;        ; 0b
-	dba SnoruntFrontpic         ;          ; 0c
-	dba HoothootFrontpic        ; HOOTHOOT        ; 0d
-	dba NoctowlFrontpic         ; NOCTOWL         ; 0e
-	dba SentretFrontpic         ; SENTRET         ; 0f
-	dba FurretFrontpic          ; FURRET          ; 10
-	dba PikachuFrontpic         ; PIKACHU         ; 11
-	dba RaichuFrontpic          ; RAICHU          ; 12
-	dba LedybaFrontpic          ; LEDYBA          ; 13
-	dba LedianFrontpic          ; LEDIAN          ; 14
-	dba SpinarakFrontpic        ; SPINARAK        ; 15
-	dba AriadosFrontpic         ; ARIADOS         ; 16
-	dba GeodudeFrontpic         ; GEODUDE         ; 17
-	dba GravelerFrontpic        ; GRAVELER        ; 18
-	dba GolemFrontpic           ; GOLEM           ; 19
-	dba ZubatFrontpic           ; ZUBAT           ; 1a
-	dba GolbatFrontpic          ; GOLBAT          ; 1b
-	dba CrobatFrontpic          ; CROBAT          ; 1c
-	dba ClefairyFrontpic        ; CLEFAIRY        ; 1d
-	dba ClefableFrontpic        ; CLEFABLE        ; 1e
-	dba TogeticFrontpic         ; TOGETIC         ; 1f
-	dba TogekissFrontpic        ; TOGEKISS        ; 20
-	dba DunsparceFrontpic       ; DUNSPARCE       ; 21
-	dba DudunsparceFrontpic     ; DUDUNSPARCE     ; 22
-	dba MareepFrontpic          ; MAREEP          ; 23
-	dba FlaaffyFrontpic         ; FLAAFFY         ; 24
-	dba AmpharosFrontpic        ; AMPHAROS        ; 25
-	dba WooperFrontpic          ; WOOPER          ; 26
-	dba QuagsireFrontpic        ; QUAGSIRE        ; 27
-	dba GastlyFrontpic          ; GASTLY          ; 28
-	dba HaunterFrontpic         ; HAUNTER         ; 29
-	dba GengarFrontpic          ; GENGAR          ; 2a
-	dba UnownAFrontpic          ; UNOWN           ; 2b
-	dba OnixFrontpic            ; ONIX            ; 2c
-	dba SteelixFrontpic         ; STEELIX         ; 2d
-	dba BellsproutFrontpic      ; BELLSPROUT      ; 2e
-	dba WeepinbellFrontpic      ; WEEPINBELL      ; 2f
-	dba VictreebelFrontpic      ; VICTREEBEL      ; 30
-	dba SkiploomFrontpic        ; SKIPLOOM        ; 31
-	dba JumpluffFrontpic        ; JUMPLUFF        ; 32
-	dba ParasFrontpic           ; PARAS           ; 33
-	dba ParasectFrontpic        ; PARASECT        ; 34
-	dba PoliwagFrontpic         ; POLIWAG         ; 35
-	dba PoliwhirlFrontpic       ; POLIWHIRL       ; 36
-	dba PoliwrathFrontpic       ; POLIWRATH       ; 37
-	dba PolitoedFrontpic        ; POLITOED        ; 38
-	dba MagikarpFrontpic        ; MAGIKARP        ; 39
-	dba GyaradosFrontpic        ; GYARADOS        ; 3a
-	dba SlowpokeFrontpic        ; SLOWPOKE        ; 3b
-	dba SlowbroFrontpic         ; SLOWBRO         ; 3c
-	dba SlowkingFrontpic        ; SLOWKING        ; 3d
-	dba OddishFrontpic          ; ODDISH          ; 3e
-	dba GloomFrontpic           ; GLOOM           ; 3f
-	dba VileplumeFrontpic       ; VILEPLUME       ; 40
-	dba BellossomFrontpic       ; BELLOSSOM       ; 41
-	dba AbraFrontpic            ; ABRA            ; 42
-	dba KadabraFrontpic         ; KADABRA         ; 43
-	dba AlakazamFrontpic        ; ALAKAZAM        ; 44
-	dba PinecoFrontpic          ; PINECO          ; 45
-	dba ForretressFrontpic      ; FORRETRESS      ; 46
-	dba NidoranFrontpic         ; NIDORAN         ; 47
-	dba NidorinaFrontpic        ; NIDORINA        ; 48
-	dba NidoqueenFrontpic       ; NIDOQUEEN       ; 49
-	dba NidorinoFrontpic        ; NIDORINO        ; 4a
-	dba NidokingFrontpic        ; NIDOKING        ; 4b
-	dba YanmaFrontpic           ; YANMA           ; 4c
-	dba YanmegaFrontpic         ; YANMEGA         ; 4d
-	dba SunfloraFrontpic        ; SUNFLORA        ; 4e
-	dba ExeggcuteFrontpic       ; EXEGGCUTE       ; 4f
-	dba ExeggutorFrontpic       ; EXEGGUTOR       ; 50
-	dba SudowoodoFrontpic       ; SUDOWOODO       ; 51
-	dba ScytherFrontpic         ; SCYTHER         ; 52
-	dba ScizorFrontpic          ; SCIZOR          ; 53
-	dba KleavorFrontpic         ; KLEAVOR         ; 54
-	dba PinsirFrontpic          ; PINSIR          ; 55
-	dba MinsirFrontpic          ; MINSIR          ; 56
-	dba HeracrossFrontpic       ; HERACROSS       ; 57
-	dba KoffingFrontpic         ; KOFFING         ; 58
-	dba WeezingFrontpic         ; WEEZING         ; 59
-	dba GrimerFrontpic          ; GRIMER          ; 5a
-	dba MukFrontpic             ; MUK             ; 5b
-	dba MagnemiteFrontpic       ; MAGNEMITE       ; 5c
-	dba MagnetonFrontpic        ; MAGNETON        ; 5d
-	dba MagnezoneFrontpic       ; MAGNEZONE       ; 5e
-	dba VoltorbFrontpic         ; VOLTORB         ; 5f
-	dba ElectrodeFrontpic       ; ELECTRODE       ; 60
-	dba AipomFrontpic           ; AIPOM           ; 61
-	dba AmbipomFrontpic         ; AMBIPOM         ; 62
-	dba SnubbullFrontpic        ; SNUBBULL        ; 63
-	dba GranbullFrontpic        ; GRANBULL        ; 64
-	dba VulpixFrontpic          ; VULPIX          ; 65
-	dba NinetalesFrontpic       ; NINETALES       ; 66
-	dba GrowlitheFrontpic       ; GROWLITHE       ; 67
-	dba ArcanineFrontpic        ; ARCANINE        ; 68
-	dba StantlerFrontpic        ; STANTLER        ; 69
-	dba WyrdeerFrontpic         ; WYRDEER         ; 6a
-	dba MarillFrontpic          ; MARILL          ; 6b
-	dba AzumarillFrontpic       ; AZUMARILL       ; 6c
-	dba MankeyFrontpic          ; MANKEY          ; 6d
-	dba PrimeapeFrontpic        ; PRIMEAPE        ; 6e
-	dba AnnihilapeFrontpic      ; ANNIHILAPE      ; 6f
-	dba MachopFrontpic          ; MACHOP          ; 70
-	dba MachokeFrontpic         ; MACHOKE         ; 71
-	dba MachampFrontpic         ; MACHAMP         ; 72
-	dba HitmonleeFrontpic       ; HITMONLEE       ; 73
-	dba HitmonchanFrontpic      ; HITMONCHAN      ; 74
-	dba HitmontopFrontpic       ; HITMONTOP       ; 75
-	dba GirafarigFrontpic       ; GIRAFARIG       ; 76
-	dba FarigirafFrontpic       ; FARIGIRAF       ; 77
-	dba TaurosFrontpic          ; TAUROS          ; 78
-	dba MiltankFrontpic         ; MILTANK         ; 79
-	dba MagmarFrontpic          ; MAGMAR          ; 7a
-	dba MagmortarFrontpic       ; MAGMORTAR       ; 7b
-	dba JynxFrontpic            ; JYNX            ; 7c
-	dba ElectabuzzFrontpic      ; ELECTABUZZ      ; 7d
-	dba ElectivireFrontpic      ; ELECTIVIRE      ; 7e
-	dba NatuFrontpic            ; NATU            ; 80
-	dba XatuFrontpic            ; XATU            ; 81
-	dba QwilfishFrontpic        ; QWILFISH        ; 82
-	dba OverqwilFrontpic        ; OVERQWIL        ; 83
-	dba TentacoolFrontpic       ; TENTACOOL       ; 84
-	dba TentacruelFrontpic      ; TENTACRUEL      ; 85
-	dba ShuckleFrontpic         ; SHUCKLE         ; 86
-	dba CorsolaFrontpic         ; CORSOLA         ; 87
-	dba RemoraidFrontpic        ; REMORAID        ; 88
-	dba OctilleryFrontpic       ; OCTILLERY       ; 89
-	dba ChinchouFrontpic        ; CHINCHOU        ; 8a
-	dba LanturnFrontpic         ; LANTURN         ; 8b
-	dba TangelaFrontpic         ; TANGELA         ; 8c
-	dba TangrowthFrontpic       ; TANGROWTH       ; 8d
-	dba EeveeFrontpic           ; EEVEE           ; 8e
-	dba VaporeonFrontpic        ; VAPOREON        ; 8f
-	dba JolteonFrontpic         ; JOLTEON         ; 90
-	dba FlareonFrontpic         ; FLAREON         ; 91
-	dba EspeonFrontpic          ; ESPEON          ; 92
-	dba UmbreonFrontpic         ; UMBREON         ; 93
-	dba LeafeonFrontpic         ; LEAFEON         ; 94
-	dba GlaceonFrontpic         ; GLACEON         ; 95
-	dba SylveonFrontpic         ; SYLVEON         ; 96
-	dba SeadraFrontpic          ; SEADRA          ; 97
-	dba KingdraFrontpic         ; KINGDRA         ; 98
-	dba GligarFrontpic          ; GLIGAR          ; 99
-	dba GliscorFrontpic         ; GLISCOR         ; 9a
-	dba SwinubFrontpic          ; SWINUB          ; 9b
-	dba PiloswineFrontpic       ; PILOSWINE       ; 9c
-	dba MamoswineFrontpic       ; MAMOSWINE       ; 9d
-	dba TeddiursaFrontpic       ; TEDDIURSA       ; 9e
-	dba UrsaringFrontpic        ; URSARING        ; 9f
-	dba UrsalunaFrontpic        ; URSALUNA        ; a0
-	dba PhanpyFrontpic          ; PHANPY          ; a1
-	dba DonphanFrontpic         ; DONPHAN         ; a2
-	dba MantineFrontpic         ; MANTINE         ; a3
-	dba SkarmoryFrontpic        ; SKARMORY        ; a4
-	dba PonytaFrontpic          ; PONYTA          ; a5
-	dba RapidashFrontpic        ; RAPIDASH        ; a6
-	dba RhyhornFrontpic         ; RHYHORN         ; a7
-	dba RhydonFrontpic          ; RHYDON          ; a8
-	dba RhyperiorFrontpic       ; RHYPERIOR       ; a9
-	dba MurkrowFrontpic         ; MURKROW         ; aa
-	dba HonchkrowFrontpic       ; HONCHKROW       ; ab
-	dba HoundourFrontpic        ; HOUNDOUR        ; ac
-	dba HoundoomFrontpic        ; HOUNDOOM        ; ad
-	dba SlugmaFrontpic          ; SLUGMA          ; ae
-	dba MagcargoFrontpic        ; MAGCARGO        ; af
-	dba SneaselFrontpic         ; SNEASEL         ; b0
-	dba WeavileFrontpic         ; WEAVILE         ; b1
-	dba SneaslerFrontpic        ; SNEASLER        ; b2
-	dba MisdreavusFrontpic      ; MISDREAVUS      ; b3
-	dba MismagiusFrontpic       ; MISMAGIUS       ; b4
-	dba PorygonFrontpic         ; PORYGON         ; b5
-	dba Porygon2Frontpic        ; PORYGON2        ; b6
-	dba Porygon_ZFrontpic       ; PORYGON-Z       ; b7
-	dba ChanseyFrontpic         ; CHANSEY         ; b8
-	dba BlisseyFrontpic         ; BLISSEY         ; b9
-	dba LaprasFrontpic          ; LAPRAS          ; ba
-	dba SnorlaxFrontpic         ; SNORLAX         ; bb
-	dba ChikoritaFrontpic       ; CHIKORITA       ; bc
-	dba BayleefFrontpic         ; BAYLEEF         ; bd
-	dba MeganiumFrontpic        ; MEGANIUM        ; be
-	dba TotodileFrontpic        ; TOTODILE        ; bf
-	dba CroconawFrontpic        ; CROCONAW        ; c0
-	dba FeraligatrFrontpic      ; FERALIGATR      ; c1
-	dba RioluFrontpic          ; GROTLE          ; c2
-	dba HorseaFrontpic        ;         ; c3
-	dba GlalieFrontpic        ;         ; c4
-	dba BasculinFrontpic       ;        ; c5
-	dba HoppipFrontpic        ;         ; c6
-	dba SunkernFrontpic        ;         ; c7
-	dba StaraviaFrontpic        ; STARAVIA        ; c8
-	dba StaraptorFrontpic       ; STARAPTOR       ; c9
-	dba ShinxFrontpic           ; SHINX           ; ca
-	dba LuxioFrontpic           ; LUXIO           ; cb
-	dba LuxrayFrontpic          ; LUXRAY          ; cc
-	dba CranidosFrontpic        ; CRANIDOS        ; cd
-	dba RampardosFrontpic       ; RAMPARDOS       ; ce
-	dba ShieldonFrontpic        ; SHIELDON        ; cf
-	dba BastiodonFrontpic       ; BASTIODON       ; d0
-	dba DittoFrontpic       ;        ; d1
-	dba DrifloonFrontpic        ; DRIFLOON        ; d2
-	dba DrifblimFrontpic        ; DRIFBLIM        ; d3
-	dba BronzorFrontpic         ; BRONZOR         ; d4
-	dba BronzongFrontpic        ; BRONZONG        ; d5
-	dba SpiritombFrontpic       ; SPIRITOMB       ; d6
-	dba LucarioFrontpic         ; LUCARIO         ; d7
-	dba HippopotasFrontpic      ; HIPPOPOTAS      ; d8
-	dba HippowdonFrontpic       ; HIPPOWDON       ; d9
-	dba CroagunkFrontpic        ; CROAGUNK        ; da
-	dba ToxicroakFrontpic       ; TOXICROAK       ; db
-	dba SnoverFrontpic          ; SNOVER          ; dc
-	dba AbomasnowFrontpic       ; ABOMASNOW       ; dd
-	dba DuskullFrontpic         ; DUSKULL         ; de
-	dba DusclopsFrontpic        ; DUSCLOPS        ; df
-	dba DusknoirFrontpic        ; DUSKNOIR        ; e0
-	dba FroslassFrontpic        ; FROSLASS        ; e1
-	dba RotomFrontpic           ; ROTOM           ; e2
-	dba BergmiteFrontpic        ; BERGMITE        ; e3
-	dba AvaluggFrontpic         ; AVALUGG         ; e4
-	dba BasculegionFrontpic     ; BASCULEGION     ; e5
-	dba BraviaryFrontpic        ; BRAVIARY        ; e6
-	dba RaltsFrontpic           ; RALTS           ; e7
-	dba KirliaFrontpic          ; KIRLIA          ; e8
-	dba GardevoirFrontpic       ; GARDEVOIR       ; e9
-	dba GalladeFrontpic         ; GALLADE         ; ea
-	dba GoomyFrontpic           ; GOOMY           ; eb
-	dba SliggooFrontpic         ; SLIGGOO         ; ec
-	dba GoodraFrontpic          ; GOODRA          ; ed
-	dba ZoruaFrontpic           ; ZORUA           ; ee
-	dba ZoroarkFrontpic         ; ZOROARK         ; ef
-	dba GibleFrontpic           ; GIBLE           ; f0
-	dba GabiteFrontpic          ; GABITE          ; f1
-	dba GarchompFrontpic        ; GARCHOMP        ; f2
-	dba DratiniFrontpic         ; DRATINI         ; f3
-	dba DragonairFrontpic       ; DRAGONAIR       ; f4
-	dba DragoniteFrontpic       ; DRAGONITE       ; f5
-	dba LarvitarFrontpic        ; LARVITAR        ; f6
-	dba PupitarFrontpic         ; PUPITAR         ; f7
-	dba TyranitarFrontpic       ; TYRANITAR       ; f8
-	dba RaikouFrontpic          ; RAIKOU          ; f9
-	dba EnteiFrontpic           ; ENTEI           ; fa
-	dba SuicuneFrontpic         ; SUICUNE         ; fb
-	dba HeatranFrontpic         ; HEATRAN         ; fc
-	dba LugiaFrontpic           ; LUGIA           ; fd
-	dba Ho_ohFrontpic           ; HO-OH           ; fe
-	dba CelebiFrontpic          ; CELEBI          ; ff
+	dba CyndaquilFrontpic       ; 01
+	dba QuilavaFrontpic       ; 02
+	dba TyphlosionFrontpic       ; 03
+	dba RowletFrontpic       ; 04
+	dba DartrixFrontpic       ; 05
+	dba DecidueyeFrontpic       ; 06
+	dba OshawottFrontpic       ; 07
+	dba DewottFrontpic       ; 08
+	dba SamurottFrontpic       ; 09
+	dba HoothootFrontpic       ; 10
+	dba NoctowlFrontpic       ; 11
+	dba SentretFrontpic       ; 12
+	dba FurretFrontpic       ; 13
+	dba PikachuFrontpic       ; 14
+	dba RaichuFrontpic       ; 15
+	dba LedybaFrontpic       ; 16
+	dba LedianFrontpic       ; 17
+	dba SpinarakFrontpic       ; 18
+	dba AriadosFrontpic       ; 19
+	dba GeodudeFrontpic       ; 20
+	dba GravelerFrontpic       ; 21
+	dba GolemFrontpic       ; 22
+	dba ZubatFrontpic       ; 23
+	dba GolbatFrontpic       ; 24
+	dba CrobatFrontpic       ; 25
+	dba ClefairyFrontpic       ; 26
+	dba ClefableFrontpic       ; 27
+	dba TogeticFrontpic       ; 28
+	dba TogekissFrontpic       ; 29
+	dba DunsparceFrontpic       ; 30
+	dba DudunsparceFrontpic       ; 31
+	dba MareepFrontpic       ; 32
+	dba FlaaffyFrontpic       ; 33
+	dba AmpharosFrontpic       ; 34
+	dba WooperFrontpic       ; 35
+	dba QuagsireFrontpic       ; 36
+	dba GastlyFrontpic       ; 37
+	dba HaunterFrontpic       ; 38
+	dba GengarFrontpic       ; 39
+	dba UnownFrontpic       ; 40
+	dba OnixFrontpic       ; 41
+	dba SteelixFrontpic       ; 42
+	dba BellsproutFrontpic       ; 43
+	dba WeepinbellFrontpic       ; 44
+	dba VictreebelFrontpic       ; 45
+	dba HoppipFrontpic       ; 46
+	dba SkiploomFrontpic       ; 47
+	dba JumpluffFrontpic       ; 48
+	dba ParasFrontpic       ; 49
+	dba ParasectFrontpic       ; 50
+	dba PoliwagFrontpic       ; 51
+	dba PoliwhirlFrontpic       ; 52
+	dba PoliwrathFrontpic       ; 53
+	dba PolitoedFrontpic       ; 54
+	dba MagikarpFrontpic       ; 55
+	dba GyaradosFrontpic       ; 56
+	dba SlowpokeFrontpic       ; 57
+	dba SlowbroFrontpic       ; 58
+	dba SlowkingFrontpic       ; 59
+	dba OddishFrontpic       ; 60
+	dba GloomFrontpic       ; 61
+	dba VileplumeFrontpic       ; 62
+	dba BellossomFrontpic       ; 63
+	dba AbraFrontpic       ; 64
+	dba KadabraFrontpic       ; 65
+	dba AlakazamFrontpic       ; 66
+	dba DittoFrontpic       ; 67
+	dba PinecoFrontpic       ; 68
+	dba ForretressFrontpic       ; 69
+	dba NidoranFrontpic       ; 70
+	dba NidorinaFrontpic       ; 71
+	dba NidoqueenFrontpic       ; 72
+	dba NidorinoFrontpic       ; 73
+	dba NidokingFrontpic       ; 74
+	dba YanmaFrontpic       ; 75
+	dba YanmegaFrontpic       ; 76
+	dba SunkernFrontpic       ; 77
+	dba SunfloraFrontpic       ; 78
+	dba ExeggcuteFrontpic       ; 79
+	dba ExeggutorFrontpic       ; 80
+	dba SudowoodoFrontpic       ; 81
+	dba ScytherFrontpic       ; 82
+	dba ScizorFrontpic       ; 83
+	dba KleavorFrontpic       ; 84
+	dba PinsirFrontpic       ; 85
+	dba MinsirFrontpic       ; 86
+	dba HeracrossFrontpic       ; 87
+	dba KoffingFrontpic       ; 88
+	dba WeezingFrontpic       ; 89
+	dba GrimerFrontpic       ; 90
+	dba MukFrontpic       ; 91
+	dba MagnemiteFrontpic       ; 92
+	dba MagnetonFrontpic       ; 93
+	dba MagnezoneFrontpic       ; 94
+	dba VoltorbFrontpic       ; 95
+	dba ElectrodeFrontpic       ; 96
+	dba AipomFrontpic       ; 97
+	dba AmbipomFrontpic       ; 98
+	dba SnubbullFrontpic       ; 99
+	dba GranbullFrontpic       ; 100
+	dba VulpixFrontpic       ; 101
+	dba NinetalesFrontpic       ; 102
+	dba GrowlitheFrontpic       ; 103
+	dba ArcanineFrontpic       ; 104
+	dba StantlerFrontpic       ; 105
+	dba WyrdeerFrontpic       ; 106
+	dba MarillFrontpic       ; 107
+	dba AzumarillFrontpic       ; 108
+	dba MankeyFrontpic       ; 109
+	dba PrimeapeFrontpic       ; 110
+	dba AnnihilapeFrontpic       ; 111
+	dba MachopFrontpic       ; 112
+	dba MachokeFrontpic       ; 113
+	dba MachampFrontpic       ; 114
+	dba HitmonleeFrontpic       ; 115
+	dba HitmonchanFrontpic       ; 116
+	dba HitmontopFrontpic       ; 117
+	dba GirafarigFrontpic       ; 118
+	dba FarigirafFrontpic       ; 119
+	dba TaurosFrontpic       ; 120
+	dba MiltankFrontpic       ; 121
+	dba MagmarFrontpic       ; 122
+	dba MagmortarFrontpic       ; 123
+	dba JynxFrontpic       ; 124
+	dba ElectabuzzFrontpic       ; 125
+	dba ElectivireFrontpic       ; 126
+	dba NatuFrontpic       ; 127
+	dba XatuFrontpic       ; 128
+	dba QwilfishFrontpic       ; 129
+	dba OverqwilFrontpic       ; 130
+	dba TentacoolFrontpic       ; 131
+	dba TentacruelFrontpic       ; 132
+	dba ShuckleFrontpic       ; 133
+	dba CorsolaFrontpic       ; 134
+	dba RemoraidFrontpic       ; 135
+	dba OctilleryFrontpic       ; 136
+	dba ChinchouFrontpic       ; 137
+	dba LanturnFrontpic       ; 138
+	dba TangelaFrontpic       ; 139
+	dba TangrowthFrontpic       ; 140
+	dba EeveeFrontpic       ; 141
+	dba VaporeonFrontpic       ; 142
+	dba JolteonFrontpic       ; 143
+	dba FlareonFrontpic       ; 144
+	dba EspeonFrontpic       ; 145
+	dba UmbreonFrontpic       ; 146
+	dba LeafeonFrontpic       ; 147
+	dba GlaceonFrontpic       ; 148
+	dba SylveonFrontpic       ; 149
+	dba HorseaFrontpic       ; 150
+	dba SeadraFrontpic       ; 151
+	dba KingdraFrontpic       ; 152
+	dba GligarFrontpic       ; 153
+	dba GliscorFrontpic       ; 154
+	dba SwinubFrontpic       ; 155
+	dba PiloswineFrontpic       ; 156
+	dba MamoswineFrontpic       ; 157
+	dba TeddiursaFrontpic       ; 158
+	dba UrsaringFrontpic       ; 159
+	dba UrsalunaFrontpic       ; 160
+	dba PhanpyFrontpic       ; 161
+	dba DonphanFrontpic       ; 162
+	dba MantineFrontpic       ; 163
+	dba SkarmoryFrontpic       ; 164
+	dba PonytaFrontpic       ; 165
+	dba RapidashFrontpic       ; 166
+	dba RhyhornFrontpic       ; 167
+	dba RhydonFrontpic       ; 168
+	dba RhyperiorFrontpic       ; 169
+	dba MurkrowFrontpic       ; 170
+	dba HonchkrowFrontpic       ; 171
+	dba HoundourFrontpic       ; 172
+	dba HoundoomFrontpic       ; 173
+	dba SlugmaFrontpic       ; 174
+	dba MagcargoFrontpic       ; 175
+	dba SneaselFrontpic       ; 176
+	dba WeavileFrontpic       ; 177
+	dba SneaslerFrontpic       ; 178
+	dba MisdreavusFrontpic       ; 179
+	dba MismagiusFrontpic       ; 180
+	dba PorygonFrontpic       ; 181
+	dba Porygon2Frontpic       ; 182
+	dba Porygon_ZFrontpic       ; 183
+	dba ChanseyFrontpic       ; 184
+	dba BlisseyFrontpic       ; 185
+	dba LaprasFrontpic       ; 186
+	dba SnorlaxFrontpic       ; 187
+	dba ChikoritaFrontpic       ; 188
+	dba BayleefFrontpic       ; 189
+	dba MeganiumFrontpic       ; 190
+	dba TotodileFrontpic       ; 191
+	dba CroconawFrontpic       ; 192
+	dba FeraligatrFrontpic       ; 193
+	dba StarlyFrontpic       ; 194
+	dba StaraviaFrontpic       ; 195
+	dba StaraptorFrontpic       ; 196
+	dba ShinxFrontpic       ; 197
+	dba LuxioFrontpic       ; 198
+	dba LuxrayFrontpic       ; 199
+	dba CranidosFrontpic       ; 200
+	dba RampardosFrontpic       ; 201
+	dba ShieldonFrontpic       ; 202
+	dba BastiodonFrontpic       ; 203
+	dba DrifloonFrontpic       ; 204
+	dba DrifblimFrontpic       ; 205
+	dba BronzorFrontpic       ; 206
+	dba BronzongFrontpic       ; 207
+	dba SpiritombFrontpic       ; 208
+	dba RioluFrontpic       ; 209
+	dba LucarioFrontpic       ; 210
+	dba HippopotasFrontpic       ; 211
+	dba HippowdonFrontpic       ; 212
+	dba CroagunkFrontpic       ; 213
+	dba ToxicroakFrontpic       ; 214
+	dba SnoverFrontpic       ; 215
+	dba AbomasnowFrontpic       ; 216
+	dba DuskullFrontpic       ; 217
+	dba DusclopsFrontpic       ; 218
+	dba DusknoirFrontpic       ; 219
+	dba SnoruntFrontpic       ; 220
+	dba GlalieFrontpic       ; 221
+	dba FroslassFrontpic       ; 222
+	dba RotomFrontpic       ; 223
+	dba BergmiteFrontpic       ; 224
+	dba AvaluggFrontpic       ; 225
+	dba BasculinFrontpic       ; 226
+	dba BasculegionFrontpic       ; 227
+	dba RuffletFrontpic       ; 228
+	dba BraviaryFrontpic       ; 229
+	dba RaltsFrontpic       ; 230
+	dba KirliaFrontpic       ; 231
+	dba GardevoirFrontpic       ; 232
+	dba GalladeFrontpic       ; 233
+	dba GoomyFrontpic       ; 234
+	dba SliggooFrontpic       ; 235
+	dba GoodraFrontpic       ; 236
+	dba ZoruaFrontpic       ; 237
+	dba ZoroarkFrontpic       ; 238
+	dba GibleFrontpic       ; 239
+	dba GabiteFrontpic       ; 240
+	dba GarchompFrontpic       ; 241
+	dba DratiniFrontpic       ; 242
+	dba DragonairFrontpic       ; 243
+	dba DragoniteFrontpic       ; 244
+	dba LarvitarFrontpic       ; 245
+	dba PupitarFrontpic       ; 246
+	dba TyranitarFrontpic       ; 247
+	dba RaikouFrontpic       ; 248
+	dba EnteiFrontpic       ; 249
+	dba SuicuneFrontpic       ; 250
+	dba HeatranFrontpic       ; 251
+	dba LugiaFrontpic       ; 252
+	dba Ho_OhFrontpic       ; 253
+	dba CelebiFrontpic       ; 254
 	assert_table_length NUM_POKEMON
 
 	dba EggPic
@@ -286,47 +286,44 @@ FrontPicPointers::
 	dba UnownExclamationFrontpic
 	dba UnownQuestionFrontpic
 
-; Alolan Forms
-	dba RaichuAlolanFrontpic
-	dba VulpixAlolanFrontpic
-	dba NinetalesAlolanFrontpic
-	dba GeodudeAlolanFrontpic
-	dba GravelerAlolanFrontpic
-	dba GolemAlolanFrontpic
-	dba GrimerAlolanFrontpic
-	dba MukAlolanFrontpic
-	dba ExeggutorAlolanFrontpic
-
-; Galarian Forms
-	dba PonytaGalarianFrontpic
-	dba RapidashGalarianFrontpic
-	dba SlowpokeGalarianFrontpic
-	dba SlowbroGalarianFrontpic
-	dba SlowkingGalarianFrontpic
-	dba WeezingGalarianFrontpic
-	dba CorsolaGalarianFrontpic
-
-; Hisuian Forms
-	dba GrowlitheHisuianFrontpic
-	dba ArcanineHisuianFrontpic
-	dba VoltorbHisuianFrontpic
-	dba ElectrodeHisuianFrontpic
-	dba TyphlosionHisuianFrontpic
-	dba QwilfishHisuianFrontpic
-	dba SneaselHisuianFrontpic
-	dba SamurottHisuianFrontpic
-	dba DecidueyeHisuianFrontpic
-
-; Other Forms
-	dba NoctowlImmortalFrontpic
-	dba UrsalunaBloodmoonFrontpic
-
-	dba FeraligatrAncestorFrontpic
-	dba MeganiumAncestorFrontpic
-	dba MagcargoAncestorFrontpic
-	dba XatuAncestorFrontpic
+	dba Raichu_AlolanFrontpic       ; 00
+	dba Vulpix_AlolanFrontpic       ; 00
+	dba Ninetales_AlolanFrontpic       ; 00
+	dba Geodude_AlolanFrontpic       ; 00
+	dba Graveler_AlolanFrontpic       ; 00
+	dba Golem_AlolanFrontpic       ; 00
+	dba Grimer_AlolanFrontpic       ; 00
+	dba Muk_AlolanFrontpic       ; 00
+	dba Exeggutor_AlolanFrontpic       ; 00
 
 
+
+	dba Ponyta_GalarianFrontpic       ; 00
+	dba Rapidash_GalarianFrontpic       ; 00
+	dba Slowpoke_GalarianFrontpic       ; 00
+	dba Slowbro_GalarianFrontpic       ; 00
+	dba Slowking_GalarianFrontpic       ; 00
+	dba Weezing_GalarianFrontpic       ; 00
+	dba Corsola_GalarianFrontpic       ; 00
+
+
+
+	dba Growlithe_HisuainFrontpic       ; 00
+	dba Arcanine_HisuininFrontpic       ; 00
+	dba Voltorb_  HisuainFrontpic       ; 00
+	dba Electrode_HisuainFrontpic       ; 00
+	dba Typhlosion_HisiinFrontpic       ; 00
+	dba Qwilfish_HisuininFrontpic       ; 00
+	dba Sneasel_Hisuia_InFrontpic       ; 00
+	dba Samurott_HisuininFrontpic       ; 00
+	dba Decidueye_HisuainFrontpic       ; 00
+
+	dba Noctowl_ImmortalFrontpic       ; 00
+	dba Ursaluna_BloodmoonFrontpic       ; 00
+	dba Feraligatr_AncestorFrontpic       ; 00
+	dba Meganium_AncestorFrontpic       ; 00
+	dba Magcargo_AncestorFrontpic       ; 00
+	dba Xatu_AncestorFrontpic       ; 00
 
 	assert_table_length NUM_UNIQUE_POKEMON
 	
