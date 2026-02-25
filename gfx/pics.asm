@@ -1,4 +1,4 @@
-INCLUDE "constants.asm"
+INCLUDE "constants.asm" ; todo 
 
 
 SECTION "Pic Pointers", ROMX

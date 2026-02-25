@@ -268,8 +268,6 @@ EggMovePointers::
 	dw NoEggMoves ; Muk_Alolan       ; 00
 	dw NoEggMoves ; Exeggutor_Alolan       ; 00
 
-
-
 	dw NoEggMoves ; Ponyta_Galarian       ; 00
 	dw NoEggMoves ; Rapidash_Galarian       ; 00
 	dw NoEggMoves ; Slowpoke_Galarian       ; 00
@@ -278,19 +276,15 @@ EggMovePointers::
 	dw NoEggMoves ; Weezing_Galarian       ; 00
 	dw NoEggMoves ; Corsola_Galarian       ; 00
 
-
-
-	dw NoEggMoves ; Growlithe_Hisuain       ; 00
-	dw NoEggMoves ; Arcanine_Hisuinin       ; 00
-	dw NoEggMoves ; Voltorb_  Hisuain       ; 00
-	dw NoEggMoves ; Electrode_Hisuain       ; 00
+	dw NoEggMoves ; Growlithe_Hisuian       ; 00
+	dw NoEggMoves ; Arcanine_Hisuian       ; 00
+	dw NoEggMoves ; Voltorb_Hisuian       ; 00
+	dw NoEggMoves ; Electrode_Hisuian       ; 00
 	dw NoEggMoves ; Typhlosion_Hisiin       ; 00
-	dw NoEggMoves ; Qwilfish_Hisuinin       ; 00
-	dw NoEggMoves ; Sneasel_Hisuia_In       ; 00
-	dw NoEggMoves ; Samurott_Hisuinin       ; 00
-	dw NoEggMoves ; Decidueye_Hisuain       ; 00
-
-
+	dw NoEggMoves ; Qwilfish_Hisuian       ; 00
+	dw NoEggMoves ; Sneasel_Hisuian       ; 00
+	dw NoEggMoves ; Samurott_Hisuian       ; 00
+	dw NoEggMoves ; Decidueye_Hisuian       ; 00
 
 	dw NoEggMoves ; Noctowl_Immortal       ; 00
 	dw NoEggMoves ; Ursaluna_Bloodmoon       ; 00

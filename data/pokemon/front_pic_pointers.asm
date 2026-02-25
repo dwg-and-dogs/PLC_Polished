@@ -296,8 +296,6 @@ FrontPicPointers::
 	dba Muk_AlolanFrontpic       ; 00
 	dba Exeggutor_AlolanFrontpic       ; 00
 
-
-
 	dba Ponyta_GalarianFrontpic       ; 00
 	dba Rapidash_GalarianFrontpic       ; 00
 	dba Slowpoke_GalarianFrontpic       ; 00
@@ -306,17 +304,15 @@ FrontPicPointers::
 	dba Weezing_GalarianFrontpic       ; 00
 	dba Corsola_GalarianFrontpic       ; 00
 
-
-
-	dba Growlithe_HisuainFrontpic       ; 00
-	dba Arcanine_HisuininFrontpic       ; 00
-	dba Voltorb_  HisuainFrontpic       ; 00
-	dba Electrode_HisuainFrontpic       ; 00
+	dba Growlithe_HisuianFrontpic       ; 00
+	dba Arcanine_HisuianFrontpic       ; 00
+	dba Voltorb_HisuianFrontpic       ; 00
+	dba Electrode_HisuianFrontpic       ; 00
 	dba Typhlosion_HisiinFrontpic       ; 00
-	dba Qwilfish_HisuininFrontpic       ; 00
-	dba Sneasel_Hisuia_InFrontpic       ; 00
-	dba Samurott_HisuininFrontpic       ; 00
-	dba Decidueye_HisuainFrontpic       ; 00
+	dba Qwilfish_HisuianFrontpic       ; 00
+	dba Sneasel_HisuianFrontpic       ; 00
+	dba Samurott_HisuianFrontpic       ; 00
+	dba Decidueye_HisuianFrontpic       ; 00
 
 	dba Noctowl_ImmortalFrontpic       ; 00
 	dba Ursaluna_BloodmoonFrontpic       ; 00

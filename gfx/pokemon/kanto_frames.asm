@@ -1,4 +1,4 @@
-KantoFrames:
+KantoFrames: ; previous build had an error in kantoframes from line 83 to the end. 
 
 CyndaquilFrames: INCLUDE "gfx/pokemon/cyndaquil/frames.asm"
 QuilavaFrames: INCLUDE "gfx/pokemon/quilava/frames.asm"

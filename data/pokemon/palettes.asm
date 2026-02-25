@@ -1,4 +1,4 @@
-PokemonPalettes:
+PokemonPalettes: ; todo 
 	table_width PAL_COLOR_SIZE * 2 * 2, PokemonPalettes
 
 if DEF(MONOCHROME)

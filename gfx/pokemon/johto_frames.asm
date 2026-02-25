@@ -1,4 +1,4 @@
-JohtoFrames:
+JohtoFrames: ; previous build had an error with the entries in kanto frames but johto frames were all OK. 
 
 PhanpyFrames: INCLUDE "gfx/pokemon/phanpy/frames.asm"
 DonphanFrames: INCLUDE "gfx/pokemon/donphan/frames.asm"

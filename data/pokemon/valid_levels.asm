@@ -1,4 +1,4 @@
-ValidPokemonLevels: ; labels here don't matter. 
+ValidPokemonLevels: ; labels don't matter. 
 	table_width 2, ValidPokemonLevels
 	;  min, max
 	db 255, 255 ; ?????

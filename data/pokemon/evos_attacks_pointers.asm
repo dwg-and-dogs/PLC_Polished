@@ -272,8 +272,6 @@ EvosAttacksPointers::
 	dw Muk_AlolanEvosAttacks       ; 00
 	dw Exeggutor_AlolanEvosAttacks       ; 00
 
-
-
 	dw Ponyta_GalarianEvosAttacks       ; 00
 	dw Rapidash_GalarianEvosAttacks       ; 00
 	dw Slowpoke_GalarianEvosAttacks       ; 00
@@ -282,19 +280,15 @@ EvosAttacksPointers::
 	dw Weezing_GalarianEvosAttacks       ; 00
 	dw Corsola_GalarianEvosAttacks       ; 00
 
-
-
-	dw Growlithe_HisuainEvosAttacks       ; 00
-	dw Arcanine_HisuininEvosAttacks       ; 00
-	dw Voltorb_  HisuainEvosAttacks       ; 00
-	dw Electrode_HisuainEvosAttacks       ; 00
+	dw Growlithe_HisuianEvosAttacks       ; 00
+	dw Arcanine_HisuianEvosAttacks       ; 00
+	dw Voltorb_HisuianEvosAttacks       ; 00
+	dw Electrode_HisuianEvosAttacks       ; 00
 	dw Typhlosion_HisiinEvosAttacks       ; 00
-	dw Qwilfish_HisuininEvosAttacks       ; 00
-	dw Sneasel_Hisuia_InEvosAttacks       ; 00
-	dw Samurott_HisuininEvosAttacks       ; 00
-	dw Decidueye_HisuainEvosAttacks       ; 00
-
-
+	dw Qwilfish_HisuianEvosAttacks       ; 00
+	dw Sneasel_HisuianEvosAttacks       ; 00
+	dw Samurott_HisuianEvosAttacks       ; 00
+	dw Decidueye_HisuianEvosAttacks       ; 00
 
 	dw Noctowl_ImmortalEvosAttacks       ; 00
 	dw Ursaluna_BloodmoonEvosAttacks       ; 00
