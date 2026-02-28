@@ -313,7 +313,7 @@ BackPicPointers::
 	dba Arcanine_HisuianBackpic       ; 00
 	dba Voltorb_HisuianBackpic       ; 00
 	dba Electrode_HisuianBackpic       ; 00
-	dba Typhlosion_HisiinBackpic       ; 00
+	dba Typhlosion_HisuianBackpic       ; 00
 	dba Qwilfish_HisuianBackpic       ; 00
 	dba Sneasel_HisuianBackpic       ; 00
 	dba Samurott_HisuianBackpic       ; 00

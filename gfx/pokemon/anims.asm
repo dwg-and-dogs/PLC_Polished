@@ -314,7 +314,7 @@ Growlithe_HisuianAnimation:  INCLUDE "gfx/pokemon/growlithe_hisuian/anim0.asm"
 Arcanine_HisuianAnimation:  INCLUDE "gfx/pokemon/arcanine_hisuian/anim0.asm"
 Voltorb_HisuianAnimation:  INCLUDE "gfx/pokemon/voltorb_hisuian/anim0.asm"
 Electrode_HisuianAnimation:  INCLUDE "gfx/pokemon/electrode_hisuian/anim0.asm"
-Typhlosion_HisiinAnimation:  INCLUDE "gfx/pokemon/typhlosion_hisiin/anim0.asm"
+Typhlosion_HisuianAnimation:  INCLUDE "gfx/pokemon/typhlosion_hisuian/anim0.asm"
 Qwilfish_HisuianAnimation:  INCLUDE "gfx/pokemon/qwilfish_hisuian/anim0.asm"
 Sneasel_HisuianAnimation:  INCLUDE "gfx/pokemon/sneasel_hisuian/anim0.asm"
 Samurott_HisuianAnimation:  INCLUDE "gfx/pokemon/samurott_hisuian/anim0.asm"
@@ -322,7 +322,7 @@ Decidueye_HisuianAnimation:  INCLUDE "gfx/pokemon/decidueye_hisuian/anim0.asm"
 
 
 
-
+Noctowl_ImmortalAnimation:  INCLUDE "gfx/pokemon/noctowl_immortal/anim0.asm"
 Ursaluna_BloodmoonAnimation:  INCLUDE "gfx/pokemon/ursaluna_bloodmoon/anim0.asm"
 Feraligatr_AncestorAnimation:  INCLUDE "gfx/pokemon/feraligatr_ancestor/anim0.asm"
 Meganium_AncestorAnimation:  INCLUDE "gfx/pokemon/meganium_ancestor/anim0.asm"

@@ -301,7 +301,7 @@ endr
 	iconpal PURPLE, BLUE    ; NOCTOWL (Immortal)
 	iconpal RED, RED ; URSALUNA, URSALUNA_BLOODMOON_FORM
 	iconpal BROWN, TEAL      ; FERALIGATR (variant)
-	iconpal RED, BROWN      ; MEGANIUM (variant)
+	iconpal BROWN, RED      ; MEGANIUM (variant)
 	iconpal PURPLE, GRAY       ; MAGCARGO (variant)
 	iconpal BROWN, GREEN      ; XATU (variant)
 

@@ -313,7 +313,7 @@ BitmasksPointers:
 	dw Arcanine_HisuianBitmasks       ; 00
 	dw Voltorb_HisuianBitmasks       ; 00
 	dw Electrode_HisuianBitmasks       ; 00
-	dw Typhlosion_HisiinBitmasks       ; 00
+	dw Typhlosion_HisuianBitmasks       ; 00
 	dw Qwilfish_HisuianBitmasks       ; 00
 	dw Sneasel_HisuianBitmasks       ; 00
 	dw Samurott_HisuianBitmasks       ; 00

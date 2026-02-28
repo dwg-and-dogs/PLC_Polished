@@ -284,7 +284,7 @@ EvosAttacksPointers::
 	dw Arcanine_HisuianEvosAttacks       ; 00
 	dw Voltorb_HisuianEvosAttacks       ; 00
 	dw Electrode_HisuianEvosAttacks       ; 00
-	dw Typhlosion_HisiinEvosAttacks       ; 00
+	dw Typhlosion_HisuianEvosAttacks       ; 00
 	dw Qwilfish_HisuianEvosAttacks       ; 00
 	dw Sneasel_HisuianEvosAttacks       ; 00
 	dw Samurott_HisuianEvosAttacks       ; 00

@@ -16,6 +16,7 @@ I noticed that the scythe file is really big. So I commented out the anim0. The 
 
 Everything else in the section should be OK. So I'm not sure what I can do other than run a make clean and see what happens. Make clean still shows a problem with sudowoodo, even though all the other members of its section seem OK. 
 
+Important finding is that the above sudowoodo to ursaluna error is a problem that terminates at the end of kanto frames and once johto frames starts there is no problem again, but it's possible that some mons animated forms are also bad there
 
 
 Notes:

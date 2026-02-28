@@ -308,7 +308,7 @@ FrontPicPointers::
 	dba Arcanine_HisuianFrontpic       ; 00
 	dba Voltorb_HisuianFrontpic       ; 00
 	dba Electrode_HisuianFrontpic       ; 00
-	dba Typhlosion_HisiinFrontpic       ; 00
+	dba Typhlosion_HisuianFrontpic       ; 00
 	dba Qwilfish_HisuianFrontpic       ; 00
 	dba Sneasel_HisuianFrontpic       ; 00
 	dba Samurott_HisuianFrontpic       ; 00

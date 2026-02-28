@@ -310,7 +310,7 @@ Growlithe_HisuianAnimationExtra:  INCLUDE "gfx/pokemon/growlithe_hisuian/anim1.a
 Arcanine_HisuianAnimationExtra:  INCLUDE "gfx/pokemon/arcanine_hisuian/anim1.asm"
 Voltorb_HisuianAnimationExtra:  INCLUDE "gfx/pokemon/voltorb_hisuian/anim1.asm"
 Electrode_HisuianAnimationExtra:  INCLUDE "gfx/pokemon/electrode_hisuian/anim1.asm"
-Typhlosion_HisiinAnimationExtra:  INCLUDE "gfx/pokemon/typhlosion_hisiin/anim1.asm"
+Typhlosion_HisuianAnimationExtra:  INCLUDE "gfx/pokemon/typhlosion_hisuian/anim1.asm"
 Qwilfish_HisuianAnimationExtra:  INCLUDE "gfx/pokemon/qwilfish_hisuian/anim1.asm"
 Sneasel_HisuianAnimationExtra:  INCLUDE "gfx/pokemon/sneasel_hisuian/anim1.asm"
 Samurott_HisuianAnimationExtra:  INCLUDE "gfx/pokemon/samurott_hisuian/anim1.asm"

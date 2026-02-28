@@ -288,43 +288,46 @@ FramesPointers:
 	dw UnownExclamationFrames
 	dw UnownQuestionFrames
 
-	dw Raichu_alolanFrames
-	dw Vulpix_alolanFrames
-	dw Ninetales_alolanFrames
-	dw Geodude_alolanFrames
-	dw Graveler_alolanFrames
-	dw Golem_alolanFrames
-	dw Grimer_alolanFrames
-	dw Muk_alolanFrames
-	dw Exeggutor_alolanFrames
+	dw Raichu_AlolanFrames       ; 00
+	dw Vulpix_AlolanFrames       ; 00
+	dw Ninetales_AlolanFrames       ; 00
+	dw Geodude_AlolanFrames       ; 00
+	dw Graveler_AlolanFrames       ; 00
+	dw Golem_AlolanFrames       ; 00
+	dw Grimer_AlolanFrames       ; 00
+	dw Muk_AlolanFrames       ; 00
+	dw Exeggutor_AlolanFrames       ; 00
 
 
-	dw Ponyta_galarianFrames
-	dw Rapidash_galarianFrames
-	dw Slowpoke_galarianFrames
-	dw Slowbro_galarianFrames
-	dw Slowking_galarianFrames
-	dw Weezing_galarianFrames
-	dw Corsola_galarianFrames
+
+	dw Ponyta_GalarianFrames       ; 00
+	dw Rapidash_GalarianFrames       ; 00
+	dw Slowpoke_GalarianFrames       ; 00
+	dw Slowbro_GalarianFrames       ; 00
+	dw Slowking_GalarianFrames       ; 00
+	dw Weezing_GalarianFrames       ; 00
+	dw Corsola_GalarianFrames       ; 00
 
 
-	dw Growlithe_hisuianFrames
-	dw Arcanine_hisuianFrames
-	dw Voltorb_hisuianFrames
-	dw Electrode_hisuianFrames
-	dw Typhlosion_hisuianFrames
-	dw Qwilfish_hisuianFrames
-	dw Sneasel_hisuianFrames
-	dw Samurott_hisuianFrames
-	dw Decidueye_hisuianFrames
+
+	dw Growlithe_HisuianFrames       ; 00
+	dw Arcanine_HisuianFrames       ; 00
+	dw Voltorb_HisuianFrames       ; 00
+	dw Electrode_HisuianFrames       ; 00
+	dw Typhlosion_HisuianFrames       ; 00
+	dw Qwilfish_HisuianFrames       ; 00
+	dw Sneasel_HisuianFrames       ; 00
+	dw Samurott_HisuianFrames       ; 00
+	dw Decidueye_HisuianFrames       ; 00
 
 
-	dw Noctowl_immortalFrames
-	dw Ursaluna_bloodmoonFrames
 
-	dw Feraligatr_ancestorFrames
-	dw Meganium_ancestorFrames
-	dw Magcargo_ancestorFrames
-	dw Xatu_ancestorFrames
+	dw Noctowl_ImmortalFrames       ; 00
+	dw Ursaluna_BloodmoonFrames       ; 00
+	dw Feraligatr_AncestorFrames       ; 00
+	dw Meganium_AncestorFrames       ; 00
+	dw Magcargo_AncestorFrames       ; 00
+	dw Xatu_AncestorFrames       ; 00
+
 
 	assert_table_length NUM_UNIQUE_POKEMON

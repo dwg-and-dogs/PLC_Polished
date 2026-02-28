@@ -1,146 +1,146 @@
 EggMovePointers::
 	table_width 2, EggMovePointers
-	dw NoEggMoves ; Cyndaquil       ; 01
+	dw CyndaquilEggMoves ; Cyndaquil       ; 01
 	dw NoEggMoves ; Quilava       ; 02
 	dw NoEggMoves ; Typhlosion       ; 03
-	dw NoEggMoves ; Rowlet       ; 04
+	dw RowletEggMoves ; Rowlet       ; 04
 	dw NoEggMoves ; Dartrix       ; 05
 	dw NoEggMoves ; Decidueye       ; 06
-	dw NoEggMoves ; Oshawott       ; 07
+	dw OshawottEggMoves ; Oshawott       ; 07
 	dw NoEggMoves ; Dewott       ; 08
 	dw NoEggMoves ; Samurott       ; 09
-	dw NoEggMoves ; Hoothoot       ; 10
+	dw HoothootEggMoves ; Hoothoot       ; 10
 	dw NoEggMoves ; Noctowl       ; 11
-	dw NoEggMoves ; Sentret       ; 12
+	dw SentretEggMoves ; Sentret       ; 12
 	dw NoEggMoves ; Furret       ; 13
-	dw NoEggMoves ; Pikachu       ; 14
+	dw PikachuEggMoves ; Pikachu       ; 14
 	dw NoEggMoves ; Raichu       ; 15
-	dw NoEggMoves ; Ledyba       ; 16
+	dw LedybaEggMoves ; Ledyba       ; 16
 	dw NoEggMoves ; Ledian       ; 17
-	dw NoEggMoves ; Spinarak       ; 18
+	dw SpinarakEggMoves ; Spinarak       ; 18
 	dw NoEggMoves ; Ariados       ; 19
-	dw NoEggMoves ; Geodude       ; 20
+	dw GeodudeEggMoves ; Geodude       ; 20
 	dw NoEggMoves ; Graveler       ; 21
 	dw NoEggMoves ; Golem       ; 22
-	dw NoEggMoves ; Zubat       ; 23
+	dw ZubatEggMoves ; Zubat       ; 23
 	dw NoEggMoves ; Golbat       ; 24
 	dw NoEggMoves ; Crobat       ; 25
-	dw NoEggMoves ; Clefairy       ; 26
+	dw ClefairyEggMoves ; Clefairy       ; 26
 	dw NoEggMoves ; Clefable       ; 27
-	dw NoEggMoves ; Togetic       ; 28
+	dw TogeticEggMoves ; Togetic       ; 28
 	dw NoEggMoves ; Togekiss       ; 29
-	dw NoEggMoves ; Dunsparce       ; 30
+	dw DunsparceEggMoves ; Dunsparce       ; 30
 	dw NoEggMoves ; Dudunsparce       ; 31
-	dw NoEggMoves ; Mareep       ; 32
+	dw MareepEggMoves ; Mareep       ; 32
 	dw NoEggMoves ; Flaaffy       ; 33
 	dw NoEggMoves ; Ampharos       ; 34
-	dw NoEggMoves ; Wooper       ; 35
+	dw WooperEggMoves ; Wooper       ; 35
 	dw NoEggMoves ; Quagsire       ; 36
-	dw NoEggMoves ; Gastly       ; 37
+	dw GastlyEggMoves ; Gastly       ; 37
 	dw NoEggMoves ; Haunter       ; 38
 	dw NoEggMoves ; Gengar       ; 39
 	dw NoEggMoves ; Unown       ; 40
-	dw NoEggMoves ; Onix       ; 41
+	dw OnixEggMoves ; Onix       ; 41
 	dw NoEggMoves ; Steelix       ; 42
-	dw NoEggMoves ; Bellsprout       ; 43
+	dw BellsproutEggMoves ; Bellsprout       ; 43
 	dw NoEggMoves ; Weepinbell       ; 44
 	dw NoEggMoves ; Victreebel       ; 45
-	dw NoEggMoves ; Hoppip       ; 46
+	dw HoppipEggMoves ; Hoppip       ; 46
 	dw NoEggMoves ; Skiploom       ; 47
 	dw NoEggMoves ; Jumpluff       ; 48
-	dw NoEggMoves ; Paras       ; 49
+	dw ParasEggMoves ; Paras       ; 49
 	dw NoEggMoves ; Parasect       ; 50
-	dw NoEggMoves ; Poliwag       ; 51
+	dw PoliwagEggMoves ; Poliwag       ; 51
 	dw NoEggMoves ; Poliwhirl       ; 52
 	dw NoEggMoves ; Poliwrath       ; 53
 	dw NoEggMoves ; Politoed       ; 54
-	dw NoEggMoves ; Magikarp       ; 55
+	dw EggMoves ; Magikarp       ; 55
 	dw NoEggMoves ; Gyarados       ; 56
-	dw NoEggMoves ; Slowpoke       ; 57
+	dw SlowpokeEggMoves ; Slowpoke       ; 57
 	dw NoEggMoves ; Slowbro       ; 58
 	dw NoEggMoves ; Slowking       ; 59
-	dw NoEggMoves ; Oddish       ; 60
+	dw OddishEggMoves ; Oddish       ; 60
 	dw NoEggMoves ; Gloom       ; 61
 	dw NoEggMoves ; Vileplume       ; 62
 	dw NoEggMoves ; Bellossom       ; 63
-	dw NoEggMoves ; Abra       ; 64
+	dw AbraEggMoves ; Abra       ; 64
 	dw NoEggMoves ; Kadabra       ; 65
 	dw NoEggMoves ; Alakazam       ; 66
 	dw NoEggMoves ; Ditto       ; 67
-	dw NoEggMoves ; Pineco       ; 68
+	dw PinecoEggMoves ; Pineco       ; 68
 	dw NoEggMoves ; Forretress       ; 69
-	dw NoEggMoves ; Nidoran       ; 70
+	dw NidoranEggMoves ; Nidoran       ; 70
 	dw NoEggMoves ; Nidorina       ; 71
 	dw NoEggMoves ; Nidoqueen       ; 72
 	dw NoEggMoves ; Nidorino       ; 73
 	dw NoEggMoves ; Nidoking       ; 74
-	dw NoEggMoves ; Yanma       ; 75
+	dw YanmaEggMoves ; Yanma       ; 75
 	dw NoEggMoves ; Yanmega       ; 76
-	dw NoEggMoves ; Sunkern       ; 77
+	dw SunkernEggMoves ; Sunkern       ; 77
 	dw NoEggMoves ; Sunflora       ; 78
-	dw NoEggMoves ; Exeggcute       ; 79
+	dw ExeggcuteEggMoves ; Exeggcute       ; 79
 	dw NoEggMoves ; Exeggutor       ; 80
-	dw NoEggMoves ; Sudowoodo       ; 81
-	dw NoEggMoves ; Scyther       ; 82
+	dw SudowoodoEggMoves ; Sudowoodo       ; 81
+	dw ScytherEggMoves ; Scyther       ; 82
 	dw NoEggMoves ; Scizor       ; 83
 	dw NoEggMoves ; Kleavor       ; 84
-	dw NoEggMoves ; Pinsir       ; 85
+	dw PinsirEggMoves ; Pinsir       ; 85
 	dw NoEggMoves ; Minsir       ; 86
-	dw NoEggMoves ; Heracross       ; 87
-	dw NoEggMoves ; Koffing       ; 88
+	dw HeracrossEggMoves ; Heracross       ; 87
+	dw KoffingEggMoves ; Koffing       ; 88
 	dw NoEggMoves ; Weezing       ; 89
-	dw NoEggMoves ; Grimer       ; 90
+	dw GrimerEggMoves ; Grimer       ; 90
 	dw NoEggMoves ; Muk       ; 91
 	dw NoEggMoves ; Magnemite       ; 92
 	dw NoEggMoves ; Magneton       ; 93
 	dw NoEggMoves ; Magnezone       ; 94
 	dw NoEggMoves ; Voltorb       ; 95
 	dw NoEggMoves ; Electrode       ; 96
-	dw NoEggMoves ; Aipom       ; 97
+	dw AipomEggMoves ; Aipom       ; 97
 	dw NoEggMoves ; Ambipom       ; 98
-	dw NoEggMoves ; Snubbull       ; 99
+	dw SnubbullEggMoves ; Snubbull       ; 99
 	dw NoEggMoves ; Granbull       ; 100
-	dw NoEggMoves ; Vulpix       ; 101
+	dw VulpixEggMoves ; Vulpix       ; 101
 	dw NoEggMoves ; Ninetales       ; 102
-	dw NoEggMoves ; Growlithe       ; 103
+	dw GrowlitheEggMoves ; Growlithe       ; 103
 	dw NoEggMoves ; Arcanine       ; 104
-	dw NoEggMoves ; Stantler       ; 105
+	dw StantlerEggMoves ; Stantler       ; 105
 	dw NoEggMoves ; Wyrdeer       ; 106
-	dw NoEggMoves ; Marill       ; 107
+	dw MarillEggMoves ; Marill       ; 107
 	dw NoEggMoves ; Azumarill       ; 108
-	dw NoEggMoves ; Mankey       ; 109
+	dw MankeyEggMoves ; Mankey       ; 109
 	dw NoEggMoves ; Primeape       ; 110
 	dw NoEggMoves ; Annihilape       ; 111
-	dw NoEggMoves ; Machop       ; 112
+	dw MachopEggMoves ; Machop       ; 112
 	dw NoEggMoves ; Machoke       ; 113
 	dw NoEggMoves ; Machamp       ; 114
-	dw NoEggMoves ; Hitmonlee       ; 115
-	dw NoEggMoves ; Hitmonchan       ; 116
-	dw NoEggMoves ; Hitmontop       ; 117
-	dw NoEggMoves ; Girafarig       ; 118
+	dw HitmonleeEggMoves ; Hitmonlee       ; 115
+	dw HitmonchanEggMoves ; Hitmonchan       ; 116
+	dw HitmontopEggMoves ; Hitmontop       ; 117
+	dw GirafarigEggMoves ; Girafarig       ; 118
 	dw NoEggMoves ; Farigiraf       ; 119
 	dw NoEggMoves ; Tauros       ; 120
-	dw NoEggMoves ; Miltank       ; 121
-	dw NoEggMoves ; Magmar       ; 122
+	dw MiltankEggMoves ; Miltank       ; 121
+	dw MagmarEggMoves ; Magmar       ; 122
 	dw NoEggMoves ; Magmortar       ; 123
-	dw NoEggMoves ; Jynx       ; 124
-	dw NoEggMoves ; Electabuzz       ; 125
+	dw JynxEggMoves ; Jynx       ; 124
+	dw ElectabuzzEggMoves ; Electabuzz       ; 125
 	dw NoEggMoves ; Electivire       ; 126
-	dw NoEggMoves ; Natu       ; 127
+	dw NatuEggMoves ; Natu       ; 127
 	dw NoEggMoves ; Xatu       ; 128
-	dw NoEggMoves ; Qwilfish       ; 129
+	dw QwilfishEggMoves ; Qwilfish       ; 129
 	dw NoEggMoves ; Overqwil       ; 130
-	dw NoEggMoves ; Tentacool       ; 131
+	dw TentacoolEggMoves ; Tentacool       ; 131
 	dw NoEggMoves ; Tentacruel       ; 132
-	dw NoEggMoves ; Shuckle       ; 133
-	dw NoEggMoves ; Corsola       ; 134
-	dw NoEggMoves ; Remoraid       ; 135
+	dw ShuckleEggMoves ; Shuckle       ; 133
+	dw CorsolaEggMoves ; Corsola       ; 134
+	dw RemoraidEggMoves ; Remoraid       ; 135
 	dw NoEggMoves ; Octillery       ; 136
-	dw NoEggMoves ; Chinchou       ; 137
+	dw ChinchouEggMoves ; Chinchou       ; 137
 	dw NoEggMoves ; Lanturn       ; 138
-	dw NoEggMoves ; Tangela       ; 139
+	dw TangelaEggMoves ; Tangela       ; 139
 	dw NoEggMoves ; Tangrowth       ; 140
-	dw NoEggMoves ; Eevee       ; 141
+	dw EeveeEggMoves ; Eevee       ; 141
 	dw NoEggMoves ; Vaporeon       ; 142
 	dw NoEggMoves ; Jolteon       ; 143
 	dw NoEggMoves ; Flareon       ; 144
@@ -149,102 +149,102 @@ EggMovePointers::
 	dw NoEggMoves ; Leafeon       ; 147
 	dw NoEggMoves ; Glaceon       ; 148
 	dw NoEggMoves ; Sylveon       ; 149
-	dw NoEggMoves ; Horsea       ; 150
+	dw HorseaEggMoves ; Horsea       ; 150
 	dw NoEggMoves ; Seadra       ; 151
 	dw NoEggMoves ; Kingdra       ; 152
-	dw NoEggMoves ; Gligar       ; 153
+	dw GligarEggMoves ; Gligar       ; 153
 	dw NoEggMoves ; Gliscor       ; 154
-	dw NoEggMoves ; Swinub       ; 155
+	dw SwinubEggMoves ; Swinub       ; 155
 	dw NoEggMoves ; Piloswine       ; 156
 	dw NoEggMoves ; Mamoswine       ; 157
-	dw NoEggMoves ; Teddiursa       ; 158
+	dw TeddiursaEggMoves ; Teddiursa       ; 158
 	dw NoEggMoves ; Ursaring       ; 159
 	dw NoEggMoves ; Ursaluna       ; 160
-	dw NoEggMoves ; Phanpy       ; 161
+	dw PhanpyEggMoves ; Phanpy       ; 161
 	dw NoEggMoves ; Donphan       ; 162
-	dw NoEggMoves ; Mantine       ; 163
-	dw NoEggMoves ; Skarmory       ; 164
-	dw NoEggMoves ; Ponyta       ; 165
+	dw MantineEggMoves ; Mantine       ; 163
+	dw SkarmoryEggMoves ; Skarmory       ; 164
+	dw PonytaEggMoves ; Ponyta       ; 165
 	dw NoEggMoves ; Rapidash       ; 166
-	dw NoEggMoves ; Rhyhorn       ; 167
+	dw RhyhornEggMoves ; Rhyhorn       ; 167
 	dw NoEggMoves ; Rhydon       ; 168
 	dw NoEggMoves ; Rhyperior       ; 169
-	dw NoEggMoves ; Murkrow       ; 170
+	dw MurkrowEggMoves ; Murkrow       ; 170
 	dw NoEggMoves ; Honchkrow       ; 171
-	dw NoEggMoves ; Houndour       ; 172
+	dw HoundourEggMoves ; Houndour       ; 172
 	dw NoEggMoves ; Houndoom       ; 173
-	dw NoEggMoves ; Slugma       ; 174
+	dw SlugmaEggMoves ; Slugma       ; 174
 	dw NoEggMoves ; Magcargo       ; 175
-	dw NoEggMoves ; Sneasel       ; 176
+	dw SneaselEggMoves ; Sneasel       ; 176
 	dw NoEggMoves ; Weavile       ; 177
 	dw NoEggMoves ; Sneasler       ; 178
-	dw NoEggMoves ; Misdreavus       ; 179
+	dw MisdreavusEggMoves ; Misdreavus       ; 179
 	dw NoEggMoves ; Mismagius       ; 180
 	dw NoEggMoves ; Porygon       ; 181
 	dw NoEggMoves ; Porygon2       ; 182
 	dw NoEggMoves ; Porygon_Z       ; 183
-	dw NoEggMoves ; Chansey       ; 184
+	dw ChanseyEggMoves ; Chansey       ; 184
 	dw NoEggMoves ; Blissey       ; 185
-	dw NoEggMoves ; Lapras       ; 186
-	dw NoEggMoves ; Snorlax       ; 187
-	dw NoEggMoves ; Chikorita       ; 188
+	dw LaprasEggMoves ; Lapras       ; 186
+	dw SnorlaxEggMoves ; Snorlax       ; 187
+	dw ChikoritaEggMoves ; Chikorita       ; 188
 	dw NoEggMoves ; Bayleef       ; 189
 	dw NoEggMoves ; Meganium       ; 190
-	dw NoEggMoves ; Totodile       ; 191
+	dw TotodileEggMoves ; Totodile       ; 191
 	dw NoEggMoves ; Croconaw       ; 192
 	dw NoEggMoves ; Feraligatr       ; 193
-	dw NoEggMoves ; Starly       ; 194
+	dw StarlyEggMoves ; Starly       ; 194
 	dw NoEggMoves ; Staravia       ; 195
 	dw NoEggMoves ; Staraptor       ; 196
-	dw NoEggMoves ; Shinx       ; 197
+	dw ShinxEggMoves ; Shinx       ; 197
 	dw NoEggMoves ; Luxio       ; 198
 	dw NoEggMoves ; Luxray       ; 199
-	dw NoEggMoves ; Cranidos       ; 200
+	dw CranidosEggMoves ; Cranidos       ; 200
 	dw NoEggMoves ; Rampardos       ; 201
-	dw NoEggMoves ; Shieldon       ; 202
+	dw ShieldonEggMoves ; Shieldon       ; 202
 	dw NoEggMoves ; Bastiodon       ; 203
-	dw NoEggMoves ; Drifloon       ; 204
+	dw DrifloonEggMoves ; Drifloon       ; 204
 	dw NoEggMoves ; Drifblim       ; 205
-	dw NoEggMoves ; Bronzor       ; 206
+	dw BronzorEggMoves ; Bronzor       ; 206
 	dw NoEggMoves ; Bronzong       ; 207
-	dw NoEggMoves ; Spiritomb       ; 208
-	dw NoEggMoves ; Riolu       ; 209
+	dw SpiritombEggMoves ; Spiritomb       ; 208
+	dw RioluEggMoves ; Riolu       ; 209
 	dw NoEggMoves ; Lucario       ; 210
-	dw NoEggMoves ; Hippopotas       ; 211
+	dw HippopotasEggMoves ; Hippopotas       ; 211
 	dw NoEggMoves ; Hippowdon       ; 212
-	dw NoEggMoves ; Croagunk       ; 213
+	dw CroagunkEggMoves ; Croagunk       ; 213
 	dw NoEggMoves ; Toxicroak       ; 214
-	dw NoEggMoves ; Snover       ; 215
+	dw SnoverEggMoves ; Snover       ; 215
 	dw NoEggMoves ; Abomasnow       ; 216
-	dw NoEggMoves ; Duskull       ; 217
+	dw DuskullEggMoves ; Duskull       ; 217
 	dw NoEggMoves ; Dusclops       ; 218
 	dw NoEggMoves ; Dusknoir       ; 219
-	dw NoEggMoves ; Snorunt       ; 220
+	dw SnoruntEggMoves ; Snorunt       ; 220
 	dw NoEggMoves ; Glalie       ; 221
 	dw NoEggMoves ; Froslass       ; 222
-	dw NoEggMoves ; Rotom       ; 223
-	dw NoEggMoves ; Bergmite       ; 224
+	dw RotomEggMoves ; Rotom       ; 223
+	dw BergmiteEggMoves ; Bergmite       ; 224
 	dw NoEggMoves ; Avalugg       ; 225
-	dw NoEggMoves ; Basculin       ; 226
+	dw BasculinEggMoves ; Basculin       ; 226
 	dw NoEggMoves ; Basculegion       ; 227
-	dw NoEggMoves ; Rufflet       ; 228
+	dw RuffletEggMoves ; Rufflet       ; 228
 	dw NoEggMoves ; Braviary       ; 229
-	dw NoEggMoves ; Ralts       ; 230
+	dw RaltsEggMoves ; Ralts       ; 230
 	dw NoEggMoves ; Kirlia       ; 231
 	dw NoEggMoves ; Gardevoir       ; 232
 	dw NoEggMoves ; Gallade       ; 233
-	dw NoEggMoves ; Goomy       ; 234
+	dw GoomyEggMoves ; Goomy       ; 234
 	dw NoEggMoves ; Sliggoo       ; 235
 	dw NoEggMoves ; Goodra       ; 236
-	dw NoEggMoves ; Zorua       ; 237
+	dw ZoruaEggMoves ; Zorua       ; 237
 	dw NoEggMoves ; Zoroark       ; 238
-	dw NoEggMoves ; Gible       ; 239
+	dw GibleEggMoves ; Gible       ; 239
 	dw NoEggMoves ; Gabite       ; 240
 	dw NoEggMoves ; Garchomp       ; 241
-	dw NoEggMoves ; Dratini       ; 242
+	dw DratiniEggMoves ; Dratini       ; 242
 	dw NoEggMoves ; Dragonair       ; 243
 	dw NoEggMoves ; Dragonite       ; 244
-	dw NoEggMoves ; Larvitar       ; 245
+	dw LarvitarEggMoves ; Larvitar       ; 245
 	dw NoEggMoves ; Pupitar       ; 246
 	dw NoEggMoves ; Tyranitar       ; 247
 	dw NoEggMoves ; Raikou       ; 248
@@ -259,30 +259,30 @@ EggMovePointers::
 	dw NoEggMoves ; Egg
 
 	dw NoEggMoves ; Raichu_Alolan       ; 00
-	dw NoEggMoves ; Vulpix_Alolan       ; 00
+	dw VulpixAlolanEggMoves ; Vulpix_Alolan       ; 00
 	dw NoEggMoves ; Ninetales_Alolan       ; 00
-	dw NoEggMoves ; Geodude_Alolan       ; 00
+	dw GeodudeAlolanEggMoves ; Geodude_Alolan       ; 00
 	dw NoEggMoves ; Graveler_Alolan       ; 00
 	dw NoEggMoves ; Golem_Alolan       ; 00
-	dw NoEggMoves ; Grimer_Alolan       ; 00
+	dw GrimerAlolanEggMoves ; Grimer_Alolan       ; 00
 	dw NoEggMoves ; Muk_Alolan       ; 00
 	dw NoEggMoves ; Exeggutor_Alolan       ; 00
 
-	dw NoEggMoves ; Ponyta_Galarian       ; 00
+	dw PonytaGalarianEggMoves ; Ponyta_Galarian       ; 00
 	dw NoEggMoves ; Rapidash_Galarian       ; 00
-	dw NoEggMoves ; Slowpoke_Galarian       ; 00
+	dw SlowpokeGalarianEggMoves ; Slowpoke_Galarian       ; 00
 	dw NoEggMoves ; Slowbro_Galarian       ; 00
 	dw NoEggMoves ; Slowking_Galarian       ; 00
 	dw NoEggMoves ; Weezing_Galarian       ; 00
-	dw NoEggMoves ; Corsola_Galarian       ; 00
+	dw CorsolaGalarianEggMoves ; Corsola_Galarian       ; 00
 
-	dw NoEggMoves ; Growlithe_Hisuian       ; 00
+	dw GrowlitheHisuianEggMoves ; Growlithe_Hisuian       ; 00
 	dw NoEggMoves ; Arcanine_Hisuian       ; 00
 	dw NoEggMoves ; Voltorb_Hisuian       ; 00
 	dw NoEggMoves ; Electrode_Hisuian       ; 00
 	dw NoEggMoves ; Typhlosion_Hisiin       ; 00
-	dw NoEggMoves ; Qwilfish_Hisuian       ; 00
-	dw NoEggMoves ; Sneasel_Hisuian       ; 00
+	dw QwilfishHisuianEggMoves ; Qwilfish_Hisuian       ; 00
+	dw SneaselHisuianEggMoves ; Sneasel_Hisuian       ; 00
 	dw NoEggMoves ; Samurott_Hisuian       ; 00
 	dw NoEggMoves ; Decidueye_Hisuian       ; 00
 

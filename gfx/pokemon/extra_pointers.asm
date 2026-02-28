@@ -313,7 +313,7 @@ AnimationExtraPointers:
 	dw Arcanine_HisuianAnimationExtra       ; 00
 	dw Voltorb_HisuianAnimationExtra       ; 00
 	dw Electrode_HisuianAnimationExtra       ; 00
-	dw Typhlosion_HisiinAnimationExtra       ; 00
+	dw Typhlosion_HisuianAnimationExtra       ; 00
 	dw Qwilfish_HisuianAnimationExtra       ; 00
 	dw Sneasel_HisuianAnimationExtra       ; 00
 	dw Samurott_HisuianAnimationExtra       ; 00

@@ -66,7 +66,7 @@ TyphlosionEvosAttacks:
 	db 60, FLARE_BLITZ ; Inferno → new move
 	db 0 ; no more level-up moves
 	
-TyphlosionHisuianEvosAttacks:
+Typhlosion_HisuianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, FIRE_PUNCH ; evolution move
 	db 1, TACKLE
@@ -142,7 +142,7 @@ DecidueyeEvosAttacks:
 	db 60, SOLAR_BEAM ; Eruption → egg move
 	db 0 ; no more level-up moves
 
-DecidueyeHisuianEvosAttacks:
+Decidueye_HisuianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -218,7 +218,7 @@ SamurottEvosAttacks:
 	db 60, SWORDS_DANCE ; Eruption → egg move
 	db 0 ; no more level-up moves
 	
-SamurottHisuianEvosAttacks:
+Samurott_HisuianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
@@ -283,7 +283,7 @@ NoctowlEvosAttacks:
 	db 55, DREAM_EATER
 	db 0 ; no more level-up moves
 	
-NoctowlImmortalEvosAttacks: ; encountered first at level 25 
+Noctowl_ImmortalEvosAttacks: ; encountered first at level 25 
 	db 0 ; no more evolutions
 	db 1, PAY_DAY
 	db 8, HYPNOSIS ; Sand Attack → similar move
@@ -334,7 +334,7 @@ RaichuEvosAttacks:
 	db 58, THUNDER
 	db 0 ; no more level-up moves
 	
-RaichuAlolanEvosAttacks:
+Raichu_AlolanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, THUNDERSHOCK
 	db 1, LEER ; Tail Whip → similar move
@@ -499,7 +499,7 @@ VulpixEvosAttacks:
 	db 53, HEALINGLIGHT ; new move
 	db 0 ; no more level-up moves
 
-VulpixAlolanEvosAttacks:
+Vulpix_AlolanEvosAttacks:
 	db EVOLVE_ITEM, ICE_STONE, NINETALES
 	db 0 ; no more evolutions
 	db 1, ICY_WIND ; Powder Snow → similar move
@@ -538,7 +538,7 @@ NinetalesEvosAttacks:
 	db 53, HEALINGLIGHT ; new move
 	db 0 ; no more level-up moves
 	
-NinetalesAlolanEvosAttacks:
+Ninetales_AlolanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DAZZLINGLEAM ; evolution move
 	db 1, NASTY_PLOT
@@ -817,7 +817,7 @@ GrowlitheEvosAttacks:
 	db 49, FLARE_BLITZ
 	db 0 ; no more level-up moves
 
-GrowlitheHisuianEvosAttacks:
+Growlithe_HisuianEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
 	db 0 ; no more evolutions
 	db 1, GROWL
@@ -859,7 +859,7 @@ ArcanineEvosAttacks:
 	db 49, FLARE_BLITZ
 	db 0 ; no more level-up moves
 
-ArcanineHisuianEvosAttacks:
+Arcanine_HisuianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DRAGON_DANCE ; new move
 	db 1, GROWL
@@ -1215,7 +1215,7 @@ GolemEvosAttacks:
 	db 0 ; no more level-up moves
 
 
-GeodudeAlolanEvosAttacks:
+Geodude_AlolanEvosAttacks:
 	db EVOLVE_LEVEL, 20, GRAVELER
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1236,7 +1236,7 @@ GeodudeAlolanEvosAttacks:
 	db 42, STONE_EDGE
 	db 0 ; no more level-up moves
 
-GravelerAlolanEvosAttacks:
+Graveler_AlolanEvosAttacks:
 	db EVOLVE_LEVEL, 40, GOLEM
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1257,7 +1257,7 @@ GravelerAlolanEvosAttacks:
 	db 54, STONE_EDGE
 	db 0 ; no more level-up moves
 
-GolemAlolanEvosAttacks:
+Golem_AlolanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
@@ -1299,7 +1299,7 @@ PonytaEvosAttacks:
 	db 0 ; no more level-up moves
 
 
-PonytaGalarianEvosAttacks:
+Ponyta_GalarianEvosAttacks:
 	db EVOLVE_LEVEL, 25, RAPIDASH
 ;	db EVOLVE_ITEM, ODD_SOUVENIR, RAPIDASH
 	db 0 ; no more evolutions
@@ -1341,7 +1341,7 @@ RapidashEvosAttacks:
 	db 0 ; no more level-up moves
 
 
-RapidashGalarianEvosAttacks:
+Rapidash_GalarianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PLAY_ROUGH ; evolution move
 	db 1, MEGAHORN
@@ -1428,7 +1428,7 @@ SlowkingEvosAttacks:
 	db 0 ; no more level-up moves
 
 
-SlowpokeGalarianEvosAttacks:
+Slowpoke_GalarianEvosAttacks:
 	db EVOLVE_HOLDING, KINGS_ROCK, SLOWKING
 	db EVOLVE_LEVEL, 31, SLOWBRO
 	db 0 ; no more evolutions
@@ -1449,7 +1449,7 @@ SlowpokeGalarianEvosAttacks:
 	db 58, RECOVER ; Heal Pulse → similar move
 	db 0 ; no more level-up moves
 
-SlowbroGalarianEvosAttacks:
+Slowbro_GalarianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GUNK_SHOT ; Shell Side Arm → similar move ; evolution move
 	db 1, CURSE
@@ -1469,7 +1469,7 @@ SlowbroGalarianEvosAttacks:
 	db 68, RECOVER ; Heal Pulse → similar move
 	db 0 ; no more level-up moves
 	
-SlowkingGalarianEvosAttacks:
+Slowking_GalarianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HEX ; Eerie Spell → Sw/Sh TR move ; evolution move
 	db 1, POWER_GEM
@@ -1604,7 +1604,7 @@ MukEvosAttacks:
 	db 52, EXPLOSION ; Belch → TM move
 	db 0 ; no more level-up moves
 
-GrimerAlolanEvosAttacks:
+Grimer_AlolanEvosAttacks:
 	db EVOLVE_LEVEL, 25, MUK
 	db 0 ; no more evolutions
 	db 1, TACKLE ; Pound → similar move
@@ -1624,7 +1624,7 @@ GrimerAlolanEvosAttacks:
 	db 46, EXPLOSION ; Belch → TM move
 	db 0 ; no more level-up moves
 
-MukAlolanEvosAttacks:
+Muk_AlolanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, MOONBLAST ; Let's Go move
 	db 1, TACKLE ; Pound → similar move
@@ -1777,7 +1777,7 @@ VoltorbEvosAttacks:
 	db 48, MIRROR_COAT
 	db 0 ; no more level-up moves
 
-VoltorbHisuianEvosAttacks:  
+Voltorb_HisuianEvosAttacks:  
 	db EVOLVE_LEVEL, 25, ELECTRODE
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -1820,7 +1820,7 @@ ElectrodeEvosAttacks:
 	db 58, MIRROR_COAT
 	db 0 ; no more level-up moves
 	
-ElectrodeHisuianEvosAttacks:
+Electrode_HisuianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEECH_SEED
 	db 1, TACKLE
@@ -1876,7 +1876,7 @@ ExeggutorEvosAttacks:
 	db 0 ; no more level-up moves
 
 
-ExeggutorAlolanEvosAttacks:
+Exeggutor_AlolanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE ; Barrage → new move
 	db 1, HYPNOSIS
@@ -1988,7 +1988,7 @@ WeezingEvosAttacks:
 	db 57, FIRE_BLAST ; Memento → TM move
 	db 0 ; no more level-up moves
 
-WeezingGalarianEvosAttacks:
+Weezing_GalarianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SAFEGUARD ; evolution move
 	db 1, TACKLE
@@ -2711,7 +2711,7 @@ Porygon2EvosAttacks:
 	db 67, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-PorygonZEvosAttacks:
+Porygon_ZEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TRICK_ROOM
 	db 1, TACKLE
@@ -2818,7 +2818,7 @@ MeganiumEvosAttacks:
 	db 0 ; no more level-up moves
 
 
-MeganiumAncestorEvosAttacks:  
+Meganium_AncestorEvosAttacks:  
 	db 0 ; no more evolutions
 	db 1, PETAL_DANCE ; evolution move
 	db 22, DISARM_VOICE ; Magical Leaf → new move
@@ -2901,7 +2901,7 @@ FeraligatrEvosAttacks:
 	db 60, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-FeraligatrAncestorEvosAttacks:  
+Feraligatr_AncestorEvosAttacks:  
 	db 0 ; no more evolutions
 	db 1, NIGHT_SLASH ; evolution move
 	db 1, METAL_CLAW ; Ice Fang → egg move
@@ -3158,7 +3158,7 @@ XatuEvosAttacks:
 	db 57, SUCKER_PUNCH ; Me First → HGSS tutor move
 	db 0 ; no more level-up moves
 
-XatuAncestorEvosAttacks: 
+Xatu_AncestorEvosAttacks: 
 	db 0 ; no more evolutions
 	db 1, ANCIENTPOWER ; evolution move
 	db 6, NIGHT_SHADE
@@ -3799,7 +3799,7 @@ QwilfishEvosAttacks:
 	db 57, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
-QwilfishHisuianEvosAttacks:
+Qwilfish_HisuianEvosAttacks:
 	db EVOLVE_MOVE, CRUNCH, OVERQWIL
 	db 0 ; no more evolutions	
 	db 1, AQUA_JET
@@ -3906,7 +3906,7 @@ SneaselEvosAttacks:
 	db 47, CRUNCH ; Ice Shard → new move
 	db 0 ; no more level-up moves
 
-SneaselHisuianEvosAttacks:
+Sneasel_HisuianEvosAttacks:
 	db EVOLVE_HOLDING, RAZOR_CLAW, SNEASLER
 	db 0 ; no more evolutions
 	db 1, TACKLE
@@ -4031,7 +4031,7 @@ UrsalunaEvosAttacks:
 	db 60, CLOSE_COMBAT ; Hammer Arm → new move
 	db 0 ; no more level-up moves
 
-UrsalunaBloodmoonEvosAttacks:
+Ursaluna_BloodmoonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, RECOVER ; HGSS tutor move
 	db 1, THIEF ; Covet → TM move
@@ -4094,7 +4094,7 @@ MagcargoEvosAttacks:
 	db 58, EARTH_POWER
 	db 0 ; no more level-up moves
 
-MagcargoAncestorEvosAttacks: 
+Magcargo_AncestorEvosAttacks: 
 	db 0 ; no more evolutions
 	db 1, SHELL_SMASH ; evolution move
 	db 1, MINIMIZE
@@ -4198,7 +4198,7 @@ CorsolaEvosAttacks:
 	db 0 ; no more level-up moves
 
 
-CorsolaGalarianEvosAttacks:
+Corsola_GalarianEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DEFENSE_CURL ; Harden → similar move
@@ -5501,7 +5501,7 @@ LugiaEvosAttacks: ;ENCOUUNTER AT LEVEL 40
 	db 65, HURRICANE ; Sky Attack → new move
 	db 0 ; no more level-up moves
 
-HoOhEvosAttacks: ;ENCOUUNTER AT LEVEL 50
+Ho_OhEvosAttacks: ;ENCOUUNTER AT LEVEL 50
 	db 0 ; no more evolutions
 	db 1, ROAR ; Whirlwind → similar move
 	db 1, GUST

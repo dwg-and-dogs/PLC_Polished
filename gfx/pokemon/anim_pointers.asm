@@ -312,7 +312,7 @@ AnimationPointers:
 	dw Arcanine_HisuianAnimation       ; 00
 	dw Voltorb_HisuianAnimation       ; 00
 	dw Electrode_HisuianAnimation       ; 00
-	dw Typhlosion_HisiinAnimation       ; 00
+	dw Typhlosion_HisuianAnimation       ; 00
 	dw Qwilfish_HisuianAnimation       ; 00
 	dw Sneasel_HisuianAnimation       ; 00
 	dw Samurott_HisuianAnimation       ; 00

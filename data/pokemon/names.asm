@@ -31,7 +31,7 @@ PokemonNames::
 	rawchar "Togetic@@@" ;28
 	rawchar "Togekiss@@" ;29
 	rawchar "Dunsparce@" ;30
-	rawchar "Dudunsprce@" ;31
+	rawchar "Dudunsprce" ;31
 	rawchar "Mareep@@@@" ;32
 	rawchar "Flaaffy@@@" ;33
 	rawchar "Ampharos@@" ;34

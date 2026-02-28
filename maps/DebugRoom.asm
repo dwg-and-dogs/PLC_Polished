@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, GAULDENROD, 1
+	warp_event  1, 8, DAYCARE, 1
 
 
 	def_coord_events
@@ -573,52 +573,41 @@ Breeder2Script:
 	iffalse_jumpopenedtext BreederSayNoText
 	writetext BreederText	
 	; a buncha mons
-	givepoke CYNDAQUIL, 5
-	givepoke ROWLET, 5	
-	givepoke OSHAWOTT, 5	
-	givepoke PIKACHU, 5	
-	givepoke NIDORINA, 5	
-	givepoke NIDORINO, 5	
-	givepoke CLEFAIRY, 5	
-	givepoke VULPIX, 5	
-	givepoke ZUBAT, 5	
-	givepoke ODDISH, 5	
-	givepoke PARAS, 5	
-	givepoke MANKEY, 5
-	givepoke GROWLITHE, 5
-	givepoke POLIWAG, 5	
-	givepoke ABRA, 5	
-	givepoke MACHOP, 5	
-	givepoke BELLSPROUT, 5	
-	givepoke TENTACOOL, 5	
-	givepoke GEODUDE, 5	
-	givepoke PONYTA, 5	
-	givepoke SLOWPOKE, 5	
-	givepoke MAGNEMITE, 5	
-	givepoke GRIMER, 5	
-	givepoke GASTLY, 5	
-	givepoke ONIX, 5	
-	givepoke VOLTORB, 5	
-	givepoke EXEGGCUTE, 5	
-	givepoke HITMONLEE, 5	
-	givepoke HITMONCHAN, 5
-	givepoke HITMONTOP, 5
-	givepoke KOFFING, 5
-	givepoke RHYHORN, 5	
-	givepoke CHANSEY, 5	
-	givepoke TANGELA, 5	
-	givepoke HORSEA, 5	
-	givepoke SCYTHER, 5	
-	givepoke JYNX, 5	
-	givepoke MAGMAR, 5	
-	givepoke PINSIR, 5	
-	givepoke TAUROS, 5	
-	givepoke MAGIKARP, 5	
-	givepoke LAPRAS, 5	
-	givepoke EEVEE, 5	
-	givepoke PORYGON, 5	
-	givepoke SNORLAX, 5
-	givepoke CHIKORITA, 5
+	givepoke RAICHU, ALOLAN_FORM, 50, NO_ITEM
+	givepoke VULPIX, ALOLAN_FORM, 50, NO_ITEM
+	givepoke NINETALES, ALOLAN_FORM, 50, NO_ITEM
+	givepoke GEODUDE, ALOLAN_FORM, 50, NO_ITEM
+	givepoke GRAVELER, ALOLAN_FORM, 50, NO_ITEM
+	givepoke GOLEM, ALOLAN_FORM, 50, NO_ITEM
+	givepoke GRIMER, ALOLAN_FORM, 50, NO_ITEM
+	givepoke MUK, ALOLAN_FORM, 50, NO_ITEM
+	givepoke EXEGGUTOR, ALOLAN_FORM, 50, NO_ITEM
+	; galarian 	
+	givepoke PONYTA,    GALARIAN_FORM, 50, NO_ITEM
+	givepoke RAPIDASH,  GALARIAN_FORM, 50, NO_ITEM
+	givepoke SLOWPOKE, GALARIAN_FORM, 50, NO_ITEM
+	givepoke SLOWBRO, GALARIAN_FORM, 50, NO_ITEM
+	givepoke SLOWKING, GALARIAN_FORM, 50, NO_ITEM
+	givepoke WEEZING, GALARIAN_FORM, 50, NO_ITEM
+	givepoke CORSOLA, GALARIAN_FORM, 50, NO_ITEM
+	; HISUIAN 
+	givepoke GROWLITHE, HISUIAN_FORM, 50, NO_ITEM
+	givepoke ARCANINE, HISUIAN_FORM, 50, NO_ITEM
+	givepoke VOLTORB,   HISUIAN_FORM, 50, NO_ITEM
+	givepoke ELECTRODE, HISUIAN_FORM, 50, NO_ITEM
+	givepoke TYPHLOSION, HISUIAN_FORM, 50, NO_ITEM
+	givepoke QWILFISH, HISUIAN_FORM, 50, NO_ITEM
+	givepoke SNEASEL, HISUIAN_FORM, 50, NO_ITEM
+	givepoke SAMUROTT, HISUIAN_FORM, 50, NO_ITEM
+	givepoke DECIDUEYE, HISUIAN_FORM, 50, NO_ITEM
+	; OTHERS
+	givepoke NOCTOWL, OTHER_FORM, 50, NO_ITEM ; IMMORTAL 
+	givepoke URSALUNA, OTHER_FORM, 50, NO_ITEM ; BLOODMOON 
+	givepoke FERALIGATR, OTHER_FORM, 50, NO_ITEM ; SWAMP KING 
+	givepoke MEGANIUM, OTHER_FORM, 50, NO_ITEM ; SAURO FORM 
+	givepoke MAGCARGO, OTHER_FORM , 50, NO_ITEM; DEEP CRUST 
+	givepoke XATU, OTHER_FORM, 50, NO_ITEM ; TOWER FORM 
+
 	closetext
 	end
 	
@@ -626,7 +615,7 @@ Breeder5Script:
 	faceplayer
 	opentext
 	; GIVE ALL MONS?
-for x, CYNDAQUIL, LUGIA + 1
+for x, CYNDAQUIL, CELEBI + 1
 	givepoke x, 50
 endr
 ;
@@ -709,15 +698,7 @@ endr
 
 
 BreederQuestionText:
-	text "Hi! I've bred a "
-	line "lotta #mon."
-
-	para "You can have"
-	line "them. But make"
-	cont "sure you have"
-	cont "a few boxes"
-	cont "available in"
-	cont "the PC."
+	text "All variants?"
 	done
 
 BreederSayNoText:
