@@ -6,11 +6,11 @@
 	db 59 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_F50, 6 ; gender ratio, step cycles to hatch
+	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/duskull/front.dimensions"
 	abilities_for DUSKULL, LEVITATE, LEVITATE, CURSED_BODY
-	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	db GROWTH_FAST ; growth rate
+	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 
 	ev_yield   0,   0,   0,   0,   0,   1
 	;         hp  atk  def  spd  sat  sdf

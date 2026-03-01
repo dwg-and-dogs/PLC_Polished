@@ -3,7 +3,7 @@
 
 	db POISON, GROUND ; type
 	db 45 ; catch rate
-	db 194 ; base exp
+	db 230 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F100, 3 ; gender ratio, step cycles to hatch

@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/rowlet/front.dimensions"
 	abilities_for ROWLET, OVERGROW, OVERCOAT, SNIPER
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_BUG, EGG_BUG ; egg groups
+	dn EGG_FLYING, EGG_FLYING ; egg groups
 
 	ev_yield   1,   0,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

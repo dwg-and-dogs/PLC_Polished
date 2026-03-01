@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/toxicroak/front.dimensions"
 	abilities_for TOXICROAK, DRY_SKIN, DRY_SKIN, POISON_TOUCH
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
+	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
 
 	ev_yield   0,   2,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

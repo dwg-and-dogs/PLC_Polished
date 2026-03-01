@@ -3,7 +3,7 @@
 
 	db ELECTRIC, ELECTRIC ; type
 	db 60 ; catch rate
-	db 150 ; base exp
+	db 172 ; base exp
 	db NO_ITEM ; item 1
 	db CELL_BATTERY ; item 2
 	dn GENDER_UNKNOWN, 3 ; gender ratio, step cycles to hatch

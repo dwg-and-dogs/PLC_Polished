@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/croagunk/front.dimensions"
 	abilities_for CROAGUNK, DRY_SKIN, DRY_SKIN, POISON_TOUCH
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_MONSTER, EGG_WATER_1 ; egg groups
+	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
 
 	ev_yield   0,   1,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

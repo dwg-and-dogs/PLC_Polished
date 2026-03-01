@@ -3,10 +3,10 @@
 
 	db STEEL, GROUND ; type
 	db 25 ; catch rate
-	db 196 ; base exp
+	db 179 ; base exp
 	db NO_ITEM ; item 1
 	db METAL_COAT ; item 2
-	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
+	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/steelix/front.dimensions"
 	abilities_for STEELIX, SHEER_FORCE, STURDY, SAND_FORCE
 	db GROWTH_MEDIUM_FAST ; growth rate

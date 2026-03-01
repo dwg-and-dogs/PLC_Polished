@@ -2,7 +2,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, FLYING ; type
-	db 75 ; catch rate
+	db 45 ; catch rate
 	db 147 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/dartrix/front.dimensions"
 	abilities_for DARTRIX, OVERGROW, OVERCOAT, SNIPER
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_WATER_1, EGG_GROUND ; egg groups
+	dn EGG_FLYING, EGG_FLYING ; egg groups
 
 	ev_yield   2,   0,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

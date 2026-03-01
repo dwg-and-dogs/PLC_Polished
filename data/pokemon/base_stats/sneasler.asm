@@ -2,7 +2,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIGHTING, POISON ; type
-	db 20 ; catch rate
+	db 135 ; catch rate
 	db 102 ; base exp
 	db GRIP_CLAW ; item 1
 	db RAZOR_CLAW ; item 2
@@ -12,7 +12,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 
-	ev_yield   0,   0,   0,   1,   0,   0
+	ev_yield   0,   1,   0,   1,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset

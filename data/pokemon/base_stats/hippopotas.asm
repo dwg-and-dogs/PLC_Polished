@@ -2,17 +2,17 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, GROUND ; type
-	db 60 ; catch rate
-	db 184 ; base exp
+	db 140 ; catch rate
+	db 66 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
+	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/hippopotas/front.dimensions"
 	abilities_for HIPPOPOTAS, SAND_STREAM, SAND_STREAM, SAND_FORCE
 	db GROWTH_SLOW ; growth rate
-	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
+	dn EGG_GROUND, EGG_GROUND ; egg groups
 
-	ev_yield   0,   0,   2,   0,   0,   0
+	ev_yield   0,   0,   1,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset

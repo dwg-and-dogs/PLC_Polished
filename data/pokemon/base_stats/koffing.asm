@@ -3,7 +3,7 @@
 
 	db POISON, POISON ; type
 	db 190 ; catch rate
-	db 114 ; base exp
+	db 68 ; base exp
 	db NO_ITEM ; item 1
 	db SMOKE_BALL ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch

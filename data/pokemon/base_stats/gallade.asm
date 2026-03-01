@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/gallade/front.dimensions"
 	abilities_for GALLADE, STEADFAST, JUSTIFIED, INNER_FOCUS
 	db GROWTH_SLOW ; growth rate
-	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
+	dn EGG_HUMANSHAPE, EGG_INDETERMINATE ; egg groups
 
 	ev_yield   0,   3,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

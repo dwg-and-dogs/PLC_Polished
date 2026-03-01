@@ -3,7 +3,7 @@
 
 	db FIRE, FIRE ; type
 	db 190 ; catch rate
-	db 152 ; base exp
+	db 82 ; base exp
 	db NO_ITEM ; item 1
 	db MARANGABERRY ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch

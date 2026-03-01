@@ -12,7 +12,7 @@
 	db GROWTH_FAST ; growth rate
 	dn EGG_MONSTER, EGG_GROUND ; egg groups
 
-	ev_yield   0,   0,   0,   0,   0,   2
+	ev_yield   0,   0,   0,   2,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset

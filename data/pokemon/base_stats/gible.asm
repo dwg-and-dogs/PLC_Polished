@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/gible/front.dimensions"
 	abilities_for GIBLE, SAND_RUSH, SAND_RUSH, DRY_SKIN
 	db GROWTH_SLOW ; growth rate
-	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
+	dn EGG_MONSTER, EGG_DRAGON ; egg groups
 
 	ev_yield   0,   1,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

@@ -1,4 +1,4 @@
-	db  40,  40,  30,  55,  20,  80 ; 265 BST
+	db  40,  40,  30,  55,  40,  80 ; 265 BST, increased attack and spatcks
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, FLYING ; type

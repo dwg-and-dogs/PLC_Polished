@@ -1,9 +1,9 @@
-	db  78,  28,  48, 108,  28,  48 ; 338 BST
+	db  78,  48,  48, 48,  48,  48 ; 338 BST
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
 	db 35 ; catch rate
-	db 61 ; base exp
+	db 101 ; base exp
 	db QUICK_POWDER ; item 1
 	db METAL_POWDER ; item 2
 	dn GENDER_UNKNOWN, 3 ; gender ratio, step cycles to hatch

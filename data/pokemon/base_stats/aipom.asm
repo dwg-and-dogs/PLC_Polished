@@ -3,7 +3,7 @@
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate
-	db 94 ; base exp
+	db 72 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch

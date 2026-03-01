@@ -3,7 +3,7 @@
 
 	db ROCK, GROUND ; type
 	db 255 ; catch rate
-	db 86 ; base exp
+	db 60 ; base exp
 	db NO_ITEM ; item 1
 	db EVERSTONE ; item 2
 	dn GENDER_F50, 2 ; gender ratio, step cycles to hatch

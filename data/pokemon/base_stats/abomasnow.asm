@@ -3,14 +3,14 @@
 
 	db GRASS, ICE ; type
 	db 60 ; catch rate
-	db 214 ; base exp
+	db 173 ; base exp
 	db NO_ITEM ; item 1
 	db NEVERMELTICE ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/abomasnow/front.dimensions"
 	abilities_for ABOMASNOW, SNOW_WARNING, SNOW_WARNING, SOUNDPROOF
 	db GROWTH_SLOW ; growth rate
-	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
+	dn EGG_MONSTER, EGG_PLANT ; egg groups
 
 	ev_yield   0,   1,   0,   0,   1,   0
 	;         hp  atk  def  spd  sat  sdf

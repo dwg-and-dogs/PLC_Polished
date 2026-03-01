@@ -3,7 +3,7 @@
 
 	db NORMAL, NORMAL ; type
 	db 90 ; catch rate
-	db 116 ; base exp
+	db 145 ; base exp
 	db ORAN_BERRY ; item 1
 	db SITRUS_BERRY ; item 2
 	dn GENDER_F50, 2 ; gender ratio, step cycles to hatch

@@ -10,9 +10,9 @@
 	INCBIN "gfx/pokemon/shieldon/front.dimensions"
 	abilities_for SHIELDON, STURDY, STURDY, SOUNDPROOF
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_MONSTER, EGG_PLANT ; egg groups
+	dn EGG_MONSTER, EGG_MONSTER ; egg groups
 
-	ev_yield   0,   0,   2,   0,   0,   0
+	ev_yield   0,   0,   1,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset

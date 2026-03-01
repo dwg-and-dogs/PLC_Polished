@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/shinx/front.dimensions"
 	abilities_for SHINX, RIVALRY, INTIMIDATE, GUTS
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_NONE, EGG_NONE ; egg groups
+	dn EGG_GROUND, EGG_GROUND ; egg groups
 
 	ev_yield   0,   1,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

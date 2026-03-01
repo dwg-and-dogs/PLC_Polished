@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/gardevoir/front.dimensions"
 	abilities_for GARDEVOIR, SYNCHRONIZE, TRACE, PIXILATE
 	db GROWTH_SLOW ; growth rate
-	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
+	dn EGG_HUMANSHAPE, EGG_INDETERMINATE ; egg groups
 
 	ev_yield   0,   0,   0,   0,   3,   0
 	;         hp  atk  def  spd  sat  sdf

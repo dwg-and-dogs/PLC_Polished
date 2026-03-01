@@ -3,7 +3,7 @@
 
 	db POISON, FLYING ; type
 	db 90 ; catch rate
-	db 171 ; base exp
+	db 159 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 2 ; gender ratio, step cycles to hatch

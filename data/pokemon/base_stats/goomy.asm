@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/goomy/front.dimensions"
 	abilities_for GOOMY, SHELL_ARMOR, SHELL_ARMOR, SAP_SIPPER
 	db GROWTH_SLOW ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	dn EGG_DRAGON, EGG_DRAGON ; egg groups
 
 	ev_yield   0,   0,   0,   0,   0,   1
 	;         hp  atk  def  spd  sat  sdf

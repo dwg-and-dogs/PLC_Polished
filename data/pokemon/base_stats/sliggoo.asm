@@ -1,4 +1,4 @@
-	db  58,  75,  83,  40,  83, 113 ; 555 BST
+	db  58,  75,  83,  40,  83, 113 ; HISUIAN 
 	;   hp  atk  def  spd  sat  sdf
 
 	db STEEL, DRAGON ; type
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/sliggoo/front.dimensions"
 	abilities_for SLIGGOO, SHELL_ARMOR, SHELL_ARMOR, SAP_SIPPER
 	db GROWTH_SLOW ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	dn EGG_DRAGON, EGG_DRAGON ; egg groups
 
 	ev_yield   0,   0,   0,   0,   0,   2
 	;         hp  atk  def  spd  sat  sdf

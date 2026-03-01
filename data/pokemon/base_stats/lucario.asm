@@ -6,11 +6,11 @@
 	db 184 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_F12_5, 15 ; gender ratio, step cycles to hatch
+	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/lucario/front.dimensions"
 	abilities_for LUCARIO, STEADFAST, INNER_FOCUS, JUSTIFIED
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_HUMANSHAPE, EGG_GROUND ; egg groups
+	dn EGG_GROUND, EGG_HUMANSHAPE ; egg groups
 
 	ev_yield   0,   1,   0,   0,   1,   0
 	;         hp  atk  def  spd  sat  sdf

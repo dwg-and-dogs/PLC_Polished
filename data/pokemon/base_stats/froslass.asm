@@ -1,7 +1,7 @@
 	db  70,  80,  70,  110,  80,  70 ; 480 bst 
 	;   hp  atk  def  spd  sat  sdf
 
-	db GHOST, ICE ; type
+	db ICE, GHOST ; type
 	db 75 ; catch rate
 	db 168 ; base exp
 	db NO_ITEM ; item 1
@@ -12,7 +12,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FAIRY, EGG_MINERAL ; egg groups
 
-	ev_yield   0,   0,   2,   0,   0,   0
+	ev_yield   0,   0,   0,   2,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset

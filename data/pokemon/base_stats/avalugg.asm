@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/avalugg/front.dimensions"
 	abilities_for AVALUGG, ICE_BODY, ICE_BODY, SLUSH_RUSH
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	dn EGG_MONSTER, EGG_MINERAL ; egg groups
 
 	ev_yield   0,   0,   2,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

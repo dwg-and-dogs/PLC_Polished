@@ -6,11 +6,11 @@
 	db 70 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_F50, 15 ; gender ratio, step cycles to hatch
+	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/cranidos/front.dimensions"
 	abilities_for CRANIDOS, MOLD_BREAKER, MOLD_BREAKER, SHEER_FORCE
 	db GROWTH_SLOW ; growth rate
-	dn EGG_NONE, EGG_NONE ; egg groups
+	dn EGG_MONSTER, EGG_MONSTER ; egg groups
 
 	ev_yield   0,   1,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

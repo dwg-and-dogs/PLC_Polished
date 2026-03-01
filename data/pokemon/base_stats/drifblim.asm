@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/drifblim/front.dimensions"
 	abilities_for DRIFBLIM, AFTERMATH, AFTERMATH, UNBURDEN
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
+	dn EGG_MINERAL, EGG_MINERAL ; egg groups
 
 	ev_yield   2,   0,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

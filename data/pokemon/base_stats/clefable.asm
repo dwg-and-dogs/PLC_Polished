@@ -3,7 +3,7 @@
 
 	db FAIRY, FAIRY ; type
 	db 25 ; catch rate
-	db 129 ; base exp
+	db 242 ; base exp
 	db LEPPA_BERRY ; item 1
 	db MOON_STONE ; item 2
 	dn GENDER_F75, 1 ; gender ratio, step cycles to hatch

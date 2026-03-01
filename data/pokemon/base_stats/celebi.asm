@@ -3,7 +3,7 @@
 
 	db PSYCHIC, GRASS ; type
 	db 45 ; catch rate
-	db 64 ; base exp
+	db 200 ; base exp
 	db ALWAYS_ITEM_2 ; item 1
 	db LUM_BERRY ; item 2
 	dn GENDER_UNKNOWN, 15 ; gender ratio, step cycles to hatch

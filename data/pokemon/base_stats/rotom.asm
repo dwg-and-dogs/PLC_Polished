@@ -1,16 +1,16 @@
 	db  50,  50,  77,  91,  95,  77 ; 440 BST
 	;   hp  atk  def  spd  sat  sdf
 
-	db GHOST, ELECTRIC ; type
+	db ELECTRIC, GHOST ; type
 	db 45 ; catch rate
 	db 154 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_UNKNOWN, 4 ; gender ratio, step cycles to hatch
+	dn GENDER_UNKNOWN, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/rotom/front.dimensions"
 	abilities_for ROTOM, LEVITATE, LEVITATE, PRANKSTER
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_BUG, EGG_BUG ; egg groups
+	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 
 	ev_yield   0,   0,   0,   1,   1,   0
 	;         hp  atk  def  spd  sat  sdf

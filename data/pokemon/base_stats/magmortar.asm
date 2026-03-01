@@ -3,7 +3,7 @@
 
 	db FIRE, FIRE ; type
 	db 30 ; catch rate
-	db 199 ; base exp
+	db 220 ; base exp
 	db ASPEAR_BERRY ; item 1
 	db MAGMARIZER ; item 2
 	dn GENDER_F25, 4 ; gender ratio, step cycles to hatch

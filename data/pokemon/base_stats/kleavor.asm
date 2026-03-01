@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/kleavor/front.dimensions"
 	abilities_for KLEAVOR, SWARM, SHEER_FORCE, STEADFAST
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER_1, EGG_DRAGON ; egg groups
+	dn EGG_BUG, EGG_BUG ; egg groups
 
 	ev_yield   0,   3,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

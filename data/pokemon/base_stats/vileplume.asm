@@ -3,7 +3,7 @@
 
 	db GRASS, POISON ; type
 	db 45 ; catch rate
-	db 184 ; base exp
+	db 245 ; base exp
 	db ALWAYS_ITEM_2 ; item 1
 	db ABSORB_BULB ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch

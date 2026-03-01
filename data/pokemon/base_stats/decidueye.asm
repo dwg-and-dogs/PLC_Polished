@@ -2,7 +2,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GHOST ; type
-	db 255 ; catch rate
+	db 45 ; catch rate
 	db 209 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/decidueye/front.dimensions"
 	abilities_for DECIDUEYE, OVERGROW, OVERCOAT, SNIPER
 	db GROWTH_MEDIUM_SLOW ; growth rate
-	dn EGG_GROUND, EGG_GROUND ; egg groups
+	dn EGG_FLYING, EGG_FLYING ; egg groups
 
 	ev_yield   0,   3,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

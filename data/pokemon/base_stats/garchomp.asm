@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/garchomp/front.dimensions"
 	abilities_for GARCHOMP, SAND_RUSH, SAND_RUSH, DRY_SKIN
 	db GROWTH_SLOW ; growth rate
-	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
+	dn EGG_MONSTER, EGG_DRAGON ; egg groups
 
 	ev_yield   0,   3,   0,   0,   1,   0
 	;         hp  atk  def  spd  sat  sdf

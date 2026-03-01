@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/kirlia/front.dimensions"
 	abilities_for KIRLIA, SYNCHRONIZE, TRACE, PIXILATE
 	db GROWTH_SLOW ; growth rate
-	dn EGG_WATER_1, EGG_DRAGON ; egg groups
+	dn EGG_HUMANSHAPE, EGG_INDETERMINATE ; egg groups
 
 	ev_yield   0,   0,   0,   0,   2,   0
 	;         hp  atk  def  spd  sat  sdf

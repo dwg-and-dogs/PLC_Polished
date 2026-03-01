@@ -3,16 +3,16 @@
 
 	db DARK, POISON ; type
 	db 45 ; catch rate
-	db 108 ; base exp
+	db 180 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/overqwil/front.dimensions"
 	abilities_for OVERQWIL, POISON_POINT, AFTERMATH, SWIFT_SWIM
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_MINERAL, EGG_MINERAL ; egg groups
+	dn EGG_WATER_2, EGG_WATER_2 ; egg groups
 
-	ev_yield   0,   0,   1,   0,   0,   0
+	ev_yield   0,   2,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 
 	; tm/hm learnset
