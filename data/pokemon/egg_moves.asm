@@ -748,10 +748,9 @@ LarvitarEggMoves:
 	db $ff
 
 StarlyEggMoves:
-	db PECK
 	db FEINT_ATTACK
-	db FORESIGHT
 	db PURSUIT
+	db FORESIGHT
 	db AIR_SLASH
 	db STEEL_WING
 	db CHARM
@@ -766,12 +765,15 @@ OshawottEggMoves:
 	db $ff
 
 RowletEggMoves:
+	db BATON_PASS
+	db HAZE
 	db CONFUSE_RAY
 	db KNOCK_OFF
 	db ROOST
 	db $ff
 	
 ShinxEggMoves:
+	db FLAME_CHARGE
 	db CHARM
 	db DOUBLE_KICK
 	db NIGHT_SLASH
@@ -784,9 +786,12 @@ CranidosEggMoves:
 	db STOMP
 	db THRASH
 	db ROAR
+	db KARATE_CHOP
 	db $ff
 	
 ShieldonEggMoves:
+	db BODY_SLAM
+	db ROCK_BLAST
 	db COUNTER
 	db FOCUS_ENERGY
 	db HEADBUTT
@@ -794,6 +799,7 @@ ShieldonEggMoves:
 	db $ff
 	
 DrifloonEggMoves:
+	db BODY_SLAM
 	db DISABLE
 	db HYPNOSIS
 	db HAZE
@@ -811,12 +817,16 @@ SpiritombEggMoves:
 	
 RioluEggMoves:
 	db BITE
+	db AGILITY
+	db BITE
 	db BULLET_PUNCH
 	db CROSS_CHOP
 	db HI_JUMP_KICK
 	db $ff
 	
 HippopotasEggMoves:
+	db BODY_SLAM
+	db RECOVER
 	db CURSE
 	db $ff
 	
@@ -828,6 +838,7 @@ CroagunkEggMoves:
 	db $ff
 	
 SnoverEggMoves:
+	db SEED_BOMB
 	db DOUBLE_EDGE
 	db GROWTH
 	db LEECH_SEED
@@ -836,6 +847,8 @@ SnoverEggMoves:
 	
 DuskullEggMoves: ; TODO FROM HERE UP, CHECK GEN 4 OR EARLIEST LEARNSET 
 	db PAIN_SPLIT
+	db DESTINY_BOND
+	db FEINT_ATTACK
 	db $ff
 	
 SnoruntEggMoves:
@@ -896,4 +909,8 @@ GibleEggMoves:
 	db OUTRAGE
 	db SCARY_FACE
 	db THRASH
+	db $ff
+
+
+NoEggMoves:
 	db $ff
