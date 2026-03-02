@@ -6391,11 +6391,21 @@ HisuiFemaleGroup:
 ; ================
 
 	; HISUI_FEMALE
-	db "Jessica@"
+	db "Darla@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 55, BLISSEY, NUGGET
-	db 54, FURRET, NUGGET
+	db 8, SNORUNT, NO_ITEM
+	db 9, DUSKULL, NO_ITEM
+	db 10, RIOLU, ORAN_BERRY
+	db -1 ; end
+	
+	; HISUI_FEMALE
+	db "Lorena@"
+	db TRAINERTYPE_ITEM
+	; party
+	db 8, RUFFLET, NO_ITEM
+	db 9, HIPPOPOTAS, NO_ITEM
+	db 10, SHINX, ORAN_BERRY
 	db -1 ; end
 
 ; ================

@@ -36,8 +36,8 @@ TimelessTapestry_MapScriptHeader:
 	object_event 15, 19, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryShiji, EVENT_KIMONOS_AT_TAPESTRY
 	object_event  9, 17, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TapestryMorphea, EVENT_KIMONOS_AT_TAPESTRY
 	; southern NPCs
-	object_event 11, 39, SPRITE_AROMA_LADY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText1, EVENT_BEAT_KANNA
-	object_event  7, 38, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText2, EVENT_BEAT_KANNA
+	object_event 11, 39, SPRITE_HISUI_FEMALE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHisuiFemale_Lorena, EVENT_BEAT_KANNA
+	object_event  7, 38, SPRITE_HISUI_FEMALE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHisuiFemale_Darla, EVENT_BEAT_KANNA
 	object_event 17, 40, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText3, EVENT_BEAT_KANNA
 
 	object_const_def
@@ -449,33 +449,6 @@ TapestryShiji:
 	line "becoming ruins!"
 	done
 
-TapestryText1:
-	text "I wish the Johto-"
-	line "Hisui festival"
-	para "could've gone on"
-	line "longer."
-	
-	para "Emperor Vesper"
-	line "is so uptight!"
-	para "He's so worried"
-	line "about outsiders"
-	cont "at the port."
-	done
-
-
-TapestryText2:
-	text "We brought along"
-	line "special #mon"
-	para "from Hisui for"
-	line "Johto trainers to"
-	cont "catch!"
-	
-	para "Oh, but you don't"
-	line "look like you're"
-	para "from Johto or"
-	line "from Hisui?"
-	done
-
 
 TapestryText3:
 	text "I spent weeks in"
@@ -488,4 +461,59 @@ TapestryText3:
 	line "learn of Celebi"
 	para "if these temples"
 	line "are closed?"
+	done
+
+	
+	; TODO 
+GenericTrainerHisuiFemale_Lorena:
+	generictrainer HISUI_FEMALE, LORENA, EVENT_BEAT_HISUI_FEMALE_LORENA, HisuiFemaleLorenaSeenText, HisuiFemaleLorenaBeatenText
+
+	text "I wish the Johto-"
+	line "Hisui festival"
+	para "could've gone on"
+	line "longer."
+	
+	para "Emperor Vesper"
+	line "is so uptight!"
+	para "He's so worried"
+	line "about outsiders"
+	cont "at the port."
+	done
+
+HisuiFemaleLorenaSeenText:
+	text "The Johto-Hisui"
+	line "festival may be"
+	para "over, but we can"
+	line "still battle!"
+	done
+
+HisuiFemaleLorenaBeatenText:
+	text "Johto trainers"
+	line "are so serious!"
+	done
+
+GenericTrainerHisuiFemale_Darla:
+	generictrainer HISUI_FEMALE, DARLA, EVENT_BEAT_HISUI_FEMALE_DARLA, HisuiFemaleDarlaSeenText, HisuiFemaleDarlaBeatenText
+	
+	text "We brought along"
+	line "special #mon"
+	para "from Hisui for"
+	line "Johto trainers to"
+	cont "catch!"
+	
+	para "Oh, but you don't"
+	line "look like you're"
+	para "from Johto or"
+	line "from Hisui?"
+	done
+
+HisuiFemaleDarlaSeenText:
+	text "Have you caught"
+	line "any of the Hisui"
+	cont "#mon here?"
+	done
+
+HisuiFemaleDarlaBeatenText:
+	text "Trading blows and"
+	line "#mon!"
 	done
