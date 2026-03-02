@@ -9,9 +9,6 @@ EvolutionMoves::
 	db NO_MOVE       ; OSHAWOTT        ; 07
 	db NO_MOVE       ; DEWOTT          ; 08
 	db REVERSAL      ; SAMUROTT        ; 09
-	db NO_MOVE       ; RUFFLET          ; 0a
-	db NO_MOVE       ; STARLY       ; 0b
-	db NO_MOVE       ; SNORUNT         ; 0c
 	db NO_MOVE       ; HOOTHOOT        ; 0d
 	db NO_MOVE       ; NOCTOWL         ; 0e
 	db NO_MOVE       ; SENTRET         ; 0f
@@ -48,6 +45,7 @@ EvolutionMoves::
 	db NO_MOVE       ; BELLSPROUT      ; 2e
 	db NO_MOVE       ; WEEPINBELL      ; 2f
 	db SWORDS_DANCE  ; VICTREEBEL      ; 30
+	db NO_MOVE       ; HOPPIP        ; c6
 	db NO_MOVE       ; SKIPLOOM        ; 31
 	db NO_MOVE       ; JUMPLUFF        ; 32
 	db NO_MOVE       ; PARAS           ; 33
@@ -68,6 +66,7 @@ EvolutionMoves::
 	db NO_MOVE       ; ABRA            ; 42
 	db CONFUSION       ; KADABRA         ; 43
 	db NO_MOVE       ; ALAKAZAM        ; 44
+	db NO_MOVE       ; DITTO       ; d1
 	db NO_MOVE       ; PINECO          ; 45
 	db GYRO_BALL     ; FORRETRESS      ; 46
 	db NO_MOVE       ; NIDORAN         ; 47
@@ -77,6 +76,7 @@ EvolutionMoves::
 	db THRASH        ; NIDOKING        ; 4b
 	db NO_MOVE       ; YANMA           ; 4c
 	db DRAGONBREATH  ; YANMEGA         ; 4d
+	db NO_MOVE     ; SUNKERN        ; c7
 	db NO_MOVE       ; SUNFLORA        ; 4e
 	db NO_MOVE       ; EXEGGCUTE       ; 4f
 	db NO_MOVE       ; EXEGGUTOR       ; 50
@@ -149,6 +149,7 @@ EvolutionMoves::
 	db RAZOR_LEAF    ; LEAFEON         ; 94
 	db ICY_WIND      ; GLACEON         ; 95
 	db DAZZLINGLEAM  ; SYLVEON         ; 96
+	db NO_MOVE    ; HORSEA        ; c3
 	db NO_MOVE       ; SEADRA          ; 97
 	db DRAGON_PULSE  ; KINGDRA         ; 98
 	db NO_MOVE       ; GLIGAR          ; 99
@@ -192,12 +193,7 @@ EvolutionMoves::
 	db NO_MOVE       ; TOTODILE        ; bf
 	db NO_MOVE       ; CROCONAW        ; c0
 	db CRUNCH        ; FERALIGATR      ; c1
-	db NO_MOVE       ; RIOLU          ; c2
-	db NO_MOVE    ; HORSEA        ; c3
-	db NO_MOVE       ; GLALIE        ; c4
-	db NO_MOVE   ; BASCULIN       ; c5
-	db NO_MOVE       ; HOPPIP        ; c6
-	db NO_MOVE     ; SUNKERN        ; c7
+	db NO_MOVE       ; STARLY       ; 0b
 	db NO_MOVE       ; STARAVIA        ; c8
 	db CLOSE_COMBAT  ; STARAPTOR       ; c9
 	db NO_MOVE       ; SHINX           ; ca
@@ -207,12 +203,13 @@ EvolutionMoves::
 	db MIRROR_COAT       ; RAMPARDOS       ; ce
 	db NO_MOVE       ; SHIELDON        ; cf
 	db NO_MOVE       ; BASTIODON       ; d0
-	db NO_MOVE       ; DITTO       ; d1
+
 	db NO_MOVE       ; DRIFLOON        ; d2
 	db NO_MOVE       ; DRIFBLIM        ; d3
 	db NO_MOVE       ; BRONZOR         ; d4
 	db PERISH_SONG   ; BRONZONG        ; d5
 	db NO_MOVE       ; SPIRITOMB       ; d6
+	db NO_MOVE       ; RIOLU          ; c2
 	db NO_MOVE       ; LUCARIO         ; d7
 	db NO_MOVE       ; HIPPOPOTAS      ; d8
 	db NO_MOVE       ; HIPPOWDON       ; d9
@@ -223,11 +220,15 @@ EvolutionMoves::
 	db NO_MOVE       ; DUSKULL         ; de
 	db NO_MOVE       ; DUSCLOPS        ; df
 	db SHADOW_CLAW   ; DUSKNOIR        ; e0
+	db NO_MOVE       ; SNORUNT         ; 0c
+	db NO_MOVE       ; GLALIE        ; c4
 	db NO_MOVE       ; FROSLASS        ; e1
 	db NO_MOVE       ; ROTOM           ; e2
 	db NO_MOVE       ; BERGMITE        ; e3
 	db AVALANCHE       ; AVALUGG         ; e4
+	db NO_MOVE   ; BASCULIN       ; c5
 	db NO_MOVE       ; BASCULEGION     ; e5
+	db NO_MOVE       ; RUFFLET          ; 0a
 	db NO_MOVE       ; BRAVIARY        ; e6
 	db NO_MOVE       ; RALTS           ; e7
 	db NO_MOVE       ; KIRLIA          ; e8
@@ -296,7 +297,5 @@ EvolutionMoves::
 	db X_SCISSOR       ; MEGANIUM ancestor
 	db SLUDGE_BOMB       ; MAGCARGO ancestor
 	db ANCIENTPOWER       ; XATU ancestor
-
-
 
 	assert_table_length NUM_EXT_POKEMON

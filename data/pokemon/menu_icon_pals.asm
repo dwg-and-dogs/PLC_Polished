@@ -218,18 +218,18 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal BROWN, RED      ; HIPPOWDON       ; d9
 	iconpal BLUE, RED       ; CROAGUNK        ; da 
 	iconpal BLUE, RED       ; TOXICROAK       ; db
-	iconpal GREEN, BROWN    ; SNOVER          ; dc
-	iconpal GREEN, BROWN    ; ABOMASNOW       ; dd
+	iconpal BROWN, GREEN    ; SNOVER          ; dc
+	iconpal BROWN, GREEN    ; ABOMASNOW       ; dd
 	iconpal GRAY, RED       ; DUSKULL         ; de 
 	iconpal GRAY, RED       ; DUSCLOPS        ; df
 	iconpal GRAY, BROWN     ; DUSKNOIR        ; e0
 	iconpal BROWN, GRAY      ; snorunt          ; 0c  
 	iconpal TEAL, PURPLE      ; glalie        ; c4  
 	iconpal TEAL, PURPLE    ; FROSLASS        ; e1
-	iconpal BROWN, TEAL     ; ROTOM           ; e2
+	iconpal BROWN, BLUE     ; ROTOM           ; e2
 	iconpal TEAL, GRAY      ; BERGMITE        ; e3 
 	iconpal TEAL, GRAY      ; AVALUGG         ; e4
-	iconpal BLUE, RED      ; basculin       ; c5  
+	iconpal RED, GREEN      ; basculin       ; c5  
 	iconpal RED, BLUE       ; BASCULEGION     ; e5
 	iconpal GRAY, BROWN     ; rufflet        ; c8
 	iconpal GRAY, PURPLE    ; BRAVIARY        ; e6
@@ -237,9 +237,9 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal GREEN, RED      ; KIRLIA          ; e8
 	iconpal GREEN, RED      ; GARDEVOIR       ; e9
 	iconpal GREEN, RED      ; GALLADE         ; ea
-	iconpal RED, GRAY    ; GOOMY           ; eb 
-	iconpal RED, GRAY       ; SLIGGOO         ; ec
-	iconpal RED, GRAY       ; GOODRA          ; ed
+	iconpal PURPLE, GRAY    ; GOOMY           ; eb 
+	iconpal PURPLE, GRAY       ; SLIGGOO         ; ec
+	iconpal PURPLE, GRAY       ; GOODRA          ; ed
 	iconpal PINK, GRAY       ; ZORUA           ; ee 
 	iconpal PINK, GRAY      ; ZOROARK         ; ef
 	iconpal BLUE, RED       ; GIBLE           ; f0 

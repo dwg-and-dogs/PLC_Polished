@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, DAYCARE, 1
+	warp_event  1, 8, SHELTERED_SHORES, 1
 
 
 	def_coord_events
@@ -146,13 +146,13 @@ endr
 	setflag ENGINE_FLYPOINT_EERIE_HAMLET
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
-	givepoke SNUBBULL, NO_FORM, 50, LEFTOVERS
+;	givepoke SNUBBULL, NO_FORM, 50, LEFTOVERS
 	loadmem wPartyMon1Moves+0, MOONBLAST
 	loadmem wPartyMon1Moves+1, SHADOW_BALL
 	loadmem wPartyMon1Moves+2, PSYCHIC_M
 	loadmem wPartyMon1Moves+3, EXPLOSION
 	; hm mules
-	givepoke PARAS, NO_FORM, 50
+;	givepoke PARAS, NO_FORM, 50
 ;	givepoke DEWOTT, NO_FORM, 50
 ;	givepoke DEWOTT, NO_FORM, 50
 ;	givepoke DARTRIX, NO_FORM, 50  
@@ -180,7 +180,7 @@ endr
 ;	readvar VAR_PARTYCOUNT
 ;	giveegg CYNDAQUIL
 	closetext
-	warp GAULDENROD_DORMS, 7, 5 
+;	warp GAULDENROD_DORMS, 7, 5 
 	end
 
 
