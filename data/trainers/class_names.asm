@@ -71,7 +71,7 @@ TrainerClassNames::
 	li "Couple"           ; COUPLE
 	li "Gentleman"        ; GENTLEMAN
 	li "Rich Boy"         ; RICH_BOY
-	li "Lady"             ; LADY
+	li "Hisui"             ; HISUI_FEMALE
 	li "Breeder"          ; BREEDER
 	li "Baker"            ; BAKER
 	li "Cowgirl"          ; COWGIRL

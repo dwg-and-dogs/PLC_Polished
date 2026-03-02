@@ -82,7 +82,7 @@ BattleTowerTrainers:
 	rawchar "Nadia@@@@@", BREEDER
 	rawchar "Hatcher@@@", GENTLEMAN
 	rawchar "Frida@@@@@", ARTIST
-	rawchar "Nimue@@@@@", LADY
+	rawchar "Nimue@@@@@", AROMA_LADY
 	rawchar "Alice@@@@@", SIGHTSEERF
 	rawchar "Valentine@", BEAUTY
 	rawchar "Uri@@@@@@@", PSYCHIC_T
@@ -90,7 +90,7 @@ BattleTowerTrainers:
 	rawchar "Chiyo@@@@@", KIMONO_GIRL_1
 	rawchar "Sidney@@@@", BIKER
 	rawchar "Nerai@@@@@", HIKER
-	rawchar "Gwen@@@@@@", LADY
+	rawchar "Gwen@@@@@@", AROMA_LADY
 	rawchar "Axl@@@@@@@", SUPER_NERD
 	rawchar "Gerald@@@@", SIGHTSEERM
 	rawchar "Kafuka@@@@", SCHOOLGIRL

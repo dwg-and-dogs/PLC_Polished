@@ -6386,11 +6386,11 @@ RichBoyGroup:
 ; ================
 ; ================================
 
-LadyGroup:
+HisuiFemaleGroup:
 ; ================================
 ; ================
 
-	; LADY
+	; HISUI_FEMALE
 	db "Jessica@"
 	db TRAINERTYPE_ITEM
 	; party

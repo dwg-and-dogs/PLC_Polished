@@ -120,7 +120,7 @@ SpriteHeaders:
 	overworld_sprite HikerSpriteGFX, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite JugglerSpriteGFX, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite KimonoGirlSpriteGFX, WALKING_SPRITE, PAL_OW_RED
-	overworld_sprite LadySpriteGFX, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite HisuiFemaleSpriteGFX, WALKING_SPRITE, PAL_OW_PURPLE
 	overworld_sprite LassSpriteGFX, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite MatronSpriteGFX, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite NurseSpriteGFX, WALKING_SPRITE, PAL_OW_RED

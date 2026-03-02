@@ -73,7 +73,7 @@ TrainerGroups:
 	dba CoupleGroup
 	dba GentlemanGroup
 	dba RichBoyGroup
-	dba LadyGroup
+	dba HisuiFemaleGroup
 	dba BreederGroup
 	dba BakerGroup
 	dba CowgirlGroup

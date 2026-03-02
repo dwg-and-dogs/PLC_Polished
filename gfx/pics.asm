@@ -992,7 +992,7 @@ GentlemanPic:             INCBIN "gfx/trainers/gentleman.2bpp.lz"
 SECTION "Trainer Pics 5", ROMX
 
 RichBoyPic:               INCBIN "gfx/trainers/rich_boy.2bpp.lz"
-LadyPic:                  INCBIN "gfx/trainers/lady.2bpp.lz"
+HisuiFemalePic:                  INCBIN "gfx/trainers/hisui_female.2bpp.lz"
 BreederPic:               INCBIN "gfx/trainers/breeder.2bpp.lz"
 BakerPic:                 INCBIN "gfx/trainers/baker.2bpp.lz"
 CowgirlPic:               INCBIN "gfx/trainers/cowgirl.2bpp.lz"

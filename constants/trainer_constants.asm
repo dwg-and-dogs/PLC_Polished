@@ -663,7 +663,7 @@ KRIS EQU __trainer_class__
 	const GERALD
 	const IRVING
 
-	trainerclass LADY ; 47
+	trainerclass HISUI_FEMALE ; 47
 	const JESSICA
 
 	trainerclass BREEDER ; 48

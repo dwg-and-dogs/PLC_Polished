@@ -71,7 +71,7 @@ TrainerPicPointers::
 	dba CouplePic
 	dba GentlemanPic
 	dba RichBoyPic
-	dba LadyPic
+	dba HisuiFemalePic
 	dba BreederPic
 	dba BakerPic
 	dba CowgirlPic
