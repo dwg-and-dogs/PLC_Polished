@@ -5680,15 +5680,6 @@ MediumGroup:
 	db 10, MISDREAVUS
 	db -1 ; end
 
-; ================
-
-	; MEDIUM
-	db "Grace@" ; grottoed glacier 1f
-	db TRAINERTYPE_NORMAL
-	; party
-	db 42, MISDREAVUS
-	db 42, DUSKNOIR
-	db -1 ; end
 
 ; ================
 
@@ -5708,18 +5699,6 @@ MediumGroup:
 	; party
 	db 36, MISDREAVUS
 	db 38, MISMAGIUS
-	db -1 ; end
-
-; ================
-; ================
-
-	; HEX_MANIAC
-	db "Esther@" ; grottoed glacier b1f
-	db TRAINERTYPE_NORMAL
-	; party
-	db 39, SNEASEL
-	db 41, MISMAGIUS
-	db 42, SNEASLER
 	db -1 ; end
 
 ; ================
@@ -6398,6 +6377,8 @@ HisuiFemaleGroup:
 	db 9, DUSKULL, NO_ITEM
 	db 10, RIOLU, ORAN_BERRY
 	db -1 ; end
+
+; ================
 	
 	; HISUI_FEMALE
 	db "Lorena@"
@@ -6406,6 +6387,26 @@ HisuiFemaleGroup:
 	db 8, RUFFLET, NO_ITEM
 	db 9, HIPPOPOTAS, NO_ITEM
 	db 10, SHINX, ORAN_BERRY
+	db -1 ; end
+	
+; ================
+
+	; HISUI_FEMALE
+	db "Grace@" ; grottoed glacier 1f
+	db TRAINERTYPE_NORMAL
+	; party
+	db 42, MISDREAVUS
+	db 42, DUSKNOIR
+	db -1 ; end
+
+
+	; HEX_MANIAC
+	db "Esther@" ; grottoed glacier b1f
+	db TRAINERTYPE_NORMAL
+	; party
+	db 39, SNEASEL
+	db 41, MISMAGIUS
+	db 42, SNEASLER
 	db -1 ; end
 
 ; ================

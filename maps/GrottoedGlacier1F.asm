@@ -18,15 +18,15 @@ GrottoedGlacier1F_MapScriptHeader:
 
 
 	def_object_events
-	object_event  3, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerMediumGrace, EVENT_BEAT_KANNA
+	object_event  3, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerHisuiFemaleGrace, EVENT_BEAT_KANNA
 	object_event 12,  2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSageUri, EVENT_BEAT_KANNA
 
 
 	object_const_def
 
 
-GenericTrainerMediumGrace:
-	generictrainer MEDIUM, GRACE, EVENT_BEAT_MEDIUM_GRACE, .SeenText, .BeatenText
+GenericTrainerHisuiFemaleGrace:
+	generictrainer HISUI_FEMALE, GRACE, EVENT_BEAT_HISUI_FEMALE_GRACE, .SeenText, .BeatenText
 
 	text "Petra will show"
 	line "Andrea how she"

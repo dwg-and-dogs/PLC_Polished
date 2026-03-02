@@ -579,12 +579,10 @@ KRIS EQU __trainer_class__
 
 	trainerclass MEDIUM ; 3c
 	const MARTHA
-	const GRACE
 	const REBECCA
 	const DORIS
-	const ESTHER
-	const MATILDA
-	const BETHANY
+	const MATILDA ; HM?
+	const BETHANY ; HM? 
 
 	trainerclass KIMONO_GIRL_1 ; 3d, red 
 	const SAYO ; flareon 
@@ -666,6 +664,8 @@ KRIS EQU __trainer_class__
 	trainerclass HISUI_FEMALE ; 47
 	const DARLA
 	const LORENA
+	const GRACE
+	const ESTHER
 
 	trainerclass BREEDER ; 48
 	const JULIE
