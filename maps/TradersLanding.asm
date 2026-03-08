@@ -4,7 +4,7 @@ TradersLanding_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, TradesLandingFlyPoint
-
+	callback MAPCALLBACK_TILES, TradesLandingStormCallback
 
 	def_warp_events
 	warp_event 11, 6, LANDING_BARBEAU, 1
@@ -65,6 +65,13 @@ TradersLanding_MapScriptHeader:
 	const TRADERS_LANDING_KURT
 	const TRADERS_LANDING_BARBEAU_2
 	const TRADERS_LANDING_KURT_2
+
+TradesLandingStormCallback:
+	checkevent EVENT_BEAT_KENSEY_PORT
+	iftrue .Done
+	changeblock 36, 06, $01
+.Done:
+	endcallback
 
 LandingTimeTravelScript: 
 	opentext

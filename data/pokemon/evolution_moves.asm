@@ -200,10 +200,9 @@ EvolutionMoves::
 	db NO_MOVE       ; LUXIO           ; cb
 	db DRAGON_CLAW   ; LUXRAY          ; cc
 	db NO_MOVE       ; CRANIDOS        ; cd
-	db MIRROR_COAT       ; RAMPARDOS       ; ce
+	db NO_MOVE       ; RAMPARDOS       ; ce
 	db NO_MOVE       ; SHIELDON        ; cf
-	db NO_MOVE       ; BASTIODON       ; d0
-
+	db MIRROR_COAT       ; BASTIODON       ; d0
 	db NO_MOVE       ; DRIFLOON        ; d2
 	db NO_MOVE       ; DRIFBLIM        ; d3
 	db NO_MOVE       ; BRONZOR         ; d4

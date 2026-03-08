@@ -73,14 +73,14 @@ MenuMonIconColors:: ;TEAL, GREEN, RED, PINK, GRAY, BLUE, GREEN, BROWN, PURPLE,
 	iconpal PURPLE, BLUE      ; ditto       ; d1  
 	iconpal GRAY, RED       ; PINECO          ; 45
 	iconpal PURPLE, BROWN   ; FORRETRESS      ; 46
-	iconpal TEAL, PURPLE ; NIDORAN
+	iconpal PURPLE, TEAL ; NIDORAN
 	iconpal TEAL, PURPLE    ; NIDORINA        ; 48
 	iconpal TEAL, PURPLE    ; NIDOQUEEN       ; 49
 	iconpal PURPLE, TEAL    ; NIDORINO        ; 4a
 	iconpal PURPLE, TEAL    ; NIDOKING        ; 4b
 	iconpal RED, BLUE       ; YANMA           ; 4c
 	iconpal RED, BLUE       ; YANMEGA         ; 4d
-	iconpal BLUE, TEAL      ; sunkern        ; c7
+	iconpal GREEN, BROWN      ; sunkern        ; c7
 	iconpal GREEN, BROWN    ; SUNFLORA        ; 4e
 	iconpal PINK, TEAL      ; EXEGGCUTE       ; 4f
 	iconpal BROWN, TEAL     ; EXEGGUTOR       ; 50

@@ -459,8 +459,8 @@ AskForHoothootText:
     done
 
 DontHaveHoothootText:
-    text "No? That's"
-    line "alright"
+    text "No? Well, come"
+	line "back if you do!"
     done
 
 GiveSharpBeakText:

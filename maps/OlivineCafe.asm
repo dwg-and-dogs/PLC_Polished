@@ -448,7 +448,7 @@ OlivineCafe3Script: ; 50000
 
 .Cafe3PokemonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, TEXTBOX_Y - 1
+	menu_coords 0, 0, 15, TEXTBOX_Y - 3
 	dw .MenuData3
 	db 1 ; default option
 

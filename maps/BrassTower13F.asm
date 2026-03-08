@@ -85,7 +85,7 @@ BrassTower13FUnownScript:
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	loadwildmon NOCTOWL, 50
+	loadwildmon NOCTOWL, OTHER_FORM, 50
 	startbattle
 	ifequal $1, .Continue
 	disappear BRASS_TOWER_13F_UNOWN

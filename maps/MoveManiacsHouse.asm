@@ -50,6 +50,9 @@ MoveReminderIntroText::
 	para "sandy little city"
 	line "until it washes"
 	cont "into the sea."
+	
+	para "All I ask is one"
+	line "Big Pearl!"
 	done
 
 MoveReminderPromptText::

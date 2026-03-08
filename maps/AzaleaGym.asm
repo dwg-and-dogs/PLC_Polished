@@ -178,6 +178,8 @@ EndTextBugsy:
 AzaleaGymBugCollectorScript: ; 5000 
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_A_POKEMON
+	iffalse_jumptextfaceplayer BugCollectorNoPokemonYetText
 	writetext AzaleaGym1Text
 	special PlaceMoneyTopRight
 	yesorno
@@ -301,4 +303,28 @@ AzaleaGymNoFishText:
 Text_NoCarry_AzaleaGym:
 	text "You don't have"
 	line "room."
+	done
+
+BugCollectorNoPokemonYetText:
+	text "I've been learning"
+	line "from Bugsy all"
+	para "about Bug-type"
+	line "#mon!"
+	
+	para "I've even found a"
+	line "way to teach them"
+	cont "unique moves."
+	
+	para "A reflective"
+	line "Ledyba,"
+	
+	para "Mega Spinarak,"
+	line "An agile Paras,"
+	para "And a Yanma that"
+	line "flies backwards!"
+	
+	para "Come back after"
+	line "your ceremony and"
+	para "you can get one"
+	line "from me!"
 	done

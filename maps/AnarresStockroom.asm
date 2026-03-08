@@ -36,10 +36,10 @@ AnarresStockroomTrigger:
 	closetext
 	follow ANARRES_STOCKROOM_MATRON, PLAYER
 	applymovement ANARRES_STOCKROOM_MATRON, Movement_AnarresStockroom
+	stopfollow
 	turnobject ANARRES_STOCKROOM_MATRON, RIGHT
 	turnobject PLAYER, LEFT
 	showtext AnarresStockroomAfterWalkingText
-	stopfollow
 	setscene $1
 	end
 

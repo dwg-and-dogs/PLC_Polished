@@ -32,11 +32,14 @@ NationalPark_MapScriptHeader:
 	object_event 11, 24, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolboyJohnny, -1 ; ok
 	object_event 19, 41, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkTeacher2Text, -1 ; ok
 	pokemon_event 28, 40, FURRET, -1, -1, PAL_NPC_BROWN, NationalParkFurretText, -1
-	object_event 20, 29, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerPokefanfBeverly1, -1
+;	object_event 20, 29, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerPokefanfBeverly1, -1
 	object_event 18,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPokefanmWilliam, -1
-	object_event 10, 14, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerLassKrise, -1
+;	object_event 10, 14, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerLassKrise, -1
 	object_event 28, 13, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBugManiacLou, -1
-;	object_event  4, 19, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OfficermKeithScript, -1
+
+	object_event 20, 29, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFSophie, -1; todo 
+	object_event 10, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFFlo, -1; todo 
+
 	itemball_event 37, 12, SHINY_STONE, 1, EVENT_NATIONAL_PARK_SHINY_STONE
 	itemball_event 37, 21, DESTINY_KNOT, 1, EVENT_NATIONAL_PARK_DESTINY_KNOT
 	tmhmball_event  3, 43, TM_DIG, EVENT_NATIONAL_PARK_TM_DIG
@@ -567,4 +570,47 @@ NoPearlForWhtApricornText:
 	text "You can find big"
 	line "pearls just by "
 	cont "fishing anywhere."
+	done
+
+
+GenericTrainerSightseerFFlo: ; raichu_a, exegg_a 
+	generictrainer SIGHTSEERF, FLO, EVENT_BEAT_SIGHTSEERF_FLO, SightseerFFloSeenText, SightseerFFloBeatenText
+
+	text "I give it 7.8 out"
+	line "of 10, not enough"
+	cont "water."
+	done
+
+SightseerFFloSeenText:
+	text "I travelled here"
+	line "and they won't"
+	para "even turn on the"
+	line "water fountain?"
+	done
+
+SightseerFFloBeatenText:
+	text "At least I found"
+	line "battle to whet"
+	cont "my battling"
+	cont "appetite!"	
+	done
+
+GenericTrainerSightseerFSophie: ; gslowking  
+	generictrainer SIGHTSEERF, SOPHIE, EVENT_BEAT_SIGHTSEERF_SOPHIE, SightseerFSophieSeenText, SightseerFSophieBeatenText
+
+	text "I wonder for how"
+	line "long regional"
+	para "forms of #mon"
+	line "have existed."
+	done
+
+SightseerFSophieSeenText:
+	text "I would travel"
+	line "anywhere with my"
+	cont "darling!"
+	done
+
+SightseerFSophieBeatenText:
+	text "I love him even"
+	line "when he loses!"
 	done

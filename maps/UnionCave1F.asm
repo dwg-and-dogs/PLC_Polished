@@ -32,8 +32,8 @@ UnionCave1F_MapScriptHeader:
 	tmhmball_event   2, 14, TM_BULLDOZE, EVENT_ROUTE_39_TM_BULLDOZE
 	smashrock_event  3, 14
 	smashrock_event  6, 10
-	strengthboulder_event  16, 12, EVENT_BEAT_WHITNEY
-	strengthboulder_event  17, 12, EVENT_BEAT_WHITNEY
+	strengthboulder_event  16, 11, EVENT_BEAT_WHITNEY
+	smashrock_event  16, 12, EVENT_BEAT_WHITNEY
 
 GenericTrainerScientistLowell:
 	generictrainer SCIENTIST, LOWELL, EVENT_BEAT_SCIENTIST_LOWELL, ScientistLowellSeenText, ScientistLowellBeatenText
@@ -157,7 +157,7 @@ UnionCaveEggGiverScript:
 
 .CaveEggPokemonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, TEXTBOX_Y - 1
+	menu_coords 0, 0, 13, TEXTBOX_Y - 3
 	dw .MenuData
 	db 1 ; default option
 

@@ -109,14 +109,14 @@ WantLemonadeText:
 	
 	para "My friends say"
 	line "I should brew a"
-	para "tinymushroom to"
+	para "Tinymushroom to"
 	line "get a smoother"
 	cont "buzz."
 	done
 
 Text_MushroomQuestion:
 	text "Do you have a"
-	line "tinymushroom?"
+	line "Tinymushroom?"
 
 	para "I would give you"
 	line "Pink Lemonade I"

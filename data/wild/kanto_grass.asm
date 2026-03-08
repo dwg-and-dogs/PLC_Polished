@@ -59,29 +59,29 @@
 	def_grass_wildmons MISTY_BASIN_B1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 8, SLOWPOKE
-	wildmon 7, ZUBAT
-	wildmon 6, WOOPER
-	wildmon 8, WOOPER
-	wildmon 7, SLOWPOKE, GALARIAN_FORM
+	wildmon 11, SLOWPOKE
+	wildmon 12, ZUBAT
+	wildmon 10, WOOPER
+	wildmon 11, WOOPER
+	wildmon 12, SLOWPOKE, GALARIAN_FORM
 	wildmon 5, SNORUNT
-	wildmon 7, VULPIX, ALOLAN_FORM
+	wildmon 12, VULPIX, ALOLAN_FORM
 ;	; day
-	wildmon 8, SLOWPOKE
-	wildmon 7, ZUBAT
-	wildmon 6, WOOPER
-	wildmon 8, WOOPER
-	wildmon 7, SLOWPOKE, GALARIAN_FORM
+	wildmon 11, SLOWPOKE
+	wildmon 12, ZUBAT
+	wildmon 10, WOOPER
+	wildmon 11, WOOPER
+	wildmon 12, SLOWPOKE, GALARIAN_FORM
 	wildmon 5, SNORUNT
-	wildmon 7, VULPIX, ALOLAN_FORM
+	wildmon 12, VULPIX, ALOLAN_FORM
 ;	; nite7
-	wildmon 8, SLOWPOKE
-	wildmon 7, ZUBAT
-	wildmon 6, WOOPER
-	wildmon 8, WOOPER
-	wildmon 7, SLOWPOKE, GALARIAN_FORM
+	wildmon 11, SLOWPOKE
+	wildmon 12, ZUBAT
+	wildmon 10, WOOPER
+	wildmon 11, WOOPER
+	wildmon 12, SLOWPOKE, GALARIAN_FORM
 	wildmon 5, SNORUNT
-	wildmon 7, VULPIX, ALOLAN_FORM
+	wildmon 12, VULPIX, ALOLAN_FORM
 	end_grass_wildmons
 
 
@@ -172,28 +172,28 @@
 	def_grass_wildmons STADIUM_GROUNDS
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 12, PIKACHU
-	wildmon 17, MURKROW
-	wildmon 15, SUNKERN
-	wildmon 14, CLEFAIRY
-	wildmon 12, CHIKORITA
-	wildmon 15, SKIPLOOM
+	wildmon 14, PIKACHU
+	wildmon 18, MURKROW
+	wildmon 12, SUNKERN
+	wildmon 18, CLEFAIRY
+	wildmon 14, CHIKORITA
+	wildmon 18, SKIPLOOM
 	wildmon 19, MURKROW
 ;	; day
-	wildmon 12, PIKACHU
-	wildmon 17, MURKROW
-	wildmon 15, SUNKERN
-	wildmon 14, CLEFAIRY
-	wildmon 12, CHIKORITA
-	wildmon 15, SKIPLOOM
+	wildmon 14, PIKACHU
+	wildmon 18, MURKROW
+	wildmon 12, SUNKERN
+	wildmon 18, CLEFAIRY
+	wildmon 14, CHIKORITA
+	wildmon 18, SKIPLOOM
 	wildmon 19, MURKROW
 ;	; nite
-	wildmon 12, PIKACHU
-	wildmon 17, MURKROW
-	wildmon 15, SUNKERN
-	wildmon 14, CLEFAIRY
-	wildmon 12, CHIKORITA
-	wildmon 15, SKIPLOOM
+	wildmon 14, PIKACHU
+	wildmon 18, MURKROW
+	wildmon 12, SUNKERN
+	wildmon 18, CLEFAIRY
+	wildmon 14, CHIKORITA
+	wildmon 18, SKIPLOOM
 	wildmon 19, MURKROW
 	end_grass_wildmons
 
@@ -704,28 +704,28 @@
 	def_grass_wildmons TIMELESS_TAPESTRY
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 ;	; morn
-	wildmon 4, RALTS
-	wildmon 4, CROAGUNK
-	wildmon 5, DUSKULL
-	wildmon 6, SHINX
-	wildmon 5, STARLY
-	wildmon 5, HIPPOPOTAS
+	wildmon 8, RALTS
+	wildmon 10, CROAGUNK
+	wildmon 9, DUSKULL
+	wildmon 11, SHINX
+	wildmon 10, STARLY
+	wildmon 8, HIPPOPOTAS
 	wildmon 5, RUFFLET
 ;	; day
-	wildmon 4, RALTS
-	wildmon 4, CROAGUNK
-	wildmon 5, DUSKULL
-	wildmon 6, SHINX
-	wildmon 5, STARLY
-	wildmon 5, HIPPOPOTAS
+	wildmon 8, RALTS
+	wildmon 10, CROAGUNK
+	wildmon 9, DUSKULL
+	wildmon 11, SHINX
+	wildmon 10, STARLY
+	wildmon 8, HIPPOPOTAS
 	wildmon 5, RUFFLET
 ;	; nite7
-	wildmon 4, RALTS
-	wildmon 4, CROAGUNK
-	wildmon 5, DUSKULL
-	wildmon 6, SHINX
-	wildmon 5, STARLY
-	wildmon 5, HIPPOPOTAS
+	wildmon 8, RALTS
+	wildmon 10, CROAGUNK
+	wildmon 9, DUSKULL
+	wildmon 11, SHINX
+	wildmon 10, STARLY
+	wildmon 8, HIPPOPOTAS
 	wildmon 5, RUFFLET
 	end_grass_wildmons
 

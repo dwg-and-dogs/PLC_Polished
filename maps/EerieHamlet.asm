@@ -24,11 +24,11 @@ EerieHamlet_MapScriptHeader:
 	bg_event  7,  7, BGEVENT_ITEM + IRON, EVENT_HAMLET_IRON
 
 	def_object_events
-	object_event  8, 5, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, 	OBJECTTYPE_SCRIPT, 0, EerieHamletHoneyScript, -1 ; trade quest 
-	object_event  1, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, 				OBJECTTYPE_COMMAND, jumptext, EerieHamletRoadblockText1, EVENT_BEAT_AMOS ; roadblock 
-	object_event  1, 7, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, 0, 					OBJECTTYPE_COMMAND, jumptext, EerieHamletRoadblockText2, EVENT_BEAT_AMOS; roadblock 
+	object_event  8, 5, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, 	OBJECTTYPE_SCRIPT, 0, EerieHamletHoneyScript, -1 ; trade quest
+	object_event  1, 6, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, 0, 				OBJECTTYPE_COMMAND, jumptext, EerieHamletRoadblockText1, EVENT_BEAT_AMOS ; roadblock
+	object_event  1, 7, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 1, -1, -1, 0, 					OBJECTTYPE_COMMAND, jumptext, EerieHamletRoadblockText2, EVENT_BEAT_AMOS; roadblock
 
-	object_event 12, 9, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 							OBJECTTYPE_SCRIPT, 0, EerieHamletNPC3, -1
+	object_event 10,  9, SPRITE_GRANNY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 							OBJECTTYPE_SCRIPT, 0, EerieHamletNPC3, -1
 	object_event 10, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, 					OBJECTTYPE_SCRIPT, 0, EerieHamletNPC4, -1
 
 	object_const_def

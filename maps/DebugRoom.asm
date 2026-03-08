@@ -7,7 +7,7 @@ DebugRoom_MapScriptHeader:
 
 	def_warp_events
 	warp_event  9, 0, AZALEA_TOWN, 5
-	warp_event  1, 8, SHELTERED_SHORES, 1
+	warp_event  1, 8, UNION_CAVE_1F, 1
 
 
 	def_coord_events
@@ -180,7 +180,7 @@ endr
 ;	readvar VAR_PARTYCOUNT
 ;	giveegg CYNDAQUIL
 	closetext
-;	warp GAULDENROD_DORMS, 7, 5 
+	warp UNION_CAVE_1F, 16, 9 
 	end
 
 

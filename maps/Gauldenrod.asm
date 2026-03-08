@@ -9,7 +9,7 @@ Gauldenrod_MapScriptHeader:
 	warp_event 19, 27, GAULDENROD_DORMS, 1
 	warp_event 27, 13, GAULDENROD_STOCKROOM, 1
 	warp_event 28, 7, GAULDENROD_GUILD, 1
-	warp_event  9, 31, GAULDENROD_HOUSE, 1  ; TRADE QUEST
+	warp_event  9, 31, GAULDENROD_HOUSE, 1
 	warp_event 11, 25, GAULDENROD_UNDERGROUND_SOUTH, 1
 	warp_event 13,  7, GAULDENROD_UNDERGROUND_NORTH, 1
 	warp_event 23, 3, GAULDENROD_SERENE_SPRINGS_GATE, 1
@@ -403,7 +403,7 @@ GauldenrodHisuiTraderText:
 	para "suited just for"
 	line "your style!"
 
-	para "Tell me. How do"
+	para "Tell me: how do"
 	line "you seek victory?"
 	done
 
