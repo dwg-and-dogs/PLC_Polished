@@ -35,6 +35,9 @@ endif
 ifeq ($(filter debug,$(MAKECMDGOALS)),debug)
 RGBASM_FLAGS += -DDEBUG
 endif
+ifeq ($(filter normalmode,$(MAKECMDGOALS)),normalmode)
+RGBASM_FLAGS += -DNORMALMODE
+endif
 
 crystal_obj := \
 main.o \
@@ -58,7 +61,7 @@ gfx/misc.o
 
 
 .SUFFIXES:
-.PHONY: clean tidy crystal faithful nortc debug monochrome freespace tools bsp
+.PHONY: clean tidy crystal faithful nortc debug normalmode monochrome freespace tools bsp
 .SECONDEXPANSION:
 .PRECIOUS: %.2bpp %.1bpp
 .SECONDARY:
@@ -73,6 +76,7 @@ monochrome: crystal
 noir: crystal
 hgss: crystal
 debug: crystal
+normalmode: crystal 
 
 tools:
 	$(MAKE) -C tools/

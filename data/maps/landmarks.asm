@@ -116,39 +116,39 @@ RouteKaJoName:		   rawchar "Route¯Ka-Jo@"
 IlexForestName:        rawchar "Ilex¯Forest@"
 BurnedTowerName:       rawchar "Burned¯Tower@"
 ;old johto
-HollysHoltName:		   rawchar "Holly's¯Holt@"
-AnarresTownName:	   rawchar "Anarres¯Town@"
-AnarresTowerName:	   rawchar "Anarres¯Tower@"
-MistyBasinName:		   rawchar "Misty¯Basin@"
-CalmCoastName:	       rawchar "Calm¯Coast@"
-GauldenrodName:		   rawchar "Gauldenrod@"
-GauldenrodTowerName:   rawchar "Gauldenrod¯Tower@"
-ShimmerSaddleName:     rawchar "Shimmering¯Saddle@"
-SereneSpringsName:	   rawchar "Serene¯Springs@"
-StadiumGroundsName:	   rawchar "Stadium¯Grounds@"
-StadiumName:           rawchar "Stadium@"
-EmperorsGardenName:    rawchar "Consul's¯Garden@"
-WesternCapitalName:    rawchar "Western¯Capital@"
-HisuiTowerName:        rawchar "Tin Tower@"
-BrassTowerName:        rawchar "Brass¯Tower@"
-CattleCullName:		   rawchar "Cattle¯Cull@"
-TradersLandingName:	   rawchar "Trader's¯Landing@"
-CianwoodCoveName:      rawchar "Cianwood¯Cove@"
-ShelteredShoresName:   rawchar "Sheltered¯Shores@"
-PhantomFjordName:      rawchar "Phantom¯Fjord@"
-SeaFluxNexusName:      rawchar "Seaflux¯Nexus@"
-ArduousAnchorageName:  rawchar "Arduous¯Anchorage@"
-LandingDocksName:      rawchar "Landing¯Docks@"
-TranquilTarnName:      rawchar "Tranquil¯Tarn@"
-GrottoedGlacierName:   rawchar "Grottoed¯Glacier@"
-EnigmaGlacierName:     rawchar "Enigma¯Glacier@"
-SinjohCampName:        rawchar "Sinjoh¯Camp@"
-EmpiresReachName:      rawchar "Empire's¯Reach@"
-EerieHamletName:       rawchar "Eerie¯Hamlet@"
-RebelsRedoubtName:     rawchar "Rebel's¯Redoubt@"
-SulfurStyName:         rawchar "Sulfur¯Sty@"
-ClastsCradleName:      rawchar "Clast's¯Cradle@"
-TimelessTapestryName:      rawchar "Timeless¯Tapestry@"
+HollysHoltName:		   rawchar "Anarres¯Holt@" ; renamed 
+AnarresTownName:	   rawchar "Anarres¯Town@" ; ok 
+AnarresTowerName:	   rawchar "Anarres¯Tower@" ; ok 
+MistyBasinName:		   rawchar "Misty¯Basin@" ; ok 
+CalmCoastName:	       rawchar "Calm¯Coast@" ; ok 
+GauldenrodName:		   rawchar "Gauldenrod@" ; ok 
+GauldenrodTowerName:   rawchar "Gauldenrod¯Tower@" ; ok 
+ShimmerSaddleName:     rawchar "Shimmering¯Saddle@" ; ok 
+SereneSpringsName:	   rawchar "Serene¯Springs@" ; ok 
+StadiumGroundsName:	   rawchar "Stadium¯Grounds@" ; ok 
+StadiumName:           rawchar "Stadium@" ; ok 
+EmperorsGardenName:    rawchar "Royal¯Garden@" ; renamed 
+WesternCapitalName:    rawchar "Western¯Capital@" ; ok 
+HisuiTowerName:        rawchar "Tin Tower@" ; ok 
+BrassTowerName:        rawchar "Brass¯Tower@" ; ok 
+CattleCullName:		   rawchar "Cattle¯Cliffs@" ; renamed  
+TradersLandingName:	   rawchar "Trader's¯Landing@" ; ok 
+CianwoodCoveName:      rawchar "Cianwood¯Cove@" ; ok 
+ShelteredShoresName:   rawchar "Sheltered¯Shores@" ; ok 
+PhantomFjordName:      rawchar "Phantom¯Fjord@" ; ok 
+SeaFluxNexusName:      rawchar "Vortex¯Caverns@" ; ok 
+ArduousAnchorageName:  rawchar "Swirling¯Sandbars@" ; ok
+LandingDocksName:      rawchar "Landing¯Docks@" ; ok 
+TranquilTarnName:      rawchar "Tranquil¯Tarn@" ; ok 
+GrottoedGlacierName:   rawchar "Ancestral¯Glacier@" ; renamed  
+EnigmaGlacierName:     rawchar "Enigma¯Glacier@" ; ok 
+SinjohCampName:        rawchar "Sinjoh¯Camp@" ; ok 
+EmpiresReachName:      rawchar "Empire's¯Reach@" ; ok 
+EerieHamletName:       rawchar "Eerie¯Hamlet@" ; ok 
+RebelsRedoubtName:     rawchar "Rebel's¯Bunker@"; renamed 
+SulfurStyName:         rawchar "Cinder¯Climbt@" ; renamed 
+ClastsCradleName:      rawchar "Clast's¯Cradle@" ; ok 
+TimelessTapestryName:      rawchar "Timeless¯Tapestry@" ; consider revising 
 ; SHAMOUTI DUMMY 
 ShamoutiIslandName:		rawchar "Dummy¯Name"
 
