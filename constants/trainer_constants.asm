@@ -911,7 +911,7 @@ KRIS EQU __trainer_class__
 	const PILAR
 	const LENIE
 	const FLO
-	const SOPHIE
+	const SOFIE
 
 	trainerclass SIGHTSEERS ; 64
 

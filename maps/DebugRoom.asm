@@ -177,10 +177,8 @@ endr
 	loadmem wPartyMon3PP+1, 15
 	loadmem wPartyMon3PP+2, 15
 	loadmem wPartyMon3PP+3, 15
-;	readvar VAR_PARTYCOUNT
-;	giveegg CYNDAQUIL
 	closetext
-	warp UNION_CAVE_1F, 16, 9 
+	warp FIRST_CLASS_CABIN, 6, 6 
 	end
 
 

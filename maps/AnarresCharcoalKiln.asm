@@ -34,32 +34,28 @@ AnarresKilnCharcoalScript:
 	jumpthisopenedtext
 
 AnarresKiln_GotCharcoal:
-	text "It's Charcoal."
-	line "Smells good, no?"
-	
-	para "I just wish there"
-	line "wasn't so much"
-	cont "ash."
+	text "Charcoal smells"
+	line "good, but I wish"
+	para "there wasn't so"
+	line "much ash."
 	done
 
 
 AnarresKiln_GiveCharcoal:
 	text "The trees smell"
-	line "so wonderful."
+	line "so wonderful!"
 	
 	para "We use this oven"
 	line "to make Charcoal."
 	
 	para "Here, take some"
 	line "to remember this"
-	para "place by. Don't"
-	line "mind the soot."
+	para "place by."
 	done
 
 AnarresKilnNPC2Text:
-	text "The elder is in"
-	line "charge of the"
-	cont "work schedule."
+	text "Elder Silas plans"
+	line "our work."
 	
 	para "But he always"
 	line "gives himself"
@@ -67,8 +63,9 @@ AnarresKilnNPC2Text:
 	done
 
 AnarresKilnNPC3Text:
-	text "We have more bark"
-	line "than we can proc-"
-	para "ess with all the"
-	line "dying trees."
+	text "We have way more"
+	line "back than we can"
+	para "process, due to"
+	line "all the trees"
+	cont "dying."
 	done

@@ -157,7 +157,7 @@ UnionCaveEggGiverScript:
 
 .CaveEggPokemonMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 13, TEXTBOX_Y - 3
+	menu_coords 0, 0, 11, TEXTBOX_Y - 5
 	dw .MenuData
 	db 1 ; default option
 

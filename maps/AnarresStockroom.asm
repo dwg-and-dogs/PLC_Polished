@@ -49,7 +49,6 @@ Movement_AnarresStockroom:
 	step_right
 	step_right
 	step_up
-	step_up
 	step_left
 	step_end
 

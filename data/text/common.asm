@@ -89,14 +89,12 @@ _UsedMulchText::
 
 SECTION "_WhichApricornText", ROMX
 _WhichApricornText::
-	text "Which one"
-	line "should I use?"
+	text "Which one?"
 	done
 
 SECTION "_HowManyShouldIMakeText", ROMX
 _HowManyShouldIMakeText::
-	text "How many should I"
-	line "make?"
+	text "How many?"
 	done
 
 SECTION "_RecoveredSomeHPText", ROMX
@@ -1337,7 +1335,7 @@ _NPCTradeIntroText2::
 	cont "routine!"
 	done
 
-SECTION "_NPCTradeCancelText2", ROMX
+SECTION "_NPCTradeCancelText2", ROMX ; 
 _NPCTradeCancelText2::
 	text "Now I'll never"
 	line "make my career"

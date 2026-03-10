@@ -596,7 +596,7 @@ SightseerFFloBeatenText:
 	done
 
 GenericTrainerSightseerFSophie: ; gslowking  
-	generictrainer SIGHTSEERF, SOPHIE, EVENT_BEAT_SIGHTSEERF_SOPHIE, SightseerFSophieSeenText, SightseerFSophieBeatenText
+	generictrainer SIGHTSEERF, SOFIE, EVENT_BEAT_SIGHTSEERF_SOPHIE, SightseerFSophieSeenText, SightseerFSophieBeatenText
 
 	text "I wonder for how"
 	line "long regional"
