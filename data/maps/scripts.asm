@@ -475,7 +475,6 @@ INCLUDE "maps/CreditsPokemonAll.asm"
 
 SECTION "Blackthorn Scripts", ROMX
 
-INCLUDE "maps/DebugRoom.asm"
 INCLUDE "maps/KimonoCabin.asm"
 INCLUDE "maps/KimonoCabin1.asm"
 INCLUDE "maps/KimonoCabin2.asm"
@@ -484,7 +483,7 @@ INCLUDE "maps/KimonoCabin4.asm"
 INCLUDE "maps/KimonoCabin5.asm"
 
 SECTION "Dragon's Den Scripts", ROMX
-
+INCLUDE "maps/DebugRoom.asm"
 
 
 SECTION "Victory Road Scripts", ROMX

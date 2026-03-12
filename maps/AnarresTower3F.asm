@@ -37,7 +37,7 @@ AnarresTower3FEvent:
 	closetext
 	applymovement ANARRES_TOWER_AMOS, AmosWalksAwayMovement
 	disappear ANARRES_TOWER_AMOS
-	clearevent EVENT_BEAT_HOLLIS ; this flag randomly gets set somehow. This is a workaround, i think 
+	clearevent EVENT_BEAT_HOLLIS
 	setevent EVENT_SAW_KLEAVOR
 	pause 60
 	appear ANARRES_TOWER_TAMMY

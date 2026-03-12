@@ -152,100 +152,100 @@ MapNameNPC3Text:
 
 	
 
-WonderTradeReceptionistScript:
-	opentext
-	writetext WonderTradeIntroText
-	waitbutton
-	checkevent EVENT_INTRODUCED_TEALA
-	iftrue .introduced
-	writetext IntroduceTealaText
-	waitbutton
-	setevent EVENT_INTRODUCED_TEALA
-.introduced
-	writetext WonderTradeExplanationText
-	promptbutton
-	special WonderTrade
-	iffalse .done
-	playmusic MUSIC_POKECOM_CENTER
-	writetext DebugWonderTradeCompleteText
-	playsound SFX_DEX_FANFARE_80_109
-	waitsfx
-.done:
-	jumpopenedtext WonderTradeGoodbyeText
+;WonderTradeReceptionistScript:
+;	opentext
+;	writetext WonderTradeIntroText
+;	waitbutton
+;	checkevent EVENT_INTRODUCED_TEALA
+;	iftrue .introduced
+;	writetext IntroduceTealaText
+;	waitbutton
+;	setevent EVENT_INTRODUCED_TEALA
+;.introduced
+;	writetext WonderTradeExplanationText
+;	promptbutton
+;	special WonderTrade
+;	iffalse .done
+;	playmusic MUSIC_POKECOM_CENTER
+;	writetext DebugWonderTradeCompleteText
+;	playsound SFX_DEX_FANFARE_80_109
+;	waitsfx
+;.done:
+;	jumpopenedtext WonderTradeGoodbyeText
 
-WonderTradeIntroText:
-	text "Hello! Welcome to"
-	line "#Com Center"
-	cont "Wonder Trade Hub."
-	done
+;WonderTradeIntroText:
+;	text "Hello! Welcome to"
+;	line "#Com Center"
+;	cont "Wonder Trade Hub."
+;	done
 
-IntroduceTealaText:
-	text "I'm Teala, your"
-	line "trade attendant."
-	done
+;IntroduceTealaText:
+;	text "I'm Teala, your"
+;	line "trade attendant."
+;	done
 
-WonderTradeExplanationText:
-	text "You can trade"
-	line "#mon with other"
-	cont "people far away."
-	done
+;WonderTradeExplanationText:
+;	text "You can trade"
+;	line "#mon with other"
+;	cont "people far away."
+;	done
 
-WonderTradeCompleteText:
-	text "It's your new"
-	line "partner."
+;WonderTradeCompleteText:
+;	text "It's your new"
+;	line "partner."
+;
+;	para "Please take care"
+;	line "of it with love."
+;	done
+;
+;WonderTradeGoodbyeText:
+;	text "We hope to see you"
+;	line "again."
+;	done
 
-	para "Please take care"
-	line "of it with love."
-	done
-
-WonderTradeGoodbyeText:
-	text "We hope to see you"
-	line "again."
-	done
-
-WonderTradeForGSBallPichuText:
-	text "…But what's this?"
-	line "Is something wrong"
-
-	para "with the Wonder"
-	line "Trade machine?"
-
-	para "It seems like you"
-	line "just traded a"
-
-	para "#mon with"
-	line "yourself."
-
-	para "But that can't be"
-	line "right… You can't"
-
-	para "be in two places"
-	line "at once."
-
-	para "Besides, the ma-"
-	line "chine communicates"
-
-	para "through space,"
-	line "not time…"
-
-	para "And what is that"
-	line "strange Ball it's"
-
-	para "holding? Is it an"
-	line "Apricorn Ball?"
-
-	para "Here, take a look…"
-	done
-
-WonderTradeForGSBallPichuText2:
-	text "It may be unusual,"
-	line "but a #mon"
-	cont "is a #mon."
-
-	para "Please look after"
-	line "it carefully."
-	done
-
+;WonderTradeForGSBallPichuText:
+;	text "…But what's this?"
+;	line "Is something wrong"
+;
+;	para "with the Wonder"
+;	line "Trade machine?"
+;
+;	para "It seems like you"
+;	line "just traded a"
+;
+;	para "#mon with"
+;	line "yourself."
+;
+;	para "But that can't be"
+;	line "right… You can't"
+;
+;	para "be in two places"
+;	line "at once."
+;
+;	para "Besides, the ma-"
+;	line "chine communicates"
+;
+;	para "through space,"
+;	line "not time…"
+;
+;	para "And what is that"
+;	line "strange Ball it's"
+;
+;	para "holding? Is it an"
+;	line "Apricorn Ball?"
+;
+;	para "Here, take a look…"
+;	done
+;
+;WonderTradeForGSBallPichuText2:
+;	text "It may be unusual,"
+;	line "but a #mon"
+;	cont "is a #mon."
+;
+;	para "Please look after"
+;	line "it carefully."
+;	done
+;
 KurtHasSomeFansText:
     text "<PLAYER>, I've"
 	line "met some trainers"

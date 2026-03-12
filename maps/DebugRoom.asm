@@ -14,100 +14,191 @@ DebugRoom_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  1,  2, BGEVENT_READ, DebugCPU ; check the items are all there 
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
-	bg_event  0,  2, BGEVENT_UP, DebugInteraction
+	bg_event  0,  2, BGEVENT_UP, DebugInteraction ; all flags, etc. 
 
 	def_object_events
-	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1
-	object_event  2,  3, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder1Script, -1
-	object_event  7,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder2Script, -1 ; gives lots of mons
-	object_event  4,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder5Script, -1 ; gives lots of mons
-	object_event  6,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, DebugWonderTradeScript, -1 ; wonder trade
+	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1 ; REVISE TEXT TODO 
+	object_event  2,  3, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder1Script, -1 ; GIVE SUPERTEAM CHECK 
+	object_event  7,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, Breeder2Script, -1 ; GIVES VARIANTS CHECK 
+	object_event  4,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, Breeder5Script, -1 ; GIVES ALL CHECK 
+	object_event  6,  4, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, Breeder6Script, -1 ; wonder gift CHECK
+	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, ItemVendorScript, -1 ; gives all items and TMs 
+	object_event  0,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, BreederTypeScript, -1 ; asks if you want fire, water, ... then gives you a first stage
 
 	
 	object_const_def
 	const DEBUG_DWG
 
-
-
-DebugInteraction: 
-	setflag ENGINE_POKEDEX
-	callasm FillPokedex
+BreederTypeScript:
+	faceplayer
 	opentext
-	; useful items
-for x, POKE_BALL, CHERISH_BALL + 1
-if x != PARK_BALL && x != SAFARI_BALL
+
+	; Ask about Group 1
+	writetext WantGroup1Text
+	yesorno
+	iffalse .AskGroup2
+
+	; Pick a random mon from Group 1 (3 mons)
+	random 3
+	ifequal 0, .GiveGroup1_0
+	ifequal 1, .GiveGroup1_1
+	; must be 2
+	givepoke HOUNDOUR, 5
+	jumpopenedtext GaveMonText
+
+.GiveGroup1_0:
+	givepoke CYNDAQUIL, 5
+	jumpopenedtext GaveMonText
+
+.GiveGroup1_1:
+	givepoke MAGMAR, 5
+	jumpopenedtext GaveMonText
+
+.AskGroup2:
+	; Ask about Group 2
+	writetext WantGroup2Text
+	yesorno
+	iffalse .NoThanks
+
+	; Pick a random mon from Group 2 (3 mons)
+	random 3
+	ifequal 0, .GiveGroup2_0
+	ifequal 1, .GiveGroup2_1
+	; must be 2
+	givepoke POLIWAG, 5
+	jumpopenedtext GaveMonText
+
+.GiveGroup2_0:
+	givepoke TOTODILE, 5
+	jumpopenedtext GaveMonText
+
+.GiveGroup2_1:
+	givepoke OSHAWOTT, 5
+	jumpopenedtext GaveMonText
+
+.NoThanks:
+	writetext NoThanksText
+	closetext
+	end
+
+WantGroup1Text:
+	text "Want a Fire-type"
+	line "POKéMON?"
+	done
+
+WantGroup2Text:
+	text "How about a"
+	line "Water-type POKéMON?"
+	done
+
+GaveMonText:
+	text "Take good care"
+	line "of it!"
+	done
+
+NoThanksText:
+	text "Maybe next time!"
+	done
+
+Breeder6Script: ; 
+	faceplayer
+	opentext
+	writetext RandomPokemonQuestionText
+	yesorno
+	iffalse_jumpopenedtext BreederSayNoText
+	; Generate a random number from 0 to (CELEBI - CYNDAQUIL)
+	; which covers the full range of pokemon
+	random CELEBI - CYNDAQUIL + 1
+	addval CYNDAQUIL
+
+	; Now $1 holds a random pokemon constant.
+	; Since there's no MON_FROM_MEM / givepoke-from-variable,
+	; we check each value and jump to the matching givepoke.
+
+for x, CYNDAQUIL, CELEBI + 1
+	ifequal x, .Give_{d:x}
+endr
+	; fallback (should never happen)
+	jumpopenedtext BreederSayNoText
+
+for x, CYNDAQUIL, CELEBI + 1
+.Give_{d:x}:
+	givepoke x, 5
+	jumpopenedtext BreederText
+endr
+
+RandomPokemonQuestionText:
+	text "Want a random"
+	line "POKéMON?"
+	done
+
+ItemVendorScript:
+	faceplayer
+	opentext
+	writetext VendorQuestionAllText
+	yesorno
+	iffalse_jumpopenedtext BreederSayNoText
+	writetext BreederText	
+	; all items 
+for x, POKE_BALL, ODD_SOUVENIR + 1
+if x != PARK_BALL && x != SAFARI_BALL && x != POLYCHROME
 	giveitem x, 99
 endc
 endr
-	giveitem MAX_POTION, 99
-	giveitem FULL_RESTORE, 99
-	giveitem MAX_REVIVE, 99
-	giveitem MAX_ELIXIR, 99
-	giveitem RARE_CANDY, 99
-	giveitem PP_UP, 99
-	giveitem PP_MAX, 99
-	giveitem SACRED_ASH, 99
-	giveitem MAX_REPEL, 99
-	giveitem ESCAPE_ROPE, 99
-	giveitem ABILITY_CAP, 99
-	giveitem LEAF_STONE, 99
-	giveitem EXP_SHARE, 1
+	; all key items
+for x, NUM_KEY_ITEMS
+if x != MACHINE_PART
+	givekeyitem x
+endc
+endr
+	; all tms+hms
+for x, NUM_TMS + NUM_HMS
+	givetmhm x
+endr
+	; all apricorns 
+	giveapricorn FIXED_CHARGE, 5
+	giveapricorn SHORE_FOAM, 5
+	giveapricorn RADIANT_OPAL, 5
+	giveapricorn HOLLOW_ROCK, 5
+	giveapricorn TOUGH_LEAVES, 5
+	giveapricorn PNK_APRICORN, 5
+	giveapricorn WHT_APRICORN, 5
+	closetext
+	end
+
+VendorQuestionAllText:
+	text "All items and"
+	line "key items?"
+	done
 	
-	givemoney $0, 1000000
-	givecoins 50000
-	; good party
+VendorYesText:
+	text "Here you go!"
+	done
+
+DebugInteraction: 
+	opentext
+	setflag ENGINE_POKEDEX
+	callasm FillPokedex
+	special Special_SetDayOfWeek
+	setflag ENGINE_POKEGEAR
+	setflag ENGINE_HAVE_SHINY_CHARM
 	; useful items
-	giveitem MASTER_BALL, 99
-	giveitem GEODE, 99;
-	giveitem JEZE_BALL, 99;
-	giveitem HERB_BALL, 99;
-	giveitem BUB_BALL, 99;
-	giveitem DECI_BALL, 99;
-	giveitem KINGS_ROCK, 99
-;	giveapricorn FIXED_CHARGE, 5
-;	giveapricorn SHORE_FOAM, 5
-;	giveapricorn RADIANT_OPAL, 5
-;	giveapricorn HOLLOW_ROCK, 5
-;	giveapricorn TOUGH_LEAVES, 5
-;	giveitem MAX_POTION, 99
-;	giveitem FULL_RESTORE, 99
-;	giveitem MAX_REVIVE, 99
-;	giveitem MAX_ELIXIR, 99
-;	giveitem HP_UP, 99
-;	giveitem PROTEIN, 99
-;	giveitem IRON, 99
-;	giveitem CARBOS, 99
-;	giveitem CALCIUM, 99
-;	giveitem ZINC, 99
-	giveitem RARE_CANDY, 99
-;	giveitem PP_UP, 99
-;	giveitem PP_MAX, 99
-;	giveitem SACRED_ASH, 99
-	giveitem MAX_REPEL, 99
-;	giveitem MAX_REPEL, 99
-	giveitem ESCAPE_ROPE, 99
-	giveitem ABILITY_CAP, 99
-	giveitem LEAF_STONE, 99
-	giveitem FIRE_STONE, 99
-	giveitem WATER_STONE, 99
-	giveitem THUNDERSTONE, 99
-	giveitem MOON_STONE, 99
-	giveitem SUN_STONE, 99
-	giveitem DUSK_STONE, 99
-	giveitem DAWN_STONE, 99
-	giveitem SHINY_STONE, 99
-;	giveitem EXP_SHARE, 99
-;	giveitem LEFTOVERS, 99
-;	giveitem BIG_NUGGET, 99
-;	giveitem SILVER_LEAF, 99
-;	giveitem GOLD_LEAF, 99
-	giveitem ODD_SOUVENIR, 99
-;	giveitem BIG_PEARL, 99
-;	giveitem FLOWER_MAIL, 1
-	; max money
-;	givemoney $0, 1000000
+for x, POKE_BALL, ODD_SOUVENIR + 1
+if x != PARK_BALL && x != SAFARI_BALL && x != POLYCHROME
+	giveitem x, 99
+endc
+endr
+	; all key items
+for x, NUM_KEY_ITEMS
+if x != MACHINE_PART
+	givekeyitem x
+endc
+endr
+	; all tms+hms
+for x, NUM_TMS + NUM_HMS
+	givetmhm x
+endr
 	; all badges
 	setflag ENGINE_ZEPHYRBADGE
 	setflag ENGINE_HIVEBADGE
@@ -123,8 +214,6 @@ endr
 	setflag ENGINE_RAINBOWBADGE
 	setflag ENGINE_MARSHBADGE
 	setflag ENGINE_SOULBADGE
-;	setflag ENGINE_VOLCANOBADGE
-;	setflag ENGINE_EARTHBADGE
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_AZALEA
 	setflag ENGINE_FLYPOINT_GOLDENROD
@@ -146,178 +235,14 @@ endr
 	setflag ENGINE_FLYPOINT_EERIE_HAMLET
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
-	givepoke SNUBBULL, NO_FORM, 50, LEFTOVERS
-	loadmem wPartyMon1Moves+0, MOONBLAST
-	loadmem wPartyMon1Moves+1, SHADOW_BALL
-	loadmem wPartyMon1Moves+2, PSYCHIC_M
-	loadmem wPartyMon1Moves+3, EXPLOSION
-	; hm mules
-	givepoke PARAS, NO_FORM, 50
-	givepoke DEWOTT, NO_FORM, 50
-;	givepoke DEWOTT, NO_FORM, 50
-;	givepoke DARTRIX, NO_FORM, 50  
-;	givepoke DARTRIX, NO_FORM, 50 
-;SPRITE CHECKS 
-;	givepoke QWILFISH, NO_FORM, 5
-;	givepoke VILEPLUME, NO_FORM, 5
-; END SPRITE CHECKS 
-	loadmem wPartyMon2Moves+0, SURF
-	loadmem wPartyMon2Moves+1, CRUNCH
-	loadmem wPartyMon2Moves+2, STRENGTH
-	loadmem wPartyMon2Moves+3, WATERFALL
-	loadmem wPartyMon2PP+0, 15
-	loadmem wPartyMon2PP+1, 15
-	loadmem wPartyMon2PP+2, 15
-	loadmem wPartyMon2PP+3, 30
-	loadmem wPartyMon3Moves+0, ENERGY_BALL
-	loadmem wPartyMon3Moves+1, ROCK_SMASH
-	loadmem wPartyMon3Moves+2, CUT
-	loadmem wPartyMon3Moves+3, FLY
-	loadmem wPartyMon3PP+0, 20
-	loadmem wPartyMon3PP+1, 15
-	loadmem wPartyMon3PP+2, 15
-	loadmem wPartyMon3PP+3, 15
-	closetext
-	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
-	startbattle
-	end
-
-
-DebugCPU:
-	opentext
-	writetext DebugCPUText
-	; time
-	special Special_SetDayOfWeek
-;	special Special_InitialClearDSTFlag
-	; full pokegear
-	setflag ENGINE_POKEGEAR
-;	setflag ENGINE_PHONE_CARD
-;	setflag ENGINE_MAP_CARD
-;	setflag ENGINE_RADIO_CARD
-;	setflag ENGINE_EXPN_CARD
-	; pokedex
-	setflag ENGINE_POKEDEX
-	; all key items
-for x, NUM_KEY_ITEMS
-if x != MACHINE_PART
-	givekeyitem x
-endc
-endr
-	; all tms+hms
-for x, NUM_TMS + NUM_HMS
-	givetmhm x
-endr
 	; givepokes
-	givepoke HEATRAN, 50
-	givepoke TOTODILE, 100
-	givepoke CHIKORITA, 100
 	givepoke LUGIA, 100
 	givepoke ENTEI, 100
 	givepoke RAIKOU, 100
 	; useful items
-	giveitem MASTER_BALL, 99
-	giveitem GEODE, 99;
-	giveitem JEZE_BALL, 99;
-	giveitem HERB_BALL, 99;
-	giveitem BUB_BALL, 99;
-	giveitem DECI_BALL, 99;
-	giveapricorn FIXED_CHARGE, 5
-	giveapricorn SHORE_FOAM, 5
-	giveapricorn RADIANT_OPAL, 5
-	giveapricorn HOLLOW_ROCK, 5
-	giveapricorn TOUGH_LEAVES, 5
-	giveitem MAX_POTION, 99
-	giveitem FULL_RESTORE, 99
-	giveitem MAX_REVIVE, 99
-	giveitem MAX_ELIXIR, 99
-	giveitem HP_UP, 99
-	giveitem PROTEIN, 99
-	giveitem IRON, 99
-	giveitem CARBOS, 99
-	giveitem CALCIUM, 99
-	giveitem ZINC, 99
-	giveitem RARE_CANDY, 99
-	giveitem PP_UP, 99
-	giveitem PP_MAX, 99
-	giveitem SACRED_ASH, 99
-	giveitem MAX_REPEL, 99
-	giveitem MAX_REPEL, 99
-	giveitem ESCAPE_ROPE, 99
-	giveitem ABILITY_CAP, 99
-	giveitem LEAF_STONE, 99
-	giveitem FIRE_STONE, 99
-	giveitem WATER_STONE, 99
-	giveitem THUNDERSTONE, 99
-	giveitem MOON_STONE, 99
-	giveitem SUN_STONE, 99
-	giveitem DUSK_STONE, 99
-	giveitem DAWN_STONE, 99
-	giveitem SHINY_STONE, 99
-	giveitem EXP_SHARE, 99
-	giveitem LEFTOVERS, 99
-	giveitem BIG_NUGGET, 99
-	giveitem SILVER_LEAF, 99
-	giveitem GOLD_LEAF, 99
-	giveitem ODD_SOUVENIR, 99
-	giveitem BIG_PEARL, 99
-	giveitem FLOWER_MAIL, 1
-	; max money
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 999999
-	givecoins 50000
-	loadmem wBattlePoints+0, 0
-	loadmem wBattlePoints+1, 250
-	; all badges
-	setflag ENGINE_ZEPHYRBADGE
-	setflag ENGINE_HIVEBADGE
-	setflag ENGINE_PLAINBADGE
-	setflag ENGINE_FOGBADGE
-	setflag ENGINE_STORMBADGE
-	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_GLACIERBADGE
-	setflag ENGINE_RISINGBADGE
-	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
-	setflag ENGINE_VOLCANOBADGE
-	setflag ENGINE_EARTHBADGE
-	; fly anywhere
-	setflag ENGINE_FLYPOINT_AZALEA
-	setflag ENGINE_FLYPOINT_GOLDENROD
-	setflag ENGINE_FLYPOINT_VIOLET
-	setflag ENGINE_FLYPOINT_UNION_CAVE
-	setflag ENGINE_FLYPOINT_ECRUTEAK
-	setflag ENGINE_FLYPOINT_OLIVINE
-	setflag ENGINE_FLYPOINT_CIANWOOD
-	setflag ENGINE_FLYPOINT_MAHOGANY
-	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
-	; historic johto
-	setflag ENGINE_FLYPOINT_ANARRES_TOWN
-	setflag ENGINE_FLYPOINT_GAULDENROD
-	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
-	setflag ENGINE_FLYPOINT_TRADERS_LANDING
-	setflag ENGINE_FLYPOINT_SHELTERED_SHORES
-	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
-	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
-	setflag ENGINE_FLYPOINT_EERIE_HAMLET
-	setflag ENGINE_FLYPOINT_SULFUR_STY
-	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
-	setflag ENGINE_HAVE_SHINY_CHARM
-	callasm FillPokedex
-	closetext
+	loadtrainer HOLLIS, 1 ; check normalmode or hardmode 
+	startbattle
 	end
-
 
 Breeder1Script:
 	faceplayer
@@ -327,48 +252,42 @@ Breeder1Script:
 	iffalse_jumpopenedtext Breeder1SayNoText
 	writetext Breeder1Text	
 	; good party
-	givepoke PIKACHU, NO_FORM, 100, LEFTOVERS
-	loadmem wPartyMon1Moves+0, MOONBLAST
+	givepoke TYPHLOSION, HISUIAN_FORM, 100, LEFTOVERS
+	loadmem wPartyMon1Moves+0, FLAMETHROWER
 	loadmem wPartyMon1Moves+1, SHADOW_BALL
-	loadmem wPartyMon1Moves+2, PSYCHIC_M
+	loadmem wPartyMon1Moves+2, EARTH_POWER
 	loadmem wPartyMon1Moves+3, EXPLOSION
-	; hm mules
-	givepoke EXEGGCUTE, NO_FORM, 100, LEFTOVERS
-	givepoke PONYTA, NO_FORM, 100, LEFTOVERS
-	givepoke ALAKAZAM, NO_FORM, 100, LEFTOVERS
-	givepoke HOOTHOOT, NO_FORM, 5, NO_ITEM ; CHECK FAINTING BEHAVIOR 
-;SPRITE CHECKS 
-;	givepoke QWILFISH, NO_FORM, 5
-;	givepoke VILEPLUME, NO_FORM, 5
-; END SPRITE CHECKS 
+	givepoke SAMUROTT, HISUIAN_FORM, 100, LEFTOVERS
 	loadmem wPartyMon2Moves+0, SURF
 	loadmem wPartyMon2Moves+1, CRUNCH
 	loadmem wPartyMon2Moves+2, STRENGTH
 	loadmem wPartyMon2Moves+3, WATERFALL
-	loadmem wPartyMon2PP+0, 15
-	loadmem wPartyMon2PP+1, 15
-	loadmem wPartyMon2PP+2, 15
-	loadmem wPartyMon2PP+3, 30
+	givepoke DECIDUEYE, HISUIAN_FORM, 100, LEFTOVERS
 	loadmem wPartyMon3Moves+0, ENERGY_BALL
-	loadmem wPartyMon3Moves+1, ROCK_SMASH
+	loadmem wPartyMon3Moves+1, SPORE
 	loadmem wPartyMon3Moves+2, CUT
 	loadmem wPartyMon3Moves+3, FLY
-	loadmem wPartyMon3PP+0, 20
-	loadmem wPartyMon3PP+1, 15
-	loadmem wPartyMon3PP+2, 15
-	loadmem wPartyMon3PP+3, 15
+	givepoke GARCHOMP, NO_FORM, 100, LEFTOVERS
+	loadmem wPartyMon4Moves+0, EARTHQUAKE
+	loadmem wPartyMon4Moves+1, DRAGON_CLAW
+	loadmem wPartyMon4Moves+2, STRENGTH
+	loadmem wPartyMon4Moves+3, SWORDS_DANCE
+	givepoke LUGIA, NO_FORM, 100, LEFTOVERS  
+	loadmem wPartyMon5Moves+0, SURF
+	loadmem wPartyMon5Moves+1, PSYCHIC
+	loadmem wPartyMon5Moves+2, HURRICANE
+	loadmem wPartyMon5Moves+3, WHIRLPOOL
+	givepoke HEATRAN, NO_FORM, 100, LEFTOVERS  
+	loadmem wPartyMon6Moves+0, FLASH_CANNON
+	loadmem wPartyMon6Moves+1, FLAMETHROWER
+	loadmem wPartyMon6Moves+2, FLASH
+	loadmem wPartyMon6Moves+3, ROCK_SMASH
 	closetext
 	end
 
 Breeder1QuestionText:
-	text "I have four "
-	line "#mon with"
-	cont "good movesets."
-	
-	para "It might work"
-	line "strangely if"
-	cont "you already have"
-	cont "a #mon."
+	text "Lv 100"
+	line "superteam?"
 	done
 
 Breeder1Text:
@@ -387,7 +306,7 @@ dwgDebugScript:
 	writetext DWGQuestionText
 	yesorno
 	iffalse_jumpopenedtext DWGRefusedText
-	writetext DWGSeenText
+;	writetext DWGSeenText
 ; BUG
 ;	givepoke SUNFLORA, 50
 ;	loadmem wPartyMon1DVs+0, $ff
@@ -449,7 +368,6 @@ dwgDebugScript:
 ;	loadmem wPartyMon6DVs+0, $ff
 ;	loadmem wPartyMon6DVs+1, $ef
 ;	loadmem wPartyMon6DVs+2, $ee
-
 ; PSYCHIC 
 ;	givepoke LUCARIO, 50
 ;	loadmem wPartyMon1DVs+0, $ff
@@ -470,7 +388,6 @@ dwgDebugScript:
 ;	loadmem wPartyMon3DVs+0, $ff
 ;	loadmem wPartyMon3DVs+1, $fe
 ;	loadmem wPartyMon3DVs+2, $ef
-
 	winlosstext DWGWinText, DWGLossText
 	setlasttalked DEBUG_DWG
 	loadtrainer ENGINEER, DWG
@@ -481,45 +398,18 @@ dwgDebugScript:
 	special HealPartyEvenForNuzlocke
 	end
 
-
 DWGIntroText:
-	text "Oh! You made it"
-	line "to the debug"
-	cont "room."
-	para "I hope you're"
+	text "I hope you're"
 	line "enjoying the"
 	cont "game!"
-	para "You can talk to"
-	line "the patrons"
-	cont "below to get a"
-	cont "solid team,"
 	
-	para "The NPC to the"
-	line "right to do a"
-	cont "Wonder Trade,"
-	
-	para "The NPC to the"
-	line "left to get a"
-	cont "solid team,"
-	
-	para "The left turbine"
-	line "gives items and"
-	cont "sets flypoints,"
+	para "There's a PC and"
+	line "NPCs to give you"
+	cont "whatever team"
+	cont "you want."
 
-	para "The stairs below"
-	line "take you back in"
-	cont "time to Anarres,"
-
-	para "The computer"
-	line "next to me"
-	cont "works to access"
-	cont "your boxes."
-
-	para "If you ever"
-	line "encounter"
-	cont "issues, you can"
-	para "contact me on"
-	line "Reddit,"
+	para "You can contact"
+	line "me on Reddit,"
 	cont "u/dwg6m9."
 	done
 
@@ -531,13 +421,7 @@ DWGQuestionText:
 	done
 
 DWGRefusedText:
-	text "Sigh... OK,"
-	line "back to work"
-	cont "for me."
-	done
-
-DWGSeenText:
-	text "Here we go!"
+	text "Back to work!"
 	done
 
 DWGWinText:
@@ -545,7 +429,7 @@ DWGWinText:
 	done
 
 DWGLossText:
-	text "gg"
+	text "GG"
 	done
 
 DWGTextAfter1:
@@ -553,16 +437,11 @@ DWGTextAfter1:
 	line "playing!"
 	done
 
-
 DebugCPU2:
 	opentext
 	special PokemonCenterPC
 	endtext
 	end
-
-DebugCPUText:
-	text "Debug CPU"
-	done
 
 Breeder2Script:
 	faceplayer
@@ -572,182 +451,79 @@ Breeder2Script:
 	iffalse_jumpopenedtext BreederSayNoText
 	writetext BreederText	
 	; a buncha mons
-	givepoke RAICHU, ALOLAN_FORM, 50, NO_ITEM
-	givepoke VULPIX, ALOLAN_FORM, 50, NO_ITEM
-	givepoke NINETALES, ALOLAN_FORM, 50, NO_ITEM
-	givepoke GEODUDE, ALOLAN_FORM, 50, NO_ITEM
-	givepoke GRAVELER, ALOLAN_FORM, 50, NO_ITEM
-	givepoke GOLEM, ALOLAN_FORM, 50, NO_ITEM
-	givepoke GRIMER, ALOLAN_FORM, 50, NO_ITEM
-	givepoke MUK, ALOLAN_FORM, 50, NO_ITEM
-	givepoke EXEGGUTOR, ALOLAN_FORM, 50, NO_ITEM
+	givepoke RAICHU, ALOLAN_FORM, 5, NO_ITEM
+	givepoke VULPIX, ALOLAN_FORM, 5, NO_ITEM
+	givepoke NINETALES, ALOLAN_FORM, 5, NO_ITEM
+	givepoke GEODUDE, ALOLAN_FORM, 5, NO_ITEM
+	givepoke GRAVELER, ALOLAN_FORM, 5, NO_ITEM
+	givepoke GOLEM, ALOLAN_FORM, 5, NO_ITEM
+	givepoke GRIMER, ALOLAN_FORM, 5, NO_ITEM
+	givepoke MUK, ALOLAN_FORM, 5, NO_ITEM
+	givepoke EXEGGUTOR, ALOLAN_FORM, 5, NO_ITEM
 	; galarian 	
-	givepoke PONYTA,    GALARIAN_FORM, 50, NO_ITEM
-	givepoke RAPIDASH,  GALARIAN_FORM, 50, NO_ITEM
-	givepoke SLOWPOKE, GALARIAN_FORM, 50, NO_ITEM
-	givepoke SLOWBRO, GALARIAN_FORM, 50, NO_ITEM
-	givepoke SLOWKING, GALARIAN_FORM, 50, NO_ITEM
-	givepoke WEEZING, GALARIAN_FORM, 50, NO_ITEM
-	givepoke CORSOLA, GALARIAN_FORM, 50, NO_ITEM
+	givepoke PONYTA,    GALARIAN_FORM, 5, NO_ITEM
+	givepoke RAPIDASH,  GALARIAN_FORM, 5, NO_ITEM
+	givepoke SLOWPOKE, GALARIAN_FORM, 5, NO_ITEM
+	givepoke SLOWBRO, GALARIAN_FORM, 5, NO_ITEM
+	givepoke SLOWKING, GALARIAN_FORM, 5, NO_ITEM
+	givepoke WEEZING, GALARIAN_FORM, 5, NO_ITEM
+	givepoke CORSOLA, GALARIAN_FORM, 5, NO_ITEM
 	; HISUIAN 
-	givepoke GROWLITHE, HISUIAN_FORM, 50, NO_ITEM
-	givepoke ARCANINE, HISUIAN_FORM, 50, NO_ITEM
-	givepoke VOLTORB,   HISUIAN_FORM, 50, NO_ITEM
-	givepoke ELECTRODE, HISUIAN_FORM, 50, NO_ITEM
-	givepoke TYPHLOSION, HISUIAN_FORM, 50, NO_ITEM
-	givepoke QWILFISH, HISUIAN_FORM, 50, NO_ITEM
-	givepoke SNEASEL, HISUIAN_FORM, 50, NO_ITEM
-	givepoke SAMUROTT, HISUIAN_FORM, 50, NO_ITEM
-	givepoke DECIDUEYE, HISUIAN_FORM, 50, NO_ITEM
+	givepoke GROWLITHE, HISUIAN_FORM, 5, NO_ITEM
+	givepoke ARCANINE, HISUIAN_FORM, 5, NO_ITEM
+	givepoke VOLTORB,   HISUIAN_FORM, 5, NO_ITEM
+	givepoke ELECTRODE, HISUIAN_FORM, 5, NO_ITEM
+	givepoke TYPHLOSION, HISUIAN_FORM, 5, NO_ITEM
+	givepoke QWILFISH, HISUIAN_FORM, 5, NO_ITEM
+	givepoke SNEASEL, HISUIAN_FORM, 5, NO_ITEM
+	givepoke SAMUROTT, HISUIAN_FORM, 5, NO_ITEM
+	givepoke DECIDUEYE, HISUIAN_FORM, 5, NO_ITEM
 	; OTHERS
-	givepoke NOCTOWL, OTHER_FORM, 50, NO_ITEM ; IMMORTAL 
-	givepoke URSALUNA, OTHER_FORM, 50, NO_ITEM ; BLOODMOON 
-	givepoke FERALIGATR, OTHER_FORM, 50, NO_ITEM ; SWAMP KING 
-	givepoke MEGANIUM, OTHER_FORM, 50, NO_ITEM ; SAURO FORM 
-	givepoke MAGCARGO, OTHER_FORM , 50, NO_ITEM; DEEP CRUST 
-	givepoke XATU, OTHER_FORM, 50, NO_ITEM ; TOWER FORM 
-
+	givepoke NOCTOWL, OTHER_FORM, 5, NO_ITEM ; IMMORTAL 
+	givepoke URSALUNA, OTHER_FORM, 5, NO_ITEM ; BLOODMOON 
+	givepoke FERALIGATR, OTHER_FORM, 5, NO_ITEM ; SWAMP KING 
+	givepoke MEGANIUM, OTHER_FORM, 5, NO_ITEM ; SAURO FORM 
+	givepoke MAGCARGO, OTHER_FORM , 5, NO_ITEM; DEEP CRUST 
+	givepoke XATU, OTHER_FORM, 5, NO_ITEM ; TOWER FORM 
 	closetext
 	end
 	
 Breeder5Script:
 	faceplayer
 	opentext
-	; GIVE ALL MONS?
+	writetext BreederQuestionAllText
+	yesorno
+	iffalse_jumpopenedtext BreederSayNoText
+	writetext BreederText	
 for x, CYNDAQUIL, CELEBI + 1
-	givepoke x, 50
+	givepoke x, 5
 endr
-;
-;	opentext
-;	writetext BreederQuestionText
-;	yesorno
-;	iffalse_jumpopenedtext BreederSayNoText
-;	writetext BreederText	
-;	; a buncha mons
-;	givepoke TOTODILE, 5
-;	givepoke SENTRET, 5	
-;	givepoke LEDYBA, 5	
-;	givepoke SPINARAK, 5	
-;	givepoke CHINCHOU, 5	
-;	givepoke TOGETIC, 5	
-;	givepoke NATU, 5	
-;	givepoke MAREEP, 5	
-;	givepoke MARILL, 5	
-;	givepoke SUDOWOODO, 5	
-;	givepoke HOPPIP, 5	
-;	givepoke SUNKERN, 5	
-;	givepoke WOOPER, 5	
-;	givepoke MURKROW, 5	
-;	givepoke MISDREAVUS, 5	
-;	givepoke YANMA, 5	
-;	givepoke UNOWN, 5	
-;	givepoke GIRAFARIG, 5	
-;	givepoke PINECO, 5
-;	givepoke DUNSPARCE, 5
-;	givepoke GLIGAR, 5
-;	givepoke SNUBBULL, 5	
-;	givepoke QWILFISH, 5	
-;	givepoke SHUCKLE, 5	
-;	givepoke HERACROSS, 5	
-;	givepoke SNEASEL, 5	
-;	givepoke TEDDIURSA, 5	
-;	givepoke SLUGMA, 5	
-;	givepoke SWINUB, 5	
-;	givepoke CORSOLA, 5	
-;	givepoke REMORAID, 5	
-;	givepoke MANTINE, 5	
-;	givepoke SKARMORY, 5	
-;	givepoke HOUNDOUR, 5	
-;	givepoke PHANPY, 5	
-;	givepoke STANTLER, 5	
-;	givepoke MILTANK, 5	
-;	givepoke STARAVIA, 5
-;	givepoke LUXIO, 5	
-;	givepoke CRANIDOS, 5	
-;	givepoke SHIELDON, 5	
-;	givepoke AMBIPOM, 5	
-;	givepoke DRIFBLIM, 5	
-;	givepoke BRONZOR, 5	
-;	givepoke SPIRITOMB, 5	
-;	givepoke GIBLE, 5	
-;	givepoke RIOLU, 5	
-;	givepoke HIPPOPOTAS, 5	
-;	givepoke CROAGUNK, 5	
-;	givepoke SNOVER, 5	
-;	givepoke DUSCLOPS, 5
-;	givepoke FROSLASS, 5
-;	givepoke ROTOM, 5
-;	givepoke BERGMITE, 5	
-;	givepoke BASCULEGION, 5	
-;	givepoke RUFFLET, 5	
-;	givepoke RALTS, 5	
-;	givepoke GOOMY, 5	
-;	givepoke ZORUA, 5	
-;	givepoke DRATINI, 5	
-;	givepoke LARVITAR, 5	
-;	givepoke RAIKOU, 5	
-;	givepoke ENTEI, 5	
-;	givepoke SUICUNE, 5	
-;	givepoke HEATRAN, 5	
-;	givepoke LUGIA, 5	
-;	givepoke HO_OH, 5	
-;	givepoke CELEBI, 5	
 	closetext
 	end
-
 
 BreederQuestionText:
 	text "All variants?"
 	done
 
+BreederQuestionAllText:
+	text "All species?"
+	line "10 mins of"
+	cont "mashing buttons."
+	
+	para "Fills up most"
+	line "of your PC."
+	done
+
+BreederQuestionRandomText:
+	text "Random level"
+	line "5 #mon?"
+	done
+
 BreederSayNoText:
-	text "If you come back"
-	line "with your current"
-	cont "box empty, I can"
-	cont "give you some."
+	text "Come back any"
+	line "time!"
 	done
 
 BreederText:
 	text "Here you go!"
-	done
-
-DebugWonderTradeScript: 
-	faceplayer
-	opentext
-	giveegg CYNDAQUIL
-	writetext DebugWonderTradeIntroText
-	waitbutton
-	writetext DebugWonderTradeExplanationText
-	promptbutton
-	special WonderTrade
-	iffalse .done
-	playmusic MUSIC_POKECOM_CENTER
-	writetext DebugWonderTradeCompleteText
-	playsound SFX_DEX_FANFARE_80_109
-	waitsfx
-	jumpopenedtext DebugWonderTradeGoodbyeText
-	
-.done
-	jumpopenedtext DebugWonderTradeGoodbyeText
-	
-	
-
-DebugWonderTradeIntroText:
-	text "I can wonder"
-	line "trade with you!"
-	done
-	
-DebugWonderTradeExplanationText:
-	text "Get a random"
-	line "#mon traded to"
-	cont "you."
-	done
-	
-DebugWonderTradeCompleteText:
-	text "It was a suc-"
-	line "cess!"
-	done
-	
-DebugWonderTradeGoodbyeText:
-	text "See ya!"
 	done
