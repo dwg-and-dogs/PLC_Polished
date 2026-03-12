@@ -137,7 +137,7 @@ CianwoodCoveName:      rawchar "Cianwood¯Cove@" ; ok
 ShelteredShoresName:   rawchar "Sheltered¯Shores@" ; ok 
 PhantomFjordName:      rawchar "Phantom¯Fjord@" ; ok 
 SeaFluxNexusName:      rawchar "Vortex¯Caverns@" ; ok 
-ArduousAnchorageName:  rawchar "Swirling¯Sandbars@" ; ok
+ArduousAnchorageName:  rawchar "Swirling¯Sandbars@" ; renamed
 LandingDocksName:      rawchar "Landing¯Docks@" ; ok 
 TranquilTarnName:      rawchar "Tranquil¯Tarn@" ; ok 
 GrottoedGlacierName:   rawchar "Ancestral¯Glacier@" ; renamed  
@@ -146,7 +146,7 @@ SinjohCampName:        rawchar "Sinjoh¯Camp@" ; ok
 EmpiresReachName:      rawchar "Empire's¯Reach@" ; ok 
 EerieHamletName:       rawchar "Eerie¯Hamlet@" ; ok 
 RebelsRedoubtName:     rawchar "Rebel's¯Bunker@"; renamed 
-SulfurStyName:         rawchar "Cinder¯Climbt@" ; renamed 
+SulfurStyName:         rawchar "Cinder¯Climb@" ; renamed 
 ClastsCradleName:      rawchar "Clast's¯Cradle@" ; ok 
 TimelessTapestryName:      rawchar "Timeless¯Tapestry@" ; consider revising 
 ; SHAMOUTI DUMMY 

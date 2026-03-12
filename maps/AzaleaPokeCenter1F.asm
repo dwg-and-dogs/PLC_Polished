@@ -210,6 +210,10 @@ GiveMintLeafText:
 	line "someone who"
 	para "wants to freshen"
 	line "their breath."
+	
+	para "In no time, you'll"
+	line "be a #mon"
+	cont "Master!"
 	done
 
 IlexExcelsiorV4Script:
