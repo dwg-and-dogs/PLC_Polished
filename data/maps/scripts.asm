@@ -225,8 +225,7 @@ INCLUDE "maps/AzaleaGym.asm"
 INCLUDE "maps/CharcoalKiln.asm"
 INCLUDE "maps/KurtsHouse.asm"
 INCLUDE "maps/TinderGarden.asm"
-INCLUDE "maps/TinderGarden3.asm"
-INCLUDE "maps/TinderGarden2.asm"
+
 
 
 SECTION "Slowpoke Well Scripts", ROMX
@@ -482,9 +481,10 @@ INCLUDE "maps/KimonoCabin3.asm"
 INCLUDE "maps/KimonoCabin4.asm"
 INCLUDE "maps/KimonoCabin5.asm"
 
-SECTION "Dragon's Den Scripts", ROMX
+SECTION "Dragon's Den Scripts", ROMX ; overflow 
 INCLUDE "maps/DebugRoom.asm"
-
+INCLUDE "maps/TinderGarden3.asm"
+INCLUDE "maps/TinderGarden2.asm"
 
 SECTION "Victory Road Scripts", ROMX
 
