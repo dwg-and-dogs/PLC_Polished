@@ -30,77 +30,6 @@ DebugRoom_MapScriptHeader:
 	object_const_def
 	const DEBUG_DWG
 
-BreederTypeScript:
-	faceplayer
-	opentext
-
-	; Ask about Group 1
-	writetext WantGroup1Text
-	yesorno
-	iffalse .AskGroup2
-
-	; Pick a random mon from Group 1 (3 mons)
-	random 3
-	ifequal 0, .GiveGroup1_0
-	ifequal 1, .GiveGroup1_1
-	; must be 2
-	givepoke HOUNDOUR, 5
-	jumpopenedtext GaveMonText
-
-.GiveGroup1_0:
-	givepoke CYNDAQUIL, 5
-	jumpopenedtext GaveMonText
-
-.GiveGroup1_1:
-	givepoke MAGMAR, 5
-	jumpopenedtext GaveMonText
-
-.AskGroup2:
-	; Ask about Group 2
-	writetext WantGroup2Text
-	yesorno
-	iffalse .NoThanks
-
-	; Pick a random mon from Group 2 (3 mons)
-	random 3
-	ifequal 0, .GiveGroup2_0
-	ifequal 1, .GiveGroup2_1
-	; must be 2
-	givepoke POLIWAG, 5
-	jumpopenedtext GaveMonText
-
-.GiveGroup2_0:
-	givepoke TOTODILE, 5
-	jumpopenedtext GaveMonText
-
-.GiveGroup2_1:
-	givepoke OSHAWOTT, 5
-	jumpopenedtext GaveMonText
-
-.NoThanks:
-	writetext NoThanksText
-	closetext
-	end
-
-WantGroup1Text:
-	text "Want a Fire-type"
-	line "POKéMON?"
-	done
-
-WantGroup2Text:
-	text "How about a"
-	line "Water-type POKéMON?"
-	done
-
-GaveMonText:
-	text "Take good care"
-	line "of it!"
-	done
-
-NoThanksText:
-	text "Maybe next time!"
-	done
-
 Breeder6Script: ; 
 	faceplayer
 	opentext
@@ -516,7 +445,7 @@ BreederQuestionAllText:
 
 BreederQuestionRandomText:
 	text "Random level"
-	line "5 #mon?"
+	line "5?"
 	done
 
 BreederSayNoText:
@@ -526,4 +455,1286 @@ BreederSayNoText:
 
 BreederText:
 	text "Here you go!"
+	done
+
+
+BreederTypeScript:
+RandomTypeNPCScript:
+	faceplayer
+	opentext
+ 
+.AskGroup0:
+	writetext WantBugText
+	yesorno
+	iffalse .AskGroup1
+ 
+	random 9
+	ifequal 0, .GiveBug_0
+	ifequal 1, .GiveBug_1
+	ifequal 2, .GiveBug_2
+	ifequal 3, .GiveBug_3
+	ifequal 4, .GiveBug_4
+	ifequal 5, .GiveBug_5
+	ifequal 6, .GiveBug_6
+	ifequal 7, .GiveBug_7
+	givepoke SHUCKLE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveBug_0:
+	givepoke LEDYBA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveBug_1:
+	givepoke SPINARAK, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveBug_2:
+	givepoke PARAS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveBug_3:
+	givepoke PINECO, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveBug_4:
+	givepoke YANMA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveBug_5:
+	givepoke SCYTHER, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveBug_6:
+	givepoke PINSIR, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveBug_7:
+	givepoke HERACROSS, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup1:
+	writetext WantDarkText
+	yesorno
+	iffalse .AskGroup2
+ 
+	random 11
+	ifequal 0, .GiveDark_0
+	ifequal 1, .GiveDark_1
+	ifequal 2, .GiveDark_2
+	ifequal 3, .GiveDark_3
+	ifequal 4, .GiveDark_4
+	ifequal 5, .GiveDark_5
+	ifequal 6, .GiveDark_6
+	ifequal 7, .GiveDark_7
+	ifequal 8, .GiveDark_8
+	ifequal 9, .GiveDark_9
+	givepoke LARVITAR, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_0:
+	givepoke OSHAWOTT, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_1:
+	givepoke PINSIR, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_2:
+	givepoke GRIMER, ALOLAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_3:
+	givepoke GIRAFARIG, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_4:
+	givepoke QWILFISH, HISUIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_5:
+	givepoke EEVEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_6:
+	givepoke MURKROW, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_7:
+	givepoke HOUNDOUR, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_8:
+	givepoke SNEASEL, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDark_9:
+	givepoke SPIRITOMB, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup2:
+	writetext WantDragonText
+	yesorno
+	iffalse .AskGroup3
+ 
+	random 8
+	ifequal 0, .GiveDragon_0
+	ifequal 1, .GiveDragon_1
+	ifequal 2, .GiveDragon_2
+	ifequal 3, .GiveDragon_3
+	ifequal 4, .GiveDragon_4
+	ifequal 5, .GiveDragon_5
+	ifequal 6, .GiveDragon_6
+	givepoke YANMA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDragon_0:
+	givepoke DUNSPARCE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDragon_1:
+	givepoke EXEGGCUTE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDragon_2:
+	givepoke HORSEA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDragon_3:
+	givepoke SHINX, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDragon_4:
+	givepoke DRATINI, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDragon_5:
+	givepoke GIBLE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveDragon_6:
+	givepoke GOOMY, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup3:
+	writetext WantElectricText
+	yesorno
+	iffalse .AskGroup4
+ 
+	random 10
+	ifequal 0, .GiveElectric_0
+	ifequal 1, .GiveElectric_1
+	ifequal 2, .GiveElectric_2
+	ifequal 3, .GiveElectric_3
+	ifequal 4, .GiveElectric_4
+	ifequal 5, .GiveElectric_5
+	ifequal 6, .GiveElectric_6
+	ifequal 7, .GiveElectric_7
+	ifequal 8, .GiveElectric_8
+	givepoke ROTOM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveElectric_0:
+	givepoke PIKACHU, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveElectric_1:
+	givepoke GEODUDE, ALOLAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveElectric_2:
+	givepoke MAREEP, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveElectric_3:
+	givepoke MAGNEMITE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveElectric_4:
+	givepoke VOLTORB, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveElectric_5:
+	givepoke ELECTABUZZ, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveElectric_6:
+	givepoke CHINCHOU, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveElectric_7:
+	givepoke EEVEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveElectric_8:
+	givepoke SHINX, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup4:
+	writetext WantFairyText
+	yesorno
+	iffalse .AskGroup5
+ 
+	random 10
+	ifequal 0, .GiveFairy_0
+	ifequal 1, .GiveFairy_1
+	ifequal 2, .GiveFairy_2
+	ifequal 3, .GiveFairy_3
+	ifequal 4, .GiveFairy_4
+	ifequal 5, .GiveFairy_5
+	ifequal 6, .GiveFairy_6
+	ifequal 7, .GiveFairy_7
+	ifequal 8, .GiveFairy_8
+	givepoke RALTS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFairy_0:
+	givepoke CLEFAIRY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFairy_1:
+	givepoke TOGETIC, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFairy_2:
+	givepoke KOFFING, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFairy_3:
+	givepoke MARILL, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFairy_4:
+	givepoke SNUBBULL, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFairy_5:
+	givepoke EEVEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFairy_6:
+	givepoke PONYTA, GALARIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFairy_7:
+	givepoke MISDREAVUS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFairy_8:
+	givepoke CHIKORITA, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup5:
+	writetext WantFightingText
+	yesorno
+	iffalse .AskGroup6
+ 
+	random 12
+	ifequal 0, .GiveFighting_0
+	ifequal 1, .GiveFighting_1
+	ifequal 2, .GiveFighting_2
+	ifequal 3, .GiveFighting_3
+	ifequal 4, .GiveFighting_4
+	ifequal 5, .GiveFighting_5
+	ifequal 6, .GiveFighting_6
+	ifequal 7, .GiveFighting_7
+	ifequal 8, .GiveFighting_8
+	ifequal 9, .GiveFighting_9
+	ifequal 10, .GiveFighting_10
+	givepoke RALTS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_0:
+	givepoke ROWLET, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_1:
+	givepoke POLIWAG, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_2:
+	givepoke HERACROSS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_3:
+	givepoke MANKEY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_4:
+	givepoke MACHOP, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_5:
+	givepoke HITMONLEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_6:
+	givepoke HITMONCHAN, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_7:
+	givepoke HITMONTOP, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_8:
+	givepoke SNEASEL, HISUIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_9:
+	givepoke RIOLU, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFighting_10:
+	givepoke CROAGUNK, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup6:
+	writetext WantFireText
+	yesorno
+	iffalse .AskGroup7
+ 
+	random 11
+	ifequal 0, .GiveFire_0
+	ifequal 1, .GiveFire_1
+	ifequal 2, .GiveFire_2
+	ifequal 3, .GiveFire_3
+	ifequal 4, .GiveFire_4
+	ifequal 5, .GiveFire_5
+	ifequal 6, .GiveFire_6
+	ifequal 7, .GiveFire_7
+	ifequal 8, .GiveFire_8
+	ifequal 9, .GiveFire_9
+	givepoke SLUGMA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_0:
+	givepoke CYNDAQUIL, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_1:
+	givepoke SUNKERN, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_2:
+	givepoke VULPIX, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_3:
+	givepoke GROWLITHE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_4:
+	givepoke GROWLITHE, HISUIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_5:
+	givepoke MAGMAR, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_6:
+	givepoke REMORAID, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_7:
+	givepoke EEVEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_8:
+	givepoke PONYTA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFire_9:
+	givepoke HOUNDOUR, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup7:
+	writetext WantFlyingText
+	yesorno
+	iffalse .AskGroup8
+ 
+	random 17
+	ifequal 0, .GiveFlying_0
+	ifequal 1, .GiveFlying_1
+	ifequal 2, .GiveFlying_2
+	ifequal 3, .GiveFlying_3
+	ifequal 4, .GiveFlying_4
+	ifequal 5, .GiveFlying_5
+	ifequal 6, .GiveFlying_6
+	ifequal 7, .GiveFlying_7
+	ifequal 8, .GiveFlying_8
+	ifequal 9, .GiveFlying_9
+	ifequal 10, .GiveFlying_10
+	ifequal 11, .GiveFlying_11
+	ifequal 12, .GiveFlying_12
+	ifequal 13, .GiveFlying_13
+	ifequal 14, .GiveFlying_14
+	ifequal 15, .GiveFlying_15
+	givepoke RUFFLET, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_0:
+	givepoke ROWLET, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_1:
+	givepoke HOOTHOOT, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_2:
+	givepoke LEDYBA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_3:
+	givepoke ZUBAT, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_4:
+	givepoke TOGETIC, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_5:
+	givepoke HOPPIP, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_6:
+	givepoke MAGIKARP, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_7:
+	givepoke YANMA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_8:
+	givepoke NATU, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_9:
+	givepoke GLIGAR, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_10:
+	givepoke MANTINE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_11:
+	givepoke SKARMORY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_12:
+	givepoke MURKROW, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_13:
+	givepoke STARLY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_14:
+	givepoke DRIFLOON, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveFlying_15:
+	givepoke DRATINI, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup8:
+	writetext WantGhostText
+	yesorno
+	iffalse .AskGroup9
+ 
+	random 14
+	ifequal 0, .GiveGhost_0
+	ifequal 1, .GiveGhost_1
+	ifequal 2, .GiveGhost_2
+	ifequal 3, .GiveGhost_3
+	ifequal 4, .GiveGhost_4
+	ifequal 5, .GiveGhost_5
+	ifequal 6, .GiveGhost_6
+	ifequal 7, .GiveGhost_7
+	ifequal 8, .GiveGhost_8
+	ifequal 9, .GiveGhost_9
+	ifequal 10, .GiveGhost_10
+	ifequal 11, .GiveGhost_11
+	ifequal 12, .GiveGhost_12
+	givepoke BASCULIN, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_0:
+	givepoke CYNDAQUIL, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_1:
+	givepoke ROWLET, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_2:
+	givepoke HOOTHOOT, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_3:
+	givepoke GASTLY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_4:
+	givepoke MANKEY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_5:
+	givepoke CORSOLA, GALARIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_6:
+	givepoke MISDREAVUS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_7:
+	givepoke DRIFLOON, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_8:
+	givepoke SPIRITOMB, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_9:
+	givepoke DUSKULL, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_10:
+	givepoke SNORUNT, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_11:
+	givepoke ROTOM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGhost_12:
+	givepoke ZORUA, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup9:
+	writetext WantGrassText
+	yesorno
+	iffalse .AskGroup10
+ 
+	random 12
+	ifequal 0, .GiveGrass_0
+	ifequal 1, .GiveGrass_1
+	ifequal 2, .GiveGrass_2
+	ifequal 3, .GiveGrass_3
+	ifequal 4, .GiveGrass_4
+	ifequal 5, .GiveGrass_5
+	ifequal 6, .GiveGrass_6
+	ifequal 7, .GiveGrass_7
+	ifequal 8, .GiveGrass_8
+	ifequal 9, .GiveGrass_9
+	ifequal 10, .GiveGrass_10
+	givepoke SNOVER, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_0:
+	givepoke ROWLET, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_1:
+	givepoke BELLSPROUT, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_2:
+	givepoke HOPPIP, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_3:
+	givepoke PARAS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_4:
+	givepoke ODDISH, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_5:
+	givepoke SUNKERN, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_6:
+	givepoke EXEGGCUTE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_7:
+	givepoke VOLTORB, HISUIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_8:
+	givepoke TANGELA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_9:
+	givepoke EEVEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGrass_10:
+	givepoke CHIKORITA, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup10:
+	writetext WantGroundText
+	yesorno
+	iffalse .AskGroup11
+ 
+	random 12
+	ifequal 0, .GiveGround_0
+	ifequal 1, .GiveGround_1
+	ifequal 2, .GiveGround_2
+	ifequal 3, .GiveGround_3
+	ifequal 4, .GiveGround_4
+	ifequal 5, .GiveGround_5
+	ifequal 6, .GiveGround_6
+	ifequal 7, .GiveGround_7
+	ifequal 8, .GiveGround_8
+	ifequal 9, .GiveGround_9
+	ifequal 10, .GiveGround_10
+	givepoke GIBLE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_0:
+	givepoke GEODUDE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_1:
+	givepoke WOOPER, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_2:
+	givepoke ONIX, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_3:
+	givepoke NIDORAN, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_4:
+	givepoke GLIGAR, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_5:
+	givepoke SWINUB, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_6:
+	givepoke TEDDIURSA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_7:
+	givepoke PHANPY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_8:
+	givepoke RHYHORN, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_9:
+	givepoke HIPPOPOTAS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveGround_10:
+	givepoke LARVITAR, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup11:
+	writetext WantIceText
+	yesorno
+	iffalse .AskGroup12
+ 
+	random 9
+	ifequal 0, .GiveIce_0
+	ifequal 1, .GiveIce_1
+	ifequal 2, .GiveIce_2
+	ifequal 3, .GiveIce_3
+	ifequal 4, .GiveIce_4
+	ifequal 5, .GiveIce_5
+	ifequal 6, .GiveIce_6
+	ifequal 7, .GiveIce_7
+	givepoke BERGMITE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveIce_0:
+	givepoke VULPIX, ALOLAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveIce_1:
+	givepoke JYNX, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveIce_2:
+	givepoke EEVEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveIce_3:
+	givepoke SWINUB, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveIce_4:
+	givepoke SNEASEL, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveIce_5:
+	givepoke LAPRAS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveIce_6:
+	givepoke SNOVER, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveIce_7:
+	givepoke SNORUNT, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup12:
+	writetext WantNormalText
+	yesorno
+	iffalse .AskGroup13
+ 
+	random 16
+	ifequal 0, .GiveNormal_0
+	ifequal 1, .GiveNormal_1
+	ifequal 2, .GiveNormal_2
+	ifequal 3, .GiveNormal_3
+	ifequal 4, .GiveNormal_4
+	ifequal 5, .GiveNormal_5
+	ifequal 6, .GiveNormal_6
+	ifequal 7, .GiveNormal_7
+	ifequal 8, .GiveNormal_8
+	ifequal 9, .GiveNormal_9
+	ifequal 10, .GiveNormal_10
+	ifequal 11, .GiveNormal_11
+	ifequal 12, .GiveNormal_12
+	ifequal 13, .GiveNormal_13
+	ifequal 14, .GiveNormal_14
+	givepoke RUFFLET, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_0:
+	givepoke HOOTHOOT, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_1:
+	givepoke SENTRET, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_2:
+	givepoke DUNSPARCE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_3:
+	givepoke DITTO, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_4:
+	givepoke AIPOM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_5:
+	givepoke STANTLER, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_6:
+	givepoke TAUROS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_7:
+	givepoke MILTANK, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_8:
+	givepoke EEVEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_9:
+	givepoke TEDDIURSA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_10:
+	givepoke PORYGON, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_11:
+	givepoke CHANSEY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_12:
+	givepoke STARLY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_13:
+	givepoke ZORUA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveNormal_14:
+	givepoke SNORLAX, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup13:
+	writetext WantPoisonText
+	yesorno
+	iffalse .AskGroup14
+ 
+	random 16
+	ifequal 0, .GivePoison_0
+	ifequal 1, .GivePoison_1
+	ifequal 2, .GivePoison_2
+	ifequal 3, .GivePoison_3
+	ifequal 4, .GivePoison_4
+	ifequal 5, .GivePoison_5
+	ifequal 6, .GivePoison_6
+	ifequal 7, .GivePoison_7
+	ifequal 8, .GivePoison_8
+	ifequal 9, .GivePoison_9
+	ifequal 10, .GivePoison_10
+	ifequal 11, .GivePoison_11
+	ifequal 12, .GivePoison_12
+	ifequal 13, .GivePoison_13
+	ifequal 14, .GivePoison_14
+	givepoke CROAGUNK, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_0:
+	givepoke SPINARAK, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_1:
+	givepoke ZUBAT, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_2:
+	givepoke GASTLY, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_3:
+	givepoke BELLSPROUT, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_4:
+	givepoke SLOWPOKE, GALARIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_5:
+	givepoke ODDISH, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_6:
+	givepoke NIDORAN, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_7:
+	givepoke KOFFING, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_8:
+	givepoke GRIMER, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_9:
+	givepoke GRIMER, ALOLAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_10:
+	givepoke QWILFISH, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_11:
+	givepoke QWILFISH, HISUIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_12:
+	givepoke TENTACOOL, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_13:
+	givepoke SLUGMA, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePoison_14:
+	givepoke SNEASEL, HISUIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup14:
+	writetext WantPsychicText
+	yesorno
+	iffalse .AskGroup15
+ 
+	random 14
+	ifequal 0, .GivePsychic_0
+	ifequal 1, .GivePsychic_1
+	ifequal 2, .GivePsychic_2
+	ifequal 3, .GivePsychic_3
+	ifequal 4, .GivePsychic_4
+	ifequal 5, .GivePsychic_5
+	ifequal 6, .GivePsychic_6
+	ifequal 7, .GivePsychic_7
+	ifequal 8, .GivePsychic_8
+	ifequal 9, .GivePsychic_9
+	ifequal 10, .GivePsychic_10
+	ifequal 11, .GivePsychic_11
+	ifequal 12, .GivePsychic_12
+	givepoke RUFFLET, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_0:
+	givepoke PIKACHU, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_1:
+	givepoke UNOWN, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_2:
+	givepoke SLOWPOKE, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_3:
+	givepoke ABRA, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_4:
+	givepoke EXEGGCUTE, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_5:
+	givepoke STANTLER, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_6:
+	givepoke GIRAFARIG, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_7:
+	givepoke JYNX, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_8:
+	givepoke NATU, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_9:
+	givepoke EEVEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_10:
+	givepoke PONYTA, GALARIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_11:
+	givepoke BRONZOR, 5
+	jumpopenedtext GaveMonText
+ 
+.GivePsychic_12:
+	givepoke RALTS, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup15:
+	writetext WantRockText
+	yesorno
+	iffalse .AskGroup16
+ 
+	random 13
+	ifequal 0, .GiveRock_0
+	ifequal 1, .GiveRock_1
+	ifequal 2, .GiveRock_2
+	ifequal 3, .GiveRock_3
+	ifequal 4, .GiveRock_4
+	ifequal 5, .GiveRock_5
+	ifequal 6, .GiveRock_6
+	ifequal 7, .GiveRock_7
+	ifequal 8, .GiveRock_8
+	ifequal 9, .GiveRock_9
+	ifequal 10, .GiveRock_10
+	ifequal 11, .GiveRock_11
+	givepoke LARVITAR, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_0:
+	givepoke GEODUDE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_1:
+	givepoke ONIX, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_2:
+	givepoke SUDOWOODO, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_3:
+	givepoke GROWLITHE, HISUIAN_FORM, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_4:
+	givepoke NATU, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_5:
+	givepoke SHUCKLE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_6:
+	givepoke CORSOLA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_7:
+	givepoke RHYHORN, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_8:
+	givepoke SLUGMA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_9:
+	givepoke CRANIDOS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_10:
+	givepoke SHIELDON, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveRock_11:
+	givepoke BERGMITE, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup16:
+	writetext WantSteelText
+	yesorno
+	iffalse .AskGroup17
+ 
+	random 9
+	ifequal 0, .GiveSteel_0
+	ifequal 1, .GiveSteel_1
+	ifequal 2, .GiveSteel_2
+	ifequal 3, .GiveSteel_3
+	ifequal 4, .GiveSteel_4
+	ifequal 5, .GiveSteel_5
+	ifequal 6, .GiveSteel_6
+	ifequal 7, .GiveSteel_7
+	givepoke GOOMY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveSteel_0:
+	givepoke ONIX, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveSteel_1:
+	givepoke PINECO, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveSteel_2:
+	givepoke MAGNEMITE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveSteel_3:
+	givepoke SKARMORY, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveSteel_4:
+	givepoke SLUGMA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveSteel_5:
+	givepoke SHIELDON, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveSteel_6:
+	givepoke BRONZOR, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveSteel_7:
+	givepoke RIOLU, 5
+	jumpopenedtext GaveMonText
+ 
+.AskGroup17:
+	writetext WantWaterText
+	yesorno
+	iffalse .NoThanks
+ 
+	random 17
+	ifequal 0, .GiveWater_0
+	ifequal 1, .GiveWater_1
+	ifequal 2, .GiveWater_2
+	ifequal 3, .GiveWater_3
+	ifequal 4, .GiveWater_4
+	ifequal 5, .GiveWater_5
+	ifequal 6, .GiveWater_6
+	ifequal 7, .GiveWater_7
+	ifequal 8, .GiveWater_8
+	ifequal 9, .GiveWater_9
+	ifequal 10, .GiveWater_10
+	ifequal 11, .GiveWater_11
+	ifequal 12, .GiveWater_12
+	ifequal 13, .GiveWater_13
+	ifequal 14, .GiveWater_14
+	ifequal 15, .GiveWater_15
+	givepoke BASCULIN, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_0:
+	givepoke OSHAWOTT, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_1:
+	givepoke WOOPER, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_2:
+	givepoke POLIWAG, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_3:
+	givepoke MAGIKARP, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_4:
+	givepoke SLOWPOKE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_5:
+	givepoke MARILL, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_6:
+	givepoke QWILFISH, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_7:
+	givepoke TENTACOOL, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_8:
+	givepoke CORSOLA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_9:
+	givepoke REMORAID, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_10:
+	givepoke CHINCHOU, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_11:
+	givepoke EEVEE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_12:
+	givepoke HORSEA, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_13:
+	givepoke MANTINE, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_14:
+	givepoke LAPRAS, 5
+	jumpopenedtext GaveMonText
+ 
+.GiveWater_15:
+	givepoke TOTODILE, 5
+	jumpopenedtext GaveMonText
+ 
+.NoThanks:
+	writetext NoThanksText
+	closetext
+	end
+ 
+WantBugText:
+	text "Want a random"
+	line "Bug-type?"
+	done
+ 
+WantDarkText:
+	text "Want a random"
+	line "Dark-type?"
+	done
+ 
+WantDragonText:
+	text "Want a random"
+	line "Dragon-type?"
+	done
+ 
+WantElectricText:
+	text "Want a random"
+	line "Electric-type?"
+	done
+ 
+WantFairyText:
+	text "Want a random"
+	line "Fairy-type?"
+	done
+ 
+WantFightingText:
+	text "Want a random"
+	line "Fighting-type?"
+	done
+ 
+WantFireText:
+	text "Want a random"
+	line "Fire-type?"
+	done
+ 
+WantFlyingText:
+	text "Want a random"
+	line "Flying-type?"
+	done
+ 
+WantGhostText:
+	text "Want a random"
+	line "Ghost-type?"
+	done
+ 
+WantGrassText:
+	text "Want a random"
+	line "Grass-type?"
+	done
+ 
+WantGroundText:
+	text "Want a random"
+	line "Ground-type?"
+	done
+ 
+WantIceText:
+	text "Want a random"
+	line "Ice-type?"
+	done
+ 
+WantNormalText:
+	text "Want a random"
+	line "Normal-type?"
+	done
+ 
+WantPoisonText:
+	text "Want a random"
+	line "Poison-type?"
+	done
+ 
+WantPsychicText:
+	text "Want a random"
+	line "Psychic-type?"
+	done
+ 
+WantRockText:
+	text "Want a random"
+	line "Rock-type?"
+	done
+ 
+WantSteelText:
+	text "Want a random"
+	line "Steel-type?"
+	done
+ 
+WantWaterText:
+	text "Want a random"
+	line "Water-type?"
+	done
+ 
+GaveMonText:
+	text "Take good care"
+	line "of it!"
+	done
+ 
+NoThanksText:
+	text "Maybe next time!"
 	done

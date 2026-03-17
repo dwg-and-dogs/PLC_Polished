@@ -1191,20 +1191,27 @@ AzaleaBlackbeltPostgateText:
 	next
 	text_start 
 	
-	text "<PLAYER>, I think"
-	line "<RIVAL> is in"
-	cont "trouble."
+	text "<PLAYER>, I got"
+	line "a letter from"
+	cont "<RIVAL>."
 	
-	para "I got mail from"
-	line "Prof. Elm that he"
-	para "had made it to"
-	line "New Bark Town and"
-	para "<RIVAL> was help-"
-	line "ing on a project"
-	cont "with the Dragon"
-	cont "Tamers, but"
+	para "He's in Blackthorn"
+	line "and it doesn't"
+	para "sound like he's"
+	line "coming back."
 	
-	para "<RIVAL> hasn't"
-	line "been seen in two"
-	cont "weeks now."
+	para "He sent me the"
+	line "blueprints for"
+	cont "his distiller,"
+	
+	para "so I can keep"
+	line "up production"
+	para "even if more of"
+	line "the forest is"
+	cont "logged."
+
+	para "..."
+	
+	para "I just want to"
+	line "know he's OK."	
 	done

@@ -6,7 +6,7 @@ You can report bugs on the discord or to me on Reddit by DM, u/dwg6m9.
 
 ### Which file do I need to play?
 
-Version 0.1.0 is released as a pre-patched gbc file. 
+Version 0.2.1 is released as a pre-patched gbc file. 
 
 For earlier versions, the ROM you should use for patching:
 
@@ -14,6 +14,14 @@ For earlier versions, the ROM you should use for patching:
   (`md5: 9f2922b235a5eeb78d65594e82ef5dde`)
 
 It's identical to the one built by the [pokecrystal](https://github.com/pret/pokecrystal) project.
+
+
+### Normal vs. Hard mode? 
+
+Normal mode trainers have no EVs nor items. Normal mode difficulty is comparable to Platinum or B2W2.
+
+In Hard Mode, experienced players who battle every trainer can expect to be a few levels below boss battles. Difficulty is still easier than Emerald Kaizo. 
+
 
 ### Where did this Pokémon go?
 
@@ -31,9 +39,8 @@ The game's [data files](data/) do a fairly good job of listing things you'll wan
 * [Move attributes](data/moves/moves.asm)
 * [TM+HM+tutor list](data/moves/tmhm_moves.asm)
 * [Wild Pokémon](data/wild/)
-* TODO: Trainer Parties and movesets (Spoilers!)
 
-A route-by-route encounter table is posted at [encounters](datascreenshots/documentation/encounters.pdf)
+An encounter table is posted in the discord channel for the beta. 
 
 ### My Pokémon is a different color, is it shiny?
 
@@ -56,7 +63,7 @@ If you need to change these options after starting a game, press Left+B at the t
 
 ### I don't recognize this move, what is it?
 
-There's only room for 255 moves, including Struggle. I wanted to fit in as many useful new moves as possible, so some similar moves were combined to free up space.
+There's only room for 255 moves, including Struggle. Some similar moves were combined to free up space.
 
 * "**Fury Strikes**" = Fury Swipes + Fury Attack
 * "**Healing Light**" = Morning Sun + Moonlight + Synthesis
@@ -64,21 +71,20 @@ There's only room for 255 moves, including Struggle. I wanted to fit in as many 
 
 ### How do I evolve my Pokémon?
 
-You can find all evolution methods at [evos-attacks](datascreenshots/documentation/evolutions_attacks.txt)
+Evolution and learnsets are posted in the discord channel for the beta. Notable evolutions: 
 
-* Pokemon evolve into Hisui forms by using the Hisui Stone from a standard pre-evolution (Hisuian forms: Typhlosion, Samurott, Decidueye, Arcanine, Electrode, Overqwil (from standard Qwilfish), Sneasler (from standard Sneasel), Wyrdeer (from Stantler))
+* Pokemon evolve into alternate forms by using the Odd Souvenir from a standard pre-evolution (Hisuian forms: Typhlosion, Samurott, Decidueye, Arcanine, Electrode, Overqwil (from standard Qwilfish), Sneasler (from standard Sneasel), Wyrdeer (from Stantler))
 * Kadabra, Graveler, Machoke, Haunter evolve at Lv. 40 
 * Ponyta, Grimer, Rhydon evolve at Lv. 25
-* Item trade evolutions (like Seadra into Kingdra while holding a Dragon Scale) now evolve while holding the item.
+* Item trade evolutions (like Seadra into Kingdra while holding a Dragon Scale) evolve while holding the item.
 * Magneton evoles with a Thunderstone
 * Ursaring evolves with a Moon Stone 
 * Yanma, Tangela, and Piloswine evolve while knowing AncientPower
 * Eevee evoles into Espeon with Sun Stone; Umbreon with Dusk Stone, Leafeon with Leaf Stone, Glaceon with Ice Stone, Sylveon with Shiny Stone
 
-
 ### Where do I get this item?
 
-You can find all items locations at [items](datascreenshots/documentation/items.pdf)
+Item locations are posted in the discord beta channel. 
 
 ### What do photographs do?
 
@@ -134,19 +140,19 @@ Final Boss: 60
 
 ### Wait, who is this character?
 
-Hollis: Elder of Anarres Town. 
+Silas: Elder of Anarres Town. 
 Amos: Leader of resistance to Mejimi. 
 
-Mejimi: Emperor of Historic Johto.
-Adrinna: General and aide to Mejimi, overseer of mining operation in historic Mt Mortar. Attempts to influence the player. 
+Vesper: Emperor of Historic Johto.
+Andrea: General and aide to Vesper, overseer of mining operation in historic Mt Mortar. Attempts to influence the player. 
 
-Bobesh: General and aide to Mejimi, overseer of Gauldenrod. 
-Kensey: General and aide to Mejimi, overseer of Trader's Landing. 
+Tyrus: General and aide to Mejimi, overseer of Gauldenrod. 
+Nemo: General and aide to Mejimi, overseer of Trader's Landing. 
 
 Sandra: Elder of Gauldenrod. 
-Vespera: Western Capital religious leader. 
-Barbeau: Elder of Trader's Landing. 
-Kanna: Hisuian expedition leader. 
+Sybil: Western Capital religious leader. 
+Remy: Elder of Trader's Landing. 
+Petra: Hisuian expedition leader. 
 
 
 
@@ -162,17 +168,17 @@ Legendary pokemon are found in the locations below:
 *Celebi: Timeless Tapestry
 *Heatran: Clast's Cradle, bottom floor
 
-Legendary pokemon cannot be reset. 
+Legendary pokemon reset each time you complete the final gauntlet and see your team portraits. 
 
 
 ### Wait, what's going on in historic Johto?
 
 The plot is partially inspired by the time of the Meiji Restoration in Japan ca. 1860. 
 
-Outsiders have landed at the western port, demanding free access. 
-It is known to the Emperor and his generals that Kanto surrendered to the outsiders and is in danger of becoming completely subsumed by the outsiders. 
+Outsiders have landed at the western port, demanding free access.  
+Emperor Vesper worries that Johto may end up like Kanto as a colony.
 
-Emperor Mejimi is influenced by General Adrinna to form an empire in Johto that will be united in its resistance to the outsiders. 
+Emperor Vesper is influenced by General Andrea to form an empire in Johto that will be united in its resistance to the outsiders. 
 General Adrinna believes that the traditional attitudes of Johto are holding it back. 
 Emperor Mejimi will assume a divine role to make his status unquestionable. 
 Over time, General Adrinna grows more frustrated with Emperor Mejimi as she sees that he is not truly reforming Johto. 

@@ -22,6 +22,7 @@ CharcoalKiln_MapScriptHeader:
 	object_event  2,  3, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 	PAL_NPC_BROWN, 	OBJECTTYPE_COMMAND, jumptext, KilnChemistryText, -1
 	object_event  3,  3, SPRITE_CHEMISTRY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 	PAL_NPC_RED, 	OBJECTTYPE_COMMAND, jumptext, KilnChemistryText, -1	
 	object_event  4,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CharcoalKilnBoss, EVENT_KILN_BOSS
+	object_event  4,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, RivalLetterScript, EVENT_AZALEA_BLACKBELT_POSTGAME
 
 
 	object_const_def
@@ -159,4 +160,59 @@ KilnChemistryText:
 	para "Smells good,"
 	line "though!"
 	done
+
+
+RivalLetterScript:
+	italictypeface
+	showtext RivalLetterText
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	end
+
+RivalLetterText:
+	text "Dad, I'm writing"
+	line "from Blackthorn."
 	
+	para "I'm working on a"
+	line "project with the"
+	cont "elders here."
+	
+	para "The water in the"
+	line "Dragon's Den makes"
+	para "#mon remain"
+	line "youthful and"
+	cont "energetic."
+	
+	para "I'm going to study"
+	line "it to help people"
+	cont "for once."
+	
+	para "I know you wanted"
+	line "me to take over"
+	para "the Kiln, but I"
+	line "resented the path"
+	cont "laid out for me."
+	
+	para "I thought that I'd"
+	line "found my calling"
+	para "when Silph put me"
+	line "in charge of the"
+	cont "OMLAS project,"
+	
+	para "but that was just"
+	line "another role for"
+	cont "me to play."
+	
+	para "I wasn't going to"
+	line "be another part"
+	cont "in their machine."
+	
+	para "I'm going to find"
+	line "myself. In the"
+	para "still waters of"
+	line "the Dragon's Den"
+	para "my reflection is"
+	line "almost coming"
+	cont "into focus."
+	cont "-<RIVAL>"
+	done

@@ -14,7 +14,7 @@ EvolutionMoves::
 	db NO_MOVE       ; SENTRET         ; 0f
 	db NO_MOVE       ; FURRET          ; 10
 	db NO_MOVE       ; PIKACHU         ; 11
-	db NO_MOVE       ; RAICHU          ; 12
+	db THUNDERBOLT       ; RAICHU          ; 12
 	db NO_MOVE       ; LEDYBA          ; 13
 	db NO_MOVE       ; LEDIAN          ; 14
 	db NO_MOVE       ; SPINARAK        ; 15
@@ -33,7 +33,7 @@ EvolutionMoves::
 	db NO_MOVE       ; DUDUNSPARCE     ; 22
 	db NO_MOVE       ; MAREEP          ; 23
 	db NO_MOVE       ; FLAAFFY         ; 24
-	db NO_MOVE       ; AMPHAROS        ; 25
+	db THUNDERPUNCH       ; AMPHAROS        ; 25
 	db NO_MOVE       ; WOOPER          ; 26
 	db NO_MOVE       ; QUAGSIRE        ; 27
 	db NO_MOVE       ; GASTLY          ; 28
@@ -77,9 +77,9 @@ EvolutionMoves::
 	db NO_MOVE       ; YANMA           ; 4c
 	db DRAGONBREATH  ; YANMEGA         ; 4d
 	db NO_MOVE     ; SUNKERN        ; c7
-	db NO_MOVE       ; SUNFLORA        ; 4e
+	db EMBER       ; SUNFLORA        ; 4e
 	db NO_MOVE       ; EXEGGCUTE       ; 4f
-	db NO_MOVE       ; EXEGGUTOR       ; 50
+	db PSYCHIC       ; EXEGGUTOR       ; 50
 	db NO_MOVE       ; SUDOWOODO       ; 51
 	db NO_MOVE       ; SCYTHER         ; 52
 	db BULLET_PUNCH  ; SCIZOR          ; 53
@@ -243,7 +243,7 @@ EvolutionMoves::
 	db NO_MOVE       ; GARCHOMP        ; f2
 	db NO_MOVE       ; DRATINI         ; f3
 	db NO_MOVE       ; DRAGONAIR       ; f4
-	db NO_MOVE       ; DRAGONITE       ; f5
+	db WING_ATTACK       ; DRAGONITE       ; f5
 	db NO_MOVE       ; LARVITAR        ; f6
 	db NO_MOVE       ; PUPITAR         ; f7
 	db NO_MOVE       ; TYRANITAR       ; f8
@@ -259,23 +259,23 @@ EvolutionMoves::
 	db NO_MOVE       ; EGG
 
 ; Alolan Forms
-	db NO_MOVE       ; RAICHU (Alolan)
+	db PSYCHIC       ; RAICHU (Alolan)
 	db NO_MOVE       ; VULPIX (Alolan)
-	db NO_MOVE       ; NINETALES (Alolan)
+	db ICY_WIND       ; NINETALES (Alolan)
 	db NO_MOVE       ; GEODUDE (Alolan)
-	db NO_MOVE       ; GRAVELER (Alolan)
-	db NO_MOVE       ; GOLEM (Alolan)
+	db SPARK       ; GRAVELER (Alolan)
+	db SPARK       ; GOLEM (Alolan)
 	db NO_MOVE       ; GRIMER (Alolan)
-	db NO_MOVE       ; MUK (Alolan)
+	db DARK_PULSE       ; MUK (Alolan)
 	db DRAGON_PULSE       ; EXEGGUTOR (Alolan)
 
 ; Galarian Forms
 	db NO_MOVE       ; PONYTA (Galarian)
 	db PLAY_ROUGH    ; RAPIDASH (Galarian)
 	db NO_MOVE       ; SLOWPOKE (Galarian)
-	db NO_MOVE       ; SLOWBRO (Galarian)
-	db NO_MOVE       ; SLOWKING (Galarian)
-	db NO_MOVE       ; WEEZING (Galarian)
+	db POISON_JAB       ; SLOWBRO (Galarian)
+	db SLUDGE_BOMB       ; SLOWKING (Galarian)
+	db DAZZLINGLEAM       ; WEEZING (Galarian)
 	db NO_MOVE       ; CORSOLA (Galarian)
 
 ; Hisuian Forms

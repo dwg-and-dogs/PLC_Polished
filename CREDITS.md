@@ -58,6 +58,21 @@ Back Sprites if different from above, using Deviantart handles:
 * Justin8964: Nomad_F (Phoebe) and Hollis
 * Ferropexola: Ninja
 
+
+## Beta Testers
+
+* MissingNoVGC
+* SilentSentinel
+* Jupiter
+* N4773R
+* howie
+* Tekk
+* BrianJK
+* Fang
+* InnerRhymes
+* gh0sti
+* Aaron151
+
 ## Other Art
 
 * Animated Fire from Azure Keys BW3: Genesis 

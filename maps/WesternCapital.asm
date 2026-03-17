@@ -394,7 +394,7 @@ WCTinTowerText:
 	done
 
 WCGardenText:
-	text "Emperor's Garden"
+	text "Royal Garden"
 	line "Home to refined"
 	cont "#mon"
 	done

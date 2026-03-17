@@ -1,0 +1,35 @@
+Inheritance Level Caps
+
+Date: 03.16.26
+Version: Beta 0.2.1
+
+Caps are the same for Normal and Hard mode. 
+
+Badge 1, Anarres Town: 16
+	Optional, Bugsy:  18
+Badge 2, Gauldenrod: 21
+	Stadium: 24
+Badge 3, Goldenrod: 29
+Badge 4, Violet City: 33
+Badge 5, Western Capital: 36
+Badge 6, Trader's Landing Docks: 40
+Badge 7, Olivine City: 43
+Badge 8, Mahogany Town: 45
+	Optional, Jasmine: 48
+	Optional, Morty: 49
+Badge 9, Sinjoh Camp: 48
+	Optional, Clair: 50 
+Badge 10, Eerie Hamlet: 51
+
+Clast's Cradle B1F: 53
+
+Final Gauntlet
+General Tyrus: 55
+General Nemo: 57
+
+If "No" chosen: 
+	General Andrea: 57
+	Emperor Vesper: 60
+If "Yes" chosen:
+	<Spoiler 1/2>: 60
+	<Spoiler 2/2>: 60

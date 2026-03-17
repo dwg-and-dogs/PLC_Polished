@@ -61,8 +61,7 @@ GoldenrodDeptStore4FGameboyKidText:
 	done
 
 GoldenrodDeptStore4FDirectoryText:
-	text "Let Us Pump Up"
-	line "Your #mon!"
-
-	para "4F Medicine Box"
+	text "4F Medicine Box"
+	line "and #Ball"
+	cont "Depot"
 	done

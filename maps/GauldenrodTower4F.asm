@@ -73,6 +73,12 @@ GauldenrodTower4FSandraScript:
 	special Special_FadeOutMusic
 	pause 60
 	playmusic MUSIC_ELITE_FOUR_BATTLE_BW
+	
+	refreshscreen
+	trainerpic ADRINNA
+	waitbutton
+	closepokepic
+	
 	opentext
 	writetext AdrinnaGauldenrodTowerText
 	waitbutton

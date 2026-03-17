@@ -96,7 +96,7 @@ GenericTrainerPicnickerKim:
 
 	text "Now, I have to"
 	line "run back to the "
-	para "#center"
+	para "#Center"
 	line "and it'll be too"
 	para "late to make any"
 	line "s'mores..."

@@ -25,15 +25,15 @@ StyCapitalGate_MapScriptHeader:
 	object_event  3,  3, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, StyCapitalGateText, EVENT_BEAT_ADRINNA_MINE
 	
 StyCapitalGateText:
-	text "Mount Mortar has"
+	text "The mountain has"
 	line "loomed over the"
 	cont "Capital for ages."
 	
 	para "Who knew that we"
 	line "were so close to"
 	cont "rich ore seams!"
-	
-	para "Andrea's digging"
-	line "at a staggering"
-	cont "pace."
+;	
+;	para "Andrea's digging"
+;	line "at a staggering"
+;	cont "pace."
 	done

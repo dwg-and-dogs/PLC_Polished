@@ -267,7 +267,7 @@ CalmCoastSign1Text:
 
 CalmCoastSign3Text:
 	text "South to:"
-	line "Holly's Holt"
+	line "Anarres Holt"
 	done
 
 CalmCoastKurtWalksAway:

@@ -99,8 +99,8 @@ SulfurStyYesTimeTravelText:
 	done
 
 StySignText:
-	text "The Sulfur Sty"
-	line "Beneath the"
+	text "The Cinder Climb:"
+	line "Ascends into the"
 	cont "Clast's Cradle"
 	done
 

@@ -366,7 +366,7 @@ HHYesTimeTravelText:
 	done
 
 HH_Sign1Text:
-	text "Holly's Holt:"
+	text "Anarres Holt:"
 	line "Home of Celebi"
 	done
 

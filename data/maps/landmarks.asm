@@ -116,7 +116,7 @@ RouteKaJoName:		   rawchar "Route¯Ka-Jo@"
 IlexForestName:        rawchar "Ilex¯Forest@"
 BurnedTowerName:       rawchar "Burned¯Tower@"
 ;old johto
-HollysHoltName:		   rawchar "Anarres¯Holt@" ; renamed 
+HollysHoltName:		   rawchar "Anarres¯Holt@" ; renamed, checked  
 AnarresTownName:	   rawchar "Anarres¯Town@" ; ok 
 AnarresTowerName:	   rawchar "Anarres¯Tower@" ; ok 
 MistyBasinName:		   rawchar "Misty¯Basin@" ; ok 
@@ -127,26 +127,26 @@ ShimmerSaddleName:     rawchar "Shimmering¯Saddle@" ; ok
 SereneSpringsName:	   rawchar "Serene¯Springs@" ; ok 
 StadiumGroundsName:	   rawchar "Stadium¯Grounds@" ; ok 
 StadiumName:           rawchar "Stadium@" ; ok 
-EmperorsGardenName:    rawchar "Royal¯Garden@" ; renamed 
+EmperorsGardenName:    rawchar "Royal¯Garden@" ; renamed, checked 
 WesternCapitalName:    rawchar "Western¯Capital@" ; ok 
 HisuiTowerName:        rawchar "Tin Tower@" ; ok 
 BrassTowerName:        rawchar "Brass¯Tower@" ; ok 
-CattleCullName:		   rawchar "Cattle¯Cliffs@" ; renamed  
+CattleCullName:		   rawchar "Cattle¯Cliffs@" ; renamed , checked 
 TradersLandingName:	   rawchar "Trader's¯Landing@" ; ok 
 CianwoodCoveName:      rawchar "Cianwood¯Cove@" ; ok 
 ShelteredShoresName:   rawchar "Sheltered¯Shores@" ; ok 
 PhantomFjordName:      rawchar "Phantom¯Fjord@" ; ok 
 SeaFluxNexusName:      rawchar "Vortex¯Caverns@" ; ok 
-ArduousAnchorageName:  rawchar "Swirling¯Sandbars@" ; renamed
+ArduousAnchorageName:  rawchar "Swirling¯Sandbars@" ; renamed, checked 
 LandingDocksName:      rawchar "Landing¯Docks@" ; ok 
 TranquilTarnName:      rawchar "Tranquil¯Tarn@" ; ok 
-GrottoedGlacierName:   rawchar "Ancestral¯Glacier@" ; renamed  
+GrottoedGlacierName:   rawchar "Ancestral¯Glacier@" ; renamed, checked 
 EnigmaGlacierName:     rawchar "Enigma¯Glacier@" ; ok 
 SinjohCampName:        rawchar "Sinjoh¯Camp@" ; ok 
 EmpiresReachName:      rawchar "Empire's¯Reach@" ; ok 
 EerieHamletName:       rawchar "Eerie¯Hamlet@" ; ok 
-RebelsRedoubtName:     rawchar "Rebel's¯Bunker@"; renamed 
-SulfurStyName:         rawchar "Cinder¯Climb@" ; renamed 
+RebelsRedoubtName:     rawchar "Rebel's¯Bunker@"; renamed checked
+SulfurStyName:         rawchar "Cinder¯Climb@" ; renamed checked
 ClastsCradleName:      rawchar "Clast's¯Cradle@" ; ok 
 TimelessTapestryName:      rawchar "Timeless¯Tapestry@" ; consider revising 
 ; SHAMOUTI DUMMY 

@@ -293,8 +293,8 @@ TL_Text9:
 	cont "her here to save"
 	para "the Landing."
 	
-	para "Let's see if Bar-"
-	line "beau can help."
+	para "Let's see if"
+	line "Remy can help."
 	done
 
 TL_Scene_2_L:

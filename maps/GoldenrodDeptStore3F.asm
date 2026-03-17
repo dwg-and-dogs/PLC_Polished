@@ -38,9 +38,9 @@ GoldenrodDeptStore3FRockerText:
 	done
 
 GoldenrodDeptStore3FDirectoryText:
-	text "For Victory"
-	line "Seekers"
+	text "Growing"
+	line "Stronger!"
 
-	para "3F Battle"
-	line "   Collection"
+	para "3F Evolution"
+	line "Stones"
 	done
