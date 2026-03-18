@@ -18,15 +18,30 @@ It's identical to the one built by the [pokecrystal](https://github.com/pret/pok
 
 ### Normal vs. Hard mode? 
 
-Normal mode trainers have no EVs nor items. Normal mode difficulty is comparable to Platinum or B2W2.
+Normal mode trainers have no EVs no boss or rival battles have items. Normal mode difficulty is comparable to Platinum or B2W2. If you like to nuzlocke, this difficulty should be fair. 
 
-In Hard Mode, experienced players who battle every trainer can expect to be a few levels below boss battles. Difficulty is still easier than Emerald Kaizo. 
+In Hard Mode, experienced players who battle every trainer can expect to be a few levels below boss battles. Difficulty is still easier than the Kaizo series. Opponents have EVs, items, and some coverage moves. 
+
+
+### Are there any sandbox or debug features? 
+
+There are two debug features:
+
+(Beta 02x only!) The first is the radio in Kurt's house. It will give you a few Lv100 team members, all TM, Dex entries, items, ... 
+
+(All versions) The back-left corner of the Azalea Gym has a portal to a debug room. Simply interact with the furthest-left flower tile. Starting from the top-left and working to the bottom-right: 
+* Random type pokemon gift, for monotype runs
+* All items
+* Lv100 super team 
+* Dev
+* Random any pokemon
+* Give all pokemon, no forms 
+* Give all pokemon, variant forms 
 
 
 ### Where did this Pokémon go?
 
 Some first forms, especially babies, were removed to make room for more evolutionary lines. 
-Missing babies: 
 
 
 ### Is there documentation for all the {Pokémon, items, moves, etc}?
@@ -73,7 +88,7 @@ There's only room for 255 moves, including Struggle. Some similar moves were com
 
 Evolution and learnsets are posted in the discord channel for the beta. Notable evolutions: 
 
-* Pokemon evolve into alternate forms by using the Odd Souvenir from a standard pre-evolution (Hisuian forms: Typhlosion, Samurott, Decidueye, Arcanine, Electrode, Overqwil (from standard Qwilfish), Sneasler (from standard Sneasel), Wyrdeer (from Stantler))
+* Pokemon evolve into alternate forms by using the Odd Souvenir from a standard pre-evolution (e.g., Quilava to Hisuian Typhlosion). There is no method to convert a plain form to a variant form. 
 * Kadabra, Graveler, Machoke, Haunter evolve at Lv. 40 
 * Ponyta, Grimer, Rhydon evolve at Lv. 25
 * Item trade evolutions (like Seadra into Kingdra while holding a Dragon Scale) evolve while holding the item.
@@ -81,6 +96,7 @@ Evolution and learnsets are posted in the discord channel for the beta. Notable 
 * Ursaring evolves with a Moon Stone 
 * Yanma, Tangela, and Piloswine evolve while knowing AncientPower
 * Eevee evoles into Espeon with Sun Stone; Umbreon with Dusk Stone, Leafeon with Leaf Stone, Glaceon with Ice Stone, Sylveon with Shiny Stone
+* Rufflet evolves at Lv. 36
 
 ### Where do I get this item?
 
@@ -108,24 +124,34 @@ White Apricorn 	-- Fast Ball 	-- Vanilla behavior
 
 ### What are suggested level caps?
 
-Anarres:  16
-Azalea Gym (Optional): 16
-Gauldenrod: 21
-Stadium Grounds: 25
-Goldenrod: 29
-Violet: 33
-Western Capital: 36
-Trader's Landing Docks: 40
-Lighthouse: 43
-Mahogany: 45
-Olivine Gym (Optional): 45
-Ecruteak Gym (Optional): 46
-Sinjoh: 48
-Extent Temple (Optional): 50
-Eerie Hamlet: 51
-Clast's Cradle: 53
-Final Gauntlet: 57
-Final Boss: 60
+Badge 1, Anarres Town: 16
+	Optional, Bugsy:  18
+Badge 2, Gauldenrod: 21
+	Stadium: 24
+Badge 3, Goldenrod: 29
+Badge 4, Violet City: 33
+Badge 5, Western Capital: 36
+Badge 6, Trader's Landing Docks: 40
+Badge 7, Olivine City: 43
+Badge 8, Mahogany Town: 45
+	Optional, Jasmine: 48
+	Optional, Morty: 49
+Badge 9, Sinjoh Camp: 48
+	Optional, Clair: 50 
+Badge 10, Eerie Hamlet: 51
+
+Clast's Cradle B1F: 53
+
+Final Gauntlet
+General Tyrus: 55
+General Nemo: 57
+
+If "No" chosen: 
+	General Andrea: 57
+	Emperor Vesper: 60
+If "Yes" chosen:
+	<Spoiler 1/2>: 60
+	<Spoiler 2/2>: 60
 
 
 ### Spoilers below!
@@ -155,7 +181,6 @@ Remy: Elder of Trader's Landing.
 Petra: Hisuian expedition leader. 
 
 
-
 ### Where do I get the legendary Pokémon?
 
 Legendary pokemon are found in the locations below: 
@@ -168,7 +193,7 @@ Legendary pokemon are found in the locations below:
 *Celebi: Timeless Tapestry
 *Heatran: Clast's Cradle, bottom floor
 
-Legendary pokemon reset each time you complete the final gauntlet and see your team portraits. 
+Legendary pokemon, Spiritomb, and Rotom reset each time you complete the final gauntlet and see your team portraits. 
 
 
 ### Wait, what's going on in historic Johto?
@@ -179,17 +204,17 @@ Outsiders have landed at the western port, demanding free access.
 Emperor Vesper worries that Johto may end up like Kanto as a colony.
 
 Emperor Vesper is influenced by General Andrea to form an empire in Johto that will be united in its resistance to the outsiders. 
-General Adrinna believes that the traditional attitudes of Johto are holding it back. 
-Emperor Mejimi will assume a divine role to make his status unquestionable. 
-Over time, General Adrinna grows more frustrated with Emperor Mejimi as she sees that he is not truly reforming Johto. 
+General Andrea believes that the traditional attitudes of Johto are holding it back. 
+Emperor Vesper will assume a divine role to make his status unquestionable. 
+Over time, General Andrea grows more frustrated with Emperor Vesper as she sees that he is not truly reforming Johto. 
 
 The emperor's plan is opposed by the leaders of various cities in Johto. 
-The resistance is organized by the character of Amos. 
+The resistance is organized by the character of Amos.
 
 
 ### Wait, what's going on in modern Johto?
 
-There is a severe drought taking hold. Kurt believes the drought is due to the region going against its traditions that held it close to nature, especially because of the influence of Silph Co. 
+There is a severe drought. Kurt believes the drought is due to the region going against its traditions, especially because of the influence of Silph Co. 
 
 Silph has installed several water-generating plants throughout Johto to disastrous effect, from building a water tower in Violet, to a distillation plant in Olivine, and a water project at the Lake of Rage. 
 
@@ -211,7 +236,7 @@ Your Rival feels bitter about the way he has been treated in Azalea and joins Si
 5. Big Mushroom in Violet West House
 6. Liteblue Mail in Ecruteak West House
 7. Gold Leaf in Ecruteak Central House
-9. Pearl in Olivine City, Northeast House
+9. Pearl in Olivine City Northeast House
 10. Surf Mail in Olivine City 
 11. Old Amber in Mahogany Town
 12. Sweet Honey in Eerie Hamlet
@@ -219,19 +244,33 @@ Your Rival feels bitter about the way he has been treated in Azalea and joins Si
 
 ### I can't figure out this puzzle!
 
-TODO
 
-Ruins of Alph Puzzles: 
+* [Celebi, Heatran, Violet Catacombs, Cabin #4 Sudoku](screenshots/Inheritance_Publish/Features/solved_puzzles)
 
 Kimono puzzles:
-	Kimono 1: <link>
 	Kimono 2: Talk to the hedgehog from the south, then east, then north, then south, then east. 
-	Kimono 3: <link>
-	Kimono 4: 
-	Kimono 5: 
 
-Sheltered shores: Hit switches in order 5-4-3-1, then hit the center switch. 
+Whirl Islands:
+1. Talk to the sages to go back in time to the Vortex Caverns. 
+2. Solve the boulder puzzle with both boulders. 
+3. Hit the switches in this order: 5 -- 4 -- 3 -- 1. You may need to hit the reset block. 
+4. Surf on the tiles to reach the center switch. 
+5. Talk to the sages to go forward in time to the Whirl Islands. 
+6. Descend past Kurt to get to the Whirlpool HM. 
+7. Enter the Whirl Islands by the top-left island. 
+8. Find the stairs that allow you to progress. 
+9. Solve the overworld maze. 
+10. Solve the water currents puzzle. 
+11. Descend the waterfall, witness Kurt capture Lugia. 
 
-Western Glacier:
+
+
+TODO
+
+Enigma Glacier: hint, use the overworld boulders to help you land where you need to. Only the bottom boulder needs to be used. 
+
+Ruins of Alph Puzzles: 
+	Bronzong: 
+	Lugia: 
 
 Brass Tower:

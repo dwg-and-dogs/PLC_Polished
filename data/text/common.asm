@@ -3255,8 +3255,7 @@ _InitialOptionsText::
 	para "You are playing"
 	line "an unfinished"
 	cont "version. Please"
-	cont "do not stream or"
-	cont "distribute!"
+	cont "don't distribute!"
 
 	para "Please see the"
 	line "Credits file for"

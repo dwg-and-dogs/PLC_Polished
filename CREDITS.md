@@ -72,6 +72,7 @@ Back Sprites if different from above, using Deviantart handles:
 * InnerRhymes
 * gh0sti
 * Aaron151
+* nepettable 
 
 ## Other Art
 

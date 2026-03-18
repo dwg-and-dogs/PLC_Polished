@@ -321,10 +321,13 @@ dwgDebugScript:
 	setlasttalked DEBUG_DWG
 	loadtrainer ENGINEER, DWG
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+;	winlosstext SilasBeatenText, 0 ; check normal vs hardmode 
+;	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
 	startbattle
 	reloadmap
 	showtext DWGTextAfter1
 	special HealPartyEvenForNuzlocke
+;	clearevent EVENT_AZALEA_BLACKBELT_POSTGAME ; debug  
 	end
 
 DWGIntroText:
