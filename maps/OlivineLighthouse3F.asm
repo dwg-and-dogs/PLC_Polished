@@ -38,7 +38,7 @@ TrainerScientistPiotr:
 .SeenText:
 	text "OMLAS Slowking"
 	line "must not be"
-	cont "distrbed!"
+	cont "disturbed!"
 	done
 
 TrainerEngineerHoward:

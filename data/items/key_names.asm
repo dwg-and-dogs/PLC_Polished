@@ -20,7 +20,7 @@ KeyItemNames::
 	li "Kurt's Map"
 	li "Mint Leaf"
 	li "Tinymushroom"
-	li "Pink Lemonade"
+	li "Pnk Lemonade"
 	li "Brick Piece"
 	li "Ragecandybar"
 	li "Big Mushroom"

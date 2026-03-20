@@ -4,6 +4,6 @@
 	db   "Hisuians believed"
 	next "it could purify"
 	next "forsaken souls"
-	next "with its flames to"
-	page "guide them to the"
+	page "with its flames to"
+	next "guide them to the"
 	next "afterlife.@"

@@ -188,8 +188,8 @@ KurtText_Intro_2:
 	text_start 	
 	text "Hey! My distiller"
 	line "can save Azalea!"
-	para "It harvests more"
-	line "10x more oils -- "
+	para "It extracts 10x"
+	line "5x more oil than-"
 	done
 
 KurtText_Intro_3:

@@ -258,7 +258,7 @@ CradleCutscene_Text6:
 	para "Says an old man"
 	line "stole my Lugia."
 	para "But she's been by"
-	line "side dutifully!"
+	line "my side loyally!"
 	cont "How absurd."
 	done
 

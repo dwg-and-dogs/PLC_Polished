@@ -180,7 +180,7 @@ KurtCattleCullStoryText:
 	para "So when your Dad"
 	line "went off to start"
 	para "his career with"
-	line "for Silph's #-"
+	line "the Silph's #-"
 	para "ball R&D in"
 	line "Kanto, he left"
 	para "Cyndaquil for me"

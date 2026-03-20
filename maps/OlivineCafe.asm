@@ -135,10 +135,10 @@ OlivineCafe1Text:
 	para "They cost ¥5000"
 	line "to take home."
 	
-	para "Reversal Magik,"
+	para "Reverse Magikarp,"
 	line "Psybeam Chinchou,"
-	cont "Amnesia Corsola,"
-	cont "or a smashing"
+	para "Amnesia Corsola,"
+	line "or a smashing"
 	cont "Shuckle."
 	
 	para "Buy for ¥5000?"
