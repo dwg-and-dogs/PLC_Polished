@@ -47,7 +47,7 @@ EcruteakGym_MapScriptHeader:
 	strengthboulder_event 3, 8, EVENT_ECRUTEAK_BOULDER_2
 	object_event  2, 15, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymBouldersResetScript, -1
 	object_event  5,  1, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakGymMortyScript, -1
-	object_event  5, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymBlockText, EVENT_BURNED_TOWER_MORTY
+	object_event  4, 13, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymBlockText, EVENT_BURNED_TOWER_MORTY
 	object_event  5, 13, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakGymBlockText, EVENT_BURNED_TOWER_MORTY
 	pokemon_event  4,  1, GENGAR, -1, -1, PAL_NPC_BLUE, MortyGengarText, -1
 

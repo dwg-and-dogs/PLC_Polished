@@ -107,12 +107,12 @@ GoldenrodDeptStore1FReceptionistScript:
 	writetext RadioTower1FRadioCardWomanYouWinText
 	promptbutton
 	verbosegiveitem UP_GRADE
-	promptbutton
-	getstring .RadioCardText, $1
-	callstd receiveitem
-	writetext RadioTower1FPokegearIsARadioText
-	promptbutton
-	setflag ENGINE_RADIO_CARD
+;	promptbutton
+;	getstring .RadioCardText, $1
+;	callstd receiveitem
+;	writetext RadioTower1FPokegearIsARadioText
+;	promptbutton
+;	setflag ENGINE_RADIO_CARD
 	writetext RadioTower1FRadioCardWomanTuneInText
 	waitbutton
 	closetext
@@ -140,10 +140,7 @@ RadioTower1FRadioCardWomanOfferQuizText:
 
 	para "Answer five ques-"
 	line "tions correctly to"
-	cont "win a both an"
-	
-	para "Up-Grade and a"
-	line "Radio Card."
+	cont "win a prize!"
 
 	para "Would you like to"
 	line "take the quiz?"
@@ -201,9 +198,7 @@ RadioTower1FRadioCardWomanYouWinText:
 	line "Congratulations!"
 
 	para "Here's your prize,"
-	line "a Radio Card,"
-	para "and a special"
-	line "promotion item"
+	line "a promotion item"
 	cont "for Porygon!"
 	done
 
@@ -214,8 +209,9 @@ RadioTower1FPokegearIsARadioText:
 	done
 
 RadioTower1FRadioCardWomanTuneInText:
-	text "Please tune in to"
-	line "our radio shows."
+	text "We hope you enjoy"
+	line "your trip to the"
+	cont "Department Store!"
 	done
 
 RadioTower1FRadioCardWomanNotTakingQuizText:

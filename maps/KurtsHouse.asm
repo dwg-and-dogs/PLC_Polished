@@ -935,4 +935,7 @@ endr
 	callasm FillPokedex
 	; intro events
 	closetext
+	; debug only
+	warp GOLDENROD_GAME_CORNER, 10, 8 
+
 	end

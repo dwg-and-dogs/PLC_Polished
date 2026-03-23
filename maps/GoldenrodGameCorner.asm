@@ -28,18 +28,18 @@ GoldenrodGameCorner_MapScriptHeader:
 	bg_event 12,  9, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
 	bg_event 12, 10, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
 	bg_event 12, 11, BGEVENT_RIGHT, GoldenrodGameCornerSlotsMachineScript
-	bg_event 13,  6, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 13,  7, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 13,  8, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 13,  9, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 13, 10, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 13, 11, BGEVENT_LEFT, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 18,  6, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 18,  7, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 18,  8, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 18,  9, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 18, 10, BGEVENT_READ, GoldenrodGameCornerCardFlipMachineScript
-	bg_event 18, 11, BGEVENT_RIGHT, GoldenrodGameCornerCardFlipMachineScript
+	bg_event 13,  6, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 13,  7, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 13,  8, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 13,  9, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 13, 10, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 13, 11, BGEVENT_LEFT, GoldenrodGameCornerSlotsMachineScript
+	bg_event 18,  6, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 18,  7, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 18,  8, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 18,  9, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 18, 10, BGEVENT_READ, GoldenrodGameCornerSlotsMachineScript
+	bg_event 18, 11, BGEVENT_RIGHT, GoldenrodGameCornerSlotsMachineScript
 	bg_event 12,  1, BGEVENT_LEFT, GoldenrodGameCornerLeftTheirDrinkScript
 
 	def_object_events
