@@ -65,6 +65,7 @@ INCLUDE "maps/WhispersWay.asm"
 INCLUDE "maps/TimelessTapestry.asm"
 INCLUDE "maps/WhispersTapestryGate.asm"
 INCLUDE "maps/EmperorsGardenCredit.asm"
+INCLUDE "maps/WesternCapitalCutscene.asm"
 
 SECTION "New Bark Scripts", ROMX 
 

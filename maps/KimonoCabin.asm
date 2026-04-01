@@ -69,7 +69,7 @@ KimonoCabin1Helped:
 Kimono1HelpedText:
 	text "Vera: Hey thanks"
 	line "for your help!"
-	para "Great-grandma"
+	para "Now my grandma"
 	line "Shiji is proud"
 	para "that I can rock"
 	line "smash now."
@@ -81,10 +81,8 @@ Kimono1AskHelpText:
 	cont "Anarres?"
 	para "It is always so"
 	line "boring here?"
-	para "We had to move"
-	line "cause my great-"
-	cont "grandma Shiji"
-	cont "said so."
+	para "My grandma Shiji"
+	line "made us move!"
 
 	para "I have chores."
 	line "I have to go a"

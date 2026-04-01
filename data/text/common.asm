@@ -4313,13 +4313,148 @@ _CoinCaseCountText::
 	line ""
 	text_decimal wCoins, 2, 5
 	text_end
+
+; Begin Celebi section 
+SECTION "_CelebiCallIlex", ROMX ; unused 
+_CelebiCallIlex::
+	text "The GS Ball needs"
+	line "a sample of anci-"
+	cont "end writing."
 	
-SECTION "_CelebiCallTest1", ROMX
-_CelebiCallTest1::
-	text "This is the 1st"
-	line "celebi test"
-	cont "string."
+	para "Visit the Ruins"
+	line "of Alph to get an"
+	cont "Unown Report."
+	
+	para "You may need to"
+	line "access by way of"
+	cont "Slowpoke Well."
 	prompt
+
+
+SECTION "_CelebiCallAlph", ROMX ; unused 
+_CelebiCallTest2::
+	text "Return the Unown"
+	line "Report to Kurt in"
+	cont "the Ilex Forest."
+	
+	para "Then, you can go"
+	line "back in time to"
+	cont "save Johto's"
+	cont "traditions!"
+	prompt
+
+SECTION "_CelebiCallAnarres", ROMX
+_CelebiCallAnarres::
+	text "The path North is"
+	line "blocked. Ask the"
+	para "Anarres Elder"
+	line "at the top of the"
+	para "Anarres Tower for"
+	line "help clearing the"
+	cont "roadblock."
+	prompt
+
+SECTION "_CelebiCallGauldenrod", ROMX
+_CelebiCallGauldenrod::
+	text "Investigate the"
+	line "corrupting"
+	para "influence! Head"
+	line "north from"
+	cont "Anarres Town."
+	prompt
+
+SECTION "_CelebiCallStadium", ROMX
+_CelebiCallStadium::
+	text "..."
+	prompt
+
+SECTION "_CelebiCallRoute35", ROMX
+_CelebiCallRoute35::
+	text "..."
+	prompt
+
+
+SECTION "_CelebiCallRadioTower", ROMX
+_CelebiCallRadioTower::
+	text "..."
+	prompt
+
+SECTION "_CelebiCallSproutTower", ROMX
+_CelebiCallSproutTower::
+	text "..."
+	prompt
+
+SECTION "_CelebiCallBellchime", ROMX
+_CelebiCallBellchime::
+	text "..."
+	prompt
+	
+SECTION "_CelebiCallTradersLanding", ROMX
+_CelebiCallTradersLanding::
+	text "..."
+	prompt
+
+SECTION "_CelebiCallRoute40", ROMX
+_CelebiCallRoute40::
+	text "..."
+	prompt
+
+SECTION "_CelebiCallWhirlIslandLugia", ROMX
+_CelebiCallWhirlIslandLugia::
+	text "..."
+	prompt
+
+
+SECTION "_CelebiCallCianwood", ROMX
+_CelebiCallCianwood::
+	text "..."
+	prompt
+
+
+SECTION "_CelebiCallLandingDocks", ROMX
+_CelebiCallLandingDocks::
+	text "..."
+	prompt
+
+
+SECTION "_CelebiCallOlivineLighthouse", ROMX
+_CelebiCallOlivineLighthouse::
+	text "..."
+	prompt
+
+SECTION "_CelebiCallLakeOfRage", ROMX
+_CelebiCallLakeOfRage::
+	text "..."
+	prompt
+
+SECTION "_CelebiCallGlacier", ROMX
+_CelebiCallGlacier::
+	text "..."
+	prompt
+
+SECTION "_CelebiCallCradle", ROMX
+_CelebiCallCradle::
+	text "..."
+	prompt
+
+
+SECTION "_CelebiCallTapestry", ROMX
+_CelebiCallTapestry::
+	text "..."
+	prompt
+
+SECTION "_CelebiCallBrassTower", ROMX
+_CelebiCallBrassTower::
+	text "Amos and Kurt are"
+	line "waiting! Ascend"
+	para "the Brass Tower"
+	line "in the Western"
+	cont "Capital to stop"
+	para "Emperor Vesper"
+	line "from destroying"
+	cont "Johto' heritage!"
+	prompt
+
 
 SECTION "Text_RaiseThePPOfWhichMove", ROMX
 Text_RaiseThePPOfWhichMove::

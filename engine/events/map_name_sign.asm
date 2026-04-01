@@ -154,10 +154,10 @@ InitMapNameSign::
 	ret z
 .check_western_capital:
 	ld a, [wMapGroup]
-	cp GROUP_WESTERN_CAPITAL
+	cp GROUP_WESTERN_CAPITAL_CUTSCENE
 	jr nz, .check_emperors_garden
 	ld a, [wMapNumber]
-	cp MAP_WESTERN_CAPITAL
+	cp MAP_WESTERN_CAPITAL_CUTSCENE
 	ret z
 .check_emperors_garden:
 	ld a, [wMapGroup]

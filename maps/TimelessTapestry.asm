@@ -88,7 +88,7 @@ TapestryAmos:
 	disappear TAPESTRY_AMOS_2
 	setevent EVENT_SKIRMISH_STARTED
 	clearevent EVENT_CAPITAL_SKIRMISHER
-	setmapscene WESTERN_CAPITAL, $1 ; DEBUG TECH 
+	setmapscene WHISPERS_WAY, $1 ; used to increment for the celebi call 
 	end
 
 TT_BronzongText:

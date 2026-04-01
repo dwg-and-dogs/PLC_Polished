@@ -813,6 +813,7 @@ WesternCapitalCemetery_BlockData:
 
 SECTION "WesternCapital_BlockData", ROMX
 WesternCapital_BlockData:
+WesternCapitalCutscene_BlockData:
 	INCBIN "maps/WesternCapital.ablk.lz"
 
 SECTION "WhispersWay_BlockData", ROMX

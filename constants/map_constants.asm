@@ -208,6 +208,7 @@ ENDM
 	map_const TIN_TOWER_OLD_2F,                                8,  8 ; sprout tower
 	map_const TIN_TOWER_OLD_3F,                                8,  8 ; sprout tower
 	map_const EMPERORS_GARDEN_CREDIT,                               20, 20 ; johto traditional
+	map_const WESTERN_CAPITAL_CUTSCENE, 					20, 18 ; just a copy of wc 
 
 	newgroup                                                     ;  8
 	map_const AZALEA_POKECENTER_1F,                        6,  4 ;  1

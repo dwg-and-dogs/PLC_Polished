@@ -17,7 +17,7 @@ TrainerClassNames::
 	li "Elder"            ; Sandra
 	li "Johto"            ; CHAMPION-kurt final 
 	li "Leader"           ; BROCK
-	li "Chronicler"       ; Vespera
+	li "Chronicler"       ; Sybil
 	li "Leader"           ; LT_SURGE
 	li "Leader"           ; ERIKA
 	li "Leader"           ; JANINE

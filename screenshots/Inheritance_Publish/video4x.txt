@@ -1,0 +1,1 @@
+ffmpeg -i input.mp4 -vf "scale=640:576:flags=neighbor" output.mp4

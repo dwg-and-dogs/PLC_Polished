@@ -1114,7 +1114,7 @@ wArduousAnchorageCreditSceneID:: db
 wSinjohCrossroadsCreditSceneID:: db
 wClastsCradleB1FCreditSceneID:: db
 wBurnedTower1FCreditSceneID:: db
-wDragonsDenCreditSceneID:: db ; UNUSED 
+wWhispersWaySceneID:: db ; dummy scene from talking to amos  
 wCreditsPokemonAllSceneID:: db
 wAnarresStockroomSceneID:: db 
 wUnused9SceneID:: db ;

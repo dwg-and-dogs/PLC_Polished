@@ -43,7 +43,7 @@ MapScenes::
 	scene_var RADIO_TOWER_1F,                         wRadioTower1FSceneID 
 	scene_var EMPERORS_GARDEN,                        wEmperorsGardenSceneID 
 	scene_var GAULDENROD_HOUSE,                       wGauldenrodHouseSceneID
-	scene_var WESTERN_CAPITAL,                        wWesternCapitalSceneID 
+	scene_var WESTERN_CAPITAL_CUTSCENE,                        wWesternCapitalSceneID 
 	scene_var HOLT_COAST_GATE,             			  wHoltCoastGateSceneID
 	scene_var ROUTE_35_GOLDENROD_GATE,          	  wRoute35GoldenrodGateSceneID 
 	scene_var WHIRL_ISLAND_LUGIA_CHAMBER,			  wWhirlIslandLugiaChamberSceneID 
@@ -80,15 +80,15 @@ MapScenes::
 	scene_var TINDER_GARDEN_2, 						  wTinderGarden2SceneID
 	scene_var TINDER_GARDEN_3, 						  wTinderGarden3SceneID
 
-	scene_var HOLLYS_HOLT_CREDIT, 						  wHollysHoltCreditSceneID
-	scene_var STADIUM_GROUNDS_CREDIT, 						  wStadiumGroundsCreditSceneID
-	scene_var EMPERORS_GARDEN_CREDIT, 						  wEmperorsGardenCreditSceneID
+	scene_var HOLLYS_HOLT_CREDIT, 					  wHollysHoltCreditSceneID
+	scene_var STADIUM_GROUNDS_CREDIT, 				  wStadiumGroundsCreditSceneID
+	scene_var EMPERORS_GARDEN_CREDIT, 				  wEmperorsGardenCreditSceneID
 	scene_var ARDUOUS_ANCHORAGE_CREDIT, 						  wArduousAnchorageCreditSceneID
 	scene_var SINJOH_CROSSROADS_CREDIT, 						  wSinjohCrossroadsCreditSceneID
 	scene_var CLASTS_CRADLE_B1F_CREDIT, 						  wClastsCradleB1FCreditSceneID
 	scene_var BURNED_TOWER_B1F_CREDIT, 						  wBurnedTower1FCreditSceneID
 	
-	scene_var DRAGONS_DEN_CREDIT, wDragonsDenCreditSceneID ; not used 
+	scene_var WHISPERS_WAY, wWhispersWaySceneID ; dummy scene for talking to amos at tapestry 
 	scene_var CREDITS_POKEMON_ALL, wCreditsPokemonAllSceneID
 	scene_var ANARRES_STOCKROOM, wAnarresStockroomSceneID
 	db -1

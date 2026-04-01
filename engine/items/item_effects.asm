@@ -1936,21 +1936,36 @@ KurtsMapKeyItem: ; c.f. typechart
 	farjp Pack_InitColors
 
 CelebiCallKeyItem:
-	checkevent EVENT_GOT_WATER_PULSE
-	iftrue .jump
-	ld hl, .celebicalltext
+	; check if we are done 
+	ld a, [wWhispersWaySceneID] ; this is incremented by amos at the tapestry 
+	cp 0 
+	jr nz, .CelebiCallBrassTower  ; if wwwID is != 0 then we jump to the brass tower 
+	; the first event to check is to see if the anarres tower is done. 
+	ld a, [wAnarresTower3FSceneID] ; if it's equal to 
+	cp 0 
+	jr nz, .CelebiCallGauldenrod  ; if the variable is set to 1, then we know we've finished the tower, and need to go to Gauldenrod.  
+	; otherwise, we can just say that we need to climb the tower 
+; you're here if you just received the item 
+	ld hl, .CelebiCallAnarresText
 	jmp MenuTextboxWaitButton
-
-.celebicalltext
-	text_far _CelebiCallTest1
+.CelebiCallAnarresText
+	text_far _CelebiCallAnarres
 	text_end
 
-.jump
-	ld hl, .celebicalltext2
+; you're here if you did the anarres tower 
+.CelebiCallGauldenrod
+	ld hl, .CelebiCallGauldenrodText
 	jmp MenuTextboxWaitButton
+.CelebiCallGauldenrodText
+	text_far _CelebiCallGauldenrod
+	text_end
 
-.celebicalltext2
-	text_far _CelebiCallTest1
+; you're here if you're done 
+.CelebiCallBrassTower
+	ld hl, .CelebiCallBrassTowerText
+	jmp MenuTextboxWaitButton
+.CelebiCallBrassTowerText
+	text_far _CelebiCallBrassTower
 	text_end
 
 RestorePPEffect:

@@ -630,6 +630,10 @@ IlexForestCelebiEventScript:
 	opentext
 	writetext WhatIsNaturalText
 	waitbutton
+	writetext CelebiCallGiftText
+	waitbutton
+	verbosegiveitem CELEBI_CALL
+	waitbutton
 	closetext
 	setevent EVENT_SUMMONED_CELEBI_IN_ILEX
 	setevent EVENT_ILEX_SHRINE_CELEBI
@@ -757,6 +761,17 @@ WhatIsNaturalText:
 	para "will take you"
 	line "to unexpected"
 	cont "places."	
+	done
+	
+CelebiCallGiftText:
+	text_high
+    text " Celebi: "
+	next
+	text_start 
+	text "You can call me"
+	line "any time if you"
+	para "are lost on your"
+	line "journey."
 	done
 
 YesTimeTravelText0:

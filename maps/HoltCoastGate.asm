@@ -30,7 +30,7 @@ HoltCoastGateWarpScene: ; C.F. bellchimetrail.asm on polished crystal clean
 ;	waitsfx
 	setscene $1
 	applyonemovement PLAYER, hide_object
-	warphide WESTERN_CAPITAL, 10, 22
+	warphide WESTERN_CAPITAL_CUTSCENE, 10, 22
 	end
 
 HoltCoastGateNPCScript:
