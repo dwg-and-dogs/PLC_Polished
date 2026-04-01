@@ -365,9 +365,11 @@ PearlForHollowRockEndText:
 	done
 
 NoPearlForHollowRockText:
-	text "You can find big"
-	line "pearls just by "
-	cont "fishing anywhere."
+	text "I'd trade you one"
+	line "for a Big Pearl."
+	
+	para "You can fish them"
+	line "up anywhere."
 	done
 
 KajoSudowoodo:

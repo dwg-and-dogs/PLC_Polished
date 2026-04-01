@@ -273,7 +273,7 @@ KeyItemIconPointers:
 	dba ShinyCharmIcon
 	dba OvalCharmIcon
 	dba CatchCharmIcon
-	dba NatuCallIcon
+	dba CelebiCallIcon
 	dba KurtsMapIcon
 	dba MintLeafKIcon
 	dba TinymushroomKIcon

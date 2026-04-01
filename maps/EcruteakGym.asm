@@ -162,7 +162,7 @@ MortyIntroText:
 	text "<PLAYER>. Thank"
 	line "you for showing"
 	para "me that there is"
-	line "subline in the"
+	line "sublime in the"
 	cont "ordinary."
 
 	para "Battle me, and"

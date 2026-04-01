@@ -587,9 +587,9 @@ NUM_APRICORNS EQU const_value - 1
 ; - KeyItemDescriptions (see data/items/descriptions.asm)..
 ; - KeyItemAttributes (see data/items/attributes.asm)..
 ; - KeyItemEffects (see engine/items/item_effects.asm)
-; icon pointers done 
-; gfx/items.asm  done
-; engine/gfx/palettes done
+; icon pointers  
+; gfx/items.asm  
+; engine/gfx/palettes 
 	const_def
 	const BICYCLE      ; 00
 	const OLD_ROD      ; 01
@@ -606,7 +606,7 @@ NUM_APRICORNS EQU const_value - 1
 	const SHINY_CHARM  ; 0c
 	const OVAL_CHARM   ; 0d
 	const CATCH_CHARM  ; 0e
-	const NATU_CALL	   ; 0f
+	const CELEBI_CALL	   ; 0f
 	const KURTS_MAP	   ; 10
 	const MINT_LEAF_K   ; 11
 	const TINYMUSHROOM_K; 12

@@ -648,13 +648,14 @@ CradleKurtText1:
 	line "used <RIVAL>'s"
 	para "invention to man-"
 	line "age the forest's"
-	cont "decline,"
+	cont "decline, I"
 	
-	para "I push him away."
-	line "I was scared. But"
+	para "pushed him away."
+	line "I was scared."
 	para "I forgot that I"
 	line "was doing it for"
-	para "you. Show Andrea"
+	para "the next genera-"
+	line "tion. Show Andrea"
 	line "that she's wrong!"
 	done
 	

@@ -43,7 +43,7 @@ KimonoCabin1Script:
 	faceplayer
 	opentext
 	checkevent EVENT_KIMONO_CABIN_DRATINI
-	iftrue_jumpopenedtext Kimono1HelpedText
+	iftrue KimonoCabin1Helped
 	writetext Kimono1AskHelpText
 	yesorno
 	iffalse_jumpopenedtext Kimono1DeclinedText
@@ -55,6 +55,16 @@ KimonoCabin1Script:
 	waitsfx
 	warp KIMONO_CABIN_1, 18, 18
 	end
+
+KimonoCabin1Helped:
+	checkevent EVENT_KIMONO_GAVE_VITAMINS
+	iftrue_jumpopenedtext Kimono1HelpedText
+	writetext Kimono11HelpedTextWithVitamins
+	verbosegiveitem CARBOS
+	setevent EVENT_KIMONO_GAVE_VITAMINS
+	closetext
+	end
+
 
 Kimono1HelpedText:
 	text "Vera: Hey thanks"

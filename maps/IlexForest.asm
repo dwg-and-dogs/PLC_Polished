@@ -692,6 +692,13 @@ RuinsOfAlphText:
 	para "We can get a copy"
 	line "at the Ruins of"
 	cont "Alph."
+	
+	para "Union Cave is"
+	line "full of miners,"
+	para "maybe there's a"
+	line "different path"
+	cont "through the"
+	cont "Slowpoke Well?"
 	done
 
 GotTheUnownReport:

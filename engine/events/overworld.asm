@@ -195,7 +195,7 @@ CutFunction:
 	dw .FailCut
 
 .CheckAble:
-	ld de, ENGINE_BOULDERBADGE ;change this to ENGINE_BOULDERBADGE, and defeating the first Anarres elder gives this engine thing
+	ld de, ENGINE_BOULDERBADGE
 	call CheckBadge
 	jr c, .nohivebadge
 	call CheckMapForSomethingToCut

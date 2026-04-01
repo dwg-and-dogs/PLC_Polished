@@ -4313,6 +4313,13 @@ _CoinCaseCountText::
 	line ""
 	text_decimal wCoins, 2, 5
 	text_end
+	
+SECTION "_CelebiCallTest1", ROMX
+_CelebiCallTest1::
+	text "This is the 1st"
+	line "celebi test"
+	cont "string."
+	prompt
 
 SECTION "Text_RaiseThePPOfWhichMove", ROMX
 Text_RaiseThePPOfWhichMove::

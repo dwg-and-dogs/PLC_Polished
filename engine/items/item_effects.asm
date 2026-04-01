@@ -300,7 +300,7 @@ KeyItemEffects:
 	dw IsntTheTimeMessage ; SHINY_CHARM
 	dw IsntTheTimeMessage ; OVAL_CHARM
 	dw IsntTheTimeMessage ; CATCH_CHARM
-	dw NatuCallKeyItem		  ; natu fall 
+	dw CelebiCallKeyItem		  ; CELEBI_CALL
 	dw KurtsMapKeyItem	  ; townmap
 	dw IsntTheTimeMessage ; MintLeafKIcon
 	dw IsntTheTimeMessage ; TinymushroomKIcon
@@ -1935,11 +1935,23 @@ KurtsMapKeyItem: ; c.f. typechart
 	farcall WaitBGMap_DrawPackGFX
 	farjp Pack_InitColors
 
-NatuCallKeyItem:
-	farcall FlyFunction
-	ret
+CelebiCallKeyItem:
+	checkevent EVENT_GOT_WATER_PULSE
+	iftrue .jump
+	ld hl, .celebicalltext
+	jmp MenuTextboxWaitButton
 
+.celebicalltext
+	text_far _CelebiCallTest1
+	text_end
 
+.jump
+	ld hl, .celebicalltext2
+	jmp MenuTextboxWaitButton
+
+.celebicalltext2
+	text_far _CelebiCallTest1
+	text_end
 
 RestorePPEffect:
 	ld a, [wCurItem]

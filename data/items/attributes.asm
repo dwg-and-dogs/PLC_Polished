@@ -555,8 +555,8 @@ KeyItemAttributes: ; ; Return 1 in wItemAttributeParamBuffer and carry if wCurKe
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; CATCH CHARM
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
-; NATU_CALL
-	key_item_attribute 0, ITEMMENU_CLOSE, ITEMMENU_NOUSE ; shouldn't be available. 
+; CELEBI_CALL
+	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE ; shouldn't be available. 
 ; KURTS_MAP
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; MINT_LEAF_K

@@ -827,9 +827,9 @@ DebugRadioScriptKurt:
 	setflag ENGINE_JUDGE_MACHINE
 	; all key items
 for x, NUM_KEY_ITEMS
-if x != NATU_CALL
+;if x != NATU_CALL
 	givekeyitem x
-endc
+;endc
 endr
 	; all tms+hms
 for x, NUM_TMS + NUM_HMS
@@ -936,6 +936,5 @@ endr
 	; intro events
 	closetext
 	; debug only
-	warp GOLDENROD_GAME_CORNER, 10, 8 
-
+	warp KIMONO_CABIN, 8, 8 
 	end

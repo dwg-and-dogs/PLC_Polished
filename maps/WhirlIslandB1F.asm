@@ -5,15 +5,15 @@ WhirlIslandB1F_MapScriptHeader:
 	callback MAPCALLBACK_TILES, WhirlIslandB1FTilesCallback
 
 	def_warp_events
-	warp_event 9, 5, WHIRL_ISLAND_1F, 5 ; 1 
-	warp_event 7, 11, WHIRL_ISLAND_1F, 6 ; 2 
-	warp_event 29, 17, WHIRL_ISLAND_1F, 7 ; 3 
+	warp_event 9, 5, WHIRL_ISLAND_1F, 5 ; 1
+	warp_event 7, 11, WHIRL_ISLAND_1F, 6 ; 2
+	warp_event 29, 17, WHIRL_ISLAND_1F, 7 ; 3
 	warp_event 37, 21, WHIRL_ISLAND_1F, 8 ; 4
 
 
-	warp_event 25, 21, WHIRL_ISLAND_B3F, 1 ; static  
-	warp_event 3, 19, WHIRL_ISLAND_B3F, 2 ; INACCESSIBLE UNTIL THE END 
-	warp_event 19, 31, WHIRL_ISLAND_B2F, 1 ; 
+	warp_event 25, 21, WHIRL_ISLAND_B3F, 1 ; static
+	warp_event 3, 19, WHIRL_ISLAND_B3F, 2 ; INACCESSIBLE UNTIL THE END
+	warp_event 19, 31, WHIRL_ISLAND_B2F, 1 ;
 
 
 	def_coord_events
@@ -23,12 +23,10 @@ WhirlIslandB1F_MapScriptHeader:
 
 
 	def_object_events
-	tmhmball_event 17, 14, HM_WHIRLPOOL, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
-; kurt, who tells you that there's a whirlpool around this
 	itemball_event  5,  4, FULL_RESTORE, 1, EVENT_WHIRL_ISLAND_B2F_FULL_RESTORE
 	itemball_event 26,  3, MAX_REVIVE, 1, EVENT_WHIRL_ISLAND_B2F_MAX_REVIVE
 	itemball_event 11, 30, MAX_ELIXIR, 1, EVENT_WHIRL_ISLAND_B2F_MAX_ELIXIR
-	tmhmball_event  7, 15, TM_REST, EVENT_WHIRL_ISLANDS_TM_REST
+	tmhmball_event 17, 13, TM_REST, EVENT_WHIRL_ISLANDS_TM_REST
 
 WhirlIslandB1FTilesCallback:
 	checkevent EVENT_NEXUS_B2F_FALLS_SWITCH

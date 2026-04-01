@@ -66,7 +66,7 @@ EHApricornBenchScript:
 	iftrue .GiveLoveBall
 	callasm .CheckHaveAnyApricorns
 	iftrue .AskApricorn
-	jumpopenedtext ASThatsALetdownText
+	jumpopenedtext EHThatsALetdownText
 
 .CheckHaveAnyApricorns:
 	xor a

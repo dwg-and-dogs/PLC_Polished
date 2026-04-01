@@ -253,7 +253,7 @@ PokemonNames::
 	rawchar "Suicune@@@" ;250
 	rawchar "Heatran@@@" ;251
 	rawchar "Lugia@@@@@" ;252
-	rawchar "Ho_Oh@@@@@" ;253
+	rawchar "Ho-Oh@@@@@" ;253
 	rawchar "Celebi@@@@" ;254
 	assert_table_length NUM_POKEMON + 1
 	rawchar "Egg@@@@@@@" ; ff

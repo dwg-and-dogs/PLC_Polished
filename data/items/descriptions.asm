@@ -272,7 +272,7 @@ KeyItemDescriptions:
 	dw ShinyCharmDesc
 	dw OvalCharmDesc
 	dw CatchCharmDesc
-	dw NatuCallDesc
+	dw CelebiCallDesc
 	dw KurtsMapDesc
 	dw MintLeafDesc
 	dw TinyMushroomDesc
@@ -1416,6 +1416,6 @@ KurtsMapDesc:
 	db 	  "For when you've" 
 	next  "lost your way.@"
 
-NatuCallDesc:
-	db    "Call's Kurt's Natu"
-	next  "to fly away.@"
+CelebiCallDesc:
+	db    "Ask Celebi for"
+	next  "help.@"

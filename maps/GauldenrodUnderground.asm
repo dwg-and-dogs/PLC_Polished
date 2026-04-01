@@ -80,19 +80,19 @@ GenericTrainerTamerBrett:
 	generictrainer TAMER, BRETT, EVENT_BEAT_TAMER_BRETT, TamerBrettSeenText, TamerBrettBeatenText
 
 	text "I was supposed to"
-	line "take these on my"
+	line "take him on my"
 	para "ritual before the"
 	line "pass was closed."
 	done
 
 TamerBrettSeenText:
 	text "My dad gave me"
-	line "these #mon!"
+	line "this #mon!"
 	done
 
 TamerBrettBeatenText:
 	text "I was supposed to"
-	line "take these on my"
+	line "take him on my"
 	para "ritual before the"
 	line "pass was closed."
 	done

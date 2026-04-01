@@ -113,7 +113,7 @@ SCApricornBenchScript:
 	iftrue .GiveLoveBall
 	callasm .CheckHaveAnyApricorns
 	iftrue .AskApricorn
-	jumpopenedtext ASThatsALetdownText
+	jumpopenedtext SCThatsALetdownText
 
 .CheckHaveAnyApricorns:
 	xor a

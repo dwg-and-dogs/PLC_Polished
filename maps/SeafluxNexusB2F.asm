@@ -6,23 +6,23 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 	callback MAPCALLBACK_TILES, SeafluxNexusB2FCallback 
 
 	def_warp_events
-	warp_event 17, 21, SEAFLUX_NEXUS_B1F, 5 ; 1 ladder 
+	warp_event 17, 21, SEAFLUX_NEXUS_B1F, 5 ; 1 ladder
 	warp_event 9, 31, SEAFLUX_NEXUS_B1F, 4 ; 2
 ; hole drop 
-	warp_event 7, 27, SEAFLUX_NEXUS_B3F, 2 ; 3 ; to the bottom of the waterfall 
+	warp_event 7, 27, SEAFLUX_NEXUS_B3F, 2 ; 3 ; to the bottom of the waterfall
 
 	def_coord_events
 
 
 	def_bg_events
-	bg_event 21, 16, BGEVENT_READ, SeafluxNexusB2F_MasterSwitch  ;  cf warehouse entrance basement key .... 
-	bg_event 19, 24, BGEVENT_READ, SeafluxNexusB2F_ResetSwitch  ;  cf warehouse entrance basement key .... 
-
-	bg_event  7, 14, BGEVENT_READ, SeafluxNexusB2F_Switch1 ; toggles w4 only (revised) 
+	bg_event 21, 16, BGEVENT_READ, SeafluxNexusB2F_MasterSwitch  ;  cf warehouse entrance basement key ....
+	bg_event 19, 24, BGEVENT_READ, SeafluxNexusB2F_ResetSwitch  ;  cf warehouse entrance basement key ....
+	tmhmball_event 20, 16, HM_WHIRLPOOL, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
+	bg_event  7, 14, BGEVENT_READ, SeafluxNexusB2F_Switch1 ; toggles w4 only (revised)
 	bg_event 29, 14, BGEVENT_READ, SeafluxNexusB2F_Switch2 ; toggles w3, w4
-	bg_event  7, 22, BGEVENT_READ, SeafluxNexusB2F_Switch3 ; toggles w1, w4 only (revised) 
+	bg_event  7, 22, BGEVENT_READ, SeafluxNexusB2F_Switch3 ; toggles w1, w4 only (revised)
 	bg_event 29, 22, BGEVENT_READ, SeafluxNexusB2F_Switch4 ; toggles w3
-	bg_event 15, 24, BGEVENT_READ, SeafluxNexusB2F_Switch5 ; toggles w2, w4, DONE 
+	bg_event 15, 24, BGEVENT_READ, SeafluxNexusB2F_Switch5 ; toggles w2, w4, DONE
 ; correct order: switch 5 - 4 - 3 - 1
 
 	def_object_events
@@ -31,7 +31,7 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 	itemball_event 26, 31, CALCIUM, 1, EVENT_NEXUSB2F_ITEM3
 	itemball_event 32, 20, IRON, 1, EVENT_NEXUSB2F_ITEM4
 	itemball_event 32, 32, ZINC, 1, EVENT_NEXUSB2F_ITEM5
-	itemball_event 21, 17, HP_UP, 1, EVENT_NEXUSB2F_ITEM6
+	itemball_event 21,  6, HP_UP, 1, EVENT_NEXUSB2F_ITEM6
 
 
 SeafluxNexusB2FCallback: ; done? 
@@ -144,6 +144,7 @@ SeafluxNexusB2F_ResetSwitch: ; option for a hint
 	playsound SFX_HYDRO_PUMP
 	waitsfx
 	reloadmap ; should be the end of it
+	special RestartMapMusic ; todo need to check 
 	end
 
 SeafluxNexusB2F_Switch1: ; controls w4

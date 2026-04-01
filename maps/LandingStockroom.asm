@@ -79,7 +79,7 @@ TLApricornBenchScript:
 	iftrue .GiveLoveBall
 	callasm .CheckHaveAnyApricorns
 	iftrue .AskApricorn
-	jumpopenedtext ASThatsALetdownText
+	jumpopenedtext TLThatsALetdownText
 
 .CheckHaveAnyApricorns:
 	xor a

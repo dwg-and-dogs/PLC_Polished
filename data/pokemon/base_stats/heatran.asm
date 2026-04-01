@@ -6,7 +6,7 @@
 	db 201 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_UNKNOWN, 15 ; gender ratio, step cycles to hatch
+	dn GENDER_F50, 15 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/heatran/front.dimensions"
 	abilities_for HEATRAN, FLASH_FIRE, FLASH_FIRE, FLAME_BODY
 	db GROWTH_SLOW ; growth rate
