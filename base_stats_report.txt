@@ -1,0 +1,98 @@
+================================================================================
+POKEMON BASE STATS COMPARISON REPORT
+================================================================================
+
+POKEMON WITH MISMATCHES
+--------------------------------------------------------------------------------
+LEDYBA
+  ✗ attack: ASM=40, Sheet=20
+
+ARIADOS
+  ✗ speed: ASM=80, Sheet=40
+UNOWN
+  ✗ special_attack: ASM=100, Sheet=72
+
+
+YANMEGA
+  ✗ type2: ASM=Dragon, Sheet=Flying
+
+SUNFLORA
+  ✗ speed: ASM=55, Sheet=30
+  ✗ type2: ASM=Fire, Sheet=<mono-type>
+
+KLEAVOR
+  ✗ attack: ASM=135, Sheet=130
+  ✗ special_defense: ASM=70, Sheet=75
+  ✗ catch_rate: ASM=15, Sheet=nan
+  ✗ base_exp: ASM=175, Sheet=nan
+  ✗ ev_attack: ASM=3, Sheet=2.0
+  ℹ Step cycles: 3
+
+NINETALES
+  ✗ type2: ASM=Psychic, Sheet=<mono-type>
+  ✗ base_exp: ASM=178, Sheet=177.0
+  ℹ Step cycles: 3
+
+GIRAFARIG
+  ✗ type1: ASM=Dark, Sheet=Normal
+  ✗ base_exp: ASM=149, Sheet=159.0
+  ℹ Step cycles: 3
+
+FARIGIRAF
+  ✗ type1: ASM=Dark, Sheet=Normal
+  ✗ base_exp: ASM=189, Sheet=260.0
+  ℹ Step cycles: 3
+
+ELECTIVIRE
+  ✗ type2: ASM=Fighting, Sheet=<mono-type>
+  ✗ base_exp: ASM=199, Sheet=270.0
+  ℹ Ste
+
+CORSOLA
+  ✗ defense: ASM=115, Sheet=95
+  ✗ special_defense: ASM=115, Sheet=95
+  ✗ base_exp: ASM=113, Sheet=144.0
+  ℹ Step cycles: 3
+
+OCTILLERY
+  ✗ type2: ASM=Fire, Sheet=<mono-type>
+  ✗ base_exp: ASM=164, Sheet=168.0
+  ℹ Step cycles: 3
+
+LANTURN
+  ✗ special_attack: ASM=86, Sheet=76
+  ✗ special_defense: ASM=86, Sheet=76
+  ✗ base_exp: ASM=156, Sheet=161.0
+  ℹ Step cycles: 3
+
+MISMAGIUS
+  ✗ type2: ASM=Fairy, Sheet=<mono-type>
+  ✗ base_exp: ASM=187, Sheet=173.0
+  ℹ Step cycles: 4
+
+BAYLEEF
+  ✗ speed: ASM=60, Sheet=69
+  ✗ base_exp: ASM=141, Sheet=142.0
+  ℹ Step cycles: 3
+
+LUXRAY
+  ✗ type2: ASM=Dragon, Sheet=<mono-type>
+
+BRONZOR
+  ✗ egg_group1: ASM=EGG_FAIRY (Fairy), Sheet=Mineral
+  ℹ Step cycles: 7
+
+SNOVER
+  ✗ egg_group1: ASM=EGG_PLANT (Grass), Sheet=Monster
+  ℹ Step cycles: 7
+
+GALLADE
+  ✗ base_exp: ASM=201, Sheet=259.0
+  ✗ egg_group1: ASM=EGG_HUMANSHAPE (Human-Like), Sheet=Amorphous
+  ✗ egg_group2: ASM=EGG_INDETERMINATE (Amorphous), Sheet=<only one group>
+  ℹ Step cycles: 3
+
+GARCHOMP
+  ✗ base_exp: ASM=201, Sheet=300.0
+  ✗ ev_special_attack: ASM=1, Sheet=0
+  ℹ Step cycles: 3

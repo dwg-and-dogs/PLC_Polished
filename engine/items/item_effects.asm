@@ -1936,23 +1936,87 @@ KurtsMapKeyItem: ; c.f. typechart
 	farjp Pack_InitColors
 
 CelebiCallKeyItem:
-	; check if we are done 
-	ld a, [wWhispersWaySceneID] ; this is incremented by amos at the tapestry 
-	cp 0 
-	jr nz, .CelebiCallBrassTower  ; if wwwID is != 0 then we jump to the brass tower 
-	; the first event to check is to see if the anarres tower is done. 
-	ld a, [wAnarresTower3FSceneID] ; if it's equal to 
-	cp 0 
-	jr nz, .CelebiCallGauldenrod  ; if the variable is set to 1, then we know we've finished the tower, and need to go to Gauldenrod.  
-	; otherwise, we can just say that we need to climb the tower 
-; you're here if you just received the item 
+	; check from the LAST event backwards
+;	ld a, [wBrassTowerRoofSceneID]
+;	cp 0
+;	jr nz, .CelebiCallComplete
+	
+	ld a, [wTimelessTapestrySceneID]
+	cp 0
+	jp nz, .CelebiCallBrassTowerRoof
+	
+	ld a, [wClastsCradleB1FSceneID]
+	cp 0
+	jp nz, .CelebiCallTimelessTapestry
+	
+	ld a, [wGrottoedGlacierB2FSceneID]
+	cp 0
+	jp nz, .CelebiCallClastsCradle
+	
+	ld a, [wLakeOfRageSceneID]
+	cp 0
+	jp nz, .CelebiCallGrottoedGlacier
+	
+	ld a, [wOlivineLighthouse6FSceneID]
+	cp 0
+	jp nz, .CelebiCallLakeOfRage
+	
+	ld a, [wLandingDocksSceneID]
+	cp 0
+	jp nz, .CelebiCallOlivineLighthouse
+	
+	ld a, [wCianwoodCitySceneID]
+	cp 0
+	jp nz, .CelebiCallLandingDocks
+	
+	ld a, [wWhirlIslandLugiaChamberSceneID]
+	cp 0
+	jp nz, .CelebiCallCianwoodCity
+	
+	ld a, [wRoute40SceneID]
+	cp 0
+	jp nz, .CelebiCallWhirlIslandLugia
+	
+	ld a, [wTradersLandingSceneID]
+	cp 0
+	jp nz, .CelebiCallRoute40
+	
+	ld a, [wBellchimeTrailSceneID]
+	cp 0
+	jp nz, .CelebiCallTradersLanding
+	
+	ld a, [wSproutTower3FSceneID]
+	cp 0
+	jp nz, .CelebiCallBellchimeTrail
+	
+	ld a, [wRadioTower5FSceneID]
+	cp 0
+	jp nz, .CelebiCallSproutTower
+	
+	ld a, [wRoute35GoldenrodGateSceneID]
+	cp 0
+	jp nz, .CelebiCallRadioTower
+	
+	ld a, [wStadiumGroundsSceneID]
+	cp 0
+	jp nz, .CelebiCallRoute35GoldenrodGate
+	
+	ld a, [wGauldenrodSceneID]
+	cp 0
+	jp nz, .CelebiCallStadiumGrounds
+	
+	ld a, [wAnarresTower3FSceneID]
+	cp 0
+	jp nz, .CelebiCallGauldenrod
+	
+	; fallthrough - just received the item
 	ld hl, .CelebiCallAnarresText
 	jmp MenuTextboxWaitButton
+
 .CelebiCallAnarresText
 	text_far _CelebiCallAnarres
 	text_end
 
-; you're here if you did the anarres tower 
 .CelebiCallGauldenrod
 	ld hl, .CelebiCallGauldenrodText
 	jmp MenuTextboxWaitButton
@@ -1960,12 +2024,123 @@ CelebiCallKeyItem:
 	text_far _CelebiCallGauldenrod
 	text_end
 
-; you're here if you're done 
-.CelebiCallBrassTower
-	ld hl, .CelebiCallBrassTowerText
+.CelebiCallStadiumGrounds
+	ld hl, .CelebiCallStadiumGroundsText
 	jmp MenuTextboxWaitButton
-.CelebiCallBrassTowerText
-	text_far _CelebiCallBrassTower
+.CelebiCallStadiumGroundsText
+	text_far _CelebiCallStadiumGrounds
+	text_end
+
+.CelebiCallRoute35GoldenrodGate
+	ld hl, .CelebiCallRoute35GoldenrodGateText
+	jmp MenuTextboxWaitButton
+.CelebiCallRoute35GoldenrodGateText
+	text_far _CelebiCallRoute35GoldenrodGate
+	text_end
+
+.CelebiCallRadioTower
+	ld hl, .CelebiCallRadioTowerText
+	jmp MenuTextboxWaitButton
+.CelebiCallRadioTowerText
+	text_far _CelebiCallRadioTower
+	text_end
+
+.CelebiCallSproutTower
+	ld hl, .CelebiCallSproutTowerText
+	jmp MenuTextboxWaitButton
+.CelebiCallSproutTowerText
+	text_far _CelebiCallSproutTower
+	text_end
+
+.CelebiCallBellchimeTrail
+	ld hl, .CelebiCallBellchimeTrailText
+	jmp MenuTextboxWaitButton
+.CelebiCallBellchimeTrailText
+	text_far _CelebiCallBellchimeTrail
+	text_end
+
+.CelebiCallTradersLanding
+	ld hl, .CelebiCallTradersLandingText
+	jmp MenuTextboxWaitButton
+.CelebiCallTradersLandingText
+	text_far _CelebiCallTradersLanding
+	text_end
+
+.CelebiCallRoute40
+	ld hl, .CelebiCallRoute40Text
+	jmp MenuTextboxWaitButton
+.CelebiCallRoute40Text
+	text_far _CelebiCallRoute40
+	text_end
+
+.CelebiCallWhirlIslandLugia
+	ld hl, .CelebiCallWhirlIslandLugiaText
+	jmp MenuTextboxWaitButton
+.CelebiCallWhirlIslandLugiaText
+	text_far _CelebiCallWhirlIslandLugia
+	text_end
+
+.CelebiCallCianwoodCity
+	ld hl, .CelebiCallCianwoodCityText
+	jmp MenuTextboxWaitButton
+.CelebiCallCianwoodCityText
+	text_far _CelebiCallCianwoodCity
+	text_end
+
+.CelebiCallLandingDocks
+	ld hl, .CelebiCallLandingDocksText
+	jmp MenuTextboxWaitButton
+.CelebiCallLandingDocksText
+	text_far _CelebiCallLandingDocks
+	text_end
+
+.CelebiCallOlivineLighthouse
+	ld hl, .CelebiCallOlivineLighthouseText
+	jmp MenuTextboxWaitButton
+.CelebiCallOlivineLighthouseText
+	text_far _CelebiCallOlivineLighthouse
+	text_end
+
+.CelebiCallLakeOfRage
+	ld hl, .CelebiCallLakeOfRageText
+	jmp MenuTextboxWaitButton
+.CelebiCallLakeOfRageText
+	text_far _CelebiCallLakeOfRage
+	text_end
+
+.CelebiCallGrottoedGlacier
+	ld hl, .CelebiCallGrottoedGlacierText
+	jmp MenuTextboxWaitButton
+.CelebiCallGrottoedGlacierText
+	text_far _CelebiCallGrottoedGlacier
+	text_end
+
+.CelebiCallClastsCradle
+	ld hl, .CelebiCallClastsCradleText
+	jmp MenuTextboxWaitButton
+.CelebiCallClastsCradleText
+	text_far _CelebiCallClastsCradle
+	text_end
+
+.CelebiCallTimelessTapestry
+	ld hl, .CelebiCallTimelessTapestryText
+	jmp MenuTextboxWaitButton
+.CelebiCallTimelessTapestryText
+	text_far _CelebiCallTimelessTapestry
+	text_end
+
+.CelebiCallBrassTowerRoof
+	ld hl, .CelebiCallBrassTowerRoofText
+	jmp MenuTextboxWaitButton
+.CelebiCallBrassTowerRoofText
+	text_far _CelebiCallBrassTowerRoof
+	text_end
+
+.CelebiCallComplete
+	ld hl, .CelebiCallCompleteText
+	jmp MenuTextboxWaitButton
+.CelebiCallCompleteText
+	text_far _CelebiCallComplete
 	text_end
 
 RestorePPEffect:

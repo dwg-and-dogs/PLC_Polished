@@ -4356,20 +4356,21 @@ _CelebiCallAnarres::
 
 SECTION "_CelebiCallGauldenrod", ROMX
 _CelebiCallGauldenrod::
-	text "Investigate the"
-	line "corrupting"
-	para "influence! Head"
-	line "north from"
-	cont "Anarres Town."
+	text "Investigate north"
+	line "of Anarres town"
+	para "for the corrupt-"
+	line "ing influence"
+	cont "taking hold in"
+	cont "Johto."
 	prompt
 
-SECTION "_CelebiCallStadium", ROMX
-_CelebiCallStadium::
+SECTION "_CelebiCallStadiumGrounds", ROMX
+_CelebiCallStadiumGrounds::
 	text "..."
 	prompt
 
-SECTION "_CelebiCallRoute35", ROMX
-_CelebiCallRoute35::
+SECTION "_CelebiCallRoute35GoldenrodGate", ROMX
+_CelebiCallRoute35GoldenrodGate::
 	text "..."
 	prompt
 
@@ -4384,8 +4385,8 @@ _CelebiCallSproutTower::
 	text "..."
 	prompt
 
-SECTION "_CelebiCallBellchime", ROMX
-_CelebiCallBellchime::
+SECTION "_CelebiCallBellchimeTrail", ROMX
+_CelebiCallBellchimeTrail::
 	text "..."
 	prompt
 	
@@ -4405,8 +4406,8 @@ _CelebiCallWhirlIslandLugia::
 	prompt
 
 
-SECTION "_CelebiCallCianwood", ROMX
-_CelebiCallCianwood::
+SECTION "_CelebiCallCianwoodCity", ROMX
+_CelebiCallCianwoodCity::
 	text "..."
 	prompt
 
@@ -4427,24 +4428,24 @@ _CelebiCallLakeOfRage::
 	text "..."
 	prompt
 
-SECTION "_CelebiCallGlacier", ROMX
-_CelebiCallGlacier::
+SECTION "_CelebiCallGrottoedGlacier", ROMX
+_CelebiCallGrottoedGlacier::
 	text "..."
 	prompt
 
-SECTION "_CelebiCallCradle", ROMX
-_CelebiCallCradle::
+SECTION "_CelebiCallClastsCradle", ROMX
+_CelebiCallClastsCradle::
 	text "..."
 	prompt
 
 
-SECTION "_CelebiCallTapestry", ROMX
-_CelebiCallTapestry::
+SECTION "_CelebiCallTimelessTapestry", ROMX
+_CelebiCallTimelessTapestry::
 	text "..."
 	prompt
 
-SECTION "_CelebiCallBrassTower", ROMX
-_CelebiCallBrassTower::
+SECTION "_CelebiCallBrassTowerRoof", ROMX
+_CelebiCallBrassTowerRoof::
 	text "Amos and Kurt are"
 	line "waiting! Ascend"
 	para "the Brass Tower"
@@ -4454,6 +4455,23 @@ _CelebiCallBrassTower::
 	line "from destroying"
 	cont "Johto' heritage!"
 	prompt
+
+;_CelebiCallStadiumGrounds - After Gauldenrod
+;_CelebiCallRoute35GoldenrodGate - After Stadium Grounds
+;_CelebiCallRadioTower - After Route 35 Goldenrod Gate
+;_CelebiCallSproutTower - After Radio Tower
+;_CelebiCallBellchimeTrail - After Sprout Tower
+;_CelebiCallTradersLanding - After Bellchime Trail
+;_CelebiCallRoute40 - After Traders Landing
+;_CelebiCallWhirlIslandLugia - After Route 40
+;_CelebiCallCianwoodCity - After Whirl Island Lugia Chamber
+;_CelebiCallLandingDocks - After Cianwood City
+;_CelebiCallOlivineLighthouse - After Landing Docks
+;_CelebiCallLakeOfRage - After Olivine Lighthouse
+;_CelebiCallGrottoedGlacier - After Lake of Rage
+;_CelebiCallClastsCradle - After Grottoed Glacier
+;_CelebiCallTimelessTapestry - After Clasts Cradle
+
 
 
 SECTION "Text_RaiseThePPOfWhichMove", ROMX
