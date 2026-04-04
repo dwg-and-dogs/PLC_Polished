@@ -1,7 +1,11 @@
 	db  73,  76,  75, 100,  81, 100 ; 505 BST
 	;   hp  atk  def  spd  sat  sdf
 
+if DEF(FAITHFUL)
+	db FIRE, FIRE ; type
+else
 	db FIRE, PSYCHIC ; type
+endc
 	db 75 ; catch rate
 	db 178 ; base exp
 	db ALWAYS_ITEM_2 ; item 1

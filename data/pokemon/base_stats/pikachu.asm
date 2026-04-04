@@ -1,9 +1,18 @@
+if DEF(FAITHFUL)
 	db  35,  55,  40,  90,  50,  50 ; 320 BST
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  35,  65,  40,  95,  60,  50 ; 345 BST
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db ELECTRIC, ELECTRIC ; type
 	db 190 ; catch rate
-	db 112 ; base exp
+if DEF(FAITHFUL)
+	db 82 ; base exp
+else
+	db 92 ; base exp
+endc
 	db ORAN_BERRY ; item 1
 	db LIGHT_BALL ; item 2
 	dn GENDER_F50, 1 ; gender ratio, step cycles to hatch

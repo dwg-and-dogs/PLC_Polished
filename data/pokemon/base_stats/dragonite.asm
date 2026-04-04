@@ -8,7 +8,11 @@
 	db DRAGON_SCALE ; item 2
 	dn GENDER_F50, 7 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/dragonite/front.dimensions"
+if DEF(FAITHFUL)
 	abilities_for DRAGONITE, INNER_FOCUS, INNER_FOCUS, MULTISCALE
+else
+	abilities_for DRAGONITE, INNER_FOCUS, MARVEL_SCALE, MULTISCALE
+endc
 	db GROWTH_SLOW ; growth rate
 	dn EGG_WATER_1, EGG_DRAGON ; egg groups
 

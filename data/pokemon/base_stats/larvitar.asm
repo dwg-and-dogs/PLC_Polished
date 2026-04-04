@@ -1,5 +1,8 @@
-	db  50,  64,  50,  41,  45,  50 ; 300 BST
-	;   hp  atk  def  spd  sat  sdf
+if DEF(FAITHFUL)
+	abilities_for LARVITAR, GUTS, GUTS, SAND_VEIL
+else
+	abilities_for LARVITAR, GUTS, BATTLE_ARMOR, SAND_VEIL
+endc
 
 	db ROCK, GROUND ; type
 	db 45 ; catch rate

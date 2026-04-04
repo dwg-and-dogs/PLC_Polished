@@ -8,7 +8,11 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 2 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/golbat/front.dimensions"
+if DEF(FAITHFUL)
 	abilities_for GOLBAT, INNER_FOCUS, INNER_FOCUS, INFILTRATOR
+else
+	abilities_for GOLBAT, INNER_FOCUS, ANTICIPATION, INFILTRATOR
+endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
 

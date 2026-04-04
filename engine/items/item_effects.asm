@@ -2136,13 +2136,6 @@ CelebiCallKeyItem:
 	text_far _CelebiCallBrassTowerRoof
 	text_end
 
-.CelebiCallComplete
-	ld hl, .CelebiCallCompleteText
-	jmp MenuTextboxWaitButton
-.CelebiCallCompleteText
-	text_far _CelebiCallComplete
-	text_end
-
 RestorePPEffect:
 	ld a, [wCurItem]
 	ld [wTempItem], a

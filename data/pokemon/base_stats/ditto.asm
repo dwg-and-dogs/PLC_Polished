@@ -1,5 +1,10 @@
-	db  78,  48,  48, 48,  48,  48 ; 338 BST
+if DEF(FAITHFUL)
+	db  48,  48,  48,  48,  48,  48 ; 288 BST
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  78,  28,  48, 108,  28,  48 ; 338 BST
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db NORMAL, NORMAL ; type
 	db 35 ; catch rate

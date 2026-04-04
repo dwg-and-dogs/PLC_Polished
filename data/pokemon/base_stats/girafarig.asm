@@ -1,7 +1,16 @@
+if DEF(FAITHFUL)
 	db  70,  80,  65,  85,  90,  65 ; 455 BST
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  70,  80,  65, 105, 110,  65 ; 495 BST
+	;   hp  atk  def  spd  sat  sdf
+endc
 
+if DEF(FAITHFUL)
 	db DARK, PSYCHIC ; type
+else
+	db NORMAL, PSYCHIC
+endc
 	db 60 ; catch rate
 	db 149 ; base exp
 	db NO_ITEM ; item 1

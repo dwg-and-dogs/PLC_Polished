@@ -1,14 +1,31 @@
+if DEF(FAITHFUL)
 	db  75,  80,  95,  50,  90, 100 ; 490 BST
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  75,  80,  95,  50, 100, 110 ; 510 BST
+	;   hp  atk  def  spd  sat  sdf
+endc
 
+if DEF(FAITHFUL)
 	db GRASS, GRASS ; type
+else
+	db GRASS, FAIRY ; type
+endc
 	db 45 ; catch rate
+if DEF(FAITHFUL)
 	db 184 ; base exp
+else
+	db 192 ; base exp
+endc
 	db NO_ITEM ; item 1
 	db ABSORB_BULB ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/bellossom/front.dimensions"
-	abilities_for BELLOSSOM, CHLOROPHYLL, CHLOROPHYLL, CLOUD_NINE
+if DEF(FAITHFUL)
+	abilities_for BELLOSSOM, CHLOROPHYLL, CHLOROPHYLL, CHLOROPHYLL
+else
+	abilities_for BELLOSSOM, CHLOROPHYLL, CHLOROPHYLL, OWN_TEMPO
+endc
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_PLANT, EGG_PLANT ; egg groups
 

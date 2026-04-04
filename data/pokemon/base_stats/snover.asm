@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/snover/front.dimensions"
 	abilities_for SNOVER, SNOW_WARNING, SNOW_WARNING, SOUNDPROOF
 	db GROWTH_SLOW ; growth rate
-	dn EGG_PLANT, EGG_PLANT ; egg groups
+	dn EGG_MONSTER, EGG_PLANT ; egg groups
 
 	ev_yield   0,   1,   0,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf

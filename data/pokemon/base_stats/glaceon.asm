@@ -8,7 +8,11 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 6 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/glaceon/front.dimensions"
-	abilities_for GLACEON, SNOW_CLOAK, ICE_BODY, SLUSH_RUSH
+if DEF(FAITHFUL)
+	abilities_for GLACEON, SNOW_CLOAK, SNOW_CLOAK, ICE_BODY
+else
+	abilities_for GLACEON, SNOW_CLOAK, SNOW_WARNING, ICE_BODY
+endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

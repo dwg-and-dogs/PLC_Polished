@@ -10,8 +10,8 @@
 	INCBIN "gfx/pokemon/bronzor/front.dimensions"
 	abilities_for BRONZOR, LEVITATE, LEVITATE, DRIZZLE
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_FAIRY, EGG_FAIRY ; egg groups
-
+	dn EGG_MINERAL, EGG_MINERAL ; egg groups
+	
 	ev_yield   0,   0,   1,   0,   0,   0
 	;         hp  atk  def  spd  sat  sdf
 

@@ -1,0 +1,45 @@
+
+LEDYBA: Higher attack, special attack 
+
+ARIADOS
+  ✗ speed: ASM=80, Sheet=40
+
+UNOWN
+  ✗ special_attack: ASM=100, Sheet=72 ; attack also? 
+
+YANMEGA: 
+Dragon/Bug --> Bug/Flying
+HA Levitate --> HA Frisk 
+
+SUNFLORA
+  ✗ speed: ASM=55, Sheet=30
+  ✗ type2: ASM=Fire, Sheet=<mono-type>
+
+NINETALES
+  ✗ type2: ASM=Psychic, Sheet=<mono-type>
+
+GIRAFARIG
+  ✗ type1: ASM=Dark, Sheet=Normal
+
+FARIGIRAF
+  ✗ type1: ASM=Dark, Sheet=Normal
+
+ELECTIVIRE
+  ✗ type2: ASM=Fighting, Sheet=<mono-type>
+
+CORSOLA
+  ✗ defense: ASM=115, Sheet=95
+  ✗ special_defense: ASM=115, Sheet=95
+
+OCTILLERY
+  ✗ type2: ASM=Fire, Sheet=<mono-type>
+
+LANTURN
+  ✗ special_attack: ASM=86, Sheet=76
+  ✗ special_defense: ASM=86, Sheet=76
+
+MISMAGIUS
+  ✗ type2: ASM=Fairy, Sheet=<mono-type>
+
+LUXRAY
+  ✗ type2: ASM=Dragon, Sheet=<mono-type>

@@ -1,9 +1,18 @@
+if DEF(FAITHFUL)
 	db  85,  76,  64,  90,  45,  55 ; 415 BST
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  85,  86,  64, 108,  45,  55 ; 443 BST
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db NORMAL, NORMAL ; type
 	db 90 ; catch rate
-	db 145 ; base exp
+if DEF(FAITHFUL)
+	db 116 ; base exp
+else
+	db 126 ; base exp
+endc
 	db ORAN_BERRY ; item 1
 	db SITRUS_BERRY ; item 2
 	dn GENDER_F50, 2 ; gender ratio, step cycles to hatch

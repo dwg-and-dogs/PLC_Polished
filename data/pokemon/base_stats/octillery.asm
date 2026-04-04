@@ -1,7 +1,11 @@
 	db  75, 105,  75,  45, 105,  75 ; 480 BST
 	;   hp  atk  def  spd  sat  sdf
 
+if DEF(FAITHFUL)
+	db WATER, WATER ; type
+else
 	db WATER, FIRE ; type
+endc
 	db 75 ; catch rate
 	db 164 ; base exp
 	db NO_ITEM ; item 1

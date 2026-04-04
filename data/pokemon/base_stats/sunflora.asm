@@ -1,9 +1,26 @@
-	db  75,  75,  55,  55, 105,  85 ; 480 BST
+if DEF(FAITHFUL)
+	db  75,  75,  55,  30, 105,  85 ; 425 BST
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  75,  55,  75,  85, 105,  85 ; 480 BST
+	;   hp  atk  def  spd  sat  sdf
+endc
 
+if DEF(FAITHFUL)
+	db GRASS, GRASS ; type
+else
 	db GRASS, FIRE ; type
+endc
+if DEF(FAITHFUL)
+	db 120 ; catch rate
+else
 	db 110 ; catch rate
+endc
+if DEF(FAITHFUL)
 	db 146 ; base exp
+else
+	db 156 ; base exp
+endc
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch

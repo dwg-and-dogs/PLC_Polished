@@ -8,7 +8,11 @@
 	db SPELL_TAG ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/gengar/front.dimensions"
-	abilities_for GENGAR, LEVITATE, LEVITATE, SHADOW_TAG
+if DEF(FAITHFUL)
+	abilities_for GENGAR, CURSED_BODY, CURSED_BODY, SHADOW_TAG
+else
+	abilities_for GENGAR, CURSED_BODY, LEVITATE, SHADOW_TAG
+endc
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 

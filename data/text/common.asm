@@ -4456,23 +4456,6 @@ _CelebiCallBrassTowerRoof::
 	cont "Johto' heritage!"
 	prompt
 
-;_CelebiCallStadiumGrounds - After Gauldenrod
-;_CelebiCallRoute35GoldenrodGate - After Stadium Grounds
-;_CelebiCallRadioTower - After Route 35 Goldenrod Gate
-;_CelebiCallSproutTower - After Radio Tower
-;_CelebiCallBellchimeTrail - After Sprout Tower
-;_CelebiCallTradersLanding - After Bellchime Trail
-;_CelebiCallRoute40 - After Traders Landing
-;_CelebiCallWhirlIslandLugia - After Route 40
-;_CelebiCallCianwoodCity - After Whirl Island Lugia Chamber
-;_CelebiCallLandingDocks - After Cianwood City
-;_CelebiCallOlivineLighthouse - After Landing Docks
-;_CelebiCallLakeOfRage - After Olivine Lighthouse
-;_CelebiCallGrottoedGlacier - After Lake of Rage
-;_CelebiCallClastsCradle - After Grottoed Glacier
-;_CelebiCallTimelessTapestry - After Clasts Cradle
-
-
 
 SECTION "Text_RaiseThePPOfWhichMove", ROMX
 Text_RaiseThePPOfWhichMove::

@@ -8,7 +8,11 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/quilava/front.dimensions"
+if DEF(FAITHFUL)
+	abilities_for QUILAVA, BLAZE, BLAZE, FLASH_FIRE
+else
 	abilities_for QUILAVA, BLAZE, FLASH_FIRE, WHITE_SMOKE
+endc
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

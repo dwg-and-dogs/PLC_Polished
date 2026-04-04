@@ -1,6 +1,10 @@
+if DEF(FAITHFUL)
 	db  55,  35,  50,  85,  55, 110 ; 390 BST
 	;   hp  atk  def  spd  sat  sdf
-
+else
+	db  55,  95,  50,  85,  35, 110 ; 430 BST
+	;   hp  atk  def  spd  sat  sdf
+endc
 	db BUG, FLYING ; type
 	db 90 ; catch rate
 	db 134 ; base exp

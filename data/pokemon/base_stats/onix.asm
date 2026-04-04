@@ -1,5 +1,10 @@
+if DEF(FAITHFUL)
 	db  35,  45, 160,  70,  30,  45 ; 385 BST
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  35,  80, 160,  70,  30,  45 ; 420 BST
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db ROCK, GROUND ; type
 	db 45 ; catch rate

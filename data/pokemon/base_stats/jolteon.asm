@@ -8,7 +8,11 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F12_5, 6 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/jolteon/front.dimensions"
+if DEF(FAITHFUL)
 	abilities_for JOLTEON, VOLT_ABSORB, VOLT_ABSORB, QUICK_FEET
+else
+	abilities_for JOLTEON, VOLT_ABSORB, STATIC, QUICK_FEET
+endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 
