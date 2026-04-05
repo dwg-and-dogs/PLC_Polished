@@ -753,8 +753,8 @@ KurtsJournal6Text: ; tinder garden 2
 	para "bag and found his"
 	line "Apricorn."
 	
-	para "The paint was ne-"
 	line "arly all chipped"
+	para "The paint was ne-"
 	para "off, so only he "
 	line "and I would know"
 	cont "what it once was." 
