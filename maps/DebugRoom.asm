@@ -268,10 +268,10 @@ dwgDebugScript:
 ;	loadmem wPartyMon6DVs+2, $ef
 
 ; FLYING
-	givepoke TOTODILE, 50
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $fe
-	loadmem wPartyMon1DVs+2, $ee
+;	givepoke TOTODILE, 50
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $fe
+;	loadmem wPartyMon1DVs+2, $ee
 ; GHOST 
 ;	givepoke NINETALES, 50
 ;	loadmem wPartyMon2DVs+0, $ff

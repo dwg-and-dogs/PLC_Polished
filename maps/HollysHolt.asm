@@ -115,7 +115,7 @@ HollysHoltHollisScript:
 
 HH_HollisHello:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 
@@ -127,7 +127,7 @@ HH_HollisHello:
 	line "from Hisui?"
 	
 	para "My name is"
-	line "Hollis. I am"
+	line "Silas. I am"
 	cont "the elder here."
 	
 	para "I was just, eh"
@@ -162,7 +162,7 @@ HH_KurtExplains:
 
 HH_HollisPinecos:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 	
@@ -321,7 +321,7 @@ HollysHoltNPC5Text:
 
 HH_HollisHello2:
 	text_high
-    text " Hollis: "
+    text " Silas: "
 	next
 	text_start
 	text "Please, visit"

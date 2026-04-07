@@ -47,8 +47,7 @@ RouteKajo_MapScriptHeader:
     object_event 42, 15, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, TrainerBreederJodyScript, -1;
     object_event 57,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerPokefan_MRobertScript, -1;
     object_event 54, 17, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, TrainerSchoolgirlFaithScript, -1;
-
-	itemball_event  7, 27, REVIVE, 1, EVENT_KAJO_REVIVE2 ;ok
+	itemball_event  7, 27, ODD_SOUVENIR, 1, EVENT_KAJO_REVIVE2 ;ok
 	itemball_event 41, 24, SUPER_POTION, 1, EVENT_KAJO_POTION2 ;ok
 	itemball_event 32,  6, ETHER, 1, EVENT_KAJO_ETHER ;ok
 	itemball_event 33, 15, ELIXIR, 1, EVENT_KAJO_ELIXIR ;ok

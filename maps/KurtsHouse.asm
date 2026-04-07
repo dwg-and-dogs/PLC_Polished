@@ -891,7 +891,7 @@ endr
 	; all badges -- REMOVED 
 	; fly anywhere -- REMOVED
 	; good party
-;	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
+	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
 	loadmem wPartyMon1EVs+0, 252
 	loadmem wPartyMon1EVs+1, 252
 	loadmem wPartyMon1EVs+2, 252
@@ -913,8 +913,8 @@ endr
 	loadmem wPartyMon1Stats+8, HIGH(999)
 	loadmem wPartyMon1Stats+9, LOW(999)
 	; hm 
-;	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
-;	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
+	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
+	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
 	loadmem wPartyMon2Moves+0, FLY
 	loadmem wPartyMon2Moves+1, SURF
 	loadmem wPartyMon2Moves+2, STRENGTH
@@ -936,7 +936,5 @@ endr
 	; intro events
 	closetext
 	; debug only
-;	setevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
-;	setevent EVENT_SOLVED_KABUTO_PUZZLE
-;	warp RUINS_OF_ALPH_KABUTO_CHAMBER, 6, 6 
+	verbosegivekeyitem CELEBI_CALL
 	end

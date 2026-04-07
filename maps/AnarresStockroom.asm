@@ -98,19 +98,24 @@ AnarresBerryGiftText:
 	done
 	
 GiveAnarresBerryText:
-	text "Different"
-	line "berries are good"
-	para "for different"
-	line "environments!"
+	text "There's a berry"
+	line "for every"
+	cont "situation!"
 	done
 
 AnarresStockroomNPC2Text:
-	text "We nearly hunted"
-	line "Farfetch'd to"
-	para "extinction in"
-	line "Johto, but there"
-	para "are still some"
-	line "left."
+	text "My great-grandpa"
+	line "told me about a"
+	para "#mon that"
+	line "carried a Stick."
+	
+	para "But they're only"
+	line "seen in Kanto,"
+	cont "nowadays."
+
+	para "They'd be a great"
+	line "help cutting down"
+	cont "trees!"
 	done
 
 AnarresStockroomNPC3Text:

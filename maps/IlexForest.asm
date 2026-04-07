@@ -632,7 +632,7 @@ IlexForestCelebiEventScript:
 	waitbutton
 	writetext CelebiCallGiftText
 	waitbutton
-	verbosegiveitem CELEBI_CALL
+	verbosegivekeyitem CELEBI_CALL ; fixed 
 	waitbutton
 	closetext
 	setevent EVENT_SUMMONED_CELEBI_IN_ILEX
