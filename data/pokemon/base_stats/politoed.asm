@@ -6,8 +6,11 @@ else
 	;   hp  atk  def  spd  sat  sdf
 endc
 
-
+if DEF(FAITHFUL)
 	db WATER, WATER ; type
+else
+	db WATER, WATER ; type
+endc
 	db 45 ; catch rate
 	db 185 ; base exp
 	db NO_ITEM ; item 1

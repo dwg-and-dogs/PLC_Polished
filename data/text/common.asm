@@ -4363,85 +4363,201 @@ _CelebiCallGauldenrod::
 	cont "taking hold in"
 	cont "Johto."
 	prompt
-
+;Investigate the source of the corrupting influence. Head north from Anarres. 
 SECTION "_CelebiCallStadiumGrounds", ROMX
 _CelebiCallStadiumGrounds::
-	text "..."
+	text "General Tyrus"
+	line "is a menace to"
+	cont "Gauldenrod!"
+	
+	para "Find a way North"
+	line "to take down his"
+	cont "stadium."
 	prompt
 
-SECTION "_CelebiCallRoute35GoldenrodGate", ROMX
+SECTION "_CelebiCallRoute35GoldenrodGate", ROMX 
 _CelebiCallRoute35GoldenrodGate::
-	text "..."
+	text "The path into"
+	line "Ecruteak is"
+	cont "blocked!"
+	
+	para "Take the long"
+	line "way around?"
 	prompt
 
 
 SECTION "_CelebiCallRadioTower", ROMX
 _CelebiCallRadioTower::
-	text "..."
+	text "Kurt has a short-"
+	line "cut to Ecruteak"
+	para "via the Magnet"
+	line "Train tracks."
+	
+	para "Meet him at the"
+	line "Goldenrod #mon"
+	cont "center to access"
+	cont "an underground"
+	cont "passageway."
 	prompt
 
-SECTION "_CelebiCallSproutTower", ROMX
+SECTION "_CelebiCallSproutTower", ROMX 
 _CelebiCallSproutTower::
-	text "..."
+	text "The path to Ecru-"
+	line "teak is blocked"
+	para "by Falkner's"
+	line "ruinous dig!"
+	
+	para "Convince him to"
+	line "stop rearranging"
+	cont "the past."
 	prompt
 
-SECTION "_CelebiCallBellchimeTrail", ROMX
+SECTION "_CelebiCallBellchimeTrail", ROMX 
 _CelebiCallBellchimeTrail::
-	text "..."
+	text "The Kimono Girls"
+	line "at the Ecruteak"
+	cont "Dance Theatre"
+	
+	para "can help return"
+	line "you to the past,"
+	
+	para "using the shrine"
+	line "by the Tin Tower."
 	prompt
 	
-SECTION "_CelebiCallTradersLanding", ROMX
+SECTION "_CelebiCallTradersLanding", ROMX 
 _CelebiCallTradersLanding::
-	text "..."
+	text "Emperor Vesper's"
+	line "next plot is at"
+	cont "Trader's Landing."
+	
+	para "Ask Chronicler"
+	line "Sybil to allow"
+	cont "you access, then"
+	
+	para "travel west from"
+	line "the Capital to"
+	cont "reach it!"
 	prompt
 
 SECTION "_CelebiCallRoute40", ROMX
 _CelebiCallRoute40::
-	text "..."
+	text "Meet Elder Remy"
+	line "at the Trader's"
+	cont "Landing shrine,"
+	
+	para "then make a plan"
+	line "to stop General"
+	cont "Nemo!"
 	prompt
 
 SECTION "_CelebiCallWhirlIslandLugia", ROMX
 _CelebiCallWhirlIslandLugia::
-	text "..."
+	text "Bring Lugia back"
+	line "to Elder Remy."
+	
+	para "She's in the deep-"
+	line "est cavern of the"
+	cont "Whirl Islands."
+	
+	para "Some islands are"
+	line "blocked by a"
+	cont "vortex."
+	
+	para "The method to"
+	line "pass a vortex"
+	cont "is lost to time,"
+	
+	para "but there're some"
+	line "sages who revere"
+	cont "Lugia, and who"
+	cont "could help you."
+	
 	prompt
 
 
-SECTION "_CelebiCallCianwoodCity", ROMX
+SECTION "_CelebiCallCianwoodCity", ROMX ; Meet Kurt in modern Cianwood. 
 _CelebiCallCianwoodCity::
-	text "..."
+	text "Kurt got to Lugia"
+	line "first. Meet him"
+	cont "in Cianwood City."
 	prompt
 
 
-SECTION "_CelebiCallLandingDocks", ROMX
+SECTION "_CelebiCallLandingDocks", ROMX ; Traverse the arduous anchorage to the Landing Docks to stop the corrupting influence. 
 _CelebiCallLandingDocks::
-	text "..."
+	text "Traverse the"
+	line "Arduous Anchorage"
+	para "towards General"
+	line "Nemo at the"
+	cont "Landing Docks!"
 	prompt
 
 
-SECTION "_CelebiCallOlivineLighthouse", ROMX
+SECTION "_CelebiCallOlivineLighthouse", ROMX ; What have you done! Prove you are still worthy by saving the OMLAS slowking in the lighthouse. 
 _CelebiCallOlivineLighthouse::
-	text "..."
+	text "What have you done!"
+	line "Prove you're still"
+	cont "worthy by ending"
+	para "Chuck's OMLAS"
+	line "project at the"
+	cont "Lighthouse."
 	prompt
 
-SECTION "_CelebiCallLakeOfRage", ROMX
+SECTION "_CelebiCallLakeOfRage", ROMX ; There is only one other source of corrupting influence. Ask Pryce to take you to the Lake of Rage. 
 _CelebiCallLakeOfRage::
-	text "..."
+	text "There is only one"
+	line "other source of"
+	para "corruption in"
+	line "historic Johto:"
+	
+	para "General Andrea's"
+	line "mine east of the"
+	cont "Western Capital."
+	
+	para "Ask Pryce to take"
+	line "you to the Lake"
+	cont "of Rage, so you"
+	cont "can stop her!"
 	prompt
 
-SECTION "_CelebiCallGrottoedGlacier", ROMX
+SECTION "_CelebiCallGrottoedGlacier", ROMX ; Stop General Andrea's plot in the Ancestor Glacier. 
 _CelebiCallGrottoedGlacier::
-	text "..."
+	text "General Andrea"
+	line "is within the"
+	cont "Ancestral Glacier"
+	cont "with the Hisuian"
+	cont "Elder."
+	
+	para "This is a chance"
+	line "to stop her!"
 	prompt
 
-SECTION "_CelebiCallClastsCradle", ROMX
+SECTION "_CelebiCallClastsCradle", ROMX ; Andrea is nearly to the bottom of the mine! Stop her before she can capture a powerful pokemon. 
 _CelebiCallClastsCradle::
-	text "..."
+	text "Andrea is nearly"
+	line "to the bottom of"
+	cont "Clast's Cradle."
+	
+	para "Convince Amos in"
+	line "the Eerie Hamlet"
+	para "that you're on his"
+	line "side, ascend the"
+	cont "Cinder Climb,"
+	
+	para "and stop that"
+	line "General Andrea"
+	para "before she takes"
+	line "that powerful"
+	cont "#mon!"
 	prompt
 
 
-SECTION "_CelebiCallTimelessTapestry", ROMX
+SECTION "_CelebiCallTimelessTapestry", ROMX ; sceneID for whispers way 
 _CelebiCallTimelessTapestry::
-	text "..."
+	text "Regroup with Amos"
+	line "at the Timeless"
+	cont "Tapestry."
 	prompt
 
 SECTION "_CelebiCallBrassTowerRoof", ROMX

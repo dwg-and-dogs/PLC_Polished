@@ -936,7 +936,7 @@ endr
 	; intro events
 	closetext
 	; debug only
-	setevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
-	setevent EVENT_SOLVED_KABUTO_PUZZLE
-	warp RUINS_OF_ALPH_KABUTO_CHAMBER, 6, 6 
+;	setevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
+;	setevent EVENT_SOLVED_KABUTO_PUZZLE
+;	warp RUINS_OF_ALPH_KABUTO_CHAMBER, 6, 6 
 	end

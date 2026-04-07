@@ -9,15 +9,15 @@ endc
 if DEF(FAITHFUL)
 	db FIRE, FIRE ; type
 else
-	db FIRE, POISON ; type
+	db FIRE, FIRE ; type
 endc
 	db 30 ; catch rate
-	db 220 ; base exp
+	db 199 ; base exp
 	db ASPEAR_BERRY ; item 1
 	db MAGMARIZER ; item 2
 	dn GENDER_F25, 4 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/magmortar/front.dimensions"
-	abilities_for MAGMORTAR, FLAME_BODY, FLAME_BODY, MEGA_LAUNCHER
+	abilities_for MAGMORTAR, FLAME_BODY, FLAME_BODY, VITAL_SPIRIT
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups
 

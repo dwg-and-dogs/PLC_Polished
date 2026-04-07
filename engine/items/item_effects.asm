@@ -1961,7 +1961,7 @@ CelebiCallKeyItem:
 	cp 0
 	jp nz, .CelebiCallLakeOfRage
 	
-	ld a, [wLandingDocksSceneID]
+	ld a, [wOlivineDesal1FSceneID] ; used to be landing docks 
 	cp 0
 	jp nz, .CelebiCallOlivineLighthouse
 	
@@ -1981,7 +1981,7 @@ CelebiCallKeyItem:
 	cp 0
 	jp nz, .CelebiCallRoute40
 	
-	ld a, [wBellchimeTrailSceneID]
+	ld a, [wEmperorsGardenSceneID] ; replaced bellchime trail scene id 
 	cp 0
 	jp nz, .CelebiCallTradersLanding
 	

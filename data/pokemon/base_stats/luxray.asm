@@ -1,11 +1,11 @@
 	db  80, 120,  79,  70,  95,  79 ; 523 BST
 	;   hp  atk  def  spd  sat  sdf
 
-if DEF(FAITHFUL)
-	db ELECTRIC, ELECTRIC
-else
+;if DEF(FAITHFUL)
+;	db ELECTRIC, ELECTRIC
+;else
 	db ELECTRIC, DRAGON ; type
-endc
+;endc
 	db 45 ; catch rate
 	db 201 ; base exp
 	db NO_ITEM ; item 1
