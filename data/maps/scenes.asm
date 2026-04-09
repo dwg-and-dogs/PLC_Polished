@@ -57,7 +57,7 @@ MapScenes::
 	scene_var SHIMMER_SADDLE, 						  wShimmerSaddleSceneID
 	scene_var TRANQUIL_TARN, 						  wTranquilTarnSceneID
 	scene_var LAKE_OF_RAGE, 						  wLakeOfRageSceneID
-	scene_var TIMELESS_TAPESTRY, 					  wTimelessTapestrySceneID
+	scene_var TIMELESS_TAPESTRY, 					  wTimelessTapestrySceneID ; dummy 
 	scene_var NATIONAL_PARK, 						  wNationalParkSceneID 
 	scene_var GOLDENROD_MUSEUM_2F, 					  wGoldenrodMuseum2FSceneID 
 	scene_var VIOLET_NICKNAME_SPEECH_HOUSE, 		  wVioletNicknameSpeechHouseSceneID 

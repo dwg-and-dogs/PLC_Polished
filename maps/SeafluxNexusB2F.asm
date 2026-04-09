@@ -17,7 +17,6 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 	def_bg_events
 	bg_event 21, 16, BGEVENT_READ, SeafluxNexusB2F_MasterSwitch  ;  cf warehouse entrance basement key ....
 	bg_event 19, 24, BGEVENT_READ, SeafluxNexusB2F_ResetSwitch  ;  cf warehouse entrance basement key ....
-	tmhmball_event 20, 16, HM_WHIRLPOOL, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
 	bg_event  7, 14, BGEVENT_READ, SeafluxNexusB2F_Switch1 ; toggles w4 only (revised)
 	bg_event 29, 14, BGEVENT_READ, SeafluxNexusB2F_Switch2 ; toggles w3, w4
 	bg_event  7, 22, BGEVENT_READ, SeafluxNexusB2F_Switch3 ; toggles w1, w4 only (revised)
@@ -32,7 +31,7 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 	itemball_event 32, 20, IRON, 1, EVENT_NEXUSB2F_ITEM4
 	itemball_event 32, 32, ZINC, 1, EVENT_NEXUSB2F_ITEM5
 	itemball_event 21,  6, HP_UP, 1, EVENT_NEXUSB2F_ITEM6
-
+	tmhmball_event 20, 16, HM_WHIRLPOOL, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
 
 SeafluxNexusB2FCallback: ; done? 
 ; first, check the boulders. Nothing happens without them. 

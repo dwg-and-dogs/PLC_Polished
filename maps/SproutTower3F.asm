@@ -105,7 +105,7 @@ VioletGymFalknerScript:
 	setflag ENGINE_ZEPHYRBADGE
 	promptbutton
 	verbosegivetmhm TM_AERIAL_ACE
-	setscene $1 ; incremented for celebi call 
+	setscene $1 ; incremented for celebi call , dummy 
 	setevent EVENT_GOT_TM_AERIAL_ACE
 .FightDone:
 	jumpopenedtext FalknerAfterText

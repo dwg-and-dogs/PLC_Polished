@@ -1941,25 +1941,25 @@ CelebiCallKeyItem:
 ;	cp 0
 ;	jr nz, .CelebiCallComplete
 	
-	ld a, [wTimelessTapestrySceneID]
+	ld a, [wWhispersWaySceneID]
 	cp 0
 	jp nz, .CelebiCallBrassTowerRoof
 	
 	ld a, [wClastsCradleB1FSceneID]
-	cp 0
-	jp nz, .CelebiCallTimelessTapestry
+	cp 2
+	jp nc, .CelebiCallTimelessTapestry
 	
 	ld a, [wGrottoedGlacierB2FSceneID]
-	cp 0
-	jp nz, .CelebiCallClastsCradle
+	cp 2
+	jp nc,  .CelebiCallClastsCradle
 	
 	ld a, [wLakeOfRageSceneID]
-	cp 0
-	jp nz, .CelebiCallGrottoedGlacier
+	cp 2
+	jp nc, .CelebiCallGrottoedGlacier
 	
 	ld a, [wOlivineLighthouse6FSceneID]
-	cp 0
-	jp nz, .CelebiCallLakeOfRage
+	cp 2
+	jp nc, .CelebiCallLakeOfRage
 	
 	ld a, [wOlivineDesal1FSceneID] ; used to be landing docks 
 	cp 0
@@ -1985,21 +1985,21 @@ CelebiCallKeyItem:
 	cp 0
 	jp nz, .CelebiCallTradersLanding
 	
-	ld a, [wSproutTower3FSceneID]
+	ld a, [wSproutTower3FSceneID] ; dummy scene 
 	cp 0
 	jp nz, .CelebiCallBellchimeTrail
 	
-	ld a, [wRadioTower5FSceneID]
+	ld a, [wRadioTower5FSceneID] ; dummy scene 
 	cp 0
 	jp nz, .CelebiCallSproutTower
 	
 	ld a, [wRoute35GoldenrodGateSceneID]
 	cp 0
 	jp nz, .CelebiCallRadioTower
-	
-	ld a, [wStadiumGroundsSceneID]
-	cp 0
-	jp nz, .CelebiCallRoute35GoldenrodGate
+		
+	ld a, [wStadiumGroundsSceneID] ; could add a scene here if needed for 2 vs 3 
+	cp 2
+	jp nc, .CelebiCallRoute35GoldenrodGate
 	
 	ld a, [wGauldenrodSceneID]
 	cp 0

@@ -123,14 +123,29 @@ CelebiCeremonyIntroScript:
 	writetext WasThatCelebiText 
 	waitbutton
 	closetext
-	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls 
+	turnobject TINDER_GARDEN_BLACK_BELT, DOWN
+	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls
+	pause 30
+	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls2
+	pause 30
+	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls3
+	pause 30
+	applymovement TINDER_GARDEN_OAK, TGOakChecksBalls4
+	pause 30
 	showemote EMOTE_SHOCK, TINDER_GARDEN_OAK, 60
 	opentext
 	writetext WasThatCelebiTextOak	
 	waitbutton
 	closetext
 	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls 
-	turnobject TINDER_GARDEN_BLACK_BELT, DOWN
+	pause 30
+	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls2 
+	pause 30
+	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls3 
+	pause 30
+	applymovement TINDER_GARDEN_KURT, TGKurtChecksBalls4 
+	pause 30	
+
 	opentext
 	writetext WasThatCelebiTextKurt
 	waitbutton
@@ -302,8 +317,8 @@ WasThatCelebiTextOak:
     text " Oak: "
 	next
 	text_start 
-	text "Two of them are"
-	line "not from Johto!"
+	text "Such rare"
+	line "#mon!"
 	done
 
 WasThatCelebiTextKurt:
@@ -343,10 +358,22 @@ TGOakChecksBalls:
 	step_right
 	step_down
 	step_right
+	step_end
+; pause here
+
+TGOakChecksBalls2:
 	step_up
 	turn_head_right
+	step_end
+; pause here 
+
+TGOakChecksBalls3:
 	step_up
 	turn_head_right
+	step_end
+; pause here
+
+TGOakChecksBalls4:
 	step_down
 	step_left
 	step_left
@@ -377,11 +404,20 @@ TGKurtChecksBalls:
 	step_right
 	step_right
 	step_right
+	step_end
+
+TGKurtChecksBalls2:
 	step_up
 	turn_head_right
+	step_end
+
+TGKurtChecksBalls3:
 	step_down
 	step_down
 	turn_head_right
+	step_end
+
+TGKurtChecksBalls4:
 	step_up
 	step_left
 	step_left

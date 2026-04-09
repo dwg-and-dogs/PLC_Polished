@@ -1,6 +1,0 @@
-Need to fix the colors a little bit more 
-
-Tried to do a checkevent with the items a la coin case. it crashes to try to run a checkevent right there. I could try to put a different version of checkevent inside. 
-
-The nurse joy scripts work to reset the scenes. maybe I can do something like that at the PC? Overworld is easy, it's just the items that are the hard part 
-

@@ -66,6 +66,7 @@ WhitneyScriptRadioTower5F:
 	clearevent EVENT_WHITNEY_GYM
 	setflag ENGINE_PLAINBADGE
 	setevent EVENT_RADIO_TOWER_KURT2
+	setscene $1 ; dummy scene 
     end
 
 WhitneyIntroText:

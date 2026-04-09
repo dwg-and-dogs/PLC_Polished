@@ -888,8 +888,42 @@ endr
 	givemoney $0, 1000000
 	givemoney $0, 999999
 	givecoins 50000
-	; all badges -- REMOVED 
-	; fly anywhere -- REMOVED
+	; all badges 
+	setflag ENGINE_ZEPHYRBADGE
+	setflag ENGINE_HIVEBADGE
+	setflag ENGINE_PLAINBADGE
+	setflag ENGINE_FOGBADGE
+	setflag ENGINE_STORMBADGE
+	setflag ENGINE_MINERALBADGE
+	setflag ENGINE_GLACIERBADGE
+	setflag ENGINE_RISINGBADGE
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
+	; fly anywhere
+	setflag ENGINE_FLYPOINT_AZALEA
+	setflag ENGINE_FLYPOINT_GOLDENROD
+	setflag ENGINE_FLYPOINT_VIOLET
+	setflag ENGINE_FLYPOINT_UNION_CAVE
+	setflag ENGINE_FLYPOINT_ECRUTEAK
+	setflag ENGINE_FLYPOINT_OLIVINE
+	setflag ENGINE_FLYPOINT_CIANWOOD
+	setflag ENGINE_FLYPOINT_MAHOGANY
+	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
+; historic johto
+	setflag ENGINE_FLYPOINT_ANARRES_TOWN
+	setflag ENGINE_FLYPOINT_GAULDENROD
+	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
+	setflag ENGINE_FLYPOINT_TRADERS_LANDING
+	setflag ENGINE_FLYPOINT_SHELTERED_SHORES
+	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
+	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
+	setflag ENGINE_FLYPOINT_EERIE_HAMLET
+	setflag ENGINE_FLYPOINT_SULFUR_STY
+	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
 	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
 	loadmem wPartyMon1EVs+0, 252
@@ -934,7 +968,30 @@ endr
 	; fill pokedex
 	callasm FillPokedex
 	; intro events
+	verbosegivekeyitem CELEBI_CALL
 	closetext
 	; debug only
-	verbosegivekeyitem CELEBI_CALL
+	setmapscene ANARRES_TOWER_3F, $1
+	setmapscene GAULDENROD, $1 ; WORKS 
+	setmapscene STADIUM_GROUNDS, $2
+;	setmapscene ROUTE_35_GOLDENROD_GATE, $1 
+; 	setmapscene RADIO_TOWER_5F, $1 
+;	setmapscene SPROUT_TOWER_3F, $1 
+;	setmapscene EMPERORS_GARDEN, $1 ; ok that it's just one, even though it can go higher?
+; 	setmapscene EMPERORS_GARDEN, $4 ; final count in the scene 
+; 	setmapscene TRADERS_LANDING, $1 ; 
+; 	setmapscene TRADERS_LANDING, $2 ; 
+;	setmapscene ROUTE_40, $1 
+;	setmapscene WHIRL_ISLAND_LUGIA_CHAMBER, $1
+; 	setmapscene CIANWOOD_CITY, $1
+;	setmapscene OLIVINE_DESAL_1F, $1
+;	setmapscene OLIVINE_LIGHTHOUSE_6F, $1
+;	setmapscene OLIVINE_LIGHTHOUSE_6F, $2
+;	setmapscene LAKE_OF_RAGE, $1
+;	setmapscene LAKE_OF_RAGE, $2
+; 	setmapscene GROTTOED_GLACIER_B2F, $1
+; 	setmapscene GROTTOED_GLACIER_B2F, $2
+;	setmapscene CLASTS_CRADLE_B1F, $1
+;	setmapscene CLASTS_CRADLE_B1F, $2
+;	setmapscene WHISPERS_WAY, $1 
 	end

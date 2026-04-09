@@ -103,6 +103,7 @@ CianwoodEusineScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	
+	setscene $1 ; dummy 
 	blackoutmod CIANWOOD_COVE
 	warp CIANWOOD_COVE, 11, 15
 	end
