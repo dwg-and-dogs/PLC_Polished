@@ -1,1 +1,9 @@
 ffmpeg -i input.mp4 -vf "scale=640:576:flags=neighbor" output.mp4
+
+
+
+To make a gif to accompany an mp4:
+
+ffmpeg -i input_1_4x.mp4 -vf "fps=15,scale=640:-1:flags=lanczos,palettegen" -update 1 palette_1.png
+
+ffmpeg -i input_1_4x.mp4 -i palette_1.png -filter_complex "fps=15,scale=640:-1:flags=lanczos[x];[x][1:v]paletteuse"input_1_4x.gif
