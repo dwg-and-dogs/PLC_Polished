@@ -4399,6 +4399,15 @@ _CelebiCallRadioTower::
 	cont "an underground"
 	cont "passageway."
 	prompt
+	
+SECTION "_CelebiCallRadioTower1F", ROMX
+_CelebiCallRadioTower1F::
+	text "Kurt's path to"
+	line "Ecruteak is via"
+	para "a ladder on the"
+	line "top floor of the"
+	cont "Radio Tower."
+	prompt
 
 SECTION "_CelebiCallSproutTower", ROMX 
 _CelebiCallSproutTower::
@@ -4469,10 +4478,11 @@ _CelebiCallWhirlIslandLugia::
 	cont "is lost to time,"
 	
 	para "but there're some"
-	line "sages who revere"
-	cont "Lugia, and who"
-	cont "could help you."
-	
+	line "sages at the"
+	cont "Whirl Islands who"
+	para "may be able to"
+	line "help you find the"
+	cont "ancient HM!"
 	prompt
 
 
@@ -4496,7 +4506,7 @@ _CelebiCallLandingDocks::
 
 SECTION "_CelebiCallOlivineLighthouse", ROMX ; What have you done! Prove you are still worthy by saving the OMLAS slowking in the lighthouse. 
 _CelebiCallOlivineLighthouse::
-	text "What have you done!"
+	text "What've you done!"
 	line "Prove you're still"
 	cont "worthy by ending"
 	para "Chuck's OMLAS"
@@ -4515,10 +4525,10 @@ _CelebiCallLakeOfRage::
 	line "mine east of the"
 	cont "Western Capital."
 	
-	para "Ask Pryce to take"
-	line "you to the Lake"
-	cont "of Rage, so you"
-	cont "can stop her!"
+	para "Pryce can take"
+	line "you back in time"
+	cont "from an area at"
+	cont "the Lake of Rage."
 	prompt
 
 SECTION "_CelebiCallGrottoedGlacier", ROMX ; Stop General Andrea's plot in the Ancestor Glacier. 
@@ -4545,11 +4555,10 @@ _CelebiCallClastsCradle::
 	line "side, ascend the"
 	cont "Cinder Climb,"
 	
-	para "and stop that"
-	line "General Andrea"
-	para "before she takes"
-	line "that powerful"
-	cont "#mon!"
+	para "and stop General"
+	line "Andrea, before"
+	cont "she captures the"
+	cont "powerful #mon!"
 	prompt
 
 
@@ -4569,7 +4578,7 @@ _CelebiCallBrassTowerRoof::
 	cont "Capital to stop"
 	para "Emperor Vesper"
 	line "from destroying"
-	cont "Johto' heritage!"
+	cont "Johto's heritage!"
 	prompt
 
 

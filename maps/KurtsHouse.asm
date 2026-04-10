@@ -925,7 +925,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
-	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
+;	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
 	loadmem wPartyMon1EVs+0, 252
 	loadmem wPartyMon1EVs+1, 252
 	loadmem wPartyMon1EVs+2, 252
@@ -947,8 +947,8 @@ endr
 	loadmem wPartyMon1Stats+8, HIGH(999)
 	loadmem wPartyMon1Stats+9, LOW(999)
 	; hm 
-	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
-	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
+;	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
+;	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
 	loadmem wPartyMon2Moves+0, FLY
 	loadmem wPartyMon2Moves+1, SURF
 	loadmem wPartyMon2Moves+2, STRENGTH
@@ -971,27 +971,4 @@ endr
 	verbosegivekeyitem CELEBI_CALL
 	closetext
 	; debug only
-	setmapscene ANARRES_TOWER_3F, $1
-	setmapscene GAULDENROD, $1 ; WORKS 
-	setmapscene STADIUM_GROUNDS, $2
-;	setmapscene ROUTE_35_GOLDENROD_GATE, $1 
-; 	setmapscene RADIO_TOWER_5F, $1 
-;	setmapscene SPROUT_TOWER_3F, $1 
-;	setmapscene EMPERORS_GARDEN, $1 ; ok that it's just one, even though it can go higher?
-; 	setmapscene EMPERORS_GARDEN, $4 ; final count in the scene 
-; 	setmapscene TRADERS_LANDING, $1 ; 
-; 	setmapscene TRADERS_LANDING, $2 ; 
-;	setmapscene ROUTE_40, $1 
-;	setmapscene WHIRL_ISLAND_LUGIA_CHAMBER, $1
-; 	setmapscene CIANWOOD_CITY, $1
-;	setmapscene OLIVINE_DESAL_1F, $1
-;	setmapscene OLIVINE_LIGHTHOUSE_6F, $1
-;	setmapscene OLIVINE_LIGHTHOUSE_6F, $2
-;	setmapscene LAKE_OF_RAGE, $1
-;	setmapscene LAKE_OF_RAGE, $2
-; 	setmapscene GROTTOED_GLACIER_B2F, $1
-; 	setmapscene GROTTOED_GLACIER_B2F, $2
-;	setmapscene CLASTS_CRADLE_B1F, $1
-;	setmapscene CLASTS_CRADLE_B1F, $2
-;	setmapscene WHISPERS_WAY, $1 
 	end

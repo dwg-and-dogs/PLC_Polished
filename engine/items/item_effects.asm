@@ -1992,6 +1992,10 @@ CelebiCallKeyItem:
 	ld a, [wRadioTower5FSceneID] ; dummy scene 
 	cp 0
 	jp nz, .CelebiCallSproutTower
+
+	ld a, [wRadioTower1FSceneID]
+	cp 0
+	jp nz, .CelebiCallRadioTower1F
 	
 	ld a, [wRoute35GoldenrodGateSceneID]
 	cp 0
@@ -2036,6 +2040,13 @@ CelebiCallKeyItem:
 	jmp MenuTextboxWaitButton
 .CelebiCallRoute35GoldenrodGateText
 	text_far _CelebiCallRoute35GoldenrodGate
+	text_end
+
+.CelebiCallRadioTower1F
+	ld hl, .CelebiCallRadioTowerText1F
+	jmp MenuTextboxWaitButton
+.CelebiCallRadioTowerText1F
+	text_far _CelebiCallRadioTower1F
 	text_end
 
 .CelebiCallRadioTower

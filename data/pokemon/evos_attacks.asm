@@ -435,7 +435,7 @@ ClefairyEvosAttacks:
 	db 1, ENCORE
 	db 7, SING
 	db 10, DOUBLE_SLAP
-	db 13, DEFENSE_CURL
+	db 13, CHARM
 	db 16, SWEET_KISS ; Follow Me → new move
 	db 19, DIZZY_PUNCH ; Bestow → Crystal unique move
 	db 22, TRI_ATTACK ; Wake-Up Slap → RBY TM move
@@ -1716,7 +1716,7 @@ OnixEvosAttacks:
 	db 13, ROCK_BLAST ; Rock Tomb → egg move
 	db 16, BULLDOZE ; Stealth Rock → TM move
 	db 19, SANDSTORM ; Rock Polish → Sandstorm
-	db 22, ANCIENTPOWER ; Smack Down → HGSS tutor move
+	db 22, MAGNITUDE ; Smack Down → HGSS tutor move
 	db 25, DRAGONBREATH
 	db 28, HEADBUTT ; Slam → tutor move
 	db 31, SCREECH
@@ -3441,11 +3441,11 @@ MurkrowEvosAttacks:
 	db 1, PECK
 	db 1, ASTONISH
 	db 5, PURSUIT
-	db 11, HAZE
-	db 15, WING_ATTACK
-	db 21, NIGHT_SHADE
+	db 11, WING_ATTACK
+	db 15, NIGHT_SHADE
+	db 21, SWAGGER
 	db 25, THIEF ; Assurance → TM move
-	db 31, SWAGGER ; Taunt → TM move
+	db 31, HAZE ; Taunt → TM move
 	db 35, FEINT_ATTACK
 	db 41, MEAN_LOOK
 	db 45, BATON_PASS ; Foul Play → XD move
@@ -3711,7 +3711,7 @@ GligarEvosAttacks:
 	db 7, DEFENSE_CURL ; Harden → similar move
 	db 10, QUICK_ATTACK ; Knock Off → Quick Attack
 	db 13, WING_ATTACK ; Quick Attack → egg move
-	db 16, BUG_BITE ; Fury Cutter → similar move
+	db 16, MAGNITUDE ; Fury Cutter → similar move
 	db 19, FEINT_ATTACK
 	db 22, ACROBATICS
 	db 27, SLASH
@@ -4357,9 +4357,9 @@ PhanpyEvosAttacks:
 	db 1, DEFENSE_CURL
 	db 6, REVERSAL ; Flail → similar move
 	db 10, ROLLOUT
-	db 15, ENCORE ; Natural Gift → event move
-	db 19, ENDURE
-	db 24, TAKE_DOWN ; Slam → Take Down
+	db 15, MAGNITUDE
+	db 19, ENCORE ; Natural Gift → event move
+	db 24, ENDURE ; Slam → Take Down
 	db 28, BODY_SLAM ; Take Down → TM move
 	db 33, CHARM
 	db 37, PLAY_ROUGH ; Last Resort → egg move
