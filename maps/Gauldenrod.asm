@@ -571,7 +571,7 @@ BobeshText3:
 	para "tower. We know he"
 	line "didn't report it."
 	
-	para "Speaks volumes,"
+	para "Says a lot,"
 	line "don't you think?"
 	
 	para "Listen! Johto is"

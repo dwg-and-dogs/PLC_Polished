@@ -58,14 +58,13 @@ AnarresDormsNPC2Text:
 	line "that if they"
 	para "eat the whole"
 	line "forest, then"
-	para "they won't have"
-	line "anything to eat!"
+	para "there won't be"
+	line "anything left!"
 	done
 	
 AnarresDormsNPC3Text:
 	text "We use Apricorns"
-	line "to catch our"
-	cont "#mon."
+	line "to catch #mon."
 
 	para "They keep a"
 	line "#mon as long"
@@ -76,7 +75,7 @@ AnarresDormsNPC3Text:
 	cont "bored and leave."
 	
 	para "But that'd take"
-	line "years, I bet."
+	line "years, I think."
 	done
 
 AnarresDormsBed:
@@ -131,13 +130,9 @@ AnarresDormsKurtScript:
 	end
 
 AnarresDormsKurtAfterHollisText:
-	text "Excellent. Now,"
-	line "we can head North"
-	para "to get to histo-"
-	line "ric Olivine where"
-	para "outside influence"
-	line "will corrupt"
-	cont "Johto!"
+	text "Let's head north"
+	line "to stop the out-"
+	cont "side influence!"
 	done
 
 KurtAnarresDormsText:
@@ -145,10 +140,11 @@ KurtAnarresDormsText:
 	line "dorms are a good"
 	cont "place to rest."
 	
-	para "We need to see"
-	line "the Elder about"
-	para "the Cut HM, but"
-	line "he's holed up!"
+	para "The path north is"
+	line "blocked by a tree"
+	cont "so we need the"
+	cont "Cut HM from Elder"
+	cont "Silas."
 	
 	para "Natu can teleport"
 	line "to the present if"
