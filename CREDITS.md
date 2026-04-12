@@ -49,6 +49,11 @@ Back Sprites if different from above, using Deviantart handles:
 * DWG: H__Arcanine, Hippowdon, Heatran, Grotle, Sneasler, Overqwil, Basculegion, H__Avalugg
 * Pokewilds: wyrdeer, hgoodra, hzoroark, hsliggoo, spiritomb, jumpluff, monferno, infernape, prinplup, bastiodon, gabite, garchomp, rotom, dusclops, dusknoir, rampardos, ambipom, empoleon, lopunny, snover, abomasnow, hbraviary, htyphlosion, hsamurott, kleavor, luxio, luxray, helectrode, rowlet, hdecidueye, skiploom, stantler, staraptor, torterra, staravia, ursaluna, vespiquen
 
+## Pokemon Cries
+
+* Cries from Polished Crystal
+* Some cries adapted from Azure Keys Black and White 3: Genesis, see data/pokemon/cries.asm for full list 
+
 ## Trainer Sprites
 
 * Pokets3: Emperor Mejimi and Generals Adrinna, Bobesh, and Kensey
@@ -57,7 +62,6 @@ Back Sprites if different from above, using Deviantart handles:
 * Justinnuggets: Scavenger (diver)  
 * Justin8964: Nomad_F (Phoebe) and Hollis
 * Ferropexola: Ninja
-
 
 ## Beta Testers
 

@@ -2,7 +2,7 @@ mon_cry: MACRO
 ; index, pitch, length
 	dw \1, \2, \3
 ENDM
-; todo: reorganize this! 
+ 
 PokemonCries::
 ; entries correspond to constants/pokemon_constants.asm
 	table_width MON_CRY_LENGTH, PokemonCries
@@ -204,34 +204,34 @@ PokemonCries::
 	mon_cry CRY_NIDOQUEEN,   $120,  $122 ; staraptor
 	mon_cry CRY_PIDGEOTTO,   $024,  $0c0 ; ; shinx CF BW3G BLITZLE 
 	mon_cry CRY_NIDORAN_M,  -$0c9,  $0ab ; luxiocf bw3g lillipup line 
-	mon_cry CRY_STOUTLAND,  -$201,  $0b0 ; luxray 
+	mon_cry CRY_NIDORAN_M,   $026,  $220 ; luxray cf bw3g zebstrika 
 	mon_cry CRY_GROWLITHE,   $1d0,  $0b0 ; cranidos cf bw3 PAWNIARD
 	mon_cry CRY_GROWLITHE,   $2fc,  $1c4 ; rampardos cf bw3 BISHARP
 	mon_cry CRY_DIGLETT,     $0ba,  $100 ; shieldon cf bw3g DWEBBLE
 	mon_cry CRY_METAPOD,     $193,  $150 ; bastiodon cf bw3g CRUSTLE
 	mon_cry CRY_RAICHU,     -$056,  $126 ; DRIFLOON ; cf bw3g
 	mon_cry CRY_DROWZEE,    -$21c,  $100 ; DRIFBLI
-	mon_cry CRY_METAPOD,     $080,  $0e0 ; Bronzor         ; d4 cf magnemite todo
-	mon_cry CRY_METAPOD,     $020,  $140 ; Bronzong        ; d5 cf magnezonetodo
+	mon_cry CRY_SQUIRTLE,    $0e4,  $0ad ; ; Bronzor         ; CF BW3G KLINK 
+	mon_cry CRY_SHELLDER,     -$108,  $1d0 ; ; Bronzong        ; cf bw3g klinklang 
 	mon_cry CRY_HOOTHOOT,    $130,  $0e8 ; Spiritomb       ; d6 ok bw3g has one but not with the right constant 
-	mon_cry CRY_SPEAROW,    -$080,  $0ac ; ; RIOLU ; cf bw3g TIMBURR 
+	mon_cry CRY_FARFETCH_D,    -$080,  $0ac ; ; RIOLU ; cf bw3g TIMBURR 
 	mon_cry CRY_SLUGMA,     -$25c,  $0e0 ; LUCARIO CF BW3G
 	mon_cry CRY_PIDGEOTTO,  -$099,  $0f3 ; hippopotas cf KROKOROK
 	mon_cry CRY_LAPRAS,     -$209,  $1ca ; hippowdon cf KROOKODILE
 	mon_cry CRY_DIGLETT,    -$133,  $125 ; CROAGUNK ; cf bw3g 
 	mon_cry CRY_SLOWKING,    $002,  $2c6 ; TOXICROAk
-	mon_cry CRY_BULBASAUR,   $020,  $100 ; Snover          ; dc cf ivysaur  todo
-	mon_cry CRY_BULBASAUR,   $000,  $140 ; Abomasnow       ; dd cf venusaur  todo
+	mon_cry CRY_PSYDUCK,    -$13a,  $0d0 ;  ; Snover          ; cf numel bw3g 
+	mon_cry CRY_RHYDON,     -$2c0,  $190 ; ; Abomasnow       ; cf camerupt bw3g 
 	mon_cry CRY_WOOPER,      $030,  $0d0 ; duskull cf bw3g LITWICK
 	mon_cry CRY_CLEFAIRY,   -$02e,  $1dd ;  dusclops cf bw3g LAMPENT
 	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ;  dusknoir cf bw3g CHANDELURE
 	mon_cry CRY_PSYDUCK,     $26f,  $0dd ; SNORUNT ; line cf bw3g 
 	mon_cry CRY_BULBASAUR,  -$020,  $0d6 ; GLALIE
 	mon_cry CRY_BLASTOISE,   $12b,  $0eb ; FROSLASS
-	mon_cry CRY_VOLTORB,     $0a8,  $110 ; Rotom           ; e2 cf electrode  todo
-	mon_cry CRY_SHELLDER,    $000,  $100 ; Bergmite        ; e3  cf shellder  todo
-	mon_cry CRY_SHELLDER,    $06f,  $160 ; Avalugg         ; e4 cf cloyster  	todo
-	mon_cry CRY_SUNFLORA,    $122,  $110 ; BASCULIN ; cf bw3g
+	mon_cry CRY_TYPHLOSION,  $03c,  $100 ; ; Rotom           ; cf sigilyph bw3g 
+	mon_cry CRY_SEEL,        $130,  $060 ; Bergmite        ; e3  cf sealeao bw3g
+	mon_cry CRY_WOOPER,      $e82,  $320  ; Avalugg         ; e4 cf walrein bw3g 
+	mon_cry CRY_REMORAID,    $122,  $110 ; BASCULIN ; cf bw3g
 	mon_cry CRY_RAICHU,      $080,  $0c0 ; Basculegion     ; e5 cf articuno  ok 
 	mon_cry CRY_SLOWPOKE,    $194,  $0a0 ; RUFFLET ; cf bw3g 
 	mon_cry CRY_GOLEM,       $2e0,  $0e0 ; BRAVIARY
@@ -241,8 +241,8 @@ PokemonCries::
 	mon_cry CRY_PIDGEOTTO,  -$4fc,  $216 ; GALLADE 
 	mon_cry CRY_METAPOD,     $094,  $100 ; goomy cf bw3g DEINO
 	mon_cry CRY_VULPIX,     -$0ee,  $090 ; sliggo cf bw3g ZWEILOUS
-	mon_cry CRY_HYDREIGON,   $000,  $0f4 ; goodra cf bw3g HYDREIGON
-	mon_cry CRY_SUNFLORA,   -$089,  $0eb ; ZORUA ; cf bw3g
+	mon_cry CRY_VILEPLUME,  -$2bb,  $0bb ;; goodra cf bw3g beartic
+	mon_cry CRY_REMORAID,   -$089,  $0eb ; ZORUA ; cf bw3g
 	mon_cry CRY_SPINARAK,   -$078,  $320 ; ZOROARK
 	mon_cry CRY_CATERPIE,    $83c,  $0c0 ; gible cf bw3g axew line 
 	mon_cry CRY_EKANS,       $9c5,  $170 ; gabite 
