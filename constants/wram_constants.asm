@@ -90,7 +90,7 @@ FONT_MASK EQU %00000111
 	const_def
 	const NATURES_OPT      ; 0
 	const ABILITIES_OPT    ; 1
-	const COLOR_VARY_OPT   ; 2
+	const COLOR_VARY_OPT   ; 2 ; unused 
 	const PERFECT_IVS_OPT  ; 3
 	const TRADED_AS_OT_OPT ; 4
 	const NUZLOCKE_MODE    ; 5
@@ -100,6 +100,12 @@ FONT_MASK EQU %00000111
 ABILITIES_OPTMASK EQU 1 << ABILITIES_OPT
 
 ; wInitialOptions2::
+DIFFICULTY_MASK   EQU %00000011
+	const_def
+	const DIFFICULTY_NORMAL ; 0
+	const DIFFICULTY_EASY   ; 1
+	const DIFFICULTY_HARD   ; 2
+; bits 2-6: unused
 RESET_INIT_OPTS EQU 7
 
 ; wForgettingMove::

@@ -4,7 +4,17 @@ GetTrainerEVsDVsAndPersonality:
 	dec a
 	ld c, a
 	ld b, 0
-	ld hl, TrainerClassDVsAndPersonality
+
+	ld a, [wInitialOptions2]
+	and DIFFICULTY_MASK
+	ld hl, TrainerClassDVsAndPersonality_Normal
+	and a ; cp DIFFICULTY_NORMAL (0)
+	jr z, .got_table
+	ld hl, TrainerClassDVsAndPersonality_Easy
+	cp DIFFICULTY_EASY
+	jr z, .got_table
+	ld hl, TrainerClassDVsAndPersonality_Hard
+.got_table:
 rept 6
 	add hl, bc
 endr

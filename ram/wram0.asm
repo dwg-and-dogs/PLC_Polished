@@ -1294,7 +1294,8 @@ wInitialOptions::
 	db
 
 wInitialOptions2::
-; bits 0-6: unused
+; bits 0-1: difficulty (00=easy,01=normal,02=hard)
+; bits 2 - 6: unused 
 ; bit 7: ask to reset at start
 	db
 wOptionsEnd::

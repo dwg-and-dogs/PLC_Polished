@@ -1,4 +1,4 @@
-NUM_INITIAL_OPTIONS EQU 7
+NUM_INITIAL_OPTIONS EQU 8
 
 SetInitialOptions:
 	ld a, $10
@@ -147,14 +147,14 @@ INCBIN "gfx/new_game/init_bg.2bpp"
 	db "            :<LNBRK>"
 	db "Exp. scaling<LNBRK>"
 	db "            :<LNBRK>"
-;	db "IVs vary colors<LNBRK>"
-;	db "best if YES:<LNBRK>"
 	db "Perfect stats<LNBRK>"
 	db "            :<LNBRK>"
 	db "Traded #mon<LNBRK>"
 	db "treat you as OT<LNBRK>"
 	db "            :<LNBRK>"
 	db "Nuzlocke mode<LNBRK>"
+	db "            :<LNBRK>"
+	db "Difficulty mode<LNBRK>"
 	db "            :<LNBRK>"
 	db "Done@"
 
@@ -166,10 +166,10 @@ GetInitialOptionPointer:
 	dw InitialOptions_Abilities
 	dw InitialOptions_PSS
 	dw InitialOptions_ExpScaling
-;	dw InitialOptions_ColorVariation ;
-	dw InitialOptions_PerfectIVs 
+	dw InitialOptions_PerfectIVs
 	dw InitialOptions_TradedMon
 	dw InitialOptions_NuzlockeMode
+	dw InitialOptions_Difficulty
 	dw InitialOptions_Done
 
 InitialOptions_Natures:
@@ -268,29 +268,64 @@ InitialOptions_ExpScaling:
 	and a
 	ret
 
-InitialOptions_ColorVariation:
-	ld hl, wInitialOptions
+InitialOptions_Difficulty:
+	ld hl, wInitialOptions2
 	ldh a, [hJoyPressed]
-	and D_LEFT | D_RIGHT | A_BUTTON
-	jr nz, .Toggle
-	bit COLOR_VARY_OPT, [hl]
-	jr z, .SetNo
-	jr .SetYes
-.Toggle
-	bit COLOR_VARY_OPT, [hl]
-	jr z, .SetYes
-.SetNo:
-	res COLOR_VARY_OPT, [hl]
-	ld de, NoString
-	jr .Display
-.SetYes:
-	set COLOR_VARY_OPT, [hl]
-	ld de, YesString
+	and D_RIGHT | A_BUTTON
+	jr nz, .CycleRight
+	ldh a, [hJoyPressed]
+	and D_LEFT
+	jr nz, .CycleLeft
+	jr .DisplayCurrent
+.CycleRight:
+	ld a, [hl]
+	and DIFFICULTY_MASK
+	ld bc, .CycleRightTable
+	jr .ApplyCycle
+.CycleLeft:
+	ld a, [hl]
+	and DIFFICULTY_MASK
+	ld bc, .CycleLeftTable
+.ApplyCycle:
+	push hl
+	ld hl, 0
+	add hl, bc
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld c, [hl]
+	pop hl
+	ld a, [hl]
+	and ~DIFFICULTY_MASK & $ff
+	or c
+	ld [hl], a
+.DisplayCurrent:
+	ld a, [hl]
+	and DIFFICULTY_MASK
+	ld de, NormalString
+	and a ; cp DIFFICULTY_NORMAL (0)
+	jr z, .Display
+	ld de, EasyString
+	cp DIFFICULTY_EASY
+	jr z, .Display
+	ld de, HardString
 .Display:
-	hlcoord 15, 9
+	hlcoord 12, 16
 	rst PlaceString
 	and a
 	ret
+
+; Normal(0) -> Hard(2) -> Easy(1) -> Normal(0)
+.CycleRightTable:
+	db DIFFICULTY_HARD   ; from Normal
+	db DIFFICULTY_NORMAL ; from Easy
+	db DIFFICULTY_EASY   ; from Hard
+
+; Normal(0) -> Easy(1) -> Hard(2) -> Normal(0)
+.CycleLeftTable:
+	db DIFFICULTY_EASY   ; from Normal
+	db DIFFICULTY_HARD   ; from Easy
+	db DIFFICULTY_NORMAL ; from Hard
 
 InitialOptions_PerfectIVs:
 	ld hl, wInitialOptions
@@ -381,6 +416,12 @@ NoString:
 	db "No @"
 YesString:
 	db "Yes@"
+EasyString:
+	db "Easy  @"
+NormalString:
+	db "Normal@"
+HardString:
+	db "Hard  @"
 
 InitialOptionsControl:
 	ld hl, wJumptableIndex
@@ -436,4 +477,4 @@ InitialOptions_UpdateCursorPosition:
 	ret
 
 .InitialOptions_CursorPositions:
-	db 0, 2, 4, 6, 8, 10, 13, 15
+	db 0, 2, 4, 6, 8, 10, 13, 15, 17

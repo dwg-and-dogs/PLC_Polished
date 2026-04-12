@@ -139,11 +139,12 @@ INCLUDE "engine/overworld/decorations.asm"
 INCLUDE "engine/pokemon/level_up_happiness.asm"
 INCLUDE "engine/battle/read_trainer_dvs.asm"
 INCLUDE "engine/battle/returntobattle_useball.asm"
-INCLUDE "data/moves/effects.asm"
+
 
 
 SECTION "bankA", ROMX
 
+INCLUDE "data/moves/effects.asm" ; moved down from bank9 
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/movie/trade_animation.asm"
 
