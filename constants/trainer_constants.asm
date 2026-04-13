@@ -27,26 +27,51 @@ CHRIS EQU __trainer_class__
 	const PHONECONTACT_LYRA
 	const PHONECONTACT_BUENA
 
-KRIS EQU __trainer_class__
-	trainerclass CARRIE ; 1
+KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF NORMALMODERS 
+	trainerclass CARRIE ; 1 unused 
 
-	trainerclass CAL ; 2
+	trainerclass CAL ; 2 unused 
 
-	trainerclass FALKNER ; 3
+	trainerclass FALKNER ; 3 checked 
+	const FALKNER_EASY
+	const FALKNER_NORMAL
+	const FALKNER_HARD
+	
 
 	trainerclass BUGSY ; 4
+	const BUGSY_EASY
+	const BUGSY_NORMAL
+	const BUGSY_HARD
 
 	trainerclass WHITNEY ; 5
+	const WHITNEY_EASY
+	const WHITNEY_NORMAL
+	const WHITNEY_HARD
 
 	trainerclass MORTY ; 6
+	const MORTY_EASY
+	const MORTY_NORMAL
+	const MORTY_HARD
 
 	trainerclass CHUCK ; 7
+	const CHUCK_EASY
+	const CHUCK_NORMAL
+	const CHUCK_HARD
 
 	trainerclass JASMINE ; 8
+	const JASMINE_EASY
+	const JASMINE_NORMAL
+	const JASMINE_HARD
 
 	trainerclass PRYCE ; 9
+	const PRYCE_EASY
+	const PRYCE_NORMAL
+	const PRYCE_HARD
 
 	trainerclass CLAIR ; a
+	const CLAIR_EASY
+	const CLAIR_NORMAL
+	const CLAIR_HARD
 
 	trainerclass KURT ; 92
 	const KURT1 ; HOLLIS , rowlet pikachu teddiursa cyndaquil gastly lv 9 
@@ -64,16 +89,28 @@ KRIS EQU __trainer_class__
 	const KURT13 ; TOP OF TIN TOWER , in the bell tower, high exp yield pokemon 
 
 	trainerclass MEJIMI ; 93
+	const MEJIMI_EASY
+	const MEJIMI_NORMAL
+	const MEJIMI_HARD
 
 	trainerclass BRUNO ; d
 
 	trainerclass SANDRA ; e replaces karen
+	const SANDRA_EASY
+	const SANDRA_NORMAL
+	const SANDRA_HARD
 
 	trainerclass KURT_FINAL ; f replaces lance and champion 
+	const KURT_FINAL_EASY
+	const KURT_FINAL_NORMAL
+	const KURT_FINAL_HARD
 
 	trainerclass BROCK ; 10
 
 	trainerclass SAMSARA ; 11 replaces misty
+	const SAMSARA_EASY
+	const SAMSARA_NORMAL
+	const SAMSARA_HARD
 
 	trainerclass LT_SURGE ; 12
 
@@ -84,6 +121,9 @@ KRIS EQU __trainer_class__
 	trainerclass SABRINA ; 15
 
 	trainerclass HOLLIS ; 16 replaces blaine
+	const HOLLIS_EASY
+	const HOLLIS_NORMAL
+	const HOLLIS_HARD
 
 	trainerclass BLUE ; 17
 
@@ -93,19 +133,43 @@ KRIS EQU __trainer_class__
 
 	trainerclass RIVAL0 ; 1a
 
-	trainerclass RIVAL1 ; 1b
-	const RIVAL1_4
-	const RIVAL1_5
-	const RIVAL1_6;
-	const RIVAL1_7
-	const RIVAL1_8
-	const RIVAL1_9;
-	const RIVAL1_10
-	const RIVAL1_11
-	const RIVAL1_12;
-	const RIVAL1_13
-	const RIVAL1_14
-	const RIVAL1_15;
+	trainerclass RIVAL1 
+	const RIVAL1_4_EASY
+	const RIVAL1_4_NORMAL
+	const RIVAL1_4_HARD
+	const RIVAL1_5_EASY
+	const RIVAL1_5_NORMAL
+	const RIVAL1_5_HARD
+	const RIVAL1_6_EASY
+	const RIVAL1_6_NORMAL
+	const RIVAL1_6_HARD
+	const RIVAL1_7_EASY
+	const RIVAL1_7_NORMAL
+	const RIVAL1_7_HARD
+	const RIVAL1_8_EASY
+	const RIVAL1_8_NORMAL
+	const RIVAL1_8_HARD
+	const RIVAL1_9_EASY
+	const RIVAL1_9_NORMAL
+	const RIVAL1_9_HARD
+	const RIVAL1_10_EASY
+	const RIVAL1_10_NORMAL
+	const RIVAL1_10_HARD
+	const RIVAL1_11_EASY
+	const RIVAL1_11_NORMAL
+	const RIVAL1_11_HARD
+	const RIVAL1_12_EASY
+	const RIVAL1_12_NORMAL
+	const RIVAL1_12_HARD
+	const RIVAL1_13_EASY
+	const RIVAL1_13_NORMAL
+	const RIVAL1_13_HARD
+	const RIVAL1_14_EASY
+	const RIVAL1_14_NORMAL
+	const RIVAL1_14_HARD
+	const RIVAL1_15_EASY
+	const RIVAL1_15_NORMAL
+	const RIVAL1_15_HARD
 
 	trainerclass RIVAL2 ; 1c
 
@@ -480,9 +544,12 @@ KRIS EQU __trainer_class__
 	trainerclass RUIN_MANIAC ; 34
 	const JONES
 	const LELAND
-	const PETRY
-	const GLYN
-	const SMILTE
+	const PETRY1_EASY 
+	const PETRY1_NORMAL
+	const PETRY1_HARD
+	const PETRY2_EASY 
+	const PETRY2_NORMAL
+	const PETRY2_HARD
 
 	trainerclass FIREBREATHER ; 35
 	const OTIS
@@ -607,7 +674,8 @@ KRIS EQU __trainer_class__
 	const TAMIKO ; wc electric 
 
 	trainerclass ELDER ; 42
-	const LI
+	const LI ; TODO ADD MORE LI 
+	const LI_HARD ; TODO ADD MORE LI 
 	const GAKU ; STUDY 
 	const MASA ; PROPER
 	const KOJI ; PEACE 
@@ -632,20 +700,7 @@ KRIS EQU __trainer_class__
 	const BEAANDMAY2
 
 	trainerclass COUPLE ; 44
-	const GAILANDELI1
-	const GAILANDELI2
-	const DUFFANDEDA1
-	const DUFFANDEDA2
-	const FOXANDRAE1
-	const FOXANDRAE2
-	const MOEANDLULU1
-	const MOEANDLULU2
-	const VICANDTARA1
-	const VICANDTARA2
-	const TIMANDSUE1
-	const TIMANDSUE2
-	const JOEANDJO1
-	const JOEANDJO2
+
 
 	trainerclass GENTLEMAN ; 45
 	const PRESTON
@@ -660,6 +715,7 @@ KRIS EQU __trainer_class__
 	const WINSTON
 	const GERALD
 	const IRVING
+	const IRVING_HARD
 
 	trainerclass HISUI_FEMALE ; 47
 	const DARLA
@@ -714,7 +770,7 @@ KRIS EQU __trainer_class__
 	const KIRK
 	const MATHEW
 	const HAL
-	const JEROME
+	const GEORGE_HARD 
 	const TUCKER
 	const RICK
 	const CAMERON
@@ -820,10 +876,7 @@ KRIS EQU __trainer_class__
 	const NOB
 	const LUNG
 	const WAI
-	const INIGO
-	const MANFORD
-	const ANDER
-	const TAKEO
+
 
 	trainerclass BATTLE_GIRL ; 55
 	const SUBARU
@@ -831,8 +884,7 @@ KRIS EQU __trainer_class__
 	const KAGAMI
 	const NOZOMI
 	const RONDA
-	const PADMA
-	const EMY
+
 
 	trainerclass DRAGON_TAMER ; 56
 	const PAUL
@@ -845,6 +897,7 @@ KRIS EQU __trainer_class__
 	trainerclass ENGINEER ; 57
 	const SMITH
 	const CAMDEN
+	const CAMDEN_HARD
 	const BERNIE
 	const LANG
 	const HUGO
@@ -856,23 +909,19 @@ KRIS EQU __trainer_class__
 
 
 	trainerclass TEACHER ; 58
-	const COLETTE
 
 
 	trainerclass GUITARISTM ; 59
-	const CLYDE
+
 
 
 	trainerclass GUITARISTF ; 5a
-	const JANET
 
 
 	trainerclass BIKER ; 5b
-	const DWAYNE
 
 
 	trainerclass ROUGHNECK ; 5c
-	const BRIAN
 
 
 	trainerclass TAMER ; 5d
@@ -884,7 +933,7 @@ KRIS EQU __trainer_class__
 	const REINA
 
 
-	trainerclass AROMA_LADY ; 5f
+	trainerclass AROMA_LADY ; 5f CHECKED HERE DOWN 
 	const DAHLIA
 	const BRYONY
 	const HEATHER
@@ -901,8 +950,7 @@ KRIS EQU __trainer_class__
 	const JASKA
 	const BLAISE
 	const GARETH
-	const CHESTER
-	const HARI
+
 
 	trainerclass SIGHTSEERF ; 63
 	const ROSIE
@@ -937,14 +985,12 @@ KRIS EQU __trainer_class__
 	const KIERAN
 	const FINCH
 	const PETRIE
-	const COOLTRAINERM_COREY
-	const COOLTRAINERM_RAYMOND
-	const FERGUS
+
 
 	trainerclass COOLTRAINERF ; 66
-	const BETH1
-	const BETH2
-	const BETH3
+	const BETH1_EASY
+	const BETH2_NORMAL
+	const BETH3_HARD 
 	const REENA1
 	const REENA2
 	const REENA3
@@ -962,151 +1008,150 @@ KRIS EQU __trainer_class__
 	const EMMA
 	const CYBIL
 	const JENN
-	const SALMA
-	const BONITA
-	const SERA
-	const NEESHA
-	const CHIARA
+
 
 	trainerclass ACE_DUO ; 67
-	const ELANANDIDA1
-	const ELANANDIDA2
-	const ARAANDBELA1
-	const ARAANDBELA2
-	const THOMANDKAE1
-	const THOMANDKAE2
-	const ZACANDJEN1
-	const ZACANDJEN2
-	const JAKEANDBRI1
-	const JAKEANDBRI2
-	const DANANDCARA1
-	const DANANDCARA2
+
 
 	trainerclass NOMAD_M ; MOVED  ; FORMERLY BUCK 
 	const NOMAD_M_JOEL
 	const NOMAD_M_GLENN
 	const NOMAD_M_DALE
 	const NOMAD_M_JACOB
-	const NOMAD_M_AIDEN
-	const NOMAD_M_DAN
-	const NOMAD_M_TEDDY
-	const NOMAD_M_TYRONE 
+
 
 	trainerclass NOMAD_F ; MOVED  ; FORMERLY CAITLIN 
 	const NOMAD_F_REINA
 	const NOMAD_F_ALINA
 	const NOMAD_F_MARLENE
 	const NOMAD_F_RIN
-	const NOMAD_F_COLETTE
-	const NOMAD_F_HILLARY
-	const NOMAD_F_SHIRLEY
-	const NOMAD_F_KATHRYN
-	const NOMAD_F_CLARICE
+
 
 	trainerclass VETERANM ; 68
 	const MATT
-	const REMY
-	const BARKHORN
 
 	trainerclass VETERANF ; 69
 	const JOANNE
 	const SYLVIE
-	const LITVYAK
 
-	trainerclass PROTON ; 6a
-	const PROTON1
-	const PROTON2
+	trainerclass PROTON ; 6a CHECKED
 
-	trainerclass PETREL ; 6b
-	const PETREL1
-	const PETREL2
+	trainerclass PETREL ; 6b CHECKED
 
-	trainerclass ARCHER ; 6c
-	const ARCHER1
-	const ARCHER2
+	trainerclass ARCHER ; 6c CHECKED
 
-	trainerclass ARIANA ; 6d
-	const ARIANA1
-	const ARIANA2
+	trainerclass ARIANA ; 6d CHECKED
 
-	trainerclass GIOVANNI ; 6e
-	const GIOVANNI1
-	const GIOVANNI2
+	trainerclass GIOVANNI ; 6e CHECKED
 
-	trainerclass PROF_OAK ; 6f
+	trainerclass PROF_OAK ; 6f CHECKED
 
-	trainerclass PROF_ELM ; 70
+	trainerclass PROF_ELM ; 70 CHECKED
 
-	trainerclass PROF_IVY ; 71
+	trainerclass PROF_IVY ; 71 CHECKED
 
-	trainerclass MYSTICALMAN ; 72
+	trainerclass MYSTICALMAN ; 72 CHECKED
 	const EUSINE
 
-	trainerclass KARATE_KING ; 73
-	const KIYO
+	trainerclass KARATE_KING ; 73 CHECKED
 
-	trainerclass OSTENE ; 74
+	trainerclass OSTENE ; 74 CHECKED
 
-	trainerclass JESSIE_JAMES ; 75
+	trainerclass JESSIE_JAMES ; 75 CHECKED
 
-	trainerclass LORELEI ; 76
+	trainerclass LORELEI ; 76 CHECKED
 
-	trainerclass AGATHA ; 77
+	trainerclass AGATHA ; 77 CHECKED
 
-	trainerclass STEVEN ; 78
+	trainerclass STEVEN ; 78 CHECKED
 
-	trainerclass CYNTHIA ; 79
+	trainerclass CYNTHIA ; 79 CHECKED
 
-	trainerclass AMOS ; 7a INVER
+	trainerclass AMOS ; 7a  ; CHECKED
+	const AMOS1_EASY
+	const AMOS1_NORMAL
+	const AMOS1_HARD
+	const AMOS2_EASY
+	const AMOS2_NORMAL
+	const AMOS2_HARD
 
-	trainerclass CHERYL ; 7b
+	trainerclass CHERYL ; 7b CHECKED
 
-	trainerclass RILEY ; 7c
+	trainerclass RILEY ; 7c CHECKED
 
-	trainerclass MARLEY ; 7e
+	trainerclass MARLEY ; 7e CHECKED
 
-	trainerclass MIRA ; 7f
+	trainerclass MIRA ; 7f CHECKED
 
-	trainerclass LANNA ; 80 anabel
+	trainerclass LANNA ; 80 CHECKED
 
-	trainerclass DARACH ; 81
+	trainerclass DARACH ; 81 CHECKED 
 
-	trainerclass BOBESH ; 83 CANDELA
-	const BOBESH1
-	const BOBESH2
+	trainerclass BOBESH ; 83 CANDELA CHECKED
+	const BOBESH1_EASY
+	const BOBESH1_NORMAL
+	const BOBESH1_HARD
+	const BOBESH2_EASY
+	const BOBESH2_NORMAL
+	const BOBESH2_HARD
 
-	trainerclass ADRINNA ; 84 BLANCHE
-	const ADRINNA1
-	const ADRINNA2
-	const ADRINNA3
+	trainerclass ADRINNA ; 84 BLANCHE CHECKED
+	const ADRINNA1_EASY
+	const ADRINNA1_NORMAL
+	const ADRINNA1_HARD
+	const ADRINNA2_EASY
+	const ADRINNA2_NORMAL
+	const ADRINNA2_HARD
+	const ADRINNA3_EASY
+	const ADRINNA3_NORMAL
+	const ADRINNA3_HARD
 
-	trainerclass BARBEAU ; 85 SPARK_T
+	trainerclass BARBEAU ; 85 SPARK_T CHECKED
+	const REMY1_EASY
+	const REMY1_NORMAL
+	const REMY1_HARD
+	const REMY2_EASY
+	const REMY2_NORMAL
+	const REMY2_HARD
 
-	trainerclass FLANNERY ; 86
+	trainerclass FLANNERY ; 86 CHECKED
 
-	trainerclass KANNA ; 87
+	trainerclass KANNA ; 87 CHECKED
+	const KANNA_EASY
+	const KANNA_NORMAL
+	const KANNA_HARD
 
-	trainerclass SKYLA ; 88
+	trainerclass SKYLA ; 88 CHECKED
 
-	trainerclass VALERIE ; 89
+	trainerclass VALERIE ; 89 CHECKED
 
-	trainerclass KUKUI ; 8a
+	trainerclass KUKUI ; 8a checked 
 
-	trainerclass VICTOR  ; 8b
+	trainerclass VICTOR  ; 8b checked
 
-	trainerclass BILL_T ; 8c
+	trainerclass BILL_T ; 8c checked
 
-	trainerclass TAMMY ; 8d
+	trainerclass TAMMY ; 8d CHECKED
+	const TAMMY_EASY
+	const TAMMY_NORMAL
+	const TAMMY_HARD 
 
-	trainerclass SILVER ; 8e
+	trainerclass SILVER ; 8e CHECKED 
+	const SILVER_EASY
+	const SILVER_NORMAL
+	const SILVER_HARD 
 
-	trainerclass IMAKUNI ; 8f
+	trainerclass IMAKUNI ; 8f checked 
 
-	trainerclass KENSEY ; 90 lawrence
-	const KENSEY1
-	const KENSEY2
+	trainerclass KENSEY ; 90 CHECKED 
+	const KENSEY1_EASY
+	const KENSEY1_NORMAL
+	const KENSEY1_HARD
+	const KENSEY2_EASY
+	const KENSEY2_NORMAL
+	const KENSEY2_HARD
 
-	trainerclass REI ; 91
+	trainerclass REI ; 91 checked 
 
 NUM_TRAINER_CLASSES EQU __trainer_class__ - 1
 
