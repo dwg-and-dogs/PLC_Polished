@@ -67,7 +67,7 @@ VioletMart:
 	db SILVER_LEAF
 	db -1
 
-AzaleaMart: ;updated
+AzaleaMart: ;
 	db 9 ; # items
 	db RARE_CANDY
 	db MAX_REPEL
@@ -82,8 +82,8 @@ AzaleaMart: ;updated
 
 Goldenrod2FMart1:
 	db 10 ; # items
-	db MAX_REPEL
 	db RARE_CANDY
+	db MAX_REPEL
 	db SUPER_POTION
 	db ANTIDOTE
 	db PARALYZEHEAL

@@ -4638,6 +4638,12 @@ _ItemOakWarningText::
 	cont "time to use that!"
 	prompt
 
+SECTION "_ItemOakWarningTextExpert", ROMX
+_ItemOakWarningTextExpert::
+	text "Experts don't take"
+	line "shortcuts!"
+	prompt
+
 SECTION "_ItemWontHaveEffectText", ROMX
 _ItemWontHaveEffectText::
 	text "It won't have any"

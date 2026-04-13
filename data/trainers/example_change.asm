@@ -1,0 +1,45 @@
+	; RIVAL1 1 ; shrine
+	db "<RIVAL>@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
+if DEF(NORMALMODE)
+	; party
+	db 10, GROWLITHE, NO_ITEM, 0
+	db 11, MURKROW, NO_ITEM, 0
+	db 12, ROWLET, NO_ITEM, 0
+else ; hard 
+	; party 
+	db 10, GROWLITHE, NO_ITEM, 16
+	db 11, MURKROW, NO_ITEM, 16
+	db 12, ROWLET, ORAN_BERRY, 16
+endc
+	db -1 ; end
+	
+	
+	
+; new version 
+	; RIVAL1 1 EASY; shrine
+	db "<RIVAL>@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
+	; party
+	db 10, GROWLITHE, NO_ITEM, 0
+	db 11, MURKROW, NO_ITEM, 0
+	db 12, ROWLET, NO_ITEM, 0
+	db -1 
+
+	; RIVAL1 1 STANDARD; shrine
+	db "<RIVAL>@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
+	; party
+	db 10, GROWLITHE, NO_ITEM, 16
+	db 11, MURKROW, NO_ITEM, 16
+	db 12, ROWLET, ORAN_BERRY, 16
+	db -1 ; end
+
+	; RIVAL1 1 HARD; shrine
+	db "<RIVAL>@"
+	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS
+	; party
+	db 10, GROWLITHE, NO_ITEM, 16
+	db 11, MURKROW, NO_ITEM, 16
+	db 12, ROWLET, ORAN_BERRY, 16
+	db -1 ; end

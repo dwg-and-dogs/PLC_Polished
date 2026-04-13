@@ -991,6 +991,12 @@ GetEVRelativePointer:
 	ret
 
 RareCandy:
+
+	ld a, [wInitialOptions2]
+	and DIFFICULTY_MASK
+	cp DIFFICULTY_HARD
+	jp z, IsntTheTimeMessage
+
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	call UseItem_SelectMon
 	jmp c, ItemNotUsed_ExitMenu
@@ -2570,6 +2576,10 @@ IsntTheTimeMessage:
 	ld hl, IsntTheTimeText
 	jr CantUseItemMessage
 
+IsntForExpertsMessage:
+	ld hl, IsntForExpertsText
+	jr CantUseItemMessage
+
 WontHaveAnyEffectMessage:
 	ld hl, WontHaveAnyEffectText
 	; fallthrough
@@ -2600,6 +2610,10 @@ AlreadyInThatBallText:
 IsntTheTimeText:
 	; OAK:  ! This isn't the time to use that!
 	text_far _ItemOakWarningText
+	text_end
+
+IsntForExpertsText:
+	text_far _ItemOakWarningTextExpert 
 	text_end
 
 WontHaveAnyEffectText:

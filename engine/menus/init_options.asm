@@ -421,7 +421,7 @@ EasyString:
 NormalString:
 	db "Normal@"
 HardString:
-	db "Hard  @"
+	db "Expert@"
 
 InitialOptionsControl:
 	ld hl, wJumptableIndex
