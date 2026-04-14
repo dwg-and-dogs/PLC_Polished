@@ -65,7 +65,7 @@ FalknerGroup:
 		db AERIAL_ACE, MUD_SLAP, ROOST, HURRICANE
 	db 30, GLIGAR, NO_ITEM, FAKE_PERFECT_DVS,"Stratofor@"
 		db TOXIC, AERIAL_ACE, BULLDOZE, NO_MOVE
-	db -1
+	db -1 ; end 
 
 	; FALKNER standard  
 	db "Falkner@"
@@ -166,7 +166,7 @@ WhitneyGroup:
 		db ATTRACT, REST, BODY_SLAM, BULLDOZE
 	db 29, MILTANK, NO_ITEM, DVS_HP_PSYCHIC, "UddrDefeat@"
 		db ROLLOUT, CHARM, FRESH_SNACK, BODY_SLAM
-	db -1 
+	db -1 ; end 
 
 	; WHITNEY normal 
 	db "Whitney@"
@@ -219,7 +219,7 @@ MortyGroup:
 		db ZEN_HEADBUTT, DOUBLE_EDGE, AGILITY, DOUBLE_KICK	
 	db 49, GENGAR, NO_ITEM,  DVS_HP_DARK,"Jung-Gar@"
 		db HEX, HYPNOSIS, SHADOW_BALL, DREAM_EATER
-	db -1 
+	db -1  ; end 
 	
 	; MORTY
 	db "Morty@"
@@ -824,7 +824,7 @@ KurtFinalGroup:
 		db ROCK_SLIDE, X_SCISSOR, QUICK_ATTACK, NO_MOVE
 	db 60, CELEBI, LEFTOVERS, FAKE_PERFECT_DVS, "@" ; no nickname?
 		db CALM_MIND, PSYCHIC_M, ENERGY_BALL, RECOVER
-	db -1 
+	db -1  ; end 
 
 
 	; KURT ; TIN TOWER, final battle 
@@ -898,7 +898,7 @@ SamsaraGroup:
 		db HI_JUMP_KICK, U_TURN, STOMP, NO_MOVE
 	db 36, TYPHLOSION, NO_ITEM, FAKE_PERFECT_DVS, ABILITY_1 | NAT_NEUTRAL, FEMALE | HISUIAN_FORM,  "Charon@"
 		db CALM_MIND, SHADOW_BALL, SWIFT, NO_MOVE
-	db -1 
+	db -1  ; end 
 
 	; Samsara renamed to vespera , attempted to copy the form of karen 
 	db "Sybil@"
@@ -1003,7 +1003,7 @@ HollisGroup:
 		db SCARY_FACE, POISON_STING, BUG_BITE, BATON_PASS
 	db 16, KLEAVOR, NO_ITEM,FAKE_PERFECT_DVS,  "Logsidian@"
 		db CUT, FOCUS_ENERGY, AGILITY, LEER
-	db -1 
+	db -1  ; end 
 
 	; Hollis 
 	db "Silas@"
@@ -1045,7 +1045,7 @@ HollisGroup:
 		db HYPNOSIS, DREAM_EATER, GIGA_DRAIN, SCARY_FACE
 	db 48, KLEAVOR, SILVERPOWDER, FAKE_PERFECT_DVS, "Logsidian@"
 		db ROCK_SLIDE, AGILITY, X_SCISSOR, NO_MOVE
-	db -1 
+	db -1  ; end 
 	
 	; Hollis  at the redoubt 
 	db "Silas@"
@@ -5564,7 +5564,7 @@ RuinManiacGroup:
 		db ROCK_SMASH, SCARY_FACE, SCREECH, NO_MOVE
 	db 12, SHIELDON
 		db MIRROR_COAT, TACKLE, SCREECH, ROCK_SMASH
-	db -1
+	db -1 ; end 
 	
 	db "Petry@"
 	db TRAINERTYPE_MOVES
@@ -7326,86 +7326,6 @@ SailorGroup:
 	db -1 ; end
 
 ; ================
-
-	; SAILOR
-	db "Jeff@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 46, FURRET
-	db 46, FURRET
-	db -1 ; end
-
-; ================
-
-	; SAILOR
-	db "Garrett@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 48, FERALIGATR
-	db -1 ; end
-
-; ================
-
-	; SAILOR
-	db "Kenneth@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 44, MACHOP
-	db 45, MACHOKE
-	db 46, POLIWRATH
-	db 45, MACHOKE
-	db -1 ; end
-
-; ================
-
-	; SAILOR
-	db "Stanley@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 45, MACHOP
-	db 48, MACHOKE
-	db 44, TOTODILE
-	db -1 ; end
-
-; ================
-
-	; SAILOR
-	db "Harry@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 20, WOOPER
-	db -1 ; end
-
-; ================
-
-	; SAILOR
-	db "Parker@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 56, SEADRA
-	db 57, SEADRA
-	db -1 ; end
-
-; ================
-
-	; SAILOR
-	db "Eddie@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 59, AZUMARILL
-	db -1 ; end
-
-; ================
-
-	; SAILOR
-	db "Harvey@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 20, MACHOP
-	db 22, MACHOP
-	db -1 ; end
-
-; ================
 ; ================================
 
 SwimmerMGroup: ; scavengers 
@@ -8448,19 +8368,17 @@ EngineerGroup:
 	db "Camden@"
 	db TRAINERTYPE_MOVES ; HARD ILEX FOREST 
 	; party
-	db 8, SCIZOR ;tried lv 10, way too hard
-		db CUT, LEER, AGILITY, BUG_BITE
+	db 8, SCIZOR 
+		db CUT, LEER, QUICK_ATTACK, FOCUS_ENERGY
 	db -1 ; end
 
 ; ================
 
-	; ENGINEER ; LIGHTHOUSE 1F 
+	; ENGINEER ; LIGHTHOUSE 1F  ; unused 
 	db "Bernie@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 54, MAGNEMITE
-	db 56, MAGNETON
-	db 54, MAGNEMITE
+	db 5, MAGNEMITE
 	db -1 ; end
 
 ; ================
@@ -9114,7 +9032,7 @@ CooltrainerFGroup:
 		db SANDSTORM, DIG, NO_MOVE, NO_MOVE
 	db 18, GLIGAR, NO_ITEM, "Scorpius@"
 		db SANDSTORM, DIG, POISON_STING, NO_MOVE
-	db -1 ;
+	db -1 ; end 
 
 	; CooltrainerF NORMAL 
 	db "Beth@"
@@ -9722,7 +9640,7 @@ AmosGroup:
 		db AQUA_TAIL, SLASH, HEADBUTT, NO_MOVE
 	db 32, GALLADE, NO_ITEM,FAKE_PERFECT_DVS,  "Oathkeeper@"
 		db PSYBEAM, KARATE_CHOP, NO_MOVE, NO_MOVE
-	db -1 
+	db -1  ; end 
 
 	; Amos in the emperor's garden
 	db "Amos@"
@@ -9772,7 +9690,7 @@ AmosGroup:
 		db SLASH, CRUNCH, WATERFALL, NO_MOVE
 	db 51, GALLADE, NO_ITEM,FAKE_PERFECT_DVS, ABILITY_1 | NAT_NEUTRAL, MALE,  "Oathkeeper@"
 		db ZEN_HEADBUTT, HI_JUMP_KICK, AGILITY, NO_MOVE
-	db -1
+	db -1 ; end 
 
 	; Amos at rebels redoubt
 	db "Amos@"
@@ -9917,7 +9835,7 @@ BobeshGroup:
 		db EMBER, BUBBLE_BEAM, SMOKESCREEN, WRAP
 	db 24, FLAREON, NO_ITEM,DVS_HP_FIRE, "Empyre@"
 		db SUNNY_DAY, FLAME_CHARGE, ROCK_SMASH, EMBER
-	db -1
+	db -1 ; end 
 	
 	; Bobesh stadium
 	db "Tyrus@"
@@ -9963,7 +9881,7 @@ BobeshGroup:
 		db BODY_SLAM, EXTREMESPEED, FLAMETHROWER, ROCK_SLIDE
 	db 55, FLAREON, NO_ITEM, DVS_HP_FIRE, ABILITY_1 | NAT_NEUTRAL, MALE, "Empyre@"
 		db FLARE_BLITZ, FLAME_CHARGE, HEADBUTT, DIG
-	db -1 
+	db -1  ; end 
 
 	; Bobesh e4
 	db "Tyrus@"
@@ -10020,7 +9938,7 @@ AdrinnaGroup:
 		db ICE_SHARD, PURSUIT, QUICK_ATTACK, NO_MOVE
 	db 30, JOLTEON, NO_ITEM,  DVS_HP_ELECTRIC, "Indrage@" ; indra plus rage 
 		db SPARK, DOUBLE_KICK, THUNDER_WAVE, NO_MOVE
-	db -1
+	db -1 ; end 
 	
 	; ADRINNA garden
 	db "Andrea@"
@@ -10066,7 +9984,7 @@ AdrinnaGroup:
 		db CRUNCH, SPARK, DOUBLE_EDGE, ROAR
 	db 53, JOLTEON, NO_ITEM, DVS_HP_ELECTRIC, "Indrage@"
 		db THUNDERBOLT, DOUBLE_KICK, SHADOW_BALL, QUICK_ATTACK
-	db -1 
+	db -1  ; end 
 
 	db "Andrea@" ; at the mine 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
@@ -10119,7 +10037,7 @@ AdrinnaGroup:
 		db CRUNCH, WILD_CHARGE, DRAGONBREATH, PLAY_ROUGH
 	db 57, JOLTEON, NO_ITEM, DVS_HP_ELECTRIC, "Indrage@"
 		db THUNDERBOLT, HYPER_BEAM, SHADOW_BALL, QUICK_ATTACK
-	db -1 
+	db -1  ; end 
 
 	; Adrinna TOWER ; DARK, STEEL, ELECTRIC, DRAGON
 	db "Andrea@"
@@ -10229,7 +10147,7 @@ BarbeauGroup:
 		db REST, DEFENSE_CURL, ROLLOUT, WRAP
 	db 50, LANTURN, NO_ITEM,  FAKE_PERFECT_DVS, "Unfathom@"
 		db SURF, THUNDERBOLT, REST, SLEEP_TALK
-	db -1 
+	db -1  ; end 
 	
 	; Barbeau_T
 	db "Remy@" ; at redoubt 
@@ -10301,7 +10219,7 @@ KannaGroup:
 		db AIR_SLASH, PSYCHIC_M, NIGHT_SHADE, NO_MOVE
 	db 48, FROSLASS, NO_ITEM,DVS_HP_GHOST,  "Blanc@" ; dead
 		db DESTINY_BOND, SHADOW_BALL, ICE_SHARD, ICE_BEAM
-	db -1
+	db -1 ; end 
 	
 	; Kanna
 	db "Petra@" 
@@ -10425,7 +10343,7 @@ TammyGroup:
 		db REVERSAL, NO_MOVE, NO_MOVE, NO_MOVE
 	db 13, FURRET, NO_ITEM, "Kitty@"
 		db HEADBUTT, NO_MOVE, NO_MOVE, NO_MOVE
-	db -1
+	db -1 ; end 
 
 	; Tammy
 	db "Ursula@"
@@ -10475,7 +10393,7 @@ SilverGroup:
 		db CALM_MIND, PSYCHIC_M, RECOVER, REFLECT
 	db 50, FERALIGATR, NO_ITEM, "StevIrwin@"
 		db EARTHQUAKE, WATERFALL, ICE_PUNCH, DRAGON_DANCE
-	db -1 
+	db -1  ; end 
 
 	; Silver
 	db "Silver@" ; done 
@@ -10550,7 +10468,7 @@ KenseyGroup:
 		db SLUDGE_BOMB, IRON_HEAD, PROTECT, NO_MOVE
 	db 40, VAPOREON, NO_ITEM, DVS_HP_STEEL, "Tidechaser@"
 		db SURF, REFLECT, ICE_BEAM, TOXIC
-	db -1 
+	db -1  ; end 
 
 	; Kensey
 	db "Nemo@" ; AT THE PORT 

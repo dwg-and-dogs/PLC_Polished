@@ -96,9 +96,12 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	trainerclass BRUNO ; d
 
 	trainerclass SANDRA ; e replaces karen
-	const SANDRA_EASY
-	const SANDRA_NORMAL
-	const SANDRA_HARD
+	const SANDRA1_EASY
+	const SANDRA1_NORMAL
+	const SANDRA1_HARD
+	const SANDRA2_EASY
+	const SANDRA2_NORMAL
+	const SANDRA2_HARD
 
 	trainerclass KURT_FINAL ; f replaces lance and champion 
 	const KURT_FINAL_EASY
@@ -121,9 +124,13 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	trainerclass SABRINA ; 15
 
 	trainerclass HOLLIS ; 16 replaces blaine
-	const HOLLIS_EASY
-	const HOLLIS_NORMAL
-	const HOLLIS_HARD
+	const HOLLIS1_EASY
+	const HOLLIS1_NORMAL
+	const HOLLIS1_HARD
+	const HOLLIS2_EASY
+	const HOLLIS2_NORMAL
+	const HOLLIS2_HARD
+
 
 	trainerclass BLUE ; 17
 
@@ -134,6 +141,15 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	trainerclass RIVAL0 ; 1a
 
 	trainerclass RIVAL1 
+	const RIVAL1_1_EASY
+	const RIVAL1_1_NORMAL
+	const RIVAL1_1_HARD
+	const RIVAL1_2_EASY
+	const RIVAL1_2_NORMAL
+	const RIVAL1_2_HARD
+	const RIVAL1_3_EASY
+	const RIVAL1_3_NORMAL
+	const RIVAL1_3_HARD
 	const RIVAL1_4_EASY
 	const RIVAL1_4_NORMAL
 	const RIVAL1_4_HARD
@@ -829,11 +845,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const MARINA
 
 	trainerclass BURGLAR ; 4e
-	const DUNCAN
-	const ORSON
-	const COREY
-	const PETE
-	const LOUIS
+
 
 	trainerclass PI ; 4f
 	const LOOKER
