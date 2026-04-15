@@ -5255,7 +5255,6 @@ ZoruaEvosAttacks:
 	db 36, SHADOW_BALL
 	db 44, NASTY_PLOT
 	db 48, EXTRASENSORY
-	db 55, EXTRASENSORY
 	db 0 ; no more level-up moves
 
 ZoroarkEvosAttacks: ; fought at Lv 30 

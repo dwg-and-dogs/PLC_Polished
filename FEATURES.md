@@ -7,36 +7,20 @@ Many of these changes were made to Polished Crystal 3.0.0.
 ## Custom Features to Inheritance
 
 * New region: Historic Johto
-* Custom Pokédex of 254 includes Sinnoh and Hisui Pokémon, including 2 fakemon: Noctowl and Minsir 
+* Custom Pokédex of 254 includes Sinnoh and Hisui Pokémon
 * New apricorn system to craft new Pokéballs
+* "Hidden Palette" system where NPCs can adjust your pokemon DVs to take on unique palette and grant the corresponding hidden power. 
 * Emphasis on overworld puzzles exploiting time travel mechanic 
 * "Trick House" in historic Ilex Forest
 * Two possible endings
-
-## Pokémon
-
-* The entire Pokédex can be caught in one game. 
-* See FAQ for unique evolutions. 
+* Three difficulty modes: Easy, where enemies have no EVs or items; Normal, which is a tough but fair challenge; and Expert, where bosses have full teams of 6 with coverage moves and even higher EVs. 
+* The entire dex can be caught in one game.
+* Debug Room that grants you items, a random Pokemon of any given type, or all Pokemon so you can play how you want to. 
 
 ## Moves
 
 * Learnsets have been updated close to Gen VI, with missing moves replaced by similar, egg, TM, or event-exclusive moves. See data/pokemon/evos_attacks or data/pokemon/base_stats/<name> for level-up and TMHM learnsets.
 * HM moves do not require move deleter to overwrite.
-
-## Graphics Mechanics
-
-* Pokemon with the highest possible DVs for each hidden power type will take on a unique sprite palette. There are six NPCs who can change the DVs of the first Pokemon in your party: The Celebi Puzzle Word Room (unlocked when you solve the puzzle); National Park; Violet City; Whirl Islands; Tin Tower; and Lake of Rage. 
-
-
-
-## Custom Features to Inheritance
-
-* New region: Historic Johto
-* Custom Pokédex of 254 includes Sinnoh and Hisui Pokémon, including 2 fakemon: Noctowl and Minsir 
-* New apricorn system to craft new Pokéballs
-* Emphasis on overworld puzzles exploiting time travel mechanic 
-* "Trick House" in historic Ilex Forest
-* Two possible endings
 
 ## Notable features carried from Polished Crystal 3.0.0
 
@@ -232,13 +216,13 @@ Curated playlist: https://open.spotify.com/playlist/1yUCVhCgMnO10MIXvMtyh4?si=fc
 ### Pokémon
 
 * Many base stat changes, mostly based on [Drayano's Sacred Gold/Storm Silver](https://gbatemp.net/threads/pok%C3%A9mon-sacred-gold-storm-silver.327567/).
+; todo: check through the faithful 
 * Octillery is Water/Fire. 
 * Electivire is Electric/Fighting.
 * Mismagius is Ghost/Fairy.
 * Meganium is Grass/Fairy.
 * Ninetales is Fire/Psychic. (Inheritance exclusive)
 * Sunflora is Grass/Fire. (Inheritance exclusive)
-* Vileplume is Grass/Dark.  (Inheritance exclusive)
 * Lugia has Drizzle ability.  (Inheritance exclusive)
 
 ### Moves
@@ -249,7 +233,7 @@ Curated playlist: https://open.spotify.com/playlist/1yUCVhCgMnO10MIXvMtyh4?si=fc
 * Strength is 90 power fighting-type. 
 * Rock Smash has 75 power.
 * Fire Spin has 90% accuracy. 
-* Whirlpool is Psychic-type Bulldoze and can be learned by most Water, Psychic, Ghost, and Fairy types. 
+* Whirlpool is now called "Vortex". It is Psychic-type Bulldoze and can be learned by most Water, Psychic, Ghost, and Fairy types. 
 * Hail boosts Defense of Ice-types by 50%.
 * Submission and Take Down have 90 power, 100% accuracy, and 15 PP to match Wild Charge.
 * Crabhammer and Octazooka have 95% accuracy.
