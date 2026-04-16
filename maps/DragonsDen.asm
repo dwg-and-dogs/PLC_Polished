@@ -126,7 +126,19 @@ ClairScript:
 	faceplayer
 	showtextfaceplayer .SeenText
 	winlosstext .BeatenText, 0
-	loadtrainer CLAIR, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer CLAIR, CLAIR_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer CLAIR, CLAIR_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer CLAIR, CLAIR_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CLAIR

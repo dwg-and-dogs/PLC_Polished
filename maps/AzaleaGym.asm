@@ -75,7 +75,17 @@ AzaleaGymBugsyScript:
 	iffalse_jumptextfaceplayer EndTextBugsy
 	showtextfaceplayer .SeenText
 	winlosstext .BeatenText, 0
-	loadtrainer BUGSY, 1
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer BUGSY, BUGSY_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer BUGSY, BUGSY_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer BUGSY, BUGSY_HARD
+.startbattle:	
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BUGSY

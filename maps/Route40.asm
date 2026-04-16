@@ -122,7 +122,19 @@ RazorScavengerScript: ; check route 31 script if not working
 	closetext
 	winlosstext .BeatenText, 0
 	setlasttalked ROUTE40_SCAVENGER
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
 	loadtrainer SWIMMERM, GEORGE
+	sjump .startbattle
+.easy:
+	loadtrainer SWIMMERM, GEORGE
+	sjump .startbattle
+.hard:
+	loadtrainer SWIMMERM, GEORGE_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SWIMMERM_GEORGE

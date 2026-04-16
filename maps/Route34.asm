@@ -121,7 +121,19 @@ Route34RichBoyIrvingScript:
 	closetext
 	winlosstext .BeatenText, 0
 	setlasttalked ROUTE34_RICH_BOY
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
 	loadtrainer RICH_BOY, IRVING
+	sjump .startbattle
+.easy:
+	loadtrainer RICH_BOY, IRVING
+	sjump .startbattle
+.hard:
+	loadtrainer RICH_BOY, IRVING_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_RICH_BOY_IRVING

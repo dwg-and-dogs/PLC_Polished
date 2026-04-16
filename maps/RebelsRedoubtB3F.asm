@@ -39,7 +39,19 @@ RedoubtHollisScript:
 	waitbutton
 	closetext
 	winlosstext HollisRedoubtText_Impressed, 0
-	loadtrainer HOLLIS, 2
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer HOLLIS, HOLLIS2_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer HOLLIS, HOLLIS2_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer HOLLIS, HOLLIS2_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 .FightDone:
@@ -107,7 +119,19 @@ RedoubtSandraScript:
 	waitbutton
 	closetext
 	winlosstext SandraRedoubtText_Impressed, 0
-	loadtrainer SANDRA, 2
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer SANDRA, SANDRA2_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer SANDRA, SANDRA2_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer SANDRA, SANDRA2_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 .FightDone:
@@ -186,7 +210,19 @@ RedoubtBarbeauScript:
 	waitbutton
 	closetext
 	winlosstext BarbeauRedoubtText_Impressed, 0
-	loadtrainer BARBEAU, 2
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer BARBEAU, REMY2_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer BARBEAU, REMY2_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer BARBEAU, REMY2_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 .FightDone:

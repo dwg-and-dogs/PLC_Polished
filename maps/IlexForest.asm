@@ -304,7 +304,19 @@ IlexForestKurtEngineerScript:
 	clearevent EVENT_LOGGERS_ILEX_FOREST
 	winlosstext CamdenWinText, 0
 	setlasttalked ILEX_FOREST_CAMDEN
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
 	loadtrainer ENGINEER, CAMDEN
+	sjump .startbattle
+.easy:
+	loadtrainer ENGINEER, CAMDEN
+	sjump .startbattle
+.hard:
+	loadtrainer ENGINEER, CAMDEN_HARD
+.startbattle:	
+	; END
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

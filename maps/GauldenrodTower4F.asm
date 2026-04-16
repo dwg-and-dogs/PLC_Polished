@@ -37,7 +37,19 @@ GauldenrodTower4FSandraScript:
 	waitbutton
 	closetext
 	winlosstext SandraWinText, 0
-	loadtrainer SANDRA, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer SANDRA, SANDRA1_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer SANDRA, SANDRA1_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer SANDRA, SANDRA1_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	disappear GAULDENRODTOWER4F_CLEFAIRY

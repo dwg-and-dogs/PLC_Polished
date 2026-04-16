@@ -40,7 +40,19 @@ WhitneyScriptRadioTower5F:
 	promptbutton
 	setevent EVENT_RADIO_TOWER_KURT2
     winlosstext WhitneyBeatenText, 0
-    loadtrainer WHITNEY, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer WHITNEY, WHITNEY_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer WHITNEY, WHITNEY_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer WHITNEY, WHITNEY_HARD
+.startbattle:	
+	; END 
     startbattle
     reloadmapafterbattle
 	opentext

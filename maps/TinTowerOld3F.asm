@@ -327,7 +327,19 @@ TinTower3FSamsaraScript:
 	waitbutton
 	closetext
 	winlosstext SamsaraWinLossText, 0
-	loadtrainer SAMSARA, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer SAMSARA, SAMSARA_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer SAMSARA, SAMSARA_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer SAMSARA, SAMSARA_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SAMSARA

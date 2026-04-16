@@ -14,8 +14,8 @@ OlivineGym_MapScriptHeader:
 
 	def_object_events
 	pokemon_event  4, 13, STEELIX, -1, -1, PAL_NPC_RED, JasmineSteelixText, EVENT_JASMINE_GYM
-	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, EVENT_JASMINE_GYM ; NOT HERE UNTIL AFTER BEATING CHUCK 
-	object_event  4,  13, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScriptOlivine, EVENT_BEAT_CHUCK 
+	object_event  5,  3, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineGymJasmineScript, EVENT_JASMINE_GYM ; NOT HERE UNTIL AFTER BEATING JASMINE 
+	object_event  4,  13, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PryceScriptOlivine, EVENT_BEAT_JASMINE 
 
 JasmineSteelixText:
 	text "ShinyHulud:"
@@ -53,7 +53,19 @@ OlivineGymJasmineScript:
 	waitbutton
 	closetext
 	winlosstext Jasmine_BetterTrainer, 0
-	loadtrainer JASMINE, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer JASMINE, JASMINE_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer JASMINE, JASMINE_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer JASMINE, JASMINE_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JASMINE

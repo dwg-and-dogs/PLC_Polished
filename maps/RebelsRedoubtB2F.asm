@@ -187,7 +187,19 @@ RedoubtAmosScript:
 	waitbutton
 	closetext
 	winlosstext AmosText_Impressed, 0
-	loadtrainer AMOS, 2
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer AMOS, AMOS2_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer AMOS, AMOS2_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer AMOS, AMOS2_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	opentext

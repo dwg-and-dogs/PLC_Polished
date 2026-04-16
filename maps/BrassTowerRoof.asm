@@ -70,8 +70,19 @@ BrassTowerRoofScript:
 ;	applyonemovement PLAYER, step_down
 ; BATTLE MEJIMI 
 	winlosstext TowerRoofMejimiText1_8, 0
-	loadtrainer MEJIMI, 1
-	startbattle
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer MEJIMI, MEJIMI_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer MEJIMI, MEJIMI_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer MEJIMI, MEJIMI_HARD
+.startbattle:	
+	; END	startbattle
 	ifequal $1, .Continue
 .Continue:
 	reloadmapafterbattle
@@ -329,7 +340,19 @@ AcceptedAdrinnaRoofScript:
 	setevent EVENT_YES_ADRINNA_BATTLE_MEJIMI 
 ; BATTLE MEJIMI 
 	winlosstext TowerRoofMejimiText2_8, 0
-	loadtrainer MEJIMI, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy2
+	ifequal DIFFICULTY_HARD, .hard2
+	loadtrainer MEJIMI, MEJIMI_NORMAL
+	sjump .startbattle2
+.easy2:
+	loadtrainer MEJIMI, MEJIMI_EASY
+	sjump .startbattle2
+.hard2:
+	loadtrainer MEJIMI, MEJIMI_HARD
+.startbattle2:	
+	; END
 	startbattle
 	ifequal $1, .Continue
 .Continue:
@@ -364,7 +387,19 @@ AcceptedAdrinnaRoofScript:
 ;	setevent EVENT_YES_ADRINNA_BATTLE_KURT
 ; BATTLE MEJIMI 
 	winlosstext TowerRoofText2_16, 0
-	loadtrainer KURT_FINAL, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer KURT_FINAL, KURT_FINAL_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer KURT_FINAL, KURT_FINAL_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer KURT_FINAL, KURT_FINAL_HARD
+.startbattle:	
+	; END
 	startbattle
 	ifequal $1, .Continue2
 .Continue2:

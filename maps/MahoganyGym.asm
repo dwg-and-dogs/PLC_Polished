@@ -32,7 +32,19 @@ MahoganyGymPryceScript:
 	waitbutton
 	closetext
 	winlosstext PryceText_Impressed, 0
-	loadtrainer PRYCE, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer PRYCE, PRYCE_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer PRYCE, PRYCE_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer PRYCE, PRYCE_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_PRYCE

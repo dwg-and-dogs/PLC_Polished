@@ -55,7 +55,19 @@ AnarresTower3FEvent:
 	showtext SilasChallengesText
 	setevent EVENT_TAMMY_ANARRES_TOWER
 	winlosstext SilasBeatenText, 0
-	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer HOLLIS, HOLLIS1_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer HOLLIS, HOLLIS1_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer HOLLIS, HOLLIS1_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle ; is tammy still around? 
 	applyonemovement ANARRES_TOWER_HOLLIS, step_down

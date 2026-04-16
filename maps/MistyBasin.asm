@@ -120,7 +120,19 @@ TammyScript:
 	faceplayer
 	showtext TammySeenText
 	winlosstext TammyBeatenText, 0
-	loadtrainer TAMMY, 1 
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer TAMMY, TAMMY_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer TAMMY, TAMMY_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer TAMMY, TAMMY_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	opentext

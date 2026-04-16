@@ -32,43 +32,43 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 
 	trainerclass CAL ; 2 unused 
 
-	trainerclass FALKNER ; 3 checked 
+	trainerclass FALKNER ; 3 done  
 	const FALKNER_EASY
 	const FALKNER_NORMAL
 	const FALKNER_HARD
 	
 
-	trainerclass BUGSY ; 4
+	trainerclass BUGSY ; 4 DONE 
 	const BUGSY_EASY
 	const BUGSY_NORMAL
 	const BUGSY_HARD
 
-	trainerclass WHITNEY ; 5
+	trainerclass WHITNEY ; 5 DONE 
 	const WHITNEY_EASY
 	const WHITNEY_NORMAL
 	const WHITNEY_HARD
 
-	trainerclass MORTY ; 6
+	trainerclass MORTY ; 6 done 
 	const MORTY_EASY
 	const MORTY_NORMAL
 	const MORTY_HARD
 
-	trainerclass CHUCK ; 7
+	trainerclass CHUCK ; 7 done
 	const CHUCK_EASY
 	const CHUCK_NORMAL
 	const CHUCK_HARD
 
-	trainerclass JASMINE ; 8
+	trainerclass JASMINE ; 8 done 
 	const JASMINE_EASY
 	const JASMINE_NORMAL
 	const JASMINE_HARD
 
-	trainerclass PRYCE ; 9
+	trainerclass PRYCE ; 9 done
 	const PRYCE_EASY
 	const PRYCE_NORMAL
 	const PRYCE_HARD
 
-	trainerclass CLAIR ; a
+	trainerclass CLAIR ; a DONE 
 	const CLAIR_EASY
 	const CLAIR_NORMAL
 	const CLAIR_HARD
@@ -88,29 +88,29 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const KURT12 ; whispering way , nidoking nidoqueen yanmega ursaring snorlax lv 46 
 	const KURT13 ; TOP OF TIN TOWER , in the bell tower, high exp yield pokemon 
 
-	trainerclass MEJIMI ; 93
+	trainerclass MEJIMI ; 93 DONE 
 	const MEJIMI_EASY
 	const MEJIMI_NORMAL
 	const MEJIMI_HARD
 
 	trainerclass BRUNO ; d
 
-	trainerclass SANDRA ; e replaces karen
+	trainerclass SANDRA ; e replaces karen DONE
 	const SANDRA1_EASY
 	const SANDRA1_NORMAL
 	const SANDRA1_HARD
-	const SANDRA2_EASY
+	const SANDRA2_EASY ; DONE 2
 	const SANDRA2_NORMAL
 	const SANDRA2_HARD
 
-	trainerclass KURT_FINAL ; f replaces lance and champion 
+	trainerclass KURT_FINAL ; f DONE 
 	const KURT_FINAL_EASY
 	const KURT_FINAL_NORMAL
 	const KURT_FINAL_HARD
 
 	trainerclass BROCK ; 10
 
-	trainerclass SAMSARA ; 11 replaces misty
+	trainerclass SAMSARA ; 11 replaces misty DONE 
 	const SAMSARA_EASY
 	const SAMSARA_NORMAL
 	const SAMSARA_HARD
@@ -124,10 +124,10 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	trainerclass SABRINA ; 15
 
 	trainerclass HOLLIS ; 16 replaces blaine
-	const HOLLIS1_EASY
+	const HOLLIS1_EASY ;DONE
 	const HOLLIS1_NORMAL
 	const HOLLIS1_HARD
-	const HOLLIS2_EASY
+	const HOLLIS2_EASY; DONE 
 	const HOLLIS2_NORMAL
 	const HOLLIS2_HARD
 
@@ -557,7 +557,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const DYLAN
 	const KAI
 
-	trainerclass RUIN_MANIAC ; 34
+	trainerclass RUIN_MANIAC ; 34 TODO REWRITE HIS SCRIPT 
 	const JONES
 	const LELAND
 	const PETRY1_EASY 
@@ -691,7 +691,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 
 	trainerclass ELDER ; 42
 	const LI ; TODO ADD MORE LI 
-	const LI_HARD ; TODO ADD MORE LI 
+	const LI_HARD ; TODO, REVISE LI'S SCRIPT 
 	const GAKU ; STUDY 
 	const MASA ; PROPER
 	const KOJI ; PEACE 
@@ -731,7 +731,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const WINSTON
 	const GERALD
 	const IRVING
-	const IRVING_HARD
+	const IRVING_HARD ; DONE 
 
 	trainerclass HISUI_FEMALE ; 47
 	const DARLA
@@ -786,7 +786,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const KIRK
 	const MATHEW
 	const HAL
-	const GEORGE_HARD 
+	const GEORGE_HARD ; DONE 
 	const TUCKER
 	const RICK
 	const CAMERON
@@ -1000,7 +1000,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 
 
 	trainerclass COOLTRAINERF ; 66
-	const BETH1_EASY
+	const BETH1_EASY ; TODO WRITE HER SCRIPT 
 	const BETH2_NORMAL
 	const BETH3_HARD 
 	const REENA1
@@ -1082,10 +1082,10 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	trainerclass AMOS ; 7a  ; CHECKED
 	const AMOS1_EASY
 	const AMOS1_NORMAL
-	const AMOS1_HARD
+	const AMOS1_HARD ; DONE 
 	const AMOS2_EASY
 	const AMOS2_NORMAL
-	const AMOS2_HARD
+	const AMOS2_HARD ; DONE 
 
 	trainerclass CHERYL ; 7b CHECKED
 
@@ -1111,7 +1111,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	trainerclass ADRINNA ; 84 BLANCHE CHECKED
 	const ADRINNA1_EASY
 	const ADRINNA1_NORMAL
-	const ADRINNA1_HARD
+	const ADRINNA1_HARD ; DONE 
 	const ADRINNA2_EASY
 	const ADRINNA2_NORMAL
 	const ADRINNA2_HARD
@@ -1128,9 +1128,9 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const REMY2_NORMAL
 	const REMY2_HARD
 
-	trainerclass FLANNERY ; 86 CHECKED
+	trainerclass FLANNERY ; 86 
 
-	trainerclass KANNA ; 87 CHECKED
+	trainerclass KANNA ; 87 DONE 
 	const KANNA_EASY
 	const KANNA_NORMAL
 	const KANNA_HARD
@@ -1145,12 +1145,12 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 
 	trainerclass BILL_T ; 8c checked
 
-	trainerclass TAMMY ; 8d CHECKED
+	trainerclass TAMMY ; 8d DONE
 	const TAMMY_EASY
 	const TAMMY_NORMAL
 	const TAMMY_HARD 
 
-	trainerclass SILVER ; 8e CHECKED 
+	trainerclass SILVER ; 8e DONE  
 	const SILVER_EASY
 	const SILVER_NORMAL
 	const SILVER_HARD 

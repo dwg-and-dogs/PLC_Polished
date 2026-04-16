@@ -139,7 +139,20 @@ Lighthouse6FScene1:
 	writetext LighthouseChuckText3
 	waitbutton
 	winlosstext ChuckLossText, 0
-	loadtrainer CHUCK, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer CHUCK, CHUCK_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer CHUCK, CHUCK_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer CHUCK, CHUCK_HARD
+.startbattle:	
+	; END 
+
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHUCK

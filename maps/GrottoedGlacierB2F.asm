@@ -135,7 +135,19 @@ PickupGlacierScene:
 	applyonemovement PLAYER, step_up
 	winlosstext KannaWinText, 0
 	setlasttalked GLACIER_B2F_KANNA
-	loadtrainer KANNA, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer KANNA, KANNA_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer KANNA, KANNA_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer KANNA, KANNA_HARD
+.startbattle:	
+	; END
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

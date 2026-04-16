@@ -131,7 +131,20 @@ EcruteakGymMortyScript:
 	waitbutton
 	closetext
 	winlosstext MortyWinLossText, 0
-	loadtrainer MORTY, 1
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer MORTY, MORTY_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer MORTY, MORTY_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer MORTY, MORTY_HARD
+.startbattle:	
+	; END 
+
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MORTY_GYM

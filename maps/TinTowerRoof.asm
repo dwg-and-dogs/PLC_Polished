@@ -46,7 +46,19 @@ TinTowerRoofSilverScript:
 	showtext TinTowerRoofSilverIntroText
 	setlasttalked TINTOWERROOF_SILVER
 	winlosstext SilverWinText, 0
-	loadtrainer SILVER, 1 
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer SILVER, SILVER_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer SILVER, SILVER_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer SILVER, SILVER_HARD
+.startbattle:	
+	; END
 	startbattle
 	dontrestartmapmusic
 	reloadmap	
