@@ -16,7 +16,7 @@ GauldenrodUnderground_MapScriptHeader:
 	object_event  1, 15, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerAromaLadyDahlia, EVENT_GAULDENROD_TUNNELERS
 	object_event  2, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFirebreatherDick, EVENT_GAULDENROD_TUNNELERS
 	object_event  1, 20, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTamerBrett, EVENT_GAULDENROD_TUNNELERS
-	object_event  2, 25, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerCooltrainerFBeth, EVENT_GAULDENROD_TUNNELERS
+	object_event  2, 25, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 0, CooltrainerFBethScript, EVENT_GAULDENROD_TUNNELERS
 	object_event  1, 26, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundNPC5Script, EVENT_GAULDENROD_TUNNELERS
 	itemball_event 1,  7, BIG_ROOT, 1, EVENT_UNDERGROUND_BIG_ROOT
 	strengthboulder_event 4, 10
@@ -97,13 +97,32 @@ TamerBrettBeatenText:
 	line "pass was closed."
 	done
 
-GenericTrainerCooltrainerFBeth: ; TODO 
-	generictrainer COOLTRAINERF, BETH2_NORMAL, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerFBethSeenText, CooltrainerFBethBeatenText
-
-	text "You might teach"
-	line "the younger ones"
-	cont "a few things."
-	done
+; todo check  
+CooltrainerFBethScript:
+	faceplayer
+	checkevent EVENT_BEAT_COOLTRAINERF_BETH
+	iftrue_jumptext CooltrainerFBethBeatenText
+	opentext
+	writetext CooltrainerFBethSeenText
+	waitbutton
+	closetext
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer COOLTRAINERF, BETH2_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer COOLTRAINERF, BETH1_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer COOLTRAINERF, BETH3_HARD
+.startbattle:	
+	; END
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_COOLTRAINERF_BETH
+	end
 
 CooltrainerFBethSeenText:
 	text "I didn't hear"
@@ -119,6 +138,9 @@ CooltrainerFBethBeatenText:
 
 GauldenrodUndergroundNPC5Script:
 	opentext
+	checkevent EVENT_BEAT_COOLTRAINERF_BETH
+	iffalse_jumptext GauldenrodUndergroundNPC5_NoBethText
+	
 	writetext GauldenrodUndergroundNPC4Text
 	waitbutton
 	setevent EVENT_GAULDENROD_TUNNELERS
@@ -196,4 +218,13 @@ GauldenrodUndergroundNPC5LeaveMovement:
 	step_up
 	step_up	
 	step_end
+
+GauldenrodUndergroundNPC5_NoBethText:
+	text "Hm? You want to"
+	line "help Sandra?"
 	
+	para "Beat all the"
+	line "trainers here"
+	cont "first, we can't"
+	cont "have a straggler."
+	done

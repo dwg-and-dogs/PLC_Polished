@@ -177,7 +177,19 @@ PickupStadiumScene:
 	waitbutton
 	closetext
 	winlosstext BobeshWinText, 0
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
 	loadtrainer BOBESH, BOBESH1_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer BOBESH, BOBESH1_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer BOBESH, BOBESH1_HARD
+.startbattle:	
+	; END
 	startbattle
 	ifequal $1, .Continue2
 .Continue2:

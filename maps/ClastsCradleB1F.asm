@@ -528,7 +528,19 @@ Cradle_Scene3Pickup:
 	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
 	showtext CradleAdrinnaText3
 	winlosstext CradleAdrinnaText4, 0
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
 	loadtrainer ADRINNA, ADRINNA2_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer ADRINNA, ADRINNA2_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer ADRINNA, ADRINNA2_HARD
+.startbattle:	
+	; END
 	startbattle
 ;	ifequal $1, .Continue2
 ;.Continue2:

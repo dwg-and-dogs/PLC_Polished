@@ -916,8 +916,8 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const HOWARD
 	const DWG
 	const GOETH ; goethite 
-	const NOBEL ; tnt, dynamite
-	const INGSOL ; inventor of drill 
+	const NOBEL ;
+	const INGSOL ;  
 
 
 	trainerclass TEACHER ; 58
@@ -945,7 +945,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const REINA
 
 
-	trainerclass AROMA_LADY ; 5f CHECKED HERE DOWN 
+	trainerclass AROMA_LADY ; 5f 
 	const DAHLIA
 	const BRYONY
 	const HEATHER
@@ -1000,7 +1000,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 
 
 	trainerclass COOLTRAINERF ; 66
-	const BETH1_EASY ; TODO WRITE HER SCRIPT 
+	const BETH1_EASY ; done 
 	const BETH2_NORMAL
 	const BETH3_HARD 
 	const REENA1
@@ -1025,14 +1025,14 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	trainerclass ACE_DUO ; 67
 
 
-	trainerclass NOMAD_M ; MOVED  ; FORMERLY BUCK 
+	trainerclass NOMAD_M ; MOVED 
 	const NOMAD_M_JOEL
 	const NOMAD_M_GLENN
 	const NOMAD_M_DALE
 	const NOMAD_M_JACOB
 
 
-	trainerclass NOMAD_F ; MOVED  ; FORMERLY CAITLIN 
+	trainerclass NOMAD_F ; MOVED   
 	const NOMAD_F_REINA
 	const NOMAD_F_ALINA
 	const NOMAD_F_MARLENE
@@ -1102,11 +1102,11 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	trainerclass BOBESH ; 83 CANDELA CHECKED
 	const BOBESH1_EASY
 	const BOBESH1_NORMAL
-	const BOBESH1_HARD
+	const BOBESH1_HARD ; DONE 
 	const BOBESH2_EASY
 	const BOBESH2_NORMAL
 	const BOBESH2_HARD
-	const BOBESH2_HARD_POST
+	const BOBESH2_HARD_POST  
 
 	trainerclass ADRINNA ; 84 BLANCHE CHECKED
 	const ADRINNA1_EASY
@@ -1114,13 +1114,13 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const ADRINNA1_HARD ; DONE 
 	const ADRINNA2_EASY
 	const ADRINNA2_NORMAL
-	const ADRINNA2_HARD
+	const ADRINNA2_HARD ; DONE 
 	const ADRINNA3_EASY
 	const ADRINNA3_NORMAL
 	const ADRINNA3_HARD
-	const ADRINNA3_HARD_POST
+	const ADRINNA3_HARD_POST  
 
-	trainerclass BARBEAU ; 85 SPARK_T CHECKED
+	trainerclass BARBEAU ; 85 DONE 
 	const REMY1_EASY
 	const REMY1_NORMAL
 	const REMY1_HARD
@@ -1160,11 +1160,11 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	trainerclass KENSEY ; 90 CHECKED 
 	const KENSEY1_EASY
 	const KENSEY1_NORMAL
-	const KENSEY1_HARD
+	const KENSEY1_HARD ; DONE 
 	const KENSEY2_EASY
 	const KENSEY2_NORMAL
 	const KENSEY2_HARD
-	const KENSEY2_HARD_POST
+	const KENSEY2_HARD_POST  
 
 	trainerclass REI ; 91 checked 
 

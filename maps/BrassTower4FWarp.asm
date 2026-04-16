@@ -38,7 +38,25 @@ BrassTowerAdrinna:
 	waitbutton
 	closetext
 	winlosstext BeatenTextAdrinnaWarp, 0
-	loadtrainer ADRINNA, 3
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer ADRINNA, ADRINNA3_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer ADRINNA, ADRINNA3_EASY
+	sjump .startbattle
+.hard:
+	checkevent EVENT_AZALEA_KIMONO_GIRL ; todo check 
+	iffalse .hard2
+	loadtrainer ADRINNA, ADRINNA3_HARD
+	sjump .startbattle
+.hard2:
+	loadtrainer ADRINNA, ADRINNA3_HARD_POST
+.startbattle:	
+	; END
+
 	startbattle
 	reloadmapafterbattle
 	showtext AdrinnaAfterText

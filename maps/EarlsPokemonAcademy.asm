@@ -14,14 +14,21 @@ EarlsPokemonAcademy_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
+	object_event  3,  2, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, ElderLiScript, -1
 	object_event  5, 12, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, AcademyNPC1Text, -1
 	object_event  1, 10, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSageEdmond, -1
 	object_event  6,  8, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageTroy, -1
 	object_event  1,  6, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSageNeal, -1
-	object_event  3,  2, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerElderLi, -1
+	pokemon_event  2,  2, VICTREEBEL, -1, -1, PAL_NPC_GREEN, VictreebelText, EVENT_BEAT_ELDER_LI
 	object_event  6,  14, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AcademyKurtScript, -1
 
 	object_const_def
+	const ACADEMY_LI
+
+VictreebelText:
+	text "Dendron:"
+	line "Victreee!"
+	done
 
 AcademyNPC1Text:
 	text "Young Falkner saw"
@@ -110,9 +117,43 @@ SageNealBeatenText:
     text "Bottomed out…"
     done
 
+
+ElderLiScript: ; TODO CHECK THIS 
+	faceplayer
+	checkevent EVENT_BEAT_ELDER_LI
+	iftrue_jumptext ElderLiBeatenText
+	opentext
+	writetext ElderLiSeenText
+	waitbutton
+	closetext
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer ELDER, LI
+	sjump .startbattle
+.easy:
+	loadtrainer ELDER, LI
+	sjump .startbattle
+.hard:
+	loadtrainer ELDER, LI_HARD
+.startbattle:	
+	; END
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_ELDER_LI
+	opentext
+	writetext ElderLiAfterBattleText
+	waitbutton
+	closetext
+	applyonemovement ACADEMY_LI, step_right
+	turnobject ACADEMY_LI, LEFT 
+	end
+
 GenericTrainerElderLi:
     generictrainer ELDER, LI, EVENT_BEAT_ELDER_LI, ElderLiSeenText, ElderLiBeatenText
 
+ElderLiAfterBattleText:
     text "Our grass types"
     line "couldn't stand up"
     cont "to Falkner."

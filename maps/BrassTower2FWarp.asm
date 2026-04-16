@@ -29,7 +29,24 @@ BrassTowerBobesh:
 	iftrue_jumptextfaceplayer .AfterText
 	showtextfaceplayer .SeenText
 	winlosstext .BeatenText, 0
-	loadtrainer BOBESH, 2
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer BOBESH, BOBESH2_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer BOBESH, BOBESH2_EASY
+	sjump .startbattle
+.hard:
+	checkevent EVENT_AZALEA_KIMONO_GIRL
+	iffalse .hard2
+	loadtrainer BOBESH, BOBESH2_HARD
+	sjump .startbattle
+.hard2:
+	loadtrainer BOBESH, BOBESH2_HARD_POST
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	showtext .AfterText

@@ -29,7 +29,25 @@ BrassTowerKensey:
 	iftrue_jumptextfaceplayer .AfterText
 	showtextfaceplayer .SeenText
 	winlosstext .BeatenText, 0
-	loadtrainer KENSEY, 2
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer KENSEY, KENSEY2_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer KENSEY, KENSEY2_EASY
+	sjump .startbattle
+.hard:
+	checkevent EVENT_AZALEA_KIMONO_GIRL 
+	iffalse .hard2
+	loadtrainer KENSEY, KENSEY2_HARD
+	sjump .startbattle
+.hard2:
+	loadtrainer KENSEY, KENSEY2_HARD_POST
+.startbattle:	
+	; END
+
 	startbattle
 	reloadmapafterbattle
 	showtext .AfterText

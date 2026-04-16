@@ -158,7 +158,19 @@ PickupDocksScene:
 	turnobject LANDING_DOCKS_KURT, UP
 	applyonemovement LANDING_DOCKS_BARBEAU, step_down
 	winlosstext BarbeauBeatenText1, 0
-	loadtrainer BARBEAU, 1 
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer BARBEAU, REMY1_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer BARBEAU, REMY1_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer BARBEAU, REMY1_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	opentext
@@ -196,7 +208,19 @@ PickupDocksScene2:
 	turnobject PLAYER, UP
 	turnobject LANDING_DOCKS_KURT, UP
 	winlosstext KenseyBeaten1, 0
-	loadtrainer KENSEY, 1 
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer KENSEY, KENSEY1_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer KENSEY, KENSEY1_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer KENSEY, KENSEY1_HARD
+.startbattle:	
+	; END
 	startbattle
 	reloadmapafterbattle
 	special RestartMapMusic
