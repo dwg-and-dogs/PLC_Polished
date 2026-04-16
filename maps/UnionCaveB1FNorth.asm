@@ -65,8 +65,8 @@ FireBreatherOtisBeatenText:
 	line "were battling."
 	done
 
-GenericTrainerRuin_maniacPetry:
-	generictrainer RUIN_MANIAC, PETRY, EVENT_BEAT_RUIN_MANIAC_PETRY, RuinManiacPetrySeenText, RuinManiacPetryBeatenText
+GenericTrainerRuin_maniacPetry: ;todo revise to a script 
+	generictrainer RUIN_MANIAC, PETRY1_NORMAL, EVENT_BEAT_RUIN_MANIAC_PETRY, RuinManiacPetrySeenText, RuinManiacPetryBeatenText
 
 	text "Some group hara-"
 	line "ssed us last"

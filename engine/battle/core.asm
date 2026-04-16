@@ -8637,12 +8637,12 @@ AutomaticRainWhenOvercast:
 	call StdBattleTextbox
 	jmp EmptyBattleTextbox
 
-BoostGiovannisArmoredMewtwo:
+BoostGiovannisArmoredMewtwo: ; USED TO BE GIOVANNI... 
 	ld a, [wOtherTrainerClass]
-	cp GIOVANNI
+	cp MYSTICALMAN
 	ret nz
 	ld a, [wOtherTrainerID]
-	cp GIOVANNI1
+	cp EUSINE 
 	ret nz
 	call SetEnemyTurn
 	ld de, ANIM_SHARPEN

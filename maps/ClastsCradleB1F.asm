@@ -528,7 +528,7 @@ Cradle_Scene3Pickup:
 	showemote EMOTE_BOLT, CRADLE_ADRINNA_2, 30
 	showtext CradleAdrinnaText3
 	winlosstext CradleAdrinnaText4, 0
-	loadtrainer ADRINNA, ADRINNA2
+	loadtrainer ADRINNA, ADRINNA2_NORMAL
 	startbattle
 ;	ifequal $1, .Continue2
 ;.Continue2:

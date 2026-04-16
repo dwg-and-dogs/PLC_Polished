@@ -580,7 +580,7 @@ IlexForestCelebiEventScript:
 	iftrue .Rowlet
 	winlosstext IlexForestWinText, IlexForestLossText
 	setlasttalked ILEX_RIVAL
-	loadtrainer RIVAL1, RIVAL1_6 ; 
+	loadtrainer RIVAL1, RIVAL1_6_NORMAL ; 
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -589,7 +589,7 @@ IlexForestCelebiEventScript:
 .Oshawott:
 	winlosstext IlexForestWinText, IlexForestLossText
 	setlasttalked ILEX_RIVAL
-	loadtrainer RIVAL1, RIVAL1_4
+	loadtrainer RIVAL1, RIVAL1_4_NORMAL
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -598,7 +598,7 @@ IlexForestCelebiEventScript:
 .Rowlet:
 	winlosstext IlexForestWinText, IlexForestLossText
 	setlasttalked ILEX_RIVAL
-	loadtrainer RIVAL1, RIVAL1_5
+	loadtrainer RIVAL1, RIVAL1_5_NORMAL 
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

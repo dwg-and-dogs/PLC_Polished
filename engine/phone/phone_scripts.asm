@@ -567,7 +567,7 @@ GavenFoundRare:
 ; Beth
 
 BethPhoneScript1:
-	gettrainername COOLTRAINERF, BETH1, $0
+	gettrainername COOLTRAINERF, BETH1_EASY, $0
 	checkflag ENGINE_BETH_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd260
 	farscall PhoneScript_AnswerPhone_Female
@@ -586,7 +586,7 @@ UnknownScript_0xbd260:
 	farsjump BethBattleReminderScript
 
 BethPhoneScript2:
-	gettrainername COOLTRAINERF, BETH1, $0
+	gettrainername COOLTRAINERF, BETH1_EASY, $0
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_BETH_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd283

@@ -529,7 +529,7 @@ EmperorsGardenAdrinnaScene:
 	showtext EG_AdrinnaText1
 	applymovement EMPERORS_GARDEN_ADRINNA_4, EG_AdrinnaMove3
 	winlosstext AdrinnaWinText, AdrinnaLossText
-	loadtrainer ADRINNA, ADRINNA1 
+	loadtrainer ADRINNA, ADRINNA1_NORMAL 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
@@ -714,7 +714,7 @@ AmosGardenScript:
 	showemote EMOTE_SHOCK, EMPERORS_GARDEN_AMOS, 10
 	showtext AmosSuspectsYouText
 	winlosstext AmosWLText, AmosWLText
-	loadtrainer AMOS, 1 
+	loadtrainer AMOS, AMOS1_NORMAL ; TODO 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic

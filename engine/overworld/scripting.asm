@@ -268,6 +268,7 @@ ScriptCommandTable:
 	dw Script_italictypeface              ; cf	
 	dw Script_micrtypeface              ; cf		
 	dw Script_warphide    				; d0
+	dw Script_readdifficultymode		; d1 
 	assert_table_length NUM_EVENT_COMMANDS
 
 StartScript:
@@ -2701,3 +2702,9 @@ Script_warphide:
 	ld a, 1
 	ld [wMapStatus], a
 	jmp StopScript
+
+Script_readdifficultymode:
+	ld a, [wInitialOptions2]
+	and DIFFICULTY_MASK
+	ldh [hScriptVar], a
+	ret

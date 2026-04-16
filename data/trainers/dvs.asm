@@ -314,9 +314,9 @@ TrainerClassDVsAndPersonality_Hard:
 	db 100, $BB, $BB, $BB, ABILITY_1 | QUIRKY, MALE   ; bugsy
 	db 100, $CC, $CC, $CC, ABILITY_1 | QUIRKY, FEMALE ; whitney
 	db 150, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; morty
-	db 150, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; chuck
+	db 120, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; chuck
 	db 150, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; jasmine
-	db 120, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; pryce
+	db 125, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; pryce
 	db 150, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; clair
 	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; KURT
 	db 300, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; MEJIMI

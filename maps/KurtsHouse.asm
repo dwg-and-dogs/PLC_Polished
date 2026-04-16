@@ -925,7 +925,11 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
-;	givepoke TYPHLOSION, NO_FORM, 100, BRIGHTPOWDER
+	givepoke TYPHLOSION, NO_FORM, 100
+	loadmem wPartyMon1Moves+0, FLAMETHROWER
+	loadmem wPartyMon1Moves+1, EARTH_POWER
+	loadmem wPartyMon1Moves+2, STRENGTH
+	loadmem wPartyMon1Moves+3, THUNDERPUNCH
 	loadmem wPartyMon1EVs+0, 252
 	loadmem wPartyMon1EVs+1, 252
 	loadmem wPartyMon1EVs+2, 252
@@ -947,8 +951,8 @@ endr
 	loadmem wPartyMon1Stats+8, HIGH(999)
 	loadmem wPartyMon1Stats+9, LOW(999)
 	; hm 
-;	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
-;	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
+	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
+	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
 	loadmem wPartyMon2Moves+0, FLY
 	loadmem wPartyMon2Moves+1, SURF
 	loadmem wPartyMon2Moves+2, STRENGTH
@@ -968,7 +972,6 @@ endr
 	; fill pokedex
 	callasm FillPokedex
 	; intro events
-	verbosegivekeyitem CELEBI_CALL
-	closetext
+	warp SPROUT_TOWER_3F, 7, 2 
 	; debug only
 	end

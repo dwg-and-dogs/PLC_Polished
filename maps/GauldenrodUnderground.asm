@@ -97,8 +97,8 @@ TamerBrettBeatenText:
 	line "pass was closed."
 	done
 
-GenericTrainerCooltrainerFBeth:
-	generictrainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerFBethSeenText, CooltrainerFBethBeatenText
+GenericTrainerCooltrainerFBeth: ; TODO 
+	generictrainer COOLTRAINERF, BETH2_NORMAL, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerFBethSeenText, CooltrainerFBethBeatenText
 
 	text "You might teach"
 	line "the younger ones"

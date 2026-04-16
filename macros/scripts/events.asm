@@ -1348,4 +1348,9 @@ warphide: MACRO
 	db \3 ; y
 ENDM
 
+	const readdifficultymode_command
+readdifficultymode: MACRO
+	db readdifficultymode_command
+ENDM
+
 NUM_EVENT_COMMANDS EQU const_value

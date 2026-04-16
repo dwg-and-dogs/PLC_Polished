@@ -22,7 +22,7 @@ PhoneContacts:
 	phone TRAINER_NONE, PHONE_00,              N_A,                       %0000, UnusedPhoneScript,   %0000, UnusedPhoneScript
 	phone TRAINER_NONE, PHONE_00,              N_A,                       %0000, UnusedPhoneScript,   %0000, UnusedPhoneScript
 	phone COOLTRAINERM, GAVEN1,                N_A,                       %1111, GavenPhoneScript1,   %1111, GavenPhoneScript2
-	phone COOLTRAINERF, BETH1,                 N_A,                       %1111, BethPhoneScript1,    %1111, BethPhoneScript2
+	phone COOLTRAINERF, BETH1_EASY,                 N_A,                       %1111, BethPhoneScript1,    %1111, BethPhoneScript2
 	phone BIRD_KEEPER,  JOSE1,                 N_A,                       %1111, JosePhoneScript1,    %1111, JosePhoneScript2
 	phone COOLTRAINERF, REENA1,                N_A,                       %1111, ReenaPhoneScript1,   %1111, ReenaPhoneScript2
 	phone YOUNGSTER,    JOEY1,                 N_A,                       %1111, JoeyPhoneScript1,    %1111, JoeyPhoneScript2

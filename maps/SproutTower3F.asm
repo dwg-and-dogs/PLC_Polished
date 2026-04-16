@@ -93,10 +93,21 @@ VioletGymFalknerScript:
 	writetext FalknerIntroText
 	waitbutton
 	closetext
+
 	winlosstext FalknerWinLossText, 0
-	loadtrainer FALKNER, 1
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer FALKNER, FALKNER_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer FALKNER, FALKNER_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer FALKNER, FALKNER_HARD
+.startbattle:
 	startbattle
-	reloadmapafterbattle
+	reloadmapafterbattle	
 	setevent EVENT_BEAT_FALKNER
 	opentext
 	writetext ReceivedZephyrBadgeText

@@ -166,8 +166,8 @@ HikerTimothyBeatenText:
 	done
 
 
-GenericTrainerRuin_maniacGlynn:
-	generictrainer RUIN_MANIAC, GLYN, EVENT_BEAT_RUIN_MANIAC_GLYN, RuinManiacGlynnSeenText, RuinManiacGlynnBeatenText
+GenericTrainerRuin_maniacGlynn: ; todo revise to a script 
+	generictrainer RUIN_MANIAC, PETRY2_NORMAL, EVENT_BEAT_RUIN_MANIAC_GLYN, RuinManiacGlynnSeenText, RuinManiacGlynnBeatenText
 
 	text "Uff. Maybe I'm"
 	line "too old for it."
