@@ -195,8 +195,7 @@ EcruteakCityHikersText:
 	cont "travel is post-"
 	cont "poned."
 	done
-
-; todo 
+ 
 EcruteakCityPsyShopScript: ; 20000 
 	faceplayer
 	opentext

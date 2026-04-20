@@ -464,7 +464,6 @@ TapestryText3:
 	done
 
 	
-	; TODO 
 GenericTrainerHisuiFemale_Lorena:
 	generictrainer HISUI_FEMALE, LORENA, EVENT_BEAT_HISUI_FEMALE_LORENA, HisuiFemaleLorenaSeenText, HisuiFemaleLorenaBeatenText
 

@@ -1,4 +1,4 @@
-HallOfFame:: ;this stubs out all of the pokemon and just goes to the player. todo: set up a halloffame script in the overworld. 
+HallOfFame:: ;this stubs out all of the pokemon and just goes to the player.
 	call HallOfFame_FadeOutMusic
 	farcall InitDisplayForHallOfFame
 	ld a, [wStatusFlags]
@@ -96,7 +96,7 @@ AnimateHallOfFame:
 ;	cp EGG
 ;	jr z, .next_mon ; Skip eggs
 ;
-;	; TODO: Display Pokémon here
+;	; : Display Pokémon here
 ;	; For now, just skip with a short delay
 ;	ld c, 30
 ;	call DelayFrames

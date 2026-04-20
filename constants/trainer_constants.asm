@@ -690,8 +690,8 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const TAMIKO ; wc electric 
 
 	trainerclass ELDER ; 42
-	const LI ; TODO ADD MORE LI 
-	const LI_HARD ; TODO, REVISE LI'S SCRIPT 
+	const LI
+	const LI_HARD
 	const GAKU ; STUDY 
 	const MASA ; PROPER
 	const KOJI ; PEACE 

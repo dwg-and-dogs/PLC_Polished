@@ -29,7 +29,7 @@ VioletHisuiTraderScript:
 	checkitem SLOWPOKETAIL
 	iffalse .NoTail
 .SawTail:
-	writetext VioletHisuiTraderText ; Ah, someone with a slowpoke tail! todo 
+	writetext VioletHisuiTraderText ; Ah, someone with a slowpoke tail! 
 	setevent EVENT_VIOLET_TRADER_SAW_SLOWPOKETAIL
 	special PlaceMoneyTopRight
 	yesorno

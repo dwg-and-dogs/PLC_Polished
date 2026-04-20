@@ -845,7 +845,7 @@ SnoverEggMoves:
 	db STOMP
 	db $ff
 	
-DuskullEggMoves: ; TODO FROM HERE UP, CHECK GEN 4 OR EARLIEST LEARNSET 
+DuskullEggMoves: 
 	db PAIN_SPLIT
 	db DESTINY_BOND
 	db FEINT_ATTACK

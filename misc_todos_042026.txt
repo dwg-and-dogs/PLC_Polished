@@ -1,59 +1,8 @@
-C:\Users\dwg11\PLC_Polished\constants\pokemon_constants.asm:
-  Line 19: ; 			need todo add all the new pics front and back
-
-C:\Users\dwg11\PLC_Polished\constants\trainer_constants.asm:
-  Line 30: KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF NORMALMODERS
-  Line 693: const LI ; TODO ADD MORE LI
-  Line 694: const LI_HARD ; TODO, REVISE LI'S SCRIPT
-
-C:\Users\dwg11\PLC_Polished\data\maps\blocks.asm:
-  Line 696: INCBIN "maps/OldJohtoDorms.ablk.lz"
-
-C:\Users\dwg11\PLC_Polished\data\pokemon\egg_moves.asm:
-  Line 848: DuskullEggMoves: ; TODO FROM HERE UP, CHECK GEN 4 OR EARLIEST LEARNSET
-
-C:\Users\dwg11\PLC_Polished\data\pokemon\palettes.asm:
-  Line 1: PokemonPalettes: ; todo
-
-C:\Users\dwg11\PLC_Polished\data\pokemon\base_stats\girafarig.asm:
-  Line 27: ; tm/hm learnset ; TODO: REVISE TO ADD SOME DARK COVERAGE
-
-C:\Users\dwg11\PLC_Polished\data\pokemon\dex_entries\dex_entries_redo.txt:
-  Line 110: New: TODO
-  Line 531: New: TODO
-  Line 548: New: TODO
-  Line 580: New: todo
-  Line 597: New: TODO
-  Line 613: New: TODO eels?
-  Line 629: New: todo
-  Line 645: New: todo
-  Line 662: New: todo
-  Line 1408: New: TODO
-  Line 1424: New: TODO
-  Line 1485: --- 195.asm --- ; slowking: FIX TYPO todo
-  Line 3130: New: TODO
-
-C:\Users\dwg11\PLC_Polished\data\text\common.asm:
-  Line 1503: SECTION "_MomBankWhatDoYouWantToDoText", ROMX
-  Line 1504: _MomBankWhatDoYouWantToDoText::
-
-C:\Users\dwg11\PLC_Polished\engine\events\halloffame.asm:
-  Line 1: HallOfFame:: ;this stubs out all of the pokemon and just goes to the player. todo: set up a halloffame script in the overworld.
-  Line 99: ;	; TODO: Display Pokémon here
-
-C:\Users\dwg11\PLC_Polished\engine\events\mom.asm:
-  Line 88: ld hl, MomBankWhatDoYouWantToDoText
-  Line 590: MomBankWhatDoYouWantToDoText:
-  Line 592: text_far _MomBankWhatDoYouWantToDoText
-
-C:\Users\dwg11\PLC_Polished\gfx\pics.asm:
-  Line 1: INCLUDE "constants.asm" ; todo
-
 C:\Users\dwg11\PLC_Polished\maps\BrassTower4FWarp.asm:
-  Line 51: checkevent EVENT_AZALEA_KIMONO_GIRL ; todo check
+  Line 51: checkevent EVENT_AZALEA_KIMONO_GIRL ; todo check these 
 
 C:\Users\dwg11\PLC_Polished\maps\DayCare.asm:
-  Line 38: DayCareManScript_Inside: ; todo will need to check this
+  Line 38: DayCareManScript_Inside: ; todo will need to check th
   Line 53: DayCareLadyScript: ; todo check her
 
 C:\Users\dwg11\PLC_Polished\maps\DebugRoom.asm:
@@ -62,32 +11,19 @@ C:\Users\dwg11\PLC_Polished\maps\DebugRoom.asm:
 C:\Users\dwg11\PLC_Polished\maps\EarlsPokemonAcademy.asm:
   Line 121: ElderLiScript: ; TODO CHECK THIS
 
-C:\Users\dwg11\PLC_Polished\maps\EcruteakCity.asm:
-  Line 199: ; todo
+UnionCave scripts with Petry b1FN and b2f
 
 C:\Users\dwg11\PLC_Polished\maps\GauldenrodUnderground.asm:
   Line 100: ; todo check
 
-C:\Users\dwg11\PLC_Polished\maps\GoldenrodDeptStoreRoof.asm:
-  Line 132: ifequal $2, .DittoDoll
-  Line 150: .DittoDoll:
-  Line 157: writetext BoughtDittoDollText
-  Line 160: writetext DittoDollSentText
-  Line 309: BoughtDittoDollText:
-  Line 314: DittoDollSentText:
+C:\Users\dwg11\PLC_Polished\maps\SeafluxNexusB2F.asm:
+  Line 146: special RestartMapMusic ; todo need to check
+
 
 C:\Users\dwg11\PLC_Polished\maps\NationalPark.asm:
   Line 40: object_event 20, 29, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFSophie, -1; todo
   Line 41: object_event 10, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFFlo, -1; todo
 
-C:\Users\dwg11\PLC_Polished\maps\SeafluxNexusB2F.asm:
-  Line 146: special RestartMapMusic ; todo need to check
-
-C:\Users\dwg11\PLC_Polished\maps\TimelessTapestry.asm:
-  Line 467: ; TODO
 
 C:\Users\dwg11\PLC_Polished\maps\TinTowerRoof.asm:
   Line 48: winlosstext SilverWinText, 0 ; todo improve the text up here
-
-C:\Users\dwg11\PLC_Polished\maps\VioletOnixTradeHouse.asm:
-  Line 32: writetext VioletHisuiTraderText ; Ah, someone with a slowpoke tail! todo

@@ -48,7 +48,7 @@ BrassTowerAdrinna:
 	loadtrainer ADRINNA, ADRINNA3_EASY
 	sjump .startbattle
 .hard:
-	checkevent EVENT_AZALEA_KIMONO_GIRL ; todo check 
+	checkevent EVENT_AZALEA_KIMONO_GIRL
 	iffalse .hard2
 	loadtrainer ADRINNA, ADRINNA3_HARD
 	sjump .startbattle

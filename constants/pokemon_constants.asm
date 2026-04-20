@@ -16,7 +16,6 @@
 ;
 ; - MenuMonIconColors (see data/pokemon/menu_icon_pals.asm)-> done
 ; - FrontPicPointers (see data/pokemon/front_pic_pointers.asm)-> done
-; 			need todo add all the new pics front and back 
 ; - BackPicPointers (see data/pokemon/back_pic_pointers.asm)-> done 
 ; - PokemonPalettes (see data/pokemon/palettes.asm) --> done , may have an error related to hgss variants not in the table?, watch out for it  
 ; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)-> done 
