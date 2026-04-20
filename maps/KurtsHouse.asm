@@ -972,7 +972,5 @@ endr
 	; fill pokedex
 	callasm FillPokedex
 	; debug only
-
-
-
+	warp BRASS_TOWER_19F, 7, 1
 	end

@@ -82,7 +82,8 @@ BrassTowerRoofScript:
 .hard:
 	loadtrainer MEJIMI, MEJIMI_HARD
 .startbattle:	
-	; END	startbattle
+	; END
+	startbattle
 	ifequal $1, .Continue
 .Continue:
 	reloadmapafterbattle
