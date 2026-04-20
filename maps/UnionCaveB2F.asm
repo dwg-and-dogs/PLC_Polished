@@ -15,17 +15,17 @@ UnionCaveB2F_MapScriptHeader:
 
 	def_object_events
 	object_event  16, 29, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, BASTIODON, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, UnionCaveBastiodon, EVENT_UNION_CAVE_B2F_FOSSIL
-	object_event  17, 29, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, RAMPARDOS, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, UnionCaveRampardos, EVENT_UNION_CAVE_B2F_FOSSIL	
-	object_event 15, 29, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerRuin_maniacGlynn, EVENT_UNION_CAVE_B2F_FOSSIL; 'PETRY'
-	object_event  7,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherJay, EVENT_UNION_CAVE_B2F_FOSSIL ; 'ray rematch
-	object_event  6,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLinden, EVENT_UNION_CAVE_B2F_FOSSIL ; 'LOWELL ' REMATCH 
-	object_event 12, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistOskar,EVENT_UNION_CAVE_B2F_FOSSIL	; PL
-	object_event  6, 24, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerTimothy, EVENT_UNION_CAVE_B2F_FOSSIL ; PLACE 
-	object_event 6, 30, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherOleg, EVENT_UNION_CAVE_B2F_FOSSIL ; PLACE 
+	object_event  17, 29, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, RAMPARDOS, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, UnionCaveRampardos, EVENT_UNION_CAVE_B2F_FOSSIL
+	object_event 15, 28, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, Ruin_maniacPetry2Script, EVENT_BEAT_RUIN_MANIAC_GLYN; 'PETRY'
+	object_event  7,  6, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerFirebreatherJay, EVENT_BEAT_RUIN_MANIAC_GLYN ; 'ray rematch
+	object_event  6,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 5, GenericTrainerScientistLinden, EVENT_BEAT_RUIN_MANIAC_GLYN ; 'LOWELL ' REMATCH
+	object_event 12, 12, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerScientistOskar,EVENT_BEAT_RUIN_MANIAC_GLYN	; PL
+	object_event  6, 24, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerTimothy, EVENT_BEAT_RUIN_MANIAC_GLYN ; PLACE
+	object_event 6, 30, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherOleg, EVENT_BEAT_RUIN_MANIAC_GLYN ; PLACE
 
-	itemball_event 14, 19, GEODE, 5, EVENT_UNION_CAVE_B2F_ELIXIR ; 
-	itemball_event 15, 25, HYPER_POTION, 1, EVENT_UNION_CAVE_B2F_HYPER_POTION ; OK 
-	itemball_event 16, 31, ABILITYPATCH, 1, EVENT_UNION_CAVE_B2F_ABILITY; 
+	itemball_event 14, 19, GEODE, 5, EVENT_UNION_CAVE_B2F_ELIXIR ;
+	itemball_event 15, 25, HYPER_POTION, 1, EVENT_UNION_CAVE_B2F_HYPER_POTION ; OK
+	itemball_event 16, 31, ABILITYPATCH, 1, EVENT_UNION_CAVE_B2F_ABILITY;
 
 
 	object_const_def
@@ -165,22 +165,35 @@ HikerTimothyBeatenText:
 	line "immovable object!"
 	done
 
-
-GenericTrainerRuin_maniacGlynn: ; todo revise to a script 
-	generictrainer RUIN_MANIAC, PETRY2_NORMAL, EVENT_BEAT_RUIN_MANIAC_GLYN, RuinManiacGlynnSeenText, RuinManiacGlynnBeatenText
-
-	text "Uff. Maybe I'm"
-	line "too old for it."
-	
-	para "It's time to give"
-	line "up on battling."
-	
-	para "I'll let you"
-	line "battle one of my"
-	cont "#mon, but the"
-	para "other one will"
-	line "probably run off."
-	done
+Ruin_maniacPetry2Script:
+	faceplayer
+	checkevent EVENT_BEAT_RUIN_MANIAC_GLYN
+	iftrue_jumptext RuinManiacGlynnBeatenText
+	showtext RuinManiacGlynnSeenText
+	winlosstext RuinManiacGlynnAfterBattleText, 0
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer RUIN_MANIAC, PETRY2_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer RUIN_MANIAC, PETRY2_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer RUIN_MANIAC, PETRY2_HARD
+.startbattle:	
+	; END
+	startbattle
+	reloadmapafterbattle
+	applyonemovement UNIONCAVEB2F_PETRY, step_down
+	turnobject UNIONCAVEB2F_PETRY, UP
+	opentext
+	writetext RuinManiacPetryAfterBattleText
+	waitbutton
+	waitbutton
+	closetext
+	end
 
 RuinManiacGlynnSeenText:
 	text "You! You're the"
@@ -197,6 +210,10 @@ RuinManiacGlynnSeenText:
 	cont "just give it up."
 	
 	para "So! Battle me!"
+	done
+
+RuinManiacGlynnAfterBattleText:
+	text "Beaten again!"
 	done
 
 RuinManiacGlynnBeatenText:

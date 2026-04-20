@@ -557,7 +557,7 @@ KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF N
 	const DYLAN
 	const KAI
 
-	trainerclass RUIN_MANIAC ; 34 TODO REWRITE HIS SCRIPT 
+	trainerclass RUIN_MANIAC ; 34 
 	const JONES
 	const LELAND
 	const PETRY1_EASY 

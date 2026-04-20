@@ -157,9 +157,9 @@ ElderLiAfterBattleText:
     text "Our grass types"
     line "couldn't stand up"
     cont "to Falkner."
-    para "But still we take"
-    line "our job to honor"
-    cont "#mon seriously."
+    para "But still we must"
+    line "honor #mon"
+    cont "with devotion."
     done
 
 ElderLiSeenText: 

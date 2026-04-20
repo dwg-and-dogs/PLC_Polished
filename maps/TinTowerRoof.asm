@@ -45,7 +45,7 @@ TinTowerRoofSilverScript:
 	faceplayer
 	showtext TinTowerRoofSilverIntroText
 	setlasttalked TINTOWERROOF_SILVER
-	winlosstext SilverWinText, 0
+	winlosstext SilverWinText, 0 ; todo improve the text up here 
 	; START 
 	readdifficultymode
 	ifequal DIFFICULTY_EASY, .easy

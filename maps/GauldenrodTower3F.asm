@@ -42,6 +42,7 @@ GauldenrodTower3F_MapScriptHeader: ; need to make it go around a circle
 	object_event  4,  8, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepLeft, EVENT_GAULDENROD_3F_CLEFAIRY
 	object_event  6,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyStepDown, EVENT_GAULDENROD_3F_CLEFAIRY
 	object_event  9,  8, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyReset, EVENT_GAULDENROD_3F_CLEFAIRY
+	object_event  8, 10, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, CLEFAIRY, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, GauldenrodTower3FClefairyDescribe, EVENT_GAULDENROD_3F_CLEFAIRY
 	
 	object_const_def
 	const GAULDENROD_TOWER_BOULDER
@@ -50,6 +51,7 @@ GauldenrodTower3F_MapScriptHeader: ; need to make it go around a circle
 	const GAULDENROD_TOWER_CLEFAIRY_L
 	const GAULDENROD_TOWER_CLEFAIRY_D
 	const GAULDENROD_TOWER_CLEFAIRY_RESET
+	const GAULDENROD_TOWER_CLEFAIRY_6
 
 GauldenrodTowerBoulders:
 	usestonetable .BoulderTable
@@ -106,7 +108,7 @@ GauldenrodTowerBoulders:
 	disappear GAULDENROD_TOWER_BOULDER
 	pause 60
 	showemote EMOTE_HAPPY, GAULDENROD_TOWER_CLEFAIRY_RESET, 60
-	disappear GAULDENROD_TOWER_CLEFAIRY_RESET ; might have to use a unique move for each one 
+	disappear GAULDENROD_TOWER_CLEFAIRY_RESET, teleport_from ; might have to use a unique move for each one 
 	showemote EMOTE_HAPPY, GAULDENROD_TOWER_CLEFAIRY_R, 60
 	disappear GAULDENROD_TOWER_CLEFAIRY_R, teleport_from
 	showemote EMOTE_HAPPY, GAULDENROD_TOWER_CLEFAIRY_U, 60
@@ -115,6 +117,8 @@ GauldenrodTowerBoulders:
 	disappear GAULDENROD_TOWER_CLEFAIRY_L, teleport_from
 	showemote EMOTE_HAPPY, GAULDENROD_TOWER_CLEFAIRY_D, 60
 	disappear GAULDENROD_TOWER_CLEFAIRY_D, teleport_from
+	showemote EMOTE_HAPPY, GAULDENROD_TOWER_CLEFAIRY_6, 60
+	disappear GAULDENROD_TOWER_CLEFAIRY_6, teleport_from ; might have to use a unique move for each one 
 	setevent EVENT_GAULDENROD_3F_CLEFAIRY
 	pause 30
 	playsound SFX_STRENGTH
@@ -145,6 +149,22 @@ GauldenrodTowerBoulderCallback:
 	changeblock 2,  8, $09
 .Done:
 	endcallback
+
+GauldenrodTower3FClefairyDescribe:
+	opentext
+	writethistext
+		text "You have wisdom,"
+		line "but lack the"
+		cont "strength."
+		
+		para "Can you show the"
+		line "other Clefaries"
+		cont "how to reach"
+		cont "greener pastures?"
+	waitbutton
+	closetext
+	end
+
 
 GauldenrodTower3FClefairyReset:
 	opentext

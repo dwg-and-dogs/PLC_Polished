@@ -971,7 +971,66 @@ endr
 	loadmem wPartyMon3PP+3, 15
 	; fill pokedex
 	callasm FillPokedex
-	; intro events
-	warp SPROUT_TOWER_3F, 7, 2 
 	; debug only
+	refreshscreen
+	trainerpic BARBEAU
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic HOLLIS
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic AMOS
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic NOMAD_M
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic NOMAD_F
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic KANNA
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic KURT_FINAL
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic RIVAL1
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic CHUCK
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic FALKNER
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic WHITNEY
+	waitbutton
+	closepokepic
+
+	refreshscreen
+	trainerpic HISUI_FEMALE
+	waitbutton
+	closepokepic
+
+
 	end

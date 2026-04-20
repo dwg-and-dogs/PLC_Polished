@@ -14,15 +14,20 @@ UnionCaveB1FNorth_MapScriptHeader:
 	bg_event  8, 22, BGEVENT_ITEM + REVIVE, EVENT_UNION_CAVE_B1F_NORTH_HIDDEN_REVIVE
 
 	def_object_events
+	object_event  4,  3, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Ruin_maniacPetryScript, EVENT_BEAT_FALKNER
 	object_event  9, 22, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerLeonard, EVENT_BEAT_FALKNER
 	object_event 11, 14, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherOtis, EVENT_BEAT_FALKNER
-	object_event  4, 10, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerRuin_maniacPetry, EVENT_BEAT_FALKNER
 	tmhmball_event  5, 22, TM_SWIFT, EVENT_UNION_CAVE_B1F_NORTH_TM_SWIFT
-	tmhmball_event  7, 10, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND ;brick break
-	pokemon_event  5, 10, CRANIDOS, -1, -1, PAL_NPC_BLUE, RampardosText, EVENT_BEAT_FALKNER
-	pokemon_event  6, 10, SHIELDON, -1, -1, PAL_NPC_BROWN, BastiodonText, EVENT_BEAT_FALKNER
+;	tmhmball_event  3,  5, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND ;brick break
+	pokemon_event  4,  2, CRANIDOS, -1, -1, PAL_NPC_BLUE, RampardosText, EVENT_BEAT_RUIN_MANIAC_PETRY
+	pokemon_event  4,  4, SHIELDON, -1, -1, PAL_NPC_BROWN, BastiodonText, EVENT_BEAT_RUIN_MANIAC_PETRY
 	itemball_event  7,  7, HARD_STONE, 1, EVENT_UNION_CAVE_HARD_STONE
 	fruittree_event 13, 4, FRUITTREE_UNION_CAVE_2, HOLLOW_ROCK, PAL_NPC_BLUE
+	smashrock_event 5, 5
+
+	object_const_def
+	const UNION_CAVE_B1F_PETRY
+
 
 GenericTrainerHikerLeonard:
 	generictrainer HIKER, LEONARD, EVENT_BEAT_HIKER_LEONARD, HikerLeonardSeenText, HikerLeonardBeatenText
@@ -64,21 +69,42 @@ FireBreatherOtisBeatenText:
 	para "happy that we"
 	line "were battling."
 	done
-
-GenericTrainerRuin_maniacPetry: ;todo revise to a script 
-	generictrainer RUIN_MANIAC, PETRY1_NORMAL, EVENT_BEAT_RUIN_MANIAC_PETRY, RuinManiacPetrySeenText, RuinManiacPetryBeatenText
-
-	text "Some group hara-"
-	line "ssed us last"
-	para "week. We just got"
-	line "back online when"
-	cont "you got here."
-	done
+	
+Ruin_maniacPetryScript:
+	faceplayer
+	checkevent EVENT_BEAT_RUIN_MANIAC_PETRY
+	iftrue_jumptext RuinManiacPetryBeatenText
+	showtext RuinManiacPetrySeenText
+	winlosstext RuinManiacPetryBeatenText, 0
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer RUIN_MANIAC, PETRY1_NORMAL
+	sjump .startbattle
+.easy:
+	loadtrainer RUIN_MANIAC, PETRY1_EASY
+	sjump .startbattle
+.hard:
+	loadtrainer RUIN_MANIAC, PETRY1_HARD
+.startbattle:	
+	; END
+	startbattle
+	reloadmapafterbattle
+	opentext
+	setevent EVENT_BEAT_RUIN_MANIAC_PETRY
+	writetext RuinManiacPetryAfterBattleText
+	waitbutton
+	verbosegivetmhm TM_ROCK_SMASH
+	waitbutton
+	closetext
+	end
 
 RuinManiacPetrySeenText:
-	text "A mine is no"
-	line "place for a"
-	cont "child."
+	text "Hey! You're the"
+	line "one who keeps"
+	para "distracting my"
+	line "workers!"
 	done
 
 RuinManiacPetryBeatenText:
@@ -88,7 +114,22 @@ RuinManiacPetryBeatenText:
 	line "back online when"
 	cont "you got here."
 	done
-	
+
+RuinManiacPetryAfterBattleText:
+	text "At least take my"
+	line "TM and smash a"
+	para "rock, to make up"
+	line "for all the delay"
+	cont "you've caused."
+
+	para "TMs and HMs can"
+	line "be used in the"
+	para "overworld so long"
+	line "as a #mon"
+	para "in your party can"
+	line "learn the move."
+	done
+
 RampardosText:
 	text "Wraaar!"
 	done
