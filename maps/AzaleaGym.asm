@@ -125,10 +125,8 @@ AzaleaGymBugsyScript:
 	cont "branched evol-"
 	cont "ution of Scyther?"
 
-	para "...A rock-bug"
-	line "type, you say?"
-	
-	para "Incredible!" 
+	para "A rock-bug"
+	line "type? Incredible!"
 	
 	para "I'm rejuvenated!"
 	line "My hypothesis was"
@@ -144,12 +142,11 @@ AzaleaGymBugsyScript:
 	text "Whoa, amazing!"
 
 	para "I forgot the"
-	line "thrill of disc-"
-	cont "overy. I let my"
+	line "thrill of disco-"
+	cont "very. I let my"
 	
-	para "own cynicism keep"
-	line "me from sharing"
-	cont "my talents."
+	para "cynicism keep me"
+	line "from leading."
 
 	para "Please - take"
 	line "this Badge."
@@ -175,8 +172,8 @@ BranchedEvoText:
 	para "Slowpoke has bra-"
 	line "nching evolution."
 	
-	para "I wonder if Scy-"
-	line "ther is the same?"
+	para "Could Scyther be"
+	line "the same?"
 	done
 
 EndTextBugsy:
@@ -207,15 +204,15 @@ AzaleaGymBugCollectorScript: ; 5000
 	jumptext AzaleaGymNoFishText
 
 .GiveLedyba:
-	givepoke LEDYBA, NO_FORM, 5, SITRUS_BERRY, POKE_BALL, COUNTER
+	givepoke LEDYBA, NO_FORM, 5, SITRUS_BERRY, POKE_BALL, MACH_PUNCH
 	iffalse_jumpopenedtext Text_NoCarry_AzaleaGym
 	playsound SFX_TRANSACTION
 	takemoney $0, 5000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "You can count on"
-	line "that one!"
+	text "Rock types are no"
+	line "match now!"
 	done
 
 .GiveSpinarak:
@@ -282,7 +279,7 @@ AzaleaGym1Text:
 	line "way to teach them"
 	cont "unique moves."
 	
-	para "A reflective"
+	para "A 'supersonic'"
 	line "Ledyba,"
 	
 	para "Mega Spinarak,"
@@ -325,7 +322,7 @@ BugCollectorNoPokemonYetText:
 	line "way to teach them"
 	cont "unique moves."
 	
-	para "A reflective"
+	para "A 'supersonic'"
 	line "Ledyba,"
 	
 	para "Mega Spinarak,"

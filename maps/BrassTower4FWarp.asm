@@ -108,7 +108,6 @@ AdrinnaSeenText0:
 	cont "I misjudged you!"
 	done
 
-
 AdrinnaTowerSeenText:
 	text_high
     text " Andrea: " 
@@ -134,14 +133,14 @@ AdrinnaTowerSeenText:
 
 
 BeatenTextAdrinnaWarp:
-	text "Unbelievable."
-	line "I had the"
+	text "Not possible!"
+	line "I trained the"
 	para "strongest #mon"
 	line "and still lost."
 
-	para "Your bonds..."
-	line "how do they"
-	cont "overcome me?"
+	para "How could your"
+	line "bonds overcome my"
+	cont "powers?"
 	done
 
 
@@ -154,7 +153,7 @@ AdrinnaAfterText:
 	line "One day, you'll"
 	cont "look around and"
 	para "see corruption"
-	line "metastasize, and"
+	line "spreading, and"
 	para "you'll wish that"
 	line "you had excised"
 	para "it when you had"
@@ -169,8 +168,9 @@ AdrinnaTakesOverText:
 	text_start
 	text "Excellent. Meet"
 	line "me on the roof."
+	
 	para "We'll show Johto"
-	line "how it needs not"
+	line "it doesn't need"
 	cont "Emperor Vesper."
 	done
 
@@ -191,7 +191,7 @@ NoToAdrinnaText:
 	next
 	text_start
 	text "Disappointing."
-	line "No matter - I'll"
+	line "No matter, I'll"
 	cont "destroy you, and"
 	cont "then the Emperor!"
 	done

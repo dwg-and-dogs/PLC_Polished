@@ -81,11 +81,11 @@ PearlForToughLeavesText:
 
 PearlForToughLeavesQuestionText:
 	text "Why, if I was you,"
-	line "I'd trade a big"
-	para "pearl for a few of"
+	line "I'd trade a Big"
+	para "Pearl for a few of"
 	line "these withered-"
 	para "I mean, verdant"
-	line "Leaves."
+	line "Tough Leaves."
 	done
 
 PearlForToughLeavesEndText:
@@ -98,7 +98,7 @@ PearlForToughLeavesEndText:
 
 NoPearlForToughLeavesText:
 	text "Oh, I thought you"
-	line "had a big pearl."
+	line "had a Big Pearl."
 	
 	para "You can fish one "
 	line "up anywhere."
@@ -203,8 +203,7 @@ MintLeafGiftText:
 	
 GiveMintLeafText:
 	text "That Mint Leaf"
-	line "will freshen"
-	cont "your breath."
+	line "smells great!"
 	
 	para "Share it with"
 	line "someone who"
@@ -256,4 +255,3 @@ AzaleaPokeCenter1FGentlemanText2:
 	line "them at centers"
 	cont "all over Johto!"
 	done
-	

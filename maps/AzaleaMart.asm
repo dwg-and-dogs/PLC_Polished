@@ -24,9 +24,12 @@ AzaleaMartCooltrainermText:
 
 AzaleaMartLadyText:
 	text "Some people use"
-	line "rare candies,"
-	para "some don't."
-	line "If you do, your"
-	para "#mon won't be"
-	line "as strong."
+	line "Rare Candies,"
+	cont "some don't."
+	para "If you do, your"
+	line "#mon won't be"
+	cont "as strong."
+	
+	para "And experts would"
+	line "never use them."
 	done

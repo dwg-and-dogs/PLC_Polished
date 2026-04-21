@@ -67,7 +67,7 @@ BrassTowerKensey:
 	para "Were my traps not"
 	line "confusing enough?"
 	
-	para "The flywheel of"
+	para "My flywheel of"
 	line "progress will"
 	cont "lift all boats!"
 	
@@ -93,4 +93,3 @@ BrassTowerKensey:
 	para "will arrest you"
 	line "soon enough."
 	done
-

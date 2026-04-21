@@ -61,8 +61,8 @@ BrassTowerAmosText1:
 	cont "the tower."
 	
 	para "Hurry! We mustn't"
-	line "let him become"
-	cont "an emperor!"
+	line "let him take over"
+	cont "Johto!"
 	done
 
 BrassTowerHealScript: 
@@ -122,10 +122,10 @@ KurtTowerText2:
 	para "We need to get"
 	line "to him before we"
 	para "get caught in the"
-	line "coming rainstorm."
+	line "thunderstorm."
 	
 	para "If you need to"
-	line "train, I have a"
+	line "train, I have"
 	para "high-experience"
 	line "#mon you can"
 	cont "battle."
@@ -152,7 +152,7 @@ BrassTowerKurtJournalText:
 	para "In this city, I'm"
 	line "reminded of the"
 	cont "last time I was"
-	cont "here..."
+	cont "here."
 	
 	para "..."
 	

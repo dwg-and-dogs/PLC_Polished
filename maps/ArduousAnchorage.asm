@@ -35,13 +35,10 @@ ArduousAnchorage_MapScriptHeader:
 	
 AnchorageNomadMText:
 	text "Oh, you're not a"
-	line "brigader or an"
-	cont "outsider."
+	line "brigader."
 	
-	para "Watch out, there"
-	line "are a few traps"
-	para "in front of the"
-	line "port..."
+	para "Watch out for"
+	line "traps ahead."
 	done
 	
 AnchorageNomadFText:
@@ -143,9 +140,8 @@ GenericTrainerSailorErnest:
 	text "The colonel has a"
 	line "sparky persona."
 	
-	para "He gives us a"
-	line "Surge of energy"
-	cont "if morale is low."
+	para "He gives a Surge"
+	line "if morale is low."
 	done
 
 SailorErnestBeatenText:

@@ -236,9 +236,8 @@ AzaleaTownYoungsterScript:
 	text "I'm surprised"
 	line "<RIVAL> is doing"
 	para "the ceremony. He"
-	line "doesn't seem to"
-	para "get along with"
-	line "Kurt."
+	line "doesn't get along"
+	cont "with Kurt."
 	done
 
 .Text4:
@@ -256,10 +255,10 @@ AzaleaTownMatronScript:
 	iftrue_jumptextfaceplayer .BugsyIsHappyText
 	jumpthistextfaceplayer
 	
-	text "Bugsy has been"
-	line "so down. No one"
-	para "is interested in"
-	line "his research."
+	text "Bugsy is feeling"
+	line "down. No one is"
+	para "interested in his"
+	line "research."
 	done
 	
 .BugsyIsHappyText
@@ -297,10 +296,8 @@ Text_WhatDoYouThinkYoureDoing:
 	done
 
 Text_ItsDangerousToGoAlone:
-	text "Aren't you and"
-	line "the charcoal boy"
-	para "in a ceremony"
-	line "today?"
+	text "Today's the day"
+	line "of your ceremony!"
 	done
 
 Movement_PokefanFRunsToYou1_AT:
@@ -454,8 +451,7 @@ AskForHoothootText:
     text "Next, can you show"
     line "me the owl"
     para "#mon that"
-	line "stands on one"
-	cont "leg?"
+	line "stands on 1 leg?"
     done
 
 DontHaveHoothootText:

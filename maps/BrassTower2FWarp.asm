@@ -74,7 +74,7 @@ BrassTowerBobesh:
 
 
 .BeatenText:
-	text "Impossible... How"
+	text "Impossible. How"
 	line "can disorder"
 	cont "triumph?"
 	done
@@ -94,4 +94,3 @@ BrassTowerBobesh:
 	line "succeed where I"
 	cont "failed."
 	done
-

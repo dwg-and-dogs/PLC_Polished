@@ -115,27 +115,25 @@ BellchimeTrailEmiScript:
 
 KimonoGirlEmiIntroText:
 	text "I sensed your"
-	line "arrival when"
-	cont "you arrived."
+	line "arrival."
 
 	para "You have come"
-	line "very far, "
+	line "very far,"
 
 	para "looking for a"
 	line "way to save"
 	cont "your heritage."
+
+	para "In Azalea, you"
+	line "confronted a new"
+	cont "invention."
 	
-	para "You have"
+	para "In Goldenrod, you"
 	line "brought people"
-	para "together in"
-	line "Goldenrod and"
+	cont "together."
 	
-	para "calmed the"
-	line "Violet gales, so"
-	
-	para "you seek the"
-	line "blossom tree"
-	cont "here."
+	para "Now you seek the"
+	line "sacred tree here."
 	
 	para "Haha, so many"
 	line "similarities!"
@@ -167,10 +165,10 @@ EmiBeatenText:
 	text "So the legends"
 	line "are true."
 	
-	para "Allow me to ex-"
-	line "plain the rest"
-	cont "of the story"
-	cont "of these towers."
+	para "I'll explain the"
+	line "rest of the story"
+	cont "of the towers."
+
 	done
 
 
@@ -180,7 +178,7 @@ KimonoGirlEmiRewardText:
 	
 	para "It struck the"
 	line "Brass tower as"
-	para "the Emperor"
+	para "an Emperor"
 	line "raised his hands."
 
 	para "His ambitions"
@@ -191,21 +189,20 @@ KimonoGirlEmiRewardText:
 	
 	para "Of course it"
 	line "could not stand."	
-	para "But few know"
-	line "of the others"
+	para "But few know that"
+	line "there was another"
 	cont "there that day."
-	
-	para "Right behind him,"
-	line "someone with"
-	para "hair like"
-	line "spring leaves."
+
+	para "Behind him, a"
+	line "figure with hair"
+	cont "as green as the"
+	cont "spring leaves."
 	
 	para "For your patience"
 	line "I give you this"
 	para "stone. Many like"
-	line "it have been"
-	para "found under the"
-	line "Tin Tower."
+	line "it are seen under"
+	cont "the Tin Tower."
 	done
 
 
@@ -223,8 +220,7 @@ EmiHealedPokemonText:
 BellchimeTrailAskToTimeTravelText:
 	text "Would you like to"
 	line "see how the story"
-	cont "unfolds for your-"
-	cont "self? Hehe."
+	cont "unfolds yourself?"
 	done
 
 
@@ -235,7 +231,7 @@ BellChimeTrailNoTimeTravelText:
 
 BellChimeTrailYesTimeTravelText:
 	text "Very good. I will"
-	line "pray to Celebi..."
+	line "pray to Celebi."
 	done
 
 BellchimeBlockerText:
