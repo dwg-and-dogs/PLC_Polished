@@ -43,9 +43,9 @@ AnarresTowerResetScript:
 	end
 
 ResetAnarresTowerTrainersText:
-	text "Hey, the guards"
-	line "are keeping any-"
-	cont "one out!"
+	text "The guards are"
+	line "keeping everyone"
+	cont "away from Silas!"
 	
 	para "Did you battle"
 	line "them already?"
@@ -57,24 +57,22 @@ AnaressTowerTrainersResetText:
 	cont "again."
 	done
 
-
 GenericTrainerBugCatcherDon:
 	generictrainer BUG_CATCHER, DON, EVENT_BEAT_BUG_CATCHER_DON, BugCatcherDonSeenText, BugCatcherDonBeatenText
 
-	text "The Elder is"
+	text "Elder Silas is"
 	line "so wise."
 	done
 
 BugCatcherDonSeenText:
-	text "The Elder's HM"
+	text "Elder Silas' HM"
 	line "is so powerful!"
 	done
 
 BugCatcherDonBeatenText:
-	text "Are you cut"
+	text "Are you Cut"
 	line "out for it?"
 	done
-
 
 GenericTrainerBugCatcherBenny:
 	generictrainer BUG_CATCHER, BENNY, EVENT_BEAT_BUG_CATCHER_BENNY, BugCatcherBennySeenText, BugCatcherBennyBeatenText

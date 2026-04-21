@@ -47,7 +47,7 @@ AnarresNPC1Script:
 	iftrue_jumptextfaceplayer .Text1
 	jumpthistextfaceplayer
 
-	text "Elder Hollis"
+	text "Elder Silas"
 	line "controls how many"
 	cont "trees are cut."
 	done
@@ -75,6 +75,11 @@ AnarresNPC2Script:
 	line "Pineco predators"
 	para "weren't keeping"
 	line "them in check."
+	
+	para "Maybe it has to"
+	line "do with the new"
+	cont "Stadium built"
+	cont "by the Emperor."
 	done
 	
 
@@ -87,18 +92,15 @@ AnarresNPC3Script:
 	
 	para "But his breath"
 	line "smells so bad!"
-	
-	para "I would not"
-	line "have an appetite."
 	done
 
 
 
 AnarresNPC4Text:
-	text "I'm nervous - the"
-	line "town north of us"
-	para "is being occupied"
-	line "by the Emperor."
+	text "Emperor Vesper"
+	line "sent troops to"
+	para "the town just"
+	line "north of us."
 	
 	para "It's so strange,"
 	line "Johto's Emperors"

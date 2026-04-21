@@ -69,7 +69,7 @@ AnarresTower3FEvent:
 .startbattle:	
 	; END
 	startbattle
-	reloadmapafterbattle ; is tammy still around? 
+	reloadmapafterbattle
 	applyonemovement ANARRES_TOWER_HOLLIS, step_down
 	turnobject PLAYER, DOWN
 	turnobject ANARRES_TOWER_HOLLIS, LEFT
@@ -77,9 +77,7 @@ AnarresTower3FEvent:
 	showtext TammyText2
 	turnobject ANARRES_TOWER_TAMMY, DOWN
 	pause 5
-;	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
 	showtext TammyText3
-;	waitbutton
 	showemote EMOTE_SHOCK, ANARRES_TOWER_HOLLIS, 60
 	showtext SilasAbuse
 	pause 5
@@ -87,7 +85,6 @@ AnarresTower3FEvent:
 	turnobject ANARRES_TOWER_HOLLIS, RIGHT
 	applyonemovement ANARRES_TOWER_HOLLIS, step_right
 	showtext SilasHM
-;	showemote EMOTE_HAPPY, ANARRES_TOWER_TAMMY, 60
 	showtext TammyThanks
 	closetext
 	applymovement ANARRES_TOWER_TAMMY, TammyWalksOutMovement
@@ -144,8 +141,8 @@ SilasPastGuards:
 	next
 	text_start
 	text "How'd you two get"
-	line "here? We're done"
-	cont "talking."
+	line "here? I'm done"
+	cont "talking to you."
 	para "My watch has kept"
 	line "us safe so far."
 	done
@@ -172,12 +169,11 @@ TammyExplains:
     text " Ursula: "
 	next
 	text_start
-	text "Listen! The Pine-"
-	line "co infestation"
-	para "requires more"
-	line "than one perspe-"
-	cont "ctive to restore"
-	cont "balance!"
+	text "Silas, the Pineco"
+	line "infestation needs"
+	para "more than one"
+	line "perspective to"
+	cont "restore balance!"
 	done
 
 
@@ -204,27 +200,17 @@ TammyText2:
 	cont "of hand."
 	done
 
-
-;SilasHmm:
-;	text_high
-;    text " HOllis: "
-;	next
-;	text_start
-;	text "HOLLIS: I..."
-;	line "I'm listening."
-;	done
-
 TammyText3:
 	text_high
     text " Ursula: "
 	next
 	text_start
-	text "The forest binds"
-	line "us all."
+	text "The Holt belongs"
+	line "to all of us."
 
 	para "My technique lets"
-	line "everyone be a"
-	cont "guardian."
+	line "everyone make a"
+	cont "contribution."
 	done
 
 
@@ -259,7 +245,7 @@ SilasHM:
 	line "balance the Holt"
 	cont "with your help."
 	
-	para "Please, teach"
+	para "Please teach"
 	line "others your"
 	cont "invention."
 	done
@@ -301,7 +287,7 @@ SilasCongratulates:
 	line "not just teach."
 
 	para "I grant you the"
-	line "Growth badge."
+	line "Growth Badge."
 	
 	para "It symbolizes how"
 	line "a tree grows, one"
@@ -309,10 +295,9 @@ SilasCongratulates:
 	line "towards the sky."
 
 	para "Each ring has its"
-	line "day in the sun… "
-	para "but then it's time"
-	line "to support the"
-	cont "trunk."
+	line "day in the sun…"
+	para "Then it's time to"
+	line "support the tree."
 
 	para "Also, please,"
 	line "accept this HM."
@@ -358,7 +343,7 @@ AnarresTower3FTammyScript:
 	line "your help!"
 	done
 
-AnarresTower3FAmosScript: ; shouldn't be able to talk to him. 
+AnarresTower3FAmosScript: 
 	end
 
 AmosWalksAwayMovement:
@@ -377,11 +362,9 @@ AmosSaysHelloText:
 	next
 	text_start
 	text "A flunkie?"
-
 	para "..."
-
-	para "Oh, you're not--"
-	line "Never mind."
+	para "No, you're not one"
+	line "of his guards."
 
 	para "I'm Amos. I've"
 	line "been trying to"

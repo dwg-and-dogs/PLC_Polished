@@ -65,9 +65,8 @@ TammyDialogue1:
 	line "infestation! The"
 	para "predators from"
 	line "the north aren't"
-	para "here, for some"
-	line "reason. The Holt"
-	cont "is unbalanced!"
+	para "here, so the Holt"
+	line "is unbalanced!"
 	done
 
 HollisDialogue1:
@@ -75,14 +74,12 @@ HollisDialogue1:
     text " Silas: "
 	next
 	text_start
-	text "Of course I see."
-	line "The forest is"
-	para "too sensitive!"
-	line "We can't afford"
-	para "any mistakes."
-	line "That means your"
-	para "invention, by"
-	line "the way."
+	text "The forest is"
+	line "so sensitive!"
+	para "Your invention is"
+	line "unproven."
+	para "We can't afford"
+	line "any mistakes."
 	done
 
 
@@ -94,9 +91,8 @@ TammyDialogue2:
 	text "The mistake is"
 	line "not adapting!"
 
-	para "You're human,"
-	line "like everyone"
-	cont "else."
+	para "You're human, like"
+	line "everyone else."
 	done
 
 
@@ -155,9 +151,9 @@ AnarresHoltGateNPCText:
     text "The Hisuians had"
 	line "such mystical"
 	cont "#mon!"
-    para "I saw a wooden"
-	line "Voltorb!"
-    para "Oh! Speaking of"
+    para "I saw a grass-"
+	line "type Voltorb!"
+    para "And speaking of"
     line "mystical things,"
     cont "take this!"
     done

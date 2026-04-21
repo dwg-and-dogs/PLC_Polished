@@ -103,21 +103,21 @@ AnarresHouseMushroomScript:
 	jumpopenedtext GiveTinyMushroomText 
 
 NeedAMintLeafText: 
-	text "I moved here"
-	line "from the landing."
+	text "We immigrated"
+	line "here from the"
+	cont "Landing."
 	
-	para "I tried to get"
+	para "I want to help"
 	line "these people to"
 	para "appreciate the"
 	line "taste of fish,"
-	para "but they all say"
-	line "my breath smells."
+	para "but they say my"
+	line "breath smells."
 	
 	para "No one wants to"
-	line "come over to"
-	para "eat. I picked"
-	line "two buckets"
-	cont "of mushrooms!"
+	line "come over to eat."
+	para "I even picked so"
+	line "many mushrooms!"
 	
 	para "Do you have any"
 	line "item that might"
@@ -125,7 +125,7 @@ NeedAMintLeafText:
 	line "smell better?"	
 
 	para "I'll give you a"
-	line "savory mushroom"
+	line "Tinymushroom"
 	cont "if you do."
 	done
 
@@ -139,7 +139,7 @@ Text_MintLeafQuestion:
 
 	
 GiveTinyMushroomText: 
-	text "Give that tiny-"
+	text "Give that Tiny-"
 	line "mushroom to"
 	para "someone who"
 	line "needs to make"
@@ -232,10 +232,6 @@ HexManiacIntroText:
     line "others through"
 	cont "perilous waters."
 	
-	para "Spirits used to"
-	line "guide me through"
-	cont "the rocks..."
-		
     para "But I left that"
 	line "all behind."	
 	
@@ -276,7 +272,6 @@ HexManiacNoNatuText:
 	line "to see it!"
     done
 
-
 HexManiacGiveTwistedSpoonText:
     text "Natu! It sees"
     line "past and future."
@@ -301,12 +296,9 @@ HexManiacGiveBlackGlassesText:
 	line "creature that"
 	cont "led me down many"
 	cont "circular paths!"
-	
-	para "Ah, such memories."
-	line "Thank you."
-	
-    para "These BlackGlass-"
-    line "es are for you."
+		
+    para "For you, these"
+	line "Blackglasses."
     done
 
 HexManiacThankYouText:

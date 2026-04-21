@@ -64,12 +64,7 @@ AnanressStockroomBeforeWalkingText:
 	done
 
 AnarresStockroomAfterWalkingText:
-	text "I've crafted many"
-	line "Apricorns here,"
-	para "from all sorts of"
-	line "materials!"
-	
-	para "Enjoy your time"
+	text "Enjoy your time"
 	line "in Anarres!"
 	done
 
@@ -92,15 +87,14 @@ AnarresBerryGiftText:
 	line "change. A season"
 	para "for Sitrus Berry"
 	line "Jam, a season to"
-	para "gather honey."
+	para "gather Honey."
 	line "Hey, I'm hungry!"
 	cont "Share a berry?"
 	done
 	
 GiveAnarresBerryText:
-	text "There's a berry"
-	line "for every"
-	cont "situation!"
+	text "There's berries"
+	line "for every season!"
 	done
 
 AnarresStockroomNPC2Text:

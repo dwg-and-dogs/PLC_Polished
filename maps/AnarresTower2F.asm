@@ -54,14 +54,14 @@ GenericTrainerBugCatcherJosh:
 	done
 
 BugCatcherJoshSeenText:
-	text "Some Bug-type"
-	line "#mon are"
-	cont "really strong."
+	text "Bug-type #mon"
+	line "get stronger when"
+	cont "they evolve."
 	done
 
 BugCatcherJoshBeatenText:
 	text "I'm working dawn"
-	line "to Dusk to evolve"
+	line "to DUSK to evolve"
 	cont "my Pinsir!"
 	done
 
@@ -78,7 +78,7 @@ BugCatcherKenSeenText:
 	line "who fights on"
 	cont "offense?"
 	
-	para "or defense?"
+	para "Or defense?"
 	done
 
 BugCatcherKenBeatenText:
@@ -92,7 +92,7 @@ GenericTrainerBugCatcherWayne:
 
 	text "Ha! It's my job to"
 	line "stop anyone from"
-	cont "getting thru!"
+	cont "getting through!"
 	
 	para "Hey, will you ask"
 	line "my boss if I'm"
