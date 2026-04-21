@@ -178,7 +178,19 @@ LakeRivalBattleScript:
     iftrue .Rowlet
     winlosstext LakeRivalWinText, 0
     setlasttalked LAKEOFRAGE_RIVAL
-    loadtrainer RIVAL1, 12 
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy12
+	ifequal DIFFICULTY_HARD, .hard12
+	loadtrainer RIVAL1, RIVAL1_12_NORMAL
+	sjump .startbattle12
+.easy12:
+	loadtrainer RIVAL1, RIVAL1_12_EASY
+	sjump .startbattle12
+.hard12:
+	loadtrainer RIVAL1, RIVAL1_12_HARD
+.startbattle12:	
+	; END
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -187,7 +199,19 @@ LakeRivalBattleScript:
 .Oshawott:
     winlosstext LakeRivalWinText, 0
     setlasttalked LAKEOFRAGE_RIVAL
-    loadtrainer RIVAL1, 10 
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy10
+	ifequal DIFFICULTY_HARD, .hard10
+	loadtrainer RIVAL1, RIVAL1_10_NORMAL
+	sjump .startbattle10
+.easy10:
+	loadtrainer RIVAL1, RIVAL1_10_EASY
+	sjump .startbattle10
+.hard10:
+	loadtrainer RIVAL1, RIVAL1_10_HARD
+.startbattle10:	
+	; END
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -196,7 +220,19 @@ LakeRivalBattleScript:
 .Rowlet:
     winlosstext LakeRivalWinText, 0
     setlasttalked LAKEOFRAGE_RIVAL
-    loadtrainer RIVAL1, 11 
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy11
+	ifequal DIFFICULTY_HARD, .hard11
+	loadtrainer RIVAL1, RIVAL1_11_NORMAL
+	sjump .startbattle11
+.easy11:
+	loadtrainer RIVAL1, RIVAL1_11_EASY
+	sjump .startbattle11
+.hard11:
+	loadtrainer RIVAL1, RIVAL1_11_HARD
+.startbattle11:	
+	; END
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle

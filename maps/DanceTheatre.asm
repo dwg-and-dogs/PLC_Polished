@@ -46,7 +46,20 @@ DanceTheatreRivalScript:
     iftrue .Rowlet
     winlosstext TheatreRivalWinText, 0
 	setlasttalked THEATRE_RIVAL
-    loadtrainer RIVAL1, 15
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy15
+	ifequal DIFFICULTY_HARD, .hard15
+	loadtrainer RIVAL1, RIVAL1_15_NORMAL
+	sjump .startbattle15
+.easy15:
+	loadtrainer RIVAL1, RIVAL1_15_EASY
+	sjump .startbattle15
+.hard15:
+	loadtrainer RIVAL1, RIVAL1_15_HARD
+.startbattle15:	
+	; END
+
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -55,7 +68,20 @@ DanceTheatreRivalScript:
 .Oshawott:
     winlosstext TheatreRivalWinText, 0
     setlasttalked THEATRE_RIVAL
-    loadtrainer RIVAL1, 13
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy13
+	ifequal DIFFICULTY_HARD, .hard13
+	loadtrainer RIVAL1, RIVAL1_13_NORMAL
+	sjump .startbattle13
+.easy13:
+	loadtrainer RIVAL1, RIVAL1_13_EASY
+	sjump .startbattle13
+.hard13:
+	loadtrainer RIVAL1, RIVAL1_13_HARD
+.startbattle13:	
+	; END
+
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -64,7 +90,19 @@ DanceTheatreRivalScript:
 .Rowlet:
     winlosstext TheatreRivalWinText, 0
     setlasttalked THEATRE_RIVAL
-    loadtrainer RIVAL1, 14
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy14
+	ifequal DIFFICULTY_HARD, .hard14
+	loadtrainer RIVAL1, RIVAL1_14_NORMAL
+	sjump .startbattle14
+.easy14:
+	loadtrainer RIVAL1, RIVAL1_14_EASY
+	sjump .startbattle14
+.hard14:
+	loadtrainer RIVAL1, RIVAL1_14_HARD
+.startbattle14:	
+	; END
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle

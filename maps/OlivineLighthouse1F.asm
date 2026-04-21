@@ -84,7 +84,19 @@ LigthouseRivalBattleScript:
     iftrue .Rowlet
     winlosstext LighthouseRivalWinText, LighthouseRivalLossText
     setlasttalked LIGHTHOUSE_RIVAL
-    loadtrainer RIVAL1, 9
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy9
+	ifequal DIFFICULTY_HARD, .hard9
+	loadtrainer RIVAL1, RIVAL1_9_NORMAL
+	sjump .startbattle9
+.easy9:
+	loadtrainer RIVAL1, RIVAL1_9_EASY
+	sjump .startbattle9
+.hard9:
+	loadtrainer RIVAL1, RIVAL1_9_HARD
+.startbattle9:
+; END 
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -93,7 +105,19 @@ LigthouseRivalBattleScript:
 .Oshawott:
     winlosstext LighthouseRivalWinText, LighthouseRivalLossText
     setlasttalked LIGHTHOUSE_RIVAL
-    loadtrainer RIVAL1, 7
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy7
+	ifequal DIFFICULTY_HARD, .hard7
+	loadtrainer RIVAL1, RIVAL1_7_NORMAL
+	sjump .startbattle7
+.easy7:
+	loadtrainer RIVAL1, RIVAL1_7_EASY
+	sjump .startbattle7
+.hard7:
+	loadtrainer RIVAL1, RIVAL1_7_HARD
+.startbattle7:	
+	; END
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -102,7 +126,19 @@ LigthouseRivalBattleScript:
 .Rowlet:
     winlosstext LighthouseRivalWinText, LighthouseRivalLossText
     setlasttalked LIGHTHOUSE_RIVAL
-    loadtrainer RIVAL1, 8
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy8
+	ifequal DIFFICULTY_HARD, .hard8
+	loadtrainer RIVAL1, RIVAL1_8_NORMAL
+	sjump .startbattle8
+.easy8:
+	loadtrainer RIVAL1, RIVAL1_8_EASY
+	sjump .startbattle8
+.hard8:
+	loadtrainer RIVAL1, RIVAL1_8_HARD
+.startbattle8:	
+	; END
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle

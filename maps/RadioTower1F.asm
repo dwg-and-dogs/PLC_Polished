@@ -52,7 +52,19 @@ RadioTowerRivalBattleScript:
     iftrue .Rowlet
     winlosstext RadioTowerRivalWinText, RadioTowerRivalLossText
     setlasttalked RADIOTOWER_RIVAL
-    loadtrainer RIVAL1, 6
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy
+	ifequal DIFFICULTY_HARD, .hard
+	loadtrainer RIVAL1, RIVAL1_6_NORMAL
+	sjump .startbattle6
+.easy:
+	loadtrainer RIVAL1, RIVAL1_6_EASY
+	sjump .startbattle6
+.hard:
+	loadtrainer RIVAL1, RIVAL1_6_HARD
+.startbattle6:	
+	; END
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -61,7 +73,19 @@ RadioTowerRivalBattleScript:
 .Oshawott:
     winlosstext RadioTowerRivalWinText, RadioTowerRivalLossText
     setlasttalked RADIOTOWER_RIVAL
-    loadtrainer RIVAL1, 4
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy4
+	ifequal DIFFICULTY_HARD, .hard4
+	loadtrainer RIVAL1, RIVAL1_4_NORMAL
+	sjump .startbattle4
+.easy4:
+	loadtrainer RIVAL1, RIVAL1_4_EASY
+	sjump .startbattle4
+.hard4:
+	loadtrainer RIVAL1, RIVAL1_4_HARD
+.startbattle4:	
+	; END
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle
@@ -70,7 +94,19 @@ RadioTowerRivalBattleScript:
 .Rowlet:
     winlosstext RadioTowerRivalWinText, RadioTowerRivalLossText
     setlasttalked RADIOTOWER_RIVAL
-    loadtrainer RIVAL1, 5
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy5
+	ifequal DIFFICULTY_HARD, .hard5
+	loadtrainer RIVAL1, RIVAL1_5_NORMAL
+	sjump .startbattle5
+.easy5:
+	loadtrainer RIVAL1, RIVAL1_5_EASY
+	sjump .startbattle5
+.hard5:
+	loadtrainer RIVAL1, RIVAL1_5_HARD
+.startbattle5:	
+	; END
     startbattle
     dontrestartmapmusic
     reloadmapafterbattle

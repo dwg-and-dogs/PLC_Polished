@@ -592,7 +592,19 @@ IlexForestCelebiEventScript:
 	iftrue .Rowlet
 	winlosstext IlexForestWinText, IlexForestLossText
 	setlasttalked ILEX_RIVAL
-	loadtrainer RIVAL1, RIVAL1_6_NORMAL ; 
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy3
+	ifequal DIFFICULTY_HARD, .hard3
+	loadtrainer RIVAL1, RIVAL1_3_NORMAL
+	sjump .startbattle3
+.easy3:
+	loadtrainer RIVAL1, RIVAL1_3_EASY
+	sjump .startbattle3
+.hard3:
+	loadtrainer RIVAL1, RIVAL1_3_HARD
+.startbattle3:	
+	; END
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -601,7 +613,19 @@ IlexForestCelebiEventScript:
 .Oshawott:
 	winlosstext IlexForestWinText, IlexForestLossText
 	setlasttalked ILEX_RIVAL
-	loadtrainer RIVAL1, RIVAL1_4_NORMAL
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy1
+	ifequal DIFFICULTY_HARD, .hard1
+	loadtrainer RIVAL1, RIVAL1_1_NORMAL
+	sjump .startbattle1
+.easy1:
+	loadtrainer RIVAL1, RIVAL1_1_EASY
+	sjump .startbattle1
+.hard1:
+	loadtrainer RIVAL1, RIVAL1_1_HARD
+.startbattle1:	
+	; END
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -610,7 +634,19 @@ IlexForestCelebiEventScript:
 .Rowlet:
 	winlosstext IlexForestWinText, IlexForestLossText
 	setlasttalked ILEX_RIVAL
-	loadtrainer RIVAL1, RIVAL1_5_NORMAL 
+	; START 
+	readdifficultymode
+	ifequal DIFFICULTY_EASY, .easy2
+	ifequal DIFFICULTY_HARD, .hard2
+	loadtrainer RIVAL1, RIVAL1_2_NORMAL
+	sjump .startbattle2
+.easy2:
+	loadtrainer RIVAL1, RIVAL1_2_EASY
+	sjump .startbattle2
+.hard2:
+	loadtrainer RIVAL1, RIVAL1_2_HARD
+.startbattle2:	
+	; END
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
