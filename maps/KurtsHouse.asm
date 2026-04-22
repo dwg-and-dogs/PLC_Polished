@@ -972,5 +972,5 @@ endr
 	; fill pokedex
 	callasm FillPokedex
 	; debug only
-	warp REBELS_REDOUBT_B3F, 22, 10
+	warp VIOLET_CITY, 25, 25
 	end
