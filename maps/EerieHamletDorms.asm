@@ -139,7 +139,7 @@ EerieDormsTutorSleepTalkScript:
 	jumpopenedtext Text_EerieDormsTutorTaught ;;
 	
 Text_SleepTalkIntro: 
-	text "I'm the resident"
+	text "I'm the Hamlet's"
 	line "sleep expert."
 	
 	para "While we sleep,"
@@ -210,11 +210,9 @@ KurtEHDormsText:
 	cont "Hisui Elder."
 	
 	para "But I believe "
-	line "Johto can still"
-	para "keep its tradit-"
-	line "ions from being"
-	cont "wiped away!"
-	
+	line "we can still save"
+	cont "our traditions!"
+
 	para "I found some good"
 	line "#mon in the"
 	cont "grass. Want to"

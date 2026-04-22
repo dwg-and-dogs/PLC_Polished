@@ -17,18 +17,10 @@ EcruteakMart_MapScriptHeader:
 	object_event  6,  6, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakMartGrannyText, -1
 
 EcruteakMartSuperNerdText:
-	text "The theatre used"
-	line "to put on shows"
-	para "about how bless-"
-	line "ing nature would"
-	para "bring you bless-"
-	line "ing in return."
-	
-	para "I wonder how it"
-	line "will be with"
-	cont "Silph in charge?"
+	text "Have you seen the"
+	line "new show at the"
+	cont "Dance Theatre?"
 	done
-
 
 EcruteakMartGrannyText:
 	text "Those Silph execs"

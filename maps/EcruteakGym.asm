@@ -166,9 +166,8 @@ EcruteakGymBlockText:
 	text "Morty is in the"
 	line "Burned Tower."
 	
-	para "Our gym is closed"
-	line "until further"
-	cont "notice."
+	para "The gym is closed"
+	line "until he returns."
 	done
 	
 MortyIntroText:
@@ -206,8 +205,9 @@ MortyText_FogBadgeSpeech:
 	
 	para "I've seen Ho-Oh"
 	line "at the top with"
-	para "someone else I"
-	line "granted my badge."
+	para "someone I granted"
+	line "my badge to, "
+	cont "10 years ago."
 	done
 
 MortyFightDoneText:
@@ -219,7 +219,7 @@ MortyFightDoneText:
 	para "What would you"
 	line "find, if you"
 	
-	para "looked beyond" ; past your doubts?
+	para "looked beyond" 
 	line "your fears?"
 	done
 
@@ -238,13 +238,8 @@ MortyText_ShadowBallSpeech:
 	line "your fears?"
 	done
 
-EcruteakMamoswineText:
-	text "Baconator:"
-	line "Mamooo!"
-	done
 
-
-EcruteakGymBouldersResetScript: ; C.F. KIMONO CABIN 3
+EcruteakGymBouldersResetScript: 
 	faceplayer
 	opentext
 	checkevent EVENT_BURNED_TOWER_MORTY

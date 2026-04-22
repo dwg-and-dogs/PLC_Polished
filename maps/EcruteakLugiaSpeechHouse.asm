@@ -20,21 +20,17 @@ EcruteakLugiaSpeechHouse_MapScriptHeader:
 EcruteakLugiaSpeechHouseGrampsText:
 	text "Back in my day,"
 	line "this town was a"
-	cont "haven of remem-"
-	cont "berance."
-	
-	para "We gathered to"
-	line "honor our ance-"
-	cont "stors!"
+	cont "bastion of"
+	cont "tradition."
 	done
 
 EcruteakLugiaSpeechHouseYoungsterText:
 	text "We can't live"
 	line "in the past for-"
-	para "ever! We're shap-"
-	line "ing our future"
-	para "while honoring"
-	line "the past!"	
+	para "ever! It's only"
+	line "worth preserving"
+	para "if people actually"
+	line "want to visit."
 	done
 
 

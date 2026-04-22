@@ -42,7 +42,7 @@ EcruteakShrineOutsideSageText:
 	done
 
 EcruteakShrineOutsideStatueText:
-	text "A #mon statue…"
+	text "A #mon statue!"
 
 	para "It looks very"
 	line "serene."
@@ -191,7 +191,7 @@ PearlForRadiantOpalQuestionText:
 
 PearlForRadiantOpalEndText:
 	text "<PLAYER> got 5"
-	line "RADIANT OPAL."
+	line "Radiant Opals."
 	para "Enjoy your stay,"
 	line "and buy more "
 	cont "merchandise to"

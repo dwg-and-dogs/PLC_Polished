@@ -93,14 +93,14 @@ YesTimeTravelText_EG:
 
 EG_Brigader_Text2:
 	text "Brigader: No, I"
-	line "say that BOBESH"
+	line "say that Tyrus"
 	cont "has the best"
 	cont "vision!"
 	done
 	
 EG_Brigader_Text1:
 	text "Brigader: No, I"
-	line "say that KENSEY"
+	line "say that Nemo"
 	cont "has the best"
 	cont "vision!"
 	done
@@ -207,7 +207,7 @@ EG_Text2:
 	next
 	text_start
 	text "Emperor Vesper."
-	line "The stadium... It"
+	line "The stadium. It"
 	para "fell into a"
 	line "sinkhole."
 	done
@@ -287,8 +287,8 @@ EG_Text6:
 	para "the southern"
 	line "forests,"
 
-	para "I will remake Jo-"
-	line "hto in my image!"
+	para "Johto will be re-"
+	line "made in my image!"
 	done
 
 
@@ -358,7 +358,7 @@ EG_Bobesh_Text1:
 	para "I thought you had"
 	line "the Strength HM"
 	cont "only for your"
-	cont "brigaders?"
+	cont "Brigaders?"
 	done
 	
 EG_Bobesh_Text1_2:
@@ -372,8 +372,8 @@ EG_Bobesh_Text1_2:
 	cont "our hands!"
 	
 	para "Gauldenrod will"
-	line "be brought back"
-	cont "to heel."
+	line "be conquered"
+	cont "again."
 	
 	para "If we had an even"
 	line "bigger stadium,"
@@ -403,9 +403,6 @@ AdrinnaMoves2:
 	step_end
 
 EmperorsGardenKenseyScene:
-
-
-
 	showemote EMOTE_SHOCK, PLAYER, 5
 	applymovement PLAYER, PlayerHidesFromKenseyMovement
 	pause 30
@@ -466,6 +463,9 @@ EG_Kensey_Text_1_2:
 	line "port for their"
 	cont "metals."
 	
+	para "It brings in many"
+	line "new resources."
+	
 	para "We have hundreds"
 	line "on our dole!"
 
@@ -480,9 +480,10 @@ EG_Kensey_Text_1_3:
 	text_start
 	text "Your plan lacks"
 	line "dynamism."
-	
-	para "You plan to guide"
-	line "them forever?"
+
+	para "How long will you"
+	line "guide the Nomads,"
+	cont "forever?"
 	done
 
 
@@ -573,7 +574,7 @@ EG_AdrinnaText1:
 	text_start
 	text "<PLAYER>!"
 	line "Fufufu..."
-	cont "enjoying the"
+	cont "Enjoying the"
 	cont "garden?"
 
 	para "This garden was"
@@ -581,10 +582,9 @@ EG_AdrinnaText1:
 	
 	para "visionary arch-"
 	line "itect, who wiped"
-	para "away the land-"
-	line "scape and built"
-	para "something better"
-	line "in its place."
+	para "away the land and"
+	line "build something"
+	cont "better over it."
 
 	para "I see the dirt"
 	line "on your nails - "
@@ -611,16 +611,16 @@ EG_AdrinnaText3:
     text " Andrea: "
 	next
 	text_start
-	text "Now, please"
-	line "relax, maybe on"
-	para "the beaches"
+	text "That feather is"
+	line "worth a lot to"
+	para "the people living"
 	line "west of here."
+	
+	para "You should visit"
+	line "to find out why."
 	done
 
 EG_SeedBombMT:
-	; debug tech
-	setflag ENGINE_BOULDERBADGE
-	; END DEBUG 	
 	faceplayer
 	opentext
 	checkevent EVENT_LISTENED_TO_SEED_BOMB_INTRO
@@ -768,7 +768,8 @@ AmosSuspectsYouText:
 	text_start
 	text "You! You've been"
 	line "with Silas, then"
-	cont "Sandra, "
+	cont "Sandra before she"
+	cont "was taken,"
 	
 	para "And you meet"
 	line "General Andrea"
@@ -780,10 +781,10 @@ AmosSuspectsYouText:
 	done
 	
 AmosWLText:
-	text "Hm, I see... Your"
-	line "home is threat-"
-	para "ened by a king of"
-	line "a different kind."
+	text "I see. Your home"
+	line "is threatened by"
+	cont "a different form"
+	cont "of power."
 	done
 
 AmosGardenAfterBattleText:
@@ -792,12 +793,10 @@ AmosGardenAfterBattleText:
 	next
 	text_start
 	text "I know you want"
-	line "to save your"
-	cont "home, but to me,"
+	line "to save your home"
 	
-	para "it seems you are"
-	line "just getting in"
-	cont "my way."
+	para "but you're getting"
+	line "in my way."
 	
 	para "Let me handle"
 	line "this. Go home."

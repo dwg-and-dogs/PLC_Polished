@@ -158,7 +158,7 @@ TextReadingTheTeaLeaves2:
 	para "future is"
 	line "undecided!"
 	
-	para "My Litebluemail"
+	para "My Liteblue Mail"
 	line "is perfect if you"
 	para "aren't sure what"
 	line "the future holds."

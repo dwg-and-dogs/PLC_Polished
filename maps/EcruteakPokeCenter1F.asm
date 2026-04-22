@@ -34,12 +34,10 @@ PokemonJournalMortyScript:
 	para "Special Feature:"
 	line "Leader Morty!"
 
-	para "Recently un-"
-	line "earthed paint-"
-	cont "ings show that"
-	
-	para "he has a close"
-	line "resemblance to"
+	para "Ancient paintings"
+	line "show that Morty"
+	para "has a close rese-"
+	line "mblance to the"
 	cont "former Emperors"
 	cont "of Johto."
 	done
@@ -52,8 +50,6 @@ EcruteakPokeCenter1FPokefanMScript:
 	cont "very immersive"
 	cont "show these days!"
 	done
-
-
 
 EcruteakPokeCenter1FGymGuyText:
 	text "I hear there's a"
@@ -68,7 +64,7 @@ EcruteakPokeCenter1FGymGuyText:
 EcruteakPokeCenter1fPokefan2Text:
 	text "Give it a rest!"
 	
-	para "People want this:"
+	para "People want both"
 	line "entertainment and"
 	cont "excitement."
 	
@@ -79,9 +75,6 @@ EcruteakPokeCenter1fPokefan2Text:
 EcruteakPokeCenter1fElderText:
 	text "Adapting? Or"
 	line "abandoning?"
-	
-	para "It's a thin"
-	line "line!"
 	done
 
 

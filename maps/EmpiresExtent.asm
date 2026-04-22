@@ -173,7 +173,7 @@ ExtentNPCText3:
 
 ExtentSignText:
 	text "Imperial Mandate:"
-	line "Urguast's Ceremony"
+	line "Vesper's Ceremony"
 	para "All citizens must"
 	line "attend!"
 	done

@@ -48,7 +48,7 @@ EerieHamletNPC3:
 	iftrue_jumptextfaceplayer .Text1
 	jumpthistextfaceplayer
 
-	text "The brigaders all"
+	text "The Brigaders all"
 	line "find this place"
 	cont "a bit eerie."
 	done
@@ -69,8 +69,8 @@ EerieHamletNPC4:
 	text "Not many venture"
 	line "this far East."
 	
-	para "The training- I"
-	line "mean, temple is"
+	para "The training, Er,"
+	line "the, temple is"
 	para "not even open"
 	line "to outsiders."
 	
@@ -111,8 +111,8 @@ EerieHamletRoadblockText1:
 
 EerieHamletRoadblockText2:
 	text "The compasses are"
-	line "shifting! My rec-"
-	para "ords show that"
+	line "shifting! My data"
+	para "shows that the"
 	line "true north keeps"
 	para "shifting every "
 	line "time we go deeper"
@@ -196,7 +196,7 @@ NeedAFossilText:
 	
 	para "mine, but I just"
 	line "need one more pot"
-	cont "of honey tea."
+	cont "of honey Tea."
 	
 	para "If I had a little"
 	line "artifact from the"
@@ -206,7 +206,7 @@ NeedAFossilText:
 	done
 
 Text_FossilQuestion:
-	text "Hey, that fossil,"
+	text "Hey, that Fossil,"
 	line "did you dig it?"
 	
 	para "I would give you"
@@ -216,11 +216,11 @@ Text_FossilQuestion:
 	
 GiveSweetHoneyText: 
 	text "Thanks, this"
-	line "fossil will prove"
+	line "Fossil will prove"
 	cont "I was working."
 
-	para "This honey is so"
-	line "sweet, it'll give"
+	para "This Honey is so"
+	line "Sweet, it'll give"
 	cont "you the energy"
 	
 	para "you need to fin-"

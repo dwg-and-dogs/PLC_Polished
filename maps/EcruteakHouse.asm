@@ -51,8 +51,8 @@ EcruteakTinTowerEntranceSageText:
 	line "limits to anyone"
 
 	para "without a bless-"
-	line "ing from the Kim-"
-	cont "ono Girls."
+	line "ing from the"
+	cont "Kimono Girls."
 	done
 
 EcruteakTinTowerEntranceSageText_BeatKimonoGirls:

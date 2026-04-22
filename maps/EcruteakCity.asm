@@ -77,7 +77,7 @@ EcruteakCityGramps1Text:
 
 EcruteakCityGramps2Text:
 	text "This city used to"
-	line "breathe tradition."
+	line "exude tradition."
 	
 	para "Even Morty acts"
 	line "insecure about"
@@ -89,7 +89,6 @@ EcruteakCityHexManiacText:
 	line "haunt this place…"
 	done
 
-
 EcruteakCityLass2Text:
 	text "Tin Tower is so"
 	line "majestic!"
@@ -98,26 +97,28 @@ EcruteakCityLass2Text:
 	line "it, so long ago."
 	done
 
-
 EcruteakCityFisherText:
-	text "I heard Silph is"
-	line "interested in ac-"
-	cont "quiring the Dance"
-	cont "Theatre."
+	text "I heard Silph"
+	line "even wants to"
+	cont "take over the"
+	cont "Dance Theatre."
 	done
 
 
 EcruteakCityYoungsterText:
 	text "We used to get"
 	line "our water from"
-	cont "the Lake of Rage."
+	cont "the Lake of Rage,"
+	
+	para "until it dried"
+	line "up."
 	
 	para "But now, we get"
-	line "it from Olivine."	
+	line "it from Olivine."
 	done
 
 EcruteakCityGramps3Text:
-	text "The burned tower"
+	text "The Burned Tower"
 	line "is falling beyond"
 	cont "disrepair."
 	done
@@ -147,10 +148,6 @@ EcruteakDanceTheaterSignText:
 
 BurnedTowerSignText:
 	text "Burned Tower"
-
-	para "It was destroyed"
-	line "by a mysterious"
-	cont "fire."
 	done
 
 EcruteakCityCuteGirlText:
@@ -163,26 +160,22 @@ EcruteakCityCuteGirlText:
 	cont "tourist-friendly."
 
 	para "The sages even do"
-	line "photo ops."
+	line "photos."
 	done
 
 EcruteakBarrierStationSignText:
 	text "Barrier Station"
 	line "to Bell Tower"
 
-	para "No Trespassing by"
-	line "the Unworthy"
 	done
 
 EcruteakCityFarmersText:
 	text "Sorry, MooMoo"
-	line "Farms is dealing"
-	cont "with a lost cow."
+	line "Farms is tracking"
+	cont "a lost Miltank."
 	
-	para "They don't want"
-	line "anyone to inter-"
-	cont "fere with the"
-	cont "rescue."
+	para "No one is allowed"
+	line "through."
 	done
 	
 EcruteakCityHikersText:

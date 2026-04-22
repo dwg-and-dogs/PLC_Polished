@@ -1,28 +1,5 @@
-C:\Users\dwg11\PLC_Polished\maps\BrassTower4FWarp.asm:
-  Line 51: checkevent EVENT_AZALEA_KIMONO_GIRL ; todo check these 
-
-C:\Users\dwg11\PLC_Polished\maps\DayCare.asm:
-  Line 38: DayCareManScript_Inside: ; todo will need to check th
-  Line 53: DayCareLadyScript: ; todo check her
-
 C:\Users\dwg11\PLC_Polished\maps\DebugRoom.asm:
   Line 21: object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1 ; REVISE TEXT TODO
-
-C:\Users\dwg11\PLC_Polished\maps\EarlsPokemonAcademy.asm:
-  Line 121: ElderLiScript: ; TODO CHECK THIS
-
-UnionCave scripts with Petry b1FN and b2f
-
-C:\Users\dwg11\PLC_Polished\maps\GauldenrodUnderground.asm:
-  Line 100: ; todo check
-
-C:\Users\dwg11\PLC_Polished\maps\SeafluxNexusB2F.asm:
-  Line 146: special RestartMapMusic ; todo need to check
-
-
-C:\Users\dwg11\PLC_Polished\maps\NationalPark.asm:
-  Line 40: object_event 20, 29, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFSophie, -1; todo
-  Line 41: object_event 10, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFFlo, -1; todo
 
 
 C:\Users\dwg11\PLC_Polished\maps\TinTowerRoof.asm:

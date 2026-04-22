@@ -116,7 +116,7 @@ NeedALiteBlueMailText:
 	line "express my love"
 	cont "on Gold Leaf!"
 
-	para "How is my beloved"
+	para "How is my darling"
 	line "to know I'm more"
 	cont "than my money?"
 	done

@@ -34,7 +34,7 @@ HamletGateText:
 	line "up by the Tarn."
 	
 	para "Then all those"
-	line "brigaders rushed"
+	line "Brigaders rushed"
 	cont "back to the mine."
 	done
 	
