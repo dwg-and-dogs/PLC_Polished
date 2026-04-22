@@ -60,7 +60,7 @@ CabinGentlemanReadMailText:
 	para "What'd it say?"
 	
 	para "Ah, a little"
-	line "too late..."
+	line "too late."
 	
 	para "Wish he would"
 	line "have used the"
@@ -70,11 +70,11 @@ CabinGentlemanReadMailText:
 FirstClassCabinTeacherText:
 	text "I heard static"
 	line "further down the"
-	cont "tunnel..."
+	cont "tunnel!"
 	
 	para "What if the train"
-	line "attracts mische-"
-	cont "vious #mon?"
+	line "attracts mischi-" ; mischievous
+	cont "evous #mon?"
 	done
 
 FirstClassCabinGentleman2Text:
