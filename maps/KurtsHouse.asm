@@ -972,5 +972,5 @@ endr
 	; fill pokedex
 	callasm FillPokedex
 	; debug only
-	warp HOLLYS_HOLT, 10, 26
+;	warp UNION_CAVE_B2F, 12, 29
 	end

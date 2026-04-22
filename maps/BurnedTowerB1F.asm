@@ -140,44 +140,5 @@ BurnedTowerB1FEusineMovement1:
 	step_end
 
 BurnedTowerB1FEusineText:
-	text "Eusine: I dug a"
-	line "hole here, too…"
-
-	para "I was shocked!"
-
-	para "Suicune raced by"
-	line "like a blur, right"
-
-	para "in front of my"
-	line "eyes!"
-
-	para "For ten years I"
-	line "chased Suicune,"
-
-	para "and I finally got"
-	line "to see it."
-
-	para "I'm all choked up!"
-
-	para "<PLAYER>, I owe"
-	line "this all to you!"
-
-	para "Thank you!"
-
-	para "I heard that the"
-	line "legendary #mon"
-
-	para "of Ecruteak test"
-	line "chosen humans by"
-
-	para "allowing them to"
-	line "get close."
-
-	para "I'm going to track"
-	line "Suicune."
-
-	para "<PLAYER>, let's"
-	line "meet again!"
-
-	para "Farewell!"
+	text "Eusine: I dug a";unused 
 	done

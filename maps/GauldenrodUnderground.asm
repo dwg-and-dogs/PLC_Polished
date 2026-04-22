@@ -16,7 +16,7 @@ GauldenrodUnderground_MapScriptHeader:
 	object_event  1, 15, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerAromaLadyDahlia, EVENT_GAULDENROD_TUNNELERS
 	object_event  2, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFirebreatherDick, EVENT_GAULDENROD_TUNNELERS
 	object_event  1, 20, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTamerBrett, EVENT_GAULDENROD_TUNNELERS
-	object_event  2, 25, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_GENERICTRAINER, 0, CooltrainerFBethScript, EVENT_GAULDENROD_TUNNELERS
+	object_event  2, 25, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CooltrainerFBethScript, EVENT_GAULDENROD_TUNNELERS
 	object_event  1, 26, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundNPC5Script, EVENT_GAULDENROD_TUNNELERS
 	itemball_event 1,  7, BIG_ROOT, 1, EVENT_UNDERGROUND_BIG_ROOT
 	strengthboulder_event 4, 10
@@ -100,12 +100,18 @@ TamerBrettBeatenText:
 ; todo check  
 CooltrainerFBethScript:
 	faceplayer
+	opentext
+
 	checkevent EVENT_BEAT_COOLTRAINERF_BETH
 	iftrue_jumptext CooltrainerFBethBeatenText
-	opentext
+	
+	
 	writetext CooltrainerFBethSeenText
 	waitbutton
 	closetext
+
+	winlosstext CooltrainerFBethBeatenText, 0
+
 	; START 
 	readdifficultymode
 	ifequal DIFFICULTY_EASY, .easy

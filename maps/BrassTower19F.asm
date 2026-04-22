@@ -89,5 +89,5 @@ BT19F_NoAscendText:
 
 BT19F_AscendingText:
 	text "The future is"
-	line "watching..."
+	line "watching."
 	done

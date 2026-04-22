@@ -105,7 +105,7 @@ GenericTrainerElderNoboru:
 
 NoboruBeatenText:
     text "I fell to the"
-	line "ground..."
+	line "ground!"
     done
 	
 NoboruSeenText:
@@ -122,7 +122,7 @@ GenericTrainerElderTakashi:
 
 TakashiBeatenText:
     text "I should have"
-	line "revered you..."
+	line "revered you!"
     done
 	
 TakashiSeenText:

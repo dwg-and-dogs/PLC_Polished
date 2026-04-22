@@ -57,12 +57,9 @@ BurnedTower1FMortyScript:
 	para "Its beauty is so"
 	line "pure and simple."
 	
-	para "Like how even a"
+	para "Like how a tiny"
 	line "raindrop refracts"
 	cont "the entire world."
-	
-	para "I've had an"
-	line "epiphany!"
 	
 	para "The sublime is in"
 	line "simplicity."
@@ -80,9 +77,9 @@ BurnedTower1FMortyScript:
 Morty1FIntroText:
 	text "Oh, have you come"
 	line "for my badge? The"
-	cont "gym is closed,"
+	cont "gym is closed."
 
-	para "Until I find a"
+	para "I must find a"
 	line "way to bring"
 	para "people closer to"
 	line "the sublime."
@@ -93,8 +90,7 @@ Morty1FIntroText:
 
 Text_MortyMorose:
 	text "I'll have to keep"
-	line "studying to find"
-	cont "one."
+	line "studying!"
 	done
 
 BurnedTower1FScientistText:
@@ -124,8 +120,8 @@ GenericTrainerFirebreatherLyle:
 	generictrainer FIREBREATHER, LYLE, EVENT_BEAT_FIREBREATHER_LYLE, FirebreatherLyleSeenText, FirebreatherLyleBeatenText
 
 	text "Are you looking"
-	line "for the legend-"
-	cont "ary beasts?"
+	line "for the legendary"
+	cont "beasts?"
 	done
 	
 GenericTrainerFirebreatherBill:
@@ -158,15 +154,19 @@ FirebreatherBillBeatenText:
 BurnedTower1FSage2Text:
 	text "When this tower"
 	line "burned down,"
+	
 	para "Ho-Oh briefly"
 	line "returned to"
 
 	para "revive three"
 	line "innocent #mon"
+	
 	para "to roam the"
 	line "land, where"
+	
 	para "they could"
 	line "inspire people"
+	
 	para "to revere the"
 	line "natural world."
 	done

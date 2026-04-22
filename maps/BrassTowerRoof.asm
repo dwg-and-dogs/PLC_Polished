@@ -161,8 +161,7 @@ TowerRoofMejimiText1_0:
 	next
 	text_start
 	text "Johto! We will be"
-	line "united under my"
-	cont "rule!"
+	line "united under me!"
 	
 	para "I am nature"
 	line "incarnate!"
@@ -172,8 +171,7 @@ TowerRoofMejimiText1_0:
 	cont "everlasting!"
 
 	para "We will repel the"
-	line "barbaric"
-	cont "outsiders!"
+	line "outsiders!"
 	done
 
 TowerRoofMejimiText1_1:
@@ -190,13 +188,13 @@ TowerRoofMejimiText1_4:
     text " Kurt: " 
 	next
 	text_start
-	text "You're wrong."
-	line "We are all"
-	cont "part of nature."
+	text "You're wrong. We"
+	line "are all part of"
+	cont "nature."
 	para "When you set"
-	line "yourself above,"
-	para "you become"
-	line "the unnatural."
+	line "yourself above it"
+	para "you become the"
+	line "unnatural."
 	done
 
 TowerRoofMejimiText1_5:
@@ -243,7 +241,6 @@ TowerRoofMejimiText1_9:
 	line "the flames!"
 	done
 
-
 TowerRoofMejimiText1_9_2:
 	text_high
     text " Vesper: " 
@@ -271,31 +268,28 @@ TowerRoofMejimiText1_10:
 	para "borrowing from"
 	line "the next."
 
-	para "This tower will"
-	line "fall. There's only"
-	para "room for you on"
-	line "Ho-Oh."
-
 	para "When we began,"
 	line "I wanted to pass"
 	para "down a Johto that"
 	line "could support you"
 	cont "in your life."
 	
+	para "This tower will"
+	line "fall. There's only"
+	para "room for you on"
+	line "Ho-Oh's back."
+	
 	para "On this unsturdy"
 	line "tower, I get to"
 	para "make the ultimate"
 	line "sacrifice to give"
 	para "you a chance to"
-	line "build a stronger"
-	cont "community."
+	line "build a brighter"
+	cont "future."
 	
 	para "Please, tell them"
 	line "the whole story."
-	
-	para "How we united to"
-	line "build a better"
-	cont "future."
+
 	done
 
 BrassTowerLugiaFleesMovement:
@@ -556,7 +550,7 @@ TowerRoofText2_10:
     text " Andrea: " 
 	next
 	text_start
-	text "See! Johto!"
+	text "See, Johto?"
 	line "Anyone can rise"
 	para "to the level of"
 	line "the Emperor, with"
@@ -576,8 +570,8 @@ TowerRoofText2_10:
 	cont "of you."
 
 	para "This is how we"
-	line "repel the out-"
-	cont "siders."
+	line "repel the barbar-"
+	cont "ic outsiders."
 	done
 
 TowerRoofText2_11: 
@@ -588,8 +582,8 @@ TowerRoofText2_11:
 	text "No! <PLAYER>,"
 	line "I was misguided."
 
-	para "I wanted the fu-"
-	line "ture to look like"
+	para "I wanted the fut-"
+	line "ure to look like"
 	cont "my past."
 
 	para "But I forgot that"
@@ -634,6 +628,7 @@ TinTowerRoofText2_Celebi:
 	line "above or below "
 	cont "nature - "
 	cont "you are nature."
+	
 	para "As a forest needs"
 	line "growth and decay,"
 	
@@ -653,6 +648,7 @@ TinTowerRoofText2_Celebi:
 
 	para "You failed me,"
 	line "<PLAYER>."
+	
 	done
 
 TowerRoofText2_16: 
@@ -673,15 +669,14 @@ TowerRoofText2_16_2:
 	line "know where I go"
 	cont "from here."
 	
-	para "First my son,"
-	line "then my home,"
-	cont "and now my "
+	para "First my son then,"
+	line "my home, now my"
 	cont "grandchild."
 
 	para "So long, <PLAYER>."
 	
 	para "I can't guide"
-	line "you any more."	
+	line "you any more."
 	done
 
 TowerRoofText2_18: 

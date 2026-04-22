@@ -95,6 +95,7 @@ VioletGymFalknerScript:
 	closetext
 
 	winlosstext FalknerWinLossText, 0
+	; start 
 	readdifficultymode
 	ifequal DIFFICULTY_EASY, .easy
 	ifequal DIFFICULTY_HARD, .hard
@@ -106,6 +107,7 @@ VioletGymFalknerScript:
 .hard:
 	loadtrainer FALKNER, FALKNER_HARD
 .startbattle:
+	; end 
 	startbattle
 	reloadmapafterbattle	
 	setevent EVENT_BEAT_FALKNER

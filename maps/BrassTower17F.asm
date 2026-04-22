@@ -42,15 +42,13 @@ GenericTrainerElderSatoru:
 	done
 
 SatoruBeatenText:
-	text "Hm, but why does"
-	line "he act with such"
-	cont "folly."	
+	text "Oh, but he acts"
+	line "with such folly."
 	done
 	
 SatoruSeenText:
-    text "Vesper has the"
-	line "wisdom of the"
-	cont "ages!"	
+    text "Vesper has wisdom"
+	line "of the ages!"	
     done
 
 BrassTower17FUnownBlocks:

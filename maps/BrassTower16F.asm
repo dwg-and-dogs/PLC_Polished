@@ -64,7 +64,6 @@ BrassTowerSwitchScript16F:
 GenericTrainerElderTadao:
     generictrainer ELDER, TADAO, EVENT_BEAT_ELDER_TADAO, TadaoSeenText, TadaoBeatenText
 
-
 	text "How did you see"
 	line "the doubt in my"
 	cont "heart?"
@@ -84,4 +83,3 @@ TadaoSeenText:
 	line "show your"
 	cont "allegiance!"
     done
-
