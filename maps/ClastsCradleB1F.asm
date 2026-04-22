@@ -181,7 +181,7 @@ CradleScene1_Mejimi:
 
 CradleCutscene_Text0:
 	text "Meanwhile, Vesper"
-	line "visits his mine:"
+	line "visits the mine:"
 	done
 
 CradleCutscene_Text1:
@@ -198,12 +198,13 @@ CradleCutscene_Text2:
     text " Tyson: " 
 	next
 	text_start 
-	text "Madam. There were"
-	line "some unexpected"
-	cont "toxic gases."
+	text "General. There"
+	line "were some unexpe-"
+	cont "cted toxic fumes."
 	
-	para "Some Hisuians"
-	line "lost #mon."
+	para "Some Hisuian"
+	line "#mon couldn't"
+	cont "handle them."
 	
 	para "They suddenly"
 	line "want to give up."
@@ -220,8 +221,8 @@ CradleCutscene_Text3:
 	para "need a taste of"
 	line "raw power."
 	
-	para "We must be very"
-	line "close to the"
+	para "But we must be"
+	line "very close to the"
 	cont "source?"
 	done
 
@@ -230,12 +231,9 @@ CradleCutscene_Text4:
     text " Vesper: " 
 	next
 	text_start 
-	text "Shoo!"
-	
-	para "Andrea, your"
-	line "soldiers are more"
-	para "lively than"
-	line "Nemo's."
+	text "Begone, soldier."
+	para "I must talk to"
+	line "General Andrea."
 	done
 
 CradleCutscene_Text5:
@@ -252,11 +250,11 @@ CradleCutscene_Text6:
     text " Vesper: " 
 	next
 	text_start 
-	text "His port - it"
-	line "was destroyed!"
+	text "His port was"
+	line "destroyed!"
 
-	para "Says an old man"
-	line "stole my Lugia."
+	para "Says by old man"
+	line "piloting Lugia."
 	para "But she's been by"
 	line "my side loyally!"
 	cont "How absurd."
@@ -268,8 +266,10 @@ CradleCutscene_Text7:
     text " Andrea: " 
 	next
 	text_start 
-	text "Another project,"
-	line "lost. How tragic!"
+	text "First the stadium"
+	line "and now the port."
+	
+	para "How unfortunate."
 	
 	para "Now, this mine is"
 	line "your only hope."
@@ -295,7 +295,7 @@ CradleCutscene_Text9:
     text " Andrea: " 
 	next
 	text_start 
-	text "Emperor, I- Er,"
+	text "Vesper, I- Er,"
 	line "you told me that"
 	para "traditions should"
 	line "be wiped clean?"
@@ -323,8 +323,8 @@ CradleCutscene_Text11:
 	line "are so close to"
 	para "the #mon that"
 	line "can shape Johto"
-	para "to how I-Er, how"
-	line "you want!" 
+	para "to how I - Er,"
+	line "how you want!"
 	done
 
 CradleCutscene_Text12:
@@ -335,8 +335,10 @@ CradleCutscene_Text12:
 	text "Hold off on those"
 	line "plans."
 	
-	para "A coronation will"
-	line "revive Johto."
+	para "My coronation as"
+	line "nature incarnate"
+	cont "will rejuvenate"
+	cont "Johto."
 	
 	para "See to it!"
 	done
@@ -347,7 +349,7 @@ CradleCutscene_Text13:
 	next
 	text_start 
 	text "Vesper, how I"
-	line "misjudged you..."
+	line "misjudged you."
 	done
 
 CradleCutscene_Text14:
@@ -365,7 +367,7 @@ CradleCutscene_Text15:
 	next
 	text_start 
 	text "We will temper"
-	line "ourselves-"
+	line "ourselves."
 
 	para "I have a plan to"
 	line "lure back the" 
@@ -438,15 +440,18 @@ GenericTrainerBrigader19: ; bugs dark
 	generictrainer BRIGADER, 19, EVENT_BEAT_ROCKET_GRUNTM_19, Brigader19SeenText, Brigader19BeatenText  
 
 	text "Wait, it's not"
-	line "sulfur smell."
+	line "sulfur I smell."
 	
-	para "I smell the pure"
-	line "aroma of Steel!"
+	para "It's a sharp tang"
+	line "of molten Iron!"
 	done
 
 Brigader19BeatenText:
-	text "Maybe I smelled"
-	line "the sulfur..."
+	text "Wait, it's not"
+	line "sulfur I smell."
+	
+	para "It's a sharp tang"
+	line "of molten Iron!"
 	done
 
 Brigader19SeenText:
@@ -468,7 +473,7 @@ GenericTrainerBrigader20: ; tyson nidos steelix
 	done
 
 Brigader20BeatenText:
-	text "Unfathomable - I"
+	text "Unfathomable. I"
 	line "was the best!"
 	done
 
@@ -479,9 +484,6 @@ Brigader20SeenText:
 	para "You wouldn't last"
 	line "a day in here!"
 	done
-
-
-
 
 CradleScene2_Heatran:
 	blackoutmod SULFUR_STY
@@ -641,9 +643,8 @@ CradleAdrinnaText2:
 	cont "should do."
 	
 	para "Your only limit"
-	line "is ..."
+	line "is ... ?"
 
-	para "...?"
 	done
 	
 	
@@ -661,14 +662,13 @@ CradleKurtText1:
 	para "invention to man-"
 	line "age the forest's"
 	cont "decline, I"
-	
-	para "pushed him away."
-	line "I was scared."
-	para "I forgot that I"
-	line "was doing it for"
-	para "the next genera-"
-	line "tion. Show Andrea"
-	line "that she's wrong!"
+	cont "pushed him away."
+	para "I was scared."
+	line "I forgot that I"
+	cont "was doing it for"
+	cont "the next genera-"
+	cont "tion. Show Andrea"
+	cont "that she's wrong!"
 	done
 	
 

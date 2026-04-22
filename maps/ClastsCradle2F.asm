@@ -90,9 +90,8 @@ GenericTrainerEngineerGoeth: ; goethite
 	generictrainer ENGINEER, GOETH, EVENT_BEAT_ENGINEER_GOETH, GoethSeenText, GoethBeatenText
 	
 	text "The mountain is"
-	line "delicate - don't"
-	para "go deeper without"
-	line "a plan!"
+	line "delicate. Always"
+	cont "dig with a plan!"
 	done
 	
 GoethBeatenText:

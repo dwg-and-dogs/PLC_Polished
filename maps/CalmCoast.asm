@@ -53,13 +53,12 @@ GenericTrainerYoungsterWarren:
 
 YoungsterWarrenSeenText:
 	text "I'm on the lookout"
-	line "for hoothoot!"
+	line "for Hoothoot!"
 	done
 
 YoungsterWarrenBeatenText:
-	text "Gosh, it gets"
-	line "boring standing"
-	cont "here."
+	text "Gosh, it's boring"
+	line "standing here."
 	done
 
 GenericTrainerCooltrainerMGaven:
@@ -77,7 +76,6 @@ CooltrainerMGavenBeatenText:
 	line "bizarre."
 	done
 
-
 CooltrainerMGavenSeenText:
 	text "I just got back"
 	line "from the bazaar!"
@@ -88,22 +86,22 @@ GenericTrainerYoungsterJimmy:
 
 	text "The strongest"
 	line "#mon trainers"
-	cont "become brigaders."
+	cont "become Brigaders."
 	
-	para "It's a brand new"
+	para "It's the infantry"
 	line "division started"
 	cont "by the Emperor!"
 	done
 
 SchoolboyJackSeenText:
 	text "I'm trying to join"
-	line "the brigaders!"
+	line "the Brigaders!"
 	done
 
 SchoolboyJackBeatenText:
 	text "Now I'll never"
 	line "make it as a"
-	cont "brigader."
+	cont "Brigader."
 	done
 
 GenericTrainerBattleGirlSubaru:
@@ -192,10 +190,7 @@ CalmCoastKurtScript:
 	writetext CalmCoastKurtText
 	waitbutton
 	closetext
-;	applymovement CALM_COAST_KURT, CalmCoastKurtWalksAway
-;	disappear CALM_COAST_KURT
-	clearevent EVENT_KURTS_HOUSE_BOOK_1 ; now it appears 
-;	setevent EVENT_KURT_CALM_COAST	
+	clearevent EVENT_KURTS_HOUSE_BOOK_1
 	end
 
 HearAStory_1Text:
@@ -215,7 +210,7 @@ CalmCoastKurtText:
 	cont "160 years ago."
 
 	para "Your father helped"
-	line "at the day care"
+	line "at the Day Care"
 	cont "when he was young."
 
 	para "Once, on the way"
@@ -234,7 +229,7 @@ CalmCoastKurtText:
 	line "Cyndaquil Puff."
 	
 	para "If you ever want"
-	line "to hear my story"
+	line "to read my story"
 	cont "again, check the"
 	cont "journals at home."
 	
@@ -247,7 +242,7 @@ CalmCoastKurtText:
 
 CalmCoastDartrixText:
 	text "Dartrix:"
-	line "...hoo!"
+	line "Hoo!"
 	done
 	
 CalmCoastPidgeottoText:
@@ -256,8 +251,8 @@ CalmCoastPidgeottoText:
 	done
 
 CalmCoastSign2Text:
-	text "Posted: do not"
-	line "bother Oshawott"
+	text "Posted: Stay away"
+	line "from Oshawott"
 	cont "dams!"
 	done
 
@@ -276,6 +271,3 @@ CalmCoastKurtWalksAway:
 	step_up
 	step_up
 	step_end
-
-;CalmCoastMatronIceMonGiftScript:
-	

@@ -38,7 +38,6 @@ CattleCull39_MapScriptHeader:
 GenericTrainerNomadFMarlene:
    generictrainer NOMAD_F, NOMAD_F_MARLENE, EVENT_BEAT_NOMAD_F_MARLENE, NomadMarleneSeenText, NomadMarleneBeatenText
 
-
    text "The Emperor never"
    line "let us try to"
    para "to repel the"
@@ -47,7 +46,7 @@ GenericTrainerNomadFMarlene:
 
 NomadMarleneSeenText:
    text "Our tempest will"
-   line "never be settled!"
+   line "never be tamed!"
    done
 
 NomadMarleneBeatenText:
@@ -65,9 +64,9 @@ GenericTrainerNomadMDale:
 
 NomadDaleSeenText:
    text "The winds speak"
-   line "to us. But:"
-   para "the brigaders"
-   line "are deaf!"
+   line "to us, and the"
+   para "Brigaders can't"
+   line "listen!"
    done
 
 NomadDaleBeatenText:
@@ -90,7 +89,7 @@ GenericTrainerNomadFRin:
 
 NomadRinSeenText:
 	text "Our lives moved"
-	line "with seasons - "
+	line "with seasons."
 	
 	para "Can you move with"
 	line "them as well?"
@@ -106,14 +105,13 @@ GenericTrainerNomadMJacob:
 
 	text "They say their"
 	line "routes are safe."
-	para "But they don't"
-	line "know how to navig-"
-	cont "ate the fog."
+	para "But they can't"
+	line "navigate the fog."
 	done
 
 NomadJacobSeenText:
 	text "I knew every cove"
-	line "and inlet!"
+	line "and current!"
 	para "Their maps make"
 	line "me worthless!"
 	done
@@ -124,7 +122,7 @@ NomadJacobBeatenText:
 	done
 
 CattleCull39SignText:
-	text "Emperor's Road-"
+	text "Emperor's Road:"
 	line "Follow through"
 	para "Cattle Cliffs to"
 	line "Trader's Landing"
@@ -183,12 +181,15 @@ KurtCattleCullStoryText:
 	line "the Silph's #-"
 	para "ball R&D in"
 	line "Kanto, he left"
-	para "Cyndaquil for me"
-	line "to take care of."
+	cont "Cyndaquil for me."
 
-	para "Cyndaquil and I"
-	line "watched him sail"
-	cont "away from."
+	para "We watched his"
+	line "ship sail beyond"
+	cont "the horizon,"
+	
+	para "growing smaller"
+	line "like a bonfire"
+	cont "fading to embers."
 
 	para "If you ever want"
 	line "to hear my story"
@@ -214,14 +215,13 @@ NomadF_GotHoneClaws:
 	
 HoneClawsText:
 	text "We're adapting to"
-	line "living on these"
-	para "cliffs for perpe-"
-	line "tuity, not just"
-	cont "seasonally."
+	line "living here for"
+	para "perpetuity, not"
+	line "just seasonally."
 	
 	para "Take this. Don't"
-	line "be afraid of lea-"
-	cont "rning new skills!"
+	line "stop learning new"
+	cont "skills!"
 	done
 
 TaurosText:
@@ -235,8 +235,7 @@ Miltank39Text:
 	done
 
 TradersLandingAheadText:
-	text "Trader's Landing"
-	line "ahead: Managed"
-	para "by the cerebral"
-	line "General Nemo"
+	text "Trader's Landing:"
+	line "Managed by"
+	cont "General Kensey"
 	done

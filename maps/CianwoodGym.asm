@@ -41,9 +41,8 @@ CianwoodGymStatue:
 GenericTrainerBlackbeltYoshi:
 	generictrainer BLACKBELT_T, YOSHI, EVENT_BEAT_BLACKBELT_YOSHI, BlackbeltYoshiSeenText, BlackbeltYoshiBeatenText
 
-	text "We will be reme-"
-	line "mbered for 100"
-	cont "years!"
+	text "Our story will be"
+	line "told for ages!"
 	done
 
 
@@ -76,9 +75,8 @@ GenericTrainerBlackbeltLung:
 
 
 BlackbeltYoshiSeenText:
-	text "We will be reme-"
-	line "mbered for 100"
-	cont "years!"
+	text "Our story will be"
+	line "told for ages!"
 	done
 
 BlackbeltYoshiBeatenText:
@@ -145,7 +143,7 @@ ResetCianwoodGymText:
 	line "item."
 	
 	para "I'll instruct the"
-	line "blackbelts to"
+	line "trainers to"
 	cont "battle you."
 	
 	para "Each one has a 2"

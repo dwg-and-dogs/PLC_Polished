@@ -53,7 +53,7 @@ KurtCradleText1:
 	line "a powerful"
 	cont "#mon."
 
-	para "The brigaders"
+	para "The Brigaders"
 	line "think there's"
 	para "nothing that can"
 	line "withstand it."

@@ -1,4 +1,4 @@
-CianwoodPokeCenter1F_MapScriptHeader:
+CianwoodPokeCenter1F_MapScriptHeader: ; unused 
 	def_scene_scripts
 
 	def_callbacks

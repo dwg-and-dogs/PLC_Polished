@@ -1,4 +1,4 @@
-CianwoodLugiaSpeechHouse_MapScriptHeader:
+CianwoodLugiaSpeechHouse_MapScriptHeader: ; unused 
 	def_scene_scripts
 
 	def_callbacks

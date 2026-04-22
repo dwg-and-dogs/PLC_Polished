@@ -32,7 +32,7 @@ CattleCull38_MapScriptHeader:
 
 
 CattleCull38SignText:
-	text "Emperor's Road-"
+	text "Emperor's Road:"
 	line "Follow through"
 	para "Cattle Cliffs to"
 	line "Trader's Landing"
@@ -55,9 +55,8 @@ NomadJoelSeenText:
 
 NomadJoelBeatenText:
 	text "We won't be kept"
-	line "in like Miltank!"
+	line "in like cattle!"
 	done
-
 
 GenericTrainerNomadMGlenn:
 	generictrainer NOMAD_M, NOMAD_M_GLENN, EVENT_BEAT_NOMAD_M_GLENN, NomadGlennSeenText, NomadGlennBeatenText
@@ -81,13 +80,13 @@ NomadGlennBeatenText:
 GenericTrainerNomadFReina:
 	generictrainer NOMAD_F, NOMAD_F_REINA, EVENT_BEAT_NOMAD_F_REINA, NomadReinaSeenText, NomadReinaBeatenText
 
-	text "Close your eyes"
-	line "and let the wind"
+	text "Close your eyes,"
+	line "let the wind"
 	cont "guide you!"
 	done
 	
 NomadReinaSeenText:
-	text "Here's a riddle:"
+	text "Here's a dilemma:"
 
 	para "What good is a"
 	line "map to a changing"

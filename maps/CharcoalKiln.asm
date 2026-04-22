@@ -95,23 +95,26 @@ CharcoalKilnBoss:
 	jumpthistextfaceplayer
 
 	text "Made any nice"
-	line "apricorns?"
+	line "Apricorns?"
 
 	para "That's handy."
-	line "Sigh..."
 	
 	para "I don't know how"
 	line "we'll stay here,"
 	para "with the drought"
 	line "taking our trees."
+	
+	para "We'll never make"
+	line "enough Charcoal"
+	cont "to make a living."
 	done
 
 .Text3:
 	text "I wonder where"
-	line "my son went..."
+	line "my son went."
 	
-	para "Maybe I've been"
-	line "too harsh on him."
+	para "I think I've been"
+	line "too harsh to him."
 	done
 
 CharcoalKilnApprentice:
@@ -122,9 +125,9 @@ CharcoalKilnApprentice:
 	endtext
 
 .Text1:
-	text "I hope this cere-"
-	line "mony means I can"
-	cont "be independent."
+	text "After my ceremony"
+	line "I can finally be"
+	cont "more independent."
 	done
 
 CharcoalKilnFarfetchdScript:
@@ -151,14 +154,16 @@ CharcoalKilnStillText:
 
 KilnChemistryText:
 	text "A complicated set"
-	line "of beakers,"
+	line "of beakers for"
+	cont "extracting aroma"
+	cont "from tree bark."
 	
 	para "haphazardly"
 	line "assembled by"
 	cont "<RIVAL>."
 	
-	para "Smells good,"
-	line "though!"
+	para "Smells like"
+	line "Charcoal!"
 	done
 
 
@@ -172,6 +177,11 @@ RivalLetterScript:
 RivalLetterText:
 	text "Dad, I'm writing"
 	line "from Blackthorn."
+	
+	para "Professor Elm"
+	line "helped me get"
+	cont "into Eastern"
+	cont "Johto."
 	
 	para "I'm working on a"
 	line "project with the"
@@ -204,11 +214,11 @@ RivalLetterText:
 	cont "me to play."
 	
 	para "I wasn't going to"
-	line "be another part"
-	cont "in their machine."
+	line "be another Part"
+	cont "in their Machine."
 	
-	para "I'm going to find"
-	line "myself. In the"
+	para "I was made for"
+	line "this. In the"
 	para "still waters of"
 	line "the Dragon's Den"
 	para "my reflection is"

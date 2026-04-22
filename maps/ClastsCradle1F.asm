@@ -160,7 +160,7 @@ Brigader17BeatenText:
 	done
 
 Brigader17SeenText:
-	text "Do you #mon"
+	text "Do your #mon"
 	line "find it hard to"
 	cont "breathe here?"
 	done
@@ -231,7 +231,7 @@ GenericTrainerDragonTamerHank2:
 
 Hank2BeatenText:
 	text "They don't rule"
-	line "the caves..."
+	line "the caves!"
 	done
 
 Hank2SeenText:
@@ -261,10 +261,7 @@ Jones2BeatenText:
 
 Jones2SeenText:
 	text "Can you damage my"
-	line "Steel dragons?"
-	para "They didn't have"
-	line "dragons like this"
-	cont "in Hisui!"
+	line "dragons?"
 	done
 
 

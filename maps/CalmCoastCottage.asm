@@ -43,7 +43,7 @@ CalmCoastCottageChildText:
 	para "So my parents"
 	line "hired a kid"
 	para "from the city"
-	line "to guard our"
+	line "to watch our"
 	cont "garden."
 	done
 

@@ -1,5 +1,4 @@
 CapitalCullGate_MapScriptHeader: 
-
 	def_scene_scripts
 
 
@@ -15,25 +14,24 @@ CapitalCullGate_MapScriptHeader:
 	def_coord_events
 
 
-
 	def_bg_events
-
 
 
 	def_object_events
 	object_event 3, 4, SPRITE_NOMAD_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CapitalCullNomadFNPCScript, -1
 
 
-
 CapitalCullNomadFNPCScript:
 	jumptextfaceplayer CapitalCullGateNPCText
 
 CapitalCullGateNPCText:
-	text "We roamed free"
-	line "from sea to"
-	cont "shore. Now,"
-	para "we're 'free' to"
-	line "make #balls"
-	cont "for them."
+	text "We used to roam"
+	line "free from the"
+	para "cliffs to the"
+	line "Sheltered Shores."
+	
+	para "Now we're 'free'"
+	line "to make #balls"
+	cont "for General Nemo."
 	done
 	

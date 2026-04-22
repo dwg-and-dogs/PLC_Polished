@@ -124,8 +124,8 @@ CianwoodShpeelText:
 	para "I used to admire"
 	line "nature, but then"
 	
-	para "she spurned Cian-"
-	line "wood - why?"
+	para "she tore apart"
+	line "Cianwood. Why?"
 	
 	para "Chuck tried to"
 	line "save it, but they"
@@ -200,6 +200,7 @@ CC_EusineText1:
 	next
 	text_start 
 	text "Lugia!"
+	
 	para "What majesty!"
 
 	para "The glyphs on the"
@@ -231,14 +232,14 @@ CC_KurtPrayer:
 	para "Lugia: In this"
 	line "darkest hour,"
 	
-	para "on this tattered"
-	line "atoll,"
+	para "on this broken"
+	line "shore,"
 	
 	para "Bring a cleansing"
-	line "shower,"
+	line "shower"
 	
-	para "Make the broken"
-	line "whole!"
+	para "from your mighty"
+	line "roar!"
 	done
 
 CianwoodCityShrineScript: ; revise: show painting of lugia
