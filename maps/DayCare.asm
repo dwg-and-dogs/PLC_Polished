@@ -84,15 +84,14 @@ DayCareManText_GiveEviolite:
     para "long, I've grown"
     line "quite fond of"
     cont "unevolved #mon."
-    para "They're just so"
-    line "adorable!"
+
     para "But I know they"
     line "sometimes struggle"
     cont "in battles."
-    para "I'd like to help"
-    line "them out. Here-"
-    para "take this"
-    line "Eviolite."
+
+    para "If you want them"
+	line "to succeed, give"
+	cont "them an Eviolite."
     done
 
 DayCareText_GotEviolite:

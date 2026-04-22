@@ -35,11 +35,15 @@ GenericTrainerDragonTamerDarin:
 	text "We train here to"
 	line "earn the consent"
 	para "to govern Eastern"
-	line "Johto and Western"
-	cont "Kanto."
+	line "Johto."
 
 	para "The mountains will"
 	line "rise again!"
+	
+	para "Hey, you're from"
+	line "Azalea? We just"
+	cont "got a visitor"
+	cont "from there."
 	done
 
 .BeatenText:

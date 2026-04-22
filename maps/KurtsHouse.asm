@@ -972,5 +972,5 @@ endr
 	; fill pokedex
 	callasm FillPokedex
 	; debug only
-;	warp UNION_CAVE_B2F, 12, 29
+	warp REBELS_REDOUBT_B3F, 22, 10
 	end

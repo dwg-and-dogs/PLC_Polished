@@ -123,22 +123,21 @@ TheatreRivalWinText:
 TheatreRivalBeforeText:
 	text "<RIVAL>: Hey, I'm"
 	line "in the middle of"
-	cont "something! Silph"
+	cont "something!"
 	
-	para "is offering me a"
-	line "big project in"
+	para "Silph wants me to"
+	line "lead a project in"
 	para "Olivine to filter"
 	line "water due to the"
 	cont "drought."
 	
 	para "I feel like this"
 	line "is was Celebi"
-	para "wanted me to do!"
-	line "What have you and"
-	para "your grandpa done"
-	line "for the drought?"
+	cont "wanted me to do!"
+	para "What have you and"
+	line "your grandpa done"
+	cont "for the drought?"
 
-	
 	para "I owe the future"
 	line "a way to actually"
 	cont "solve problems."
@@ -167,8 +166,8 @@ DanceTheatreOstene1Text:
 	
 RivalTheatreAfterBattleText:
 	text "With Silph's help"
-	line "I'm going to res-"
-	cont "tore balance."
+	line "I'll restore"
+	cont "balance."
 	
 	para "So stay out of"
 	line "my way."
@@ -182,7 +181,7 @@ DanceTheatreSilphText:
 	done
 
 
-DanceTheatreKurtScript: ; will this work?....
+DanceTheatreKurtScript:
 	faceplayer
 	opentext
 	writetext DanceTheatreKurtText
@@ -278,8 +277,8 @@ DanceTheatre_GoodLuck:
 TheatreElderThanksYou:
 	text "Congratulations!"
 	
-	para "Akari invites you"
-	line "to an epilogue at"
+	para "You are invited"
+	line "to a finale at"
 	cont "Bellchime Trail."
 	done
 

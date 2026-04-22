@@ -68,7 +68,7 @@ GenericTrainerKimono_girlNaoko: ; leafeon
 Kimono_girl_1NaokoSeenText:
 	text "Our story starts"
 	line "long ago in the"
-	cont "forest!"
+	cont "southern forest!"
 	done
 
 Kimono_girl_1NaokoBeatenText:
@@ -109,6 +109,12 @@ Kimono_girl_1SayoBeatenText:
 	
 	para "the hero brought"
 	line "them together."
+
+	para "Though they'd"
+	line "lost their ritual"
+	para "they gained a new"
+	line "appreciation for"
+	cont "each other."
 	done
 
 
@@ -119,9 +125,8 @@ GenericTrainerKimono_girlZuki:
 	line "into the Western"
 	cont "Capital, and"
 	para "learned of the"
-	line "Emperor's plans"
-	cont "without his"
-	cont "knowing."
+	line "Emperor's plans."
+
 	para "At that time,"
 	line "the towers were"
 	cont "still home to"
@@ -142,6 +147,15 @@ Kimono_girl_1ZukiBeatenText:
 	line "into the Capital,"
 	para "and learned the"
 	line "Emperor's plans."
+
+	para "At that time,"
+	line "the towers were"
+	cont "still home to"
+	para "Lugia and Ho-Oh,"
+	line "but Ho-Oh was"
+	cont "growing restless"
+	para "from the Emperor's"
+	line "drumbeat of war."
 	done
 
 
@@ -175,9 +189,18 @@ Kimono_girl_1IzumiBeatenText:
 	text "A harsh storm"
 	line "destroyed the"
 	cont "Emperor's port."
+	
+	para "Legend says that"
+	line "the storm was"
+	para "like an Aeroblast"
+	line "on the sea."
+	
 	para "Now, the Emperor"
-	line "had to expand to"
-	cont "the East."
+	line "had to focus on"
+	para "the East as his"
+	line "only source of"
+	para "metals to build"
+	line "his towers."
 	done
 
 
@@ -187,8 +210,8 @@ GenericTrainerKimono_girlKuni:
 	text "The hero made a"
 	line "a coalition in"
 	para "the Northeast to"
-	line "fight the Emperor."
-
+	line "oppose the "
+	cont "Emperor."
 	done
 
 Kimono_girl_1KuniSeenText:
@@ -236,19 +259,22 @@ Kimono_girl_1MikiBeatenText:
 GenericTrainerKimono_girlAkari:
 	generictrainer KIMONO_GIRL_1, AKARI, EVENT_BEAT_KIMONO_GIRL_AKARI, Kimono_girl_1AkariSeenText, Kimono_girl_1AkariBeatenText
 
-	text "Flames filled"
-	line "the tower,"
-	cont "undoing the"
-	cont "Emperor's work."
+	text "The tower was hit"
+	line "by lightning!"
+	
+	para "Flame consumed it"
+	line "and consumed the"
+	cont "Emperor's plan."
+	
 	para "The legendary"
-	line "#mon refuse"
+	line "#mon refused"
 	cont "to put it out."
-	para "Your #mon are"
-	line "so strong, you"
-	cont "should visit"
-	para "the Bell Tower"
-	line "to learn why."
+
+	para "You should visit"
+	line "the Bell Tower"
+	cont "to find out why."
 	done
+
 
 Kimono_girl_1AkariSeenText:
 	text "Do you know the"
@@ -269,6 +295,6 @@ Kimono_girl_1AkariBeatenText:
 	cont "to put it out."
 
 	para "You should visit"
-	line "the bell tower"
+	line "the Bell Tower"
 	cont "to find out why."
 	done

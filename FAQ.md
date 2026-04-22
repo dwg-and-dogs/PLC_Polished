@@ -6,7 +6,7 @@ You can report bugs on the discord or to me on Reddit by DM, u/dwg6m9.
 
 ### Which file do I need to play?
 
-Version 0.2.1 is released as a pre-patched gbc file. 
+Versions >0.0.1 is released as a pre-patched gbc file. 
 
 For earlier versions, the ROM you should use for patching:
 
@@ -16,7 +16,9 @@ For earlier versions, the ROM you should use for patching:
 It's identical to the one built by the [pokecrystal](https://github.com/pret/pokecrystal) project.
 
 
-### Normal vs. Hard mode? 
+### Difficulty Selection 
+
+TODO 
 
 Normal mode trainers have no EVs no boss or rival battles have items. Normal mode difficulty is comparable to Platinum or B2W2. If you like to nuzlocke, this difficulty should be fair. 
 
@@ -27,7 +29,7 @@ In Hard Mode, experienced players who battle every trainer can expect to be a fe
 
 There are two debug features:
 
-(Beta 02x only!) The first is the radio in Kurt's house. It will give you a few Lv100 team members, all TM, Dex entries, items, ... 
+(Beta only!) The first is the radio in Kurt's house. It will give you a few Lv100 team members, all TM, Dex entries, items, ... 
 
 (All versions) The back-left corner of the Azalea Gym has a portal to a debug room. Simply interact with the furthest-left flower tile. Starting from the top-left and working to the bottom-right: 
 * Random type pokemon gift, for monotype runs
@@ -72,6 +74,7 @@ There is also a 1 in 1,048,576 change to encounter a Pokémon with maximum DVs f
 * **Perfect stats:** All Pokémon stats, for you and the opponent, are calculated as if they had maximum IVs. The actual IVs are still random, so color variation and Hidden Power type are not affected.
 * **Traded Pokémon treat you as OT:** All differences in traded Pokémon go away: they always obey you, don't gain boosted experience, and can be nicknamed.
 * **Nuzlocke mode:** Enables a [Nuzlocke challenge](https://bulbapedia.bulbagarden.net/wiki/Nuzlocke_Challenge); see [FEATURES.md](FEATURES.md) for detailed clauses.
+* **Difficulty:** Easy: No EVs or items on trainers; Normal: Typical romhack difficult; Expert: Full teams of 6 and higher EVs for bosses. 
 
 If you need to change these options after starting a game, press Left+B at the title screen to reset them.
 
@@ -244,6 +247,8 @@ Your Rival feels bitter about the way he has been treated in Azalea and joins Si
 
 ### I can't figure out this puzzle!
 
+
+TODO 
 
 * [Celebi, Heatran, Violet Catacombs, Cabin #4 Sudoku](screenshots/Inheritance_Publish/Features/solved_puzzles)
 
