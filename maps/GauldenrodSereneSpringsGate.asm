@@ -30,9 +30,5 @@ GauldenrodSereneSpringsGateNPCText:
 	line "powerful #mon"
 	para "swimming through"
 	line "the bedrock."
-
-	para "..."
-
-	para "Say, I think I"
-	line "smell sulfur."
 	done
+

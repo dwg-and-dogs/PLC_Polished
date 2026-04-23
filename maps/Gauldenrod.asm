@@ -109,7 +109,7 @@ GauldenrodNPC2Script:
 	iftrue_jumptextfaceplayer .Text2
 	jumpthistextfaceplayer
 
-	text "The forest North"
+	text "The forest north"
 	line "of Gauldenrod was"
 	para "cleared to make"
 	line "space for Tyrus's"
@@ -152,7 +152,7 @@ GauldenrodNPC4Script:
 	jumpthistextfaceplayer
 
 	text "I used to resent"
-	line "the bridgaders"
+	line "the Bridgaders"
 	para "taking over, but"
 	line "the stadium is"
 	cont "nice to have."
@@ -161,9 +161,7 @@ GauldenrodNPC4Script:
 .Text4: 
 	text "I've seen some"
 	line "weird stuff on"
-	para "the mountain. No"
-	line "way am I going"
-	cont "to do my quest."
+	cont "the mountain."
 	done 
 
 GauldenrodNPC5Script:
@@ -281,7 +279,6 @@ GauldenrodGuildSignText:
 	done
 
 
-
 GauldenrodTunnelSign:
 	jumptext GauldenrodTunnelSignText
 	
@@ -387,9 +384,7 @@ GauldenrodHisuiTraderRememberText:
 	para "Oh, by the way,"
 	line "if you see a red-"
 	cont "white #mon,"
-	
-	para "Just stay clear,"
-	line "OK?"
+	cont "stay clear!"
 	done
 
 GauldenrodHisuiTraderText:
@@ -689,9 +684,8 @@ GauldenrodElderQuestText:
 	para "are too scared,"
 	line "ever since the"
 	cont "Brigaders told "
-	para "some ghost stor-"
-	line "ies. Will you"
-	cont "help me?"
+	cont "ghost stories."
+	para "Will you help me?"
 	done
 	
 GauldenrodElderQuestNo:
@@ -703,16 +697,16 @@ GauldenrodElderQuestNo:
 GauldenrodElderThanks:
 	text "Thank you! I know"
 	line "a secret way up"
-	cont "to the top..."
+	cont "to the top."
 	done
 
 GauldenrodElderNoSurf:
 	text "Please, won't you"
 	line "help me? I can't"
-	cont "find my wife..."
+	cont "find my wife."
 	
 	para "Oh, you don't"
-	line "have surf? I need"
+	line "have Surf? I need"
 	cont "someone who can"
 	cont "navigate water."
 	done
@@ -720,7 +714,7 @@ GauldenrodElderNoSurf:
 GauldenrodElderAfterQuest:
 	text "Thank you for"
 	line "indulging my"
-	cont "request..."
+	cont "request."
 	
 	para "Without you, I'd"
 	line "have followed an"

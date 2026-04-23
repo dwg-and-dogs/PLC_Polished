@@ -48,14 +48,13 @@ Gauldenrod_NatuText_1:
 
 
 GauldenrodDormsNPC1Text:
-	text "I wish the protest"
-	line "wouldn't be so"
-	cont "violent."
+	text "Everything feels"
+	line "so tense."
 
-	para "When they were"
-	line "blocking the gate,"
-	cont "I saw a Flareon"
-	cont "brought out!"
+	para "General Tyrus"
+	line "brings out his"
+	cont "mighty Flareon"
+	cont "on a whim!"
 	done
 
 GauldenrodDormsNPC2Text:
@@ -64,17 +63,14 @@ GauldenrodDormsNPC2Text:
 	para "learned on my"
 	line "ritual. It's"
 	para "too bad that the"
-	line "brigaders have"
+	line "Brigaders have"
 	para "blocked us from"
 	line "carrying it on."
 	done
 
 GauldenrodDormsNPC3Text:
-	text "Here, take a rest."
+	text "Take a rest."
 	
-	para "The fighting on"
-	line "both sides wears"
-	cont "me out."
 	done
 
 GauldenrodDormsBed:
@@ -153,10 +149,9 @@ KurtGauldenrodDormsText:
 	cont "National Park?"
 	
 	para "Oh! I found some"
-	line "neat #mon in"
-	para "the wild areas"
-	line "around here."
-
+	line "wild #mon in"
+	cont "the grass nearby."
+	
 	para "Want to battle?"
 	done
 	

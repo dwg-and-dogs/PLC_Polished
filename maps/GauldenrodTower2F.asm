@@ -39,7 +39,7 @@ AromaLadyBryonySeenText:
 	done
 
 AromaLadyBryonyBeatenText:
-	text "Respectable…"
+	text "Respectable."
 	done
 
 GenericTrainerAromaLadyRosa:

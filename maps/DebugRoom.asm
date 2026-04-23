@@ -169,8 +169,30 @@ endr
 	givepoke ENTEI, 100
 	givepoke RAIKOU, 100
 	; useful items
-	loadtrainer HOLLIS, 1 ; check normalmode or hardmode 
-	startbattle
+	opentext
+	writethistext
+		text "Elder Hollis"
+		line "wants to battle!"
+
+		para "Elder Sandra"
+		line "wants to battle!"
+
+		para "Chronicler Sybil"
+		line "wants to battle!"
+
+		para "Elder Remy"
+		line "wants to battle!"
+
+		para "Hisui Petra"
+		line "wants to battle!"
+
+		para "Johto Amos"
+		line "wants to battle!"		
+	waitbutton
+	closetext
+	
+;	loadtrainer HOLLIS, 1 ; check normalmode or hardmode 
+;	startbattle
 	end
 
 Breeder1Script:

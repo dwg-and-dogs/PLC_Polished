@@ -110,7 +110,7 @@ GauldenrodGuildMasterBallScript:
 	
 NeedSweetHoneyText: 
     text "I'm working on 2"
-    line "ideal apricorns."
+    line "ideal Apricorns."
     
     para "When complete,"
     line "they'll surpass"
@@ -126,24 +126,17 @@ Text_HoneyQuestion:
 	text "That aroma! Sweet"
 	line "Honey!"
 	
-	para "Just what these"
-	line "old bones need"
-	para "to finish my"
-	line "project!"
+	para "Just what I need"
+	line "to finish!"
     done
 
 Text_NoHoney:
-    text "Back to work..."
-    line "carefully now."
+    text "Back to work."
+    line "carefully now!"
     done
 
-TextGaveMasterBall: 
-    text "Now... Each"
-    line "piece must be"
-    cont "placed with great"
-    cont "care..."
-    
-    para "There! Perfect"
+TextGaveMasterBall:  
+    text "There! Perfect"
     line "at last!"
     
     para "I'll give you one"
@@ -152,9 +145,8 @@ TextGaveMasterBall:
 
 
 TextGaveMasterBall2:
-    text "That ball will"
-    line "catch any"
-    cont "#mon."
+    text "That will catch"
+	line "any #mon."
     	
 	para "Go on. What dream"
 	line "would you chase,"
@@ -251,12 +243,7 @@ GauldenrodGuildNPC3Text:
 	text "We used to live a"
 	line "lot like Anarres."
 	
-	para "But now we have to"
-	line "pay taxes to the"
-	cont "Emperor."
-	
-	para "The brigade makes"
-	line "sure no one tries"
-	para "to talk about"
-	line "that, though."
+	para "But now we pay"
+	line "taxes to the"
+	cont "Western Capital."
 	done

@@ -45,7 +45,6 @@ GenericTrainerAromaLadyDahlia:
 AromaLadyDahliaSeenText:
 	text "You moved that"
 	line "stone!"
-	
 	done
 
 AromaLadyDahliaBeatenText:
@@ -97,7 +96,6 @@ TamerBrettBeatenText:
 	line "pass was closed."
 	done
 
-; todo check  
 CooltrainerFBethScript:
 	faceplayer
 	opentext

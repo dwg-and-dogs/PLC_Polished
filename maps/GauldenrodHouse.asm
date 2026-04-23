@@ -100,18 +100,14 @@ LemonadeHouseLadyScript:
 	
 
 WantLemonadeText:
-	text "I'm trying to kick"
-	line "my caffeine habit"
-	
-	para "now that the bri-"
-	line "gaders levy taxes"
-	cont "on tea."
-	
+	text "I'm trying not to"
+	line "drink so much Pnk"
+	cont "Lemonade."
+		
 	para "My friends say"
-	line "I should brew a"
-	para "Tinymushroom to"
-	line "get a smoother"
-	cont "buzz."
+	line "I should drink"
+	para "Tinymushroom tea"
+	line "instead."
 	done
 
 Text_MushroomQuestion:
@@ -131,8 +127,7 @@ GivingLemonadeText:
 	para "Enjoy that Pink"
 	line "Lemonade, it hits"
 	para "the spot when I'm"
-	line "out on a hike"
-	cont "north of here."
+	line "out on a walk."
 	done
 
 Text_NoMushroom:

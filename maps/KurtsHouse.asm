@@ -972,5 +972,5 @@ endr
 	; fill pokedex
 	callasm FillPokedex
 	; debug only
-	warp VIOLET_CITY, 25, 25
+	warp GAULDENROD_TOWER_3F, 9, 11
 	end

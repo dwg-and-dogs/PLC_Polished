@@ -161,6 +161,7 @@ GauldenrodTower3FClefairyDescribe:
 		line "other Clefaries"
 		cont "how to reach"
 		cont "greener pastures?"
+		done
 	waitbutton
 	closetext
 	end

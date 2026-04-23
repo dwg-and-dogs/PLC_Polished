@@ -36,5 +36,4 @@ GauldenrodTower1FBrigader2Script:
 GauldenrodTower1FBrigader2Text:
 	text "What are you"
 	line "looking at?"
-	para "Scram!"
 	done

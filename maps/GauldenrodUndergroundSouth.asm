@@ -30,7 +30,7 @@ GauldenrodUndergroundSouthGateScript:
 
 GauldenrodUndergroundSouthGateText1:
 	text "Nothing to see"
-	line "here..."
+	line "here."
 
 	para "Unless you have"
 	line "a blessing from"

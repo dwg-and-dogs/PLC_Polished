@@ -107,13 +107,12 @@ GauldenrodStockroomNPC4Script:
 
 GauldenrodStockroomNPC4Text:
 	text "We used to have a"
-	line "thriving craft"
-	cont "guild."
+	line "thriving guild."
 
 	para "But the Emperor"
-	line "ships cheap items,"
-	para "and the Guild had"
-	line "to close."
+	line "is bringing new"
+	cont "materials, so we"
+	cont "have to close."
 	done
 
 GauldenrodStockroomNPC5Script:
@@ -122,10 +121,11 @@ GauldenrodStockroomNPC5Script:
 GauldenrodStockroomNPC5Text:
 	text "Not everyone came"
 	line "back from the"
-	cont "ritual."
-
-	para "It was a dangerous"
-	line "rite."
+	cont "ritual. There was"
+	para "a legend of a red"
+	line "shadow that lured"
+	cont "you to its nest,"
+	cont "never to return!"
 	done
 
 GSApricornBenchScript:

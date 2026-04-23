@@ -143,9 +143,9 @@ SandraIntroText:
 	para "technologies from"
 	line "entering Johto."
 	
-	para "Tell me, what is"
-	line "the most destruc-"
-	cont "tive innovation?"
+	para "Tell me, which"
+	line "innovation is"
+	cont "most destructive?"
 
 	para "Ha, you will learn"
 	line "soon enough."
@@ -172,20 +172,18 @@ SandraAfterText:
 	cont "you of everyone's"
 	cont "dignity."
 
-	para "There's an inter-"
-	line "dependence from"
-	cont "me to you." 
+	para "There is an"
+	line "interdependence"
+	cont "from me to you." 
 
 	para "Also, please take"
 	line "this technique."
 	
 	para "It'll dazzle your"
-	line "opponenents, the"
-	para "way you dazzled"
-	line "me!"
+	line "opponenents!"
 
 	para "I used to award"
-	line "them to youth who"
+	line "it to youth who"
 	para "carried an elder"
 	line "up to the Alpine"
 	cont "Lakes."
@@ -197,8 +195,7 @@ SandraRefusedText:
 	next
 	text_start
 	text "I see. Perhaps"
-	line "you're not ready"
-	cont "yet."
+	line "you're not ready."
 	done
 
 BrigaderInterruptText:
@@ -370,11 +367,13 @@ AdrinnaGauldenrodTowerText:
 	para "What say you of"
 	line "Tyrus's stadium?"
 	
-	para "Do strong"
+	para "Do the strongest"
 	line "trainers watch?"
 
 	para "Think about it."
-	line "This might be"
-	cont "of use to you."
+
+	para "This might be"
+	line "of use to you."
+
 	done
 	
