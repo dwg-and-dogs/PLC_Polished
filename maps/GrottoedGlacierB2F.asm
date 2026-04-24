@@ -6,12 +6,10 @@ GrottoedGlacierB2F_MapScriptHeader:
 	callback MAPCALLBACK_TILES,GlacierBouldersB2FCallback
 	callback MAPCALLBACK_OBJECTS, GlacierB2FCallback_MoveAK
 
-; PROBABLY WILL NEED A CALLBACK TO MOVE THE PEOPLE 
-
 	def_warp_events
 	warp_event 5, 15, GROTTOED_GLACIER_B1F, 2
 	warp_event 4, 15, GROTTOED_GLACIER_B1F, 2
-	warp_event 17, 10, GROTTOED_GLACIER_B1F, 2 ; debug only 
+	warp_event 17, 10, GROTTOED_GLACIER_B1F, 2 ; debug warp 
 
 
 	def_coord_events
@@ -26,7 +24,7 @@ GrottoedGlacierB2F_MapScriptHeader:
 	object_event  17,  4, SPRITE_KANNA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GLACIER_KANNA 
 	object_event  17,  5, SPRITE_ADRINNA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_GLACIER_ADRINNA
 	pokemon_event  17, 3, BASCULEGION, -1, -1, PAL_NPC_ROCK, BasculegionText, EVENT_BASCULEGION_SLEEPS
-	pokemon_event  17, 3, BASCULEGION, -1, -1, PAL_NPC_RED, BasculegionText, EVENT_BASCULEGION_LIVES ; INITIALIZE 
+	pokemon_event  17, 3, BASCULEGION, -1, -1, PAL_NPC_RED, BasculegionText, EVENT_BASCULEGION_LIVES 
 	itemball_event  7, 2, CHOICE_SPECS, 1, EVENT_CHOICE_SPECS
 
 	object_const_def
@@ -59,7 +57,7 @@ GrottoedGlacierB1FScene1:
 	applyonemovement PLAYER, step_up
 	sjump PickupGlacierScene
 
-	startbattle
+	startbattle ; i think this is a stub from something else
 	ifequal $1, .Continue
 	disappear ANCHORAGE_OVERQWIL_1
 .Continue:

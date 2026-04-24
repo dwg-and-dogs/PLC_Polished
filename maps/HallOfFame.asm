@@ -1,4 +1,4 @@
-HallOfFame_MapScriptHeader:
+HallOfFame_MapScriptHeader: ; unused 
 	def_scene_scripts
 	scene_script HallOfFameEntranceTrigger
 

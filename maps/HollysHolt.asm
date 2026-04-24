@@ -63,7 +63,6 @@ HollysHoltTrigger:
 	end
 
 HollysHoltScript1:
-;	playmusic MUSIC_CELADON_CITY
 	showemote EMOTE_SHOCK, HOLLYS_HOLT_KURT, 60
 	showemote EMOTE_SHOCK, HOLLYS_HOLT_HOLLIS, 60
 	turnobject HOLLYS_HOLT_KURT, LEFT
@@ -126,12 +125,11 @@ HH_HollisHello:
 	para "Are you also"
 	line "from Hisui?"
 	
-	para "My name is"
-	line "Silas. I am"
-	cont "the elder here."
+	para "I am Silas, the"
+	line "Elder of Anarres."
 	
-	para "I was just, eh"
-	line "praying at the"
+	para "I was praying for"
+	line "guidance at the"
 	cont "shrine."
 	
 	para "You will see that"
@@ -141,6 +139,11 @@ HH_HollisHello:
 	para "I'm the only one"
 	line "who can safely"
 	cont "remove them."
+	
+	para "Nothing works, it"
+	line "feels like I'm"
+	cont "hitting my head"
+	cont "against a wall!"
 	done
 
 	
@@ -149,14 +152,14 @@ HH_KurtExplains:
     text " Kurt: "
 	next
 	text_start
-	text "Ah, we're here to"
-	line "...fortify Johto's"
-	cont "traditions."
+	text "We're here to"
+	line "fortify Johto's"
+	cont "traditions!"
 	
-	para "There are some"
-	line "dangerous inven-"
-	para "tions taking root"
-	line "from elsewhere."
+	para "Some dangerous"
+	line "inventions from"
+	cont "outside threaten"
+	cont "to destroy them."
 	done
 
 
@@ -166,14 +169,19 @@ HH_HollisPinecos:
 	next
 	text_start
 	
-	text "Hm? The Hisuians"
-	line "are no enemy."
+	text "Yes, we must be"
+	line "vigilant against"
+	cont "outside threats."
 	
-	para "But there was a"
-	line "rumor of visitors"
-	para "at the Landing,"
-	line "to the west of"
-	cont "the Capital."
+	para "I can tolerate"
+	line "the Hisuians at"
+	cont "the ceremony,"
+		
+	para "But there is word"
+	line "of visitors at"
+	cont "the Landing,"
+	para "to the west of"
+	line "the Capital."
 
 	para "I wish I could"
 	line "stay, but I am"
@@ -194,13 +202,13 @@ HH_KurtHasAPlan:
 	cont "Olivine City."
 	
 	para "We have to find"
-	line "a way out of this"
-	cont "forest."
+	line "a way north of"
+	cont "the forest."
 	
-	para "Oh, I think if"
-	line "you need to go to"
-	para "our time, you can"
-	line "visit the shrine."
+	para "If you need to go"
+	line "back to our time,"
+	cont "you can visit the"
+	cont "shrine."
 	done
 
 	
@@ -282,10 +290,11 @@ HollysHoltNPC3Text:
 	
 	para "The Pinecos"
 	line "can't help but"
-	para "reproduce this"
-	line "way. We have to"
-	para "find a way to"
-	line "restore balance."
+	cont "act this way."
+	
+	para "We have to find a"
+	line "way to restore"
+	cont "balance."
 	done
 
 HollysHoltNPC4Text: 
@@ -304,8 +313,8 @@ HollysHoltNPC4Text:
 	
 HollysHoltNPC5Text:
 	text "Celebi isn't"
-	line "just the forest"
-	para "protector. It is"
+	line "just the forest's"
+	para "protector. It IS"
 	line "the forest."
 	
 	para "Like a Tangela"
@@ -313,10 +322,6 @@ HollysHoltNPC5Text:
 	para "at all times"
 	line "and extents of"
 	cont "the forest."
-
-	para "At least that's"
-	line "what we learned"
-	cont "at the ritual."
 	done
 
 HH_HollisHello2:
@@ -327,13 +332,11 @@ HH_HollisHello2:
 	text "Please, visit"
 	line "Anarres Town."
 	
-	para "The town isn't"
-	line "as lively as"
-	para "usual, due to"
-	line "the bagworms"
-	para "damaging so"
-	line "many of the"
-	cont "trees."
+	para "The town isn't as"
+	line "lively as usual,"
+
+	para "due to the Pineco"
+	line "infestation."
 	done
 
 HollysHoltShrineScript:
@@ -438,16 +441,15 @@ HollysHoltNPC6Text:
 	line "me how to use"
 	cont "Headbutt."
 
-	para "Tending nature"
-	line "is part of pro-"
-	cont "tecting it."
+	para "Tending nature is"
+	line "our sacred duty."
 	done
 
 HollysHoltBagwormText:
 	text "It's a Pineco."
-	line "The leaves are"
-	para "decimated by"
-	line "bug bites."
+	line "The tree's leaves"
+	cont "are shredded with"
+	cont "bug bites."
 	done
 
 HH_Hollis_Leaves:
@@ -470,8 +472,10 @@ HH_Sign3Text:
 PinecoHeadbuttScript1:
 	jumpthistext
 	
-	text "The tree is infe-"
-	line "sted with hundr-"
-	cont "eds of Pineco."
+	text "Dozens of Pineco"
+	line "cover the tree."
+	
+	para "It's turning a"
+	line "sickly yellow."
 	done
 	

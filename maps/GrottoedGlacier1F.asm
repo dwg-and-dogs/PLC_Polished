@@ -53,10 +53,9 @@ GenericTrainerHisuiFemaleGrace:
 GenericTrainerSageUri:
 	generictrainer SAGE, URI, EVENT_BEAT_SAGE_URI, .SeenText1, .BeatenText1
 
-	text "What would your"
-	line "ancestors say,"
-	para "seeing you wreck"
-	line "our ceremony?"
+	text "General Andrea"
+	line "will get what's"
+	cont "coming to her."
 	
 	para "Turn back!"
 	done

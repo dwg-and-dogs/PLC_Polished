@@ -105,6 +105,12 @@ GenericTrainerSageVirgil:
 
 .SeenText1:
 	text "The ceremony must"
-	line "not be stopped!"	
+	line "not be stopped!"
+	
+	para "Elder Petra will"
+	line "convince General"
+	cont "Andrea that our"
+	para "traditions are"
+	line "worthwhile."
 	done
 
