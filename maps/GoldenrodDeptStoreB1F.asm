@@ -54,15 +54,20 @@ GoldenrodDeptStoreB1FBlackBelt2Text:
 	text "Want to know a"
 	line "secret? There's"
 	para "a path from the"
-	line "underground to"
+	line "Underground to"
 	para "underneath the"
-	line "radio tower."
+	line "Radio Tower."
+	
+	para "There's a cavern"
+	line "that shifted due"
+	para "to the changing"
+	line "level of water in"
+	cont "our acquifers."
 	done
 
 GoldenrodDeptStoreB1FBlackBelt3Text:
-	text "I have to rent"
-	line "this #mon"
-	cont "from Silph."
+	text "I rent a #mon"
+	line "from Silph."
 	para "I get out ahead,"
 	line "most days."
 	done

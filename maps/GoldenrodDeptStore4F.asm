@@ -29,9 +29,9 @@ GoldenrodDeptStore4FCooltrainerMText:
 	text "Hey. I love strong"
 	line "#mon."
 
-	para "I feed them Pro-"
-	line "tein to crank up"
-	cont "their Attack."
+	para "I crank up their"
+	line "attack with lots"
+	cont "of Protein."
 	done
 
 GoldenrodDeptStore4FBugCatcherText:
@@ -40,7 +40,7 @@ GoldenrodDeptStore4FBugCatcherText:
 	
 	para "I can never win,"
 	line "even using Hyper"
-	cont "beam..."
+	cont "Beam!"
 	done
 
 GoldenrodDeptStore4FGameboyKidText:

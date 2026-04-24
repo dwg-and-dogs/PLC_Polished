@@ -249,7 +249,7 @@ Text_NoBrickPiece:
     text "I wish I had an"
 	line "historic sample"
 	para "from the old"
-	line "stadium."
+	line "Stadium."
 	
 	para "All of them get"
 	line "scooped up by"
@@ -278,7 +278,7 @@ GoldenrodMuseum2FNPC3Text:
 
 GoldenrodMuseum2FNPC4Text:
     text "Ho-Oh is such a"
-    line "wise #mon…"
+    line "wise #mon."
     para "A cycle of"
     line "violence darkens"
     cont "the heart."
@@ -293,7 +293,7 @@ GoldenrodMuseum2FNPC5Text:
 
 GoldenrodMuseum2FExhibit3Text:
     text "A rite of passage"
-    line "in old Goldenrod"
+    line "in old Goldenrod:"
     
     para "Young trainers"
     line "would journey to"
@@ -305,20 +305,15 @@ GoldenrodMuseum2FExhibit3Text:
 	line "them about how to"
 	para "survive from the"
 	line "local flora."
-    
-    para "Sometimes, groups"
-	line "would return with"
-	para "#mon from the"
-	line "Ruins of Alph."
     done
 
 GoldenrodMuseum2FExhibit4Text:
     text "Goldenrod Tower"
     line "A sacred place"
     
-    para "Ho-Oh once"
-    line "rested here and"
-    cont "at Bell Tower."
+    para "Ho-Oh once rested"
+    line "there and at the"
+	cont "Bell Tower."
     
     para "When Ecruteak"
     line "grew violent,"

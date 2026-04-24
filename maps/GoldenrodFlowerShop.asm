@@ -48,7 +48,10 @@ FlowerShopLogBook:
 NPC1GiveBerryText:
 	text "(sniff, sniff)"
 	para "You smell like"
-	line "a forest!"
+	line "holly!"
+	
+	para "You must be from"
+	line "Azalea!"
 	done
 
 
@@ -63,10 +66,8 @@ FlowerShopNPC2Text:
 	text "We aren't too"
 	line "affected by the"
 	cont "drought."
-	para "We grow every-"
-	line "thing in Silph"
-	cont "hydro basins."
-	para "Isn't it great?"
+	para "We use Silph's"
+	line "hydro basins."
 	done
 
 FlowerShopGloriaText:
@@ -99,7 +100,7 @@ FlowerShopBerryBasinText:
 FlowerShopLogBookText:
 	text "It's the log book"
 	line "for the basins."
-	para "Silph Co Hydro-"
+	para "Silph Co. Hydro-"
 	line "ponic Berry"
 	cont "Basins."
 	para "Grow with less"

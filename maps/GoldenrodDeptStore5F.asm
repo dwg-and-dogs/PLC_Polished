@@ -124,11 +124,9 @@ GoldenrodDeptStore5FPokefanMText:
 	line "#mon you get in"
 	cont "a trade."
 
-	para "The name is a re-"
-	line "flection of the"
-
-	para "original trainer's"
-	line "feelings for it."
+	para "The name reflects"
+	line "the feelings of"
+	cont "its 1st trainer."
 	done
 
 GoldenrodDeptStore5FDirectoryText:

@@ -798,6 +798,20 @@ AmosGardenAfterBattleText:
 	para "but you're getting"
 	line "in my way."
 	
+	para "Johto is stronger"
+	line "when we are open"
+	cont "to the world,"
+	
+	para "exchanging ideas,"
+	line "and #mon with"
+	cont "other regions."
+	
+	para "Emperor Vesper"
+	line "and his generals"
+	para "would put us down"
+	line "a dark timeline"
+	cont "if they succeed."
+	
 	para "Let me handle"
 	line "this. Go home."
 	done

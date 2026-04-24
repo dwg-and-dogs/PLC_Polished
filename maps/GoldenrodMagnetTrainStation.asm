@@ -83,7 +83,7 @@ Text_TrainStationReadingMail:
 	para "Ugh! Why did he"
 	line "choose today?!"
 	
-	para "...Er-hem..."
+	para "…Er-hem…"
 	
 	para "Sorry for the"
 	line "angry outburst."
@@ -226,8 +226,8 @@ PearlForFixedChargeQuestionText:
 	line "Big Pearl!"
 	
 	para "I'll trade five"
-	line "fixed charge for"
-	cont "one Big Pearl."
+	line "Fixed Charges for"
+	cont "a Big Pearl."
 	done
 
 PearlForFixedChargeEndText:
@@ -236,7 +236,7 @@ PearlForFixedChargeEndText:
 	done
 
 NoPearlForFixedChargeText:
-	text "You can find big"
-	line "pearls just by "
+	text "You can find Big"
+	line "Pearls just by "
 	cont "fishing anywhere."
 	done

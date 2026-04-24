@@ -180,12 +180,12 @@ GoldenrodCityCooltrainerF1Text:
 
 
 GoldenrodCityCooltrainerFOlivineText:
-	text "I came here on"
-	line "the S.S.Aqua."
-
-	para "It's slower than"
-	line "the Magnet Train,"
-	cont "but more scenic."
+	text "I miss the S.S."
+	line "Aqua. It was"
+	
+	para "slower than the"
+	line "Magnet Train, but"
+	cont "more scenic."
 	done
 
 
@@ -203,10 +203,10 @@ GoldenrodCityGramps1Script:
 
 	text "Whitney's radio"
 	line "asks nothing of"
-	para "the listener!"
-	line "How can that be"
-	para "the basis of a"
-	line "moral life?"
+	cont "the listener!"
+	para "How can that be"
+	line "the basis of a"
+	cont "moral life?"
 	done
 
 GoldenrodCityLassText:
@@ -214,9 +214,8 @@ GoldenrodCityLassText:
 	line "of people on her"
 	cont "show."
 
-	para "But sometimes"
-	line "she's out of her"
-	cont "depth."
+	para "But she often is"
+	line "out of her depth."
 	done
 
 
@@ -252,6 +251,11 @@ GoldenrodCityBeautyText:
 	text "I wonder what this"
 	line "town was like a "
 	cont "long time ago."
+	
+	para "Still a center"
+	line "of commerce, or"
+	para "something more"
+	line "quaint?"
 	done
 
 GoldenrodCityStationSignText:

@@ -229,11 +229,16 @@ AmosText_Intro:
 	text "...<PLAYER>. Each"
 	line "time we meet, you"
 	cont "cause some havoc."
-	
+
 	para "I've been trying"
 	line "to organize an"
 	para "opposition to "
-	line "Vesper."
+	line "Emperor Vesper."
+	
+	para "We cannot let him"
+	line "close us off from"
+	cont "other regions and"
+	cont "rewrite history!"
 	
 	para "You've convinced"
 	line "the Elders from"
@@ -249,7 +254,7 @@ AmosText_Intro:
 	
 	para "But I still see a"
 	line "coin perched on"
-	cont "its edge, unsure"
+	cont "its edge,"
 	
 	para "unsure which way"
 	line "it wants to fall."
@@ -284,9 +289,9 @@ AmosText_LegacyBadgeSpeech:
 	line "our fighters that"
 	cont "you're one of us."
 
-	para "First, we need to"
-	line "stop General Adr-"
-	cont "inna at the mine."
+	para "First, let's stop"
+	line "General Adrinna"
+	cont "at the mine." 
 	
 	para "If she gets to"
 	line "the powerful"

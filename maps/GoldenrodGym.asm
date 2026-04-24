@@ -137,11 +137,10 @@ WhitneyTextFacade:
 
 WhitneyAfterText:
 	text "I need to get"
-	line "back to the rea-"
-	para "son why I be-"
-	line "came a Gym"
+	line "back to why I"
+	para "became a Gym"
 	para "Leader in the"
-	line "first place-"
+	line "first place:"
 
 	para "helping people"
 	line "see the cuteness"

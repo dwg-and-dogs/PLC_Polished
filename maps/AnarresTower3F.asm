@@ -371,9 +371,16 @@ AmosSaysHelloText:
 	para "get Silas to"
 	line "take the Emperor's"
 	cont "threat seriously."
+	
+	para "If the emperor"
+	line "succeeds, Johto"
+	para "will lose its "
+	line "connections to"
+	para "the outside world"
+	line "and our history!"
 
-	para "But he's stuck in"
-	line "his tower like a"
+	para "But Silas hides"
+	line "up here, like a"
 	para "cocoon, afraid of"
 	line "a changing world."
 

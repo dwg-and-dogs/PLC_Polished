@@ -18,17 +18,15 @@ GoldenrodDeptStore6F_MapScriptHeader:
 	object_event  8,  2, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStore6FSuperNerdText, -1
 
 GoldenrodDeptStore6FLassText:
-	text "Do you listen to"
-	line "Lucky Channel?"
-
-	para "If you want to"
-	line "win, trade #mon"
-
-	para "with as many peo-"
-	line "ple as possible to"
-
-	para "get different ID"
-	line "numbers."
+	text "Have you heard"
+	line "Whitney's latest"
+	cont "show?"
+	
+	para "She says that the"
+	line "drought is caused"
+	para "by people who"
+	line "won't let us make"
+	cont "enough water!"
 	done
 
 GoldenrodDeptStore6FSuperNerdText:

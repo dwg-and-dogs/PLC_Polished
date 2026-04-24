@@ -43,8 +43,7 @@ GoldenrodHPUpFisherScript:
 	para "We had a tough"
 	line "breakup - she"
 	para "got to be too"
-	line "tempestuous for"
-	cont "me."
+	line "tempestuous."
 	
 	para "Ah, so I don't"
 	line "need this any"
@@ -64,9 +63,8 @@ GoldenrodHPUpHousePokefanFText:
 	line "I realized I was"
 	cont "Whicash-fished."
 	
-	para "His ex took all"
-	line "of his stuff in"
-	cont "the divorce."
+	para "He lost it all in"
+	line "the divorce."
 	done
 
 GoldenrodHPUpHousePikachuText:

@@ -88,19 +88,20 @@ NoMoneyTextBalloon:
 	done
 
 GivingBalloonText:
-    text "Ah, fascinating!"
-	
-    para "See my Weezing?"
+    text "See my Weezing?"
     line "It rises until"
     para "the buoyant"
     line "force is zero."
     
 	para "Just like this"
     line "Air Balloon. It"
-    cont "works similarly."
+    cont "works similarly"
+	para "to make #mon"
+	line "avoid ground-type"
+	cont "attacks."
 	
-	para "I'll sell to you"
-	line "for 5000."
+	para "I'll sell you one"
+	line "for ¥5000."
     done
 	
 
@@ -211,9 +212,10 @@ GoldenrodDeptStoreRoofPokefanFText:
 	done
 
 GoldenrodDeptStoreRoofTwinText:
-	text "They have bargain"
-	line "sales here every"
-	cont "so often."
+	text "On a clear day,"
+	line "I can even see"
+	para "the wrecked coast"
+	line "near Cianwood."
 	done
 
 GoldenrodDeptStoreRoofSuperNerdOhWowText:
@@ -258,8 +260,6 @@ GoldenrodDeptStoreRoofBugCatcherText:
 	para "I wonder if"
 	line "there's any left?"
 	done
-
-
 
 Binoculars1Text:
 	text "Wow, I can see"

@@ -1,4 +1,4 @@
-GoldenrodPokecomCenterOffice_MapScriptHeader:
+GoldenrodPokecomCenterOffice_MapScriptHeader: ; unused 
 	def_scene_scripts
 
 	def_callbacks

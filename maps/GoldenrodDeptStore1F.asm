@@ -21,8 +21,8 @@ GoldenrodDeptStore1F_MapScriptHeader:
 	object_event 11,  5, SPRITE_GENTLEMAN, 		SPRITEMOVEDATA_WANDER, 			1, 1, -1, -1, 0, 				OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodDeptStore1FGentlemanText, -1
 
 GoldenrodDeptStore1FReceptionistText:
-	text "Welcome to Golden-"
-	line "rod Dept.Store."
+	text "   Goldenrod    "
+	line "   Dept. Store   "
 	done
 
 
@@ -38,17 +38,9 @@ GoldenrodDeptStore1FBugCatcherText:
 	done
 
 GoldenrodDeptStore1FGentlemanText:
-	text "Here's a secret:"
-	para "Some drinks give"
-	line "more HP than"
-	para "potions, on a"
-	line "dollar basis."
-	
-	para "Clever marketing"
-	line "by Silph to get"
-	para "people to prefer"
-	line "their meds!"
-	
+	text "I still can't pass"
+	line "the quiz to get"
+	cont "an Up-Grade!"	
 	done
 	
 GoldenrodDeptStore1FDirectoryText:
@@ -107,20 +99,11 @@ GoldenrodDeptStore1FReceptionistScript:
 	writetext RadioTower1FRadioCardWomanYouWinText
 	promptbutton
 	verbosegiveitem UP_GRADE
-;	promptbutton
-;	getstring .RadioCardText, $1
-;	callstd receiveitem
-;	writetext RadioTower1FPokegearIsARadioText
-;	promptbutton
-;	setflag ENGINE_RADIO_CARD
 	writetext RadioTower1FRadioCardWomanTuneInText
 	waitbutton
 	closetext
 	end
 
-
-.RadioCardText:
-	db "Radio Card@"
 
 .WrongAnswer:
 	playsound SFX_WRONG
@@ -138,12 +121,12 @@ RadioTower1FRadioCardWomanOfferQuizText:
 	line "quiz campaign on"
 	cont "right now."
 
-	para "Answer five ques-"
-	line "tions correctly to"
-	cont "win a prize!"
+	para "Win a prize by"
+	line "solving a five"
+	cont "question quiz!"
 
 	para "Would you like to"
-	line "take the quiz?"
+	line "try?"
 	done
 
 RadioTower1FRadioCardWomanQuestion1Text: ;  
@@ -179,9 +162,9 @@ RadioTower1FRadioCardWomanQuestion4Text:
 	line "Question 4:"
 
 	para "In Kanto ca. 1999"
-	line "an Ultra Ball was"
+	line "Ultra Balls were"
 	para "always better"
-	line "than Great Ball?"
+	line "than Great Balls?"
 	done
 
 RadioTower1FRadioCardWomanQuestion5Text:

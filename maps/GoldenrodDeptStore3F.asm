@@ -29,11 +29,11 @@ GoldenrodDeptStore3FSuperNerdText:
 	done
 
 GoldenrodDeptStore3FRockerText:
-	text "My mom sold"
+	text "My mom worked"
 	line "part time here,"
 	para "but she quit when"
-	line "Silph made"
-	para "everyone go"
+	line "Silph forced"
+	para "everyone to go"
 	line "full time."
 	done
 

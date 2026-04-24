@@ -41,14 +41,14 @@ GoldenrodMuseum1FAttendantText:
     text "Enjoy your visit"
     line "to the museum,"
     para "brought to you"
-    line "by Silph!"
+    line "by Silph Co.!"
     done
 
 GoldenrodMuseum1FNPC1Text:
     text "I can't believe"
-    line "that the national"
-    para "park used to have"
-    line "a stadium in it."
+    line "that the National"
+    para "Park used to have"
+    line "a stadium in it!"
     done
 
 GoldenrodMuseum1FNPC2Text:

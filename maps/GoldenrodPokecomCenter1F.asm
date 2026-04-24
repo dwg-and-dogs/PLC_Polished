@@ -129,7 +129,7 @@ MapNameNPC1Text:
 	para "take out a loan"
 	line "to get a new"
 	para "#dex every"
-	line "other year…"
+	line "other year."
 	done
 
 MapNameNPC2Text:

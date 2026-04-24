@@ -28,11 +28,10 @@ GoldenrodNetBallHouseYoungsterScript:
 	jumpthisopenedtext
 
 .Text2:
-	text "My dad could"
-	line "never focus on"
-	para "details with"
-	line "those Wise "
-	cont "Glasses."
+	text "My dad couldn't"
+	line "focus on details"
+	para "with those Wise"
+	line "Glasses."
 	done
 
 .Text1:

@@ -73,9 +73,8 @@ BillsMomBagFullText:
     done
 
 BillsSisterText:
-    text "My grandpa is on"
-    line "DraftKingdra all"
-    cont "the time."
+    text "Gramp's always on"
+    line "DraftKingdra."
     done
 	
 BillsGrandpaText:

@@ -17,16 +17,14 @@ GoldenrodBandHouse_MapScriptHeader:
 	object_event  2,  4, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodBandHouseBattleGirlScript, -1
 
 GoldenrodBandHouseRocker1Text:
-	text "My Mr. Mime is"
+	text "My Voltorb is"
 	line "totally tone-deaf"
-	para "due to its"
-	line "ability."
+	cont "from its ability."
 	done
 
 GoldenrodBandHouseRocker2Text:
-	text "Our cover band is"
-	line "called Guns and"
-	cont "Roserades."
+	text "Our band is named"
+	line "Guns 'n Roselias."
 	done
 
 GoldenrodBandHouseBattleGirlScript:
