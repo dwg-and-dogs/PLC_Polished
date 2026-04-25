@@ -66,18 +66,14 @@ KurtHouseEventScript:
 	opentext
 	writetext KurtIntroText
 	promptbutton
-;	verbosegivekeyitem TIMEPIECE
 	verbosegivekeyitem KURTS_MAP
 	verbosegivekeyitem APRICORN_BOX
 	getstring GearName, $1
 	callstd receiveitem
 	setflag ENGINE_POKEGEAR
-;	setflag ENGINE_PHONE_CARD
-;	setflag ENGINE_MAP_CARD
-;	addcellnum PHONE_MOM
-	setscene $1 ; this should keep the event from playing in a loop?
-	setevent EVENT_KURTS_HOUSE_KURT_0 ; changed from mom
-	clearevent EVENT_PLAYERS_HOUSE_KURT_2 ; may not need this line? 
+	setscene $1
+	setevent EVENT_KURTS_HOUSE_KURT_0
+	clearevent EVENT_PLAYERS_HOUSE_KURT_2
 	promptbutton
 	writetext MomPokegearText
 	promptbutton
@@ -129,27 +125,26 @@ KurtIntroText:
 	
 	para "Before we go, I"
 	line "want to give you"
-	cont "a some gifts."
+	cont "some items."
 	done
 
 
 MomPokegearText:
 	text "These gifts are"
 	line "a new watch and"
-	para "a map of Johto"
-	line "if you get lost."
+	cont "a map of Johto."
 
 	para "There's also an"
-	line "Apricorn box."
+	line "Apricorn Box."
 	
-	para "You can use that"
-	line "at any bench."
+	para "You can use it at"
+	line "any bench."
 	
 	para "Try making balls"
 	line "from many things!"
 
-	para "Oh, say, what day"
-	line "is it today?"
+	para "Oh, say, remind"
+	line "me the day today?"
 	done
 
 MomDSTText:
@@ -164,7 +159,7 @@ MomRunningShoesText:
 	text "By the way, do"
 	line "you know how to"
 
-	para "use your new"
+	para "use your the"
 	line "Running Shoes?"
 	done
 
@@ -206,7 +201,7 @@ KurtsHouseShuckleText:
 	done
 	
 PokemonJournalProfWestwoodScript:
-	setflag ENGINE_READ_PROF_WESTWOOD_JOURNAL ; revised this? 
+	setflag ENGINE_READ_PROF_WESTWOOD_JOURNAL 
 	jumpthistext
 
 	text "Apricorn Journal"
@@ -227,8 +222,8 @@ PokemonJournalProfWestwoodScript:
 	done
 
 KurtsHouseOakPhotoText:
-	text "It's Grampa, Dad,"
-	line "and a glowing"
+	text "It's Grandpa Kurt,"
+	line "Dad, and a lively"
 	cont "Cyndaquil."
 	done
 
@@ -497,7 +492,7 @@ NoReadKurtText:
 	text "Put it down."
 	done
 
-KurtsJournal1Text: ; calm coast 
+KurtsJournal1Text: ; todo copy these from the rest of the maps 
 	text "So this is how"
 	line "Route 34 looked"
 	cont "160 years ago."
@@ -816,7 +811,7 @@ KurtsJournal6Text: ; tinder garden 2
 	line "did with you."
 	done
 
-DebugRadioScriptKurt:
+DebugRadioScriptKurt: ; todo remove before submitting 
 	opentext
 	; time
 	special Special_SetDayOfWeek
@@ -972,5 +967,5 @@ endr
 	; fill pokedex
 	callasm FillPokedex
 	; debug only
-	warp GAULDENROD_TOWER_3F, 9, 11
+;	warp GAULDENROD_TOWER_3F, 9, 11
 	end

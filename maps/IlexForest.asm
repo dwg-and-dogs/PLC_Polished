@@ -83,8 +83,8 @@ Text_IlexForestMossRock:
 	text "The rock is cover-"
 	line "ed in moss."
 
-	para "It feels pleasant-"
-	line "ly cool."
+	para "It feels pleasant"
+	line "and cool."
 	done
 
 Text_IlexForestSignpost0:
@@ -100,24 +100,22 @@ Text_IlexForestSignpost0:
 	done
 
 Text_IlexForestSignpost1:
-	text "Report any susp-"
-	line "icious activity"
-	para "to Goldenrod"
-	line "police or to"
+	text "Report suspicious"
+	line "activity to the"
+	cont "authorities!"
 	
-	para "Silph Forestry,"
+	para "-Silph Forestry,"
 	line "on behalf of"
-	para "Violet City Gym"
-	line "Leader Falkner." 
+	cont "Violet City" 
 	done
 
 Text_IlexForestShrine:
 	text "Ilex Forest"
-	line "Shrine…"
+	line "Shrine."
 
 	para "It's in honor of"
 	line "the forest's"
-	cont "protector…"
+	cont "protector."
 	done
 
 GenericTrainerBug_catcherWade:
@@ -164,9 +162,9 @@ YoungsterJoeyBeatenText:
 GenericTrainerBug_catcherArnie:
 	generictrainer BUG_CATCHER, ARNIE1, EVENT_BEAT_BUG_CATCHER_ARNIE, Bug_catcherArnieSeenText, Bug_catcherArnieBeatenText ;this seems to keep calling someone else... 
 
-	text "My Yanma likes"
-	line "it when we watch"
-	cont "dragon movies."
+	text "My Yanma shudders"
+	line "when I tell it"
+	cont "Fairy tales."
 	done
 
 Bug_catcherArnieSeenText:
@@ -177,7 +175,7 @@ Bug_catcherArnieSeenText:
 	done
 
 Bug_catcherArnieBeatenText:
-	text "Lost my buzz."
+	text "You're a buzzkill."
 	done
 
 GenericTrainerYoungsterMikey:
@@ -202,8 +200,8 @@ GenericTrainerPicnickerLiz:
 	generictrainer PICNICKER, LIZ1, EVENT_BEAT_PICNICKER_LIZ, PicnickerLizSeenText, PicnickerLizBeatenText
 	text "There used to be"
 	line "way more campsites"
-	para "before Silph sta-"
-	line "rted logging."
+	para "before Silph's"
+	line "logging."
 	done
 	
 	PicnickerLizSeenText:
@@ -221,7 +219,7 @@ GenericTrainerEngineerSmith:
 	generictrainer ENGINEER, SMITH, EVENT_BEAT_ENGINEER_SMITH, EngineerSmithSeenText, EngineerSmithBeatenText	
 	text "I thought it"
 	line "would make a"
-	cont "Magneton..."
+	cont "Magneton."
 	done
 	
 	EngineerSmithSeenText:
@@ -320,8 +318,6 @@ IlexForestKurtEngineerScript:
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
-;	special DeleteSavedMusic
-;	playmusic MUSIC_RIVAL_AFTER
 	opentext
 	writetext CamdenLeavingText
 	waitbutton
@@ -385,9 +381,9 @@ CamdenText1:
     text " Camden: "
 	next
 	text_start 
-	text "We need this lum-"
-	line "ber for the Vio-"
-	cont "let tower!"
+	text "We need lumber"
+	line "for the Sprout"
+	cont "Tower upgrade!"
 	done
 
 KurtText2:
@@ -442,7 +438,7 @@ CamdenLeavingText:
 	cont "isn't all bad."
 	
 	para "Take one of my"
-	line "abilitypatches,"
+	line "Abilitypatches,"
 	para "see if your mind"
 	line "changes."
 	done
@@ -478,10 +474,9 @@ KurtExplainsGSBallText:
     text " Kurt: "
 	next
 	text_start 
-	text "When did progress"
-	line "at all costs bec-"
-	para "come Johto's"
-	line "religion?"
+	text "Progress at any"
+	line "cost has become"
+	cont "Johto's religion."
 
 	para "Just look, they"
 	line "nearly destroyed"
@@ -717,10 +712,9 @@ IlexForestShrineScript:
 .BeautifulShrine:
 	jumpthistext
 
-	text "A beautiful"
-	line "shrine built 20"
-	cont "years ago to honor"
-	cont "Celebi."
+	text "A shrine built 20"
+	line "years ago, to"
+	cont "honor Celebi."
 	done
 
 AskToTimeTravelText:
@@ -778,14 +772,14 @@ InsertingGSBallText:
 	next
 	text_start 
 	text "It goes on the"
-	line "stage just so..."
+	line "stage just so…"
 	done
 
 IlexCelebiMovement:
 	step_down
 	step_down
 	step_down
-	step_end ;should end right on the shrine
+	step_end 
 
 IlexRivalWalksToShrine:
 	step_right
@@ -800,8 +794,9 @@ WhatIsNaturalText:
     text " Celebi: "
 	next
 	text_start 
-	text "An unnatural inv-"
-	line "ention destroys"
+	
+	text "A most unnatural"
+	line "invention risks"
 	cont "the forest."
 	
 	para "If you decide"
@@ -886,7 +881,7 @@ RivalWalksToYou:
 
 IlexForestWinText:
 	text "I need better"
-	line "training..."
+	line "training."
 	done
 
 IlexForestLossText:

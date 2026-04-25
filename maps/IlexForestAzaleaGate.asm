@@ -104,7 +104,7 @@ ProfOaksAide1NestBallText:
 	done
 
 ProfOaksAide1ExplainText:
-	text "Use that EXP"
+	text "Use that Exp."
 	line "share to level"
 	cont "up weak #mon."
 	done

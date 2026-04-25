@@ -191,17 +191,16 @@ KimonoCabin5GrannyText1:
 	next
 	text_start 
 
-	text "That's me, as a"
-	line "young person!"
+	text "That's me, when"
+	line "I was young!"
 	
 	para "That kimono, I"
 	line "remember it from"
 	cont "the last tryout."
 
 	para "The mud on the"
-	line "hem-I tripped"
-	cont "on the way to"
-	cont "the theatre."
+	line "hem. I tripped on"
+	cont "my way to tryout."
 	
 	para "I wanted to run"
 	line "home and cry!"
@@ -217,7 +216,7 @@ KimonoCabin5LassText1:
 	next
 	text_start 
 
-	text "And we succeeded!"
+	text "Yet we succeeded!"
 	line "The greatest gift"
 	para "we inherited was"
 	line "adaptability. "
@@ -233,10 +232,8 @@ KimonoCabin5LassText2:
 	line "this Eevee."
 	
 	para "It represents the"
-	line "Growth we earn"
-	para "from others who"
-	line "help us to be"
-	cont "our best."
+	line "things we learn"
+	para "from others."
 
 	para "How will you"
 	line "adapt? Who will"
@@ -255,8 +252,8 @@ KimonoCabin5GrannyText2:
 	line "don't belong."
 	
 	para "It's time that we"
-	line "stood up against"
-	cont "Vesper."
+	line "stood up to"
+	cont "Emperor Vesper."
 	
 	para "We are strong. We"
 	line "can adapt to the"

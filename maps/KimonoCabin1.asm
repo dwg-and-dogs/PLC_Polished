@@ -80,9 +80,8 @@ Kimono11HelpedText:
 	para "just uncomfy here"
 	line "in the cellar."
 	
-	para "And now I know"
-	line "how to smash"
-	cont "rocks!"
+	para "And now I can"
+	line "smash rocks!"
 	
 	para "Thank you!"
 	done
@@ -93,9 +92,8 @@ Kimono11HelpedTextWithVitamins:
 	cont "just uncomfy here"
 	cont "in the cellar."
 	
-	para "And now I know"
-	line "how to smash"
-	cont "rocks!"
+	para "And now I can"
+	line "smash rocks!"
 	
 	para "Take this candy,"
 	line "it always gives"

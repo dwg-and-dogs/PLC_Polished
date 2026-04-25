@@ -675,8 +675,7 @@ KimonoCabin44Script:
 ExplainSudokuText:
 	text "Shiji: This will"
 	line "be a marvel, like"
-	cont "the ones of my"
-	cont "youth!"
+	cont "when I was young!"
 	
 	para "#mon will come"
 	line "far and wide."

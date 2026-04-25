@@ -45,11 +45,11 @@ KajoCabinHikerText:
 	line "Magnet tracks."
 	
 	para "Crazy to think: "
-	line "all the boulders"
-	para "you see have pro-"
-	line "bably been there"
-	para "for hundreds of"
-	line "years!"
+	para "the rockslides"
+	line "hundreds of years"
+	cont "ago determine"
+	cont "what's accessible"
+	cont "in our time!"
 	done
 
 
@@ -76,9 +76,9 @@ KaJoHealerScript:
 
 KaJoWantToHeal:
 	text "It's tough off"
-	line "the grid. We have"
-	cont "some healing"
-	cont "items to share."
+	line "the grid. But we"
+	para "have some healing"
+	line "items to share."
 	done
 
 KaJoHealedPokemon:
@@ -127,8 +127,10 @@ KajoCabinDadIntroText:
     text "We moved to this"
     line "cabin to get away"
     cont "from it all."
+	
     para "I sent my daughter"
     line "to the acquifer to"
+
     para "gather water, but"
     line "she's lost."
 	cont "I hope she's OK."
@@ -138,9 +140,11 @@ KajoCabinDadThankYouText:
     text "Oh, you're the one"
     line "that sent my"
     cont "daughter back!"
+	
     para "Thank you so much."
     line "She made you a"
-    para "drawing... it has"
+	
+    para "drawing. It has"
     line "a lot of glitter"
     cont "on it."
     done
@@ -149,9 +153,10 @@ KajoCabinDadAfterText:
     text "Thanks again. Her"
     line "glitter might"
     cont "never come off,"
-    para "but the bright-"
-    line "powder keeps hits"
-	cont "off of you!"
+
+    para "but Brightpowder"
+    line "keeps hits off"
+	cont "of you!"
     done
 
 KajoCabinDadBagFullText:

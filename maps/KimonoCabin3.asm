@@ -134,8 +134,8 @@ KimonoCabin3Boulders:
 	reloadmappart
 	jumpthistext
 
-	text "The boulder fell"
-	line "down!"
+	text "The boulder fell!"
+
 	done	
 
 	
@@ -147,8 +147,8 @@ KimonoCabin3Boulders:
 	reloadmappart
 	jumpthistext
 
-	text "The boulder fell"
-	line "down!"
+	text "The boulder fell!"
+
 	done
 	
 .Disappear3:
@@ -159,8 +159,7 @@ KimonoCabin3Boulders:
 	reloadmappart
 	jumpthistext
 
-	text "The boulder fell"
-	line "down!"
+	text "The boulder fell!"
 	done
 
 .Disappear4:
@@ -171,8 +170,7 @@ KimonoCabin3Boulders:
 	reloadmappart
 	jumpthistext
 
-	text "The boulder fell"
-	line "down!"
+	text "The boulder fell!"
 	done
 
 
@@ -184,8 +182,7 @@ KimonoCabin3Boulders:
 	reloadmappart
 	jumpthistext
 
-	text "The boulder fell"
-	line "down!"
+	text "The boulder fell!"
 	done
 
 KimonoCabin3BoulderResetScript:
@@ -284,8 +281,7 @@ KimonoCabin3Explains1Text:
 	cont "attic rafters - "
 	
 	para "Try not to fall"
-	line "thru, and don't"
-	cont "mind the clutter."
+	line "through!"
 	
 	para "If you need help,"
 	line "my Umbreons will"

@@ -93,7 +93,6 @@ Kimono2GivesGeode:
 	done
 
 Kimono2LarvitarScript:
-	; figure out which one
 	checkevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_4
 	iftrue FifthHedgeHogInteraction ; only from the E 
 	checkevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_3
@@ -143,7 +142,7 @@ HedgeHogMoves4thTime:; player is facing up from the S
 	end
 
 
-FifthHedgeHogInteraction: ; right now, this does work. But for some reason the other ones don't. May need to just brute force it. 
+FifthHedgeHogInteraction:
 	readvar VAR_FACING 
 	ifnotequal LEFT, SpookedHedgehogScript
 	showemote EMOTE_SHOCK, KIMONO_CABIN_2_LARVITAR, 15 
@@ -205,11 +204,10 @@ Kimono2GladThatsOverText:
 	line "with that ornery"
 	cont "creature."
 	
-	para "It would have eat-"
-	line "en all the dirt"
-	cont "from the garden"
-	cont "if we didn't deal"
-	cont "with it!"
+	para "It would've eaten"
+	line "all the dirt from"
+	cont "the garden!"
+
 	done
 
 Kimono2TakeThisAsThanks:
@@ -219,12 +217,14 @@ Kimono2TakeThisAsThanks:
 	para "I knit it myself,"
 	line "as I had cellar"
 	cont "duty before Vera."
+
 	done
 
 Kimono2TakeThisAsThanks2:
 	text "Oh, hey, it dug"
 	line "up this weird"
 	cont "stone. Want it?"
+
 	done
 
 
@@ -237,41 +237,29 @@ HedgehogSpookedText:
 FirstLarvitarMovement: ; 7-9 to 3-5 only from the S 
 	fix_facing
 	fast_jump_step_up
-;	fast_jump_step_up
 	fast_jump_step_left
-;	fast_jump_step_left
-;	fast_jump_step_up
 	fast_jump_step_up
 	step_end
 
 SecondLarvitarMovement: ; from 3-5 to 7-5 only from the E
 	fix_facing
 	fast_jump_step_up
-;	fast_jump_step_up
 	fast_jump_step_right
-;	fast_jump_step_right
 	fast_jump_step_right
-;	fast_jump_step_right
 	fast_jump_step_down
-;	fast_jump_step_down
 	step_end
 
 
 ThirdLarvitarMovement:; from 7-5 to 5-7 only from the N 
 	fix_facing
 	fast_jump_step_down
-;	fast_jump_step_down
 	fast_jump_step_left
-;	fast_jump_step_left
 	step_end
 
 
 FourthLarvitarMovement:; from 5-7 to 9-5 ; only from the S, last check is the E 
 	fix_facing
 	fast_jump_step_right
-;	fast_jump_step_right
 	fast_jump_step_right
-;	fast_jump_step_right
 	fast_jump_step_up
-;	fast_jump_step_up
 	step_end

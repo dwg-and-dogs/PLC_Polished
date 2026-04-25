@@ -267,13 +267,19 @@ LakeRivalText2:
 	next
 	text_start
 	text "No, just getting"
-	line "material for my"
+	line "working on my"
 	cont "distiller."
 	
 	para "I had to leave"
 	line "Olivine. I could"
 	para "not bear to see"
-	line "Silph any more."
+	line "what Silph was"
+	cont "doing with my"
+	cont "invention."
+	
+	para "The Slowking,"
+	line "the coastline,"
+	cont "because of me!"
 	done
 
 LakeRivalText2_2: 
@@ -282,11 +288,14 @@ LakeRivalText2_2:
 	next
 	text_start
 	text "Aha! So, you see"
-	line "inventions upset"
-	cont "the balance!"
+	line "new technologies"
+	cont "upset the order!"
 	
 	para "You ought to"
 	line "head home."
+	
+	para "It's where you"
+	line "belong."
 	done
 
 LakeRivalText2_3:
@@ -307,10 +316,10 @@ LakeRivalText2_3:
 	para "that they destroy"
 	line "their habitat."
 	
-	para "We are part of"
-	line "nature. Our niche"
-	para "is to be reflect-"
-	line "ive stewards."
+;	para "We are part of"
+;	line "nature. Our niche"
+;	para "is to be reflect-"
+;	line "ive stewards."
 	
 	para "I'm much stronger"
 	line "without you!"
@@ -329,24 +338,25 @@ LakeRivalAfterText:
 	text "You're only gett-"
 	line "ing weaker, like"
 	
-	para "the shrine that"
-	line "fades every 20"
-	cont "years. Unlike a"
+	para "that shrine that"
+	line "falls to ruins"
+	cont "every 20 years."
+	cont "years. Unlike you"
 	
-	para "Pineco hiding in"
-	line "a shell,"
-	
-	para "Or you hiding in"
-	line "righteousness,"
-	
+	para "using tradition"
+	line "as a righteous"
+	cont "shield to soothe"
+	cont "your insecurity,"
+
 	para "Or Silph hiding"
 	line "behind fake"
-	cont "altruism,"
+	cont "altruism in the"
+	cont "pursuit of power,"
 	
-	para "I see my effect."
-	line "I walked away"
-	cont "when it wasn't"
-	cont "working."
+	para "I see clearly how"
+	line "it all connects."
+
+	para "I walked away."
 	
 	para "<PLAYER>,"
 	line "what will you do?"
@@ -371,43 +381,51 @@ LakePryceAfterRivalText:
 	text_start	
 	
 	text "Nature goes in"
-	line "cycles. This area"
-	cont "is rarely static."
+	line "cycles. The Lake,"
+	cont "for instnace."
 	
 	para "It was once a"
-	line "tarn: the extent"
-	cont "of a glacier."
+	line "Tarn: an icy pond"
+	cont "under a glacier."
 
 	para "Ahead of me, a"
-	line "chasm dug by a"
+	line "chasm dug by the"
 	cont "glacier long ago."
 	
-	para "Then a Gyarados"
-	line "rampage shaped"
-	para "the area into a"
-	line "lake."
+	para "Until a Gyarados"
+	line "rampage reshaped"
+	cont "the area."
 	
 	para "Surely the years"
 	line "after weren't easy"
+	
 	para "as people sought"
 	line "balance with the"
 	cont "new system."
 	
 	para "Now, Silph has"
-	line "drained the lake."
-	para "Ironically, the"
-	line "future they crea-"
-	cont "ted gives us a"
-	para "glimpse into the"
-	line "past in the mud."
+	line "drained the Lake."
 
-	para "Now, it's up to"
-	line "the Mahogany Gym"
-	para "to find a new"
+	para "Ironically, the"
+	line "future they made"
+	cont "reveals the past"
+	cont "in the mud."
+
+	para "A long buried"
+	line "temple is now"
+	cont "accessible."
+
+	para "So it's up to the"
+	line "Mahogany Gym to"
+	para "find a new"
 	line "balance here."
 	
 	para "That's our role"
-	line "as stewards."
+	line "as stewards - "
+	
+	para "Give the future"
+	line "something worth"
+	cont "returning to."
 	done
 
 LakeKurtAfterRivalText_2:  
@@ -416,11 +434,11 @@ LakeKurtAfterRivalText_2:
 	next
 	text_start
 
-	text "Maybe. But! I"
-	line "still think I can"
-	para "save Johto from"
-	line "modernizing infl-"
-	cont "uences."
+	text "Hm. But! I think"
+	line "I can still save"
+	cont "Johto from those"
+	cont "modernizing"
+	cont "influences."
 	
 	para "Please, Pryce."
 	line "You said you'd"
@@ -445,14 +463,12 @@ LakePryceAfterRivalText_2:
 	line "a sprinkle,"
 	
 	para "Don't panic,"
-	line "have prudence!"
+	line "have prudence,"
 
-	para "So we can choose"
-	line "our wrinkles."
+	para "So you can choose"
+	line "your wrinkles."
 	done
 	
-
-
 LakeRivalToPlayer:
 	step_left
 	step_left
@@ -532,10 +548,10 @@ LakePrayerText:
 	line "a sprinkle,"
 	
 	para "Don't panic,"
-	line "have prudence!"
+	line "have prudence,"
 
-	para "So we can choose"
-	line "our wrinkles."
+	para "So you can choose"
+	line "your wrinkles."
 	done
 
 WesleyScript:
@@ -591,7 +607,7 @@ WesleyDynamicPunchText:
 	line "lot of momentum"
 	
 	para "but the position"
-	line "is unknown."	
+	line "is unknown."
 	done
 
 WesleyMeowthText:
@@ -688,8 +704,7 @@ GenericTrainerPokemaniacCalvin:
 
 	text "The lake is so"
 	line "tranquil, without"
-	para "Gyarados thrash-"
-	line "ing about."
+	cont "Gyarados."
 	done
 
 .BeatenText5:
@@ -702,9 +717,9 @@ GenericTrainerPokemaniacCalvin:
 .SeenText5:
 	text "Before Silph, the"
 	line "Lake had Gyarados"
-	cont "but now there's"
-	para "so many rare"
-	line "#mon!"
+	para "but there's still"
+	line "so many strong"
+	cont "#mon!"
 	done
 
 
@@ -1411,9 +1426,9 @@ LakeOfRageDV_Setting_EggText:
 
 LakeOfRageWhatPotentialText:
 	text "So the legends"
-	line "were true..."
+	line "were true."
 	
-	para "Another structure"
+	para "Another temple"
 	line "did exist."
 	
 	para "You never know"

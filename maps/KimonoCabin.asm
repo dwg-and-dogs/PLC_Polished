@@ -79,26 +79,29 @@ Kimono1AskHelpText:
 	text "Hi! I'm Vera."
 	line "Are you from"
 	cont "Anarres?"
+	
 	para "It is always so"
 	line "boring here?"
+
 	para "My grandma Shiji"
 	line "made us move!"
 
 	para "I have chores."
 	line "I have to go a"
 	cont "freezing cellar."
+
 	para "And there's a"
 	line "big scary worm"
 	cont "writhing around."
+
 	para "Would you help"
 	line "me? Pleeease?"
 	done
 
 Kimono1DeclinedText:
-	text "Vera: Oh"
-	line "brother... I'm"
-	para "never gonna"
-	line "make it here."
+	text "Vera: Oh brother."
+	line "I'm never gonna"
+	cont "make it here."
 	done
 
 Kimono1ThanksForHelpingText:
@@ -135,28 +138,25 @@ KimonoCabin2Script:
 	end
 
 Kimono2HelpedText:
-	text "Piper: Thanks"
-	line "for your help"
-	cont "out there."
+	text "Piper: Thanks for"
+	line "your help."
 
-	para "Maybe people"
-	line "can learn,"
-	cont "after all."
+	para "Maybe people can"
+	line "learn, after all."
 	done
 	
 Kimono2NotStrongEnoughText: 
 	text "Piper: It's so"
-	line "unfair. I was"
-	para "about to be prom-"
-	line "oted, but now I'm"
-	para "here thanks to"
-	line "that emperor."
+	line "unfair. I was to"
+	para "be promoted, but"
+	line "now I'm here!"
 
 	para "Why does grandma"
 	line "even bother?"
 
 	para "Hey, I'm setting"
 	line "up a garden, but"
+
 	para "there's an ornery"
 	line "hedgehog."
 	
@@ -167,17 +167,16 @@ Kimono2NotStrongEnoughText:
 	
 Kimono2AskHelpText:
 	text "Piper: It's so"
-	line "unfair. I was"
-	para "about to be prom-"
-	line "oted, but now I'm"
-	para "here thanks to"
-	line "that emperor."
+	line "unfair. I was to"
+	para "be promoted, but"
+	line "now I'm here!"
 
 	para "Why does grandma"
 	line "even bother?"
 
 	para "Hey, I'm setting"
 	line "up a garden, but"
+
 	para "there's an ornery"
 	line "hedgehog."
 	
@@ -197,8 +196,6 @@ Kimono2ThanksForHelpingText:
 	text "Piper: OK,"
 	line "Great! Let's go!"
 	done
-
-
 
 KimonoCabin3Script: ; samaria 
 	faceplayer
@@ -229,10 +226,11 @@ Kimono3HelpedText:
 Kimono3NotStrongEnoughText:
 	text "Samaria: Welcome"
 	line "to our cabin."
-	para "Sorry if we"
-	line "smell, my"
-	para "daughters use"
-	line "all the soap."
+	para "Sorry about the"
+	line "dusty smell, we"
+	para "haven't lit any"
+	line "incense yet."
+
 	para "Say, I stashed"
 	line "some in the attic"
 	para "but something's"
@@ -248,10 +246,11 @@ Kimono3NotStrongEnoughText:
 Kimono3AskHelpText:
 	text "Samaria: Welcome"
 	line "to our cabin."
-	para "Sorry if we"
-	line "smell, my"
-	para "daughters use"
-	line "all the soap."
+	para "Sorry about the"
+	line "dusty smell, we"
+	para "haven't lit any"
+	line "incense yet."
+
 	para "Say, I stashed"
 	line "some in the attic"
 	para "but something's"
@@ -287,7 +286,6 @@ KimonoCabin4Script:
 	yesorno
 	iffalse_jumpopenedtext Kimono4DeclinedText
 	writetext Kimono4ThanksForHelpingText
-;	clearevent EVENT_SOLVED_KIMONO_4_SUDOKU ; 
 	clearevent EVENT_EXPLAINED_SUDOKU
 	waitbutton
 	closetext
@@ -313,15 +311,16 @@ KimonoCabin4Script:
 
 Kimono4HelpedText:
 	text "Shiji: Darling!"
-	para "Thanks again"
-	line "for your help"
-	cont "in the garden."
-	para "When you get"
-	line "old and grey"
-	para "like me, make"
-	line "sure you teach"
-	para "someone else,"
-	line "hear?"
+	para "Thanks again for"
+	line "your help in the"
+	cont "garden."
+
+	para "When you get old"
+	line "and grey like me,"
+	
+	para "teach someone"
+	line "else, hear?"
+
 	done
 
 Kimono4NotStrongEnoughText:
@@ -330,14 +329,16 @@ Kimono4NotStrongEnoughText:
 	para "I knew we would"
 	line "have some soon."
 
-	para "I'm setting up"
-	line "a garden, but"
-	para "I'm not strong"
-	line "enough to move"
-	para "boulders around."
+	para "I'm setting up a"
+	line "garden, but I'm"
+	cont "not strong enough"
+	cont "to move boulders."
+
 	para "Oh, but you're not"
 	line "strong enough."
+
 	para "..."
+
 	para "Maybe this move"
 	line "was a bad idea."
 	done
@@ -348,31 +349,31 @@ Kimono4AskHelpText:
 	para "I knew we would"
 	line "have some soon."
 
-	para "I'm setting up"
-	line "a garden, but"
-	para "I'm not strong"
-	line "enough to move"
-	para "boulders around."
+	para "I'm setting up a"
+	line "garden, but I'm"
+	cont "not strong enough"
+	cont "to move boulders."
+	
 	para "I can teach you"
-	line "some landscap-"
-	cont "ing to attract"
+	line "some landscaping"
+	cont "that will delight"
 	cont "rare #mon."
 	done
 
 Kimono4DeclinedText:
 	text "Really? That is"
-	line "quite sad..."
+	line "quite sad."
 	para "Maybe the last"
 	line "garden in Johto"
-	para "has already"
-	line "been tilled."
+	para "has already been"
+	line "tilled."
 	done
 
 Kimono4ThanksForHelpingText:
 	text "Wonderful! You"
-	line "won't regret it"
-	para "Please come"
-	line "with me!"
+	line "won't regret it."
+	
+	para "Come with me!"
 	done
 
 KimonoCabin5Script:
@@ -404,53 +405,65 @@ KimonoCabin5Script:
 Kimono5HelpedText:
 	text "Morphea: Thank"
 	line "you again."
+	
 	para "We'll be leaving"
 	line "very soon."
+
 	para "We're hearing that"
 	line "the time is nigh"
-	para "to inscribe our"
-	line "knowledge upon"
-	cont "Johto."
+
+	para "to preserve our"
+	line "knowledge for"
+	cont "the future."
 	done
 
 Kimono5NotStrongEnoughText:
 	text "Morphea: Still!"
 	line "My eyes are bad."
+	
 	para "The only time I"
 	line "see clearly is"
 	cont "in my dreams."
+
 	para "Every night, I"
 	line "dream that I am"
+
 	para "adrift in the"
 	line "winds of fate."
-	para "But who has"
-	line "time for dreams"
-	para "when my family"
-	line "still has such"
-	cont "strife?"
+
+	para "But who has time"
+	line "for dreams, when"
+	cont "my family has"
+	cont "such strife?"
+
 	done
 	
 Kimono5AskHelpText:
 	text "Morphea: Still!"
 	line "My eyes are bad."
+	
 	para "The only time I"
 	line "see clearly is"
 	cont "in my dreams."
+
 	para "Every night, I"
 	line "dream that I am"
+
 	para "adrift in the"
 	line "winds of fate."
+	
 	para "Do you think"
 	line "you can help me"
 	cont "interpret it?"
 	done
 
 Kimono5DeclinedText:
-	text "Morphea: Who "
-	line "could blame"
-	para "you... We can't"
-	line "force anyone to"
-	cont "choose a path."
+	text "Morphea: Who can"
+	line "blame you?"
+
+	para "We can't force"
+	line "anyone to choose"
+	cont "a path."
 	done
 
 Kimono5ThanksForHelpingText:
@@ -459,11 +472,12 @@ Kimono5ThanksForHelpingText:
 
 	para "Here, rest your"
 	line "hand on my head"
-	cont "as I drift off..."
+	cont "as I drift off."
 	done
 
 KimonoCabinShijiNotebook1:
 	text "Shiji's Journal: "
+	
 	line "Only a few months"
 	para "with access to"
 	line "#balls, and I"
@@ -476,24 +490,24 @@ KimonoCabinShijiNotebook1:
 
 	para "Something must be"
 	line "done to preserve"
+	
 	para "this knowledge, in"
 	line "case we ever need"
 	cont "it again!"
 	done
 	
 KimonoCabinSamariaNotebook1:
-	text "Samaria's Jour-"
-	line "nal: I had forgot-"
-	para "ten just how hard"
-	line "manual labor is,"
+	text "Samaria's Journal:"
+	line "I forgot how hard"
+	cont "manul labor is,"
 	
 	para "prior to the new"
-	line "comforts the emp-"
-	cont "eror delivered."
+	line "comforts in the"
+	cont "Capital."
 	
 	para "Perhaps Shiji has"
 	line "made a mistake in"
-	cont "leaving..."
+	cont "leaving?"
 	done
 	
 KimonoCabinPiperNotebook1:
@@ -517,8 +531,8 @@ KimonoCabinPiperNotebook1:
 
 KimonoCabinVeraNotebook1:
 	text "Vera's Journal:"
-	line "At the cabin, ev-"
-	para "eryone smells!"
+	line "This cabin is so"
+	cont "musty!"
 	
 	para "And no one ever"
 	line "dances anymore."
@@ -528,12 +542,13 @@ KimonoCabinVeraNotebook1:
 	
 	para "Oh, but I saw a"
 	line "cute Cyndaquil!"
+	
 	done
 	
 KimonoCabinMorpheaNotebook1:
-	text "Morphea's Journ-"
-	line "al: My daughter"
-	cont "is so headstrong."
+	text "Morphea's Journal:"
+	line "My daughter is sp"
+	cont "headstrong."
 	
 	para "Did she overreact,"
 	line "were things really"
@@ -552,11 +567,11 @@ KimonoCabinMorpheaNotebook1:
 
 KimonoCabinBookshelfText:
 	text "There's a lot"
-	line "of books..."
+	line "of books."
 	
 	para "Sewing with silk,"
 	line "Apricorn craft,"
 	
 	para "Dancing apart"
-	line "from time..."
+	line "from time."
 	done
