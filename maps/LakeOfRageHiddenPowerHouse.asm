@@ -41,9 +41,9 @@ NoReadBasculegionText:
 	done
 	
 ReadBasculegionTextQuestion:
-	text "It's a big pile"
-	line "of handwritten"
-	cont "papers. Read?"
+	text "It's a long letter"
+	line "addressed to you"
+	cont "from Pryce. Read?"
 	done
 	
 BasculegionBlessingText:
@@ -55,7 +55,7 @@ BasculegionBlessingText:
 	para "swim all the way"
 	line "upstream to this"
 	para "Lake, many many"
-	line "years ago?"
+	line "years ago."
 
 	para "Winter winds"
 	line "remind us to be"
@@ -67,15 +67,16 @@ BasculegionBlessingText:
 	para "wrapped in silt"
 	line "and sticks."
 	
-	para "They unwrap to"
+	para "Just born, they"
 	line "find mysterious"
 	para "salty scales and"
 	line "ravaged fins."
 
-	para "Then in summer,"
-	line "to the ocean with"
-	para "its dangers and"
-	line "opportunities."
+	para "In summer, they"
+	line "swim to the ocean"
+	para "for its plentiful"
+	line "opportunities,"
+	cont "despite the risk."
 	
 	para "In fall, instinct"
 	line "compels them to"
@@ -94,10 +95,10 @@ BasculegionBlessingText:
 	para "They will never"
 	line "see their gifts"
 	para "received by the"
-	line "next generations."
+	line "next generation."
 	
 	para "They must hope an"
-	line "inheritance of an"
+	line "Inheritance of an"
 	para "orderly nest and"
 	line "proof of scaled"
 	para "waterfalls will"
@@ -144,14 +145,13 @@ PryceCabinText1Text:
 	para "I feel like an"
 	line "old Granbull that"
 	
-	para "doesn't see or"
-	line "hear things right"
-	cont "anymore,"
+	para "can't see or hear"
+	line "right anymore,"
 	
-	para "Barking at noth-"
-	line "ing and getting"
-	cont "told to shut it"
-	cont "and go away."
+	para "Getting told to"
+	line "shut it as if I"
+	cont "was barking at"
+	cont "nothing."
 	done
 
 PryceCabinText2Text:
@@ -161,6 +161,8 @@ PryceCabinText2Text:
 	para "I'm sorry that so"
 	line "few Azaleans came"
 	cont "to the ceremony."
+	
+	; para "But there's a RAM NPC limit that can be on screen at any time. You kept turning into letters because the screen was too full."
 	
 	para "And I hear you"
 	line "are more agitated"

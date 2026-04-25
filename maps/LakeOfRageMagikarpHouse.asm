@@ -103,7 +103,7 @@ Text_LakeOfRageTutorRefused:
 	done
 
 Text_LakeOfRageTutorTaught:
-	text "There! Now, you"
+	text "There! Now you"
 	line "can wield the"
 	para "flatus of the"
 	line "Earth as well!"

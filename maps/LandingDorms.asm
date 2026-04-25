@@ -54,7 +54,7 @@ Landing_NatuText_1:
 LandingDormsNPC1Text:
 	text "Do you know the"
 	line "legend of the"
-	cont "whirl islands?"
+	cont "Vortex Caverns?"
 	
 	para "They can only"
 	line "be navigated"
@@ -64,10 +64,9 @@ LandingDormsNPC1Text:
 	
 LandingDormsNPC2Text:
 	text "We navigated to"
-	line "those sheltered"
-	para "shores south of"
-	line "the port every"
-	cont "summer,"
+	line "those Sheltered"
+	para "Shores every"
+	line "summer,"
 	
 	para "and older members"
 	line "would stay back"
@@ -75,7 +74,7 @@ LandingDormsNPC2Text:
 	line "journey."
 	
 	para "Then, when winter"
-	line "monsoons arrived,"
+	line "storms arrived,"
 	para "we surfed to the"
 	line "cliffs here,"
 	
@@ -196,9 +195,9 @@ BarbeauJournal:
 	text "Remy's Journal"
 	
 	para "The people grow"
-	line "restless... Is"
+	line "restless. Is"
 	para "Amos' plan really"
 	line "enough to repel"
-	para "both barbarians"
-	line "and the Emperor?"
+	para "the outsiders and"
+	line "the Emperor?"
 	done

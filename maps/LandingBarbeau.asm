@@ -37,8 +37,8 @@ KenseyOfficeKenseyText:
 
 KenseyOfficeSailorText:
 	text "It's taking too"
-	line "long! I've alrea-"
-	para "dy sent mail for"
+	line "long! I've sent"
+	para "mail, calling for"
 	line "another ship."
 	
 	para "The safety of the"

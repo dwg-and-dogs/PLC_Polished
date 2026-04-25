@@ -41,10 +41,9 @@ LandingHouse1MomScript:
 	line "son is back."
 	
 	para "Even though our"
-	line "lives are diffe-"
-	cont "rent, we can at"
-	para "least depend on"
-	line "our families."
+	line "lives are changed"
+	cont "we can depend on"
+	cont "each other."
 	done
 
 LandingHouse1_GotLifeOrb:
@@ -52,10 +51,9 @@ LandingHouse1_GotLifeOrb:
 	line "son is back."
 	
 	para "Even though our"
-	line "lives are diffe-"
-	cont "rent, we can at"
-	para "least depend on"
-	line "our families."
+	line "lives are changed"
+	cont "we can depend on"
+	cont "each other."
 	done
 
 LandingHouse1_GiveLifeOrb:
@@ -67,14 +65,14 @@ LandingHouse1_GiveLifeOrb:
 	line "orbs when we"
 	para "need strength to"
 	line "break through a"
-	cont "tough storm..."
+	cont "tough storm."
 	done
 	
 LandingHouseWhereSonText:
 	text "Where is my son?"
 	line "I told him he"
 	para "shouldn't go to"
-	line "the shores alone."
+	line "the Caverns solo."
 	done
 	
 
@@ -101,10 +99,9 @@ LandingHouse1_GotFlash:
 	done
 	
 LandingHouse1_GiveFlash:
-	text "Thanks for help-"
-	line "ing me out of the"
-	cont "caves. Here, this"
-	para "will help you if"
-	line "you find any more"
+	text "Thanks for your"
+	line "help. Here, this"
+	para "will be of use if"
+	line "you encounter any"
 	cont "dark areas."
 	done

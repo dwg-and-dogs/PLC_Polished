@@ -38,11 +38,12 @@ LandingStockroomNPC1Text:
 	
 	para "but now I find"
 	line "it hard to go"
-	cont "back."
+	cont "back to anything"
+	cont "else!"
 	done
 	
 LandingStockroomNPC2Text:
-	text "The mart has"
+	text "The mart stocks"
 	line "wares from far"
 	cont "away."
 	done
@@ -54,8 +55,6 @@ LandingStockroomNPC3Text:
 	para "I can go make"
 	line "my own way."
 	done
-
-
 
 TLApricornBenchScript:
 	opentext

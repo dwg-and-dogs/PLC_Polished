@@ -63,7 +63,7 @@ LandingDocksScene:
 	blackoutmod CIANWOOD_COVE
 	special Special_FadeOutMusic
 	pause 30
-	playmusic MUSIC_LUGIA_BATTLE_HGSS ; MUSIC_BATTLE_FACTORY_RSE ; MUSIC_FRONTIER_BRAIN_BATTLE_RSE, MUSIC_ELITE_FOUR_BATTLE_SM
+	playmusic MUSIC_LUGIA_BATTLE_HGSS 
 	applyonemovement PLAYER, step_up
 	showemote EMOTE_BOLT, LANDING_DOCKS_SURGE, 30
 	opentext
@@ -181,7 +181,7 @@ PickupDocksScene:
 	closetext
 	playsound SFX_GET_BADGE
 	setflag ENGINE_RAINBOWBADGE
-	waitsfx ; YOU GET THE BADGE AT THE END 
+	waitsfx 
 	applyonemovement LANDING_DOCKS_BARBEAU, step_up
 	turnobject LANDING_DOCKS_BARBEAU, DOWN
 	turnobject LANDING_DOCKS_KURT, LEFT
@@ -260,7 +260,6 @@ PickupDocksScene2:
 	setevent EVENT_DOCKS_LUGIA
 	setevent EVENT_BEAT_KENSEY_PORT
 	playsound SFX_WARP_TO
-;	special FadeOutPalettes
 	waitsfx
 	applyonemovement PLAYER, hide_object
 	warphide CLASTS_CRADLE_B1F, 21, 11
@@ -320,9 +319,8 @@ Docks_Text3:
     text " Kurt: " 
 	next
 	text_start 
-	text "Begone! Lugia,"
-	line "Aeroblast their"
-	cont "ships!"
+	text "Lugia, aeroblast"
+	line "their ships!"
 	done
 
 Docks_LugiaMove1:
@@ -341,7 +339,7 @@ Docks_Text4:
 	next
 	text_start 
 	text "The guardian of"
-	line "the sea?..."
+	line "the sea?"
 	done
 
 Docks_Text4_2:
@@ -417,11 +415,14 @@ Docks_Text8:
 	next
 	text_start 
 	text "I captured Lugia"
-	line "for Johto. Her"
-	para "power is mine."
-	line "Johto's future"
-	para "depends on block-"
-	line "ing those ships."
+	line "for Johto. Lugia's"
+	cont "power is mine."
+	
+	para "Johto's future"
+	line "depends on those"
+	para "ships sinking to"
+	line "the bottom of the"
+	cont "ocean."
 	done
 
 Docks_Text9:
@@ -445,7 +446,7 @@ Docks_Text11:
     text " Remy: " 
 	next
 	text_start 
-	text "She is sacred!"
+	text "Lugia is sacred!"
 	line "You must release"
 	para "her. Battle me,"
 	line "or choose a"
@@ -458,8 +459,10 @@ Docks_Text11_2:
 	next
 	text_start 
 	text "Lugia is mine."
-	line "I brought her!"
+	line "I caught her!"
 	cont "I deserve her!"
+	cont "She WILL do my"
+	cont "bidding!"
 	
 	para "<PLAYER>, please"
 	line "address him."
@@ -480,15 +483,16 @@ Docks_Text12:
 	text_start 
 	text "<PLAYER>, I cannot"
 	line "condone what you"
-	para "did. But tradit-"
-	line "ion dictates that"
-	para "I must give you "
-	line "the Vortex Badge,"
+	para "did. But my honor"
+	line "requires that I"
+	para "must give you the"
+	line "Vortex Badge,"
 	para "marking you as"
 	line "worthy to go on"
 	para "an expedition and"
 	line "be welcomed home"
 	cont "from one."
+
 	done
 
 Docks_Text12_Badge:
@@ -512,8 +516,6 @@ Docks_Text12_2:
 	line "from their tech!"
 	done
 
-; heal party 
-
 Docks_Text13:
 	text_high
     text " Nemo: " 
@@ -530,17 +532,16 @@ Docks_Text13:
 KenseyBeaten1:
 	text "You have a talent"
 	line "for battling. But"
-	para "I don't think we"
-	line "have seen the"
-	para "last of new tech"
-	line "just yet."
+	para "you can't stop the"
+	line "flywheel of"
+	cont "progress."
 	
 	para "The Emperor has a"
 	line "mine to the East"
-	para "where we are dev-"
-	line "eloping tech that"
-	para "can compete with"
-	line "the outsiders'."
+	para "where technology"
+	line "is being made to"
+	cont "compete with the"
+	cont "outsiders."
 	done
 
 Docks_Text14:
@@ -552,8 +553,8 @@ Docks_Text14:
 	line "a mine east of"
 	cont "the capital."
 
-	para "Adrinna is becom-"
-	line "ing a capable"
+	para "General Andrea"
+	line "is now a capable"
 	cont "metallurgist."
 
 	para "Johto will master"
@@ -590,11 +591,10 @@ Docks_Text17:
 	text_start 
 	text "She dove beneath"
 	line "the waves, but"
-	
-	para "the sea is still."
-	line "Is she OK? Was I"
-	para "the last of us to"
-	line "see her?"
+	cont "the sea is still."
+	para "Is she OK? Was I"
+	line "the last of us to"
+	cont "see her?"
 	done
 
 Docks_Text18:
@@ -637,9 +637,8 @@ Docks_Text19:
 	para "A few weeks time"
 	line "against Lugia?"
 
-	para "... Say, do you"
-	line "also smell Holly"
-	cont "in the air?"
+	para "Say, why do I"
+	line "smell holly?"
 	done
 
 Docks_Text20:

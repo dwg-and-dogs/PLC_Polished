@@ -70,6 +70,6 @@ GiveAssaultVestText:
 	line "switcheroo with"
 	cont "one of mine."
 	
-	para "... Don't let 'em"
+	para "Don't let 'em"
 	line "keep you down."	
 	done
