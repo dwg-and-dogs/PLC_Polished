@@ -19,8 +19,8 @@ SAVE_VERSION EQU 7
 ; time of day boundaries
 MORN_HOUR EQU  5 ; 5 AM - 9 AM (4 hours)
 DAY_HOUR  EQU  9 ; 9 AM - 5 PM (8 hours)
-EVE_HOUR  EQU 17 ; 5 PM - 9 PM (4 hours)
-NITE_HOUR EQU 21 ; 9 PM - 5 AM (8 hours)
+EVE_HOUR  EQU 17 ; 5 PM - 8 PM (4 hours)
+NITE_HOUR EQU 20 ; 8 PM - 5 AM (8 hours)
 MAX_HOUR  EQU 24 ; 12 AM - 12 AM (24 hours)
 
 if DEF(NO_RTC)
