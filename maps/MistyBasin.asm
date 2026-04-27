@@ -86,22 +86,20 @@ GenericTrainerSageNico:
 	done
 
 SageNicoSeenText:
-	text "Don't tell"
-	line "anyone we're"
-	cont "here!"
+	text "Don't tell them"
+	line "we're here!"
 	done
 
 SageNicoBeatenText:
-	text "Deflated."
+	text "Shh!"
 	done
 
 GenericTrainerMediumMartha:
 	generictrainer MEDIUM, MARTHA, EVENT_BEAT_MEDIUM_MARTHA, MediumMarthaSeenText, MediumMarthaBeatenText
 
 	text "Ursula developed"
-	line "a method of"
-	para "hitting the"
-	line "trees to knock"
+	line "a method to hit"
+	cont "trees to knock"
 	cont "off Pineco."
 	done
 
@@ -160,18 +158,23 @@ TammyAfterBattleText:
 	text "I invented a way"
 	line "to shake Pineco"
 	para "off, without"
-	line "hurting the"
-	para "tree. Hollis"
-	line "says it's"
-	cont "unnatural."
+	line "hurting the tree."
+
+	para "Silas says it's"
+	line "unnatural."
+
 	
 	para "I want to help,"
-	line "but he just"
-	para "sits on top of"
-	line "the tower. Since"
-	para "you want the HM"
-	line "as well, can you"
-	cont "help me?"
+	line "but he just sits"
+	cont "in his tower."
+	
+	para "If we both go,"
+	line "they can't stop"
+	cont "us all."
+	
+	para "Let's go to the"
+	line "Tower! See you"
+	cont "up there!"
 	done
 
 TammySeenText:
@@ -179,14 +182,18 @@ TammySeenText:
     text " Ursula: "
 	next
 	text_start
-	text "We're organized"
-	line "to confront the"
-	cont "Elder. Oh?"
-	para "You're also"
-	line "trying to get"
-	para "the HM? Let's"
-	line "see if you're"
-	cont "strong enough."
+	text "We're about to"
+	line "confront Silas."
+	
+	para "Why are you here?"
+	
+	para "..."
+	
+	para "I see. You're also"
+	line "trying to get his"
+	cont "HM. Let's see how"
+	cont "strong you are!"
+
 	done
 
 
@@ -226,5 +233,5 @@ TammySeeYaText:
 	next
 	text_start
 	text "See you at the"
-	line "tower!"
+	line "Tower!"
 	done

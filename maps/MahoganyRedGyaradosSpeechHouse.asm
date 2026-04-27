@@ -34,7 +34,7 @@ MahoganyRedGyaradosSpeechHouseBlackBeltScript:
 GotScaldText:
 	text "Not everyone has"
 	line "the guts to drink"
-	cont "such a hot drink."
+	cont "something so hot."
 	done
 	
 GiveScaldText:
@@ -48,6 +48,6 @@ GiveScaldText:
 
 MahoganyRedGyaradosSpeechHouseTeacherText:
 	text "Even when it gets"
-	line "cold I prefer a"
+	line "chilly I prefer a"
 	cont "nice cold brew."
 	done

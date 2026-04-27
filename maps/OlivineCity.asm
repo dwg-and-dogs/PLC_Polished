@@ -24,8 +24,6 @@ OlivineCity_MapScriptHeader:
 	bg_event 20, 22, BGEVENT_JUMPTEXT, OlivineCityPortSignText
 	bg_event  7,  7, BGEVENT_JUMPTEXT, OlivineGymSignText
 	bg_event 34, 20, BGEVENT_JUMPTEXT, OlivineLighthouseSignText
-;	bg_event  1, 21, BGEVENT_JUMPTEXT, OlivineCityBattleTowerSignText
-;	bg_event 50, 27, BGEVENT_JUMPTEXT, OlivineCityPokeathlonDomeSignText
 	bg_event 10, 17, BGEVENT_JUMPTEXT, OlivineCityCafeSignText
 	bg_event 36, 14, BGEVENT_ITEM + RARE_CANDY, EVENT_OLIVINE_CITY_HIDDEN_RARE_CANDY
 	bg_event 47, 17, BGEVENT_ITEM + BIG_PEARL, EVENT_OLIVINE_CITY_HIDDEN_BIG_PEARL
@@ -41,18 +39,15 @@ OlivineCity_MapScriptHeader:
 
 	object_event 18, 17, SPRITE_PHARMACIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 0, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityRefugeeText, -1
 	object_event 11, 23, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, 			OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineCityPokefanFText, -1 
-;roadblocks, their text is in route 40 
-;	object_event -1, 19, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK
-;	object_event -1, 18, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_CHUCK
-	object_event 33, 20, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT 
-	object_event 19, 24, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT 
-	object_event 20, 24, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT 
-	object_event 19, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT 
-	object_event 20, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT
-	object_event 18, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT 
-	object_event 21, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT
-	; 
-;	tmhmball_event 8, 3, TM_VOLT_SWITCH, EVENT_TM_VOLT_SWITCH
+
+	object_event 33, 20, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT  ; lighthouse 
+	object_event 19, 24, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT  ; desal 
+	object_event 20, 24, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT  ; desal 
+	object_event 19, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT  ; r39 
+	object_event 20, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT ; r39 
+	object_event 18, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT  ; r39 
+	object_event 21, 0, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText2, EVENT_BEAT_KENSEY_PORT ; r 39 
+
 	smashrock_event 52, 23
 	smashrock_event 55, 26
 
@@ -86,16 +81,14 @@ OlivineCitySailor1Script:
 	iftrue_jumptext OlivineCitySailorText2
 
 	jumpthistext
-	text "The lighthouse"
-	line "was a natural"
-	para "place to put"
-	line "the OMLAS."
+	text "The lighthouse is"
+	line "a natural place"
+	cont "to put OMLAS."
 	done
 
 OlivineCitySailorText2:
-	text "The sea smells"
-	line "less salty these"
-	cont "days."
+	text "I smell less salt"
+	line "these days."
 	
 	para "Did they reduce"
 	line "the Desal plant"
@@ -111,7 +104,7 @@ OlivineCityPokefanFText:
 	cont "market."
 	done
 
-OlivineCitySchoolBoyScript: ; optimistic about omlas 
+OlivineCitySchoolBoyScript: 
 	faceplayer
 	checkevent EVENT_BEAT_CHUCK
 	iftrue_jumptext OlivineCitySchoolBoyText2
@@ -161,8 +154,8 @@ OlivineCityPokefanMText2:
 OlivineCitySignText:
 	text "Olivine City"
 
-	para "The Port Closest"
-	line "to Foreign Lands"
+	para "The City at the"
+	line "Frontier!"
 	done
 
 OlivineCityPortSignText:
@@ -207,13 +200,13 @@ PearlForPnkApricornText:
 	line "a peach tree in"
 	cont "my backyard,"
 	
-	para "but it was a-"
-	line "useless PNK"
+	para "but it was just a"
+	line "useless Pnk"
 	cont "Apricorn tree!"
 
 	para "I can't eat those."
 	line "I want to eat a"
-	cont "BIG Boba pearl."
+	cont "Big Boba pearl."
 	done
 
 PearlForPnkApricornQuestionText:
@@ -226,7 +219,7 @@ PearlForPnkApricornQuestionText:
 
 PearlForPnkApricornEndText:
 	text "<PLAYER> got 5"
-	line "PNK Apricorn."
+	line "Pnk Apricorn."
 	
 	para "Thanks! Hey,"
 	line "this isn't a"
@@ -255,6 +248,5 @@ OlivineOfficerText2:
 	para "We need to catch"
 	line "a thief who took"
 	para "a part from the"
-	line "desal plant."
+	line "Desal Plant."
 	done
-	

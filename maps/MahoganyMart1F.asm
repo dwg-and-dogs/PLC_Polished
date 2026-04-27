@@ -27,5 +27,5 @@ MahoganyMartGrampsText:
 	para "Now that the lake"
 	line "is empty, we get"
 	para "by selling stones"
-	line "from the rocks."
+	line "from the pit."
 	done

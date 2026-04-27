@@ -15,7 +15,7 @@ MahoganyGym_MapScriptHeader:
 
 	def_object_events
 	object_event  5,  3, SPRITE_PRYCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MahoganyGymPryceScript, EVENT_GOT_TM_CALM_MIND
-;trainers feel proud of pryce
+
 	object_event  6, 16, SPRITE_SKIER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSkierRoxanne, -1
 	object_event  8,  4, SPRITE_SKIER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerSkierClarissa, -1
 	
@@ -82,25 +82,24 @@ PryceText_Intro: ; done
 	line "if you ever get"
 	cont "the same choice."
 
-	para "...So you want to"
-	line "go to the Lake"
-	cont "to finish your"
-	cont "quest."
+	para "So you want to"
+	line "finish your quest"
+	cont "at the Lake."
 	
 	para "I'm of two minds."
 	line "Changing the past"
-	cont "to fix today..."
+	cont "to fix today?"
 
 	para "But what about"
 	line "staying here to"
-	para "build a better"
-	line "future?"
+	cont "build the future?"
+
 	para "I'll help you"
 	line "on one condition:"
-	para "Prove your #mon"
-	line "have the spirit"
-	para "to inspire change"
-	line "in others!"
+
+	para "Prove you can"
+	line "inspire your own"
+	cont "#mon!"
 	done
 
 
@@ -130,11 +129,9 @@ PryceText_CalmMindText: ; revise, fix
 	done
 
 PryceText_MeetYouAtTheLake:
-	text "Now, meet me on"
-	line "the north shore."	
-	
-	para "Make sure you"
-	line "have supplies."
+	text "Now, meet me at"
+	line "the north side of"
+	cont "the Lake."	
 	done
 
 
@@ -193,8 +190,7 @@ BoarderDouglasBeatenText:
 BoarderDouglasSeenText:
 	text "I know Pryce's"
 	line "secret. I've seen"
-	para "how we'll restore"
-	line "the Lake."
+	cont "how he trains."
 	done
 
 
@@ -214,9 +210,7 @@ BoarderRonaldSeenText:
 	
 	para "Come to see what"
 	line "we're about?"
-	
-	para "It's not for the"
-	line "faint of heart!"
+
 	done
 
 
@@ -234,7 +228,7 @@ BoarderBradBeatenText:
 	done
 
 BoarderBradSeenText:
-	text "Watch out - I'm"
+	text "Watch out. I'm"
 	line "vying to take the"
 	cont "gym over after"
 	cont "Pryce!"

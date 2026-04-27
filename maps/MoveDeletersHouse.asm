@@ -1,4 +1,4 @@
-MoveDeletersHouse_MapScriptHeader:
+MoveDeletersHouse_MapScriptHeader: ; inaccessible. all moves can be deleted at any time. 
 	def_scene_scripts
 
 	def_callbacks

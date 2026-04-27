@@ -41,9 +41,8 @@ MoveReminderScript:
 	jumpopenedtext MoveReminderCancelText
 
 MoveReminderIntroText::
-	text "Why am I here?"
-	line "I'm the move re-"
-	cont "minder."
+	text "Who am I? I'm the"
+	line "move reminder."
 	
 	para "And someone needs"
 	line "to remember this"

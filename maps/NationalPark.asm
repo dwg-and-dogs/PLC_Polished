@@ -15,7 +15,6 @@ NationalPark_MapScriptHeader:
 	coord_event 18, 38, 0, NationalParkTradeScene
 	coord_event 19, 38, 0, NationalParkTradeScene	
 	
-	; n and s of the picnicker 
 
 	def_bg_events
 	bg_event 16, 44, BGEVENT_JUMPTEXT, NationalParkRelaxationSquareText
@@ -25,20 +24,18 @@ NationalPark_MapScriptHeader:
 
 	def_object_events
 	object_event  19, 37, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ThirstyCamperScript, -1
-	object_event 17, 24, SPRITE_PICNICKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkLassText, -1 ; ok
-	object_event 16,  4, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkPokefanFText, -1 ; ok
-	object_event 29, 40, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1 ; ok
-	object_event 28,  6, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkGameboyKidScript, -1 ; ok
-	object_event 11, 24, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolboyJohnny, -1 ; ok
-	object_event 19, 41, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkTeacher2Text, -1 ; ok
+	object_event 17, 24, SPRITE_PICNICKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkLassText, -1
+	object_event 16,  4, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkPokefanFText, -1
+	object_event 29, 40, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NationalParkTeacher1Script, -1
+	object_event 28,  6, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkGameboyKidScript, -1
+	object_event 11, 24, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolboyJohnny, -1
+	object_event 19, 41, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, NationalParkTeacher2Text, -1
 	pokemon_event 28, 40, FURRET, -1, -1, PAL_NPC_BROWN, NationalParkFurretText, -1
-;	object_event 20, 29, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerPokefanfBeverly1, -1
 	object_event 18,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPokefanmWilliam, -1
-;	object_event 10, 14, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerLassKrise, -1
 	object_event 28, 13, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBugManiacLou, -1
 
-	object_event 20, 29, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFSophie, -1; todo 
-	object_event 10, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFFlo, -1; todo 
+	object_event 20, 29, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFSophie, -1 
+	object_event 10, 14, SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFFlo, -1 
 
 	itemball_event 37, 12, SHINY_STONE, 1, EVENT_NATIONAL_PARK_SHINY_STONE
 	itemball_event 37, 21, DESTINY_KNOT, 1, EVENT_NATIONAL_PARK_DESTINY_KNOT
@@ -114,37 +111,29 @@ NationalParkGameboyKidScript:
     promptbutton
     verbosegivetmhm TM_LEECH_LIFE
     setevent EVENT_YELLOW_FOREST_TM_LEECH_LIFE
-    jumptext GameboyKidGaveTMText
 .AlreadyGotTM
-    jumptext GameboyKidAfterText
+    jumptext GameboyKidGaveTMText
 
 
 GameboyKidComplainText:
-    text "There's hordes of"
-	line "bugs here, but I"
-	para "don't get bothered"
-	line "at all."
+    text "I bet you want to"
+	line "know how my bugs"
+	para "have the stamina"
+	line "to compete in the"
+	para "Bug-Catching"
+	line "contest."
 	
-	para "Why not? Because"
-	line "of Leech Life!"
-	
-    para "Try it out!"
+	para "My secret? They"
+	line "top off their HP"
+	cont "with Leech Life!"
     done
 
 GameboyKidGaveTMText:
-    text "Give those bugs a"
-	line "taste of their"
-	cont "own medicine!"
+    text "Use that TM to"
+	line "keep your bugs"
+	cont "buzzing."
     done
 
-GameboyKidAfterText:
-    text "Don't let the"
-	line "bed bugs bite."
-    done
-
-GameboyKidBagFullText:
-    text "Your bag is full."
-    done
 
 GenericTrainerPokefanmWilliam:
 	generictrainer POKEFANM, WILLIAM, EVENT_BEAT_POKEFANM_WILLIAM, PokefanmWilliamSeenText, PokefanmWilliamBeatenText
@@ -153,7 +142,7 @@ GenericTrainerPokefanmWilliam:
 	line "but my #mon win"
 
 	para "the prize for"
-	line "being most lovely."
+	line "being most lovely!"
 	done
 
 TrainerPokefanfBeverly1:
@@ -238,32 +227,28 @@ NationalParkLassText:
 	done
 
 NationalParkPokefanFText:
-	text "Whitney comes off"
-	line "as kinda fake."
-	
-	para "But maybe it's"
-	line "just me?"	
+	text "I just don't see"
+	line "Whitney's appeal!"
 	done
 
 NationalParkTeacher1Text:
-	text "I've been a tea-"
-	line "cher for many"
-	cont "years, but I"
-	
-	para "can still keep"
-	line "up! How?"
-	
+	text "How do I keep up"
+	line "with my students"
+
+	para "after teaching so"
+	line "many years?"
+
 	para "With this Quick"
 	line "Claw!"
 	done
 
 NationalParkTeacher1Text_GotQuickClaw:
-	text "Let a #mon hold"
-	line "that Quick Claw."
+	text "Slow #mon can"
+	line "hold that."
 
-	para "Sometimes it will"
-	line "strike first"
-	cont "during battle."
+	para "Sometimes they'll"
+	line "strike first in"
+	cont "battle."
 	done
 
 SchoolboyJohnnySeenText:
@@ -282,10 +267,9 @@ NationalParkTeacher2Text:
 	para "to be shut off"
 	line "from the fountain."
 	
-	para "But I heard that"
-	line "Falkner may have"
-	para "some way to get"
-	line "more water."
+	para "But soon, Falkner"
+	line "will bring us a"
+	cont "downpour!"
 	done
 
 NationalParkFurretText:
@@ -333,7 +317,7 @@ PokefanFBeverlyMarillFriendText:
 	line "endearing."
 
 	para "Oh, I wish for a"
-	line "Marill of my own…"
+	line "Marill of my own!"
 	done
 
 LassKriseSeenText:
@@ -348,17 +332,16 @@ LassKriseBeatenText:
 	done
 
 BugManiacLouSeenText:
-	text "Arg, I can't"
-	line "get this tent set"
-	cont "up myself!"
+	text "Arg, I can't get"
+	line "my tent set up!"
 	
 	para "I'll take it out"
 	line "on you!"
 	done
 
 BugManiacLouBeatenText:
-	text "Could you at"
-	line "least help me"
+	text "Could you please"
+	line "at least help me"
 	cont "with the spokes?"
 	done
 
@@ -496,7 +479,9 @@ GiveBrickPieceText:
 	line "good use for that"
 	cont "old Brick Piece."
 	
-	para "Seems historic."
+	para "Seems historic,"
+	line "like it belongs"
+	cont "in a museum!"
 	done
 
 Text_NoLemonade:
@@ -545,31 +530,30 @@ NationalParkWhtApricornScript:
 
 PearlForWhtApricornText:
 	text "I wanted to make"
-	line "pearl jewelry, "
+	line "Pearl jewelry, "
 	para "but all I have"
-	line "are these white"
-	cont "apricorns."
+	line "are these Wht"
+	cont "Apricorns."
 	done
 
 PearlForWhtApricornQuestionText:
 	text "Do you have a"
-	line "big pearl? I'll"
+	line "Big Pearl? I'll"
 	cont "trade you!"
 	done
 
 PearlForWhtApricornEndText:
 	text "<PLAYER> got 5"
-	line "WHT APRICORN."
+	line "Wht Apricorn."
 	
-	para "Thanks! Now I "
-	line "can make my "
-	cont "jewelry!"
+	para "Thanks! Now I can"
+	line "make my necklace!"
 	done
 
 NoPearlForWhtApricornText:
-	text "You can find big"
-	line "pearls just by "
-	cont "fishing anywhere."
+	text "You can find Big"
+	line "Pearls fishing"
+	cont "anywhere."
 	done
 
 
@@ -602,6 +586,10 @@ GenericTrainerSightseerFSophie: ; gslowking
 	line "long regional"
 	para "forms of #mon"
 	line "have existed."
+
+	para "When do their"
+	line "evolution lines"
+	cont "split off?"
 	done
 
 SightseerFSophieSeenText:

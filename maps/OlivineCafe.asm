@@ -14,7 +14,7 @@ OlivineCafe_MapScriptHeader:
 
 
 	def_object_events
-	object_event  4,  5, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CafeSurfMailScript, -1 
+	object_event  4,  5, SPRITE_ARTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, CafeSurfMailScript, -1 
 	object_event 9, 1, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlivineCafe1Script, -1
 	object_event 9, 2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCafe2Script, -1
 	object_event 9, 3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OlivineCafe3Script, -1
@@ -65,7 +65,6 @@ OlivineCafe1Script: ; 5000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 .GiveChinchou:
@@ -77,7 +76,6 @@ OlivineCafe1Script: ; 5000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 
@@ -90,7 +88,6 @@ OlivineCafe1Script: ; 5000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 
@@ -103,7 +100,6 @@ OlivineCafe1Script: ; 5000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 
@@ -129,8 +125,8 @@ OlivineCafe1Text:
 	para "These small fry"
 	line "are just 5k."
 	
-	para "They've got spec-"
-	line "ial moves."
+	para "They've got unique"
+	line "moves."
 	
 	para "They cost ¥5000"
 	line "to take home."
@@ -152,7 +148,7 @@ OlivineCafeNotEnoughMoney:
 	jumpthisopenedtext
 
 	text "You don't have"
-	line "enough money…"
+	line "enough money."
 	done
 
 CafeNoFishText:
@@ -235,21 +231,26 @@ CafeSurfMailScript:
 	jumpopenedtext GiveSurfMailText 
 
 NeedAPearlText: 
-	text "Between this fish"
-	line "shop and the de-"
-	cont "sal discharge, I"
+	text "Before the Desal"
+	line "Plant discharge"
+	para "make it hard for"
+	line "Shellder to live"
+	cont "here,"
 	
-	para "can't pull any"
-	line "fish! I need"
-	cont "better lures."
-
-	para "Fish love shiny"
-	line "little orbs."
+	para "I collected their"
+	line "pearls to make"
+	cont "jewelry from the"
+	cont "Olivine Docks."
 	
-	para "It does give me"
-	line "time to doodle"
-	para "while I watch the"
-	line "sea, though."
+	para "Now, I doodle on"
+	line "postcards from"
+	cont "my memories on"
+	cont "those Docks."
+	
+	para "If I just had one"
+	line "more Pearl, I "
+	cont "could finish my"
+	cont "last piece."
 	done
 
 Text_PearlQuestion:
@@ -257,15 +258,11 @@ Text_PearlQuestion:
 	line "Pearl?"
 	
 	para "I'll give you my"
-	line "Surf Mail for it,"
-	
-	para "I decorated it"
-	line "with water-type"
-	cont "#mon!"
+	line "Surf Mail for it!"
 	done
 	
 GiveSurfMailText: 
-	text "That surf mail"
+	text "That Surf Mail"
 	line "evokes the sea."
 	
 	para "Hopefully it's a"
@@ -307,7 +304,6 @@ OlivineCafe2Script: ; 25000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 .GiveMantine:
@@ -319,7 +315,6 @@ OlivineCafe2Script: ; 25000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 
@@ -332,7 +327,6 @@ OlivineCafe2Script: ; 25000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 .GiveBasculin:
@@ -344,7 +338,6 @@ OlivineCafe2Script: ; 25000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 .Cafe2PokemonMenuHeader:
@@ -380,7 +373,7 @@ OlivineCafe2Text:
 	para "Mirror-coated"
 	line "Mantine,"
 
-	para "a Qwilfish"
+	para "Hisuian Qwilfish"
 	line "that's the bomb,"
 
 	para "or the angriest"
@@ -388,8 +381,6 @@ OlivineCafe2Text:
 	
 	para "Buy for ¥25000?"
 	done
-
-;;;;;;;
 
 OlivineCafe3Script: ; 50000 
 	faceplayer
@@ -408,7 +399,7 @@ OlivineCafe3Script: ; 50000
 	ifequal 2, .GiveSeadra
 	ifequal 3, .GiveTentacool
 	jumptext CafeNoFishText
-; Dratini EXTREMESPEED liechi, Seadra POISON JAB salac, Staryu transform petaya, with pinch berry and in bub_ball 50000 
+
 .GiveDratini:
 	givepoke DRATINI, NO_FORM, 25, LIECHI_BERRY, BUB_BALL, EXTREMESPEED
 	iffalse_jumpopenedtext Text_NoCarry
@@ -418,7 +409,6 @@ OlivineCafe3Script: ; 50000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 .GiveSeadra:
@@ -430,7 +420,6 @@ OlivineCafe3Script: ; 50000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 
@@ -443,7 +432,6 @@ OlivineCafe3Script: ; 50000
 	jumpthisopenedtext
 
 	text "Here you go, kid!"
-	line "Enjoy it!"
 	done
 
 .Cafe3PokemonMenuHeader:

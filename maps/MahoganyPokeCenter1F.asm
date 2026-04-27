@@ -56,8 +56,8 @@ MahoganyPokeCenter1FMatronText:
 	line "the Lake after it"
 	cont "drained."
 	
-	para "Wild #mon"
-	line "are taking over."
+	para "Wild #mon are"
+	line "taking over."
 	done
 
 IlexExcelsiorV7Script:

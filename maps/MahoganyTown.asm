@@ -50,11 +50,11 @@ MahoganyTownSouvenirShopSign:
 	done
 
 MahoganyTownGrannyText:
-	text "I hear that at"
-	line "night, an enorm-"
-	para "ous Ursaring goes"
-	line "around, looking"
-	cont "for scraps."
+	text "On the night of"
+	line "a full moon, an"
+	
+	para "enormous Ursaluna"
+	line "prowls the Lake."
 	done
 
 MahoganyTownGrampsScript:
@@ -160,7 +160,6 @@ Text_SurfMailQuestion:
 	cont "fossil I dug up."
 	done
 
-	
 GiveOldAmberText: 
 	text "That fossil was"
 	line "dug out of the"
@@ -171,7 +170,7 @@ GiveOldAmberText:
 Text_NoSurfMail:
 	text "Oh, I only have"
 	line "my memories to"
-	cont "see it by..."
+	cont "see it by."
 	done
 
 MahoganyTownFisherText:
@@ -185,8 +184,8 @@ MahoganyTownFisherText:
 
 MahoganyTownLassText:
 	text "Blackthorn City"
-	line "radicals blocked"
-	cont "Route 44."
+	line "dragon tamers"
+	cont "block Route 44."
 	
 	para "They don't want"
 	line "Silph to get to"
@@ -206,7 +205,6 @@ MahoganyGymSignText:
 	line "#mon Gym"
 	cont "Leader: Pryce"
 	done
-
 
 MahoganyKurtScript: 
 	faceplayer
@@ -249,8 +247,7 @@ KurtMahoganyStoryText:
 
 	para "We'd had some big"
 	line "fights about his"
-	para "work on #-"
-	line "balls."
+	para "#ball work."
 
 	para "I probably said"
 	line "some things I"
@@ -275,10 +272,10 @@ KurtMahoganyStoryText:
 MahoganyTownOfficerText:
 	text "There's a report"
 	line "of an aggressive"
-	para "#mon ahead."
-	line "Only those with"
-	para "Pryce's Badge"
-	line "can pass."
+	cont "#mon ahead."
+	para "Only those with"
+	line "Pryce's Badge"
+	cont "can pass."
 	done	
 
 SilphSpringsAheadText:
@@ -295,8 +292,7 @@ MahoganyDragonTamerText:
 	line "to keep our water"
 	cont "in our region!"
 	
-	para "We will not allow"
-	line "Silph to destroy"
-	cont "our Den!"
+	para "Silph will not"
+	line "take our den!"
 	done
 	

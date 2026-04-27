@@ -31,9 +31,9 @@ LandingTavernNomad1:
 	iftrue_jumpopenedtext TavernGladThatsOverText
 	jumpthisopenedtext
 	
-	text "I wish those bar-"
-	line "barians would get"
-	cont "out of here."
+	text "Those barbarians"
+	line "need to get out"
+	cont "of here."
 	
 	para "This is supposed"
 	line "to be a place"
@@ -56,25 +56,27 @@ LandingTavernNomad2:
 	iftrue_jumpopenedtext TavernGladThatsOverText2
 	jumpthisopenedtext
 	
-	text "Remy thinks"
-	line "he can strong-"
-	para "arm us into"
-	line "helping guide the"
-	para "barbarian ships"
-	line "into port."
+	text "Nemo thinks he"
+	line "can strong-arm"
+
+	para "us into helping"
+	line "guide their ships"
+	cont "into port."
 	
 	para "Never!"
 	done
 	
 TavernGladThatsOverText2:
 	text "I'm working on a"
-	line "new way to navi-"
-	cont "gate."
+	line "tool to aid"
+	cont "navigation."
 	
 	para "It's a metal arc,"
 	line "lens, and mirror."
+	
 	para "I line up a star"
 	line "with the horizon,"
+
 	para "and then I know"
 	line "my latitude!"
 	done
@@ -85,8 +87,8 @@ LandingTavernSailorText:
 	para "make it to port"
 	line "soon, another"
 	para "will come after"
-	line "it to see if Ken-"
-	cont "sey reneged."
+	line "it to see if Nemo"
+	cont "broke his deal."
 	done
 	
 

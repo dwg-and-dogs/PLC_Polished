@@ -47,7 +47,12 @@ MistyBasinB1F_MoveBoulderText:
 	cont "boulder."
 	
 	para "But I've barely"
-	line "moved it..."
+	line "moved it."
+	
+	para "At this pace, it"
+	line "might take years"
+	cont "to get it out of"
+	cont "the way."
 	
 	para "Should I keep"
 	line "going?"
