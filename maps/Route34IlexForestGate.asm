@@ -83,27 +83,28 @@ EggGrannyOfferEggText:
 EggGrannyAfterText:
     text "That Lucky Egg"
     line "will help your"
-    cont "#mon gain"
-    cont "experience faster!"
+    cont "#mon grow"
+    cont "faster!"
     done
 
 EggGrannyRemindText:
     text "I eat 12 eggs"
     line "every morning!"
+	
     para "And that's how I"
     line "can churn butter"
+
     para "by shaking a "
     line "whole Miltank!"
+
 	para "Those Eggs will"
 	line "make your #mon"
 	cont "as strong as me!"
     done
 
 EggGrannyBagFullText:
-    text "Oh my, your bag is"
-    line "full! You must be"
-    cont "carrying too many"
-    cont "eggs already!"
+    text "Oh my, your bag's"
+    line "full!"
     done
 
 Route34IlexForestGateButterfreeText:
@@ -119,8 +120,4 @@ Route34IlexForestGateLassText:
 	para "It watches over"
 	line "the Forest from"
 	cont "across time."
-
-	para "I think that it"
-	line "must be a Grass-"
-	cont "type #mon."
 	done

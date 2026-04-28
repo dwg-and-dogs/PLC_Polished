@@ -94,12 +94,13 @@ CooltrainerFGwenBeatenText:
 GenericTrainerPicnickerKim:
 	generictrainer CAMPER, ROLAND, EVENT_BEAT_CAMPER_ROLAND, RolandSeenText, RolandBeatenText
 
+RolandBeatenText:
 	text "Now, I have to"
 	line "run back to the "
-	para "#Center"
-	line "and it'll be too"
-	para "late to make any"
-	line "s'mores..."
+	cont "#Center,"
+	para "and it'll be too"
+	line "late to make any"
+	cont "s'mores..."
 	done
 
 RolandSeenText:
@@ -111,15 +112,7 @@ RolandSeenText:
 	line "s'mores tonight."
 	done
 
-RolandBeatenText:
-	text "Thanks a lot."
-	
-	para "Now, I have to"
-	line "run back to the "
-	cont "#center"
-	cont "and it'll be too"
-	cont "late..."
-	done
+
 
 GenericTrainerBreederTheresa:
 	generictrainer BREEDER, THERESA, EVENT_BEAT_BREEDER_THERESA, BreederTheresaSeenText, BreederTheresaBeatenText
@@ -164,11 +157,10 @@ FirebreatherWaltBeatenText:
 TrainerJugglerIrwin:
 	generictrainer JUGGLER, IRWIN1, EVENT_BEAT_JUGGLER_IRWIN, JugglerIrwin1SeenText, JugglerIrwin1BeatenText
 
-	text "They're saying"
-	line "that a new"
-	para "technique is"
-	line "going to bring"
-	cont "rain."
+JugglerIrwin1BeatenText:
+	text "They're saying a"
+	line "new technique can"
+	cont "bring rain."
 	done
 
 JugglerIrwin1SeenText:
@@ -177,10 +169,7 @@ JugglerIrwin1SeenText:
 	cont "in the ruins?"
 	done
 
-JugglerIrwin1BeatenText:
-	text "I wish I could"
-	line "have seen it."
-	done
+
 
 
 Route35SignText:
@@ -223,16 +212,17 @@ Text_BodySlamIntro:
 	line "leave your mind"
 	cont "and body still."
 	
-	para "It's a smother-"
-	line "ing BODY SLAM!"
+	para "It's a smothering"
+	line "BODY SLAM!"
 	done
 	
 
 Text_ROUTE35_TutorBodySlam:
-	text "My special relax-"
-	line "ation technique"
-	para "can be learned"
-	line "by some #mon,"
+	text "My relaxation"
+	line "technique can be"
+	cont "learned by some"
+	cont "#mon,"
+
 	para "if you want your"
 	line "worries cocooned"
 	para "where they can't"
@@ -254,9 +244,9 @@ Text_ROUTE35_TutorRefused:
 
 Text_ROUTE35_TutorTaught:
 	text "There! Now you"
-	line "have the power"
-	para "to Body Slam"
-	line "your problems!"
+	line "have the power to"
+	para "Body Slam your"
+	line "problems!"
 	done
 
 Route35KimonoGirlScript:
@@ -922,8 +912,8 @@ Route35DV_Setting_EggText:
 
 
 Route35WhatPotentialText:
-	text "I see a blossom"
-	line "flower on your"
+	text "I see a flower"
+	line "blossom on your"
 	cont "shoulder, child."
 	
 	para "You know what it"

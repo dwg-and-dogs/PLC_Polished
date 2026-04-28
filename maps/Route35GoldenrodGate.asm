@@ -53,7 +53,7 @@ WhitneyRadioShowText:
 	line "of YOUR water?"
 	
 	para "Listen in, and"
-	line "remember - "
+	line "remember:"
 	
 	para "Stomp or get"
 	line "stomped!"
@@ -164,18 +164,6 @@ RandyAfterGentlemanReadMailText:
 Route35GoldenrodGateRandyThanksText:
 	text "You will? Great!"
 	line "Thanks, kid!"
-
-;	para "My brother is"
-;	line "a fancy guy in"
-;	cont "red clothes."
-;
-;	para "You'll recognize"
-;	line "him right away!"
-;	
-;	para "And, uh, don't"
-;	line "tell anyone else"
-;	para "where you got"
-;	line "that mail, OK?"
 	done
 
 Route35GoldenrodGatePlayerReceivedAMonWithMailText:
@@ -252,7 +240,7 @@ SomeOtherTime_2Text:
 	
 	para "By the way, the"
 	line "gate agent looks"
-	para "a little nervous"
+	para "a little twitchy"
 	line "don't you think?"
 	done
 
@@ -272,7 +260,7 @@ KurtGoldenrodGateText:
 
 	para "We got some funny"
 	line "looks for having"
-	cont "an apricorn - "
+	cont "an Apricorn."
 	para "#balls were"
 	line "just getting"
 	cont "popular."
@@ -284,6 +272,6 @@ KurtGoldenrodGateText:
 	
 	para "By the way, the"
 	line "gate agent looks"
-	para "a little nervous"
+	para "a little twitchy"
 	line "don't you think?"
 	done

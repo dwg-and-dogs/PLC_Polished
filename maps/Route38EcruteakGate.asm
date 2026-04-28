@@ -46,10 +46,13 @@ Route38EcruteakGateOfficerText:
 	text "Where did you say"
 	line "you're from?"
 
-	para "Azalea?"
+	para "Azalea? That's"
+	line "where my weekly"
+	cont "magazine is from."
 
-	para "Oh, I get a maga-"
-	line "zine from there."
+	para "Do you know the"
+	line "publisher?"
+
 	done
 
 ProfOaksAide2HiText:

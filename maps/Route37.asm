@@ -47,9 +47,7 @@ GenericTrainerPsychicGreg:
 	generictrainer PSYCHIC_T, GREG, EVENT_BEAT_PSYCHIC_GREG, PsychicGregSeenText, PsychicGregBeatenText
 
 	text "Zzz..."
-	
-	para "Perfect time for"
-	line "a nap."
+	line "Time for a nap!"
 	done
 
 Route37ZapCannonScript:
@@ -112,6 +110,10 @@ Text_Route37TutorTaught:
 	para "not hit often,"
 	line "but when it does,"
 	cont "it's wicked!"
+	
+	para "My sibling at the"
+	line "Silph Springs has"
+	cont "a similar move."
 	done
 
 SunnySundayText:

@@ -89,8 +89,8 @@ Route39FarmerScript:
 	jumptext Route39LostMiltankText
 
 Route39LostMiltankText:
-	text "One of the Milt-"
-	line "ank went missin'."
+	text "One of my Miltank"
+	line "went missing."
 	
 	para "But, uh, for now"
 	line "it needs to get"
@@ -219,13 +219,13 @@ Text_Miltank39:
 	done
 	
 SpookToRancherText:
-	text "Herd the miltank"
+	text "Herd the Miltank"
 	line "back to the"
 	cont "rancher?"
 	done
 
 SpookToSuicuneText:
-	text "Herd the miltank"
+	text "Herd the Miltank"
 	line "to Suicune?"
 	done
 

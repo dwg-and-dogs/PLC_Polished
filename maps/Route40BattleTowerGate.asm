@@ -1,4 +1,4 @@
-Route40BattleTowerGate_MapScriptHeader:
+Route40BattleTowerGate_MapScriptHeader: ; unused 
 	def_scene_scripts
 
 	def_callbacks

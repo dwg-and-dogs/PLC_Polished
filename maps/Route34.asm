@@ -348,22 +348,21 @@ GenericTrainerCamperTodd1:
 CamperTodd1SeenText:
     text "I came to enjoy"
     line "nature, but all I"
-    cont "hear is loggers!"
+    cont "hear is logging!"
     done
 
 CamperTodd1BeatenText:
-    text "Defeated amidst"
-    line "all this noise!"
+    text "Timber!"
     done
 
 GenericTrainerBreederJulie:
     generictrainer BREEDER, JULIE, EVENT_BEAT_BREEDER_JULIE, BreederJulieSeenText, BreederJulieBeatenText
 
-    text "Even if the"
-	line "Ilex Forest"
-	cont "is cleared, I"
-	cont "still have hope"
-	cont "for the future."
+    text "Even if the Ilex"
+	line "Forest is logged,"
+	
+	para "I still have hope"
+	line "for the future."
     done
 
 BreederJulieSeenText:
@@ -380,6 +379,7 @@ BreederJulieBeatenText:
 GenericTrainerPicnickerErin:
     generictrainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerGina1SeenText, PicnickerGina1BeatenText
 
+PicnickerGina1BeatenText:
     text "I guess I'll go"
     line "shopping instead."
     cont "So much for"
@@ -391,16 +391,11 @@ PicnickerGina1SeenText:
 	line "picnic in the"
 	cont "forest."
 	
-	para "I'll have to ba-"
-	line "ttle you instead!"
+	para "I'll battle you"
+	line "instead!"
     done
 
-PicnickerGina1BeatenText:
-    text "I guess I'll go"
-    line "shopping instead."
-    cont "So much for"
-    cont "nature..."
-    done
+
 
 GenericOfficerfMaraScript:
     generictrainer OFFICERF, MARA, EVENT_BEAT_OFFICERF_MARA, OfficerfMaraSeenText, OfficerfMaraBeatenText
@@ -425,20 +420,19 @@ OfficerfMaraBeatenText:
 GenericTrainerPokefanmBrandon:
     generictrainer POKEFANM, BRANDON, EVENT_BEAT_POKEFANM_BRANDON, PokefanmBrandonSeenText, PokefanmBrandonBeatenText
 
-    text "Something fishy is"
-    line "going on between"
-    cont "here and Azalea."
-    done
-
-PokefanmBrandonSeenText:
-    text "Whitney's show is"
-    line "odd, but these"
-    cont "forest noises..."
-    done
-
 PokefanmBrandonBeatenText:
-    text "Suspicious indeed!"
+    text "I love showing"
+	line "off my #mon!"
     done
+	
+PokefanmBrandonSeenText:
+    text "I got my #mon"
+	line "back from the"
+	cont "Day Care!"
+	
+    done
+
+
 
 
 Route34ShoreFoamScript:
@@ -459,22 +453,15 @@ Route34ShoreFoamScript:
 	jumpopenedtext NoPearlForShoreFoamText ;;
 
 PearlForShoreFoamText:
-	text "I've made an ama-"
-	line "zing discovery."
-	
-	para "The shore foam"
+	text "The Shore Foam"
 	line "around here is"
 	cont "high in aquatic"
 	
 	para "protein, which"
 	line "allows it to be"
 	cont "whipped into a"
-	
-	para "sturdy structure,"
-	line "due to the energy"
-	cont "imparted on it"
-	cont "by the waves."
-	
+	cont "sturdy structure."
+
 	para "It's just like"
 	line "homemade whipped"
 	cont "cream!"	
@@ -497,7 +484,7 @@ PearlForShoreFoamEndText:
 	done
 
 NoPearlForShoreFoamText:
-	text "You can find big"
-	line "pearls just by "
+	text "You can find Big"
+	line "Pearls just by "
 	cont "fishing anywhere."
 	done

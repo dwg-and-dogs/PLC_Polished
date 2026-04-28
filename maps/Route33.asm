@@ -23,7 +23,7 @@ GenericTrainerHikerAnthony:
 
 	text "Do you have the"
 	line "strength to work"
-	cont "in the cave?"
+	cont "in Union Cave?"
 	done
 
 
@@ -120,8 +120,8 @@ Text_Route33TutorNoSilverLeaf:
 	text "You don't have"
 	line "a Silver Leaf."
 	
-	para "Check Ilex For-"
-	line "est, or the"
+	para "Check the Ilex"
+	line "Fores or the"
 	cont "Azalea Mart."
 	done
 

@@ -31,8 +31,6 @@ PokefanM_DairyFarmer:
 	end
 
 FarmerMScript_SellMilk:
-;	checkflag ENGINE_BOUGHT_MOOMOO_MILK
-;	iftrue .Milking
 	opentext
 	writetext FarmerMText_BuyMilk
 	special PlaceMoneyTopRight
@@ -155,15 +153,8 @@ FarmerFText_InTrouble:
 	line "are lucky to be"
 	cont "at our ranch."
 	
-	para "Our ponds are cl-"
-	line "osed loop pools."
-	para "Water they drink"
-	line "goes right back"
-	cont "a bit later."
-	
-	para "And the sheen on"
-	line "the ponds changes"
-	cont "with the seasons!"
-	
-	para "Magical, right?"
+	para "It's a magical"
+	line "place. The sheen"
+	para "on the ponds is"
+	line "always changing!"
 	done

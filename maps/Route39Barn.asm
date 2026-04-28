@@ -28,11 +28,11 @@ BarnZenHeadbuttScript:
 	waitbutton
 	setevent EVENT_LISTENED_TO_ZEN_HEADBUTT_INTRO
 BarnTutorZenHeadbuttScript:
-	writetext Text_BarnTutorZenHeadbutt ;;
+	writetext Text_BarnTutorZenHeadbutt
 	waitbutton
 	checkitem SILVER_LEAF
 	iffalse .NoSilverLeaf
-	writetext Text_BarnTutorQuestion ;;
+	writetext Text_BarnTutorQuestion
 	yesorno
 	iffalse .TutorRefused
 	setval ZEN_HEADBUTT
@@ -40,24 +40,23 @@ BarnTutorZenHeadbuttScript:
 	special Special_MoveTutor
 	ifequal $0, .TeachMove
 .TutorRefused
-	jumpopenedtext Text_BarnTutorRefused ;; 
+	jumpopenedtext Text_BarnTutorRefused
 
 .NoSilverLeaf
 	jumpopenedtext Text_BarnTutorNoSilverLeaf
 
 .TeachMove
 	takeitem SILVER_LEAF
-	jumpopenedtext Text_BarnTutorTaught ;;
+	jumpopenedtext Text_BarnTutorTaught
 	
 Text_ZenHeadbuttIntro: 
 	text "This Tauros can"
 	line "meditate!"
 	
-	para "See, he is still"
-	line "for hours - ideal"
-	cont "posture."
-
-	para "Perfect Zen!"
+	para "He's still for"
+	line "hours at a time."
+	
+	para "Totally Zen."
 	done
 
 Text_BarnTutorZenHeadbutt:

@@ -47,7 +47,7 @@ PokefanMJoshuaSeenText:
 GenericTrainerPokefanMCarter:
 	generictrainer POKEFANM, CARTER, EVENT_BEAT_POKEFANM_CARTER, PokefanMCarterSeenText, PokefanMCarterBeatenText
 
-	text "Moomoo miltanks"
+	text "Moomoo Miltanks"
 	line "deserve better!"
 	done
 
@@ -89,9 +89,9 @@ GenericTrainerPokefanFJaime:
 	generictrainer POKEFANF, JAIME, EVENT_BEAT_POKEFANF_JAIME, PokefanFJaimeSeenText, PokefanFJaimeBeatenText
 
 	text "The Olivine Desal"
-	line "plant can't even"
+	line "Plant can't even"
 	para "filter the water"
-	line "from the plant."
+	line "from the ranch."
 	done
 
 PokefanFJaimeBeatenText:
@@ -101,18 +101,21 @@ PokefanFJaimeBeatenText:
 	done
 
 PokefanFJaimeSeenText:
-	text "Meat is murder!"
+	text "I only drink"
+	line "Apricorn Milk!"
 	done
 
 GenericTrainerOfficerMDirk:
 	generictrainer OFFICERM, DIRK, EVENT_BEAT_OFFICER_DIRK, OfficerDirkSeenText, OfficerDirkBeatenText
 
 	text "My kids say that"
-	line "there's cows and"
-	cont "pigs on Route 38,"
+	line "there's a pig"
+	cont "on this Route,"
 	
 	para "but the farm has"
 	line "only Miltank."
+	
+	para "Huh?"
 	
 	done
 

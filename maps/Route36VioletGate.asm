@@ -1,4 +1,4 @@
-Route36VioletGate_MapScriptHeader:
+Route36VioletGate_MapScriptHeader: ; unused? 
 	def_scene_scripts
 
 	def_callbacks
@@ -22,9 +22,6 @@ Route36VioletGateOfficerScript:
 	opentext
 	jumpopenedtext Route36VioletGateOfficerText1
 
-.ClearedSudowoodo
-	jumpopenedtext Route36VioletGateOfficerText2
-
 Route36VioletGateOfficerText1:
 	text "Lately, I don't"
 	line "see people coming"
@@ -33,16 +30,6 @@ Route36VioletGateOfficerText1:
 	line "City."
 	done
 
-Route36VioletGateOfficerText2:
-	text "Things are busy"
-	line "lately, because"
-
-	para "many people are"
-	line "coming from"
-
-	para "Goldenrod and"
-	line "Ecruteak!"
-	done
 
 Route36VioletGateYoungsterText:
 	text "Plants are living"

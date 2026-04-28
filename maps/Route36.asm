@@ -94,12 +94,8 @@ GenericTrainerSchoolboyRoute36:
 GenericTrainerFirebreatherRoute36:
 	generictrainer FIREBREATHER, BURT, EVENT_BEAT_FIREBREATHER_BURT, Route36FirebreatherSeenText, Route36FirebreatherBeatenText
 
-	text "I make my anti-"
-	line "dotes from poison"
-	cont "#mon."
-	para "It's a great exam-"
-	line "ple of Yin and"
-	cont "Yang."
+	text "I make antidotes"
+	line "from my #mon."
 	done
 
 GenericTrainerPicnickerRoute36:
@@ -111,17 +107,15 @@ GenericTrainerPicnickerRoute36:
 	line "or wait for my"
 	cont "boyfriend?"
 	
-	para "He was so ex-"
-	line "cited to make"
-	cont "s'mores tonight."
+	para "We were going to"
+	line "camp tonight!"
 	done
 
 Route36KurtText:
-	text "<PLAYER>: Drat!"
-	line "The route is "
-	para "blocked."
-	line "We have to find"
-	cont "another way."
+	text "<PLAYER>: Ugh, the"
+	line "route's blocked."
+	para "We have to find"
+	line "another way."
 	
 	para "I know some folks"
 	line "in the city that"
@@ -297,7 +291,7 @@ Route36TrainerTips1Text:
 	text "Trainer Tips"
 
 	para "#mon stats"
-	line "vary--even within"
+	line "vary, even within"
 	cont "the same species."
 	done
 
@@ -338,7 +332,7 @@ YesTimeTravelTextRoute36:
 	text "Time to go!"
 	done
 
-VioletImmigrantTextRoute36:
+VioletImmigrantTextRoute36: ; unused 
 	text "Entrance into"
 	line "Violet City is"
 	para "limited due to"
@@ -384,11 +378,11 @@ Text_SeismicTossIntro:
 	cont "move!"
 	
 	para "Seismica-Tossa,"
-	line "When you can"
+	line "When you can-"
 	cont "not phaze!"
 	
-	para "It means no wo-"
-	line "rries for the"
+	para "It means don't"
+	line "worry about the"
 	para "defense of your"
 	line "foes,"
 	
@@ -427,8 +421,16 @@ Text_ROUTE36_TutorRefused:
 	done
 
 Text_ROUTE36_TutorTaught:
-	text "It means no wo-"
-	line "rries for the"
+	para "Seismica-Tossa,"
+	line "What a wonderful"
+	cont "move!"
+	
+	para "Seismica-Tossa,"
+	line "When you can-"
+	cont "not phaze!"
+	
+	para "It means don't"
+	line "worry about the"
 	para "defense of your"
 	line "foes,"
 	
@@ -437,5 +439,5 @@ Text_ROUTE36_TutorTaught:
 	para "Move I'll teach"
 	line "to you,"
 	
-	para "Seismic-Tossa!"
+	para "Seismica-Tossa!"
 	done
