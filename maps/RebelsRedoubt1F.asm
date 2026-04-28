@@ -132,7 +132,7 @@ Text_RedoubtTutorRefused:
 	done
 
 Text_RedoubtTutorTaught:
-	text "There - now you"
+	text "There. Now you"
 	line "can Knock Off"
 	cont "items from your"
 	cont "enemies!"
@@ -172,10 +172,6 @@ RR_1F_BallText:
 	line "glass is thinner"
 	cont "than a hair."
 
-	para "May shatter if it"
-	line "is even looked at"
-	cont "with disdain."
-
 	para "Its base warns:"
 	line "EXTREMELY FRAGILE"
 	cont "in dark letters."
@@ -200,7 +196,6 @@ Redoubt1FScript:
 	setevent EVENT_RR_OPENED_HATCH
 	changeblock 6, 2, $1E
 	reloadmappart
-	; sfx for changing the map part
 	showtext RR_1F_KurtText2
 	applyonemovement REDOUBT_1F_KURT, step_up
 	disappear REDOUBT_1F_KURT
@@ -258,7 +253,7 @@ RedoubtKurtWalks:
 	step_right
 	step_up
 	step_up
-	turn_head_left ; 7, 4 
+	turn_head_left 
 	step_end
 
 RR_1F_BeatAmosText:

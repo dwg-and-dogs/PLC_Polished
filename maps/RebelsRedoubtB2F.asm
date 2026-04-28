@@ -140,12 +140,12 @@ RedoubtKurtScript:
 KurtRedoubtAfterAmosText:
 	text "You did it! Amos"
 	line "and the ninjas"
-	para "will attack"
-	line "General Andrea's"
-	cont "mine to stop her"
-	para "from reaching the"
-	line "#mon at the"
-	cont "bottom."
+	cont "will attack"
+	para "General Andrea's"
+	line "mine to stop her"
+	cont "from reaching the"
+	para "#mon at the"
+	line "bottom."
 	
 	para "After we stop her"
 	line "we'll have to go"
@@ -155,10 +155,9 @@ KurtRedoubtAfterAmosText:
 
 KurtHealRedoubtText:
 	text "<PLAYER>, there"
-	line "is one source"
-	cont "of Steel left for"
-	para "Emperor Vesper:"
-	line "in the mine."
+	line "is one resource"
+	cont "for the emperor:"
+	cont "Andrea's mine."
 	
 	para "If we join forces"
 	line "with Amos, we can"
@@ -226,7 +225,7 @@ AmosText_Intro:
     text " Amos: " 
 	next
 	text_start
-	text "...<PLAYER>. Each"
+	text "<PLAYER>. Each"
 	line "time we meet, you"
 	cont "cause some havoc."
 
@@ -244,13 +243,13 @@ AmosText_Intro:
 	line "the Elders from"
 	para "around Johto that"
 	line "you're no spy."
-
-	para "And through my"
-	line "channels,"
-	
-	para "Sybil tells me"
-	line "you impressed"
-	cont "the Tower's sages."
+;
+;	para "And through my"
+;	line "channels,"
+;	
+;	para "Sybil tells me"
+;	line "you impressed"
+;	cont "the Tower's sages."
 	
 	para "But I still see a"
 	line "coin perched on"

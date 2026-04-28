@@ -158,9 +158,9 @@ Text_HyperVoiceIntro:
 	line "A CRISIS!"
 	para "Do you know how"
 	line "many WEEKS I've"
-	para "talked up those"
-	line "Blackthorn separ-"
-	cont "atists?"
+	para "been blabbing on"
+	line "about Blackthorne"
+	cont "separatists?"
 	done
 
 

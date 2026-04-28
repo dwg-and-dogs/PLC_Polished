@@ -87,7 +87,7 @@ WhitneyIntroText:
 	next
 	text_start
 	text "Oh? Are you the"
-	line "one who cut off"
+	line "ones who cut off"
 	cont "my show?"
 
 	para "Jealous of my"
@@ -166,8 +166,9 @@ WhitneyAttractText:
 	cont "the Plain Badge."
 	
 	para "You reminded me"
-	line "that I should"
-	cont "uplift others."
+	line "that I should try"
+	cont "to see the good"
+	cont "in others."
 	done
 
 	
@@ -177,8 +178,8 @@ WhitneyAfterBattleText:
 	next
 	text_start
 	text "Maybe it isn't"
-	line "too late to"
-	cont "re-make my gym."
+	line "too late to fix"
+	cont "the gym."
 	done
 
 KurtFinalText:

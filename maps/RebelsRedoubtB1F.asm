@@ -52,7 +52,7 @@ GenericTrainerNinja8: ; shade
 	text "There's a time"
 	line "when everyone's"
 	para "will enters a"
-	line "crucible - "
+	line "crucible."
 	
 	para "Will yours break?"
 	done
@@ -81,7 +81,7 @@ GenericTrainerNinja9: ; haze
 .BeatenText9:
 	text "I've only seen"
 	line "such precision"
-	cont "from Amos..."
+	cont "from Amos."
 	done
 
 .SeenText9:

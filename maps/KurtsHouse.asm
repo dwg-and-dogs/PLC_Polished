@@ -966,6 +966,8 @@ endr
 	loadmem wPartyMon3PP+3, 15
 	; fill pokedex
 	callasm FillPokedex
+	waitbutton
+	closetext
 	; debug only
-;	warp GAULDENROD_TOWER_3F, 9, 11
+;	warp STADIUM_GROUNDS, 5, 5
 	end

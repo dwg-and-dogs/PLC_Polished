@@ -133,7 +133,7 @@ TrainerClassDVsAndPersonality_Easy:
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; mira
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; anabel-LANNA
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; darach
-	db  0, $DD, $DD, $DD,  ABILITY_1 | LONELY, FEMALE ; candela/BOBESH
+	db  0, $DD, $DD, $DD,  ABILITY_1 | LONELY, MALE ; candela/BOBESH
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; blanche/ADRINNA
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; spark/BOBESH
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; flannery
@@ -286,7 +286,7 @@ TrainerClassDVsAndPersonality_Normal:
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; mira
 	db  0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; anabel-LANNA
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; darach
-	db 50, $DD, $DD, $DD,  ABILITY_1 | LONELY, FEMALE ; candela/BOBESH
+	db 50, $DD, $DD, $DD,  ABILITY_1 | LONELY, MALE ; candela/BOBESH
 	db 75, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; blanche/ADRINNA
 	db 28, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; spark/BOBESH
 	db  0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; flannery
@@ -438,7 +438,7 @@ TrainerClassDVsAndPersonality_Hard:
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; mira
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; anabel-LANNA
 	db 100, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; darach
-	db 80, $DD, $DD, $DD,  ABILITY_1 | LONELY, FEMALE ; candela/BOBESH
+	db 80, $DD, $DD, $DD,  ABILITY_1 | LONELY, MALE ; candela/BOBESH
 	db 150, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; blanche/ADRINNA
 	db 150, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; spark/BOBESH
 	db 100, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; flannery

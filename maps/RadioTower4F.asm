@@ -62,8 +62,8 @@ RadioTower4KurtRemindText:
 	
 	para "Then, we'll sneak"
 	line "through the train"
-	cont "station to Violet"
-	cont "City."
+	cont "station towards"
+	cont "Violet City."
     done
 
 WhitneysNoteScript:	
@@ -119,15 +119,11 @@ RadioTowerBagFullText:
 WhitneyRadioText:
     text "(Charm!) Welcome"
     line "back to the only"
-    cont "show that truly"
-    cont "gets you."
-
-    para "Let's embrace"
-    line "the beautiful"
-    cont "chaos of now."
+    cont "show that tells"
+	cont "the whole truth."
 	
 	para "We have a very"
-	line "special guest-"
+	line "special guest."
 	
 	para "Someone like a"
 	line "lot of you."
@@ -140,17 +136,12 @@ WhitneyRadioText:
 	cont "winning inventor!"
 	
 	para "He just might be"
-	line "the one to save"
-	para "us from this "
-	line "drought."
+	line "able to save us"
+	cont "from the drought."
 
     para "Just another ex-"
 	line "ample of how the"
 	para "old traditions"
     line "don't work in this"
     cont "day and age."
-
-    para "After all, it's"
-    line "all made up - so"
-    cont "make it amazing."
     done

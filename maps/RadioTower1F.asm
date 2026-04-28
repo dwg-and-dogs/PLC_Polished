@@ -156,7 +156,7 @@ RadioTowerRivalBeforeText:
 	line "mocked."
 
     para "We're building a"
-    line "new world - you"
+    line "new world. You"
     para "and your grandpa"
     line "are just relics!"
     done
@@ -178,8 +178,7 @@ RadioTowerRivalLossText:
 RadioTowerRivalAfterText:
     text "I must be going."
     line "Silph wants to"
-	para "meet me in"
-	line "Ectureak to talk"
-	para "about my distill-"
-	line "er. See ya never."
+	para "meet in Ecruteak"
+	line "to talk about"
+	cont "my distiller."
     done

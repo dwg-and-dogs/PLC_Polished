@@ -26,35 +26,29 @@ Route32RuinsOfAlphGateOfficerText:
 	line "collapsed the"
 	cont "inner chamber."
 	
-	para "You can still see"
-	line "some mosaics,"
-	cont "though!"
+	para "But you can still"
+	line "see the mosaics!"
 	done
 
 Route32RuinsOfAlphGatePokefanMText:
-	text "If I had one"
-	line "wish, it would"
-	cont "be for a big"
-	cont "raincloud."
+	text "If I had one wish"
+	line "it'd be for rain."
 	
-	para "The ponds in"
-	line "Violet are near-"
-	cont "ly dried up!"
+	para "Violet City's"
+	line "ponds are nearly"
+	cont "dried up!"
 	done
 
 Route32RuinsOfAlphGateKurtText:
-	text "Well, our plan"
-	line "to go around"
-	para "has come to a"
-	line "screeching halt"
-	para "due to that"
-	line "excavation by"
-	cont "the ruins."
+	text "Well, our plan to"
+	line "go around is at a"
+	cont "screeching halt"
 	
-	para "We have to get"
-	line "them to pause"
-	cont "to let us past."
+	para "due to Falkner's"
+	line "excavation of the"
+	cont "#mon north of"
+	cont "the Ruins."
 	
-	para "Maybe Falkner can"
-	line "let us through?"
+	para "We have to tell"
+	line "him to let us by."
 	done

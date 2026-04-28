@@ -74,12 +74,11 @@ HollisRedoubtText_Intro:
 	para "I wanted to stay"
 	line "out of politics,"
 	para "but that's not"
-	line "possible."	
-	para "From you, I lea-"
-	line "rned to share my"
-	cont "power."
+	line "possible. From"
+	cont "you, I learned to"
+	cont "share my power."
 	
-	para "why does Amos say"
+	para "Why does Amos say"
 	line "you would help"
 	para "Andrea entrench"
 	line "herself?"
@@ -150,10 +149,9 @@ SandraRedoubtText_Intro:
 	text "<PLAYER>, please"
 	line "take no offense,"
 	
-	para "I am still grate-"
-	line "ful for the help"
-	cont "you gave to"
-	cont "Gauldenrod-"
+	para "I am grateful for"
+	line "the help you gave"
+	cont "in Gauldenrod."
 	
 	para "But now that you"
 	line "are so versed in"
@@ -162,10 +160,10 @@ SandraRedoubtText_Intro:
 	para "know if you have"
 	line "forgotten the "
 	cont "sacrifices that"
-	
-	para "made it possible."
-	line "Do you still feel"
-	cont "the Sonder?"
+	cont "made it possible."
+
+	para "Do you still feel"
+	line "the Sonder?"
 
 	para "We Johto Elders"
 	line "are sacrificing"
@@ -269,8 +267,8 @@ BarbeauRedoubtText_Intro:
 
 BarbeauRedoubtText_Impressed:
 	text "Magnificent! Your"
-	line "#mon would"
-	cont "go to the last"
+	line "#mon would go"
+	cont "to their last"
 	cont "breath for you."
 	done
 

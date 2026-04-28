@@ -44,9 +44,8 @@ Route32_MapScriptHeader:
 Route32CooltrainermPetrieTrainer: 
 	generictrainer COOLTRAINERM, PETRIE, EVENT_BEAT_COOLTRAINERM_PETRIE, PetrieSeenText, PetrieBeatenText
 
-	text "Maybe I'll"
-	line "be a pop star"
-	cont "in Goldenrod."
+	text "Maybe I'll be a"
+	line "pop star instead."
 	done
 
 PetrieSeenText:
@@ -107,7 +106,7 @@ GenericTrainerYoungsterAlbert:
 	cont "with my favorites."
 	
 	para "Also, my favorite"
-	line "#mon are"
+	line "#mon are:"
 	para "Snorlax, Gengar,"
 	line "Exeggutor, Skarm-"
 	cont "ory, Tyranitar,"
@@ -164,9 +163,8 @@ FisherHenrySeenText:
 	done
 
 FisherHenryBeatenText:
-	text "Well, you're"
-	line "a pin in my"
-	cont "side."
+	text "Well, you're a"
+	line "pin in my side."
 	done
 
 YoungsterAlbertSeenText:
@@ -216,10 +214,9 @@ CamperLloydBeatenText:
 	done
 
 Bird_keeperPeterSeenText:
-	text "I'm going to"
-	line "show Falkner"
-	cont "how bird #mon"
-	cont "can win!"
+	text "I'm going to show"
+	line "Falkner how bird"
+	cont "#mon can win!"
 	done
 
 Bird_keeperPeterBeatenText:
@@ -255,10 +252,9 @@ FriedaGaveGiftText:
 	done
 
 FriedaFridayText:
-	text "Frieda: Veno-"
-	line "shock, to kick"
-	para "your opponent wh-"
-	line "en they're down!"
+	text "Frieda: Kick your"
+	line "enemy when they're"
+	cont "down: Venoshock!"
 	done
 
 
@@ -310,16 +306,15 @@ Route32BerryVendor:
 	loadmenu .BerryMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .GivePomeg ; pomeg
-	ifequal 2, .GiveKelpsy ; kelpsy 
-	ifequal 3, .GiveQualot ; qualot 
-	ifequal 4, .GiveHondew ; hondew, grepa, tamato
-	ifequal 5, .GiveGrepa ; hondew, grepa, tamato
-	ifequal 6, .GiveTamato ; hondew, grepa, tamato
+	ifequal 1, .GivePomeg ; 
+	ifequal 2, .GiveKelpsy ;  
+	ifequal 3, .GiveQualot ;  
+	ifequal 4, .GiveHondew ; 
+	ifequal 5, .GiveGrepa ; 
+	ifequal 6, .GiveTamato ; 
 
 	jumptext Route32NoFishText
 
-;	givepoke MAGIKARP, MAGIKARP_MASK_FORM, 10, EVIOLITE, ULTRA_BALL, DRAGON_RAGE
 .GivePomeg:
 	giveitem POMEG_BERRY, 12
 	iffalse_jumpopenedtext Text_NoCarryRoute32
@@ -448,6 +443,7 @@ Text_NoCarryRoute32:
 Route32Slowpoketail2Text:
 	text "Don't look at me"
 	line "like that!"
+	
 	para "It's a lab-grown"
 	line "SlowpokeTail."
 	
@@ -461,7 +457,7 @@ Route32AmenitiesText:
 	text "I was once a"
 	line "Rocket Grunt."
 	
-	para "I served my time,"
+	para "I served my time"
 	line "and got a job"
 	
 	para "making lunch for"
