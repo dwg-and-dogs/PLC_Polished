@@ -30,8 +30,7 @@ TrainerScientistNigel:
 
 .BeatenText:
 	text "Wait, are you"
-	line "even allowed in"
-	cont "here?"
+	line "allowed in here?"
 	done
 
 .SeenText:
@@ -51,9 +50,8 @@ TrainerEngineerHugo:
 	done
 
 .Beaten1Text:
-	text "Wait, are you"
-	line "even allowed in"
-	cont "here?"
+	text "You shouldn't be"
+	line "here!"
 	done
 
 .Seen1Text:

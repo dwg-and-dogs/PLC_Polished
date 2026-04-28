@@ -90,7 +90,7 @@ OlivineDesal_Text_2:
 
 	text "Someone took a"
 	line "part from the"
-	cont "Desal plant!"
+	cont "Desal Plant!"
 	done
 
 OlivineDesal_Text_3:
@@ -100,7 +100,7 @@ OlivineDesal_Text_3:
 	text_start
 
 	text "But then, without"
-	line "the desal, how"
+	line "the Desal, how"
 	para "will you run the"
 	line "OMLAS forecast?"
 	done
@@ -117,10 +117,10 @@ OlivineDesal_Text_4:
 	line "new design from"
 	cont "<RIVAL>,"
 	
-	para "but we will need"
+	para "but now I'll need"
 	line "a lot more water"
-	para "for the OMLAS"
-	line "Slowking."
+	cont "for the Slowking"
+	cont "at the OMLAS."
 	done
 
 OlivineDesal_Text_5:
@@ -176,4 +176,3 @@ Desal1FNPCText:
 	cont "machine part from"
 	cont "the Desal plant."
 	done
-

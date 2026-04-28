@@ -87,7 +87,7 @@ RaikouAppears:
 	reloadmapafterbattle
 	end
 
-LighthouseRaikouMovement1: ; fix 
+LighthouseRaikouMovement1: 
 	fix_facing
 	fast_jump_step_up
 	fast_jump_step_right
@@ -95,7 +95,7 @@ LighthouseRaikouMovement1: ; fix
 	step_end
 
 
-LighthouseRaikouMovement2: ; fix 
+LighthouseRaikouMovement2: 
 	fix_facing
 	fast_jump_step_up
 	fast_jump_step_left
@@ -117,12 +117,12 @@ RaikouConditionText:
 
 RaikouCOnditionText2:
 	text "That #mon"
-	line "summons a storm-"
+	line "summons a storm!"
 	
 	para "I can hear its"
 	line "footfalls, like"
 	
-	para "static drawn to"
+	para "static piling on"
 	line "an antenna!"
 	done
 

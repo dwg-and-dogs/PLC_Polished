@@ -37,7 +37,7 @@ PryceTextOlivine:
 	para "I came here to"
 	line "confront Jasmine"
 	para "about the Desal"
-	line "plant wrecking"
+	line "Plant wrecking"
 	para "livelihoods, but"
 	line "she won't leave"
 	cont "the lighthouse."
@@ -124,9 +124,8 @@ Jasmine_SteelTypeIntro:
 
 Jasmine_BetterTrainer:
 	text "Excellent battle,"
-	line "finding even more"
-	cont "weak spots in my"
-	cont "style."
+	line "finding weakness"
+	cont "in my style."
 	done
 
 Text_ReceivedMineralBadge:

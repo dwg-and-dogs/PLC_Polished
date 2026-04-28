@@ -62,7 +62,6 @@ Lighthouse6FScene:
 	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 30
 	writetext LighthouseChuckText1
 	waitbutton
-;	showemote EMOTE_BOLT, LIGHTHOUSE_KURT1, 30 
 	writetext LighthouseKurtText1
 	waitbutton
 	closetext
@@ -79,9 +78,8 @@ LighthouseJasmineText1:
     text " Jasmine: "
 	next
 	text_start
-	text "You're sick!"
-	line "How can you do"
-	cont "this?"
+	text "You're sick! How"
+	line "can you do this?"
 	done
 
 LighthouseChuckText1:
@@ -89,13 +87,11 @@ LighthouseChuckText1:
     text " Chuck: "
 	next
 	text_start
-	text "Look. It doesn't"
-	line "matter - The"
-	cont "struggle is how"
-	
-	para "OMLAS Slowking's"
-	line "brain gets more"
-	cont "powerful!"
+	text "Don't you see?"
+	line "The greater its"
+	cont "agony, then the"
+	cont "more powerful the"
+	cont "OMLAS becomes!"
 	
 	para "It's our guardian"
 	line "from the sea!"
@@ -129,11 +125,9 @@ Lighthouse6FScene2:
 Lighthouse6FScene1:
 	turnobject PLAYER, LEFT
 	turnobject LIGHTHOUSE_CHUCK, RIGHT
-;	showemote EMOTE_BOLT, LIGHTHOUSE_CHUCK, 30
 	opentext
 	writetext LighthouseChuckText2
 	waitbutton
-;	showemote EMOTE_QUESTION, LIGHTHOUSE_JASMINE, 30
 	writetext LighthouseJasmineText2
 	waitbutton
 	writetext LighthouseChuckText3
@@ -152,7 +146,6 @@ Lighthouse6FScene1:
 	loadtrainer CHUCK, CHUCK_HARD
 .startbattle:	
 	; END 
-
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHUCK
@@ -215,15 +208,13 @@ LighthouseChuckText3:
 	text_start
 	text "I'd have mapped"
 	line "the future."
-	para "You think you'd"
-	line "be better alone?"
 	
 	para "I lost one home"
 	line "to the whims of"
 	cont "fate."
 	
-	para "I won't lose an-"
-	line "other. You child,"
+	para "I won't lose this"
+	line "one. You child,"
 	cont "battle me!"
 	done
 	
@@ -252,11 +243,11 @@ LighthouseJasmineText3:
 	text "You convinced"
 	line "me progress was"
 	cont "always good, but"
+	cont "you limited us."
 	
-	para "you limited us."
-	line "Running the desal"
-	para "at its original"
-	line "level, it may"
+	para "Running the desal"
+	line "at its original"
+	cont "level, it may"
 	
 	para "take generations"
 	line "for the shore to"
@@ -362,28 +353,24 @@ LighthouseKurtAfterChuck:
 	next
 	text_start
 	text "I'm ashamed to"
-	line "say that I recog-"
-	cont "nized the look in"
-	cont "Chuck's eyes."
+	line "say that I saw"
+	para "some of myself"
+	line "in Chuck, when I"
+	cont "piloted Lugia at"
+	cont "the port."
 	
-	para "It's the same one"
-	line "that was in my"
-	para "reflection, when"
-	line "I commanded Lugia"
-	cont "at the port."
+	para "I wasn't thinking"
+	line "about what would"
+	cont "be lost,"
 	
-	para "A lack of aware-"
-	line "ness about what"
-	cont "might be lost,"
-	
-	para "How difficult it"
-	line "might be to rest-"
-	cont "ore balance."
+	para "how hard it would"
+	line "be to restore"
+	cont "balance."
 	
 	para "Hopefully, Celebi"
 	line "was watching, and"
 	para "will see that I"
-	line "have learned."
+	line "have changed."
 	done
 	
 Lighthouse6FScientistScript:
@@ -398,6 +385,7 @@ Lighthouse6FScientistScript:
 	para "and the context"
 	line "windows persist"
 	cont "for Y, then we "
+
 	para "need ... how many"
 	line "Tentacruels for"
 	cont "the forecast?"

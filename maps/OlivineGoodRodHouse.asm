@@ -43,7 +43,7 @@ OfferGoodRodText:
 	line "with only his"
 	cont "rod and his wits."
 	
-	para "This super rod"
+	para "This Super Rod"
 	line "catches the most"
 	cont "angry fish in the"
 	cont "whole ocean."

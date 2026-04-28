@@ -47,7 +47,7 @@ TrainerEngineerHoward:
 	text "Whoever took the"
 	line "part must've been"
 	para "so familiar with"
-	line "the Desal plant."
+	line "the Desal Plant."
 	done
 
 .Beaten1Text:
@@ -57,7 +57,7 @@ TrainerEngineerHoward:
 .Seen1Text:
 	text "I've been working"
 	line "overtime with the"
-	para "downtime... I'm"
+	para "downtime. I'm"
 	line "ready to blow!"
 	done
 	

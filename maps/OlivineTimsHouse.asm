@@ -41,4 +41,3 @@ GiveBandText1:
 	cont "what needs to"
 	cont "be done!"
 	done
-

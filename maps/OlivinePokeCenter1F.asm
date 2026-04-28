@@ -48,7 +48,7 @@ KurtOlivineText:
 	line "misguided?"
 
 	para "We have a chance"
-	line "for redemption-"
+	line "for redemption."
 	
 	para "Chuck's OMLAS"
 	line "project destroys"
@@ -95,7 +95,7 @@ PokemonJournalJasmineScript:
 
 	para "Despite losing"
 	line "his home to a"
-	cont "tsunami, Chuck"
+	cont "hurricane, Chuck"
 	
 	para "remains hopeful"
 	line "that the next"

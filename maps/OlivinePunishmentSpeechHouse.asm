@@ -50,7 +50,7 @@ VoltSwitchScript:
 GiveVoltSwitchText:
 	text "Kids grow up so"
 	line "fast. One day,"
-	para "you see cute"
+	para "they're cute"
 	line "little girls. The"
 	cont "next, they're"
 	cont "all grown."
@@ -73,8 +73,8 @@ OlivinePunishmentSpeechHouseDaughterText:
 	line "find an entry-"
 	cont "level position,"
 	
-	para "but the Slowking"
-	line "OMLAS does all"
+	para "but the OMLAS"
+	line "Slowking does all"
 	cont "those things now."
 	
 	para "I hope I can do"
@@ -152,19 +152,16 @@ OlivineLightBallScript:
 	setevent EVENT_GOT_PEARL_OLIVINE
 	jumpopenedtext GiveLightBallText 
 
-NeedAGoldLeafText:
+NeedAGoldLeafText: ; todo revise 
 	text "I need to impress"
 	line "my boyfriend's"
 	para "family. But all I"
-	line "have are pearls."
+	line "have is this"
+	cont "single Pearl!"
 	
-	para "Each day, I go on"
-	line "the shore to get"
-	cont "all the pearls."
-	
-	para "But my boyfriend's"
-	line "mom thinks they're"
-	cont "tacky."
+	para "What could I ever"
+	line "make with just"
+	cont "one pearl?"
 	
 	para "I need something"
 	line "glittering!"
@@ -180,12 +177,17 @@ Text_GoldLeafMailQuestion:
 	line "What an idea!"
 	
 	para "Would you trade"
-	line "it for a pearl?"
+	line "it for a Pearl?"
 	done
 
 GiveLightBallText:
-	text "Those are sure"
-	line "to attract people"
-	para "and #mon"
-	line "at the beach!"
+	text "That pearl is so"
+	line "precious, it'd"
+	para "be best on an"
+	line "earring."
+	
+	para "I think someone"
+	line "in town used to"
+	cont "make jewelry like"
+	cont "that actually!"
 	done

@@ -183,10 +183,10 @@ LighthouseRivalBeforeText_2:
 	next
 	text_start
 	
-	text "Hey! Your invent-"
-	line "ion pollutes the"
-	para "sea with its"
-	line "discharge!"
+	text "Your invention"
+	line "pollutes the sea"
+	cont "with all the"
+	cont "briny discharge!"
 	done
 
 
@@ -201,11 +201,13 @@ LighthouseRivalBeforeText_3:
 	cont "this!"
 	
 	para "I just wanted to"
-	line "let us come into"
-	para "a balance with"
-	line "nature."
+	line "bring us closer"
+	cont "in balance with"
+	cont "nature."
+
 	para "As you look back,"
 	line "I look forward!"	
+
 	done
 
 
@@ -223,12 +225,12 @@ LighthouseRivalAfterText:
 	next
 	text_start
 	
-    text "I know. I didn't"
-	line "want to be their"
-	para "pawn. And I had"
-	line "no idea what they"
-	para "were doing on the"
-	line "top floor..."
+	text "I didn't want to"
+	line "be their pawn."
+	
+	para "I had no idea "
+	line "what was going on"
+	cont "on the top floor."
 
 	para "Don't follow me"
 	line "any more."
@@ -241,7 +243,7 @@ LighthouseKurtEndText:
 	text_start
 	
 	text "We have to get"
-	line "to the top!"
+	line "up there!"
 	done
 
 Kurt_LighthouseMove1:
@@ -280,7 +282,7 @@ Kurt_LighthouseText1:
 	
 	para "He uses #mon"
 	line "brutally, for his" 
-	cont "own designs!"
+	cont "own ends!"
 	done
 
 TrainerScientistJoseph:
