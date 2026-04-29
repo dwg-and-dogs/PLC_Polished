@@ -691,11 +691,9 @@ AlphRuinsGreatnessLiesWithinText:
 	line "within!"
 	
 	para "Be on the lookout"
-	line "for my 5 sisters."
+	line "for my sisters."
 	done	
 	
-
-
 AlphRuinsDV_Setting_EggText:
 	text "That's only an"
 	line "egg! Give it time"

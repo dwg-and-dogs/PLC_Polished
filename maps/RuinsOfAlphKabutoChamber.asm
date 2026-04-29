@@ -122,14 +122,13 @@ RuinsScientistMovesToYou:
 
 Scientist_TakeThisReport:
 	text "You solved the"
-	line "mosaic! We have"
-	para "been trying to"
-	line "solve it for"
-	cont "years."
+	line "mosaic! I've been"
+	para "trying to solve"
+	line "it for years."
 	
-	para "As a token of"
-	line "our thanks,"
-	cont "please take this"
+	para "As a token of our"
+	line "thanks, please"
+	cont "accept this"
 	cont "Unown Report."
 	done
 	
@@ -215,7 +214,7 @@ RuinsOfAlphKabutoChamberScientistScript:
 	promptbutton
 .unowninparty
 	closetext
-	setevent EVENT_GOT_UNOWN ; FROM SHUCKIE
+	setevent EVENT_GOT_UNOWN 
 	end	
 .refusetotakeunown
 	jumpopenedtext DontBlameYou	
@@ -274,16 +273,13 @@ RuinsOfAlphKabutoChamberReceptionistText: ; unused?
 	done
 
 RuinsOfAlphKabutoChamberScientistCrypticText:
-	text "Recently, strange,"
-	line "cryptic patterns"
-	cont "have appeared."
-
-	para "It's odd. They"
-	line "weren't here a"
-	cont "little while ago…"
-
-	para "You should take a"
-	line "look at the walls."
+	text "This mosaic is"
+	line "giving me fits!"
+	
+	para "If you help me"
+	line "solve it, I'll"
+	para "share on of our"
+	line "Unown Reports."
 	done
 
 RuinsOfAlphKabutoChamberScientistHoleText:
@@ -301,10 +297,10 @@ RuinsOfAlphKabutoChamberScientistTremorText:
 
 RuinsOfAlphKabutoChamberDescriptionText:
 	text "The forest kami"
-	line "time travels"
+	line "travels through"
 
-	para "like a morning"
-	line "stroll."
+	para "time like a"
+	line "morning stroll."
 	done
 
 RuinsOfAlphItemRoomDescriptionText:

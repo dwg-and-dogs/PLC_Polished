@@ -72,7 +72,7 @@ PoisonJabbarText:
 	
 	para "An animal would"
 	line "gnaw its hand off"
-	cont "to ecape..."
+	cont "to ecape. You?"
 	done
 
 IncredibleJabbarText:

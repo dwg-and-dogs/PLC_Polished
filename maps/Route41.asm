@@ -71,9 +71,8 @@ Route41SageImpressedText:
 	text "Who approaches"
 	line "Lugia's islands,"
 	
-	para "with Whirlpools"
-	line "sustained by her"
-	cont "Psychic power?"
+	para "each protected by"
+	line "a vortex?"
 	
 	para "..."
 	
@@ -84,6 +83,7 @@ Route41SageImpressedText:
 Route41SageText2:
 	para "Clearly you honor"
 	line "Lugia if you"
+
 	para "preserve one of"
 	line "her feathers."
 	
@@ -111,24 +111,24 @@ Route41SageScript2:
 Route41AskToTimeTravel:
 	text "Have you come to"
 	line "observe Lugia's"
-	para "AncientPower with"
-	line "us?"
+	Cont "AncientPower?"
 	done
 
 Route41NoTimeTravel:
-	text "Oh? But I thought"
-	line "you wanted to"
-	cont "join us?"
+	text "Oh? Don't you want"
+	line "to join us?"
 	done
 
 Route41TimeTravel:
 	text "Swirling depths,"
 	line "Lugia's might"
+	
 	para "Even pulls the"
 	line "Day into night."
 	
 	para "From the deep"
 	line "she watches all,"
+	
 	para "Until tides turn"
 	line "And empires fall."
 	done
@@ -136,7 +136,6 @@ Route41TimeTravel:
 Route41WaitText:
 	text "Egad! What is"
 	line "happening to us?"
-	
 	done
 
 GenericTrainerSwimmermMathew:
@@ -212,8 +211,9 @@ GenericTrainerGentlemanCamus:
 	done
 
 .SeenText7:
-	text "Beautiful day to"
-	line "be on the sea!"
+	text "I hear there's a"
+	line "rare mineral in"
+	cont "Cianwood Cove."
 	done
 
 Route41MatronScript:
@@ -254,8 +254,7 @@ GenericTrainerBeautyOlivia:
 	text "I wish I had the"
 	line "courage to swim"
 	para "over to those"
-	line "workers south of"
-	cont "our beach!"
+	line "workers!"
 	done
 
 .BeatenText6:
@@ -336,14 +335,13 @@ GenericTrainerScientistCarl:
 
 	text "Chuck's OMLAS"
 	line "needs terabytes"
-	cont "of weathere data."
+	cont "of weather data."
 	done
 
 .BeatenText2:
 	text "This equipment"
 	line "costs more than"
-	cont "a master ball,"
-	cont "kid."
+	cont "a master ball!"
 	done
 
 .SeenText2:
@@ -363,12 +361,10 @@ GenericTrainerScientistDexter:
 .BeatenText1:
 	text "We're collecting"
 	line "data to help the"
-	cont "forecasting in"
-	cont "Olivine."
+	cont "OMLAS forecast."
 	done
 
 .SeenText1:
 	text "So much data!"
 	line "So little time!"
 	done
-	

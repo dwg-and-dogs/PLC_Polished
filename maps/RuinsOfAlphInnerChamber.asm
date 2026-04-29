@@ -1,4 +1,4 @@
-RuinsOfAlphInnerChamber_MapScriptHeader:
+RuinsOfAlphInnerChamber_MapScriptHeader: ; unused 
 	def_scene_scripts
 	scene_script RuinsofAlphInnerChamberTrigger0
 	scene_script RuinsofAlphInnerChamberTrigger1

@@ -13,7 +13,7 @@ RuinsOfAlphResearchCenter_MapScriptHeader:
 
 	def_bg_events
 	bg_event  6,  5, BGEVENT_JUMPTEXT, RuinsOfAlphResearchCenterAcademicBooksText
-;	bg_event  5,  1, BGEVENT_JUMPTEXT, RuinsOfAlphResearchCenterProfSilktreePhotoText
+
 
 	def_object_events
 	object_event  4,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphResearchCenterScientist1Text, -1
@@ -38,22 +38,18 @@ RuinsOfAlphResearchCenterScientist3Script:
 	para "ing from the"
 	line "northwest cave."
 	
-	para "There's a mini"
-	line "tremor causing"
-	cont "that vortex."
-	
 	para "My instruments go"
 	line "haywire near it."
 	done
 
 RuinsOfAlphResearchCenterScientist1Text:
-	text "The ruins are"
+	text "The Ruins are"
 	line "over 1,500 years"
 	cont "old."
 
 	para "But it's not known"
 	line "why they were"
-	cont "built--or by whom."
+	cont "built, or by whom."
 	done
 
 RuinsOfAlphResearchCenterScientist2Text:
@@ -93,9 +89,9 @@ RuinsOfAlphResearchCenterAcademicBooksText:
 	done
 
 ThatsABrandNewHarpText:
-	text "That harp - did"
+	text "That harp, did"
 	line "you find it in "
-	cont "the ruins?"
+	cont "the Ruins?"
 	
 	para "I wonder: why"
 	line "did they stash"

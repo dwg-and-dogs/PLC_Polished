@@ -39,7 +39,7 @@ MapRuinsofAlphAerodactylChamberSignpost3Script:
 
 RuinsOfAlphAerodactylChamberDescriptionText:
 	text "It flies in"
-	line "moonlight"
+	line "darkness"
 	
 	para "guided by"
 	line "instinct."

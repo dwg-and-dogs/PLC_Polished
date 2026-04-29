@@ -159,7 +159,7 @@ Text_HyperVoiceIntro:
 	para "Do you know how"
 	line "many WEEKS I've"
 	para "been blabbing on"
-	line "about Blackthorne"
+	line "about Blackthorn"
 	cont "separatists?"
 	done
 

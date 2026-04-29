@@ -8,19 +8,16 @@ Route42_MapScriptHeader:
 	warp_event  0,  8, ROUTE_42_ECRUTEAK_GATE, 3
 	warp_event  0,  9, ROUTE_42_ECRUTEAK_GATE, 4
 	warp_event 46, 7, ENTEIS_CAVERN, 1
-; entei's cavern 
 
 
 	def_coord_events
 
 
 	def_bg_events
-;	bg_event  8, 12, BGEVENT_JUMPTEXT, Route42Sign1Text
 	bg_event  7,  7, BGEVENT_JUMPTEXT, MtMortarSign1Text
 	bg_event 45,  9, BGEVENT_JUMPTEXT, MtMortarSign2Text
 	bg_event 54,  8, BGEVENT_JUMPTEXT, Route42Sign2Text
 	bg_event 16, 11, BGEVENT_ITEM + MAX_POTION, EVENT_ROUTE_42_HIDDEN_MAX_POTION
-;entei's cavern if you have the pumice harp 
 	bg_event 46,  7, BGEVENT_READ, PumiceHarpEntrance
 	bg_event 26,  5, BGEVENT_READ, MissingMachinePartScript
 	bg_event 10,  5, BGEVENT_READ, Route42TimeTravelScript
@@ -41,7 +38,6 @@ Route42_MapScriptHeader:
 
 	itemball_event  7, 10, ULTRA_BALL, 1, EVENT_ROUTE_42_ULTRA_BALL
 	itemball_event 12, 15, HYPER_POTION, 1, EVENT_ROUTE_42_SUPER_POTION
-;	tmhmball_event 10, 2, TM_SCALD, EVENT_GOT_TM_SCALD 
 	fruittree_event 25, 5, FRUITTREE_ROUTE_42, HOLLOW_ROCK, PAL_NPC_BLUE
 
 	object_const_def
@@ -247,12 +243,12 @@ Route42CharcoalKilnBossText:
 	line "him in weeks."
 	
 	para "Our Farfetch'd"
-	line "tracked to here."
+	line "tracked him here."
 	
 	para "He started an"
 	line "apricorn orchard"
-	para "to supply"
-	line "his distiller..."
+	para "to supply his"
+	line "distiller."
 	
 	para "Where is he now?"
 	line "I wish I had been"
@@ -276,8 +272,8 @@ GenericTrainerFisherKyle:
 	done
 
 .SeenText2:
-	text "Whoa! You're"
-	line "right in my line!"
+	text "Whoa! You're right"
+	line "in my line!"
 	done
 	
 GenericTrainerFisherArnold:
@@ -285,7 +281,8 @@ GenericTrainerFisherArnold:
 
 	text "Mountain lakes"
 	line "are the only"
-	para "places left in"
+	
+	para "freshwater in"
 	line "Johto to fish,"
 	cont "I think."
 	done
@@ -315,9 +312,8 @@ GenericTrainerAromaLadyHeather:
 	done
 
 .BeatenText3:
-	text "I feel the winds"
-	line "of a new beginn-"
-	cont "ing blow!"
+	text "I feel a wind of"
+	line "a new beginning!"
 	done
 
 .SeenText3:
@@ -333,10 +329,6 @@ GenericTrainerAromaLadyHolly:
 	line "clouds looming on"
 	cont "Mt Silver above"
 	cont "New Bark."
-	
-	para "Somehow, they"
-	line "won't let out"
-	cont "any rain."
 	done
 
 .BeatenText4:
@@ -396,15 +388,15 @@ GenericTrainerCamperSid:
 	text "My big brother"
 	line "said he went up"
 	para "to the drained"
-	line "lake of Rage, but"
+	line "Lake of Rage, but"
 	para "the officer said"
 	line "it's closed?"
 	
-	para "But I trained for"
-	line "an adventure!"
+	para "I trained for an"
+	line "adventure!"
 	done
 
-Route42OfficerText:
+Route42OfficerText: ; unused?
 	text "Sorry, you can't"
 	line "come this way."
 

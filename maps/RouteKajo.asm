@@ -141,7 +141,7 @@ TrainerPokefan_MRobertScript:
 TrainerSchoolgirlFaithScript:
     generictrainer SCHOOLGIRL, FAITH, EVENT_BEAT_SCHOOLGIRL_FAITH, SchoolgirlFaithSeenText, SchoolgirlFaithBeatenText
 
-    text "The ruins of Alph"
+    text "The Ruins of Alph"
     line "are just below."
     para "You should check"
     line "them out."
@@ -156,7 +156,7 @@ CamperBarrySeenText:
 
 CamperBarryBeatenText:
     text "Now I'm even more"
-    line "lost."
+    line "lost!"
     done
 
 PicnickerTiffanySeenText:
@@ -239,7 +239,7 @@ SchoolgirlFaithSeenText:
     done
 
 SchoolgirlFaithBeatenText:
-    text "The ruins of Alph"
+    text "The Ruins of Alph"
     line "are just below."
     para "You should check"
     line "them out."
@@ -254,7 +254,7 @@ RouteKajoPetroglyph4:
 	cont "rock."
 	
 	para "It looks like an"
-	line "unown."
+	line "Unown."
     done
 
 RouteKajoSignpost:
@@ -292,8 +292,8 @@ LostKajoGirlText:
 	done
 
 KajoFeraligatrText:
-	text "Feraligatr:"
-	line "Snarl..."
+	text "Croconaw:"
+	line "Snarl!"
 	done
 
 RouteKajoCabinSign:
@@ -320,17 +320,12 @@ RouteKajoHollowRockScript:
 	jumpopenedtext NoPearlForHollowRockText ;;
 
 PearlForHollowRockText:
-	text "Not many people"
-	line "know, but Johto"
-	para "used to be very"
-	line "active, volcanic-"
-	cont "ally speaking."
-	
-	para "The igneous rocks"
+	text "The igneous rocks"
 	line "uncovered by the"
 	cont "railroad tunnel"
 	para "are irrefutable"
-	line "proof!"
+	line "proof of Johto's"
+	cont "volcanic past."
 	
 	para "Take this Hollow"
 	line "Rock. It's proof"
@@ -338,10 +333,8 @@ PearlForHollowRockText:
 	line "soup bubbled to"
 	para "the surface, and"
 	line "its dissolved gas"
-	para "made a perfect"
-	line "spherical cavity"
-	cont "when it cooled."
-
+	para "made a perfectly"
+	line "spherical cavity."
 	done
 
 PearlForHollowRockQuestionText:
@@ -351,12 +344,12 @@ PearlForHollowRockQuestionText:
 	line "live in these."
 	para "I'll trade you"
 	line "some of mine for"
-	cont "a BIG PEARL."	
+	cont "a Big Pearl."	
 	done
 
 PearlForHollowRockEndText:
 	text "<PLAYER> got 5"
-	line "HOLLOW ROCK."
+	line "Hollow Rock."
 	
 	para "The story of the"
 	line "Earth's past is"

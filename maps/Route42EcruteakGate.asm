@@ -19,7 +19,7 @@ Route42EcruteakGate_MapScriptHeader:
 
 
 Route42EcruteakGateOfficerText:
-	text "Mt.Mortar has had"
+	text "Mt. Mortar's had"
 	line "some landslides,"
 	
 	para "so most entrances"
@@ -55,10 +55,10 @@ GiveEnergyBall:
 	cont "selves!"
 	
 	para "When stressed,"
-	line "they secrete che-"
-	cont "micals."
+	line "they will secrete"
+	cont "chemicals, and"
 	
-	para "If they need to"
+	para "if they need to"
 	line "do more, they use"
 	cont "Energy Ball!"	
 	done

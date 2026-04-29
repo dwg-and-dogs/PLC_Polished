@@ -21,7 +21,6 @@ Route43_MapScriptHeader:
 
 	def_object_events
 	object_event  12,  20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_43_HURSALUNA 
-	; officerf jamie, pokemaniac  larry, andrew, brent, sightseerm jaska, sightseerf rosie 
 	object_event 10, 9,  SPRITE_PICNICKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSightseerFRosie, -1
 	object_event  9, 12,  SPRITE_SIGHTSEER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSightseerMJaska, -1
 	object_event 5, 22,  SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerPokemaniacBrent, -1
@@ -44,9 +43,8 @@ GenericTrainerSightseerFRosie:
 	done
 
 .BeatenText6:
-	text "Don't they call "
-	line "it GORP every-"
-	cont "where?"
+	text "You don't know"
+	line "about GORP?"
 	done
 
 .SeenText6:
@@ -187,6 +185,6 @@ Route43Sign2Text:
 	done
 
 Route43TrainerTipsText:
-	text "Silph Springgs"
+	text "Silph Springs"
 	line "Check-in gate"
 	done

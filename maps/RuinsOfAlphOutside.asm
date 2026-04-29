@@ -119,9 +119,8 @@ GenericTrainerSchoolgirlMolly:
 	done
 
 SchoolgirlMollySeenText:
-	text "We're on a"
-	line "trip to visit"
-	cont "the ruins!"
+	text "We're on a trip"
+	line "to the Ruins!"
 	done
 
 SchoolgirlMollyBeatenText:
@@ -163,10 +162,6 @@ RuinsOfAlphScientist2Text:
 	para "ection between"
 	line "the Unown and"
 	cont "the Kimono girls!"
-	
-	para "How else do you"
-	line "explain the"
-	cont "similarities?"
 	done
 
 RuinsOfAlphOutsideScientist1Script:
@@ -189,18 +184,18 @@ RuinsOfAlphOutsideScientist3Script:
 	jumptextfaceplayer RuinsOfAlphScientist3Text
 
 RuinsOfAlphScientist3Text:
-	text "We discovered"
-	line "a Bronzong in"
-	para "buried in the"
-	line "ground!"
+	text "We discovered a"
+	line "Bronzong buried"
+	cont "in the ground!"
 	
-	para "Falkner wants"
-	line "to put it at"
-	para "the top of his"
-	line "tower to perform"
+	para "Falkner wants to"
+	line "put it on Sprout"
+	cont "Tower to perform"
+	
 	para "a Rain Dance to"
 	line "alleviate the"
 	cont "drought."
+
 	done
 
 
@@ -209,12 +204,13 @@ RuinsOfAlphNorthScientistScript:
 	jumptext RuinsOfAlphNorthScientistText
 	
 RuinsOfAlphNorthScientistText:
-	text "Some say if"
-	line "you stare at"
-	para "the shattered"
-	line "mosaic for long"
-	para "enough, you can"
-	line "see a story."
+	text "Some say if you"
+	line "stare at the"
+	para "shattered mosaic"
+	line "for long enough,"
+	
+	para "you can see a"
+	line "story."
 	done
 
 RuinsOfAlphSignText:
@@ -230,8 +226,6 @@ RuinsOfAlphResearchCenterSignText:
 	line "Reseach Center."
 	done
 
-
-
 GenericTrainerSightseerFLenie: ; vulpix, grimer alolan 
 	generictrainer SIGHTSEERF, LENIE, EVENT_BEAT_SIGHTSEERF_LENIE, SightseerFLenieSeenText, SightseerFLenieBeatenText
 
@@ -244,7 +238,7 @@ GenericTrainerSightseerFLenie: ; vulpix, grimer alolan
 	done
 
 SightseerFLenieSeenText:
-	text "A trainer! That's"
+	text "A trainer! Not"
 	line "what I'd expect"
 	para "to see at these"
 	line "ruins!"
@@ -262,7 +256,7 @@ GenericTrainerSightseerFPilar:; slowpoke, ponyta galar
 	line "markings like the"
 	para "ones inside the"
 	line "Ruins are found"
-	para "in Sinnoh too!"
+	cont "in Sinnoh too!"
 	done
 
 SightseerFPilarSeenText:

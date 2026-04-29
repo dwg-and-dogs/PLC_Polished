@@ -29,7 +29,7 @@ Route43MahoganyGateOfficer:
 
 LakeOfRageEngineerText:
 	text "I can't bear to"
-	line "leave this place-"
+	line "leave this place!"
 	
 	para "Why didn't I tell"
 	line "Silph their plan"
@@ -83,10 +83,8 @@ Text_ROUTE42GATE_TutorRefused:
 	text "Stay vigilant."
 	done
 
-
 Text_ROUTE42GATE_TutorTaught:
 	text "There. Now you"
 	line "can set the pace"
 	cont "of battles."
 	done
-

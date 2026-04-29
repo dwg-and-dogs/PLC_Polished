@@ -11,20 +11,18 @@ Route40_MapScriptHeader:
 	coord_event 7, 5, 0, Route40_KurtScene
 
 	def_bg_events
-	bg_event 14, 10, BGEVENT_JUMPTEXT, Route40SignText ; fix sign 
+	bg_event 14, 10, BGEVENT_JUMPTEXT, Route40SignText
 	bg_event  8,  4, BGEVENT_ITEM + HYPER_POTION, EVENT_ROUTE_40_HIDDEN_HYPER_POTION
 
 	def_object_events
-	; npc who gives you razor claw for defeating them all 
-	object_event 11, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RazorScavengerScript, -1
+	object_event 11, 16, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RazorScavengerScript, -1 	; npc who gives you razor claw for defeating them all 
 	object_event 6, 5, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_40_KURT
-;monica
 	object_event  14,  6, SPRITE_POKEFAN_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MonicaScript, -1
 	smashrock_event  7, 15
 	smashrock_event  6, 13
 	smashrock_event  7, 12
-; double edge 
-	object_event 15, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40FisherScript, -1
+
+	object_event 15, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route40FisherScript, -1; double edge 
 	object_event 14, 29, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40SailorText, -1
 ;scavengers
 	object_event 13, 21, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerSwimmermHarold, -1
@@ -34,9 +32,7 @@ Route40_MapScriptHeader:
 ; beach NPCs
 	object_event 12, 10, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route40MatronScript, -1 ; redo text and heal you 
 	object_event  10,  8, SPRITE_BEAUTY, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route40Lass2Text, -1 ; redo text 
-; roadblock NPCs, quarantine the city while they look for who took the part 
-;	object_event 19, 4, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_DOCKS_KENSEY ; redo text and heal you 
-;	object_event 19, 5, SPRITE_OFFICER,  SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, OlivineOfficerText, EVENT_DOCKS_KENSEY ; redo text and heal you 
+
 
 
 	object_const_def
@@ -98,7 +94,7 @@ Route40SailorText:
 	cont "Lugia pendants."
 	done
 
-RazorScavengerScript: ; check route 31 script if not working 
+RazorScavengerScript:
 ;	endifjustbattled
 	checkevent EVENT_GOT_RAZOR_ITEM_ROUTE_40
 	iftrue_jumptextfaceplayer .AfterText2
@@ -147,42 +143,39 @@ RazorScavengerScript: ; check route 31 script if not working
 	setevent EVENT_GOT_RAZOR_ITEM_ROUTE_40
 	jumpthisopenedtext
 
-.AfterText2: ;  
+.AfterText2:   
 	text "Without so many"
 	line "boats around, it"
 	cont "is safe to dive."
 	
-	para "The corals really"
+	para "But the Corsola"
 	line "took a hit with"
-	cont "the desal plant,"
-	cont "though."
+	cont "the Desal Plant."
 	done
 
-.IntroText:;  
-	text "The other scav-"
-	line "engers are good"
-	cont "divers, but not"
+.IntroText:
+	text "The others are"
+	line "good divers, but"
+	cont "not so much"
+	cont "battlers."
 	
-	para "so much battlers."
-	line "If you beat them"
-	cont "all, come talk to"
-	para "me, so I can have"
-	line "an interesting"
-	cont "battle."
+	para "If you beat them"
+	line "all, come see me."
 	done
 
-.QuestionText:;  
+.QuestionText:
 	text "You defeated all"
 	line "others!"
 	
 	para "Shall we battle?"
 	line "If you win, I'll"
+
 	para "give you a nice"
 	line "item I found in"
 	cont "a wreck."
 	done
 
-.RefusedText:;  
+.RefusedText:
 	text "Fine, I'll keep"
 	line "my Razor Claw."
 	done
@@ -236,14 +229,13 @@ MonicaGivesGiftText:
 
 MonicaGaveGiftText:
 	text "That TM is best"
-	line "if you're unteth-"
-	cont "ered from the"
-	para "complexities of"
-	line "battle items."
+	line "if you want to"
+	para "avoid all the"
+	line "complexities of"
+	cont "battle items."
 	
-	para "Take a load off"
-	line "and see how good"
-	cont "it feels!"
+	para "It feels good to"
+	line "take a load off!"
 	done
 
 
@@ -288,7 +280,7 @@ Text_DoubleEdgeIntro:
 	cont "mended our own"
 	cont "vessels."
 
-	para "But new models"
+	para "But new boats"
 	line "demand more spec-"
 	cont "ialized skills."
 
@@ -370,9 +362,10 @@ Route40Healed:
 
 Route40Lass2Text:
 	text "The output from"
-	line "the desal plant"
+	line "the Desal Plant"
 	para "has changed the"
 	line "ocean chemistry."
+	
 	para "Around here, you"
 	line "need a wetsuit to"
 	cont "protect yourself."
@@ -416,8 +409,6 @@ GenericTrainerSwimmermSimon:
 	line "world under the"
 	cont "surface!"
 	done
-
-
 
 GenericTrainerSwimmermRandall:
 	generictrainer SWIMMERM, RANDALL, EVENT_BEAT_SWIMMER_M_RANDALL, .SeenText3, .BeatenText3
@@ -464,4 +455,3 @@ GenericTrainerSwimmermCharlie:
 	line "some nuggets in a"
 	cont "shipwreck!"
 	done
-

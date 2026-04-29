@@ -67,7 +67,7 @@ MapRuinsofAlphHoOhChamberSignpost3Script:
 	end
 
 RuinsOfAlphHoOhChamberDescriptionText:
-	text "If unleashed from"
+	text "Incubated in a"
 	line "volcanic cradle"
 	
 	para "It will melt all"

@@ -1,4 +1,4 @@
-RuinsOfAlphSinjohChamber_MapScriptHeader:
+RuinsOfAlphSinjohChamber_MapScriptHeader: ; unused 
 	def_scene_scripts
 
 	def_callbacks
