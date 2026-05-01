@@ -143,7 +143,7 @@ SeafluxNexusB2F_ResetSwitch: ; option for a hint
 	playsound SFX_HYDRO_PUMP
 	waitsfx
 	reloadmap ; should be the end of it
-	special RestartMapMusic ; todo need to check 
+	special RestartMapMusic
 	end
 
 SeafluxNexusB2F_Switch1: ; controls w4
@@ -327,11 +327,11 @@ SwitchesResetText:
 	text "All waterfalls"
 	line "are reset."
 	
-	para "Hint: to access"
-	line "center block,"
-	
-	para "not all blocks"
-	line "will be used!"
+;	para "Hint: to access"
+;	line "center block,"
+;	
+;	para "not all blocks"
+;	line "will be used!"
 	done
 
 Switch1Text:

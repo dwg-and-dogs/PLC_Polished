@@ -116,12 +116,14 @@ BlackbeltKenjiSeenText:
 
 BlackbeltKenjiBeatenText:
     text "Whitney and Silph"
-    line "have all channels."
+    line "control all the"
+	cont "media!"
     done
 
 BlackbeltKenjiAfterText:
     text "Whitney and Silph"
-    line "have all channels."
+    line "control all the"
+	cont "media!"
     done
 
 BeautySamanthaSeenText:
@@ -200,10 +202,10 @@ KurtAfterHealText:
 	line "tower, so we can"
 	para "sneak past onto"
 	line "the Magnet Train"
-	cont "tracks to the "
-	cont "East."
+	cont "tracks towards"
+	cont "Ecruteak."
 
-   	para "Her Radio show"
+   	para "Whitney's show"
 	line "gets listeners"
 	cont "so riled up… "
 	para "yet another vile"
@@ -211,9 +213,6 @@ KurtAfterHealText:
 
     para "Are you ready?"
     done
-
-
-
 
 KurtNotReadyText:
     text "OK."

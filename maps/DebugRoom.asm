@@ -18,7 +18,7 @@ DebugRoom_MapScriptHeader:
 	bg_event  0,  2, BGEVENT_UP, DebugInteraction ; all flags, etc. 
 
 	def_object_events
-	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1 ; TODO FIX BEFORE SHIP  
+	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1 
 	object_event  2,  3, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, Breeder1Script, -1 ; GIVE SUPERTEAM CHECK 
 	object_event  7,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, Breeder2Script, -1 ; GIVES VARIANTS CHECK 
 	object_event  4,  8, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN,  OBJECTTYPE_SCRIPT, 0, Breeder5Script, -1 ; GIVES ALL CHECK 
@@ -190,7 +190,7 @@ endr
 		line "wants to battle!"		
 	waitbutton
 	closetext
-	
+	; debug 
 ;	loadtrainer HOLLIS, 1 ; check normalmode or hardmode 
 ;	startbattle
 	end
@@ -343,8 +343,6 @@ dwgDebugScript:
 	setlasttalked DEBUG_DWG
 	loadtrainer ENGINEER, DWG
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-;	winlosstext SilasBeatenText, 0 ; check normal vs hardmode 
-;	loadtrainer HOLLIS, 1 ; WILL THIS FIND?
 	startbattle
 	reloadmap
 	showtext DWGTextAfter1

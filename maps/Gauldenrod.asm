@@ -405,8 +405,8 @@ GauldenrodHisuiTraderText:
 GauldenrodHisuiTraderGoomyText:
 	text "Ah, Goomy!"
 	line "Once it evolves,"
-	para "it becomes tough to"
-	line "bring down!"
+	para "it becomes tough"
+	line "to bring down!"
 	done
 
 GauldenrodHisuiTraderGibleText: 

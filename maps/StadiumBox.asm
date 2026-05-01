@@ -119,17 +119,14 @@ KurtDialogueStadiumBox:
 	para "General Tyrus"
 	line "was such a tyrant"
 	para "to force everyone"
-	line "to follow him,"
-	
-	para "always believing"
-	line "he was right."
+	line "to follow him."
 	
 	para "Can you imagine!"
 
 	para "Now, we need to"
 	line "get to the port"
 	para "to stop the outs-"
-	line "iders technology."
+	line "ider technology."
 
 	para "Johto depends on"
 	line "it! Sandra, how"
@@ -148,7 +145,8 @@ SandraDialogueStadiumBox:
 	cont "Capital."
 	
 	para "However, the path"
-	line "is guarded."
+	line "is guarded from"
+	cont "here."
 	
 	para "You'll need to"
 	line "sneak around."

@@ -138,8 +138,8 @@ TG2_Text_Kurt5_2:
 	text "Last I was at the"
 	line "Burned Tower was"
 	para "for the new year"
-	line "celebration befo-"
-	cont "re you were born."
+	line "festival before"
+	cont "you were born."
 
 	para "Your dad and I "
 	line "were going to"
@@ -152,8 +152,8 @@ TG2_Text_Kurt5_2:
 	para "silence about our"
 	line "disagreements."
 
-	para "I wanted to rem-"
-	line "ind him of his "
+	para "I planned to"
+	line "remind him of his"
 	cont "first #mon,"
 	
 	para "since you were"
@@ -161,12 +161,8 @@ TG2_Text_Kurt5_2:
 	
 	para "While I waited,"
 	line "I looked in the "
-	para "bag and found the"
+	para "bag and found his"
 	line "Apricorn."
-	
-	para "The one that we'd"
-	line "shared so many"
-	cont "memories over."
 	
 	para "The paint was ne-"
 	line "arly all chipped"

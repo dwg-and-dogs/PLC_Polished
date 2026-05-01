@@ -152,7 +152,7 @@ OlivineLightBallScript:
 	setevent EVENT_GOT_PEARL_OLIVINE
 	jumpopenedtext GiveLightBallText 
 
-NeedAGoldLeafText: ; todo revise 
+NeedAGoldLeafText: 
 	text "I need to impress"
 	line "my boyfriend's"
 	para "family. But all I"
@@ -169,7 +169,7 @@ NeedAGoldLeafText: ; todo revise
 
 NoGoldLeafText:
 	text "How will I make"
-	line "my letters shine?"
+	line "an impression?"
 	done
 
 Text_GoldLeafMailQuestion:

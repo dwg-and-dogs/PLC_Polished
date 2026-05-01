@@ -34,7 +34,7 @@ BrigaderScript:
 	
 GauldenrodBrigaderText:
 	text "Stay out of"
-	line "trouble - "
+	line "trouble!"
 	
 	para "especially avoid"
 	line "the troublemakers"
@@ -54,7 +54,7 @@ GenericTrainerBrigader3:
 Brigader3SeenText:
 	text "Stop right there!"
 	line "No one is allowed"
-	para "into the stadium"
+	para "into the Stadium"
 	line "at the moment!"
 	done
 
@@ -72,13 +72,13 @@ GenericTrainerBrigader4:
 	done
 
 Brigader4SeenText:
-	text "The stadium isn't"
+	text "The Stadium isn't"
 	line "open! Turn back!"
 	done
 
 Brigader4BeatenText:
 	text "I wish I could"
-	line "stop you…"
+	line "stop you."
 	done
 
 GenericTrainerBrigader5:
@@ -162,13 +162,12 @@ ReceptionistOfferText:
 	para "It's thrilling!"
 
 	para "Every day is an"
-	line "adventure in"
-	cont "arithmetic,"
+	line "adventure,"
 	
 	para "making sure I"
 	line "track down all"
 	para "the towels the"
-	line "brigaders used."
+	line "Brigaders used."
 
 	para "I can teach your"
 	line "#mon to Counter"
@@ -180,9 +179,7 @@ ReceptionistOfferText:
 
 ReceptionistAskTeachText:
 	text "So, what do you"
-	line "say? Want to join"
-	para "the exciting world"
-	line "of towel counting?"
+	line "say?"
 	done
 
 ReceptionistTaughtText:
@@ -194,27 +191,18 @@ ReceptionistTaughtText:
 	para "and maybe you can"
 	line "take over my j-"
 
-	para "I mean, enjoy your"
+	para "I mean, enjoy the"
 	line "new skill!"
 	done
 
 ReceptionistNoPaymentText:
-	text "Oh... you don't"
+	text "Oh, you don't"
 	line "have a Silver"
 	cont "Leaf?"
-
-	para "That's... that's"
-	line "fine. I'll just"
-	cont "keep counting."
-
-	para "One, two, three..."
-
-	para "WHERE DID THEY ALL"
-	line "GO?!"
 	done
 
 ReceptionistRefusedText:
-	text "You... you don't"
+	text "You- you don't"
 	line "want to learn the"
 	cont "joy of counting?"
 
@@ -226,8 +214,6 @@ ReceptionistRefusedText:
 	para "Forever."
 
 	para "And ever."
-
-	para "...and ever."
 	done
 
 StadiumAheadSign:

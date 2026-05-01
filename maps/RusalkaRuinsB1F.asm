@@ -88,7 +88,7 @@ CaptainsLog02Text:
 	para "properly secured"
 	line "our territory."
 	
-	para "That stone..."
+	para "That stone:"
 	line "there's something"
 	cont "regal about it."
 	
@@ -128,7 +128,7 @@ CaptainsLog03Text:
 	
 	para "Also, found a"
 	line "few of my crew"
-	para "stealing - sent"
+	para "stealing ! Sent"
 	line "them below deck"
 	cont "in the cells!"
 	done

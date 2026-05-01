@@ -161,9 +161,10 @@ WC_Cemetery6Text:
 	line "Oscar,"
 	
 	para "During an epi-"
-	line "demic, tore the"
+	line "demic, tore out"
 	para "ornamental trees"
-	line "for medicinal"
+	line "to make space"
+	cont "to grow medicinal"
 	cont "berries."
 	done
 	

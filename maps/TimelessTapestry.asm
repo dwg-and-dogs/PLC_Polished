@@ -206,11 +206,11 @@ TapestryAmosNoText:
 	text "Quickly prepare!"
 	line "Vesper will soon"
 	para "declare himself"
-	line "the Emperor!"
+	line "absolute ruler"
+	cont "of Johto!"
 	done
 
 TapestrySceneFinale: 
-	;cf western capital scene ;
 	checkevent EVENT_TAPESTRY_SCENE
 	iffalse .NoScene
 	disappear PLAYER
@@ -426,7 +426,7 @@ MorpheaAfterText:
 	text "You've done it!"
 	line "Celebi has joined"
 	para "you! Now, Amos is"
-	line "waiting: You must"
+	line "waiting. You must"
 	cont "stop Vesper!"
 	done
 
@@ -476,7 +476,7 @@ GenericTrainerHisuiFemale_Lorena:
 	line "is so uptight!"
 	para "He's so worried"
 	line "about outsiders"
-	cont "at the port."
+	cont "at his port."
 	done
 
 HisuiFemaleLorenaSeenText:

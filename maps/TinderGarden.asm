@@ -283,7 +283,6 @@ KurtLetsBegin2:
 	para "So the next gene-"
 	line "ration can rise"
 	para "in an inheritance"
-	
 	line "of fallen leaves"
 	para "like a phoenix"
 	line "from the ashes."
@@ -309,7 +308,7 @@ WasThatCelebiText:
 	
 	para "And there are"
 	line "3 #mon"
-	cont "over there..."
+	cont "over there!"
 	done
 
 WasThatCelebiTextOak:
@@ -329,9 +328,10 @@ WasThatCelebiTextKurt:
 	text "Hold on, I"
 	line "know these from"
 	cont "an old book."
+	
 	para "These three were"
 	line "carried by a hero"
-	cont "from Hisui."
+	cont "long ago."
 	
 	para "Clearly, Celebi"
 	line "brought them for"
@@ -628,7 +628,7 @@ RivalChoosesStarterText:
 RivalReceivedStarterText:
 	text "<RIVAL>"
     line "received"
-	cont "" ;should fix the text here?
+	cont ""
 	text_ram wStringBuffer3
 	text "!"
 	done
@@ -755,7 +755,6 @@ TinderGardenRivalBattleScript1:
 	turnobject TINDER_GARDEN_RIVAL, LEFT
 	opentext
 	writetext TGRivalGoodbyeText
-;	writetext TGKurtDismissesText
 	promptbutton
 	closetext
 	applymovement TINDER_GARDEN_RIVAL, TGRivalLeavesMovement
@@ -772,8 +771,8 @@ TinderGardenRivalBattleScript1:
 	applymovement TINDER_GARDEN_KURT, KurtLeavesInAHurryMovement
 	disappear TINDER_GARDEN_KURT
 	setscene $4 ; 
-	setmapscene AZALEA_TOWN, $1 ;now the people shouldn't stop you
-	setmapscene ILEX_FOREST, $1 ;ready for the fight at Ilex Forest
+	setmapscene AZALEA_TOWN, $1 
+	setmapscene ILEX_FOREST, $1 
 	clearevent EVENT_KURTS_HOUSE_NOTEBOOK
 	clearevent EVENT_KILN_BOSS
 	setevent EVENT_ILEX_FOREST_RIVAL
@@ -1023,9 +1022,9 @@ TGRivalText_YouWon:
     text " <RIVAL>: "
 	next
 	text_start
-	text "I've been trea-"
-	line "ted like I can't"
-	cont "do anything."
+	text "I've been treated"
+	line "like I don't"
+	cont "belong."
 	
 	para "I'm going to"
 	line "show you all!"

@@ -147,8 +147,7 @@ VioletHisuiTraderText:
 	cont "tough conditions."
 
 	para "I'm fostering them"
-	line "but it's not easy"
-	cont "work."
+	line "but it's tough."
 		
 	para "I'll let you have"
 	line "one for 30k."

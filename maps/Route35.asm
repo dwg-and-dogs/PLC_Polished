@@ -779,7 +779,7 @@ GaveMaximumDVsText_Route35:
 	done
 
 GaveDVsText_Route35:
-	text "DVs are set"
+	text "DVs are set."
 	done
 
 

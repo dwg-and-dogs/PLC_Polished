@@ -566,7 +566,7 @@ GaveMaximumDVsText_AlphRuins:
 	done
 
 GaveDVsText_AlphRuins:
-	text "DVs are set"
+	text "DVs are set."
 	done
 
 

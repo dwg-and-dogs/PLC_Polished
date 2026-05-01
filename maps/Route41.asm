@@ -111,7 +111,7 @@ Route41SageScript2:
 Route41AskToTimeTravel:
 	text "Have you come to"
 	line "observe Lugia's"
-	Cont "AncientPower?"
+	cont "AncientPower?"
 	done
 
 Route41NoTimeTravel:

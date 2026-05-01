@@ -85,9 +85,8 @@ Text_RolloutTutorNoSilverLeaf:
 	para "with a Silver"
 	line "Leaf."
 	
-	para "Check Ilex For-"
-	line "est, or the"
-	cont "Azalea Mart."
+	para "Check Ilex Forest"
+	line "or Azalea Mart."
 	done
 
 Text_RolloutTutorQuestion:
@@ -119,6 +118,6 @@ SlowpokeWellB1FText:
 	line "could've been so"
 	para "different if one"
 	line "rock was in one"
-	para "place instead of"
-	line "another!"
+	para "place, hundreds"
+	line "of years ago!"
 	done

@@ -31,7 +31,8 @@ WiseTriosRoomText1:
 
 WiseTriosRoomText3:
 	text "You look very"
-	line "familiar... Like"
+	line "familiar. Like"
 	cont "I have seen your"
 	cont "face in a mural?"
 	done
+

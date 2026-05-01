@@ -1,6 +1,0 @@
-C:\Users\dwg11\PLC_Polished\maps\DebugRoom.asm:
-  Line 21: object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1 ; REVISE TEXT TODO
-
-
-C:\Users\dwg11\PLC_Polished\maps\TinTowerRoof.asm:
-  Line 48: winlosstext SilverWinText, 0 ; todo improve the text up here

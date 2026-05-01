@@ -67,9 +67,8 @@ ShoresAskToTimeTravel:
 	para "aren't on Route"
 	line "41 any more."
 	
-	para "It must be conn-"
-	line "ected to Lugia"
-	cont "somehow!"
+	para "It's related to"
+	line "Lugia, somehow."
 	
 	para "Shall we pray to"
 	line "her again?"
@@ -133,29 +132,25 @@ Text_IcyWindIntro:
 	text "W-w-welcome to"
 	line "sheltered shores."
 	
-	para "I'm f-f-freezing"
-	line "the islands so"
-	cont "n-n-no one will"
-	para "want to mess"
-	line "w-w-with us."
+	para "The wind in this"
+	line "s-s-storm cuts"
+	cont "through me!"
+	
+	para "It's so c-c-cold!"
 	done
 
 Text_ShoresTutorIcyWind:
-	text "An i-i-icy wind"
-	line "should repel the"
-	cont "outsiders and the"
-	cont "b-b-brigaders."
-	
-	para "I'll sh-sh-show"
-	line "you how, if you"
-	cont "b-b-bring me a"
-	cont "Silver Leaf to"
-	para "m-m-make myself a"
-	line "h-h-hot tea..."
+	text "I can teach y-y-"
+	line "your #mon to"
+	para "summon an Icy"
+	line "w-w-wind if you"
+	para "bring me a Silver"
+	line "L-L-Leaf."
 	done
 
 Text_ShoresTutorNoSilverLeaf:
-	text "N-n-no leaf?"
+	text "You don't have"
+	line "a Silver Leaf?"
 	done
 
 Text_ShoresTutorQuestion:
@@ -170,9 +165,7 @@ Text_ShoresTutorRefused:
 	done
 
 Text_ShoresTutorTaught:
-	text "Th-th-there! Now"
-	line "for s-some hot"
-	cont "t-tea."
+	text "Th-th-there!"
 	done
 
 ShoresSailorText:

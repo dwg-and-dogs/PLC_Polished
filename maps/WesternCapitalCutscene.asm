@@ -127,7 +127,7 @@ Prologue_Text2:
     text " Vesper: "
 	next
 	text_start
-	text "Ah --  General"
+	text "Ah, General"
 	line "Andrea! I had"
 	para "two meetings"
 	line "before yours."
@@ -146,7 +146,7 @@ Prologue_Text2_2:
 	cont "strategies."
 	
 	para "The other cities"
-	line "resist us."
+	line "defy us."
 	done
 
 Prologue_Text2_3:	

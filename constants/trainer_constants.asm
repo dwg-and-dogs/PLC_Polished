@@ -27,7 +27,7 @@ CHRIS EQU __trainer_class__
 	const PHONECONTACT_LYRA
 	const PHONECONTACT_BUENA
 
-KRIS EQU __trainer_class__ ; TODO CHECK THE ORIGINAL PARTIES.ASM FOR A LIST OF NORMALMODERS 
+KRIS EQU __trainer_class__ ; 
 	trainerclass CARRIE ; 1 unused 
 
 	trainerclass CAL ; 2 unused 

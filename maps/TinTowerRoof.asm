@@ -45,7 +45,7 @@ TinTowerRoofSilverScript:
 	faceplayer
 	showtext TinTowerRoofSilverIntroText
 	setlasttalked TINTOWERROOF_SILVER
-	winlosstext SilverWinText, 0 ; todo improve the text up here 
+	winlosstext SilverWinText, 0 
 	; START 
 	readdifficultymode
 	ifequal DIFFICULTY_EASY, .easy
@@ -69,32 +69,34 @@ TinTowerRoofSilverScript:
 	end
 
 TinTowerRoofSilverIntroText:
-	text "Look at those be-"
-	line "autiful fabrics."
+	text "You're swaddled"
+	line "in beautiful"
+	cont "fabrics."
 	
-	para "I was wrapped in"
+	para "I was swaddled in"
 	line "spite and malice."
 	
-	para "I fled, but I co-"
-	line "uldn't keep from"
-	para "draping my"
-	line "#mon in the"
-	para "same threads I"
-	line "knew."
+	para "I fled, but I"
+	line "couldn't keep from"
+	para "repeating the"
+	line "mistakes of my"
+	cont "parents."
 	
-	para "But one day, I"
+	para "Until one day, I"
 	line "saw the pain in"
 	para "their bloodshot"
 	line "eyes."
 	
 	para "I wept. My tears"
-	line "washed it clean."
+	line "washed me clean."
 	para "I gave them love,"
-	line "and I got a"
-	cont "second chance."
+	line "and they gave me"
+	cont "a second chance."
 	
-	para "My travels brou-"
-	line "ght me to Ho-Oh."
+	para "I was drawn to"
+	line "this tower's roof"
+	cont "by Ho-Oh."
+	
 	para "It saw my heart"
 	line "had been reborn."
 	
@@ -114,7 +116,12 @@ SilverAfterBattleText:
 	line "ship of Ho-Oh."
 	
 	para "Now, it is your"
-	line "turn."
+	line "turn. I hope you"
+	cont "learn as much as"
+	cont "I did."
+	
+	para "I think I should"
+	line "return home."
 	done
 
 	

@@ -37,7 +37,7 @@ CaptainSpiritomb:
 DeadCaptainText:
 	text "It's the captain."
 	line "He looks as cold"
-	cont "as ice..."
+	cont "as ice."
 	done
 
 
@@ -56,9 +56,8 @@ CaptainsLog10Text:
 	cont "each breath."
 	
 	para "The bats screech"
-	line "a eulogy for"
-	para "the crew I"
-	line "sacrificed."
+	line "a eulogy for the"
+	cont "crew I lost."
 	
 	para "How fitting to"
 	line "die surrounded"
@@ -68,15 +67,13 @@ CaptainsLog10Text:
 	line "chose wrong."
 	
 	para "Eleanor's last"
-	line "letter sits"
-	cont "before me."
+	line "letter I opened:"
 	
-	para "A child."
-	para "A child I'll"
+	para "A child! One I'll"
 	line "never meet."
 	
 	para "But let me give"
-	line "a confession:"
+	line "a warning."
 	
 	para "I would have"
 	line "barely known you."

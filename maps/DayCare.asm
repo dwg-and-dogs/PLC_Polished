@@ -35,7 +35,7 @@ DayCareEggCheckCallback:
 	clearevent EVENT_DAYCARE_MAN_ON_ROUTE_34
 	endcallback
 
-DayCareManScript_Inside: ; todo will need to check this 
+DayCareManScript_Inside: 
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
@@ -50,7 +50,7 @@ DayCareManScript_Inside: ; todo will need to check this
 	special Special_DayCareMan
 	waitendtext
 
-DayCareLadyScript: ; todo check her 
+DayCareLadyScript:
 	faceplayer
 	opentext
 	checkflag ENGINE_DAY_CARE_MAN_HAS_EGG

@@ -579,7 +579,7 @@ GaveMaximumDVsText_TT5F:
 	done
 
 GaveDVsText_TinTower:
-	text "DVs are set"
+	text "DVs are set."
 	done
 
 

@@ -14,7 +14,7 @@ WhirlIslandB3F_MapScriptHeader:
 
 	def_bg_events
 	; debug tech
-	bg_event 8, 25, BGEVENT_READ, WhirlIslandB3f_Debug
+;	bg_event 8, 25, BGEVENT_READ, WhirlIslandB3f_Debug
 
 	def_object_events
 

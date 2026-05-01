@@ -71,9 +71,9 @@ KurtLugiaText2: ; need to have kurt go to the top floor and tell the player here
 	text "<PLAYER>, I've"
 	line "caught Lugia."
 	
-	para "Now it can wreak"
-	line "havoc at the"
-	cont "Emperor's port."
+	para "Now it can use"
+	line "her to destroy"
+	cont "Nemo's port."
 	
 	para "There may be a"
 	line "shrine we can use"

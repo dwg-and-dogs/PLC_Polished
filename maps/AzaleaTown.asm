@@ -1047,7 +1047,7 @@ GaveMaximumDVsText_TTTown:
 	done
 
 GaveDVsText_Azalea:
-	text "DVs are set"
+	text "DVs are set."
 	done
 
 

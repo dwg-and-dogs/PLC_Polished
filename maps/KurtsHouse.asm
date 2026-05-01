@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt	
+	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
@@ -492,30 +492,29 @@ NoReadKurtText:
 	text "Put it down."
 	done
 
-KurtsJournal1Text: ; todo copy these from the rest of the maps 
+KurtsJournal1Text: 
 	text "So this is how"
 	line "Route 34 looked"
 	cont "160 years ago."
 
 	para "Your father helped"
-	line "at the day care"
+	line "at the Day Care"
 	cont "when he was young."
 
 	para "Once, on the way"
 	line "back to Azalea, he"
-	cont "was playing with"
-	para "an Apricorn and"
-	line "caught"
-	cont "a Cyndaquil."
+	para "was playing with"
+	line "an apricorn and"
+	para "accidentally got"
+	line "a Cyndaquil!"
 	
-	para "The Apricorn had"
+	para "The apricorn had"
 	line "a soft glow in"
-	cont "his hands with the"
-	cont "#mon inside!"
-
-	para "It was so simple."
-	line "He caught it the"
-	cont "right way."
+	para "his hands with the"
+	line "#mon inside!"
+	
+	para "He nicknamed the"
+	line "Cyndaquil Puff."
 	done
 
 
@@ -554,10 +553,10 @@ KurtsJournal2Text: ; route 35 gate?
 
 	para "We got some funny"
 	line "looks for having"
-	cont "an Apricorn, as"
+	cont "an Apricorn."
 	para "#balls were"
-	line "just becoming"
-	cont "widely used."
+	line "just getting"
+	cont "popular."
 	done
 
 
@@ -593,17 +592,12 @@ KurtsJournal3Text: ; earls academy
 	cont "his Apricorn."
 
 	para "The other kids had"
-	line "#seals for"
+	line "#seals for "
 	cont "their #balls,"
 
 	para "So we decorated"
 	line "the Apricorn with"
 	cont "vibrant paints!"
-
-	para "Each scrape and"
-	line "chip in the coat"
-	para "was a memory of"
-	line "an adventure."
 	done
 
 
@@ -643,15 +637,18 @@ KurtsJournal4Text:
 	para "So when your Dad"
 	line "went off to start"
 	para "his career with"
-	line "for Silph's #-"
+	line "the Silph's #-"
 	para "ball R&D in"
-	cont "Kanto, he left"
-	para "Cyndaquil for me"
-	line "to take care of."
+	line "Kanto, he left"
+	cont "Cyndaquil for me."
 
-	para "Cyndaquil and I"
-	line "watched him sail"
-	cont "away from."
+	para "We watched his"
+	line "ship sail beyond"
+	cont "the horizon,"
+	
+	para "growing smaller"
+	line "like a bonfire"
+	cont "fading to embers."
 	done
 
 KurtsJournal5Script:
@@ -680,8 +677,7 @@ KurtsJournal5Text: ; mahogany town
 
 	para "We'd had some big"
 	line "fights about his"
-	para "work on #-"
-	line "balls."
+	para "#ball work."
 
 	para "I probably said"
 	line "some things I"
@@ -695,7 +691,7 @@ KurtsJournal5Text: ; mahogany town
 	para "When I got home,"
 	line "I noticed some "
 	para "paint was wearing"
-	line "off the Apricorn."
+	line "off the apricorn."
 	done
 
 	
@@ -722,8 +718,8 @@ KurtsJournal6Text: ; tinder garden 2
 	text "Last I was at the"
 	line "Burned Tower was"
 	para "for the new year"
-	line "celebration befo-"
-	cont "re you were born."
+	line "festival before"
+	cont "you were born."
 
 	para "Your dad and I "
 	line "were going to"
@@ -736,33 +732,32 @@ KurtsJournal6Text: ; tinder garden 2
 	para "silence about our"
 	line "disagreements."
 
-	para "I wanted to rem-"
-	line "ind him of his "
+	para "I planned to"
+	line "remind him of his"
 	cont "first #mon,"
 	
-	para "since he was abo-"
-	line "ut to have you."
+	para "since you were"
+	line "about to be born." 
 	
 	para "While I waited,"
 	line "I looked in the "
 	para "bag and found his"
 	line "Apricorn."
 	
-	line "arly all chipped"
 	para "The paint was ne-"
+	line "arly all chipped"
 	para "off, so only he "
 	line "and I would know"
 	cont "what it once was." 
 	
-	para "When I picked it"
-	line "up it was cold"
-	para "and still."
+	para "It was cold and"
+	line "still in my hand."
 	
 	para "When I opened it,"
-	line "the inside was "
-	para "dark. I tried re-"
-	line "opening it to no"
-	cont "avail."	
+	line "it was dark. The"
+	para "#mon inside"
+	line "had fled due to"
+	cont "neglect."
 
 	para "I closed it for"
 	line "the last time,"
@@ -770,39 +765,35 @@ KurtsJournal6Text: ; tinder garden 2
 	line "of that part of"
 	cont "my life."
 
-	para "Looking back, I"
-	line "had been so rigid"
-	para "in my thinking."
+	para "Now, looking back"
+	line "I see all of my"
+	cont "mistakes."
 
-	para "I should've said,"
-	line "'I am sorry.'"
-	para "I should've said,"
-	line "'I support you.'"
-
-	para "I should've said,"
-	line "'I love you and"
-	para "accept you as"
-	line "you are.'"
+	para "You could've had"
+	line "an inheritance"
+	cont "of belonging, of"
+	cont "belief that you"
+	cont "could build a"
+	cont "future here,"
 
 	para "Instead of trying"
-	line "to make you into"
-	para "what I thought"
-	line "you should be."
-
+	line "to force you to"
+	cont "live the way I"
+	cont "wanted."
+	
 	para "I still think of"
 	line "those good days"
 	cont "whenever I see"
 	cont "an Apricorn,"
 
-	para "but now I also"
-	line "think of all the"
-	para "good days we could"
-	line "have had if I'd"
-	cont "been wiser."
+	para "and how I never"
+	line "know when my last"
+	cont "chance to make it"
+	cont "up to you was."
 
-	para "If you're reading"
-	line "this I hope you"
-	para "can forgive a"
+	para "If you read this,"
+	line "I hope you can"
+	para "forgive me, a"
 	line "stubborn old man."
 
 	para "And I hope you'll"
@@ -811,7 +802,7 @@ KurtsJournal6Text: ; tinder garden 2
 	line "did with you."
 	done
 
-DebugRadioScriptKurt: ; todo remove before submitting 
+DebugRadioScriptKurt: ; remove before submitting 
 	opentext
 	; time
 	special Special_SetDayOfWeek
@@ -969,5 +960,5 @@ endr
 	waitbutton
 	closetext
 	; debug only
-;	warp STADIUM_GROUNDS, 5, 5
+	warp EARLS_POKEMON_ACADEMY, 3, 3
 	end

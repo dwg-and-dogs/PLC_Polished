@@ -128,7 +128,7 @@ GenericTrainerBrigader13:
 
 Brigader13BeatenText:
 	text "I was beaten"
-	line "back..."
+	line "back."
 	done
 
 Brigader13SeenText:

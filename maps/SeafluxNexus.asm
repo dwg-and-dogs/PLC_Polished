@@ -68,8 +68,7 @@ NexusNomadText:
 	
 	para "But my friends"
 	line "gave up. I can't"
-	para "keep up all by"
-	line "myself..."
+	para "do it all myself."
 	
 	para "I need to head"
 	line "home soon."

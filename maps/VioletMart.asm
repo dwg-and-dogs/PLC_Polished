@@ -19,17 +19,11 @@ VioletMart_MapScriptHeader:
 VioletMartGrannyText:
 	text "The tower can see"
 	line "for miles away."
-	
-	para "Falkner uses his"
-	line "Noctowl to blow"
-	para "clouds from all"
-	line "over to rain on"
-	cont "our city."
 	done
 
 VioletMartCooltrainerMText:
 	text "Without rain the"
-	line "sprout tower was"
+	line "Sprout Tower was"
 	para "getting too"
-	line "wobbly."
+	line "unstable."
 	done

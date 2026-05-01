@@ -172,8 +172,8 @@ GenericTrainerPokemaniacDonald:
 GenericTrainerCosplayerClara:
 	generictrainer COSPLAYER, CLARA, EVENT_BEAT_COSPLAYER_CLARA, CosplayerClaraSeenText, CosplayerClaraBeatenText
 
-	text "I made this cos-"
-	line "tume myself!"
+	text "I made my costume"
+	line "myself!"
 	done
 
 BitterMerchantScript:
@@ -396,7 +396,7 @@ SupernerdTeruSeenText:
 SupernerdTeruBeatenText:
 	text "I should have"
 	line "gotten stronger"
-	cont "#mon..."
+	cont "#mon!"
 	done
 
 PokemaniacIssacSeenText:

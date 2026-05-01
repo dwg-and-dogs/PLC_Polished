@@ -51,7 +51,7 @@ MapRuinsofAlphOmanyteChamberSignpost2Script:
 
 .BronzongPuzzleComplete:
 	refreshscreen
-	paintingpic LUGIA_PUZZLE
+	paintingpic BRONZONG_PUZZLE
 	waitbutton
 	closepokepic
 	jumpthistext

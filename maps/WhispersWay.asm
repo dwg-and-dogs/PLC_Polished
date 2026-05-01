@@ -23,7 +23,6 @@ WhispersWay_MapScriptHeader:
 
 	def_object_events
 	object_event 9, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhispersKurtScript, EVENT_SKIRMISH_STARTED
-;	object_event   10, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptWW, -1
 
 
 WhispersWaySign:
@@ -53,10 +52,10 @@ KurtWWText:
 	line "beautiful!"
 	
 	para "We are getting"
-	line "close to taking"
-	cont "down Vesper."
+	line "close to stopping"
+	cont "Emperor Vesper."
 	
-	para "Amos is South of"
+	para "Amos is south of"
 	line "here. We should"
 	para "make our final"
 	line "preparations,"

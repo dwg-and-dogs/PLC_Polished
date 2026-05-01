@@ -33,9 +33,8 @@ SinjohStockroomNPC1Text:
 	done
 
 SinjohStockroomNPC2Text:
-	text "We used to have"
-	line "gather in peace"
-	cont "with Johto-"
+	text "We used to gather"
+	line "in peace."
 	
 	para "Now the Emperor"
 	line "sends soldiers?"
@@ -68,8 +67,8 @@ LeftiesIntroText:
 	line "the middle of"
 	cont "long battles."
 	
-	para "Instead of leav-"
-	line "ing for a snack,"
+	para "Instead of going"
+	line "for a snack,"
 	
 	para "I make sure to"
 	line "have Leftovers"
@@ -80,7 +79,7 @@ LeftiesIntroText:
 	done
 
 LeftiesAfterText:
-	text "Those leftovers"
+	text "Those Leftovers"
 	line "will sustain you"
 	cont "for long battles."
 	done

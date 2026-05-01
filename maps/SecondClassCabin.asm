@@ -25,7 +25,7 @@ SecondClassCabin_MapScriptHeader:
 
 	
 SecondClassCabinMatronText:
-	text "There, there..."	
+	text "There, there."	
 	line "It'll be OK."
 	
 	para "Don't be afraid."
@@ -44,7 +44,7 @@ SecondClassCabinYoungster:
 	end
 	
 YoungsterIsScaredText:
-	text "Snivel..."
+	text "Snivel."
 	
 	para "Waaa!"
 	

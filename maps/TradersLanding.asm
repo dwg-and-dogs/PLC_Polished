@@ -269,8 +269,8 @@ TL_Text8:
 	text "Wait… is that a"
 	line "Silver Wing?"
 	
-	para "Are you a friend"
-	line "of Lugia?"
+	para "You must be a"
+	line "friend of Lugia!"
 	
 	para "Meet me by the"
 	line "shrine."
@@ -290,8 +290,8 @@ TL_Text9:
 	line "Silver Wing,"
 	para "we can go to our"
 	line "time and bring"
-	cont "her here to save"
-	para "the Landing."
+	cont "her here to stop"
+	cont "the outsiders."
 	
 	para "Let's see if"
 	line "Remy can help."
@@ -309,11 +309,11 @@ TL_Scene_2_R:
 	appear TRADERS_LANDING_KURT_2
 	applymovement TRADERS_LANDING_KURT_2, TL_2_PlayerMovesUp
 	turnobject TRADERS_LANDING_BARBEAU_2, DOWN
-	showtext TL_2_Text2 ; we are on a quest from celebi from a different world, to stop expansion of steel types. We believe that this shrine will get celebi to help us out. 
+	showtext TL_2_Text2 
 	showemote EMOTE_SHOCK, TRADERS_LANDING_BARBEAU_2, 10
-	showtext TL_2_Text3 ; best chance i've got. kensey and those pokeballs are so brutal. Just promise me you will take good care of her?
+	showtext TL_2_Text3
 	showemote EMOTE_BOLT, TRADERS_LANDING_KURT_2, 10
-	showtext TL_2_Text4 ; yes we will
+	showtext TL_2_Text4
 	turnobject TRADERS_LANDING_BARBEAU_2, UP
 	applyonemovement TRADERS_LANDING_BARBEAU_2, step_up
 	turnobject PLAYER, UP
@@ -349,10 +349,10 @@ TL_2_Text2:
 	text "We come from far"
 	line "away, but share"	
 	cont "the same goal:"
-	para "stop those ships."
-	line "The future of "
-	para "Johto depends on"
-	line "blocking them!"
+	cont "stop those ships."
+	para "The future of "
+	line "Johto depends on"
+	cont "blocking them!"
 		
 	para "I believe if you"
 	line "pray here, we can"
@@ -379,7 +379,7 @@ TL_2_Text3:
 	
 	para "If anything were"
 	line "to happen to her,"
-	para "it would be..."
+	para "it would be "
 	line "devastating."
 	
 	para "We rely on her to"
@@ -387,14 +387,13 @@ TL_2_Text3:
 	cont "from the islands."
 	done
 
-
 TL_2_Text4:
 	text_high
     text " Kurt: " 
 	next
 	text_start 
 	text "Of course. You"
-	line "can trust us."
+	line "can trust me."
 	done
 	
 TL_2_Text5:
@@ -424,8 +423,7 @@ TL_KenseysOfficeSign:
 
 TL_ReportForWorkSign:
 	text "Coastal Nomads:"
-	line "Report for work"
-	cont "at lighthouse!"
+	line "Report for work!"
 	
 	para "Johto needs more"
 	line "#balls!"
@@ -448,12 +446,12 @@ TL_Brigader_Script:
 	text "Port is open only"
 	line "to workers."
 	
-	para "Go see Remy"
-	line "for assignment."
+	para "Go see Remy for"
+	line "an assignment."
 	
 	para "Wait, you don't"
 	line "look like one of"
-	cont "the nomads?"
+	cont "the Nomads?"
 	done
 
 TL_Brigader_AfterKenseyText:
@@ -745,8 +743,7 @@ TL_AmosWantedSign:
 
 	para "If you see him,"
 	line "please notify a"
-	cont "brigader"
-	cont "immediately."
+	cont "Brigader!"
 
 	para "Known alias:"
 	line "Amos."

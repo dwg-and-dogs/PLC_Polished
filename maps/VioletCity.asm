@@ -69,6 +69,7 @@ VioletCityCooltrainerM1Text:
 	para "made, but he"
 	line "started with his"
 	cont "dad's #mon."
+
 	done
 
 VioletCityCooltrainerFScript:
@@ -76,9 +77,10 @@ VioletCityCooltrainerFScript:
 	iftrue_jumptextfaceplayer .Text1
 	jumpthistextfaceplayer
 
-	text "They want Bronz-"
-	line "ong atop the tower"
-	cont "for a rain dance."
+	text "They'll put that"
+	line "Bronzong on the"
+	para "Sprout Tower to"
+	line "use Rain Dance."
 	done
 
 .Text1: 
@@ -86,7 +88,7 @@ VioletCityCooltrainerFScript:
 	line "there won't be a"
 	para "Bronzong. I've"
 	line "always admired"
-	cont "belltowers."
+	cont "bell towers."
 	done 
 
 
@@ -98,12 +100,10 @@ VioletCityGrampsText:
 	done
 
 VioletCityFisherText:
-	text "Elders lost their"
-	line "tower, but keep"
-	cont "their duty."
-	para "They hold tight"
-	line "to tradition,"
-	cont "tower or not."
+	text "Elder Li lost the"
+	line "tower, but keeps"
+	cont "his duty."
+
 	done
 
 VioletCityCooltrainerM2Text:
@@ -116,7 +116,7 @@ VioletCityCooltrainerM2Text:
 	done
 
 VioletCitySignText:
-	text "Violet City"
+	text "Violet City:"
 	line "Conserve Water!"
 	done
 
@@ -137,7 +137,7 @@ EarlsPokemonAcademySignText:
 	text "Sprout Tower"
 	line "Passageway"
 	
-	para "Manged by"
+	para "Managed by"
 	line "Elder Li"
 	done
 
@@ -746,7 +746,7 @@ GaveMaximumDVsText_VioletCity:
 	done
 
 GaveDVsText_VioletCity:
-	text "DVs are set"
+	text "DVs are set."
 	done
 
 

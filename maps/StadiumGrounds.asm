@@ -310,8 +310,8 @@ SandraThankYouText:
     text " Sandra: "
 	next
 	text_start
-	text "Oh, is the Stad-"
-	line "ium getting some"
+	text "Oh, the Stadium"
+	line "is getting some"
 	cont "renovations?"
 	
 	para "Thank you for a"
@@ -346,7 +346,7 @@ BobeshBattleText:
 	line "that would rip"
 	cont "you to shreds."
 
-	para "Whoa- where"
+	para "Whoa, where"
 	line "did that water"
 	cont "come from?"
 
@@ -400,8 +400,8 @@ GenericTrainerBrigader9:
 
 	text "General Tyrus has"
 	line "a plan to change"
-	cont "Gauldenrod tradi-"
-	cont "tions to favor"
+	para "Gauldenrod tradi-"
+	line "tions to favor"
 	cont "Emperor Vesper."
 	done
 
@@ -411,7 +411,7 @@ Brigader9SeenText:
 
 Brigader9BeatenText:
 	text "Your elder is in"
-	line "the stadium."
+	line "the Stadium."
 	para "And she's not"
 	line "coming back!"
 	done
@@ -421,15 +421,15 @@ GenericTrainerBrigader10: ; manolete, tauros
 
 	text "We find really"
 	line "strong wild"
-	cont "#mon to battle"
-	cont "trainers at the"
-	cont "stadium."
+	para "#mon to battle"
+	line "trainers at the"
+	cont "Stadium."
 	done
 
 Brigader10SeenText:
 	text "Don't mess with"
 	line "me, I got mine"
-	cont "from the stadium!"
+	cont "from the Stadium!"
 	done
 
 Brigader10BeatenText:
@@ -506,10 +506,9 @@ SandraInvitesToBoxText:
 	para "against General"
 	line "Tyrus."
 
-	para "I have much admir-"
-	line "ation for your"
-	para "bond with your"
-	line "#mon."
+	para "I admire your"
+	line "bonds with your"
+	cont "#mon."
 
 	para "Please, meet me in"
 	line "the Stadium Box"
@@ -617,7 +616,7 @@ GenericTrainerBrigader6:
 	text "Want to know a"
 	line "secret? Sometimes"
 	para "we inflict a"
-	line "fighter's #MON"
+	line "fighter's #mon"
 	para "with status before"
 	line "they have to"
 	cont "battle."

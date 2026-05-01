@@ -42,8 +42,8 @@ SinjohBrigader1Script:
 	text "Haha! Her plan,"
 	line "it worked!"
 	
-	para "We got a few His-"
-	line "uians to join us!"
+	para "Some Hisuians"
+	line "joined us!"
 	done
 
 Brigader1Text1:
@@ -76,10 +76,10 @@ Brigader2Text1:
 	done
 
 SinjohNinjaText:
-	text "Shh..."
+	text "Shh!"
 	
 	para "I'm watching the"
-	line "brigaders."
+	line "Brigaders."
 	done
 
 SinjohNPC1Text:

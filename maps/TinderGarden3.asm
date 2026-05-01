@@ -82,7 +82,7 @@ GardenEngineerText1:
 
 	
 GardenEngineerText2:
-	text "Yup, it may be the"
+	text "Yup, it's the"
 	line "last one in"
 	cont "Johto."
 	done
@@ -99,7 +99,7 @@ GardenEngineerText3:
 GardenEngineerText4:
 	text "Hoenn wants the"
 	line "them for an extr-"
-	cont "avagant shrine."
+	cont "avagant tower."
 	
 	para "I'm glad Johto"
 	line "doesn't have such"

@@ -118,7 +118,7 @@ SageNealBeatenText:
     done
 
 
-ElderLiScript: ; TODO CHECK THIS 
+ElderLiScript:
 	faceplayer
 	checkevent EVENT_BEAT_ELDER_LI
 	iftrue_jumptext ElderLiBeatenText
@@ -126,6 +126,7 @@ ElderLiScript: ; TODO CHECK THIS
 	writetext ElderLiSeenText
 	waitbutton
 	closetext
+	winlosstext ElderLiBeatenText, 0
 	; START 
 	readdifficultymode
 	ifequal DIFFICULTY_EASY, .easy
@@ -146,7 +147,7 @@ ElderLiScript: ; TODO CHECK THIS
 	writetext ElderLiAfterBattleText
 	waitbutton
 	closetext
-	applyonemovement ACADEMY_LI, step_right
+	applyonemovement ACADEMY_LI, step_right	
 	turnobject ACADEMY_LI, LEFT 
 	end
 
@@ -251,11 +252,6 @@ AcademyKurtText:
 	para "So we decorated"
 	line "the Apricorn with"
 	cont "vibrant paints!"
-
-	para "Each scrape and"
-	line "chip in the coat"
-	para "was a memory of"
-	line "an adventure."
 
 	para "If you ever want"
 	line "to hear my story"

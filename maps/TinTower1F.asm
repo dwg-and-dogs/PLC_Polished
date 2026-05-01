@@ -32,12 +32,12 @@ TinTower1FSage1Text:
 	text "The stairs appear"
 	line "only to those"
 	cont "who can see "
-	cont "through the fog."
+	cont "through the Fog."
 	
 	para "I have only seen"
 	line "Morty and two"
 	cont "others find their"
-	cont "footsteps..."
+	cont "way."
 	done
 
 TinTower1FSage2Text:

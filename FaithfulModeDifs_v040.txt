@@ -1,0 +1,31 @@
+Listed by pokedex number. 
+
+LEDYBA: Higher attack, special attack 
+
+ARIADOS: Speed increased 40 -> 80 
+
+UNOWN: Increase attack, special attack 72 -> 100 
+
+YANMEGA: Type change from Bug/Flying -> Bug/Dragon
+HA Levitate -> HA Frisk
+
+SUNFLORA: Speed increase 30 -> 55
+Type change from Grass -> Grass/Fire
+
+NINETALES: Type change Fire -> Fire/Psychic
+
+GIRAFARIG: Type change from Normal/Psychic -> Dark/Psychic
+
+FARIGIRAF: Type change from Normal/Psychic -> Dark/Psychic
+
+ELECTIVIRE: Type change from Electric -> Electric/Fighting
+
+CORSOLA: Defense, special defense 95->115
+
+OCTILLERY: Type change from Water -> Water/Fire
+
+LANTURN: Special attack, special defense 76 -> 86
+
+MISMAGIUS: Type Ghost -> Ghost/Fairy 
+
+LUXRAY: Type Electric -> Electric/Dragon

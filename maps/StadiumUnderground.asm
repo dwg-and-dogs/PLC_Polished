@@ -46,7 +46,7 @@ StadiumUndergroundBoulders:
 	
 	para "There's a sound"
 	line "of water filling"
-	cont "up a basin..."
+	cont "up a basin."
 	done
 
 StadiumUndergroundNPC1Script:
@@ -73,7 +73,7 @@ StadiumUndergroundNPC1Text:
 	
 	para "We've nearly"
 	line "finished divert-"
-	para "ing the springs."
+	cont "ing the springs."
 	
 	para "The rocks can be"
 	line "pretty rough on"

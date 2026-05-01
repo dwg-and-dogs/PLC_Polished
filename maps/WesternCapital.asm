@@ -67,7 +67,7 @@ WesternCapitalNPC1Text:
 
 	jumpthistext
 	text "We couldn't have"
-	line "built the East"
+	line "built the Tin"
 	cont "Tower without"
 	
 	para "help from the"
@@ -131,9 +131,8 @@ WesternCapitalNPC4Text_2:
 	text "Something weird"
 	line "is going on."
 	
-	para "Andrea's briga-"
-	line "ders aren't here"
-	cont "for some reason."
+	para "Andrea's Brigaders"
+	line "aren't here."
 	done
 
 WesternCapitalNPC5Text:
@@ -298,10 +297,9 @@ WesternCapitalFishingGuruScript:
 	line "sure how to get"
 	para "out of a problem,"
 	line "just toss a line"
-	para "and let the solu-"
-	line "tion come to you."
+	para "and the solution"
+	line "will come to you."
 	done
-
 
 .DoneText:
 	text "Every morning's a"

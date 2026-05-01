@@ -127,11 +127,6 @@ FalknerIntroText:
 	text "My #mon saw"
 	line "you coming."
 	
-	para "You took down"
-	line "Whitney in her"
-	para "tower in your"
-	line "crusade."
-	
 	para "Presumably, you're"
 	line "here for me."
 	
@@ -139,13 +134,17 @@ FalknerIntroText:
 	line "nearly unearthed."
 	para "Its tones will"
 	line "bring rains for"
-	cont "many weeks."
+	cont "many weeks,"
 	
-	para "Once I tore out"
-	line "the roots of this"
-	para "tower, it was"
-	line "ready to be tran-"
-	cont "sformed for me!"
+	para "pulling water out"
+	line "of the air from"
+	cont "miles away."
+	
+	para "I tore the roots"
+	line "out of this tower"
+	para "and transformed"
+	line "it into something"
+	cont "useful!"
 	done
 
 

@@ -55,7 +55,7 @@ GenericTrainerFirebreatherOtis:
 	line "See the fire-"
 	para "steel type #-"
 	line "mon that lives"
-	cont "in volcanos."
+	cont "in magma."
 	done
 
 FireBreatherOtisSeenText:
@@ -111,11 +111,12 @@ RuinManiacPetrySeenText:
 	done
 
 RuinManiacPetryBeatenText:
-	text "Some group hara-"
-	line "ssed us last"
-	para "week. We just got"
-	line "back online when"
-	cont "you got here."
+	text "We keep getting"
+	line "sabotaged."
+	
+	para "We only just got"
+	line "back up online"
+	cont "this week."
 	done
 
 RuinManiacPetryAfterBattleText:

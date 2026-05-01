@@ -8,7 +8,7 @@ VioletCatacombs_MapScriptHeader:
 
 	def_warp_events
 	warp_event 3, 27, VIOLET_CITY, 10
-	warp_event 3, 26, VIOLET_CATACOMBS, 2 ; DROP TO HERE 
+	warp_event 3, 26, VIOLET_CATACOMBS, 2 
 
 	
 	def_coord_events

@@ -55,13 +55,13 @@ CaptainsLog05Text:
 	text "Captain's Log 5"
 	line "May 15"
 	
-	para "These cursed wh-"
+	para "These cursed"
 	line "islands are tough"
 	cont "to navigate."
 	
-	para "Though we can just"
-	line "see the mountain-"
-	cont "tops ahead,"
+	para "Though we can"
+	line "see the mountains"
+	cont "ahead,"
 	
 	para "We can't get any"
 	line "closer."
@@ -96,7 +96,7 @@ CaptainsLog06Text:
 	line "exploratory crew"
 	para "into the caves"
 	line "to look for"
-	para "metals two days"
+	para "gold two days"
 	line "back with the"
 	cont "chief's wife."
 	
@@ -128,8 +128,8 @@ CaptainsLog07Text:
 	
 	para "The expedition"
 	line "has yet to return"
-	cont "from the whirling"
-	cont "islands."
+	cont "from the Vortex"
+	cont "Islands."
 	
 	para "No mail for 2"
 	line "weeks - how is"

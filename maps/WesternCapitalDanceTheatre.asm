@@ -92,8 +92,8 @@ WC_DT_NPC2_Text2:
 	text "The Emperor's"
 	line "generals have"
 	cont "taken a heavy"
-	para "hand with the Ki-"
-	line "mono Theatre."
+	para "hand with the "
+	line "Kimono Theatre."
 	
 	para "I can't defeat"
 	line "even one!"
@@ -169,6 +169,10 @@ Kimono_girl_1TamikoSeenText:
 	line "els your hairs"
 	cont "to stand at"
 	cont "attention!"
+	
+	para "Can you stay calm"
+	line "if lightning"
+	cont "strikes?"
 	done
 
 Kimono_girl_1TamikoBeatenText:

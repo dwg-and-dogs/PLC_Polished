@@ -32,9 +32,9 @@ PokemonJournalFalknerScript:
 	para "People say that"
 	line "Falkner reveres"
 	cont "his father, who"
-
-	para "was a ground-"
-	line "type specialist."
+	
+	para "had an emerald-"
+	line "colored #mon."
 	done
 
 VioletPokeCenter1FGameboyKidText:

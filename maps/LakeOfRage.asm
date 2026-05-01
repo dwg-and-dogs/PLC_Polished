@@ -1292,7 +1292,7 @@ GaveMaximumDVsText_LakeOfRage:
 	done
 
 GaveDVsText_LakeOfRage:
-	text "DVs are set"
+	text "DVs are set."
 	done
 
 

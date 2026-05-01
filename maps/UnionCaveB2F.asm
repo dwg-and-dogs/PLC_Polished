@@ -65,15 +65,15 @@ GenericTrainerFirebreatherJay:
 
 FirebreatherJaySeenText:
 	text "You again?"
-	line "We won't be"
-	para "stopped so easy"
-	line "this time!"
+	para "We won't be"
+	line "stopped so easy"
+	cont "this time!"
 	done
 
 FirebreatherJayBeatenText:
 	text "Boss Petry wants"
 	line "to reach the end"
-	cont "of this seam."
+	cont "of this tunnel."
 	done
 
 GenericTrainerFirebreatherOleg:
@@ -198,16 +198,14 @@ Ruin_maniacPetry2Script:
 RuinManiacGlynnSeenText:
 	text "You! You're the"
 	line "one that threw"
-	para "off our opera-"
-	line "tion last time!"
+	cont "us off last time!"
 	
 	para "I'm not taking"
 	line "it easy on you"
 	cont "now. If I can't"
 	
-	para "deal with tres-"
-	line "passers, I should"
-	cont "just give it up."
+	para "deal with a kid"
+	line "I should give up."
 	
 	para "So! Battle me!"
 	done

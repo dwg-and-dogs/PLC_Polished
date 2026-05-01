@@ -301,7 +301,7 @@ ShimmerGramps2Text4:
 ShimmerGramps2Text5:
 	text "Thank you for"
 	line "indulging my"
-	cont "request..."
+	cont "request."
 	
 	para "Without you, I'd"
 	line "have followed an"
@@ -351,8 +351,8 @@ ShimmerGramps2Move2:
 
 
 ShimmerText1:
-	text "The text is carv-"
-	line "ed into the wall:"
+	text "Text is carved"
+	line "into the wall:"
 	
 	para "This quest is so"
 	line "boring! The old"
@@ -361,8 +361,8 @@ ShimmerText1:
 	done
 	
 ShimmerText2:
-	text "The text is carv-"
-	line "ed into the wall:"
+	text "Text is carved"
+	line "into the wall:"
 	
 	para "The old lady has"
 	line "no idea where she"
@@ -373,15 +373,15 @@ ShimmerText2:
 	done
 	
 ShimmerText3:
-	text "The text is carv-"
-	line "ed into the wall:"
+	text "Text is carved"
+	line "into the wall:"
 	
 	para "To my family: It"
 	line "wasn't my fault."
 	para "The mudslide came"
 	line "out of nowhere."
 	para "Now, I can't find"
-	line "her... I had to"
+	line "her. I had to"
 	cont "run. Forgive me."
 	done
 	
@@ -391,11 +391,11 @@ ShimmerText4:
 	
 	para "It came so fast,"
 	line "we had no time to"
-	para "prepare... All"
+	para "prepare. All"
 	line "our supplies,"
 	para "stolen in an"
 	line "instant, by a"
-	para "flash of light?"
+	para "red shadow?"
 	line "My elder hasn't"
 	para "seen any #mon"
 	line "like it..."

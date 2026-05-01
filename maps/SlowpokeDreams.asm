@@ -53,9 +53,9 @@ SlowkingWiseText:
 	line "a higher plane."
 
 	para "I see millions of"
-	line "outcomes, and a"
+	line "outcomes. Every"
 	para "Butterfree wing"
-	line "flap feels like a"
+	line "flap is like a"
 	cont "concussion."
 	
 	para "I carry on,"

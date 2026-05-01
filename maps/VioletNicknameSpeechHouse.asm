@@ -43,15 +43,13 @@ VioletNicknameSpeechHouseTeacherScript:
 	setevent EVENT_GOT_GIGA_DRAIN
 	jumpthisopenedtext
 
-	text "If you get thir-"
-	line "sty, you can use"
-	cont "that TM."
+	text "If you're thirsty"
+	line "use that TM."
 	done
 
 VioletCity_GotGigaDrain:
-	text "If you get thir-"
-	line "sty, you can use"
-	cont "that TM."
+	text "If you're thirsty"
+	line "use that TM."
 	done
 	
 VioletCityGiveGigaDrainText:
@@ -94,10 +92,9 @@ ParasectVioletText:
 	
 	para "It waddles with a"
 	line "vacant smile."
-		
-	para "Condiment residue"
-	line "is all over its"
-	cont "mushroom."
+
+	para "Smells faintly of"
+	line "ketchup."
 	done
 	
 	

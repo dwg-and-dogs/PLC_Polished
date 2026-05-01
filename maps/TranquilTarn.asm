@@ -89,7 +89,7 @@ NoTimeTravelText_TT:
 	done
 	
 YesTimeTravelText_TT:
-	text "There's a roar!"
+	text "There's a Roar!"
 	done
 
 GenericTrainerBirdKeeperHank:
@@ -133,19 +133,19 @@ GenericTrainerRuinManiacLeland:
 	generictrainer RUIN_MANIAC, ROB, EVENT_BEAT_RUIN_MANIAC_ROB, RuinManiacLelandSeenText, RuinManiacLelandBeatenText
 
 	text "There's something"
-	line "more energized"
+	line "more energizing"
 	para "about Johto this"
-	line "trip."
+	line "year."
 	done
 
 RuinManiacLelandBeatenText:
-	text "I couldn't"
-	line "even beat you?"
+	text "I couldn't even"
+	line "beat you?"
 	done
 	
 RuinManiacLelandSeenText:
 	text "I've explored all"
-	line "Hisui's caves - "
+	line "Hisui's caves."
 	
 	para "I know a thing or"
 	line "two!"
@@ -193,9 +193,8 @@ TarnBrigaderText2:
 	text "General Andrea's"
 	line "plan worked!"
 	
-	para "Some of the His-"
-	line "uians joined our"
-	cont "brigade!"
+	para "Some Hisuians"
+	line "joined us!"
 	
 	para "And now, a great"
 	line "Lake to raise up"
@@ -212,7 +211,7 @@ TranquilTarnNPC1Script:
 	line "know what they"
 	cont "were doing?"
 	
-	para "The tarn will"
+	para "The Tarn will"
 	line "never be the"
 	cont "same again."
 	done
@@ -227,7 +226,7 @@ TarnNPC1Text:
 	done
 
 TranquilTarnNPC2Text:
-	text "Those brigaders"
+	text "Those Brigaders"
 	line "have no control"
 	cont "of their #mon!"
 	

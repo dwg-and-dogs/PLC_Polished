@@ -49,13 +49,14 @@ TapestryBatonPassScript:
 Text_BatonPassIntro:  
 	text "Ahead is the site"
 	line "where we pass our"
-	para "knowledge to fut-"
-	line "ure generations."
+	para "knowledge to the"
+	line "next generation."
 	
 	para "At least, we used"
 	line "to, before a self"
 	para "declared Emperor"
-	line "closed it up."
+	line "of Johto closed"
+	cont "them off."
 	done
 
 Text_TapestryTutorBatonPass:
@@ -79,4 +80,3 @@ Text_TapestryTutorTaught:
 	line "to pass the baton"
 	cont "to the future."
 	done
-

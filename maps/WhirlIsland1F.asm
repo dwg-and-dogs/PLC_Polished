@@ -558,7 +558,7 @@ GaveMaximumDVsText_WhirlIsland:
 	done
 
 GaveDVsText_WhirlIsland:
-	text "DVs are set"
+	text "DVs are set."
 	done
 
 

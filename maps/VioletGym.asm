@@ -23,10 +23,9 @@ VioletGymPryceText:
 	para "like a wild grove"
 	line "of fruit trees."
 
-	para "But Falkner's is"
-	line "like a walled"
-	cont "garden!"
+	para "But Violet's is a"
+	line "walled garden!"
 	
-	para "He won't even let"
-	line "me talk to him!"
+	para "Falkner won't"
+	line "speak to me!"
 	done

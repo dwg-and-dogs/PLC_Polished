@@ -36,7 +36,7 @@ SulfurStyHouse1StoneEdgeScript: ;CF THE ROUTE34GATE TEACHER
 	jumpthisopenedtext
 
 GotStoneEdgeText:
-	text "Stone Edge-not"
+	text "Stone Edge. Not"
 	line "every #mon can"
 	para "wield it. It's"
 	line "powerful, but"

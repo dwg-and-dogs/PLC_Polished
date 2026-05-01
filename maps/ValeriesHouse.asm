@@ -80,16 +80,16 @@ ValeriesHouseRedFairyBookText:
 	cont "foundation."
 
 	para "A sophisticated"
-	line "lightning protect-"
-	cont "ion system."
+	line "lightning prote-"
+	cont "ction method."
 
 	para "While such"
-	line "features are well-"
+	line "features are well"
 	para "documented in"
 	line "ancient temples"
-	cont "of Sinnoh..."
+	cont "of Sinnoh,"
 
-	para "Their presence in"
+	para "their presence in"
 	line "Johto is unique"
 	cont "to this site."
 	done

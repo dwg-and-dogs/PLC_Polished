@@ -253,7 +253,7 @@ GenericTrainerSagePing:
 
     text "Of course not!"
 	line "Divinity is not"
-	cont "in mortality, it"
+	cont "immortality, it"
 	para "is in the eternal"
 	line "relationship bet-"
 	cont "ween mortals!"
@@ -272,9 +272,9 @@ SagePingSeenText:
     done
 
 SagePingBeatenText:
-    text "Of course not!"
+   text "Of course not!"
 	line "Divinity is not"
-	cont "in mortality, it"
+	cont "immortality, it"
 	para "is in the eternal"
 	line "relationship bet-"
 	cont "ween mortals!"
@@ -295,9 +295,9 @@ GenericTrainerSageJin:
 SageJinSeenText:
     text "Vesper's ambition"
 	line "to rise above"
-	cont "nature itself - "
+	cont "nature itself:"
 	
-	para "Does it upset the"
+	para "does it upset the"
 	line "delicate balance"
 	cont "that sustains us?"
 	done
@@ -305,10 +305,9 @@ SageJinSeenText:
 SageJinBeatenText:
     text "Yes, I see!"
 	
-	para "If he climbs"
-	line "too high, he"
-	cont "may cause it to"
-	cont "crumble down!"
+	para "If he climbs too"
+	line "high, he'll cause"
+	cont "it to crumble!"
     done
 
 
@@ -433,20 +432,22 @@ SamsaraWinLossText:
 	cont "future."
 	
 	para "They know they "
-	line "will persevere"
+	line "will persevere."
 	para "with their uni-"
 	line "que talents."
 
 	para "This is what"
 	line "Vesper forgot."
 	
-	para "His ancestors"
-	line "were not revered"
-	para "for taking, but"
-	line "by giving of"
+	para "His ancestors are"
+	line "still revered,"
+	para "not because they"
+	line "took so much,"
+	para "but because they"
+	line "gave so much of"
 	cont "themselves."
-	done
 
+	done
 
 SamsaraAfterText:
 	text "There is still"
