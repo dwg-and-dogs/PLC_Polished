@@ -943,7 +943,7 @@ KRIS EQU __trainer_class__ ;
 
 	trainerclass ARTIST ; 5e
 	const REINA
-
+	const MARIO 
 
 	trainerclass AROMA_LADY ; 5f 
 	const DAHLIA

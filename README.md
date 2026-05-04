@@ -16,4 +16,3 @@ In historic Johto, you'll see the power-hungry Emperor Mejimi and his generals B
 In modern Johto, you'll confront Johto's wayward gym leaders as they wonder how to cope with a changing world. 
 
 Nothing is inevitable - what path will you choose? 
-

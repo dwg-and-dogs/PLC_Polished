@@ -6,7 +6,7 @@ You can report bugs on the discord or to me on Reddit by DM, u/dwg6m9.
 
 ### Which file do I need to play?
 
-Versions >0.0.1 is released as a pre-patched gbc file. 
+Versions >0.4.0 is released as a pre-patched gbc file. 
 
 For earlier versions, the ROM you should use for patching:
 
@@ -18,21 +18,20 @@ It's identical to the one built by the [pokecrystal](https://github.com/pret/pok
 
 ### Difficulty Selection 
 
-TODO 
+Difficulty can be changed at any time from the title screen by pressing left-B and then continuing your save file. 
 
-Normal mode trainers have no EVs no boss or rival battles have items. Normal mode difficulty is comparable to Platinum or B2W2. If you like to nuzlocke, this difficulty should be fair. 
+Easy mode trainers have no EVs, and no boss or rival battles have items. Should be a smooth experience. 
 
-In Hard Mode, experienced players who battle every trainer can expect to be a few levels below boss battles. Difficulty is still easier than the Kaizo series. Opponents have EVs, items, and some coverage moves. 
+Normal mode will have boss battles a few levels above your team. Opponents have EVs, items, and some coverage moves. The 'intended' way to play. 
 
+Expert mode will have full teams of six for boss battles and mini bosses. They have twice the EVs of normal mode. There are a few custom regional forms on enemy teams. 
 
 ### Are there any sandbox or debug features? 
 
 There are two debug features:
 
-(Beta only!) The first is the radio in Kurt's house. It will give you a few Lv100 team members, all TM, Dex entries, items, ... 
-
 (All versions) The back-left corner of the Azalea Gym has a portal to a debug room. Simply interact with the furthest-left flower tile. Starting from the top-left and working to the bottom-right: 
-* Random type pokemon gift, for monotype runs
+* Random type pokemon gift, for starting a monotype runs
 * All items
 * Lv100 super team 
 * Dev
@@ -48,20 +47,23 @@ Some first forms, especially babies, were removed to make room for more evolutio
 
 ### Is there documentation for all the {Pokémon, items, moves, etc}?
 
-The game's [data files](data/) do a fairly good job of listing things you'll want to know. Some highlights:
+The game's [documentation](screenshots/documentation/v040) does a fairly good job of listing things you'll want to know. Some highlights:
 
 * [Base stats and TM learnsets](data/pokemon/base_stats/)
+* [Evolution methods](screenshots/documentation/v040/Evolution_Methods_v040_050126)
 * [Level-up learnsets and evolution methods](data/pokemon/evos_attacks.asm)
 * [Egg moves](data/pokemon/egg_moves.asm)
 * [Move attributes](data/moves/moves.asm)
 * [TM+HM+tutor list](data/moves/tmhm_moves.asm)
 * [Wild Pokémon](data/wild/)
-
-An encounter table is posted in the discord channel for the beta. 
+* [Faithful mode changes](screenshots/documentation/v040/FaithfulMode_Changes_v040_050126)
+* [Encounters](todo)
 
 ### My Pokémon is a different color, is it shiny?
 
-There's a 1 in 1,024 chance to encounter a shiny Pokémon, and they'll be marked with a star next to their name. You're probably noticing the effect of the **IVs vary colors** option (see below).
+There's a 1 in 1,024 chance to encounter a shiny Pokémon, and they'll be marked with a star next to their name. 
+
+You may be noticing the effect of the **IVs vary colors** option (see below).
 
 There is also a 1 in 1,048,576 change to encounter a Pokémon with maximum DVs for a given hidden power. These are special Pokémon that have wildly varying color palettes. 
 
@@ -76,7 +78,7 @@ There is also a 1 in 1,048,576 change to encounter a Pokémon with maximum DVs f
 * **Nuzlocke mode:** Enables a [Nuzlocke challenge](https://bulbapedia.bulbagarden.net/wiki/Nuzlocke_Challenge); see [FEATURES.md](FEATURES.md) for detailed clauses.
 * **Difficulty:** Easy: No EVs or items on trainers; Normal: Typical romhack difficult; Expert: Full teams of 6 and higher EVs for bosses. 
 
-If you need to change these options after starting a game, press Left+B at the title screen to reset them.
+If you need to change these options after starting a game, press Left+B at the title screen and continue your save to reset them.
 
 
 ### I don't recognize this move, what is it?
@@ -89,9 +91,9 @@ There's only room for 255 moves, including Struggle. Some similar moves were com
 
 ### How do I evolve my Pokémon?
 
-Evolution and learnsets are posted in the discord channel for the beta. Notable evolutions: 
+Full list at: [Evolution methods](screenshots/documentation/v040/Evolution_Methods_v040_050126) 
 
-* Pokemon evolve into alternate forms by using the Odd Souvenir from a standard pre-evolution (e.g., Quilava to Hisuian Typhlosion). There is no method to convert a plain form to a variant form. 
+* Pokemon evolve into alternate forms by using the Odd Souvenir from a standard pre-evolution (e.g., Quilava to Hisuian Typhlosion).
 * Kadabra, Graveler, Machoke, Haunter evolve at Lv. 40 
 * Ponyta, Grimer, Rhydon evolve at Lv. 25
 * Item trade evolutions (like Seadra into Kingdra while holding a Dragon Scale) evolve while holding the item.
@@ -175,13 +177,13 @@ Amos: Leader of resistance to Mejimi.
 Vesper: Emperor of Historic Johto.
 Andrea: General and aide to Vesper, overseer of mining operation in historic Mt Mortar. Attempts to influence the player. 
 
-Tyrus: General and aide to Mejimi, overseer of Gauldenrod. 
-Nemo: General and aide to Mejimi, overseer of Trader's Landing. 
+Tyrus: General and aide to Vesper, overseer of Gauldenrod. 
+Nemo: General and aide to Vesper, overseer of Trader's Landing. 
 
 Sandra: Elder of Gauldenrod. 
 Sybil: Western Capital religious leader. 
 Remy: Elder of Trader's Landing. 
-Petra: Hisuian expedition leader. 
+Petra: Hisuian leader. 
 
 
 ### Where do I get the legendary Pokémon?
@@ -191,7 +193,7 @@ Legendary pokemon are found in the locations below:
 *Entei: Solve the last Alph puzzle and use the item obtained on the rock indent on the eastern half of Route 42. 
 *Suicune: Save the Miltank on Route 39. 
 *Raikou: Top of Lighthouse (beyond the room with Jasmine and the scientists) with Lugia or Politoed in the party. 
-*Lugia: Historic Whirl Islands (Sheltered Shores), requires waterfall
+*Lugia: Historic Whirl Islands (Sheltered Shores), requires Waterfall
 *Ho-Oh: Show Morty any of the legendary beasts, defeat him, then ascend Tin Tower. 
 *Celebi: Timeless Tapestry
 *Heatran: Clast's Cradle, bottom floor
@@ -203,15 +205,15 @@ Legendary pokemon, Spiritomb, and Rotom reset each time you complete the final g
 
 The plot is partially inspired by the time of the Meiji Restoration in Japan ca. 1860. 
 
-Outsiders have landed at the western port, demanding free access.  
+Outsiders have landed at the western port, demanding free access and threatening Johto's sovereignty.  
 Emperor Vesper worries that Johto may end up like Kanto as a colony.
 
-Emperor Vesper is influenced by General Andrea to form an empire in Johto that will be united in its resistance to the outsiders. 
-General Andrea believes that the traditional attitudes of Johto are holding it back. 
+Emperor Vesper is influenced by General Andrea to form an empire in Johto that will be united around him in its resistance to the outsiders. 
 Emperor Vesper will assume a divine role to make his status unquestionable. 
+General Andrea believes that the traditional attitudes of Johto are holding it back, and once those attitudes are left behind, Johto will be unleashed. 
 Over time, General Andrea grows more frustrated with Emperor Vesper as she sees that he is not truly reforming Johto. 
 
-The emperor's plan is opposed by the leaders of various cities in Johto. 
+The Emperor's plan is opposed by the leaders of various cities in historic Johto. 
 The resistance is organized by the character of Amos.
 
 
@@ -219,13 +221,14 @@ The resistance is organized by the character of Amos.
 
 There is a severe drought. Kurt believes the drought is due to the region going against its traditions, especially because of the influence of Silph Co. 
 
-Silph has installed several water-generating plants throughout Johto to disastrous effect, from building a water tower in Violet, to a distillation plant in Olivine, and a water project at the Lake of Rage. 
+Silph has installed several water-generating plants throughout Johto to disastrous effect, from clearing the Ilex Forest to build a taller tower in Violet, to a distillation plant in Olivine, and a water project at the Lake of Rage. 
 
-The drought is so severe that the region is essentially split in two, with the entire Eastern half being guarded by Dragon Tamers to prevent Silph from accessing the water in Mt. Silver. 
+The drought is so severe that the region is essentially split in two, with the entire Eastern half being guarded by Dragon Tamers to prevent Silph from accessing the water in the Dragon's Den and beyond. 
 
-Johto's gym leaders have given in to cynicism that prevents them from addressing the drought, except for Pryce. Pryce is going around to each of the gym leaders to convince them to help their cities. 
+Johto's gym leaders have given in to cynicism that prevents them from addressing the drought, except for Pryce. 
+Pryce is trying to convince them to help their cities. 
 
-Your Rival feels bitter about the way he has been treated in Azalea and joins Silph with his inventions. Over time, he becomes disillusioned. 
+Your rival feels bitter about the way he has been treated in Azalea and joins Silph with his inventions. Over time, he becomes disillusioned. 
 
 
 
@@ -247,9 +250,6 @@ Your Rival feels bitter about the way he has been treated in Azalea and joins Si
 
 ### I can't figure out this puzzle!
 
-
-TODO 
-
 * [Celebi, Heatran, Violet Catacombs, Cabin #4 Sudoku](screenshots/Inheritance_Publish/Features/solved_puzzles)
 
 Kimono puzzles:
@@ -258,16 +258,14 @@ Kimono puzzles:
 Whirl Islands:
 1. Talk to the sages to go back in time to the Vortex Caverns. 
 2. Solve the boulder puzzle with both boulders. 
-3. Hit the switches in this order: 5 -- 4 -- 3 -- 1. You may need to hit the reset block. 
+3. Hit the switches in this order: Reset -- 5 -- 4 -- 3 -- 1. 
 4. Surf on the tiles to reach the center switch. 
-5. Talk to the sages to go forward in time to the Whirl Islands. 
-6. Descend past Kurt to get to the Whirlpool HM. 
-7. Enter the Whirl Islands by the top-left island. 
-8. Find the stairs that allow you to progress. 
-9. Solve the overworld maze. 
-10. Solve the water currents puzzle. 
-11. Descend the waterfall, witness Kurt capture Lugia. 
-
+5. Acquire the Whirlpool HM.
+6. Enter the Whirl Islands by the top-left island. 
+7. Find the stairs that allow you to progress. 
+8. Solve the overworld maze. 
+9. Solve the water currents puzzle. 
+10. Descend the waterfall, witness Kurt capture Lugia. 
 
 
 TODO
@@ -277,5 +275,3 @@ Enigma Glacier: hint, use the overworld boulders to help you land where you need
 Ruins of Alph Puzzles: 
 	Bronzong: 
 	Lugia: 
-
-Brass Tower:

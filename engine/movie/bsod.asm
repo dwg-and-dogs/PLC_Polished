@@ -123,19 +123,19 @@ else
 endc
 
 BSODMessage:
-	db    "      #mon"
-	next1 " Legends Celebi"
+	db    "#mon Crystal"
+	next1 "Inheritance"
 	next  "       ERROR"
 	next1 "------------------"
 	next  "Please report this"
 	next1 "crash to the dev."
-	next1 "dwg, reddit UN"
+	next1 "dwg, Reddit"
 	next1 "u/dwg6m9."
 	next  "Error:@"
 
 VBABSODMessage:
-	db    "      #mon"
-	next1 " Polished Crystal"
+	db    "#mon Crystal"
+	next1 "Inheritance"
 	next  "       ERROR"
 	next1 "------------------"
 	next  "Please use a more"

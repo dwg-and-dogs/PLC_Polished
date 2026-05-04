@@ -11,15 +11,19 @@ GoldenrodMuseum1F_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-    bg_event  1,  0, BGEVENT_READ, GoldenrodMuseum1FExhibit1
-    bg_event  9,  0, BGEVENT_READ, GoldenrodMuseum1FExhibit2
+	bg_event  1,  0, BGEVENT_READ, GoldenrodMuseum1FExhibit1
+	bg_event  9,  0, BGEVENT_READ, GoldenrodMuseum1FExhibit2
 
 	def_object_events
+	object_event  3,  6,  SPRITE_ARTIST, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MarioScript, -1
 	object_event  1,  2, SPRITE_SLOWPOKETAIL, SPRITEMOVEDATA_ARCH_TREE_DOWN, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_COMMAND, end, NULL, -1
 	object_event  2,  2, SPRITE_SLOWPOKETAIL, SPRITEMOVEDATA_ARCH_TREE_UP, 0, 0, -1, -1, PAL_NPC_TREE, OBJECTTYPE_COMMAND, end, NULL, -1
-    object_event  7,  4, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum1FAttendantScript, -1
-    object_event  5,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum1FNPC1Script, -1
-    object_event 10,  3, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum1FNPC2Script, -1
+	object_event  7,  4, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum1FAttendantScript, -1
+	object_event  5,  2, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum1FNPC1Script, -1
+	object_event 10,  3, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMuseum1FNPC2Script, -1
+
+	object_const_def
+	const MUSEUM_MARIO
 
 
 GoldenrodMuseum1FAttendantScript:
@@ -75,4 +79,65 @@ GoldenrodMuseum1FExhibit2Text:
     line "Goldenrod around"
     cont "160 years ago."
     done
+
+
+MarioScript:
+	faceplayer
+	opentext
+	writetext MarioIntroText
+	waitbutton
+	checkevent EVENT_BEAT_AMOS
+	iffalse_jumpopenedtext MarioNotYetText
+;	checkevent EVENT_BEAT_MARIO
+;	iftrue_jumptext MarioTextAfter
+	writetext MarioQuestionText
+	yesorno
+	iffalse_jumpopenedtext MarioRefusedText
+	winlosstext MarioWinText, MarioLossText
+	setlasttalked MUSEUM_MARIO
+	loadtrainer ARTIST, MARIO
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext MarioTextAfter
+	special HealPartyEvenForNuzlocke
+	end
+
+MarioIntroText:	
+	text "Hi, I'm Mario!"
+	line "I drew you."
+	done
 	
+MarioTextAfter:
+	text "I'm dithering"
+	line "between staying"
+	para "here and visiting"
+	line "the Dept Store."
+	done
+
+MarioQuestionText:
+	text "Would you like to"
+	line "battle?"
+	done
+
+MarioRefusedText:
+	text "Maybe some other"
+	line "time."
+	done
+
+MarioWinText:
+	text "That was fun!"
+	done
+
+MarioLossText:
+	text "Try harder next"
+	line "time. Life is a"
+	cont "work in progress."
+	done
+
+MarioNotYetText:
+	text "Let's battle a"
+	line "bit later. I'm "
+	para "still enjoying"
+	line "the museum."
+	done

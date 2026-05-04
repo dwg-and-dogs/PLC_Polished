@@ -1,6 +1,6 @@
 Listed by pokedex number. 
 
-LEDYBA: Higher attack, special attack 
+LEDYBA: Attack, special attack 20 -> 40 
 
 ARIADOS: Speed increased 40 -> 80 
 
