@@ -939,15 +939,15 @@ endr
 	; hm 
 	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
 	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
-	loadmem wPartyMon2Moves+0, FLY
-	loadmem wPartyMon2Moves+1, SURF
-	loadmem wPartyMon2Moves+2, STRENGTH
-	loadmem wPartyMon2Moves+3, CUT
+	loadmem wPartyMon2Moves+0, X_SCISSOR
+	loadmem wPartyMon2Moves+1, ANCIENTPOWER
+	loadmem wPartyMon2Moves+2, TRICK_ROOM
+	loadmem wPartyMon2Moves+3, U_TURN
 	loadmem wPartyMon2PP+0, 15
 	loadmem wPartyMon2PP+1, 15
 	loadmem wPartyMon2PP+2, 15
 	loadmem wPartyMon2PP+3, 30
-	loadmem wPartyMon3Moves+0, FLASH
+	loadmem wPartyMon3Moves+0, SURF
 	loadmem wPartyMon3Moves+1, ROCK_SMASH
 	loadmem wPartyMon3Moves+2, HEADBUTT
 	loadmem wPartyMon3Moves+3, WATERFALL
@@ -960,5 +960,5 @@ endr
 	waitbutton
 	closetext
 	; debug only
-	warp BRASS_TOWER_4F_WARP, 4, 4
+	warp ROUTE_43, 10, 50
 	end

@@ -248,6 +248,11 @@ AzaleaTownYoungsterScript:
 	para "I've never even"
 	line "been to Slowpoke"
 	cont "Well or Route 33."
+	
+	para "I've heard of a"
+	line "secret grotto"
+	para "somewhere in the"
+	line "Ilex Forest, too!"
 	done
 
 AzaleaTownMatronScript:

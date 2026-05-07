@@ -188,6 +188,7 @@ Ruin_maniacPetry2Script:
 	reloadmapafterbattle
 	applyonemovement UNIONCAVEB2F_PETRY, step_down
 	turnobject UNIONCAVEB2F_PETRY, UP
+	setevent EVENT_BEAT_RUIN_MANIAC_GLYN
 	opentext
 	writetext RuinManiacGlynnBeatenText
 	waitbutton

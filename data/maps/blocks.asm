@@ -1152,3 +1152,11 @@ VioletCatacombs_BlockData:
 SECTION "CreditsPokemonAll_BlockData", ROMX
 CreditsPokemonAll_BlockData:
 	INCBIN "maps/CreditsPokemonAll.ablk.lz"
+	
+SECTION "SereneSpringsCavern_BlockData", ROMX
+SereneSpringsCavern_BlockData:
+	INCBIN "maps/SereneSpringsCavern.ablk.lz"
+	
+SECTION "FeraligatrLair_BlockData", ROMX
+FeraligatrLair_BlockData:
+	INCBIN "maps/FeraligatrLair.ablk.lz"

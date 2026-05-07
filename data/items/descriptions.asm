@@ -270,7 +270,7 @@ KeyItemDescriptions:
 	dw GSBallDesc
 	dw PumiceHarpDesc
 	dw ShinyCharmDesc
-	dw OvalCharmDesc
+	dw AdamantCrystalDesc
 	dw CatchCharmDesc
 	dw CelebiCallDesc
 	dw KurtsMapDesc
@@ -1325,7 +1325,7 @@ PassDesc:
 
 MachinePartDesc:
 	db   "A machine part for"
-	next "the Power Plant.@"
+	next "the Desal Plant.@"
 
 LostItemDesc:
 	db   "The # Doll lost"
@@ -1364,9 +1364,9 @@ ShinyCharmDesc:
 	db   "A charm for find-"
 	next "ing shiny #mon.@"
 
-OvalCharmDesc:
-	db   "A charm for find-"
-	next "ing Eggs.@"
+AdamantCrystalDesc:
+	db   "Refracts light in"
+	next "unusual ways.@"
 
 CatchCharmDesc:
 	db   "A charm for catch-"

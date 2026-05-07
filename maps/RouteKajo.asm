@@ -239,10 +239,13 @@ SchoolgirlFaithSeenText:
     done
 
 SchoolgirlFaithBeatenText:
-    text "The Ruins of Alph"
-    line "are just below."
-    para "You should check"
-    line "them out."
+    text "This route has so"
+	line "many tiny pockets"
+	cont "carved by water."
+	
+	para "There's got to be"
+	line "a Hidden Grotto"
+	cont "somewhere!"
     done
 
 RouteKajoPetroglyph1:

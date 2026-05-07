@@ -271,7 +271,7 @@ KeyItemIconPointers:
 	dba GSBallIcon
 	dba PumiceHarpIcon
 	dba ShinyCharmIcon
-	dba OvalCharmIcon
+	dba AdamantOrbIcon
 	dba CatchCharmIcon
 	dba CelebiCallIcon
 	dba KurtsMapIcon

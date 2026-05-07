@@ -437,7 +437,8 @@ ENDM
 	map_const SHIMMER_SADDLE, 								30, 20
 	map_const VIOLET_CATACOMBS, 							10, 15 ; TUNNEL 
 	map_const CREDITS_POKEMON_ALL, 							  5, 5
-	
+	map_const SERENE_SPRINGS_CAVERN, 						 11, 9 ; CAVE 
+	map_const FERALIGATR_LAIR, 								 13, 13 ; FOREST
 
 	newgroup                                                     ; 32
 

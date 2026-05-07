@@ -19,7 +19,7 @@ OlivineDesalB1F_MapScriptHeader:
 	object_event  5,  7, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DesalB1FScript1, -1
 	object_event  7,  7, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, DesalB1FScript2, -1
 	itemball_event 3, 0, ELECTIRIZER, 1, EVENT_GOT_ELECTRIZER
-
+	object_event  1,  7, SPRITE_CHUCK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, ChuckDesalText, EVENT_JASMINE_GYM ; NOT HERE UNTIL AFTER BEATING JASMINE 
 
 DesalB1FScript1:
 	faceplayer
@@ -73,3 +73,28 @@ DesalText2_2:
 	para "a #mon game"
 	line "at work."
 	done
+
+ChuckDesalText:
+	text "Oh, <PLAYER>."
+	line "Welcome to the"
+	cont "Desal Plant."
+	
+;	para "We still need"
+;	line "help. Turns out"
+;	para "the engineers"
+;	line "were querying the"
+;	para "OMLAS for all the"
+;	line "issues, so their"
+;	cont "skills aren't"
+;	cont "so sharp anymore."
+;	
+	para "Say, after the"
+	line "Cianwood storm,"
+	para "I saw a big cave"
+	line "open up north of"
+	cont "the city."
+	
+	para "I wonder what's"
+	line "inside it?"
+	done
+	

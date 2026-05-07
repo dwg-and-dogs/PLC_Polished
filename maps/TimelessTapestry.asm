@@ -29,6 +29,7 @@ TimelessTapestry_MapScriptHeader:
 	; other objects 
 	object_event 16, 15, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TapestryAmos, EVENT_SKIRMISH_STARTED
 	pokemon_event 17, 15, BRONZONG, -1, -1, PAL_NPC_BLUE, TT_BronzongText, EVENT_TAPESTRY_BRONZONG
+	object_event  10, 34, SPRITE_MON_ICON, SPRITEMOVEDATA_STANDING_DOWN, 0, XATU, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, AncientXatuScript, EVENT_FOUGHT_XATU_VARIANT ; TODO 
 	; interactables  
 	object_event  6,  8, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryVera, EVENT_KIMONOS_AT_TAPESTRY ; VERA
 	object_event  8, 17, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, EVENT_KIMONOS_AT_TAPESTRY ; piper
@@ -36,15 +37,17 @@ TimelessTapestry_MapScriptHeader:
 	object_event 15, 19, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryShiji, EVENT_KIMONOS_AT_TAPESTRY
 	object_event  9, 17, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TapestryMorphea, EVENT_KIMONOS_AT_TAPESTRY
 	; southern NPCs
-	object_event 11, 39, SPRITE_HISUI_FEMALE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHisuiFemale_Lorena, EVENT_BEAT_KANNA
-	object_event  7, 38, SPRITE_HISUI_FEMALE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHisuiFemale_Darla, EVENT_BEAT_KANNA
-	object_event 17, 40, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText3, EVENT_BEAT_KANNA
+	object_event 11, 39, SPRITE_HISUI_FEMALE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHisuiFemale_Lorena, EVENT_BEAT_KANNA
+	object_event  7, 38, SPRITE_HISUI_FEMALE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHisuiFemale_Darla, EVENT_BEAT_KANNA
+	object_event 17, 40, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText3, EVENT_BEAT_KANNA
+	object_event 10, 37, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText4, EVENT_BEAT_KANNA
 
 	object_const_def
 	const TAPESTRY_SAMSARA
 	const TAPESTRY_AMOS
 	const TAPESTRY_AMOS_2
 	const TAPESTRY_BRONZONG
+	const TAPESTRY_XATU
 
 TimelessTapestryFlyPoint:
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
@@ -463,6 +466,23 @@ TapestryText3:
 	line "are closed?"
 	done
 
+TapestryText4:
+	text "Just as you and I"
+	line "I have ancestors,"
+	cont "#mon do too."
+	
+	para "This place used"
+	line "to honor the"
+	cont "Ancient Power"
+	
+	para "that could be"
+	line "roused in any"
+	cont "#mon,"
+	
+	para "but now only the"
+	line "statues and caves"
+	cont "remain."
+	done
 	
 GenericTrainerHisuiFemale_Lorena:
 	generictrainer HISUI_FEMALE, LORENA, EVENT_BEAT_HISUI_FEMALE_LORENA, HisuiFemaleLorenaSeenText, HisuiFemaleLorenaBeatenText
@@ -515,4 +535,106 @@ HisuiFemaleDarlaSeenText:
 HisuiFemaleDarlaBeatenText:
 	text "Trading blows and"
 	line "#mon!"
+	done
+
+AncientXatuScript: ; todo check with no moves, xsc, ancient, tr, and ut
+;	refreshscreen
+;	pokepic XATU, OTHER_FORM
+;	waitbutton
+;	closepokepic
+
+	opentext
+	writetext WeirdXatuText
+	waitbutton
+	closetext
+
+	
+	unowntypeface
+	showtext WeirdXatuText_Unown
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	opentext
+	writetext PokemonInterestInXatuText
+	waitbutton
+;	checkmove X_SCISSOR
+;	iffalse_jumptext NoXatuMoveText
+;	writetext XatuWiggleText_XScissor ; todo figure out how to make it move 
+;	turnobject TAPESTRY_XATU, UP
+;	pause 5
+;	turnobject TAPESTRY_XATU, DOWN 
+;	waitbutton
+	checkmove ANCIENTPOWER
+	iffalse_jumptext NoXatuMoveText
+	writetext XatuWiggleText_AncientPower
+	waitbutton
+;	checkmove TRICK_ROOM
+;	iffalse_jumptext NoXatuMoveText
+;	writetext XatuWiggleText_TrickRoom
+;	waitbutton
+;	checkmove U_TURN
+;	iffalse_jumptext NoXatuMoveText
+;	writetext XatuWiggleText_UTurn
+;	waitbutton
+	cry XATU
+	pause 60
+	closetext
+	setevent EVENT_FOUGHT_XATU_VARIANT
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
+	loadwildmon XATU, OTHER_FORM, 25
+	startbattle
+	disappear TAPESTRY_XATU
+	reloadmapafterbattle
+	end
+
+WeirdXatuText:
+	text "It's a Xatu that"
+	line "appears to be"
+	cont "made of Rock."
+	
+	para "There's writing"
+	line "at its feet."
+	done
+
+WeirdXatuText_Unown:
+	text "awoken by primal"
+	line "energy" 
+	done
+
+NoXatuMoveText:
+	text "But the Xatu now"
+	line "stands still."
+	done
+
+XatuWiggleText_XScissor:
+	text "Your #mon's"
+	line "X-Scissor"
+	cont "made it move!"
+	done
+
+XatuWiggleText_AncientPower:
+	text "Your #mon's"
+	line "AncientPower"
+	cont "roused the Xatu!"
+	
+	para "The Xatu attacks!"
+	done
+
+XatuWiggleText_TrickRoom:
+	text "Your #mon's"
+	line "Trick Room"
+	cont "made it move!"
+	done
+
+XatuWiggleText_UTurn:
+	text "Your #mon's"
+	line "U-Turn"
+	cont "made it move!"
+
+	para "The Xatu attacks!"
+	done
+
+PokemonInterestInXatuText:
+	text "Your #mon are"
+	line "trying to rouse"
+	cont "the Xatu!"
 	done

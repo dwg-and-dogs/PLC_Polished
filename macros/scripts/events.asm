@@ -1353,4 +1353,10 @@ readdifficultymode: MACRO
 	db readdifficultymode_command
 ENDM
 
+	const checkmove_command
+checkmove: MACRO
+	db checkmove_command
+	db \1 ; move
+ENDM
+
 NUM_EVENT_COMMANDS EQU const_value

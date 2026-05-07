@@ -6,7 +6,7 @@ StadiumGrounds_MapScriptHeader:
 	callback MAPCALLBACK_OBJECTS, StadiumGroundsCallback_MoveNPCs
 	
 	def_warp_events
-	warp_event  4, 23, STADIUM_UNDERGROUND, 1
+	warp_event  4, 19, STADIUM_UNDERGROUND, 1
 	warp_event 26,  5, STADIUM_BOX, 1
 	warp_event 12, 39, SERENE_SPRINGS, 3
 	warp_event 11, 39, SERENE_SPRINGS, 4
@@ -30,6 +30,7 @@ StadiumGrounds_MapScriptHeader:
 	object_event 30,  10, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandraScript, EVENT_BEAT_BOBESH_STADIUM
 	pokemon_event  28, 10, TOXICROAK, -1, -1, PAL_NPC_BLUE, ToxicroakChallengeText, EVENT_TOXICROAK_STADIUM
 	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, EVENT_STADIUM_GROUNDS_SANDRA
+	object_event 4,  26, SPRITE_MON_ICON, SPRITEMOVEDATA_STANDING_DOWN, 0, MEGANIUM, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, AncientMeganiumScript, EVENT_FOUGHT_MEGANIUM_VARIANT ; TODO
 	object_event 49, 14, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
 	object_event 49, 11, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
 	object_event 42,  3, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader10, EVENT_BEAT_BOBESH_STADIUM
@@ -46,6 +47,7 @@ StadiumGrounds_MapScriptHeader:
 	const STADIUMGROUNDS_SANDRA
 	const STADIUMGROUNDS_TOXICROAK
 	const STADIUMGROUNDS_SANDRA_2
+	const STADIUMGROUNDS_MEGANIUM
 
 
 StadiumGroundsFloodCallback:
@@ -83,7 +85,7 @@ StadiumGroundsBobeshScene:
 	turnobject STADIUMGROUNDS_SANDRA, LEFT
 	sjump PickupStadiumScene
 	
-		cry BRONZONG
+		cry BRONZONG ; pretty sure this is a mistake from route 36 
 	pause 15
 	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
 	loadwildmon BRONZONG, 30
@@ -685,4 +687,76 @@ Text_ToWCSign:
 	para "Visa required"
 	line "from Chronicler"
 	cont "Vespera"
+	done
+
+AncientMeganiumScript:  
+	opentext
+	writetext WeirdMeganiumText
+	waitbutton
+	closetext
+
+;	refreshscreen
+;	pokepic MEGANIUM, OTHER_FORM
+;	waitbutton
+;	closepokepic
+
+	unowntypeface
+	showtext WeirdMeganiumText_Unown
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	opentext
+	writetext PokemonInterestInMeganiumText
+	waitbutton
+	checkmove SUNNY_DAY
+	iffalse_jumptext NoMeganiumMoveText
+	writetext MeganiumWiggleText_SunnyDay
+	waitbutton
+	closetext
+	cry MEGANIUM
+	setevent EVENT_FOUGHT_MEGANIUM_VARIANT
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
+	loadwildmon MEGANIUM, OTHER_FORM, 25
+	startbattle
+	disappear STADIUMGROUNDS_MEGANIUM
+	reloadmapafterbattle
+	end
+
+WeirdMeganiumText:
+	text "It's a Meganium,"
+	line "but it's covered"
+	cont "rock-hard cocoon."
+	
+	para "There's writing"
+	line "at its feet."
+	done
+
+WeirdMeganiumText_Unown: ; hints for the four moves , todo revise this 
+	text "Slumbers through"
+	line "cloudy night"
+	
+	para "until the sun"
+	line "shines bright"
+	
+	done
+
+NoMeganiumMoveText:
+	text "The Meganium"
+	line "stands still."
+	done
+
+MeganiumWiggleText_SunnyDay:
+	text "Your #mon's"
+	line "Sunny Day"
+	
+	para "causes the cocoon"
+	line "to molt!"
+	
+	para "The Meganium"
+	line "attacks!"
+	done
+
+PokemonInterestInMeganiumText:
+	text "Your #mon are"
+	line "trying to rouse"
+	cont "the Meganium!"
 	done

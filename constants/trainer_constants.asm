@@ -861,6 +861,7 @@ KRIS EQU __trainer_class__ ;
 	const JOSEPH
 	const NIGEL
 	const PIOTR
+	const ARI
 
 	trainerclass ROCKET_SCIENTIST ; 51
 	const ROSS

@@ -38,13 +38,21 @@ BurnedTower1FMortyScript:
 	opentext
 	writetext Morty1FIntroText
 	waitbutton
+	checkpoke LUGIA
+	iftrue .MortyReturns
+	checkpoke HEATRAN
+	iftrue .MortyReturns
 	checkpoke RAIKOU
 	iftrue .MortyReturns
 	checkpoke SUICUNE
 	iftrue .MortyReturns
+	checkpoke HO_OH
+	iftrue .MortyReturns 
+	checkpoke CELEBI
+	iftrue .MortyReturns 
 	checkpoke ENTEI
-	iftrue .MortyReturns ;
-	jumpopenedtext Text_MortyMorose ;; 
+	iftrue .MortyReturns 
+	jumpopenedtext Text_MortyMorose 
 		
 .MortyReturns:
 	setevent EVENT_BURNED_TOWER_MORTY

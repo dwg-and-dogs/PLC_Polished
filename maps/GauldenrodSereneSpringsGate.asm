@@ -27,8 +27,11 @@ GauldenrodSereneSpringsGateNPCText:
 	para "The bubbles are"
 	line "said to be steam"
 	para "coming off of a"
-	line "powerful #mon"
-	para "swimming through"
-	line "the bedrock."
+	line "powerful #mon."
+	
+	para "You'd have find"
+	line "the right spot to"
+	cont "Dig down to find"
+	cont "it, though."
 	done
 

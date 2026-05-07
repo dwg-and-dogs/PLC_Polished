@@ -597,14 +597,14 @@ NUM_APRICORNS EQU const_value - 1
 	const SUPER_ROD    ; 03
 	const COIN_CASE    ; 04
 	const ITEMFINDER   ; 05
-	const UNOWNREPORT ; 06 WAS SECRETPOTION
+	const UNOWNREPORT ; 06
 	const RAINBOW_WING ; 07
 	const SILVER_WING  ; 08
 	const CLEAR_BELL   ; 09
 	const GS_BALL      ; 0a
 	const PUMICE_HARP  ; 0b
 	const SHINY_CHARM  ; 0c
-	const OVAL_CHARM   ; 0d
+	const ADAMANT_ORB  ; 0d cynthia, dialga call 
 	const CATCH_CHARM  ; 0e
 	const CELEBI_CALL	   ; 0f
 	const KURTS_MAP	   ; 10

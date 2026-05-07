@@ -86,10 +86,8 @@ Route42_MachinePartText:
 	done
 	
 Route42_MachinePartText_2:
-	text "Best keep this"
-	line "hidden, in case"
-	cont "Chuck changes"
-	cont "his mind."
+	text "But who would"
+	line "have put it here?"
 	done
 
 PumiceHarpEntrance:

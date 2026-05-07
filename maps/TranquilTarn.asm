@@ -63,6 +63,15 @@ TranquilTarnFlyPoint:
 TranquilTarnShrineScript:
 	opentext
 	writetext AskToTimeTravelText_TT
+	waitbutton
+	checkkeyitem ADAMANT_ORB
+	iffalse .NoOrb
+	writetext AskToTimeTravelText_TT_Lair
+	yesorno
+	iftrue TarnToLairScript
+	
+.NoOrb:
+	writetext AskToTimeTravelText_TT_Present
 	yesorno
 	iffalse_jumpopenedtext NoTimeTravelText_TT
 	writetext YesTimeTravelText_TT
@@ -75,13 +84,32 @@ TranquilTarnShrineScript:
 	warp LAKE_OF_RAGE, 21, 32  
 	end
 
+TarnToLairScript:
+	writetext YesTimeTravelText_TT
+	waitbutton
+	closetext
+	warp FERALIGATR_LAIR, 10, 10  
+	end
+
 AskToTimeTravelText_TT:
 	text "It's a shrine to"
 	line "a blue and gray"
 	para "sauropod-like"
 	line "#mon."
+	done
+
+AskToTimeTravelText_TT_Present:
+	text "Make an offering"
+	line "to travel to the"
+	cont "present?"
+	done
+
+AskToTimeTravelText_TT_Lair:
+	text "The Adamant Orb"
+	line "would fit right"
+	cont "in the notch!"
 	
-	para "Give an offering?"
+	para "Place it?"
 	done
 
 NoTimeTravelText_TT:

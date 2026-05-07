@@ -7,15 +7,15 @@ KeyItemNames::
 	li "Super Rod"
 	li "Coin Case"
 	li "Itemfinder"
-	li "Unown Report" ; replaces spotion
+	li "Unown Report" 
 	li "Rainbow Wing"
 	li "Silver Wing"
-	li "Clear Bell"
+	li "Clear Bell" ; UNUSED 
 	li "GS Ball"
-	li "Pumice Harp" ; "Old Sea Map"
+	li "Pumice Harp" 
 	li "Shiny Charm"
-	li "Oval Charm"
-	li "Catch Charm"
+	li "Adamant Orb"  
+	li "Catch Charm" ; UNUSED 
 	li "Celebi Call"
 	li "Kurt's Map"
 	li "Mint Leaf"

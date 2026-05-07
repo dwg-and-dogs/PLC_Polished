@@ -88,8 +88,6 @@ MarioScript:
 	waitbutton
 	checkevent EVENT_BEAT_AMOS
 	iffalse_jumpopenedtext MarioNotYetText
-;	checkevent EVENT_BEAT_MARIO
-;	iftrue_jumptext MarioTextAfter
 	writetext MarioQuestionText
 	yesorno
 	iffalse_jumpopenedtext MarioRefusedText

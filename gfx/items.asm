@@ -327,7 +327,7 @@ ClearBellIcon::    INCBIN "gfx/items/clear_bell.2bpp.lz"
 GSBallIcon::       INCBIN "gfx/items/gs_ball.2bpp.lz"
 PumiceHarpIcon::    INCBIN "gfx/items/pumice_harp.2bpp.lz"
 ShinyCharmIcon::   INCBIN "gfx/items/shiny_charm.2bpp.lz"
-OvalCharmIcon::    INCBIN "gfx/items/oval_charm.2bpp.lz"
+AdamantOrbIcon::    INCBIN "gfx/items/adamant_orb.2bpp.lz"
 CatchCharmIcon::   INCBIN "gfx/items/catch_charm.2bpp.lz"
 CelebiCallIcon::    INCBIN "gfx/items/celebi_call.2bpp.lz"  
 

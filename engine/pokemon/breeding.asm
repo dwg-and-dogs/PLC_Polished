@@ -196,7 +196,7 @@ DoEggStep::
 .no_ability_bonus
 	ld c, 1
 .ability_ok
-	ld a, OVAL_CHARM
+	ld a, SHINY_CHARM
 	ld [wCurKeyItem], a
 	push bc
 	call CheckKeyItem

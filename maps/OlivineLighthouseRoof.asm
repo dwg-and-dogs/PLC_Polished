@@ -26,6 +26,8 @@ EusineRaikouScript:
 	iftrue_jumptext RaikouText3
 	writetext RaikouConditionText
 	waitbutton
+	checkmove RAIN_DANCE
+	iftrue RaikouAppears
 	checkpoke LUGIA
 	iftrue RaikouAppears
 	checkpoke POLITOED
@@ -39,7 +41,13 @@ EusineTextNoRain:
 	text "If only I could"
 	line "summon a storm!"
 	done
-	
+
+;RaikouAppearsRainDance:
+;	writethistext
+;		text "They can summon"
+;		line "a Rain Storm!"
+;		done
+;	waitbutton	
 RaikouAppears:
 	showemote EMOTE_SHOCK, LIGHTHOUSE_EUSINE, 30
 	writetext RaikouCOnditionText2
@@ -116,8 +124,11 @@ RaikouConditionText:
 	done
 
 RaikouCOnditionText2:
-	text "That #mon"
+	text "Your #mon"
 	line "summons a storm!"
+	
+	para "Raikou will be "
+	line "here any moment!"
 	
 	para "I can hear its"
 	line "footfalls, like"

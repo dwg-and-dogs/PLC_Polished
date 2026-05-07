@@ -78,6 +78,9 @@ ENDM
 
 	special_bg_pal map,      CIANWOOD_CAVE,               PAL_SINGLE,    WhirlIslandsPalette
 	special_bg_pal map,  	 DRAGONS_DEN,       		  PAL_SINGLE,    DragonShrinePalette
+	
+	special_bg_pal map,      SERENE_SPRINGS_CAVERN,       PAL_SINGLE,    SereneSpringsCavernPalette
+	special_bg_pal map, 	 FERALIGATR_LAIR,             PAL_SINGLE,    MurkySwampPalette
 
 	special_bg_pal overcast, (unused),                    PAL_TIMEOFDAY, OvercastBGPalette
 	db 0 ; end
@@ -1385,6 +1388,19 @@ endc
 MurkySwampPalette:
 if !DEF(MONOCHROME)
 INCLUDE "maps/MurkySwamp.pal"
+else
+rept 7
+	MONOCHROME_RGB_FOUR_NIGHT
+endr
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_WHITE
+	RGB_MONOCHROME_DARK
+	RGB_MONOCHROME_BLACK
+endc
+
+SereneSpringsCavernPalette:
+if !DEF(MONOCHROME)
+INCLUDE "maps/SereneSpringsCavern.pal"
 else
 rept 7
 	MONOCHROME_RGB_FOUR_NIGHT

@@ -10,6 +10,7 @@
 * Beat the generals on hardmode after you reach the credits once
 * Solve all five of the Kimono Cabin puzzles
 * Solve all the Ruins of Alph puzzles
+* Awaken the ancestor Xatu, Magcargo, Meganium, and Feraligatr
 * Solve the Violet Catacombs puzzle
 * Reach the bottom of the Enigma Glacier
 * Reach B2F of Union Cave 

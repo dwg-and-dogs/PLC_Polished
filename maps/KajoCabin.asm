@@ -132,7 +132,7 @@ KajoCabinDadIntroText:
     line "to the acquifer to"
 
     para "gather water, but"
-    line "she's lost."
+    line "she's still gone."
 	cont "I hope she's OK."
     done
 

@@ -551,8 +551,8 @@ KeyItemAttributes: ; ; Return 1 in wItemAttributeParamBuffer and carry if wCurKe
 	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 ; SHINY CHARM
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
-; OVAL CHARM
-	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
+; ADAMANT CRYSTAL 
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE ; just a check that you have it. 
 ; CATCH CHARM
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; CELEBI_CALL

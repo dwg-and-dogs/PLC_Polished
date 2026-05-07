@@ -269,6 +269,7 @@ ScriptCommandTable:
 	dw Script_micrtypeface              ; cf		
 	dw Script_warphide    				; d0
 	dw Script_readdifficultymode		; d1 
+	dw Script_checkmove					; d2 
 	assert_table_length NUM_EVENT_COMMANDS
 
 StartScript:
@@ -2708,3 +2709,109 @@ Script_readdifficultymode:
 	and DIFFICULTY_MASK
 	ldh [hScriptVar], a
 	ret
+
+Script_checkmove:
+	xor a
+	ldh [hScriptVar], a
+	call GetScriptByte
+	ld b, a ; b = move to find
+
+	ld a, [wPartyMon1Moves]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon1Moves + 1]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon1Moves + 2]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon1Moves + 3]
+	cp b
+	jp z, .found
+
+	ld a, [wPartyCount]
+	cp 2
+	ret c
+	ld a, [wPartyMon2Moves]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon2Moves + 1]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon2Moves + 2]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon2Moves + 3]
+	cp b
+	jp z, .found
+
+	ld a, [wPartyCount]
+	cp 3
+	ret c
+	ld a, [wPartyMon3Moves]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon3Moves + 1]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon3Moves + 2]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon3Moves + 3]
+	cp b
+	jp z, .found
+
+	ld a, [wPartyCount]
+	cp 4
+	ret c
+	ld a, [wPartyMon4Moves]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon4Moves + 1]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon4Moves + 2]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon4Moves + 3]
+	cp b
+	jp z, .found
+
+	ld a, [wPartyCount]
+	cp 5
+	ret c
+	ld a, [wPartyMon5Moves]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon5Moves + 1]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon5Moves + 2]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon5Moves + 3]
+	cp b
+	jp z, .found
+
+	ld a, [wPartyCount]
+	cp 6
+	ret c
+	ld a, [wPartyMon6Moves]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon6Moves + 1]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon6Moves + 2]
+	cp b
+	jp z, .found
+	ld a, [wPartyMon6Moves + 3]
+	cp b
+	jp z, .found
+	ret
+
+.found:
+	ld a, TRUE
+	ldh [hScriptVar], a
+	ret
+

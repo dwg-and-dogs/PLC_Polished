@@ -202,7 +202,7 @@ DayCareStep::
 	; 3: Very compatible
 	lb bc, 70, 88
 .got_odds
-	ld a, OVAL_CHARM
+	ld a, SHINY_CHARM
 	ld [wCurKeyItem], a
 	push bc
 	call CheckKeyItem

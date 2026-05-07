@@ -486,6 +486,9 @@ SECTION "Dragon's Den Scripts", ROMX ; overflow
 INCLUDE "maps/DebugRoom.asm"
 INCLUDE "maps/TinderGarden3.asm"
 INCLUDE "maps/TinderGarden2.asm"
+INCLUDE "maps/SereneSpringsCavern.asm"
+INCLUDE "maps/FeraligatrLair.asm"
+
 
 SECTION "Victory Road Scripts", ROMX
 

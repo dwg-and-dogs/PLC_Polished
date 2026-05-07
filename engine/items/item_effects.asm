@@ -298,7 +298,7 @@ KeyItemEffects:
 	dw IsntTheTimeMessage ; GS_BALL
 	dw IsntTheTimeMessage ; PUMICE_HARP
 	dw IsntTheTimeMessage ; SHINY_CHARM
-	dw IsntTheTimeMessage ; OVAL_CHARM
+	dw IsntTheTimeMessage ; ADAMANT CRYSTAL 
 	dw IsntTheTimeMessage ; CATCH_CHARM
 	dw CelebiCallKeyItem		  ; CELEBI_CALL
 	dw KurtsMapKeyItem	  ; townmap

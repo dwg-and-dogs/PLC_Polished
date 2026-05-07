@@ -39,6 +39,7 @@ OlivineLighthouse6F_MapScriptHeader:
 	pokemon_event 9, 8, TENTACRUEL, -1, -1, PAL_NPC_BLUE, TentacruelLighthouseText, EVENT_SLOWKING_DREAMS
 	object_event 18,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Lighthouse6FScientistScript, -1
 	object_event 14,  7, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Lighthouse6FScientist2Text, EVENT_BEAT_CHUCK
+	object_event 12,  15, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Lighthouse6FScientist3Text, -1	
 	itemball_event  2,  9, DUBIOUS_DISC, 1, EVENT_DUBIOUS_DISC
 
 	object_const_def
@@ -415,3 +416,15 @@ LighthousePoisonText:
 	line "pool has a foul"
 	cont "odor. Stay clear!"
 	done
+
+Lighthouse6FScientist3Text:
+	text "I like to go up"
+	line "one more floor to"
+	cont "the roof."
+	
+	para "I need the fresh"
+	line "air after being"
+	cont "hard at work."
+	
+	done
+	

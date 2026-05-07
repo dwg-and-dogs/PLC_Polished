@@ -40,7 +40,6 @@ RuinsOfAlphOutside_MapScriptHeader:
 	; SIGHTSEERS
 	object_event 16, 34, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFPilar, -1;
 	object_event 17, 34, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFLenie, -1;
-
 	smashrock_event  9, 34
 
 

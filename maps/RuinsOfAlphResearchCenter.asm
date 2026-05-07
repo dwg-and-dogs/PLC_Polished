@@ -16,11 +16,14 @@ RuinsOfAlphResearchCenter_MapScriptHeader:
 
 
 	def_object_events
+	object_event  1,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist4Script, -1
 	object_event  4,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphResearchCenterScientist1Text, -1
 	object_event  5,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphResearchCenterScientist2Text, -1
 	object_event  2,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphResearchCenterScientist3Script, -1
 
-
+	object_const_def
+	const CENTER_SCIENTIST_4
+	
 RuinsOfAlphResearchCenterScientist3Script:
 	faceplayer
 	opentext
@@ -101,4 +104,65 @@ ThatsABrandNewHarpText:
 	line "some connection"
 	cont "to Mt. Mortar."
 	done
+
+RuinsOfAlphResearchCenterScientist4Script:
+	faceplayer
+	opentext
+	writetext Scientist4IntroText
+	waitbutton
+	checkevent EVENT_BEAT_SCIENTIST_ARI
+	iftrue_jumpopenedtext Scientist4BeatenText
+	writetext Scientist4QuestionText
+	yesorno
+	iffalse_jumpopenedtext Scientist4RefusedText
+	winlosstext Scientist4WinText, Scientist4LossText
+	setlasttalked CENTER_SCIENTIST_4
+	loadtrainer SCIENTIST, ARI
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext Scientist4BeatenText
+	special HealPartyEvenForNuzlocke
+	end
+
+Scientist4IntroText:	
+	text "I found some Odd"
+	line "Souvenirs in the"
+	para "Ruins. My #mon"
+	line "have been acting"
+	para "so agitated ever"
+	line "since then."
+	done
 	
+Scientist4BeatenText:
+	text "Why won't they"
+	line "settle down?"
+	
+	para "I need to store"
+	line "my Odd Souvenirs"
+	cont "somewhere else."
+	done
+
+Scientist4QuestionText:
+	text "Would you battle"
+	line "them to tire them"
+	cont "out?"
+	done
+
+Scientist4RefusedText:
+	text "Maybe some other"
+	line "time."
+	done
+
+Scientist4WinText:
+	text "You're a new"
+	line "variant!"
+	done
+
+Scientist4LossText:
+	text "Well, they're"
+	line "still rearing to"
+	para "go. Come back if"
+	line "you want to go"
+	cont "another round."
+	done
