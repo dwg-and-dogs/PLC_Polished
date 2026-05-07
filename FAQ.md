@@ -31,10 +31,10 @@ Expert mode will have full teams of six for boss battles and mini bosses. They h
 There are two debug features:
 
 (All versions) The back-left corner of the Azalea Gym has a portal to a debug room. Simply interact with the furthest-left flower tile. Starting from the top-left and working to the bottom-right: 
-* Random type pokemon gift, for starting a monotype runs
+* Random type pokemon gift for starting a monotype runs
 * All items
 * Lv100 super team 
-* Dev
+* DWG battle 
 * Random any pokemon
 * Give all pokemon, no forms 
 * Give all pokemon, variant forms 
@@ -76,9 +76,9 @@ There is also a 1 in 1,048,576 change to encounter a Pokémon with maximum DVs f
 * **Perfect stats:** All Pokémon stats, for you and the opponent, are calculated as if they had maximum IVs. The actual IVs are still random, so color variation and Hidden Power type are not affected.
 * **Traded Pokémon treat you as OT:** All differences in traded Pokémon go away: they always obey you, don't gain boosted experience, and can be nicknamed.
 * **Nuzlocke mode:** Enables a [Nuzlocke challenge](https://bulbapedia.bulbagarden.net/wiki/Nuzlocke_Challenge); see [FEATURES.md](FEATURES.md) for detailed clauses.
-* **Difficulty:** Easy: No EVs or items on trainers; Normal: Typical romhack difficult; Expert: Full teams of 6 and higher EVs for bosses. 
+* **Difficulty:** Easy: No EVs or items on trainers; Normal: Typical romhack difficult; Expert: Full teams of 6 and higher EVs for bosses and special trainers. 
 
-If you need to change these options after starting a game, press Left+B at the title screen and continue your save to reset them.
+If you need to change these options after starting a game, press Left+B at the title screen and continue your save file.
 
 
 ### I don't recognize this move, what is it?
@@ -93,6 +93,7 @@ There's only room for 255 moves, including Struggle. Some similar moves were com
 
 Full list at: [Evolution methods](screenshots/documentation/v040/Evolution_Methods_v040_050126) 
 
+Some notable: 
 * Pokemon evolve into alternate forms by using the Odd Souvenir from a standard pre-evolution (e.g., Quilava to Hisuian Typhlosion).
 * Kadabra, Graveler, Machoke, Haunter evolve at Lv. 40 
 * Ponyta, Grimer, Rhydon evolve at Lv. 25
@@ -159,6 +160,16 @@ If "Yes" chosen:
 	<Spoiler 2/2>: 60
 
 
+
+
+### How do I get to Eastern Johto?
+
+Eastern Johto is not available. 
+
+
+
+
+
 ### Spoilers below!
 
 
@@ -172,11 +183,10 @@ If "Yes" chosen:
 ### Wait, who is this character?
 
 Silas: Elder of Anarres Town. 
-Amos: Leader of resistance to Mejimi. 
+Amos: Leader of resistance to Vesper. 
 
 Vesper: Emperor of Historic Johto.
 Andrea: General and aide to Vesper, overseer of mining operation in historic Mt Mortar. Attempts to influence the player. 
-
 Tyrus: General and aide to Vesper, overseer of Gauldenrod. 
 Nemo: General and aide to Vesper, overseer of Trader's Landing. 
 
@@ -186,32 +196,36 @@ Remy: Elder of Trader's Landing.
 Petra: Hisuian leader. 
 
 
-### Where do I get the legendary Pokémon?
+### Where do I get the legendary Pokémon or the custom variants?
 
 Legendary pokemon are found in the locations below: 
 
+*Xatu: At the south Timeless Tapestry, have a pokemon knowing Ancientpower in your party, then interact with it. 
+*Magcargo: Surf to the cliff wall on the Serene Springs with a notch. Have a pokemon knowing Dig in your party, then interact with the notch. 
+*Meganium: At the western side of the Stadium Grounds, there is a small island. Have a pokemon knowing Sunny Day in your party, the interact with it. 
+*Feraligatr: Get the Adamant Orb from Cynthia by having over 100 pokedex entries. Then use the Adamant Orb at the notched cliff wall in the southern Tranquil Tarn. Have a pokemon knowing Splash in your party - you can fish up a Magikarp on this map. 
 *Entei: Solve the last Alph puzzle and use the item obtained on the rock indent on the eastern half of Route 42. 
 *Suicune: Save the Miltank on Route 39. 
 *Raikou: Top of Lighthouse (beyond the room with Jasmine and the scientists) with Lugia or Politoed in the party. 
 *Lugia: Historic Whirl Islands (Sheltered Shores), requires Waterfall
 *Ho-Oh: Show Morty any of the legendary beasts, defeat him, then ascend Tin Tower. 
+*Heatran: Clast's Cradle
 *Celebi: Timeless Tapestry
-*Heatran: Clast's Cradle, bottom floor
 
-Legendary pokemon, Spiritomb, and Rotom reset each time you complete the final gauntlet and see your team portraits. 
+Legendary pokemon, Spiritomb, and Rotom reset each time you complete the final gauntlet and see your team portraits. You can evolve the pre-evolutions of the variant forms with the odd souvenir. 
 
 
 ### Wait, what's going on in historic Johto?
 
-The plot is partially inspired by the time of the Meiji Restoration in Japan ca. 1860. 
+The plot is partially inspired by the time of the Meiji Restoration in Japan ca. 1860. (Which happens to coincide with the timing of the events at the Burned Tower!)
 
 Outsiders have landed at the western port, demanding free access and threatening Johto's sovereignty.  
 Emperor Vesper worries that Johto may end up like Kanto as a colony.
 
 Emperor Vesper is influenced by General Andrea to form an empire in Johto that will be united around him in its resistance to the outsiders. 
 Emperor Vesper will assume a divine role to make his status unquestionable. 
-General Andrea believes that the traditional attitudes of Johto are holding it back, and once those attitudes are left behind, Johto will be unleashed. 
-Over time, General Andrea grows more frustrated with Emperor Vesper as she sees that he is not truly reforming Johto. 
+General Andrea believes that the traditional attitudes of Johto are holding it back, and once those attitudes are left behind by Vesper's reforms, Johto will be unleashed. 
+Over time, General Andrea grows more frustrated with Emperor Vesper as she sees that he is not truly reforming Johto.
 
 The Emperor's plan is opposed by the leaders of various cities in historic Johto. 
 The resistance is organized by the character of Amos.
@@ -219,7 +233,7 @@ The resistance is organized by the character of Amos.
 
 ### Wait, what's going on in modern Johto?
 
-There is a severe drought. Kurt believes the drought is due to the region going against its traditions, especially because of the influence of Silph Co. 
+There is a severe drought. Kurt believes the drought is due to the region going against its traditions, especially because of the influence of Silph. 
 
 Silph has installed several water-generating plants throughout Johto to disastrous effect, from clearing the Ilex Forest to build a taller tower in Violet, to a distillation plant in Olivine, and a water project at the Lake of Rage. 
 

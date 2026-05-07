@@ -1,6 +1,6 @@
 # Completionist Checklist
 
-'''wip'''
+Last update: v0.4.2 05/07/26
 
 * Complete the Pokedex
 * Collect all 14 badges
@@ -19,3 +19,4 @@
 * Return the wayward Nomad in the Vortex Caverns 
 * Complete the Master Ball trade quest
 * Find all four hidden grottoes
+* Defeat Cynthia (Mahogany Gate), Artist Mario (Goldenrod Museum), dwg (Debug Room)

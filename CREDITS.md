@@ -30,7 +30,7 @@ Front Sprites
 * ChanseyMedicine animated from Pokets3: HTyphlosion, Sneasler, 
 * Egg3ggEgg: H__Goodra
 * Accad501: Immortal Noctowl, Ancestor Feraligatr
-* Prism: Cranidos , Croagunk, Drifloon, Duskull, Gible, 
+* Prism: Cranidos , Croagunk, Drifloon, Duskull, Gible
 
 Back Sprites if different from above, using Deviantart handles:
 
@@ -56,11 +56,10 @@ Back Sprites if different from above, using Deviantart handles:
 
 ## Trainer Sprites
 
-* Pokets3: Emperor Mejimi and Generals Adrinna, Bobesh, and Kensey
+* Pokets3 ("Mario"): Emperor Vesper and Generals Andrea, Tyrus, and Nemo, Hisui Female, Falkner, Kurt-Final, Whitney, Chuck, Player front and back, Remy, Silas, Amos, Nomad_M, Nomad_F, Petra, Rival
 * DWG: Brigader (adapted from beta Falkner)
-* Bronzeswagger: Samsara 
+* Bronzeswagger: Sybil 
 * Justinnuggets: Scavenger (diver)  
-* Justin8964: Nomad_F (Phoebe) and Hollis
 * Ferropexola: Ninja
 
 ## Beta Testers
@@ -77,6 +76,20 @@ Back Sprites if different from above, using Deviantart handles:
 * gh0sti
 * Aaron151
 * nepettable 
+* bigafdeddy
+* Ingles92
+* dinorider42
+* BigMoses
+* _flexoo1502
+* nintendoswitchpim
+* Zorojr
+* beastiepaws
+* spiritsulwyn
+* gh0sti
+* StreetItalianPie
+* juneberry
+* If I left you out, let me know!  
+
 
 ## Other Art
 
