@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt	
+;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
@@ -159,7 +159,7 @@ MomRunningShoesText:
 	text "By the way, do"
 	line "you know how to"
 
-	para "use your the"
+	para "use your"
 	line "Running Shoes?"
 	done
 
@@ -960,5 +960,5 @@ endr
 	waitbutton
 	closetext
 	; debug only
-	warp UNION_CAVE_B2F, 10, 30
+	warp CIANWOOD_CITY, 20, 20
 	end

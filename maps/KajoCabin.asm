@@ -45,7 +45,7 @@ KajoCabinHikerText:
 	line "Magnet tracks."
 	
 	para "Crazy to think: "
-	para "the rockslides"
+	para "the rock slides"
 	line "hundreds of years"
 	cont "ago determine"
 	cont "what's accessible"

@@ -2822,13 +2822,13 @@ Meganium_AncestorEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, PETAL_DANCE ; evolution move
 	db 22, DISARM_VOICE ; Magical Leaf → new move
-	db 34, ANCIENTPOWER ; Sweet Scent → HGSS tutor move
-	db 36, LEECH_LIFE
-	db 38, BODY_SLAM
-	db 40, SAFEGUARD
-	db 44, PLAY_ROUGH ; Aromatherapy → new move
+	db 30, ANCIENTPOWER ; Sweet Scent → HGSS tutor move
+	db 33, BUG_BUZZ
+	db 37, DRAIN_KISS
+	db 40, PLAY_ROUGH
+	db 44, SAFEGUARD
 	db 48, MEGAHORN
-	db 52, MOONBLAST ; Aromatherapy → similar move
+	db 52, MOONBLAST 
 	db 56, OUTRAGE ; HGSS tutor move
 	db 60, HEAL_BELL ; new move
 	db 0 ; no more level-up moves
@@ -5274,7 +5274,7 @@ ZoroarkEvosAttacks: ; fought at Lv 30
 	db 36, SHADOW_BALL
 	db 44, NASTY_PLOT
 	db 48, EXTRASENSORY
-	db 55, EXTRASENSORY
+	db 55, DARK_PULSE
 	db 0 ; no more level-up moves
 
 DratiniEvosAttacks:

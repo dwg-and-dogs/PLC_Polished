@@ -199,7 +199,7 @@ KurtAZScript:
 	text "Follow this path"
 	line "when you have"
 	para "talked to the"
-	line "Charcoal family."
+	line "charcoal family."
 	done
 
 AzaleaTownPokefanFScript:

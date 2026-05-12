@@ -29,7 +29,7 @@ TimelessTapestry_MapScriptHeader:
 	; other objects 
 	object_event 16, 15, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TapestryAmos, EVENT_SKIRMISH_STARTED
 	pokemon_event 17, 15, BRONZONG, -1, -1, PAL_NPC_BLUE, TT_BronzongText, EVENT_TAPESTRY_BRONZONG
-	object_event  10, 34, SPRITE_MON_ICON, SPRITEMOVEDATA_STANDING_DOWN, 0, XATU, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, AncientXatuScript, EVENT_FOUGHT_XATU_VARIANT ; TODO 
+	object_event  9, 34, SPRITE_MON_ICON, SPRITEMOVEDATA_STANDING_DOWN, 0, XATU, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, AncientXatuScript, EVENT_FOUGHT_XATU_VARIANT ; TODO 
 	; interactables  
 	object_event  6,  8, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryVera, EVENT_KIMONOS_AT_TAPESTRY ; VERA
 	object_event  8, 17, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, EVENT_KIMONOS_AT_TAPESTRY ; piper
@@ -40,7 +40,7 @@ TimelessTapestry_MapScriptHeader:
 	object_event 11, 39, SPRITE_HISUI_FEMALE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHisuiFemale_Lorena, EVENT_BEAT_KANNA
 	object_event  7, 38, SPRITE_HISUI_FEMALE, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerHisuiFemale_Darla, EVENT_BEAT_KANNA
 	object_event 17, 40, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText3, EVENT_BEAT_KANNA
-	object_event 10, 37, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryText4, EVENT_BEAT_KANNA
+	object_event 10, 37, SPRITE_SAGE, 		SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, TapestryText4, -1
 
 	object_const_def
 	const TAPESTRY_SAMSARA
@@ -467,6 +467,12 @@ TapestryText3:
 	done
 
 TapestryText4:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_KANNA
+	iftrue_jumptext TapestryText4_BeatKannaText
+	jumpthistext
+	
 	text "Just as you and I"
 	line "I have ancestors,"
 	cont "#mon do too."
@@ -482,6 +488,20 @@ TapestryText4:
 	para "but now only the"
 	line "statues and caves"
 	cont "remain."
+	done
+
+TapestryText4_BeatKannaText:
+	text "There's a lot more"
+	line "to these temples."
+	
+	para "Most of them are"
+	line "accessed through"
+	cont "the Western"
+	cont "Capital."
+	
+	para "I wonder if the"
+	line "Empreror still"
+	cont "has it blocked?"
 	done
 	
 GenericTrainerHisuiFemale_Lorena:

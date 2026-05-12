@@ -488,13 +488,21 @@ GauldenrodBobeshScene:
     end
 
 BrigaderText1:
-    text "Brigader: Where"
-    line "is he?"
+	text_high
+    text " Brigader: "
+	next
+	text_start
+
+    text "Where is Amos?"
     done
 
 CindyText1:
-    text "Matron: I told"
-	line "you, I don't know!"
+	text_high
+    text " Brigader: "
+	next
+	text_start
+    text "I told you!"
+	line "I don't know!"
     done
 
 BobeshText1:

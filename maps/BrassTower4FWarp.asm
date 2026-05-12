@@ -78,7 +78,7 @@ BrassTowerAdrinna:
 	writetext AdrinnaTakesOverText
 	waitbutton
 	closetext
-;	setevent EVENT_BEAT_ADRINNA_TOWER
+	setevent EVENT_BEAT_ADRINNA_TOWER
 	end
 
 AdrinnaSeenText0:

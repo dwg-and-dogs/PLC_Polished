@@ -80,12 +80,14 @@ TinTowerRoofSilverIntroText:
 	line "couldn't keep from"
 	para "repeating the"
 	line "mistakes of my"
-	cont "parents."
+	cont "parents with my"
+	cont "own #mon."
 	
-	para "Until one day, I"
+	para "But one day, I"
 	line "saw the pain in"
 	para "their bloodshot"
-	line "eyes."
+	line "eyes while I"
+	cont "trained them."
 	
 	para "I wept. My tears"
 	line "washed me clean."

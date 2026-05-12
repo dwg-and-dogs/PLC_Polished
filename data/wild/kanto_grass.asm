@@ -373,24 +373,24 @@
 	wildmon 39, SUNFLORA
 	wildmon 39, RUFFLET
 	wildmon 35, STARAVIA
-	wildmon 37, PONYTA, GALARIAN_FORM
-	wildmon 37, FERALIGATR, OTHER_FORM
+	wildmon 37, PONYTA
+	wildmon 37, FERALIGATR
 ;	; day
 	wildmon 38, KIRLIA
 	wildmon 38, GOOMY
 	wildmon 39, SUNFLORA
 	wildmon 39, RUFFLET
 	wildmon 35, STARAVIA
-	wildmon 37, PONYTA, GALARIAN_FORM
-	wildmon 37, FERALIGATR, OTHER_FORM
+	wildmon 37, PONYTA
+	wildmon 37, FERALIGATR
 ;	; nite
 	wildmon 38, KIRLIA
 	wildmon 38, GOOMY
 	wildmon 39, SUNFLORA
 	wildmon 39, RUFFLET
 	wildmon 36, STARAVIA
-	wildmon 37, PONYTA, GALARIAN_FORM
-	wildmon 37, FERALIGATR, OTHER_FORM
+	wildmon 37, PONYTA
+	wildmon 37, FERALIGATR
 	end_grass_wildmons
 
 	def_grass_wildmons GROTTOED_GLACIER_1F
@@ -542,7 +542,7 @@
 	wildmon 41, PARASECT
 	wildmon 42, LUXIO
 	wildmon 43, SNEASEL, HISUIAN_FORM
-	wildmon 38, MEGANIUM, OTHER_FORM
+	wildmon 38, ZORUA
 ;	; day
 	wildmon 39, STARAVIA
 	wildmon 39, LUXIO
@@ -550,7 +550,7 @@
 	wildmon 41, PARASECT
 	wildmon 42, LUXIO
 	wildmon 43, SNEASEL, HISUIAN_FORM
-	wildmon 38, MEGANIUM, OTHER_FORM
+	wildmon 38, RIOLU
 ;	; nite
 	wildmon 39, STARAVIA
 	wildmon 39, LUXIO
@@ -558,7 +558,7 @@
 	wildmon 41, PARASECT
 	wildmon 42, LUXIO
 	wildmon 43, SNEASEL, HISUIAN_FORM
-	wildmon 38, MEGANIUM, OTHER_FORM
+	wildmon 38, ZORUA
 	end_grass_wildmons
 
 	def_grass_wildmons EMPIRES_EXTENT
@@ -682,7 +682,7 @@
 	wildmon 44, RHYDON
 	wildmon 45, PRIMEAPE
 	wildmon 35, MACHOKE
-	wildmon 42, MAGCARGO, OTHER_FORM
+	wildmon 42, MAGCARGO
 ;	; day
 	wildmon 43, DONPHAN
 	wildmon 42, MAGCARGO
@@ -690,7 +690,7 @@
 	wildmon 44, RHYDON
 	wildmon 45, PRIMEAPE
 	wildmon 35, MACHOKE
-	wildmon 42, MAGCARGO, OTHER_FORM
+	wildmon 42, MAGCARGO
 ;	; nite
 	wildmon 43, DONPHAN
 	wildmon 42, MAGCARGO
@@ -698,7 +698,7 @@
 	wildmon 44, RHYDON
 	wildmon 45, PRIMEAPE
 	wildmon 35, MACHOKE
-	wildmon 42, MAGCARGO, OTHER_FORM
+	wildmon 42, MAGCARGO
 	end_grass_wildmons
 
 	def_grass_wildmons TIMELESS_TAPESTRY

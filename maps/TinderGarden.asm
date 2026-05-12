@@ -184,7 +184,7 @@ KurtText_Intro:
     text " Kurt: "
 	next
 	text_start 
-	text "Kurt: Surprise!"
+	text "Surprise!"
 	line "Oak is here."
 	
 	para "Pryce couldn't"

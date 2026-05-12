@@ -129,9 +129,8 @@ CooltrainerFBethScript:
 	end
 
 CooltrainerFBethSeenText:
-	text "I didn't hear"
-	line "that you were"
-	cont "coming!"
+	text "How did you get"
+	line "past the boulder?"
 	done
 
 CooltrainerFBethBeatenText:

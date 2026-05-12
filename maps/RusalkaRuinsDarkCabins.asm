@@ -38,7 +38,7 @@ RusalkaRuinsDarkCabins_MapScriptHeader:
 
 
 	def_object_events
-	tmhmball_event 6, 10, TM_WILL_O_WISP, EVENT_RUSALKA_WILLOWISP
+	tmhmball_event 5, 10, TM_WILL_O_WISP, EVENT_RUSALKA_WILLOWISP
 	pokemon_event  4,  2, FROSLASS, -1, -1, PAL_NPC_BLUE, FroslassText, -1
 	pokemon_event  5,  8, FROSLASS, -1, -1, PAL_NPC_BLUE, FroslassText, -1
 	

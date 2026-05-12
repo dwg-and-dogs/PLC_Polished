@@ -38,7 +38,7 @@ OlivineDesal1FScene:
 	waitbutton
 	closetext
 	pause 30
-	turnobject DESAL_CHUCK, RIGHT
+	turnobject DESAL_CHUCK, DOWN
 	opentext
 	writetext OlivineDesal_Text_4
 	waitbutton

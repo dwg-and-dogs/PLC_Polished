@@ -14,3 +14,17 @@
 *
 *
 *  
+
+
+Center: Title screen / 10 images
+1. Initial Options
+2. Starters
+3. Crafting balls
+4. Color change
+5. Female trainer card with historic 
+6. Debug Room
+7. Chuck plot
+8. Andrea plot
+9. Unown Puzzle with Celebi
+10. Other misc. features: No teach HM, Rare Candy, 
+11. Annihilape

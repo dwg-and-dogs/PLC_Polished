@@ -688,6 +688,7 @@ IlexForestCelebiEventScript:
 	disappear ILEX_CELEBI
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
+	special HealParty
 	waitsfx
 	warp HOLLYS_HOLT, 10, 26
 	end

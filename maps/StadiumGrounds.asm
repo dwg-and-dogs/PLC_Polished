@@ -714,7 +714,6 @@ AncientMeganiumScript:
 	closetext
 	cry MEGANIUM
 	setevent EVENT_FOUGHT_MEGANIUM_VARIANT
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
 	loadwildmon MEGANIUM, OTHER_FORM, 25
 	startbattle
 	disappear STADIUMGROUNDS_MEGANIUM
@@ -730,7 +729,7 @@ WeirdMeganiumText:
 	line "at its feet."
 	done
 
-WeirdMeganiumText_Unown: ; hints for the four moves , todo revise this 
+WeirdMeganiumText_Unown:
 	text "Slumbers through"
 	line "cloudy night"
 	

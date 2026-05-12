@@ -275,12 +275,18 @@ CynthiaExplainText:
 
     text "Fossils of the"
 	line "Feraligatr"
-	line "ancestor must be"
+	cont "ancestor must be"
 	para "buried at the"
 	line "Lake. They may be"
 	para "buried under a"
 	line "few hundred years"
 	cont "of silt, though."
+	
+	para "Finding it would"
+	line "make quite the"
+	para "splash in the"
+	line "archaeology"
+	cont "community!"
     done
 
 CynthiaNoRoomText:

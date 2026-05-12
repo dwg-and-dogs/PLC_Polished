@@ -121,7 +121,7 @@ Text_Route33TutorNoSilverLeaf:
 	line "a Silver Leaf."
 	
 	para "Check the Ilex"
-	line "Fores or the"
+	line "Forest or the"
 	cont "Azalea Mart."
 	done
 

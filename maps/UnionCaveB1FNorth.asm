@@ -14,7 +14,7 @@ UnionCaveB1FNorth_MapScriptHeader:
 	bg_event  8, 22, BGEVENT_ITEM + REVIVE, EVENT_UNION_CAVE_B1F_NORTH_HIDDEN_REVIVE
 
 	def_object_events
-	object_event  4,  3, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Ruin_maniacPetryScript, EVENT_BEAT_FALKNER
+	object_event  4,  3, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Ruin_maniacPetryScript, EVENT_BEAT_RUIN_MANIAC_PETRY
 	object_event  9, 22, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHikerLeonard, EVENT_BEAT_FALKNER
 	object_event 11, 14, SPRITE_FIREBREATHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerFirebreatherOtis, EVENT_BEAT_FALKNER
 	tmhmball_event  5, 22, TM_SWIFT, EVENT_UNION_CAVE_B1F_NORTH_TM_SWIFT
@@ -135,14 +135,16 @@ RuinManiacPetryAfterBattleText:
 	done
 
 RampardosText:
-	text "Wraaar!"
+	text "Cranidos:"
+	line "Wraaar!"
 	done
 	
 BastiodonText:
+
 	text "Munch..."
 	line "Munch..."
 	
-	para "It appears to"
-	line "be eating rocks."
+	para "Shieldon is"
+	line "eating rocks."
 	done
 	

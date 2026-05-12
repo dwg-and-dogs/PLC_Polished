@@ -1,4 +1,4 @@
-CianwoodGym_MapScriptHeader:
+CianwoodGym_MapScriptHeader: 
 	def_scene_scripts
 
 	def_callbacks
@@ -19,13 +19,14 @@ CianwoodGym_MapScriptHeader:
 	object_event  3, 7, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltLao, -1
 	object_event  6, 3, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltNob, -1
 	object_event  8, 10, SPRITE_BLACK_BELT, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerBlackbeltLung, -1
+	strengthboulder_event  1, 4
 	strengthboulder_event  5, 2
 	strengthboulder_event  6, 2
 	strengthboulder_event  4, 2
 	strengthboulder_event  7, 7
 	itemball_event 8, 12, CHOICE_BAND, 1, EVENT_GOT_CHOICE_BAND
 	object_event  5,  13, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodGymResetScript, -1
-
+	object_event  6,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, MANKEY, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CianwoodGymResetMankey, -1
 	
 
 
@@ -129,7 +130,8 @@ CianwoodGymResetScript:
 	clearevent EVENT_BEAT_BLACKBELT_NOB
 	clearevent EVENT_BEAT_BLACKBELT_LAO
 	clearevent EVENT_BEAT_BLACKBELT_YOSHI
-	reloadmap
+	special FadeOutPalettes
+	warp CIANWOOD_GYM, 4, 17
 	end
 
 ResetCianwoodGymText:
@@ -156,4 +158,35 @@ CianwoodCongratulationsText:
 	
 	para "You can't always"
 	line "go back."
+	done
+
+CianwoodGymResetMankey:
+	faceplayer
+	opentext
+;	checkevent EVENT_GOT_CHOICE_BAND
+;	iftrue_jumptext CianwoodCongratulationsText
+	writethistext
+		text "Ask the Mankey to"
+		line "toss you back to"
+		cont "the front of the"
+		cont "gym?"
+		done
+	waitbutton
+	yesorno
+	iffalse_jumptext MankeyDisappointedText
+;	writetext ResetCianwoodGymText
+;	promptbutton
+	closetext
+	clearevent EVENT_BEAT_BLACKBELT_LUNG
+	clearevent EVENT_BEAT_BLACKBELT_NOB
+	clearevent EVENT_BEAT_BLACKBELT_LAO
+	clearevent EVENT_BEAT_BLACKBELT_YOSHI
+;	reloadmap
+	special FadeOutPalettes
+	warp CIANWOOD_GYM, 4, 17
+	end
+
+MankeyDisappointedText:
+	text "It looks sort of"
+	line "disappointed."
 	done
