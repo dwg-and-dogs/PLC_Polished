@@ -18,7 +18,7 @@ EmpiresExtentCavern_MapScriptHeader:
 
 
 	def_object_events
-	object_event  5, 1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EECavernMysticScript, -1	; done 
+	object_event  5, 1, SPRITE_HISUI_FEMALE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EECavernMysticScript, -1	; done 
 
 
 	object_const_def

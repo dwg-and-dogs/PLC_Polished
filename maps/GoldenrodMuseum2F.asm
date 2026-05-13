@@ -59,17 +59,18 @@ LugiaPaintingScript:
 	done
 
 HoOhPaintingScript:
-	checkevent EVENT_BEAT_MEJIMI
-	iffalse_jumptext UnsolvedPuzzleText
-	refreshscreen
-	paintingpic HO_OH_PAINTING
-	waitbutton
-	closepokepic
-	jumpthistext
-
-	text "   The Phoenix"
-	line "    Ascending"
-	done
+	jumptext UnsolvedPuzzleText
+;	checkevent EVENT_BEAT_MEJIMI for some reason this script doesn't call the right painting even though brass tower roof does?
+;	iffalse_jumptext UnsolvedPuzzleText
+;	refreshscreen
+;	paintingpic HO_OH_PAINTING
+;	waitbutton
+;	closepokepic
+;	jumpthistext
+;
+;	text "   The Phoenix"
+;	line "    Ascending"
+;	done
 
 BellTowerPaintingScript:
 	checkevent EVENT_BEAT_MEJIMI

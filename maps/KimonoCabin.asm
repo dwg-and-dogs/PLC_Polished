@@ -35,8 +35,6 @@ KimonoCabin_MapScriptHeader:
 	object_event  1,  5, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptext, KimonoCabinPiperNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 	object_event  2,  6, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptext, KimonoCabinVeraNotebook1, EVENT_KIMONO_CABIN_LAPRAS
 
-;	object_event  2,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptext, KimonoCabinMorpheaNotebook1, EVENT_KIMONO_CABIN_MORPHEA_NOTEBOOK
-
 
 
 KimonoCabin1Script:
@@ -545,25 +543,6 @@ KimonoCabinVeraNotebook1:
 	
 	done
 	
-KimonoCabinMorpheaNotebook1:
-	text "Morphea's Journal:"
-	line "My daughter is sp"
-	cont "headstrong."
-	
-	para "Did she overreact,"
-	line "were things really"
-	cont "so bad there?"
-	
-	para "Did I raise her "
-	line "properly to adapt"
-	cont "to the world?"
-
-	para "Is she adrift in"
-	line "the world, or is"
-	cont "she navigating it"
-	cont "adeptly?"
-	
-	done
 
 KimonoCabinBookshelfText:
 	text "There's a lot"

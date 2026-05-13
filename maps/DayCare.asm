@@ -42,7 +42,7 @@ DayCareManScript_Inside:
 	iftrue .GotEvioliteDayCareMan 
 	writetext DayCareManText_GiveEviolite
 	waitbutton
-    giveitem EVIOLITE
+	verbosegiveitem EVIOLITE
     setevent EVENT_GOT_EVIOLITE_FROM_DAYCARE
     writetext DayCareText_GotEviolite
 	waitbutton
@@ -92,6 +92,8 @@ DayCareManText_GiveEviolite:
     para "If you want them"
 	line "to succeed, give"
 	cont "them an Eviolite."
+	
+	para "Here, take one!"
     done
 
 DayCareText_GotEviolite:
@@ -100,28 +102,3 @@ DayCareText_GotEviolite:
 	para "#mon that can"
 	line "still evolve."
     done
-
-DayCareManText_DeclinedEviolite:
-    text "Oh, that's too"
-    line "bad. Well, if you"
-    cont "change your mind,"
-    cont "come back anytime."
-    done
-
-DayCarePokeFanNoEggText:
-	text "The noise from"
-	line "Ilex Loggers"
-	para "stresses out the"
-	line "#mon so they"
-	cont "won't lay eggs."
-	
-	para "Fortunately, most"
-	line "egg moves and TMs"
-	para "can be found in"
-	line "Johto somewhere."
-
-	para "Maybe the Day"
-	line "Care will be open"
-	cont "at a later date!"
-	done
-	

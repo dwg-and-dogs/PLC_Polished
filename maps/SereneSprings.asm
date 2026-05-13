@@ -257,8 +257,9 @@ SereneSpringsSlugmaDigScript:
 		done
 	waitbutton
 	closetext
-	; todo sfx dig 
-	; applyonemovement player warp_from but dig 
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
 	warp SERENE_SPRINGS_CAVERN, 10, 10
 	end
 

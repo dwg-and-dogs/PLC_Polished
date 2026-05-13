@@ -15,14 +15,29 @@ SecondClassCabin_MapScriptHeader:
 	def_bg_events
 
 
-
 	def_object_events
 	object_event  4,  4, SPRITE_JUGGLER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, trade, NPC_TRADE_KYLE, -1
 	object_event  1,  4, SPRITE_JUGGLER, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecondClassCabinJuggler2, -1
 	object_event  8,  3, SPRITE_YOUNGSTER, 	SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SecondClassCabinYoungster, -1
 	object_event  8,  2, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, SecondClassCabinMatronText, -1
+	object_event  5,  2, SPRITE_GAMEBOY_KID, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, PAL_NPC_BLUE, SecondClassCabinPhoneScript, -1
 
 
+
+SecondClassCabinPhoneScript:
+	faceplayer
+	opentext
+	writethistext
+		text "You need to use"
+		line "my smartphone?"
+		
+		para "Make it quick!"
+		done
+	waitbutton
+	special PokemonCenterPC
+	endtext
+	turnobject LAST_TALKED, DOWN 
+	end
 	
 SecondClassCabinMatronText:
 	text "There, there."	

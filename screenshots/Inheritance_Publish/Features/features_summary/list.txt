@@ -1,7 +1,6 @@
-* Annihilape
-* Minsir
+* Annihilape vs. Minsir
 * Difficulty selection 
-* Battle Hisui trainer
+* Battle Hisui trainer, male trainer back 
 * Battle variant form trainer
 * Hidden palette
 * Apricorn crafted
@@ -16,15 +15,20 @@
 *  
 
 
-Center: Title screen / 10 images
-1. Initial Options
-2. Starters
+Center: Title screen / 16 images
+1. Initial Options showing expert difficulty 
+2. Starters in Tinder Garden 
 3. Crafting balls
-4. Color change
-5. Female trainer card with historic 
-6. Debug Room
-7. Chuck plot
-8. Andrea plot
-9. Unown Puzzle with Celebi
-10. Other misc. features: No teach HM, Rare Candy, 
-11. Annihilape
+4. Color change: Psychic
+5. Color Change: Ice 
+6. Female trainer card with historic 
+7. Sandbox Room
+8. Chuck plot with OMLAS 
+9. Andrea plot, rebuild Johto 
+10. Unown Puzzle with Celebi
+11. 1$ Rare Candy  
+12. Annihilape vs. Minsir
+13. Kurt Battle you for experience 
+14. Plot with Andrea vs. Emperor 
+15. Apricorn guy 
+16. Whitney? 

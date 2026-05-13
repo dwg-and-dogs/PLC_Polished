@@ -30,6 +30,6 @@ AzaleaMartLadyText:
 	line "#mon won't be"
 	cont "as strong."
 	
-	para "And experts would"
-	line "never use them."
+;	para "And experts would"
+;	line "never use them."
 	done

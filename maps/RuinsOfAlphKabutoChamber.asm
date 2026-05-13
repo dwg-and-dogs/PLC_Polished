@@ -280,6 +280,11 @@ RuinsOfAlphKabutoChamberScientistCrypticText:
 	line "solve it, I'll"
 	para "share on of our"
 	line "Unown Reports."
+	
+	para "We believe this"
+	line "mosaic is related"
+	para "to the protector"
+	line "of Ilex Forest."
 	done
 
 RuinsOfAlphKabutoChamberScientistHoleText:

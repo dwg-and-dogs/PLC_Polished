@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt	
+	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
@@ -960,5 +960,11 @@ endr
 	waitbutton
 	closetext
 	; debug only
-	warp CIANWOOD_CITY, 20, 20
+;	setevent EVENT_SOLVED_KABUTO_PUZZLE
+;	setevent EVENT_SOLVED_OMANYTE_PUZZLE
+;	setevent EVENT_SOLVED_HO_OH_PUZZLE
+;	setevent EVENT_SOLVED_AERODACTYL_PUZZLE	
+;	setevent EVENT_BEAT_MEJIMI
+;	setevent EVENT_CIANWOODCITY_EUSINE
+	warp BRASS_TOWER_ROOF, 9, 5
 	end

@@ -1,4 +1,4 @@
-FeraligatrLair_MapScriptHeader: 
+FeraligatrLair_MapScriptHeader:
 	def_scene_scripts
 
 
@@ -6,7 +6,7 @@ FeraligatrLair_MapScriptHeader:
 
 
 	def_warp_events
-;	warp_event 0, 0,  SERENE_SPRINGS, 5
+
 
 
 	def_coord_events
@@ -26,14 +26,6 @@ FeraligatrLairScript:
 	opentext
 	writetext WeirdFeraligatrText
 	waitbutton
-	closetext
-
-;	refreshscreen
-;	pokepic FERALIGATR, OTHER_FORM
-;	waitbutton
-;	closepokepic
-
-	opentext
 	writetext PokemonInterestInFeraligatrText
 	waitbutton
 	checkmove SPLASH
@@ -69,15 +61,20 @@ ReturnToTarnText:
 	done
 
 LairText:
-	text "The Feraligatr is"
-	line "intensely focused"
-	cont "on the water."
+	text "It smells a lot"
+	line "like Magikarp in"
+	cont "this swamp."
 	done
 	
 WeirdFeraligatrText:	
 	text "It's a Feraligatr,"
 	line "but it's covered"
 	cont "in thick mud."
+	
+	para "It's intensely"
+	line "focused on the"
+	para "water, looking"
+	line "for any movement."
 	done
 
 WeirdFeraligatrText_Unown: 

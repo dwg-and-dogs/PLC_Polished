@@ -160,7 +160,7 @@ ClairScript:
 
 	promptbutton
 	verbosegivetmhm TM_DRAGON_CLAW
-	setevent EVENT_GOT_TM69_U_TURN
+;	setevent EVENT_GOT_TM69_U_TURN ?? must have been a mistake 
 	jumptext .AfterClairText
 
 .ClairText1:
@@ -205,7 +205,15 @@ ClairScript:
 
 	para "You've earned the"
 	line "Rising Badge and" 
-	cont "this TM. Take it."
+	cont "this TM."
+	
+	para "Dragon Claw is"
+	line "best for bringing"
+	para "out your inner"
+	line "ferocity. I was"
+	para "letting myself be"
+	line "consumed by my"
+	cont "own anger."
 	done
 
 

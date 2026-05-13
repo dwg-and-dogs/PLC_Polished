@@ -992,10 +992,10 @@ GetEVRelativePointer:
 
 RareCandy:
 
-	ld a, [wInitialOptions2]
-	and DIFFICULTY_MASK
-	cp DIFFICULTY_HARD
-	jp z, IsntTheTimeMessage
+;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
+;	and DIFFICULTY_MASK ; also update azalea mart npc 
+;	cp DIFFICULTY_HARD
+;	jp z, IsntTheTimeMessage
 
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	call UseItem_SelectMon

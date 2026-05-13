@@ -22,7 +22,7 @@ WhispersWay_MapScriptHeader:
 	bg_event 17, 30, BGEVENT_ITEM + MAX_REVIVE, EVENT_WISHERS_HIDDEN_MAX_REVIVE
 
 	def_object_events
-	object_event 9, 18, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhispersKurtScript, EVENT_SKIRMISH_STARTED
+	object_event 9, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhispersKurtScript, EVENT_SKIRMISH_STARTED
 
 
 WhispersWaySign:
@@ -48,10 +48,7 @@ WhispersKurtScript:
 	jumpopenedtext WWKurtBattleText2
 
 KurtWWText:
-	text "This path is so"
-	line "beautiful!"
-	
-	para "We are getting"
+	text "We are getting"
 	line "close to stopping"
 	cont "Emperor Vesper."
 	

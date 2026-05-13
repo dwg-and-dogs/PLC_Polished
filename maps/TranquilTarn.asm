@@ -81,6 +81,9 @@ TranquilTarnShrineScript:
 	special FadeOutPalettes
 	waitsfx
 	blackoutmod LAKE_OF_RAGE
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
 	warp LAKE_OF_RAGE, 21, 32  
 	end
 
@@ -88,6 +91,9 @@ TarnToLairScript:
 	writetext YesTimeTravelText_TT
 	waitbutton
 	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
 	warp FERALIGATR_LAIR, 10, 10  
 	end
 

@@ -2,8 +2,6 @@
 
 ## Custom Features to Inheritance
 
-TODO 
-
 * New region: Historic Johto
 * Custom Pokédex of 254 includes Sinnoh and Hisui Pokémon
 * New apricorn system to craft new Pokéballs: Bub Ball, Herb Ball, Deci Ball, Jeze Ball, and Geode crafted from materials on the overworld.
@@ -13,9 +11,9 @@ TODO
 * Two possible endings
 * Three difficulty modes: Easy, where enemies have no EVs or items; Normal, which is a tough but fair challenge; and Expert, where bosses have full teams of 6 with coverage moves and even higher EVs. 
 * The entire dex can be caught in one game.
-* Debug Room that grants you items, a random Pokemon of any given type, or all Pokemon so you can play how you want to. 
+* Sandbox Room that grants you items, a random Pokemon of any given type, or all Pokemon so you can play how you want to. 
 * HM moves do not require move deleter to overwrite.
-* Kurt will battle you for extra experience throughout the game to help you get locations for rare Pokémon. 
+* Kurt will battle you for extra experience throughout the game to give you experience and help you get locations for rare Pokémon. 
 * Whirlpool is now called "Vortex". It is Psychic-type Bulldoze and can be learned by most Water, Psychic, Ghost, and Fairy types. 
 
 ## Notable features carried from Polished Crystal 3.0.0

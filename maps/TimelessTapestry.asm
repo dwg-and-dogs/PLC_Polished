@@ -29,7 +29,7 @@ TimelessTapestry_MapScriptHeader:
 	; other objects 
 	object_event 16, 15, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TapestryAmos, EVENT_SKIRMISH_STARTED
 	pokemon_event 17, 15, BRONZONG, -1, -1, PAL_NPC_BLUE, TT_BronzongText, EVENT_TAPESTRY_BRONZONG
-	object_event  9, 34, SPRITE_MON_ICON, SPRITEMOVEDATA_STANDING_DOWN, 0, XATU, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, AncientXatuScript, EVENT_FOUGHT_XATU_VARIANT ; TODO 
+	object_event  9, 34, SPRITE_MON_ICON, SPRITEMOVEDATA_STANDING_DOWN, 0, XATU, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, AncientXatuScript, EVENT_FOUGHT_XATU_VARIANT 
 	; interactables  
 	object_event  6,  8, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, TapestryVera, EVENT_KIMONOS_AT_TAPESTRY ; VERA
 	object_event  8, 17, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TapestryPiper, EVENT_KIMONOS_AT_TAPESTRY ; piper
@@ -557,11 +557,7 @@ HisuiFemaleDarlaBeatenText:
 	line "#mon!"
 	done
 
-AncientXatuScript: ; todo check with no moves, xsc, ancient, tr, and ut
-;	refreshscreen
-;	pokepic XATU, OTHER_FORM
-;	waitbutton
-;	closepokepic
+AncientXatuScript:
 
 	opentext
 	writetext WeirdXatuText
@@ -576,30 +572,14 @@ AncientXatuScript: ; todo check with no moves, xsc, ancient, tr, and ut
 	opentext
 	writetext PokemonInterestInXatuText
 	waitbutton
-;	checkmove X_SCISSOR
-;	iffalse_jumptext NoXatuMoveText
-;	writetext XatuWiggleText_XScissor ; todo figure out how to make it move 
-;	turnobject TAPESTRY_XATU, UP
-;	pause 5
-;	turnobject TAPESTRY_XATU, DOWN 
-;	waitbutton
 	checkmove ANCIENTPOWER
 	iffalse_jumptext NoXatuMoveText
 	writetext XatuWiggleText_AncientPower
 	waitbutton
-;	checkmove TRICK_ROOM
-;	iffalse_jumptext NoXatuMoveText
-;	writetext XatuWiggleText_TrickRoom
-;	waitbutton
-;	checkmove U_TURN
-;	iffalse_jumptext NoXatuMoveText
-;	writetext XatuWiggleText_UTurn
-;	waitbutton
 	cry XATU
 	pause 60
 	closetext
 	setevent EVENT_FOUGHT_XATU_VARIANT
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
 	loadwildmon XATU, OTHER_FORM, 25
 	startbattle
 	disappear TAPESTRY_XATU

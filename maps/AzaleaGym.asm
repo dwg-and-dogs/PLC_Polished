@@ -53,7 +53,7 @@ DebugRoomPortal:
 	end
 
 AskWarpDebugText:
-	text "To Debug Room?"
+	text "To Sandbox Room?"
 	done
 	
 NoWarpText:
