@@ -58,13 +58,14 @@ BlackthornMart:; UNUSED
 	db -1
 
 VioletMart:
-	db 6 ; # items
-	db RARE_CANDY
+	db 7 ; # items
 	db MAX_REPEL
+	db SUPER_POTION
 	db HYPER_POTION
 	db GREAT_BALL
 	db FULL_HEAL
 	db SILVER_LEAF
+	db REVIVE
 	db -1
 
 AzaleaMart: ;
@@ -81,8 +82,7 @@ AzaleaMart: ;
 	db -1
 
 Goldenrod2FMart1:
-	db 10 ; # items
-	db RARE_CANDY
+	db 9 ; # items
 	db MAX_REPEL
 	db SUPER_POTION
 	db ANTIDOTE
@@ -174,25 +174,25 @@ UndergroundMart:
 
 EcruteakMart:
 	db 7 ; # items
-	db RARE_CANDY
 	db MAX_REPEL
 	db GREAT_BALL
 	db DUSK_BALL
 	db SUPER_POTION
+	db HYPER_POTION
 	db FULL_HEAL
 	db REVIVE
 	db -1
 
 OlivineMart:
 	db 8 ; # items
-	db RARE_CANDY
 	db MAX_REPEL
-	db GREAT_BALL
+	db ULTRA_BALL
 	db DIVE_BALL
 	db SUPER_POTION
 	db HYPER_POTION
 	db FULL_HEAL
 	db ABILITY_CAP 
+	db REVIVE
 	db -1
 
 WesternCapitalMonMart: ; in the dance theatre
@@ -208,8 +208,7 @@ WesternCapitalMonMart: ; in the dance theatre
 	db -1
 
 WesternCapitalPrepMart:
-	db 6 ; # items
-	db RARE_CANDY
+	db 5 ; # items
 	db FULL_RESTORE
 	db FULL_HEAL
 	db REVIVE
@@ -223,14 +222,13 @@ MahoganyMart1:
 	db -1
 
 WesternCapitalMart:
-	db 7 ; # items
-	db RARE_CANDY
+	db 6 ; # items
 	db MAX_REPEL
+	db GREAT_BALL
 	db QUICK_BALL
 	db HYPER_POTION
 	db FULL_HEAL
 	db REVIVE
-	db SILVER_LEAF
 	db -1
 
 
@@ -247,8 +245,7 @@ TradersLandingMart_TM:
 	db -1
 	
 AnarresMart:
-	db 9 ; # items
-	db RARE_CANDY
+	db 8 ; # items
 	db MAX_REPEL
 	db ORAN_BERRY 
 	db CHERI_BERRY
@@ -260,8 +257,7 @@ AnarresMart:
 	db -1
 
 GauldenrodMart1: ; normal items
-	db 8 ; # items
-	db RARE_CANDY
+	db 7 ; # items
 	db MAX_REPEL
 	db POKE_BALL
 	db ESCAPE_ROPE
@@ -293,8 +289,7 @@ GauldenrodMart3: ; TMs, HMs
 
 TradersLandingMart:
 TradersLandingMart_Items:
-	db 8 ; # items
-	db RARE_CANDY
+	db 10 ; # items
 	db MAX_REPEL
 	db HYPER_POTION
 	db GREAT_BALL
@@ -302,11 +297,14 @@ TradersLandingMart_Items:
 	db FULL_HEAL
 	db X_ATTACK
 	db X_SPEED
+	db X_DEFEND
+	db X_SPCL_ATK
+	db X_SPCL_DEF
 	db -1
 
+
 SinjohCrossroadsMart:
-	db 7 ; # items
-	db RARE_CANDY
+	db 6 ; # items
 	db MAX_REPEL
 	db HYPER_POTION
 	db FULL_HEAL
@@ -316,12 +314,11 @@ SinjohCrossroadsMart:
 	db -1
 
 EerieHamletMart:
-	db 12 ; # items
-	db RARE_CANDY
+	db 11 ; # items
 	db MAX_REPEL
-	db ODD_SOUVENIR
 	db REVIVAL_HERB
 	db ENERGYPOWDER
+	db HEAL_POWDER
 	db JEZE_BALL
 	db BUB_BALL
 	db DECI_BALL

@@ -375,15 +375,29 @@ PokegearJumptable:
 ;	dw PokegearRadio_Joypad
 
 PokegearClock_Init:
-	call InitPokegearTilemap
-	hlcoord 1, 14          ; Inside the textbox (row 14 is first text row)
-	lb bc, 2, 18           ; 2 rows, 18 columns (the text area)
-	call ClearBox
-	ld hl, PokegearText_PressAnyButtonToExit
-	call PrintText
-	ld hl, wJumptableIndex
-	inc [hl]
-	jmp ExitPokegearRadio_HandleMusic
+    call InitPokegearTilemap
+    xor a
+    ldh [hBGMapMode], a
+    hlcoord 1, 14
+    lb bc, 2, 18
+    call ClearBox
+    hlcoord 1, 14
+    ld de, .PressLine1
+    rst PlaceString
+    hlcoord 1, 16
+    ld de, .PressLine2
+    rst PlaceString
+    call ApplyTilemapInVBlank
+    ld a, $1
+    ldh [hBGMapMode], a
+    ld hl, wJumptableIndex
+    inc [hl]
+    jmp ExitPokegearRadio_HandleMusic
+
+.PressLine1:
+    db "Press any button@"
+.PressLine2:
+    db "to exit.       @"
 
 PokegearClock_Joypad: ; the bad text is in here somewhere... 
 	call .UpdateClock ; update clock is where the bad text seems to be coming from 

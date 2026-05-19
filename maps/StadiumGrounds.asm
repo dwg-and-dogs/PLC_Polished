@@ -707,8 +707,11 @@ AncientMeganiumScript:
 	opentext
 	writetext PokemonInterestInMeganiumText
 	waitbutton
+	checkpoke VULPIX, NO_FORM
+	iftrue .SunnyDayInParty
 	checkmove SUNNY_DAY
 	iffalse_jumptext NoMeganiumMoveText
+.SunnyDayInParty:
 	writetext MeganiumWiggleText_SunnyDay
 	waitbutton
 	closetext

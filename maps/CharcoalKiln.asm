@@ -156,7 +156,7 @@ KilnChemistryText:
 	text "A complicated set"
 	line "of beakers for"
 	cont "extracting aroma"
-	cont "from tree bark."
+	cont "from tree bark,"
 	
 	para "haphazardly"
 	line "assembled by"
