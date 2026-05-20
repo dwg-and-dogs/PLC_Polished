@@ -1,4 +1,4 @@
-	const_def ; fixing from the original. remaining todo: 1) check diff against the 045 version for any remaining stubs to consider; 2) Revise "Switch" to +/- 160 yrs, 3) Revise the text string to take up the whole length, 4) removet the black button at the top, 5) prevent closing with A button 
+	const_def ; fixing from the original. remaining todo: 1) check diff against the 045 version for any remaining stubs to consider; 4) removet the black button at the top, 5) prevent closing with A button 
 	const CLOCK_CARD
 	const MAP_CARD
 	const PHONE_CARD
@@ -271,7 +271,7 @@ InitPokegearTilemap:
 	jmp Pokegear_UpdateClock
 
 .switch
-	db " Switch▶@"
+	db "+/-160yr@"
 
 .Map:
 	call PokegearMap
@@ -398,7 +398,7 @@ PokegearClock_Joypad:
 	call .UpdateClock
 	ld hl, hJoyLast
 	ld a, [hl]
-	and A_BUTTON + B_BUTTON + START + SELECT
+	and B_BUTTON + START + SELECT ; A_BUTTON + 
 	jr nz, .quit
 	ld a, [hl]
 	and D_RIGHT

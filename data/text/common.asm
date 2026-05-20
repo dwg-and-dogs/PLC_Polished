@@ -4093,8 +4093,8 @@ _PokegearAskWhoCallText::
 
 SECTION "_PokegearPressButtonText", ROMX
 _PokegearPressButtonText::
-	text "Press the B"
-	line "Button to exit."
+	text "Press the B       "
+	line "Button to exit.   "
 	done
 
 SECTION "_PokegearAskDeleteText", ROMX
