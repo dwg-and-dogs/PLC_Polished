@@ -598,7 +598,7 @@
 	wildmon 3, WOOPER
 	wildmon 3, WOOPER
 	wildmon 3, SLOWPOKE
-	wildmon 3, SWINUB
+	wildmon 3, VULPIX, ALOLAN_FORM
 	; day
 	wildmon 3, ZUBAT
 	wildmon 3, WOOPER
@@ -606,7 +606,7 @@
 	wildmon 3, WOOPER
 	wildmon 3, WOOPER
 	wildmon 3, SLOWPOKE
-	wildmon 3, SWINUB
+	wildmon 3, VULPIX, ALOLAN_FORM
 	; nite
 	wildmon 3, ZUBAT
 	wildmon 3, WOOPER
@@ -614,7 +614,7 @@
 	wildmon 3, WOOPER
 	wildmon 3, WOOPER
 	wildmon 3, SLOWPOKE
-	wildmon 3, SWINUB
+	wildmon 3, VULPIX, ALOLAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons ILEX_FOREST

@@ -95,6 +95,11 @@ AdrinnaSeenText0:
 	para "more without your"
 	line "grandfather!"
 	
+	para "Where I'm from,"
+	line "you're entitled"
+	cont "to the sweat of"
+	cont "your brow."
+	
 	para "If you shed those"
 	line "antiquated bonds,"
 	para "you'd be revered"

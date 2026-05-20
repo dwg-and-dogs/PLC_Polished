@@ -24,3 +24,9 @@ Revise pokegear to try to be more stable.
 
 Add False Swipe to more movepools. 
 Add U-Turn to Heracross. 
+Revise encounter tables for Route 33 and Union Cave. 
+Update pokegear for Delta compatibility. 
+Tweak Andrea dialogue in her sanctum. 
+Fix tile error in Andrea's sanctum. 
+
+
