@@ -430,7 +430,7 @@
 	wildmon 5, MACHOP
 	wildmon 4, KOFFING
 	wildmon 3, GRIMER
-	wildmon 2, MACHOP
+	wildmon 2, GROWLITHE, HISUIAN_FORM
 	; day
 	wildmon 2, SLUGMA
 	wildmon 3, GEODUDE
@@ -438,7 +438,7 @@
 	wildmon 5, MACHOP
 	wildmon 4, KOFFING
 	wildmon 3, GRIMER
-	wildmon 2, MACHOP
+	wildmon 2, GROWLITHE, HISUIAN_FORM
 	; nite
 	wildmon 2, SLUGMA
 	wildmon 3, GEODUDE
@@ -446,7 +446,7 @@
 	wildmon 5, MACHOP
 	wildmon 4, KOFFING
 	wildmon 3, GRIMER
-	wildmon 2, MACHOP
+	wildmon 2, GROWLITHE, HISUIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B1F_SOUTH
@@ -1039,7 +1039,7 @@
 	wildmon 4, NIDORAN
 	wildmon 4, SENTRET
 	wildmon 4, HOPPIP
-	wildmon 4, NIDORAN
+	wildmon 4, VULPIX
 	; nite
 	wildmon 3, HOOTHOOT
 	wildmon 3, GROWLITHE

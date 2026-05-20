@@ -320,51 +320,51 @@ TrainerClassDVsAndPersonality_Hard:
 	db 150, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; clair
 	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; KURT
 	db 300, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; MEJIMI
-	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; bruno
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; bruno
 	db  80, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; SANDRA
 	db 300, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; KURT_FINAL
-	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; brock
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; brock
 	db 150, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE  ; Samsara / vespera 
-	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; lt surge
-	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; erika
-	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; janine
-	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; sabrina
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; lt surge
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; erika
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; janine
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; sabrina
 	db  60, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; Hollis
-	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; blue
-	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; red
-	db   0, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; leaf
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; blue
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; red
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; leaf
 	db   0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; rival0
-	db  40, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; rival1
+	db  50, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; rival1
 	db  80, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; rival2
-	db   0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; lyra1
-	db   0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; lyra2
-	db  20, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; youngster
-	db  20, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; bug catcher
-	db  20, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; camper
-	db  20, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; picnicker
-	db  20, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; twins
-	db  40, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; fisher
-	db  40, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; bird keeper
-	db  40, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; hiker
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; lyra1
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; lyra2
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; youngster
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; bug catcher
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; camper
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; picnicker
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; twins
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; fisher
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; bird keeper
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; hiker
 	db  80, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; Brigader
-	db   0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; gruntf
-	db  40, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; pokefanm
-	db  40, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; pokefanf
-	db  10, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; officerm
-	db  10, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; officerf
-	db   0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; nurse
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; gruntf
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; pokefanm
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; pokefanf
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; officerm
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; officerf
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; nurse
 	db  60, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; pokemaniac
-	db  20, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; cosplayer
-	db  40, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; super nerd
-	db  40, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; lass
-	db  40, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; beauty
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; cosplayer
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; super nerd
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; lass
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; beauty
 	db  60, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; bug maniac
 	db  60, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; ruin maniac
-	db  40, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; firebreather
-	db  40, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; juggler
-	db  40, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; schoolboy
-	db  40, $CC, $CC, $CC, ABILITY_1 | QUIRKY, FEMALE ; schoolgirl
-	db  40, $AA, $CC, $DD, ABILITY_1 | QUIRKY, MALE   ; psychic
+	db  50, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; firebreather
+	db  50, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; juggler
+	db  50, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; schoolboy
+	db  50, $CC, $CC, $CC, ABILITY_1 | QUIRKY, FEMALE ; schoolgirl
+	db  50, $AA, $CC, $DD, ABILITY_1 | QUIRKY, MALE   ; psychic
 	db  60, $AA, $CC, $DD, ABILITY_1 | QUIRKY, FEMALE ; hex maniac
 	db  60, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; sage
 	db  60, $CC, $CC, $CC, ABILITY_1 | QUIRKY, FEMALE ; medium
@@ -379,8 +379,8 @@ TrainerClassDVsAndPersonality_Hard:
 	db  90, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; gentleman
 	db 100, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; rich boy (high EVs from vitamins)
 	db  60, $CC, $CC, $CC, ABILITY_1 | QUIRKY, FEMALE ; lady
-	db  20, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; breeder (low EVs due to breeding)
-	db  20, $CC, $CC, $CC, ABILITY_1 | QUIRKY, FEMALE ; baker
+	db   0, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; breeder (low EVs due to breeding)
+	db  50, $CC, $CC, $CC, ABILITY_1 | QUIRKY, FEMALE ; baker
 	db  80, $CC, $CC, $CC, ABILITY_1 | QUIRKY, FEMALE ; cowgirl
 	db  80, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; sailor
 	db  80, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; swimmerm
@@ -411,10 +411,10 @@ TrainerClassDVsAndPersonality_Hard:
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; cooltrainerm
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; cooltrainerf
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; ace duo
-	db 70, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; NOMAD_M
-	db 70, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; NOMAD_F
-	db 80, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; veteranm
-	db 80, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; veteranf
+	db  70, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; NOMAD_M
+	db  70, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; NOMAD_F
+	db  80, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; veteranm
+	db  80, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; veteranf
 	db 100, $BB, $BB, $BB, ABILITY_1 | QUIRKY, MALE   ; proton
 	db 100, $CC, $CC, $CC, ABILITY_1 | QUIRKY, MALE   ; petrel
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; archer
@@ -438,7 +438,7 @@ TrainerClassDVsAndPersonality_Hard:
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; mira
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; anabel-LANNA
 	db 100, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; darach
-	db 80, $DD, $DD, $DD,  ABILITY_1 | LONELY, MALE ; candela/BOBESH
+	db  80, $DD, $DD, $DD,  ABILITY_1 | LONELY, MALE ; candela/BOBESH
 	db 150, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; blanche/ADRINNA
 	db 150, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; spark/BOBESH
 	db 100, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, FEMALE ; flannery
@@ -448,7 +448,7 @@ TrainerClassDVsAndPersonality_Hard:
 	db 100, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; kukui
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; victor
 	db 100, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; bill
-	db 40, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; yellow/TAMMY
+	db  50, $DD, $DD, $DD, ABILITY_1 | QUIRKY, FEMALE ; yellow/TAMMY
 	db 100, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; silver
 	db 100, $DD, $DD, $DD, ABILITY_1 | QUIRKY, MALE   ; imakuni
 	db 160, $DD, $DD, $DD,  ABILITY_1 | QUIRKY, MALE   ; lawrence/KENSEY
