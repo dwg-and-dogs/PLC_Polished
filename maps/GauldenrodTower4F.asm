@@ -58,7 +58,6 @@ GauldenrodTower4FSandraScript:
 	waitbutton
 	verbosegivetmhm TM_DAZZLINGLEAM
 	waitbutton
-;	givekeyitem RAINBOW_WING
 	setflag ENGINE_CASCADEBADGE
 	waitbutton
 	closetext

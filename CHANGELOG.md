@@ -28,5 +28,5 @@ Revise encounter tables for Route 33 and Union Cave.
 Update pokegear for Delta compatibility. 
 Tweak Andrea dialogue in her sanctum. 
 Fix tile error in Andrea's sanctum. 
-
+Update sandbox room and HM checks to prevent sequence breaks. 
 

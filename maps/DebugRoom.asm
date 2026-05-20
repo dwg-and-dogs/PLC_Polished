@@ -83,7 +83,9 @@ endc
 endr
 	; all tms+hms
 for x, NUM_TMS + NUM_HMS
+if x != WHIRLPOOL 
 	givetmhm x
+endc
 endr
 	; all apricorns 
 	giveapricorn FIXED_CHARGE, 5

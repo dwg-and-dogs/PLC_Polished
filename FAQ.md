@@ -80,6 +80,7 @@ There is also a 1 in 1,048,576 change to encounter a Pokémon with maximum DVs f
 
 If you need to change these options after starting a game, press Left+B at the title screen and continue your save file.
 
+If you want to change the time, press Down+Select+B at the title screen and continue your save file. 
 
 ### I don't recognize this move, what is it?
 

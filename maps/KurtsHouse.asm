@@ -13,7 +13,8 @@ KurtsHouse_MapScriptHeader:
 
 	def_bg_events
 ;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt	
+	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
+;	bg_event  6,  1, BGEVENT_READ, TimeShiftRadio	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfWestwoodScript
@@ -827,7 +828,7 @@ if x != PARK_BALL && x != SAFARI_BALL
 	giveitem x, 99
 endc
 endr
-	giveitem MAX_POTION, 99
+	giveitem ODD_SOUVENIR, 99
 	giveitem FULL_RESTORE, 99
 	giveitem MAX_REVIVE, 99
 	giveitem MAX_ELIXIR, 99
@@ -960,11 +961,23 @@ endr
 	waitbutton
 	closetext
 	; debug only
-;	setevent EVENT_SOLVED_KABUTO_PUZZLE
-;	setevent EVENT_SOLVED_OMANYTE_PUZZLE
-;	setevent EVENT_SOLVED_HO_OH_PUZZLE
-;	setevent EVENT_SOLVED_AERODACTYL_PUZZLE	
-;	setevent EVENT_BEAT_MEJIMI
-;	setevent EVENT_CIANWOODCITY_EUSINE
-	warp BRASS_TOWER_ROOF, 9, 5
+	opentext
+	givepoke GRIMER, 50
+	waitbutton
+	closetext
+	end
+
+TimeShiftRadio:
+	opentext
+	writethistext
+		text "It's Kurt's Radio!"
+		line "Tuned to an oldies"
+		para "station playing"
+		line "the Mankees."
+		para "Listen until what"
+		line "time?"
+		done
+	waitbutton
+	closetext
+	farcall InitClock
 	end

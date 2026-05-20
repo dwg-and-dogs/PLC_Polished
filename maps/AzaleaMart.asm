@@ -17,9 +17,10 @@ AzaleaMart_MapScriptHeader:
 	object_event  5,  3, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, (1 << MORN) | (1 << DAY), PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AzaleaMartLadyText, -1
 
 AzaleaMartCooltrainermText:
-	text "I wish Kurt would"
-	line "make me some of"
-	cont "his custom Balls."
+	text "I love this mart!"
+	line "It's the only one"
+	para "in Johto to sell"
+	line "Rare Candies."
 	done
 
 AzaleaMartLadyText:

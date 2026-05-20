@@ -468,7 +468,7 @@ SurfFunction:
 	dw .AlreadySurfing
 
 .TrySurf:
-	ld de, ENGINE_BOULDERBADGE ; USED TO BE FOG BADGE
+	ld de, ENGINE_THUNDERBADGE ; samsara 
 	call CheckBadge
 	jr c, .asm_c956
 	ld hl, wOWState
@@ -620,9 +620,9 @@ TrySurfOW::
 	call CheckDirection
 	jr c, .quit
 
-;	ld de, ENGINE_BOULDERBADGE ; FOGBADGE
-;	call CheckEngineFlag
-;	jr c, .quit
+	ld de, ENGINE_THUNDERBADGE ; FOGBADGE
+	call CheckEngineFlag
+	jr c, .quit
 
 	lb de, SURF, HM_SURF
 	call CheckPartyMove
@@ -704,7 +704,7 @@ FlyFunction:
 
 .TryFly:
 ; Fly
-	ld de, ENGINE_BOULDERBADGE ; STORMBADGE
+	ld de, ENGINE_BOULDERBADGE 
 	call CheckBadge
 	jr c, .nostormbadge
 	call CheckFlyAllowedOnMap
@@ -782,7 +782,7 @@ WaterfallFunction:
 
 .TryWaterfall:
 ; Waterfall
-	ld de, ENGINE_BOULDERBADGE ; RISINGBADGE
+	ld de, ENGINE_MARSHBADGE ; PETRA 
 	call CheckBadge
 	ld a, $80
 	ret c
@@ -854,7 +854,7 @@ TryWaterfallOW::
 ;	ld d, WATERFALL
 	call CheckPartyMove
 	jr c, .failed
-	ld de, ENGINE_BOULDERBADGE ; RISING BADGE
+	ld de, ENGINE_MARSHBADGE ; PETRA 
 	call CheckEngineFlag
 	jr c, .failed
 	call CheckMapCanWaterfall
@@ -1089,13 +1089,13 @@ StrengthFunction:
 
 .TryStrength:
 ; Strength
-;	ld de, ENGINE_BOULDERBADGE ; PLAINBADGE
-;	call CheckBadge
-;	jr nc, .UseStrength
+	ld de, ENGINE_CASCADEBADGE ; sandra 
+	call CheckBadge
+	jr nc, .UseStrength
 
-;.Failed:
-;	ld a, $80
-;	ret
+.Failed:
+	ld a, $80
+	ret
 
 .UseStrength:
 	ld hl, Script_StrengthFromMenu
@@ -1193,7 +1193,7 @@ Jumptable_cdae:
 	dw .FailWhirlpool
 
 .TryWhirlpool:
-	ld de, ENGINE_BOULDERBADGE ; GLACIERBADGE
+	ld de, ENGINE_BOULDERBADGE ; sequence break prevented at sandbox room, NOT HERE 
 	call CheckBadge
 	jr c, .noglacierbadge
 	call TryWhirlpoolMenu
@@ -1304,7 +1304,7 @@ TryWhirlpoolOW::
 ;	ld d, WHIRLPOOL
 	call CheckPartyMove
 	jr c, .failed
-	ld de, ENGINE_BOULDERBADGE ; GLACIER BADGE
+	ld de, ENGINE_BOULDERBADGE ; sequence break prevented at sandbox room 
 	call CheckEngineFlag
 	jr c, .failed
 	call TryWhirlpoolMenu
@@ -1868,7 +1868,6 @@ Script_CantGetOffBike:
 	waitendtext
 
 HasCutAvailable::
-;	ld d, CUT
 	lb de, CUT, HM_CUT
 	call CheckPartyMove
 	jr c, .no
