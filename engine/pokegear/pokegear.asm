@@ -1,4 +1,4 @@
-	const_def ; fixing from the original. remaining todo: 1) check diff against the 045 version for any remaining stubs to consider; 4) removet the black button at the top, 5) prevent closing with A button 
+	const_def ; fixing from the original. remaining todo: 1) check diff against the 045 version for any remaining stubs to consider; 4) removet the black button at the top
 	const CLOCK_CARD
 	const MAP_CARD
 	const PHONE_CARD
@@ -63,7 +63,7 @@ PokeGear:
 	ldh [hWX], a
 	call Pokegear_LoadGFX
 	call ClearSpriteAnims
-	call InitPokegearModeIndicatorArrow
+;	call InitPokegearModeIndicatorArrow
 	ld a, 8
 	call SkipMusic
 	ld a, %11100011
