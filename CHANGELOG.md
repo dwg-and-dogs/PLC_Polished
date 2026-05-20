@@ -20,3 +20,7 @@ Mart Items revised; Rare Candies now only at Azalea Mart
 Another way to awaken Ancestor Meganium. 
 Revise pokegear to try to be more stable. 
 
+* Update 0.4.6 
+
+Add False Swipe to more movepools. 
+Add U-Turn to Heracross. 

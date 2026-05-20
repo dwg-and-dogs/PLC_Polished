@@ -1,4 +1,4 @@
-	const_def ; only going to get the clock card 
+	const_def ; fixing from the original. remaining todo: 1) check diff against the 045 version for any remaining stubs to consider; 2) Revise "Switch" to +/- 160 yrs, 3) Revise the text string to take up the whole length, 4) removet the black button at the top, 5) prevent closing with A button 
 	const CLOCK_CARD
 	const MAP_CARD
 	const PHONE_CARD
@@ -152,12 +152,12 @@ SinjohRuinsArrowGFX:
 INCBIN "gfx/town_map/arrow.2bpp.lz"
 
 InitPokegearModeIndicatorArrow:
-;	depixel 4, 2, 4, 0
-;	ld a, SPRITE_ANIM_INDEX_POKEGEAR_MODE_ARROW
-;	call _InitSpriteAnimStruct
-;	ld hl, SPRITEANIMSTRUCT_TILE_ID
-;	add hl, bc
-;	ld [hl], $0
+	depixel 4, 2, 4, 0
+	ld a, SPRITE_ANIM_INDEX_POKEGEAR_MODE_ARROW
+	call _InitSpriteAnimStruct
+	ld hl, SPRITEANIMSTRUCT_TILE_ID
+	add hl, bc
+	ld [hl], $0
 	ret
 
 AnimatePokegearModeIndicatorArrow:
@@ -263,15 +263,15 @@ InitPokegearTilemap:
 	ld hl, ClockTilemapRLE
 	call Pokegear_LoadTilemapRLE
 	hlcoord 12, 1
-	ld de, .clocktext
+	ld de, .switch
 	rst PlaceString
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
 	jmp Pokegear_UpdateClock
 
-.clocktext
-	db "+/-160yr@"
+.switch
+	db " Switch▶@"
 
 .Map:
 	call PokegearMap
@@ -327,7 +327,19 @@ Pokegear_FinishTilemap:
 	ld bc, $8
 	ld a, $4f
 	rst ByteFill
-	ret    
+	ld de, wPokegearFlags
+	ld a, [de]
+	bit 0, a
+	call nz, .PlaceMapIcon
+	ld a, [de]
+	bit 2, a
+	call nz, .PlacePhoneIcon
+	ld a, [de]
+	bit 1, a
+	call nz, .PlaceRadioIcon
+	hlcoord 0, 0
+	ld a, $46
+	jr .PlacePokegearCardIcon
 
 .PlaceMapIcon:
 	hlcoord 2, 0
@@ -357,53 +369,36 @@ Pokegear_FinishTilemap:
 PokegearJumptable:
 	call StandardStackJumpTable
 
-.Jumptable: ;  OK to have all but the first two commented out 
+.Jumptable:
 	dw PokegearClock_Init
 	dw PokegearClock_Joypad
-;	dw PokegearMap_CheckRegion
-;	dw PokegearMap_Init
-;	dw PokegearMap_JohtoMap
-;	dw PokegearMap_Init
-;	dw PokegearMap_KantoMap
-;	dw PokegearMap_Init
-;	dw PokegearMap_OrangeMap
-;	dw PokegearPhone_Init
-;	dw PokegearPhone_Joypad
-;	dw PokegearPhone_MakePhoneCall
-;	dw PokegearPhone_FinishPhoneCall
-;	dw PokegearRadio_Init
-;	dw PokegearRadio_Joypad
+	dw PokegearMap_CheckRegion
+	dw PokegearMap_Init
+	dw PokegearMap_JohtoMap
+	dw PokegearMap_Init
+	dw PokegearMap_KantoMap
+	dw PokegearMap_Init
+	dw PokegearMap_OrangeMap
+	dw PokegearPhone_Init
+	dw PokegearPhone_Joypad
+	dw PokegearPhone_MakePhoneCall
+	dw PokegearPhone_FinishPhoneCall
+	dw PokegearRadio_Init
+	dw PokegearRadio_Joypad
 
 PokegearClock_Init:
-    call InitPokegearTilemap
-    xor a
-    ldh [hBGMapMode], a
-    hlcoord 1, 14
-    lb bc, 2, 18
-    call ClearBox
-    hlcoord 1, 14
-    ld de, .PressLine1
-    rst PlaceString
-    hlcoord 1, 16
-    ld de, .PressLine2
-    rst PlaceString
-    call ApplyTilemapInVBlank
-    ld a, $1
-    ldh [hBGMapMode], a
-    ld hl, wJumptableIndex
-    inc [hl]
-    jmp ExitPokegearRadio_HandleMusic
+	call InitPokegearTilemap
+	ld hl, PokegearText_PressAnyButtonToExit
+	call PrintText
+	ld hl, wJumptableIndex
+	inc [hl]
+	jmp ExitPokegearRadio_HandleMusic
 
-.PressLine1:
-    db "Press any button@"
-.PressLine2:
-    db "to exit.       @"
-
-PokegearClock_Joypad: ; the bad text is in here somewhere... 
-	call .UpdateClock ; update clock is where the bad text seems to be coming from 
+PokegearClock_Joypad:
+	call .UpdateClock
 	ld hl, hJoyLast
 	ld a, [hl]
-	and B_BUTTON + START + SELECT ; maybe consider removing some of these to see which ones are getting the problem? 
+	and A_BUTTON + B_BUTTON + START + SELECT
 	jr nz, .quit
 	ld a, [hl]
 	and D_RIGHT
@@ -435,19 +430,12 @@ PokegearClock_Joypad: ; the bad text is in here somewhere...
 	ret
 
 .UpdateClock:
-    xor a
-    ldh [hBGMapMode], a
-    call Pokegear_UpdateClock
-    ; Overwrite garbage with your preferred text
-    hlcoord 1, 16
-    ld de, .line15text
-    rst PlaceString
-    ld a, $1
-    ldh [hBGMapMode], a
-    ret
-
-.line15text:
-    db "Button to exit.@"    ; or whatever text you want
+	xor a
+	ldh [hBGMapMode], a
+	call Pokegear_UpdateClock
+	ld a, $1
+	ldh [hBGMapMode], a
+	ret
 
 Pokegear_UpdateClock:
 	hlcoord 3, 5
@@ -471,7 +459,6 @@ Pokegear_UpdateClock:
 .DayText:
 	text_far _GearTodayText
 	text_end
-
 
 PokegearMap_CheckRegion:
 	ld a, [wPokegearMapPlayerIconLandmark]
@@ -644,7 +631,7 @@ PokegearMap_InitPlayerIcon:
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
-	ld b, SPRITE_ANIM_INDEX_RED_WALK
+	ld b, SPRITE_ANIM_INDEX_BLUE_WALK
 .got_gender
 	ld a, b
 	call _InitSpriteAnimStruct
@@ -728,6 +715,7 @@ TownMap_ConvertLineBreakCharacters:
 	hlcoord 9, 0
 	rst PlaceString
 	ret
+
 
 TownMap_GetJohtoLandmarkLimits:
 	lb de, LAKE_OF_RAGE, AZALEA_TOWN ; LAST_LANDMARK, FIRST_LANDMARK 
@@ -1893,7 +1881,7 @@ _FlyMap:
 	ldh [hBGMapMode], a
 	call ClearSpriteAnims
 	call LoadTownMapGFX
-	call FlyMap ; also check that this is the same 
+	call FlyMap
 	ld a, CGB_POKEGEAR_PALS
 	call GetCGBLayout
 	call SetPalettes
@@ -1912,7 +1900,7 @@ _FlyMap:
 	call DelayFrame
 	jr .loop
 
-.pressedB 
+.pressedB
 	ld a, -1
 	jr .exit
 
@@ -2504,15 +2492,16 @@ Pokedex_GetArea:
 ;	jr z, .Sinjoh
 	farjp GetPlayerIcon
 
-;.FastShip:
-;	ld de, FastShipGFX
-;	ld b, BANK(FastShipGFX)
-;	ret
 
-;.Sinjoh:
-;	ld de, SinjohRuinsArrowGFX
-;	ld b, BANK(SinjohRuinsArrowGFX)
-;	ret
+.FastShip:
+	ld de, FastShipGFX
+	ld b, BANK(FastShipGFX)
+	ret
+
+.Sinjoh:
+	ld de, SinjohRuinsArrowGFX
+	ld b, BANK(SinjohRuinsArrowGFX)
+	ret
 
 TownMapBGUpdate:
 ; Update BG Map tiles and attributes
@@ -2721,7 +2710,7 @@ TownMapPlayerIcon:
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
-	ld b, SPRITE_ANIM_INDEX_RED_WALK ; Female
+	ld b, SPRITE_ANIM_INDEX_BLUE_WALK ; Female
 .got_gender
 	ld a, b
 	call _InitSpriteAnimStruct
