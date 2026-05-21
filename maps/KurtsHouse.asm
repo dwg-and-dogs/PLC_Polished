@@ -962,7 +962,7 @@ endr
 	closetext
 	; debug only
 	opentext
-	givepoke GRIMER, 50
+	givepoke GRIMER, 50, ALOLAN_FORM 
 	waitbutton
 	closetext
 	end

@@ -396,10 +396,10 @@ endr
 
 ChangeFormOnLevelEvolution:
 ; These Pokémon evolve into plain forms by level.
-	ld a, [wTempMonSpecies]
-	cp GRIMER
-	jr z, _PlainFormOnEvolution
-	cp KOFFING
+;	ld a, [wTempMonSpecies]
+;	cp GRIMER
+;	jr z, _PlainFormOnEvolution
+;	cp KOFFING
 	ret nz
 
 _PlainFormOnEvolution:
