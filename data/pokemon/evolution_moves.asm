@@ -79,7 +79,7 @@ EvolutionMoves::
 	db NO_MOVE     ; SUNKERN        ; c7
 	db EMBER       ; SUNFLORA        ; 4e
 	db NO_MOVE       ; EXEGGCUTE       ; 4f
-	db PSYCHIC       ; EXEGGUTOR       ; 50
+	db PSYCHIC_M       ; EXEGGUTOR       ; 50
 	db NO_MOVE       ; SUDOWOODO       ; 51
 	db NO_MOVE       ; SCYTHER         ; 52
 	db BULLET_PUNCH  ; SCIZOR          ; 53
@@ -101,11 +101,11 @@ EvolutionMoves::
 	db NO_MOVE       ; SNUBBULL        ; 63
 	db NO_MOVE       ; GRANBULL        ; 64
 	db NO_MOVE       ; VULPIX          ; 65
-	db PSYCHIC   ; NINETALES       ; 66
+	db PSYCHIC_M   ; NINETALES       ; 66
 	db NO_MOVE       ; GROWLITHE       ; 67
 	db EXTREMESPEED  ; ARCANINE        ; 68
 	db NO_MOVE       ; STANTLER        ; 69
-	db PSYCHIC       ; WYRDEER         ; 6a
+	db PSYCHIC_M       ; WYRDEER         ; 6a
 	db NO_MOVE       ; MARILL          ; 6b
 	db NO_MOVE       ; AZUMARILL       ; 6c
 	db NO_MOVE       ; MANKEY          ; 6d
@@ -259,7 +259,7 @@ EvolutionMoves::
 	db NO_MOVE       ; EGG
 
 ; Alolan Forms
-	db PSYCHIC       ; RAICHU (Alolan)
+	db PSYCHIC_M       ; RAICHU (Alolan)
 	db NO_MOVE       ; VULPIX (Alolan)
 	db ICY_WIND       ; NINETALES (Alolan)
 	db NO_MOVE       ; GEODUDE (Alolan)
