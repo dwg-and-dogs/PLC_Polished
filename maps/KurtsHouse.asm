@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
+;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
 ;	bg_event  6,  1, BGEVENT_READ, TimeShiftRadio	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
@@ -912,7 +912,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
-	givepoke TYPHLOSION, NO_FORM, 100
+	givepoke ANNIHILAPE, NO_FORM, 100
 	loadmem wPartyMon1Moves+0, FLAMETHROWER
 	loadmem wPartyMon1Moves+1, EARTH_POWER
 	loadmem wPartyMon1Moves+2, STRENGTH
@@ -963,7 +963,7 @@ endr
 	; debug only
 ; debug 
 	winlosstext DWGWinText, DWGLossText
-	loadtrainer KURT_FINAL, 3 ; check normalmode or hardmode 
+	loadtrainer BRIGADER, 20 ; check normalmode or hardmode 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 

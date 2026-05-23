@@ -1,34 +1,23 @@
-* Annihilape vs. Minsir
-* Difficulty selection 
-* Battle Hisui trainer, male trainer back 
-* Battle variant form trainer
-* Hidden palette
-* Apricorn crafted
-* Debug Room location 
-* No need to team HM
-* Starter selection 
-* Historic Johto Badges
-* Celebi Puzzle 
-*
-*
-*
-*  
-
-
 Center: Title screen / 16 images
-1. Initial Options showing expert difficulty 
-2. Starters in Tinder Garden 
-3. Crafting balls
-4. Color change: Psychic
-5. Color Change: Ice 
-6. Female trainer card with historic 
-7. Sandbox Room
+1. Initial Options showing expert difficulty DONE 
+2. Starters in Tinder Garden DONE 
+3. Crafting balls DONE
+4. Color change: Psychic DONE
+5. Color Change: Ice DONE
+7. Sandbox Room DONE
+11. 1$ Rare Candy  DONE
+10. Unown Puzzle with Celebi DONE
+6. Female trainer card with historic DONE
+9. Andrea plot, rebuild Johto DONE
+12. Annihilape vs. Minsir DONE
+
 8. Chuck plot with OMLAS 
-9. Andrea plot, rebuild Johto 
-10. Unown Puzzle with Celebi
-11. 1$ Rare Candy  
-12. Annihilape vs. Minsir
 13. Kurt Battle you for experience 
 14. Plot with Andrea vs. Emperor 
-15. Apricorn guy 
-16. Whitney? 
+15. bobesh vs Sandra 
+16. kensey vs nemo
+
+17 falkner wants to battle
+18 whitney 
+19 lake of rage , drained 
+20 cianwood 
