@@ -1154,7 +1154,7 @@ TryStrengthOW:
 	call CheckPartyMove
 	jr c, .nope
 
-	ld de, ENGINE_BOULDERBADGE ; PLAINBADGE
+	ld de, ENGINE_CASCADEBADGE ; PLAINBADGE
 	call CheckEngineFlag
 	jr c, .nope
 

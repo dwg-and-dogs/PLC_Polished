@@ -192,9 +192,9 @@ endr
 		line "wants to battle!"		
 	waitbutton
 	closetext
-	; debug 
-;	loadtrainer HOLLIS, 1 ; check normalmode or hardmode 
-;	startbattle
+; debug 
+	loadtrainer BOBESH, 3 ; check normalmode or hardmode 
+	startbattle
 	end
 
 Breeder1Script:

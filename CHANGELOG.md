@@ -29,4 +29,8 @@ Update pokegear for Delta compatibility.
 Tweak Andrea dialogue in her sanctum. 
 Fix tile error in Andrea's sanctum. 
 Update sandbox room and HM checks to prevent sequence breaks. 
+Fix some party names not displaying properly. 
+Add badge checks for HM to prevent sequence breaks.
+
+
 

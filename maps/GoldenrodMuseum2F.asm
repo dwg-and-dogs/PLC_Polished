@@ -14,8 +14,8 @@ GoldenrodMuseum2F_MapScriptHeader:
 	bg_event  2,  0, BGEVENT_READ, LugiaPaintingScript
 	bg_event  4,  0, BGEVENT_READ, BellTowerPaintingScript
 	bg_event  5,  0, BGEVENT_READ, BellTowerPaintingScript
-	bg_event  7,  0, BGEVENT_READ, HoOhPaintingScript
-	bg_event  8,  0, BGEVENT_READ, HoOhPaintingScript
+;	bg_event  7,  0, BGEVENT_READ, HoOhPaintingScript
+;	bg_event  8,  0, BGEVENT_READ, HoOhPaintingScript
 	bg_event  0,  4, BGEVENT_READ, KabutoPuzzleScript
 	bg_event  0,  5, BGEVENT_READ, KabutoPuzzleScript
 	bg_event  3,  4, BGEVENT_READ, OmanytePuzzleScript

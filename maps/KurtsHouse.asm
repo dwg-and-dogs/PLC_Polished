@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
+	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
 ;	bg_event  6,  1, BGEVENT_READ, TimeShiftRadio	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
@@ -876,20 +876,20 @@ endr
 	givemoney $0, 999999
 	givecoins 50000
 	; all badges 
-	setflag ENGINE_ZEPHYRBADGE
-	setflag ENGINE_HIVEBADGE
-	setflag ENGINE_PLAINBADGE
-	setflag ENGINE_FOGBADGE
-	setflag ENGINE_STORMBADGE
-	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_GLACIERBADGE
-	setflag ENGINE_RISINGBADGE
-	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
+;	setflag ENGINE_ZEPHYRBADGE
+;	setflag ENGINE_HIVEBADGE
+;	setflag ENGINE_PLAINBADGE
+;	setflag ENGINE_FOGBADGE
+;	setflag ENGINE_STORMBADGE
+;	setflag ENGINE_MINERALBADGE
+;	setflag ENGINE_GLACIERBADGE
+;	setflag ENGINE_RISINGBADGE
+;	setflag ENGINE_BOULDERBADGE
+;	setflag ENGINE_CASCADEBADGE
+;	setflag ENGINE_THUNDERBADGE
+;	setflag ENGINE_RAINBOWBADGE
+;	setflag ENGINE_MARSHBADGE
+;	setflag ENGINE_SOULBADGE
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_AZALEA
 	setflag ENGINE_FLYPOINT_GOLDENROD
@@ -961,10 +961,12 @@ endr
 	waitbutton
 	closetext
 	; debug only
-	opentext
-	givepoke GRIMER, 50, ALOLAN_FORM 
-	waitbutton
-	closetext
+; debug 
+	winlosstext DWGWinText, DWGLossText
+	loadtrainer KURT_FINAL, 3 ; check normalmode or hardmode 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+
 	end
 
 TimeShiftRadio:
