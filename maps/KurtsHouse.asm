@@ -963,7 +963,7 @@ endr
 	; debug only
 ; debug 
 	winlosstext DWGWinText, DWGLossText
-	loadtrainer BRIGADER, 20 ; check normalmode or hardmode 
+	loadtrainer ADRINNA, 9 ; check normalmode or hardmode 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 
