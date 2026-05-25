@@ -83,7 +83,7 @@ endc
 endr
 	; all tms+hms
 for x, NUM_TMS + NUM_HMS
-if x != WHIRLPOOL 
+if x != HM_WHIRLPOOL 
 	givetmhm x
 endc
 endr
@@ -95,6 +95,7 @@ endr
 	giveapricorn TOUGH_LEAVES, 5
 	giveapricorn PNK_APRICORN, 5
 	giveapricorn WHT_APRICORN, 5
+	waitbutton
 	closetext
 	end
 

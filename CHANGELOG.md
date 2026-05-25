@@ -34,3 +34,9 @@ Add badge checks for HM to prevent sequence breaks.
 
 
 
+* Update 1.0.0
+
+Fix female fishing sprite. 
+Fix DayCare Man being in two places at once. 
+Fix Sandbox room giving the Vortex HM. 
+
