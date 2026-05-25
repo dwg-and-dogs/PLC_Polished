@@ -120,14 +120,15 @@ The Judge Machine in Goldenrod City's PokéCom Center shows your Pokémon's EVs 
 
 ### What do the new balls do?
 
-Material 		-- PokeBall 	-- Effect
-Radiant Opal 	-- Jeze Ball 	-- Better catch rate for Dark, Psychic, Fairy 
-Shore Foam 		-- Bub Ball 	-- Better catch rate for Ice, Water 
-Fixed Charge 	-- Deci Ball 	-- Better catch rate for Electric
-Tough Leaves 	-- Herb Ball 	-- Better catch rate for Poison, Bug, Grass
-Hollow Rock 	-- Geode 		-- Better catch rate for Steel, Ground, Rock 
-Red Apricorn 	-- Love Ball 	-- Better catch rate for opposite gender & increases friendship (combines Love Ball and Friend Ball effect from vanilla) 
-White Apricorn 	-- Fast Ball 	-- Vanilla behavior
+| Material | PokeBall | Effect |
+| --- | --- | --- |
+| Radiant Opal | Jeze Ball | Better catch rate for Dark, Psychic, Fairy |
+| Shore Foam | Bub Ball | Better catch rate for Ice, Water |
+| Fixed Charge | Deci Ball | Better catch rate for Electric |
+| Tough Leaves | Herb Ball | Better catch rate for Poison, Bug, Grass |
+| Hollow Rock | Geode | Better catch rate for Steel, Ground, Rock |
+| Red Apricorn | Love Ball | Better catch rate for opposite gender & increases friendship (combines Love Ball and Friend Ball effect from vanilla) |
+| White Apricorn | Fast Ball | Vanilla behavior |
 
 ### What are suggested level caps?
 
