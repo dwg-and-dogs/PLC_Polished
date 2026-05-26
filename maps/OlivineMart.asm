@@ -74,7 +74,7 @@ GivingPatchText:
 	line "ability!"
 	
 	para "I'll sell to you"
-	line "for 30k. Deal?"
+	line "for ¥30k. Deal?"
 	done
 	
 GotPatchText:

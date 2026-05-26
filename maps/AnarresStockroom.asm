@@ -19,9 +19,9 @@ AnarresStockroom_MapScriptHeader:
 	def_object_events 
 	object_event  6,  5, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresStockroomNPC3Text, -1
 	mart_clerk_event  2,  3, MARTTYPE_STANDARD, MART_ANARRES
-	object_event  2,  5, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, jumptextfaceplayer, AnarresStockroomNPC1Script, -1
+	object_event  2,  5, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AnarresStockroomNPC1Script, -1
 	object_event  5,  2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, AnarresStockroomNPC2Text, -1
-
+	object_event  2,  2, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, AnarresStockroomApricorn, -1
 
 
 	object_const_def
@@ -284,74 +284,61 @@ ASCheckForApricornsText:
 
 
 ; todo revise to sell apricorns wht pnk and tough leaves 
-OlivineCafe1Script: ; 5000 
+AnarresStockroomApricorn: ; 200 
 	faceplayer
 	opentext
-	writetext OlivineCafe1Text
+	writetext Apricorn1Text
 	special PlaceMoneyTopRight
 	yesorno
-	iffalse_jumpopenedtext OlivineCafeText4
-	checkmoney $0, 5000
-	ifequal $2, OlivineCafeNotEnoughMoney
+	iffalse_jumpopenedtext ApricornNoText
+	checkmoney $0, 500
+	ifequal $2, ApricornVendorNoMoneyText
 	promptbutton
-	loadmenu .Cafe1PokemonMenuHeader
+	loadmenu .ApricornHeader
 	verticalmenu
 	closewindow
-	ifequal 1, .GiveMagikarp
-	ifequal 2, .GiveChinchou
-	ifequal 3, .GiveCorsola
-	ifequal 4, .GiveShuckle
+	ifequal 1, .GivePink
+	ifequal 2, .GiveWhite
+	ifequal 3, .GiveLeaves
 	jumptext CafeNoFishText
 
 ;	givepoke MAGIKARP, MAGIKARP_MASK_FORM, 10, EVIOLITE, ULTRA_BALL, DRAGON_RAGE
-.GiveMagikarp:
-	givepoke MAGIKARP, NO_FORM, 100, LEPPA_BERRY, POKE_BALL, REVERSAL
-	iffalse_jumpopenedtext Text_NoCarry
+.GivePink:
+	giveapricorn PNK_APRICORN
 	playsound SFX_TRANSACTION
-	takemoney $0, 5000
+	takemoney $0, 500
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "Here you go, kid!"
+	text "Enjoy your Pnk"
+	line "Apricorn!"
 	done
 
-.GiveChinchou:
-	givepoke CHINCHOU, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, PSYBEAM
-	iffalse_jumpopenedtext Text_NoCarry
+.GiveWhite:
+	giveapricorn WHT_APRICORN
 	playsound SFX_TRANSACTION
-	takemoney $0, 5000
+	takemoney $0, 500
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "Here you go, kid!"
+	text "Enjoy your Wht"
+	line "Apricorn!"
 	done
 
 
-.GiveCorsola:
-	givepoke CORSOLA, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, AMNESIA
-	iffalse_jumpopenedtext Text_NoCarry
+.GiveLeaves:
+	giveapricorn TOUGH_LEAVES
 	playsound SFX_TRANSACTION
-	takemoney $0, 5000
+	takemoney $0, 500
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
-	text "Here you go, kid!"
+	text "Enjoy those Tough"
+	line "Leaves!"
 	done
 
 
-.GiveShuckle:
-	givepoke SHUCKLE, NO_FORM, 5, LEPPA_BERRY, POKE_BALL, SHELL_SMASH
-	iffalse_jumpopenedtext Text_NoCarry
-	playsound SFX_TRANSACTION
-	takemoney $0, 5000
-	special PlaceMoneyTopRight
-	jumpthisopenedtext
-
-	text "Here you go, kid!"
-	done
-
-
-.Cafe1PokemonMenuHeader:
+.ApricornHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 0, 15, TEXTBOX_Y - 1
 	dw .MenuData
@@ -359,31 +346,28 @@ OlivineCafe1Script: ; 5000
 
 .MenuData:
 	db STATICMENU_CURSOR ; flags
-	db 5 ; items
-	db "Magikarp@"
-	db "Chinchou@"
-	db "Corsola@"
-	db "Shuckle@"
+	db 4 ; items
+	db "Pink@"
+	db "White@"
+	db "Leaves@"
 	db "Cancel@"
 	
-OlivineCafe1Text:
-	text "Oy, oy, we got"
-	line "a lotta fish!"
+Apricorn1Text:
+	text "Hi Trainer! If"
+	line "you don't have any"
+	cont "apricorns,"
+	
+	para "we keep some at"
+	line "this Stockroom"
+	cont "for just ¥500."
+	done
 
-	para "These small fry"
-	line "are just 5k."
-	
-	para "They've got unique"
-	line "moves."
-	
-	para "They cost ¥5000"
-	line "to take home."
-	
-	para "Reverse Magikarp,"
-	line "Psybeam Chinchou,"
-	para "Amnesia Corsola,"
-	line "or a smashing"
-	cont "Shuckle."
-	
-	para "Buy for ¥5000?"
+ApricornNoText:
+	text "Come back any"
+	line "time!"
+	done
+
+ApricornVendorNoMoneyText:
+	text "Oh, you don't"
+	line "have enough."
 	done

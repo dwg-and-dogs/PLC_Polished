@@ -1,5 +1,5 @@
 NAME := crystal_inheritance
-VERSION := 0.4.6-beta
+VERSION := 1.0.0
 
 TITLE := PKPCRYSTAL
 MCODE := PKPC
