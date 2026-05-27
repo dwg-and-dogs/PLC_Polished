@@ -35,7 +35,7 @@
 
 ## Screenshots
 
-![Title](screenshots/Inheritance_Publish/Features/features_summary/title1p0.png) 
+![Features](screenshots/Inheritance_Publish/Features/features_summary/template.png) 
 
 ![Starters](screenshots/Inheritance_Publish/Features/features_summary/starter.png) 
 
@@ -45,20 +45,13 @@
 
 ![Cianwood](screenshots/Inheritance_Publish/Features/features_summary/CIANWOOD.png) 
 
-![Olivine](screenshots/Inheritance_Publish/Features/features_summary/chuckVSJasmine.png) 
+![Olivine](screenshots/Inheritance_Publish/Features/features_summary/chuckVSjasmine.png)
 
-![Falkner](screenshots/Inheritance_Publish/Features/features_summary/Falkner.png) 
+![Falkner](screenshots/Inheritance_Publish/Features/features_summary/falknerVSkurtney.png) 
 
 ![Whitney](screenshots/Inheritance_Publish/Features/features_summary/whitneyVSsylvan.png) 
- 
-
-![generals](screenshots/Inheritance_Publish/Plot/consuls_garden.png) 
-
-![Badges](screenshots/Inheritance_Publish/Plot/historic_johto_badges_011025.png) 
 
 ![Petra](screenshots/Inheritance_Publish/Plot/kanna_080225.png) 
-
-![Andrea](screenshots/Inheritance_Publish/Plot/Adrinna_Mine.png) 
 
 ![Landing](screenshots/Inheritance_Publish/Plot/traders_landing.png) 
 
@@ -66,7 +59,9 @@
 
 ![Tyrus](screenshots/Inheritance_Publish/Features/features_summary/TYRUS1.png) 
 
-![Minsir](screenshots/Inheritance_Publish/Features/minsir.png) 
+![Andrea](screenshots/Inheritance_Publish/Plot/Adrinna_Mine.png) 
+
+![Minsir](screenshots/Inheritance_Publish/Features/features_summary/minsir2.png) 
 
 ![Captain](screenshots/Inheritance_Publish/Plot/rusalka_ruins_captain_072325.png) 
 
@@ -74,7 +69,7 @@
 
 ![Annihilape](screenshots/Inheritance_Publish/Features/features_summary/annihilape.png) 
 
-![Azalea Mart](screenshots/Inheritance_Publish/Features/features_summary/candy.png) 
+![Azalea Mart](screenshots/Inheritance_Publish/Features/features_summary/CANDY.png) 
 
 ![Kurt](screenshots/Inheritance_Publish/Features/features_summary/KURTBATTLE.png) 
 
@@ -89,14 +84,13 @@
 
 ![ApricornCrafting2](screenshots/Inheritance_Publish/Features/apricorns/hollow_rock.png) 
 
-![ApricornCrafting3](screenshots/Inheritance_Publish/Features/apricorns/radiant_opal.png) 
+![ApricornCrafting3](screenshots/Inheritance_Publish/Features/apricorns/radiant_opal_2.png) 
 
-![ApricornCrafting4](screenshots/Inheritance_Publish/Features/apricorns/shore_foam.png) 
-
-![ApricornCrafting5](screenshots/Inheritance_Publish/Features/apricorns/tough_leaves.png) 
 
 
 ## New Hidden Palette Colors
+
+Pokemon with the highest possible DV for a given hidden power type will have a palette to match. There are 6 NPCs who can grant these DVs to one of your Pokemon during your playthrough, and one more once you reach the credits. 
 
 ![Bug](screenshots/Inheritance_Publish/Features/hp_colors/hp_bug.png) 
 ![Dark](screenshots/Inheritance_Publish/Features/hp_colors/hp_dark.png) 
