@@ -35,47 +35,7 @@
 
 ## Screenshots
 
-![Features](screenshots/Inheritance_Publish/Features/features_summary/template.png) 
-
-![Starters](screenshots/Inheritance_Publish/Features/features_summary/starter.png) 
-
-![Expert](screenshots/Inheritance_Publish/Features/features_summary/expert.png) 
-
-![Ilex](screenshots/Inheritance_Publish/Plot/ilex_forest.png) 
-
-![Cianwood](screenshots/Inheritance_Publish/Features/features_summary/CIANWOOD.png) 
-
-![Olivine](screenshots/Inheritance_Publish/Features/features_summary/chuckVSjasmine.png)
-
-![Falkner](screenshots/Inheritance_Publish/Features/features_summary/falknerVSkurtney.png) 
-
-![Whitney](screenshots/Inheritance_Publish/Features/features_summary/whitneyVSsylvan.png) 
-
-![Petra](screenshots/Inheritance_Publish/Plot/kanna_080225.png) 
-
-![Landing](screenshots/Inheritance_Publish/Plot/traders_landing.png) 
-
-![Amos](screenshots/Inheritance_Publish/Features/features_summary/amos.png) 
-
-![Tyrus](screenshots/Inheritance_Publish/Features/features_summary/TYRUS1.png) 
-
-![Andrea](screenshots/Inheritance_Publish/Plot/Adrinna_Mine.png) 
-
-![Minsir](screenshots/Inheritance_Publish/Features/features_summary/minsir2.png) 
-
-![Captain](screenshots/Inheritance_Publish/Plot/rusalka_ruins_captain_072325.png) 
-
-![Route39](screenshots/Inheritance_Publish/Plot/route39.png) 
-
-![Annihilape](screenshots/Inheritance_Publish/Features/features_summary/annihilape.png) 
-
-![Azalea Mart](screenshots/Inheritance_Publish/Features/features_summary/CANDY.png) 
-
-![Kurt](screenshots/Inheritance_Publish/Features/features_summary/KURTBATTLE.png) 
-
-![Sandbox](screenshots/Inheritance_Publish/Features/features_summary/sandbox.png) 
-
-![Excelsior](screenshots/Inheritance_Publish/Plot/ilex_excelsior.png) 
+![Features](screenshots/Inheritance_Publish/Features/features_summary/features.png) 
 
 
 ## New Mechanic: Expanded Apricorn Crafting System 
