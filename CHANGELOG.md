@@ -2,8 +2,6 @@
 
 *This document will contain any changes made to public releases.
 
-* Last updated: 05-13-26, v0.4.4
-
 * Update 0.4.4:
 
 Olivine Battle Shop open at the Olivine Mart. 
@@ -34,7 +32,9 @@ Add badge checks for HM to prevent sequence breaks.
 
 * Update 1.0.0
 
+Finished release version! Should have no errors that crash the game or allow sequence breaks. 
 Fix female fishing sprite. 
 Fix DayCare Man being in two places at once. 
 Fix Sandbox room giving the Vortex HM. 
 
+Last updated: 05/27/26

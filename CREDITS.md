@@ -8,7 +8,7 @@ Credits from Polished Crystal are located at the end of this document.
 
 ## Crystal Inheritance Credits
 
-## Pokemon Front and Back sprites
+## Pokémon Front and Back sprites
 
 Many sprites were adapted to the Gen 2 format. Credits are for the original source. If you believe your work was used and is not credited, please let me know by reddit or Discord! DM: u/dwg6m9
 
@@ -43,28 +43,31 @@ Back Sprites if different from above, using Deviantart handles:
 * Theymadememakethisac: H__Decidueye
 * utytft: Decidueye
 
-## Pokemon Menu icons
+## Pokémon Menu icons
 
 * Azure Keys: Dewott, Samurott, Drapion, Lucario, Roserade, Roselia, Drifblim, Toxicroak, Froslass, Gardevoir, Gallade, Oshawott
 * DWG: H__Arcanine, Hippowdon, Heatran, Grotle, Sneasler, Overqwil, Basculegion, H__Avalugg
 * Pokewilds: wyrdeer, hgoodra, hzoroark, hsliggoo, spiritomb, jumpluff, monferno, infernape, prinplup, bastiodon, gabite, garchomp, rotom, dusclops, dusknoir, rampardos, ambipom, empoleon, lopunny, snover, abomasnow, hbraviary, htyphlosion, hsamurott, kleavor, luxio, luxray, helectrode, rowlet, hdecidueye, skiploom, stantler, staraptor, torterra, staravia, ursaluna, vespiquen
 
-## Pokemon Cries
+## Pokémon Cries
 
 * Cries from Polished Crystal
-* Some cries adapted from Azure Keys Black and White 3: Genesis, see data/pokemon/cries.asm for full list 
+* Some cries adapted from Azure Keys Black and White 3: Genesis, see data/Pokémon/cries.asm for full list 
 
 ## Trainer Sprites
 
-* Pokets3 ("Mario"): Emperor Vesper and Generals Andrea, Tyrus, and Nemo, Hisui Female, Falkner, Kurt-Final, Whitney, Chuck, Player front and back, Remy, Silas, Amos, Nomad_M, Nomad_F, Petra, Rival
+* Pokets3 ("Mario"): Emperor Mejimi and Generals Andrea, Tyrus, and Nemo, Hisui Female, Falkner, Kurt-Final, Whitney, Chuck, Player front and back, Remy, Silas, Amos, Nomad_M, Nomad_F, Petra, Rival
 * DWG: Brigader (adapted from beta Falkner)
 * Bronzeswagger: Sybil 
 * Justinnuggets: Scavenger (diver)  
 * Ferropexola: Ninja
 
-## Beta Testers
+## Special Thanks
 
 * MissingNoVGC
+
+## Beta Testers
+
 * SilentSentinel
 * Jupiter
 * N4773R
@@ -85,7 +88,6 @@ Back Sprites if different from above, using Deviantart handles:
 * Zorojr
 * beastiepaws
 * spiritsulwyn
-* gh0sti
 * StreetItalianPie
 * juneberry
 * If I left you out, let me know!  
@@ -94,14 +96,14 @@ Back Sprites if different from above, using Deviantart handles:
 ## Other Art
 
 * Animated Fire from Azure Keys BW3: Genesis 
-* Box Art Assets adapted from Pokemon Trading Card Game art
+* Box Art Assets adapted from Pokémon Trading Card Game art
 * Title Screen: Tree adapted from takashi14_daumzey
 
 ## Miscellaneous
 
 * Pret Pokecrystal discord
 * Ferropexola ("Johto Legends") 
-* r/PokemonROMhacks
+* r/PokémonROMhacks
 * Feedback at Crystal Inheritance Discord
 
 ## Tools used
@@ -141,7 +143,7 @@ Back Sprites if different from above, using Deviantart handles:
 * ShockSlayer for some Pokémon Go and Pokémon Stadium battle music.
 * Monstarules for the RSE Surf music.
 * TriteHexagon for the Kanto wild night battle music.
-* LevusBevus, GRonnoc, Cat333Pokemon, and KoolBoyMan for some music from Pokémon Prism (available in the music player).
+* LevusBevus, GRonnoc, Cat333Pokémon, and KoolBoyMan for some music from Pokémon Prism (available in the music player).
 
 
 ## Graphics
@@ -194,6 +196,6 @@ Back Sprites if different from above, using Deviantart handles:
 
 * yenatch, kanzure, Pikalax, iimarckus, and everyone else who's contributed to disassembling Pokémon Crystal.
 * Luna for her inspiring Red++ ROM hack, and help on Skeetendo.
-* Crystal_ for his in-depth RBY/GSC mechanics research, and help on /r/PokemonROMhacks.
+* Crystal_ for his in-depth RBY/GSC mechanics research, and help on /r/PokémonROMhacks.
 * Tauwasser, comet, and other members of Skeetendo for help and advice.
 * Satoshi Tajiri, Game Freak, and Nintendo for creating Pokémon Crystal in the first place.

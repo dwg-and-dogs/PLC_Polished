@@ -5,13 +5,13 @@
 * New region: Historic Johto
 * Custom Pokédex of 254 includes Sinnoh and Hisui Pokémon
 * New apricorn system to craft new Pokéballs: Bub Ball, Herb Ball, Deci Ball, Jeze Ball, and Geode crafted from materials on the overworld.
-* "Hidden Palette" system where NPCs can adjust your pokemon DVs to take on unique palette and grant the corresponding hidden power. 
+* "Hidden Palette" system where NPCs can adjust your Pokémon DVs to take on unique palette and grant the corresponding hidden power. 
 * Emphasis on overworld puzzles exploiting time travel mechanic 
 * "Trick House" in historic Ilex Forest
 * Two possible endings
 * Three difficulty modes: Easy, where enemies have no EVs or items; Normal, which is a tough but fair challenge; and Expert, where bosses have full teams of 6 with coverage moves and even higher EVs. 
 * The entire dex can be caught in one game.
-* Sandbox Room that grants you items, a random Pokemon of any given type, or all Pokemon so you can play how you want to. 
+* Sandbox Room that grants you items, a random Pokémon of any given type, or all Pokémon so you can play how you want to. 
 * HM moves do not require move deleter to overwrite.
 * Kurt will battle you for extra experience throughout the game to give you experience and help you get locations for rare Pokémon. 
 * Whirlpool is now called "Vortex". It is Psychic-type Bulldoze and can be learned by most Water, Psychic, Ghost, and Fairy types. 
@@ -22,8 +22,7 @@
 * New mechanics, including the Fairy type, Physical/Special split, Natures, unlimited TMs, Running Shoes, and continuous Repel.
 * Music and graphics devamped from other versions.
 * Nuzlocke mode in the Option menu, enabling the basic rules of the [Nuzlocke Challenge](http://bulbapedia.bulbagarden.net/wiki/Nuzlocke_Challenge).
-* Learnsets have been updated close to Gen VI, with missing moves replaced by similar, egg, TM, or event-exclusive moves. See data/pokemon/evos_attacks or data/pokemon/base_stats/<name> for level-up and TMHM learnsets.
-* HM moves do not require move deleter to overwrite.
+* Learnsets have been updated close to Gen VI, with missing moves replaced by similar, egg, TM, or event-exclusive moves. See data/Pokémon/evos_attacks or data/Pokémon/base_stats/<name> for level-up and TMHM learnsets.
 * Hold B to use Running Shoes, or turn on the Option to always use them.
 * Continuous Repel system.
 * Cure poison when it reaches 1 HP outside a battle.
@@ -33,7 +32,7 @@
 * Maximum 30 items and 16 Balls in your bag pocket.
 
 
-## Screenshots
+## Gameplay
 
 ![Features](screenshots/Inheritance_Publish/Features/features_summary/features.png) 
 
@@ -50,7 +49,7 @@
 
 ## New Hidden Palette Colors
 
-Pokemon with the highest possible DV for a given hidden power type will have a palette to match. There are 6 NPCs who can grant these DVs to one of your Pokemon during your playthrough, and one more once you reach the credits. 
+Pokémon with the highest possible DV for a given hidden power type will have a palette to match. There are 6 NPCs who can grant these DVs to one of your Pokémon during your playthrough, and one more once you reach the credits. 
 
 ![Bug](screenshots/Inheritance_Publish/Features/hp_colors/hp_bug.png) 
 ![Dark](screenshots/Inheritance_Publish/Features/hp_colors/hp_dark.png) 
@@ -69,6 +68,10 @@ Pokemon with the highest possible DV for a given hidden power type will have a p
 ![Steel](screenshots/Inheritance_Publish/Features/hp_colors/hp_steel.png) 
 ![Water](screenshots/Inheritance_Publish/Features/hp_colors/hp_water.png) 
 
+
+## Pokedex
+
+![Features](screenshots/Inheritance_Publish/Features/pokedex_front_images.png) 
 
 ## Spotify Playlist
 
@@ -140,7 +143,7 @@ Curated playlist: https://open.spotify.com/playlist/1yUCVhCgMnO10MIXvMtyh4?si=fc
 
 ## Events
 
-* Move Reminder in Cianwood City. (Code borrowed from TPP Anniversary Crystal, thanks to its developers graciously making [their source code](https://github.com/TwitchPlaysPokemon/tppcrystal251pub/) public.)
+* Move Reminder in Cianwood City. (Code borrowed from TPP Anniversary Crystal, thanks to its developers graciously making [their source code](https://github.com/TwitchPlaysPokémon/tppcrystal251pub/) public.)
 * Revised Game Corner prizes.
 * Revised Buena's Password prizes.
 * Three of Prof. Oak's aides give you items as you complete the Pokédex.

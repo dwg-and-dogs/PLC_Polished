@@ -20,22 +20,22 @@ Difficulty can be changed at any time from the title screen by pressing left-B a
 
 Easy mode trainers have no EVs, and no boss or rival battles have items. Should be a smooth experience. 
 
-Normal mode will have boss battles a few levels above your team. Opponents have EVs, items, and some coverage moves. The 'intended' way to play. 
+Normal mode has boss battles a few levels above your team. Opponents have EVs, items, and some coverage moves. The 'intended' way to play. 
 
-Expert mode will have full teams of six for boss battles and mini bosses. They have twice the EVs of normal mode. There are a few custom regional forms on enemy teams. 
+Expert modehas full teams of six for boss battles and mini bosses. They have twice the EVs of normal mode. There are a few custom regional forms on enemy teams. 
 
 ### Are there any sandbox or debug features? 
 
 There are two debug features:
 
 (All versions) The back-left corner of the Azalea Gym has a portal to a debug room. Simply interact with the furthest-left flower tile. Starting from the top-left and working to the bottom-right: 
-* Random type pokemon gift for starting a monotype runs
+* Random type Pokémon  gift for starting a monotype runs
 * All items
 * Lv100 super team 
 * DWG battle 
-* Random any pokemon
-* Give all pokemon, no forms 
-* Give all pokemon, variant forms 
+* Random any Pokémon 
+* Give all Pokémon , no forms 
+* Give all Pokémon , variant forms 
 
 
 ### Where did this Pokémon go?
@@ -45,17 +45,26 @@ Some first forms, especially babies, were removed to make room for more evolutio
 
 ### Is there documentation for all the {Pokémon, items, moves, etc}?
 
-The game's [documentation](screenshots/documentation/v040) does a fairly good job of listing things you'll want to know. Some highlights:
+The game's [documentation](screenshots/documentation/v100) contains:
 
-* [Base stats and TM learnsets](data/pokemon/base_stats/)
-* [Evolution methods](screenshots/documentation/v040/Evolution_Methods_v040_050126)
-* [Level-up learnsets and evolution methods](data/pokemon/evos_attacks.asm)
+* [Level Caps](screenshots/documentation/v100/todo.txt)
+* [Encounters](screenshots/documentation/v100/todo.txt)
+* [Evolution Methods](screenshots/documentation/v100/todo.txt)
+* [Learnsets](screenshots/documentation/v100/todo.txt)
+* [Faithful Mode Differences](screenshots/documentation/v100/todo.txt)
+
+* [Item Locations](screenshots/documentation/v100/todo.txt)
+* [Completionist Tasks](screenshots/documentation/v100/todo.txt)
+
+
+You may also be interested in:
 * [Egg moves](data/pokemon/egg_moves.asm)
+* [Box Art](screenshots/Inheritance_Publish/PLC_BOX_v3.png) ; todo: add to v100 folder 
+* [Base stats and TM learnsets](data/pokemon/base_stats/)
 * [Move attributes](data/moves/moves.asm)
 * [TM+HM+tutor list](data/moves/tmhm_moves.asm)
 * [Wild Pokémon](data/wild/)
-* [Faithful mode changes](screenshots/documentation/v040/FaithfulMode_Changes_v040_050126)
-* [Encounters](todo)
+
 
 ### My Pokémon is a different color, is it shiny?
 
@@ -93,7 +102,7 @@ There's only room for 255 moves, including Struggle. Some similar moves were com
 Full list at: [Evolution methods](screenshots/documentation/v040/Evolution_Methods_v040_050126) 
 
 Some notable: 
-* Pokemon evolve into alternate forms by using the Odd Souvenir from a standard pre-evolution (e.g., Quilava to Hisuian Typhlosion).
+* Pokémon  evolve into alternate forms by using the Odd Souvenir from a standard pre-evolution (e.g., Quilava to Hisuian Typhlosion).
 * Kadabra, Graveler, Machoke, Haunter evolve at Lv. 40 
 * Ponyta, Grimer, Rhydon evolve at Lv. 25
 * Item trade evolutions (like Seadra into Kingdra while holding a Dragon Scale) evolve while holding the item.
@@ -130,6 +139,7 @@ The Judge Machine in Goldenrod City's PokéCom Center shows your Pokémon's EVs 
 
 ### What are suggested level caps?
 
+TODO update this 
 Badge 1, Anarres Town: 16
 	Optional, Bugsy:  18
 Badge 2, Gauldenrod: 21
@@ -179,6 +189,7 @@ Eastern Johto is not available.
 
 ### Seriously, spoilers below!
 
+Youtube guide by MissingNoVGC has answers to most of these questions: https://www.youtube.com/watch?v=onymeorXFSU&list=PLx-yM2ZRc5WEgOP1WPfqFdHy0DFTJM8Oj
 
 ### Wait, who is this character?
 
@@ -198,21 +209,22 @@ Petra: Hisuian leader.
 
 ### Where do I get the legendary Pokémon or the custom variants?
 
-Legendary pokemon are found in the locations below: 
+Legendary Pokémon  are found in the locations below: 
 
-* Xatu: At the south Timeless Tapestry, have a pokemon knowing Ancientpower in your party, then interact with it. 
-* Magcargo: Surf to the cliff wall on the Serene Springs with a notch. Have a pokemon knowing Dig in your party, then interact with the notch. 
-* Meganium: At the western side of the Stadium Grounds, there is a small island. Have a pokemon knowing Sunny Day in your party, the interact with it. 
-* Feraligatr: Get the Adamant Orb from Cynthia by having over 100 pokedex entries. Then use the Adamant Orb at the notched cliff wall in the southern Tranquil Tarn. Have a pokemon knowing Splash in your party - you can fish up a Magikarp on this map. 
-* Entei: Solve the last Alph puzzle and use the item obtained on the rock indent on the eastern half of Route 42. 
-* Suicune: Save the Miltank on Route 39. 
-* Raikou: Top of Lighthouse (beyond the room with Jasmine and the scientists) with Lugia or Politoed in the party. 
-* Lugia: Historic Whirl Islands (Sheltered Shores), requires Waterfall
-* Ho-Oh: Show Morty any of the legendary beasts, defeat him, then ascend Tin Tower. 
-* Heatran: Clast's Cradle
-* Celebi: Timeless Tapestry
+* **Noctowl**: In the Violet Catacombs, arrange the tiles to say "NOCS FOR YOUR TOLL"
+* **Xatu**: At the south Timeless Tapestry, have a Pokémon  knowing Ancientpower in your party, then interact with it. 
+* **Magcargo**: Surf to the cliff wall on the Serene Springs with a notch. Have a Pokémon  knowing Dig in your party, then interact with the notch. 
+* **Meganium**: At the western side of the Stadium Grounds, there is a small island. Have a Pokémon knowing Sunny Day or with Drought in your party, the interact with it. 
+* **Feraligatr**: Get the Adamant Orb from Cynthia by having over 100 pokedex entries. Then use the Adamant Orb at the notched cliff wall in the southern Tranquil Tarn. Have a Pokémon knowing Splash in your party - you can fish up a Magikarp on this map. 
+* **Entei**: Solve the Heatran Ruins of Alph puzzle and use the item obtained on the rock indent on the eastern half of Route 42. 
+* **Suicune**: Save the Miltank on Route 39. 
+* **Raikou**: Top of Lighthouse (beyond the room with Jasmine and the scientists) with Lugia or Politoed in the party. 
+* **Lugia**: Historic Whirl Islands (Sheltered Shores), requires Waterfall
+* **Ho-Oh**: Show Morty any of the legendary beasts, defeat him, then ascend Tin Tower. 
+* **Heatran**: Clast's Cradle
+* **Celebi**: Timeless Tapestry
 
-Legendary pokemon, Spiritomb, and Rotom reset each time you complete the final gauntlet and see your team portraits. You can evolve the pre-evolutions of the variant forms with the odd souvenir. 
+Legendary Pokémon , Spiritomb, and Rotom reset each time you complete the final gauntlet and see your team portraits. You can evolve the pre-evolutions of the variant forms with the odd souvenir. 
 
 
 ### Wait, what's going on in historic Johto?

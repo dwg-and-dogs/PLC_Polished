@@ -16,3 +16,5 @@ In historic Johto, you'll see the power-hungry Emperor Vesper and his generals T
 In modern Johto, you'll confront Johto's wayward gym leaders as they wonder how to cope with a changing world. 
 
 Nothing is inevitable - what path will you choose? 
+
+![Box Art](screenshots/Inheritance_Publish/PLC_BOX_v3.png) 
