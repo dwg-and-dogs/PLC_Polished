@@ -11,7 +11,7 @@ When Ilex Forest is threatened, Celebi calls out for help. Can you go back in ti
 
 Use your knowledge of the world to craft pokéballs from new apricorns, discover Hisuian evolutions of Johto Pokémon, and explore Johto like never before. 
 
-In historic Johto, you'll see the power-hungry Emperor Mejimi and his generals Bobesh, Kensey, and Adrinna use a crisis to consolidate power.
+In historic Johto, you'll see the power-hungry Emperor Vesper and his generals Tyrus, Nemo, and Andrea use a crisis to consolidate power.
 
 In modern Johto, you'll confront Johto's wayward gym leaders as they wonder how to cope with a changing world. 
 

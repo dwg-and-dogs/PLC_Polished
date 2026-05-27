@@ -32,8 +32,6 @@ Update sandbox room and HM checks to prevent sequence breaks.
 Fix some party names not displaying properly. 
 Add badge checks for HM to prevent sequence breaks.
 
-
-
 * Update 1.0.0
 
 Fix female fishing sprite. 

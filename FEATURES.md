@@ -35,11 +35,55 @@
 
 ## Screenshots
 
-TODO 
+![Title](screenshots/Inheritance_Publish/Features/features_summary/title1p0.png) 
 
-![TradersLanding](screenshots/Inheritance_BoxArt/back/title_screen_093024.png)
+![Starters](screenshots/Inheritance_Publish/Features/features_summary/starter.png) 
 
-![StarterSelection](screenshots/Inheritance_BoxArt/back/screenshot_tg.png)
+![Expert](screenshots/Inheritance_Publish/Features/features_summary/expert.png) 
+
+![Ilex](screenshots/Inheritance_Publish/Plot/ilex_forest.png) 
+
+![Cianwood](screenshots/Inheritance_Publish/Features/features_summary/CIANWOOD.png) 
+
+![Olivine](screenshots/Inheritance_Publish/Features/features_summary/chuckVSJasmine.png) 
+
+![Falkner](screenshots/Inheritance_Publish/Features/features_summary/Falkner.png) 
+
+![Whitney](screenshots/Inheritance_Publish/Features/features_summary/whitneyVSsylvan.png) 
+ 
+
+![generals](screenshots/Inheritance_Publish/Plot/consuls_garden.png) 
+
+![Badges](screenshots/Inheritance_Publish/Plot/historic_johto_badges_011025.png) 
+
+![Petra](screenshots/Inheritance_Publish/Plot/kanna_080225.png) 
+
+![Andrea](screenshots/Inheritance_Publish/Plot/Adrinna_Mine.png) 
+
+![Landing](screenshots/Inheritance_Publish/Plot/traders_landing.png) 
+
+![Amos](screenshots/Inheritance_Publish/Features/features_summary/amos.png) 
+
+![Tyrus](screenshots/Inheritance_Publish/Features/features_summary/TYRUS1.png) 
+
+![Minsir](screenshots/Inheritance_Publish/Features/minsir.png) 
+
+![Captain](screenshots/Inheritance_Publish/Plot/rusalka_ruins_captain_072325.png) 
+
+![Route39](screenshots/Inheritance_Publish/Plot/route39.png) 
+
+![Annihilape](screenshots/Inheritance_Publish/Features/features_summary/annihilape.png) 
+
+![Azalea Mart](screenshots/Inheritance_Publish/Features/features_summary/candy.png) 
+
+![Kurt](screenshots/Inheritance_Publish/Features/features_summary/KURTBATTLE.png) 
+
+![Sandbox](screenshots/Inheritance_Publish/Features/features_summary/sandbox.png) 
+
+![Excelsior](screenshots/Inheritance_Publish/Plot/ilex_excelsior.png) 
+
+
+## New Mechanic: Expanded Apricorn Crafting System 
 
 ![ApricornCrafting1](screenshots/Inheritance_Publish/Features/apricorns/fixed_charge.png) 
 
@@ -50,37 +94,6 @@ TODO
 ![ApricornCrafting4](screenshots/Inheritance_Publish/Features/apricorns/shore_foam.png) 
 
 ![ApricornCrafting5](screenshots/Inheritance_Publish/Features/apricorns/tough_leaves.png) 
-
-![Minsir](screenshots/Inheritance_Publish/Features/minsir.png) 
-
-![generals](screenshots/Inheritance_Publish/Plot/consuls_garden.png) 
-
-![Badges](screenshots/Inheritance_Publish/Plot/historic_johto_badges_011025.png) 
-
-![Excelsior](screenshots/Inheritance_Publish/Plot/ilex_excelsior.png) 
-
-![Ilex](screenshots/Inheritance_Publish/Plot/ilex_forest.png) 
-
-![Landing](screenshots/Inheritance_Publish/Plot/traders_landing.png) 
-
-![Captain](screenshots/Inheritance_Publish/Plot/rusalka_ruins_captain_072325.png) 
-
-![Route39](screenshots/Inheritance_Publish/Plot/route39.png) 
-
-![Adrinna](screenshots/Inheritance_Publish/Plot/Adrinna_Mine.png) 
-
-![Capital](screenshots/Inheritance_Publish/Plot/capital_palette.png) 
-
-![Kanna](screenshots/Inheritance_Publish/Plot/kanna_080225.png) 
-
-
-; todo 
-New Colors
-
-Debug Room (Spoiler)
-
-Example format below: 
-![seafoam-islands](screenshots/seafoam-islands.png) ; (screenshots/gameplay/<file_name>.png)
 
 
 ## New Hidden Palette Colors

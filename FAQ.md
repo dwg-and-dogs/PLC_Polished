@@ -6,9 +6,7 @@ You can report bugs on the discord or to me on Reddit by DM, u/dwg6m9.
 
 ### Which file do I need to play?
 
-Versions >0.4.0 is released as a pre-patched gbc file. 
-
-For earlier versions, the ROM you should use for patching:
+If you don't have a gbc file, the ROM you should use for patching:
 
 * Pokémon - Crystal Version (UE) (V1.0) [C][!].gbc
   (`md5: 9f2922b235a5eeb78d65594e82ef5dde`)
@@ -202,17 +200,17 @@ Petra: Hisuian leader.
 
 Legendary pokemon are found in the locations below: 
 
-*Xatu: At the south Timeless Tapestry, have a pokemon knowing Ancientpower in your party, then interact with it. 
-*Magcargo: Surf to the cliff wall on the Serene Springs with a notch. Have a pokemon knowing Dig in your party, then interact with the notch. 
-*Meganium: At the western side of the Stadium Grounds, there is a small island. Have a pokemon knowing Sunny Day in your party, the interact with it. 
-*Feraligatr: Get the Adamant Orb from Cynthia by having over 100 pokedex entries. Then use the Adamant Orb at the notched cliff wall in the southern Tranquil Tarn. Have a pokemon knowing Splash in your party - you can fish up a Magikarp on this map. 
-*Entei: Solve the last Alph puzzle and use the item obtained on the rock indent on the eastern half of Route 42. 
-*Suicune: Save the Miltank on Route 39. 
-*Raikou: Top of Lighthouse (beyond the room with Jasmine and the scientists) with Lugia or Politoed in the party. 
-*Lugia: Historic Whirl Islands (Sheltered Shores), requires Waterfall
-*Ho-Oh: Show Morty any of the legendary beasts, defeat him, then ascend Tin Tower. 
-*Heatran: Clast's Cradle
-*Celebi: Timeless Tapestry
+* Xatu: At the south Timeless Tapestry, have a pokemon knowing Ancientpower in your party, then interact with it. 
+* Magcargo: Surf to the cliff wall on the Serene Springs with a notch. Have a pokemon knowing Dig in your party, then interact with the notch. 
+* Meganium: At the western side of the Stadium Grounds, there is a small island. Have a pokemon knowing Sunny Day in your party, the interact with it. 
+* Feraligatr: Get the Adamant Orb from Cynthia by having over 100 pokedex entries. Then use the Adamant Orb at the notched cliff wall in the southern Tranquil Tarn. Have a pokemon knowing Splash in your party - you can fish up a Magikarp on this map. 
+* Entei: Solve the last Alph puzzle and use the item obtained on the rock indent on the eastern half of Route 42. 
+* Suicune: Save the Miltank on Route 39. 
+* Raikou: Top of Lighthouse (beyond the room with Jasmine and the scientists) with Lugia or Politoed in the party. 
+* Lugia: Historic Whirl Islands (Sheltered Shores), requires Waterfall
+* Ho-Oh: Show Morty any of the legendary beasts, defeat him, then ascend Tin Tower. 
+* Heatran: Clast's Cradle
+* Celebi: Timeless Tapestry
 
 Legendary pokemon, Spiritomb, and Rotom reset each time you complete the final gauntlet and see your team portraits. You can evolve the pre-evolutions of the variant forms with the odd souvenir. 
 
