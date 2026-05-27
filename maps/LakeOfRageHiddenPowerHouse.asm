@@ -14,7 +14,7 @@ LakeOfRageHiddenPowerHouse_MapScriptHeader: ; pryce's cabin
 
 
 	def_bg_events
-	bg_event  5,  1, BGEVENT_JUMPSTD, radio2
+;	bg_event  5,  1, BGEVENT_JUMPSTD, radio2
 	bg_event  6,  1, BGEVENT_JUMPSTD, difficultbookshelf
 	bg_event  7,  1, BGEVENT_JUMPSTD, difficultbookshelf
 

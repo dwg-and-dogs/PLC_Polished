@@ -30,11 +30,14 @@ Update sandbox room and HM checks to prevent sequence breaks.
 Fix some party names not displaying properly. 
 Add badge checks for HM to prevent sequence breaks.
 
-* Update 1.0.0
+* Release 1.0.0
 
 Finished release version! Should have no errors that crash the game or allow sequence breaks. 
 Fix female fishing sprite. 
 Fix DayCare Man being in two places at once. 
 Fix Sandbox room giving the Vortex HM. 
+Removed Pryce's Cabin surround sound.
+Fixed a tile in Traders Landing.
+Fixed s tile on Route KaJo. 
 
 Last updated: 05/27/26

@@ -218,7 +218,7 @@ Legendary Pokémon  are found in the locations below:
 * **Feraligatr**: Get the Adamant Orb from Cynthia by having over 100 pokedex entries. Then use the Adamant Orb at the notched cliff wall in the southern Tranquil Tarn. Have a Pokémon knowing Splash in your party - you can fish up a Magikarp on this map. 
 * **Entei**: Solve the Heatran Ruins of Alph puzzle and use the item obtained on the rock indent on the eastern half of Route 42. 
 * **Suicune**: Save the Miltank on Route 39. 
-* **Raikou**: Top of Lighthouse (beyond the room with Jasmine and the scientists) with Lugia or Politoed in the party. 
+* **Raikou**: Top of Lighthouse (beyond the room with Jasmine and the scientists) with a Pokémon knowing Rain Dance of 
 * **Lugia**: Historic Whirl Islands (Sheltered Shores), requires Waterfall
 * **Ho-Oh**: Show Morty any of the legendary beasts, defeat him, then ascend Tin Tower. 
 * **Heatran**: Clast's Cradle
