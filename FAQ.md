@@ -47,19 +47,19 @@ Some first forms, especially babies, were removed to make room for more evolutio
 
 The game's [documentation](screenshots/documentation/v100) contains:
 
-* [Level Caps](screenshots/documentation/v100/todo.txt)
-* [Encounters](screenshots/documentation/v100/todo.txt)
-* [Evolution Methods](screenshots/documentation/v100/todo.txt)
-* [Learnsets](screenshots/documentation/v100/todo.txt)
-* [Faithful Mode Differences](screenshots/documentation/v100/todo.txt)
+* [Level Caps](screenshots/documentation/v100/CrystalInheritance_LevelCaps_v100.txt)
+* [Evolution Methods](screenshots/documentation/v100/CrystalInheritance_evolution_methods_v100.txt)
+* [Faithful Mode Differences](screenshots/documentation/v100/CrystalInheritance_FaithfulMode_Changes_v100.txt)
+* [Learnsets](screenshots/documentation/v100/CrystalInheritance_evos_attacks_v100.txt)
+* [Item Locations](screenshots/documentation/v100/CrystalInheritance_Items_v100.pdf)
+* [Completionist Tasks](screenshots/documentation/v100/CrystalInheritance_Completionist_v100.txt)
+* [Encounters](screenshots/documentation/v100/CrystalInheritance_Encounters_v100.pdf)
 
-* [Item Locations](screenshots/documentation/v100/todo.txt)
-* [Completionist Tasks](screenshots/documentation/v100/todo.txt)
 
 
 You may also be interested in:
 * [Egg moves](data/pokemon/egg_moves.asm)
-* [Box Art](screenshots/Inheritance_Publish/PLC_BOX_v3.png) ; todo: add to v100 folder 
+* [Box Art](screenshots/Inheritance_Publish/PLC_BOX_v3.png)
 * [Base stats and TM learnsets](data/pokemon/base_stats/)
 * [Move attributes](data/moves/moves.asm)
 * [TM+HM+tutor list](data/moves/tmhm_moves.asm)
@@ -137,50 +137,21 @@ The Judge Machine in Goldenrod City's PokéCom Center shows your Pokémon's EVs 
 | Red Apricorn | Love Ball | Better catch rate for opposite gender & increases friendship (combines Love Ball and Friend Ball effect from vanilla) |
 | White Apricorn | Fast Ball | Vanilla behavior |
 
-### What are suggested level caps?
-
-TODO update this 
-Badge 1, Anarres Town: 16
-	Optional, Bugsy:  18
-Badge 2, Gauldenrod: 21
-	Stadium: 24
-Badge 3, Goldenrod: 29
-Badge 4, Violet City: 33
-Badge 5, Western Capital: 36
-Badge 6, Trader's Landing Docks: 40
-Badge 7, Olivine City: 43
-Badge 8, Mahogany Town: 45
-	Optional, Jasmine: 48
-	Optional, Morty: 49
-Badge 9, Sinjoh Camp: 48
-	Optional, Clair: 50 
-Badge 10, Eerie Hamlet: 51
-
-Clast's Cradle B1F: 53
-
-Final Gauntlet
-General Tyrus: 55
-General Nemo: 57
-
-If "No" chosen: 
-	General Andrea: 57
-	Emperor Vesper: 60
-If "Yes" chosen:
-	<Spoiler 1/2>: 60
-	<Spoiler 2/2>: 60
 
 
+### How do I get to Eastern Johto? Is there a postgame?
 
+Eastern Johto is not available. There's a completionist document if you want to make sure you got every nook and cranny:
 
-### How do I get to Eastern Johto?
-
-Eastern Johto is not available. 
-
+* [Completionist Tasks](screenshots/documentation/v100/CrystalInheritance_Completionist_v100.txt)
 
 
 
 
 ### Spoilers below!
+
+
+
 
 
 
@@ -278,8 +249,20 @@ Your rival feels bitter about the way he has been treated in Azalea and joins Si
 
 * [Celebi, Heatran, Violet Catacombs, Cabin #4 Sudoku](screenshots/Inheritance_Publish/Features/solved_puzzles)
 
-Kimono puzzles:
+![Celebi](gfx/unown_puzzle/celebi.png) 
+![Bronzong](gfx/unown_puzzle/bronzong.png) 
+![Lugia](gfx/unown_puzzle/lugia.png) 
+![Heatran](gfx/unown_puzzle/heatran.png) 
+
+* Kimono puzzles:
+
 	Kimono 2: Talk to the hedgehog from the south, then east, then north, then south, then east. 
+
+![Kimono3](screenshots/Inheritance_Publish/Features/kimono3.png) 
+
+![Kimono4](screenshots/Inheritance_Publish/Features/kimono_cabin_4_sudoku.png) 
+
+
 
 Whirl Islands:
 1. Talk to the sages to go back in time to the Vortex Caverns. 
@@ -291,13 +274,4 @@ Whirl Islands:
 7. Find the stairs that allow you to progress. 
 8. Solve the overworld maze. 
 9. Solve the water currents puzzle. 
-10. Descend the waterfall, witness Kurt capture Lugia. 
-
-
-TODO
-
-Enigma Glacier: hint, use the overworld boulders to help you land where you need to. Only the bottom boulder needs to be used. 
-
-Ruins of Alph Puzzles: 
-	Bronzong: 
-	Lugia: 
+10. Descend the waterfall, enter Lugia's chamber.

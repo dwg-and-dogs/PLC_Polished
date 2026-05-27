@@ -5,16 +5,16 @@ The game was built using Polished Crystal 3.0.0 as a base by dwg (Reddit usernam
 
 ## About Crystal Inheritance
 
-Crystal Inheritance is a time-traveling adventure through Johto! 
+Crystal Inheritance is a time-traveling adventure through Johto! In a twist on the classic Pokemon experience, instead of collecting badges to become champion, you unite Johto against a dark force threatening its future.
 
 When Ilex Forest is threatened, Celebi calls out for help. Can you go back in time to save Johto's future? 
 
-Use your knowledge of the world to craft pokéballs from new apricorns, discover Hisuian evolutions of Johto Pokémon, and explore Johto like never before. 
+Use your knowledge of the world to craft pokéballs from new apricorns, discover Hisuian and Ancestor forms of Johto Pokémon, and explore Johto like never before. 
 
-In historic Johto, you'll see the power-hungry Emperor Vesper and his generals Tyrus, Nemo, and Andrea use a crisis to consolidate power.
+In historic Johto, you'll see the power-hungry Emperor Mejimi and his generals Bobesh, Kensey, and Adrinna use a crisis to consolidate power.
 
 In modern Johto, you'll confront Johto's wayward gym leaders as they wonder how to cope with a changing world. 
 
-Nothing is inevitable - what path will you choose? 
+Nothing is inevitable - what path will you choose?
 
 ![Box Art](screenshots/Inheritance_Publish/PLC_BOX_v3.png) 

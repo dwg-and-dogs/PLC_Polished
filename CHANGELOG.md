@@ -38,6 +38,7 @@ Fix DayCare Man being in two places at once.
 Fix Sandbox room giving the Vortex HM. 
 Removed Pryce's Cabin surround sound.
 Fixed a tile in Traders Landing.
-Fixed s tile on Route KaJo. 
+Fixed a tile on Route KaJo. 
+Tidy up the MD files and documentation. 
 
 Last updated: 05/27/26

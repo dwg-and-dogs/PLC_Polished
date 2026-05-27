@@ -12,7 +12,7 @@ Credits from Polished Crystal are located at the end of this document.
 
 Many sprites were adapted to the Gen 2 format. Credits are for the original source. If you believe your work was used and is not credited, please let me know by reddit or Discord! DM: u/dwg6m9
 
-Front Sprites
+Front Sprites:
 
 * PeanutellaX: Ancestor Meganium, Ancestor Xatu, Ancestor Magcargo, H__Sliggoo, Goomy, 
 * Azure Keys: Dewott, Samurott, Spiritomb, Glalie
@@ -56,8 +56,8 @@ Back Sprites if different from above, using Deviantart handles:
 
 ## Trainer Sprites
 
-* Pokets3 ("Mario"): Emperor Mejimi and Generals Andrea, Tyrus, and Nemo, Hisui Female, Falkner, Kurt-Final, Whitney, Chuck, Player front and back, Remy, Silas, Amos, Nomad_M, Nomad_F, Petra, Rival
-* DWG: Brigader (adapted from beta Falkner)
+* Pokets3 ("Mario"): Emperor Vesper and Generals Andrea, Tyrus, and Nemo, Hisui Female, Falkner, Kurt-Final, Whitney, Chuck, Player front and back, Remy, Silas, Amos, Nomad_M, Nomad_F, Petra, Rival
+* dwg: Brigader (adapted from beta Falkner)
 * Bronzeswagger: Sybil 
 * Justinnuggets: Scavenger (diver)  
 * Ferropexola: Ninja
