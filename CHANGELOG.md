@@ -40,5 +40,7 @@ Removed Pryce's Cabin surround sound.
 Fixed a tile in Traders Landing.
 Fixed a tile on Route KaJo. 
 Tidy up the MD files and documentation. 
+Fix file error on Route 34.
+Add an apricorn vendor in Anarres Stockroom. 
 
 Last updated: 05/27/26

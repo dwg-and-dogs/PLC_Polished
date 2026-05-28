@@ -366,6 +366,23 @@ DWGIntroText:
 	para "You can contact"
 	line "me on Reddit,"
 	cont "u/dwg6m9."
+
+	para "Just a reminder,"
+	line "you can change"
+	para "difficulty at any"
+	line "time by pressing"
+	para "Left + B at the"
+	line "title screen and"
+	cont "continuing your"
+	cont "save file,"
+	
+	para "and you can reset"
+	line "the clock at any"
+	para "time by pressing"
+	line "Down + Select + B"
+	cont "at title screen"
+	cont "and continuing"
+	cont "your save file."
 	done
 
 DWGQuestionText:

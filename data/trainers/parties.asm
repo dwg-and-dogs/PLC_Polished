@@ -8681,7 +8681,7 @@ ArtistGroup:
 
 ; ================
 
-	; ARTIST ; TODO 
+	; ARTIST  
 	db "Mario@"
 	db TRAINERTYPE_MOVES
 	; party

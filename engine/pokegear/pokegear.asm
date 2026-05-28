@@ -1,4 +1,4 @@
-	const_def ; fixing from the original. remaining todo: 1) check diff against the 045 version for any remaining stubs to consider; 4) removet the black button at the top
+	const_def 
 	const CLOCK_CARD
 	const MAP_CARD
 	const PHONE_CARD

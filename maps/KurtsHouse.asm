@@ -962,11 +962,7 @@ endr
 	closetext
 	; debug only
 ; debug 
-	winlosstext DWGWinText, DWGLossText
-	loadtrainer ADRINNA, 9 ; check normalmode or hardmode 
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-
+	warp ROUTE_34, 3, 23
 	end
 
 TimeShiftRadio:

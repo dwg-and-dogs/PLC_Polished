@@ -283,7 +283,6 @@ ASCheckForApricornsText:
 	done
 
 
-; todo revise to sell apricorns wht pnk and tough leaves 
 AnarresStockroomApricorn: ; 200 
 	faceplayer
 	opentext
@@ -340,7 +339,7 @@ AnarresStockroomApricorn: ; 200
 
 .ApricornHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 0, 15, TEXTBOX_Y - 1
+	menu_coords 0, 0, 9, 10
 	dw .MenuData
 	db 1 ; default option
 
