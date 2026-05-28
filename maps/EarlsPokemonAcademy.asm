@@ -134,7 +134,7 @@ ElderLiScript:
 	loadtrainer ELDER, LI
 	sjump .startbattle
 .easy:
-	loadtrainer ELDER, LI
+	loadtrainer ELDER, LI_EASY
 	sjump .startbattle
 .hard:
 	loadtrainer ELDER, LI_HARD

@@ -403,19 +403,29 @@ def pokemon_card(poke: dict, move_types: dict) -> Table:
         mv_bg = type_color(mv_type)
         add_row(_para(title_case(move), FONT, 6, fg_for(mv_bg)), mv_bg)
 
-    # Pad to exactly 7 rows so cards align across a row
+    # Number of real content rows (species + nickname + item + actual moves).
+    # Padding rows after this point get a minimal fixed height so they don't
+    # balloon when a Pokémon has few or no moves.
+    n_content = len(rows)   # before padding
+
+    # Pad to exactly 7 rows so all cards in a row share the same structure
     while len(rows) < 7:
         add_row(_para("", FONT, 6, colors.black), EMPTY_BG)
 
-    t = Table(rows, colWidths=[CARD_W])
+    # rowHeights: content rows auto-size; padding rows collapse to 3 mm
+    EMPTY_ROW_H = 3 * mm
+    row_heights = [None] * n_content + [EMPTY_ROW_H] * (len(rows) - n_content)
+
+    t = Table(rows, colWidths=[CARD_W], rowHeights=row_heights)
     t.setStyle(TableStyle(styles))
     return t
 
 
 def empty_card() -> Table:
     """Filler card for trainers with fewer than 6 Pokémon."""
+    EMPTY_ROW_H = 3 * mm
     rows = [[""] for _ in range(7)]
-    t = Table(rows, colWidths=[CARD_W])
+    t = Table(rows, colWidths=[CARD_W], rowHeights=[EMPTY_ROW_H] * 7)
     t.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, -1), EMPTY_BG),
         ("BOX",        (0, 0), (-1, -1), 0.3, _c("#252E50")),

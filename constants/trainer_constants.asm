@@ -690,6 +690,7 @@ KRIS EQU __trainer_class__ ;
 	const TAMIKO ; wc electric 
 
 	trainerclass ELDER ; 42
+	const LI_EASY
 	const LI
 	const LI_HARD
 	const GAKU ; STUDY 
