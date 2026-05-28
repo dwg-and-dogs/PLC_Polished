@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu May 28 11:21:17 2026
-
-@author: dwg11
-"""
-
 #!/usr/bin/env python3
 """
 Pokémon Trainer Guide Generator
@@ -51,12 +44,9 @@ if MODE not in ("easy", "normal", "expert"):
 
 MOVES_PATH   = Path("data/moves/moves.asm")
 PARTIES_PATH = Path("data/trainers/parties.asm")
-OUTPUT_PATH  = Path(f"screenshots/documentation/v100/trainer_guide_{MODE}.pdf")
+OUTPUT_PATH  = Path(f"trainer_guide_{MODE}.pdf")
 
-# Accept .asm or .txt for the order file
-ORDER_PATH = Path(f"trainer_order_{MODE}.txt")
-if not ORDER_PATH.exists():
-    ORDER_PATH = Path(f"trainer_order_{MODE}.txt")
+ORDER_PATH = Path(f"trainer_parties_{MODE}.txt")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -111,8 +101,13 @@ def strip_comment(line: str) -> str:
 
 
 def clean_asm_str(s: str) -> str:
-    """Remove surrounding quotes and trailing @ from assembly string literals."""
-    return s.strip().strip('"').rstrip("@").strip()
+    """Remove surrounding quotes and trailing @ from assembly string literals.
+    Special token names like <RIVAL> are converted to title case (-> 'Rival')."""
+    result = s.strip().strip('"').rstrip("@").strip()
+    m = re.match(r"^<(\w+)>$", result)
+    if m:
+        result = m.group(1).title()
+    return result
 
 
 def title_case(s: str) -> str:
@@ -120,8 +115,10 @@ def title_case(s: str) -> str:
     return s.replace("_", " ").title()
 
 
-def hp_type_from_dvs(dvs: str) -> str:
+def hp_type_from_dvs(dvs: str | None) -> str:
     """DVS_HP_FLYING → FLYING.  Falls back to NORMAL."""
+    if not dvs:
+        return "NORMAL"
     m = re.match(r"DVS_HP_(\w+)", dvs)
     return m.group(1) if m else "NORMAL"
 
@@ -222,25 +219,57 @@ def parse_parties(path: Path) -> dict:
                     j += 1
                     continue
 
-                # ── (3) Pokemon line:
-                #        db LEVEL, SPECIES, ITEM, DVS [, "NICK@"]
-                m = re.match(
-                    r"^db\s+(\d+)\s*,\s*(\w+)\s*,\s*(\w+)\s*,\s*(\w+)"
-                    r'(?:\s*,\s*"([^"]*)")?',
-                    line,
-                )
+                # ── (3) Pokemon line
+                # Only LEVEL and SPECIES are always present. Everything else
+                # depends on TRAINERTYPE_* flags and varies widely:
+                #
+                #   TRAINERTYPE_NORMAL / bare TRAINERTYPE_MOVES
+                #       db LEVEL, SPECIES
+                #   TRAINERTYPE_ITEM | TRAINERTYPE_MOVES (no DVS)
+                #       db LEVEL, SPECIES, ITEM
+                #   TRAINERTYPE_ITEM | TRAINERTYPE_DVS | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES
+                #       db LEVEL, SPECIES, ITEM, DVS_CONST, "NICK@"
+                #   TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_MOVES
+                #       db LEVEL, SPECIES, ITEM, EVS_NUMBER
+                #   TRAINERTYPE_ITEM | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
+                #       db LEVEL, SPECIES, ITEM, ABILITY_X | NAT_X, GENDER[;, extra]
+                #       (the ; makes everything after it a comment, already stripped)
+                #
+                # Strategy: require only LEVEL + SPECIES, then parse the tail
+                # token-by-token guided by the flags present.
+                m = re.match(r"^db\s+(\d+)\s*,\s*(\w+)(.*)", line)
                 if m:
-                    level, species, item, dvs, nick = (
-                        int(m.group(1)),
-                        m.group(2),
-                        m.group(3),
-                        m.group(4),
-                        m.group(5),
-                    )
+                    level   = int(m.group(1))
+                    species = m.group(2)
+                    tail    = m.group(3)   # everything after species
+
+                    # Split tail on commas; tokens may contain spaces
+                    # (e.g. "ABILITY_1 | NAT_NEUTRAL") — that is fine, we only
+                    # care about the item slot and any quoted nickname / DVS_HP_.
+                    tokens = [t.strip() for t in tail.split(",") if t.strip()]
+
+                    item     = None
+                    nickname = ""
+                    hp_type  = "NORMAL"
+                    tok_idx  = 0
+
+                    # Item is always the first tail token when the flag is set
+                    if "TRAINERTYPE_ITEM" in flags and tok_idx < len(tokens):
+                        raw_item = tokens[tok_idx]
+                        item     = None if raw_item == "NO_ITEM" else raw_item
+                        tok_idx += 1
+
+                    # Remaining tokens: scan for quoted nickname and DVS_HP_ type
+                    for tok in tokens[tok_idx:]:
+                        if tok.startswith('"'):
+                            nickname = clean_asm_str(tok)
+                        elif re.match(r"DVS_HP_\w+", tok):
+                            hp_type = tok.split("DVS_HP_", 1)[1]
+
                     moves: list = []
 
-                    # Look ahead for moves line (starts with db then a letter,
-                    # not a digit — pokemon lines always start with a level number)
+                    # Look ahead for moves line (starts with db then a capital
+                    # letter — pokemon lines always start with a digit level)
                     if "TRAINERTYPE_MOVES" in flags and j + 1 < len(lines):
                         nxt = lines[j + 1]
                         if re.match(r"^db\s+[A-Z_]", nxt):
@@ -254,10 +283,10 @@ def parse_parties(path: Path) -> dict:
                     pokes.append({
                         "level":    level,
                         "species":  species,
-                        "item":     None if item == "NO_ITEM" else item,
-                        "nickname": clean_asm_str(nick) if nick else "",
+                        "item":     item,
+                        "nickname": nickname,
                         "moves":    moves,
-                        "hp_type":  hp_type_from_dvs(dvs),
+                        "hp_type":  hp_type,
                     })
 
                 j += 1

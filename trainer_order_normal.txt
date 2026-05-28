@@ -1,3 +1,0 @@
-BUGSY, 2
-FALKNER, 2
-

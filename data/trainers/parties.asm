@@ -5608,7 +5608,7 @@ RuinManiacGroup:
 	db 12, SHIELDON
 		db MIRROR_COAT, TACKLE, SCREECH, ROCK_SMASH
 	db -1 ; end 
-	
+; ================	
 	db "Petry@"
 	db TRAINERTYPE_MOVES
 	; party	
@@ -5617,7 +5617,7 @@ RuinManiacGroup:
 	db 12, SHIELDON
 		db MIRROR_COAT, TACKLE, SCREECH, ROCK_SMASH
 	db -1 ; end
-
+; ================
 	db "Petry@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
 	; party	
@@ -10396,7 +10396,7 @@ TammyGroup:
 	db 13, FURRET, NO_ITEM, "Kitty@"
 		db HEADBUTT, NO_MOVE, NO_MOVE, NO_MOVE
 	db -1 ; end 
-
+; ================
 	; Tammy
 	db "Ursula@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES	
@@ -10408,7 +10408,7 @@ TammyGroup:
 	db 13, FURRET, NO_ITEM, "Kitty@"
 		db HEADBUTT, NO_MOVE, NO_MOVE, NO_MOVE
 	db -1 ; end
-
+; ================
 	; Tammy
 	db "Ursula@" ;  
 	db TRAINERTYPE_ITEM | TRAINERTYPE_NICKNAME | TRAINERTYPE_MOVES	
@@ -10417,12 +10417,10 @@ TammyGroup:
 		db BUG_BITE, PROTECT, STRING_SHOT, NO_MOVE
 	db 12, EXEGGCUTE, ORAN_BERRY, "Coco@"
 		db STUN_SPORE, MEGA_DRAIN, CONFUSION, NO_MOVE
-
 	db 12, AIPOM, ORAN_BERRY, "George@"
 		db TACKLE, ASTONISH, MUD_SLAP, SCREECH
 	db 12, MANKEY, ORAN_BERRY, "Ankeymay@"
 		db LOW_KICK, FOCUS_ENERGY, LEER, NO_MOVE
-
 	db 13, FURRET, ORAN_BERRY, "Kitty@"
 		db HEADBUTT, NO_MOVE, NO_MOVE, NO_MOVE
 	db 13, HERACROSS, NO_ITEM, "Hercules@"
