@@ -74,26 +74,42 @@ ClastsCradleB1FCreditScene:
 	warphide CREDITS_POKEMON_ALL, 4, 5
 	end
 
-halloffametext_1:
-	text "If there's someone"
+halloffametext_2:
+	text "Even on the"
+	line "darkest day,"
+	
+	para "even in the"
+	line "thinnest soil,"
+	
+	para "there's a flower"
+	line "in your spirit"
+	
+	para "trying to share"
+	line "its gift,"
+	
+	para "if only you have"
+	line "the courage to"
+	cont "let it bloom."
+
+	para "If there's someone"
 	line "who shaped your"
 	cont "world for the"
 	cont "better,"
 	
 	para "Give them a call,"
-	line "send a letter,"
-	cont "a message, or"
-	para "even a prayer,"
+	line "write a letter,"
+	cont "send a message,"
+	
+	para "or even a prayer,"
 	
 	para "to let them know"
 	line "what they mean"
 	cont "to you."
 	
-	para "It may mean the"
-	line "world to them to"
-	para "know that their"
-	line "inheritance is"
-	cont "treasured."
+	para "Not everyone is"
+	line "so lucky to know"
+	cont "their inheritance"
+	cont "is growing."
 	done
 	
 CC_Credit_Move1:

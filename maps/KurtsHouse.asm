@@ -962,7 +962,7 @@ endr
 	closetext
 	; debug only
 ; debug 
-	warp ROUTE_34, 3, 23
+	warp EARLS_POKEMON_ACADEMY, 3, 3
 	end
 
 TimeShiftRadio:
