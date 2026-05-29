@@ -18,7 +18,8 @@ Image descriptions, from top left:
 * Six new gym badges for the region of Historic Johto. 
 * A handful of Fakemon, only one of which is mandatory to encounter before the credits, including a Pinsir evolution ("Minsir") from the Gen 2 cutting room floor, and a number of new "Ancestor" forms of Johto pokemon. 
 * Kurt accompanies the player on their journey and will battle you to help you level your team and show you rare pokemon on the routes you've traveled. 
-* The region of historic Johto is inspired by 
+* The region of historic Johto is loosely inspired by the Meiji Restoration in Japan.
+* A 
 
 
 
