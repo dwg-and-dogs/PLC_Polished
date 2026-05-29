@@ -42,5 +42,6 @@ Fixed a tile on Route KaJo.
 Tidy up the MD files and documentation. 
 Fix file error on Route 34.
 Add an apricorn vendor in Anarres Stockroom. 
+Update the final text & credits.
 
 Last updated: 05/27/26

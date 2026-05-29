@@ -107,6 +107,7 @@ SECTION "Credits", ROMX
 	const US_COORDINATION
 	const TEXT_TRANSLATION
 	const PAAD_TESTING
+	const MISSINGNOVGC
 
 	const_def -7
 	const CREDITS_THEEND
@@ -1161,6 +1162,12 @@ CreditsScript:
 
 	db CREDITS_WAIT, 12
 
+	db       SPECIAL_THANKS, 0
+	db         MISSINGNOVGC, 1
+
+
+	db CREDITS_WAIT, 12
+
 	db   EXECUTIVE_PRODUCER, 1
 	db     HIROSHI_YAMAUCHI, 2
 
@@ -1281,6 +1288,7 @@ CreditsStrings:
 	dw .UsCoordination
 	dw .TextTranslation
 	dw .PaadTesting
+	dw .MissingNoVGC
 
 .SatoshiTajiri:       db "   Satoshi Tajiri@"
 .JunichiMasuda:       db "   Junichi Masuda@"
@@ -1388,6 +1396,7 @@ CreditsStrings:
 .UsCoordination:      db "  US Coordination@"
 .TextTranslation:     db "  Text Translation@"
 .PaadTesting:         db "    PAAD Testing@"
+.MissingNoVGC:		  db "    MissingNoVGC@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

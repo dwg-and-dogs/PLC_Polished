@@ -74,7 +74,7 @@ ClastsCradleB1FCreditScene:
 	warphide CREDITS_POKEMON_ALL, 4, 5
 	end
 
-halloffametext_2:
+halloffametext_1:
 	text "Even on the"
 	line "darkest day,"
 	

@@ -3248,15 +3248,10 @@ _MayRegisterItemText::
 SECTION "_InitialOptionsText", ROMX
 _InitialOptionsText::
 	text "This game was"
-	line "built on the"
+	line "built from 8-bit"
 	cont "Polished Crystal"
 	cont "3.0.0 by dwg."
 	
-	para "You are playing"
-	line "an unfinished"
-	cont "version. Please"
-	cont "don't distribute!"
-
 	para "Please see the"
 	line "Credits file for"
 	cont "attributions."
