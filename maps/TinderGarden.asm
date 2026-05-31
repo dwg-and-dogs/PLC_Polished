@@ -3,7 +3,7 @@ TinderGarden_MapScriptHeader:
 	scene_script CelebiCeremonyIntroScript
 
 	def_callbacks
-
+	callback MAPCALLBACK_TILES, TinderGardenTilesCallback
 	
 	def_warp_events
 	warp_event  4, 17, AZALEA_TOWN, 9
@@ -50,6 +50,12 @@ TinderGarden_MapScriptHeader:
 	const TINDER_GARDEN_CELEBI
 	const TINDER_GARDEN_PRYCE
 
+TinderGardenTilesCallback:
+	checkevent EVENT_BEAT_RUIN_MANIAC_PETRY
+	iffalse .Done
+	changeblock 12,  8, $01
+.Done:
+	endcallback
 
 CelebiCeremonyIntroScript:
 	sdefer .Script
@@ -449,7 +455,7 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText;;;
 	promptbutton
 	waitsfx
-	givepoke CYNDAQUIL, NO_FORM, 5, ORAN_BERRY ; this only works when I have done something in the debug...
+	givepoke CYNDAQUIL, NO_FORM, 5, ORAN_BERRY 
 	writetext RivalChoosesStarterText;;;
 	waitbutton
 	closetext
@@ -787,8 +793,9 @@ TGRivalBattleMove3:
 	step_end
 
 CelebiPokeBallText:
-	text "A gift from"
-	line "Celebi."
+	text "It's one of the"
+	line "#mon sent by"
+	cont "Celebi."
 	done
 
 CelebiHeroText:

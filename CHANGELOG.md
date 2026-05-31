@@ -44,4 +44,13 @@ Fix file error on Route 34.
 Add an apricorn vendor in Anarres Stockroom. 
 Update the final text & credits.
 
-Last updated: 05/29/26
+
+* Release 1.0.1
+
+Fix apricorn vendor in Anarres. 
+Snubbull can now hold Thick Club.
+Add Thick Club as hidden item on Calm Coast map. 
+Add shortcut between Azalea and Ruins of Alph after completing Union Cave. 
+Cut is no longer given in Sandbox room. 
+
+Last updated: 05/31/26

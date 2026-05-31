@@ -283,7 +283,7 @@ ASCheckForApricornsText:
 	done
 
 
-AnarresStockroomApricorn: ; 200 
+AnarresStockroomApricorn: ; 500 
 	faceplayer
 	opentext
 	writetext Apricorn1Text
@@ -299,7 +299,7 @@ AnarresStockroomApricorn: ; 200
 	ifequal 1, .GivePink
 	ifequal 2, .GiveWhite
 	ifequal 3, .GiveLeaves
-	jumptext CafeNoFishText
+	jumptext AnarresNoApricornText
 
 ;	givepoke MAGIKARP, MAGIKARP_MASK_FORM, 10, EVIOLITE, ULTRA_BALL, DRAGON_RAGE
 .GivePink:
@@ -367,6 +367,13 @@ ApricornNoText:
 	done
 
 ApricornVendorNoMoneyText:
+	jumpthisopenedtext 
+	
 	text "Oh, you don't"
 	line "have enough."
+	done
+
+AnarresNoApricornText:
+	text "Come back any"
+	line "time!"
 	done

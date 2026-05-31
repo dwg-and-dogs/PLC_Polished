@@ -83,7 +83,7 @@ endc
 endr
 	; all tms+hms
 for x, NUM_TMS + NUM_HMS
-if x != HM_WHIRLPOOL 
+if x != HM_WHIRLPOOL && x != HM_CUT
 	givetmhm x
 endc
 endr

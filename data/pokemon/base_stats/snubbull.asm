@@ -4,7 +4,7 @@
 	db FAIRY, FAIRY ; type
 	db 190 ; catch rate
 	db 63 ; base exp
-	db NO_ITEM ; item 1
+	db THICK_CLUB ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F75, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/snubbull/front.dimensions"
