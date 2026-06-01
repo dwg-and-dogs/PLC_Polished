@@ -957,13 +957,8 @@ endr
 	callasm FillPokedex
 	waitbutton
 	closetext
-	givepoke CROCONAW, 31
-	givepoke CROCONAW, 31
-	givepoke CROCONAW, 31
-	giveitem RARE_CANDY, 99
-	giveitem ODD_SOUVENIR, 1
-	setevent EVENT_BEAT_RUIN_MANIAC_PETRY
-	; debug only
+	warp GAULDENROD, 22, 22
+; debug only
 ; debug 
 	end
 

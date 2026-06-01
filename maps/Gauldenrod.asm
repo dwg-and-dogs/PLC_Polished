@@ -319,7 +319,7 @@ GauldenrodHisuiTraderScript:
 	end
 
 .GiveGoomy:
-	givepoke GOOMY, NO_FORM, 10, NO_ITEM
+	givepoke GOOMY, 10;, NO_ITEM
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
 	writetext GauldenrodHisuiTraderGoomyText

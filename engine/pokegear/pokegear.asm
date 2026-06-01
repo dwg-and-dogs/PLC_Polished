@@ -433,9 +433,15 @@ PokegearClock_Joypad:
 	xor a
 	ldh [hBGMapMode], a
 	call Pokegear_UpdateClock
+	hlcoord 1, 16
+	ld de, .exittext
+	rst PlaceString
 	ld a, $1
 	ldh [hBGMapMode], a
 	ret
+
+.exittext
+	db "Button to exit.   @"
 
 Pokegear_UpdateClock:
 	hlcoord 3, 5
