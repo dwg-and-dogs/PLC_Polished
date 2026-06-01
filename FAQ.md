@@ -24,6 +24,18 @@ Normal mode has boss battles a few levels above your team. Opponents have EVs, i
 
 Expert modehas full teams of six for boss battles and mini bosses. They have twice the EVs of normal mode. There are a few custom regional forms on enemy teams. 
 
+
+### What's the deal with the color changes?
+
+If a pokemon has the maximum possible DVs for a given hidden power type, then it will have the corresponding palette for that type. 
+
+There are six NPCs who can optimize a single one of your Pokemon's DVs. Most boss battles features at least one member with a unique palette.
+
+Technically, any wild Pokemon can have these "Hidden Palette" DVs, but the odds to find one are ~ 128x worse than a standard Gen 2 shiny.
+
+More information: https://www.reddit.com/r/PokemonROMhacks/comments/1sgugqu/crystal_inheritance_hidden_palette_lets_you/ 
+
+
 ### Are there any sandbox or debug features? 
 
 There are two debug features:

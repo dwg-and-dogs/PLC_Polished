@@ -57,6 +57,6 @@ Cut is no longer given in Sandbox room.
 * Release 1.0.2
 
 Restore Scyther evolving to Kleavor by levelling up while holding hard stone. 
-
+Fix Pokegear watch showing bad text. 
 
 Last updated: 06/01/26
