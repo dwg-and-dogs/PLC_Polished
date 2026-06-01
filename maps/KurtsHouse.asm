@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
+;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
 ;	bg_event  6,  1, BGEVENT_READ, TimeShiftRadio	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
@@ -860,9 +860,6 @@ endr
 	giveitem BIG_NUGGET, 99
 	giveitem SILVER_LEAF, 99
 	; all decorations except Diploma
-for x, EVENT_DECO_BED_1, EVENT_DECO_BIG_LAPRAS_DOLL + 1
-	setevent x
-endr
 	; max money
 	givemoney $0, 1000000
 	givemoney $0, 1000000

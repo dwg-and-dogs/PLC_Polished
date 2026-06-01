@@ -468,7 +468,7 @@ Breeder5Script:
 	iffalse_jumpopenedtext BreederSayNoText
 	writetext BreederText	
 for x, CYNDAQUIL, CELEBI + 1
-	givepoke x, 5
+	givepoke x, NO_FORM, 5, NO_ITEM
 endr
 	closetext
 	end
@@ -520,39 +520,39 @@ RandomTypeNPCScript:
 	ifequal 5, .GiveBug_5
 	ifequal 6, .GiveBug_6
 	ifequal 7, .GiveBug_7
-	givepoke SHUCKLE, 5
+	givepoke SHUCKLE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveBug_0:
-	givepoke LEDYBA, 5
+	givepoke LEDYBA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveBug_1:
-	givepoke SPINARAK, 5
+	givepoke SPINARAK, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveBug_2:
-	givepoke PARAS, 5
+	givepoke PARAS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveBug_3:
-	givepoke PINECO, 5
+	givepoke PINECO, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveBug_4:
-	givepoke YANMA, 5
+	givepoke YANMA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveBug_5:
-	givepoke SCYTHER, 5
+	givepoke SCYTHER, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveBug_6:
-	givepoke PINSIR, 5
+	givepoke PINSIR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveBug_7:
-	givepoke HERACROSS, 5
+	givepoke HERACROSS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup1:
@@ -571,47 +571,47 @@ RandomTypeNPCScript:
 	ifequal 7, .GiveDark_7
 	ifequal 8, .GiveDark_8
 	ifequal 9, .GiveDark_9
-	givepoke LARVITAR, 5
+	givepoke LARVITAR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_0:
-	givepoke OSHAWOTT, 5
+	givepoke OSHAWOTT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_1:
-	givepoke PINSIR, 5
+	givepoke PINSIR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_2:
-	givepoke GRIMER, ALOLAN_FORM, 5
+	givepoke GRIMER, ALOLAN_FORM, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_3:
-	givepoke GIRAFARIG, 5
+	givepoke GIRAFARIG, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_4:
-	givepoke QWILFISH, HISUIAN_FORM, 5
+	givepoke QWILFISH, HISUIAN_FORM, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_5:
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_6:
-	givepoke MURKROW, 5
+	givepoke MURKROW, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_7:
-	givepoke HOUNDOUR, 5
+	givepoke HOUNDOUR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_8:
-	givepoke SNEASEL, 5
+	givepoke SNEASEL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_9:
-	givepoke SPIRITOMB, 5
+	givepoke SPIRITOMB, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup2:
@@ -627,35 +627,35 @@ RandomTypeNPCScript:
 	ifequal 4, .GiveDragon_4
 	ifequal 5, .GiveDragon_5
 	ifequal 6, .GiveDragon_6
-	givepoke YANMA, 5
+	givepoke YANMA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDragon_0:
-	givepoke DUNSPARCE, 5
+	givepoke DUNSPARCE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDragon_1:
-	givepoke EXEGGCUTE, 5
+	givepoke EXEGGCUTE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDragon_2:
-	givepoke HORSEA, 5
+	givepoke HORSEA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDragon_3:
-	givepoke SHINX, 5
+	givepoke SHINX, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDragon_4:
-	givepoke DRATINI, 5
+	givepoke DRATINI, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDragon_5:
-	givepoke GIBLE, 5
+	givepoke GIBLE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDragon_6:
-	givepoke GOOMY, 5
+	givepoke GOOMY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup3:
@@ -673,43 +673,43 @@ RandomTypeNPCScript:
 	ifequal 6, .GiveElectric_6
 	ifequal 7, .GiveElectric_7
 	ifequal 8, .GiveElectric_8
-	givepoke ROTOM, 5
+	givepoke ROTOM, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveElectric_0:
-	givepoke PIKACHU, 5
+	givepoke PIKACHU, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveElectric_1:
-	givepoke GEODUDE, ALOLAN_FORM, 5
+	givepoke GEODUDE, ALOLAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveElectric_2:
-	givepoke MAREEP, 5
+	givepoke MAREEP, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveElectric_3:
-	givepoke MAGNEMITE, 5
+	givepoke MAGNEMITE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveElectric_4:
-	givepoke VOLTORB, 5
+	givepoke VOLTORB, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveElectric_5:
-	givepoke ELECTABUZZ, 5
+	givepoke ELECTABUZZ, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveElectric_6:
-	givepoke CHINCHOU, 5
+	givepoke CHINCHOU, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveElectric_7:
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveElectric_8:
-	givepoke SHINX, 5
+	givepoke SHINX, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup4:
@@ -727,31 +727,31 @@ RandomTypeNPCScript:
 	ifequal 6, .GiveFairy_6
 	ifequal 7, .GiveFairy_7
 	ifequal 8, .GiveFairy_8
-	givepoke RALTS, 5
+	givepoke RALTS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFairy_0:
-	givepoke CLEFAIRY, 5
+	givepoke CLEFAIRY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFairy_1:
-	givepoke TOGETIC, 5
+	givepoke TOGETIC, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFairy_2:
-	givepoke KOFFING, 5
+	givepoke KOFFING, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFairy_3:
-	givepoke MARILL, 5
+	givepoke MARILL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFairy_4:
-	givepoke SNUBBULL, 5
+	givepoke SNUBBULL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFairy_5:
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFairy_6:
@@ -759,11 +759,11 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveFairy_7:
-	givepoke MISDREAVUS, 5
+	givepoke MISDREAVUS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFairy_8:
-	givepoke CHIKORITA, 5
+	givepoke CHIKORITA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup5:
@@ -783,39 +783,39 @@ RandomTypeNPCScript:
 	ifequal 8, .GiveFighting_8
 	ifequal 9, .GiveFighting_9
 	ifequal 10, .GiveFighting_10
-	givepoke RALTS, 5
+	givepoke RALTS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_0:
-	givepoke ROWLET, 5
+	givepoke ROWLET, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_1:
-	givepoke POLIWAG, 5
+	givepoke POLIWAG, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_2:
-	givepoke HERACROSS, 5
+	givepoke HERACROSS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_3:
-	givepoke MANKEY, 5
+	givepoke MANKEY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_4:
-	givepoke MACHOP, 5
+	givepoke MACHOP, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_5:
-	givepoke HITMONLEE, 5
+	givepoke HITMONLEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_6:
-	givepoke HITMONCHAN, 5
+	givepoke HITMONCHAN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_7:
-	givepoke HITMONTOP, 5
+	givepoke HITMONTOP, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_8:
@@ -823,11 +823,11 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveFighting_9:
-	givepoke RIOLU, 5
+	givepoke RIOLU, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_10:
-	givepoke CROAGUNK, 5
+	givepoke CROAGUNK, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup6:
@@ -846,47 +846,47 @@ RandomTypeNPCScript:
 	ifequal 7, .GiveFire_7
 	ifequal 8, .GiveFire_8
 	ifequal 9, .GiveFire_9
-	givepoke SLUGMA, 5
+	givepoke SLUGMA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_0:
-	givepoke CYNDAQUIL, 5
+	givepoke CYNDAQUIL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_1:
-	givepoke SUNKERN, 5
+	givepoke SUNKERN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_2:
-	givepoke VULPIX, 5
+	givepoke VULPIX, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_3:
-	givepoke GROWLITHE, 5
+	givepoke GROWLITHE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_4:
-	givepoke GROWLITHE, HISUIAN_FORM, 5
+	givepoke GROWLITHE, HISUIAN_FORM, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_5:
-	givepoke MAGMAR, 5
+	givepoke MAGMAR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_6:
-	givepoke REMORAID, 5
+	givepoke REMORAID, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_7:
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_8:
-	givepoke PONYTA, 5
+	givepoke PONYTA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_9:
-	givepoke HOUNDOUR, 5
+	givepoke HOUNDOUR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup7:
@@ -911,71 +911,71 @@ RandomTypeNPCScript:
 	ifequal 13, .GiveFlying_13
 	ifequal 14, .GiveFlying_14
 	ifequal 15, .GiveFlying_15
-	givepoke RUFFLET, 5
+	givepoke RUFFLET, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_0:
-	givepoke ROWLET, 5
+	givepoke ROWLET, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_1:
-	givepoke HOOTHOOT, 5
+	givepoke HOOTHOOT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_2:
-	givepoke LEDYBA, 5
+	givepoke LEDYBA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_3:
-	givepoke ZUBAT, 5
+	givepoke ZUBAT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_4:
-	givepoke TOGETIC, 5
+	givepoke TOGETIC, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_5:
-	givepoke HOPPIP, 5
+	givepoke HOPPIP, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_6:
-	givepoke MAGIKARP, 5
+	givepoke MAGIKARP, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_7:
-	givepoke YANMA, 5
+	givepoke YANMA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_8:
-	givepoke NATU, 5
+	givepoke NATU, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_9:
-	givepoke GLIGAR, 5
+	givepoke GLIGAR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_10:
-	givepoke MANTINE, 5
+	givepoke MANTINE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_11:
-	givepoke SKARMORY, 5
+	givepoke SKARMORY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_12:
-	givepoke MURKROW, 5
+	givepoke MURKROW, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_13:
-	givepoke STARLY, 5
+	givepoke STARLY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_14:
-	givepoke DRIFLOON, 5
+	givepoke DRIFLOON, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFlying_15:
-	givepoke DRATINI, 5
+	givepoke DRATINI, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup8:
@@ -997,27 +997,27 @@ RandomTypeNPCScript:
 	ifequal 10, .GiveGhost_10
 	ifequal 11, .GiveGhost_11
 	ifequal 12, .GiveGhost_12
-	givepoke BASCULIN, 5
+	givepoke BASCULIN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_0:
-	givepoke CYNDAQUIL, 5
+	givepoke CYNDAQUIL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_1:
-	givepoke ROWLET, 5
+	givepoke ROWLET, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_2:
-	givepoke HOOTHOOT, 5
+	givepoke HOOTHOOT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_3:
-	givepoke GASTLY, 5
+	givepoke GASTLY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_4:
-	givepoke MANKEY, 5
+	givepoke MANKEY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_5:
@@ -1025,31 +1025,31 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveGhost_6:
-	givepoke MISDREAVUS, 5
+	givepoke MISDREAVUS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_7:
-	givepoke DRIFLOON, 5
+	givepoke DRIFLOON, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_8:
-	givepoke SPIRITOMB, 5
+	givepoke SPIRITOMB, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_9:
-	givepoke DUSKULL, 5
+	givepoke DUSKULL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_10:
-	givepoke SNORUNT, 5
+	givepoke SNORUNT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_11:
-	givepoke ROTOM, 5
+	givepoke ROTOM, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_12:
-	givepoke ZORUA, 5
+	givepoke ZORUA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup9:
@@ -1069,51 +1069,51 @@ RandomTypeNPCScript:
 	ifequal 8, .GiveGrass_8
 	ifequal 9, .GiveGrass_9
 	ifequal 10, .GiveGrass_10
-	givepoke SNOVER, 5
+	givepoke SNOVER, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_0:
-	givepoke ROWLET, 5
+	givepoke ROWLET, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_1:
-	givepoke BELLSPROUT, 5
+	givepoke BELLSPROUT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_2:
-	givepoke HOPPIP, 5
+	givepoke HOPPIP, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_3:
-	givepoke PARAS, 5
+	givepoke PARAS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_4:
-	givepoke ODDISH, 5
+	givepoke ODDISH, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_5:
-	givepoke SUNKERN, 5
+	givepoke SUNKERN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_6:
-	givepoke EXEGGCUTE, 5
+	givepoke EXEGGCUTE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_7:
-	givepoke VOLTORB, HISUIAN_FORM, 5
+	givepoke VOLTORB, HISUIAN_FORM, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_8:
-	givepoke TANGELA, 5
+	givepoke TANGELA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_9:
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_10:
-	givepoke CHIKORITA, 5
+	givepoke CHIKORITA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup10:
@@ -1133,51 +1133,51 @@ RandomTypeNPCScript:
 	ifequal 8, .GiveGround_8
 	ifequal 9, .GiveGround_9
 	ifequal 10, .GiveGround_10
-	givepoke GIBLE, 5
+	givepoke GIBLE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_0:
-	givepoke GEODUDE, 5
+	givepoke GEODUDE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_1:
-	givepoke WOOPER, 5
+	givepoke WOOPER, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_2:
-	givepoke ONIX, 5
+	givepoke ONIX, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_3:
-	givepoke NIDORAN, 5
+	givepoke NIDORAN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_4:
-	givepoke GLIGAR, 5
+	givepoke GLIGAR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_5:
-	givepoke SWINUB, 5
+	givepoke SWINUB, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_6:
-	givepoke TEDDIURSA, 5
+	givepoke TEDDIURSA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_7:
-	givepoke PHANPY, 5
+	givepoke PHANPY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_8:
-	givepoke RHYHORN, 5
+	givepoke RHYHORN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_9:
-	givepoke HIPPOPOTAS, 5
+	givepoke HIPPOPOTAS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGround_10:
-	givepoke LARVITAR, 5
+	givepoke LARVITAR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup11:
@@ -1194,7 +1194,7 @@ RandomTypeNPCScript:
 	ifequal 5, .GiveIce_5
 	ifequal 6, .GiveIce_6
 	ifequal 7, .GiveIce_7
-	givepoke BERGMITE, 5
+	givepoke BERGMITE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveIce_0:
@@ -1202,31 +1202,31 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveIce_1:
-	givepoke JYNX, 5
+	givepoke JYNX, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveIce_2:
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveIce_3:
-	givepoke SWINUB, 5
+	givepoke SWINUB, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveIce_4:
-	givepoke SNEASEL, 5
+	givepoke SNEASEL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveIce_5:
-	givepoke LAPRAS, 5
+	givepoke LAPRAS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveIce_6:
-	givepoke SNOVER, 5
+	givepoke SNOVER, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveIce_7:
-	givepoke SNORUNT, 5
+	givepoke SNORUNT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup12:
@@ -1250,67 +1250,67 @@ RandomTypeNPCScript:
 	ifequal 12, .GiveNormal_12
 	ifequal 13, .GiveNormal_13
 	ifequal 14, .GiveNormal_14
-	givepoke RUFFLET, 5
+	givepoke RUFFLET, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_0:
-	givepoke HOOTHOOT, 5
+	givepoke HOOTHOOT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_1:
-	givepoke SENTRET, 5
+	givepoke SENTRET, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_2:
-	givepoke DUNSPARCE, 5
+	givepoke DUNSPARCE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_3:
-	givepoke DITTO, 5
+	givepoke DITTO, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_4:
-	givepoke AIPOM, 5
+	givepoke AIPOM, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_5:
-	givepoke STANTLER, 5
+	givepoke STANTLER, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_6:
-	givepoke TAUROS, 5
+	givepoke TAUROS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_7:
-	givepoke MILTANK, 5
+	givepoke MILTANK, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_8:
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_9:
-	givepoke TEDDIURSA, 5
+	givepoke TEDDIURSA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_10:
-	givepoke PORYGON, 5
+	givepoke PORYGON, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_11:
-	givepoke CHANSEY, 5
+	givepoke CHANSEY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_12:
-	givepoke STARLY, 5
+	givepoke STARLY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_13:
-	givepoke ZORUA, 5
+	givepoke ZORUA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveNormal_14:
-	givepoke SNORLAX, 5
+	givepoke SNORLAX, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup13:
@@ -1334,23 +1334,23 @@ RandomTypeNPCScript:
 	ifequal 12, .GivePoison_12
 	ifequal 13, .GivePoison_13
 	ifequal 14, .GivePoison_14
-	givepoke CROAGUNK, 5
+	givepoke CROAGUNK, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_0:
-	givepoke SPINARAK, 5
+	givepoke SPINARAK, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_1:
-	givepoke ZUBAT, 5
+	givepoke ZUBAT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_2:
-	givepoke GASTLY, 5
+	givepoke GASTLY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_3:
-	givepoke BELLSPROUT, 5
+	givepoke BELLSPROUT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_4:
@@ -1358,19 +1358,19 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GivePoison_5:
-	givepoke ODDISH, 5
+	givepoke ODDISH, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_6:
-	givepoke NIDORAN, 5
+	givepoke NIDORAN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_7:
-	givepoke KOFFING, 5
+	givepoke KOFFING, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_8:
-	givepoke GRIMER, 5
+	givepoke GRIMER, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_9:
@@ -1378,7 +1378,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GivePoison_10:
-	givepoke QWILFISH, 5
+	givepoke QWILFISH, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_11:
@@ -1386,11 +1386,11 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GivePoison_12:
-	givepoke TENTACOOL, 5
+	givepoke TENTACOOL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_13:
-	givepoke SLUGMA, 5
+	givepoke SLUGMA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_14:
@@ -1416,47 +1416,47 @@ RandomTypeNPCScript:
 	ifequal 10, .GivePsychic_10
 	ifequal 11, .GivePsychic_11
 	ifequal 12, .GivePsychic_12
-	givepoke RUFFLET, 5
+	givepoke RUFFLET, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_0:
-	givepoke PIKACHU, 5
+	givepoke PIKACHU, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_1:
-	givepoke UNOWN, 5
+	givepoke UNOWN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_2:
-	givepoke SLOWPOKE, 5
+	givepoke SLOWPOKE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_3:
-	givepoke ABRA, 5
+	givepoke ABRA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_4:
-	givepoke EXEGGCUTE, 5
+	givepoke EXEGGCUTE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_5:
-	givepoke STANTLER, 5
+	givepoke STANTLER, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_6:
-	givepoke GIRAFARIG, 5
+	givepoke GIRAFARIG, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_7:
-	givepoke JYNX, 5
+	givepoke JYNX, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_8:
-	givepoke NATU, 5
+	givepoke NATU, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_9:
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_10:
@@ -1464,11 +1464,11 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GivePsychic_11:
-	givepoke BRONZOR, 5
+	givepoke BRONZOR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_12:
-	givepoke RALTS, 5
+	givepoke RALTS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup15:
@@ -1489,19 +1489,19 @@ RandomTypeNPCScript:
 	ifequal 9, .GiveRock_9
 	ifequal 10, .GiveRock_10
 	ifequal 11, .GiveRock_11
-	givepoke LARVITAR, 5
+	givepoke LARVITAR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_0:
-	givepoke GEODUDE, 5
+	givepoke GEODUDE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_1:
-	givepoke ONIX, 5
+	givepoke ONIX, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_2:
-	givepoke SUDOWOODO, 5
+	givepoke SUDOWOODO, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_3:
@@ -1509,35 +1509,35 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveRock_4:
-	givepoke NATU, 5
+	givepoke NATU, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_5:
-	givepoke SHUCKLE, 5
+	givepoke SHUCKLE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_6:
-	givepoke CORSOLA, 5
+	givepoke CORSOLA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_7:
-	givepoke RHYHORN, 5
+	givepoke RHYHORN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_8:
-	givepoke SLUGMA, 5
+	givepoke SLUGMA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_9:
-	givepoke CRANIDOS, 5
+	givepoke CRANIDOS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_10:
-	givepoke SHIELDON, 5
+	givepoke SHIELDON, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_11:
-	givepoke BERGMITE, 5
+	givepoke BERGMITE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup16:
@@ -1554,39 +1554,39 @@ RandomTypeNPCScript:
 	ifequal 5, .GiveSteel_5
 	ifequal 6, .GiveSteel_6
 	ifequal 7, .GiveSteel_7
-	givepoke GOOMY, 5
+	givepoke GOOMY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveSteel_0:
-	givepoke ONIX, 5
+	givepoke ONIX, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveSteel_1:
-	givepoke PINECO, 5
+	givepoke PINECO, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveSteel_2:
-	givepoke MAGNEMITE, 5
+	givepoke MAGNEMITE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveSteel_3:
-	givepoke SKARMORY, 5
+	givepoke SKARMORY, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveSteel_4:
-	givepoke SLUGMA, 5
+	givepoke SLUGMA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveSteel_5:
-	givepoke SHIELDON, 5
+	givepoke SHIELDON, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveSteel_6:
-	givepoke BRONZOR, 5
+	givepoke BRONZOR, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveSteel_7:
-	givepoke RIOLU, 5
+	givepoke RIOLU, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup17:
@@ -1611,71 +1611,71 @@ RandomTypeNPCScript:
 	ifequal 13, .GiveWater_13
 	ifequal 14, .GiveWater_14
 	ifequal 15, .GiveWater_15
-	givepoke BASCULIN, 5
+	givepoke BASCULIN, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_0:
-	givepoke OSHAWOTT, 5
+	givepoke OSHAWOTT, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_1:
-	givepoke WOOPER, 5
+	givepoke WOOPER, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_2:
-	givepoke POLIWAG, 5
+	givepoke POLIWAG, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_3:
-	givepoke MAGIKARP, 5
+	givepoke MAGIKARP, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_4:
-	givepoke SLOWPOKE, 5
+	givepoke SLOWPOKE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_5:
-	givepoke MARILL, 5
+	givepoke MARILL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_6:
-	givepoke QWILFISH, 5
+	givepoke QWILFISH, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_7:
-	givepoke TENTACOOL, 5
+	givepoke TENTACOOL, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_8:
-	givepoke CORSOLA, 5
+	givepoke CORSOLA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_9:
-	givepoke REMORAID, 5
+	givepoke REMORAID, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_10:
-	givepoke CHINCHOU, 5
+	givepoke CHINCHOU, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_11:
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_12:
-	givepoke HORSEA, 5
+	givepoke HORSEA, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_13:
-	givepoke MANTINE, 5
+	givepoke MANTINE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_14:
-	givepoke LAPRAS, 5
+	givepoke LAPRAS, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveWater_15:
-	givepoke TOTODILE, 5
+	givepoke TOTODILE, NO_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .NoThanks:

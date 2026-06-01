@@ -291,7 +291,7 @@ givepoke: MACRO
 		dp \1, \2 ; pokemon
 		db \3 ; level
 	else
-		dp \1, PLAIN_FORM
+		dp \1, PLAIN_FORM ; no_form? todo 
 		db \2 ; level
 	endc
 	if _NARG >= 4

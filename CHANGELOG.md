@@ -53,4 +53,9 @@ Add Thick Club as hidden item on Calm Coast map.
 Add shortcut between Azalea and Ruins of Alph after completing Union Cave. 
 Cut is no longer given in Sandbox room. 
 
-Last updated: 05/31/26
+
+* Release 1.0.2
+
+Restore Scyther evolving to Kleavor by levelling up while holding hard stone. 
+
+Last updated: 06/01/26

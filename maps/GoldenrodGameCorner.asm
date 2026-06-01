@@ -177,7 +177,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	givepoke EEVEE, 5
+	givepoke EEVEE, NO_FORM, 5, SITRUS_BERRY
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
 	setval EEVEE
 	special Special_GameCornerPrizeMonCheckDex
@@ -194,7 +194,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	givepoke PORYGON, 10
+	givepoke PORYGON, NO_FORM, 10, NO_ITEM
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
 	setval PORYGON
 	special Special_GameCornerPrizeMonCheckDex
@@ -211,7 +211,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	givepoke CHANSEY, 15
+	givepoke CHANSEY, NO_FORM, 10, NO_ITEM
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
 	setval CHANSEY
 	special Special_GameCornerPrizeMonCheckDex

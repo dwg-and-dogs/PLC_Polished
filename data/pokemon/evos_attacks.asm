@@ -2216,6 +2216,7 @@ KingdraEvosAttacks:
 
 ScytherEvosAttacks:
 	db EVOLVE_HOLDING, METAL_COAT, SCIZOR
+	db EVOLVE_HOLDING, HARD_STONE, KLEAVOR
 	db 0 ; no more evolutions
 	db 1, QUICK_ATTACK
 	db 1, LEER

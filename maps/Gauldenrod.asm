@@ -319,7 +319,7 @@ GauldenrodHisuiTraderScript:
 	end
 
 .GiveGoomy:
-	givepoke GOOMY, 10
+	givepoke GOOMY, NO_FORM, 10, NO_ITEM
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
 	writetext GauldenrodHisuiTraderGoomyText
@@ -328,7 +328,7 @@ GauldenrodHisuiTraderScript:
 	end
 
 .GiveGible:
-	givepoke GIBLE, 10
+	givepoke GIBLE, NO_FORM, 10, NO_ITEM
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
 	writetext GauldenrodHisuiTraderGibleText
@@ -337,7 +337,7 @@ GauldenrodHisuiTraderScript:
 	end
 
 .GiveZorua:
-	givepoke ZORUA, 10
+	givepoke ZORUA, NO_FORM, 10, NO_ITEM
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
 	writetext GauldenrodHisuiTraderZoruaText
@@ -346,7 +346,7 @@ GauldenrodHisuiTraderScript:
 	end
 
 .GiveRiolu:
-	givepoke RIOLU, 5
+	givepoke RIOLU, NO_FORM, 10, NO_ITEM
 	iffalse .PartyFull
 	setevent EVENT_GOT_GAULDENROD_POKEMON
 	writetext GauldenrodHisuiTraderRioluText
