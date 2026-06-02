@@ -79,15 +79,6 @@ ChuckDesalText:
 	line "Welcome to the"
 	cont "Desal Plant."
 	
-;	para "We still need"
-;	line "help. Turns out"
-;	para "the engineers"
-;	line "were querying the"
-;	para "OMLAS for all the"
-;	line "issues, so their"
-;	cont "skills aren't"
-;	cont "so sharp anymore."
-;	
 	para "Say, after the"
 	line "Cianwood storm,"
 	para "I saw a big cave"

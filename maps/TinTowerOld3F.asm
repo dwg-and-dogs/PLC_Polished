@@ -459,6 +459,12 @@ SamsaraAfterText:
 	
 	para "We cannot leave,"
 	line "but you can."
+
+	para "A #mon that"
+	line "can use the Surf"
+	cont "HM will take you"
+	cont "beyond the moat."
+
 	done
 
 TinTowerHaunterScript:

@@ -162,7 +162,7 @@ FacilityPiperScript:
 	iffalse_jumpopenedtext FacilityPiperRefusedText
 	winlosstext FacilityPiperWinText, FacilityPiperLossText
 	setlasttalked FACILITY_PIPER
-	loadtrainer KIMONO_GIRL_1, PIPER ; CHECK THE PALETTE TODO 
+	loadtrainer KIMONO_GIRL_1, PIPER_KG ; todo 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -193,6 +193,7 @@ FacilityPiperWinText:
 FacilityPiperLossText:
 	text "TODO"
 	done
+	
 FacilityUrsulaScript:
 	faceplayer
 	opentext
@@ -203,13 +204,14 @@ FacilityUrsulaScript:
 	iffalse_jumpopenedtext FacilityUrsulaRefusedText
 	winlosstext FacilityUrsulaWinText, FacilityUrsulaLossText
 	setlasttalked FACILITY_URSULA
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer TAMMY, URSULA_FACILITY ; party is done 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
 	showtext FacilityUrsulaAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilityUrsulaIntroText:
 	text "TODO"
 	done
@@ -239,13 +241,14 @@ FacilitySilasScript:
 	iffalse_jumpopenedtext FacilitySilasRefusedText
 	winlosstext FacilitySilasWinText, FacilitySilasLossText
 	setlasttalked FACILITY_SILAS
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer HOLLIS, HOLLIS_FACILITY
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
 	showtext FacilitySilasAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilitySilasIntroText:
 	text "TODO"
 	done
@@ -282,6 +285,7 @@ FacilityBethScript:
 	showtext FacilityBethAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilityBethIntroText:
 	text "TODO"
 	done
@@ -318,6 +322,7 @@ FacilitySandraScript:
 	showtext FacilitySandraAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilitySandraIntroText:
 	text "TODO"
 	done
@@ -354,6 +359,7 @@ FacilitySybilScript:
 	showtext FacilitySybilAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilitySybilIntroText:
 	text "TODO"
 	done
@@ -390,6 +396,7 @@ FacilityTysonScript:
 	showtext FacilityTysonAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilityTysonIntroText:
 	text "TODO"
 	done
@@ -426,6 +433,7 @@ FacilityNomadFScript:
 	showtext FacilityNomadFAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilityNomadFIntroText:
 	text "TODO"
 	done
@@ -462,6 +470,7 @@ FacilityBarbeauScript:
 	showtext FacilityBarbeauAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilityBarbeauIntroText:
 	text "TODO"
 	done
@@ -498,6 +507,7 @@ FacilityPetraScript:
 	showtext FacilityPetraAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilityPetraIntroText:
 	text "TODO"
 	done
@@ -534,6 +544,7 @@ FacilityAmosScript:
 	showtext FacilityAmosAfter
 	special HealPartyEvenForNuzlocke
 	end
+	
 FacilityAmosIntroText:
 	text "TODO"
 	done

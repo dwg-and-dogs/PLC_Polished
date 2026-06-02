@@ -130,7 +130,7 @@ KRIS EQU __trainer_class__ ;
 	const HOLLIS2_EASY; DONE 
 	const HOLLIS2_NORMAL
 	const HOLLIS2_HARD
-
+	const HOLLIS_FACILITY
 
 	trainerclass BLUE ; 17
 
@@ -672,6 +672,7 @@ KRIS EQU __trainer_class__ ;
 	const AKARI ; JOLTEON 
 	const MASAKO ; wc fire 
 	const KROMA ; tinder garden 
+	const PIPER_KG ; facility 
 
 	trainerclass KIMONO_GIRL_2 ; 3e, purple? 
 	const ZUKI ; ESPEON 
@@ -1151,6 +1152,7 @@ KRIS EQU __trainer_class__ ;
 	const TAMMY_EASY
 	const TAMMY_NORMAL
 	const TAMMY_HARD 
+	const URSULA_FACILITY
 
 	trainerclass SILVER ; 8e DONE  
 	const SILVER_EASY
