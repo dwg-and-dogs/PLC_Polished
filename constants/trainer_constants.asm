@@ -102,6 +102,7 @@ KRIS EQU __trainer_class__ ;
 	const SANDRA2_EASY ; DONE 2
 	const SANDRA2_NORMAL
 	const SANDRA2_HARD
+	const SANDRA_FACILITY
 
 	trainerclass KURT_FINAL ; f DONE 
 	const KURT_FINAL_EASY
@@ -114,6 +115,7 @@ KRIS EQU __trainer_class__ ;
 	const SAMSARA_EASY
 	const SAMSARA_NORMAL
 	const SAMSARA_HARD
+	const SAMSARA_FACILITY
 
 	trainerclass LT_SURGE ; 12
 
@@ -1006,6 +1008,7 @@ KRIS EQU __trainer_class__ ;
 	const BETH1_EASY ; done 
 	const BETH2_NORMAL
 	const BETH3_HARD 
+	const BETH_FACILITY
 	const REENA1
 	const REENA2
 	const REENA3

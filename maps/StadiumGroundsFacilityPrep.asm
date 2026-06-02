@@ -278,7 +278,7 @@ FacilityBethScript:
 	iffalse_jumpopenedtext FacilityBethRefusedText
 	winlosstext FacilityBethWinText, FacilityBethLossText
 	setlasttalked FACILITY_BETH
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer COOLTRAINERF, BETH_FACILITY
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -315,7 +315,7 @@ FacilitySandraScript:
 	iffalse_jumpopenedtext FacilitySandraRefusedText
 	winlosstext FacilitySandraWinText, FacilitySandraLossText
 	setlasttalked FACILITY_SANDRA
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer SANDRA, SANDRA_FACILITY
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -352,7 +352,7 @@ FacilitySybilScript:
 	iffalse_jumpopenedtext FacilitySybilRefusedText
 	winlosstext FacilitySybilWinText, FacilitySybilLossText
 	setlasttalked FACILITY_SYBIL
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer SAMSARA, SAMSARA_FACILITY
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
