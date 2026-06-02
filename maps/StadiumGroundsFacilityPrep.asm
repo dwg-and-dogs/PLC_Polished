@@ -389,7 +389,7 @@ FacilityTysonScript:
 	iffalse_jumpopenedtext FacilityTysonRefusedText
 	winlosstext FacilityTysonWinText, FacilityTysonLossText
 	setlasttalked FACILITY_TYSON
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer BRIGADER, 22
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -426,7 +426,7 @@ FacilityNomadFScript:
 	iffalse_jumpopenedtext FacilityNomadFRefusedText
 	winlosstext FacilityNomadFWinText, FacilityNomadFLossText
 	setlasttalked FACILITY_NOMAD_F
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer NOMAD_F, NOMAD_F_MOTHER
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -463,7 +463,7 @@ FacilityBarbeauScript:
 	iffalse_jumpopenedtext FacilityBarbeauRefusedText
 	winlosstext FacilityBarbeauWinText, FacilityBarbeauLossText
 	setlasttalked FACILITY_BARBEAU
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer BARBEAU, REMY_FACILITY
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -500,7 +500,7 @@ FacilityPetraScript:
 	iffalse_jumpopenedtext FacilityPetraRefusedText
 	winlosstext FacilityPetraWinText, FacilityPetraLossText
 	setlasttalked FACILITY_PETRA
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer KANNA, KANNA_FACILITY
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -537,7 +537,7 @@ FacilityAmosScript:
 	iffalse_jumpopenedtext FacilityAmosRefusedText
 	winlosstext FacilityAmosWinText, FacilityAmosLossText
 	setlasttalked FACILITY_AMOS
-	loadtrainer DUMMY_CLASS, DUMMY_POINTER
+	loadtrainer AMOS, AMOS_FACILITY
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap

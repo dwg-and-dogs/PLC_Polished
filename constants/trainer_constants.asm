@@ -1043,7 +1043,7 @@ KRIS EQU __trainer_class__ ;
 	const NOMAD_F_ALINA
 	const NOMAD_F_MARLENE
 	const NOMAD_F_RIN
-
+	const NOMAD_F_MOTHER
 
 	trainerclass VETERANM ; 68
 	const MATT
@@ -1092,6 +1092,7 @@ KRIS EQU __trainer_class__ ;
 	const AMOS2_EASY
 	const AMOS2_NORMAL
 	const AMOS2_HARD ; DONE 
+	const AMOS_FACILITY
 
 	trainerclass CHERYL ; 7b CHECKED
 
@@ -1133,6 +1134,7 @@ KRIS EQU __trainer_class__ ;
 	const REMY2_EASY
 	const REMY2_NORMAL
 	const REMY2_HARD
+	const REMY_FACILITY
 
 	trainerclass FLANNERY ; 86 
 
@@ -1140,6 +1142,7 @@ KRIS EQU __trainer_class__ ;
 	const KANNA_EASY
 	const KANNA_NORMAL
 	const KANNA_HARD
+	const KANNA_FACILITY
 
 	trainerclass SKYLA ; 88 CHECKED
 
