@@ -1160,3 +1160,12 @@ SereneSpringsCavern_BlockData:
 SECTION "FeraligatrLair_BlockData", ROMX
 FeraligatrLair_BlockData:
 	INCBIN "maps/FeraligatrLair.ablk.lz"
+
+SECTION "StadiumGroundsFacilityPrep_BlockData", ROMX
+StadiumGroundsFacilityPrep_BlockData:
+	INCBIN "maps/StadiumGroundsFacilityPrep.ablk.lz" 
+	
+SECTION "StadiumGroundsFacility_BlockData", ROMX
+StadiumGroundsFacility_BlockData:
+	INCBIN "maps/StadiumGroundsFacility.ablk.lz" 
+	

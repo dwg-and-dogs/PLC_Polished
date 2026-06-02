@@ -574,3 +574,6 @@ ENDM
 	
 	map_attributes SereneSpringsCavern, SERENE_SPRINGS_CAVERN, $0, 0
 	map_attributes FeraligatrLair, FERALIGATR_LAIR, $0, 0
+	
+	map_attributes StadiumGroundsFacilityPrep, STADIUM_GROUNDS_FACILITY_PREP, $0, 0
+	map_attributes StadiumGroundsFacility, STADIUM_GROUNDS_FACILITY, $0, 0

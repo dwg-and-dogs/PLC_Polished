@@ -38,9 +38,10 @@ More information: https://www.reddit.com/r/PokemonROMhacks/comments/1sgugqu/crys
 
 ### Are there any sandbox or debug features? 
 
-There are two debug features:
+(All versions) The northwest corner of the Azalea Gym has a portal to a debug room. Simply face north and interact with the furthest-left flower tile. 
 
-(All versions) The back-left corner of the Azalea Gym has a portal to a debug room. Simply interact with the furthest-left flower tile. Starting from the top-left and working to the bottom-right: 
+Starting from the top-left and working to the bottom-right: 
+
 * Random type Pokémon  gift for starting a monotype runs
 * All items
 * Lv100 super team 

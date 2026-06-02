@@ -1,9 +1,13 @@
 StadiumGroundsFacility_MapScriptHeader:
 	def_scene_scripts
 	; going to need a wram variable TODO 
-
+		; wram for trainer 1, 2, 3 ( 1- 10 no repeats) 
+		; wram for pokemon 1 (1 - 20) 
+	; prevent saving 
+	; spawn point here unless you have not yet beaten the game then it sends you to azalea 
+	
 	def_callbacks
-	callback MAPCALLBACK_OBJECTS, StadiumGroundsFacilityNPCs
+	callback MAPCALLBACK_OBJECTS, StadiumGroundsFacilityNPCs ; c.f. the hidden groto 
 	
 	def_warp_events
 	; you're warped in and out of these 
@@ -68,6 +72,11 @@ StadiumGroundsFacilityScript:
 ; AMAGCARGO 
 	startbattle
 	ifequal $1, .Continue
+	
+	; heal the PLAYER
+	; allow them to reorganize the party and items 
+	; then prompt to start the battles 
+	
 	; now start the trainers, up to three 
 
 	winlosstext SGF_Tier1_WinText, SGF_Tier1_LoseText

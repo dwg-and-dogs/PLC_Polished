@@ -396,10 +396,10 @@ ENDM
 	map_const KIMONO_CABIN_5,                               9,  9
 
 	newgroup                                                     ; 24
-
+	map_const STADIUM_GROUNDS_FACILITY_PREP,			    15, 12
 
 	newgroup                                                     ; 25
-
+	map_const STADIUM_GROUNDS_FACILITY,  	                19, 11
 
 	newgroup                                                     ; 26
 

@@ -81,6 +81,9 @@ ENDM
 	
 	special_bg_pal map,      SERENE_SPRINGS_CAVERN,       PAL_SINGLE,    SereneSpringsCavernPalette
 	special_bg_pal map, 	 FERALIGATR_LAIR,             PAL_SINGLE,    MurkySwampPalette
+	
+;	special_bg_pal map, 	STADIUM_GROUNDS_FACILITY_PREP, PAL_SINGLE, 	 StadiumGroundsFacilityPrepPalette ; todo 
+;	special_bg_pal map, 	STADIUM_GROUNDS_FACILITY, PAL_SINGLE, 	 StadiumGroundsFacilityPalette ; todo 
 
 	special_bg_pal overcast, (unused),                    PAL_TIMEOFDAY, OvercastBGPalette
 	db 0 ; end

@@ -491,11 +491,11 @@ INCLUDE "maps/FeraligatrLair.asm"
 
 
 SECTION "Victory Road Scripts", ROMX
-
+INCLUDE "maps/StadiumGroundsFacilityPrep.asm"
 
 
 SECTION "Tohjo Falls Scripts", ROMX
-
+INCLUDE "maps/StadiumGroundsFacility.asm"
 
 
 SECTION "Indigo Plateau Scripts", ROMX
