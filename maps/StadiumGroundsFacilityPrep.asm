@@ -1,12 +1,15 @@
 StadiumGroundsFacilityPrep_MapScriptHeader:
 	def_scene_scripts
-
+; 06.02.26 70 todos 
 	
 	def_callbacks
 	
 	
 	def_warp_events
-	; warp to stadium grounds 
+	warp_event 0, 0, STADIUM_GROUNDS, 0
+	warp_event 0, 0, STADIUM_GROUNDS, 0
+	; todo warp in from stadium grounds 
+	; warp to stadium grounds todo
 	
 	def_coord_events 
 
@@ -21,6 +24,7 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 
 	def_object_events ; depending on time of day? 
 	; time of day 
+	; todo for each of these I need an event like event_beat_facility_... so that the player can have a trophy for that 
 	object_event 11, 14, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityUrsulaScript, -1 ; todo 
 	object_event 29, 20, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilitySilasScript, -1 ; todo 
 	object_event 12, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityBethScript, -1 ; todo 
@@ -162,7 +166,7 @@ FacilityPiperScript:
 	iffalse_jumpopenedtext FacilityPiperRefusedText
 	winlosstext FacilityPiperWinText, FacilityPiperLossText
 	setlasttalked FACILITY_PIPER
-	loadtrainer KIMONO_GIRL_1, PIPER_KG ; todo 
+	loadtrainer KIMONO_GIRL_1, PIPER_KG 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -171,27 +175,47 @@ FacilityPiperScript:
 	end
 
 FacilityPiperIntroText:	
-	text "TODO"
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at the Tapestry."
+	
+	para "Surely your story"
+	line "will be told for"
+	para "hundreds of years"
+	line "from now!"
+	
+	para "You showed us we"
+	line "should not hide"
+	para "our gifts in fear"
+	line "but share them"
+	cont "with others!"	
 	done
 	
 FacilityPiperAfter:
-	text "TODO"
+	text "We can battle as"
+	line "much as you like."
 	done
 
 FacilityPiperQuestionText:
-	text "TODO"
+	text "I've been training"
+	line "a #mon team."
+	
+	para "Would you like to"
+	line "battle?"
 	done
 
 FacilityPiperRefusedText:
-	text "TODO"
+	text "Some other time!"
 	done
 
 FacilityPiperWinText:
-	text "TODO"
+	text "Wow, I learned a"
+	line "lot from you!"
 	done
 
 FacilityPiperLossText:
-	text "TODO"
+	text "Wow! I'm getting"
+	line "good at this!"
 	done
 	
 FacilityUrsulaScript:
@@ -212,23 +236,43 @@ FacilityUrsulaScript:
 	special HealPartyEvenForNuzlocke
 	end
 	
-FacilityUrsulaIntroText:
-	text "TODO"
+FacilityUrsulaIntroText:; todo text_high 
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at Anarres."
+	
+	para "The Pineco are no"
+	line "longer a threat"
+	cont "to the forest."
 	done
+	
 FacilityUrsulaAfter:
-	text "TODO"
+	text "What have you"
+	line "taught someone"
+	cont "lately?"
 	done
+
 FacilityUrsulaQuestionText:
-	text "TODO"
+	text "I've been training"
+	line "a lot since we"
+	cont "first battled."
+	
+	para "Would you like to"
+	line "battle again?"
 	done
+	
 FacilityUrsulaRefusedText:
-	text "TODO"
+	text "Some other time."
 	done
+	
 FacilityUrsulaWinText:
-	text "TODO"
+	text "You're still a"
+	line "tough trainer!"
 	done
+
 FacilityUrsulaLossText:
-	text "TODO"
+	text "Hah! This time I"
+	line "came out ahead!"
 	done
 
 FacilitySilasScript:
@@ -250,22 +294,52 @@ FacilitySilasScript:
 	end
 	
 FacilitySilasIntroText:
-	text "TODO"
+	text "<PLAYER>, thank"
+	line "you for helping"
+	para "me to see that"
+	line "some adaptation"
+	para "is necessary to"
+	line "grow."
+	
+	para "With the forest"
+	line "in crisis, I was"
+	para "afraid of Ursula's"
+	line "invention."
+	para "I thought I knew"
+	line "it all!"
+	
+	para "I hope the Ilex"
+	line "Forest doesn't"
+	para "have a crisis"
+	line "like that for a"
+	cont "long time."
 	done
+
 FacilitySilasAfter:
-	text "TODO"
+	text "Be responsible"
+	line "with that HM I"
+	cont "gave you, hear?"
 	done
+
 FacilitySilasQuestionText:
-	text "TODO"
+	text "Say, think I can"
+	line "teach you a few"
+	cont "things in battle?"
 	done
+
 FacilitySilasRefusedText:
-	text "TODO"
+	text "Some other time."
 	done
+
 FacilitySilasWinText:
-	text "TODO"
+	text "Ha! I still have"
+	line "so much to learn!"
 	done
+
 FacilitySilasLossText:
-	text "TODO"
+	text "Ha! You still"
+	line "have so much to"
+	cont "learn!"
 	done
 
 FacilityBethScript:
