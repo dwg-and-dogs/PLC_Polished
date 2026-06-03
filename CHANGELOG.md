@@ -59,4 +59,17 @@ Cut is no longer given in Sandbox room.
 Restore Scyther evolving to Kleavor by levelling up while holding hard stone. 
 Fix Pokegear watch showing bad text. 
 
+* Release 1.0.3
+
+Todo: 
+* Streamline the historic lugia quest to remove the need for the block. 
+* Bug catching contest every day 
+* Remove day of week from pokegear
+* Check goldenrod underground npcs 
+* Update grimer and HElectrode animations
+* Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
+* 
+
+
 Last updated: 06/01/26
+

@@ -768,7 +768,7 @@ PokemonInterestInMeganiumText:
 
 StadiumFacilityEntranceNPC:
 	faceplayer
-	checkevent EVENT_BEAT_VESPER ; ? 
+;	checkevent EVENT_BEAT_VESPER ; ? 
 	opentext
 	iffalse_jumptext StadiumGrounds_NoFacilityText
 	writetext StadiumGrounds_FacilityEntranceText

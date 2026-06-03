@@ -1,6 +1,7 @@
 StadiumGroundsFacilityPrep_MapScriptHeader:
 	def_scene_scripts
 ; 06.02.26 70 todos 
+; 06.03.26 52 todos 
 	
 	def_callbacks
 	
@@ -316,9 +317,8 @@ FacilitySilasIntroText:
 	done
 
 FacilitySilasAfter:
-	text "Be responsible"
-	line "with that HM I"
-	cont "gave you, hear?"
+	text "Say, how's your"
+	line "grandpa?"
 	done
 
 FacilitySilasQuestionText:
@@ -361,22 +361,43 @@ FacilityBethScript:
 	end
 	
 FacilityBethIntroText:
-	text "TODO"
+	text "<PLAYER>, thank"
+	line "you for helping"
+	para "us save Sandra at"
+	line "the Stadium."
+	
+	para "It's surreal to"
+	line "be here after"
+	cont "Tyrus is gone."	
 	done
+	
 FacilityBethAfter:
-	text "TODO"
+	text "I'm going to keep"
+	line "training to be as"
+	cont "strong as Sandra!"
 	done
+
 FacilityBethQuestionText:
-	text "TODO"
+	text "Say, I've been"
+	line "training up my"
+	para "#mon since we"
+	line "last talked."
+	
+	para "Want to battle?"
 	done
+
 FacilityBethRefusedText:
-	text "TODO"
+	text "Some other time."
 	done
+	
 FacilityBethWinText:
-	text "TODO"
+	text "You really dug"
+	line "deep!"
 	done
+
 FacilityBethLossText:
-	text "TODO"
+	text "I need to dig"
+	line "deeper!"
 	done
 
 FacilitySandraScript:
@@ -398,22 +419,51 @@ FacilitySandraScript:
 	end
 	
 FacilitySandraIntroText:
-	text "TODO"
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at the Stadium."
+	
+	para "I hope that you"
+	line "learned what the"
+	para "most dangerous"
+	line "invention is."
+	
+	para "Now that Tyrus is"
+	line "gone, we can make"
+	para "the stadium into"
+	line "a positive place"
+	para "for trainers to"
+	line "share battling"
+	cont "strategies."
 	done
+	
 FacilitySandraAfter:
-	text "TODO"
+	text "Remember, a tree"
+	line "needs its highest"
+	para "branches and its"
+	line "deepest roots."
 	done
+	
 FacilitySandraQuestionText:
-	text "TODO"
+	text "Speaking of "
+	line "#mon battles,"
+	
+	para "would you like to"
+	line "battle me?"
 	done
+
 FacilitySandraRefusedText:
-	text "TODO"
+	text "Some other time."
 	done
+
 FacilitySandraWinText:
-	text "TODO"
+	text "Your connection"
+	line "is still strong!"
 	done
+	
 FacilitySandraLossText:
-	text "TODO"
+	text "Now that was"
+	line "thrilling!"
 	done
 
 FacilitySybilScript:
@@ -435,20 +485,27 @@ FacilitySybilScript:
 	end
 	
 FacilitySybilIntroText:
-	text "TODO"
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at the Tin Tower."
 	done
+	
 FacilitySybilAfter:
 	text "TODO"
 	done
+
 FacilitySybilQuestionText:
 	text "TODO"
 	done
+
 FacilitySybilRefusedText:
 	text "TODO"
 	done
+
 FacilitySybilWinText:
 	text "TODO"
 	done
+
 FacilitySybilLossText:
 	text "TODO"
 	done

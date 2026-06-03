@@ -49,6 +49,7 @@ Route35NationalParkGate_Yes:
 
 Route35NationalParkGate_CheckIfContestDay:
 	readvar VAR_WEEKDAY
+	ifequal SUNDAY, Route35NationalParkGate_IsContestDay
 	ifequal TUESDAY, Route35NationalParkGate_IsContestDay
 	ifequal THURSDAY, Route35NationalParkGate_IsContestDay
 	ifequal SATURDAY, Route35NationalParkGate_IsContestDay
@@ -93,7 +94,7 @@ Route35NationalParkGate_GoBackIn:
 
 Route35OfficerScriptContest:
 	readvar VAR_WEEKDAY
-	ifequal SUNDAY, Route35NationalParkGate_NoContestToday
+;	ifequal SUNDAY, Route35NationalParkGate_NoContestToday
 	ifequal MONDAY, Route35NationalParkGate_NoContestToday
 	ifequal WEDNESDAY, Route35NationalParkGate_NoContestToday
 	ifequal FRIDAY, Route35NationalParkGate_NoContestToday
