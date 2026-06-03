@@ -63,7 +63,7 @@ Fix Pokegear watch showing bad text.
 
 Nidoran base defense raised to equal its base attack.
 Update HElectrode animation. (todo: check)
-Remove day-of-week condition for bug catching contest and Goldenrod Underground (todo: check)
+Remove day-of-week condition for bug catching contest and Goldenrod Underground. 
 
 Todo: 
 * Remove day of week from Pokegear; re-center the time of day 

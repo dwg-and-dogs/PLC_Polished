@@ -22,7 +22,7 @@ WarehouseEntrance_MapScriptHeader:
 	bg_event 15,  8, BGEVENT_ITEM + ANTIDOTE, EVENT_WAREHOUSE_ENTRANCE_HIDDEN_ANTIDOTE ; ok 
 
 	def_object_events
-	object_event  5, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BargainMerchantScript, -1
+;	object_event  5, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BargainMerchantScript, -1
 	object_event  5, 14, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlderHaircutBrotherScript, -1
 ;	object_event  5, 15, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, YoungerHaircutBrotherScript, EVENT_WAREHOUSE_ENTRANCE_YOUNGER_HAIRCUT_BROTHER
 	object_event  5, 21, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BitterMerchantScript, -1
@@ -177,34 +177,35 @@ GenericTrainerCosplayerClara:
 	done
 
 BitterMerchantScript:
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .Open
-	ifequal SATURDAY, .Open
-	jumptext GoldenrodUndergroundWeAreNotOpenTodayText
-
-.Open:
+;	readvar VAR_WEEKDAY
+;	ifequal SUNDAY, .Open
+;	ifequal SATURDAY, .Open
+;	jumptext GoldenrodUndergroundWeAreNotOpenTodayText
+;
+;.Open:
 	pokemart MARTTYPE_BITTER, MART_UNDERGROUND
 
 BargainMerchantScript:
-	checkflag ENGINE_GOLDENROD_UNDERGROUND_MERCHANT_CLOSED
-	iftrue_jumptext GoldenrodUndergroundWeAreNotOpenTodayText
-	readvar VAR_WEEKDAY
-	ifequal MONDAY, .CheckMorn
-	jumptext GoldenrodUndergroundWeAreNotOpenTodayText
-
-.CheckMorn:
-	checktime 1 << MORN
-	iffalse_jumptext GoldenrodUndergroundWeAreNotOpenTodayText
+;	checkflag ENGINE_GOLDENROD_UNDERGROUND_MERCHANT_CLOSED
+;	iftrue_jumptext GoldenrodUndergroundWeAreNotOpenTodayText
+;	readvar VAR_WEEKDAY
+;	ifequal MONDAY, .CheckMorn
+;	jumptext GoldenrodUndergroundWeAreNotOpenTodayText
+;
+;.CheckMorn:
+;	checktime 1 << MORN
+;	iffalse_jumptext GoldenrodUndergroundWeAreNotOpenTodayText
 	pokemart MARTTYPE_BARGAIN, 0
 
 OlderHaircutBrotherScript:
-	readvar VAR_WEEKDAY
-	ifequal TUESDAY, .DoHaircut
-	ifequal THURSDAY, .DoHaircut
-	ifequal SATURDAY, .DoHaircut
-	jumptext GoldenrodUndergroundWeAreNotOpenTodayText
-
-.DoHaircut:
+;	readvar VAR_WEEKDAY
+;	ifequal SUNDAY, .DoHaircut
+;	ifequal TUESDAY, .DoHaircut
+;	ifequal THURSDAY, .DoHaircut
+;	ifequal SATURDAY, .DoHaircut
+;	jumptext GoldenrodUndergroundWeAreNotOpenTodayText
+;
+;.DoHaircut:
 	opentext
 	checkflag ENGINE_GOLDENROD_UNDERGROUND_GOT_HAIRCUT
 	iftrue .AlreadyGotHaircut

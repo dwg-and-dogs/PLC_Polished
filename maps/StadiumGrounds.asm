@@ -11,6 +11,7 @@ StadiumGrounds_MapScriptHeader:
 	warp_event 12, 39, SERENE_SPRINGS, 3
 	warp_event 11, 39, SERENE_SPRINGS, 4
 	warp_event  49, 3, STADIUM_CAPITAL_GATE, 1
+	warp_event 21, 25, STADIUM_GROUNDS_FACILITY_PREP, 1 ; WARP BACK?
 	
 	def_coord_events 
 	coord_event 26,  6, 0, StadiumGroundsToxicroakScene

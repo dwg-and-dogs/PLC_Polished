@@ -909,7 +909,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
-	givepoke ANNIHILAPE, NO_FORM, 100
+	givepoke ANNIHILAPE, NO_FORM, 200
 	loadmem wPartyMon1Moves+0, FLAMETHROWER
 	loadmem wPartyMon1Moves+1, EARTH_POWER
 	loadmem wPartyMon1Moves+2, STRENGTH
@@ -957,7 +957,7 @@ endr
 	callasm FillPokedex
 	waitbutton
 	closetext
-	warp GOLDENROD_CITY, 14, 8
+	warp STADIUM_GROUNDS_FACILITY_PREP, 13, 23
 ; debug only
 ; debug 
 	end

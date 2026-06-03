@@ -6,8 +6,8 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	
 	
 	def_warp_events
-	warp_event 0, 0, STADIUM_GROUNDS, 0
-	warp_event 0, 0, STADIUM_GROUNDS, 0
+	warp_event 13, 23, STADIUM_GROUNDS, 0
+	warp_event 14, 23, STADIUM_GROUNDS, 0
 	; todo warp in from stadium grounds 
 	
 	def_coord_events 
@@ -36,11 +36,11 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	object_event 12, 18, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityAmosScript, -1 
 	object_event  3, 19, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityPiperScript, -1 
 	; permanent 
-	object_event 14, 10, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript, -1
-	object_event 15, 10, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript2, -1
+	object_event 13, 11, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript, -1
+	object_event 14, 11, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript2, -1
 	object_event 15, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityNatuScript, -1
 	object_event 0, 0, SPRITE_SILVER_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, SilverTrophyText, EVENT_FACILITY_SILVER_TROPHY
-	object_event 0, 0, SPRITE_GOLD_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldTrophyScript, EVENT_FACILITY_GOLD_TROPHY
+;	object_event 0, 0, SPRITE_GOLD_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldTrophyScript, EVENT_FACILITY_GOLD_TROPHY
 	; trophy / doll of pokemon that you beat the gauntlet with by itself 
 
 
@@ -80,6 +80,7 @@ StadiumGroundsFaciltyPrepClerkScript:
 	yesorno
 	iffalse .NoExplain
 	writetext FacilityPrep_ExplainFullText
+	waitbutton
 .NoExplain:
 	; check if > 1 in your party
 	; if > 1, .PleaseReducePartySize
@@ -213,6 +214,10 @@ FacilityPiperAfter:
 	done
 
 FacilityPiperQuestionText:
+	text_high
+    text " Piper: "
+	next
+	text_start 
 	text "I've been training"
 	line "a #mon team."
 	
@@ -575,6 +580,8 @@ FacilitySybilIntroText:
 	text "<PLAYER>, thank"
 	line "you for your help"
 	cont "at the Tin Tower."
+	
+	para "todo"
 	done
 	
 FacilitySybilAfter:
@@ -1124,7 +1131,12 @@ FacilityRecruitNomadf:
 	line "morning,"
 	
 	para "but she is still"
-	line "
+	line "waiting for her"
+	cont "son to return."
+	
+	para "You should go see"
+	line "her at Trader's"
+	cont "Landing."
 	done
 
 FacilityRecruitBarbeau:
