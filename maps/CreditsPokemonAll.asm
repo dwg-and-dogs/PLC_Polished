@@ -18,6 +18,7 @@ CreditsPokemonAll_MapScriptHeader:
 
 
 CreditsPokemonAllScene: 
+	setevent EVENT_REACHED_CREDITS_ONCE
 ; reset all legendaries
 ; entei
 	clearevent EVENT_FOUGHT_ENTEI ; need to check 

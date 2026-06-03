@@ -6,8 +6,8 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	
 	
 	def_warp_events
-	warp_event 13, 23, STADIUM_GROUNDS, 0
-	warp_event 14, 23, STADIUM_GROUNDS, 0
+	warp_event 13, 23, STADIUM_GROUNDS, 6
+	warp_event 14, 23, STADIUM_GROUNDS, 6
 	; todo warp in from stadium grounds 
 	
 	def_coord_events 
@@ -39,8 +39,8 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	object_event 13, 11, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript, -1
 	object_event 14, 11, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript2, -1
 	object_event 15, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityNatuScript, -1
-	object_event 0, 0, SPRITE_SILVER_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, SilverTrophyText, EVENT_FACILITY_SILVER_TROPHY
-;	object_event 0, 0, SPRITE_GOLD_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldTrophyScript, EVENT_FACILITY_GOLD_TROPHY
+	object_event 0, 17, SPRITE_SILVER_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, SilverTrophyText, EVENT_FACILITY_SILVER_TROPHY
+;	object_event 1, 17, SPRITE_GOLD_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldTrophyScript, EVENT_FACILITY_GOLD_TROPHY
 	; trophy / doll of pokemon that you beat the gauntlet with by itself 
 
 
@@ -1017,8 +1017,9 @@ StadiumGroundsFaciltyPrepClerkScript2:
 	faceplayer
 	opentext
 	checkevent EVENT_FACILITY_SILVER_TROPHY
-	iftrue_jumptext CongratsSilverTrophyText
+	iffalse_jumptext CongratsSilverTrophyText
 	writetext SilverTrophyExplainText
+	waitbutton
 	checkevent EVENT_FACILITY_BEAT_URSULA
 	iffalse_jumptext FacilityRecruitUrsula
 	checkevent EVENT_FACILITY_BEAT_SILAS
@@ -1044,8 +1045,8 @@ StadiumGroundsFaciltyPrepClerkScript2:
 	checkevent EVENT_FACILITY_BEAT_PIPER
 	iffalse_jumptext FacilityRecruitPiper
 	
-	setevent EVENT_FACILITY_SILVER_TROPHY
-	jumptext CongratsSilverTrophyText
+	clearevent EVENT_FACILITY_SILVER_TROPHY
+	jumptext CongratsSilverTrophyText2
 		
 SilverTrophyExplainText:
 	text "The Stadium was"
@@ -1073,6 +1074,15 @@ CongratsSilverTrophyText:
 	para "It's on display"
 	line "at the Trophy"
 	cont "room."
+	done
+
+CongratsSilverTrophyText2:
+	text "Congratulations"
+	line "on earning the"
+	cont "Silver Trophy!"
+	
+	para "It will be on"
+	line "display soon."
 	done
 
 FacilityRecruitUrsula:
@@ -1128,15 +1138,7 @@ FacilityRecruitNomadf:
 	line "beaten Maia."
 	
 	para "She visits in the"
-	line "morning,"
-	
-	para "but she is still"
-	line "waiting for her"
-	cont "son to return."
-	
-	para "You should go see"
-	line "her at Trader's"
-	cont "Landing."
+	line "morning."
 	done
 
 FacilityRecruitBarbeau:

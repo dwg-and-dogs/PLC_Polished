@@ -12,6 +12,7 @@ StadiumGrounds_MapScriptHeader:
 	warp_event 11, 39, SERENE_SPRINGS, 4
 	warp_event  49, 3, STADIUM_CAPITAL_GATE, 1
 	warp_event 21, 25, STADIUM_GROUNDS_FACILITY_PREP, 1 ; WARP BACK?
+	warp_event 22, 25, STADIUM_GROUNDS_FACILITY_PREP, 1 ; WARP BACK?
 	
 	def_coord_events 
 	coord_event 26,  6, 0, StadiumGroundsToxicroakScene
@@ -32,8 +33,8 @@ StadiumGrounds_MapScriptHeader:
 	pokemon_event  28, 10, TOXICROAK, -1, -1, PAL_NPC_BLUE, ToxicroakChallengeText, EVENT_TOXICROAK_STADIUM
 	object_event 46, 28, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsSandra2Script, EVENT_STADIUM_GROUNDS_SANDRA
 	object_event 4,  26, SPRITE_MON_ICON, SPRITEMOVEDATA_STANDING_DOWN, 0, MEGANIUM, -1, -1, PAL_NPC_ROCK, OBJECTTYPE_SCRIPT, 0, AncientMeganiumScript, EVENT_FOUGHT_MEGANIUM_VARIANT
-;	object_event  0, 0, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumFacilityEntranceNPC, EVENT_STADIUM_GROUNDS_SANDRA
-;	object_event  0, 0, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumFacilityEntranceNPC, EVENT_STADIUM_GROUNDS_SANDRA
+	object_event 21, 27, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, StadiumFacilityEntranceNPCText, -1;EVENT_REACHED_CREDITS_ONCE
+	object_event 22, 27, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, StadiumFacilityEntranceNPCText, -1;EVENT_REACHED_CREDITS_ONCE
 	object_event 49, 14, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader8, EVENT_BEAT_BOBESH_STADIUM
 	object_event 49, 11, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader9, EVENT_BEAT_BOBESH_STADIUM
 	object_event 42,  3, SPRITE_BRIGADER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBrigader10, EVENT_BEAT_BOBESH_STADIUM
@@ -767,48 +768,11 @@ PokemonInterestInMeganiumText:
 	cont "the Meganium!"
 	done
 
-StadiumFacilityEntranceNPC:
-	faceplayer
-;	checkevent EVENT_BEAT_VESPER ; ? 
-	opentext
-	iffalse_jumptext StadiumGrounds_NoFacilityText
-	writetext StadiumGrounds_FacilityEntranceText
-	yesorno
-	iffalse_jumptext StadiumGrounds_NoFacilityText_2
-	waitbutton
-	writetext StadiumGrounds_FacilityEntranceText_2
-	closetext
-	warp STADIUM_GROUNDS_FACILITY_PREP, 0, 0
-	; todo coordinates and warp sfx and maybe some more movement that is a little cleaner
-	end
-
-
-StadiumGrounds_NoFacilityText:
-	text "Sorry, but we're"
-	line "still repairing"
-	cont "the Stadium."
+StadiumFacilityEntranceNPCText:
+	text "The Stadium is"
+	line "closed!"
 	
-	para "It won't be ready"
-	line "for a while,"
-	cont "come back later."
-	
-	para "As in after the"
-	line "1.2 update of"
-	cont "the game."
-	done
-
-StadiumGrounds_NoFacilityText_2:
-	text "Some other time."
-	done
-
-StadiumGrounds_FacilityEntranceText:
-	text "A challenger for"
-	line "the Stadium!"
-	
-	para "Would you like to"
-	line "enter?"
-	done
-
-StadiumGrounds_FacilityEntranceText_2:
-	text "Right this way!"
+	para "There are some"
+	line "fiercely powerful"
+	cont "#mon inside."
 	done

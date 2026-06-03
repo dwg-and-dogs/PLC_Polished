@@ -957,6 +957,7 @@ endr
 	callasm FillPokedex
 	waitbutton
 	closetext
+	clearevent EVENT_NOMAD_ISLANDS_HOUSE
 	warp STADIUM_GROUNDS_FACILITY_PREP, 13, 23
 ; debug only
 ; debug 
