@@ -1,0 +1,584 @@
+FacilityPiperScript:
+	faceplayer
+	opentext
+	writetext FacilityPiperIntroText
+	waitbutton
+	writetext FacilityPiperQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilityPiperRefusedText
+	winlosstext FacilityPiperWinText, FacilityPiperLossText
+	setlasttalked FACILITY_PIPER
+	loadtrainer KIMONO_GIRL_1, PIPER_KG 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	iftrue .DefeatedByPiper
+	setevent EVENT_FACILITY_BEAT_PIPER
+.DefeatedByPiper:
+	showtext FacilityPiperAfter
+	special HealPartyEvenForNuzlocke
+	end
+
+FacilityPiperIntroText:	
+	text_high
+    text " Piper: "
+	next
+	text_start 
+
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at the Tapestry."
+	
+	para "Surely your story"
+	line "will be told for"
+	para "hundreds of years"
+	line "from now!"
+	
+	para "You showed us we"
+	line "should not hide"
+	para "our gifts in fear"
+	line "but share them"
+	cont "with others!"	
+	done
+	
+FacilityPiperAfter:
+	text_high
+    text " Piper: "
+	next
+	text_start 
+	text "We can battle as"
+	line "much as you like."
+	done
+
+FacilityPiperQuestionText:
+	text "I've been training"
+	line "a #mon team."
+	
+	para "Would you like to"
+	line "battle?"
+	done
+
+FacilityPiperRefusedText:
+	text_high
+    text " Piper: "
+	next
+	text_start 
+	text "Some other time!"
+	done
+
+FacilityPiperWinText:
+	text "Wow, I learned a"
+	line "lot from you!"
+	done
+
+FacilityPiperLossText:
+	text "Wow! I'm getting"
+	line "good at this!"
+	done
+	
+FacilityUrsulaScript:
+	faceplayer
+	opentext
+	writetext FacilityUrsulaIntroText
+	waitbutton
+	writetext FacilityUrsulaQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilityUrsulaRefusedText
+	winlosstext FacilityUrsulaWinText, FacilityUrsulaLossText
+	setlasttalked FACILITY_URSULA
+	loadtrainer TAMMY, URSULA_FACILITY ; party is done 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilityUrsulaAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilityUrsulaIntroText:; todo text_high 
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at Anarres."
+	
+	para "The Pineco are no"
+	line "longer a threat"
+	cont "to the forest."
+	done
+	
+FacilityUrsulaAfter:
+	text "What have you"
+	line "taught someone"
+	cont "lately?"
+	done
+
+FacilityUrsulaQuestionText:
+	text "I've been training"
+	line "a lot since we"
+	cont "first battled."
+	
+	para "Would you like to"
+	line "battle again?"
+	done
+	
+FacilityUrsulaRefusedText:
+	text "Some other time."
+	done
+	
+FacilityUrsulaWinText:
+	text "You're still a"
+	line "tough trainer!"
+	done
+
+FacilityUrsulaLossText:
+	text "Hah! This time I"
+	line "came out ahead!"
+	done
+
+FacilitySilasScript:
+	faceplayer
+	opentext
+	writetext FacilitySilasIntroText
+	waitbutton
+	writetext FacilitySilasQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilitySilasRefusedText
+	winlosstext FacilitySilasWinText, FacilitySilasLossText
+	setlasttalked FACILITY_SILAS
+	loadtrainer HOLLIS, HOLLIS_FACILITY
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilitySilasAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilitySilasIntroText:
+	text "<PLAYER>, thank"
+	line "you for helping"
+	para "me to see that"
+	line "some adaptation"
+	para "is necessary to"
+	line "grow."
+	
+	para "With the forest"
+	line "in crisis, I was"
+	para "afraid of Ursula's"
+	line "invention."
+	para "I thought I knew"
+	line "it all!"
+	
+	para "I hope the Ilex"
+	line "Forest doesn't"
+	para "have a crisis"
+	line "like that for a"
+	cont "long time."
+	done
+
+FacilitySilasAfter:
+	text "Say, how's your"
+	line "grandpa?"
+	done
+
+FacilitySilasQuestionText:
+	text "Say, think I can"
+	line "teach you a few"
+	cont "things in battle?"
+	done
+
+FacilitySilasRefusedText:
+	text "Some other time."
+	done
+
+FacilitySilasWinText:
+	text "Ha! I still have"
+	line "so much to learn!"
+	done
+
+FacilitySilasLossText:
+	text "Ha! You still"
+	line "have so much to"
+	cont "learn!"
+	done
+
+FacilityBethScript:
+	faceplayer
+	opentext
+	writetext FacilityBethIntroText
+	waitbutton
+	writetext FacilityBethQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilityBethRefusedText
+	winlosstext FacilityBethWinText, FacilityBethLossText
+	setlasttalked FACILITY_BETH
+	loadtrainer COOLTRAINERF, BETH_FACILITY
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilityBethAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilityBethIntroText:
+	text "<PLAYER>, thank"
+	line "you for helping"
+	para "us save Sandra at"
+	line "the Stadium."
+	
+	para "It's surreal to"
+	line "be here after"
+	cont "Tyrus is gone."	
+	done
+	
+FacilityBethAfter:
+	text "I'm going to keep"
+	line "training to be as"
+	cont "strong as Sandra!"
+	done
+
+FacilityBethQuestionText:
+	text "Say, I've been"
+	line "training up my"
+	para "#mon since we"
+	line "last talked."
+	
+	para "Want to battle?"
+	done
+
+FacilityBethRefusedText:
+	text "Some other time."
+	done
+	
+FacilityBethWinText:
+	text "You really dug"
+	line "deep!"
+	done
+
+FacilityBethLossText:
+	text "I need to dig"
+	line "deeper!"
+	done
+
+FacilitySandraScript:
+	faceplayer
+	opentext
+	writetext FacilitySandraIntroText
+	waitbutton
+	writetext FacilitySandraQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilitySandraRefusedText
+	winlosstext FacilitySandraWinText, FacilitySandraLossText
+	setlasttalked FACILITY_SANDRA
+	loadtrainer SANDRA, SANDRA_FACILITY
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilitySandraAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilitySandraIntroText:
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at the Stadium."
+	
+	para "I hope that you"
+	line "learned what the"
+	para "most dangerous"
+	line "invention is."
+	
+	para "Now that Tyrus is"
+	line "gone, we can make"
+	para "the stadium into"
+	line "a positive place"
+	para "for trainers to"
+	line "share battling"
+	cont "strategies."
+	done
+	
+FacilitySandraAfter:
+	text "Remember, a tree"
+	line "needs its highest"
+	para "branches and its"
+	line "deepest roots."
+	done
+	
+FacilitySandraQuestionText:
+	text "Speaking of "
+	line "#mon battles,"
+	
+	para "would you like to"
+	line "battle me?"
+	done
+
+FacilitySandraRefusedText:
+	text "Some other time."
+	done
+
+FacilitySandraWinText:
+	text "Your connection"
+	line "is still strong!"
+	done
+	
+FacilitySandraLossText:
+	text "Now that was"
+	line "thrilling!"
+	done
+
+FacilitySybilScript:
+	faceplayer
+	opentext
+	writetext FacilitySybilIntroText
+	waitbutton
+	writetext FacilitySybilQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilitySybilRefusedText
+	winlosstext FacilitySybilWinText, FacilitySybilLossText
+	setlasttalked FACILITY_SYBIL
+	loadtrainer SAMSARA, SAMSARA_FACILITY
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilitySybilAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilitySybilIntroText:
+	text "<PLAYER>, thank"
+	line "you for your help"
+	cont "at the Tin Tower."
+	done
+	
+FacilitySybilAfter:
+	text "TODO"
+	done
+
+FacilitySybilQuestionText:
+	text "Would you like to"
+	line "battle?"
+	done
+
+FacilitySybilRefusedText:
+	text "Some other time."
+	done
+
+FacilitySybilWinText:
+	text "Your battle style"
+	line "is a revelation!"
+	done
+
+FacilitySybilLossText:
+	text "TODO"
+	done
+
+FacilityTysonScript:
+	faceplayer
+	opentext
+	writetext FacilityTysonIntroText
+	waitbutton
+	writetext FacilityTysonQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilityTysonRefusedText
+	winlosstext FacilityTysonWinText, FacilityTysonLossText
+	setlasttalked FACILITY_TYSON
+	loadtrainer BRIGADER, 22
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilityTysonAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilityTysonIntroText:
+	text "I trained under"
+	line "General Andrea"
+	cont "for years."
+	
+	para "I left behind my"
+	line "family and my"
+	cont "friends pursuing"
+	cont "glory under her."
+	
+	para "The mine is gone!"
+	line "The sweat of my"
+	cont "brow, gone like a"
+	cont "drop of dew in"
+	cont "the evening."
+	
+	para "I hope it's not"
+	line "too late to start"
+	cont "over."
+	done
+	
+FacilityTysonAfter:
+	text "Please forgive me"
+	line "for my mistakes."
+	done
+	
+FacilityTysonQuestionText:
+	text "Will you battle"
+	line "me again?"
+	
+	para "I need to see"
+	line "your connection."
+	done
+
+FacilityTysonRefusedText:
+	text "Why? Why do you"
+	line "refuse me!"
+	done
+
+FacilityTysonWinText:
+	text "What do you have"
+	line "that I lack?"
+	done
+
+FacilityTysonLossText:
+	text "Glory is mine!"
+	done
+
+FacilityNomadFScript:
+	faceplayer
+	opentext
+	writetext FacilityNomadFIntroText
+	waitbutton
+	writetext FacilityNomadFQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilityNomadFRefusedText
+	winlosstext FacilityNomadFWinText, FacilityNomadFLossText
+	setlasttalked FACILITY_NOMAD_F
+	loadtrainer NOMAD_F, NOMAD_F_MOTHER
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilityNomadFAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilityNomadFIntroText:
+	text "TODO"
+	done
+FacilityNomadFAfter:
+	text "TODO"
+	done
+FacilityNomadFQuestionText:
+	text "TODO"
+	done
+FacilityNomadFRefusedText:
+	text "TODO"
+	done
+FacilityNomadFWinText:
+	text "TODO"
+	done
+FacilityNomadFLossText:
+	text "TODO"
+	done
+
+FacilityBarbeauScript:
+	faceplayer
+	opentext
+	writetext FacilityBarbeauIntroText
+	waitbutton
+	writetext FacilityBarbeauQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilityBarbeauRefusedText
+	winlosstext FacilityBarbeauWinText, FacilityBarbeauLossText
+	setlasttalked FACILITY_BARBEAU
+	loadtrainer BARBEAU, REMY_FACILITY
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilityBarbeauAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilityBarbeauIntroText:
+	text "TODO"
+	done
+FacilityBarbeauAfter:
+	text "TODO"
+	done
+FacilityBarbeauQuestionText:
+	text "TODO"
+	done
+FacilityBarbeauRefusedText:
+	text "TODO"
+	done
+FacilityBarbeauWinText:
+	text "TODO"
+	done
+FacilityBarbeauLossText:
+	text "TODO"
+	done
+
+FacilityPetraScript:
+	faceplayer
+	opentext
+	writetext FacilityPetraIntroText
+	waitbutton
+	writetext FacilityPetraQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilityPetraRefusedText
+	winlosstext FacilityPetraWinText, FacilityPetraLossText
+	setlasttalked FACILITY_PETRA
+	loadtrainer KANNA, KANNA_FACILITY
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilityPetraAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilityPetraIntroText:
+	text "TODO"
+	done
+FacilityPetraAfter:
+	text "TODO"
+	done
+FacilityPetraQuestionText:
+	text "TODO"
+	done
+FacilityPetraRefusedText:
+	text "TODO"
+	done
+FacilityPetraWinText:
+	text "TODO"
+	done
+FacilityPetraLossText:
+	text "TODO"
+	done
+
+FacilityAmosScript:
+	faceplayer
+	opentext
+	writetext FacilityAmosIntroText
+	waitbutton
+	writetext FacilityAmosQuestionText
+	yesorno
+	iffalse_jumpopenedtext FacilityAmosRefusedText
+	winlosstext FacilityAmosWinText, FacilityAmosLossText
+	setlasttalked FACILITY_AMOS
+	loadtrainer AMOS, AMOS_FACILITY
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	showtext FacilityAmosAfter
+	special HealPartyEvenForNuzlocke
+	end
+	
+FacilityAmosIntroText:
+	text "TODO"
+	done
+FacilityAmosAfter:
+	text "TODO"
+	done
+FacilityAmosQuestionText:
+	text "TODO"
+	done
+FacilityAmosRefusedText:
+	text "TODO"
+	done
+FacilityAmosWinText:
+	text "TODO"
+	done
+FacilityAmosLossText:
+	text "TODO"
+	done

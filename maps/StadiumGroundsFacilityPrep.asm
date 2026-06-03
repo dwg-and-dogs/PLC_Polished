@@ -1,8 +1,7 @@
 StadiumGroundsFacilityPrep_MapScriptHeader:
 	def_scene_scripts
-; 06.02.26 70 todos 
-; 06.03.26 52 todos 
-	
+
+
 	def_callbacks
 	
 	
@@ -10,36 +9,40 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	warp_event 0, 0, STADIUM_GROUNDS, 0
 	warp_event 0, 0, STADIUM_GROUNDS, 0
 	; todo warp in from stadium grounds 
-	; warp to stadium grounds todo
 	
 	def_coord_events 
 
 
 	def_bg_events
-	; trophy for easy mode
-	; trophy for normal mode
-	; trophy for hard mode
-	; trophy for beating with only one in the party 
 
 
 
-	def_object_events ; depending on time of day? 
+
+	def_object_events ; depending on time of day TODO 
 	; time of day 
-	; todo for each of these I need an event like event_beat_facility_... so that the player can have a trophy for that 
-	object_event 11, 14, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityUrsulaScript, -1 ; todo 
-	object_event 29, 20, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilitySilasScript, -1 ; todo 
-	object_event 12, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityBethScript, -1 ; todo 
-	object_event 26, 19, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilitySandraScript, -1 ; todo 
-	object_event 28, 18, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilitySybilScript, -1 ; todo 
-	object_event 16, 12, SPRITE_BRIGADER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityTysonScript, -1 ; todo 
-	object_event 16, 18, SPRITE_NOMAD_F, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FacilityNomadFScript, -1	; todo only appears if you return the nomad 
-	object_event 25, 17, SPRITE_BARBEAU, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, FacilityBarbeauScript, -1  ; todo 
-	object_event 12, 20, SPRITE_KANNA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityPetraScript, -1  ; todo 
-	object_event 12, 18, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityAmosScript, -1 ; todo 
-	object_event  3, 19, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityPiperScript, -1 ; todo 
+; FROM POLISHED azalea mart 
+;	object_event  8,  6, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, (1 << EVE) | (1 << NITE), PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AzaleaMartRockerText, -1
+; 	object_event  5,  4, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, (1 << EVE) | (1 << NITE), 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, PlayersNeighborsHusbandText, -1
+
+	object_event 11, 14, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityUrsulaScript, -1 
+	object_event 29, 20, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilitySilasScript, -1 
+	object_event 12, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityBethScript, -1 
+	object_event 26, 19, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilitySandraScript, -1 
+	object_event 28, 18, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilitySybilScript, -1 
+	object_event 16, 12, SPRITE_BRIGADER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityTysonScript, -1 
+	object_event 16, 18, SPRITE_NOMAD_F, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FacilityNomadFScript, EVENT_NOMAD_ISLANDS_HOUSE 
+	object_event 25, 17, SPRITE_BARBEAU, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, FacilityBarbeauScript, -1   
+	object_event 12, 20, SPRITE_KANNA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityPetraScript, -1 
+	object_event 12, 18, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FacilityAmosScript, -1 
+	object_event  3, 19, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityPiperScript, -1 
 	; permanent 
-	object_event 14, 10, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript, -1 ; todo
+	object_event 14, 10, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript, -1
+	object_event 15, 10, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript2, -1
 	object_event 15, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityNatuScript, -1
+	object_event 0, 0, SPRITE_SILVER_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, SilverTrophyText, EVENT_FACILITY_SILVER_TROPHY
+	object_event 0, 0, SPRITE_GOLD_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldTrophyScript, EVENT_FACILITY_GOLD_TROPHY
+	; trophy / doll of pokemon that you beat the gauntlet with by itself 
+
 
 	object_const_def
 	const FACILITY_URSULA
@@ -171,11 +174,19 @@ FacilityPiperScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedByPiper
+	setevent EVENT_FACILITY_BEAT_PIPER
+.DefeatedByPiper:
 	showtext FacilityPiperAfter
 	special HealPartyEvenForNuzlocke
 	end
 
 FacilityPiperIntroText:	
+	text_high
+    text " Piper: "
+	next
+	text_start 
+
 	text "<PLAYER>, thank"
 	line "you for your help"
 	cont "at the Tapestry."
@@ -193,6 +204,10 @@ FacilityPiperIntroText:
 	done
 	
 FacilityPiperAfter:
+	text_high
+    text " Piper: "
+	next
+	text_start 
 	text "We can battle as"
 	line "much as you like."
 	done
@@ -206,6 +221,10 @@ FacilityPiperQuestionText:
 	done
 
 FacilityPiperRefusedText:
+	text_high
+    text " Piper: "
+	next
+	text_start 
 	text "Some other time!"
 	done
 
@@ -233,11 +252,18 @@ FacilityUrsulaScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedByUrsula
+	setevent EVENT_FACILITY_BEAT_URSULA
+.DefeatedByUrsula:
 	showtext FacilityUrsulaAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
-FacilityUrsulaIntroText:; todo text_high 
+FacilityUrsulaIntroText:
+	text_high
+    text " Ursula: "
+	next
+	text_start 
 	text "<PLAYER>, thank"
 	line "you for your help"
 	cont "at Anarres."
@@ -248,12 +274,20 @@ FacilityUrsulaIntroText:; todo text_high
 	done
 	
 FacilityUrsulaAfter:
+	text_high
+    text " Ursula: "
+	next
+	text_start 
 	text "What have you"
 	line "taught someone"
 	cont "lately?"
 	done
 
 FacilityUrsulaQuestionText:
+	text_high
+    text " Ursula: "
+	next
+	text_start 
 	text "I've been training"
 	line "a lot since we"
 	cont "first battled."
@@ -290,11 +324,18 @@ FacilitySilasScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedBySilas
+	setevent EVENT_FACILITY_BEAT_SILAS
+.DefeatedBySilas:
 	showtext FacilitySilasAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
 FacilitySilasIntroText:
+	text_high
+    text " Silas: "
+	next
+	text_start 
 	text "<PLAYER>, thank"
 	line "you for helping"
 	para "me to see that"
@@ -317,11 +358,19 @@ FacilitySilasIntroText:
 	done
 
 FacilitySilasAfter:
+	text_high
+    text " Silas: "
+	next
+	text_start 
 	text "Say, how's your"
 	line "grandpa?"
 	done
 
 FacilitySilasQuestionText:
+	text_high
+    text " Silas: "
+	next
+	text_start 
 	text "Say, think I can"
 	line "teach you a few"
 	cont "things in battle?"
@@ -356,11 +405,18 @@ FacilityBethScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedByBeth
+	setevent EVENT_FACILITY_BEAT_BETH
+.DefeatedByBeth:
 	showtext FacilityBethAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
 FacilityBethIntroText:
+	text_high
+    text " Beth: "
+	next
+	text_start 
 	text "<PLAYER>, thank"
 	line "you for helping"
 	para "us save Sandra at"
@@ -372,12 +428,20 @@ FacilityBethIntroText:
 	done
 	
 FacilityBethAfter:
+	text_high
+    text " Beth: "
+	next
+	text_start 
 	text "I'm going to keep"
 	line "training to be as"
 	cont "strong as Sandra!"
 	done
 
 FacilityBethQuestionText:
+	text_high
+    text " Beth: "
+	next
+	text_start 
 	text "Say, I've been"
 	line "training up my"
 	para "#mon since we"
@@ -414,11 +478,18 @@ FacilitySandraScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedBySandra
+	setevent EVENT_FACILITY_BEAT_SANDRA
+.DefeatedBySandra:
 	showtext FacilitySandraAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
 FacilitySandraIntroText:
+	text_high
+    text " Sandra: "
+	next
+	text_start 
 	text "<PLAYER>, thank"
 	line "you for your help"
 	cont "at the Stadium."
@@ -438,6 +509,10 @@ FacilitySandraIntroText:
 	done
 	
 FacilitySandraAfter:
+	text_high
+    text " Sandra: "
+	next
+	text_start 
 	text "Remember, a tree"
 	line "needs its highest"
 	para "branches and its"
@@ -445,6 +520,11 @@ FacilitySandraAfter:
 	done
 	
 FacilitySandraQuestionText:
+	text_high
+    text " Sandra: "
+	next
+	text_start 
+
 	text "Speaking of "
 	line "#mon battles,"
 	
@@ -480,34 +560,56 @@ FacilitySybilScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedBySybil
+	setevent EVENT_FACILITY_BEAT_SYBIL
+.DefeatedBySybil:
 	showtext FacilitySybilAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
 FacilitySybilIntroText:
+	text_high
+    text " Sybil: "
+	next
+	text_start 
 	text "<PLAYER>, thank"
 	line "you for your help"
 	cont "at the Tin Tower."
 	done
 	
 FacilitySybilAfter:
-	text "TODO"
+	text_high
+    text " Sybil: "
+	next
+	text_start 
+	text "May Johto never"
+	line "forget what was"
+	cont "sacrificed at the"
+	cont "Burned Tower."
 	done
 
 FacilitySybilQuestionText:
-	text "TODO"
+	text_high
+    text " Sybil: "
+	next
+	text_start 
+
+	text "Would you like to"
+	line "battle?"
 	done
 
 FacilitySybilRefusedText:
-	text "TODO"
+	text "Some other time."
 	done
 
 FacilitySybilWinText:
-	text "TODO"
+	text "Your battle style"
+	line "is a revelation!"
 	done
 
 FacilitySybilLossText:
-	text "TODO"
+	text "I had the spirits"
+	line "on my side!"
 	done
 
 FacilityTysonScript:
@@ -524,27 +626,75 @@ FacilityTysonScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedByTyson
+	setevent EVENT_FACILITY_BEAT_TYSON
+.DefeatedByTyson:
 	showtext FacilityTysonAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
 FacilityTysonIntroText:
-	text "TODO"
+	text_high
+    text " Tyson: "
+	next
+	text_start 
+	text "I trained under"
+	line "General Andrea"
+	cont "for years."
+	
+	para "I left behind my"
+	line "family and my"
+	cont "friends pursuing"
+	cont "glory under her."
+	
+	para "The mine is gone!"
+	line "The sweat of my"
+	cont "brow, gone like a"
+	cont "drop of dew in"
+	cont "the evening."
+	
+	para "I hope it's not"
+	line "too late to start"
+	cont "over."
 	done
+	
 FacilityTysonAfter:
-	text "TODO"
+	text_high
+    text " Tyson: "
+	next
+	text_start 
+	text "Please forgive me"
+	line "for my mistakes."
 	done
+	
 FacilityTysonQuestionText:
-	text "TODO"
+	text_high
+    text " Tyson: "
+	next
+	text_start 
+	text "Will you battle"
+	line "me again?"
+	
+	para "I need to see"
+	line "your connection."
 	done
+
 FacilityTysonRefusedText:
-	text "TODO"
+	text_high
+    text " Tyson: "
+	next
+	text_start 
+	text "Why? Why do you"
+	line "refuse me!"
 	done
+
 FacilityTysonWinText:
-	text "TODO"
+	text "What do you have"
+	line "that I lack?"
 	done
+
 FacilityTysonLossText:
-	text "TODO"
+	text "Glory is mine!"
 	done
 
 FacilityNomadFScript:
@@ -561,27 +711,57 @@ FacilityNomadFScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedByNomadF
+	setevent EVENT_FACILITY_BEAT_NOMADF
+.DefeatedByNomadF:
 	showtext FacilityNomadFAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
 FacilityNomadFIntroText:
-	text "TODO"
+	text_high
+    text " Maia: "
+	next
+	text_start 
+	text "<PLAYER>, thank"
+	line "you for helping"
+	para "my son return"
+	line "home safely."
 	done
+	
 FacilityNomadFAfter:
-	text "TODO"
+	text_high
+    text " Maia: "
+	next
+	text_start 
+	text "You must be so"
+	line "proud of your"
+	cont "#mon!"
 	done
+	
 FacilityNomadFQuestionText:
-	text "TODO"
+	text_high
+    text " Maia: "
+	next
+	text_start 
+	text "I would like to"
+	line "battle you, if"
+	cont "you accept."
 	done
+	
 FacilityNomadFRefusedText:
-	text "TODO"
+	text "Some other time."
 	done
+
 FacilityNomadFWinText:
-	text "TODO"
+	text "You must come"
+	line "from a strong"
+	cont "community!"
 	done
+
 FacilityNomadFLossText:
-	text "TODO"
+	text "I've still got"
+	line "my battle skills!"
 	done
 
 FacilityBarbeauScript:
@@ -598,27 +778,75 @@ FacilityBarbeauScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedByBarbeau
+	setevent EVENT_FACILITY_BEAT_BARBEAU
+.DefeatedByBarbeau:
 	showtext FacilityBarbeauAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
 FacilityBarbeauIntroText:
-	text "TODO"
+	text_high
+    text " Remy: "
+	next
+	text_start 
+	text "<PLAYER>, I see"
+	line "that I had my"
+	para "head stuck in the"
+	line "sand when it came"
+	para "to relying on"
+	line "Lugia for our"
+	cont "livelihoods."
+	
+	para "I'm learning that"
+	line "the winds help"
+	para "those who help"
+	line "themselves."
+	
 	done
+	
 FacilityBarbeauAfter:
-	text "TODO"
+	text_high
+    text " Remy: "
+	next
+	text_start 
+	
+	text "The Landing still"
+	line "doesn't feel like"
+
+	para "home. I think I'll"
+	line "make a home at"
+	para "that rocky shore"
+	line "to the west of"
+	cont "the islands."
+		
 	done
+	
 FacilityBarbeauQuestionText:
-	text "TODO"
+	text_high
+    text " Remy: "
+	next
+	text_start 
+	text "I've been training"
+	line "my #mon since"
+	cont "we last met."
+	
+	para "Would you like to"
+	line "battle?"
 	done
+	
 FacilityBarbeauRefusedText:
-	text "TODO"
+	text "Some other time."
 	done
+
 FacilityBarbeauWinText:
-	text "TODO"
+	text "Hah! The wind was"
+	line "in your sails!"
 	done
+
 FacilityBarbeauLossText:
-	text "TODO"
+	text "The wind was with"
+	line "my #mon!"
 	done
 
 FacilityPetraScript:
@@ -635,27 +863,71 @@ FacilityPetraScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedByPetra
+	setevent EVENT_FACILITY_BEAT_PETRA
+.DefeatedByPetra:
 	showtext FacilityPetraAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
 FacilityPetraIntroText:
-	text "TODO"
+	text_high
+    text " Petra: "
+	next
+	text_start 
+	text "The Hisuians will"
+	line "not return for"
+	cont "the annual ritual"
+	
+	para "but I still have"
+	line "interest in"
+	cont "visiting."
+	
+	para "Especially now"
+	line "that the Emperor"
+	cont "is gone."
+	
+	para "We Hisuians are"
+	line "born to explore,"
+	para "then return to "
+	line "our home with the"
+	cont "learning we find."
 	done
+	
 FacilityPetraAfter:
-	text "TODO"
+	text_high
+    text " Petra: "
+	next
+	text_start 
+	text "Say, do you know"
+	line "if the alpine"
+	para "villages to the"
+	line "east will ever"
+	cont "open up?"
 	done
+	
 FacilityPetraQuestionText:
-	text "TODO"
+	text_high
+    text " Petra: "
+	next
+	text_start 
+	text "Would you like to"
+	line "battle, to show"
+	para "me something new?"
 	done
+
 FacilityPetraRefusedText:
-	text "TODO"
+	text "Some other time."
 	done
+	
 FacilityPetraWinText:
-	text "TODO"
+	text "What a unique"
+	line "battle strategy!"
 	done
+	
 FacilityPetraLossText:
-	text "TODO"
+	text "I hope you were"
+	line "paying attention!"
 	done
 
 FacilityAmosScript:
@@ -672,25 +944,226 @@ FacilityAmosScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
+	iftrue .DefeatedByAmos
+	setevent EVENT_FACILITY_BEAT_AMOS
+.DefeatedByAmos:
 	showtext FacilityAmosAfter
 	special HealPartyEvenForNuzlocke
 	end
 	
 FacilityAmosIntroText:
-	text "TODO"
+	text_high
+    text " Amos: "
+	next
+	text_start 
+	text "<PLAYER>, I'm glad"
+	line "to see you made"
+	para "it out of the"
+	line "Burned Tower."
+	
+	para "Ho-Oh must have "
+	line "seen that your"
+	cont "heart is pure."
 	done
+	
 FacilityAmosAfter:
-	text "TODO"
+	text_high
+    text " Amos: "
+	next
+	text_start 
+	text "Where do you see"
+	line "yourself in the"
+	cont "future?"
+	
 	done
+	
 FacilityAmosQuestionText:
-	text "TODO"
+	text_high
+    text " Amos: "
+	next
+	text_start 
+	text "Would you like to"
+	line "battle, for old"
+	cont "time's sake?"
 	done
+	
 FacilityAmosRefusedText:
-	text "TODO"
+	text "Some other time."
 	done
+	
 FacilityAmosWinText:
-	text "TODO"
+	text "Your skills are"
+	line "still sharp!"
 	done
+	
 FacilityAmosLossText:
-	text "TODO"
+	text "Your skills are"
+	line "becoming dull!"
+	done
+
+SilverTrophyText:
+	text "It's the Silver"
+	line "trophy!"
+	done
+
+StadiumGroundsFaciltyPrepClerkScript2:
+	faceplayer
+	opentext
+	checkevent EVENT_FACILITY_SILVER_TROPHY
+	iftrue_jumptext CongratsSilverTrophyText
+	writetext SilverTrophyExplainText
+	checkevent EVENT_FACILITY_BEAT_URSULA
+	iffalse_jumptext FacilityRecruitUrsula
+	checkevent EVENT_FACILITY_BEAT_SILAS
+	iffalse_jumptext FacilityRecruitSilas
+	checkevent EVENT_FACILITY_BEAT_BETH
+	iffalse_jumptext FacilityRecruitBeth
+	checkevent EVENT_FACILITY_BEAT_SANDRA
+	iffalse_jumptext FacilityRecruitSandra
+	checkevent EVENT_FACILITY_BEAT_SYBIL
+	iffalse_jumptext FacilityRecruitSybil
+	checkevent EVENT_FACILITY_BEAT_TYSON
+	iffalse_jumptext FacilityRecruitTyson
+	checkevent EVENT_NOMAD_ISLANDS_HOUSE
+	iftrue_jumptext FacilityRecruitNomadf2
+	checkevent EVENT_FACILITY_BEAT_NOMADF
+	iffalse_jumptext FacilityRecruitNomadf
+	checkevent EVENT_FACILITY_BEAT_BARBEAU
+	iffalse_jumptext FacilityRecruitBarbeau
+	checkevent EVENT_FACILITY_BEAT_PETRA
+	iffalse_jumptext FacilityRecruitPetra
+	checkevent EVENT_FACILITY_BEAT_AMOS
+	iffalse_jumptext FacilityRecruitAmos
+	checkevent EVENT_FACILITY_BEAT_PIPER
+	iffalse_jumptext FacilityRecruitPiper
+	
+	setevent EVENT_FACILITY_SILVER_TROPHY
+	jumptext CongratsSilverTrophyText
+		
+SilverTrophyExplainText:
+	text "The Stadium was"
+	line "abandoned by the"
+	cont "Emperor, but it"
+	
+	para "attracts strong"
+	line "trainers from"
+	cont "around Johto."
+	
+	para "If you defeat all"
+	line "of them,"
+	
+	para "I can award you a"
+	line "Silver Trophy!"
+	
+	para "Let's check!"
+	done
+	
+CongratsSilverTrophyText:
+	text "Congratulations"
+	line "on earning the"
+	cont "Silver Trophy!"
+	
+	para "It's on display"
+	line "at the Trophy"
+	cont "room."
+	done
+
+FacilityRecruitUrsula:
+	text "Oh, you haven't"
+	line "beaten Ursula."
+	
+	para "She visits in the"
+	line "morning."
+	done
+
+FacilityRecruitSilas:
+	text "Oh, you haven't"
+	line "beaten Silas."
+	
+	para "He visits during"
+	line "the day."
+	done
+
+FacilityRecruitBeth:
+	text "Oh, you haven't"
+	line "beaten Beth."
+	
+	para "She visits during"
+	line "the night."
+	done
+
+FacilityRecruitSandra:
+	text "Oh, you haven't"
+	line "beaten Sandra."
+	
+	para "She visits in the"
+	line "morning."
+	done
+
+FacilityRecruitSybil:
+	text "Oh, you haven't"
+	line "beaten Sybil."
+	
+	para "She visits during"
+	line "the day."
+	done
+
+FacilityRecruitTyson:
+	text "Oh, you haven't"
+	line "beaten Tyson."
+	
+	para "He visits during"
+	line "the night."
+	done
+
+FacilityRecruitNomadf:
+	text "Oh, you haven't"
+	line "beaten Maia."
+	
+	para "She visits in the"
+	line "morning,"
+	
+	para "but she is still"
+	line "
+	done
+
+FacilityRecruitBarbeau:
+	text "Oh, you haven't"
+	line "beaten Remy."
+	
+	para "He visits during"
+	line "the day."
+	done
+
+FacilityRecruitPetra:
+	text "Oh, you haven't"
+	line "beaten Petra."
+	
+	para "She visits during"
+	line "the night."
+	done
+
+FacilityRecruitAmos:
+	text "Oh, you haven't"
+	line "beaten Amos."
+	
+	para "He visits in the"
+	line "morning."
+	done
+
+FacilityRecruitPiper:
+	text "Oh, you haven't"
+	line "beaten Piper."
+	
+	para "She visits during"
+	line "the day."
+	done
+
+FacilityRecruitNomadf2:
+	text "Oh, Maia from the"
+	line "Landing hasn't"
+	cont "checked in yet."
+	
+	para "She's been worried"
+	line "about her son."
 	done
