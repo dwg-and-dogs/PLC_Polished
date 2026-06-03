@@ -291,7 +291,7 @@ INCLUDE "data/pokemon/dex_entries/095.asm"
 
 SECTION "SteelixPokedexEntry", ROMX
 SteelixPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/206.asm";;
+INCLUDE "data/pokemon/dex_entries/208.asm"
 
 SECTION "VoltorbPokedexEntry", ROMX
 VoltorbPokedexEntry::
@@ -319,15 +319,15 @@ INCLUDE "data/pokemon/dex_entries/107.asm"
 
 SECTION "HitmontopPokedexEntry", ROMX
 HitmontopPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/237.asm";;
+INCLUDE "data/pokemon/dex_entries/237.asm"
 
 SECTION "KoffingPokedexEntry", ROMX
 KoffingPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/109.asm";;
+INCLUDE "data/pokemon/dex_entries/109.asm"
 
 SECTION "WeezingPokedexEntry", ROMX
 WeezingPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/110.asm";;
+INCLUDE "data/pokemon/dex_entries/110.asm"
 
 SECTION "RhyhornPokedexEntry", ROMX
 RhyhornPokedexEntry::
@@ -343,11 +343,11 @@ INCLUDE "data/pokemon/dex_entries/464.asm"
 
 SECTION "ChanseyPokedexEntry", ROMX
 ChanseyPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/113.asm";;
+INCLUDE "data/pokemon/dex_entries/113.asm"
 
 SECTION "BlisseyPokedexEntry", ROMX
 BlisseyPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/242.asm";;
+INCLUDE "data/pokemon/dex_entries/242.asm"
 
 SECTION "TangelaPokedexEntry", ROMX
 TangelaPokedexEntry::
@@ -363,7 +363,7 @@ INCLUDE "data/pokemon/dex_entries/116.asm"
 
 SECTION "SeadraPokedexEntry", ROMX
 SeadraPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/117.asm";;
+INCLUDE "data/pokemon/dex_entries/117.asm"
 
 SECTION "KingdraPokedexEntry", ROMX
 KingdraPokedexEntry::
@@ -371,7 +371,7 @@ INCLUDE "data/pokemon/dex_entries/230.asm"
 
 SECTION "ScytherPokedexEntry", ROMX
 ScytherPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/123.asm";;
+INCLUDE "data/pokemon/dex_entries/123.asm"
 
 SECTION "ScizorPokedexEntry", ROMX
 ScizorPokedexEntry::
@@ -379,7 +379,7 @@ INCLUDE "data/pokemon/dex_entries/212.asm"
 
 SECTION "KleavorPokedexEntry", ROMX
 KleavorPokedexEntry::
-INCLUDE "data/pokemon/dex_entries/312.asm";;
+INCLUDE "data/pokemon/dex_entries/312.asm"
 
 SECTION "JynxPokedexEntry", ROMX
 JynxPokedexEntry::

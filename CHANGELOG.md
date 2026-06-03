@@ -62,22 +62,28 @@ Fix Pokegear watch showing bad text.
 * Release 1.0.3 (unpublished)
 
 Nidoran base defense raised to equal its base attack.
+Update HElectrode animation. (todo: check)
+Remove day-of-week condition for bug catching contest and Goldenrod Underground (todo: check)
 
 Todo: 
+* Remove day of week from Pokegear; re-center the time of day 
 * Streamline the historic lugia quest to remove the need for the block. 
-* Bug catching contest every day (todo: check)
-* Underground NPCs present every day (todo: check)
-* Remove day of week from Pokegear
-* Check goldenrod underground npcs 
-* Update grimer and HElectrode animations
-* Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
-* Fix trainer palette issue at HOF
-* Pokedex footprint area to evolution method
-* Fly as an item
-* New pokedex entries
 * Postgame: Rematches
 * Postgame facility
+* New pokedex entries
+* Fly as an item
+* Pokedex footprint area to evolution method
+* Fix trainer palette issue at HOF
+* Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * Epilogue: New Bark --> Blackthorn
+
+
+
+
+
+
+
+
 
 
 Last updated: 06/03/26
