@@ -68,6 +68,7 @@ Two NPCs at Stadium Grounds.
 Remove day of week from Pokegear and the initial interaction with Kurt. 
 Update Item Giver in Sandbox Room (todo: check)
 Postgame: Rematches (stealth finished at v103, need to check time of day effect)
+Clean up Slowking level-up learnset.
 
 Todo: 
 * Streamline the historic lugia quest to remove the need for the block. 
