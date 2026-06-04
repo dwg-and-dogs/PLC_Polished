@@ -72,7 +72,7 @@ ItemVendorScript:
 		done
 	yesorno
 	iffalse .PokeBall
-for x, NUM_TMS + NUM_HMS
+for x, NUM_TMS + NUM_HMS ; works 
 if x != HM_WHIRLPOOL && x != HM_CUT
 	givetmhm x
 endc
@@ -84,7 +84,7 @@ endr
 	yesorno
 	iffalse .Medicines
 	; all items 
-for x, POKE_BALL, ODD_SOUVENIR + 1
+for x, POKE_BALL, CHERISH_BALL + 1
 if x != PARK_BALL && x != SAFARI_BALL && x != MASTER_BALL && x != ABILITYPATCH
 	giveitem x, 99
 endc
@@ -96,7 +96,11 @@ endr
 		done
 	yesorno
 	iffalse .PokemonUpgrades
-for x, FULL_RESTORE, PP_MAX + 1
+	giveitem FULL_RESTORE, 99
+	giveitem MAX_REVIVE, 99
+	giveitem PP_MAX, 99 
+	giveitem MAX_ELIXIR, 99 
+for x, HP_UP, ZINC + 1
 	giveitem x, 99
 endr
 .PokemonUpgrades:
@@ -131,8 +135,6 @@ endr
 .KeyItems:
 	writethistext
 		text "Key items?"
-		line "It won't break"
-		cont "the trade quest."
 		done
 	yesorno
 	iffalse .Apricorns
@@ -141,7 +143,6 @@ endr
 	givekeyitem SUPER_ROD	
 	givekeyitem GOOD_ROD	
 	givekeyitem COIN_CASE
-	givekeyitem ITEMFINDER
 	givekeyitem ITEMFINDER
 .Apricorns:
 	writethistext
