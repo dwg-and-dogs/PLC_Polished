@@ -78,7 +78,7 @@ KurtHouseEventScript:
 	promptbutton
 	writetext MomPokegearText
 	promptbutton
-	special Special_SetDayOfWeek
+;	special Special_SetDayOfWeek
 .InitialSetDSTFlag:
 	writetext MomDSTText
 	yesorno
@@ -143,9 +143,9 @@ MomPokegearText:
 	
 	para "Try making balls"
 	line "from many things!"
-
-	para "Oh, say, remind"
-	line "me the day today?"
+;
+;	para "Oh, say, remind"
+;	line "me the day today?"
 	done
 
 MomDSTText:

@@ -433,6 +433,9 @@ PokegearClock_Joypad:
 	xor a
 	ldh [hBGMapMode], a
 	call Pokegear_UpdateClock
+	hlcoord 6, 6
+	ld de, .blankday
+	rst PlaceString
 	hlcoord 1, 16
 	ld de, .exittext
 	rst PlaceString
@@ -440,6 +443,8 @@ PokegearClock_Joypad:
 	ldh [hBGMapMode], a
 	ret
 
+.blankday
+	db "        @"
 .exittext
 	db "Button to exit.   @"
 
@@ -453,9 +458,9 @@ Pokegear_UpdateClock:
 	ld c, a
 	ld a, [wOptions2]
 	bit CLOCK_FORMAT, a
-	decoord 6, 8
+	decoord 6, 7
 	jr z, .h12
-	decoord 8, 8
+	decoord 8, 7
 .h12
 	call PrintHoursMins
 	ld hl, .DayText

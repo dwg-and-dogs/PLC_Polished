@@ -66,42 +66,109 @@ ItemVendorScript:
 	faceplayer
 	opentext
 	writetext VendorQuestionAllText
+	waitbutton
+	writethistext
+		text "All TM+HM?"
+		done
 	yesorno
-	iffalse_jumpopenedtext BreederSayNoText
-	writetext BreederText	
-	; all items 
-for x, POKE_BALL, ODD_SOUVENIR + 1
-if x != PARK_BALL && x != SAFARI_BALL && x != POLYCHROME
-	giveitem x, 99
-endc
-endr
-	; all key items
-for x, NUM_KEY_ITEMS
-if x != MACHINE_PART
-	givekeyitem x
-endc
-endr
-	; all tms+hms
+	iffalse .PokeBall
 for x, NUM_TMS + NUM_HMS
 if x != HM_WHIRLPOOL && x != HM_CUT
 	givetmhm x
 endc
 endr
+.PokeBall: ; todo seem to get some bad items like X items and potion?
+	writethistext
+		text "All #balls?"
+		done
+	yesorno
+	iffalse .Medicines
+	; all items 
+for x, POKE_BALL, ODD_SOUVENIR + 1
+if x != PARK_BALL && x != SAFARI_BALL && x != MASTER_BALL && x != ABILITYPATCH
+	giveitem x, 99
+endc
+endr
+.Medicines:
+	writethistext
+		text "All meds and"
+		line "vitamins?"
+		done
+	yesorno
+	iffalse .PokemonUpgrades
+for x, FULL_RESTORE, PP_MAX + 1
+	giveitem x, 99
+endr
+.PokemonUpgrades:
+	writethistext
+		text "Ability upgrades"
+		line "and evo stones?"
+		done
+	yesorno
+	iffalse .BattleItems
+	giveitem ABILITYPATCH
+for x, ABILITY_CAP, ICE_STONE + 1
+	giveitem x, 99
+endr
+for x, DRAGON_SCALE, ODD_SOUVENIR + 1
+	giveitem x, 99
+endr
+.BattleItems:
+	writethistext
+		text "Battle items?"
+		done
+	yesorno
+	iffalse .KeyItems
+	giveitem CHOICE_BAND, 99
+	giveitem CHOICE_SPECS, 99
+	giveitem CHOICE_SCARF, 99
+	giveitem FLAME_ORB, 99
+	giveitem TOXIC_ORB, 99
+	giveitem LEFTOVERS, 99
+for x, SILK_SCARF, THICK_CLUB + 1
+	giveitem x, 99
+endr
+.KeyItems:
+	writethistext
+		text "Key items?"
+		line "It won't break"
+		cont "the trade quest."
+		done
+	yesorno
+	iffalse .Apricorns
+	givekeyitem BICYCLE
+	givekeyitem OLD_ROD	
+	givekeyitem SUPER_ROD	
+	givekeyitem GOOD_ROD	
+	givekeyitem COIN_CASE
+	givekeyitem ITEMFINDER
+	givekeyitem ITEMFINDER
+.Apricorns:
+	writethistext
+		text "All apricorns?"
+		done
+	yesorno
+	iffalse .Done
 	; all apricorns 
-	giveapricorn FIXED_CHARGE, 5
-	giveapricorn SHORE_FOAM, 5
-	giveapricorn RADIANT_OPAL, 5
-	giveapricorn HOLLOW_ROCK, 5
-	giveapricorn TOUGH_LEAVES, 5
-	giveapricorn PNK_APRICORN, 5
-	giveapricorn WHT_APRICORN, 5
+	giveapricorn FIXED_CHARGE, 99
+	giveapricorn SHORE_FOAM, 99
+	giveapricorn RADIANT_OPAL, 99
+	giveapricorn HOLLOW_ROCK, 99
+	giveapricorn TOUGH_LEAVES, 99
+	giveapricorn PNK_APRICORN, 99
+	giveapricorn WHT_APRICORN, 99
+	waitbutton
+.Done:
+	writethistext
+		text "Enjoy!"
+		done
 	waitbutton
 	closetext
 	end
 
 VendorQuestionAllText:
-	text "All items and"
-	line "key items?"
+	text "I can give you"
+	line "any items!"
 	done
 	
 VendorYesText:
