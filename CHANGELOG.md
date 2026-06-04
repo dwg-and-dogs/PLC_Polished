@@ -66,11 +66,10 @@ Update HElectrode animation.
 Remove day-of-week condition for bug catching contest and Goldenrod Underground. 
 Two NPCs at Stadium Grounds. 
 Remove day of week from Pokegear and the initial interaction with Kurt. 
-
+Update Item Giver in Sandbox Room (todo: check)
 
 Todo: 
-* Update Item Giver in Sandbox Room
-* Postgame: Rematches (stealth finished at v103)
+* Postgame: Rematches (stealth finished at v103, need to check time of day effect)
 * Streamline the historic lugia quest to remove the need for the block. 
 * Postgame facility
 * New pokedex entries
