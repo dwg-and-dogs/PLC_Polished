@@ -68,10 +68,10 @@ Two NPCs at Stadium Grounds.
 Remove day of week from Pokegear and the initial interaction with Kurt. 
 Update Item Giver in Sandbox Room (todo: check)
 Postgame: Rematches (stealth finished at v103, need to check time of day effect)
-Clean up Slowking level-up learnset.
+Clean up Slowking level-up learnset. TODO: check that the learnset stuck. 
+Streamline the historic lugia quest to remove the need for the block.  TODO: check that the puzzle works as intended; update the block. 
 
 Todo: 
-* Streamline the historic lugia quest to remove the need for the block. 
 * Postgame facility
 * New pokedex entries
 * Fly as an item
@@ -80,14 +80,6 @@ Todo:
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * Epilogue: New Bark --> Blackthorn
 * Brick Break + Light Screen interaction
-
-
-
-
-
-
-
-
 
 Last updated: 06/04/26
 

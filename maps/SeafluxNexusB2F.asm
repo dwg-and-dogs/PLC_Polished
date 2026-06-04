@@ -25,6 +25,7 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 ; correct order: switch 5 - 4 - 3 - 1
 
 	def_object_events
+	object_event 20, 16, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_D0WN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WhirlpoolHMBall, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
 	itemball_event  6,  8, GEODE, 1, EVENT_NEXUSB2F_ITEM1
 	itemball_event 18, 34, JEZE_BALL, 1, EVENT_NEXUSB2F_ITEM2
 	itemball_event 26, 31, CALCIUM, 1, EVENT_NEXUSB2F_ITEM3
@@ -32,6 +33,9 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 	itemball_event 32, 32, ZINC, 1, EVENT_NEXUSB2F_ITEM5
 	itemball_event 21,  6, HP_UP, 1, EVENT_NEXUSB2F_ITEM6
 	tmhmball_event 20, 16, HM_WHIRLPOOL, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
+
+	object_const_def
+	const SEAFLUX_NEXUS_B2F_ITEMBALL
 
 SeafluxNexusB2FCallback: ; done? 
 ; first, check the boulders. Nothing happens without them. 
@@ -98,20 +102,29 @@ SeafluxNexusB2FCallback: ; done?
 .Done:
 	endcallback	
 
-SeafluxNexusB2F_MasterSwitch:
-	checkevent EVENT_NEXUS_B2F_FALLS_SWITCH
-	iftrue_jumptext MasterSwitchSetText
+WhirlpoolHMBall:
+	checkevent EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
+	iftrue .Done
 	opentext
-	writetext MasterSwitchText1
-	yesorno
-	iffalse_jumpopenedtext NotPressedText
-	setevent EVENT_NEXUS_B2F_FALLS_SWITCH
+	verbosegivetmhm HM_WHIRLPOOL
+	waitbutton
+SeafluxNexusB2F_MasterSwitch:
+;	checkevent EVENT_NEXUS_B2F_FALLS_SWITCH
+;	iftrue_jumptext MasterSwitchSetText
+;	opentext
+;	writetext MasterSwitchText1
+;	yesorno
+;	iffalse_jumpopenedtext NotPressedText
 	playsound SFX_1ST_PLACE
 	waitsfx
 	writetext MasterSwitchSetText
 	waitbutton
 	closetext
+	setevent EVENT_NEXUS_B2F_FALLS_SWITCH
+	setevent EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
+	disappear SEAFLUX_NEXUS_B2F_ITEMBALL
 	reloadmap ; should be the end of it
+.Done:
 	end
 
 SeafluxNexusB2F_ResetSwitch: ; option for a hint 
@@ -393,8 +406,8 @@ NotPressedText:
 	done
 
 MasterSwitchSetText:
-	text "The main block"
-	line "is set."
+	text "The currents are"
+	line "fixed."
 	
 	para "No more changes"
 	line "can be made."
