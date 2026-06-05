@@ -95,6 +95,7 @@ Back Sprites if different from above, using Deviantart handles:
 
 ## Other Art
 
+* Front Box Art with Celebi & Tree by NicMondo
 * Animated Fire from Azure Keys BW3: Genesis 
 * Box Art Assets adapted from Pokémon Trading Card Game art
 * Title Screen: Tree adapted from takashi14_daumzey

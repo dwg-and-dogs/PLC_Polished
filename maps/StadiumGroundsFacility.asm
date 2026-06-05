@@ -163,4 +163,5 @@ StadiumGroundsFacility_MapScriptHeader:
 ; AKAZM 
 ; TTAR
 ; DNITE
+
 ; RAIKOU    
