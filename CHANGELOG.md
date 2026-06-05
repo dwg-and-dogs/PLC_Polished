@@ -71,7 +71,7 @@ Update Item Giver in Sandbox Room (todo: check)
 Postgame: Rematches (stealth finished at v103, need to check time of day effect)
 Clean up Slowking level-up learnset. TODO: check that the learnset stuck. 
 Streamline the historic lugia quest to remove the need for the block.  TODO: check that the puzzle works as intended; update the block. 
-
+Decidueye, HDecidueye, and Dartix get Seed Bomb. 
 
 Todo: 
 * Postgame facility
@@ -81,7 +81,7 @@ Todo:
 * Fix trainer palette issue at HOF
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * Epilogue: New Bark --> Blackthorn
-* Brick Break + Light Screen interaction
+* Brick Break + Light Screen interaction: TODO 
 
 Last updated: 06/04/26
 
