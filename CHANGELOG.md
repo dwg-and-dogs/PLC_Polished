@@ -66,10 +66,12 @@ Update HElectrode animation.
 Remove day-of-week condition for bug catching contest and Goldenrod Underground. 
 Two NPCs at Stadium Grounds. 
 Remove day of week from Pokegear and the initial interaction with Kurt. 
+HGrowlithe gets Rock Head hidden ability. 
 Update Item Giver in Sandbox Room (todo: check)
 Postgame: Rematches (stealth finished at v103, need to check time of day effect)
 Clean up Slowking level-up learnset. TODO: check that the learnset stuck. 
 Streamline the historic lugia quest to remove the need for the block.  TODO: check that the puzzle works as intended; update the block. 
+
 
 Todo: 
 * Postgame facility

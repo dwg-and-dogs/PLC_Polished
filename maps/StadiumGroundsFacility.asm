@@ -1,45 +1,50 @@
 StadiumGroundsFacility_MapScriptHeader:
 	def_scene_scripts
-	; going to need a wram variable TODO 
-		; wram for trainer 1, 2, 3 ( 1- 10 no repeats) 
-		; wram for pokemon 1 (1 - 20) 
-	; prevent saving 
-	; spawn point here unless you have not yet beaten the game then it sends you to azalea 
+	; todo prevent using items in battle 
+		; could just check if you have any in your bag?... 
+	; todo, spawn point to gauldenrod unless you have not yet beaten the game then it sends you to azalea 
 	
 	def_callbacks
-;	callback MAPCALLBACK_OBJECTS, StadiumGroundsFacilityNPCs ; c.f. the hidden groto 
+;	callback MAPCALLBACK_NEWMAP, HiddenGrottoCallback --> StadiumGroundsFacilityCallback
+;	callback MAPCALLBACK_OBJECTS, StadiumGroundsFacilityNPCs ; c.f. the hidden grotto?
 	
 	def_warp_events
-	; you're warped in and out of these 
+	; you're warped in and out of these - nothing to do here 
 	
 	def_coord_events 
-
-
+;	coord_event 0, 0, 0, StadiumFacility_Pokemon1Event
+;	coord_event 0, 0, 1, StadiumFacility_Trainers1Event
+;	coord_event 0, 0, 2, StadiumFacility_Pokemon2Event
+;	coord_event 0, 0, 3, StadiumFacility_Trainers2Event
+;	coord_event 0, 0, 4, StadiumFacility_Pokemon3Event
+;	coord_event 0, 0, 5, StadiumFacility_Trainers3Event
+;	coord_event 0, 0, 6, StadiumFacility_Pokemon4Event
+;	coord_event 0, 0, 7, StadiumFacility_Trainers4Event
+;	coord_event 0, 0, 8, StadiumFacility_Pokemon5Event
+;	coord_event 0, 0, 9, StadiumFacility_Trainers5Event
 
 	def_bg_events
+; 
 
 
 	def_object_events
-	; pokemon 1 
-	; bug maniacs 
-	; hollis 
+;	object_event 0, 0, SPRITE_FACILITY_MON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityMonScript, EVENT_FACILITY_MON
+;	object_event 0, 0, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityMonBallScript, EVENT_FACILITY_MON_BALL
 
-	; pokemon 2
-	; aroma ladies
-	; sandra 
-	
-	; pokemon 3
-	; sages
-	; sybil
+;	object_event 0, 0, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BUG_MANIAC
+;	object_event 0, 0, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AROMA_LADY
+;	object_event 0, 0, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SAGE
+;	object_event 0, 0, SPRITE_NOMADF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NOMADF
+;	object_event 0, 0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NINJA
+;	object_event 0, 0, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BRIGADER
 
-	; pokemon 4
-	; nomadf
-	; remy
-
-	; pokemon 5
-	; ninjas 
-	; amos
-
+;	object_event 0, 0, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SILAS
+;	object_event 0, 0, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SANDRA
+;	object_event 0, 0, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SYBIL
+;	object_event 0, 0, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_REMY
+;	object_event 0, 0, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AMOS
+;	object_event 0, 0, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_KURT
+;	object_event 0, 0, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_VESPER
 
 	
 	object_const_def

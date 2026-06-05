@@ -17,7 +17,7 @@ KimonoCabin1_MapScriptHeader:
 	def_object_events
 	object_event  5,  0, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, DRATINI, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KimonoCabin1Dratini, EVENT_KIMONO_CABIN_DRATINI
 	object_event  19, 18, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE,  OBJECTTYPE_SCRIPT, 0, KimonoCabin11Script, -1 
-	tmhmball_event  18, 19, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND
+;	tmhmball_event  18, 19, TM_ROCK_SMASH, EVENT_UNION_CAVE_B1F_NORTH_X_DEFEND
 	smashrock_event 18, 10
 	smashrock_event 13, 5
 	smashrock_event 13, 11
