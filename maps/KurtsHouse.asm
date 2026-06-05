@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
+	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
 ;	bg_event  6,  1, BGEVENT_READ, TimeShiftRadio	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
@@ -873,20 +873,20 @@ endr
 	givemoney $0, 999999
 	givecoins 50000
 	; all badges 
-;	setflag ENGINE_ZEPHYRBADGE
-;	setflag ENGINE_HIVEBADGE
-;	setflag ENGINE_PLAINBADGE
-;	setflag ENGINE_FOGBADGE
-;	setflag ENGINE_STORMBADGE
-;	setflag ENGINE_MINERALBADGE
-;	setflag ENGINE_GLACIERBADGE
-;	setflag ENGINE_RISINGBADGE
-;	setflag ENGINE_BOULDERBADGE
-;	setflag ENGINE_CASCADEBADGE
-;	setflag ENGINE_THUNDERBADGE
-;	setflag ENGINE_RAINBOWBADGE
-;	setflag ENGINE_MARSHBADGE
-;	setflag ENGINE_SOULBADGE
+	setflag ENGINE_ZEPHYRBADGE
+	setflag ENGINE_HIVEBADGE
+	setflag ENGINE_PLAINBADGE
+	setflag ENGINE_FOGBADGE
+	setflag ENGINE_STORMBADGE
+	setflag ENGINE_MINERALBADGE
+	setflag ENGINE_GLACIERBADGE
+	setflag ENGINE_RISINGBADGE
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_THUNDERBADGE
+	setflag ENGINE_RAINBOWBADGE
+	setflag ENGINE_MARSHBADGE
+	setflag ENGINE_SOULBADGE
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_AZALEA
 	setflag ENGINE_FLYPOINT_GOLDENROD
@@ -909,56 +909,60 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
-	givepoke ANNIHILAPE, NO_FORM, 200
-	loadmem wPartyMon1Moves+0, FLAMETHROWER
-	loadmem wPartyMon1Moves+1, EARTH_POWER
-	loadmem wPartyMon1Moves+2, STRENGTH
-	loadmem wPartyMon1Moves+3, THUNDERPUNCH
-	loadmem wPartyMon1EVs+0, 252
-	loadmem wPartyMon1EVs+1, 252
-	loadmem wPartyMon1EVs+2, 252
-	loadmem wPartyMon1EVs+3, 252
-	loadmem wPartyMon1EVs+4, 252
-	loadmem wPartyMon1EVs+5, 252
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ff
-	loadmem wPartyMon1DVs+2, $ff
-	loadmem wPartyMon1Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
-	loadmem wPartyMon1Stats+0, HIGH(999)
-	loadmem wPartyMon1Stats+1, LOW(999)
-	loadmem wPartyMon1Stats+2, HIGH(999)
-	loadmem wPartyMon1Stats+3, LOW(999)
-	loadmem wPartyMon1Stats+4, HIGH(999)
-	loadmem wPartyMon1Stats+5, LOW(999)
-	loadmem wPartyMon1Stats+6, HIGH(999)
-	loadmem wPartyMon1Stats+7, LOW(999)
-	loadmem wPartyMon1Stats+8, HIGH(999)
-	loadmem wPartyMon1Stats+9, LOW(999)
+	givepoke CROBAT, NO_FORM, 31
+;	loadmem wPartyMon1Moves+0, FLAMETHROWER
+;	loadmem wPartyMon1Moves+1, EARTH_POWER
+;	loadmem wPartyMon1Moves+2, STRENGTH
+;	loadmem wPartyMon1Moves+3, THUNDERPUNCH
+;	loadmem wPartyMon1EVs+0, 252
+;	loadmem wPartyMon1EVs+1, 252
+;	loadmem wPartyMon1EVs+2, 252
+;	loadmem wPartyMon1EVs+3, 252
+;	loadmem wPartyMon1EVs+4, 252
+;	loadmem wPartyMon1EVs+5, 252
+;	loadmem wPartyMon1DVs+0, $ff
+;	loadmem wPartyMon1DVs+1, $ff
+;	loadmem wPartyMon1DVs+2, $ff
+;	loadmem wPartyMon1Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
+;	loadmem wPartyMon1Stats+0, HIGH(999)
+;	loadmem wPartyMon1Stats+1, LOW(999)
+;	loadmem wPartyMon1Stats+2, HIGH(999)
+;	loadmem wPartyMon1Stats+3, LOW(999)
+;	loadmem wPartyMon1Stats+4, HIGH(999)
+;	loadmem wPartyMon1Stats+5, LOW(999)
+;	loadmem wPartyMon1Stats+6, HIGH(999)
+;	loadmem wPartyMon1Stats+7, LOW(999)
+;	loadmem wPartyMon1Stats+8, HIGH(999)
+;	loadmem wPartyMon1Stats+9, LOW(999)
 	; hm 
-	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
-	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
-	loadmem wPartyMon2Moves+0, X_SCISSOR
-	loadmem wPartyMon2Moves+1, ANCIENTPOWER
-	loadmem wPartyMon2Moves+2, TRICK_ROOM
-	loadmem wPartyMon2Moves+3, U_TURN
-	loadmem wPartyMon2PP+0, 15
-	loadmem wPartyMon2PP+1, 15
-	loadmem wPartyMon2PP+2, 15
-	loadmem wPartyMon2PP+3, 30
-	loadmem wPartyMon3Moves+0, SURF
-	loadmem wPartyMon3Moves+1, ROCK_SMASH
-	loadmem wPartyMon3Moves+2, HEADBUTT
-	loadmem wPartyMon3Moves+3, WATERFALL
-	loadmem wPartyMon3PP+0, 20
-	loadmem wPartyMon3PP+1, 15
-	loadmem wPartyMon3PP+2, 15
-	loadmem wPartyMon3PP+3, 15
+;	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
+;	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
+;	loadmem wPartyMon2Moves+0, X_SCISSOR
+;	loadmem wPartyMon2Moves+1, ANCIENTPOWER
+;	loadmem wPartyMon2Moves+2, TRICK_ROOM
+;	loadmem wPartyMon2Moves+3, U_TURN
+;	loadmem wPartyMon2PP+0, 15
+;	loadmem wPartyMon2PP+1, 15
+;	loadmem wPartyMon2PP+2, 15
+;	loadmem wPartyMon2PP+3, 30
+;	loadmem wPartyMon3Moves+0, SURF
+;	loadmem wPartyMon3Moves+1, ROCK_SMASH
+;	loadmem wPartyMon3Moves+2, HEADBUTT
+;	loadmem wPartyMon3Moves+3, WATERFALL
+;	loadmem wPartyMon3PP+0, 20
+;	loadmem wPartyMon3PP+1, 15
+;	loadmem wPartyMon3PP+2, 15
+;	loadmem wPartyMon3PP+3, 15
+	givepoke HAUNTER, NO_FORM, 31
+	givepoke STEELIX, NO_FORM, 31
+	givepoke JUMPLUFF, NO_FORM, 31
+	givepoke VICTREEBEL, NO_FORM, 31
+	givepoke DECIDUEYE, NO_FORM, 31
 	; fill pokedex
 	callasm FillPokedex
 	waitbutton
 	closetext
-	clearevent EVENT_NOMAD_ISLANDS_HOUSE
-	warp STADIUM_GROUNDS_FACILITY_PREP, 13, 23
+	warp EARLS_POKEMON_ACADEMY, 3, 4
 ; debug only
 ; debug 
 	end

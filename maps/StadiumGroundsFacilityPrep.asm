@@ -29,17 +29,17 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 ;EVE_HOUR  EQU 17 ; 5 PM - 8 PM (4 hours)
 ;NITE_HOUR EQU 20 ; 8 PM - 5 AM (8 hours)
 
-	object_event 11, 14, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, (1 << MORN) | (1 << DAY), 0, OBJECTTYPE_SCRIPT, 0, FacilityUrsulaScript, -1  ; morning - day 
-	object_event 29, 20, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, (1 << MORN) | (1 << DAY), 0, OBJECTTYPE_SCRIPT, 0, FacilitySilasScript, -1 ; morning - day  
-	object_event 12, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, (1 << MORN) | (1 << DAY), 0, OBJECTTYPE_SCRIPT, 0, FacilityBethScript, -1 ; morning - day  
-	object_event 26, 19, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, (1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilitySandraScript, -1 ; eve - night 
-	object_event 28, 18, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, (1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilitySybilScript, -1 ; eve - night 
-	object_event 16, 12, SPRITE_BRIGADER, SPRITEMOVEDATA_WANDER, 1, 1, (1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilityTysonScript, -1 ;  eve - night  
-	object_event 16, 18, SPRITE_NOMAD_F, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, (1 << MORN) | (1 << DAY), PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FacilityNomadFScript, EVENT_NOMAD_ISLANDS_HOUSE ; morning - day  
-	object_event 25, 17, SPRITE_BARBEAU, SPRITEMOVEDATA_WANDER, 1, 1, (1 << MORN) | (1 << DAY), PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, FacilityBarbeauScript, -1   ; morning - day   
-	object_event 12, 20, SPRITE_KANNA, SPRITEMOVEDATA_STANDING_UP, 0, 0, (1 << EVE) | (1 << NITE), PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityPetraScript, -1  ;  eve - night  
-	object_event 12, 18, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_UP, 0, 0, (1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilityAmosScript, -1  ; eve - night   
-	object_event  3, 19, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_WANDER, 0, 0, (1 << MORN) | (1 << DAY), PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityPiperScript, -1 ; morning - day   
+	object_event 11, 14, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, (1 << MORN) | (1 << DAY), 0, OBJECTTYPE_SCRIPT, 0, FacilityUrsulaScript, -1  ; morning - day 
+	object_event 29, 20, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1,(1 << MORN) | (1 << DAY), 0, OBJECTTYPE_SCRIPT, 0, FacilitySilasScript, -1 ; morning - day  
+	object_event 12, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1,(1 << MORN) | (1 << DAY), 0, OBJECTTYPE_SCRIPT, 0, FacilityBethScript, -1 ; morning - day  
+	object_event 26, 19, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1,(1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilitySandraScript, -1 ; eve - night 
+	object_event 28, 18, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1,(1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilitySybilScript, -1 ; eve - night 
+	object_event 16, 12, SPRITE_BRIGADER, SPRITEMOVEDATA_WANDER, 1, 1, -1,(1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilityTysonScript, -1 ;  eve - night  
+	object_event 16, 18, SPRITE_NOMAD_F, 	SPRITEMOVEDATA_STANDING_UP, 0, 0, -1,(1 << MORN) | (1 << DAY), PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FacilityNomadFScript, EVENT_NOMAD_ISLANDS_HOUSE ; morning - day  
+	object_event 25, 17, SPRITE_BARBEAU, SPRITEMOVEDATA_WANDER, 1, 1, -1,(1 << MORN) | (1 << DAY), PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, FacilityBarbeauScript, -1   ; morning - day   
+	object_event 12, 20, SPRITE_KANNA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1,(1 << EVE) | (1 << NITE), PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityPetraScript, -1  ;  eve - night  
+	object_event 12, 18, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1,(1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilityAmosScript, -1  ; eve - night   
+	object_event  3, 19, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_WANDER, 0, 0, -1,(1 << MORN) | (1 << DAY), PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityPiperScript, -1 ; morning - day   
 	; permanent 
 ;	object_event 13, 11, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript, -1 crash the game r.n. 
 	object_event 14, 11, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript2, -1
@@ -587,7 +587,13 @@ FacilitySybilIntroText:
 	line "you for your help"
 	cont "at the Tin Tower."
 	
-	para "todo"
+	para "Your connection"
+	line "with your #mon"
+	para "showed us that"
+	line "the ordinary is"
+	cont "transcendental."
+	
+	
 	done
 	
 FacilitySybilAfter:

@@ -110,7 +110,7 @@ endr
 		done
 	yesorno
 	iffalse .BattleItems
-	giveitem ABILITYPATCH
+	giveitem ABILITYPATCH, 99
 for x, ABILITY_CAP, ICE_STONE + 1
 	giveitem x, 99
 endr

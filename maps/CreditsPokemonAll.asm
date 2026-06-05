@@ -180,6 +180,15 @@ CreditsPokemonAllScene:
 	waitbutton
 	closetext
 .done:
+;	closepokepic
+	opentext
+	writethistext
+		text "Trainer rematches"
+		line "at Gauldenrod"
+		cont "Stadium are open!"
+		done
+	waitbutton
+	closetext
 ;	loadmem wCurPartyMon, 0    ; Select first party slot
 	loadmem wCurForm, 0 ; this can sometimes cause the player sprite to have some funny colors - may need to do wcurform 1 or something, or a dummy pokepic. 
 	; WCURFORM0 w no special pal in trainer party causes hooh palette to show up. 

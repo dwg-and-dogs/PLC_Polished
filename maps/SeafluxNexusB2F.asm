@@ -15,7 +15,7 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 
 
 	def_bg_events
-	bg_event 21, 16, BGEVENT_READ, SeafluxNexusB2F_MasterSwitch  ;  cf warehouse entrance basement key ....
+;	bg_event 21, 16, BGEVENT_READ, SeafluxNexusB2F_MasterSwitch  ;  cf warehouse entrance basement key ....
 	bg_event 19, 24, BGEVENT_READ, SeafluxNexusB2F_ResetSwitch  ;  cf warehouse entrance basement key ....
 	bg_event  7, 14, BGEVENT_READ, SeafluxNexusB2F_Switch1 ; toggles w4 only (revised)
 	bg_event 29, 14, BGEVENT_READ, SeafluxNexusB2F_Switch2 ; toggles w3, w4
@@ -25,14 +25,14 @@ SeafluxNexusB2F_MapScriptHeader: ; encounters here are turned off
 ; correct order: switch 5 - 4 - 3 - 1
 
 	def_object_events
-	object_event 20, 16, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_D0WN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WhirlpoolHMBall, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
+	object_event 20, 16, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, WhirlpoolHMBall, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
 	itemball_event  6,  8, GEODE, 1, EVENT_NEXUSB2F_ITEM1
 	itemball_event 18, 34, JEZE_BALL, 1, EVENT_NEXUSB2F_ITEM2
 	itemball_event 26, 31, CALCIUM, 1, EVENT_NEXUSB2F_ITEM3
 	itemball_event 32, 20, IRON, 1, EVENT_NEXUSB2F_ITEM4
 	itemball_event 32, 32, ZINC, 1, EVENT_NEXUSB2F_ITEM5
 	itemball_event 21,  6, HP_UP, 1, EVENT_NEXUSB2F_ITEM6
-	tmhmball_event 20, 16, HM_WHIRLPOOL, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
+;	tmhmball_event 20, 16, HM_WHIRLPOOL, EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
 
 	object_const_def
 	const SEAFLUX_NEXUS_B2F_ITEMBALL
@@ -104,11 +104,11 @@ SeafluxNexusB2FCallback: ; done?
 
 WhirlpoolHMBall:
 	checkevent EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
-	iftrue .Done
+	iftrue .Done2
 	opentext
 	verbosegivetmhm HM_WHIRLPOOL
 	waitbutton
-SeafluxNexusB2F_MasterSwitch:
+;SeafluxNexusB2F_MasterSwitch:
 ;	checkevent EVENT_NEXUS_B2F_FALLS_SWITCH
 ;	iftrue_jumptext MasterSwitchSetText
 ;	opentext
@@ -124,7 +124,7 @@ SeafluxNexusB2F_MasterSwitch:
 	setevent EVENT_GOT_WHIRLPOOL_WHIRL_ISLANDS
 	disappear SEAFLUX_NEXUS_B2F_ITEMBALL
 	reloadmap ; should be the end of it
-.Done:
+.Done2:
 	end
 
 SeafluxNexusB2F_ResetSwitch: ; option for a hint 

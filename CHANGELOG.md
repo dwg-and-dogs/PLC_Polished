@@ -59,19 +59,21 @@ Cut is no longer given in Sandbox room.
 Restore Scyther evolving to Kleavor by levelling up while holding hard stone. 
 Fix Pokegear watch showing bad text. 
 
-* Release 1.0.3 (unpublished)
+* Release 1.0.3
 
 Nidoran base defense raised to equal its base attack.
 Update HElectrode animation. 
 Remove day-of-week condition for bug catching contest and Goldenrod Underground. 
-Two NPCs at Stadium Grounds. 
 Remove day of week from Pokegear and the initial interaction with Kurt. 
 HGrowlithe gets Rock Head hidden ability. 
-Update Item Giver in Sandbox Room (todo: check)
-Postgame: Rematches (stealth finished at v103, need to check time of day effect)
-Clean up Slowking level-up learnset. TODO: check that the learnset stuck. 
-Streamline the historic lugia quest to remove the need for the block.  TODO: check that the puzzle works as intended; update the block. 
 Decidueye, HDecidueye, and Dartix get Seed Bomb. 
+Update Item Giver in Sandbox Room. 
+Revise Slowking level-up learnset. 
+Streamline the whirl islands quest: No longer need to hit the block, just pick up the HM. 
+Postgame rematches at the Stadium.
+Expert Mode Elder Li's Bellsprout moveset revised to just be "Wrap".
+
+
 
 Todo: 
 * Postgame facility
@@ -82,6 +84,8 @@ Todo:
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * Epilogue: New Bark --> Blackthorn
 * Brick Break + Light Screen interaction: TODO 
+* Move animations
+* Special mark on pokemon if they have max DVs
 
 Last updated: 06/04/26
 

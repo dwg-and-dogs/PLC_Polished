@@ -1413,11 +1413,11 @@ SlowkingEvosAttacks:
 	db 9, WATER_GUN
 	db 14, CONFUSION
 	db 19, DISABLE
-	db 23, RECOVER
+	db 23, TRICK_ROOM
 	db 28, SURF
 	db 33, PSYCHIC_M
 	db 36, NASTY_PLOT
-	db 41, SWAGGER
+	db 41, RECOVER
 	db 49, RAIN_DANCE ; Trump Card → TM move
 	db 54, BELLY_DRUM ; Psych Up → egg move
 	db 58, RECOVER ; Heal Pulse → similar move
