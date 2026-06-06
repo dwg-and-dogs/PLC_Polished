@@ -144,6 +144,7 @@ endr
 	givekeyitem GOOD_ROD	
 	givekeyitem COIN_CASE
 	givekeyitem ITEMFINDER
+	givekeyitem SHINY_CHARM
 .Apricorns:
 	writethistext
 		text "All apricorns?"

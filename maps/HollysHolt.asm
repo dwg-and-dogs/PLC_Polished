@@ -153,7 +153,7 @@ HH_KurtExplains:
 	next
 	text_start
 	text "We're here to"
-	line "fortify Johto's"
+	line "preserve Johto's"
 	cont "traditions!"
 	
 	para "Some dangerous"

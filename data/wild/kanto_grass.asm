@@ -541,7 +541,7 @@
 	wildmon 40, SNEASEL, HISUIAN_FORM
 	wildmon 41, PARASECT
 	wildmon 42, LUXIO
-	wildmon 43, SNEASEL, HISUIAN_FORM
+	wildmon 35, BRONZOR
 	wildmon 38, ZORUA
 ;	; day
 	wildmon 39, STARAVIA
@@ -549,15 +549,15 @@
 	wildmon 40, SNEASEL, HISUIAN_FORM
 	wildmon 41, PARASECT
 	wildmon 42, LUXIO
-	wildmon 43, SNEASEL, HISUIAN_FORM
-	wildmon 38, RIOLU
+	wildmon 35, BRONZOR
+	wildmon 15, RIOLU
 ;	; nite
 	wildmon 39, STARAVIA
 	wildmon 39, LUXIO
 	wildmon 40, SNEASEL, HISUIAN_FORM
 	wildmon 41, PARASECT
 	wildmon 42, LUXIO
-	wildmon 43, SNEASEL, HISUIAN_FORM
+	wildmon 35, BRONZOR
 	wildmon 38, ZORUA
 	end_grass_wildmons
 

@@ -72,7 +72,12 @@ Revise Slowking level-up learnset.
 Streamline the whirl islands quest: No longer need to hit the block, just pick up the HM. 
 Postgame rematches at the Stadium.
 Expert Mode Elder Li's Bellsprout moveset revised to just be "Wrap".
+Shiny charm given in the sandbox room. 
 
+* Release 1.0.4
+
+HGrowtlithe updated to Fire/Rock. 
+Bronzor added to Sinjoh Camp encounter table. 
 
 
 Todo: 

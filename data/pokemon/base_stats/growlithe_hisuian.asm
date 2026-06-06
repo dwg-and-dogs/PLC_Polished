@@ -1,7 +1,7 @@
 	db  60,  75,  45,  55,  65,  50 ; 350 BST
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIRE, FIRE ; type
+	db FIRE, ROCK ; type
 	db 190 ; catch rate
 	db 91 ; base exp
 	db ALWAYS_ITEM_2 ; item 1
