@@ -76,6 +76,7 @@ Expert Mode Elder Li's Bellsprout moveset revised to just be "Wrap".
 
 
 Todo: 
+* Earlier shiny charm 
 * Postgame facility
 * New pokedex entries
 * Fly as an item
@@ -86,6 +87,7 @@ Todo:
 * Brick Break + Light Screen interaction: TODO 
 * Move animations
 * Special mark on pokemon if they have max DVs
+* Ancestor Ledian, Alakazam from Accad501
 
-Last updated: 06/04/26
+Last updated: 06/05/26
 
