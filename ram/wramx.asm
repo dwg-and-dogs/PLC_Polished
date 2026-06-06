@@ -914,7 +914,7 @@ wOriginalDV3:: ds 1 ; Store original DV byte 3
 wStadiumFacilityFirstMon:: db ; first pokemon choice, could be up to 0 -- 50 as needed 
 wStadiumFacilityFirstTrainer:: db ; first trainer choice , from a selection of 0 - 30 
 wStadiumFacilitySecondTrainer:: db ; second trainer choice, from a selection of 0 - 30, not the same as the first one 
-wStadiumFacilitySceneID:: db ; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+wStadiumFacilitySceneID:: db ; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 
 	ds 6 ; unused
 
 wMapObjects::

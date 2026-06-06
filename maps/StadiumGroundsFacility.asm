@@ -1,7 +1,7 @@
 StadiumGroundsFacility_MapScriptHeader:
 	def_scene_scripts
 	; todo prevent using items in battle 
-		; could just check if you have any in your bag?... 
+		; probably in engine/item_effects 
 	; todo, spawn point to gauldenrod unless you have not yet beaten the game then it sends you to azalea 
 	
 	def_callbacks

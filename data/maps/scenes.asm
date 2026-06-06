@@ -91,4 +91,6 @@ MapScenes::
 	scene_var WHISPERS_WAY, wWhispersWaySceneID ; dummy scene for talking to amos at tapestry 
 	scene_var CREDITS_POKEMON_ALL, wCreditsPokemonAllSceneID
 	scene_var ANARRES_STOCKROOM, wAnarresStockroomSceneID
+	
+	scene_var STADIUM_GROUNDS_FACILITY, wStadiumFacilitySceneID ; 
 	db -1
