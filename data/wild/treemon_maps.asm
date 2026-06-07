@@ -29,7 +29,7 @@ TreeMonMaps:
 ;OLD 
 	treemon_map HOLLYS_HOLT, 6
 	treemon_map ANARRES_TOWN, 2
-	treemon_map CALM_COAST, 2
+	treemon_map CALM_COAST, 3 
 	treemon_map GAULDENROD, 2
 	treemon_map SERENE_SPRINGS, 4
 	treemon_map STADIUM_GROUNDS, 4

@@ -26,6 +26,9 @@ GrottoedGlacierB1F_MapScriptHeader:
 	object_event  4, 19, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerSageVirgil, EVENT_BEAT_KANNA
 	itemball_event 13, 14, NEVERMELTICE, 1, EVENT_GLACIER_B1F_ITEM_1
 	itemball_event 21, 15, REVIVAL_HERB, 1, EVENT_GLACIER_B1F_ITEM_2
+	smashrock_event  16, 7
+	smashrock_event  15, 7
+
 
 	object_const_def
 	const GROTTOEDGLACIER_BOULDER1
