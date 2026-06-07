@@ -22,21 +22,18 @@ FishGroups:
 	fishgroup 60 percent + 1, 70 percent + 1, .Qwilfish_NoSwarm_Old, .Qwilfish_NoSwarm_Good, .Qwilfish_NoSwarm_Super
 	assert_table_length NUM_FISHGROUPS
 
-; TODO ANYTHING WITH A 0 AFTER THE PERCENT GETS FIXED, ALL SHOULD HAVE THE SAME FORMAT!!
 .Shore_Old:
 	db  70 percent + 1, REMORAID,   5
 	db  85 percent + 1, HORSEA,   5
 	db 100 percent,     HORSEA,   5
 .Shore_Good:
-	db  35 percent,     TENTACOOL,   20
-	db  70 percent,     HORSEA,     20
-	db  90 percent + 1, HORSEA,     20
-	db 100 percent,     0, 0
+	db  70 percent + 1, TENTACOOL,   15
+	db  85 percent + 1, HORSEA,   15
+	db 100 percent,     HORSEA,   15
 .Shore_Super:
-	db  40 percent,     TENTACRUEL,     40
-	db  70 percent,     0, 1
-	db  90 percent + 1, TENTACRUEL,   50
-	db 100 percent,     TENTACRUEL,   50
+	db  70 percent + 1, TENTACRUEL,   35
+	db  85 percent + 1, TENTACRUEL,   45
+	db 100 percent,     TENTACRUEL,   55
 
 .Ocean_Old:
 	db  70 percent + 1, CHINCHOU,   5
@@ -47,38 +44,36 @@ FishGroups:
 	db  85 percent + 1, LANTURN,   25
 	db 100 percent,     LANTURN,   25
 .Ocean_Super:
-	db  70 percent + 1, CHINCHOU,   25
-	db  85 percent + 1, CHINCHOU,   25
-	db 100 percent,     CHINCHOU,   25
+	db  70 percent + 1, LANTURN,   35
+	db  85 percent + 1, LANTURN,   45
+	db 100 percent,     LANTURN,   55
 
 .Lake_Old:
 	db  70 percent + 1, MAGIKARP,   5
 	db  85 percent + 1, MAGIKARP,   5
 	db 100 percent,     MAGIKARP,   5
 .Lake_Good:
-	db  70 percent + 1, SLOWPOKE,   25
-	db  85 percent + 1, SLOWPOKE,   25
-	db 100 percent,     SLOWPOKE,   25
+	db  70 percent + 1, SLOWPOKE,   15
+	db  85 percent + 1, SLOWPOKE,   15
+	db 100 percent,     SLOWPOKE,   15
 .Lake_Super:
-	db  40 percent,     CROCONAW,   40
-	db  70 percent,     0, 5
-	db  90 percent + 1, CROCONAW,   40
-	db 100 percent,     CROCONAW,   40
+	db  70 percent + 1, CROCONAW,   25
+	db  85 percent + 1, CROCONAW,   25
+	db 100 percent,     CROCONAW,   25
+
 
 .Pond_Old:
 	db  70 percent + 1, MAGIKARP,   5
 	db  85 percent + 1, POLIWAG,    5
 	db 100 percent,     POLIWAG,    5
 .Pond_Good:
-	db  35 percent,     POLIWAG,    20
-	db  70 percent,     POLIWAG,    20
-	db  90 percent + 1, POLIWHIRL,  20
-	db 100 percent,     0, 6
+	db  70 percent + 1, POLIWAG,   15
+	db  85 percent + 1, POLIWAG,    15
+	db 100 percent,     POLIWHIRL,   25
 .Pond_Super:
-	db  40 percent,     POLIWHIRL,   40
-	db  70 percent,     0, 7
-	db  90 percent + 1, POLIWHIRL,   40
-	db 100 percent,     POLITOED,   40
+	db  70 percent + 1, POLIWHIRL,   25
+	db  85 percent + 1, POLITOED,    35
+	db 100 percent,     POLITOED,    45
 
 .Dratini_Old: ;alpine lake on route KaJo
 	db  70 percent + 1, MAGIKARP,   5
@@ -128,9 +123,9 @@ FishGroups:
 	db  85 percent + 1, GYARADOS,   20
 	db 100 percent,     GYARADOS,   20
 .Gyarados_Super:
-	db  70 percent + 1, GYARADOS,   40
+	db  70 percent + 1, GYARADOS,   30
 	db  85 percent + 1, GYARADOS,   40
-	db 100 percent,     GYARADOS,   40
+	db 100 percent,     GYARADOS,   50
 
 .Dratini_2_Old: ;ROUTE 38 39
 	db  70 percent + 1, GRIMER,        5
@@ -141,9 +136,9 @@ FishGroups:
 	db  85 percent + 1, MUK,        25
 	db 100 percent,     MUK,        25
 .Dratini_2_Super:
-	db  70 percent + 1, MUK,        35
+	db  70 percent + 1, MUK,        25
 	db  85 percent + 1, MUK,        35
-	db 100 percent,     MUK,        35
+	db 100 percent,     MUK,        45
 
 .WhirlIslands_Old:
 	db  70 percent + 1, MAGIKARP,   5

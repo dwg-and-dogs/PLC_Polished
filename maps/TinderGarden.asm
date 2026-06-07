@@ -1131,15 +1131,13 @@ CelebiScript:
 	end
 
 LittleGiddingText:
-	text "We shalln't cease"
-	line "from exploration,"
+	text "You can never"
+	line "climb the same"
+	cont "tree twice,"
 	
-	para "And the end of"
-	line "our exploring,"
-	
-	para "Will be to arrive"
-	line "where we started,"
-	
-	para "And know it as if"
-	line "for the 1st time."
+	para "for it's not the"
+	line "same tree"
+	para "and you're not"
+	line "the same person"
+
 	done

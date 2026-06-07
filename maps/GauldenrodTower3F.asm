@@ -29,6 +29,8 @@ GauldenrodTower3F_MapScriptHeader: ; need to make it go around a circle
 	warp_event  7,  6, GAULDENROD_TOWER_3F, 1 ; HOLE
 	warp_event  9,  4, GAULDENROD_TOWER_3F, 1 ; HOLE
 	warp_event  9,  5, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event 10,  3, GAULDENROD_TOWER_3F, 1 ; HOLE
+	warp_event 11,  3, GAULDENROD_TOWER_3F, 1 ; HOLE
 	
 	
 	def_coord_events
@@ -99,6 +101,8 @@ GauldenrodTowerBoulders:
 	stonetable 38, GAULDENROD_TOWER_BOULDER, .Disappear2		
 	stonetable 39, GAULDENROD_TOWER_BOULDER, .Disappear2		
 	stonetable 40, GAULDENROD_TOWER_BOULDER, .Disappear2			
+	stonetable 41, GAULDENROD_TOWER_BOULDER, .Disappear2		
+	stonetable 42, GAULDENROD_TOWER_BOULDER, .Disappear2			
 
 
 
@@ -140,7 +144,7 @@ GauldenrodTowerBoulders:
 	jumpthistext
 
 	text "The boulder fell"
-	line "through!"
+	line "down!"
 	done
 
 GauldenrodTowerBoulderCallback:

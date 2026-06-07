@@ -85,8 +85,16 @@ Revise fishing encounters to prevent unexpected encounters.
 Move a hidden item on Cinder Climb. 
 Small tile and text changes. 
 Add Shiny Charm to the Key Items given in the sandbox room. 
+Revised Gauldenrod Boulder Puzzle. 
+Switched snover palette (todo check)
+Revise fishing encounters to match v100 documentation. 
+Revise Tinder Garden sign text. 
+Slowpoke have Kings Rock again.
+Snubbull chance to have Thick Club reduced. 
 
 Todo: 
+* Box Art 
+* Hackdex Description
 * Postgame facility
 * New pokedex entries
 * Fly as an item
@@ -94,13 +102,6 @@ Todo:
 * Fix trainer palette issue at HOF
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * Epilogue: New Bark --> Blackthorn
-* Gauldenrod Fence+Cave Tiles
-* Gauldenrod Tower 3F puzzle shortcut
-* Box Art 
-* Hackdex Description
-* Little Gidding text
-* Fishing TOD 
-* Snover palette
 * Brick Break + Light Screen interaction: TODO 
 * Move animations
 * Special mark on pokemon if they have max DVs

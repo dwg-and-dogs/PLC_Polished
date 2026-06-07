@@ -188,8 +188,8 @@ KurtGauldenrodDormsText2:
 DormsBermiteBrotherText:
 	text "My brother is so"
 	line "dense. He was"
-	para "duped a Hisuian"
-	line "to thinking that"
-	cont "Bergmite is a"
-	cont "bug #mon!"
+	para "duped to believe"
+	line "that Bergmite is"
+	cont "a bug #mon"
+	cont "by a Hisuian!"
 	done
