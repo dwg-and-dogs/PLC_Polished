@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
+;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
+	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
 ;	bg_event  6,  1, BGEVENT_READ, TimeShiftRadio	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
@@ -953,16 +953,11 @@ endr
 ;	loadmem wPartyMon3PP+1, 15
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
-	givepoke HAUNTER, NO_FORM, 31
-	givepoke STEELIX, NO_FORM, 31
-	givepoke JUMPLUFF, NO_FORM, 31
-	givepoke VICTREEBEL, NO_FORM, 31
-	givepoke DECIDUEYE, NO_FORM, 31
+	givepoke SNOVER, NO_FORM, 31
 	; fill pokedex
 	callasm FillPokedex
 	waitbutton
 	closetext
-	warp EARLS_POKEMON_ACADEMY, 3, 4
 ; debug only
 ; debug 
 	end

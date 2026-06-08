@@ -4950,7 +4950,7 @@ DusknoirEvosAttacks:
 
 SnoruntEvosAttacks: 
 	db EVOLVE_LEVEL, 32, GLALIE
-	db EVOLVE_ITEM, ICE_STONE, FROSLASS
+	db EVOLVE_ITEM, DAWN_STONE, FROSLASS
 	db 0 ; no more Evolutions
 	db 1, ASTONISH
 	db 1, ICE_SHARD
@@ -5129,7 +5129,7 @@ RaltsEvosAttacks:
 
 KirliaEvosAttacks:
 	db EVOLVE_LEVEL, 30, GARDEVOIR
-	db EVOLVE_ITEM, SHINY_STONE, GALLADE
+	db EVOLVE_ITEM, DAWN_STONE, GALLADE
 	db 0 ; no more Evolutions
 	db 1, DISARM_VOICE
 	db 1, GROWL

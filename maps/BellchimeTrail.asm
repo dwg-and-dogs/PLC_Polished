@@ -96,7 +96,8 @@ BellchimeTrailEmiScript:
 	special RestartMapMusic
 	
 	setevent EVENT_BEAT_KIMONO_GIRL_EMI
-;	writetext EmiHealedPokemonText	; 
+	writetext EmiHealedPokemonText
+	waitbutton
 .AskToTimeTravel:
 	writetext BellchimeTrailAskToTimeTravelText
 	yesorno
@@ -212,9 +213,14 @@ EmiHealsYouText:
 	done
 
 EmiHealedPokemonText:
-	text "Chronicler Emi"
-	line "healed your"
-	cont "#mon."
+	text "Also, you'll see"
+	line "a new #mon in"
+	para "Ecruteak City"
+	line "soon. It will"
+	cont "make it easier"
+	para "to travel between"
+	line "modern and"
+	cont "historic Johto."
 	done
 
 BellchimeTrailAskToTimeTravelText:

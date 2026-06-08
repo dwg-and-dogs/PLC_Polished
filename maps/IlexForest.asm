@@ -412,9 +412,11 @@ CamdenText2:
 	text_start 
 
 	text "Progress is"
-	line "natural, as I"
-	cont "I naturally"
-	cont "beat you."
+	line "natural, old man."
+	
+	para "Would you really"
+	line "live frozen in"
+	cont "the past?"
 	
 	para "Oh? You have some"
 	line "reinforcements?"

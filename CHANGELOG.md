@@ -81,31 +81,43 @@ Bronzor added to Sinjoh Camp encounter table.
 HGrowlithe and HArcanine HA to Rock Head. 
 Add smashrocks to Ancestral Glacier 1F and B1F.
 Revise fishing and headbutt groups to match the encounters doc. 
-Revise fishing encounters to prevent unexpected encounters. 
 Move a hidden item on Cinder Climb. 
 Small tile and text changes. 
 Add Shiny Charm to the Key Items given in the sandbox room. 
 Revised Gauldenrod Boulder Puzzle. 
-Switched snover palette (todo check)
-Revise fishing encounters to match v100 documentation. 
 Revise Tinder Garden sign text. 
-Slowpoke have Kings Rock again.
+Slowpoke can hold Kings Rock.
 Snubbull chance to have Thick Club reduced. 
+Fix Sandbox L100 team. 
+Garchomp gets Swords Dance. 
+Kirlia and Snorunt now evolve with the Dawn Stone. 
+Fixed Snover palette. 
+Ursaluna Bloodmoon respawns with credits.  (todo: check)
+Easier time travel with a Pokemon in Ecruteak and Western Capital. (todo: check!)
+
 
 Todo: 
-* Box Art 
+* Box Art update 
 * Hackdex Description
+
+v106
+* Special mark on pokemon if they have max DVs
+* Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
+v110
+* Ancestor Ledian, Alakazam from Accad501
 * Postgame facility
+
+vAny
 * New pokedex entries
 * Fly as an item
 * Pokedex footprint area to evolution method
 * Fix trainer palette issue at HOF
-* Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
-* Epilogue: New Bark --> Blackthorn
 * Brick Break + Light Screen interaction: TODO 
 * Move animations
-* Special mark on pokemon if they have max DVs
-* Ancestor Ledian, Alakazam from Accad501
 
-Last updated: 06/05/26
+v120
+* Epilogue: New Bark --> Blackthorn
+
+
+Last updated: 06/08/26
 

@@ -276,35 +276,36 @@ Breeder1Script:
 	writetext Breeder1Text	
 	; good party
 	givepoke TYPHLOSION, HISUIAN_FORM, 100, LEFTOVERS
-	loadmem wPartyMon1Moves+0, FLAMETHROWER
-	loadmem wPartyMon1Moves+1, SHADOW_BALL
-	loadmem wPartyMon1Moves+2, EARTH_POWER
-	loadmem wPartyMon1Moves+3, EXPLOSION
+;	loadmem wPartyMon1Moves+0, FLAMETHROWER
+;	loadmem wPartyMon1Moves+1, SHADOW_BALL
+;	loadmem wPartyMon1Moves+2, EARTH_POWER
+;	loadmem wPartyMon1Moves+3, EXPLOSION
 	givepoke SAMUROTT, HISUIAN_FORM, 100, LEFTOVERS
-	loadmem wPartyMon2Moves+0, SURF
-	loadmem wPartyMon2Moves+1, CRUNCH
-	loadmem wPartyMon2Moves+2, STRENGTH
-	loadmem wPartyMon2Moves+3, WATERFALL
+;	loadmem wPartyMon2Moves+0, SURF
+;	loadmem wPartyMon2Moves+1, CRUNCH
+;	loadmem wPartyMon2Moves+2, STRENGTH
+;	loadmem wPartyMon2Moves+3, WATERFALL
 	givepoke DECIDUEYE, HISUIAN_FORM, 100, LEFTOVERS
-	loadmem wPartyMon3Moves+0, ENERGY_BALL
-	loadmem wPartyMon3Moves+1, SPORE
-	loadmem wPartyMon3Moves+2, CUT
-	loadmem wPartyMon3Moves+3, FLY
+;	loadmem wPartyMon3Moves+0, ENERGY_BALL
+;	loadmem wPartyMon3Moves+1, SPORE
+;	loadmem wPartyMon3Moves+2, CUT
+;	loadmem wPartyMon3Moves+3, FLY
 	givepoke GARCHOMP, NO_FORM, 100, LEFTOVERS
-	loadmem wPartyMon4Moves+0, EARTHQUAKE
-	loadmem wPartyMon4Moves+1, DRAGON_CLAW
-	loadmem wPartyMon4Moves+2, STRENGTH
-	loadmem wPartyMon4Moves+3, SWORDS_DANCE
+;	loadmem wPartyMon4Moves+0, EARTHQUAKE
+;	loadmem wPartyMon4Moves+1, DRAGON_CLAW
+;	loadmem wPartyMon4Moves+2, STRENGTH
+;	loadmem wPartyMon4Moves+3, SWORDS_DANCE
 	givepoke LUGIA, NO_FORM, 100, LEFTOVERS  
-	loadmem wPartyMon5Moves+0, SURF
-	loadmem wPartyMon5Moves+1, PSYCHIC
-	loadmem wPartyMon5Moves+2, HURRICANE
-	loadmem wPartyMon5Moves+3, WHIRLPOOL
+;	loadmem wPartyMon5Moves+0, SURF
+;	loadmem wPartyMon5Moves+1, PSYCHIC
+;	loadmem wPartyMon5Moves+2, HURRICANE
+;	loadmem wPartyMon5Moves+3, WHIRLPOOL
 	givepoke HEATRAN, NO_FORM, 100, LEFTOVERS  
-	loadmem wPartyMon6Moves+0, FLASH_CANNON
-	loadmem wPartyMon6Moves+1, FLAMETHROWER
-	loadmem wPartyMon6Moves+2, FLASH
-	loadmem wPartyMon6Moves+3, ROCK_SMASH
+;	loadmem wPartyMon6Moves+0, FLASH_CANNON
+;	loadmem wPartyMon6Moves+1, FLAMETHROWER
+;	loadmem wPartyMon6Moves+2, FLASH
+;	loadmem wPartyMon6Moves+3, ROCK_SMASH
+	waitbutton
 	closetext
 	end
 

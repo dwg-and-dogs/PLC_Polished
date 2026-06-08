@@ -112,10 +112,9 @@ GenericTrainerPicnickerRoute36:
 	done
 
 Route36KurtText:
-	text "<PLAYER>: Ugh, the"
-	line "route's blocked."
-	para "We have to find"
-	line "another way."
+	text "It's blocked!"
+	line "We have to find"
+	cont "another way."
 	
 	para "I know some folks"
 	line "in the city that"

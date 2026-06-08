@@ -30,7 +30,8 @@ LakeOfRage_MapScriptHeader:
 	object_event 13, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LakeKurtScript, EVENT_LAKE_KURT
 	object_event 24, 5, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_RIVAL
 ;URSALUNA
-	object_event  16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA
+	object_event   16,  13, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LAKE_HURSALUNA
+	object_event   16,  20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, URSALUNA, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, UrsalunaBMScript, EVENT_LAKE_URSALUNA_POSTGAME
 ;trainers
 	object_event  	4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, -1
 	pokemon_event 	3,  4, GIRAFARIG, -1, -1, PAL_NPC_BROWN, WesleyMeowthText, -1
@@ -53,6 +54,7 @@ LakeOfRage_MapScriptHeader:
 	const LAKEOFRAGE_KURT
 	const LAKEOFRAGE_RIVAL 
 	const LAKEOFRAGE_URSALUNA
+	const LAKEOFRAGE_URSALUNA_2
 
 LakeOfRageFlyPoint:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
@@ -1469,3 +1471,14 @@ LakeKurtText2:
 	line "stop Adrinna and"
 	cont "Vesper's mine!"
 	done
+UrsalunaBMScript:
+	earthquake 20
+	cry URSARING
+	pause 20
+	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
+	loadwildmon URSALUNA, OTHER_FORM, 45
+	startbattle
+	disappear LAKEOFRAGE_URSALUNA_2
+	reloadmapafterbattle
+	setevent EVENT_LAKE_URSALUNA_POSTGAME
+	end

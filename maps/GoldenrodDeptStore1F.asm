@@ -99,6 +99,7 @@ GoldenrodDeptStore1FReceptionistScript:
 	writetext RadioTower1FRadioCardWomanYouWinText
 	promptbutton
 	verbosegiveitem UP_GRADE
+	setevent EVENT_WON_QUIZ
 	writetext RadioTower1FRadioCardWomanTuneInText
 	waitbutton
 	closetext

@@ -751,6 +751,7 @@ AmosGardenScript:
 	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
 	setmapscene WESTERN_CAPITAL, $1
 	special HealParty
+	clearevent EVENT_ECRUTEAK_UNOWN
 	end
 
 AmosWalksAwayMovement_EG:

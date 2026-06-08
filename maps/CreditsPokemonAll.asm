@@ -20,6 +20,7 @@ CreditsPokemonAll_MapScriptHeader:
 CreditsPokemonAllScene: 
 	setevent EVENT_REACHED_CREDITS_ONCE
 ; reset all legendaries
+	clearevent EVENT_LAKE_URSALUNA_POSTGAME
 ; entei
 	clearevent EVENT_FOUGHT_ENTEI ; need to check 
 ; raikou 

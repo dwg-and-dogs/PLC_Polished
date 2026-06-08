@@ -56,7 +56,7 @@ WesternCapital_MapScriptHeader:
 	object_event  4, 7, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, WCBrigaderSkirmishText, EVENT_CAPITAL_SKIRMISHER ; LIKE THE GAMEBOY BOYS, FACING YOU THEN BACK
 	pokemon_event 4, 8, DONPHAN, -1, -1, PAL_NPC_BROWN, SkirmishBrigaderMonText, EVENT_CAPITAL_SKIRMISHER
 	
-
+	object_event  16, 19, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, UNOWN, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, WesternCapitalUnownScript, -1
 
 
 
@@ -306,4 +306,34 @@ WesternCapitalFishingGuruScript:
 	line "good morning if"
 	cont "I'm fishing."
 	done
-	
+
+
+
+WesternCapitalUnownScript:
+	opentext
+	writetext UnownWC_AskToTimeTravelText
+	yesorno
+	iffalse_jumpopenedtext UnownWC_NoTimeTravelText
+	writetext UnownWC_YesTimeTravelText
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	blackoutmod ECRUTEAK_CITY
+	warp ECRUTEAK_CITY, 22, 20
+	end
+
+UnownWC_AskToTimeTravelText:
+	text "It's an Unown!"
+	line "Ask it to use"
+	cont "Future Sight?"
+	done
+
+UnownWC_NoTimeTravelText:
+	text "Maybe later."
+	done
+
+UnownWC_YesTimeTravelText:
+	text "..."
+	done

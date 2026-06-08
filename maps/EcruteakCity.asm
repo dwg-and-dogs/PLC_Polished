@@ -44,6 +44,8 @@ EcruteakCity_MapScriptHeader:
 	object_event 5, 18, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_KENSEY_PORT ; done
 	object_event 5, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityFarmersText, EVENT_BEAT_KENSEY_PORT ; done
 	
+	object_event  21, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, UNOWN, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityUnownScript, EVENT_ECRUTEAK_UNOWN
+	
 	object_event 30, 23, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps1Text, -1 ; done
 	object_event 24, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, EcruteakCityGramps2Text, -1 ; ok e
 	object_event  7,  9, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass2Script, -1 ; don e
@@ -322,4 +324,33 @@ PsyShopNoFishText:
 Text_NoCarry_PsyShop:
 	text "You don't have"
 	line "room."
+	done
+
+EcruteakCityUnownScript:
+	opentext
+	writetext UnownEC_AskToTimeTravelText
+	yesorno
+	iffalse_jumpopenedtext UnownEC_NoTimeTravelText
+	writetext UnownEC_YesTimeTravelText
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	blackoutmod WESTERN_CAPITAL
+	warp WESTERN_CAPITAL, 17, 19
+	end
+
+UnownEC_AskToTimeTravelText:
+	text "It's an Unown!"
+	line "Ask it to use"
+	cont "Ancient Power?"
+	done
+	
+UnownEC_NoTimeTravelText:
+	text "Maybe later."
+	done
+
+UnownEC_YesTimeTravelText:
+	text "..."
 	done
