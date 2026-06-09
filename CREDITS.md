@@ -29,7 +29,7 @@ Front Sprites:
 * SageDeoxys: Basculegion, Beedrill, Crobat, Dratini, Dugtrio, Eevee, Forretress, Gastly, Gloom, Gyarados, Magcargo, Natu, Pikachu, Qwilfish, Scyther, Tangela, Weepinbell, Xatu
 * ChanseyMedicine animated from Pokets3: HTyphlosion, Sneasler, 
 * Egg3ggEgg: H__Goodra
-* Accad501: Immortal Noctowl, Ancestor Feraligatr
+* Accad501: Ancestor Noctowl, Ancestor Feraligatr
 * Prism: Cranidos , Croagunk, Drifloon, Duskull, Gible
 
 Back Sprites if different from above, using Deviantart handles:
@@ -61,6 +61,7 @@ Back Sprites if different from above, using Deviantart handles:
 * Bronzeswagger: Sybil 
 * Justinnuggets: Scavenger (diver)  
 * Ferropexola: Ninja
+* Carabarabonanza: Trainee-Male, Historic Female Cooltrainer, Historic Mail Cooltrainer, Clair, ... 
 
 ## Special Thanks
 
