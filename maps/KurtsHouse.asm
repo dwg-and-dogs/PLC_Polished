@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2 
-	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
+	bg_event  6,  1, BGEVENT_JUMPSTD, radio2
+;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
 ;	bg_event  6,  1, BGEVENT_READ, TimeShiftRadio	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
@@ -953,13 +953,14 @@ endr
 ;	loadmem wPartyMon3PP+1, 15
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
-	givepoke SNOVER, NO_FORM, 31
+	givepoke SNOVER, NO_FORM, 100
 	; fill pokedex
 	callasm FillPokedex
 	waitbutton
 	closetext
 ; debug only
 ; debug 
+	warp ECRUTEAK_CITY, 20, 20
 	end
 
 TimeShiftRadio:

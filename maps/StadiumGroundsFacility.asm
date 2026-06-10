@@ -12,7 +12,7 @@ StadiumGroundsFacility_MapScriptHeader:
 	; you're warped in and out of these - nothing to do here 
 	
 	def_coord_events 
-;	coord_event 0, 0, 0, StadiumFacility_Pokemon1Event
+;	coord_event 19, 13, 0, StadiumFacility_Pokemon1Event
 ;	coord_event 0, 0, 1, StadiumFacility_Trainers1Event
 ;	coord_event 0, 0, 2, StadiumFacility_Pokemon2Event
 ;	coord_event 0, 0, 3, StadiumFacility_Trainers2Event
@@ -28,6 +28,7 @@ StadiumGroundsFacility_MapScriptHeader:
 
 
 	def_object_events
+; 	object_event 19, 14, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityClerkScript, EVENT_FACILITY_CLERK
 ;	object_event 0, 0, SPRITE_FACILITY_MON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityMonScript, EVENT_FACILITY_MON
 ;	object_event 0, 0, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityMonBallScript, EVENT_FACILITY_MON_BALL
 
@@ -48,7 +49,86 @@ StadiumGroundsFacility_MapScriptHeader:
 
 	
 	object_const_def
+; 	const STADIUM_FACILITY_CLERK
+; 	const STADIUM_FACILITY_MON
 
+; 	const STADIUM_FACILITY_BUG_CATCHER
+; 	const STADIUM_FACILITY_AROMA_LADY
+; 	const STADIUM_FACILITY_SAGE
+; 	const STADIUM_FACILITY_NOMADF
+; 	const STADIUM_FACILITY_NINJA
+; 	const STADIUM_FACILITY_BRIGADER
+
+; 	const STADIUM_FACILITY_HOLLIS 
+; 	const STADIUM_FACILITY_SANDRA
+; 	const STADIUM_FACILITY_SAMSARA
+; 	const STADIUM_FACILITY_BARBEAU
+; 	const STADIUM_FACILITY_AMOS
+; 	const STADIUM_FACILITY_KURTF
+; 	const STADIUM_FACILITY_MEJIMI
+
+FacilityClerkScript:
+	faceplayer
+	opentext
+	writethistext
+		text "Please speak to"
+		line "me from the"
+		cont "left, please."
+		done
+	waitbutton
+	closetext
+	end
+
+StadiumFacility_Pokemon1Event:
+	; clerk is with the player
+	turnobject STADIUM_FACILITY_CLERK, LEFT
+	opentext
+	writetext FacilityAreYouReadyText
+	yesorno
+	iffalse_jumptext FacilityGetReadyText
+	writetext FacilityExplainBallText
+	waitbutton
+	; random 1 - 20 
+	; store it in the wram variable
+	; depending on the wram, we report various text
+.Pokemon1_1:
+	writetext Facility1_1Text
+	waitbutton
+	sjump .Facility1_EndMonsScript
+
+.Facility1_EndMonsScript:
+	writetext Facility1_EndMonsText
+; battle the mon, then move the player to allow for TMs, etc 	
+	end
+
+FacilityAreYouReadyText:
+	text "Are you ready?"
+	done
+
+FacilityGetReadyText:
+	text "Take your time."
+	done
+
+FacilityExplainBallText:
+	text "In my hands are 2"
+	line "Apricorns, each "
+	para "with unique"
+	line "#mon inside."
+	
+	para "The left hand has"
+	line "an Apricon with a"
+	cont "wild"
+	done
+
+Facility1_1Text:
+	text "Ariados in it."
+
+Facility1_EndMonsText
+	text "My other hand has"
+	line "something else."
+	
+	para "Take 
+	done
 
 ;StadiumGroundsFacilityScript:
 	; random 1-5, for now we just do these in order
