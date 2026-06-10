@@ -1,4 +1,5 @@
 # generated extensions
+*.sav 
 *.gbc
 *.map
 *.sym
