@@ -128,20 +128,20 @@ TrainerClassNames::
 	li "<PK><MN> Trainer" ; CHERYL / unused 
 	li "<PK><MN> Trainer" ; RILEY / unused 
 	li "<PK><MN> Trainer" ; MARLEY / unused 
-	li "<PK><MN> Trainer" ; MIRA / unused 
-	li "Anarres"          ; Lanna / ANABEL unused 
-	li "Valet"            ; DARACH UNUSED 
+	li "Nomad" ; MIRA / unused -->NOMADF FACILITY 
+	li "Brigader"          ; Lanna / ANABEL --> Brigader facility  
+	li "Ninja"            ; DARACH --> Ninja Facility  
 	li "General"          ; bobesh / CANDELA
 	li "General"          ; adrinna / BLANCHE
 	li "Elder"            ; barbeau / SPARK_T
-	li "Trainer"          ; FLANNERY UNUSED 
+	li "Sage"          ; FLANNERY --> facility sage  
 	li "Hisui"           ; Kanna UNUSED
-	li "Pilot"            ; SKYLA UNUSED
-	li "Designer"         ; VALERIE UNUSED 
-	li "<PK><MN> Trainer" ; KUKUI UNUSED 
-	li "Scavenger"        ; VICTOR 
-	li "#Maniac"          ; BILL_T UNUSED 
-	li "Anarres"          ; Tammy
+	li "<PK><MN> Trainer"            ; SKYLA --> facility pkmn trainer 
+	li "Bug Maniac"         ; VALERIE --> facility bug maniac  
+	li "<PK><MN> Trainer" ; KUKUI UNUSED  pkmn trainer historic female 
+	li "<PK><MN> Trainer"        ; VICTOR --> pkmn trainer historic male 
+	li "Trainee"          ; BILL_T --> trainee  
+	li "Anarres"          ; Tammy / ursula 
 	li "<PK><MN> Trainer" ; SILVER FROM WALKER rival
 	li "Student"          ; IMAKUNI, UNUSED 
 	li "General"          ; Kensey  / LAWRENCE

@@ -767,21 +767,21 @@ TrainerClassAttributes:
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
-; Mira
+; Mira-->nomadf facility 
 	db 0, 0 ; items
-	db 16 ; base reward
-	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS + AI_RISKY
+	db 10 ; base reward
+	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
-; Anabel /lanna
+; Anabel /lanna--> Brigader facility  
 	db 0, 0 ; items
-	db 16 ; base reward
-	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_CAUTIOUS + AI_STATUS + AI_RISKY
+	db 10 ; base reward
+	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
-; Darach
+; Darach--> Ninja Facility  
 	db 0, 0 ; items
-	db 25 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
@@ -803,9 +803,9 @@ TrainerClassAttributes:
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
-; Flannery
+; Flannery--> facility sage  
 	db 0, 0 ; items
-	db 25 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
@@ -815,35 +815,35 @@ TrainerClassAttributes:
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
-; Skyla
+; Skyla-->facility pkmn trainer 
 	db 0, 0 ; items
-	db 25 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
-; Valerie
+; Valerie--> facility bug maniac  
 	db 0, 0 ; items
-	db 25 ; base reward
+	db 10 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
-; Kukui
+; Kukui--pkmn trainer historic female 
 	db 0, 0 ; items
-	db 25 ; base reward
+	db 15 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
 	dw CONTEXT_USE + SWITCH_SOMETIMES
 
-; Victor
+; Victor-->pkmn trainer historic male 
 	db 0, 0 ; items
-	db 20 ; base reward
+	db 15 ; base reward
 	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
+	dw CONTEXT_USE + SWITCH_SOMETIMES
+
+; Bill T --> trainee (youngster) 
+	db 0, 0 ; items
+	db 4 ; base reward
+	dw AI_BASIC + AI_STATUS
 	dw CONTEXT_USE + SWITCH_RARELY
-
-; Bill T
-	db 0, 0 ; items
-	db 24 ; base reward
-	dw AI_BASIC + AI_SETUP + AI_TYPES + AI_SMART + AI_OPPORTUNIST + AI_AGGRESSIVE + AI_CAUTIOUS + AI_STATUS + AI_RISKY
-	dw CONTEXT_USE + SWITCH_SOMETIMES
 
 ; Yellow / tammy
 	db 0, 0 ; items

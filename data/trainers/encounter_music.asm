@@ -130,19 +130,19 @@ TrainerEncounterMusic:
 	db MUSIC_BEAUTY_ENCOUNTER ; cheryl
 	db MUSIC_HIKER_ENCOUNTER ; riley
 	db MUSIC_LASS_ENCOUNTER ; marley
-	db MUSIC_LASS_ENCOUNTER ; mira
-	db MUSIC_LASS_ENCOUNTER ; anabel
-	db MUSIC_HIKER_ENCOUNTER ; darach
+	db MUSIC_BEAUTY_ENCOUNTER ; mira--facility nomadf 
+	db MUSIC_OFFICER_ENCOUNTER ; anabel--facility brigader
+	db MUSIC_OFFICER_ENCOUNTER ; darach--facility ninja 
 	db MUSIC_KIMONO_ENCOUNTER ; candela
 	db MUSIC_KIMONO_ENCOUNTER ; blanche
 	db MUSIC_HIKER_ENCOUNTER ; spark_t
-	db MUSIC_HIKER_ENCOUNTER ; flannery
-	db MUSIC_LASS_ENCOUNTER ; maylene
-	db MUSIC_LASS_ENCOUNTER ; skyla
-	db MUSIC_KIMONO_ENCOUNTER ; valerie
-	db MUSIC_HIKER_ENCOUNTER ; kukui
-	db MUSIC_HIKER_ENCOUNTER ; victor
-	db MUSIC_POKEMANIAC_ENCOUNTER ; bill_t
+	db MUSIC_SAGE_ENCOUNTER ; flannery -- facility sage 
+	db MUSIC_LASS_ENCOUNTER ; maylene/kanna 
+	db MUSIC_HIKER_ENCOUNTER ; skyla-- facility pkmntrainer hf
+	db MUSIC_KIMONO_ENCOUNTER ; valerie--facility bug maniac 
+	db MUSIC_HIKER_ENCOUNTER ; kukui--pkmntrainerhf
+	db MUSIC_HIKER_ENCOUNTER ; victor--pkmntrainerhm
+	db MUSIC_YOUNGSTER_ENCOUNTER ; bill_t--trainee 
 	db MUSIC_LASS_ENCOUNTER ; yellow
 	db MUSIC_HIKER_ENCOUNTER ; walker
 	db MUSIC_HIKER_ENCOUNTER ; imakuni

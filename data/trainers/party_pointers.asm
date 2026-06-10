@@ -130,19 +130,19 @@ TrainerGroups:
 	dba CherylGroup
 	dba RileyGroup
 	dba MarleyGroup
-	dba MiraGroup
-	dba LannaGroup
-	dba DarachGroup
+	dba FacilityNomadFGroup
+	dba FacilityBrigaderGroup
+	dba FacilityNinjaGroup
 	dba BobeshGroup
 	dba AdrinnaGroup
 	dba BarbeauGroup
-	dba FlanneryGroup
+	dba FacilitySageGroup
 	dba KannaGroup
-	dba SkylaGroup
-	dba ValerieGroup
-	dba KukuiGroup
-	dba VictorGroup
-	dba BillGroup
+	dba FacilityPKMNTrainerHFGroup
+	dba FacilityBugCatcherGroup
+	dba PKMNTrainerHFGroup
+	dba PKMNTrainerHMGroup
+	dba TraineeGroup
 	dba TammyGroup
 	dba SilverGroup
 	dba ImakuniGroup
