@@ -95,14 +95,18 @@ Fixed Snover palette.
 Ursaluna Bloodmoon respawns with credits.  (todo: check)
 Easier time travel with a Pokemon in Ecruteak and Western Capital. (todo: check!)
 
+* Release 1.0.5
+
+Gardevoir, Gallade, and Kirlia get Hyper Voice. 
+Update rock smash table to avoid getting a fossil. 
 
 Todo: 
-* Gardevoir gets hyper voice
-* remove dome fossil from rock smash 
+* Fix tangela back sprite colors 
 * Replace Kukui class with "Trainee" Class from coroborabonanza
 * Replace Bill-T class with "Cooltrainer-HF" Class from coroborabonanza
 * Replace Victor class with "Cooltrainer-HM" Class from coroborabonanza
 * Replace Clair sprite 
+* Go through Calm Coast and Gauldenrod Tower 2F and Gauldenrod Underground maps; replace with the new trainer classes 
 
 
 v106

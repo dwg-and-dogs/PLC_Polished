@@ -152,7 +152,7 @@ GauldenrodNPC4Script:
 	jumpthistextfaceplayer
 
 	text "I used to resent"
-	line "the Bridgaders"
+	line "the Brigaders"
 	para "taking over, but"
 	line "the stadium is"
 	cont "nice to have."

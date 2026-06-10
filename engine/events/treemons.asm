@@ -35,11 +35,11 @@ RockItemEncounter:
 	ret
 
 .RockItems:
-	db 1, HELIX_FOSSIL
-	db 1, DOME_FOSSIL
-	db 1, NO_ITEM
+	db 1, IRON
+	db 1, CALCIUM
+	db 1, ZINC
 	db 1, BIG_NUGGET
-	db 2, RARE_BONE
+	db 2, THICK_CLUB
 	db 4, NUGGET
 	db 6, STAR_PIECE
 	db 12, BIG_PEARL

@@ -1102,9 +1102,9 @@ KRIS EQU __trainer_class__ ;
 
 	trainerclass MIRA ; 7f CHECKED
 
-	trainerclass LANNA ; 80 CHECKED
+	trainerclass LANNA ; 80 CHECKED todo convert to BRIGADER-FACILITY 
 
-	trainerclass DARACH ; 81 CHECKED 
+	trainerclass DARACH ; 81 todo convert to NINJA-FACLIITY  
 
 	trainerclass BOBESH ; 83 CANDELA CHECKED
 	const BOBESH1_EASY
@@ -1136,7 +1136,7 @@ KRIS EQU __trainer_class__ ;
 	const REMY2_HARD
 	const REMY_FACILITY
 
-	trainerclass FLANNERY ; 86 
+	trainerclass FLANNERY ; todo convert to SAGE-FACILITY
 
 	trainerclass KANNA ; 87 DONE 
 	const KANNA_EASY
@@ -1144,15 +1144,15 @@ KRIS EQU __trainer_class__ ;
 	const KANNA_HARD
 	const KANNA_FACILITY
 
-	trainerclass SKYLA ; 88 CHECKED
+	trainerclass SKYLA ; 88 todo convert to PKMN-TRAINER-HF-FACILITY 
 
-	trainerclass VALERIE ; 89 CHECKED
+	trainerclass VALERIE ; 89 todo convert to BUGCATCHER-FACILITY
 
-	trainerclass KUKUI ; 8a checked 
+	trainerclass KUKUI ; 8a todo conver to PKMN-TRAINER-HF
 
-	trainerclass VICTOR  ; 8b checked
+	trainerclass VICTOR  ; 8b todo convert to PKMN-TRAINER-HM
 
-	trainerclass BILL_T ; 8c checked
+	trainerclass BILL_T ; 8c todo convert to TRAINEE 
 
 	trainerclass TAMMY ; 8d DONE
 	const TAMMY_EASY

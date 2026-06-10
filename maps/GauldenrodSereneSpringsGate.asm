@@ -29,7 +29,7 @@ GauldenrodSereneSpringsGateNPCText:
 	para "coming off of a"
 	line "powerful #mon."
 	
-	para "You'd have find"
+	para "You'd have to find"
 	line "the right spot to"
 	cont "Dig down to find"
 	cont "it, though."

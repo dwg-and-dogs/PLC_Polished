@@ -38,7 +38,7 @@ GauldenrodBrigaderText:
 	text "Stay out of"
 	line "trouble!"
 	
-	para "especially avoid"
+	para "Especially avoid"
 	line "the troublemakers"
 	cont "who gather in the"
 	cont "tunnels."
