@@ -128,19 +128,19 @@ TrainerPicPointers::
 	dba CherylPic
 	dba RileyPic
 	dba MarleyPic
-	dba MiraPic
-	dba LannaPic
-	dba DarachPic
+	dba NomadFPic ; facility
+	dba BrigaderPic ; facility 
+	dba NinjaPic ; facility 
 	dba BobeshPic
 	dba AdrinnaPic
 	dba BarbeauPic
-	dba FlanneryPic
+	dba SagePic ; facility 
 	dba KannaPic
-	dba SkylaPic
-	dba ValeriePic
-	dba KukuiPic
-	dba VictorPic
-	dba BillPic
+	dba PKMNTrainerHFPic ; facility 
+	dba BugManiacPic ; facility 
+	dba PKMNTrainerHFPic
+	dba PKKMNTrainerHMPic
+	dba TraineePic
 	dba TammyPic
 	dba SilverPic ;Rival2Pic
 	dba ImakuniPic

@@ -132,19 +132,19 @@ AmosPalette:             INCLUDE "gfx/trainers/amos.pal" ; plum?
 CherylPalette:           INCLUDE "gfx/trainers/cheryl.pal"
 RileyPalette:            INCLUDE "gfx/trainers/riley.pal"
 MarleyPalette:           INCLUDE "gfx/trainers/marley.pal"
-MiraPalette:             INCLUDE "gfx/trainers/mira.pal"
-LannaPalette:            INCLUDE "gfx/trainers/lanna.pal" ; yellow light
-DarachPalette:           INCLUDE "gfx/trainers/darach.pal"
+FacilityNomadFPalette:             INCLUDE "gfx/trainers/nomad_f.pal"
+FacilityBrigaderPalette:            INCLUDE "gfx/trainers/brigader.pal" 
+FacilityNinjaPalette:           INCLUDE "gfx/trainers/ninja.pal"
 BobeshPalette:           INCLUDE "gfx/trainers/bobesh.pal" ; red
 AdrinnaPalette:          INCLUDE "gfx/trainers/adrinna.pal" ; yellow, dark
 BarbeauPalette:          INCLUDE "gfx/trainers/barbeau.pal" ; blue
-FlanneryPalette:         INCLUDE "gfx/trainers/flannery.pal"
-KannaPalette:            INCLUDE "gfx/trainers/kanna.pal" ;lt blue, misty?
-SkylaPalette:            INCLUDE "gfx/trainers/skyla.pal"
-ValeriePalette:          INCLUDE "gfx/trainers/valerie.pal"
-KukuiPalette:            INCLUDE "gfx/trainers/kukui.pal"
-VictorPalette:           INCLUDE "gfx/trainers/victor.pal"
-BillPalette:             INCLUDE "gfx/trainers/bill.pal"
+FacilitySagePalette:         INCLUDE "gfx/trainers/sage.pal"
+KannaPalette:            INCLUDE "gfx/trainers/kanna.pal" 
+FacilityPKMNTrainerHFPalette:            INCLUDE "gfx/trainers/CooltrainerfPalette.pal"
+FacilityBugCatcherPalette:          INCLUDE "gfx/trainers/bug_maniac.pal"
+PKMNTrainerHFPalette:            INCLUDE "gfx/trainers/CooltrainerfPalette.pal"
+PKMNTrainerHMPalette:           INCLUDE "gfx/trainers/CooltrainermPalette.pal"
+TraineePalette:             INCLUDE "gfx/trainers/trainee.pal"
 TammyPalette:            INCLUDE "gfx/trainers/tammy.pal" ; yellow
 SilverPalette:           INCLUDE "gfx/trainers/rival2.pal" ; done
 ImakuniPalette:          INCLUDE "gfx/trainers/imakuni.pal"

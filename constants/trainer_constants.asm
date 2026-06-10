@@ -13,11 +13,11 @@ ENDM
 ; - TrainerClassDVsAndPersonality (see data/trainers/dvs.asm)..
 ; - TrainerGroups (see data/trainers/party_pointers.asm)..
 ; - TrainerEncounterMusic (see data/trainers/encounter_music.asm)..
-; - TrainerPicPointers (see data/trainers/pic_pointers.asm). ; todo from here 
-; - TrainerPalettes (see data/trainers/palettes.asm).
-; - BTTrainerClassSprites (see data/trainers/sprites.asm).
+; - TrainerPicPointers (see data/trainers/pic_pointers.asm)..
+; - TrainerPalettes (see data/trainers/palettes.asm).. ; todo need trainee palette and pkmn trainer hm hf palettes 
+; - BTTrainerClassSprites (see data/trainers/sprites.asm).-not edited 
 ; - BTTrainerClassGenders (see data/trainers/genders.asm).
-; trainer constants are indexes for the sub-tables of TrainerGroups (see data/trainers/parties.asm)
+; trainer constants are indexes for the sub-tables of TrainerGroups (see data/trainers/parties.asm) -- ; todo: gauldenrod tower 2f + underground trainers 
 CHRIS EQU __trainer_class__
 	trainerclass TRAINER_NONE ; 0
 	const PHONECONTACT_MOM

@@ -9998,20 +9998,20 @@ MarleyGroup:
 
 ; ================================
 
-MiraGroup:
+FacilityNomadFGroup:
 ; ================================
 ; ================
 
 ; ================
 ; ================================
 
-LannaGroup:
+FacilityBrigaderGroup:
 ; ================================
 ; ================
 
 ; ================================
 
-DarachGroup:
+FacilityNinjaGroup:
 ; ================================
 ; ================
 
@@ -10450,7 +10450,7 @@ BarbeauGroup:
 ; ================
 ; ================================
 
-FlanneryGroup:
+FacilitySageGroup:
 ; ================================
 ; ================
 
@@ -10535,39 +10535,99 @@ KannaGroup:
 ; ================
 ; ================================
 
-SkylaGroup:
+FacilityPKMNTrainerHFGroup:
 ; ================================
 ; ================
 
 
 ; ================================
 
-ValerieGroup:
+FacilityBugCatcherGroup:
 ; ================================
 ; ================
 
 
 ; ================================
 
-KukuiGroup:
+PKMNTrainerHFGroup:
+; ================================
+
+; ================
+	; BATTLE_GIRL ' CALM COAST todo remove 
+	db "Subaru@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 10, OSHAWOTT
+	db 16, DEWOTT
+	db -1 ; end
+
+; ================
+
+	; BATTLE_GIRL CALM COAST
+	db "Diane@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 10, MARILL
+	db 18, AZUMARILL
+	db -1 ; end
+
+; ================
+
+	; BATTLE_GIRL CALM COAST
+	db "Kagami@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 10, POLIWAG
+	db 15, POLIWHIRL
+	db -1 ; end
+
+
+; ================================
+
+PKMNTrainerHMGroup:
 ; ================================
 ; ================
 
-
-
+; ================
 ; ================================
 
-VictorGroup:
+TraineeGroup:
 ; ================================
 ; ================
 
 ; ================
-; ================================
 
-BillGroup:
-; ================================
+	; TRAINEE  ; CALM COAST -- TODO REMOVE FROM YOUNGSTER 
+	db "Warren@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 10, TANGELA
+	db 11, MAREEP
+	db 12, NATU
+	db -1 ; end
+
 ; ================
+	
+	; SCHOOLBOY -- TODO REMOVE 
+	db "Jack@" ; calm coast 
+	db TRAINERTYPE_NORMAL
+	; party
+	db 10, CYNDAQUIL
+	db 11, GRIMER
+	db 12, PHANPY
+	db -1 ; end
 
+; ================
+	
+
+	; FROM COOLTRAINERM ; CALM COAST TODO REMOVE AND PLACE 
+	db "Gaven@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 12, RIOLU
+	db 16, GLOOM
+	db 15, LUXIO
+	db -1 ; end
 
 ; ================
 ; ================================
