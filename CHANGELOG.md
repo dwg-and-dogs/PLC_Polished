@@ -97,8 +97,13 @@ Easier time travel with a Pokemon in Ecruteak and Western Capital. (todo: check!
 
 
 Todo: 
-* Box Art update 
-* Hackdex Description
+* Gardevoir gets hyper voice
+* remove dome fossil from rock smash 
+* Replace Kukui class with "Trainee" Class from coroborabonanza
+* Replace Bill-T class with "Cooltrainer-HF" Class from coroborabonanza
+* Replace Victor class with "Cooltrainer-HM" Class from coroborabonanza
+* Replace Clair sprite 
+
 
 v106
 * Special mark on pokemon if they have max DVs
