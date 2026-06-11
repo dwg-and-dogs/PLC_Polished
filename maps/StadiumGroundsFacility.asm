@@ -12,23 +12,26 @@ StadiumGroundsFacility_MapScriptHeader:
 	; you're warped in and out of these - nothing to do here 
 	
 	def_coord_events 
-;	coord_event 19, 13, 0, StadiumFacility_Pokemon1Event
-;	coord_event 0, 0, 1, StadiumFacility_Trainers1Event
-;	coord_event 0, 0, 2, StadiumFacility_Pokemon2Event
-;	coord_event 0, 0, 3, StadiumFacility_Trainers2Event
-;	coord_event 0, 0, 4, StadiumFacility_Pokemon3Event
-;	coord_event 0, 0, 5, StadiumFacility_Trainers3Event
-;	coord_event 0, 0, 6, StadiumFacility_Pokemon4Event
-;	coord_event 0, 0, 7, StadiumFacility_Trainers4Event
-;	coord_event 0, 0, 8, StadiumFacility_Pokemon5Event
-;	coord_event 0, 0, 9, StadiumFacility_Trainers5Event
+	coord_event 18, 15, 0, StadiumFacility_Pokemon1Event
+;	coord_event 18, 15, 1, StadiumFacility_Trainers1Event
+;	coord_event 18, 15, 2, StadiumFacility_Pokemon2Event
+;	coord_event 18, 15, 3, StadiumFacility_Trainers2Event
+;	coord_event 18, 15, 4, StadiumFacility_Pokemon3Event
+;	coord_event 18, 15, 5, StadiumFacility_Trainers3Event
+;	coord_event 18, 15, 6, StadiumFacility_Pokemon4Event
+;	coord_event 18, 15, 7, StadiumFacility_Trainers4Event
+;	coord_event 18, 15, 8, StadiumFacility_Pokemon5Event
+;	coord_event 18, 15, 9, StadiumFacility_Trainers5Event
+
+;	coord_event 18, 15, 10, StadiumFacility_TrainersEndlessEvent	
 
 	def_bg_events
 ; 
 
 
 	def_object_events
-; 	object_event 19, 14, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityClerkScript, EVENT_FACILITY_CLERK
+ 	object_event 19, 15, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityClerkScript, EVENT_FACILITY_CLERK
+ 	object_event 14, 15, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityClerkRetireScript, EVENT_FACILITY_CLERK	
 ;	object_event 0, 0, SPRITE_FACILITY_MON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityMonScript, EVENT_FACILITY_MON
 ;	object_event 0, 0, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityMonBallScript, EVENT_FACILITY_MON_BALL
 
@@ -66,6 +69,37 @@ StadiumGroundsFacility_MapScriptHeader:
 ; 	const STADIUM_FACILITY_AMOS
 ; 	const STADIUM_FACILITY_KURTF
 ; 	const STADIUM_FACILITY_MEJIMI
+
+FacilityClerkRetireScript:
+	faceplayer
+	opentext
+	writethistext
+		text "Would you like"
+		line "to retire?"
+		
+		para "Your current"
+		line "streak is:"
+; print battle tower number 		
+		done
+	waitbutton
+	yesorno
+	iffalse_jumptext KeepBattlingText
+	writethistext
+		text "Really, you're"
+		line "ready to end?"
+		done
+	waitbutton
+	yesorno
+	iffalse_jumptext KeepBattlingText
+	waitbutton
+	closetext
+	; todo add warp sfx 
+	warp STADIUM_GROUNDS_FACILITY_PREP, 13, 12
+	done
+
+KeepBattlingText:
+	text "Good luck!"
+	done
 
 FacilityClerkScript:
 	faceplayer
@@ -123,11 +157,11 @@ FacilityExplainBallText:
 Facility1_1Text:
 	text "Ariados in it."
 
-Facility1_EndMonsText
+Facility1_EndMonsText:
 	text "My other hand has"
 	line "something else."
 	
-	para "Take 
+	para "Take it?" ; todo from here 
 	done
 
 ;StadiumGroundsFacilityScript:

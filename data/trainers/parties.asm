@@ -5421,15 +5421,6 @@ TamerGroup:
 ; ================================
 ; ================
 
-	; TAMER
-	db "Brett@"
-	db TRAINERTYPE_NORMAL ; GAULDENROD
-	; party
-	db 15, GIBLE
-	db -1 ; end
-
-; ================
-
 	; TAMER ; route 39
 	db "Vince@"
 	db TRAINERTYPE_NORMAL

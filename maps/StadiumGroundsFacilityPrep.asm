@@ -19,16 +19,6 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 
 
 	def_object_events ; depending on time of day TODO 
-	; time of day 
-; FROM POLISHED azalea mart 
-;	object_event  8,  6, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, (1 << EVE) | (1 << NITE), PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AzaleaMartRockerText, -1
-; 	object_event  5,  4, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, (1 << EVE) | (1 << NITE), 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, PlayersNeighborsHusbandText, -1
-
-;MORN_HOUR EQU  5 ; 5 AM - 9 AM (4 hours)
-;DAY_HOUR  EQU  9 ; 9 AM - 5 PM (8 hours)
-;EVE_HOUR  EQU 17 ; 5 PM - 8 PM (4 hours)
-;NITE_HOUR EQU 20 ; 8 PM - 5 AM (8 hours)
-
 	object_event 11, 14, SPRITE_TAMMY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, (1 << MORN) | (1 << DAY), 0, OBJECTTYPE_SCRIPT, 0, FacilityUrsulaScript, -1  ; morning - day 
 	object_event 29, 20, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1,(1 << MORN) | (1 << DAY), 0, OBJECTTYPE_SCRIPT, 0, FacilitySilasScript, -1 ; morning - day  
 	object_event 12, 14, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1,(1 << MORN) | (1 << DAY), 0, OBJECTTYPE_SCRIPT, 0, FacilityBethScript, -1 ; morning - day  
@@ -88,12 +78,27 @@ StadiumGroundsFaciltyPrepClerkScript:
 	writetext FacilityPrep_ExplainFullText
 	waitbutton
 .NoExplain:
-	; check if > 1 in your party
-	; if > 1, .PleaseReducePartySize
+	writethistext
+		text "I'll now check if"
+		line "you have more than"
+		para "one #mon in"
+		line "your party."
+		done
+	waitbutton
+	readvar VAR_PARTYCOUNT
+	ifless $2, .WarpToFacility
+	jumpthistext
+		text "Please reduce your"
+		line "party size to"
+		cont "one #mon."
+		done
+	
+.WarpToFacility:
 	writetext FacilityPrep_AreYouReadyText
 	waitbutton
 	yesorno
 	iffalse_jumptext FacilityPrep_GetReadyText
+	warp STADIUM_GROUNDS_FACILITY, 17, 16 
 	; movement, warp you and the clerk to the Facility 
 	end
 	

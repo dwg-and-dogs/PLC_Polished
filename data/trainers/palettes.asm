@@ -140,11 +140,11 @@ AdrinnaPalette:          INCLUDE "gfx/trainers/adrinna.pal" ; yellow, dark
 BarbeauPalette:          INCLUDE "gfx/trainers/barbeau.pal" ; blue
 FacilitySagePalette:         INCLUDE "gfx/trainers/sage.pal"
 KannaPalette:            INCLUDE "gfx/trainers/kanna.pal" 
-FacilityPKMNTrainerHFPalette:            INCLUDE "gfx/trainers/CooltrainerfPalette.pal"
+FacilityPKMNTrainerHFPalette:            INCLUDE "gfx/trainers/cooltrainer_f.pal"
 FacilityBugCatcherPalette:          INCLUDE "gfx/trainers/bug_maniac.pal"
-PKMNTrainerHFPalette:            INCLUDE "gfx/trainers/CooltrainerfPalette.pal"
-PKMNTrainerHMPalette:           INCLUDE "gfx/trainers/CooltrainermPalette.pal"
-TraineePalette:             INCLUDE "gfx/trainers/trainee.pal"
+PKMNTrainerHFPalette:            INCLUDE "gfx/trainers/cooltrainer_f.pal"
+PKMNTrainerHMPalette:           INCLUDE "gfx/trainers/cooltrainer_m.pal"
+TraineePalette:             INCLUDE "gfx/trainers/youngster.pal"
 TammyPalette:            INCLUDE "gfx/trainers/tammy.pal" ; yellow
 SilverPalette:           INCLUDE "gfx/trainers/rival2.pal" ; done
 ImakuniPalette:          INCLUDE "gfx/trainers/imakuni.pal"

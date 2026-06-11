@@ -619,7 +619,6 @@ KRIS EQU __trainer_class__ ;
 
 
 	trainerclass TAMER ; 5d
-	const BRETT
 	const VINCE
 	const OSWALD
 
