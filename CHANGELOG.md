@@ -99,6 +99,9 @@ Easier time travel with a Pokemon in Ecruteak and Western Capital. (todo: check!
 
 Gardevoir, Gallade, and Kirlia get Hyper Voice. 
 Update rock smash table to avoid getting a fossil. 
+Prevent random type npc from giving you a level 0 pokemon. 
+New trainer sprites for Clair, historic cooltrainers, and historic youngster. 
+
 
 Todo: 
 * Fix tangela back sprite colors 

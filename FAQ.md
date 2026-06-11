@@ -14,6 +14,41 @@ If you don't have a gbc file, the ROM you should use for patching:
 It's identical to the one built by the [pokecrystal](https://github.com/pret/pokecrystal) project.
 
 
+### Ancestor / Regional Forms
+
+The ancestor forms have the following attributes:
+
+Ancestor Noctowl:
+	Ghost/Flying
+	hp  atk  def  spd  sat  sdf
+	100,  86,  60,  80,  50,  96 ; 405 BST
+	TECHNICIAN, TINTED_LENS, COMPOUND_EYES 
+
+Ancestor Magcargo
+	Steel/Poison
+	hp  atk  def  spd  sat  sdf
+	60,  85, 60,  90,  75,  60 ; 430 BST
+	CORROSION, WEAK_ARMOR, SPEED_BOOST
+
+Ancestor Xatu
+	Rock/Psychic
+	hp  atk  def  spd  sat  sdf
+	65,  50,  95,  45,  120,  95 ; 470 BST
+	TRACE, MAGIC_GUARD, MAGIC_BOUNCE
+
+Ancestor Meganium
+	Bug/Fairy 
+	hp  atk  def  spd  sat  sdf	
+	80,  100, 82,  80,  100, 83 ; 525 BST
+	COMPOUND_EYES, SHED_SKIN, TINTED_LENS
+
+Ancestor Feraligatr
+	Ground/Electric
+		hp  atk  def  spd  sat  sdf	
+	85, 79, 83,  68,  105,  110 ; 530 BST
+	INTIMIDATE, GUTS, WATER_ABSORB
+
+
 ### Difficulty Selection 
 
 Difficulty can be changed at any time from the title screen by pressing left-B and then continuing your save file. 

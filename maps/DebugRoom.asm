@@ -653,7 +653,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveDark_2:
-	givepoke GRIMER, ALOLAN_FORM, NO_FORM, 5, NO_ITEM
+	givepoke GRIMER, ALOLAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_3:
@@ -661,7 +661,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveDark_4:
-	givepoke QWILFISH, HISUIAN_FORM, NO_FORM, 5, NO_ITEM
+	givepoke QWILFISH, HISUIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveDark_5:
@@ -825,7 +825,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveFairy_6:
-	givepoke PONYTA, GALARIAN_FORM, 5
+	givepoke PONYTA, GALARIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFairy_7:
@@ -889,7 +889,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveFighting_8:
-	givepoke SNEASEL, HISUIAN_FORM, 5
+	givepoke SNEASEL, HISUIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFighting_9:
@@ -936,7 +936,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveFire_4:
-	givepoke GROWLITHE, HISUIAN_FORM, NO_FORM, 5, NO_ITEM
+	givepoke GROWLITHE, HISUIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveFire_5:
@@ -1091,7 +1091,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveGhost_5:
-	givepoke CORSOLA, GALARIAN_FORM, 5
+	givepoke CORSOLA, GALARIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGhost_6:
@@ -1171,7 +1171,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveGrass_7:
-	givepoke VOLTORB, HISUIAN_FORM, NO_FORM, 5, NO_ITEM
+	givepoke VOLTORB, HISUIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveGrass_8:
@@ -1268,7 +1268,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveIce_0:
-	givepoke VULPIX, ALOLAN_FORM, 5
+	givepoke VULPIX, ALOLAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveIce_1:
@@ -1444,7 +1444,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GivePoison_9:
-	givepoke GRIMER, ALOLAN_FORM, 5
+	givepoke GRIMER, ALOLAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_10:
@@ -1452,7 +1452,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GivePoison_11:
-	givepoke QWILFISH, HISUIAN_FORM, 5
+	givepoke QWILFISH, HISUIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePoison_12:
@@ -1464,7 +1464,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GivePoison_14:
-	givepoke SNEASEL, HISUIAN_FORM, 5
+	givepoke SNEASEL, HISUIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .AskGroup14:
@@ -1530,7 +1530,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GivePsychic_10:
-	givepoke PONYTA, GALARIAN_FORM, 5
+	givepoke PONYTA, GALARIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GivePsychic_11:
@@ -1575,7 +1575,7 @@ RandomTypeNPCScript:
 	jumpopenedtext GaveMonText
  
 .GiveRock_3:
-	givepoke GROWLITHE, HISUIAN_FORM, 5
+	givepoke GROWLITHE, HISUIAN_FORM, 5, NO_ITEM
 	jumpopenedtext GaveMonText
  
 .GiveRock_4:
