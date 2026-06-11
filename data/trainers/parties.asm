@@ -2578,16 +2578,6 @@ BirdKeeperGroup:
 
 ; ================
 
-	; BIRD_KEEPER ; TARN 
-	db "Roy@"
-	db TRAINERTYPE_NORMAL
-	; party
-	db 39, RUFFLET
-	db 41, TOGETIC
-	db -1 ; end
-
-; ================
-
 	; BIRD_KEEPER
 	db "Peter@" ; ROUTE 32
 	db TRAINERTYPE_NORMAL
@@ -2689,7 +2679,7 @@ HikerGroup:
 
 ; ================
 
-	; HIKER ; timothy UNION CAVE B2F
+	; HIKER ; timothy UNION CAVE B2F rematch 
 	db "Leonard@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -3183,7 +3173,7 @@ PokemaniacGroup:
 ; ================
 
 	; POKEMANIAC
-	db "Beckett@"
+	db "Beckett@" ; BEN 
 	db TRAINERTYPE_NORMAL
 	; party
 	db 30, SLOWBRO
@@ -3639,7 +3629,7 @@ FirebreatherGroup:
 
 ; ================
 
-	; FIREBREATHER ; UNION CAVE B2F JAY 
+	; FIREBREATHER ; UNION CAVE B2F JAY  
 	db "Ray@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -4760,7 +4750,7 @@ SwimmerMGroup: ; scavengers
 
 ; ================
 
-	; SWIMMERM ; route 40 
+	; SWIMMERM ; route 40 ; charlie 
 	db "Karla@"
 	db TRAINERTYPE_NORMAL
 	; party
@@ -4901,7 +4891,7 @@ ScientistGroup:
 ; ================
 
 	; SCIENTIST ; union cave b2f
-	db "Lowell@" ; LINDEN 
+	db "Lowell@" ; LINDEN  rematch 
 	db TRAINERTYPE_NORMAL
 	; party
 	db 34, MUK
@@ -4912,7 +4902,7 @@ ScientistGroup:
 ; ================
 
 	; SCIENTIST ; oskar  union cave b2f 
-	db "Dennett@"
+	db "Dennett@" ; rematch of dennett  
 	db TRAINERTYPE_NORMAL
 	; party
 	db 33, MAGNETON
@@ -5703,7 +5693,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM
+	; COOLTRAINERM ;  
 	db "Finch@"
 	db TRAINERTYPE_ITEM | TRAINERTYPE_PERSONALITY | TRAINERTYPE_MOVES
 	; party
@@ -5716,7 +5706,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM
+	; COOLTRAINERM ; PETRIE 
 	db "Finch@" ; 
 	db TRAINERTYPE_ITEM | TRAINERTYPE_EVS | TRAINERTYPE_NICKNAME
 	; party

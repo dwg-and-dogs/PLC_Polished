@@ -266,7 +266,6 @@ KRIS EQU __trainer_class__ ;
 	const TOBY
 	const DENIS
 	const HANK
-	const HANK1
 	const PETER
 
 
@@ -279,7 +278,7 @@ KRIS EQU __trainer_class__ ;
 	const BENJAMIN
 	const ERIK
 	const MICHAEL
-	const TIMOTHY
+	const TIMOTHY ; leonard rematch 
 
 	trainerclass BRIGADER
 
@@ -318,7 +317,7 @@ KRIS EQU __trainer_class__ ;
 	const ANDREW
 	const CALVIN
 	const SHANE
-	const BEN
+	const BEN ; beckett 
 	const RON
 	const ETHAN
 	const ISSAC
@@ -518,7 +517,7 @@ KRIS EQU __trainer_class__ ;
 	const ERNEST; ANCHORAGE
 
 
-	trainerclass SWIMMERM ; 4c
+	trainerclass SWIMMERM ; 4c ; diver class 
 	const HAROLD
 	const SIMON
 	const RANDALL
@@ -543,7 +542,7 @@ KRIS EQU __trainer_class__ ;
 	trainerclass SCIENTIST ; 50
 	const LOWELL
 	const DENNETT
-	const LINDEN
+	const LINDEN ; lowell rematch 
 	const OSKAR
 	const BRAYDON
 	const CARL
