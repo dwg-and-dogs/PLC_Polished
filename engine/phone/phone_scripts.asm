@@ -395,7 +395,7 @@ LyraPhoneScript2:
 ; Jack
 
 JackPhoneScript1:
-	gettrainername SCHOOLBOY, JACK1, $0
+	gettrainername SCHOOLBOY, ALAN1, $0
 	checkflag ENGINE_JACK_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd0f3
 	farscall PhoneScript_AnswerPhone_Male
@@ -414,7 +414,7 @@ UnknownScript_0xbd0f3:
 	farsjump JackWantsBattleScript
 
 JackPhoneScript2:
-	gettrainername SCHOOLBOY, JACK1, $0
+	gettrainername SCHOOLBOY, ALAN1, $0
 	farscall PhoneScript_GreetPhone_Male
 	farscall PhoneScript_Random2
 	ifequal $0, JackBattleTrivia
@@ -520,7 +520,7 @@ HueyWantsBattle:
 ; Gaven
 
 GavenPhoneScript1:
-	gettrainername COOLTRAINERM, GAVEN1, $0
+	gettrainername COOLTRAINERM, NICK, $0
 	checkflag ENGINE_GAVEN_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd1fd
 	farscall PhoneScript_AnswerPhone_Male
@@ -539,7 +539,7 @@ UnknownScript_0xbd1fd:
 	farsjump GavenReminderScript
 
 GavenPhoneScript2:
-	gettrainername COOLTRAINERM, GAVEN1, $0
+	gettrainername COOLTRAINERM, NICK, $0
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_GAVEN_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd220
@@ -609,7 +609,7 @@ BethWantsBattle:
 ; Jose
 
 JosePhoneScript1:
-	gettrainername BIRD_KEEPER, JOSE2, $0
+	gettrainername BIRD_KEEPER, VANCE1, $0
 	checkflag ENGINE_JOSE_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd2bd
 	farscall PhoneScript_AnswerPhone_Male
@@ -634,7 +634,7 @@ UnknownScript_0xbd2c4:
 	farsjump JoseReminderScript
 
 JosePhoneScript2:
-	gettrainername BIRD_KEEPER, JOSE2, $0
+	gettrainername BIRD_KEEPER, VANCE1, $0
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_JOSE_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd2f5
@@ -671,7 +671,7 @@ JoseHasStarPiece:
 ; Reena
 
 ReenaPhoneScript1:
-	gettrainername COOLTRAINERF, REENA1, $0
+	gettrainername COOLTRAINERF, KATE, $0
 	checkflag ENGINE_REENA_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd33f
 	farscall PhoneScript_AnswerPhone_Female
@@ -690,7 +690,7 @@ UnknownScript_0xbd33f:
 	farsjump ReenaHurryScript
 
 ReenaPhoneScript2:
-	gettrainername COOLTRAINERF, REENA1, $0
+	gettrainername COOLTRAINERF, KATE, $0
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_REENA_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd362
@@ -1168,7 +1168,7 @@ ToddDeptStoreSale:
 ; Gina
 
 GinaPhoneScript1:
-	gettrainername PICNICKER, GINA1, $0
+	gettrainername PICNICKER, LIZ1, $0
 	checkflag ENGINE_GINA_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbd776
 	farscall PhoneScript_AnswerPhone_Female
@@ -1198,7 +1198,7 @@ UnknownScript_0xbd77d:
 	farsjump GinaComePickUpScript
 
 GinaPhoneScript2:
-	gettrainername PICNICKER, GINA1, $0
+	gettrainername PICNICKER, LIZ1, $0
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
 	iftrue GinaRockets
@@ -1810,7 +1810,7 @@ VanceWantsRematch:
 	farsjump PhoneScript_WantsToBattle_Male
 
 WiltonPhoneScript1:
-	gettrainername FISHER, WILTON1, $0
+	gettrainername FISHER, RALPH1, $0
 	checkflag ENGINE_WILTON_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbdcf7
 	farscall PhoneScript_AnswerPhone_Male
@@ -1835,7 +1835,7 @@ UnknownScript_0xbdcfe:
 	farsjump WiltonWantThisScript
 
 WiltonPhoneScript2:
-	gettrainername FISHER, WILTON1, $0
+	gettrainername FISHER, RALPH1, $0
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_WILTON_READY_FOR_REMATCH
 	iftrue UnknownScript_0xbdd2f

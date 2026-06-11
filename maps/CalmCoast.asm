@@ -21,11 +21,11 @@ CalmCoast_MapScriptHeader:
 	def_object_events
 	object_event 14, 40, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastKurtScript, EVENT_GAULDENROD_BRIGADER_CINDY
 	object_event 15, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterWarren, EVENT_BEAT_BOBESH_STADIUM ;
-	object_event 11, 21, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
+	object_event 11, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerMGaven, -1
 	object_event 11, 6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerYoungsterJimmy, -1
-	object_event 6, 50, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlSubaru, -1
-	object_event 7, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlDiane, -1
-	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlKagami, -1
+	object_event 6, 50, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlSubaru, -1
+	object_event 7, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlDiane, -1
+	object_event 5, 48, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBattleGirlKagami, -1
 ;	object_event 8, 51, SPRITE_MATRON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CalmCoastMatronIceMonGiftScript, -1
 	object_event 11, 4, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBrigader2, EVENT_BEAT_BOBESH_STADIUM
 	tmhmball_event 9, 49, TM_ROAR, EVENT_GOT_TM05_ROAR
@@ -41,7 +41,7 @@ CalmCoast_MapScriptHeader:
 ;	const CALM_COAST_KURT
 
 GenericTrainerYoungsterWarren:
-	generictrainer YOUNGSTER, WARREN, EVENT_BEAT_YOUNGSTER_WARREN, YoungsterWarrenSeenText, YoungsterWarrenBeatenText
+	generictrainer TRAINEE, WARREN, EVENT_BEAT_YOUNGSTER_WARREN, YoungsterWarrenSeenText, YoungsterWarrenBeatenText
 
 	text "Can you tell the"
 	line "old guy I'm ready"
@@ -62,7 +62,7 @@ YoungsterWarrenBeatenText:
 	done
 
 GenericTrainerCooltrainerMGaven:
-	generictrainer COOLTRAINERM, GAVEN1, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainerMGavenSeenText, CooltrainerMGavenBeatenText
+	generictrainer TRAINEE, GAVEN, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainerMGavenSeenText, CooltrainerMGavenBeatenText
 
 	text "The bazaar has so"
 	line "many vendors."
@@ -82,7 +82,7 @@ CooltrainerMGavenSeenText:
 	done
 
 GenericTrainerYoungsterJimmy:
-	generictrainer SCHOOLBOY, JACK1, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJackSeenText, SchoolboyJackBeatenText
+	generictrainer TRAINEE, JACK, EVENT_BEAT_SCHOOLBOY_JACK, SchoolboyJackSeenText, SchoolboyJackBeatenText
 
 	text "The strongest"
 	line "#mon trainers"
@@ -105,7 +105,7 @@ SchoolboyJackBeatenText:
 	done
 
 GenericTrainerBattleGirlSubaru:
-	generictrainer BATTLE_GIRL, SUBARU, EVENT_BEAT_BATTLE_GIRL_SUBARU, BattleGirlSubaruSeenText, BattleGirlSubaruBeatenText
+	generictrainer PKMN_TRAINER_HF, SUBARU, EVENT_BEAT_BATTLE_GIRL_SUBARU, BattleGirlSubaruSeenText, BattleGirlSubaruBeatenText
 
 	text "Watch out for my"
 	line "sisters."
@@ -122,7 +122,7 @@ BattleGirlSubaruBeatenText:
 	done
 
 GenericTrainerBattleGirlDiane:
-	generictrainer BATTLE_GIRL, DIANE, EVENT_BEAT_BATTLE_GIRL_DIANE, BattleGirlDianeSeenText, BattleGirlDianeBeatenText
+	generictrainer PKMN_TRAINER_HF, DIANE, EVENT_BEAT_BATTLE_GIRL_DIANE, BattleGirlDianeSeenText, BattleGirlDianeBeatenText
 
 	text "We're training for"
 	line "an attack on the"
@@ -140,7 +140,7 @@ BattleGirlDianeBeatenText:
 	done
 
 GenericTrainerBattleGirlKagami:
-	generictrainer BATTLE_GIRL, KAGAMI, EVENT_BEAT_BATTLE_GIRL_KAGAMI, BattleGirlKagamiSeenText, BattleGirlKagamiBeatenText
+	generictrainer PKMN_TRAINER_HF, KAGAMI, EVENT_BEAT_BATTLE_GIRL_KAGAMI, BattleGirlKagamiSeenText, BattleGirlKagamiBeatenText
 
 	text "This spot is so"
 	line "quiet, it's good"

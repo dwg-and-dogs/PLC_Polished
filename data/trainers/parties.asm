@@ -3781,7 +3781,17 @@ PsychicGroup:
 	db -1 ; end
 
 
+; ================
 
+	; PSYCHIC_T
+	db "Greg@" ; ROUTE 37 
+	db TRAINERTYPE_MOVES
+	; party
+	db 27, HAUNTER
+		db HYPNOSIS, DREAM_EATER, CURSE, NIGHT_SHADE
+	db 27, SLOWPOKE
+		db REST, SLEEP_TALK, CURSE, ZEN_HEADBUTT
+	db -1 ; endf
 ; ================
 ; ================================
 
@@ -4606,7 +4616,16 @@ BreederGroup:
 	db 14, MAGMAR, EVIOLITE, ABILITY_1 | NAT_NEUTRAL, FEMALE
 	db 14, ELECTABUZZ, EVIOLITE, SHINY_MASK | ABILITY_1 | NAT_NEUTRAL, FEMALE
 	db -1 ; end
+; ================
 
+	; BREEDER
+	db "Jody@"
+	db TRAINERTYPE_ITEM
+	; party
+	db 24, SNUBBULL, EVIOLITE
+	db 24, MACHOP, EVIOLITE
+	db 24, TOGETIC, EVIOLITE
+	db -1 ; end
 
 ; ================
 ; ================================
@@ -5747,6 +5766,15 @@ CooltrainerFGroup:
 	db 35, SLOWKING
 	db -1 ; end
 
+; ================
+
+	; COOLTRAINERF
+	db "Gwen@" ; route 35
+	db TRAINERTYPE_NORMAL
+	; party
+	db 22, CORSOLA
+	db 22, TOGETIC
+	db -1 ; end
 ; ================
 ; ================================
 

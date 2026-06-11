@@ -14,17 +14,17 @@ GauldenrodTower2F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  0,  0, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerAromaLadyBryony, EVENT_BEAT_SANDRA
-	object_event  6,  7, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerAromaLadyRosa, EVENT_BEAT_SANDRA
-	object_event  5,  7, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerAromaLadyPeony, EVENT_BEAT_SANDRA
+	object_event  0,  0, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerAromaLadyBryony, EVENT_BEAT_SANDRA
+	object_event  6,  7, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerAromaLadyRosa, EVENT_BEAT_SANDRA
+	object_event  5,  7, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerAromaLadyPeony, EVENT_BEAT_SANDRA
 
-	object_event  8,  1, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperVance, EVENT_BEAT_SANDRA
+	object_event  8,  1, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBirdKeeperVance, EVENT_BEAT_SANDRA
 	object_event  2,  2, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFirebreatherNed, EVENT_BEAT_SANDRA
-	object_event 11, 11, SPRITE_VETERAN_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerVeteranFJoanne, EVENT_BEAT_SANDRA
+	object_event 11, 11, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerVeteranFJoanne, EVENT_BEAT_SANDRA
 
 
 GenericTrainerAromaLadyBryony:
-	generictrainer AROMA_LADY, BRYONY, EVENT_BEAT_AROMA_LADY_BRYONY, AromaLadyBryonySeenText, AromaLadyBryonyBeatenText
+	generictrainer PKMN_TRAINER_HF, BRYONY, EVENT_BEAT_AROMA_LADY_BRYONY, AromaLadyBryonySeenText, AromaLadyBryonyBeatenText
 
 	text "I don't see how"
 	line "this tower could"
@@ -43,7 +43,7 @@ AromaLadyBryonyBeatenText:
 	done
 
 GenericTrainerAromaLadyRosa:
-	generictrainer AROMA_LADY, ROSA, EVENT_BEAT_AROMA_LADY_ROSA, AromaLadyRosaSeenText, AromaLadyRosaBeatenText
+	generictrainer PKMN_TRAINER_HF, ROSA, EVENT_BEAT_AROMA_LADY_ROSA, AromaLadyRosaSeenText, AromaLadyRosaBeatenText
 
 	text "This tower is how"
 	line "people connect"
@@ -62,7 +62,7 @@ AromaLadyRosaBeatenText:
 	done
 
 GenericTrainerAromaLadyPeony:
-	generictrainer AROMA_LADY, PEONY, EVENT_BEAT_AROMA_LADY_PEONY, AromaLadyPeonySeenText, AromaLadyPeonyBeatenText
+	generictrainer PKMN_TRAINER_HF, PEONY, EVENT_BEAT_AROMA_LADY_PEONY, AromaLadyPeonySeenText, AromaLadyPeonyBeatenText
 
 	text "A contribution can"
 	line "be made by even"
@@ -82,7 +82,7 @@ AromaLadyPeonyBeatenText:
 	done
 
 GenericTrainerBirdKeeperVance:
-	generictrainer BIRD_KEEPER, VANCE1, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVanceSeenText, BirdKeeperVanceBeatenText
+	generictrainer PKMN_TRAINER_HM, VANCE, EVENT_BEAT_BIRD_KEEPER_VANCE, BirdKeeperVanceSeenText, BirdKeeperVanceBeatenText
 
 	text "I heard someone"
 	line "organized against"
@@ -104,14 +104,14 @@ GenericTrainerFirebreatherNed:
 	generictrainer FIREBREATHER, NED, EVENT_BEAT_FIREBREATHER_NED, FirebreatherNedSeenText, FirebreatherNedBeatenText
 
 	text "We must turn away"
-	line "from the Stadium."
+	line "from the Stadium!"
 	done
 
 FirebreatherNedSeenText:
 	text "The bell at the"
 	line "top of this tower"
-	cont "was forged from"
-	cont "intense heat. Can"
+	para "was forged from"
+	line "intense heat. Can"
 	cont "you handle it?"
 	done
 
@@ -120,7 +120,7 @@ FirebreatherNedBeatenText:
 	done
 
 GenericTrainerVeteranFJoanne:
-	generictrainer VETERANF, JOANNE, EVENT_BEAT_VETERANF_JOANNE, VeteranFJoanneSeenText, VeteranFJoanneBeatenText
+	generictrainer PKMN_TRAINER_HF, JOANNE, EVENT_BEAT_VETERANF_JOANNE, VeteranFJoanneSeenText, VeteranFJoanneBeatenText
 
 	text "Sandra has been"
 	line "trying to coax"

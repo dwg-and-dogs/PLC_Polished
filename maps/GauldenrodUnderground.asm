@@ -13,11 +13,11 @@ GauldenrodUnderground_MapScriptHeader:
 
 
 	def_object_events
-	object_event  1, 15, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerAromaLadyDahlia, EVENT_GAULDENROD_TUNNELERS
-	object_event  2, 17, SPRITE_FIREBREATHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFirebreatherDick, EVENT_GAULDENROD_TUNNELERS
-	object_event  1, 20, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTamerBrett, EVENT_GAULDENROD_TUNNELERS
-	object_event  2, 25, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CooltrainerFBethScript, EVENT_GAULDENROD_TUNNELERS
-	object_event  1, 26, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundNPC5Script, EVENT_GAULDENROD_TUNNELERS
+	object_event  1, 15, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerAromaLadyDahlia, EVENT_GAULDENROD_TUNNELERS
+	object_event  2, 17, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerFirebreatherDick, EVENT_GAULDENROD_TUNNELERS
+	object_event  1, 20, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerTamerBrett, EVENT_GAULDENROD_TUNNELERS
+	object_event  2, 25, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CooltrainerFBethScript, EVENT_GAULDENROD_TUNNELERS
+	object_event  1, 26, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, GauldenrodUndergroundNPC5Script, EVENT_GAULDENROD_TUNNELERS
 	itemball_event 1,  7, BIG_ROOT, 1, EVENT_UNDERGROUND_BIG_ROOT
 	strengthboulder_event 4, 10
 
@@ -30,7 +30,7 @@ GauldenrodUnderground_MapScriptHeader:
 	const GAULDENRODUNDERGROUND_NPC5
 
 GenericTrainerAromaLadyDahlia:
-	generictrainer AROMA_LADY, DAHLIA, EVENT_BEAT_AROMA_LADY_DAHLIA, AromaLadyDahliaSeenText, AromaLadyDahliaBeatenText
+	generictrainer PKMN_TRAINER_HF, DAHLIA, EVENT_BEAT_AROMA_LADY_DAHLIA, AromaLadyDahliaSeenText, AromaLadyDahliaBeatenText
 
 	text "The elders have"
 	line "been trying to"
@@ -55,7 +55,7 @@ AromaLadyDahliaBeatenText:
 	done
 
 GenericTrainerFirebreatherDick:
-	generictrainer FIREBREATHER, DICK, EVENT_BEAT_FIREBREATHER_DICK, FirebreatherDickSeenText, FirebreatherDickBeatenText
+	generictrainer PKMN_TRAINER_HM, DALVIN, EVENT_BEAT_FIREBREATHER_DICK, FirebreatherDickSeenText, FirebreatherDickBeatenText
 
 	text "There's an aquifer"
 	line "under the stadium."
@@ -76,7 +76,7 @@ FirebreatherDickBeatenText:
 	done
 
 GenericTrainerTamerBrett:
-	generictrainer TAMER, BRETT, EVENT_BEAT_TAMER_BRETT, TamerBrettSeenText, TamerBrettBeatenText
+	generictrainer PKMN_TRAINER_HM, BRETT, EVENT_BEAT_TAMER_BRETT, TamerBrettSeenText, TamerBrettBeatenText
 
 	text "I was supposed to"
 	line "take him on my"
@@ -114,13 +114,13 @@ CooltrainerFBethScript:
 	readdifficultymode
 	ifequal DIFFICULTY_EASY, .easy
 	ifequal DIFFICULTY_HARD, .hard
-	loadtrainer COOLTRAINERF, BETH2_NORMAL
+	loadtrainer PKMN_TRAINER_HF, BETH2_NORMAL
 	sjump .startbattle
 .easy:
-	loadtrainer COOLTRAINERF, BETH1_EASY
+	loadtrainer PKMN_TRAINER_HF, BETH1_EASY
 	sjump .startbattle
 .hard:
-	loadtrainer COOLTRAINERF, BETH3_HARD
+	loadtrainer PKMN_TRAINER_HF, BETH3_HARD
 .startbattle:	
 	; END
 	startbattle

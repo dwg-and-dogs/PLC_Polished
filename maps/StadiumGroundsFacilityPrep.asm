@@ -417,7 +417,7 @@ FacilityBethScript:
 	iffalse_jumpopenedtext FacilityBethRefusedText
 	winlosstext FacilityBethWinText, FacilityBethLossText
 	setlasttalked FACILITY_BETH
-	loadtrainer COOLTRAINERF, BETH_FACILITY
+	loadtrainer PKMN_TRAINER_HF, BETH_FACILITY
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap

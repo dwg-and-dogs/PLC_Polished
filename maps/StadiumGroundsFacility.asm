@@ -52,7 +52,7 @@ StadiumGroundsFacility_MapScriptHeader:
 
 	
 	object_const_def
-; 	const STADIUM_FACILITY_CLERK
+ 	const STADIUM_FACILITY_CLERK
 ; 	const STADIUM_FACILITY_MON
 
 ; 	const STADIUM_FACILITY_BUG_CATCHER

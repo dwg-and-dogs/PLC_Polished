@@ -99,7 +99,7 @@ GenericTrainerFirebreatherRoute36:
 	done
 
 GenericTrainerPicnickerRoute36:
-	generictrainer PICNICKER, GINA1, EVENT_BEAT_PICNICKER_GINA, Route36PicnickerSeenText, Route36PicnickerBeatenText
+	generictrainer PICNICKER, GINA, EVENT_BEAT_PICNICKER_GINA, Route36PicnickerSeenText, Route36PicnickerBeatenText
 
 	text "What to do?"
 	

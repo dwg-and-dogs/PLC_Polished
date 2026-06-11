@@ -16,22 +16,22 @@ PhoneContacts:
 	phone TRAINER_NONE, PHONECONTACT_BILL,     N_A,                       %1111, BillPhoneScript1,    %0000, BillPhoneScript2
 	phone TRAINER_NONE, PHONECONTACT_ELM,      N_A,              	      %1111, ElmPhoneScript1,     %0000, ElmPhoneScript2
 	phone TRAINER_NONE, PHONECONTACT_LYRA,     N_A,           			  %1111, LyraPhoneScript,     %0000, LyraPhoneScript2
-	phone SCHOOLBOY,    JACK1,                 NATIONAL_PARK,             %1111, JackPhoneScript1,    %1111, JackPhoneScript2
+	phone SCHOOLBOY,    JOHNNY,                 NATIONAL_PARK,             %1111, JackPhoneScript1,    %1111, JackPhoneScript2
 	phone POKEFANF,     BEVERLY1,              NATIONAL_PARK,             %1111, BeverlyPhoneScript1, %1111, BeverlyPhoneScript2
 	phone SAILOR,       HUEY1,                 OLIVINE_LIGHTHOUSE_2F,     %1111, HueyPhoneScript1,    %1111, HueyPhoneScript2
 	phone TRAINER_NONE, PHONE_00,              N_A,                       %0000, UnusedPhoneScript,   %0000, UnusedPhoneScript
 	phone TRAINER_NONE, PHONE_00,              N_A,                       %0000, UnusedPhoneScript,   %0000, UnusedPhoneScript
-	phone COOLTRAINERM, GAVEN1,                N_A,                       %1111, GavenPhoneScript1,   %1111, GavenPhoneScript2
+	phone COOLTRAINERM, CODY,                N_A,                       %1111, GavenPhoneScript1,   %1111, GavenPhoneScript2
 	phone COOLTRAINERF, BETH1_EASY,                 N_A,                       %1111, BethPhoneScript1,    %1111, BethPhoneScript2
 	phone BIRD_KEEPER,  JOSE1,                 N_A,                       %1111, JosePhoneScript1,    %1111, JosePhoneScript2
-	phone COOLTRAINERF, REENA1,                N_A,                       %1111, ReenaPhoneScript1,   %1111, ReenaPhoneScript2
+	phone COOLTRAINERF, IRENE,                N_A,                       %1111, ReenaPhoneScript1,   %1111, ReenaPhoneScript2
 	phone YOUNGSTER,    JOEY1,                 N_A,                       %1111, JoeyPhoneScript1,    %1111, JoeyPhoneScript2
 	phone BUG_CATCHER,  WADE1,                 N_A,                       %1111, WadePhoneScript1,    %1111, WadePhoneScript2
 	phone FISHER,       RALPH1,                ROUTE_32,                  %1111, RalphPhoneScript1,   %1111, RalphPhoneScript2
 	phone PICNICKER,    LIZ1,                  ROUTE_32,                  %1111, LizPhoneScript1,     %1111, LizPhoneScript2
 	phone HIKER,        ANTHONY1,              ROUTE_33,                  %1111, AnthonyPhoneScript1, %1111, AnthonyPhoneScript2
 	phone CAMPER,       TODD1,                 ROUTE_34,                  %1111, ToddPhoneScript1,    %1111, ToddPhoneScript2
-	phone PICNICKER,    GINA1,                 ROUTE_34,                  %1111, GinaPhoneScript1,    %1111, GinaPhoneScript2
+	phone PICNICKER,    TIFFANY1,                 ROUTE_34,                  %1111, GinaPhoneScript1,    %1111, GinaPhoneScript2
 	phone JUGGLER,      IRWIN1,                ROUTE_35,                  %1111, IrwinPhoneScript1,   %1111, IrwinPhoneScript2
 	phone BUG_CATCHER,  ARNIE1,                ROUTE_35,                  %1111, ArniePhoneScript1,   %1111, ArniePhoneScript2
 	phone SCHOOLBOY,    ALAN1,                 ROUTE_36,                  %1111, AlanPhoneScript1,    %1111, AlanPhoneScript2
@@ -43,7 +43,7 @@ PhoneContacts:
 	phone POKEMANIAC,   BRENT1,                ROUTE_43,                  %1111, BrentPhoneScript1,   %1111, BrentPhoneScript2
 	phone PICNICKER,    TIFFANY1,              ROUTE_43,                  %1111, TiffanyPhoneScript1, %1111, TiffanyPhoneScript2
 	phone BIRD_KEEPER,  VANCE1,                N_A,                       %1111, VancePhoneScript1,   %1111, VancePhoneScript2
-	phone FISHER,       WILTON1,               N_A,                       %1111, WiltonPhoneScript1,  %1111, WiltonPhoneScript2
+	phone FISHER,       KYLE,               N_A,                       %1111, WiltonPhoneScript1,  %1111, WiltonPhoneScript2
 	phone BLACKBELT_T,  KENJI1,                N_A,                       %1111, KenjiPhoneScript1,   %1111, KenjiPhoneScript2
 	phone HIKER,        PARRY1,                N_A,                       %1111, ParryPhoneScript1,   %1111, ParryPhoneScript2
 	phone PICNICKER,    ERIN1,                 N_A,                       %1111, ErinPhoneScript1,    %1111, ErinPhoneScript2

@@ -20,7 +20,7 @@ BugContestant_BugCatcherDon:
 	dbw LEDIAN,   226
 
 BugContestant_BugCatcherEd:
-	db BUG_CATCHER, ED
+	db BUG_CATCHER, WADE1
 	dbw YANMA,      286
 	dbw LEDIAN, 251
 	dbw LEDIAN,   237
@@ -50,7 +50,7 @@ BugContestant_CamperBarry:
 	dbw ARIADOS,     314
 
 BugContestant_PicnickerCindy:
-	db PICNICKER, CINDY
+	db PICNICKER, TIFFANY1
 	dbw LEDIAN, 341
 	dbw LEDIAN,    301
 	dbw LEDIAN,   264
@@ -68,7 +68,7 @@ BugContestant_SchoolboyJohnny:
 	dbw LEDIAN,   251
 
 BugContestant_SchoolboyKipp:
-	db SCHOOLBOY, KIPP
+	db SCHOOLBOY, CHAD1
 	dbw YANMA,    267
 	dbw PARAS,      254
 	dbw ARIADOS,     259

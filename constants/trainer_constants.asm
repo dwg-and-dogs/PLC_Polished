@@ -397,7 +397,7 @@ KRIS EQU __trainer_class__ ;
 
 	trainerclass PSYCHIC_T ; 39
 	const NATHAN
-
+	const GREG 
 
 
 	trainerclass HEX_MANIAC ; 3a
@@ -499,8 +499,8 @@ KRIS EQU __trainer_class__ ;
 
 	trainerclass BREEDER ; 48
 	const JULIE
-	const THERESA
-
+	const THERESA	
+	const JODY 
 
 	trainerclass BAKER ; 49
 
@@ -667,7 +667,7 @@ KRIS EQU __trainer_class__ ;
 	const KATE
 	const IRENE
 	const JENN
-
+	const GWEN 
 
 	trainerclass ACE_DUO ; 67
 
@@ -709,7 +709,7 @@ KRIS EQU __trainer_class__ ;
 	trainerclass PROF_IVY ; 71 CHECKED
 
 	trainerclass MYSTICALMAN ; 72 CHECKED
-
+	const EUSINE ; keep this even though its not anything 
 
 	trainerclass KARATE_KING ; 73 CHECKED
 
