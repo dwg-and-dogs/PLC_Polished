@@ -6,6 +6,7 @@ __trainer_class__ += 1
 	const_def 1
 ENDM
 
+; TODO MAKE SURE THAT THESE PARTIES RECONCILE!!
 ; trainer class ids
 ; `trainerclass` indexes are for:
 ; - TrainerClassNames (see data/trainers/class_names.asm)..
@@ -212,7 +213,6 @@ KRIS EQU __trainer_class__ ;
 	const MIKEY
 	const ALBERT
 	const GORDON
-	const WARREN
 	const JIMMY
 	const OWEN
 	const JASON
@@ -262,85 +262,23 @@ KRIS EQU __trainer_class__ ;
 
 	trainerclass PICNICKER ; 22
 	const LIZ1
-	const GINA1
-	const GINA2
-	const GINA3
-	const GINA4
-	const GINA5
 	const ERIN1
-	const ERIN2
-	const ERIN3
 	const TIFFANY1
-	const TIFFANY2
-	const TIFFANY3
-	const TIFFANY4
-	const KIM
-	const CINDY
-	const HOPE
-	const SHARON
-	const DEBRA
-	const HEIDI
-	const EDNA
-	const TANYA
-	const LILY
-	const PIPER
-	const GINGER
-	const CHEYENNE
-	const ADRIAN
+
 
 	trainerclass TWINS ; 23
-	const AMYANDMAY1
-	const AMYANDMAY2
 	const ANNANDANNE1
 	const ANNANDANNE2
-	const JOANDZOE1
-	const JOANDZOE2
-	const MEGANDPEG1
-	const MEGANDPEG2
-	const LEAANDPIA1
-	const LEAANDPIA2
-	const DAYANDDANI1
-	const DAYANDDANI2
-	const KAYANDTIA1
-	const KAYANDTIA2
+
 
 	trainerclass FISHER ; 24
 	const RALPH1
-	const RALPH2
-	const RALPH3
-	const RALPH4
-	const RALPH5
 	const TULLY
-	const TULLY2
-	const TULLY3
-	const TULLY4
-	const WILTON1
-	const WILTON2
-	const WILTON3
 	const JUSTIN
 	const ARNOLD
 	const KYLE
 	const HENRY
-	const MARVIN
-	const ANDRE
-	const RAYMOND
-	const EDGAR
-	const JONAH
-	const MARTIN
-	const STEPHEN
-	const BARNEY
-	const SCOTT
-	const PATON
-	const KILEY
-	const FRANCIS
-	const LEROY
-	const KYLER
-	const MURPHY
-	const LIAM
-	const GIDEON
-	const DUNDEE
-	const HALL
-	const DALLAS
+
 
 	trainerclass BIRD_KEEPER ; 25
 	const VANCE1
@@ -511,21 +449,7 @@ KRIS EQU __trainer_class__ ;
 	const CATHY
 	const AMANDA
 	const KRISE
-	const CONNIE
-	const LINDA
-	const LAURA
-	const SHANNON
-	const MICHELLE
-	const ELLEN
-	const IRIS
-	const MIRIAM
-	const LAYLA
-	const ROSE
-	const MEADOW
-	const JENNIFER
-	const GINA
-	const ALICE
-	const DUPLICA
+
 
 	trainerclass BEAUTY ; 32
 	const VICTORIA
@@ -569,9 +493,8 @@ KRIS EQU __trainer_class__ ;
 	const PETRY2_NORMAL
 	const PETRY2_HARD
 
-	trainerclass FIREBREATHER ; 35
+	trainerclass FIREBREATHER ; 35 checked 
 	const OTIS
-	const DICK
 	const NED
 	const BURT
 	const BILL
@@ -580,43 +503,16 @@ KRIS EQU __trainer_class__ ;
 	const LYLE
 	const JAY
 	const OLEG
-	const TALA
 
-	trainerclass JUGGLER ; 36
+
+	trainerclass JUGGLER ; 36 checked 
 	const IRWIN1
-	const FRITZ
-	const HORTON
 
 	trainerclass SCHOOLBOY ; 37
-	const JACK1
-	const JACK2
-	const JACK3
-	const JACK4
-	const JACK5
 	const ALAN1
-	const ALAN2
-	const ALAN3
-	const ALAN4
-	const ALAN5
 	const CHAD1
-	const CHAD2
-	const CHAD3
-	const CHAD4
-	const CHAD5
-	const KIPP
 	const JOHNNY
-	const DANNY
-	const TOMMY
-	const DUDLEY
-	const JOE
-	const BILLY
-	const NATE
-	const RICKY
-	const SHERMAN
-	const SCHOOLBOY_CONNOR
-	const TORIN
-	const TRAVIS
-
+	
 	trainerclass SCHOOLGIRL ; 38
 	const MOLLY
 	const ELIZA
@@ -896,12 +792,8 @@ KRIS EQU __trainer_class__ ;
 
 
 	trainerclass BATTLE_GIRL ; 55
-	const SUBARU
-	const DIANE
-	const KAGAMI
 	const NOZOMI
 	const RONDA
-
 
 	trainerclass DRAGON_TAMER ; 56
 	const PAUL
@@ -950,13 +842,9 @@ KRIS EQU __trainer_class__ ;
 	const REINA
 	const MARIO 
 
-	trainerclass AROMA_LADY ; 5f 
-	const DAHLIA
-	const BRYONY
+	trainerclass AROMA_LADY ; 5f TODO UPDATE 
 	const HEATHER
 	const HOLLY
-	const PEONY
-	const ROSA
 
 
 	trainerclass WAITER ; 60
@@ -983,9 +871,6 @@ KRIS EQU __trainer_class__ ;
 
 
 	trainerclass COOLTRAINERM ; 65
-	const GAVEN1
-	const GAVEN2
-	const GAVEN3
 	const NICK
 	const AARON
 	const CODY
@@ -1005,26 +890,8 @@ KRIS EQU __trainer_class__ ;
 
 
 	trainerclass COOLTRAINERF ; 66
-	const BETH1_EASY ; done 
-	const BETH2_NORMAL
-	const BETH3_HARD 
-	const BETH_FACILITY
-	const REENA1
-	const REENA2
-	const REENA3
-	const GWEN
-	const LOIS
-	const FRAN
-	const LOLA
 	const KATE
 	const IRENE
-	const KELLY
-	const JOYCE
-	const MEGAN
-	const CAROL
-	const QUINN
-	const EMMA
-	const CYBIL
 	const JENN
 
 
@@ -1049,8 +916,7 @@ KRIS EQU __trainer_class__ ;
 	const MATT
 
 	trainerclass VETERANF ; 69
-	const JOANNE
-	const SYLVIE
+
 
 	trainerclass PROTON ; 6a CHECKED
 
@@ -1148,11 +1014,32 @@ KRIS EQU __trainer_class__ ;
 
 	trainerclass BUG_MANIAC_FACILITY ; 89 todo convert to BUGCATCHER-FACILITY
 
-	trainerclass PKMN_TRAINER_HF ; 8a todo conver to PKMN-TRAINER-HF
+	trainerclass PKMN_TRAINER_HF ; 8a DONE 
+	const SUBARU
+	const DIANE
+	const KAGAMI
+	const GINA
+	const PEONY
+	const ROSA
+	const JOANNE
+	const BRYONY
+	const DAHLIA
+	const BETH1_EASY
+	const BETH2_NORMAL
+	const BETH3_HARD
+	const BETH_FACILITY
+	
 
-	trainerclass PKMN_TRAINER_HM  ; 8b todo convert to PKMN-TRAINER-HM
+	trainerclass PKMN_TRAINER_HM  ; 8b DONE 
+	const DAN
+	const VANCE
+	const BRETT
+	const DALVIN
 
-	trainerclass TRAINEE ; 8c todo convert to TRAINEE 
+	trainerclass TRAINEE ; 8c done 
+	const WARREN
+	const JACK
+	const GAVEN
 
 	trainerclass TAMMY ; 8d DONE
 	const TAMMY_EASY
