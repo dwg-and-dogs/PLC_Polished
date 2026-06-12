@@ -2385,6 +2385,18 @@ PicnickerGroup:
 	db -1 ; end
 
 
+; ================
+
+	; PICNICKER
+	db "Gina@" ; route36 
+	db TRAINERTYPE_NORMAL
+	; party
+	db 12, CYNDAQUIL
+	db 13, SENTRET
+	db 14, FURRET
+	db -1 ; end
+
+
 ; ================================
 
 TwinsGroup:
@@ -3562,16 +3574,6 @@ FirebreatherGroup:
 	; party
 	db 5, MAGMAR
 	db 6, PONYTA
-	db -1 ; end
-
-; ================
-	; FIREBREATHER
-	db "Ned@" ; USED
-	db TRAINERTYPE_NORMAL
-	; party
-	db 16, PONYTA
-	db 17, MAGMAR
-	db 16, QUILAVA
 	db -1 ; end
 
 ; ================
@@ -6835,17 +6837,6 @@ PKMNTrainerHFGroup:
 
 ; ================
 
-	; PICNICKER
-	db "Gina@" ; GAULDENROD TOWER
-	db TRAINERTYPE_NORMAL
-	; party
-	db 12, CYNDAQUIL
-	db 13, SENTRET
-	db 14, FURRET
-	db -1 ; end
-
-; ================
-
 
 	; AROMA_LADY ; GAULDENROD TOWER 2F
 	db "Peony@"
@@ -6976,8 +6967,6 @@ PKMNTrainerHMGroup:
 	db 16, HOOTHOOT
 	db -1 ; end
 
-
-
 	; TAMER
 	db "Brett@"
 	db TRAINERTYPE_NORMAL ; GAULDENROD underground 
@@ -6985,13 +6974,25 @@ PKMNTrainerHMGroup:
 	db 15, GIBLE
 	db -1 ; end
 
-	; FIREBREATHER ; gauldenrod--> pkmntrainerm
+	; cooltrainerhm ; gauldenrod--> pkmntrainerm
 	db "Dalvin@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 13, SLUGMA
 	db 14, QUILAVA
 	db -1 ; end
+
+
+; ================
+	; cooltrainerhm
+	db "Ned@" ; USED gauldenrod tower 2f 
+	db TRAINERTYPE_NORMAL
+	; party
+	db 16, PONYTA
+	db 17, MAGMAR
+	db 16, QUILAVA
+	db -1 ; end
+
 
 ; ================
 

@@ -137,7 +137,7 @@ TrainerPicPointers::
 	dba SagePic ; facility 
 	dba KannaPic
 	dba PKMNTrainerHFPic ; facility 
-	dba BugManiacPic ; facility 
+	dba BugCatcherPic ; facility 
 	dba PKMNTrainerHFPic
 	dba PKKMNTrainerHMPic
 	dba TraineePic

@@ -241,6 +241,7 @@ KRIS EQU __trainer_class__ ;
 	const LIZ1
 	const ERIN1
 	const TIFFANY1
+	const GINA
 
 
 	trainerclass TWINS ; 23
@@ -370,7 +371,6 @@ KRIS EQU __trainer_class__ ;
 
 	trainerclass FIREBREATHER ; 35 checked 
 	const OTIS
-	const NED
 	const BURT
 	const BILL
 	const WALT
@@ -791,7 +791,6 @@ KRIS EQU __trainer_class__ ;
 	const SUBARU
 	const DIANE
 	const KAGAMI
-	const GINA
 	const PEONY
 	const ROSA
 	const JOANNE
@@ -808,6 +807,8 @@ KRIS EQU __trainer_class__ ;
 	const VANCE
 	const BRETT
 	const DALVIN
+	const NED
+
 
 	trainerclass TRAINEE ; 8c done 
 	const WARREN

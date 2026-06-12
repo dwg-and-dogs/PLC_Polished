@@ -328,6 +328,8 @@ Text_NoCarry_PsyShop:
 
 EcruteakCityUnownScript:
 	opentext
+	checkevent EVENT_BATTLED_AMOS_GARDEN
+	iffalse_jumptext EC_Unown_NotAllowed
 	writetext UnownEC_AskToTimeTravelText
 	yesorno
 	iffalse_jumpopenedtext UnownEC_NoTimeTravelText
@@ -353,4 +355,10 @@ UnownEC_NoTimeTravelText:
 
 UnownEC_YesTimeTravelText:
 	text "..."
+	done
+
+EC_Unown_NotAllowed:
+	text "It's an Unown!"
+	line "Did it wander"
+	cont "from the Ruins?"
 	done

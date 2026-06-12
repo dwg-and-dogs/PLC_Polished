@@ -141,7 +141,7 @@ BarbeauPalette:          INCLUDE "gfx/trainers/barbeau.pal" ; blue
 FacilitySagePalette:         INCLUDE "gfx/trainers/sage.pal"
 KannaPalette:            INCLUDE "gfx/trainers/kanna.pal" 
 FacilityPKMNTrainerHFPalette:            INCLUDE "gfx/trainers/cooltrainer_f.pal"
-FacilityBugCatcherPalette:          INCLUDE "gfx/trainers/bug_maniac.pal"
+FacilityBugCatcherPalette:          INCLUDE "gfx/trainers/bug_catcher.pal"
 PKMNTrainerHFPalette:            INCLUDE "gfx/trainers/cooltrainer_f.pal"
 PKMNTrainerHMPalette:           INCLUDE "gfx/trainers/cooltrainer_m.pal"
 TraineePalette:             INCLUDE "gfx/trainers/youngster.pal"
