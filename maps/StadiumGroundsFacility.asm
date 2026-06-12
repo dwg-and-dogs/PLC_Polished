@@ -2,6 +2,7 @@ StadiumGroundsFacility_MapScriptHeader:
 	def_scene_scripts
 	; todo prevent using items in battle 
 		; probably in engine/item_effects 
+		; maybe check the map you're on ? 
 	; todo, spawn point to gauldenrod unless you have not yet beaten the game then it sends you to azalea 
 	
 	def_callbacks
@@ -22,7 +23,6 @@ StadiumGroundsFacility_MapScriptHeader:
 ;	coord_event 18, 15, 7, StadiumFacility_Trainers4Event
 ;	coord_event 18, 15, 8, StadiumFacility_Pokemon5Event
 ;	coord_event 18, 15, 9, StadiumFacility_Trainers5Event
-
 ;	coord_event 18, 15, 10, StadiumFacility_TrainersEndlessEvent	
 
 	def_bg_events
@@ -93,6 +93,8 @@ FacilityClerkRetireScript:
 	iffalse_jumptext KeepBattlingText
 	waitbutton
 	closetext
+	; check if you've beaten the game yet
+	; if not, warp you to azalea town 
 	; todo add warp sfx 
 	warp STADIUM_GROUNDS_FACILITY_PREP, 13, 12
 	done
@@ -105,9 +107,9 @@ FacilityClerkScript:
 	faceplayer
 	opentext
 	writethistext
-		text "Please speak to"
-		line "me from the"
-		cont "left, please."
+		text "When you're ready"
+		line "talk to me from"
+		cont "the west."
 		done
 	waitbutton
 	closetext
@@ -120,40 +122,118 @@ StadiumFacility_Pokemon1Event:
 	writetext FacilityAreYouReadyText
 	yesorno
 	iffalse_jumptext FacilityGetReadyText
+	; clear the events
+	clearevent EVENT_STADIUM_HEALED
 	writetext FacilityExplainBallText
 	waitbutton
-	; special FacilityTwoRandoms
-	; special, in which two numbers are rolled from 1 - 20, 
-	; and the two values are stored in ram at 
-	; wStadiumFacilityFirstMon and 
-	; wStadiumFacilitySecondMon, where the 
-	; second mon has to be a different number than
-	; the first. 
-	
-	; check the value of wStadiumFacilityFirstMon
-	; if the value is equal to 0, then .. 
-	ifequal 0, .GivePokemon1_0	
-	
-	
-	; need to store it in memory somehow? ... 
-	ifequal 0, .GivePokemon1_0
-	ifequal 1, .GivePokemon1_1
-;	ifequal 2, .GivePokemon1_2
-;.GivePokemon1_2:
-	write
+	; special FacilityThreeRandoms N ; here, written for three mons . This special is shared 
+		; between rolling for two pokemon and three trainers later in the script, 
+		; but for simplicity we will just keep it the same. 
+		
+		; special, in which three numbers are rolled from 0 TO N-1, 
+		; and the values are stored in ram at 
+		; wStadiumFacilityFirstTrainer and 
+		; wStadiumFacilitySecondTrainer, and
+		; wStadiumFacilityThirdTrainer, where each
+		; value is different from the last. 
+		; the values of each range from 0 to N-1. 
 
-	; random 1 - 20 
-	; store it in the wram variable
-	; depending on the wram, we report various text
-.Pokemon1_1:
-	writetext Facility1_1Text
+	; special ReadRandom 1
+		; special, in which the first of the three random numbers is read 
+	; if the value of wStadiumFacilityFirstTrainer is equal to 0, then .. 
+	ifequal 0, .TellPokemon1_0	
+	ifequal 1, .TellPokemon1_1
+;	ifequal 2, .TellPokemon1_2
+;.TellPokemon1_2:
+	writethistext
+		text "Ariados."
+		done
+	sjump .ToldPokemon 
+.TellPokemon1_0:
+	writethistext
+		text "Ledian."
+		done
+	sjump .ToldPokemon 
+.TellPokemon1_1:
+	writethistext
+		text "Ancestor Noctowl."
+		done
+;	sjump .ToldPokemon 
+.ToldPokemon:
 	waitbutton
-	sjump .Facility1_EndMonsScript
+	writethistext
+		text "Would you like to"
+		line "try to catch it?"
+		
+		para "If no, then I can"
+		line "call a random other"
+		cont "#mon."
+		done
+	waitbutton
+	yesorno
+	; ===== I need a bit of help here -- I don't want to have multiple copies of this running around. 
+	; ===== I only want one section that is either pre-loadded with ReadRandom 1 or ReadRandom 2. 
 
-.Facility1_EndMonsScript:
-	writetext Facility1_EndMonsText
-; battle the mon, then move the player to allow for TMs, etc 	
+; ============== start section I need help with 
+	; special ReadRandom 1
+	iftrue .DontCallSecondMon
+	; special Readrandom 2 
+			; this overwrites whatever the value of ReadRandom1 was 
+	.DontCallSecondMon:
+;	special ReadFirstRandom
+	; if the value is equal to 0, then .. 
+	ifequal 0, .CallPokemon1_0	
+	ifequal 1, .CallPokemon1_1
+;	ifequal 2, .CallPokemon1_2
+;.CallPokemon1_2:
+	loadwildmon ARIADOS, 100
+	sjump .AfterPokemon1
+.CallPokemon1_1:
+	loadwildmon LEDIAN, 100
+	sjump .AfterPokemon1
+.CallPokemon1_0:
+	loadwildmon NOCTOWL, OTHER_FORM, 100
+;	sjump .AfterPokemon1
+.AfterPokemon1:	
+	startbattle
+	reloadmapafterbattle
+; ================== end section I need help with 
+	opentext
+	writetext FacilityCurrentStreakText
+	waitbutton
+	writetext FacilityHealPartyText
+	waitbutton
+	yesorno
+	iffalse .DidntHeal
+	special HealParty
+	; todo add healing sfx 
+	setevent EVENT_STADIUM_HEALED
+.DidntHeal:
+	writetext FacilityComeBackWhenYoureReadyText
+	waitbutton
+	closetext
+	setscene $1
+	applyonemovement PLAYER, step_left
 	end
+
+FacilityCurrentStreakText:
+	text "Current Streak:
+;	line "insert streak"
+	done
+
+FacilityHealPartyText:
+	text "Heal your team?"
+	line "You can do this"
+	para "one time per set"
+	line "of five battles."
+	done
+
+FacilityComeBackWhenYoureReadyText:
+	text "You can teach"
+	line "TMs, set party"
+	para "order, or change"
+	line "held items."
+	done
 
 FacilityAreYouReadyText:
 	text "Are you ready?"
@@ -183,119 +263,3 @@ Facility1_EndMonsText:
 	
 	para "Take it?" ; todo from here 
 	done
-
-;StadiumGroundsFacilityScript:
-	; random 1-5, for now we just do these in order
-	; set the spawn to gauldenrod 
-;	opentext
-;	writethistext
-;		text "<PLAYER>!"
-;		line "Prove youself as"
-;		cont "a master of both"
-;		cont "catching and"
-;		cont "battling!"
-;		done
-;	waitbutton
-;	closetext
-	
-;	loadvar VAR_BATTLETYPE, BATTLETYPE_TRAP
-	; random 1- 5
-;	loadwildmon SCYTHER, 100 ; CHECK MOVES AT LV 100  TODO AND ALSO ADD CUSTOM ITEMS -- SCYTHER LEFTIES
-;	loadwildmon KLEAVOR, 100 ; CHECK MOVES AT LV 100  HARD STONE 
-;	loadwildmon MINSIR, 100 ; CHECK MOVES AT LV 100  CHOICE SCARF 
-;	loadwildmon YANMEGA, 100 ; CHECK MOVES AT LV 100 CHOICE SPECS 
-;	loadwildmon HELECTRODE, 100 ; CHECK MOVES AT LV 100 BRIGHTPOWDER 
-; GLSOWKING 
-; HERACROSS 
-; FORRETRESS 
-; AMAGCARGO 
-;	startbattle
-;	ifequal $1, .Continue
-	
-	; heal the PLAYER
-	; allow them to reorganize the party and items 
-	; then prompt to start the battles 
-	
-	; now start the trainers, up to three 
-
-;	winlosstext SGF_Tier1_WinText, SGF_Tier1_LoseText
-	; START 
-; random 1 - 3
-;	loadtrainer BUG_MANIAC, BUG_MANIAC_SGF_1
-;	startbattle
-;	ifequal $1, .Continue2
-;.Continue2:
-;	reloadmapafterbattle
-; random 4 - 6
-;	winlosstext SGF_Tier1_WinText, SGF_Tier1_LoseText
-;	loadtrainer BUG_MANIAC, BUG_MANIAC_SGF_4
-;	startbattle
-;	ifequal $1, .Continue2
-; random 7 - 9
-;	winlosstext SGF_Tier1_WinText, SGF_Tier1_LoseText
-;	loadtrainer BUG_MANIAC, BUG_MANIAC_SGF_7
-;	startbattle
-;	ifequal $1, .Continue2
-
-
-
-
-
-
-; SANDRAS MONS 
-;	loadwildmon CLEFABLE, 100 ; CHECK MOVES AT LV 100  TODO AND ALSO ADD CUSTOM ITEMS
-;	loadwildmon RAPIDASH GALARIAN, 100 ; CHECK MOVES AT LV 100 
-;	loadwildmon GALARIAN WEEZING, 100 ; CHECK MOVES AT LV 100  CHOICE SCARF 
-;	loadwildmon SNEASLER, 100 ; CHECK MOVES AT LV 100 CHOICE SPECS 
-;	loadwildmon RAPIDASH, 100 ; CHECK MOVES AT LV 100 BRIGHTPOWDER 
-; NIDOQUEEN 
-; BLISSEY 
-; TOGEKISS 
-; AMEGNAIUM 
-
-
-
-
-
-
-
-; SYBIL MONS 
-;	loadwildmon MISMAGIUS, 100 ; CHECK MOVES AT LV 100  TODO AND ALSO ADD CUSTOM ITEMS
-;	loadwildmon GENGAR, 100 ; CHECK MOVES AT LV 100 
-;	loadwildmon WYRDEER, 100 ; CHECK MOVES AT LV 100  CHOICE SCARF 
-;	loadwildmon CROBAT, 100 ; CHECK MOVES AT LV 100 CHOICE SPECS 
-;	loadwildmon ANNIHILAPE , 100 ; CHECK MOVES AT LV 100 BRIGHTPOWDER 
-; NIDOQUEEN 
-; HOUNDOOM  
-; BSCULAEION  
-; DRIFBLIM
-; SPIRITOMB
-; ENTEI 
-; ANOCTOWL 
-; AXATU 
-
-; REMY  MONS 
-;	loadwildmon LANTURN, 100 ; CHECK MOVES AT LV 100  TODO AND ALSO ADD CUSTOM ITEMS
-;	loadwildmon QUGASIRE , 100 ; CHECK MOVES AT LV 100 
-;	loadwildmon GDOS, 100 ; CHECK MOVES AT LV 100  CHOICE SCARF 
-;	loadwildmon JUMPLUFF, 100 ; CHECK MOVES AT LV 100 CHOICE SPECS 
-;	loadwildmon TENTACRURL , 100 ; CHECK MOVES AT LV 100 BRIGHTPOWDER 
-; OCTILLERY  
-; FROLSASS 
-; SUICUNE   
-
-
-
-; AMOS   MONS 
-;	loadwildmon HGOODRA, 100 ; CHECK MOVES AT LV 100  TODO AND ALSO ADD CUSTOM ITEMS
-;	loadwildmon ABOMOASNOW  , 100 ; CHECK MOVES AT LV 100 
-;	loadwildmon GALLADE, 100 ; CHECK MOVES AT LV 100  CHOICE SCARF 
-;	loadwildmon FERALIGAR, 100 ; CHECK MOVES AT LV 100 CHOICE SPECS 
-;	loadwildmon MEGANIUM , 100 ; CHECK MOVES AT LV 100 BRIGHTPOWDER 
-; BRONZONG   
-; URSALUNA
-; AKAZM 
-; TTAR
-; DNITE
-
-; RAIKOU    
