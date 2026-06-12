@@ -4133,6 +4133,7 @@ PiloswineEvosAttacks:
 	db EVOLVE_MOVE, ANCIENTPOWER, MAMOSWINE
 	db 0 ; no more evolutions
 	db 1, ANCIENTPOWER
+	db 1, ICICLE_SPEAR
 	db 1, FURY_STRIKES ; evolution move (Fury Attack)
 	db 1, PECK
 	db 1, FORESIGHT ; Odor Sleuth → similar move
@@ -4153,6 +4154,7 @@ PiloswineEvosAttacks:
 
 MamoswineEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, ICICLE_SPEAR
 	db 1, ANCIENTPOWER
 	db 1, PECK
 	db 1, FORESIGHT ; Odor Sleuth → similar move

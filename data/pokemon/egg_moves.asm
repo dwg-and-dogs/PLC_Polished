@@ -641,7 +641,7 @@ SwinubEggMoves:
 	db ROCK_SLIDE
 	db ANCIENTPOWER
 	db ICICLE_CRASH
-	db ICICLE_SPEAR
+;	db ICICLE_SPEAR ; no compatible parents 
 	db $ff
 
 CorsolaEggMoves:

@@ -122,6 +122,26 @@ StadiumFacility_Pokemon1Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
+	; special FacilityTwoRandoms
+	; special, in which two numbers are rolled from 1 - 20, 
+	; and the two values are stored in ram at 
+	; wStadiumFacilityFirstMon and 
+	; wStadiumFacilitySecondMon, where the 
+	; second mon has to be a different number than
+	; the first. 
+	
+	; check the value of wStadiumFacilityFirstMon
+	; if the value is equal to 0, then .. 
+	ifequal 0, .GivePokemon1_0	
+	
+	
+	; need to store it in memory somehow? ... 
+	ifequal 0, .GivePokemon1_0
+	ifequal 1, .GivePokemon1_1
+;	ifequal 2, .GivePokemon1_2
+;.GivePokemon1_2:
+	write
+
 	; random 1 - 20 
 	; store it in the wram variable
 	; depending on the wram, we report various text

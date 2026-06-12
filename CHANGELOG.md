@@ -105,10 +105,22 @@ Cleaned up trainer parties to split cooltrainers and youngsters into modern and 
 Minsir gets Waterfall. 
 Minor text, tile, object palette issues. 
 
+
+* Release 1.0.6 
+
+Mamoswine and Piloswine get Icicle Spear as Lv 1 move. 
+Update ANoctowl and AFeraligatr back sprites. 
+
+* Release 1.1.0: Stadium Facility 
+
 Todo: 
+* Grep for pokemon at too low of level for their evolution stage 
 * Fix tangela back sprite colors 
+* Fix Accad501 Noctowl and Feraligatr back sprites 
 * Special mark on pokemon if they have max DVs
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
+* More evo items for the person, incl metal coat and kings rock
+* Better Lucario Sprite 
 
 v110
 * Postgame facility
@@ -126,5 +138,5 @@ v120
 * Epilogue: New Bark --> Blackthorn
 
 
-Last updated: 06/08/26
+Last updated: 06/11/26
 
