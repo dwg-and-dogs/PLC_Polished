@@ -99,25 +99,19 @@ Easier time travel with a Pokemon in Ecruteak and Western Capital. (todo: check!
 
 Gardevoir, Gallade, and Kirlia get Hyper Voice. 
 Update rock smash table to avoid getting a fossil. 
-Prevent random type npc from giving you a level 0 pokemon. 
-New trainer sprites for Clair, historic cooltrainers, and historic youngster. 
-
+Prevent random type npc in the sandbox room from giving you a level 0 pokemon. 
+New trainer sprites for Clair, historic cooltrainers, and historic youngster. (Credit to Carabarabonanza!)
+Cleaned up trainer parties to split cooltrainers and youngsters into modern and historic counterparts. 
+Minsir gets Waterfall. 
 
 Todo: 
 * Fix tangela back sprite colors 
-* Replace Kukui class with "Trainee" Class from coroborabonanza
-* Replace Bill-T class with "Cooltrainer-HF" Class from coroborabonanza
-* Replace Victor class with "Cooltrainer-HM" Class from coroborabonanza
-* Replace Clair sprite 
-* Go through Calm Coast and Gauldenrod Tower 2F and Gauldenrod Underground maps; replace with the new trainer classes 
-
-
-v106
 * Special mark on pokemon if they have max DVs
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
+
 v110
-* Ancestor Ledian, Alakazam from Accad501
 * Postgame facility
+* Ancestor Ledian, Alakazam from Accad501
 
 vAny
 * New pokedex entries
