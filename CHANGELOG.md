@@ -103,6 +103,7 @@ Prevent random type npc in the sandbox room from giving you a level 0 pokemon.
 New trainer sprites for Clair, historic cooltrainers, and historic youngster. (Credit to Carabarabonanza!)
 Cleaned up trainer parties to split cooltrainers and youngsters into modern and historic counterparts. 
 Minsir gets Waterfall. 
+Minor text, tile, object palette issues. 
 
 Todo: 
 * Fix tangela back sprite colors 
