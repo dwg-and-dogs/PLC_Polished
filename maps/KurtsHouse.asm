@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-	bg_event  6,  1, BGEVENT_JUMPSTD, radio2
-;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
+;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2
+	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
 ;	bg_event  6,  1, BGEVENT_READ, TimeShiftRadio	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
@@ -909,7 +909,7 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
-	givepoke CROBAT, NO_FORM, 31
+;	givepoke CROBAT, NO_FORM, 31
 ;	loadmem wPartyMon1Moves+0, FLAMETHROWER
 ;	loadmem wPartyMon1Moves+1, EARTH_POWER
 ;	loadmem wPartyMon1Moves+2, STRENGTH
@@ -953,14 +953,28 @@ endr
 ;	loadmem wPartyMon3PP+1, 15
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
-	givepoke SNOVER, NO_FORM, 100
+	giveitem LEFTOVERS
+	givepoke SUICUNE, 100
+	loadmem wPartyMon1Moves+0, SURF
+	loadmem wPartyMon1Moves+1, ICE_BEAM
+	loadmem wPartyMon1Moves+2, CALM_MIND
+	loadmem wPartyMon1Moves+3, THUNDERBOLT
+	loadmem wPartyMon1EVs+0, 252
+	loadmem wPartyMon1EVs+1, 252
+	loadmem wPartyMon1EVs+2, 252
+	loadmem wPartyMon1EVs+3, 252
+	loadmem wPartyMon1EVs+4, 252
+	loadmem wPartyMon1EVs+5, 252
+	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ff
 	; fill pokedex
 	callasm FillPokedex
 	waitbutton
 	closetext
 ; debug only
 ; debug 
-	warp ECRUTEAK_CITY, 20, 20
+	warp STADIUM_GROUNDS_FACILITY_PREP, 15, 15
 	end
 
 TimeShiftRadio:

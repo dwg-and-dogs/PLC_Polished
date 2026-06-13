@@ -49,10 +49,10 @@ RuinsOfAlphInnerChamber_MapScriptHeader: ; unused
 	bg_event 17, 24, BGEVENT_JUMPTEXT, RuinsofAlphStatueText
 
 	def_object_events
-	object_event  3,  7, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphInnerChamberFisherText, EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
-	object_event 14, 14, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphInnerChamberTeacherText, EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
-	object_event 11, 19, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphInnerChamberGrampsText, EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
-	object_event  7, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphInnerChamberScientistText, EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
+;	object_event  3,  7, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphInnerChamberFisherText, EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
+;	object_event 14, 14, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphInnerChamberTeacherText, EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
+;	object_event 11, 19, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphInnerChamberGrampsText, EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
+;	object_event  7, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_COMMAND, jumptextfaceplayer, RuinsOfAlphInnerChamberScientistText, EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
 
 RuinsofAlphInnerChamberTrigger1:
 	sdefer RuinsOfAlphInnerChamberStrangePresenceScript
@@ -60,57 +60,8 @@ RuinsofAlphInnerChamberTrigger0:
 	end
 
 RuinsOfAlphInnerChamberStrangePresenceScript:
-	showtext RuinsOfAlphStrangePresenceText
-	setscene $0
-	setevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
-	clearevent EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_FISHER
+;	showtext RuinsOfAlphStrangePresenceText
+;	setscene $0
+;	setevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
+;	clearevent EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_FISHER
 	end
-
-RuinsOfAlphStrangePresenceText:
-	text "There is a strange"
-	line "presence here…"
-	done
-
-RuinsOfAlphInnerChamberFisherText:
-	text "This is a big"
-	line "room, but there's"
-	cont "nothing here."
-	done
-
-RuinsOfAlphInnerChamberTeacherText:
-	text "This place has a"
-	line "mystical quality"
-	cont "to it."
-
-	para "It feels sort of"
-	line "ethereal even."
-	done
-
-RuinsOfAlphInnerChamberGrampsText:
-	text "The ruins have not"
-	line "been robbed or"
-	cont "tampered with."
-
-	para "Something here"
-	line "must make people"
-	cont "want to preserve"
-	cont "it."
-	done
-
-RuinsOfAlphInnerChamberScientistText:
-	text "The patterns on"
-	line "the wall appear to"
-	cont "be words!"
-
-	para "And those sliding"
-	line "stone panels seem"
-
-	para "to be signals of"
-	line "some kind."
-
-	para "I think they make"
-	line "#mon appear,"
-
-	para "but it's not clear"
-	line "yet…"
-	done
