@@ -126,24 +126,14 @@ StadiumFacility_Pokemon1Event:
 	clearevent EVENT_STADIUM_HEALED
 	writetext FacilityExplainBallText
 	waitbutton
-	; special FacilityThreeRandoms N ; here, written for three mons . This special is shared 
-		; between rolling for two pokemon and three trainers later in the script, 
-		; but for simplicity we will just keep it the same. 
-		
-		; special, in which three numbers are rolled from 0 TO N-1, 
-		; and the values are stored in ram at 
-		; wStadiumFacilityFirstTrainer and 
-		; wStadiumFacilitySecondTrainer, and
-		; wStadiumFacilityThirdTrainer, where each
-		; value is different from the last. 
-		; the values of each range from 0 to N-1. 
-
-	; special ReadRandom 1
-		; special, in which the first of the three random numbers is read 
-	; if the value of wStadiumFacilityFirstTrainer is equal to 0, then .. 
+	
+	setval 3                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+	; tell the player which mon (the FIRST roll)
+	readmem wStadiumFacilityFirstTrainer ; reads the first value that's written, the player gets to see that. 
 	ifequal 0, .TellPokemon1_0	
 	ifequal 1, .TellPokemon1_1
-;	ifequal 2, .TellPokemon1_2
+;	ifequal 2, .TellPokemon1_2 ; fallthru 
 ;.TellPokemon1_2:
 	writethistext
 		text "Ariados."
@@ -158,7 +148,7 @@ StadiumFacility_Pokemon1Event:
 	writethistext
 		text "Ancestor Noctowl."
 		done
-;	sjump .ToldPokemon 
+;	sjump .ToldPokemon ; fallthru 
 .ToldPokemon:
 	waitbutton
 	writethistext
@@ -170,28 +160,22 @@ StadiumFacility_Pokemon1Event:
 		cont "#mon."
 		done
 	waitbutton
-	yesorno
-	; ===== I need a bit of help here -- I don't want to have multiple copies of this running around. 
-	; ===== I only want one section that is either pre-loadded with ReadRandom 1 or ReadRandom 2. 
 
-; ============== start section I need help with 
-	; special ReadRandom 1
-	iftrue .DontCallSecondMon
-	; special Readrandom 2 
-			; this overwrites whatever the value of ReadRandom1 was 
-	.DontCallSecondMon:
-;	special ReadFirstRandom
-	; if the value is equal to 0, then .. 
-	ifequal 0, .CallPokemon1_0	
+	yesorno
+	iffalse .CallSecondMon
+	readmem wStadiumFacilityFirstTrainer   ; YES -> keep the named mon told to the player 
+	sjump .HaveChoice
+.CallSecondMon:
+	readmem wStadiumFacilitySecondTrainer  ; NO  -> the next, guaranteed-different mon
+.HaveChoice:
+	ifequal 0, .CallPokemon1_0
 	ifequal 1, .CallPokemon1_1
-;	ifequal 2, .CallPokemon1_2
-;.CallPokemon1_2:
-	loadwildmon ARIADOS, 100
-	sjump .AfterPokemon1
-.CallPokemon1_1:
-	loadwildmon LEDIAN, 100
+	loadwildmon ARIADOS, 100               ; Pokemon1_2 
 	sjump .AfterPokemon1
 .CallPokemon1_0:
+	loadwildmon LEDIAN, 100
+	sjump .AfterPokemon1
+.CallPokemon1_1:
 	loadwildmon NOCTOWL, OTHER_FORM, 100
 ;	sjump .AfterPokemon1
 .AfterPokemon1:	

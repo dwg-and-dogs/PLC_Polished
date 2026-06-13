@@ -482,3 +482,147 @@ BillBoxSwitchCheck:
 	ld a, b
 	ldh [hScriptVar], a
 	ret
+
+; ============================================================================
+; Facility random-number specials
+; ----------------------------------------------------------------------------
+; FacilityThreeRandoms
+;   Rolls THREE distinct random numbers, each in the range 0 .. N-1, and
+;   stores them at wStadiumFacilityFirstTrainer / ...Second... / ...Third...
+;
+;   N (the "argument") is read from the script variable, so set it first:
+;
+;       setval N                     ; N = size of the pool to choose from
+;       special FacilityThreeRandoms
+;
+;   The three values are guaranteed to differ from one another. N must be at
+;   least 3 (you can't draw three different numbers from a smaller pool); if a
+;   smaller N is passed it is clamped to 3 so the game can never hang.
+;
+; ReadRandom (optional convenience - `readmem` does the same job, see below)
+;   Loads one of the three stored rolls back into the script variable so the
+;   `ifequal` / `ifless` chain can branch on it:
+;
+;       setval 1                     ; 1, 2, or 3 -> which roll to read
+;       special ReadRandom
+;       ifequal 0, .Foo
+;       ...
+;
+; Registration: add both routines to the SpecialsPointers table exactly the
+; way HealParty is registered, and make sure this file is INCLUDEd from a bank
+; that the table reaches. The `special` macro references the label
+; "<Name>Special", so the table entry is what creates that symbol.
+;
+; WRAM: declare the three bytes (any location, they don't need to be adjacent):
+;       wStadiumFacilityFirstTrainer::  db
+;       wStadiumFacilitySecondTrainer:: db
+;       wStadiumFacilityThirdTrainer::  db
+; ============================================================================
+
+FacilityThreeRandoms:
+	ldh a, [hScriptVar]   ; a = N (the pool size passed via `setval`)
+	cp 3
+	jr nc, .got_n
+	ld a, 3               ; clamp: never allow N < 3 (would be unsatisfiable)
+.got_n
+	ld d, a               ; d = N  (preserved across .RandUnder)
+
+	; --- 1st value: any number in [0, N-1] ---
+	ld a, d
+	call .RandUnder
+	ld [wStadiumFacilityFirstTrainer], a
+
+	; --- 2nd value: pick in [0, N-2], then shift up past the 1st so it can't
+	;     collide.  This maps the smaller range onto "everything except 1st". ---
+	ld a, d
+	dec a                 ; N-1
+	call .RandUnder
+	ld hl, wStadiumFacilityFirstTrainer
+	cp [hl]
+	jr c, .second_ok      ; below the 1st value -> leave it
+	inc a                 ; otherwise step over the 1st value
+.second_ok
+	ld [wStadiumFacilitySecondTrainer], a
+
+	; --- 3rd value: pick in [0, N-3], then shift up past BOTH used values.
+	;     We sort the two used values (b = lo, c = hi) first so the two
+	;     "+1" bumps are applied in the right order. ---
+	ld a, d
+	sub 2                 ; N-2
+	call .RandUnder
+	ld e, a               ; e = raw 3rd pick (no more RNG calls after this)
+
+	ld a, [wStadiumFacilityFirstTrainer]
+	ld b, a
+	ld a, [wStadiumFacilitySecondTrainer]
+	ld c, a
+	; order them: want b = smaller, c = larger
+	ld a, b
+	cp c
+	jr c, .ordered        ; b < c already
+	ld a, b               ; swap b <-> c
+	ld b, c
+	ld c, a
+.ordered
+	ld a, e               ; raw 3rd pick
+	cp b
+	jr c, .third_ok       ; below the smaller used value
+	inc a                 ; step over the smaller
+	cp c
+	jr c, .third_ok       ; now below the larger used value
+	inc a                 ; step over the larger too
+.third_ok
+	ld [wStadiumFacilityThirdTrainer], a
+	ret
+
+; Return a uniform random value in [0, a-1] in a.  Mirrors the engine's
+; `random` script command (rejection-sample away the modulo bias, then reduce
+; with SimpleDivide).  Preserves DE so the caller can keep N in D.
+.RandUnder
+	push de
+	and a
+	jr z, .ru_zero        ; rand(0) -> 0
+	ld c, a               ; c = bound (kept across the Random calls below)
+	push bc
+	call .Mod256          ; a = 256 mod c
+	pop bc
+	and a
+	jr z, .ru_norestrict  ; bound divides 256 evenly -> no bias to correct
+	ld b, a
+	xor a
+	sub b
+	ld b, a               ; b = 256 - (256 mod c) = first value we must reject
+.ru_reroll
+	push bc
+	call Random
+	pop bc
+	ldh a, [hRandomAdd]
+	cp b
+	jr nc, .ru_reroll     ; reject the top, biased slice
+	jr .ru_reduce
+.ru_norestrict
+	push bc
+	call Random
+	pop bc
+	ldh a, [hRandomAdd]
+.ru_reduce
+	call SimpleDivide     ; a = a mod c
+	pop de
+	ret
+.ru_zero
+	xor a
+	pop de
+	ret
+
+; a = 256 mod c  (c unchanged).  Same routine as Script_random's .Divide256byC.
+.Mod256
+	xor a
+	ld b, a
+	sub c
+.mod_loop
+	inc b
+	sub c
+	jr nc, .mod_loop
+	dec b
+	add c
+	ret
