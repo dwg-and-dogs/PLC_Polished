@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/magcargo_ancestor/front.dimensions"
-	abilities_for MAGCARGO_ANCESTOR, CORROSION, WEAK_ARMOR, SPEED_BOOST
+	abilities_for MAGCARGO_ANCESTOR, CORROSION, AFTERMATH, SPEED_BOOST
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_INDETERMINATE, EGG_INDETERMINATE ; egg groups
 

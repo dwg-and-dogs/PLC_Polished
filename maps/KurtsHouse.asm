@@ -954,7 +954,7 @@ endr
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
 
-	givepoke SUICUNE, 100
+	givepoke SUICUNE, 200
 	loadmem wPartyMon1Moves+0, SURF
 	loadmem wPartyMon1Moves+1, ICE_BEAM
 	loadmem wPartyMon1Moves+2, CALM_MIND
@@ -969,7 +969,7 @@ endr
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
 
-	givepoke RAIKOU, 100
+	givepoke RAIKOU, 200
 	loadmem wPartyMon2Moves+0, PROTECT
 	loadmem wPartyMon2Moves+1, CRUNCH
 	loadmem wPartyMon2Moves+2, CALM_MIND
@@ -984,7 +984,7 @@ endr
 	loadmem wPartyMon2DVs+1, $ff
 	loadmem wPartyMon2DVs+2, $ff
 
-	givepoke ENTEI, 100
+	givepoke ENTEI, 200
 	loadmem wPartyMon3Moves+0, FLAMETHROWER
 	loadmem wPartyMon3Moves+1, EARTHQUAKE
 	loadmem wPartyMon3Moves+2, ROCK_SLIDE
@@ -999,8 +999,8 @@ endr
 	loadmem wPartyMon3DVs+1, $ff
 	loadmem wPartyMon3DVs+2, $ff	
 	
-	givepoke FERALIGATR, OTHER_FORM, 100
-	loadmem wPartyMon4Moves+0, EARTHQUAKE
+	givepoke FERALIGATR, OTHER_FORM, 200
+	loadmem wPartyMon4Moves+0, EARTH_POWER
 	loadmem wPartyMon4Moves+1, SURF
 	loadmem wPartyMon4Moves+2, ICE_BEAM
 	loadmem wPartyMon4Moves+3, THUNDERBOLT

@@ -82,9 +82,8 @@ GardenEngineerText1:
 
 	
 GardenEngineerText2:
-	text "Yup, it's the"
-	line "last one in"
-	cont "Johto."
+	text "Yup, the last one"
+	line "in Ilex."
 	done
 	
 Celebi2Text:
@@ -97,18 +96,26 @@ GardenEngineerText3:
 	done
 
 GardenEngineerText4:
-	text "Hoenn wants the"
-	line "them for an extr-"
-	cont "avagant tower."
+	text "They say it'll be"
+	line "strong enough to"
+	para "build supports on"
+	line "Route Ka-Jo, so"
+	para "we can tap the"
+	line "acquifer and get"
+	para "some relief from"
+	line "the drought."
 	
-	para "I'm glad Johto"
-	line "doesn't have such"
-	para "wasteful things"
-	line "ever since that"
-	para "kid toppled the"
-	line "Emperor some"
-	cont "180 years ago."
+	para "You know, it used"
+	line "to be the wood"
+	para "ancient Johto"
+	line "line built their"
+	cont "shrines from,"
 	
-	para "What was their"
-	line "name again?"
+	para "before that kid"
+	line "overthrew the"
+	cont "tribal Elders."
+	
+	para "Say, how did that"
+	line "story go again?"
+
 	done

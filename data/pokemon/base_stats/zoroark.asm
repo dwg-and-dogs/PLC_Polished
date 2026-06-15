@@ -8,7 +8,7 @@
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/zoroark/front.dimensions"
-	abilities_for ZOROARK, INSOMNIA, COMPOUND_EYES, IMPOSTER
+	abilities_for ZOROARK, FRISK, CURSED_BODY, IMPOSTER
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

@@ -4,17 +4,21 @@ StadiumGroundsFacility_MapScriptHeader:
 		; probably in engine/item_effects 
 		; maybe check the map you're on ? 
 
-	; todo bug catches have an oh my ... text from being near the end or the second to last mon I need to remvoe it, actually many of them do 
+	; todo bug catches have an "oh my ..." text from being near the end or the second to last mon I need to remvoe it, actually many of them do 
 	; todo, spawn point to gauldenrod unless you have not yet beaten the game then it sends you to azalea 
 	; todo add more pause, more drama in between battles, more text 
-	; todo the bug catcher still remains after silas battle 
-	; todo check if gardevoir gets willowisp 
 	; todo ONE OF THE bug catcher fac teams has avalugg and abomosnow twice 
 	; todo increment the battle points, maybe just a special that increements and updates the max value 
 	; todo write the streak each time 
-	; todo likely tune up the levels of the enemies, 75/80/85/90/95 is too low, maybe 85/88/91/94/97
+	; todo likely tune up the levels of the enemies, 75/80/85/90/95 is too low? maybe 85/88/91/94/97?
 	; todo fix the sprites that are called for each of the trainer events 
 	; todo unique text for all the trainers to give a hint as to their team 
+	; todo load the first mon in your party for the current streak, and then also 
+	; save the mon that was used in the previous best streak 
+	; TODO IT might be nice if they tell you the number of the list that you're on 
+	; TODO ninjas say "my last stand"
+	; TODO elder parties better for the stadium when they only have three to hax a win 
+	
 	
 	def_callbacks
 ;	callback MAPCALLBACK_NEWMAP, HiddenGrottoCallback --> StadiumGroundsFacilityCallback; stretch goal 
@@ -25,16 +29,16 @@ StadiumGroundsFacility_MapScriptHeader:
 	
 	def_coord_events 
 	coord_event 18, 15, 0, StadiumFacility_Pokemon1Event ; DONE 
-	coord_event 18, 15, 1, StadiumFacility_Trainers1Event ; done -- this format is how it should be done with the trainers disappearing 
+	coord_event 18, 15, 1, StadiumFacility_Trainers1Event ; done 
 	coord_event 18, 15, 2, StadiumFacility_Pokemon2Event ; done 
-	coord_event 18, 15, 3, StadiumFacility_Trainers2Event ; todo sandra party and load her team 
+	coord_event 18, 15, 3, StadiumFacility_Trainers2Event ; done 
 	coord_event 18, 15, 4, StadiumFacility_Pokemon3Event ; done
-	coord_event 18, 15, 5, StadiumFacility_Trainers3Event ; need todo check trainers work, check functional, write sybil party 
-	coord_event 18, 15, 6, StadiumFacility_Pokemon4Event ; need todo check functional 
-	coord_event 18, 15, 7, StadiumFacility_Trainers4Event ; need todo check trainers work, check functional, write remy party 
-	coord_event 18, 15, 8, StadiumFacility_Pokemon5Event ; need todo check functional 
-	coord_event 18, 15, 9, StadiumFacility_Trainers5Event ; need todo check trainers work, check functional, write amos party 
-;	coord_event 18, 15, 10, StadiumFacility_TrainersEndlessEvent	
+	coord_event 18, 15, 5, StadiumFacility_Trainers3Event ; done
+	coord_event 18, 15, 6, StadiumFacility_Pokemon4Event ; done
+	coord_event 18, 15, 7, StadiumFacility_Trainers4Event ; done
+	coord_event 18, 15, 8, StadiumFacility_Pokemon5Event ; done
+	coord_event 18, 15, 9, StadiumFacility_Trainers5Event ; check that amos party loads correctly now and hands off to the endless event 
+	coord_event 18, 15, 10, StadiumFacility_TrainersEndlessEvent	
 
 	def_bg_events
 ; 
@@ -48,17 +52,17 @@ StadiumGroundsFacility_MapScriptHeader:
 	object_event 24, 14, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BUG_MANIAC
 	object_event 24, 14, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AROMA_LADY
 	object_event 24, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SAGE
-	object_event 24, 14, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NOMADF
+	object_event 24, 14, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NOMADF
 	object_event 24, 14, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NINJA
-	object_event 24, 14, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BRIGADER
+	object_event 24, 14, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BRIGADER
 	; TODO WRITE THE FINAL TEAMS FOR ALL OF THESE 
 	object_event 19, 17, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SILAS ; SUICUNE FINALE  TEAM 
 	object_event 19, 17, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SANDRA ;  FINALE HO OH TEAM 
 	object_event 19, 17, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SYBIL ; ENTEI TEAM 
-	object_event 19, 17, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_REMY ; ANOTHER LUGIA TEAM  
-	object_event 19, 17, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AMOS ; RAIKOU TEAM 
-	object_event 19, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_KURT ; CELEBI TEAM 
-	object_event 19, 17, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_VESPER ; HEATRAN TEAM 
+	object_event 19, 17, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_REMY ; ANOTHER LUGIA TEAM  
+	object_event 19, 17, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AMOS ; RAIKOU TEAM 
+	object_event 19, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_KURT ; CELEBI TEAM 
+	object_event 19, 17, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_VESPER ; HEATRAN TEAM 
 
 ; always present
  	object_event 14, 15, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityClerkRetireScript, EVENT_FACILITY_CLERK	
@@ -1987,7 +1991,7 @@ StadiumFacility_Trainers1Event: ; todo need to figure out adding in the optional
 	applyonemovement PLAYER, step_left
 	end
 
-StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional healing 
+StadiumFacility_Trainers2Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
 	opentext
@@ -2142,9 +2146,9 @@ StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional
 ; ========
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
-	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
-	disappear STADIUM_FACILITY_BUG_CATCHER
-	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
+	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_AROMA_LADY
+	moveobject STADIUM_FACILITY_AROMA_LADY, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2160,18 +2164,18 @@ StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	appear STADIUM_FACILITY_HOLLIS
-	setevent EVENT_FACILITY_BUG_MANIAC
-	disappear STADIUM_FACILITY_BUG_CATCHER
-	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_STADIUM 
+	appear STADIUM_FACILITY_SANDRA
+	setevent EVENT_FACILITY_AROMA_LADY
+	disappear STADIUM_FACILITY_AROMA_LADY
+	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextSandra, FacilityLossTextSandra 
+	loadtrainer SANDRA, SANDRA_STADIUM 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
-	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
+	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_SILAS
-	disappear STADIUM_FACILITY_HOLLIS	
+	disappear STADIUM_FACILITY_SANDRA	
 	special HealParty
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
@@ -2183,7 +2187,7 @@ StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional
 	end
 
 
-StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional healing 
+StadiumFacility_Trainers3Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
 	opentext
@@ -2191,14 +2195,16 @@ StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional
 	yesorno
 	iffalse_jumptext FacilityGetReadyText
 	; clear the events
-	clearevent EVENT_STADIUM_HEALED
+;	clearevent EVENT_STADIUM_HEALED ; this is below so that you don't accidentally waste your heal before the first trainer 
 	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
 	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	writetext FacilityExplainTrainersText
 	waitbutton
+	closetext
 	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
 	iftrue .AlreadyHealed
@@ -2210,8 +2216,14 @@ StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional
 	setevent EVENT_STADIUM_HEALED
 	; todo add heal sfx 
 .AlreadyHealed:
+	closetext
+	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	iftrue .FinalFacilityElder
+	appear STADIUM_FACILITY_SAGE
+	applymovement STADIUM_FACILITY_SAGE, GenericTrainerWalkTowardMovement ; walks on screen and faces the player 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .SecondFacilityTrainer
+	clearevent EVENT_STADIUM_HEALED
 	readmem wStadiumFacilityFirstTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .SecondFacilityTrainer:
@@ -2220,8 +2232,8 @@ StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional
 	readmem wStadiumFacilitySecondTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .ThirdFacilityTrainer:
-	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
-	iftrue .FinalFacilityElder
+;	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+;	iftrue .FinalFacilityElder
 	readmem wStadiumFacilityThirdTrainer ; reads the first value that's written
 .LoadedFacilityTrainerIndex:
 	ifequal 0,  .CallTrainer1_0
@@ -2330,9 +2342,9 @@ StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional
 ; ========
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
-	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
-	disappear STADIUM_FACILITY_BUG_CATCHER
-	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
+	applymovement STADIUM_FACILITY_SAGE, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_SAGE
+	moveobject STADIUM_FACILITY_SAGE, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2348,18 +2360,18 @@ StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	appear STADIUM_FACILITY_HOLLIS
-	setevent EVENT_FACILITY_BUG_MANIAC
-	disappear STADIUM_FACILITY_BUG_CATCHER
-	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_STADIUM 
+	appear STADIUM_FACILITY_SAMSARA
+	setevent EVENT_FACILITY_SAGE
+	disappear STADIUM_FACILITY_SAGE
+	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextSybil, FacilityLossTextSybil 
+	loadtrainer SAMSARA, SAMSARA_STADIUM 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
-	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
-	setevent EVENT_FACILITY_SILAS
-	disappear STADIUM_FACILITY_HOLLIS	
+	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_SYBIL
+	disappear STADIUM_FACILITY_SAMSARA	
 	special HealParty
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
@@ -2370,7 +2382,7 @@ StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional
 	applyonemovement PLAYER, step_left
 	end
 
-StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional healing 
+StadiumFacility_Trainers4Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
 	opentext
@@ -2378,14 +2390,16 @@ StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional
 	yesorno
 	iffalse_jumptext FacilityGetReadyText
 	; clear the events
-	clearevent EVENT_STADIUM_HEALED
+;	clearevent EVENT_STADIUM_HEALED ; this is below so that you don't accidentally waste your heal before the first trainer 
 	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
 	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	writetext FacilityExplainTrainersText
 	waitbutton
+	closetext
 	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
 	iftrue .AlreadyHealed
@@ -2397,8 +2411,14 @@ StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional
 	setevent EVENT_STADIUM_HEALED
 	; todo add heal sfx 
 .AlreadyHealed:
+	closetext
+	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	iftrue .FinalFacilityElder
+	appear STADIUM_FACILITY_NOMADF
+	applymovement STADIUM_FACILITY_NOMADF, GenericTrainerWalkTowardMovement ; walks on screen and faces the player 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .SecondFacilityTrainer
+	clearevent EVENT_STADIUM_HEALED
 	readmem wStadiumFacilityFirstTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .SecondFacilityTrainer:
@@ -2407,8 +2427,8 @@ StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional
 	readmem wStadiumFacilitySecondTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .ThirdFacilityTrainer:
-	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
-	iftrue .FinalFacilityElder
+;	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+;	iftrue .FinalFacilityElder
 	readmem wStadiumFacilityThirdTrainer ; reads the first value that's written
 .LoadedFacilityTrainerIndex:
 	ifequal 0,  .CallTrainer1_0
@@ -2517,9 +2537,9 @@ StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional
 ; ========
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
-	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
-	disappear STADIUM_FACILITY_BUG_CATCHER
-	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
+	applymovement STADIUM_FACILITY_NOMADF, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_NOMADF
+	moveobject STADIUM_FACILITY_NOMADF, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2535,18 +2555,18 @@ StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	appear STADIUM_FACILITY_HOLLIS
-	setevent EVENT_FACILITY_BUG_MANIAC
-	disappear STADIUM_FACILITY_BUG_CATCHER
-	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_STADIUM 
+	appear STADIUM_FACILITY_BARBEAU
+	setevent EVENT_FACILITY_NOMADF
+	disappear STADIUM_FACILITY_NOMADF
+	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextRemy, FacilityLossTextRemy 
+	loadtrainer BARBEAU, REMY_STADIUM 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
-	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
-	setevent EVENT_FACILITY_SILAS
-	disappear STADIUM_FACILITY_HOLLIS	
+	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_REMY
+	disappear STADIUM_FACILITY_BARBEAU	
 	special HealParty
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
@@ -2557,7 +2577,8 @@ StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional
 	applyonemovement PLAYER, step_left
 	end
 
-StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional healing 
+
+StadiumFacility_Trainers5Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
 	opentext
@@ -2565,14 +2586,16 @@ StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional
 	yesorno
 	iffalse_jumptext FacilityGetReadyText
 	; clear the events
-	clearevent EVENT_STADIUM_HEALED
+;	clearevent EVENT_STADIUM_HEALED ; this is below so that you don't accidentally waste your heal before the first trainer 
 	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
 	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	writetext FacilityExplainTrainersText
 	waitbutton
+	closetext
 	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
 	iftrue .AlreadyHealed
@@ -2584,8 +2607,14 @@ StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional
 	setevent EVENT_STADIUM_HEALED
 	; todo add heal sfx 
 .AlreadyHealed:
+	closetext
+	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	iftrue .FinalFacilityElder
+	appear STADIUM_FACILITY_NINJA
+	applymovement STADIUM_FACILITY_NINJA, GenericTrainerWalkTowardMovement ; walks on screen and faces the player 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .SecondFacilityTrainer
+	clearevent EVENT_STADIUM_HEALED
 	readmem wStadiumFacilityFirstTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .SecondFacilityTrainer:
@@ -2594,8 +2623,8 @@ StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional
 	readmem wStadiumFacilitySecondTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .ThirdFacilityTrainer:
-	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
-	iftrue .FinalFacilityElder
+;	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+;	iftrue .FinalFacilityElder
 	readmem wStadiumFacilityThirdTrainer ; reads the first value that's written
 .LoadedFacilityTrainerIndex:
 	ifequal 0,  .CallTrainer1_0
@@ -2704,9 +2733,9 @@ StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional
 ; ========
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
-	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
-	disappear STADIUM_FACILITY_BUG_CATCHER
-	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
+	applymovement STADIUM_FACILITY_NINJA, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_NINJA
+	moveobject STADIUM_FACILITY_NINJA, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2722,29 +2751,36 @@ StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	appear STADIUM_FACILITY_HOLLIS
-	setevent EVENT_FACILITY_BUG_MANIAC
-	disappear STADIUM_FACILITY_BUG_CATCHER
-	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_STADIUM 
+	appear STADIUM_FACILITY_AMOS
+	setevent EVENT_FACILITY_NINJA
+	disappear STADIUM_FACILITY_NINJA
+	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextAmos, FacilityLossTextAmos
+	loadtrainer AMOS, AMOS_STADIUM 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
-	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
-	setevent EVENT_FACILITY_SILAS
-	disappear STADIUM_FACILITY_HOLLIS	
+	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_AMOS
+	disappear STADIUM_FACILITY_AMOS	
 	special HealParty
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
 	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
 	closetext
-	setscene $10
+	setscene 10
 	applyonemovement PLAYER, step_left
 	end
 
-StadiumFacility_TrainersEndlessEvent: ; todo need to figure out adding in the optional healing 
+
+StadiumFacility_TrainersEndlessEvent:
+	; TODO THIS ONE JUST CYCLES THROUGH FOUR BRIGADERS FROM THE GP OF 20, 
+	; WHILE AFTER EACH SET OF 4 THERE IS ONE OF THE FOLLOWING BOSS TRAINERS LOADED RANDOMLY, 
+	; FROM A, B, C, D, E, F, G
+	; EVERY FIVE TURNS YOU GET THE CHANCE TO STEP ASIDE AND CHANGE UP YOUR TEAM 
+	; TODO ONCE THE STREAK REACHES 50 YOU GET A LITTLE TROPHY OF the mon you started with
+
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
 	opentext
@@ -2752,14 +2788,16 @@ StadiumFacility_TrainersEndlessEvent: ; todo need to figure out adding in the op
 	yesorno
 	iffalse_jumptext FacilityGetReadyText
 	; clear the events
-	clearevent EVENT_STADIUM_HEALED
+;	clearevent EVENT_STADIUM_HEALED ; this is below so that you don't accidentally waste your heal before the first trainer 
 	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
 	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	writetext FacilityExplainTrainersText
 	waitbutton
+	closetext
 	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
 	iftrue .AlreadyHealed
@@ -2771,8 +2809,14 @@ StadiumFacility_TrainersEndlessEvent: ; todo need to figure out adding in the op
 	setevent EVENT_STADIUM_HEALED
 	; todo add heal sfx 
 .AlreadyHealed:
+	closetext
+	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	iftrue .FinalFacilityElder
+	appear STADIUM_FACILITY_AROMA_LADY
+	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkTowardMovement ; walks on screen and faces the player 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .SecondFacilityTrainer
+	clearevent EVENT_STADIUM_HEALED
 	readmem wStadiumFacilityFirstTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .SecondFacilityTrainer:
@@ -2781,8 +2825,8 @@ StadiumFacility_TrainersEndlessEvent: ; todo need to figure out adding in the op
 	readmem wStadiumFacilitySecondTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .ThirdFacilityTrainer:
-	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
-	iftrue .FinalFacilityElder
+;	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+;	iftrue .FinalFacilityElder
 	readmem wStadiumFacilityThirdTrainer ; reads the first value that's written
 .LoadedFacilityTrainerIndex:
 	ifequal 0,  .CallTrainer1_0
@@ -2807,83 +2851,83 @@ StadiumFacility_TrainersEndlessEvent: ; todo need to figure out adding in the op
 ;	ifequal 19, .CallTrainer1_19 ; fallthru
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 20
+	loadtrainer BRIGADER_FACILITY, 20
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 1
+	loadtrainer BRIGADER_FACILITY, 1
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 2
+	loadtrainer BRIGADER_FACILITY, 2
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 3
+	loadtrainer BRIGADER_FACILITY, 3
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 4
+	loadtrainer BRIGADER_FACILITY, 4
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 5
+	loadtrainer BRIGADER_FACILITY, 5
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 6
+	loadtrainer BRIGADER_FACILITY, 6
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 7
+	loadtrainer BRIGADER_FACILITY, 7
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 8
+	loadtrainer BRIGADER_FACILITY, 8
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 9
+	loadtrainer BRIGADER_FACILITY, 9
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 10
+	loadtrainer BRIGADER_FACILITY, 10
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 11
+	loadtrainer BRIGADER_FACILITY, 11
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 12
+	loadtrainer BRIGADER_FACILITY, 12
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 13
+	loadtrainer BRIGADER_FACILITY, 13
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 14
+	loadtrainer BRIGADER_FACILITY, 14
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 15
+	loadtrainer BRIGADER_FACILITY, 15
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 16
+	loadtrainer BRIGADER_FACILITY, 16
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 17
+	loadtrainer BRIGADER_FACILITY, 17
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 18
+	loadtrainer BRIGADER_FACILITY, 18
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 19
+	loadtrainer BRIGADER_FACILITY, 19
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -2891,6 +2935,9 @@ StadiumFacility_TrainersEndlessEvent: ; todo need to figure out adding in the op
 ; ========
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
+	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_AROMA_LADY
+	moveobject STADIUM_FACILITY_AROMA_LADY, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2906,20 +2953,27 @@ StadiumFacility_TrainersEndlessEvent: ; todo need to figure out adding in the op
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	; SILAS WALKS IN 
-	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_FACILITY 
+	appear STADIUM_FACILITY_SANDRA
+	setevent EVENT_FACILITY_AROMA_LADY
+	disappear STADIUM_FACILITY_AROMA_LADY
+	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextSandra, FacilityLossTextSandra 
+	loadtrainer SANDRA, SANDRA_STADIUM 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
-; HOLLIS WALKS AWAY
+	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_SILAS
+	disappear STADIUM_FACILITY_SANDRA	
 	special HealParty
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
+	opentext
+	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
-;	closetext
+	closetext
+;	setscene $6
 	applyonemovement PLAYER, step_left
-	setscene $2 
 	end
-
 
 ; =================
 ; text
@@ -2980,7 +3034,6 @@ FacilityCurrentStreakText:
 ;	line "insert streak" ; TODO 
 	done
 
-
 KeepBattlingText:
 	text "Good luck!"
 	done
@@ -3001,6 +3054,39 @@ FacilityLossTextSilas:
 	text "ha ha ha"
 	done
 
+FacilityWinTextSandra:
+	text "yay"
+	done
+
+FacilityLossTextSandra:
+	text "he he he"
+	done
+
+FacilityWinTextSybil:
+	text "nice"
+	done
+
+FacilityLossTextSybil:
+	text "gg"
+	done
+
+FacilityWinTextRemy:
+	text "wp"
+	done
+	
+FacilityLossTextRemy:
+	text "uh oh"
+	done
+
+FacilityWinTextAmos:
+	text "ugh"
+	done
+
+FacilityLossTextAmos:
+	text "u mad"
+	done
+
+
 StadiumFacilityClerkPostRoundText:
 	text "Congrats! Your"
 	line "current streak is:"
@@ -3010,6 +3096,11 @@ StadiumFacilityClerkPostRoundText:
 	para "ready for the"
 	line "next round."
 	done
+
+
+; =================
+; movement 
+; =================
 
 ClerkWalkAwayMovement:
 	step_up

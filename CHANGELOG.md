@@ -113,13 +113,11 @@ Update ANoctowl and AFeraligatr back sprites.
 Reduce Union Cave trainer party size to split experience a little better. 
 Fix tiles on sheltered shores causing graphical glitch. 
 Fix Tangela back sprite colors : to check 
-
-
-* Release 1.1.0: Stadium Facility 
+Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
+Slightly updated the "bad ending" text. 
 
 Todo: 
 * Grep for pokemon at too low of level for their evolution stage 
-* Check the bad ending text for over the top text 
 * Special mark on pokemon if they have max DVs
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * More evo items for the person, incl metal coat and kings rock
