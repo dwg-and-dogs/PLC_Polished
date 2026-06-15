@@ -137,7 +137,7 @@ TrainerClassNames::
 	li "Sage"          ; FLANNERY --> facility sage  
 	li "Hisui"           ; Kanna UNUSED
 	li "<PK><MN> Trainer"            ; SKYLA --> facility pkmn trainer 
-	li "Bug Maniac"         ; VALERIE --> facility bug maniac  
+	li "Bug Catcher"         ; VALERIE --> facility bug maniac  
 	li "<PK><MN> Trainer" ; KUKUI UNUSED  pkmn trainer historic female 
 	li "<PK><MN> Trainer"        ; VICTOR --> pkmn trainer historic male 
 	li "Trainee"          ; BILL_T --> trainee  

@@ -3,26 +3,37 @@ StadiumGroundsFacility_MapScriptHeader:
 	; todo prevent using items in battle 
 		; probably in engine/item_effects 
 		; maybe check the map you're on ? 
+
+	; todo bug catches have an oh my ... text from being near the end or the second to last mon I need to remvoe it, actually many of them do 
 	; todo, spawn point to gauldenrod unless you have not yet beaten the game then it sends you to azalea 
+	; todo add more pause, more drama in between battles, more text 
+	; todo the bug catcher still remains after silas battle 
+	; todo check if gardevoir gets willowisp 
+	; todo ONE OF THE bug catcher fac teams has avalugg and abomosnow twice 
+	; todo increment the battle points, maybe just a special that increements and updates the max value 
+	; todo write the streak each time 
+	; todo likely tune up the levels of the enemies, 75/80/85/90/95 is too low, maybe 85/88/91/94/97
+	; todo fix the sprites that are called for each of the trainer events 
+	; todo unique text for all the trainers to give a hint as to their team 
 	
 	def_callbacks
-;	callback MAPCALLBACK_NEWMAP, HiddenGrottoCallback --> StadiumGroundsFacilityCallback
-;	callback MAPCALLBACK_OBJECTS, StadiumGroundsFacilityNPCs ; c.f. the hidden grotto?
+;	callback MAPCALLBACK_NEWMAP, HiddenGrottoCallback --> StadiumGroundsFacilityCallback; stretch goal 
+
 	
 	def_warp_events
-	; you're warped in and out of these - nothing to do here 
+
 	
 	def_coord_events 
-	coord_event 18, 15, 0, StadiumFacility_Pokemon1Event
-	coord_event 18, 15, 1, StadiumFacility_Trainers1Event
-	coord_event 18, 15, 2, StadiumFacility_Pokemon2Event
-	coord_event 18, 15, 3, StadiumFacility_Trainers2Event
-	coord_event 18, 15, 4, StadiumFacility_Pokemon3Event
-	coord_event 18, 15, 5, StadiumFacility_Trainers3Event
-	coord_event 18, 15, 6, StadiumFacility_Pokemon4Event
-	coord_event 18, 15, 7, StadiumFacility_Trainers4Event
-	coord_event 18, 15, 8, StadiumFacility_Pokemon5Event
-	coord_event 18, 15, 9, StadiumFacility_Trainers5Event
+	coord_event 18, 15, 0, StadiumFacility_Pokemon1Event ; DONE 
+	coord_event 18, 15, 1, StadiumFacility_Trainers1Event ; done -- this format is how it should be done with the trainers disappearing 
+	coord_event 18, 15, 2, StadiumFacility_Pokemon2Event ; done 
+	coord_event 18, 15, 3, StadiumFacility_Trainers2Event ; todo sandra party and load her team 
+	coord_event 18, 15, 4, StadiumFacility_Pokemon3Event ; done
+	coord_event 18, 15, 5, StadiumFacility_Trainers3Event ; need todo check trainers work, check functional, write sybil party 
+	coord_event 18, 15, 6, StadiumFacility_Pokemon4Event ; need todo check functional 
+	coord_event 18, 15, 7, StadiumFacility_Trainers4Event ; need todo check trainers work, check functional, write remy party 
+	coord_event 18, 15, 8, StadiumFacility_Pokemon5Event ; need todo check functional 
+	coord_event 18, 15, 9, StadiumFacility_Trainers5Event ; need todo check trainers work, check functional, write amos party 
 ;	coord_event 18, 15, 10, StadiumFacility_TrainersEndlessEvent	
 
 	def_bg_events
@@ -32,22 +43,22 @@ StadiumGroundsFacility_MapScriptHeader:
 	def_object_events
  	object_event 19, 15, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityClerkScript, EVENT_FACILITY_CLERK
 ;	object_event 0, 0, SPRITE_FACILITY_MON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityMonScript, EVENT_FACILITY_MON
-;	object_event 0, 0, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityMonBallScript, EVENT_FACILITY_MON_BALL
 
-;	object_event 0, 0, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BUG_MANIAC
-;	object_event 0, 0, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AROMA_LADY
-;	object_event 0, 0, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SAGE
-;	object_event 0, 0, SPRITE_NOMADF, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NOMADF
-;	object_event 0, 0, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NINJA
-;	object_event 0, 0, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BRIGADER
 
-;	object_event 0, 0, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SILAS
-;	object_event 0, 0, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SANDRA
-;	object_event 0, 0, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SYBIL
-;	object_event 0, 0, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_REMY
-;	object_event 0, 0, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AMOS
-;	object_event 0, 0, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_KURT
-;	object_event 0, 0, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_VESPER
+	object_event 24, 14, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BUG_MANIAC
+	object_event 24, 14, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AROMA_LADY
+	object_event 24, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SAGE
+	object_event 24, 14, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NOMADF
+	object_event 24, 14, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NINJA
+	object_event 24, 14, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BRIGADER
+	; TODO WRITE THE FINAL TEAMS FOR ALL OF THESE 
+	object_event 19, 17, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SILAS ; SUICUNE FINALE  TEAM 
+	object_event 19, 17, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SANDRA ;  FINALE HO OH TEAM 
+	object_event 19, 17, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SYBIL ; ENTEI TEAM 
+	object_event 19, 17, SPRITE_BARBEAU, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_REMY ; ANOTHER LUGIA TEAM  
+	object_event 19, 17, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AMOS ; RAIKOU TEAM 
+	object_event 19, 17, SPRITE_KURT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_KURT ; CELEBI TEAM 
+	object_event 19, 17, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_VESPER ; HEATRAN TEAM 
 
 ; always present
  	object_event 14, 15, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityClerkRetireScript, EVENT_FACILITY_CLERK	
@@ -56,20 +67,20 @@ StadiumGroundsFacility_MapScriptHeader:
  	const STADIUM_FACILITY_CLERK
 ; 	const STADIUM_FACILITY_MON
 
-; 	const STADIUM_FACILITY_BUG_CATCHER
-; 	const STADIUM_FACILITY_AROMA_LADY
-; 	const STADIUM_FACILITY_SAGE
-; 	const STADIUM_FACILITY_NOMADF
-; 	const STADIUM_FACILITY_NINJA
-; 	const STADIUM_FACILITY_BRIGADER
+ 	const STADIUM_FACILITY_BUG_CATCHER
+ 	const STADIUM_FACILITY_AROMA_LADY
+ 	const STADIUM_FACILITY_SAGE
+ 	const STADIUM_FACILITY_NOMADF
+ 	const STADIUM_FACILITY_NINJA
+ 	const STADIUM_FACILITY_BRIGADER
 
-; 	const STADIUM_FACILITY_HOLLIS 
-; 	const STADIUM_FACILITY_SANDRA
-; 	const STADIUM_FACILITY_SAMSARA
-; 	const STADIUM_FACILITY_BARBEAU
-; 	const STADIUM_FACILITY_AMOS
-; 	const STADIUM_FACILITY_KURTF
-; 	const STADIUM_FACILITY_MEJIMI
+ 	const STADIUM_FACILITY_HOLLIS 
+ 	const STADIUM_FACILITY_SANDRA
+ 	const STADIUM_FACILITY_SAMSARA
+ 	const STADIUM_FACILITY_BARBEAU
+ 	const STADIUM_FACILITY_AMOS
+ 	const STADIUM_FACILITY_KURTF
+ 	const STADIUM_FACILITY_MEJIMI
 
 FacilityClerkRetireScript:
 	faceplayer
@@ -427,187 +438,6 @@ StadiumFacility_Pokemon1Event:
 	applyonemovement PLAYER, step_left
 	end
 
-StadiumFacility_Trainers1Event: ; todo need to figure out adding in the optional healing 
-	turnobject STADIUM_FACILITY_CLERK, LEFT
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext FacilityAreYouReadyText
-	yesorno
-	iffalse_jumptext FacilityGetReadyText
-	; clear the events
-	clearevent EVENT_STADIUM_HEALED
-	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
-	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
-	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
-	writetext FacilityExplainTrainersText
-	waitbutton
-	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
-.FacilityTrainerBattles:
-	checkevent EVENT_STADIUM_HEALED
-	iftrue .AlreadyHealed
-	opentext
-	writetext FacilityHealPartyText
-	yesorno
-	iffalse .AlreadyHealed
-	special HealParty
-	setevent EVENT_STADIUM_HEALED
-	; todo add heal sfx 
-.AlreadyHealed:
-	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
-	iftrue .SecondFacilityTrainer
-	readmem wStadiumFacilityFirstTrainer ; reads the first value that's written
-	sjump .LoadedFacilityTrainerIndex
-.SecondFacilityTrainer:
-	checkevent EVENT_BEAT_SECOND_FACILITY_TRAINER
-	iftrue .ThirdFacilityTrainer
-	readmem wStadiumFacilitySecondTrainer ; reads the first value that's written
-	sjump .LoadedFacilityTrainerIndex
-.ThirdFacilityTrainer:
-	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
-	iftrue .FinalFacilityElder
-	readmem wStadiumFacilityThirdTrainer ; reads the first value that's written
-.LoadedFacilityTrainerIndex:
-	ifequal 0,  .CallTrainer1_0
-	ifequal 1,  .CallTrainer1_1
-	ifequal 2,  .CallTrainer1_2
-	ifequal 3,  .CallTrainer1_3
-	ifequal 4,  .CallTrainer1_4
-	ifequal 5,  .CallTrainer1_5
-	ifequal 6,  .CallTrainer1_6
-	ifequal 7,  .CallTrainer1_7
-	ifequal 8,  .CallTrainer1_8
-	ifequal 9,  .CallTrainer1_9
-	ifequal 10, .CallTrainer1_10
-	ifequal 11, .CallTrainer1_11
-	ifequal 12, .CallTrainer1_12
-	ifequal 13, .CallTrainer1_13
-	ifequal 14, .CallTrainer1_14
-	ifequal 15, .CallTrainer1_15
-	ifequal 16, .CallTrainer1_16
-	ifequal 17, .CallTrainer1_17
-	ifequal 18, .CallTrainer1_18
-;	ifequal 19, .CallTrainer1_19 ; fallthru
-;.CallTrainer1_19:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 20
-	sjump .LoadedTrainer
-.CallTrainer1_0:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 1
-	sjump .LoadedTrainer
-.CallTrainer1_1:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 2
-	sjump .LoadedTrainer
-.CallTrainer1_2:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 3
-	sjump .LoadedTrainer
-.CallTrainer1_3:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 4
-	sjump .LoadedTrainer
-.CallTrainer1_4:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 5
-	sjump .LoadedTrainer
-.CallTrainer1_5:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 6
-	sjump .LoadedTrainer
-.CallTrainer1_6:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 7
-	sjump .LoadedTrainer
-.CallTrainer1_7:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 8
-	sjump .LoadedTrainer
-.CallTrainer1_8:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 9
-	sjump .LoadedTrainer
-.CallTrainer1_9:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 10
-	sjump .LoadedTrainer
-.CallTrainer1_10:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 11
-	sjump .LoadedTrainer
-.CallTrainer1_11:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 12
-	sjump .LoadedTrainer
-.CallTrainer1_12:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 13
-	sjump .LoadedTrainer
-.CallTrainer1_13:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 14
-	sjump .LoadedTrainer
-.CallTrainer1_14:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 15
-	sjump .LoadedTrainer
-.CallTrainer1_15:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 16
-	sjump .LoadedTrainer
-.CallTrainer1_16:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 17
-	sjump .LoadedTrainer
-.CallTrainer1_17:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 18
-	sjump .LoadedTrainer
-.CallTrainer1_18:
-	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 19
-;	sjump .LoadedTrainer ; fallthru
-.LoadedTrainer:
-	startbattle
-	reloadmapafterbattle ; or just reloadmap? 
-; ========
-; check which trainer we're on, set the event, and jump back to the trainer sequences 
-; ========
-	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
-	iftrue .CheckSecond
-	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
-	sjump .FacilityTrainerBattles
-.CheckSecond:
-	checkevent EVENT_BEAT_SECOND_FACILITY_TRAINER
-	iftrue .CheckThird
-	setevent EVENT_BEAT_SECOND_FACILITY_TRAINER
-	sjump .FacilityTrainerBattles
-.CheckThird:
-	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
-	iftrue .FinalFacilityElder
-	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
-	sjump .FacilityTrainerBattles
-.FinalFacilityElder: 
-	; SILAS WALKS IN 
-	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_FACILITY 
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	reloadmap
-; HOLLIS WALKS AWAY
-	special HealParty
-	waitbutton
-;	closetext
-	applyonemovement PLAYER, step_left
-	setscene $2 
-	end
-
-
-; =========
-; dummy text here just to see how big it gets / if it fits 
-; =========
-
 StadiumFacility_Pokemon2Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
@@ -617,7 +447,7 @@ StadiumFacility_Pokemon2Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 27                      ; N = 27 mons to choose among
+	setval 28                      ; N = 28 mons to choose among
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	; tell the player which mon (the FIRST roll)
 	readmem wStadiumFacilityFirstTrainer
@@ -647,142 +477,148 @@ StadiumFacility_Pokemon2Event:
 	ifequal 23, .TellPokemon1_23
 	ifequal 24, .TellPokemon1_24
 	ifequal 25, .TellPokemon1_25
-;	ifequal 26, .TellPokemon1_26 ; fallthru
-;.TellPokemon1_26:
+	ifequal 26, .TellPokemon1_26
+;	ifequal 27, .TellPokemon1_27 ; fallthru
+;.TellPokemon1_27:
 	writethistext
-		text "Victreebel."
+		text "Alolan Golem."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_0:
 	writethistext
-		text "Ancestor Magcargo."
+		text "Clefable."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_1:
 	writethistext
-		text "Hisuian Electrode."
+		text "Togekiss."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_2:
 	writethistext
-		text "Galarian Slowbro."
+		text "Bellossom."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_3:
 	writethistext
-		text "Galarian Slowking."
+		text "Nidoqueen."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_4:
 	writethistext
-		text "Scizor."
+		text "Jynx."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_5:
 	writethistext
-		text "Kleavor."
+		text "Blissey."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_6:
 	writethistext
-		text "Minsir."
+		text "Toxicroak."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_7:
 	writethistext
-		text "Yanmega."
+		text "Golem."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_8:
 	writethistext
-		text "Furret."
+		text "Nidoking."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_9:
 	writethistext
-		text "Pinsir."
+		text "Exeggutor."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_10:
 	writethistext
-		text "Scyther."
+		text "Granbull."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_11:
 	writethistext
-		text "Hippowdon."
+		text "Azumarill."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_12:
 	writethistext
-		text "Abomasnow."
+		text "Hitmonlee."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_13:
 	writethistext
-		text "Avalugg."
+		text "Hitmonchan."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_14:
 	writethistext
-		text "Heracross."
+		text "Hitmontop."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_15:
 	writethistext
-		text "Forretress."
+		text "Tangrowth."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_16:
 	writethistext
-		text "Magcargo."
+		text "Rapidash."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_17:
 	writethistext
-		text "Ariados."
+		text "Bastiodon."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_18:
 	writethistext
-		text "Ledian."
+		text "Raichu."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_19:
 	writethistext
-		text "Ancestor Noctowl."
+		text "Meganium."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_20:
 	writethistext
-		text "Parasect."
+		text "Weezing."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_21:
 	writethistext
-		text "Slowbro."
+		text "Sunflora."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_22:
 	writethistext
-		text "Slowking."
+		text "Gardevoir."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_23:
 	writethistext
-		text "Quagsire."
+		text "Alolan Raichu."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_24:
 	writethistext
-		text "Staraptor."
+		text "Alolan Meganium."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_25:
 	writethistext
-		text "Jumpluff."
+		text "Galarian Weezing."
 		done
-;	sjump .ToldPokemon ; fallthru
+	sjump .ToldPokemon
+.TellPokemon1_26:
+	writethistext
+		text "Galarian Rapidash."
+		done
+	sjump .ToldPokemon
 .ToldPokemon:
 	waitbutton
 	writethistext
@@ -827,85 +663,89 @@ StadiumFacility_Pokemon2Event:
 	ifequal 23, .CallPokemon1_23
 	ifequal 24, .CallPokemon1_24
 	ifequal 25, .CallPokemon1_25
-	loadwildmon VICTREEBEL, 100            ; Pokemon1_26
+	ifequal 26, .CallPokemon1_26
+	loadwildmon GOLEM, ALOLAN_FORM, 100    ; Agolem (Pokemon1_27)
 	sjump .AfterPokemon1
 .CallPokemon1_0:
-	loadwildmon MAGCARGO, OTHER_FORM, 100  ; Ancestor form
+	loadwildmon CLEFABLE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_1:
-	loadwildmon ELECTRODE, HISUIAN_FORM, 100 ; Hisuian form
+	loadwildmon TOGEKISS, 100
 	sjump .AfterPokemon1
 .CallPokemon1_2:
-	loadwildmon SLOWBRO, GALARIAN_FORM, 100   ; Galarian form
+	loadwildmon BELLOSSOM, 100
 	sjump .AfterPokemon1
 .CallPokemon1_3:
-	loadwildmon SLOWKING, GALARIAN_FORM, 100  ; Galarian form
+	loadwildmon NIDOQUEEN, 100
 	sjump .AfterPokemon1
 .CallPokemon1_4:
-	loadwildmon SCIZOR, 100
+	loadwildmon JYNX, 100
 	sjump .AfterPokemon1
 .CallPokemon1_5:
-	loadwildmon KLEAVOR, 100
+	loadwildmon BLISSEY, 100
 	sjump .AfterPokemon1
 .CallPokemon1_6:
-	loadwildmon MINSIR, 100
+	loadwildmon TOXICROAK, 100
 	sjump .AfterPokemon1
 .CallPokemon1_7:
-	loadwildmon YANMEGA, 100
+	loadwildmon GOLEM, 100
 	sjump .AfterPokemon1
 .CallPokemon1_8:
-	loadwildmon FURRET, 100
+	loadwildmon NIDOKING, 100
 	sjump .AfterPokemon1
 .CallPokemon1_9:
-	loadwildmon PINSIR, 100
+	loadwildmon EXEGGUTOR, 100
 	sjump .AfterPokemon1
 .CallPokemon1_10:
-	loadwildmon SCYTHER, 100
+	loadwildmon GRANBULL, 100
 	sjump .AfterPokemon1
 .CallPokemon1_11:
-	loadwildmon HIPPOWDON, 100
+	loadwildmon AZUMARILL, 100
 	sjump .AfterPokemon1
 .CallPokemon1_12:
-	loadwildmon ABOMASNOW, 100
+	loadwildmon HITMONLEE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_13:
-	loadwildmon AVALUGG, 100
+	loadwildmon HITMONCHAN, 100
 	sjump .AfterPokemon1
 .CallPokemon1_14:
-	loadwildmon HERACROSS, 100
+	loadwildmon HITMONTOP, 100
 	sjump .AfterPokemon1
 .CallPokemon1_15:
-	loadwildmon FORRETRESS, 100
+	loadwildmon TANGROWTH, 100
 	sjump .AfterPokemon1
 .CallPokemon1_16:
-	loadwildmon MAGCARGO, 100
+	loadwildmon RAPIDASH, 100
 	sjump .AfterPokemon1
 .CallPokemon1_17:
-	loadwildmon ARIADOS, 100
+	loadwildmon BASTIODON, 100
 	sjump .AfterPokemon1
 .CallPokemon1_18:
-	loadwildmon LEDIAN, 100
+	loadwildmon RAICHU, 100
 	sjump .AfterPokemon1
 .CallPokemon1_19:
-	loadwildmon NOCTOWL, OTHER_FORM, 100   ; Ancestor form
+	loadwildmon MEGANIUM, 100
 	sjump .AfterPokemon1
 .CallPokemon1_20:
-	loadwildmon PARASECT, 100
+	loadwildmon WEEZING, 100
 	sjump .AfterPokemon1
 .CallPokemon1_21:
-	loadwildmon SLOWBRO, 100
+	loadwildmon SUNFLORA, 100
 	sjump .AfterPokemon1
 .CallPokemon1_22:
-	loadwildmon SLOWKING, 100
+	loadwildmon GARDEVOIR, 100
 	sjump .AfterPokemon1
 .CallPokemon1_23:
-	loadwildmon QUAGSIRE, 100
+	loadwildmon RAICHU, ALOLAN_FORM, 100   ; ARaichu
 	sjump .AfterPokemon1
 .CallPokemon1_24:
-	loadwildmon STARAPTOR, 100
+	loadwildmon MEGANIUM, OTHER_FORM, 100 ; AMeganium
 	sjump .AfterPokemon1
 .CallPokemon1_25:
-	loadwildmon JUMPLUFF, 100
+	loadwildmon WEEZING, GALARIAN_FORM, 100  ; GWeezing
+	sjump .AfterPokemon1
+.CallPokemon1_26:
+	loadwildmon RAPIDASH, GALARIAN_FORM, 100 ; GRapidash
 ;	sjump .AfterPokemon1 ; fallthru
 .AfterPokemon1:
 	startbattle
@@ -917,7 +757,7 @@ StadiumFacility_Pokemon2Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
-	setscene $1
+	setscene $3
 	applyonemovement PLAYER, step_left
 	end
 
@@ -931,7 +771,7 @@ StadiumFacility_Pokemon3Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 27                      ; N = 27 mons to choose among
+	setval 25                      ; N = 25 mons to choose among
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	; tell the player which mon (the FIRST roll)
 	readmem wStadiumFacilityFirstTrainer
@@ -959,144 +799,132 @@ StadiumFacility_Pokemon3Event:
 	ifequal 21, .TellPokemon1_21
 	ifequal 22, .TellPokemon1_22
 	ifequal 23, .TellPokemon1_23
-	ifequal 24, .TellPokemon1_24
-	ifequal 25, .TellPokemon1_25
-;	ifequal 26, .TellPokemon1_26 ; fallthru
-;.TellPokemon1_26:
+;	ifequal 24, .TellPokemon1_24 ; fallthru
+;.TellPokemon1_24:
 	writethistext
-		text "Victreebel."
+		text "Alolan Muk."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_0:
 	writethistext
-		text "Ancestor Magcargo."
+		text "Sudowoodo."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_1:
 	writethistext
-		text "Hisuian Electrode."
+		text "Gengar."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_2:
 	writethistext
-		text "Galarian Slowbro."
+		text "Vileplume."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_3:
 	writethistext
-		text "Galarian Slowking."
+		text "Wyrdeer."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_4:
 	writethistext
-		text "Scizor."
+		text "Annihilape."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_5:
 	writethistext
-		text "Kleavor."
+		text "Ambipom."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_6:
 	writethistext
-		text "Minsir."
+		text "Xatu."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_7:
 	writethistext
-		text "Yanmega."
+		text "Honchkrow."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_8:
 	writethistext
-		text "Furret."
+		text "Houndoom."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_9:
 	writethistext
-		text "Pinsir."
+		text "Crobat."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_10:
 	writethistext
-		text "Scyther."
+		text "Ninetales."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_11:
 	writethistext
-		text "Hippowdon."
+		text "Farigiraf."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_12:
 	writethistext
-		text "Abomasnow."
+		text "Magmortar."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_13:
 	writethistext
-		text "Avalugg."
+		text "Basculegion."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_14:
 	writethistext
-		text "Heracross."
+		text "Mismagius."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_15:
 	writethistext
-		text "Forretress."
+		text "Dusknoir."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_16:
 	writethistext
-		text "Magcargo."
+		text "Weavile."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_17:
 	writethistext
-		text "Ariados."
+		text "Entei."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_18:
 	writethistext
-		text "Ledian."
+		text "Muk."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_19:
 	writethistext
-		text "Ancestor Noctowl."
+		text "Electrode."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_20:
 	writethistext
-		text "Parasect."
+		text "Donphan."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_21:
 	writethistext
-		text "Slowbro."
+		text "Spiritomb."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_22:
 	writethistext
-		text "Slowking."
+		text "Rotom."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_23:
 	writethistext
-		text "Quagsire."
+		text "Ancestor Xatu."
 		done
 	sjump .ToldPokemon
-.TellPokemon1_24:
-	writethistext
-		text "Staraptor."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_25:
-	writethistext
-		text "Jumpluff."
-		done
-;	sjump .ToldPokemon ; fallthru
 .ToldPokemon:
 	waitbutton
 	writethistext
@@ -1139,87 +967,79 @@ StadiumFacility_Pokemon3Event:
 	ifequal 21, .CallPokemon1_21
 	ifequal 22, .CallPokemon1_22
 	ifequal 23, .CallPokemon1_23
-	ifequal 24, .CallPokemon1_24
-	ifequal 25, .CallPokemon1_25
-	loadwildmon VICTREEBEL, 100            ; Pokemon1_26
+	loadwildmon MUK, ALOLAN_FORM, 100       ; Muk, Alolan_form (Pokemon1_26)
 	sjump .AfterPokemon1
 .CallPokemon1_0:
-	loadwildmon MAGCARGO, OTHER_FORM, 100  ; Ancestor form
+	loadwildmon SUDOWOODO, 100
 	sjump .AfterPokemon1
 .CallPokemon1_1:
-	loadwildmon ELECTRODE, HISUIAN_FORM, 100 ; Hisuian form
+	loadwildmon GENGAR, 100
 	sjump .AfterPokemon1
 .CallPokemon1_2:
-	loadwildmon SLOWBRO, GALARIAN_FORM, 100   ; Galarian form
+	loadwildmon VILEPLUME, 100
 	sjump .AfterPokemon1
 .CallPokemon1_3:
-	loadwildmon SLOWKING, GALARIAN_FORM, 100  ; Galarian form
+	loadwildmon WYRDEER, 100
 	sjump .AfterPokemon1
 .CallPokemon1_4:
-	loadwildmon SCIZOR, 100
+	loadwildmon ANNIHILAPE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_5:
-	loadwildmon KLEAVOR, 100
+	loadwildmon AMBIPOM, 100
 	sjump .AfterPokemon1
 .CallPokemon1_6:
-	loadwildmon MINSIR, 100
+	loadwildmon XATU, 100
 	sjump .AfterPokemon1
 .CallPokemon1_7:
-	loadwildmon YANMEGA, 100
+	loadwildmon HONCHKROW, 100
 	sjump .AfterPokemon1
 .CallPokemon1_8:
-	loadwildmon FURRET, 100
+	loadwildmon HOUNDOOM, 100
 	sjump .AfterPokemon1
 .CallPokemon1_9:
-	loadwildmon PINSIR, 100
+	loadwildmon CROBAT, 100
 	sjump .AfterPokemon1
 .CallPokemon1_10:
-	loadwildmon SCYTHER, 100
+	loadwildmon NINETALES, 100
 	sjump .AfterPokemon1
 .CallPokemon1_11:
-	loadwildmon HIPPOWDON, 100
+	loadwildmon FARIGIRAF, 100
 	sjump .AfterPokemon1
 .CallPokemon1_12:
-	loadwildmon ABOMASNOW, 100
+	loadwildmon MAGMORTAR, 100
 	sjump .AfterPokemon1
 .CallPokemon1_13:
-	loadwildmon AVALUGG, 100
+	loadwildmon BASCULEGION, 100
 	sjump .AfterPokemon1
 .CallPokemon1_14:
-	loadwildmon HERACROSS, 100
+	loadwildmon MISMAGIUS, 100
 	sjump .AfterPokemon1
 .CallPokemon1_15:
-	loadwildmon FORRETRESS, 100
+	loadwildmon DUSKNOIR, 100
 	sjump .AfterPokemon1
 .CallPokemon1_16:
-	loadwildmon MAGCARGO, 100
+	loadwildmon WEAVILE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_17:
-	loadwildmon ARIADOS, 100
+	loadwildmon ENTEI, 100
 	sjump .AfterPokemon1
 .CallPokemon1_18:
-	loadwildmon LEDIAN, 100
+	loadwildmon MUK, 100
 	sjump .AfterPokemon1
 .CallPokemon1_19:
-	loadwildmon NOCTOWL, OTHER_FORM, 100   ; Ancestor form
+	loadwildmon ELECTRODE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_20:
-	loadwildmon PARASECT, 100
+	loadwildmon DONPHAN, 100
 	sjump .AfterPokemon1
 .CallPokemon1_21:
-	loadwildmon SLOWBRO, 100
+	loadwildmon SPIRITOMB, 100
 	sjump .AfterPokemon1
 .CallPokemon1_22:
-	loadwildmon SLOWKING, 100
+	loadwildmon ROTOM, 100
 	sjump .AfterPokemon1
 .CallPokemon1_23:
-	loadwildmon QUAGSIRE, 100
-	sjump .AfterPokemon1
-.CallPokemon1_24:
-	loadwildmon STARAPTOR, 100
-	sjump .AfterPokemon1
-.CallPokemon1_25:
-	loadwildmon JUMPLUFF, 100
+	loadwildmon XATU, OTHER_FORM, 100      ; Xatu, Ancestor_form
 ;	sjump .AfterPokemon1 ; fallthru
 .AfterPokemon1:
 	startbattle
@@ -1231,10 +1051,10 @@ StadiumFacility_Pokemon3Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
-	setscene $1
+	setscene $5
 	applyonemovement PLAYER, step_left
 	end
-
+	
 StadiumFacility_Pokemon4Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
@@ -1244,7 +1064,7 @@ StadiumFacility_Pokemon4Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 27                      ; N = 27 mons to choose among
+	setval 25                      ; N = 25 mons to choose among
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	; tell the player which mon (the FIRST roll)
 	readmem wStadiumFacilityFirstTrainer
@@ -1272,144 +1092,132 @@ StadiumFacility_Pokemon4Event:
 	ifequal 21, .TellPokemon1_21
 	ifequal 22, .TellPokemon1_22
 	ifequal 23, .TellPokemon1_23
-	ifequal 24, .TellPokemon1_24
-	ifequal 25, .TellPokemon1_25
-;	ifequal 26, .TellPokemon1_26 ; fallthru
-;.TellPokemon1_26:
+;	ifequal 24, .TellPokemon1_24 ; fallthru
+;.TellPokemon1_24:
 	writethistext
-		text "Victreebel."
+		text "Suicune."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_0:
 	writethistext
-		text "Ancestor Magcargo."
+		text "Ampharos."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_1:
 	writethistext
-		text "Hisuian Electrode."
+		text "Politoed."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_2:
 	writethistext
-		text "Galarian Slowbro."
+		text "Poliwrath."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_3:
 	writethistext
-		text "Galarian Slowking."
+		text "Gyarados."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_4:
 	writethistext
-		text "Scizor."
+		text "Kingdra."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_5:
 	writethistext
-		text "Kleavor."
+		text "Shuckle."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_6:
 	writethistext
-		text "Minsir."
+		text "Feraligatr."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_7:
 	writethistext
-		text "Yanmega."
+		text "Goodra."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_8:
 	writethistext
-		text "Furret."
+		text "Skarmory."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_9:
 	writethistext
-		text "Pinsir."
+		text "Drifblim."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_10:
 	writethistext
-		text "Scyther."
+		text "Braviary."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_11:
 	writethistext
-		text "Hippowdon."
+		text "Miltank."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_12:
 	writethistext
-		text "Abomasnow."
+		text "Electivire."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_13:
 	writethistext
-		text "Avalugg."
+		text "Overqwil."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_14:
 	writethistext
-		text "Heracross."
+		text "Tentacruel."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_15:
 	writethistext
-		text "Forretress."
+		text "Octillery."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_16:
 	writethistext
-		text "Magcargo."
+		text "Lanturn."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_17:
 	writethistext
-		text "Ariados."
+		text "Corsola."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_18:
 	writethistext
-		text "Ledian."
+		text "Mantine."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_19:
 	writethistext
-		text "Ancestor Noctowl."
+		text "Lapras."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_20:
 	writethistext
-		text "Parasect."
+		text "Alolan Ninetales."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_21:
 	writethistext
-		text "Slowbro."
+		text "Galarian Corsola."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_22:
 	writethistext
-		text "Slowking."
+		text "Galarian Exeggutor."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_23:
 	writethistext
-		text "Quagsire."
+		text "Ancestor Feraligatr."
 		done
 	sjump .ToldPokemon
-.TellPokemon1_24:
-	writethistext
-		text "Staraptor."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_25:
-	writethistext
-		text "Jumpluff."
-		done
-;	sjump .ToldPokemon ; fallthru
 .ToldPokemon:
 	waitbutton
 	writethistext
@@ -1452,87 +1260,79 @@ StadiumFacility_Pokemon4Event:
 	ifequal 21, .CallPokemon1_21
 	ifequal 22, .CallPokemon1_22
 	ifequal 23, .CallPokemon1_23
-	ifequal 24, .CallPokemon1_24
-	ifequal 25, .CallPokemon1_25
-	loadwildmon VICTREEBEL, 100            ; Pokemon1_26
+	loadwildmon SUICUNE, 100               ; Suicune (Pokemon1_30)
 	sjump .AfterPokemon1
 .CallPokemon1_0:
-	loadwildmon MAGCARGO, OTHER_FORM, 100  ; Ancestor form
+	loadwildmon AMPHAROS, 100
 	sjump .AfterPokemon1
 .CallPokemon1_1:
-	loadwildmon ELECTRODE, HISUIAN_FORM, 100 ; Hisuian form
+	loadwildmon POLITOED, 100
 	sjump .AfterPokemon1
 .CallPokemon1_2:
-	loadwildmon SLOWBRO, GALARIAN_FORM, 100   ; Galarian form
+	loadwildmon POLIWRATH, 100
 	sjump .AfterPokemon1
 .CallPokemon1_3:
-	loadwildmon SLOWKING, GALARIAN_FORM, 100  ; Galarian form
+	loadwildmon GYARADOS, 100
 	sjump .AfterPokemon1
 .CallPokemon1_4:
-	loadwildmon SCIZOR, 100
+	loadwildmon KINGDRA, 100
 	sjump .AfterPokemon1
 .CallPokemon1_5:
-	loadwildmon KLEAVOR, 100
+	loadwildmon SHUCKLE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_6:
-	loadwildmon MINSIR, 100
+	loadwildmon FERALIGATR, 100
 	sjump .AfterPokemon1
 .CallPokemon1_7:
-	loadwildmon YANMEGA, 100
+	loadwildmon GOODRA, 100
 	sjump .AfterPokemon1
 .CallPokemon1_8:
-	loadwildmon FURRET, 100
+	loadwildmon SKARMORY, 100
 	sjump .AfterPokemon1
 .CallPokemon1_9:
-	loadwildmon PINSIR, 100
+	loadwildmon DRIFBLIM, 100
 	sjump .AfterPokemon1
 .CallPokemon1_10:
-	loadwildmon SCYTHER, 100
+	loadwildmon BRAVIARY, 100
 	sjump .AfterPokemon1
 .CallPokemon1_11:
-	loadwildmon HIPPOWDON, 100
+	loadwildmon MILTANK, 100
 	sjump .AfterPokemon1
 .CallPokemon1_12:
-	loadwildmon ABOMASNOW, 100
+	loadwildmon ELECTIVIRE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_13:
-	loadwildmon AVALUGG, 100
+	loadwildmon OVERQWIL, 100
 	sjump .AfterPokemon1
 .CallPokemon1_14:
-	loadwildmon HERACROSS, 100
+	loadwildmon TENTACRUEL, 100
 	sjump .AfterPokemon1
 .CallPokemon1_15:
-	loadwildmon FORRETRESS, 100
+	loadwildmon OCTILLERY, 100
 	sjump .AfterPokemon1
 .CallPokemon1_16:
-	loadwildmon MAGCARGO, 100
+	loadwildmon LANTURN, 100
 	sjump .AfterPokemon1
 .CallPokemon1_17:
-	loadwildmon ARIADOS, 100
+	loadwildmon CORSOLA, 100
 	sjump .AfterPokemon1
 .CallPokemon1_18:
-	loadwildmon LEDIAN, 100
+	loadwildmon MANTINE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_19:
-	loadwildmon NOCTOWL, OTHER_FORM, 100   ; Ancestor form
+	loadwildmon LAPRAS, 100
 	sjump .AfterPokemon1
 .CallPokemon1_20:
-	loadwildmon PARASECT, 100
+	loadwildmon NINETALES, ALOLAN_FORM, 100 ; Ninetales_Alolan
 	sjump .AfterPokemon1
 .CallPokemon1_21:
-	loadwildmon SLOWBRO, 100
+	loadwildmon CORSOLA, GALARIAN_FORM, 100  ; Corsola_Galarian
 	sjump .AfterPokemon1
 .CallPokemon1_22:
-	loadwildmon SLOWKING, 100
+	loadwildmon EXEGGUTOR, GALARIAN_FORM, 100 ; Exeggutor_Galarian
 	sjump .AfterPokemon1
 .CallPokemon1_23:
-	loadwildmon QUAGSIRE, 100
-	sjump .AfterPokemon1
-.CallPokemon1_24:
-	loadwildmon STARAPTOR, 100
-	sjump .AfterPokemon1
-.CallPokemon1_25:
-	loadwildmon JUMPLUFF, 100
+	loadwildmon FERALIGATR, OTHER_FORM, 100 ; Feraligatr_ancestor
 ;	sjump .AfterPokemon1 ; fallthru
 .AfterPokemon1:
 	startbattle
@@ -1544,10 +1344,10 @@ StadiumFacility_Pokemon4Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
-	setscene $1
+	setscene $7
 	applyonemovement PLAYER, step_left
 	end
-
+ 
 StadiumFacility_Pokemon5Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
@@ -1557,7 +1357,7 @@ StadiumFacility_Pokemon5Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 27                      ; N = 27 mons to choose among
+	setval 39                      ; N = 39 mons to choose among
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	; tell the player which mon (the FIRST roll)
 	readmem wStadiumFacilityFirstTrainer
@@ -1587,142 +1387,219 @@ StadiumFacility_Pokemon5Event:
 	ifequal 23, .TellPokemon1_23
 	ifequal 24, .TellPokemon1_24
 	ifequal 25, .TellPokemon1_25
-;	ifequal 26, .TellPokemon1_26 ; fallthru
-;.TellPokemon1_26:
+	ifequal 26, .TellPokemon1_26
+	ifequal 27, .TellPokemon1_27
+	ifequal 28, .TellPokemon1_28
+	ifequal 29, .TellPokemon1_29
+	ifequal 30, .TellPokemon1_30
+	ifequal 31, .TellPokemon1_31
+	ifequal 32, .TellPokemon1_32
+	ifequal 33, .TellPokemon1_33
+	ifequal 34, .TellPokemon1_34
+	ifequal 35, .TellPokemon1_35
+	ifequal 36, .TellPokemon1_36
+	ifequal 37, .TellPokemon1_37
+;	ifequal 38, .TellPokemon1_38 ; fallthru
+;.TellPokemon1_38:
 	writethistext
-		text "Victreebel."
+		text "Bloodmoon"
+		line "Ursaluna."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_0:
 	writethistext
-		text "Ancestor Magcargo."
+		text "Typhlosion."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_1:
 	writethistext
-		text "Hisuian Electrode."
+		text "Decidueye."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_2:
 	writethistext
-		text "Galarian Slowbro."
+		text "Samurott."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_3:
 	writethistext
-		text "Galarian Slowking."
+		text "Machamp."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_4:
 	writethistext
-		text "Scizor."
+		text "Ursaluna."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_5:
 	writethistext
-		text "Kleavor."
+		text "Luxray."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_6:
 	writethistext
-		text "Minsir."
+		text "Lucario."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_7:
 	writethistext
-		text "Yanmega."
+		text "Gallade."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_8:
 	writethistext
-		text "Furret."
+		text "Dragonite."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_9:
 	writethistext
-		text "Pinsir."
+		text "Tyranitar."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_10:
 	writethistext
-		text "Scyther."
+		text "Hisuian"
+		line "Arcanine."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_11:
 	writethistext
-		text "Hippowdon."
+		text "Steelix."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_12:
 	writethistext
-		text "Abomasnow."
+		text "Dudunsparce."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_13:
 	writethistext
-		text "Avalugg."
+		text "Arcanine."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_14:
 	writethistext
-		text "Heracross."
+		text "Hisuian"
+		line "Typhlosion."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_15:
 	writethistext
-		text "Forretress."
+		text "Hisuian"
+		line "Decidueye."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_16:
 	writethistext
-		text "Magcargo."
+		text "Hisuian"
+		line "Samurott."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_17:
 	writethistext
-		text "Ariados."
+		text "Jolteon."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_18:
 	writethistext
-		text "Ledian."
+		text "Vaporeon."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_19:
 	writethistext
-		text "Ancestor Noctowl."
+		text "Flareon."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_20:
 	writethistext
-		text "Parasect."
+		text "Leafeon."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_21:
 	writethistext
-		text "Slowbro."
+		text "Sylveon."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_22:
 	writethistext
-		text "Slowking."
+		text "Glaceon."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_23:
 	writethistext
-		text "Quagsire."
+		text "Espeon."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_24:
 	writethistext
-		text "Staraptor."
+		text "Umbreon."
 		done
 	sjump .ToldPokemon
 .TellPokemon1_25:
 	writethistext
-		text "Jumpluff."
+		text "Alakazam."
 		done
-;	sjump .ToldPokemon ; fallthru
+	sjump .ToldPokemon
+.TellPokemon1_26:
+	writethistext
+		text "Magnezone."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_27:
+	writethistext
+		text "Mamoswine."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_28:
+	writethistext
+		text "Rhyperior."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_29:
+	writethistext
+		text "Sneasler."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_30:
+	writethistext
+		text "Porygon2."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_31:
+	writethistext
+		text "PorygonZ."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_32:
+	writethistext
+		text "Rampardos."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_33:
+	writethistext
+		text "Bronzong."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_34:
+	writethistext
+		text "Zoroark."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_35:
+	writethistext
+		text "Garchomp."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_36:
+	writethistext
+		text "Snorlax."
+		done
+	sjump .ToldPokemon
+.TellPokemon1_37:
+	writethistext
+		text "Gliscor."
+		done
+	sjump .ToldPokemon
 .ToldPokemon:
 	waitbutton
 	writethistext
@@ -1767,85 +1644,133 @@ StadiumFacility_Pokemon5Event:
 	ifequal 23, .CallPokemon1_23
 	ifequal 24, .CallPokemon1_24
 	ifequal 25, .CallPokemon1_25
-	loadwildmon VICTREEBEL, 100            ; Pokemon1_26
+	ifequal 26, .CallPokemon1_26
+	ifequal 27, .CallPokemon1_27
+	ifequal 28, .CallPokemon1_28
+	ifequal 29, .CallPokemon1_29
+	ifequal 30, .CallPokemon1_30
+	ifequal 31, .CallPokemon1_31
+	ifequal 32, .CallPokemon1_32
+	ifequal 33, .CallPokemon1_33
+	ifequal 34, .CallPokemon1_34
+	ifequal 35, .CallPokemon1_35
+	ifequal 36, .CallPokemon1_36
+	ifequal 37, .CallPokemon1_37
+	loadwildmon URSALUNA, OTHER_FORM, 100  ; Ursaluna_bloodmoon (Pokemon1_45)
 	sjump .AfterPokemon1
 .CallPokemon1_0:
-	loadwildmon MAGCARGO, OTHER_FORM, 100  ; Ancestor form
+	loadwildmon TYPHLOSION, 100
 	sjump .AfterPokemon1
 .CallPokemon1_1:
-	loadwildmon ELECTRODE, HISUIAN_FORM, 100 ; Hisuian form
+	loadwildmon DECIDUEYE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_2:
-	loadwildmon SLOWBRO, GALARIAN_FORM, 100   ; Galarian form
+	loadwildmon SAMUROTT, 100
 	sjump .AfterPokemon1
 .CallPokemon1_3:
-	loadwildmon SLOWKING, GALARIAN_FORM, 100  ; Galarian form
+	loadwildmon MACHAMP, 100
 	sjump .AfterPokemon1
 .CallPokemon1_4:
-	loadwildmon SCIZOR, 100
+	loadwildmon URSALUNA, 100
 	sjump .AfterPokemon1
 .CallPokemon1_5:
-	loadwildmon KLEAVOR, 100
+	loadwildmon LUXRAY, 100
 	sjump .AfterPokemon1
 .CallPokemon1_6:
-	loadwildmon MINSIR, 100
+	loadwildmon LUCARIO, 100
 	sjump .AfterPokemon1
 .CallPokemon1_7:
-	loadwildmon YANMEGA, 100
+	loadwildmon GALLADE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_8:
-	loadwildmon FURRET, 100
+	loadwildmon DRAGONITE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_9:
-	loadwildmon PINSIR, 100
+	loadwildmon TYRANITAR, 100
 	sjump .AfterPokemon1
 .CallPokemon1_10:
-	loadwildmon SCYTHER, 100
+	loadwildmon ARCANINE, HISUIAN_FORM, 100  ; Arcanine_hisuan
 	sjump .AfterPokemon1
 .CallPokemon1_11:
-	loadwildmon HIPPOWDON, 100
+	loadwildmon STEELIX, 100
 	sjump .AfterPokemon1
 .CallPokemon1_12:
-	loadwildmon ABOMASNOW, 100
+	loadwildmon DUDUNSPARCE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_13:
-	loadwildmon AVALUGG, 100
+	loadwildmon ARCANINE, 100
 	sjump .AfterPokemon1
 .CallPokemon1_14:
-	loadwildmon HERACROSS, 100
+	loadwildmon TYPHLOSION, HISUIAN_FORM, 100 ; Typhlosion_hisuan
 	sjump .AfterPokemon1
 .CallPokemon1_15:
-	loadwildmon FORRETRESS, 100
+	loadwildmon DECIDUEYE, HISUIAN_FORM, 100 ; Decidueye_hisuan
 	sjump .AfterPokemon1
 .CallPokemon1_16:
-	loadwildmon MAGCARGO, 100
+	loadwildmon SAMUROTT, HISUIAN_FORM, 100  ; Samurott_hisuan
 	sjump .AfterPokemon1
 .CallPokemon1_17:
-	loadwildmon ARIADOS, 100
+	loadwildmon JOLTEON, 100
 	sjump .AfterPokemon1
 .CallPokemon1_18:
-	loadwildmon LEDIAN, 100
+	loadwildmon VAPOREON, 100
 	sjump .AfterPokemon1
 .CallPokemon1_19:
-	loadwildmon NOCTOWL, OTHER_FORM, 100   ; Ancestor form
+	loadwildmon FLAREON, 100
 	sjump .AfterPokemon1
 .CallPokemon1_20:
-	loadwildmon PARASECT, 100
+	loadwildmon LEAFEON, 100
 	sjump .AfterPokemon1
 .CallPokemon1_21:
-	loadwildmon SLOWBRO, 100
+	loadwildmon SYLVEON, 100
 	sjump .AfterPokemon1
 .CallPokemon1_22:
-	loadwildmon SLOWKING, 100
+	loadwildmon GLACEON, 100
 	sjump .AfterPokemon1
 .CallPokemon1_23:
-	loadwildmon QUAGSIRE, 100
+	loadwildmon ESPEON, 100
 	sjump .AfterPokemon1
 .CallPokemon1_24:
-	loadwildmon STARAPTOR, 100
+	loadwildmon UMBREON, 100
 	sjump .AfterPokemon1
 .CallPokemon1_25:
-	loadwildmon JUMPLUFF, 100
+	loadwildmon ALAKAZAM, 100
+	sjump .AfterPokemon1
+.CallPokemon1_26:
+	loadwildmon MAGNEZONE, 100
+	sjump .AfterPokemon1
+.CallPokemon1_27:
+	loadwildmon MAMOSWINE, 100
+	sjump .AfterPokemon1
+.CallPokemon1_28:
+	loadwildmon RHYPERIOR, 100
+	sjump .AfterPokemon1
+.CallPokemon1_29:
+	loadwildmon SNEASLER, 100
+	sjump .AfterPokemon1
+.CallPokemon1_30:
+	loadwildmon PORYGON2, 100
+	sjump .AfterPokemon1
+.CallPokemon1_31:
+	loadwildmon PORYGON_Z, 100
+	sjump .AfterPokemon1
+.CallPokemon1_32:
+	loadwildmon RAMPARDOS, 100
+	sjump .AfterPokemon1
+.CallPokemon1_33:
+	loadwildmon BRONZONG, 100
+	sjump .AfterPokemon1
+.CallPokemon1_34:
+	loadwildmon ZOROARK, 100
+	sjump .AfterPokemon1
+.CallPokemon1_35:
+	loadwildmon GARCHOMP, 100
+	sjump .AfterPokemon1
+.CallPokemon1_36:
+	loadwildmon SNORLAX, 100
+	sjump .AfterPokemon1
+.CallPokemon1_37:
+	loadwildmon GLISCOR, 100
 ;	sjump .AfterPokemon1 ; fallthru
 .AfterPokemon1:
 	startbattle
@@ -1857,11 +1782,16 @@ StadiumFacility_Pokemon5Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
-	setscene $1
+	setscene $9
 	applyonemovement PLAYER, step_left
 	end
 
-StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional healing 
+
+; =========
+; trainers
+; =========
+
+StadiumFacility_Trainers1Event: ; todo need to figure out adding in the optional healing 
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
 	opentext
@@ -1869,14 +1799,16 @@ StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional
 	yesorno
 	iffalse_jumptext FacilityGetReadyText
 	; clear the events
-	clearevent EVENT_STADIUM_HEALED
+;	clearevent EVENT_STADIUM_HEALED ; this is below so that you don't accidentally waste your heal before the first trainer 
 	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
 	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	writetext FacilityExplainTrainersText
 	waitbutton
+	closetext
 	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
 	iftrue .AlreadyHealed
@@ -1888,8 +1820,14 @@ StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional
 	setevent EVENT_STADIUM_HEALED
 	; todo add heal sfx 
 .AlreadyHealed:
+	closetext
+	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	iftrue .FinalFacilityElder
+	appear STADIUM_FACILITY_BUG_CATCHER
+	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkTowardMovement ; walks on screen and faces the player 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .SecondFacilityTrainer
+	clearevent EVENT_STADIUM_HEALED
 	readmem wStadiumFacilityFirstTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .SecondFacilityTrainer:
@@ -1898,8 +1836,8 @@ StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional
 	readmem wStadiumFacilitySecondTrainer ; reads the first value that's written
 	sjump .LoadedFacilityTrainerIndex
 .ThirdFacilityTrainer:
-	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
-	iftrue .FinalFacilityElder
+;	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+;	iftrue .FinalFacilityElder
 	readmem wStadiumFacilityThirdTrainer ; reads the first value that's written
 .LoadedFacilityTrainerIndex:
 	ifequal 0,  .CallTrainer1_0
@@ -2008,6 +1946,10 @@ StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional
 ; ========
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
+	; send the generictrainer away 
+	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2023,19 +1965,223 @@ StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	; SILAS WALKS IN 
+	appear STADIUM_FACILITY_HOLLIS
+	setevent EVENT_FACILITY_BUG_MANIAC
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_FACILITY 
+	loadtrainer HOLLIS, HOLLIS_STADIUM 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
-; HOLLIS WALKS AWAY
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_SILAS
+	disappear STADIUM_FACILITY_HOLLIS	
 	special HealParty
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
+	opentext
+	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
-;	closetext
-	applyonemovement PLAYER, step_left
+	closetext
 	setscene $2 
+	applyonemovement PLAYER, step_left
 	end
+
+StadiumFacility_Trainers2Event: ; todo need to figure out adding in the optional healing 
+	turnobject STADIUM_FACILITY_CLERK, LEFT
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext FacilityAreYouReadyText
+	yesorno
+	iffalse_jumptext FacilityGetReadyText
+	; clear the events
+;	clearevent EVENT_STADIUM_HEALED ; this is below so that you don't accidentally waste your heal before the first trainer 
+	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
+	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
+	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	writetext FacilityExplainTrainersText
+	waitbutton
+	closetext
+	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
+.FacilityTrainerBattles:
+	checkevent EVENT_STADIUM_HEALED
+	iftrue .AlreadyHealed
+	opentext
+	writetext FacilityHealPartyText
+	yesorno
+	iffalse .AlreadyHealed
+	special HealParty
+	setevent EVENT_STADIUM_HEALED
+	; todo add heal sfx 
+.AlreadyHealed:
+	closetext
+	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	iftrue .FinalFacilityElder
+	appear STADIUM_FACILITY_AROMA_LADY
+	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkTowardMovement ; walks on screen and faces the player 
+	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
+	iftrue .SecondFacilityTrainer
+	clearevent EVENT_STADIUM_HEALED
+	readmem wStadiumFacilityFirstTrainer ; reads the first value that's written
+	sjump .LoadedFacilityTrainerIndex
+.SecondFacilityTrainer:
+	checkevent EVENT_BEAT_SECOND_FACILITY_TRAINER
+	iftrue .ThirdFacilityTrainer
+	readmem wStadiumFacilitySecondTrainer ; reads the first value that's written
+	sjump .LoadedFacilityTrainerIndex
+.ThirdFacilityTrainer:
+;	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+;	iftrue .FinalFacilityElder
+	readmem wStadiumFacilityThirdTrainer ; reads the first value that's written
+.LoadedFacilityTrainerIndex:
+	ifequal 0,  .CallTrainer1_0
+	ifequal 1,  .CallTrainer1_1
+	ifequal 2,  .CallTrainer1_2
+	ifequal 3,  .CallTrainer1_3
+	ifequal 4,  .CallTrainer1_4
+	ifequal 5,  .CallTrainer1_5
+	ifequal 6,  .CallTrainer1_6
+	ifequal 7,  .CallTrainer1_7
+	ifequal 8,  .CallTrainer1_8
+	ifequal 9,  .CallTrainer1_9
+	ifequal 10, .CallTrainer1_10
+	ifequal 11, .CallTrainer1_11
+	ifequal 12, .CallTrainer1_12
+	ifequal 13, .CallTrainer1_13
+	ifequal 14, .CallTrainer1_14
+	ifequal 15, .CallTrainer1_15
+	ifequal 16, .CallTrainer1_16
+	ifequal 17, .CallTrainer1_17
+	ifequal 18, .CallTrainer1_18
+;	ifequal 19, .CallTrainer1_19 ; fallthru
+;.CallTrainer1_19:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 20
+	sjump .LoadedTrainer
+.CallTrainer1_0:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 1
+	sjump .LoadedTrainer
+.CallTrainer1_1:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 2
+	sjump .LoadedTrainer
+.CallTrainer1_2:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 3
+	sjump .LoadedTrainer
+.CallTrainer1_3:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 4
+	sjump .LoadedTrainer
+.CallTrainer1_4:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 5
+	sjump .LoadedTrainer
+.CallTrainer1_5:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 6
+	sjump .LoadedTrainer
+.CallTrainer1_6:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 7
+	sjump .LoadedTrainer
+.CallTrainer1_7:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 8
+	sjump .LoadedTrainer
+.CallTrainer1_8:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 9
+	sjump .LoadedTrainer
+.CallTrainer1_9:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 10
+	sjump .LoadedTrainer
+.CallTrainer1_10:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 11
+	sjump .LoadedTrainer
+.CallTrainer1_11:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 12
+	sjump .LoadedTrainer
+.CallTrainer1_12:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 13
+	sjump .LoadedTrainer
+.CallTrainer1_13:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 14
+	sjump .LoadedTrainer
+.CallTrainer1_14:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 15
+	sjump .LoadedTrainer
+.CallTrainer1_15:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 16
+	sjump .LoadedTrainer
+.CallTrainer1_16:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 17
+	sjump .LoadedTrainer
+.CallTrainer1_17:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 18
+	sjump .LoadedTrainer
+.CallTrainer1_18:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer PKMN_TRAINER_HF_FACILITY, 19
+;	sjump .LoadedTrainer ; fallthru
+.LoadedTrainer:
+	startbattle
+	reloadmapafterbattle ; or just reloadmap? 
+; ========
+; check which trainer we're on, set the event, and jump back to the trainer sequences 
+; ========
+	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
+	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
+	iftrue .CheckSecond
+	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
+	sjump .FacilityTrainerBattles
+.CheckSecond:
+	checkevent EVENT_BEAT_SECOND_FACILITY_TRAINER
+	iftrue .CheckThird
+	setevent EVENT_BEAT_SECOND_FACILITY_TRAINER
+	sjump .FacilityTrainerBattles
+.CheckThird:
+	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	iftrue .FinalFacilityElder
+	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	sjump .FacilityTrainerBattles
+.FinalFacilityElder: 
+	appear STADIUM_FACILITY_HOLLIS
+	setevent EVENT_FACILITY_BUG_MANIAC
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
+	loadtrainer HOLLIS, HOLLIS_STADIUM 
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	reloadmap
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_SILAS
+	disappear STADIUM_FACILITY_HOLLIS	
+	special HealParty
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
+	opentext
+	writetext StadiumFacilityClerkPostRoundText
+	waitbutton
+	closetext
+	setscene $4
+	applyonemovement PLAYER, step_left
+	end
+
 
 StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional healing 
 	turnobject STADIUM_FACILITY_CLERK, LEFT
@@ -2100,83 +2246,83 @@ StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional
 ;	ifequal 19, .CallTrainer1_19 ; fallthru
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 20
+	loadtrainer SAGE_FACILITY, 20
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 1
+	loadtrainer SAGE_FACILITY, 1
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 2
+	loadtrainer SAGE_FACILITY, 2
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 3
+	loadtrainer SAGE_FACILITY, 3
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 4
+	loadtrainer SAGE_FACILITY, 4
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 5
+	loadtrainer SAGE_FACILITY, 5
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 6
+	loadtrainer SAGE_FACILITY, 6
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 7
+	loadtrainer SAGE_FACILITY, 7
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 8
+	loadtrainer SAGE_FACILITY, 8
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 9
+	loadtrainer SAGE_FACILITY, 9
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 10
+	loadtrainer SAGE_FACILITY, 10
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 11
+	loadtrainer SAGE_FACILITY, 11
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 12
+	loadtrainer SAGE_FACILITY, 12
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 13
+	loadtrainer SAGE_FACILITY, 13
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 14
+	loadtrainer SAGE_FACILITY, 14
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 15
+	loadtrainer SAGE_FACILITY, 15
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 16
+	loadtrainer SAGE_FACILITY, 16
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 17
+	loadtrainer SAGE_FACILITY, 17
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 18
+	loadtrainer SAGE_FACILITY, 18
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 19
+	loadtrainer SAGE_FACILITY, 19
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -2184,6 +2330,9 @@ StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional
 ; ========
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
+	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2199,18 +2348,26 @@ StadiumFacility_Trainers3Event: ; todo need to figure out adding in the optional
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	; SILAS WALKS IN 
+	appear STADIUM_FACILITY_HOLLIS
+	setevent EVENT_FACILITY_BUG_MANIAC
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_FACILITY 
+	loadtrainer HOLLIS, HOLLIS_STADIUM 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
-; HOLLIS WALKS AWAY
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_SILAS
+	disappear STADIUM_FACILITY_HOLLIS	
 	special HealParty
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
+	opentext
+	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
-;	closetext
+	closetext
+	setscene $6
 	applyonemovement PLAYER, step_left
-	setscene $2 
 	end
 
 StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional healing 
@@ -2276,83 +2433,83 @@ StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional
 ;	ifequal 19, .CallTrainer1_19 ; fallthru
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 20
+	loadtrainer NOMAD_F_FACILITY, 20
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 1
+	loadtrainer NOMAD_F_FACILITY, 1
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 2
+	loadtrainer NOMAD_F_FACILITY, 2
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 3
+	loadtrainer NOMAD_F_FACILITY, 3
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 4
+	loadtrainer NOMAD_F_FACILITY, 4
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 5
+	loadtrainer NOMAD_F_FACILITY, 5
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 6
+	loadtrainer NOMAD_F_FACILITY, 6
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 7
+	loadtrainer NOMAD_F_FACILITY, 7
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 8
+	loadtrainer NOMAD_F_FACILITY, 8
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 9
+	loadtrainer NOMAD_F_FACILITY, 9
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 10
+	loadtrainer NOMAD_F_FACILITY, 10
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 11
+	loadtrainer NOMAD_F_FACILITY, 11
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 12
+	loadtrainer NOMAD_F_FACILITY, 12
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 13
+	loadtrainer NOMAD_F_FACILITY, 13
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 14
+	loadtrainer NOMAD_F_FACILITY, 14
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 15
+	loadtrainer NOMAD_F_FACILITY, 15
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 16
+	loadtrainer NOMAD_F_FACILITY, 16
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 17
+	loadtrainer NOMAD_F_FACILITY, 17
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 18
+	loadtrainer NOMAD_F_FACILITY, 18
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 19
+	loadtrainer NOMAD_F_FACILITY, 19
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -2360,6 +2517,9 @@ StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional
 ; ========
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
+	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2375,18 +2535,26 @@ StadiumFacility_Trainers4Event: ; todo need to figure out adding in the optional
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	; SILAS WALKS IN 
+	appear STADIUM_FACILITY_HOLLIS
+	setevent EVENT_FACILITY_BUG_MANIAC
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_FACILITY 
+	loadtrainer HOLLIS, HOLLIS_STADIUM 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
-; HOLLIS WALKS AWAY
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_SILAS
+	disappear STADIUM_FACILITY_HOLLIS	
 	special HealParty
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
+	opentext
+	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
-;	closetext
+	closetext
+	setscene $8
 	applyonemovement PLAYER, step_left
-	setscene $2 
 	end
 
 StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional healing 
@@ -2452,83 +2620,83 @@ StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional
 ;	ifequal 19, .CallTrainer1_19 ; fallthru
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 20
+	loadtrainer NINJA_FACILITY, 20
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 1
+	loadtrainer NINJA_FACILITY, 1
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 2
+	loadtrainer NINJA_FACILITY, 2
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 3
+	loadtrainer NINJA_FACILITY, 3
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 4
+	loadtrainer NINJA_FACILITY, 4
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 5
+	loadtrainer NINJA_FACILITY, 5
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 6
+	loadtrainer NINJA_FACILITY, 6
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 7
+	loadtrainer NINJA_FACILITY, 7
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 8
+	loadtrainer NINJA_FACILITY, 8
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 9
+	loadtrainer NINJA_FACILITY, 9
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 10
+	loadtrainer NINJA_FACILITY, 10
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 11
+	loadtrainer NINJA_FACILITY, 11
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 12
+	loadtrainer NINJA_FACILITY, 12
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 13
+	loadtrainer NINJA_FACILITY, 13
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 14
+	loadtrainer NINJA_FACILITY, 14
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 15
+	loadtrainer NINJA_FACILITY, 15
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 16
+	loadtrainer NINJA_FACILITY, 16
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 17
+	loadtrainer NINJA_FACILITY, 17
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 18
+	loadtrainer NINJA_FACILITY, 18
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
-	loadtrainer BUG_MANIAC_FACILITY, 19
+	loadtrainer NINJA_FACILITY, 19
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -2536,6 +2704,9 @@ StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional
 ; ========
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
+	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2551,18 +2722,26 @@ StadiumFacility_Trainers5Event: ; todo need to figure out adding in the optional
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	; SILAS WALKS IN 
+	appear STADIUM_FACILITY_HOLLIS
+	setevent EVENT_FACILITY_BUG_MANIAC
+	disappear STADIUM_FACILITY_BUG_CATCHER
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
-	loadtrainer HOLLIS, HOLLIS_FACILITY 
+	loadtrainer HOLLIS, HOLLIS_STADIUM 
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
-; HOLLIS WALKS AWAY
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_SILAS
+	disappear STADIUM_FACILITY_HOLLIS	
 	special HealParty
+	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
+	opentext
+	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
-;	closetext
+	closetext
+	setscene $10
 	applyonemovement PLAYER, step_left
-	setscene $2 
 	end
 
 StadiumFacility_TrainersEndlessEvent: ; todo need to figure out adding in the optional healing 
@@ -2792,7 +2971,7 @@ FacilityExplainBallText:
 	line "#mon inside."
 	
 	para "The left hand has"
-	line "an Apricon with a"
+	line "an Apricorn with a"
 	cont "wild"
 	done
 
@@ -2821,3 +3000,59 @@ FacilityWinTextSilas:
 FacilityLossTextSilas:
 	text "ha ha ha"
 	done
+
+StadiumFacilityClerkPostRoundText:
+	text "Congrats! Your"
+	line "current streak is:"
+;	para ""
+	para "Please let me"
+	line "know when you are"
+	para "ready for the"
+	line "next round."
+	done
+
+ClerkWalkAwayMovement:
+	step_up
+	step_left
+	turn_head_down
+	step_end
+
+ClerkWalkTowardsMovement:
+	step_right
+	step_down
+	turn_head_left
+	step_end
+	
+GenericTrainerWalkTowardMovement:
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_down
+	turn_head_left
+	step_end
+
+GenericTrainerWalkAwayMovement:
+	step_down
+	step_left
+	step_left
+	step_left
+	step_up  
+	step_up 
+	step_left
+	step_left
+;	step_left
+	step_end
+
+BossTrainerWalkTowardMovement:
+	step_up
+	step_up
+	turn_head_left
+	step_end
+
+BossTrainerWalkAwayMovement:
+	step_down
+	step_down
+	step_end
+

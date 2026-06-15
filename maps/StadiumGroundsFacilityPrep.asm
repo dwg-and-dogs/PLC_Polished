@@ -134,16 +134,8 @@ FacilityPrep_ExplainFullText:
 	para "that you have the"
 	line "option to catch."
 	
-	para "If you fail to"
-	line "catch it, then"
-	para "you will have one"
-	line "more chance to"
-	para "catch a different"
-	line "#mon."
-	
-	para "Then your team is"
-	line "healed by one of"
-	cont "our clerks,"
+	para "Your team is then"
+	line "healed,"
 	
 	para "and you can set"
 	line "your new team's"
@@ -157,10 +149,19 @@ FacilityPrep_ExplainFullText:
 	para "boss for the"
 	line "round."
 	
+	para "You may not use"
+	line "any healing"
+	cont "items in battle." ; todo 
+	
+	para "Enemy trainers do"
+	line "not have any"
+	cont "effort values."
+	
 	para "You may enter at"
 	line "whatever level"
 	para "you like, but I"
 	line "suggest Lv. 100."
+	
 	done
 
 FacilityPrep_AreYouReadyText:

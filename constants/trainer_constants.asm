@@ -93,6 +93,7 @@ KRIS EQU __trainer_class__ ;
 	const MEJIMI_EASY
 	const MEJIMI_NORMAL
 	const MEJIMI_HARD
+	const MEJIMI_STADIUM
 
 	trainerclass BRUNO ; d
 
@@ -104,11 +105,13 @@ KRIS EQU __trainer_class__ ;
 	const SANDRA2_NORMAL
 	const SANDRA2_HARD
 	const SANDRA_FACILITY
+	const SANDRA_STADIUM
 
 	trainerclass KURT_FINAL ; f DONE 
 	const KURT_FINAL_EASY
 	const KURT_FINAL_NORMAL
 	const KURT_FINAL_HARD
+	const KURT_FINAL_STADIUM
 
 	trainerclass BROCK ; 10
 
@@ -117,6 +120,8 @@ KRIS EQU __trainer_class__ ;
 	const SAMSARA_NORMAL
 	const SAMSARA_HARD
 	const SAMSARA_FACILITY
+	const SAMSARA_STADIUM
+	const SAMSARA_STADIUM_FINAL
 
 	trainerclass LT_SURGE ; 12
 
@@ -134,6 +139,7 @@ KRIS EQU __trainer_class__ ;
 	const HOLLIS2_NORMAL
 	const HOLLIS2_HARD
 	const HOLLIS_FACILITY
+	const HOLLIS_STADIUM
 
 	trainerclass BLUE ; 17
 
@@ -732,6 +738,8 @@ KRIS EQU __trainer_class__ ;
 	const AMOS2_NORMAL
 	const AMOS2_HARD ; DONE 
 	const AMOS_FACILITY
+	const AMOS_STADIUM
+	const AMOS_STADIUM_FINAL
 
 	trainerclass CHERYL ; 7b CHECKED
 
@@ -774,6 +782,9 @@ KRIS EQU __trainer_class__ ;
 	const REMY2_NORMAL
 	const REMY2_HARD
 	const REMY_FACILITY
+	const REMY_STADIUM
+	const REMY_STADIUM_FINAL
+	
 
 	trainerclass SAGE_FACILITY ; todo convert to SAGE-FACILITY
 

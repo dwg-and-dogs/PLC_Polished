@@ -953,12 +953,12 @@ endr
 ;	loadmem wPartyMon3PP+1, 15
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
-	giveitem LEFTOVERS
+
 	givepoke SUICUNE, 100
 	loadmem wPartyMon1Moves+0, SURF
 	loadmem wPartyMon1Moves+1, ICE_BEAM
 	loadmem wPartyMon1Moves+2, CALM_MIND
-	loadmem wPartyMon1Moves+3, THUNDERBOLT
+	loadmem wPartyMon1Moves+3, REST
 	loadmem wPartyMon1EVs+0, 252
 	loadmem wPartyMon1EVs+1, 252
 	loadmem wPartyMon1EVs+2, 252
@@ -968,6 +968,51 @@ endr
 	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
+
+	givepoke RAIKOU, 100
+	loadmem wPartyMon2Moves+0, PROTECT
+	loadmem wPartyMon2Moves+1, CRUNCH
+	loadmem wPartyMon2Moves+2, CALM_MIND
+	loadmem wPartyMon2Moves+3, THUNDERBOLT
+	loadmem wPartyMon2EVs+0, 252
+	loadmem wPartyMon2EVs+1, 252
+	loadmem wPartyMon2EVs+2, 252
+	loadmem wPartyMon2EVs+3, 252
+	loadmem wPartyMon2EVs+4, 252
+	loadmem wPartyMon2EVs+5, 252
+	loadmem wPartyMon2DVs+0, $ff
+	loadmem wPartyMon2DVs+1, $ff
+	loadmem wPartyMon2DVs+2, $ff
+
+	givepoke ENTEI, 100
+	loadmem wPartyMon3Moves+0, FLAMETHROWER
+	loadmem wPartyMon3Moves+1, EARTHQUAKE
+	loadmem wPartyMon3Moves+2, ROCK_SLIDE
+	loadmem wPartyMon3Moves+3, BODY_SLAM
+	loadmem wPartyMon3EVs+0, 252
+	loadmem wPartyMon3EVs+1, 252
+	loadmem wPartyMon3EVs+2, 252
+	loadmem wPartyMon3EVs+3, 252
+	loadmem wPartyMon3EVs+4, 252
+	loadmem wPartyMon3EVs+5, 252
+	loadmem wPartyMon3DVs+0, $ff
+	loadmem wPartyMon3DVs+1, $ff
+	loadmem wPartyMon3DVs+2, $ff	
+	
+	givepoke FERALIGATR, OTHER_FORM, 100
+	loadmem wPartyMon4Moves+0, EARTHQUAKE
+	loadmem wPartyMon4Moves+1, SURF
+	loadmem wPartyMon4Moves+2, ICE_BEAM
+	loadmem wPartyMon4Moves+3, THUNDERBOLT
+	loadmem wPartyMon4EVs+0, 252
+	loadmem wPartyMon4EVs+1, 252
+	loadmem wPartyMon4EVs+2, 252
+	loadmem wPartyMon4EVs+3, 252
+	loadmem wPartyMon4EVs+4, 252
+	loadmem wPartyMon4EVs+5, 252
+	loadmem wPartyMon4DVs+0, $ff
+	loadmem wPartyMon4DVs+1, $ff
+	loadmem wPartyMon4DVs+2, $ff	
 	; fill pokedex
 	callasm FillPokedex
 	waitbutton

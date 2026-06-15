@@ -106,17 +106,20 @@ Minsir gets Waterfall.
 Minor text, tile, object palette issues. 
 
 
-* Release 1.0.6 
+* Release 1.1.0 
 
 Mamoswine and Piloswine get Icicle Spear as Lv 1 move. 
 Update ANoctowl and AFeraligatr back sprites. 
+Reduce Union Cave trainer party size to split experience a little better. 
+Fix tiles on sheltered shores causing graphical glitch. 
+Fix Tangela back sprite colors : to check 
+
 
 * Release 1.1.0: Stadium Facility 
 
 Todo: 
 * Grep for pokemon at too low of level for their evolution stage 
-* Fix tangela back sprite colors 
-* Fix Accad501 Noctowl and Feraligatr back sprites 
+* Check the bad ending text for over the top text 
 * Special mark on pokemon if they have max DVs
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * More evo items for the person, incl metal coat and kings rock

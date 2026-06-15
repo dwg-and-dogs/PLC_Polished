@@ -217,7 +217,7 @@ KimonoCabin3Script: ; samaria
 	end
 
 Kimono3HelpedText:
-	text "A feisty sneasel"
+	text "A feisty Sneasel"
 	line "was up there!"
 	done
 
