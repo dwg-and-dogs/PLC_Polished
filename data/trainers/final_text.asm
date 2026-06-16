@@ -5,7 +5,7 @@ FinalTextList_TriplePhrases:
 	dbw LYRA2,  .FinalText_Lyra2
 	db -1
 
-.FinalText_Rival0: ;these are said right before the last pokemon comes out. 04-27-24
+.FinalText_Rival0: 
 	dw Rival1_1FinalPkmnText
 
 .FinalText_Rival1: 
@@ -76,12 +76,12 @@ FinalText_SinglePhrases:
 	dw NULL
 	dw NULL
 	dw NULL
-	dw LannaFinalPkmnText ;new
-	dw DarachFinalPkmnText
+	dw NULL ;new
+	dw NULL
 	dw BobeshFinalPkmnText
 	dw AdrinnaFinalPkmnText
 	dw BarbeauFinalPkmnText
-	dw FlanneryFinalPkmnText
+	dw NULL
 	dw KannaFinalPkmnText ;new
 	dw NULL
 	dw NULL ; 
