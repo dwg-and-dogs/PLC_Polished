@@ -169,6 +169,8 @@ GetMonSprite:
 	jr z, .BreedMon2
 	cp SPRITE_GROTTO_MON
 	jr z, .GrottoMon
+	cp SPRITE_TROPHY_MON
+	jr z, .TrophyMon
 
 	cp SPRITE_VARS
 	jr c, .Normal
@@ -199,6 +201,10 @@ GetMonSprite:
 	add hl, bc
 	ld a, [hl]
 	jr .NoFormMon
+
+.TrophyMon:
+	ld a, [wStadiumFacilityBestMon]
+	jr .Mon 
 
 .BreedMon1:
 	ld a, [wBreedMon1Shiny]

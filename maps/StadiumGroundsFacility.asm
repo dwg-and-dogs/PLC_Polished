@@ -1,27 +1,28 @@
 StadiumGroundsFacility_MapScriptHeader:
 	def_scene_scripts
+
+; engine fixes 
 	; todo prevent using items in battle 
 		; probably in engine/item_effects 
 		; maybe check the map you're on ? 
 
-	; todo bug catches have an "oh my ..." text from being near the end or the second to last mon I need to remvoe it, actually many of them do 
-	; todo, spawn point to gauldenrod unless you have not yet beaten the game then it sends you to azalea 
-	; todo add more pause, more drama in between battles, more text 
-	; todo ONE OF THE bug catcher fac teams has avalugg and abomosnow twice 
-	; todo increment the battle points, maybe just a special that increements and updates the max value 
-	; todo write the streak each time 
-	; todo likely tune up the levels of the enemies, 75/80/85/90/95 is too low? maybe 85/88/91/94/97?
-	; todo fix the sprites that are called for each of the trainer events 
-	; todo unique text for all the trainers to give a hint as to their team 
-	; todo load the first mon in your party for the current streak, and then also 
-	; save the mon that was used in the previous best streak 
-	; TODO IT might be nice if they tell you the number of the list that you're on 
-	; TODO ninjas say "my last stand"
+; minor scripting fixes 
+	; TODO ninjas say "my last stand", check
+	; todo "what do I do now" final text still needs to remove sages 
+	; todo add more pause, more drama in between battles, more text in between each, the clerk tells you the streak you have 
+	; todo increment the battle points with each trainer and update the streak counter
+	; save the mon that was used in the previous best streak, check 
+
+; battle fixes
 	; TODO elder parties better for the stadium when they only have three to hax a win 
-	
+	; todo ONE OF THE bug catcher fac teams has avalugg and abomosnow twice 
+	; todo likely tune up the levels of the enemies, 75/80/85/90/95 is too low? maybe 85/88/91/94/97? -- depends on testing 
+
+; stretch goals
+	; read the loaded mon and make its sprite appear 
 	
 	def_callbacks
-;	callback MAPCALLBACK_NEWMAP, HiddenGrottoCallback --> StadiumGroundsFacilityCallback; stretch goal 
+
 
 	
 	def_warp_events
@@ -50,7 +51,7 @@ StadiumGroundsFacility_MapScriptHeader:
 
 
 	object_event 24, 14, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BUG_MANIAC
-	object_event 24, 14, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AROMA_LADY
+	object_event 24, 14, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AROMA_LADY
 	object_event 24, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SAGE
 	object_event 24, 14, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NOMADF
 	object_event 24, 14, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NINJA
@@ -86,18 +87,29 @@ StadiumGroundsFacility_MapScriptHeader:
  	const STADIUM_FACILITY_KURTF
  	const STADIUM_FACILITY_MEJIMI
 
-FacilityClerkRetireScript:
+FacilityClerkRetireScript: ; todo fix 
 	faceplayer
 	opentext
 	writethistext
-		text "Would you like"
-		line "to retire?"
-		
-		para "Your current"
+		text "Your current"
 		line "streak is:"
+		text_decimal wBattleTowerCurStreak, 2, 5
 ; print battle tower number 		
 		done
 	waitbutton
+;	opentext
+	readmem wStadiumFacilityBestMon    ; script var = best species number
+	getmonname 0, 0                    ; 0 = take species from script var; dest 0 -> wStringBuffer3
+	writethistext
+		text "Best #MON:"
+		line ""
+		text_ram wStringBuffer3        ; <- the resolved name, not a party mon
+		done
+	waitbutton
+	writethistext
+		text "Would you like"
+		line "to retire?"
+		done
 	yesorno
 	iffalse_jumptext KeepBattlingText
 	writethistext
@@ -109,13 +121,15 @@ FacilityClerkRetireScript:
 	iffalse_jumptext KeepBattlingText
 	waitbutton
 	closetext
-	; todo warp check 
-	; check if you've beaten the game yet
-	; if not, warp you to azalea town 
-	; todo add warp sfx 
+	checkevent EVENT_REACHED_CREDITS_ONCE
+	; TODO add warp sfx 
+	iftrue .WarpToPrepRoom
+	warp KURTS_HOUSE, 7, 1 ; TODO CHECK 
+	sjump .Warped
+.WarpToPrepRoom:
 	warp STADIUM_GROUNDS_FACILITY_PREP, 13, 12
+.Warped:
 	end
-
 
 FacilityClerkScript:
 	faceplayer
@@ -438,6 +452,8 @@ StadiumFacility_Pokemon1Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
+	special UpdateStadiumStreak
+	clearevent EVENT_TROPHY_MON
 	setscene $1
 	applyonemovement PLAYER, step_left
 	end
@@ -761,6 +777,7 @@ StadiumFacility_Pokemon2Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
+	special UpdateStadiumStreak
 	setscene $3
 	applyonemovement PLAYER, step_left
 	end
@@ -1055,6 +1072,7 @@ StadiumFacility_Pokemon3Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
+	special UpdateStadiumStreak
 	setscene $5
 	applyonemovement PLAYER, step_left
 	end
@@ -1348,6 +1366,7 @@ StadiumFacility_Pokemon4Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
+	special UpdateStadiumStreak
 	setscene $7
 	applyonemovement PLAYER, step_left
 	end
@@ -1786,6 +1805,7 @@ StadiumFacility_Pokemon5Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
+	special UpdateStadiumStreak
 	setscene $9
 	applyonemovement PLAYER, step_left
 	end
@@ -1952,6 +1972,8 @@ StadiumFacility_Trainers1Event: ; todo need to figure out adding in the optional
 ; ========
 	; send the generictrainer away 
 	applymovement STADIUM_FACILITY_BUG_CATCHER, GenericTrainerWalkAwayMovement
+	special UpdateStadiumStreak
+	showtext StadiumFacilityClerkMidRoundText
 	disappear STADIUM_FACILITY_BUG_CATCHER
 	moveobject STADIUM_FACILITY_BUG_CATCHER, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -1975,10 +1997,11 @@ StadiumFacility_Trainers1Event: ; todo need to figure out adding in the optional
 	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
 	loadtrainer HOLLIS, HOLLIS_STADIUM 
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
 	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
+	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_SILAS
 	disappear STADIUM_FACILITY_HOLLIS	
 	special HealParty
@@ -2147,6 +2170,7 @@ StadiumFacility_Trainers2Event:
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
 	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkAwayMovement
+	special UpdateStadiumStreak
 	disappear STADIUM_FACILITY_AROMA_LADY
 	moveobject STADIUM_FACILITY_AROMA_LADY, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2170,10 +2194,11 @@ StadiumFacility_Trainers2Event:
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSandra, FacilityLossTextSandra 
 	loadtrainer SANDRA, SANDRA_STADIUM 
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
+	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_SILAS
 	disappear STADIUM_FACILITY_SANDRA	
 	special HealParty
@@ -2343,6 +2368,7 @@ StadiumFacility_Trainers3Event:
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
 	applymovement STADIUM_FACILITY_SAGE, GenericTrainerWalkAwayMovement
+	special UpdateStadiumStreak
 	disappear STADIUM_FACILITY_SAGE
 	moveobject STADIUM_FACILITY_SAGE, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2366,10 +2392,11 @@ StadiumFacility_Trainers3Event:
 	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSybil, FacilityLossTextSybil 
 	loadtrainer SAMSARA, SAMSARA_STADIUM 
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
 	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkAwayMovement 
+	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_SYBIL
 	disappear STADIUM_FACILITY_SAMSARA	
 	special HealParty
@@ -2538,6 +2565,7 @@ StadiumFacility_Trainers4Event:
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
 	applymovement STADIUM_FACILITY_NOMADF, GenericTrainerWalkAwayMovement
+	special UpdateStadiumStreak
 	disappear STADIUM_FACILITY_NOMADF
 	moveobject STADIUM_FACILITY_NOMADF, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2561,10 +2589,11 @@ StadiumFacility_Trainers4Event:
 	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextRemy, FacilityLossTextRemy 
 	loadtrainer BARBEAU, REMY_STADIUM 
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
 	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkAwayMovement 
+	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_REMY
 	disappear STADIUM_FACILITY_BARBEAU	
 	special HealParty
@@ -2734,6 +2763,7 @@ StadiumFacility_Trainers5Event:
 ; check which trainer we're on, set the event, and jump back to the trainer sequences 
 ; ========
 	applymovement STADIUM_FACILITY_NINJA, GenericTrainerWalkAwayMovement
+	special UpdateStadiumStreak
 	disappear STADIUM_FACILITY_NINJA
 	moveobject STADIUM_FACILITY_NINJA, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2757,16 +2787,25 @@ StadiumFacility_Trainers5Event:
 	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextAmos, FacilityLossTextAmos
 	loadtrainer AMOS, AMOS_STADIUM 
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
 	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkAwayMovement 
+	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_AMOS
 	disappear STADIUM_FACILITY_AMOS	
 	special HealParty
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
 	writetext StadiumFacilityClerkPostRoundText
+	waitbutton
+	closetext
+	clearevent EVENT_FACILITY_GOLD_TROPHY
+	opentext
+	writethistext
+		text "Gold Trophy is"
+		line "now unlocked!"
+		done
 	waitbutton
 	closetext
 	setscene 10
@@ -2931,11 +2970,9 @@ StadiumFacility_TrainersEndlessEvent:
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
-	reloadmapafterbattle ; or just reloadmap? 
-; ========
-; check which trainer we're on, set the event, and jump back to the trainer sequences 
-; ========
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkAwayMovement
+	special UpdateStadiumStreak
 	disappear STADIUM_FACILITY_AROMA_LADY
 	moveobject STADIUM_FACILITY_AROMA_LADY, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2953,27 +2990,28 @@ StadiumFacility_TrainersEndlessEvent:
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
+	; have to roll for this, todo 
 	appear STADIUM_FACILITY_SANDRA
 	setevent EVENT_FACILITY_AROMA_LADY
 	disappear STADIUM_FACILITY_AROMA_LADY
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSandra, FacilityLossTextSandra 
 	loadtrainer SANDRA, SANDRA_STADIUM 
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_SILAS
 	disappear STADIUM_FACILITY_SANDRA	
+; end of random elder selection 
 	special HealParty
+	special UpdateStadiumStreak
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
 	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
 	closetext
-;	setscene $6
 	applyonemovement PLAYER, step_left
-	end
+	end 	; can do it all over again... 
 
 ; =================
 ; text
@@ -3086,11 +3124,17 @@ FacilityLossTextAmos:
 	text "u mad"
 	done
 
+StadiumFacilityClerkMidRoundText:
+	text "Your current"
+	line "streak is:"
+	text_decimal wBattleTowerCurStreak, 2, 5
+	done
 
 StadiumFacilityClerkPostRoundText:
-	text "Congrats! Your"
-	line "current streak is:"
-;	para ""
+	text "Your current"
+	line "streak is:"
+	text_decimal wBattleTowerCurStreak, 2, 5
+
 	para "Please let me"
 	line "know when you are"
 	para "ready for the"

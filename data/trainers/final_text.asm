@@ -72,19 +72,19 @@ FinalText_SinglePhrases:
 	dw StevenFinalPkmnText
 	dw CynthiaFinalPkmnText
 	dw AmosFinalPkmnText ;new
-	dw CherylFinalPkmnText
-	dw RileyFinalPkmnText
-	dw MarleyFinalPkmnText
-	dw MiraFinalPkmnText
+	dw NULL
+	dw NULL
+	dw NULL
+	dw NULL
 	dw LannaFinalPkmnText ;new
 	dw DarachFinalPkmnText
-	dw BobeshFinalPkmnText ; hopefully lines up?
-	dw AdrinnaFinalPkmnText ;new
-	dw BarbeauFinalPkmnText ;new
+	dw BobeshFinalPkmnText
+	dw AdrinnaFinalPkmnText
+	dw BarbeauFinalPkmnText
 	dw FlanneryFinalPkmnText
 	dw KannaFinalPkmnText ;new
-	dw SkylaFinalPkmnText
-	dw ValerieFinalPkmnText
+	dw NULL
+	dw NULL ; 
 	dw KukuiFinalPkmnText ; Kukui
 	dw NULL ; Victor
 	dw BillFinalPkmnText

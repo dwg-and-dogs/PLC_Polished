@@ -206,6 +206,7 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_DAYCARE_MON_1 ; f3
 	const SPRITE_DAYCARE_MON_2 ; f4
 	const SPRITE_GROTTO_MON ; f5
+	const SPRITE_TROPHY_MON ;  f6 ? 
 
 ; wVariableSprites indexes (see ram/wramx.asm)
 SPRITE_VARS EQU const_value

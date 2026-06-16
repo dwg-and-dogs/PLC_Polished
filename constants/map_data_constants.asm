@@ -96,6 +96,8 @@ NUM_FISHGROUPS EQU const_value - 1
 	const SPAWN_OLIVINE ; matches 
 	const SPAWN_MAHOGANY ; mathces 
 	const SPAWN_LAKE_OF_RAGE ; matches 
+; special 
+	const SPAWN_FACILITY
 NUM_SPAWNS EQU const_value
 
 

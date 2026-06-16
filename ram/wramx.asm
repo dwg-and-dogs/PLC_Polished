@@ -901,18 +901,18 @@ wObjectStructsEnd::
 
 wStoneTableAddress:: dw
 
-wBattleTowerCurStreak:: dw ; ok to keep 
-wBattleTowerTopStreak:: dw	; ok to keep 
-wBattleFactoryCurStreak:: dw
-wBattleFactoryTopStreak:: dw
-wBattleFactorySwapCount:: db ; Amount of swaps performed.
+wBattleTowerCurStreak:: dw ; currently used 
+wBattleTowerTopStreak:: dw ; currently used 
+wBattleFactoryCurStreak:: dw ; unused 
+wBattleFactoryTopStreak:: dw ; unused 
+wBattleFactorySwapCount:: db ; unused 
 ; these are used for palette swaps, and wOriginalDVx is just a placeholder in
 wOriginalDV1:: ds 1 ; Store original DV byte 1 
 wOriginalDV2:: ds 1 ; Store original DV byte 2 
 wOriginalDV3:: ds 1 ; Store original DV byte 3
 
-wStadiumFacilityFirstMon:: db ; first pokemon choice, could be up to 0 -- 50 as needed 
-wStadiumFacilitySecondMon:: db ; first pokemon choice, could be up to 0 -- 50 as needed 
+wStadiumFacilityFirstMon:: db ; first pokemon choice
+wStadiumFacilityBestMon:: db ; best mon that gets a streak 
 wStadiumFacilityFirstTrainer:: db ; first trainer choice , from a selection of 0 - 30 
 wStadiumFacilitySecondTrainer:: db ; second trainer choice, from a selection of 0 - 30, not the same as the first one 
 wStadiumFacilityThirdTrainer:: db ; second trainer choice, from a selection of 0 - 30, not the same as the first one 

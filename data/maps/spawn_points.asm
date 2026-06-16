@@ -31,6 +31,8 @@ SpawnPoints:
 	spawn MAHOGANY_TOWN,              15, 14 ; works
 	spawn LAKE_OF_RAGE,               21, 31 ; needs a hardcode exception 
 
+	spawn STADIUM_GROUNDS_FACILITY_PREP, 2, 19 ; trophy room 
+
 	spawn N_A,                        -1, -1
 
 	assert_table_length NUM_SPAWNS + 1

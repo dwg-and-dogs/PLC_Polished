@@ -22,27 +22,27 @@ CreditsPokemonAllScene:
 ; reset all legendaries
 	clearevent EVENT_LAKE_URSALUNA_POSTGAME
 ; entei
-	clearevent EVENT_FOUGHT_ENTEI ; need to check 
+	clearevent EVENT_FOUGHT_ENTEI 
 ; raikou 
-	clearevent EVENT_BATTLED_RAIKOU ; need to check 
+	clearevent EVENT_BATTLED_RAIKOU 
 ; suicune
 	clearevent EVENT_ROUTE39_MILTANK
 	clearevent EVENT_MILTANK_COWGIRL
-	clearevent EVENT_ROUTE39_MILTANK ; need to check 
+	clearevent EVENT_ROUTE39_MILTANK 
 ; lugia 
-	clearevent EVENT_NEXUS_LUGIA ; need to check 
+	clearevent EVENT_NEXUS_LUGIA ; 
 ; ho oh
-	clearevent EVENT_FOUGHT_HO_OH ; need to check 
+	clearevent EVENT_FOUGHT_HO_OH ; 
 ; celebi
-	clearevent EVENT_TAPESTRY_CELEBI ; need to check 
+	clearevent EVENT_TAPESTRY_CELEBI ; 
 ; heatran 
-	clearevent EVENT_CC_HEATRAN_2 ; need to check 
+	clearevent EVENT_CC_HEATRAN_2 ;
 ; rotom 
-	clearevent EVENT_MAGNET_TUNNEL_ROTOM ; need to check 
+	clearevent EVENT_MAGNET_TUNNEL_ROTOM ; 
 ; spiritomb 
-	clearevent EVENT_RUSALKA_SPIRITOMB ; need to check 
+	clearevent EVENT_RUSALKA_SPIRITOMB ; 
 ; initialize postgame teaster
-	setmapscene AZALEA_TOWN, $2 ; need to check 
+	setmapscene AZALEA_TOWN, $2  
 	setevent EVENT_KILN_BOSS
 	clearevent EVENT_AZALEA_BLACKBELT_POSTGAME
 ; begin credits 

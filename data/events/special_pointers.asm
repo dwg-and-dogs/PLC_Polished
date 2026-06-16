@@ -167,4 +167,5 @@ SpecialsPointers::
 	add_special Special_CurBoxFullCheck
 	add_special GetCurBoxName
 	add_special FacilityThreeRandoms
+	add_special UpdateStadiumStreak 
 ;	add_special KimonoDVsUpdate

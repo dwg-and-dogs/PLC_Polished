@@ -626,3 +626,39 @@ FacilityThreeRandoms:
 	dec b
 	add c
 	ret
+
+UpdateStadiumStreak:
+	; wBattleTowerCurStreak += 1
+	ld hl, wBattleTowerCurStreak + 1
+	inc [hl]
+	jr nz, .no_carry
+	dec hl
+	inc [hl]
+.no_carry
+	; Cur -> bc, Top -> de
+	ld hl, wBattleTowerCurStreak
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ld hl, wBattleTowerTopStreak
+	ld a, [hli]
+	ld d, a
+	ld e, [hl]
+	; new record?
+	ld a, b
+	cp d
+	jr c, .done
+	jr nz, .update
+	ld a, c
+	cp e
+	jr c, .done
+	jr z, .done
+.update
+	ld a, b
+	ld [wBattleTowerTopStreak], a
+	ld a, c
+	ld [wBattleTowerTopStreak + 1], a
+	ld a, [wStadiumFacilityFirstMon]   ; record beaten -> save starter as best
+	ld [wStadiumFacilityBestMon], a
+.done
+	ret
