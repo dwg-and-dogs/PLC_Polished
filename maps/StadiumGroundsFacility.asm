@@ -7,11 +7,12 @@ StadiumGroundsFacility_MapScriptHeader:
 		; maybe check the map you're on ? 
 
 ; minor scripting fixes 
+	; check that each time you can actually get a heal and it doesn't prompt you to waste it before the first one 
 	; TODO ninjas say "my last stand", check
 	; todo "what do I do now" final text still needs to remove sages 
 	; todo add more pause, more drama in between battles, more text in between each, the clerk tells you the streak you have 
 	; todo increment the battle points with each trainer and update the streak counter
-	; save the mon that was used in the previous best streak, check 
+	; save the mon that was used in the previous best streak, check that this works
 
 ; battle fixes
 	; TODO elder parties better for the stadium when they only have three to hax a win 
@@ -2010,6 +2011,7 @@ StadiumFacility_Trainers1Event: ; todo need to figure out adding in the optional
 	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
 	closetext
+	setevent EVENT_STADIUM_HEALED
 	setscene $2 
 	applyonemovement PLAYER, step_left
 	end
@@ -2207,6 +2209,7 @@ StadiumFacility_Trainers2Event:
 	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
 	closetext
+	setevent EVENT_STADIUM_HEALED
 	setscene $4
 	applyonemovement PLAYER, step_left
 	end
@@ -2406,6 +2409,7 @@ StadiumFacility_Trainers3Event:
 	waitbutton
 	closetext
 	setscene $6
+	setevent EVENT_STADIUM_HEALED
 	applyonemovement PLAYER, step_left
 	end
 
@@ -2602,6 +2606,7 @@ StadiumFacility_Trainers4Event:
 	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
 	closetext
+	setevent EVENT_STADIUM_HEALED
 	setscene $8
 	applyonemovement PLAYER, step_left
 	end
@@ -2809,6 +2814,7 @@ StadiumFacility_Trainers5Event:
 	waitbutton
 	closetext
 	setscene 10
+	setevent EVENT_STADIUM_HEALED
 	applyonemovement PLAYER, step_left
 	end
 
@@ -3010,6 +3016,7 @@ StadiumFacility_TrainersEndlessEvent:
 	writetext StadiumFacilityClerkPostRoundText
 	waitbutton
 	closetext
+	setevent EVENT_STADIUM_HEALED
 	applyonemovement PLAYER, step_left
 	end 	; can do it all over again... 
 
