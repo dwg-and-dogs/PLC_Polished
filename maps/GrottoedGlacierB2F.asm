@@ -350,10 +350,11 @@ GlacierB2F_Text8_3:
     text " Petra: " 
 	next
 	text_start
-	text "Without glaciers"
+	
+	text "Without a glacier"
 	line "to traverse, how"
-	para "will our regions"
-	line "meet?"
+	cont "will we meet?"
+
 	para "Generations of"
 	line "knowledge,"
 	cont "destroyed!"
@@ -385,9 +386,8 @@ GlacierB2F_Text9:
 	next
 	text_start
 	text "Heavens! We have"
-	line "to leave, before"
-	para "anything else"
-	line "happens..."
+	line "to leave, while"
+	cont "we still can."
 	
 	para "And you: please,"
 	line "think about what"

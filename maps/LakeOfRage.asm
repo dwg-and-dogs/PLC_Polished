@@ -384,10 +384,10 @@ LakePryceAfterRivalText:
 	
 	text "Nature goes in"
 	line "cycles. The Lake,"
-	cont "for instnace."
+	cont "for instance."
 	
 	para "It was once a"
-	line "Tarn: an icy pond"
+	line "tarn, an icy pond"
 	cont "under a glacier."
 
 	para "Ahead of me, a"

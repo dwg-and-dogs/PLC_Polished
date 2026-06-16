@@ -132,8 +132,9 @@ TheatreRivalBeforeText:
 	cont "drought."
 	
 	para "I feel like this"
-	line "is was Celebi"
+	line "is what Celebi"
 	cont "wanted me to do!"
+
 	para "What have you and"
 	line "your grandpa done"
 	cont "for the drought?"
