@@ -332,6 +332,9 @@ INCLUDE "data/pokemon/base_stats/feraligatr_ancestor.asm"       ; 00
 INCLUDE "data/pokemon/base_stats/meganium_ancestor.asm"       ; 00
 INCLUDE "data/pokemon/base_stats/magcargo_ancestor.asm"       ; 00
 INCLUDE "data/pokemon/base_stats/xatu_ancestor.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/ledian_ancestor.asm"       ; 00
+INCLUDE "data/pokemon/base_stats/alakazam_ancestor.asm"       ; 00
+
 
 	assert_table_length NUM_EXT_POKEMON
 	

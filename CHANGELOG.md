@@ -108,31 +108,31 @@ Minor text, tile, object palette issues.
 
 * Release 1.1.0 
 
+Postgame Battle Facility: Stadium 
+Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
+Higher EVs for the Stadium Rematch teams. 
+Updated composition for Stadium Rematch teams. 
+Fix Tangela back sprite colors : to check 
 Mamoswine and Piloswine get Icicle Spear as Lv 1 move. 
 Update ANoctowl and AFeraligatr back sprites. 
 Reduce Union Cave trainer party size to split experience a little better. 
 Fix tiles on sheltered shores causing graphical glitch. 
-Fix Tangela back sprite colors : to check 
-Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
 Slightly updated the "bad ending" text. 
+Ancestor Ledian and Alakazam, sprites courtesy Accad501
 
-Todo: 
-* Grep for pokemon at too low of level for their evolution stage 
+Todo for v110:
+* Ancestor Ledian, Alakazam events, palettes, add to some trainer parties in the postgame 
+* Finish Stadium todos  
 * Special mark on pokemon if they have max DVs
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * More evo items for the person, incl metal coat and kings rock
 * Better Lucario Sprite 
+* Brick Break + Light Screen interaction: TODO 
 
-v110
-* Postgame facility
-* Ancestor Ledian, Alakazam from Accad501
 
 vAny
 * New pokedex entries
 * Fly as an item
-* Pokedex footprint area to evolution method
-* Fix trainer palette issue at HOF
-* Brick Break + Light Screen interaction: TODO 
 * Move animations
 
 v120

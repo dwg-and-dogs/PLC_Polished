@@ -326,4 +326,7 @@ IconPointers:
 	dba MagcargoIcon
 	dba XatuIcon
 
+	dba LedianIcon
+	dba AlakazamIcon
+
 	assert_table_length NUM_UNIQUE_POKEMON + 1

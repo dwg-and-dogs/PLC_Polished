@@ -297,5 +297,8 @@ EvosAttacksPointers::
 	dw Magcargo_AncestorEvosAttacks       ; 00
 	dw Xatu_AncestorEvosAttacks       ; 00
 
+	dw Ledian_AncestorEvosAttacks       ; 00
+	dw Alakazam_AncestorEvosAttacks       ; 00
+
 	assert_table_length NUM_EXT_POKEMON
 	

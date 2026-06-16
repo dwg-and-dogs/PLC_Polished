@@ -328,5 +328,8 @@ BackPicPointers::
 	dba Magcargo_AncestorBackpic       ; 00
 	dba Xatu_AncestorBackpic       ; 00
 
+	dba Ledian_AncestorBackpic       ; 00
+	dba Alakazam_AncestorBackpic       ; 00
+
 
 	assert_table_length NUM_UNIQUE_POKEMON

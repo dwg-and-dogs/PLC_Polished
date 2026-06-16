@@ -6,18 +6,14 @@ StadiumGroundsFacility_MapScriptHeader:
 		; probably in engine/item_effects 
 		; maybe check the map you're on ? 
 
-; minor scripting fixes 
-	; check that each time you can actually get a heal and it doesn't prompt you to waste it before the first one 
-	; TODO ninjas say "my last stand", check
-	; todo "what do I do now" final text still needs to remove sages 
-	; todo add more pause, more drama in between battles, more text in between each, the clerk tells you the streak you have 
-	; todo increment the battle points with each trainer and update the streak counter
-	; save the mon that was used in the previous best streak, check that this works
-
 ; battle fixes
+	; save the mon that was used in the previous best streak, check that this works
+	; todo write phrases for all trainers 
 	; TODO elder parties better for the stadium when they only have three to hax a win 
 	; todo ONE OF THE bug catcher fac teams has avalugg and abomosnow twice 
 	; todo likely tune up the levels of the enemies, 75/80/85/90/95 is too low? maybe 85/88/91/94/97? -- depends on testing 
+	; todo add more EVs to the facility trainers 300 evs each 
+	; todo write the endless waves of brigaders + random final boss section 
 
 ; stretch goals
 	; read the loaded mon and make its sprite appear 
@@ -1888,82 +1884,102 @@ StadiumFacility_Trainers1Event: ; todo need to figure out adding in the optional
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 20
+	showtext BUG_MANIAC_FACILITY_20_Text
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 1
+	showtext BUG_MANIAC_FACILITY_1_Text
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 2
+	showtext BUG_MANIAC_FACILITY_2_Text
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 3
+	showtext BUG_MANIAC_FACILITY_3_Text
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 4
+	showtext BUG_MANIAC_FACILITY_4_Text
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 5
+	showtext BUG_MANIAC_FACILITY_5_Text
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 6
+	showtext BUG_MANIAC_FACILITY_6_Text
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 7
+	showtext BUG_MANIAC_FACILITY_7_Text
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 8
+	showtext BUG_MANIAC_FACILITY_8_Text
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 9
+	showtext BUG_MANIAC_FACILITY_9_Text
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 10
+	showtext BUG_MANIAC_FACILITY_10_Text
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 11
+	showtext BUG_MANIAC_FACILITY_11_Text
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 12
+	showtext BUG_MANIAC_FACILITY_12_Text
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 13
+	showtext BUG_MANIAC_FACILITY_13_Text
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 14
+	showtext BUG_MANIAC_FACILITY_14_Text
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 15
+	showtext BUG_MANIAC_FACILITY_15_Text
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 16
+	showtext BUG_MANIAC_FACILITY_16_Text
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 17
+	showtext BUG_MANIAC_FACILITY_17_Text
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 18
+	showtext BUG_MANIAC_FACILITY_18_Text
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BUG_MANIAC_FACILITY, 19
+	showtext BUG_MANIAC_FACILITY_19_Text
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -1998,6 +2014,7 @@ StadiumFacility_Trainers1Event: ; todo need to figure out adding in the optional
 	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSilas, FacilityLossTextSilas 
 	loadtrainer HOLLIS, HOLLIS_STADIUM 
+	showtext HOLLIS_HOLLIS_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -2088,82 +2105,102 @@ StadiumFacility_Trainers2Event:
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 20
+	showtext PKMN_TRAINER_HF_FACILITY_20_Text
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 1
+	showtext PKMN_TRAINER_HF_FACILITY_1_Text
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 2
+	showtext PKMN_TRAINER_HF_FACILITY_2_Text
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 3
+	showtext PKMN_TRAINER_HF_FACILITY_3_Text
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 4
+	showtext PKMN_TRAINER_HF_FACILITY_4_Text
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 5
+	showtext PKMN_TRAINER_HF_FACILITY_5_Text
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 6
+	showtext PKMN_TRAINER_HF_FACILITY_6_Text
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 7
+	showtext PKMN_TRAINER_HF_FACILITY_7_Text
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 8
+	showtext PKMN_TRAINER_HF_FACILITY_8_Text
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 9
+	showtext PKMN_TRAINER_HF_FACILITY_9_Text
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 10
+	showtext PKMN_TRAINER_HF_FACILITY_10_Text
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 11
+	showtext PKMN_TRAINER_HF_FACILITY_11_Text
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 12
+	showtext PKMN_TRAINER_HF_FACILITY_12_Text
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 13
+	showtext PKMN_TRAINER_HF_FACILITY_13_Text
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 14
+	showtext PKMN_TRAINER_HF_FACILITY_14_Text
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 15
+	showtext PKMN_TRAINER_HF_FACILITY_15_Text
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 16
+	showtext PKMN_TRAINER_HF_FACILITY_16_Text
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 17
+	showtext PKMN_TRAINER_HF_FACILITY_17_Text
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 18
+	showtext PKMN_TRAINER_HF_FACILITY_18_Text
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer PKMN_TRAINER_HF_FACILITY, 19
+	showtext PKMN_TRAINER_HF_FACILITY_19_Text
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -2173,6 +2210,7 @@ StadiumFacility_Trainers2Event:
 ; ========
 	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkAwayMovement
 	special UpdateStadiumStreak
+	showtext StadiumFacilityClerkMidRoundText
 	disappear STADIUM_FACILITY_AROMA_LADY
 	moveobject STADIUM_FACILITY_AROMA_LADY, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2196,6 +2234,7 @@ StadiumFacility_Trainers2Event:
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSandra, FacilityLossTextSandra 
 	loadtrainer SANDRA, SANDRA_STADIUM 
+	showtext SANDRA_SANDRA_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -2287,82 +2326,102 @@ StadiumFacility_Trainers3Event:
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 20
+	showtext SAGE_FACILITY_20_Text
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 1
+	showtext SAGE_FACILITY_1_Text
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 2
+	showtext SAGE_FACILITY_2_Text
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 3
+	showtext SAGE_FACILITY_3_Text
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 4
+	showtext SAGE_FACILITY_4_Text
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 5
+	showtext SAGE_FACILITY_5_Text
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 6
+	showtext SAGE_FACILITY_6_Text
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 7
+	showtext SAGE_FACILITY_7_Text
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 8
+	showtext SAGE_FACILITY_8_Text
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 9
+	showtext SAGE_FACILITY_9_Text
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 10
+	showtext SAGE_FACILITY_10_Text
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 11
+	showtext SAGE_FACILITY_11_Text
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 12
+	showtext SAGE_FACILITY_12_Text
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 13
+	showtext SAGE_FACILITY_13_Text
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 14
+	showtext SAGE_FACILITY_14_Text
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 15
+	showtext SAGE_FACILITY_15_Text
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 16
+	showtext SAGE_FACILITY_16_Text
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 17
+	showtext SAGE_FACILITY_17_Text
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 18
+	showtext SAGE_FACILITY_18_Text
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer SAGE_FACILITY, 19
+	showtext SAGE_FACILITY_19_Text
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -2372,6 +2431,7 @@ StadiumFacility_Trainers3Event:
 ; ========
 	applymovement STADIUM_FACILITY_SAGE, GenericTrainerWalkAwayMovement
 	special UpdateStadiumStreak
+	showtext StadiumFacilityClerkMidRoundText
 	disappear STADIUM_FACILITY_SAGE
 	moveobject STADIUM_FACILITY_SAGE, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2395,6 +2455,7 @@ StadiumFacility_Trainers3Event:
 	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSybil, FacilityLossTextSybil 
 	loadtrainer SAMSARA, SAMSARA_STADIUM 
+	showtext SAMSARA_SAMSARA_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -2485,82 +2546,102 @@ StadiumFacility_Trainers4Event:
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 20
+	showtext NOMAD_F_FACILITY_20_Text
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 1
+	showtext NOMAD_F_FACILITY_1_Text
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 2
+	showtext NOMAD_F_FACILITY_2_Text
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 3
+	showtext NOMAD_F_FACILITY_3_Text
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 4
+	showtext NOMAD_F_FACILITY_4_Text
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 5
+	showtext NOMAD_F_FACILITY_5_Text
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 6
+	showtext NOMAD_F_FACILITY_6_Text
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 7
+	showtext NOMAD_F_FACILITY_7_Text
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 8
+	showtext NOMAD_F_FACILITY_8_Text
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 9
+	showtext NOMAD_F_FACILITY_9_Text
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 10
+	showtext NOMAD_F_FACILITY_10_Text
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 11
+	showtext NOMAD_F_FACILITY_11_Text
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 12
+	showtext NOMAD_F_FACILITY_12_Text
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 13
+	showtext NOMAD_F_FACILITY_13_Text
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 14
+	showtext NOMAD_F_FACILITY_14_Text
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 15
+	showtext NOMAD_F_FACILITY_15_Text
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 16
+	showtext NOMAD_F_FACILITY_16_Text
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 17
+	showtext NOMAD_F_FACILITY_17_Text
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 18
+	showtext NOMAD_F_FACILITY_18_Text
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NOMAD_F_FACILITY, 19
+	showtext NOMAD_F_FACILITY_19_Text
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -2570,6 +2651,7 @@ StadiumFacility_Trainers4Event:
 ; ========
 	applymovement STADIUM_FACILITY_NOMADF, GenericTrainerWalkAwayMovement
 	special UpdateStadiumStreak
+	showtext StadiumFacilityClerkMidRoundText
 	disappear STADIUM_FACILITY_NOMADF
 	moveobject STADIUM_FACILITY_NOMADF, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2593,6 +2675,7 @@ StadiumFacility_Trainers4Event:
 	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextRemy, FacilityLossTextRemy 
 	loadtrainer BARBEAU, REMY_STADIUM 
+	showtext BARBEAU_REMY_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -2684,82 +2767,102 @@ StadiumFacility_Trainers5Event:
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 20
+	showtext NINJA_FACILITY_20_Text
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 1
+	showtext NINJA_FACILITY_1_Text
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 2
+	showtext NINJA_FACILITY_2_Text
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 3
+	showtext NINJA_FACILITY_3_Text
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 4
+	showtext NINJA_FACILITY_4_Text
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 5
+	showtext NINJA_FACILITY_5_Text
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 6
+	showtext NINJA_FACILITY_6_Text
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 7
+	showtext NINJA_FACILITY_7_Text
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 8
+	showtext NINJA_FACILITY_8_Text
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 9
+	showtext NINJA_FACILITY_9_Text
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 10
+	showtext NINJA_FACILITY_10_Text
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 11
+	showtext NINJA_FACILITY_11_Text
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 12
+	showtext NINJA_FACILITY_12_Text
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 13
+	showtext NINJA_FACILITY_13_Text
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 14
+	showtext NINJA_FACILITY_14_Text
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 15
+	showtext NINJA_FACILITY_15_Text
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 16
+	showtext NINJA_FACILITY_16_Text
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 17
+	showtext NINJA_FACILITY_17_Text
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 18
+	showtext NINJA_FACILITY_18_Text
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer NINJA_FACILITY, 19
+	showtext NINJA_FACILITY_19_Text
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -2769,6 +2872,7 @@ StadiumFacility_Trainers5Event:
 ; ========
 	applymovement STADIUM_FACILITY_NINJA, GenericTrainerWalkAwayMovement
 	special UpdateStadiumStreak
+	showtext StadiumFacilityClerkMidRoundText
 	disappear STADIUM_FACILITY_NINJA
 	moveobject STADIUM_FACILITY_NINJA, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -2792,6 +2896,7 @@ StadiumFacility_Trainers5Event:
 	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextAmos, FacilityLossTextAmos
 	loadtrainer AMOS, AMOS_STADIUM 
+	showtext AMOS_AMOS_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	reloadmap
@@ -2897,88 +3002,109 @@ StadiumFacility_TrainersEndlessEvent:
 ;.CallTrainer1_19:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 20
+	showtext BRIGADER_FACILITY_20_Text
 	sjump .LoadedTrainer
 .CallTrainer1_0:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 1
+	showtext BRIGADER_FACILITY_1_Text
 	sjump .LoadedTrainer
 .CallTrainer1_1:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 2
+	showtext BRIGADER_FACILITY_2_Text
 	sjump .LoadedTrainer
 .CallTrainer1_2:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 3
+	showtext BRIGADER_FACILITY_3_Text
 	sjump .LoadedTrainer
 .CallTrainer1_3:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 4
+	showtext BRIGADER_FACILITY_4_Text
 	sjump .LoadedTrainer
 .CallTrainer1_4:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 5
+	showtext BRIGADER_FACILITY_5_Text
 	sjump .LoadedTrainer
 .CallTrainer1_5:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 6
+	showtext BRIGADER_FACILITY_6_Text
 	sjump .LoadedTrainer
 .CallTrainer1_6:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 7
+	showtext BRIGADER_FACILITY_7_Text
 	sjump .LoadedTrainer
 .CallTrainer1_7:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 8
+	showtext BRIGADER_FACILITY_8_Text
 	sjump .LoadedTrainer
 .CallTrainer1_8:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 9
+	showtext BRIGADER_FACILITY_9_Text
 	sjump .LoadedTrainer
 .CallTrainer1_9:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 10
+	showtext BRIGADER_FACILITY_10_Text
 	sjump .LoadedTrainer
 .CallTrainer1_10:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 11
+	showtext BRIGADER_FACILITY_11_Text
 	sjump .LoadedTrainer
 .CallTrainer1_11:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 12
+	showtext BRIGADER_FACILITY_12_Text
 	sjump .LoadedTrainer
 .CallTrainer1_12:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 13
+	showtext BRIGADER_FACILITY_13_Text
 	sjump .LoadedTrainer
 .CallTrainer1_13:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 14
+	showtext BRIGADER_FACILITY_14_Text
 	sjump .LoadedTrainer
 .CallTrainer1_14:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 15
+	showtext BRIGADER_FACILITY_15_Text
 	sjump .LoadedTrainer
 .CallTrainer1_15:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 16
+	showtext BRIGADER_FACILITY_16_Text
 	sjump .LoadedTrainer
 .CallTrainer1_16:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 17
+	showtext BRIGADER_FACILITY_17_Text
 	sjump .LoadedTrainer
 .CallTrainer1_17:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 18
+	showtext BRIGADER_FACILITY_18_Text
 	sjump .LoadedTrainer
 .CallTrainer1_18:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 19
+	showtext BRIGADER_FACILITY_19_Text
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
 	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkAwayMovement
 	special UpdateStadiumStreak
+	showtext StadiumFacilityClerkMidRoundText
 	disappear STADIUM_FACILITY_AROMA_LADY
 	moveobject STADIUM_FACILITY_AROMA_LADY, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -3003,6 +3129,7 @@ StadiumFacility_TrainersEndlessEvent:
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSandra, FacilityLossTextSandra 
 	loadtrainer SANDRA, SANDRA_STADIUM 
+	showtext SANDRA_SANDRA_STADIUM_Text
 	startbattle
 	reloadmap
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
@@ -3075,8 +3202,9 @@ FacilityExplainBallText:
 	done
 
 FacilityCurrentStreakText:
-	text "Current Streak:"
-;	line "insert streak" ; TODO 
+	text "Your current"
+	line "streak is:"
+	text_decimal wBattleTowerCurStreak, 2, 5
 	done
 
 KeepBattlingText:
@@ -3198,3 +3326,503 @@ BossTrainerWalkAwayMovement:
 	step_down
 	step_end
 
+
+AMOS_AMOS_STADIUM_Text:
+	text "Amos Amos Stadium"
+	done
+
+BARBEAU_REMY_STADIUM_Text:
+	text "Barbeau Remy Stadium"
+	done
+
+BRIGADER_FACILITY_20_Text:
+	text "Brigader 20"
+	done
+
+BRIGADER_FACILITY_1_Text:
+	text "Brigader 1"
+	done
+
+BRIGADER_FACILITY_2_Text:
+	text "Brigader 2"
+	done
+
+BRIGADER_FACILITY_3_Text:
+	text "Brigader 3"
+	done
+
+BRIGADER_FACILITY_4_Text:
+	text "Brigader 4"
+	done
+
+BRIGADER_FACILITY_5_Text:
+	text "Brigader 5"
+	done
+
+BRIGADER_FACILITY_6_Text:
+	text "Brigader 6"
+	done
+
+BRIGADER_FACILITY_7_Text:
+	text "Brigader 7"
+	done
+
+BRIGADER_FACILITY_8_Text:
+	text "Brigader 8"
+	done
+
+BRIGADER_FACILITY_9_Text:
+	text "Brigader 9"
+	done
+
+BRIGADER_FACILITY_10_Text:
+	text "Brigader 10"
+	done
+
+BRIGADER_FACILITY_11_Text:
+	text "Brigader 11"
+	done
+
+BRIGADER_FACILITY_12_Text:
+	text "Brigader 12"
+	done
+
+BRIGADER_FACILITY_13_Text:
+	text "Brigader 13"
+	done
+
+BRIGADER_FACILITY_14_Text:
+	text "Brigader 14"
+	done
+
+BRIGADER_FACILITY_15_Text:
+	text "Brigader 15"
+	done
+
+BRIGADER_FACILITY_16_Text:
+	text "Brigader 16"
+	done
+
+BRIGADER_FACILITY_17_Text:
+	text "Brigader 17"
+	done
+
+BRIGADER_FACILITY_18_Text:
+	text "Brigader 18"
+	done
+
+BRIGADER_FACILITY_19_Text:
+	text "Brigader 19"
+	done
+
+BUG_MANIAC_FACILITY_20_Text:
+	text "Bug Maniac 20"
+	done
+
+BUG_MANIAC_FACILITY_1_Text:
+	text "Bug Maniac 1"
+	done
+
+BUG_MANIAC_FACILITY_2_Text:
+	text "Bug Maniac 2"
+	done
+
+BUG_MANIAC_FACILITY_3_Text:
+	text "Bug Maniac 3"
+	done
+
+BUG_MANIAC_FACILITY_4_Text:
+	text "Bug Maniac 4"
+	done
+
+BUG_MANIAC_FACILITY_5_Text:
+	text "Bug Maniac 5"
+	done
+
+BUG_MANIAC_FACILITY_6_Text:
+	text "Bug Maniac 6"
+	done
+
+BUG_MANIAC_FACILITY_7_Text:
+	text "Bug Maniac 7"
+	done
+
+BUG_MANIAC_FACILITY_8_Text:
+	text "Bug Maniac 8"
+	done
+
+BUG_MANIAC_FACILITY_9_Text:
+	text "Bug Maniac 9"
+	done
+
+BUG_MANIAC_FACILITY_10_Text:
+	text "Bug Maniac 10"
+	done
+
+BUG_MANIAC_FACILITY_11_Text:
+	text "Bug Maniac 11"
+	done
+
+BUG_MANIAC_FACILITY_12_Text:
+	text "Bug Maniac 12"
+	done
+
+BUG_MANIAC_FACILITY_13_Text:
+	text "Bug Maniac 13"
+	done
+
+BUG_MANIAC_FACILITY_14_Text:
+	text "Bug Maniac 14"
+	done
+
+BUG_MANIAC_FACILITY_15_Text:
+	text "Bug Maniac 15"
+	done
+
+BUG_MANIAC_FACILITY_16_Text:
+	text "Bug Maniac 16"
+	done
+
+BUG_MANIAC_FACILITY_17_Text:
+	text "Bug Maniac 17"
+	done
+
+BUG_MANIAC_FACILITY_18_Text:
+	text "Bug Maniac 18"
+	done
+
+BUG_MANIAC_FACILITY_19_Text:
+	text "Bug Maniac 19"
+	done
+
+HOLLIS_HOLLIS_STADIUM_Text:
+	text "Hollis Hollis Stadium"
+	done
+
+NINJA_FACILITY_20_Text:
+	text "Ninja 20"
+	done
+
+NINJA_FACILITY_1_Text:
+	text "Ninja 1"
+	done
+
+NINJA_FACILITY_2_Text:
+	text "Ninja 2"
+	done
+
+NINJA_FACILITY_3_Text:
+	text "Ninja 3"
+	done
+
+NINJA_FACILITY_4_Text:
+	text "Ninja 4"
+	done
+
+NINJA_FACILITY_5_Text:
+	text "Ninja 5"
+	done
+
+NINJA_FACILITY_6_Text:
+	text "Ninja 6"
+	done
+
+NINJA_FACILITY_7_Text:
+	text "Ninja 7"
+	done
+
+NINJA_FACILITY_8_Text:
+	text "Ninja 8"
+	done
+
+NINJA_FACILITY_9_Text:
+	text "Ninja 9"
+	done
+
+NINJA_FACILITY_10_Text:
+	text "Ninja 10"
+	done
+
+NINJA_FACILITY_11_Text:
+	text "Ninja 11"
+	done
+
+NINJA_FACILITY_12_Text:
+	text "Ninja 12"
+	done
+
+NINJA_FACILITY_13_Text:
+	text "Ninja 13"
+	done
+
+NINJA_FACILITY_14_Text:
+	text "Ninja 14"
+	done
+
+NINJA_FACILITY_15_Text:
+	text "Ninja 15"
+	done
+
+NINJA_FACILITY_16_Text:
+	text "Ninja 16"
+	done
+
+NINJA_FACILITY_17_Text:
+	text "Ninja 17"
+	done
+
+NINJA_FACILITY_18_Text:
+	text "Ninja 18"
+	done
+
+NINJA_FACILITY_19_Text:
+	text "Ninja 19"
+	done
+
+NOMAD_F_FACILITY_20_Text:
+	text "Nomad F 20"
+	done
+
+NOMAD_F_FACILITY_1_Text:
+	text "Nomad F 1"
+	done
+
+NOMAD_F_FACILITY_2_Text:
+	text "Nomad F 2"
+	done
+
+NOMAD_F_FACILITY_3_Text:
+	text "Nomad F 3"
+	done
+
+NOMAD_F_FACILITY_4_Text:
+	text "Nomad F 4"
+	done
+
+NOMAD_F_FACILITY_5_Text:
+	text "Nomad F 5"
+	done
+
+NOMAD_F_FACILITY_6_Text:
+	text "Nomad F 6"
+	done
+
+NOMAD_F_FACILITY_7_Text:
+	text "Nomad F 7"
+	done
+
+NOMAD_F_FACILITY_8_Text:
+	text "Nomad F 8"
+	done
+
+NOMAD_F_FACILITY_9_Text:
+	text "Nomad F 9"
+	done
+
+NOMAD_F_FACILITY_10_Text:
+	text "Nomad F 10"
+	done
+
+NOMAD_F_FACILITY_11_Text:
+	text "Nomad F 11"
+	done
+
+NOMAD_F_FACILITY_12_Text:
+	text "Nomad F 12"
+	done
+
+NOMAD_F_FACILITY_13_Text:
+	text "Nomad F 13"
+	done
+
+NOMAD_F_FACILITY_14_Text:
+	text "Nomad F 14"
+	done
+
+NOMAD_F_FACILITY_15_Text:
+	text "Nomad F 15"
+	done
+
+NOMAD_F_FACILITY_16_Text:
+	text "Nomad F 16"
+	done
+
+NOMAD_F_FACILITY_17_Text:
+	text "Nomad F 17"
+	done
+
+NOMAD_F_FACILITY_18_Text:
+	text "Nomad F 18"
+	done
+
+NOMAD_F_FACILITY_19_Text:
+	text "Nomad F 19"
+	done
+
+PKMN_TRAINER_HF_FACILITY_20_Text:
+	text "Pkmn Trainer Hf 20"
+	done
+
+PKMN_TRAINER_HF_FACILITY_1_Text:
+	text "Pkmn Trainer Hf 1"
+	done
+
+PKMN_TRAINER_HF_FACILITY_2_Text:
+	text "Pkmn Trainer Hf 2"
+	done
+
+PKMN_TRAINER_HF_FACILITY_3_Text:
+	text "Pkmn Trainer Hf 3"
+	done
+
+PKMN_TRAINER_HF_FACILITY_4_Text:
+	text "Pkmn Trainer Hf 4"
+	done
+
+PKMN_TRAINER_HF_FACILITY_5_Text:
+	text "Pkmn Trainer Hf 5"
+	done
+
+PKMN_TRAINER_HF_FACILITY_6_Text:
+	text "Pkmn Trainer Hf 6"
+	done
+
+PKMN_TRAINER_HF_FACILITY_7_Text:
+	text "Pkmn Trainer Hf 7"
+	done
+
+PKMN_TRAINER_HF_FACILITY_8_Text:
+	text "Pkmn Trainer Hf 8"
+	done
+
+PKMN_TRAINER_HF_FACILITY_9_Text:
+	text "Pkmn Trainer Hf 9"
+	done
+
+PKMN_TRAINER_HF_FACILITY_10_Text:
+	text "Pkmn Trainer Hf 10"
+	done
+
+PKMN_TRAINER_HF_FACILITY_11_Text:
+	text "Pkmn Trainer Hf 11"
+	done
+
+PKMN_TRAINER_HF_FACILITY_12_Text:
+	text "Pkmn Trainer Hf 12"
+	done
+
+PKMN_TRAINER_HF_FACILITY_13_Text:
+	text "Pkmn Trainer Hf 13"
+	done
+
+PKMN_TRAINER_HF_FACILITY_14_Text:
+	text "Pkmn Trainer Hf 14"
+	done
+
+PKMN_TRAINER_HF_FACILITY_15_Text:
+	text "Pkmn Trainer Hf 15"
+	done
+
+PKMN_TRAINER_HF_FACILITY_16_Text:
+	text "Pkmn Trainer Hf 16"
+	done
+
+PKMN_TRAINER_HF_FACILITY_17_Text:
+	text "Pkmn Trainer Hf 17"
+	done
+
+PKMN_TRAINER_HF_FACILITY_18_Text:
+	text "Pkmn Trainer Hf 18"
+	done
+
+PKMN_TRAINER_HF_FACILITY_19_Text:
+	text "Pkmn Trainer Hf 19"
+	done
+
+SAGE_FACILITY_20_Text:
+	text "Sage 20"
+	done
+
+SAGE_FACILITY_1_Text:
+	text "Sage 1"
+	done
+
+SAGE_FACILITY_2_Text:
+	text "Sage 2"
+	done
+
+SAGE_FACILITY_3_Text:
+	text "Sage 3"
+	done
+
+SAGE_FACILITY_4_Text:
+	text "Sage 4"
+	done
+
+SAGE_FACILITY_5_Text:
+	text "Sage 5"
+	done
+
+SAGE_FACILITY_6_Text:
+	text "Sage 6"
+	done
+
+SAGE_FACILITY_7_Text:
+	text "Sage 7"
+	done
+
+SAGE_FACILITY_8_Text:
+	text "Sage 8"
+	done
+
+SAGE_FACILITY_9_Text:
+	text "Sage 9"
+	done
+
+SAGE_FACILITY_10_Text:
+	text "Sage 10"
+	done
+
+SAGE_FACILITY_11_Text:
+	text "Sage 11"
+	done
+
+SAGE_FACILITY_12_Text:
+	text "Sage 12"
+	done
+
+SAGE_FACILITY_13_Text:
+	text "Sage 13"
+	done
+
+SAGE_FACILITY_14_Text:
+	text "Sage 14"
+	done
+
+SAGE_FACILITY_15_Text:
+	text "Sage 15"
+	done
+
+SAGE_FACILITY_16_Text:
+	text "Sage 16"
+	done
+
+SAGE_FACILITY_17_Text:
+	text "Sage 17"
+	done
+
+SAGE_FACILITY_18_Text:
+	text "Sage 18"
+	done
+
+SAGE_FACILITY_19_Text:
+	text "Sage 19"
+	done
+
+SAMSARA_SAMSARA_STADIUM_Text:
+	text "Samsara Samsara Stadium"
+	done
+
+SANDRA_SANDRA_STADIUM_Text:
+	text "Sandra Sandra Stadium"
+	done

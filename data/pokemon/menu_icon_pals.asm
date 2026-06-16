@@ -298,11 +298,14 @@ endr
 	iconpal BROWN, RED      ; DECIDUEYE (Hisuian)
 
 ; Other Forms
-	iconpal PURPLE, BLUE    ; NOCTOWL (Immortal)
+	iconpal PURPLE, BLUE    ; NOCTOWL (ancestor)
 	iconpal RED, RED ; URSALUNA, URSALUNA_BLOODMOON_FORM
-	iconpal BROWN, TEAL      ; FERALIGATR (variant)
-	iconpal BROWN, RED      ; MEGANIUM (variant)
-	iconpal PURPLE, GRAY       ; MAGCARGO (variant)
-	iconpal BROWN, GREEN      ; XATU (variant)
+	iconpal BROWN, TEAL      ; FERALIGATR (ancestor)
+	iconpal BROWN, RED      ; MEGANIUM (ancestor)
+	iconpal PURPLE, GRAY       ; MAGCARGO (ancestor)
+	iconpal BROWN, GREEN      ; XATU (ancestor)
+
+	iconpal BLUE, GRAY       ; LEDIAN (ancestor)
+	iconpal RED, GRAY      ; ALAKAZAM (ancestor)
 
 	assert_table_length NUM_UNIQUE_POKEMON

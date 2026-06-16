@@ -404,6 +404,8 @@ OTHER_FORM EQU 2
 	const_skip ; meganium
 	const_skip ; MAGCARGO
 	const_skip ; XATU 
+;	const_skip ; LEDIAN 
+;	const_skip ; ALAKAZAM 
 
 NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; 
 

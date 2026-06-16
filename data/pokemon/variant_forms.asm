@@ -33,7 +33,7 @@ CosmeticSpeciesAndFormTable:
 	assert_table_length NUM_COSMETIC_FORMS
 	; fallthrough
 
-VariantSpeciesAndFormTable: ; as many variants as we have 
+VariantSpeciesAndFormTable: 
 	table_width 2, VariantSpeciesAndFormTable
 	; alolan 
 	dp RAICHU, ALOLAN_FORM 
@@ -70,18 +70,14 @@ VariantSpeciesAndFormTable: ; as many variants as we have
 	dp MEGANIUM, OTHER_FORM ; SAURO FORM 
 	dp MAGCARGO, OTHER_FORM ; DEEP CRUST 
 	dp XATU, OTHER_FORM ; TOWER FORM 
+	dp LEDIAN, OTHER_FORM
+	dp ALAKAZAM, OTHER_FORM
 	assert_table_length NUM_VARIANT_FORMS
 	; fallthrough
 
 
 
-ExtSpeciesTable: ; no change here from polished - the OG is just this. 
-; For species after index 254. Just a simple ordered table.
-; We can't just convert directly, that results in problems with formes, even if
-; the extspecies doesn't have a form on its own.
-; could do: maybe convert directly anyway by splitting the tables up for
-; optimization reasons? This would only really be relevant for the pokedex.
+ExtSpeciesTable: ; LEAVE THIS BE! 
 	table_width 2, ExtSpeciesTable
 	assert_table_length NUM_EXT_SPECIES
-
 	db 0 ; end

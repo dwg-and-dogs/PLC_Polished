@@ -321,5 +321,8 @@ FrontPicPointers::
 	dba Magcargo_AncestorFrontpic       ; 00
 	dba Xatu_AncestorFrontpic       ; 00
 
+	dba Ledian_AncestorFrontpic       ; 00
+	dba Alakazam_AncestorFrontpic       ; 00
+
 	assert_table_length NUM_UNIQUE_POKEMON
 	

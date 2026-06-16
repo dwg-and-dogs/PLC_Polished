@@ -67,6 +67,7 @@ NatuFacilityText:
 	done	
 
 StadiumGroundsFaciltyPrepClerkScript:
+	setmapscene STADIUM_GROUNDS_FACILITY, 0
 	loadmem wBattleTowerCurStreak, 0       ; reset streak (both bytes)
 	loadmem wBattleTowerCurStreak + 1, 0
 	readmem wPartyMon1Species               ; script var = lead species

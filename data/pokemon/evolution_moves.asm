@@ -297,4 +297,7 @@ EvolutionMoves::
 	db SLUDGE_BOMB       ; MAGCARGO ancestor
 	db ANCIENTPOWER       ; XATU ancestor
 
+	db AQUA_JET       ; LEDIAN ancestor
+	db DARK_PULSE       ; ALAKAZAM ancestor
+
 	assert_table_length NUM_EXT_POKEMON

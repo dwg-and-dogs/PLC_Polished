@@ -292,5 +292,7 @@ EggMovePointers::
 	dw NoEggMoves ; Meganium_Ancestor       ; 00
 	dw NoEggMoves ; Magcargo_Ancestor       ; 00
 	dw NoEggMoves ; Xatu_Ancestor       ; 00
+	dw NoEggMoves ; Ledian_Ancestor       ; 00
+	dw NoEggMoves ; Alakazam_Ancestor       ; 00
 
 	assert_table_length NUM_EXT_POKEMON

@@ -1114,6 +1114,11 @@ INCLUDE "gfx/pokemon/magcargo_ancestor/shiny.pal"
 INCLUDE "gfx/pokemon/xatu_ancestor/normal.pal"
 INCLUDE "gfx/pokemon/xatu_ancestor/shiny.pal"
 
+INCLUDE "gfx/pokemon/ledian_ancestor/normal.pal"
+INCLUDE "gfx/pokemon/ledian_ancestor/shiny.pal"
+INCLUDE "gfx/pokemon/alakazam_ancestor/normal.pal"
+INCLUDE "gfx/pokemon/alakazam_ancestor/shiny.pal"
+
 	assert_table_length NUM_EXT_POKEMON + 1
 
 endc

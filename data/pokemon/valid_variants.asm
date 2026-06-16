@@ -11,8 +11,8 @@ ValidVariantRanges: ; for Wonder Trade
 	db MUK, 2
 	db EXEGGUTOR, 2
 	; galarian 
-	db PONYTA,    2 ; GALARIAN
-	db RAPIDASH,  2 ; GALARIAN
+	db PONYTA,    2 
+	db RAPIDASH,  2
 	db SLOWPOKE, 2
 	db SLOWBRO, 2
 	db SLOWKING, 2
@@ -21,7 +21,7 @@ ValidVariantRanges: ; for Wonder Trade
 	; hisuian 
 	db GROWLITHE, 2
 	db ARCANINE, 2
-	db VOLTORB, 2 ; hisuian 
+	db VOLTORB, 2 
 	db ELECTRODE, 2
 	db TYPHLOSION, 2
 	db QWILFISH, 2
@@ -35,4 +35,6 @@ ValidVariantRanges: ; for Wonder Trade
 	db MEGANIUM, 2
 	db MAGCARGO, 2
 	db XATU, 2
+	db LEDIAN, 2
+	db ALAKAZAM, 2
 	db -1

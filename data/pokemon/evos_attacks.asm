@@ -987,6 +987,27 @@ AlakazamEvosAttacks:
 	db 46, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
+AlakazamAncestorEvosAtacks: ; TODO IMPROVE 
+	db 0 ; no more evolutions
+	db 1, TRI_ATTACK ; RBY TM move
+	db 1, PSYBEAM
+	db 1, FORESIGHT ; evolution move
+	db 16, CONFUSION
+	db 18, DISABLE
+	db 21, PSYBEAM
+	db 23, NIGHT_SHADE ; Miracle Eye → Let's Go move
+	db 26, REFLECT
+	db 28, LIGHT_SCREEN ; Psycho Cut → egg move
+	db 31, RECOVER
+	db 33, DARK_PULSE
+	db 36, SHADOW_BALL ; Ally Switch → new move
+	db 38, PSYCHIC_M
+	db 41, CALM_MIND
+	db 43, AURA_SPHERE ; Role Play → new move
+	db 46, FUTURE_SIGHT
+	db 0 ; no more level-up moves
+
+
 DittoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TRANSFORM
@@ -2992,6 +3013,25 @@ LedianEvosAttacks:
 	db 33, AGILITY
 	db 38, BUG_BUZZ
 	db 42, AIR_SLASH
+	db 47, DOUBLE_EDGE
+	db 0 ; no more level-up moves
+
+LedianAncestorEvosAttacks: ; TODO IMPROVE 
+	db 0 ; no more evolutions
+	db 1, SWORDS_DANCE ; evolution move
+	db 1, TACKLE
+	db 5, SUPERSONIC
+	db 8, SWIFT
+	db 12, LIGHT_SCREEN
+	db 12, REFLECT
+	db 12, SAFEGUARD
+	db 15, MACH_PUNCH
+	db 20, BUBBLE_BEAM ; Silver Wind → event move
+	db 24, WATERFALL ; Comet Punch → new move
+	db 29, BATON_PASS
+	db 33, AGILITY
+	db 38, HYDRO_PUMP
+	db 42, BUG_BUZZ
 	db 47, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
