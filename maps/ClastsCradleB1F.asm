@@ -250,10 +250,10 @@ CradleCutscene_Text6:
     text " Vesper: " 
 	next
 	text_start 
-	text "His port was"
-	line "destroyed!"
-
-	para "Says by old man"
+	text "He says that his"
+	line "port was wrecked"
+	
+	para "by an old man"
 	line "piloting Lugia."
 	para "But she's been by"
 	line "my side loyally!"

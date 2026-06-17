@@ -27,8 +27,8 @@ CalmCoastCottageDayCareManText:
 	para "interested in my"
 	line "wife's Staravia."
 	
-	para "If they will"
-	line "made an egg,"
+	para "If they made an"
+	line "egg,"
 
 	para "wouldn't that be"
 	line "a Hoot!"
