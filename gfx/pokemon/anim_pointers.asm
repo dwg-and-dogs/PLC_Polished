@@ -327,6 +327,7 @@ AnimationPointers:
 	dw Magcargo_AncestorAnimation       ; 00
 	dw Xatu_AncestorAnimation       ; 00
 
-
+	dw Ledian_AncestorAnimation
+	dw Alakazam_AncestorAnimation
 
 	assert_table_length NUM_UNIQUE_POKEMON

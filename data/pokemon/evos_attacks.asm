@@ -987,7 +987,7 @@ AlakazamEvosAttacks:
 	db 46, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
-AlakazamAncestorEvosAtacks: ; TODO IMPROVE 
+Alakazam_AncestorEvosAttacks: ; TODO IMPROVE 
 	db 0 ; no more evolutions
 	db 1, TRI_ATTACK ; RBY TM move
 	db 1, PSYBEAM
@@ -3016,7 +3016,7 @@ LedianEvosAttacks:
 	db 47, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
-LedianAncestorEvosAttacks: ; TODO IMPROVE 
+Ledian_AncestorEvosAttacks: ; TODO IMPROVE 
 	db 0 ; no more evolutions
 	db 1, SWORDS_DANCE ; evolution move
 	db 1, TACKLE

@@ -1,4 +1,5 @@
-KantoFrames: ; previous build had an error in kantoframes from line 83 to the end. 
+KantoFrames: ; previous build had an error in kantoframes from line 83 to the end. ; I think it was related to variants not being on the same as their normal, 
+; and things got shuffled around a bit. 
 
 CyndaquilFrames:  INCLUDE "gfx/pokemon/cyndaquil/frames.asm"
 QuilavaFrames:  INCLUDE "gfx/pokemon/quilava/frames.asm"
@@ -101,4 +102,3 @@ Samurott_HisuianFrames:  INCLUDE "gfx/pokemon/samurott_hisuian/frames.asm"
 Decidueye_HisuianFrames:  INCLUDE "gfx/pokemon/decidueye_hisuian/frames.asm"
 
 Noctowl_ImmortalFrames:  INCLUDE "gfx/pokemon/noctowl_immortal/frames.asm"
-

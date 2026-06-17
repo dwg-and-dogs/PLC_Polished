@@ -329,5 +329,7 @@ FramesPointers:
 	dw Magcargo_AncestorFrames       ; 00
 	dw Xatu_AncestorFrames       ; 00
 
+	dw Ledian_AncestorFrames
+	dw Alakazam_AncestorFrames
 
 	assert_table_length NUM_UNIQUE_POKEMON

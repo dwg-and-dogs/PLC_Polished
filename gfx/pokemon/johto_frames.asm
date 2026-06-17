@@ -234,3 +234,6 @@ Xatu_AncestorFrames:  INCLUDE "gfx/pokemon/xatu_ancestor/frames.asm"
 Feraligatr_AncestorFrames:  INCLUDE "gfx/pokemon/feraligatr_ancestor/frames.asm"
 Meganium_AncestorFrames:  INCLUDE "gfx/pokemon/meganium_ancestor/frames.asm"
 Magcargo_AncestorFrames:  INCLUDE "gfx/pokemon/magcargo_ancestor/frames.asm"
+
+Ledian_AncestorFrames:  INCLUDE "gfx/pokemon/ledian_ancestor/frames.asm"
+Alakazam_AncestorFrames:  INCLUDE "gfx/pokemon/alakazam_ancestor/frames.asm"

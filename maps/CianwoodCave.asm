@@ -18,9 +18,13 @@ CianwoodCave_MapScriptHeader:
 	
 	def_object_events
 	itemball_event 3, 3, DRAGON_SCALE, 1, EVENT_CAVE_DRAGON_SCALE ; TOP OF THE CAVE
-	tmhmball_event  3, 18, TM_DRAGON_PULSE, EVENT_DRAGON_PULSE ; ON ONE OF THE THINGS
+	tmhmball_event  9,  1, TM_DRAGON_PULSE, EVENT_DRAGON_PULSE ; ON ONE OF THE THINGS
 	itemball_event 11, 21, REVIVE, 1, EVENT_CIANWOODCAVE_REVIVE
 	itemball_event 11, 29, HYPER_POTION, 1, EVENT_CIANWOODCAVE_HYPER_POTION
+	object_event  2, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ALAKAZAM, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodCaveScript, EVENT_FOUGHT_ALAKAZAM_VARIANT
+
+	object_const_def
+	const CIANWOOD_CAVE_ALAKAZAM
 
 	smashrock_event  13, 5
 	smashrock_event  15, 5
@@ -42,4 +46,20 @@ CianwoodCave_MapScriptHeader:
 	strengthboulder_event 10, 13
 	
 	
-	
+CianwoodCaveScript:
+	opentext
+	writetext AlakazamTextCave
+	waitbutton
+	cry ALAKAZAM
+	pause 60
+	closetext
+	setevent EVENT_FOUGHT_ALAKAZAM_VARIANT
+	loadwildmon ALAKAZAM, 30
+	startbattle
+	disappear CIANWOOD_CAVE_ALAKAZAM
+	reloadmapafterbattle
+	end
+
+AlakazamTextCave:
+	text "..."
+	done

@@ -7,7 +7,7 @@
 	db NO_ITEM ; item 1
 	db BLACKGLASSES ; item 2
 	dn GENDER_F25, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/alakazam/front.dimensions"
+	INCBIN "gfx/pokemon/alakazam_ancestor/front.dimensions"
 	abilities_for ALAKAZAM_ANCESTOR, SYNCHRONIZE, MAGIC_GUARD, SNIPER
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups

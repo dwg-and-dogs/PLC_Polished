@@ -329,5 +329,8 @@ Meganium_AncestorAnimation:  INCLUDE "gfx/pokemon/meganium_ancestor/anim0.asm"
 Magcargo_AncestorAnimation:  INCLUDE "gfx/pokemon/magcargo_ancestor/anim0.asm"
 Xatu_AncestorAnimation:  INCLUDE "gfx/pokemon/xatu_ancestor/anim0.asm"
 
+Ledian_AncestorAnimation:  INCLUDE "gfx/pokemon/ledian_ancestor/anim0.asm"
+Alakazam_AncestorAnimation:  INCLUDE "gfx/pokemon/alakazam_ancestor/anim0.asm"
+
 
 

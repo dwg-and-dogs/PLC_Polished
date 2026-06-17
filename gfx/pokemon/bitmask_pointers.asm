@@ -328,7 +328,8 @@ BitmasksPointers:
 	dw Magcargo_AncestorBitmasks       ; 00
 	dw Xatu_AncestorBitmasks       ; 00
 
-
+	dw Ledian_AncestorBitmasks
+	dw Alakazam_AncestorBitmasks
 
 
 	assert_table_length NUM_UNIQUE_POKEMON

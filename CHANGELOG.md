@@ -121,13 +121,14 @@ Slightly updated the "bad ending" text.
 Ancestor Ledian and Alakazam, sprites courtesy Accad501
 
 Todo for v110:
-* Ancestor Ledian, Alakazam events, palettes, add to some trainer parties in the postgame 
+* Ancestor Ledian, Alakazam events
+* Add new ancestor forms to some parties 
 * Finish Stadium todos  
 * Special mark on pokemon if they have max DVs
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * More evo items for the person, incl metal coat and kings rock
 * Better Lucario Sprite 
-* Brick Break + Light Screen interaction: TODO 
+* Brick Break + Light Screen interaction
 
 
 vAny

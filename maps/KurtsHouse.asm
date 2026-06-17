@@ -1013,6 +1013,10 @@ endr
 	loadmem wPartyMon4DVs+0, $ff
 	loadmem wPartyMon4DVs+1, $ff
 	loadmem wPartyMon4DVs+2, $ff	
+
+	givepoke ALAKAZAM, OTHER_FORM, 100 
+	givepoke LEDIAN, OTHER_FORM, 100 
+
 	; fill pokedex
 	callasm FillPokedex
 	waitbutton

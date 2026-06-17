@@ -893,7 +893,6 @@ Noctowl_ImmortalFrontpic: INCBIN "gfx/pokemon/noctowl_immortal/front.animated.2b
 Noctowl_ImmortalBackpic:  INCBIN "gfx/pokemon/noctowl_immortal/back.2bpp.lz"
 Ursaluna_BloodmoonFrontpic: INCBIN "gfx/pokemon/ursaluna_bloodmoon/front.animated.2bpp.lz"
 Ursaluna_BloodmoonBackpic:  INCBIN "gfx/pokemon/ursaluna_bloodmoon/back.2bpp.lz"
-
 Feraligatr_AncestorFrontpic: INCBIN "gfx/pokemon/feraligatr_ancestor/front.animated.2bpp.lz"
 Feraligatr_AncestorBackpic:  INCBIN "gfx/pokemon/feraligatr_ancestor/back.2bpp.lz"
 Meganium_AncestorFrontpic: INCBIN "gfx/pokemon/meganium_ancestor/front.animated.2bpp.lz"
@@ -902,6 +901,10 @@ Magcargo_AncestorFrontpic: INCBIN "gfx/pokemon/magcargo_ancestor/front.animated.
 Magcargo_AncestorBackpic:  INCBIN "gfx/pokemon/magcargo_ancestor/back.2bpp.lz"
 Xatu_AncestorFrontpic: INCBIN "gfx/pokemon/xatu_ancestor/front.animated.2bpp.lz"
 Xatu_AncestorBackpic:  INCBIN "gfx/pokemon/xatu_ancestor/back.2bpp.lz"
+Ledian_AncestorFrontpic: INCBIN "gfx/pokemon/ledian_ancestor/front.animated.2bpp.lz"
+Ledian_AncestorBackpic:  INCBIN "gfx/pokemon/ledian_ancestor/back.2bpp.lz"
+Alakazam_AncestorFrontpic: INCBIN "gfx/pokemon/alakazam_ancestor/front.animated.2bpp.lz"
+Alakazam_AncestorBackpic:  INCBIN "gfx/pokemon/alakazam_ancestor/back.2bpp.lz"
 
 
 SECTION "Trainer Pics 1", ROMX

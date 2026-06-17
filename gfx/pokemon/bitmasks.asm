@@ -326,4 +326,6 @@ Meganium_AncestorBitmasks:  INCLUDE "gfx/pokemon/meganium_ancestor/bitmask.asm"
 Magcargo_AncestorBitmasks:  INCLUDE "gfx/pokemon/magcargo_ancestor/bitmask.asm"
 Xatu_AncestorBitmasks:  INCLUDE "gfx/pokemon/xatu_ancestor/bitmask.asm"
 
+Ledian_AncestorBitmasks:  INCLUDE "gfx/pokemon/ledian_ancestor/bitmask.asm"
+Alakazam_AncestorBitmasks:  INCLUDE "gfx/pokemon/alakazam_ancestor/bitmask.asm"
 

@@ -36,6 +36,8 @@ HollysHolt_MapScriptHeader:
 	object_event   6, 18, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_BEAT_HOLLIS ;;;;
 	object_event  29, 28, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_BEAT_HOLLIS ;;;;
 	object_event   4, 40, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_BEAT_HOLLIS ;;;;
+
+	object_event  2, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ALAKAZAM, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LedianAncestorScript, EVENT_FOUGHT_LEDIAN_VARIANT	
 	
 	object_event  8, 16, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC1Text, -1
 	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HollysHoltNPC2Script, -1  ; gives seed
@@ -57,6 +59,7 @@ HollysHolt_MapScriptHeader:
 	const HOLLYS_HOLT_PINECO_1
 	const HOLLYS_HOLT_PINECO_2
 	const HOLLYS_HOLT_PINECO_3
+	const HOLLYS_HOLT_LEDIAN 
 
 HollysHoltTrigger:
 	sdefer HollysHoltScript1
@@ -478,4 +481,64 @@ PinecoHeadbuttScript1:
 	para "It's turning a"
 	line "sickly yellow."
 	done
+
+LedianAncestorScript:  ; todo 
+	opentext
+	writetext WeirdLedianText
+	waitbutton
+	closetext
+
+	unowntypeface
+	showtext WeirdLedianText_Unown
+	restoretypeface
+	special MapCallbackSprites_LoadUsedSpritesGFX
+	opentext
+	writetext PokemonInterestInLedianText
+	waitbutton
+	checkmove ANCIENTPOWER
+	iffalse_jumptext NoLedianMoveText
+	writetext LedianWiggleText_AncientPower
+	waitbutton
+	cry LEDIAN
+	pause 60
+	closetext
+	setevent EVENT_FOUGHT_LEDIAN_VARIANT
+	loadwildmon LEDIAN, OTHER_FORM, 25
+	startbattle
+	disappear HOLLYS_HOLT_LEDIAN
+	reloadmapafterbattle
+	end
+
+WeirdLedianText:
+	text "It's a Ledian that"
+	line "appears to be"
+	cont "made of Rock."
 	
+	para "There's writing"
+	line "at its feet."
+	done
+
+WeirdLedianText_Unown:
+	text "awoken by primal"
+	line "energy" 
+	done
+
+NoLedianMoveText:
+	text "But the Ledian now"
+	line "stands still."
+	done
+
+LedianWiggleText_AncientPower:
+	text "Your #mon's"
+	line "AncientPower"
+	cont "roused the Ledian!"
+	
+	para "The Ledian attacks!"
+	done
+
+
+PokemonInterestInLedianText:
+	text "Your #mon are"
+	line "trying to rouse"
+	cont "the Ledian!"
+	done
