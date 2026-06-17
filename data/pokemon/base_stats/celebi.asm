@@ -7,7 +7,7 @@
 	db ALWAYS_ITEM_2 ; item 1
 	db LUM_BERRY ; item 2
 	dn GENDER_UNKNOWN, 15 ; gender ratio, step cycles to hatch
-	dn 5 , 5 ; frontpic dimensions
+	INCBIN "gfx/pokemon/celebi/front.dimensions"
 	abilities_for CELEBI, NATURAL_CURE, NATURAL_CURE, NATURAL_CURE
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups

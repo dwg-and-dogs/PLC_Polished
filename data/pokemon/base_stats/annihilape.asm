@@ -7,8 +7,8 @@
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
 	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
-	INCBIN "gfx/pokemon/primeape/front.dimensions"
-	abilities_for PRIMEAPE, GORILLA_TACTICS, INNER_FOCUS, DEFIANT
+	INCBIN "gfx/pokemon/annihilape/front.dimensions"
+	abilities_for ANNIHILAPE, GORILLA_TACTICS, INNER_FOCUS, DEFIANT
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

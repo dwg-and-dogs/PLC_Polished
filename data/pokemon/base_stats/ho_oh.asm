@@ -7,7 +7,7 @@
 	db ALWAYS_ITEM_2 ; item 1
 	db SACRED_ASH ; item 2
 	dn GENDER_UNKNOWN, 15 ; gender ratio, step cycles to hatch
-	dn 7 , 7 ; frontpic dimensions
+	INCBIN "gfx/pokemon/ho_oh/front.dimensions"
 	abilities_for HO_OH, PRESSURE, PRESSURE, REGENERATOR
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
