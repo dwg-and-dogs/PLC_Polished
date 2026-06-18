@@ -1,30 +1,7 @@
 JohtoFrames: ; previous build had an error with the entries in kanto frames but johto frames were all OK. 
-SudowoodoFrames:  INCLUDE "gfx/pokemon/sudowoodo/frames.asm"
-ScytherFrames:  INCLUDE "gfx/pokemon/scyther/frames.asm"
-ScizorFrames:  INCLUDE "gfx/pokemon/scizor/frames.asm"
-KleavorFrames:  INCLUDE "gfx/pokemon/kleavor/frames.asm"
-PinsirFrames:  INCLUDE "gfx/pokemon/pinsir/frames.asm"
-MinsirFrames:  INCLUDE "gfx/pokemon/minsir/frames.asm"
-HeracrossFrames:  INCLUDE "gfx/pokemon/heracross/frames.asm"
-KoffingFrames:  INCLUDE "gfx/pokemon/koffing/frames.asm"
-WeezingFrames:  INCLUDE "gfx/pokemon/weezing/frames.asm"
-GrimerFrames:  INCLUDE "gfx/pokemon/grimer/frames.asm"
-MukFrames:  INCLUDE "gfx/pokemon/muk/frames.asm"
-MagnemiteFrames:  INCLUDE "gfx/pokemon/magnemite/frames.asm"
-MagnetonFrames:  INCLUDE "gfx/pokemon/magneton/frames.asm"
-MagnezoneFrames:  INCLUDE "gfx/pokemon/magnezone/frames.asm"
-VoltorbFrames:  INCLUDE "gfx/pokemon/voltorb/frames.asm"
-ElectrodeFrames:  INCLUDE "gfx/pokemon/electrode/frames.asm"
-AipomFrames:  INCLUDE "gfx/pokemon/aipom/frames.asm"
-AmbipomFrames:  INCLUDE "gfx/pokemon/ambipom/frames.asm"
-SnubbullFrames:  INCLUDE "gfx/pokemon/snubbull/frames.asm"
-GranbullFrames:  INCLUDE "gfx/pokemon/granbull/frames.asm"
-VulpixFrames:  INCLUDE "gfx/pokemon/vulpix/frames.asm"
-NinetalesFrames:  INCLUDE "gfx/pokemon/ninetales/frames.asm"
-GrowlitheFrames:  INCLUDE "gfx/pokemon/growlithe/frames.asm"
-ArcanineFrames:  INCLUDE "gfx/pokemon/arcanine/frames.asm"
-StantlerFrames:  INCLUDE "gfx/pokemon/stantler/frames.asm"
-WyrdeerFrames:  INCLUDE "gfx/pokemon/wyrdeer/frames.asm"
+;UPDATE engine/gfx/pic_animation with the first species here 
+; tried moving these around so that marill is the first. Maybe the unown is messing things up? 
+; I have learned that definitely the variant form needs to be in the same file as its plain form 
 MarillFrames:  INCLUDE "gfx/pokemon/marill/frames.asm"
 AzumarillFrames:  INCLUDE "gfx/pokemon/azumarill/frames.asm"
 MankeyFrames:  INCLUDE "gfx/pokemon/mankey/frames.asm"
@@ -59,7 +36,6 @@ ChinchouFrames:  INCLUDE "gfx/pokemon/chinchou/frames.asm"
 LanturnFrames:  INCLUDE "gfx/pokemon/lanturn/frames.asm"
 TangelaFrames:  INCLUDE "gfx/pokemon/tangela/frames.asm"
 TangrowthFrames:  INCLUDE "gfx/pokemon/tangrowth/frames.asm"
-
 EeveeFrames:  INCLUDE "gfx/pokemon/eevee/frames.asm"
 VaporeonFrames:  INCLUDE "gfx/pokemon/vaporeon/frames.asm"
 JolteonFrames:  INCLUDE "gfx/pokemon/jolteon/frames.asm"
@@ -175,8 +151,18 @@ LugiaFrames:  INCLUDE "gfx/pokemon/lugia/frames.asm"
 Ho_OhFrames:  INCLUDE "gfx/pokemon/ho_oh/frames.asm"
 CelebiFrames:  INCLUDE "gfx/pokemon/celebi/frames.asm"
 
-
 EggFrames: INCLUDE "gfx/pokemon/egg/frames.asm"
+
+Corsola_GalarianFrames:  INCLUDE "gfx/pokemon/corsola_galarian/frames.asm"
+Qwilfish_HisuianFrames:  INCLUDE "gfx/pokemon/qwilfish_hisuian/frames.asm"
+Ponyta_GalarianFrames:  INCLUDE "gfx/pokemon/ponyta_galarian/frames.asm" ; ok 
+Rapidash_GalarianFrames:  INCLUDE "gfx/pokemon/rapidash_galarian/frames.asm" ; ok 
+Sneasel_HisuianFrames:  INCLUDE "gfx/pokemon/sneasel_hisuian/frames.asm" ; ok 
+Ursaluna_BloodmoonFrames:  INCLUDE "gfx/pokemon/ursaluna_bloodmoon/frames.asm"
+Xatu_AncestorFrames:  INCLUDE "gfx/pokemon/xatu_ancestor/frames.asm"
+Feraligatr_AncestorFrames:  INCLUDE "gfx/pokemon/feraligatr_ancestor/frames.asm"
+Meganium_AncestorFrames:  INCLUDE "gfx/pokemon/meganium_ancestor/frames.asm"
+Magcargo_AncestorFrames:  INCLUDE "gfx/pokemon/magcargo_ancestor/frames.asm"
 
 
 UnownAFrames: INCLUDE "gfx/pokemon/unown_a/frames.asm"
@@ -207,33 +193,3 @@ UnownYFrames: INCLUDE "gfx/pokemon/unown_y/frames.asm"
 UnownZFrames: INCLUDE "gfx/pokemon/unown_z/frames.asm"
 UnownExclamationFrames: INCLUDE "gfx/pokemon/unown_exclamation/frames.asm"
 UnownQuestionFrames:    INCLUDE "gfx/pokemon/unown_question/frames.asm"
-
-Vulpix_AlolanFrames:  INCLUDE "gfx/pokemon/vulpix_alolan/frames.asm"
-Ninetales_AlolanFrames:  INCLUDE "gfx/pokemon/ninetales_alolan/frames.asm"
-Grimer_AlolanFrames:  INCLUDE "gfx/pokemon/grimer_alolan/frames.asm"
-Muk_AlolanFrames:  INCLUDE "gfx/pokemon/muk_alolan/frames.asm"
-
-
-Weezing_GalarianFrames:  INCLUDE "gfx/pokemon/weezing_galarian/frames.asm"
-Corsola_GalarianFrames:  INCLUDE "gfx/pokemon/corsola_galarian/frames.asm"
-
-
-Growlithe_HisuianFrames:  INCLUDE "gfx/pokemon/growlithe_hisuian/frames.asm"
-Arcanine_HisuianFrames:  INCLUDE "gfx/pokemon/arcanine_hisuian/frames.asm"
-Voltorb_HisuianFrames:  INCLUDE "gfx/pokemon/voltorb_hisuian/frames.asm"
-Electrode_HisuianFrames:  INCLUDE "gfx/pokemon/electrode_hisuian/frames.asm"
-
-Qwilfish_HisuianFrames:  INCLUDE "gfx/pokemon/qwilfish_hisuian/frames.asm"
-
-Ponyta_GalarianFrames:  INCLUDE "gfx/pokemon/ponyta_galarian/frames.asm" ; ok 
-Rapidash_GalarianFrames:  INCLUDE "gfx/pokemon/rapidash_galarian/frames.asm" ; ok 
-
-Sneasel_HisuianFrames:  INCLUDE "gfx/pokemon/sneasel_hisuian/frames.asm" ; ok 
-Ursaluna_BloodmoonFrames:  INCLUDE "gfx/pokemon/ursaluna_bloodmoon/frames.asm"
-Xatu_AncestorFrames:  INCLUDE "gfx/pokemon/xatu_ancestor/frames.asm"
-Feraligatr_AncestorFrames:  INCLUDE "gfx/pokemon/feraligatr_ancestor/frames.asm"
-Meganium_AncestorFrames:  INCLUDE "gfx/pokemon/meganium_ancestor/frames.asm"
-Magcargo_AncestorFrames:  INCLUDE "gfx/pokemon/magcargo_ancestor/frames.asm"
-
-Ledian_AncestorFrames:  INCLUDE "gfx/pokemon/ledian_ancestor/frames.asm"
-Alakazam_AncestorFrames:  INCLUDE "gfx/pokemon/alakazam_ancestor/frames.asm"
