@@ -339,10 +339,10 @@ Special_BattleTower_NextRentalBattle:
 	call GetMoveName
 
 	; Figure out how many details we want to reveal.
-	ld a, [wBattleFactoryCurStreak]
+	ld a, [wBattleTowerTopStreakExpert]
 	and a
 	jr nz, .most_common_type
-	ld a, [wBattleFactoryCurStreak + 1]
+	ld a, [wBattleTowerTopStreakExpert + 1]
 	ld b, 7
 	sub b
 	ld hl, .ExpectThese3
@@ -684,7 +684,7 @@ BT_GetCurStreakAddr:
 ; Sets hl to the streak address for the current battle mode.
 ; Closes SRAM.
 	call BT_InRentalMode
-	ld hl, wBattleFactoryCurStreak
+	ld hl, wBattleTowerTopStreakExpert
 	ret z
 	ld hl, wBattleTowerCurStreak
 	ret

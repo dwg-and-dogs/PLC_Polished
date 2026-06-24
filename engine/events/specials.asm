@@ -635,12 +635,20 @@ UpdateStadiumStreak:
 	dec hl
 	inc [hl]
 .no_carry
-	; Cur -> bc, Top -> de
-	ld hl, wBattleTowerCurStreak
-	ld a, [hli]
+	; Cur -> bc
+	ld a, [wBattleTowerCurStreak]
 	ld b, a
-	ld c, [hl]
-	ld hl, wBattleTowerTopStreak
+	ld a, [wBattleTowerCurStreak + 1]
+	ld c, a
+	; pick the top-streak slot for the current difficulty
+	ld hl, wBattleTowerTopStreak          ; normal mode record
+	ld a, [wInitialOptions2]
+	and DIFFICULTY_MASK
+	cp DIFFICULTY_HARD                     ; expert?
+	jr nz, .got_slot
+	ld hl, wBattleTowerTopStreakExpert     ; expert mode record
+.got_slot
+	; Top -> de   (hl ends pointing at the slot's low byte)
 	ld a, [hli]
 	ld d, a
 	ld e, [hl]
@@ -654,11 +662,16 @@ UpdateStadiumStreak:
 	jr c, .done
 	jr z, .done
 .update
-	ld a, b
-	ld [wBattleTowerTopStreak], a
 	ld a, c
-	ld [wBattleTowerTopStreak + 1], a
-	ld a, [wStadiumFacilityFirstMon]   ; record beaten -> save starter as best
+	ld [hld], a       ; write low byte, hl -> high byte
+	ld a, b
+	ld [hl], a        ; write high byte
+	; best mon only tracked for expert records
+	ld a, [wInitialOptions2]
+	and DIFFICULTY_MASK
+	cp DIFFICULTY_HARD
+	jr nz, .done
+	ld a, [wStadiumFacilityFirstMon]
 	ld [wStadiumFacilityBestMon], a
 .done
 	ret

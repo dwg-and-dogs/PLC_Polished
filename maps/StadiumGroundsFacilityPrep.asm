@@ -30,12 +30,17 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	object_event 12, 18, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1,(1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilityAmosScript, -1  ; eve - night   
 	object_event  3, 19, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_WANDER, 0, 0, -1,(1 << MORN) | (1 << DAY), PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityPiperScript, -1 ; morning - day   
 	; permanent 
-	object_event 13, 11, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript, -1
-	object_event 14, 11, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript2, -1
+	object_event 13, 11, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript, -1
+	object_event 14, 11, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript2, -1
 	object_event 15, 20, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityNatuScript, -1
 	object_event 0, 17, SPRITE_SILVER_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, SilverTrophyText, EVENT_FACILITY_SILVER_TROPHY
 	object_event 2, 17, SPRITE_TROPHY_MON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrophyPokemonScript, EVENT_TROPHY_MON 
 	object_event 1, 17, SPRITE_GOLD_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldTrophyScript, EVENT_FACILITY_GOLD_TROPHY
+ 
+	object_event 29, 7, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_BT_1, -1
+	object_event 29, 8, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD,  MART_BT_2, -1	
+	object_event 29, 9, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_BT_3, -1	
+	
 
 
 	object_const_def
@@ -69,7 +74,8 @@ NatuFacilityText:
 StadiumGroundsFaciltyPrepClerkScript:
 	setmapscene STADIUM_GROUNDS_FACILITY, 0
 	loadmem wBattleTowerCurStreak, 0       ; reset streak (both bytes)
-	loadmem wBattleTowerCurStreak + 1, 0
+	loadmem wBattleTowerCurStreak + 1, 0	; reset streak (both bytes) 
+	; only try to reset the streak if the mon is there 
 	readdifficultymode
 	ifequal DIFFICULTY_HARD, .hard
 	sjump .NotHardDifficulty
@@ -77,6 +83,7 @@ StadiumGroundsFaciltyPrepClerkScript:
 	readmem wPartyMon1Species               ; script var = lead species
 	writemem wStadiumFacilityFirstMon       ; remember the run's starter
 .NotHardDifficulty:
+	; memory is all set up time to go 
 	faceplayer
 	opentext
 	writetext FacilityPrep_ExplainText ; todo fix 
@@ -175,14 +182,14 @@ FacilityPrep_ExplainFullText:
 	line "not have any"
 	para "effort values on"
 	line "Easy or Normal"
-	para "mode, but Hard"
+	para "mode, but Expert"
 	line "mode trainer EVs"
 	para "increase from 0"
 	line "to 50 over the"
 	cont "five rounds."
 	
 	para "If you play on"
-	line "Hard Mode, you"
+	line "Expert Mode, you"
 	para "will get a trophy"
 	line "of your first"
 	para "#mon made for"
@@ -190,15 +197,13 @@ FacilityPrep_ExplainFullText:
 	para "if it gets a"
 	line "best streak."
 	
-	para "You may enter at"
-	line "whatever level"
-	para "you like, but I"
-	line "suggest Lv. 100."
+	para "Change difficulty"
+	line "by pressing"
+	cont "Left+B at the"
+	cont "title screen."
 	
-	para "Using items in"
-	line "battle is not"
-	cont "permitted."
-	
+	para "Recommended to"
+	line "enter at Lv100."	
 	done
 
 FacilityPrep_AreYouReadyText:
@@ -1255,11 +1260,11 @@ TrophyPokemonScript:
 		text "   "
 		text_ram wStringBuffer3        ; <- the resolved name, not a party mon
 		line "Expert streak:"
-		text_decimal wBattleTowerTopStreak, 2, 5 ; todo the streak needs to only be re-written if playing on expert mode 
+		text_decimal wBattleTowerTopStreakExpert, 2, 5 ; todo the streak needs to only be re-written if playing on expert mode 
 		done
 	waitbutton
 	closetext
-	done
+	end
 	
 GoldTrophyScript:
 	jumpthistext

@@ -903,7 +903,7 @@ wStoneTableAddress:: dw
 
 wBattleTowerCurStreak:: dw ; currently used 
 wBattleTowerTopStreak:: dw ; currently used 
-wBattleFactoryCurStreak:: dw ; unused 
+wBattleTowerTopStreakExpert:: dw ; to be used  
 wBattleFactoryTopStreak:: dw ; unused 
 wBattleFactorySwapCount:: db ; unused 
 ; these are used for palette swaps, and wOriginalDVx is just a placeholder in

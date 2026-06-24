@@ -413,36 +413,40 @@ ShamoutiMart2:
 	db -1
 
 BattleTowerMart1:
-	db 8 ; # items
-	db CHOICE_BAND,  48
-	db CHOICE_SCARF, 48
-	db CHOICE_SPECS, 48
-	db EXPERT_BELT,  32
-	db MUSCLE_BAND,  32
-	db WISE_GLASSES, 32
-	db BINDING_BAND, 32
-	db GRIP_CLAW,    32
+	db 9 ; # items
+	db CHOICE_BAND
+	db CHOICE_SCARF
+	db CHOICE_SPECS
+	db EXPERT_BELT
+	db MUSCLE_BAND
+	db WISE_GLASSES
+	db BINDING_BAND
+	db QUICK_CLAW
+	db LEFTOVERS
 	db -1
 
 BattleTowerMart2:
-	db 8 ; # items
-	db RARE_CANDY,   64
-	db PP_MAX,       64
-	db ABILITY_CAP,  32
-	db WEAK_POLICY,  48
-	db LIFE_ORB,     48
-	db FLAME_ORB,    32
-	db TOXIC_ORB,    32
-	db BLACK_SLUDGE, 32
+	db 9 ; # items
+	db LUM_BERRY
+	db SITRUS_BERRY
+	db CHESTO_BERRY
+	db PERSIM_BERRY
+	db AIR_BALLOON
+	db FOCUS_SASH
+	db WEAK_POLICY
+	db WHITE_HERB
+	db POWER_HERB
 	db -1
 
 BattleTowerMart3:
-	db 7 ; # items
-	db MACHO_BRACE,  16
-	db FOCUS_BAND,   16
-	db FOCUS_SASH,   48
-	db ASSAULT_VEST, 48
-	db PROTECT_PADS, 16
-	db ROCKY_HELMET, 48
-	db SAFE_GOGGLES, 32
+	db 9 ; # items
+	db BLACK_SLUDGE
+	db LIFE_ORB
+	db FLAME_ORB
+	db TOXIC_ORB
+	db ASSAULT_VEST
+	db LIGHT_CLAY
+	db PROTECT_PADS
+	db ROCKY_HELMET
+	db SAFE_GOGGLES
 	db -1

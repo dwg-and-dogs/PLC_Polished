@@ -5,15 +5,16 @@ StadiumGroundsFacility_MapScriptHeader:
 
 
 ; battle fixes
-	; save the mon that was used in the previous best streak, check that this works--revise for hard mode only 
 	; todo better parties based on battle factory sets 
-	; todo write the endless waves of brigaders + random final boss section, 
-	; todo trainers for the endless section, hollis+suicune.sandra+hooh.sybil+entei.barbeau+lugia.amos+raikou.kurtf+celebi.mejimi+heatran
-	; todo see how hard it would be to tell you one, then two, then random mon 
+	; todo write the endless waves of brigaders + random final boss section
+	; todo trainers for the endless section, barbeau+lugia // amos+raikou // kurtf+celebi // mejimi+heatran
 	
 ; testing fixes
 	; todo write phrases for all trainers 
 	; todo adjust enemy levels based on testing 
+
+; stretch goals 
+	; todo see how hard it would be to tell you one, then two, then random mon 
 
 
 	def_callbacks
@@ -41,9 +42,7 @@ StadiumGroundsFacility_MapScriptHeader:
 
 
 	def_object_events
- 	object_event 19, 15, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityClerkScript, EVENT_FACILITY_CLERK
-;	object_event 0, 0, SPRITE_FACILITY_MON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityMonScript, EVENT_FACILITY_MON
-
+ 	object_event 19, 15, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityClerkScript, -1
 
 	object_event 24, 14, SPRITE_BUG_MANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BUG_MANIAC
 	object_event 24, 14, SPRITE_AROMA_LADY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_AROMA_LADY
@@ -51,7 +50,7 @@ StadiumGroundsFacility_MapScriptHeader:
 	object_event 24, 14, SPRITE_NOMAD_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NOMADF
 	object_event 24, 14, SPRITE_NINJA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_NINJA
 	object_event 24, 14, SPRITE_BRIGADER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_BRIGADER
-	; TODO WRITE THE FINAL TEAMS FOR ALL OF THESE 
+
 	object_event 19, 17, SPRITE_HOLLIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SILAS ; SUICUNE FINALE  TEAM 
 	object_event 19, 17, SPRITE_SANDRA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SANDRA ;  FINALE HO OH TEAM 
 	object_event 19, 17, SPRITE_SAMSARA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_SYBIL ; ENTEI TEAM 
@@ -61,11 +60,10 @@ StadiumGroundsFacility_MapScriptHeader:
 	object_event 19, 17, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_VESPER ; HEATRAN TEAM 
 
 ; always present
- 	object_event 14, 15, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityClerkRetireScript, EVENT_FACILITY_CLERK	
+ 	object_event 14, 15, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityClerkRetireScript, -1	
 	
 	object_const_def
  	const STADIUM_FACILITY_CLERK
-; 	const STADIUM_FACILITY_MON
 
  	const STADIUM_FACILITY_BUG_CATCHER
  	const STADIUM_FACILITY_AROMA_LADY
@@ -442,6 +440,7 @@ StadiumFacility_Pokemon1Event:
 .AfterPokemon1:
 	startbattle
 	reloadmapafterbattle
+	special UpdateStadiumStreak
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
@@ -449,8 +448,12 @@ StadiumFacility_Pokemon1Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
-	special UpdateStadiumStreak
+	readdifficultymode
+	ifequal DIFFICULTY_HARD, .hard
+	sjump .NotHardDifficulty
+.hard:
 	clearevent EVENT_TROPHY_MON
+.NotHardDifficulty:
 	setscene $1
 	applyonemovement PLAYER, step_left
 	end
@@ -1812,7 +1815,7 @@ StadiumFacility_Pokemon5Event:
 ; trainers
 ; =========
 
-StadiumFacility_Trainers1Event: ; todo need to figure out adding in the optional healing 
+StadiumFacility_Trainers1Event: 
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
 	opentext
@@ -2925,12 +2928,7 @@ StadiumFacility_Trainers5Event:
 
 
 StadiumFacility_TrainersEndlessEvent:
-	; TODO THIS ONE JUST CYCLES THROUGH FOUR BRIGADERS FROM THE GP OF 20, 
-	; WHILE AFTER EACH SET OF 4 THERE IS ONE OF THE FOLLOWING BOSS TRAINERS LOADED RANDOMLY, 
-	; FROM A, B, C, D, E, F, G
-	; EVERY FIVE TURNS YOU GET THE CHANCE TO STEP ASIDE AND CHANGE UP YOUR TEAM 
-	; TODO ONCE THE STREAK REACHES 50 YOU GET A LITTLE TROPHY OF the mon you started with
-
+	; EVERY FOUR TURNS YOU GET THE CHANCE TO STEP ASIDE AND CHANGE UP YOUR TEAM 
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
 	opentext
@@ -2962,8 +2960,8 @@ StadiumFacility_TrainersEndlessEvent:
 	closetext
 	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	iftrue .FinalFacilityElder
-	appear STADIUM_FACILITY_AROMA_LADY
-	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkTowardMovement ; walks on screen and faces the player 
+	appear STADIUM_FACILITY_BRIGADER
+	applymovement STADIUM_FACILITY_BRIGADER, GenericTrainerWalkTowardMovement ; walks on screen and faces the player 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .SecondFacilityTrainer
 	clearevent EVENT_STADIUM_HEALED
@@ -3102,11 +3100,11 @@ StadiumFacility_TrainersEndlessEvent:
 .LoadedTrainer:
 	startbattle
 	reloadmapafterbattle
-	applymovement STADIUM_FACILITY_AROMA_LADY, GenericTrainerWalkAwayMovement
+	applymovement STADIUM_FACILITY_BRIGADER, GenericTrainerWalkAwayMovement
 	special UpdateStadiumStreak
 	showtext StadiumFacilityClerkMidRoundText
-	disappear STADIUM_FACILITY_AROMA_LADY
-	moveobject STADIUM_FACILITY_AROMA_LADY, 24, 14 
+	disappear STADIUM_FACILITY_BRIGADER
+	moveobject STADIUM_FACILITY_BRIGADER, 24, 14 
 	checkevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	iftrue .CheckSecond
 	setevent EVENT_BEAT_FIRST_FACILITY_TRAINER
@@ -3122,19 +3120,24 @@ StadiumFacility_TrainersEndlessEvent:
 	setevent EVENT_BEAT_THIRD_FACILITY_TRAINER
 	sjump .FacilityTrainerBattles
 .FinalFacilityElder: 
-	; have to roll for this, todo 
+	setevent EVENT_FACILITY_BRIGADER
+	disappear STADIUM_FACILITY_BRIGADER
+	; roll for one of seven. 
+	; TODO THIS ONE JUST CYCLES THROUGH FOUR BRIGADERS FROM THE GP OF 20, 
+	; WHILE AFTER EACH SET OF 4 THERE IS ONE OF THE FOLLOWING BOSS TRAINERS LOADED RANDOMLY, 
+	; FROM A, B, C, D, E, F, G
+.SandraStadiumFinale: 
 	appear STADIUM_FACILITY_SANDRA
-	setevent EVENT_FACILITY_AROMA_LADY
-	disappear STADIUM_FACILITY_AROMA_LADY
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSandra, FacilityLossTextSandra 
-	loadtrainer SANDRA, SANDRA_STADIUM 
+	loadtrainer SANDRA, SANDRA_STADIUM_FINALE
 	showtext SANDRA_SANDRA_STADIUM_Text
 	startbattle
 	reloadmap
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
-	setevent EVENT_FACILITY_SILAS
+	setevent EVENT_FACILITY_SANDRA
 	disappear STADIUM_FACILITY_SANDRA	
+.EndOfBossFinales:
 ; end of random elder selection 
 	special HealParty
 	special UpdateStadiumStreak
