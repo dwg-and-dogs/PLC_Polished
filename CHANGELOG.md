@@ -108,18 +108,20 @@ Minor text, tile, object palette issues.
 
 * Release 1.1.0 
 
-Postgame Battle Facility: Stadium 
+Major Updates: 
+Postgame Battle Facility: Stadium! <todo description> 
+New Ancestor forms: Ledian (Bug/Water Special Attacker) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in <todo> and Cianwood Cave, respectively. 
+Special mark on trainer and enemy mon if they have max DVs. 
+
+Minor updates: 
 Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
 Higher EVs for the Stadium Rematch teams. 
 Updated composition for Stadium Rematch teams. 
-Fix Tangela back sprite colors : to check 
 Mamoswine and Piloswine get Icicle Spear as Lv 1 move. 
 Update ANoctowl and AFeraligatr back sprites. 
 Reduce Union Cave trainer party size to split experience a little better. 
 Fix tiles on sheltered shores causing graphical glitch. 
 Slightly updated the "bad ending" text. 
-Ancestor Ledian and Alakazam, sprites courtesy Accad501. Updated some trainer teams to include these. 
-New events for Ledian and Alakazam in Hollys Holt and Cianwood Cave, respectively. 
 Fix text of "Adrinna" to "Andrea". 
 Increase Sneasler base EXP. 
 Revise Jynx sprite to the Crystal version. (Sorry I didn't notice this sooner!)
@@ -127,7 +129,6 @@ Revise Lucario sprite to be better for Hidden Palette.
 Add all evolution-hold items to Sandbox room. 
 Revise Rival Lake Battle Text. 
 Resolve Lake of Rage partial softlock. 
-Special mark on trainer and enemy mon if they have max DVs. 
 Update some NPC text to give more guidance on where to go with Tin Tower and Whirl Island. 
 
 Todo for v110:
@@ -137,6 +138,7 @@ Todo for v110:
 * Update Facility trainer parties 
 * Pokemon flag is only revised if you play on expert mode 
 * Update pokemon trophy to be "Expert" 
+* Fix Tangela back sprite colors : todo check 
 
 vAny
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
@@ -149,5 +151,5 @@ v120
 * Epilogue: New Bark --> Blackthorn
 
 
-Last updated: 06/23/26
+Last updated: 06/24/26
 
