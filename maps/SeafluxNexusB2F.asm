@@ -125,6 +125,7 @@ WhirlpoolHMBall:
 	disappear SEAFLUX_NEXUS_B2F_ITEMBALL
 	reloadmap ; should be the end of it
 .Done2:
+	special RestartMapMusic
 	end
 
 SeafluxNexusB2F_ResetSwitch: ; option for a hint 

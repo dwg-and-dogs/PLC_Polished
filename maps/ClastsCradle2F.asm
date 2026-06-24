@@ -49,6 +49,7 @@ CC_2F_Switch:
 	waitsfx
 	setevent EVENT_CRADLE_2F_CART_1
 	reloadmappart
+	special RestartMapMusic
 	jumptext CartMovedText 
 	
 CC_2F_SwitchBack:
@@ -58,6 +59,7 @@ CC_2F_SwitchBack:
 	waitsfx
 	clearevent EVENT_CRADLE_2F_CART_1
 	reloadmappart
+	special RestartMapMusic
 	jumptext CartMovedText 
 
 CartSwitchText:

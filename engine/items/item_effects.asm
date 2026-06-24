@@ -914,11 +914,13 @@ ItemHappinessRoseButStatFellText:
 	text_end
 
 VitaminEffect:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
 
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	call UseItem_SelectMon
@@ -997,6 +999,13 @@ GetEVRelativePointer:
 	ret
 
 RareCandy:
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
 
 ;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
 ;	and DIFFICULTY_MASK ; also update azalea mart npc 
@@ -1063,11 +1072,14 @@ RareCandy:
 	jmp UseDisposableItem
 
 HealPowder:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	call UseItem_SelectMon
 	jmp c, ItemNotUsed_ExitMenu
@@ -1081,11 +1093,14 @@ HealPowder:
 	jmp LooksBitterMessage
 
 HealStatusEffect:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+
 
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	call UseItem_SelectMon
@@ -1185,11 +1200,14 @@ GetItemHealingAction:
 	db -1,       PARTYMENUTEXT_HEAL_ALL
 
 RevivalHerb:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+
 	ld a, [wInitialOptions]
 	bit NUZLOCKE_MODE, a
 	jmp nz, Revive_NuzlockeFailureMessage
@@ -1207,11 +1225,14 @@ RevivalHerb:
 	jmp LooksBitterMessage
 
 ReviveEffect:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+
 	ld a, [wInitialOptions]
 	bit NUZLOCKE_MODE, a
 	jmp nz, Revive_NuzlockeFailureMessage
@@ -1252,11 +1273,14 @@ RevivePokemon:
 	ret
 
 FullRestore:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	call UseItem_SelectMon
 	jmp c, ItemNotUsed_ExitMenu
@@ -1284,11 +1308,14 @@ FullRestore:
 	jmp UseDisposableItem
 
 PersimBerry:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+
 	ld hl, wPlayerSubStatus3
 	bit SUBSTATUS_CONFUSED, [hl]
 	jmp z, WontHaveAnyEffectMessage
@@ -1302,20 +1329,26 @@ PersimBerry:
 	jmp StdBattleTextbox
 
 EnergyPowder:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+
 	ld c, HAPPINESS_BITTERPOWDER
 	jr EnergyPowderEnergyRootCommon
 
 EnergyRoot:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
 	ld c, HAPPINESS_ENERGYROOT
 
 EnergyPowderEnergyRootCommon:
@@ -1383,11 +1416,14 @@ UseItem_SelectMon2:
 	pop hl
 	jr UseItem_DoSelectMon
 
-RestoreHPEffect: ; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+RestoreHPEffect:  
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
 
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	ld hl, ItemRestoreHP
@@ -1826,11 +1862,14 @@ TextJump_RepelUsedEarlierIsStillInEffect:
 	text_end
 
 PokeDoll:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+
 	ld a, [wBattleMode]
 	dec a
 	jmp nz, ItemNotUsed_ExitMenu ; not a wild battle
@@ -1843,11 +1882,14 @@ PokeDoll:
 	jmp UseItemText
 
 GuardSpec:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
 	ld a, [wPlayerGuards]
 	and GUARD_MIST
 	jmp nz, WontHaveAnyEffect_NotUsedMessage
@@ -1861,11 +1903,14 @@ GuardSpec:
 	jmp StdBattleTextbox
 
 DireHit:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
 	ld hl, wPlayerSubStatus4
 	bit SUBSTATUS_FOCUS_ENERGY, [hl]
 	jmp nz, WontHaveAnyEffect_NotUsedMessage
@@ -1874,11 +1919,14 @@ DireHit:
 	jmp UseItemText
 
 XItemEffect:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
 	call CheckItemParam
 	ld b, a
 
@@ -2226,11 +2274,14 @@ CelebiCallKeyItem:
 	text_end
 
 RestorePPEffect:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
 	ld a, [wCurItem]
 	ld [wTempItem], a
 
@@ -2514,11 +2565,14 @@ BasementKey:
 	farjp _BasementKey
 
 SacredAsh:
-; todo make this report "not the time" if you have incremented the scene at stadiumgroundsfacility 
-;	ld a, [wInitialOptions2] ; when these lines are active, expert mode does not allow rare candies 
-;	and DIFFICULTY_MASK ; also update azalea mart npc 
-;	cp DIFFICULTY_HARD
-;	jp z, IsntTheTimeMessage
+	ld a, [wMapGroup] 
+	cp 24 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
+	ld a, [wMapGroup] 
+	cp 25 ; 24, 25 in base 10 
+	jp z, IsntTheTimeMessage
+	
 	ld a, [wInitialOptions]
 	bit NUZLOCKE_MODE, a
 	jr nz, Revive_NuzlockeFailureMessage

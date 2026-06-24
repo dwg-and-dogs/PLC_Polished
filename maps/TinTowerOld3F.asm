@@ -58,6 +58,7 @@ TT3F_CCW_Bottom_Trigger:
 	setscene $1
 	setevent EVENT_BLUE_TIN_TOWER
 	reloadmap
+	special RestartMapMusic
 	end
 
 TT3F_CW_Bottom_Trigger:
@@ -69,6 +70,7 @@ TT3F_CW_Bottom_Trigger:
 	setscene $0
 	clearevent EVENT_BLUE_TIN_TOWER
 	reloadmap
+	special RestartMapMusic
 	end
 
 Player_CCW_Bottom_Move:
@@ -97,6 +99,7 @@ TT3F_CCW_Right_Trigger:
 	setscene $1
 	setevent EVENT_BLUE_TIN_TOWER
 	reloadmap
+	special RestartMapMusic
 	end
 	
 TT3F_CW_Right_Trigger:
@@ -108,6 +111,7 @@ TT3F_CW_Right_Trigger:
 	setscene $0
 	clearevent EVENT_BLUE_TIN_TOWER
 	reloadmap
+	special RestartMapMusic
 	end
 
 Player_CCW_Right_Move: 
@@ -187,6 +191,7 @@ TT3F_CCW_Left_Trigger:
 	setscene $1
 	setevent EVENT_BLUE_TIN_TOWER
 	reloadmap
+	special RestartMapMusic
 	end
 	
 TT3F_CW_Left_Trigger:
@@ -198,6 +203,7 @@ TT3F_CW_Left_Trigger:
 	setscene $0
 	clearevent EVENT_BLUE_TIN_TOWER
 	reloadmap
+	special RestartMapMusic
 	end
 
 Player_CCW_Left_Move:

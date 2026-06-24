@@ -950,6 +950,7 @@ AbraEvosAttacks:
 
 KadabraEvosAttacks:
 	db EVOLVE_LEVEL, 40, ALAKAZAM
+	db EVOLVE_ITEM, ODD_SOUVENIR, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, CONFUSION
 	db 1, FORESIGHT ; evolution move
@@ -2981,6 +2982,7 @@ FurretEvosAttacks:
 
 LedybaEvosAttacks:
 	db EVOLVE_LEVEL, 14, LEDIAN
+	db EVOLVE_ITEM, ODD_SOUVENIR, LEDIAN 
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 5, SUPERSONIC

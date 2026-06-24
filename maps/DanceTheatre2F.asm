@@ -208,7 +208,7 @@ GenericTrainerKimono_girlKuni:
 	generictrainer KIMONO_GIRL_4, KUNI, EVENT_BEAT_KIMONO_GIRL_KUNI, Kimono_girl_1KuniSeenText, Kimono_girl_1KuniBeatenText
 
 	text "The hero made a"
-	line "a coalition in"
+	line "coalition in"
 	para "the Northeast to"
 	line "oppose the "
 	cont "Emperor."

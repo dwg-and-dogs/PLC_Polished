@@ -999,7 +999,7 @@ endr
 	loadmem wPartyMon3DVs+1, $fe
 	loadmem wPartyMon3DVs+2, $ff	
 	
-	givepoke FERALIGATR, OTHER_FORM, 200
+	givepoke TANGELA, OTHER_FORM, 200
 	loadmem wPartyMon4Moves+0, EARTH_POWER
 	loadmem wPartyMon4Moves+1, SURF
 	loadmem wPartyMon4Moves+2, ICE_BEAM
@@ -1013,9 +1013,9 @@ endr
 	loadmem wPartyMon4DVs+0, $ff
 	loadmem wPartyMon4DVs+1, $ff
 	loadmem wPartyMon4DVs+2, $fe	
-
-;	givepoke ALAKAZAM, OTHER_FORM, 100 
-;	givepoke LEDIAN, OTHER_FORM, 100 
+	giveitem ODD_SOUVENIR, 2
+	givepoke KADABRA, 100 
+	givepoke LEDYBA, 30 
 
 	; fill pokedex
 	callasm FillPokedex

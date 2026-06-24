@@ -112,6 +112,7 @@ Major Updates:
 Postgame Battle Facility: Stadium! <todo description> 
 New Ancestor forms: Ledian (Bug/Water Special Attacker) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in <todo> and Cianwood Cave, respectively. 
 Special mark on trainer and enemy mon if they have max DVs. 
+Stadium Facility Rematches are a bit harder. 
 
 Minor updates: 
 Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
@@ -130,15 +131,19 @@ Add all evolution-hold items to Sandbox room.
 Revise Rival Lake Battle Text. 
 Resolve Lake of Rage partial softlock. 
 Update some NPC text to give more guidance on where to go with Tin Tower and Whirl Island. 
+Fix Tangela back sprite colors 
+Restore map music on some maps where it was paused after an event. 
+Misc. text fixes. 
 
 Todo for v110:
-* Check tin tower old 3f music restarts 
+* Update pokemon trophy to be "Expert"
+	* this means adding another wram variable that tracks the expert streak only 
+	* also, only update the bestmon for Expert
+	* another option is that streaks that get to 30 can only progress with expert? 
 * Finish Stadium todos 
+* Add another item vendor to the Stadium in the back room to sell consumables like focus sash, ... 
+
 * Update all docs
-* Update Facility trainer parties 
-* Pokemon flag is only revised if you play on expert mode 
-* Update pokemon trophy to be "Expert" 
-* Fix Tangela back sprite colors : todo check 
 
 vAny
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?

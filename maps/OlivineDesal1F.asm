@@ -69,6 +69,7 @@ OlivineDesal1FScene:
 	setevent EVENT_DESAL_1F_JASMINE
 	clearevent EVENT_KURT_OLIVINE_POKECENTER
 	setscene $1
+	special RestartMapMusic
 	end
 	
 

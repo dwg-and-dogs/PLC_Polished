@@ -55,6 +55,7 @@ VioletCatacombsPuzzleScript:
 	waitsfx
 	pause 20
 	disappear CATACOMBS_UNOWN
+	special RestartMapMusic
 	end
 
 NotSolvedText:

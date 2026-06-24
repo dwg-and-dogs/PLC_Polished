@@ -1,23 +1,21 @@
 StadiumGroundsFacility_MapScriptHeader:
 	def_scene_scripts
 
-; engine fixes 
-	; todo prevent using items in battle 
-		; probably in engine/item_effects 
-		; maybe check the map you're on ? 
+; 06.24.26  ROMX bank #29:   	SECTION: $4000-$6811 ($2812 bytes) ["Tohjo Falls Scripts"]
+
 
 ; battle fixes
-	; save the mon that was used in the previous best streak, check that this works
-	; todo write phrases for all trainers 
-	; TODO elder parties better for the stadium when they only have three to hax a win 
-	; todo ONE OF THE bug catcher fac teams has avalugg and abomosnow twice 
-	; todo likely tune up the levels of the enemies, 75/80/85/90/95 is too low? maybe 85/88/91/94/97? -- depends on testing 
-	; todo add more EVs to the facility trainers 300 evs each 
-	; todo write the endless waves of brigaders + random final boss section 
-
-; stretch goals
-	; read the loaded mon and make its sprite appear 
+	; save the mon that was used in the previous best streak, check that this works--revise for hard mode only 
+	; todo better parties based on battle factory sets 
+	; todo write the endless waves of brigaders + random final boss section, 
+	; todo trainers for the endless section, hollis+suicune.sandra+hooh.sybil+entei.barbeau+lugia.amos+raikou.kurtf+celebi.mejimi+heatran
+	; todo see how hard it would be to tell you one, then two, then random mon 
 	
+; testing fixes
+	; todo write phrases for all trainers 
+	; todo adjust enemy levels based on testing 
+
+
 	def_callbacks
 
 
@@ -119,7 +117,9 @@ FacilityClerkRetireScript: ; todo fix
 	waitbutton
 	closetext
 	checkevent EVENT_REACHED_CREDITS_ONCE
-	; TODO add warp sfx 
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx	
 	iftrue .WarpToPrepRoom
 	warp KURTS_HOUSE, 7, 1 ; TODO CHECK 
 	sjump .Warped

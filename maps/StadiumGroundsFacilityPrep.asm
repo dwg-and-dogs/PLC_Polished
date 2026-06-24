@@ -70,8 +70,13 @@ StadiumGroundsFaciltyPrepClerkScript:
 	setmapscene STADIUM_GROUNDS_FACILITY, 0
 	loadmem wBattleTowerCurStreak, 0       ; reset streak (both bytes)
 	loadmem wBattleTowerCurStreak + 1, 0
+	readdifficultymode
+	ifequal DIFFICULTY_HARD, .hard
+	sjump .NotHardDifficulty
+.hard:
 	readmem wPartyMon1Species               ; script var = lead species
 	writemem wStadiumFacilityFirstMon       ; remember the run's starter
+.NotHardDifficulty:
 	faceplayer
 	opentext
 	writetext FacilityPrep_ExplainText ; todo fix 
@@ -109,7 +114,9 @@ StadiumGroundsFaciltyPrepClerkScript:
 	blackoutmod STADIUM_GROUNDS_FACILITY_PREP
 	; FALLTHRU 
 .BlackoutSet:	
-	; TODO ADD WARP SF 
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx	
 	warp STADIUM_GROUNDS_FACILITY, 17, 16 
 	end
 	
@@ -134,7 +141,7 @@ FacilityPrep_ExplainFullText:
 	text "You enter with 1"
 	line "#mon and try"
 	para "to get through"
-	line "5 rounds."
+	line "five rounds."
 	
 	para "Each round has"
 	line "the following"
@@ -166,12 +173,31 @@ FacilityPrep_ExplainFullText:
 	
 	para "Enemy trainers do"
 	line "not have any"
-	cont "effort values."
+	para "effort values on"
+	line "Easy or Normal"
+	para "mode, but Hard"
+	line "mode trainer EVs"
+	para "increase from 0"
+	line "to 50 over the"
+	cont "five rounds."
+	
+	para "If you play on"
+	line "Hard Mode, you"
+	para "will get a trophy"
+	line "of your first"
+	para "#mon made for"
+	line "the trophy room"
+	para "if it gets a"
+	line "best streak."
 	
 	para "You may enter at"
 	line "whatever level"
 	para "you like, but I"
 	line "suggest Lv. 100."
+	
+	para "Using items in"
+	line "battle is not"
+	cont "permitted."
 	
 	done
 
@@ -1097,6 +1123,10 @@ SilverTrophyExplainText:
 	para "I can award you a"
 	line "Silver Trophy!"
 	
+	para "Remember, items"
+	line "are not allowed"
+	para "in battle here."
+	
 	para "Let's check!"
 	done
 	
@@ -1225,7 +1255,7 @@ TrophyPokemonScript:
 		text "   "
 		text_ram wStringBuffer3        ; <- the resolved name, not a party mon
 		line "Expert streak:"
-		text_decimal wBattleTowerTopStreak, 2, 5
+		text_decimal wBattleTowerTopStreak, 2, 5 ; todo the streak needs to only be re-written if playing on expert mode 
 		done
 	waitbutton
 	closetext

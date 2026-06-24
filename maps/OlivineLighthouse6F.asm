@@ -173,6 +173,7 @@ Lighthouse6FScene1:
 	clearevent EVENT_JASMINE_GYM
 	setevent EVENT_KILN_BOSS
 	setscene $2
+	special RestartMapMusic
 	end
 	
 	

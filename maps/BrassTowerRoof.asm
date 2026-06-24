@@ -258,10 +258,9 @@ TowerRoofMejimiText1_10:
 	text_start
 	text "<PLAYER>. All of"
 	line "Johto is watching."
-	para "We've shown them"
-	line "the most ruinous"
-	para "invention is"
-	line "selfishness."
+	para "Selfishness is"
+	line "the most unnat-"
+	cont "ural invention."
 
 	para "We're part of an"
 	line "endless cycle,"

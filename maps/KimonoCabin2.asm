@@ -109,6 +109,7 @@ Kimono2LarvitarScript:
 	waitsfx	
 	applymovement KIMONO_CABIN_2_LARVITAR, FirstLarvitarMovement
 	setevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_1
+	special RestartMapMusic
 	end
 
 HedgeHogMoves2ndTime:; player is facing left freom th E
@@ -119,6 +120,7 @@ HedgeHogMoves2ndTime:; player is facing left freom th E
 	waitsfx	
 	applymovement KIMONO_CABIN_2_LARVITAR, SecondLarvitarMovement
 	setevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_2
+	special RestartMapMusic
 	end
 	
 HedgeHogMoves3rdTime:; player is facing down from the N 
@@ -129,6 +131,7 @@ HedgeHogMoves3rdTime:; player is facing down from the N
 	waitsfx	
 	applymovement KIMONO_CABIN_2_LARVITAR, ThirdLarvitarMovement
 	setevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_3
+	special RestartMapMusic
 	end
 	
 HedgeHogMoves4thTime:; player is facing up from the S
@@ -139,6 +142,7 @@ HedgeHogMoves4thTime:; player is facing up from the S
 	waitsfx	
 	applymovement KIMONO_CABIN_2_LARVITAR, FourthLarvitarMovement
 	setevent EVENT_KIMONO_CABIN_2_LARVITAR_MOVED_4
+	special RestartMapMusic
 	end
 
 
@@ -186,6 +190,7 @@ SpookedHedgehogScript:
 	writetext HedgehogSpookedText
 	waitbutton
 	closetext
+	special RestartMapMusic
 	end
 
 KimonoCabin2GirlMoves:
