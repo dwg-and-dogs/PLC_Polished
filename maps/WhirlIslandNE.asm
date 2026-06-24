@@ -46,6 +46,13 @@ KurtWhirlHealText:
 	line "she's singing just"
 	cont "for me."
 	
+	para "These caverns are"
+	line "a maze. I wonder"
+	para "if you use the"
+	line "Celebi Call if"
+	para "Celebi can help"
+	line "find a way down."
+	
 	para "Here, let me heal"
 	line "your #mon."
 	done

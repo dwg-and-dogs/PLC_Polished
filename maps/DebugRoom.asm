@@ -77,7 +77,7 @@ if x != HM_WHIRLPOOL && x != HM_CUT
 	givetmhm x
 endc
 endr
-.PokeBall: ; todo seem to get some bad items like X items and potion?
+.PokeBall: 
 	writethistext
 		text "All #balls?"
 		done

@@ -141,6 +141,7 @@ TT3F_CCW_Top_Trigger:
 	setscene $1
 	setevent EVENT_BLUE_TIN_TOWER
 	reloadmap
+	special RestartMapMusic
 	end
 	
 TT3F_CW_Top_Trigger:
@@ -152,6 +153,7 @@ TT3F_CW_Top_Trigger:
 	setscene $0
 	clearevent EVENT_BLUE_TIN_TOWER
 	reloadmap
+	special RestartMapMusic
 	end
 
 Player_CCW_Top_Move:
@@ -366,11 +368,11 @@ TinTower3FStudyHarderText:
 	cont "putting us in an"
 	cont "even worse spot."
 	
-	para "We are in a"
-	line "crisis. Come"
+	para "The sages and I"
+	line "are in a crisis."
 	
-	para "back when we have"
-	line "resolved it."
+	para "Can you help us"
+	line "resolve it?"
 	done
 
 

@@ -451,6 +451,10 @@ ChangeFormOnItemEvolution:
 	cp DARTRIX ;CHECKED BOTH 
 	jp z, .ok_hisuiain
 
+	cp LEDYBA ;CHECKED BOTH 
+	jp z, .ok_other
+	cp KADABRA ;CHECKED BOTH 
+	jp z, .ok_other
 	cp HOOTHOOT ;CHECKED BOTH 
 	jp z, .ok_other
 	cp CROCONAW ;CHECKED BOTH 

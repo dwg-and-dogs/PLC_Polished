@@ -1217,14 +1217,14 @@ FacilityRecruitNomadf2:
 	line "about her son."
 	done
 
-TrophyPokemonScript: ; todo check 
+TrophyPokemonScript: 
 	opentext
 	readmem wStadiumFacilityBestMon    ; script var = best species number
 	getmonname 0, 0                    ; 0 = take species from script var; dest 0 -> wStringBuffer3
 	writethistext
-		text " "
+		text "   "
 		text_ram wStringBuffer3        ; <- the resolved name, not a party mon
-		line "Best streak:"
+		line "Expert streak:"
 		text_decimal wBattleTowerTopStreak, 2, 5
 		done
 	waitbutton

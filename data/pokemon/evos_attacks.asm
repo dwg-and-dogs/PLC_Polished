@@ -988,7 +988,7 @@ AlakazamEvosAttacks:
 	db 46, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
-Alakazam_AncestorEvosAttacks: ; TODO IMPROVE 
+Alakazam_AncestorEvosAttacks: ; 
 	db 0 ; no more evolutions
 	db 1, TRI_ATTACK ; RBY TM move
 	db 1, PSYBEAM

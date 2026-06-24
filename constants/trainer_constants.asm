@@ -6,7 +6,6 @@ __trainer_class__ += 1
 	const_def 1
 ENDM
 
-; TODO MAKE SURE THAT THESE PARTIES RECONCILE!!
 ; trainer class ids
 ; `trainerclass` indexes are for:
 ; - TrainerClassNames (see data/trainers/class_names.asm)..
@@ -15,10 +14,10 @@ ENDM
 ; - TrainerGroups (see data/trainers/party_pointers.asm)..
 ; - TrainerEncounterMusic (see data/trainers/encounter_music.asm)..
 ; - TrainerPicPointers (see data/trainers/pic_pointers.asm)..
-; - TrainerPalettes (see data/trainers/palettes.asm).. ; todo need trainee palette and pkmn trainer hm hf palettes 
+; - TrainerPalettes (see data/trainers/palettes.asm).. ; 
 ; - BTTrainerClassSprites (see data/trainers/sprites.asm).-not edited 
 ; - BTTrainerClassGenders (see data/trainers/genders.asm).
-; trainer constants are indexes for the sub-tables of TrainerGroups (see data/trainers/parties.asm) -- ; todo: gauldenrod tower 2f + underground trainers 
+; trainer constants are indexes for the sub-tables of TrainerGroups (see data/trainers/parties.asm)
 CHRIS EQU __trainer_class__
 	trainerclass TRAINER_NONE ; 0
 	const PHONECONTACT_MOM
@@ -631,7 +630,7 @@ KRIS EQU __trainer_class__ ;
 	const REINA
 	const MARIO 
 
-	trainerclass AROMA_LADY ; 5f TODO UPDATE 
+	trainerclass AROMA_LADY ; 5f 
 	const HEATHER
 	const HOLLY
 
@@ -749,9 +748,9 @@ KRIS EQU __trainer_class__ ;
 
 	trainerclass NOMAD_F_FACILITY ; 7f CHECKED
 
-	trainerclass BRIGADER_FACILITY ; 80 CHECKED todo convert to BRIGADER-FACILITY 
+	trainerclass BRIGADER_FACILITY ; 80 CHECKED 
 
-	trainerclass NINJA_FACILITY ; 81 todo convert to NINJA-FACLIITY  
+	trainerclass NINJA_FACILITY ; 81 
 
 	trainerclass BOBESH ; 83 CANDELA CHECKED
 	const BOBESH1_EASY
@@ -786,7 +785,7 @@ KRIS EQU __trainer_class__ ;
 	const REMY_STADIUM_FINAL
 	
 
-	trainerclass SAGE_FACILITY ; todo convert to SAGE-FACILITY
+	trainerclass SAGE_FACILITY ; 
 
 	trainerclass KANNA ; 87 DONE 
 	const KANNA_EASY
@@ -794,9 +793,9 @@ KRIS EQU __trainer_class__ ;
 	const KANNA_HARD
 	const KANNA_FACILITY
 
-	trainerclass PKMN_TRAINER_HF_FACILITY ; 88 todo convert to PKMN-TRAINER-HF-FACILITY 
+	trainerclass PKMN_TRAINER_HF_FACILITY ; 88 
 
-	trainerclass BUG_MANIAC_FACILITY ; 89 todo convert to BUGCATCHER-FACILITY
+	trainerclass BUG_MANIAC_FACILITY ; 89 
 
 	trainerclass PKMN_TRAINER_HF ; 8a DONE 
 	const SUBARU

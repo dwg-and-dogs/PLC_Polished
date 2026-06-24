@@ -128,13 +128,18 @@ Add all evolution-hold items to Sandbox room.
 Revise Rival Lake Battle Text. 
 Resolve Lake of Rage partial softlock. 
 Special mark on trainer and enemy mon if they have max DVs. 
+Update some NPC text to give more guidance on where to go with Tin Tower and Whirl Island. 
 
 Todo for v110:
-* Finish Stadium todos  
-* Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
+* Check tin tower old 3f music restarts 
+* Finish Stadium todos 
 * Update all docs
+* Update Facility trainer parties 
+* Pokemon flag is only revised if you play on expert mode 
+* Update pokemon trophy to be "Expert" 
 
 vAny
+* Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * New pokedex entries
 * Fly as an item
 * Move animations
