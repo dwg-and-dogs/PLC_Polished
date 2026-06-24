@@ -17,11 +17,12 @@ CianwoodCave_MapScriptHeader:
 
 	
 	def_object_events
+	object_event  2, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ALAKAZAM, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodCaveScript, EVENT_FOUGHT_ALAKAZAM_VARIANT
 	itemball_event 3, 3, DRAGON_SCALE, 1, EVENT_CAVE_DRAGON_SCALE ; TOP OF THE CAVE
-	tmhmball_event  9,  1, TM_DRAGON_PULSE, EVENT_DRAGON_PULSE ; ON ONE OF THE THINGS
+	tmhmball_event 19,  3, TM_DRAGON_PULSE, EVENT_DRAGON_PULSE ; ON ONE OF THE THINGS
 	itemball_event 11, 21, REVIVE, 1, EVENT_CIANWOODCAVE_REVIVE
 	itemball_event 11, 29, HYPER_POTION, 1, EVENT_CIANWOODCAVE_HYPER_POTION
-	object_event  2, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ALAKAZAM, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CianwoodCaveScript, EVENT_FOUGHT_ALAKAZAM_VARIANT
+
 
 	object_const_def
 	const CIANWOOD_CAVE_ALAKAZAM
@@ -54,7 +55,7 @@ CianwoodCaveScript:
 	pause 60
 	closetext
 	setevent EVENT_FOUGHT_ALAKAZAM_VARIANT
-	loadwildmon ALAKAZAM, 30
+	loadwildmon ALAKAZAM, OTHER_FORM, 30
 	startbattle
 	disappear CIANWOOD_CAVE_ALAKAZAM
 	reloadmapafterbattle

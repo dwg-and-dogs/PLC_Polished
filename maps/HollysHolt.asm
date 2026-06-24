@@ -37,7 +37,7 @@ HollysHolt_MapScriptHeader:
 	object_event  29, 28, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_BEAT_HOLLIS ;;;;
 	object_event   4, 40, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, PINECO, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PinecoHeadbuttScript1, EVENT_BEAT_HOLLIS ;;;;
 
-	object_event  2, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ALAKAZAM, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LedianAncestorScript, EVENT_FOUGHT_LEDIAN_VARIANT	
+	object_event 23, 30, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, LEDIAN, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, LedianAncestorScript, EVENT_FOUGHT_LEDIAN_VARIANT	
 	
 	object_event  8, 16, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HollysHoltNPC1Text, -1
 	object_event 23, 24, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HollysHoltNPC2Script, -1  ; gives seed
@@ -495,7 +495,7 @@ LedianAncestorScript:  ; todo
 	opentext
 	writetext PokemonInterestInLedianText
 	waitbutton
-	checkmove ANCIENTPOWER
+	checkmove FALSE_SWIPE
 	iffalse_jumptext NoLedianMoveText
 	writetext LedianWiggleText_AncientPower
 	waitbutton
@@ -511,16 +511,16 @@ LedianAncestorScript:  ; todo
 
 WeirdLedianText:
 	text "It's a Ledian that"
-	line "appears to be"
-	cont "made of Rock."
+	line "is esconced in"
+	cont "a bubble."
 	
 	para "There's writing"
 	line "at its feet."
 	done
 
 WeirdLedianText_Unown:
-	text "awoken by primal"
-	line "energy" 
+	text "break bubble with"
+	line "weak slash"
 	done
 
 NoLedianMoveText:
@@ -530,10 +530,10 @@ NoLedianMoveText:
 
 LedianWiggleText_AncientPower:
 	text "Your #mon's"
-	line "AncientPower"
-	cont "roused the Ledian!"
+	line "False Swipe"
+	cont "broke the bubble!"
 	
-	para "The Ledian attacks!"
+	para "Ledian attacks!"
 	done
 
 

@@ -296,8 +296,6 @@ AnimationPointers:
 	dw Muk_AlolanAnimation       ; 00
 	dw Exeggutor_AlolanAnimation       ; 00
 
-
-
 	dw Ponyta_GalarianAnimation       ; 00
 	dw Rapidash_GalarianAnimation       ; 00
 	dw Slowpoke_GalarianAnimation       ; 00
@@ -305,8 +303,6 @@ AnimationPointers:
 	dw Slowking_GalarianAnimation       ; 00
 	dw Weezing_GalarianAnimation       ; 00
 	dw Corsola_GalarianAnimation       ; 00
-
-
 
 	dw Growlithe_HisuianAnimation       ; 00
 	dw Arcanine_HisuianAnimation       ; 00
@@ -317,8 +313,6 @@ AnimationPointers:
 	dw Sneasel_HisuianAnimation       ; 00
 	dw Samurott_HisuianAnimation       ; 00
 	dw Decidueye_HisuianAnimation       ; 00
-
-
 
 	dw Noctowl_ImmortalAnimation       ; 00
 	dw Ursaluna_BloodmoonAnimation       ; 00

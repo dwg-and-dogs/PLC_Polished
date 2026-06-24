@@ -118,27 +118,31 @@ Update ANoctowl and AFeraligatr back sprites.
 Reduce Union Cave trainer party size to split experience a little better. 
 Fix tiles on sheltered shores causing graphical glitch. 
 Slightly updated the "bad ending" text. 
-Ancestor Ledian and Alakazam, sprites courtesy Accad501
+Ancestor Ledian and Alakazam, sprites courtesy Accad501. Updated some trainer teams to include these. 
+New events for Ledian and Alakazam in Hollys Holt and Cianwood Cave, respectively. 
+Fix text of "Adrinna" to "Andrea". 
+Increase Sneasler base EXP. 
+Revise Jynx sprite to the Crystal version. (Sorry I didn't notice this sooner!)
+Revise Lucario sprite to be better for Hidden Palette. 
+Add all evolution-hold items to Sandbox room. 
+Revise Rival Lake Battle Text. 
+Resolve Lake of Rage partial softlock. 
+Special mark on trainer and enemy mon if they have max DVs. 
 
 Todo for v110:
-* Ancestor Ledian, Alakazam events
-* Add new ancestor forms to some parties 
 * Finish Stadium todos  
-* Special mark on pokemon if they have max DVs
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
-* More evo items for the person, incl metal coat and kings rock
-* Better Lucario Sprite 
-* Brick Break + Light Screen interaction
-
+* Update all docs
 
 vAny
 * New pokedex entries
 * Fly as an item
 * Move animations
+* Brick Break + Light Screen interaction: to check 
 
 v120
 * Epilogue: New Bark --> Blackthorn
 
 
-Last updated: 06/11/26
+Last updated: 06/23/26
 

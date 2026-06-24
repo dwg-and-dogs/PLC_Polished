@@ -954,8 +954,8 @@ endr
 ;	loadmem wPartyMon3PP+2, 15
 ;	loadmem wPartyMon3PP+3, 15
 
-	givepoke SUICUNE, 200
-	loadmem wPartyMon1Moves+0, SURF
+	givepoke LUCARIO, 200
+	loadmem wPartyMon1Moves+0, PSYCHIC_M
 	loadmem wPartyMon1Moves+1, ICE_BEAM
 	loadmem wPartyMon1Moves+2, CALM_MIND
 	loadmem wPartyMon1Moves+3, REST
@@ -965,7 +965,7 @@ endr
 	loadmem wPartyMon1EVs+3, 252
 	loadmem wPartyMon1EVs+4, 252
 	loadmem wPartyMon1EVs+5, 252
-	loadmem wPartyMon1DVs+0, $ff
+	loadmem wPartyMon1DVs+0, $fe
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
 
@@ -982,7 +982,7 @@ endr
 	loadmem wPartyMon2EVs+5, 252
 	loadmem wPartyMon2DVs+0, $ff
 	loadmem wPartyMon2DVs+1, $ff
-	loadmem wPartyMon2DVs+2, $ff
+	loadmem wPartyMon2DVs+2, $fe
 
 	givepoke ENTEI, 200
 	loadmem wPartyMon3Moves+0, FLAMETHROWER
@@ -996,7 +996,7 @@ endr
 	loadmem wPartyMon3EVs+4, 252
 	loadmem wPartyMon3EVs+5, 252
 	loadmem wPartyMon3DVs+0, $ff
-	loadmem wPartyMon3DVs+1, $ff
+	loadmem wPartyMon3DVs+1, $fe
 	loadmem wPartyMon3DVs+2, $ff	
 	
 	givepoke FERALIGATR, OTHER_FORM, 200
@@ -1012,10 +1012,10 @@ endr
 	loadmem wPartyMon4EVs+5, 252
 	loadmem wPartyMon4DVs+0, $ff
 	loadmem wPartyMon4DVs+1, $ff
-	loadmem wPartyMon4DVs+2, $ff	
+	loadmem wPartyMon4DVs+2, $fe	
 
-	givepoke ALAKAZAM, OTHER_FORM, 100 
-	givepoke LEDIAN, OTHER_FORM, 100 
+;	givepoke ALAKAZAM, OTHER_FORM, 100 
+;	givepoke LEDIAN, OTHER_FORM, 100 
 
 	; fill pokedex
 	callasm FillPokedex

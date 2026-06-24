@@ -1,4 +1,4 @@
-FramesPointers:
+FramesPointers: ; this one has to be in data/pokemon/constants order. 
 	table_width 2, FramesPointers
 	dw CyndaquilFrames       ; 01
 	dw QuilavaFrames       ; 02
@@ -14,7 +14,7 @@ FramesPointers:
 	dw SentretFrames       ; 12
 	dw FurretFrames       ; 13
 	dw PikachuFrames       ; 14
-	dw RaichuFrames       ; 15
+	dw RaichuFrames       ; 15 ok 
 	dw LedybaFrames       ; 16
 	dw LedianFrames       ; 17
 	dw SpinarakFrames       ; 18
@@ -34,7 +34,7 @@ FramesPointers:
 	dw MareepFrames       ; 32
 	dw FlaaffyFrames       ; 33
 	dw AmpharosFrames       ; 34
-	dw WooperFrames       ; 35
+	dw WooperFrames       ; 35 ok 
 	dw QuagsireFrames       ; 36
 	dw GastlyFrames       ; 37
 	dw HaunterFrames       ; 38
@@ -54,7 +54,7 @@ FramesPointers:
 	dw PoliwhirlFrames       ; 52
 	dw PoliwrathFrames       ; 53
 	dw PolitoedFrames       ; 54
-	dw MagikarpFrames       ; 55
+	dw MagikarpFrames       ; 55 ok 
 	dw GyaradosFrames       ; 56
 	dw SlowpokeFrames       ; 57
 	dw SlowbroFrames       ; 58
@@ -74,7 +74,7 @@ FramesPointers:
 	dw NidoqueenFrames       ; 72
 	dw NidorinoFrames       ; 73
 	dw NidokingFrames       ; 74
-	dw YanmaFrames       ; 75
+	dw YanmaFrames       ; 75 ok 
 	dw YanmegaFrames       ; 76
 	dw SunkernFrames       ; 77
 	dw SunfloraFrames       ; 78
@@ -94,7 +94,7 @@ FramesPointers:
 	dw MagnemiteFrames       ; 92
 	dw MagnetonFrames       ; 93
 	dw MagnezoneFrames       ; 94
-	dw VoltorbFrames       ; 95
+	dw VoltorbFrames       ; 95 ok 
 	dw ElectrodeFrames       ; 96
 	dw AipomFrames       ; 97
 	dw AmbipomFrames       ; 98
@@ -114,7 +114,7 @@ FramesPointers:
 	dw MachopFrames       ; 112
 	dw MachokeFrames       ; 113
 	dw MachampFrames       ; 114
-	dw HitmonleeFrames       ; 115
+	dw HitmonleeFrames       ; 115 ok 
 	dw HitmonchanFrames       ; 116
 	dw HitmontopFrames       ; 117
 	dw GirafarigFrames       ; 118
@@ -134,7 +134,7 @@ FramesPointers:
 	dw TentacruelFrames       ; 132
 	dw ShuckleFrames       ; 133
 	dw CorsolaFrames       ; 134
-	dw RemoraidFrames       ; 135
+	dw RemoraidFrames       ; 135 ok 
 	dw OctilleryFrames       ; 136
 	dw ChinchouFrames       ; 137
 	dw LanturnFrames       ; 138
@@ -154,7 +154,7 @@ FramesPointers:
 	dw KingdraFrames       ; 152
 	dw GligarFrames       ; 153
 	dw GliscorFrames       ; 154
-	dw SwinubFrames       ; 155
+	dw SwinubFrames       ; 155 ok 
 	dw PiloswineFrames       ; 156
 	dw MamoswineFrames       ; 157
 	dw TeddiursaFrames       ; 158
@@ -174,7 +174,7 @@ FramesPointers:
 	dw HoundourFrames       ; 172
 	dw HoundoomFrames       ; 173
 	dw SlugmaFrames       ; 174
-	dw MagcargoFrames       ; 175
+	dw MagcargoFrames       ; 175 ok 
 	dw SneaselFrames       ; 176
 	dw WeavileFrames       ; 177
 	dw SneaslerFrames       ; 178
@@ -194,7 +194,7 @@ FramesPointers:
 	dw CroconawFrames       ; 192
 	dw FeraligatrFrames       ; 193
 	dw StarlyFrames       ; 194
-	dw StaraviaFrames       ; 195
+	dw StaraviaFrames       ; 195 ok 
 	dw StaraptorFrames       ; 196
 	dw ShinxFrames       ; 197
 	dw LuxioFrames       ; 198
@@ -214,7 +214,7 @@ FramesPointers:
 	dw HippowdonFrames       ; 212
 	dw CroagunkFrames       ; 213
 	dw ToxicroakFrames       ; 214
-	dw SnoverFrames       ; 215
+	dw SnoverFrames       ; 215 ok 
 	dw AbomasnowFrames       ; 216
 	dw DuskullFrames       ; 217
 	dw DusclopsFrames       ; 218
@@ -234,8 +234,8 @@ FramesPointers:
 	dw GardevoirFrames       ; 232
 	dw GalladeFrames       ; 233
 	dw GoomyFrames       ; 234
-	dw SliggooFrames       ; 235
-	dw GoodraFrames       ; 236
+	dw SliggooFrames       ; 235 ok 
+	dw GoodraFrames       ; 236 ok 
 	dw ZoruaFrames       ; 237
 	dw ZoroarkFrames       ; 238
 	dw GibleFrames       ; 239
@@ -253,7 +253,7 @@ FramesPointers:
 	dw HeatranFrames       ; 251
 	dw LugiaFrames       ; 252
 	dw Ho_OhFrames       ; 253
-	dw CelebiFrames       ; 254
+	dw CelebiFrames       ; 254 ok 
 
 
 	assert_table_length NUM_POKEMON
@@ -287,18 +287,16 @@ FramesPointers:
 	dw UnownZFrames
 	dw UnownExclamationFrames
 	dw UnownQuestionFrames
-
-	dw Raichu_AlolanFrames       ; 00
-	dw Vulpix_AlolanFrames       ; 00
-	dw Ninetales_AlolanFrames       ; 00
-	dw Geodude_AlolanFrames       ; 00
-	dw Graveler_AlolanFrames       ; 00
-	dw Golem_AlolanFrames       ; 00
+; all ancestors here ok 
+	dw Raichu_AlolanFrames       ; 00 ok 
+	dw Vulpix_AlolanFrames       ; 00 ok 
+	dw Ninetales_AlolanFrames       ; 00 ok 
+	dw Geodude_AlolanFrames       ; 00 ok 
+	dw Graveler_AlolanFrames       ; 00 ok 
+	dw Golem_AlolanFrames       ; 00 ok 
 	dw Grimer_AlolanFrames       ; 00
 	dw Muk_AlolanFrames       ; 00
 	dw Exeggutor_AlolanFrames       ; 00
-
-
 
 	dw Ponyta_GalarianFrames       ; 00
 	dw Rapidash_GalarianFrames       ; 00
@@ -307,8 +305,6 @@ FramesPointers:
 	dw Slowking_GalarianFrames       ; 00
 	dw Weezing_GalarianFrames       ; 00
 	dw Corsola_GalarianFrames       ; 00
-
-
 
 	dw Growlithe_HisuianFrames       ; 00
 	dw Arcanine_HisuianFrames       ; 00
@@ -320,16 +316,14 @@ FramesPointers:
 	dw Samurott_HisuianFrames       ; 00
 	dw Decidueye_HisuianFrames       ; 00
 
-
-
-	dw Noctowl_ImmortalFrames       ; 00
+	dw Noctowl_ImmortalFrames       ; 00 ok 
 	dw Ursaluna_BloodmoonFrames       ; 00
 	dw Feraligatr_AncestorFrames       ; 00
 	dw Meganium_AncestorFrames       ; 00
 	dw Magcargo_AncestorFrames       ; 00
-	dw Xatu_AncestorFrames       ; 00
+	dw Xatu_AncestorFrames       ; 00 ok 
 
 	dw Ledian_AncestorFrames
-	dw Alakazam_AncestorFrames
+	dw Alakazam_AncestorFrames ; takes some weird animation? 
 
 	assert_table_length NUM_UNIQUE_POKEMON

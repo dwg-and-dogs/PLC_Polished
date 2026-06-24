@@ -2,21 +2,20 @@ PicAnimations:
 
 CyndaquilAnimation:  INCLUDE "gfx/pokemon/cyndaquil/anim0.asm"
 QuilavaAnimation:  INCLUDE "gfx/pokemon/quilava/anim0.asm"
-TyphlosionAnimation:  INCLUDE "gfx/pokemon/typhlosion/anim0.asm"
+
 RowletAnimation:  INCLUDE "gfx/pokemon/rowlet/anim0.asm"
 DartrixAnimation:  INCLUDE "gfx/pokemon/dartrix/anim0.asm"
-DecidueyeAnimation:  INCLUDE "gfx/pokemon/decidueye/anim0.asm"
+
 OshawottAnimation:  INCLUDE "gfx/pokemon/oshawott/anim0.asm"
 DewottAnimation:  INCLUDE "gfx/pokemon/dewott/anim0.asm"
-SamurottAnimation:  INCLUDE "gfx/pokemon/samurott/anim0.asm"
 HoothootAnimation:  INCLUDE "gfx/pokemon/hoothoot/anim0.asm"
-NoctowlAnimation:  INCLUDE "gfx/pokemon/noctowl/anim0.asm"
+
 SentretAnimation:  INCLUDE "gfx/pokemon/sentret/anim0.asm"
 FurretAnimation:  INCLUDE "gfx/pokemon/furret/anim0.asm"
 PikachuAnimation:  INCLUDE "gfx/pokemon/pikachu/anim0.asm"
 
 LedybaAnimation:  INCLUDE "gfx/pokemon/ledyba/anim0.asm"
-LedianAnimation:  INCLUDE "gfx/pokemon/ledian/anim0.asm"
+
 SpinarakAnimation:  INCLUDE "gfx/pokemon/spinarak/anim0.asm"
 AriadosAnimation:  INCLUDE "gfx/pokemon/ariados/anim0.asm"
 
@@ -61,7 +60,7 @@ VileplumeAnimation:  INCLUDE "gfx/pokemon/vileplume/anim0.asm"
 BellossomAnimation:  INCLUDE "gfx/pokemon/bellossom/anim0.asm"
 AbraAnimation:  INCLUDE "gfx/pokemon/abra/anim0.asm"
 KadabraAnimation:  INCLUDE "gfx/pokemon/kadabra/anim0.asm"
-AlakazamAnimation:  INCLUDE "gfx/pokemon/alakazam/anim0.asm"
+
 DittoAnimation:  INCLUDE "gfx/pokemon/ditto/anim0.asm"
 PinecoAnimation:  INCLUDE "gfx/pokemon/pineco/anim0.asm"
 ForretressAnimation:  INCLUDE "gfx/pokemon/forretress/anim0.asm"
@@ -84,20 +83,18 @@ PinsirAnimation:  INCLUDE "gfx/pokemon/pinsir/anim0.asm"
 MinsirAnimation:  INCLUDE "gfx/pokemon/minsir/anim0.asm"
 HeracrossAnimation:  INCLUDE "gfx/pokemon/heracross/anim0.asm"
 KoffingAnimation:  INCLUDE "gfx/pokemon/koffing/anim0.asm"
-WeezingAnimation:  INCLUDE "gfx/pokemon/weezing/anim0.asm"
+
 
 MagnemiteAnimation:  INCLUDE "gfx/pokemon/magnemite/anim0.asm"
 MagnetonAnimation:  INCLUDE "gfx/pokemon/magneton/anim0.asm"
 MagnezoneAnimation:  INCLUDE "gfx/pokemon/magnezone/anim0.asm"
-VoltorbAnimation:  INCLUDE "gfx/pokemon/voltorb/anim0.asm"
-ElectrodeAnimation:  INCLUDE "gfx/pokemon/electrode/anim0.asm"
+
 AipomAnimation:  INCLUDE "gfx/pokemon/aipom/anim0.asm"
 AmbipomAnimation:  INCLUDE "gfx/pokemon/ambipom/anim0.asm"
 SnubbullAnimation:  INCLUDE "gfx/pokemon/snubbull/anim0.asm"
 GranbullAnimation:  INCLUDE "gfx/pokemon/granbull/anim0.asm"
 
-GrowlitheAnimation:  INCLUDE "gfx/pokemon/growlithe/anim0.asm"
-ArcanineAnimation:  INCLUDE "gfx/pokemon/arcanine/anim0.asm"
+
 StantlerAnimation:  INCLUDE "gfx/pokemon/stantler/anim0.asm"
 WyrdeerAnimation:  INCLUDE "gfx/pokemon/wyrdeer/anim0.asm"
 MarillAnimation:  INCLUDE "gfx/pokemon/marill/anim0.asm"
@@ -121,13 +118,13 @@ JynxAnimation:  INCLUDE "gfx/pokemon/jynx/anim0.asm"
 ElectabuzzAnimation:  INCLUDE "gfx/pokemon/electabuzz/anim0.asm"
 ElectivireAnimation:  INCLUDE "gfx/pokemon/electivire/anim0.asm"
 NatuAnimation:  INCLUDE "gfx/pokemon/natu/anim0.asm"
-XatuAnimation:  INCLUDE "gfx/pokemon/xatu/anim0.asm"
-QwilfishAnimation:  INCLUDE "gfx/pokemon/qwilfish/anim0.asm"
+
+
 OverqwilAnimation:  INCLUDE "gfx/pokemon/overqwil/anim0.asm"
 TentacoolAnimation:  INCLUDE "gfx/pokemon/tentacool/anim0.asm"
 TentacruelAnimation:  INCLUDE "gfx/pokemon/tentacruel/anim0.asm"
 ShuckleAnimation:  INCLUDE "gfx/pokemon/shuckle/anim0.asm"
-CorsolaAnimation:  INCLUDE "gfx/pokemon/corsola/anim0.asm"
+
 RemoraidAnimation:  INCLUDE "gfx/pokemon/remoraid/anim0.asm"
 OctilleryAnimation:  INCLUDE "gfx/pokemon/octillery/anim0.asm"
 ChinchouAnimation:  INCLUDE "gfx/pokemon/chinchou/anim0.asm"
@@ -153,7 +150,7 @@ PiloswineAnimation:  INCLUDE "gfx/pokemon/piloswine/anim0.asm"
 MamoswineAnimation:  INCLUDE "gfx/pokemon/mamoswine/anim0.asm"
 TeddiursaAnimation:  INCLUDE "gfx/pokemon/teddiursa/anim0.asm"
 UrsaringAnimation:  INCLUDE "gfx/pokemon/ursaring/anim0.asm"
-UrsalunaAnimation:  INCLUDE "gfx/pokemon/ursaluna/anim0.asm"
+
 PhanpyAnimation:  INCLUDE "gfx/pokemon/phanpy/anim0.asm"
 DonphanAnimation:  INCLUDE "gfx/pokemon/donphan/anim0.asm"
 MantineAnimation:  INCLUDE "gfx/pokemon/mantine/anim0.asm"
@@ -168,8 +165,7 @@ HonchkrowAnimation:  INCLUDE "gfx/pokemon/honchkrow/anim0.asm"
 HoundourAnimation:  INCLUDE "gfx/pokemon/houndour/anim0.asm"
 HoundoomAnimation:  INCLUDE "gfx/pokemon/houndoom/anim0.asm"
 SlugmaAnimation:  INCLUDE "gfx/pokemon/slugma/anim0.asm"
-MagcargoAnimation:  INCLUDE "gfx/pokemon/magcargo/anim0.asm"
-SneaselAnimation:  INCLUDE "gfx/pokemon/sneasel/anim0.asm"
+
 WeavileAnimation:  INCLUDE "gfx/pokemon/weavile/anim0.asm"
 SneaslerAnimation:  INCLUDE "gfx/pokemon/sneasler/anim0.asm"
 MisdreavusAnimation:  INCLUDE "gfx/pokemon/misdreavus/anim0.asm"
@@ -183,10 +179,10 @@ LaprasAnimation:  INCLUDE "gfx/pokemon/lapras/anim0.asm"
 SnorlaxAnimation:  INCLUDE "gfx/pokemon/snorlax/anim0.asm"
 ChikoritaAnimation:  INCLUDE "gfx/pokemon/chikorita/anim0.asm"
 BayleefAnimation:  INCLUDE "gfx/pokemon/bayleef/anim0.asm"
-MeganiumAnimation:  INCLUDE "gfx/pokemon/meganium/anim0.asm"
+
 TotodileAnimation:  INCLUDE "gfx/pokemon/totodile/anim0.asm"
 CroconawAnimation:  INCLUDE "gfx/pokemon/croconaw/anim0.asm"
-FeraligatrAnimation:  INCLUDE "gfx/pokemon/feraligatr/anim0.asm"
+
 StarlyAnimation:  INCLUDE "gfx/pokemon/starly/anim0.asm"
 StaraviaAnimation:  INCLUDE "gfx/pokemon/staravia/anim0.asm"
 StaraptorAnimation:  INCLUDE "gfx/pokemon/staraptor/anim0.asm"
@@ -308,7 +304,6 @@ Muk_AlolanAnimation:  INCLUDE "gfx/pokemon/muk_alolan/anim0.asm"
 ExeggutorAnimation:  INCLUDE "gfx/pokemon/exeggutor/anim0.asm"
 Exeggutor_AlolanAnimation:  INCLUDE "gfx/pokemon/exeggutor_alolan/anim0.asm"
 
-
 PonytaAnimation:  INCLUDE "gfx/pokemon/ponyta/anim0.asm"
 Ponyta_GalarianAnimation:  INCLUDE "gfx/pokemon/ponyta_galarian/anim0.asm"
 
@@ -324,58 +319,59 @@ Slowbro_GalarianAnimation:  INCLUDE "gfx/pokemon/slowbro_galarian/anim0.asm"
 SlowkingAnimation:  INCLUDE "gfx/pokemon/slowking/anim0.asm"
 Slowking_GalarianAnimation:  INCLUDE "gfx/pokemon/slowking_galarian/anim0.asm"
 
-
+WeezingAnimation:  INCLUDE "gfx/pokemon/weezing/anim0.asm"
 Weezing_GalarianAnimation:  INCLUDE "gfx/pokemon/weezing_galarian/anim0.asm"
 
-
+CorsolaAnimation:  INCLUDE "gfx/pokemon/corsola/anim0.asm"
 Corsola_GalarianAnimation:  INCLUDE "gfx/pokemon/corsola_galarian/anim0.asm"
 
-
-
+GrowlitheAnimation:  INCLUDE "gfx/pokemon/growlithe/anim0.asm"
 Growlithe_HisuianAnimation:  INCLUDE "gfx/pokemon/growlithe_hisuian/anim0.asm"
 
-
+ArcanineAnimation:  INCLUDE "gfx/pokemon/arcanine/anim0.asm"
 Arcanine_HisuianAnimation:  INCLUDE "gfx/pokemon/arcanine_hisuian/anim0.asm"
 
-
+VoltorbAnimation:  INCLUDE "gfx/pokemon/voltorb/anim0.asm"
 Voltorb_HisuianAnimation:  INCLUDE "gfx/pokemon/voltorb_hisuian/anim0.asm"
 
-
+ElectrodeAnimation:  INCLUDE "gfx/pokemon/electrode/anim0.asm"
 Electrode_HisuianAnimation:  INCLUDE "gfx/pokemon/electrode_hisuian/anim0.asm"
 
-
+TyphlosionAnimation:  INCLUDE "gfx/pokemon/typhlosion/anim0.asm"
 Typhlosion_HisuianAnimation:  INCLUDE "gfx/pokemon/typhlosion_hisuian/anim0.asm"
 
-
+QwilfishAnimation:  INCLUDE "gfx/pokemon/qwilfish/anim0.asm"
 Qwilfish_HisuianAnimation:  INCLUDE "gfx/pokemon/qwilfish_hisuian/anim0.asm"
 
-
+SneaselAnimation:  INCLUDE "gfx/pokemon/sneasel/anim0.asm"
 Sneasel_HisuianAnimation:  INCLUDE "gfx/pokemon/sneasel_hisuian/anim0.asm"
 
-
+SamurottAnimation:  INCLUDE "gfx/pokemon/samurott/anim0.asm"
 Samurott_HisuianAnimation:  INCLUDE "gfx/pokemon/samurott_hisuian/anim0.asm"
 
-
+DecidueyeAnimation:  INCLUDE "gfx/pokemon/decidueye/anim0.asm"
 Decidueye_HisuianAnimation:  INCLUDE "gfx/pokemon/decidueye_hisuian/anim0.asm"
 
-
-
+NoctowlAnimation:  INCLUDE "gfx/pokemon/noctowl/anim0.asm"
 Noctowl_ImmortalAnimation:  INCLUDE "gfx/pokemon/noctowl_immortal/anim0.asm"
 
-
+UrsalunaAnimation:  INCLUDE "gfx/pokemon/ursaluna/anim0.asm"
 Ursaluna_BloodmoonAnimation:  INCLUDE "gfx/pokemon/ursaluna_bloodmoon/anim0.asm"
 
-
+FeraligatrAnimation:  INCLUDE "gfx/pokemon/feraligatr/anim0.asm"
 Feraligatr_AncestorAnimation:  INCLUDE "gfx/pokemon/feraligatr_ancestor/anim0.asm"
 
-
+MeganiumAnimation:  INCLUDE "gfx/pokemon/meganium/anim0.asm"
 Meganium_AncestorAnimation:  INCLUDE "gfx/pokemon/meganium_ancestor/anim0.asm"
 
-
+MagcargoAnimation:  INCLUDE "gfx/pokemon/magcargo/anim0.asm"
 Magcargo_AncestorAnimation:  INCLUDE "gfx/pokemon/magcargo_ancestor/anim0.asm"
 
-
+XatuAnimation:  INCLUDE "gfx/pokemon/xatu/anim0.asm"
 Xatu_AncestorAnimation:  INCLUDE "gfx/pokemon/xatu_ancestor/anim0.asm"
 
+LedianAnimation:  INCLUDE "gfx/pokemon/ledian/anim0.asm"
 Ledian_AncestorAnimation:  INCLUDE "gfx/pokemon/ledian_ancestor/anim0.asm"
+
+AlakazamAnimation:  INCLUDE "gfx/pokemon/alakazam/anim0.asm"
 Alakazam_AncestorAnimation:  INCLUDE "gfx/pokemon/alakazam_ancestor/anim0.asm"

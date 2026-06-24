@@ -111,6 +111,9 @@ endr
 	yesorno
 	iffalse .BattleItems
 	giveitem ABILITYPATCH, 99
+	giveitem METAL_COAT
+	giveitem KINGS_ROCK
+	giveitem HARD_STONE
 for x, ABILITY_CAP, ICE_STONE + 1
 	giveitem x, 99
 endr

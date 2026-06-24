@@ -6,7 +6,7 @@
 	db 209 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
-	dn GENDER_F12_5, 3 ; gender ratio, step cycles to hatch
+	dn GENDER_F50, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/samurott_hisuian/front.dimensions"
 	abilities_for SAMUROTT_HISUIAN, TORRENT, SHELL_ARMOR, TECHNICIAN
 	db GROWTH_MEDIUM_SLOW ; growth rate

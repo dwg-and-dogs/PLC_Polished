@@ -155,10 +155,10 @@ LakeRivalScript:
 	waitbutton
 	writetext LakeKurtAfterRivalText_2
 	waitbutton
-	writetext LakeShrineQuestion
-	yesorno
-	iffalse_jumptext LakeNoText
-	waitbutton
+;	writetext LakeShrineQuestion
+;	yesorno
+;	iffalse_jumptext LakeNoText
+;	waitbutton
 	writetext LakePryceAfterRivalText_2
 	waitbutton
 	closetext
@@ -1468,9 +1468,10 @@ LakeKurtText2:
 	cont "here at the lake."
 	
 	para "We can go back to"
-	line "stop Adrinna and"
+	line "stop Andrea and"
 	cont "Vesper's mine!"
 	done
+	
 UrsalunaBMScript:
 	earthquake 20
 	cry URSARING

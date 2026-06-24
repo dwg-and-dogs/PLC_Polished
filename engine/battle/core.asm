@@ -3775,7 +3775,15 @@ endr
 	hlcoord 19, 8
 	ld [hl], a
 
-.not_own_shiny
+
+.not_own_shiny:
+	call CheckShinyDV
+	jr nc, .not_hp_star_own
+	ld a, "<STAR>"
+	hlcoord 14, 8
+	ld [hl], a
+
+.not_hp_star_own
 	ld a, TEMPMON
 	ld [wMonType], a
 	farcall GetGender
@@ -3801,6 +3809,32 @@ UpdateEnemyHUD::
 	call DrawEnemyHUD
 	call UpdateEnemyHPPal
 	jmp PopBCDEHL
+
+CheckShinyDV:
+; Carry set if the DV block at wTempMonDVs qualifies for the star.
+; Match if the first two bytes are both $ff, OR the last two are both $ff.
+	ld a, [wTempMonDVs + 0]
+	cp $ff
+	jr nz, .check_last
+;	ld a, [wTempMonDVs + 1]
+;	cp $ff
+;	jr nz, .check_last
+	scf
+	ret
+
+.check_last
+	ld a, [wTempMonDVs + 1]
+	cp $ff
+	jr nz, .no_match
+	ld a, [wTempMonDVs + 2]
+	cp $ff
+	jr nz, .no_match
+	scf
+	ret
+
+.no_match
+	and a
+	ret
 
 DrawEnemyHUD:
 	ld a, [wEnemySubStatus2]
@@ -3844,7 +3878,15 @@ endr
 	hlcoord 9, 1
 	ld [hl], a
 
-.not_shiny
+.not_shiny:
+	call CheckShinyDV
+	jr nc, .not_hp_star
+	ld a, "<STAR>"
+	hlcoord 4, 1
+	ld [hl], a
+
+
+.not_hp_star
 	ld a, TEMPMON
 	ld [wMonType], a
 	farcall GetGender

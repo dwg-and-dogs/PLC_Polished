@@ -289,7 +289,7 @@ AmosText_LegacyBadgeSpeech:
 	cont "you're one of us."
 
 	para "First, let's stop"
-	line "General Adrinna"
+	line "General Andrea"
 	cont "at the mine." 
 	
 	para "If she gets to"

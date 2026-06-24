@@ -30,9 +30,8 @@ SinjohDorms_MapScriptHeader:
 
 
 SinjohDormsNPC1Text:
-	text "I love visiting"
-	line "Johto. #mon"
-	cont "here are so cute!"
+	text "Johto #mon"
+	line "are so cute!"
 	done
 
 ChikoritaText:
@@ -42,7 +41,7 @@ ChikoritaText:
 SinjohDormsNPC2Text:
 	text "General Andrea"
 	line "wants us to join"
-	cont "his army."
+	cont "her army."
 	
 	para "But I think she's"
 	line "a power-hungry"

@@ -28,6 +28,8 @@ EusineRaikouScript:
 	waitbutton
 	checkmove RAIN_DANCE
 	iftrue RaikouAppears
+	checkpoke BRONZONG
+	iftrue RaikouAppears
 	checkpoke LUGIA
 	iftrue RaikouAppears
 	checkpoke POLITOED

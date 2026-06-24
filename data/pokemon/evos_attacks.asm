@@ -292,6 +292,7 @@ Noctowl_ImmortalEvosAttacks: ; encountered first at level 25
 	db 23, WING_ATTACK	
 	db 26, THIEF
 	db 30, SHADOW_CLAW
+	db 32, BITE
 	db 35, DREAM_EATER
 	db 35, KNOCK_OFF
 	db 41, HAZE

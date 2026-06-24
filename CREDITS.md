@@ -15,12 +15,12 @@ Many sprites were adapted to the Gen 2 format. Credits are for the original sour
 Front Sprites:
 
 * PeanutellaX: Ancestor Meganium, Ancestor Xatu, Ancestor Magcargo, H__Sliggoo, Goomy, 
-* Azure Keys: Dewott, Samurott, Spiritomb, Glalie
+* Azure Keys: Dewott, Samurott, Spiritomb, Glalie, Lucario
 * E-SY (From PiaCRT Deviantart): Monferno, Infernape, Prinplup, Roserade, Hippowdon, Heatran, Grotle, Empoleon, Bronzor, Bronzong, Skuntank, Staraptor, Hippopotas, 
 * Rowlet: Matdemo
 * Pokets3: H__Braviary
 * Nuukie: Wyrdeer, Roselia, Drifblim, Lopunny, Toxicroak, Snover, Abomasnow, Froslass, Kirlia, Gardevoir, Gallade
-* Pokewilds: Kleavor, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Lucario, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott, Shinx, Shieldon, Croagunk, Ralts, H__Zorua, 
+* Pokewilds: Kleavor, Staravia, Luxio, Luxray, Rampardos, Bastiodon, Ambipom, Gabite, Garchomp, Drapion, Dusclops, Dusknoir, Rotom, Vespiquen, Dartrix, Decidueye, Oshawott, Shinx, Shieldon, Croagunk, Ralts, H__Zorua, 
 * DWG: Avalugg 
 * Sour Crystal: Quilava, Butterfree, Pidgeotto, Sunflora, Dragonite, Celebi, Xatu
 * utytft: H__Typlosion, H__Decidueye, H__Samurott, H__Zoroark, Bergmite, H__Braviary

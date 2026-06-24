@@ -1827,11 +1827,11 @@ Petrel2FinalPkmnText:
 	prompt
 
 Archer1FinalPkmnText:
-	text "We can't have you"
-	line "getting in the way"
-
-	para "before Giovanni"
-	line "rejoins us!"
+	text "Why won't you just"
+	line "leave me be?"
+	
+	para "I'm not who you"
+	line "think I am!"
 	prompt
 
 Archer2FinalPkmnText:
