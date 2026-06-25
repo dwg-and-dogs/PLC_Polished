@@ -5,7 +5,7 @@ StadiumGroundsFacility_MapScriptHeader:
 
 
 ; battle fixes
-	; todo better parties based on battle factory sets 
+	; todo better parties based on battle factory sets: 1,2,3 DONE; 4,5,6 TODO 
 	; todo write the endless waves of brigaders + random final boss section
 	; todo trainers for the endless section, barbeau+lugia // amos+raikou // kurtf+celebi // mejimi+heatran
 	
