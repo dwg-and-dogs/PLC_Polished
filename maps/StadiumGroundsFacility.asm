@@ -3423,11 +3423,15 @@ BossTrainerWalkAwayMovement:
 
 
 AMOS_AMOS_STADIUM_Text:
-	text "Amos Amos Stadium"
+	text "Amos Stadium"
 	done
 
 BARBEAU_REMY_STADIUM_Text:
-	text "Barbeau Remy Stadium"
+	text "Remy Stadium"
+	done
+
+SAMSARA_SAMSARA_STADIUM_Text:
+	text "Samsara Stadium"
 	done
 
 BRIGADER_FACILITY_20_Text:
