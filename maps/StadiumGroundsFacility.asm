@@ -60,9 +60,9 @@ StadiumGroundsFacility_MapScriptHeader:
 	object_event 19, 17, SPRITE_MEJIMI, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_FACILITY_VESPER ; HEATRAN TEAM 
 ; always present
  	object_event 14, 15, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityClerkRetireScript, -1	
-; 	object_event 14, 15, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, RandomGiftGiverScript, -1 ; option to give you a master ball if you are on the last round AND you "get lucky" ie the value of one of your random numbers is exactly 0, which is 17/20 to not get it 
-; 	object_event 14, 15, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FacilityMoveReminderScript, -1 ; move reminder 
-; 	object_event 14, 15, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityMoveTutorScript, -1 ; move tutor 
+ 	object_event 14,  9, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, RandomGiftGiverScript, -1 ; option to give you a master ball if you are on the last round AND you "get lucky" ie the value of one of your random numbers is exactly 0, which is 17/20 to not get it 
+ 	object_event 23,  9, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FacilityMoveReminderScript, -1 ; move reminder 
+; 	object_event 14, 10, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityMoveTutorScript, -1 ; move tutor 
 	
 	object_const_def
  	const STADIUM_FACILITY_CLERK
@@ -4002,4 +4002,58 @@ FacilityLossTextSandraFinal:
 FacilityLossTextVesperFinal:
 	text "Lose Vesper Final"
 	done
+
+FacilityMoveReminderScript:
+	faceplayer
+	opentext
+	writetext MoveReminderIntroTextFacility
+	yesorno
+	iffalse .refused
+	setval NO_MOVE ; to toggle move relearner
+	writetext MoveReminderWhichMonTextFacility
+	waitbutton
+	special Special_MoveTutor
+	ifequal $0, .teach_move
+.refused
+	jumpopenedtext MoveReminderCancelTextFacility
+
+.teach_move
+	takeitem BIG_PEARL
+	jumpopenedtext MoveReminderCancelTextFacility
+
+MoveReminderIntroTextFacility:
+	text "I can remind your"
+	line "#mon of moves."
+
+	para "Do you want me to"
+	line "tutor one of your"
+	cont "#mon a move?"
+	done
+
+MoveReminderWhichMonTextFacility:
+	text "Which #mon"
+	line "needs tutoring?"
+	done
+
+
+MoveReminderCancelTextFacility:
+	text "Best of luck!"
+	done
+
+RandomGiftGiverScript:
+	faceplayer
+	opentext
+	; you can do this once if you get a streak above 15 
+	; if less than 15, .NotLongEnoughStreak 
+
+	; you can do this ab
+
+	; if the first one is 0 then you get a master ball
+
+
 	
+	ifequal 0, .GiveMasterBall
+	
+	jumptext NoMasterBallText
+
+
