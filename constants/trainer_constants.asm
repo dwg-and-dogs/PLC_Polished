@@ -92,7 +92,7 @@ KRIS EQU __trainer_class__ ;
 	const MEJIMI_EASY
 	const MEJIMI_NORMAL
 	const MEJIMI_HARD
-	const MEJIMI_STADIUM_FINALE
+	const MEJIMI_STADIUM_FINAL
 
 	trainerclass BRUNO ; d
 

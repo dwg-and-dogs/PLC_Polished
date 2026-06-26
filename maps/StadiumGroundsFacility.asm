@@ -2928,6 +2928,7 @@ StadiumFacility_Trainers5Event:
 
 
 StadiumFacility_TrainersEndlessEvent:
+	; todo rewrite for up to 30 trainers 
 	; EVERY FOUR TURNS YOU GET THE CHANCE TO STEP ASIDE AND CHANGE UP YOUR TEAM 
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
@@ -3136,14 +3137,37 @@ StadiumFacility_TrainersEndlessEvent:
 	ifequal 4, .BattleAmosFinal
 	ifequal 5, .BattleKurtFinalFinal
 ;.BattleMejimiFinal:
-	
-	; todo write this for the other 6 
-.SandraStadiumFinale: 
+	appear STADIUM_FACILITY_MEJIMI
+	applymovement STADIUM_FACILITY_MEJIMI, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextVesperFinal, FacilityLossTextVesperFinal
+	loadtrainer MEJIMI, MEJIMI_STADIUM_FINAL
+	showtext VesperStadiumFinalText
+	startbattle
+	reloadmap
+	applymovement STADIUM_FACILITY_MEJIMI, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_VESPER
+	disappear STADIUM_FACILITY_MEJIMI	
+	sjump .EndOfBossFinals
+
+.BattleSilasFinal:
+	appear STADIUM_FACILITY_HOLLIS
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextHollisFinal, FacilityLossTextHollisFinal
+	loadtrainer HOLLIS, HOLLIS_STADIUM_FINAL
+	showtext HollisStadiumFinalText
+	startbattle
+	reloadmap
+	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_SILAS
+	disappear STADIUM_FACILITY_HOLLIS	
+	sjump .EndOfBossFinals
+
+.BattleSandraFinal:
 	appear STADIUM_FACILITY_SANDRA
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextSandra, FacilityLossTextSandra 
-	loadtrainer SANDRA, SANDRA_STADIUM_FINALE
-	showtext SANDRA_SANDRA_STADIUM_Text
+	winlosstext FacilityWinTextSandraFinal, FacilityLossTextSandraFinal
+	loadtrainer SANDRA, SANDRA_STADIUM_FINAL
+	showtext SandraStadiumFinalText
 	startbattle
 	reloadmap
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
@@ -3151,6 +3175,57 @@ StadiumFacility_TrainersEndlessEvent:
 	disappear STADIUM_FACILITY_SANDRA	
 	sjump .EndOfBossFinals
 
+.BattleSybilFinal:
+	appear STADIUM_FACILITY_SAMSARA
+	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextSamsaraFinal, FacilityLossTextSamsaraFinal
+	loadtrainer SANDRA, SANDRA_STADIUM_FINAL
+	showtext SamsaraStadiumFinalText
+	startbattle
+	reloadmap
+	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_SYBIL
+	disappear STADIUM_FACILITY_SAMSARA	
+	sjump .EndOfBossFinals
+
+.BattleRemyFinal:
+	appear STADIUM_FACILITY_BARBEAU
+	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextRemyFinal, FacilityLossTextRemyFinal
+	loadtrainer BARBEAU, REMY_STADIUM_FINAL
+	showtext RemyStadiumFinalText
+	startbattle
+	reloadmap
+	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_REMY
+	disappear STADIUM_FACILITY_BARBEAU	
+	sjump .EndOfBossFinals
+
+.BattleAmosFinal:
+	appear STADIUM_FACILITY_AMOS
+	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextAmosFinal, FacilityLossTextAmosFinal
+	loadtrainer AMOS, AMOS_STADIUM_FINAL
+	showtext AmosStadiumFinalText
+	startbattle
+	reloadmap
+	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_AMOS
+	disappear STADIUM_FACILITY_AMOS	
+	sjump .EndOfBossFinals
+
+.BattleKurtFinalFinal:
+	appear STADIUM_FACILITY_KURTF
+	applymovement STADIUM_FACILITY_KURTF, BossTrainerWalkTowardMovement
+	winlosstext FacilityWinTextKurtFinal, FacilityLossTextKurtFinal
+	loadtrainer AMOS, AMOS_STADIUM_FINAL
+	showtext KurtStadiumFinalText
+	startbattle
+	reloadmap
+	applymovement STADIUM_FACILITY_KURTF, BossTrainerWalkAwayMovement 
+	setevent EVENT_FACILITY_KURT
+	disappear STADIUM_FACILITY_KURTF	
+	sjump .EndOfBossFinals
 
 .EndOfBossFinals:
 ; end of random elder selection 
@@ -3163,7 +3238,7 @@ StadiumFacility_TrainersEndlessEvent:
 	closetext
 	setevent EVENT_STADIUM_HEALED
 	applyonemovement PLAYER, step_left
-	end 	; can do it all over again... 
+	end
 
 ; =================
 ; text
@@ -3837,10 +3912,88 @@ SAGE_FACILITY_19_Text:
 	text "Sage 19"
 	done
 
-SAMSARA_SAMSARA_STADIUM_Text:
-	text "Samsara Samsara Stadium"
+
+HollisStadiumFinalText:
+	text "Silas Final Text"
 	done
 
-SANDRA_SANDRA_STADIUM_Text:
-	text "Sandra Sandra Stadium"
+SandraStadiumFinalText:
+	text "Sandra Final Text"
 	done
+
+SamsaraStadiumFinalText:
+	text "Sybil Final Text"
+	done
+	
+RemyStadiumFinalText:
+	text "Remy Final Text"
+	done
+	
+AmosStadiumFinalText:
+	text "Amos Final Text"
+	done
+	
+KurtStadiumFinalText:
+	text "Kurt Final Text"
+	done
+	
+VesperStadiumFinalText:
+	text "Vesper Final Text"
+	done
+
+FacilityWinTextAmosFinal:
+	text "Beat Amos Final"
+	done
+
+FacilityWinTextHollisFinal:
+	text "Beat Silas Final"
+	done
+
+FacilityWinTextKurtFinal:
+	text "Beat Kurt Final"
+	done
+
+FacilityWinTextRemyFinal:
+	text "Beat Remy Final"
+	done
+
+FacilityWinTextSamsaraFinal:
+	text "Beat Sybil Final"
+	done
+
+FacilityWinTextSandraFinal:
+	text "Beat Sandra Final"
+	done
+
+FacilityWinTextVesperFinal:
+	text "Beat Vesper Final"
+	done
+
+FacilityLossTextAmosFinal:
+	text "Lose Amos Final"
+	done
+
+FacilityLossTextHollisFinal:
+	text "Lose Silas Final"
+	done
+
+FacilityLossTextKurtFinal:
+	text "Lose Kurt Final"
+	done
+
+FacilityLossTextRemyFinal:
+	text "Lose Remy Final"
+	done
+
+FacilityLossTextSamsaraFinal:
+	text "Lose Sybil Final"
+	done
+
+FacilityLossTextSandraFinal:
+	text "Lose Sandra Final"
+	done
+
+FacilityLossTextVesperFinal:
+	text "Lose Vesper Final"
+	done
+	
