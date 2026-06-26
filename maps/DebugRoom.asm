@@ -15,7 +15,7 @@ DebugRoom_MapScriptHeader:
 
 	def_bg_events
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
-	bg_event  0,  2, BGEVENT_UP, DebugInteraction ; all flags, etc. 
+	bg_event  0,  2, BGEVENT_UP, DebugInteraction
 
 	def_object_events
 	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1 

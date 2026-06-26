@@ -92,7 +92,7 @@ KRIS EQU __trainer_class__ ;
 	const MEJIMI_EASY
 	const MEJIMI_NORMAL
 	const MEJIMI_HARD
-	const MEJIMI_STADIUM
+	const MEJIMI_STADIUM_FINALE
 
 	trainerclass BRUNO ; d
 
@@ -105,16 +105,17 @@ KRIS EQU __trainer_class__ ;
 	const SANDRA2_HARD
 	const SANDRA_FACILITY
 	const SANDRA_STADIUM
+	const SANDRA_STADIUM_FINAL
 
 	trainerclass KURT_FINAL ; f DONE 
 	const KURT_FINAL_EASY
 	const KURT_FINAL_NORMAL
 	const KURT_FINAL_HARD
-	const KURT_FINAL_STADIUM
+	const KURT_FINAL_STADIUM_FINAL
 
 	trainerclass BROCK ; 10
 
-	trainerclass SAMSARA ; 11 replaces misty DONE 
+	trainerclass SAMSARA ; 11 SYBIL 
 	const SAMSARA_EASY
 	const SAMSARA_NORMAL
 	const SAMSARA_HARD
@@ -139,6 +140,7 @@ KRIS EQU __trainer_class__ ;
 	const HOLLIS2_HARD
 	const HOLLIS_FACILITY
 	const HOLLIS_STADIUM
+	const HOLLIS_STADIUM_FINAL
 
 	trainerclass BLUE ; 17
 

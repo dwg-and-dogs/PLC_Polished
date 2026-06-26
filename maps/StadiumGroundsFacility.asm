@@ -5,9 +5,9 @@ StadiumGroundsFacility_MapScriptHeader:
 
 
 ; battle fixes
-	; todo better parties based on battle factory sets: 1,2,3 DONE; 4,5,6 TODO 
+	; todo better parties based on battle factory sets: check with make 
 	; todo write the endless waves of brigaders + random final boss section
-	; todo trainers for the endless section, barbeau+lugia // amos+raikou // kurtf+celebi // mejimi+heatran
+ ; TODO ADD MOVE TUTORS AND RELEARNER TO THE STADIUM 
 	
 ; testing fixes
 	; todo write phrases for all trainers 
@@ -3126,6 +3126,18 @@ StadiumFacility_TrainersEndlessEvent:
 	; TODO THIS ONE JUST CYCLES THROUGH FOUR BRIGADERS FROM THE GP OF 20, 
 	; WHILE AFTER EACH SET OF 4 THERE IS ONE OF THE FOLLOWING BOSS TRAINERS LOADED RANDOMLY, 
 	; FROM A, B, C, D, E, F, G
+	
+	; random  1 - 7 
+	random 7
+	ifequal 0, .BattleSilasFinal
+	ifequal 1, .BattleSandraFinal
+	ifequal 2, .BattleSybilFinal
+	ifequal 3, .BattleRemyFinal
+	ifequal 4, .BattleAmosFinal
+	ifequal 5, .BattleKurtFinalFinal
+;.BattleMejimiFinal:
+	
+	; todo write this for the other 6 
 .SandraStadiumFinale: 
 	appear STADIUM_FACILITY_SANDRA
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
@@ -3137,7 +3149,10 @@ StadiumFacility_TrainersEndlessEvent:
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_SANDRA
 	disappear STADIUM_FACILITY_SANDRA	
-.EndOfBossFinales:
+	sjump .EndOfBossFinals
+
+
+.EndOfBossFinals:
 ; end of random elder selection 
 	special HealParty
 	special UpdateStadiumStreak
