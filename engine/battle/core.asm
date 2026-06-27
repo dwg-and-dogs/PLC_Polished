@@ -3811,8 +3811,7 @@ UpdateEnemyHUD::
 	jmp PopBCDEHL
 
 CheckShinyDV:
-; Carry set if the DV block at wTempMonDVs qualifies for the star.
-; Match if the first two bytes are both $ff, OR the last two are both $ff.
+; this returns true for enemy mon with tempmonDVs +0 = ff and +1 =fb and +2 = be; I think it needs to be updated 
 	ld a, [wTempMonDVs + 0]
 	cp $ff
 	jr nz, .check_last

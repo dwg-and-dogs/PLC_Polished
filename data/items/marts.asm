@@ -426,7 +426,7 @@ BattleTowerMart1:
 	db -1
 
 BattleTowerMart2:
-	db 9 ; # items
+	db 10 ; # items
 	db LUM_BERRY
 	db SITRUS_BERRY
 	db CHESTO_BERRY
@@ -436,6 +436,7 @@ BattleTowerMart2:
 	db WEAK_POLICY
 	db WHITE_HERB
 	db POWER_HERB
+	db PP_MAX
 	db -1
 
 BattleTowerMart3:

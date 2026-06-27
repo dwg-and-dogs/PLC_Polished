@@ -593,6 +593,8 @@ KRIS EQU __trainer_class__ ;
 	const JONES2
 	const LELAND2
 	const AEGON
+	
+	
 
 	trainerclass ENGINEER ; 57
 	const SMITH
@@ -627,6 +629,10 @@ KRIS EQU __trainer_class__ ;
 	trainerclass TAMER ; 5d
 	const VINCE
 	const OSWALD
+	
+	const TAMER_ATTACK
+	const TAMER_SP_SPATK
+	const TAMER_DEF_HP_SPDEF
 
 	trainerclass ARTIST ; 5e
 	const REINA

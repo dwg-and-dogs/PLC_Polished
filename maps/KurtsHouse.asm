@@ -909,53 +909,9 @@ endr
 	setflag ENGINE_FLYPOINT_SULFUR_STY
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
-;	givepoke CROBAT, NO_FORM, 31
-;	loadmem wPartyMon1Moves+0, FLAMETHROWER
-;	loadmem wPartyMon1Moves+1, EARTH_POWER
-;	loadmem wPartyMon1Moves+2, STRENGTH
-;	loadmem wPartyMon1Moves+3, THUNDERPUNCH
-;	loadmem wPartyMon1EVs+0, 252
-;	loadmem wPartyMon1EVs+1, 252
-;	loadmem wPartyMon1EVs+2, 252
-;	loadmem wPartyMon1EVs+3, 252
-;	loadmem wPartyMon1EVs+4, 252
-;	loadmem wPartyMon1EVs+5, 252
-;	loadmem wPartyMon1DVs+0, $ff
-;	loadmem wPartyMon1DVs+1, $ff
-;	loadmem wPartyMon1DVs+2, $ff
-;	loadmem wPartyMon1Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
-;	loadmem wPartyMon1Stats+0, HIGH(999)
-;	loadmem wPartyMon1Stats+1, LOW(999)
-;	loadmem wPartyMon1Stats+2, HIGH(999)
-;	loadmem wPartyMon1Stats+3, LOW(999)
-;	loadmem wPartyMon1Stats+4, HIGH(999)
-;	loadmem wPartyMon1Stats+5, LOW(999)
-;	loadmem wPartyMon1Stats+6, HIGH(999)
-;	loadmem wPartyMon1Stats+7, LOW(999)
-;	loadmem wPartyMon1Stats+8, HIGH(999)
-;	loadmem wPartyMon1Stats+9, LOW(999)
-	; hm 
-;	givepoke GYARADOS, NO_FORM, 100, LEFTOVERS
-;	givepoke AMPHAROS, NO_FORM, 100, LEFTOVERS
-;	loadmem wPartyMon2Moves+0, X_SCISSOR
-;	loadmem wPartyMon2Moves+1, ANCIENTPOWER
-;	loadmem wPartyMon2Moves+2, TRICK_ROOM
-;	loadmem wPartyMon2Moves+3, U_TURN
-;	loadmem wPartyMon2PP+0, 15
-;	loadmem wPartyMon2PP+1, 15
-;	loadmem wPartyMon2PP+2, 15
-;	loadmem wPartyMon2PP+3, 30
-;	loadmem wPartyMon3Moves+0, SURF
-;	loadmem wPartyMon3Moves+1, ROCK_SMASH
-;	loadmem wPartyMon3Moves+2, HEADBUTT
-;	loadmem wPartyMon3Moves+3, WATERFALL
-;	loadmem wPartyMon3PP+0, 20
-;	loadmem wPartyMon3PP+1, 15
-;	loadmem wPartyMon3PP+2, 15
-;	loadmem wPartyMon3PP+3, 15
 
-	givepoke LUCARIO, 200
-	loadmem wPartyMon1Moves+0, PSYCHIC_M
+	givepoke SUICUNE, 200
+	loadmem wPartyMon1Moves+0, SURF
 	loadmem wPartyMon1Moves+1, ICE_BEAM
 	loadmem wPartyMon1Moves+2, CALM_MIND
 	loadmem wPartyMon1Moves+3, REST
@@ -965,12 +921,12 @@ endr
 	loadmem wPartyMon1EVs+3, 252
 	loadmem wPartyMon1EVs+4, 252
 	loadmem wPartyMon1EVs+5, 252
-	loadmem wPartyMon1DVs+0, $fe
+	loadmem wPartyMon1DVs+0, $ff
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
 
-	givepoke RAIKOU, 200
-	loadmem wPartyMon2Moves+0, PROTECT
+	givepoke RAIKOU, 100
+	loadmem wPartyMon2Moves+0, EXTRASENSORY
 	loadmem wPartyMon2Moves+1, CRUNCH
 	loadmem wPartyMon2Moves+2, CALM_MIND
 	loadmem wPartyMon2Moves+3, THUNDERBOLT
@@ -982,12 +938,12 @@ endr
 	loadmem wPartyMon2EVs+5, 252
 	loadmem wPartyMon2DVs+0, $ff
 	loadmem wPartyMon2DVs+1, $ff
-	loadmem wPartyMon2DVs+2, $fe
+	loadmem wPartyMon2DVs+2, $ff
 
-	givepoke ENTEI, 200
+	givepoke ENTEI, 100
 	loadmem wPartyMon3Moves+0, FLAMETHROWER
-	loadmem wPartyMon3Moves+1, EARTHQUAKE
-	loadmem wPartyMon3Moves+2, ROCK_SLIDE
+	loadmem wPartyMon3Moves+1, EARTH_POWER
+	loadmem wPartyMon3Moves+2, CALM_MIND
 	loadmem wPartyMon3Moves+3, BODY_SLAM
 	loadmem wPartyMon3EVs+0, 252
 	loadmem wPartyMon3EVs+1, 252
@@ -996,14 +952,14 @@ endr
 	loadmem wPartyMon3EVs+4, 252
 	loadmem wPartyMon3EVs+5, 252
 	loadmem wPartyMon3DVs+0, $ff
-	loadmem wPartyMon3DVs+1, $fe
+	loadmem wPartyMon3DVs+1, $ff
 	loadmem wPartyMon3DVs+2, $ff	
-	
-	givepoke TANGELA, OTHER_FORM, 200
-	loadmem wPartyMon4Moves+0, EARTH_POWER
-	loadmem wPartyMon4Moves+1, SURF
-	loadmem wPartyMon4Moves+2, ICE_BEAM
-	loadmem wPartyMon4Moves+3, THUNDERBOLT
+
+	givepoke SNORLAX, 100
+	loadmem wPartyMon4Moves+0, CURSE
+	loadmem wPartyMon4Moves+1, REST
+	loadmem wPartyMon4Moves+2, BODY_SLAM
+	loadmem wPartyMon4Moves+3, EARTHQUAKE
 	loadmem wPartyMon4EVs+0, 252
 	loadmem wPartyMon4EVs+1, 252
 	loadmem wPartyMon4EVs+2, 252
@@ -1012,10 +968,37 @@ endr
 	loadmem wPartyMon4EVs+5, 252
 	loadmem wPartyMon4DVs+0, $ff
 	loadmem wPartyMon4DVs+1, $ff
-	loadmem wPartyMon4DVs+2, $fe	
-	giveitem ODD_SOUVENIR, 2
-	givepoke KADABRA, 100 
-	givepoke LEDYBA, 30 
+	loadmem wPartyMon4DVs+2, $ff	
+	
+	givepoke DRAGONITE, 100
+	loadmem wPartyMon5Moves+0, DRAGON_DANCE
+	loadmem wPartyMon5Moves+1, DRAGON_CLAW
+	loadmem wPartyMon5Moves+2, IRON_HEAD
+	loadmem wPartyMon5Moves+3, FIRE_PUNCH
+	loadmem wPartyMon5EVs+0, 252
+	loadmem wPartyMon5EVs+1, 252
+	loadmem wPartyMon5EVs+2, 252
+	loadmem wPartyMon5EVs+3, 252
+	loadmem wPartyMon5EVs+4, 252
+	loadmem wPartyMon5EVs+5, 252
+	loadmem wPartyMon5DVs+0, $ff
+	loadmem wPartyMon5DVs+1, $ff
+	loadmem wPartyMon5DVs+2, $ff	
+
+	givepoke BLISSEY, 100
+	loadmem wPartyMon6Moves+0, RECOVER
+	loadmem wPartyMon6Moves+1, SEISMIC_TOSS
+	loadmem wPartyMon6Moves+2, HEAL_BELL
+	loadmem wPartyMon6Moves+3, DOUBLE_TEAM
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff	
 
 	; fill pokedex
 	callasm FillPokedex

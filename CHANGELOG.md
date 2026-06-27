@@ -113,6 +113,7 @@ Postgame Battle Facility: Stadium! <todo description>
 New Ancestor forms: Ledian (Bug/Water Special Attacker) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in <todo> and Cianwood Cave, respectively. 
 Special mark on trainer and enemy mon if they have max DVs. 
 Stadium Facility Rematches are a bit harder. 
+EV trainers in the Stadium Facility Prep Room. 
 
 Minor updates: 
 Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
@@ -136,12 +137,9 @@ Restore map music on some maps where it was paused after an event.
 Misc. text fixes. 
 
 Todo for v110:
-* Update pokemon trophy to be "Expert"
-	* this means adding another wram variable that tracks the expert streak only 
-	* also, only update the bestmon for Expert
-	* another option is that streaks that get to 30 can only progress with expert? 
+* Double check jynx 
 * Finish Stadium todos 
-* Add another item vendor to the Stadium in the back room to sell consumables like focus sash, ... 
+* Fix CheckShinyDV in engine/battle/core to check better for the various DVs; right now it only checks +0 and not +1, +2 
 
 * Update all docs
 

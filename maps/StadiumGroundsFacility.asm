@@ -5,9 +5,9 @@ StadiumGroundsFacility_MapScriptHeader:
 
 
 ; battle fixes
-	; todo better parties based on battle factory sets: check with make 
+	; todo trainrs 61-80 need an extra mon each, right now they only have 4
+	; todo the ranomd gift giver isn't checking correctly 
 	; todo write the endless waves of brigaders + random final boss section
- ; TODO ADD MOVE TUTORS AND RELEARNER TO THE STADIUM 
 	
 ; testing fixes
 	; todo write phrases for all trainers 
@@ -772,6 +772,7 @@ StadiumFacility_Pokemon2Event:
 .AfterPokemon1:
 	startbattle
 	reloadmapafterbattle
+	special UpdateStadiumStreak
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
@@ -779,7 +780,6 @@ StadiumFacility_Pokemon2Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
-	special UpdateStadiumStreak
 	setscene $3
 	applyonemovement PLAYER, step_left
 	end
@@ -1067,6 +1067,7 @@ StadiumFacility_Pokemon3Event:
 .AfterPokemon1:
 	startbattle
 	reloadmapafterbattle
+	special UpdateStadiumStreak
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
@@ -1074,7 +1075,6 @@ StadiumFacility_Pokemon3Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
-	special UpdateStadiumStreak
 	setscene $5
 	applyonemovement PLAYER, step_left
 	end
@@ -1361,6 +1361,7 @@ StadiumFacility_Pokemon4Event:
 .AfterPokemon1:
 	startbattle
 	reloadmapafterbattle
+	special UpdateStadiumStreak
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
@@ -1368,7 +1369,6 @@ StadiumFacility_Pokemon4Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
-	special UpdateStadiumStreak
 	setscene $7
 	applyonemovement PLAYER, step_left
 	end
@@ -1800,6 +1800,7 @@ StadiumFacility_Pokemon5Event:
 .AfterPokemon1:
 	startbattle
 	reloadmapafterbattle
+	special UpdateStadiumStreak
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
@@ -1807,7 +1808,6 @@ StadiumFacility_Pokemon5Event:
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
-	special UpdateStadiumStreak
 	setscene $9
 	applyonemovement PLAYER, step_left
 	end
@@ -3407,7 +3407,7 @@ GenericTrainerWalkAwayMovement:
 	step_up 
 	step_left
 	step_left
-;	step_left
+	step_left ; 
 	step_end
 
 BossTrainerWalkTowardMovement:
@@ -3421,6 +3421,9 @@ BossTrainerWalkAwayMovement:
 	step_down
 	step_end
 
+SANDRA_SANDRA_STADIUM_Text:
+	text "Sandra Stadium"
+	done
 
 AMOS_AMOS_STADIUM_Text:
 	text "Amos Stadium"
@@ -4043,17 +4046,65 @@ MoveReminderCancelTextFacility:
 RandomGiftGiverScript:
 	faceplayer
 	opentext
-	; you can do this once if you get a streak above 15 
-	; if less than 15, .NotLongEnoughStreak 
+	writetext RandomGiftGiverText
+	waitbutton
+	readmem wBattleTowerCurStreak
+	ifgreater 14, .CheckForGift
+	jumptext RandomGiftNotYetText
+.CheckForGift:
+	readmem wStadiumFacilityThirdTrainer
+	ifequal 0,  .KeepCheckingNumbers ; 1/20
+; else, 
+	jumptext NoInterestedPatronsText
+.KeepCheckingNumbers:
+	writetext InterestedPatronText
+	waitbutton
+	readmem wStadiumFacilityFirstTrainer ; reads the first value that's written
+	ifless 2,  .GiveMasterBallScript ; 1/10 => 1/200 (0.5%) 
+	ifless 10,  .GiveLeftoversScript  ; 1/2 =  1/40  (2.0%)
+;.GiveUltraBallScript:
+	verbosegiveitem ULTRA_BALL ; (5% - 2.5% = 2.5%)
+	jumptext RandomGiftAfterText
 
-	; you can do this ab
+.GiveMasterBallScript:
+	verbosegiveitem MASTER_BALL
+	jumptext RandomGiftAfterText
 
-	; if the first one is 0 then you get a master ball
+
+.GiveLeftoversScript:
+	verbosegiveitem LEFTOVERS
+	jumptext RandomGiftAfterText
 
 
+
+RandomGiftGiverText:
+	text "Fortune favors"
+	line "the bold!"
+	done
+
+RandomGiftNotYetText:
+	text "If you make it"
+	line "to 15 rounds,"
 	
-	ifequal 0, .GiveMasterBall
+	para "a patron might"
+	line "take interest in"
+	cont "your streak."
+	done
+
+NoInterestedPatronsText:
+	text "No patrons have"
+	line "taken interest."
 	
-	jumptext NoMasterBallText
+	para "Try again later."
+	done
 
+InterestedPatronText:
+	text "You have interest"
+	line "by a patron!"
+	
+	para "Congratulations!"
+	done
 
+RandomGiftAfterText:
+	text "Keep going!"
+	done
