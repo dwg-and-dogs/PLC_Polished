@@ -397,6 +397,7 @@ ENDM
 
 	newgroup                                                     ; 24
 	map_const STADIUM_GROUNDS_FACILITY_PREP,			    15, 12
+	map_const STADIUM_GROUNDS_FACILITY_PREP_2,			    15, 12
 
 	newgroup                                                     ; 25
 	map_const STADIUM_GROUNDS_FACILITY,  	                19, 11

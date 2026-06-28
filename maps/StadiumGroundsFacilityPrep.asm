@@ -28,7 +28,7 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	object_event 25, 17, SPRITE_BARBEAU, SPRITEMOVEDATA_WANDER, 1, 1, -1,(1 << MORN) | (1 << DAY), PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, FacilityBarbeauScript, -1   ; morning - day   
 	object_event 12, 20, SPRITE_KANNA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1,(1 << EVE) | (1 << NITE), PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FacilityPetraScript, -1  ;  eve - night  
 	object_event 12, 18, SPRITE_AMOS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1,(1 << EVE) | (1 << NITE), 0, OBJECTTYPE_SCRIPT, 0, FacilityAmosScript, -1  ; eve - night   
-	object_event  3, 19, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_WANDER, 0, 0, -1,(1 << MORN) | (1 << DAY), PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityPiperScript, -1 ; morning - day   
+	object_event  3, 19, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_WANDER, 1, 1, -1,(1 << MORN) | (1 << DAY), PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FacilityPiperScript, -1 ; morning - day   
 	; permanent 
 	object_event 13, 11, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript, -1
 	object_event 14, 11, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, StadiumGroundsFaciltyPrepClerkScript2, -1
@@ -36,8 +36,9 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	object_event 0, 17, SPRITE_SILVER_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptext, SilverTrophyText, EVENT_FACILITY_SILVER_TROPHY
 	object_event 2, 17, SPRITE_TROPHY_MON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrophyPokemonScript, EVENT_TROPHY_MON 
 	object_event 1, 17, SPRITE_GOLD_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldTrophyScript, EVENT_FACILITY_GOLD_TROPHY
- 
-	object_event 29, 7, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_BT_1, -1 ; todo test all of these 
+
+; TODO add a second map with these NPCs in it and their scrips that is attached to the room  
+	object_event 29, 7, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_BT_1, -1 
 	object_event 29, 8, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD,  MART_BT_2, -1	
 	object_event 29, 9, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_BT_3, -1	
 

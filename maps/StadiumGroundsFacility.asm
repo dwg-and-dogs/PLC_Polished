@@ -7,7 +7,7 @@ StadiumGroundsFacility_MapScriptHeader:
 ; battle fixes
 	; todo trainrs 61-80 need an extra mon each, right now they only have 4
 	; todo the ranomd gift giver isn't checking correctly 
-	; todo write the endless waves of brigaders + random final boss section
+	; todo check a few more rounds of the final section
 	
 ; testing fixes
 	; todo write phrases for all trainers 
@@ -3181,7 +3181,7 @@ StadiumFacility_TrainersEndlessEvent:
 	appear STADIUM_FACILITY_SAMSARA
 	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkTowardMovement
 	winlosstext FacilityWinTextSamsaraFinal, FacilityLossTextSamsaraFinal
-	loadtrainer SANDRA, SANDRA_STADIUM_FINAL
+	loadtrainer SAMSARA, SAMSARA_STADIUM_FINAL
 	showtext SamsaraStadiumFinalText
 	startbattle
 	reloadmap
@@ -4049,7 +4049,7 @@ RandomGiftGiverScript:
 	writetext RandomGiftGiverText
 	waitbutton
 	readmem wBattleTowerCurStreak
-	ifgreater 14, .CheckForGift
+	ifgreater $e, .CheckForGift ; check if greater than 13 ... 
 	jumptext RandomGiftNotYetText
 .CheckForGift:
 	readmem wStadiumFacilityThirdTrainer
