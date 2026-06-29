@@ -577,3 +577,4 @@ ENDM
 	
 	map_attributes StadiumGroundsFacilityPrep, STADIUM_GROUNDS_FACILITY_PREP, $0, 0
 	map_attributes StadiumGroundsFacility, STADIUM_GROUNDS_FACILITY, $0, 0
+	map_attributes StadiumGroundsFacilityPrep2, STADIUM_GROUNDS_FACILITY_PREP_2, $0, 0

@@ -394,7 +394,7 @@ OlivineBattleMart:
 
 SinjohCrossroadsMonMart: ; unused 
 	db 1 ; # items
-	db POKE_BALL
+	db RARE_CANDY
 	db -1
 
 GauldenrodTMMart: ; remove? 

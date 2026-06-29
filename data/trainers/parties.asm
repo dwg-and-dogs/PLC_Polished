@@ -5569,7 +5569,7 @@ TamerGroup:
 ; ================
 
 	; TAMER ; attack 
-	db "Oswald@"
+	db "Atticus@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 50, NIDOKING
@@ -5582,13 +5582,13 @@ TamerGroup:
 
 ; ================
 
-	; TAMER ; speed spatck 
-	db "Oswald@"
+	; TAMER ; spatck 
+	db "Sadiq@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 50, RAICHU
-	db 50, CROBAT
-	db 50, JUMPLUFF
+	db 50, ALAKAZAM
+	db 50, VILEPLUME
+	db 50, GENGAR
 	db 50, VILEPLUME
 	db 50, ALAKAZAM
 	db 50, GENGAR
@@ -5596,15 +5596,57 @@ TamerGroup:
 
 ; ================
 
-	; TAMER ; hp def spedf 
-	db "Oswald@"
+	; TAMER ; speed 
+	db "Spencer@"
+	db TRAINERTYPE_NORMAL
+	; party
+	db 50, RAICHU
+	db 50, CROBAT
+	db 50, JUMPLUFF
+	db 50, RAICHU
+	db 50, CROBAT
+	db 50, JUMPLUFF
+	db -1 ; end
+
+; ================
+
+	; TAMER ; hp
+	db "Harper@"
 	db TRAINERTYPE_NORMAL
 	; party
 	db 50, NIDOQUEEN
 	db 50, CLEFABLE
+	db 50, AZUMARILL
+	db 50, BLISSEY
+	db 50, NIDOQUEEN
+	db 50, CLEFABLE
+	db -1 ; end
+
+; ================
+
+	; TAMER ; DEF
+	db "Devin@"
+	db TRAINERTYPE_NORMAL
+	; party
 	db 50, GOLEM
 	db 50, POLIWRATH
+	db 50, POLIWRATH
+	db 50, GOLEM
+	db 50, POLIWRATH
+	db 50, GOLEM
+	db -1 ; end
+
+; ================
+
+	; TAMER ; spdef
+	db "Sadif@"
+	db TRAINERTYPE_NORMAL
+	; party
 	db 50, BELLOSSOM
+	db 50, BELLOSSOM
+	db 50, BELLOSSOM
+	db 50, POLITOED
+	db 50, POLITOED
 	db 50, POLITOED
 	db -1 ; end
 

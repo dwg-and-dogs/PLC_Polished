@@ -490,11 +490,11 @@ INCLUDE "maps/SereneSpringsCavern.asm"
 INCLUDE "maps/FeraligatrLair.asm"
 
 
-SECTION "Victory Road Scripts", ROMX
+SECTION "Facility Prep Scripts", ROMX
 INCLUDE "maps/StadiumGroundsFacilityPrep.asm"
+INCLUDE "maps/StadiumGroundsFacilityPrep2.asm"
 
-
-SECTION "Tohjo Falls Scripts", ROMX
+SECTION "Facility Scripts", ROMX
 INCLUDE "maps/StadiumGroundsFacility.asm"
 
 

@@ -631,8 +631,12 @@ KRIS EQU __trainer_class__ ;
 	const OSWALD
 	
 	const TAMER_ATTACK
-	const TAMER_SP_SPATK
-	const TAMER_DEF_HP_SPDEF
+	const TAMER_SPATK
+	const TAMER_SPEED
+	const TAMER_HP
+	const TAMER_DEFENSE
+	const TAMER_SPDEF
+
 
 	trainerclass ARTIST ; 5e
 	const REINA

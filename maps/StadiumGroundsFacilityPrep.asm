@@ -8,6 +8,9 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	def_warp_events
 	warp_event 13, 23, STADIUM_GROUNDS, 6
 	warp_event 14, 23, STADIUM_GROUNDS, 6
+
+	warp_event 29, 22, STADIUM_GROUNDS_FACILITY_PREP_2, 1
+	warp_event 29, 23, STADIUM_GROUNDS_FACILITY_PREP_2, 2
 	
 	def_coord_events 
 
@@ -37,15 +40,6 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	object_event 2, 17, SPRITE_TROPHY_MON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrophyPokemonScript, EVENT_TROPHY_MON 
 	object_event 1, 17, SPRITE_GOLD_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldTrophyScript, EVENT_FACILITY_GOLD_TROPHY
 
-; TODO add a second map with these NPCs in it and their scrips that is attached to the room  
-	object_event 29, 7, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_BT_1, -1 
-	object_event 29, 8, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD,  MART_BT_2, -1	
-	object_event 29, 9, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, pokemart, MARTTYPE_STANDARD, MART_BT_3, -1	
-
-	object_event 0, 8, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FacilityPrepAttackTrainer,  -1 ; todo test all of these 
-	object_event 2, 8, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT,0,  FacilityPrepSpAtkSpeedTrainer,   -1	
-	object_event 4, 8, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, FacilityPrepHPDEFSPDefTrainer,  -1	
-	
 
 
 	object_const_def
@@ -1278,93 +1272,3 @@ GoldTrophyScript:
 		para "wins at the"
 		line "Stadium."
 		done
-
-FacilityPrepAttackTrainer:
-	faceplayer
-	opentext
-	writethistext
-		text "I'm the Attack"
-		line "EV trainer."
-		done
-	waitbutton
-	writetext EVTrainerAskToBattle
-	yesorno
-	iffalse_jumptext DVTrainerNoBattleText
-	winlosstext FacilityEVWinText, FacilityEVLoseText
-	loadtrainer TAMER, TAMER_ATTACK
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	reloadmap
-	showtext FacilityEVAfter
-	special HealPartyEvenForNuzlocke
-	end
-
-FacilityPrepSpAtkSpeedTrainer:
-	faceplayer
-	opentext
-	writethistext
-		text "I train Speed"
-		line "and Sp Attack."
-		done
-	waitbutton
-	writetext EVTrainerAskToBattle
-	yesorno
-	iffalse_jumptext DVTrainerNoBattleText
-	winlosstext FacilityEVWinText, FacilityEVLoseText
-	loadtrainer TAMER, TAMER_SP_SPATK
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	reloadmap
-	showtext FacilityEVAfter
-	special HealPartyEvenForNuzlocke
-	end
-
-FacilityPrepHPDEFSPDefTrainer:
-	faceplayer
-	opentext
-	writethistext
-		text "I train Def,"
-		line "HP,  and Sp Def."
-		done
-	waitbutton
-	writetext EVTrainerAskToBattle
-	yesorno
-	iffalse_jumptext DVTrainerNoBattleText
-	winlosstext FacilityEVWinText, FacilityEVLoseText
-	loadtrainer TAMER, TAMER_DEF_HP_SPDEF
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	reloadmap
-	showtext FacilityEVAfter
-	special HealPartyEvenForNuzlocke
-	end
-
-
-
-
-
-
-EVTrainerAskToBattle:
-	text "Would you like to"
-	line "battle?"
-	done
-
-DVTrainerNoBattleText:
-	text "No worries."
-	done
-
-FacilityEVWinText:
-	text "Well played!"
-	done
-
-FacilityEVLoseText:
-	text "Better luck next"
-	line "time."
-	done
-
-FacilityEVAfter:
-	text "There is no 510"
-	line "EV limit. #mon"
-	para "can max out all"
-	line "EVs in Gen2."
-	done

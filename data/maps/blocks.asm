@@ -1168,4 +1168,8 @@ StadiumGroundsFacilityPrep_BlockData:
 SECTION "StadiumGroundsFacility_BlockData", ROMX
 StadiumGroundsFacility_BlockData:
 	INCBIN "maps/StadiumGroundsFacility.ablk.lz" 
+
+SECTION "StadiumGroundsFacilityPrep2_BlockData", ROMX
+StadiumGroundsFacilityPrep2_BlockData:
+	INCBIN "maps/StadiumGroundsFacilityPrep2.ablk.lz" 
 	
