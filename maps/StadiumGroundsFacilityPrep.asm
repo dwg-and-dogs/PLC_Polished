@@ -3,7 +3,7 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 
 
 	def_callbacks
-	
+	; TODO FILL OUT BF MARTS
 	
 	def_warp_events
 	warp_event 13, 23, STADIUM_GROUNDS, 6

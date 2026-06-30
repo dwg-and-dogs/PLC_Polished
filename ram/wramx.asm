@@ -917,7 +917,8 @@ wStadiumFacilityFirstTrainer:: db ; first trainer choice , from a selection of 0
 wStadiumFacilitySecondTrainer:: db ; second trainer choice, from a selection of 0 - 30, not the same as the first one 
 wStadiumFacilityThirdTrainer:: db ; second trainer choice, from a selection of 0 - 30, not the same as the first one 
 wStadiumFacilitySceneID:: db ; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 
-	ds 4 ; unused
+wFacilityLoopStage:: db ; 0, 1, 2, 3 
+	ds 3 ; unused
 
 wMapObjects::
 wPlayerObject:: map_object wPlayer

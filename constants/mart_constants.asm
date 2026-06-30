@@ -16,12 +16,12 @@
 ; Marts indexes (see data/items/marts.asm)
 	const_def
 	const MART_CHERRYGROVE
-	const MART_CHERRYGROVE_DEX
+	const MART_BT_4
 	const MART_VIOLET
 	const MART_AZALEA
 	const MART_GOLDENROD_2F_1
 	const MART_GOLDENROD_2F_2
-	const MART_GOLDENROD_2F_2_EEVEE ; unused 
+	const MART_BT_5 
 	const MART_GOLDENROD_3F
 	const MART_GOLDENROD_4F
 	const MART_GOLDENROD_5F_TM
@@ -42,7 +42,7 @@
 	const MART_WESTERN_CAPITAL
 	const MART_WESTERN_CAPITAL_TM ; unused 
 	const MART_TRADERS_LANDING_TM
-	const MART_TRADERS_LANDING_ITEMS ; unused 
+	const MART_UNUSED_X 
 	const MART_SINJOH_CROSSROADS
 	const MART_EERIE_HAMLET
 	const MART_WESTERN_CAPITAL_2

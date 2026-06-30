@@ -1,12 +1,12 @@
 Marts: 
 	table_width 2, Marts
 	dw CherrygroveMart ; unused MART_CHERRYGROVE
-	dw CherrygroveMartAfterDex ; unused MART_CHERRYGROVE_DEX
+	dw BattleTowerMart4 ; unused MART_CHERRYGROVE_DEX
 	dw VioletMart ; MART_VIOLET
 	dw AzaleaMart ; MART_AZALEA
 	dw Goldenrod2FMart1 ; MART_GOLDENROD_2F_1
 	dw Goldenrod2FMart2 ; MART_GOLDENROD_2F_2
-	dw Goldenrod2FMart2Eevee ; MART_GOLDENROD_2F_2_EEVEE
+	dw BattleTowerMart5 ; MART_GOLDENROD_2F_2_EEVEE
 	dw Goldenrod3FMart ; MART_GOLDENROD_3F
 	dw Goldenrod4FMart ; MART_GOLDENROD_4F
 	dw Goldenrod5FTMMart ; MART_GOLDENROD_5F_TM
@@ -47,7 +47,7 @@ CherrygroveMart:; UNUSED
 	db POTION
 	db -1
 
-CherrygroveMartAfterDex: ; UNUSED
+BattleTowerMart4: ; UNUSED
 	db 1 ; # items
 	db POTION
 	db -1
@@ -107,9 +107,9 @@ Goldenrod2FMart2:
 	db DREAM_BALL
 	db -1
 
-Goldenrod2FMart2Eevee: ; unused 
+BattleTowerMart5:  
 	db 1 ; # items
-	db POKE_BALL
+	db RARE_CANDY
 	db -1
 
 Goldenrod3FMart:
