@@ -5,10 +5,9 @@ StadiumGroundsFacility_MapScriptHeader:
 
 
 ; battle fixes
-	; todo the ranomd gift giver isn't checking correctly 
 	; todo check a few more rounds of the final section
 	; fix the shiny star showing up for ff with non ee,ff dvs
-	; adjust the format of the first pokemon event to the other five 
+	; adjust the format of the first pokemon event to the other five --> todo check 
 	
 ; testing fixes
 	; todo write phrases for all trainers 
@@ -521,6 +520,11 @@ StadiumFacility_Pokemon1Event:
 ; above is for pokemon 1	
 ; ===================
 	
+; ====================================================================
+; ====================================================================
+;   STADIUM FACILITY - POKEMON 2 EVENT  (28 mons)
+; ====================================================================
+; ====================================================================
 StadiumFacility_Pokemon2Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
@@ -530,195 +534,75 @@ StadiumFacility_Pokemon2Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 28                      ; N = 28 mons to choose among
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
-	; tell the player which mon (the FIRST roll)
+	setval 28                      ; N = 28 mons
+	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
+
+; ---- step 2: announce mon1, mon2, "or random" ----
+	setval 0
+	writemem wFacilityLoopStage
 	readmem wStadiumFacilityFirstTrainer
-	ifequal 0,  .TellPokemon1_0
-	ifequal 1,  .TellPokemon1_1
-	ifequal 2,  .TellPokemon1_2
-	ifequal 3,  .TellPokemon1_3
-	ifequal 4,  .TellPokemon1_4
-	ifequal 5,  .TellPokemon1_5
-	ifequal 6,  .TellPokemon1_6
-	ifequal 7,  .TellPokemon1_7
-	ifequal 8,  .TellPokemon1_8
-	ifequal 9,  .TellPokemon1_9
-	ifequal 10, .TellPokemon1_10
-	ifequal 11, .TellPokemon1_11
-	ifequal 12, .TellPokemon1_12
-	ifequal 13, .TellPokemon1_13
-	ifequal 14, .TellPokemon1_14
-	ifequal 15, .TellPokemon1_15
-	ifequal 16, .TellPokemon1_16
-	ifequal 17, .TellPokemon1_17
-	ifequal 18, .TellPokemon1_18
-	ifequal 19, .TellPokemon1_19
-	ifequal 20, .TellPokemon1_20
-	ifequal 21, .TellPokemon1_21
-	ifequal 22, .TellPokemon1_22
-	ifequal 23, .TellPokemon1_23
-	ifequal 24, .TellPokemon1_24
-	ifequal 25, .TellPokemon1_25
-	ifequal 26, .TellPokemon1_26
-;	ifequal 27, .TellPokemon1_27 ; fallthru
-;.TellPokemon1_27:
-	writethistext
-		text "Alolan Golem."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_0:
-	writethistext
-		text "Clefable."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_1:
-	writethistext
-		text "Togekiss."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_2:
-	writethistext
-		text "Bellossom."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_3:
-	writethistext
-		text "Nidoqueen."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_4:
-	writethistext
-		text "Jynx."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_5:
-	writethistext
-		text "Blissey."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_6:
-	writethistext
-		text "Toxicroak."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_7:
-	writethistext
-		text "Golem."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_8:
-	writethistext
-		text "Nidoking."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_9:
-	writethistext
-		text "Exeggutor."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_10:
-	writethistext
-		text "Granbull."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_11:
-	writethistext
-		text "Azumarill."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_12:
-	writethistext
-		text "Hitmonlee."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_13:
-	writethistext
-		text "Hitmonchan."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_14:
-	writethistext
-		text "Hitmontop."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_15:
-	writethistext
-		text "Tangrowth."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_16:
-	writethistext
-		text "Rapidash."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_17:
-	writethistext
-		text "Bastiodon."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_18:
-	writethistext
-		text "Raichu."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_19:
-	writethistext
-		text "Meganium."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_20:
-	writethistext
-		text "Weezing."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_21:
-	writethistext
-		text "Sunflora."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_22:
-	writethistext
-		text "Gardevoir."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_23:
-	writethistext
-		text "Alolan Raichu."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_24:
-	writethistext
-		text "Alolan Meganium."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_25:
-	writethistext
-		text "Galarian Weezing."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_26:
-	writethistext
-		text "Galarian Rapidash."
-		done
-	sjump .ToldPokemon
-.ToldPokemon:
+	sjump .PrintName
+.AfterAnnounce1:
+	waitbutton
+	setval 1
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterAnnounce2:
 	waitbutton
 	writethistext
-		text "Would you like to"
-		line "try to catch it?"
-		
-		para "If no, then I can"
-		line "call a random"
-		cont "other #mon."
+		text "Or, I can call"
+		line "a random #mon."
 		done
 	waitbutton
+
+; ---- step 3: offer mon1 ----
+.OfferFirst:
+	setval 2
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilityFirstTrainer
+	sjump .PrintName
+.AfterOfferFirst:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
 	yesorno
-	iffalse .CallSecondMon
-	readmem wStadiumFacilityFirstTrainer   ; YES -> keep the named mon told to the player
+	iftrue .ChoseFirst
+
+; ---- step 4: offer mon2 ----
+.OfferSecond:
+	setval 3
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterOfferSecond:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
+	yesorno
+	iftrue .ChoseSecond
+
+; ---- step 5: offer random, else loop to step 3 ----
+	writethistext
+		text "Shall I call a"
+		line "random #mon"
+		cont "instead?"
+		done
+	yesorno
+	iffalse .OfferFirst
+	readmem wStadiumFacilityThirdTrainer
 	sjump .HaveChoice
-.CallSecondMon:
-	readmem wStadiumFacilitySecondTrainer  ; NO  -> the next, guaranteed-different mon
+
+.ChoseFirst:
+	readmem wStadiumFacilityFirstTrainer
+	sjump .HaveChoice
+.ChoseSecond:
+	readmem wStadiumFacilitySecondTrainer
+;	fallthrough
 .HaveChoice:
 	ifequal 0,  .CallPokemon1_0
 	ifequal 1,  .CallPokemon1_1
@@ -747,7 +631,7 @@ StadiumFacility_Pokemon2Event:
 	ifequal 24, .CallPokemon1_24
 	ifequal 25, .CallPokemon1_25
 	ifequal 26, .CallPokemon1_26
-	loadwildmon GOLEM, ALOLAN_FORM, 100    ; Agolem (Pokemon1_27)
+	loadwildmon GOLEM, ALOLAN_FORM, 100    ; index 27
 	sjump .AfterPokemon1
 .CallPokemon1_0:
 	loadwildmon CLEFABLE, 100
@@ -829,7 +713,7 @@ StadiumFacility_Pokemon2Event:
 	sjump .AfterPokemon1
 .CallPokemon1_26:
 	loadwildmon RAPIDASH, GALARIAN_FORM, 100 ; GRapidash
-;	sjump .AfterPokemon1 ; fallthru
+;	fallthrough
 .AfterPokemon1:
 	startbattle
 	reloadmapafterbattle
@@ -845,7 +729,188 @@ StadiumFacility_Pokemon2Event:
 	applyonemovement PLAYER, step_left
 	end
 
+; ===== single shared name table =====
+.PrintName:
+	ifequal 0,  .Name_0
+	ifequal 1,  .Name_1
+	ifequal 2,  .Name_2
+	ifequal 3,  .Name_3
+	ifequal 4,  .Name_4
+	ifequal 5,  .Name_5
+	ifequal 6,  .Name_6
+	ifequal 7,  .Name_7
+	ifequal 8,  .Name_8
+	ifequal 9,  .Name_9
+	ifequal 10, .Name_10
+	ifequal 11, .Name_11
+	ifequal 12, .Name_12
+	ifequal 13, .Name_13
+	ifequal 14, .Name_14
+	ifequal 15, .Name_15
+	ifequal 16, .Name_16
+	ifequal 17, .Name_17
+	ifequal 18, .Name_18
+	ifequal 19, .Name_19
+	ifequal 20, .Name_20
+	ifequal 21, .Name_21
+	ifequal 22, .Name_22
+	ifequal 23, .Name_23
+	ifequal 24, .Name_24
+	ifequal 25, .Name_25
+	ifequal 26, .Name_26
+	writethistext
+		text "Alolan Golem."
+		done
+	sjump .NamePrinted
+.Name_0:
+	writethistext
+		text "Clefable."
+		done
+	sjump .NamePrinted
+.Name_1:
+	writethistext
+		text "Togekiss."
+		done
+	sjump .NamePrinted
+.Name_2:
+	writethistext
+		text "Bellossom."
+		done
+	sjump .NamePrinted
+.Name_3:
+	writethistext
+		text "Nidoqueen."
+		done
+	sjump .NamePrinted
+.Name_4:
+	writethistext
+		text "Jynx."
+		done
+	sjump .NamePrinted
+.Name_5:
+	writethistext
+		text "Blissey."
+		done
+	sjump .NamePrinted
+.Name_6:
+	writethistext
+		text "Toxicroak."
+		done
+	sjump .NamePrinted
+.Name_7:
+	writethistext
+		text "Golem."
+		done
+	sjump .NamePrinted
+.Name_8:
+	writethistext
+		text "Nidoking."
+		done
+	sjump .NamePrinted
+.Name_9:
+	writethistext
+		text "Exeggutor."
+		done
+	sjump .NamePrinted
+.Name_10:
+	writethistext
+		text "Granbull."
+		done
+	sjump .NamePrinted
+.Name_11:
+	writethistext
+		text "Azumarill."
+		done
+	sjump .NamePrinted
+.Name_12:
+	writethistext
+		text "Hitmonlee."
+		done
+	sjump .NamePrinted
+.Name_13:
+	writethistext
+		text "Hitmonchan."
+		done
+	sjump .NamePrinted
+.Name_14:
+	writethistext
+		text "Hitmontop."
+		done
+	sjump .NamePrinted
+.Name_15:
+	writethistext
+		text "Tangrowth."
+		done
+	sjump .NamePrinted
+.Name_16:
+	writethistext
+		text "Rapidash."
+		done
+	sjump .NamePrinted
+.Name_17:
+	writethistext
+		text "Bastiodon."
+		done
+	sjump .NamePrinted
+.Name_18:
+	writethistext
+		text "Raichu."
+		done
+	sjump .NamePrinted
+.Name_19:
+	writethistext
+		text "Meganium."
+		done
+	sjump .NamePrinted
+.Name_20:
+	writethistext
+		text "Weezing."
+		done
+	sjump .NamePrinted
+.Name_21:
+	writethistext
+		text "Sunflora."
+		done
+	sjump .NamePrinted
+.Name_22:
+	writethistext
+		text "Gardevoir."
+		done
+	sjump .NamePrinted
+.Name_23:
+	writethistext
+		text "Alolan Raichu."
+		done
+	sjump .NamePrinted
+.Name_24:
+	writethistext
+		text "Alolan Meganium."
+		done
+	sjump .NamePrinted
+.Name_25:
+	writethistext
+		text "Galarian Weezing."
+		done
+	sjump .NamePrinted
+.Name_26:
+	writethistext
+		text "Galarian Rapidash."
+		done
+;	fallthrough
+.NamePrinted:
+	readmem wFacilityLoopStage
+	ifequal 0, .AfterAnnounce1
+	ifequal 1, .AfterAnnounce2
+	ifequal 2, .AfterOfferFirst
+;	stage 3 fallthru
+	sjump .AfterOfferSecond
 
+
+; ====================================================================
+; ====================================================================
+;   STADIUM FACILITY - POKEMON 3 EVENT  (25 mons)
+; ====================================================================
+; ====================================================================
 StadiumFacility_Pokemon3Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
@@ -855,177 +920,75 @@ StadiumFacility_Pokemon3Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 25                      ; N = 25 mons to choose among
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
-	; tell the player which mon (the FIRST roll)
+	setval 25                      ; N = 25 mons
+	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
+
+; ---- step 2: announce mon1, mon2, "or random" ----
+	setval 0
+	writemem wFacilityLoopStage
 	readmem wStadiumFacilityFirstTrainer
-	ifequal 0,  .TellPokemon1_0
-	ifequal 1,  .TellPokemon1_1
-	ifequal 2,  .TellPokemon1_2
-	ifequal 3,  .TellPokemon1_3
-	ifequal 4,  .TellPokemon1_4
-	ifequal 5,  .TellPokemon1_5
-	ifequal 6,  .TellPokemon1_6
-	ifequal 7,  .TellPokemon1_7
-	ifequal 8,  .TellPokemon1_8
-	ifequal 9,  .TellPokemon1_9
-	ifequal 10, .TellPokemon1_10
-	ifequal 11, .TellPokemon1_11
-	ifequal 12, .TellPokemon1_12
-	ifequal 13, .TellPokemon1_13
-	ifequal 14, .TellPokemon1_14
-	ifequal 15, .TellPokemon1_15
-	ifequal 16, .TellPokemon1_16
-	ifequal 17, .TellPokemon1_17
-	ifequal 18, .TellPokemon1_18
-	ifequal 19, .TellPokemon1_19
-	ifequal 20, .TellPokemon1_20
-	ifequal 21, .TellPokemon1_21
-	ifequal 22, .TellPokemon1_22
-	ifequal 23, .TellPokemon1_23
-;	ifequal 24, .TellPokemon1_24 ; fallthru
-;.TellPokemon1_24:
-	writethistext
-		text "Alolan Muk."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_0:
-	writethistext
-		text "Sudowoodo."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_1:
-	writethistext
-		text "Gengar."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_2:
-	writethistext
-		text "Vileplume."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_3:
-	writethistext
-		text "Wyrdeer."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_4:
-	writethistext
-		text "Annihilape."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_5:
-	writethistext
-		text "Ambipom."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_6:
-	writethistext
-		text "Xatu."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_7:
-	writethistext
-		text "Honchkrow."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_8:
-	writethistext
-		text "Houndoom."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_9:
-	writethistext
-		text "Crobat."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_10:
-	writethistext
-		text "Ninetales."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_11:
-	writethistext
-		text "Farigiraf."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_12:
-	writethistext
-		text "Magmortar."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_13:
-	writethistext
-		text "Basculegion."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_14:
-	writethistext
-		text "Mismagius."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_15:
-	writethistext
-		text "Dusknoir."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_16:
-	writethistext
-		text "Weavile."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_17:
-	writethistext
-		text "Entei."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_18:
-	writethistext
-		text "Muk."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_19:
-	writethistext
-		text "Electrode."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_20:
-	writethistext
-		text "Donphan."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_21:
-	writethistext
-		text "Spiritomb."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_22:
-	writethistext
-		text "Rotom."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_23:
-	writethistext
-		text "Ancestor Xatu."
-		done
-	sjump .ToldPokemon
-.ToldPokemon:
+	sjump .PrintName
+.AfterAnnounce1:
+	waitbutton
+	setval 1
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterAnnounce2:
 	waitbutton
 	writethistext
-		text "Would you like to"
-		line "try to catch it?"
-		
-		para "If no, then I can"
-		line "call a random"
-		cont "other #mon."
+		text "Or, I can call"
+		line "a random #mon."
 		done
 	waitbutton
+
+; ---- step 3: offer mon1 ----
+.OfferFirst:
+	setval 2
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilityFirstTrainer
+	sjump .PrintName
+.AfterOfferFirst:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
 	yesorno
-	iffalse .CallSecondMon
-	readmem wStadiumFacilityFirstTrainer   ; YES -> keep the named mon told to the player
+	iftrue .ChoseFirst
+
+; ---- step 4: offer mon2 ----
+.OfferSecond:
+	setval 3
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterOfferSecond:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
+	yesorno
+	iftrue .ChoseSecond
+
+; ---- step 5: offer random, else loop to step 3 ----
+	writethistext
+		text "Shall I call a"
+		line "random #mon"
+		cont "instead?"
+		done
+	yesorno
+	iffalse .OfferFirst
+	readmem wStadiumFacilityThirdTrainer
 	sjump .HaveChoice
-.CallSecondMon:
-	readmem wStadiumFacilitySecondTrainer  ; NO  -> the next, guaranteed-different mon
+
+.ChoseFirst:
+	readmem wStadiumFacilityFirstTrainer
+	sjump .HaveChoice
+.ChoseSecond:
+	readmem wStadiumFacilitySecondTrainer
+;	fallthrough
 .HaveChoice:
 	ifequal 0,  .CallPokemon1_0
 	ifequal 1,  .CallPokemon1_1
@@ -1051,7 +1014,7 @@ StadiumFacility_Pokemon3Event:
 	ifequal 21, .CallPokemon1_21
 	ifequal 22, .CallPokemon1_22
 	ifequal 23, .CallPokemon1_23
-	loadwildmon MUK, ALOLAN_FORM, 100       ; Muk, Alolan_form (Pokemon1_26)
+	loadwildmon MUK, ALOLAN_FORM, 100       ; index 24
 	sjump .AfterPokemon1
 .CallPokemon1_0:
 	loadwildmon SUDOWOODO, 100
@@ -1124,7 +1087,7 @@ StadiumFacility_Pokemon3Event:
 	sjump .AfterPokemon1
 .CallPokemon1_23:
 	loadwildmon XATU, OTHER_FORM, 100      ; Xatu, Ancestor_form
-;	sjump .AfterPokemon1 ; fallthru
+;	fallthrough
 .AfterPokemon1:
 	startbattle
 	reloadmapafterbattle
@@ -1139,7 +1102,171 @@ StadiumFacility_Pokemon3Event:
 	setscene $5
 	applyonemovement PLAYER, step_left
 	end
-	
+
+; ===== single shared name table =====
+.PrintName:
+	ifequal 0,  .Name_0
+	ifequal 1,  .Name_1
+	ifequal 2,  .Name_2
+	ifequal 3,  .Name_3
+	ifequal 4,  .Name_4
+	ifequal 5,  .Name_5
+	ifequal 6,  .Name_6
+	ifequal 7,  .Name_7
+	ifequal 8,  .Name_8
+	ifequal 9,  .Name_9
+	ifequal 10, .Name_10
+	ifequal 11, .Name_11
+	ifequal 12, .Name_12
+	ifequal 13, .Name_13
+	ifequal 14, .Name_14
+	ifequal 15, .Name_15
+	ifequal 16, .Name_16
+	ifequal 17, .Name_17
+	ifequal 18, .Name_18
+	ifequal 19, .Name_19
+	ifequal 20, .Name_20
+	ifequal 21, .Name_21
+	ifequal 22, .Name_22
+	ifequal 23, .Name_23
+	writethistext
+		text "Alolan Muk."
+		done
+	sjump .NamePrinted
+.Name_0:
+	writethistext
+		text "Sudowoodo."
+		done
+	sjump .NamePrinted
+.Name_1:
+	writethistext
+		text "Gengar."
+		done
+	sjump .NamePrinted
+.Name_2:
+	writethistext
+		text "Vileplume."
+		done
+	sjump .NamePrinted
+.Name_3:
+	writethistext
+		text "Wyrdeer."
+		done
+	sjump .NamePrinted
+.Name_4:
+	writethistext
+		text "Annihilape."
+		done
+	sjump .NamePrinted
+.Name_5:
+	writethistext
+		text "Ambipom."
+		done
+	sjump .NamePrinted
+.Name_6:
+	writethistext
+		text "Xatu."
+		done
+	sjump .NamePrinted
+.Name_7:
+	writethistext
+		text "Honchkrow."
+		done
+	sjump .NamePrinted
+.Name_8:
+	writethistext
+		text "Houndoom."
+		done
+	sjump .NamePrinted
+.Name_9:
+	writethistext
+		text "Crobat."
+		done
+	sjump .NamePrinted
+.Name_10:
+	writethistext
+		text "Ninetales."
+		done
+	sjump .NamePrinted
+.Name_11:
+	writethistext
+		text "Farigiraf."
+		done
+	sjump .NamePrinted
+.Name_12:
+	writethistext
+		text "Magmortar."
+		done
+	sjump .NamePrinted
+.Name_13:
+	writethistext
+		text "Basculegion."
+		done
+	sjump .NamePrinted
+.Name_14:
+	writethistext
+		text "Mismagius."
+		done
+	sjump .NamePrinted
+.Name_15:
+	writethistext
+		text "Dusknoir."
+		done
+	sjump .NamePrinted
+.Name_16:
+	writethistext
+		text "Weavile."
+		done
+	sjump .NamePrinted
+.Name_17:
+	writethistext
+		text "Entei."
+		done
+	sjump .NamePrinted
+.Name_18:
+	writethistext
+		text "Muk."
+		done
+	sjump .NamePrinted
+.Name_19:
+	writethistext
+		text "Electrode."
+		done
+	sjump .NamePrinted
+.Name_20:
+	writethistext
+		text "Donphan."
+		done
+	sjump .NamePrinted
+.Name_21:
+	writethistext
+		text "Spiritomb."
+		done
+	sjump .NamePrinted
+.Name_22:
+	writethistext
+		text "Rotom."
+		done
+	sjump .NamePrinted
+.Name_23:
+	writethistext
+		text "Ancestor Xatu."
+		done
+;	fallthrough
+.NamePrinted:
+	readmem wFacilityLoopStage
+	ifequal 0, .AfterAnnounce1
+	ifequal 1, .AfterAnnounce2
+	ifequal 2, .AfterOfferFirst
+;	stage 3 fallthru
+	sjump .AfterOfferSecond
+
+
+; ====================================================================
+; ====================================================================
+;   STADIUM FACILITY - POKEMON 4 EVENT  (25 mons)
+; ====================================================================
+; ====================================================================
 StadiumFacility_Pokemon4Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
@@ -1149,177 +1276,75 @@ StadiumFacility_Pokemon4Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 25                      ; N = 25 mons to choose among
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
-	; tell the player which mon (the FIRST roll)
+	setval 25                      ; N = 25 mons
+	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
+
+; ---- step 2: announce mon1, mon2, "or random" ----
+	setval 0
+	writemem wFacilityLoopStage
 	readmem wStadiumFacilityFirstTrainer
-	ifequal 0,  .TellPokemon1_0
-	ifequal 1,  .TellPokemon1_1
-	ifequal 2,  .TellPokemon1_2
-	ifequal 3,  .TellPokemon1_3
-	ifequal 4,  .TellPokemon1_4
-	ifequal 5,  .TellPokemon1_5
-	ifequal 6,  .TellPokemon1_6
-	ifequal 7,  .TellPokemon1_7
-	ifequal 8,  .TellPokemon1_8
-	ifequal 9,  .TellPokemon1_9
-	ifequal 10, .TellPokemon1_10
-	ifequal 11, .TellPokemon1_11
-	ifequal 12, .TellPokemon1_12
-	ifequal 13, .TellPokemon1_13
-	ifequal 14, .TellPokemon1_14
-	ifequal 15, .TellPokemon1_15
-	ifequal 16, .TellPokemon1_16
-	ifequal 17, .TellPokemon1_17
-	ifequal 18, .TellPokemon1_18
-	ifequal 19, .TellPokemon1_19
-	ifequal 20, .TellPokemon1_20
-	ifequal 21, .TellPokemon1_21
-	ifequal 22, .TellPokemon1_22
-	ifequal 23, .TellPokemon1_23
-;	ifequal 24, .TellPokemon1_24 ; fallthru
-;.TellPokemon1_24:
-	writethistext
-		text "Suicune."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_0:
-	writethistext
-		text "Ampharos."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_1:
-	writethistext
-		text "Politoed."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_2:
-	writethistext
-		text "Poliwrath."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_3:
-	writethistext
-		text "Gyarados."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_4:
-	writethistext
-		text "Kingdra."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_5:
-	writethistext
-		text "Shuckle."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_6:
-	writethistext
-		text "Feraligatr."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_7:
-	writethistext
-		text "Goodra."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_8:
-	writethistext
-		text "Skarmory."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_9:
-	writethistext
-		text "Drifblim."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_10:
-	writethistext
-		text "Braviary."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_11:
-	writethistext
-		text "Miltank."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_12:
-	writethistext
-		text "Electivire."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_13:
-	writethistext
-		text "Overqwil."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_14:
-	writethistext
-		text "Tentacruel."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_15:
-	writethistext
-		text "Octillery."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_16:
-	writethistext
-		text "Lanturn."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_17:
-	writethistext
-		text "Corsola."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_18:
-	writethistext
-		text "Mantine."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_19:
-	writethistext
-		text "Lapras."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_20:
-	writethistext
-		text "Alolan Ninetales."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_21:
-	writethistext
-		text "Galarian Corsola."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_22:
-	writethistext
-		text "Galarian Exeggutor."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_23:
-	writethistext
-		text "Ancestor Feraligatr."
-		done
-	sjump .ToldPokemon
-.ToldPokemon:
+	sjump .PrintName
+.AfterAnnounce1:
+	waitbutton
+	setval 1
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterAnnounce2:
 	waitbutton
 	writethistext
-		text "Would you like to"
-		line "try to catch it?"
-		
-		para "If no, then I can"
-		line "call a random"
-		cont "other #mon."
+		text "Or, I can call"
+		line "a random #mon."
 		done
 	waitbutton
+
+; ---- step 3: offer mon1 ----
+.OfferFirst:
+	setval 2
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilityFirstTrainer
+	sjump .PrintName
+.AfterOfferFirst:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
 	yesorno
-	iffalse .CallSecondMon
-	readmem wStadiumFacilityFirstTrainer   ; YES -> keep the named mon told to the player
+	iftrue .ChoseFirst
+
+; ---- step 4: offer mon2 ----
+.OfferSecond:
+	setval 3
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterOfferSecond:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
+	yesorno
+	iftrue .ChoseSecond
+
+; ---- step 5: offer random, else loop to step 3 ----
+	writethistext
+		text "Shall I call a"
+		line "random #mon"
+		cont "instead?"
+		done
+	yesorno
+	iffalse .OfferFirst
+	readmem wStadiumFacilityThirdTrainer
 	sjump .HaveChoice
-.CallSecondMon:
-	readmem wStadiumFacilitySecondTrainer  ; NO  -> the next, guaranteed-different mon
+
+.ChoseFirst:
+	readmem wStadiumFacilityFirstTrainer
+	sjump .HaveChoice
+.ChoseSecond:
+	readmem wStadiumFacilitySecondTrainer
+;	fallthrough
 .HaveChoice:
 	ifequal 0,  .CallPokemon1_0
 	ifequal 1,  .CallPokemon1_1
@@ -1345,7 +1370,7 @@ StadiumFacility_Pokemon4Event:
 	ifequal 21, .CallPokemon1_21
 	ifequal 22, .CallPokemon1_22
 	ifequal 23, .CallPokemon1_23
-	loadwildmon SUICUNE, 100               ; Suicune (Pokemon1_30)
+	loadwildmon SUICUNE, 100               ; index 24
 	sjump .AfterPokemon1
 .CallPokemon1_0:
 	loadwildmon AMPHAROS, 100
@@ -1418,7 +1443,7 @@ StadiumFacility_Pokemon4Event:
 	sjump .AfterPokemon1
 .CallPokemon1_23:
 	loadwildmon FERALIGATR, OTHER_FORM, 100 ; Feraligatr_ancestor
-;	sjump .AfterPokemon1 ; fallthru
+;	fallthrough
 .AfterPokemon1:
 	startbattle
 	reloadmapafterbattle
@@ -1433,7 +1458,171 @@ StadiumFacility_Pokemon4Event:
 	setscene $7
 	applyonemovement PLAYER, step_left
 	end
- 
+
+; ===== single shared name table =====
+.PrintName:
+	ifequal 0,  .Name_0
+	ifequal 1,  .Name_1
+	ifequal 2,  .Name_2
+	ifequal 3,  .Name_3
+	ifequal 4,  .Name_4
+	ifequal 5,  .Name_5
+	ifequal 6,  .Name_6
+	ifequal 7,  .Name_7
+	ifequal 8,  .Name_8
+	ifequal 9,  .Name_9
+	ifequal 10, .Name_10
+	ifequal 11, .Name_11
+	ifequal 12, .Name_12
+	ifequal 13, .Name_13
+	ifequal 14, .Name_14
+	ifequal 15, .Name_15
+	ifequal 16, .Name_16
+	ifequal 17, .Name_17
+	ifequal 18, .Name_18
+	ifequal 19, .Name_19
+	ifequal 20, .Name_20
+	ifequal 21, .Name_21
+	ifequal 22, .Name_22
+	ifequal 23, .Name_23
+	writethistext
+		text "Suicune."
+		done
+	sjump .NamePrinted
+.Name_0:
+	writethistext
+		text "Ampharos."
+		done
+	sjump .NamePrinted
+.Name_1:
+	writethistext
+		text "Politoed."
+		done
+	sjump .NamePrinted
+.Name_2:
+	writethistext
+		text "Poliwrath."
+		done
+	sjump .NamePrinted
+.Name_3:
+	writethistext
+		text "Gyarados."
+		done
+	sjump .NamePrinted
+.Name_4:
+	writethistext
+		text "Kingdra."
+		done
+	sjump .NamePrinted
+.Name_5:
+	writethistext
+		text "Shuckle."
+		done
+	sjump .NamePrinted
+.Name_6:
+	writethistext
+		text "Feraligatr."
+		done
+	sjump .NamePrinted
+.Name_7:
+	writethistext
+		text "Goodra."
+		done
+	sjump .NamePrinted
+.Name_8:
+	writethistext
+		text "Skarmory."
+		done
+	sjump .NamePrinted
+.Name_9:
+	writethistext
+		text "Drifblim."
+		done
+	sjump .NamePrinted
+.Name_10:
+	writethistext
+		text "Braviary."
+		done
+	sjump .NamePrinted
+.Name_11:
+	writethistext
+		text "Miltank."
+		done
+	sjump .NamePrinted
+.Name_12:
+	writethistext
+		text "Electivire."
+		done
+	sjump .NamePrinted
+.Name_13:
+	writethistext
+		text "Overqwil."
+		done
+	sjump .NamePrinted
+.Name_14:
+	writethistext
+		text "Tentacruel."
+		done
+	sjump .NamePrinted
+.Name_15:
+	writethistext
+		text "Octillery."
+		done
+	sjump .NamePrinted
+.Name_16:
+	writethistext
+		text "Lanturn."
+		done
+	sjump .NamePrinted
+.Name_17:
+	writethistext
+		text "Corsola."
+		done
+	sjump .NamePrinted
+.Name_18:
+	writethistext
+		text "Mantine."
+		done
+	sjump .NamePrinted
+.Name_19:
+	writethistext
+		text "Lapras."
+		done
+	sjump .NamePrinted
+.Name_20:
+	writethistext
+		text "Alolan Ninetales."
+		done
+	sjump .NamePrinted
+.Name_21:
+	writethistext
+		text "Galarian Corsola."
+		done
+	sjump .NamePrinted
+.Name_22:
+	writethistext
+		text "Galarian Exeggutor."
+		done
+	sjump .NamePrinted
+.Name_23:
+	writethistext
+		text "Ancestor Feraligatr."
+		done
+;	fallthrough
+.NamePrinted:
+	readmem wFacilityLoopStage
+	ifequal 0, .AfterAnnounce1
+	ifequal 1, .AfterAnnounce2
+	ifequal 2, .AfterOfferFirst
+;	stage 3 fallthru
+	sjump .AfterOfferSecond
+
+
+; ====================================================================
+; ====================================================================
+;   STADIUM FACILITY - POKEMON 5 EVENT  (39 mons)
+; ====================================================================
+; ====================================================================
 StadiumFacility_Pokemon5Event:
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
@@ -1443,266 +1632,75 @@ StadiumFacility_Pokemon5Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 39                      ; N = 39 mons to choose among
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
-	; tell the player which mon (the FIRST roll)
+	setval 39                      ; N = 39 mons
+	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
+
+; ---- step 2: announce mon1, mon2, "or random" ----
+	setval 0
+	writemem wFacilityLoopStage
 	readmem wStadiumFacilityFirstTrainer
-	ifequal 0,  .TellPokemon1_0
-	ifequal 1,  .TellPokemon1_1
-	ifequal 2,  .TellPokemon1_2
-	ifequal 3,  .TellPokemon1_3
-	ifequal 4,  .TellPokemon1_4
-	ifequal 5,  .TellPokemon1_5
-	ifequal 6,  .TellPokemon1_6
-	ifequal 7,  .TellPokemon1_7
-	ifequal 8,  .TellPokemon1_8
-	ifequal 9,  .TellPokemon1_9
-	ifequal 10, .TellPokemon1_10
-	ifequal 11, .TellPokemon1_11
-	ifequal 12, .TellPokemon1_12
-	ifequal 13, .TellPokemon1_13
-	ifequal 14, .TellPokemon1_14
-	ifequal 15, .TellPokemon1_15
-	ifequal 16, .TellPokemon1_16
-	ifequal 17, .TellPokemon1_17
-	ifequal 18, .TellPokemon1_18
-	ifequal 19, .TellPokemon1_19
-	ifequal 20, .TellPokemon1_20
-	ifequal 21, .TellPokemon1_21
-	ifequal 22, .TellPokemon1_22
-	ifequal 23, .TellPokemon1_23
-	ifequal 24, .TellPokemon1_24
-	ifequal 25, .TellPokemon1_25
-	ifequal 26, .TellPokemon1_26
-	ifequal 27, .TellPokemon1_27
-	ifequal 28, .TellPokemon1_28
-	ifequal 29, .TellPokemon1_29
-	ifequal 30, .TellPokemon1_30
-	ifequal 31, .TellPokemon1_31
-	ifequal 32, .TellPokemon1_32
-	ifequal 33, .TellPokemon1_33
-	ifequal 34, .TellPokemon1_34
-	ifequal 35, .TellPokemon1_35
-	ifequal 36, .TellPokemon1_36
-	ifequal 37, .TellPokemon1_37
-;	ifequal 38, .TellPokemon1_38 ; fallthru
-;.TellPokemon1_38:
-	writethistext
-		text "Bloodmoon"
-		line "Ursaluna."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_0:
-	writethistext
-		text "Typhlosion."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_1:
-	writethistext
-		text "Decidueye."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_2:
-	writethistext
-		text "Samurott."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_3:
-	writethistext
-		text "Machamp."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_4:
-	writethistext
-		text "Ursaluna."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_5:
-	writethistext
-		text "Luxray."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_6:
-	writethistext
-		text "Lucario."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_7:
-	writethistext
-		text "Gallade."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_8:
-	writethistext
-		text "Dragonite."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_9:
-	writethistext
-		text "Tyranitar."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_10:
-	writethistext
-		text "Hisuian"
-		line "Arcanine."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_11:
-	writethistext
-		text "Steelix."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_12:
-	writethistext
-		text "Dudunsparce."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_13:
-	writethistext
-		text "Arcanine."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_14:
-	writethistext
-		text "Hisuian"
-		line "Typhlosion."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_15:
-	writethistext
-		text "Hisuian"
-		line "Decidueye."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_16:
-	writethistext
-		text "Hisuian"
-		line "Samurott."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_17:
-	writethistext
-		text "Jolteon."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_18:
-	writethistext
-		text "Vaporeon."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_19:
-	writethistext
-		text "Flareon."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_20:
-	writethistext
-		text "Leafeon."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_21:
-	writethistext
-		text "Sylveon."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_22:
-	writethistext
-		text "Glaceon."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_23:
-	writethistext
-		text "Espeon."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_24:
-	writethistext
-		text "Umbreon."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_25:
-	writethistext
-		text "Alakazam."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_26:
-	writethistext
-		text "Magnezone."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_27:
-	writethistext
-		text "Mamoswine."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_28:
-	writethistext
-		text "Rhyperior."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_29:
-	writethistext
-		text "Sneasler."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_30:
-	writethistext
-		text "Porygon2."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_31:
-	writethistext
-		text "PorygonZ."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_32:
-	writethistext
-		text "Rampardos."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_33:
-	writethistext
-		text "Bronzong."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_34:
-	writethistext
-		text "Zoroark."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_35:
-	writethistext
-		text "Garchomp."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_36:
-	writethistext
-		text "Snorlax."
-		done
-	sjump .ToldPokemon
-.TellPokemon1_37:
-	writethistext
-		text "Gliscor."
-		done
-	sjump .ToldPokemon
-.ToldPokemon:
+	sjump .PrintName
+.AfterAnnounce1:
+	waitbutton
+	setval 1
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterAnnounce2:
 	waitbutton
 	writethistext
-		text "Would you like to"
-		line "try to catch it?"
-		
-		para "If no, then I can"
-		line "call a random"
-		cont "other #mon."
+		text "Or, I can call"
+		line "a random #mon."
 		done
 	waitbutton
+
+; ---- step 3: offer mon1 ----
+.OfferFirst:
+	setval 2
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilityFirstTrainer
+	sjump .PrintName
+.AfterOfferFirst:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
 	yesorno
-	iffalse .CallSecondMon
-	readmem wStadiumFacilityFirstTrainer   ; YES -> keep the named mon told to the player
+	iftrue .ChoseFirst
+
+; ---- step 4: offer mon2 ----
+.OfferSecond:
+	setval 3
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterOfferSecond:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
+	yesorno
+	iftrue .ChoseSecond
+
+; ---- step 5: offer random, else loop to step 3 ----
+	writethistext
+		text "Shall I call a"
+		line "random #mon"
+		cont "instead?"
+		done
+	yesorno
+	iffalse .OfferFirst
+	readmem wStadiumFacilityThirdTrainer
 	sjump .HaveChoice
-.CallSecondMon:
-	readmem wStadiumFacilitySecondTrainer  ; NO  -> the next, guaranteed-different mon
+
+.ChoseFirst:
+	readmem wStadiumFacilityFirstTrainer
+	sjump .HaveChoice
+.ChoseSecond:
+	readmem wStadiumFacilitySecondTrainer
+;	fallthrough
 .HaveChoice:
 	ifequal 0,  .CallPokemon1_0
 	ifequal 1,  .CallPokemon1_1
@@ -1742,7 +1740,7 @@ StadiumFacility_Pokemon5Event:
 	ifequal 35, .CallPokemon1_35
 	ifequal 36, .CallPokemon1_36
 	ifequal 37, .CallPokemon1_37
-	loadwildmon URSALUNA, OTHER_FORM, 100  ; Ursaluna_bloodmoon (Pokemon1_45)
+	loadwildmon URSALUNA, OTHER_FORM, 100  ; index 38, Ursaluna_bloodmoon
 	sjump .AfterPokemon1
 .CallPokemon1_0:
 	loadwildmon TYPHLOSION, 100
@@ -1857,7 +1855,7 @@ StadiumFacility_Pokemon5Event:
 	sjump .AfterPokemon1
 .CallPokemon1_37:
 	loadwildmon GLISCOR, 100
-;	sjump .AfterPokemon1 ; fallthru
+;	fallthrough
 .AfterPokemon1:
 	startbattle
 	reloadmapafterbattle
@@ -1872,6 +1870,253 @@ StadiumFacility_Pokemon5Event:
 	setscene $9
 	applyonemovement PLAYER, step_left
 	end
+
+; ===== single shared name table =====
+.PrintName:
+	ifequal 0,  .Name_0
+	ifequal 1,  .Name_1
+	ifequal 2,  .Name_2
+	ifequal 3,  .Name_3
+	ifequal 4,  .Name_4
+	ifequal 5,  .Name_5
+	ifequal 6,  .Name_6
+	ifequal 7,  .Name_7
+	ifequal 8,  .Name_8
+	ifequal 9,  .Name_9
+	ifequal 10, .Name_10
+	ifequal 11, .Name_11
+	ifequal 12, .Name_12
+	ifequal 13, .Name_13
+	ifequal 14, .Name_14
+	ifequal 15, .Name_15
+	ifequal 16, .Name_16
+	ifequal 17, .Name_17
+	ifequal 18, .Name_18
+	ifequal 19, .Name_19
+	ifequal 20, .Name_20
+	ifequal 21, .Name_21
+	ifequal 22, .Name_22
+	ifequal 23, .Name_23
+	ifequal 24, .Name_24
+	ifequal 25, .Name_25
+	ifequal 26, .Name_26
+	ifequal 27, .Name_27
+	ifequal 28, .Name_28
+	ifequal 29, .Name_29
+	ifequal 30, .Name_30
+	ifequal 31, .Name_31
+	ifequal 32, .Name_32
+	ifequal 33, .Name_33
+	ifequal 34, .Name_34
+	ifequal 35, .Name_35
+	ifequal 36, .Name_36
+	ifequal 37, .Name_37
+	writethistext
+		text "Bloodmoon"
+		line "Ursaluna."
+		done
+	sjump .NamePrinted
+.Name_0:
+	writethistext
+		text "Typhlosion."
+		done
+	sjump .NamePrinted
+.Name_1:
+	writethistext
+		text "Decidueye."
+		done
+	sjump .NamePrinted
+.Name_2:
+	writethistext
+		text "Samurott."
+		done
+	sjump .NamePrinted
+.Name_3:
+	writethistext
+		text "Machamp."
+		done
+	sjump .NamePrinted
+.Name_4:
+	writethistext
+		text "Ursaluna."
+		done
+	sjump .NamePrinted
+.Name_5:
+	writethistext
+		text "Luxray."
+		done
+	sjump .NamePrinted
+.Name_6:
+	writethistext
+		text "Lucario."
+		done
+	sjump .NamePrinted
+.Name_7:
+	writethistext
+		text "Gallade."
+		done
+	sjump .NamePrinted
+.Name_8:
+	writethistext
+		text "Dragonite."
+		done
+	sjump .NamePrinted
+.Name_9:
+	writethistext
+		text "Tyranitar."
+		done
+	sjump .NamePrinted
+.Name_10:
+	writethistext
+		text "Hisuian"
+		line "Arcanine."
+		done
+	sjump .NamePrinted
+.Name_11:
+	writethistext
+		text "Steelix."
+		done
+	sjump .NamePrinted
+.Name_12:
+	writethistext
+		text "Dudunsparce."
+		done
+	sjump .NamePrinted
+.Name_13:
+	writethistext
+		text "Arcanine."
+		done
+	sjump .NamePrinted
+.Name_14:
+	writethistext
+		text "Hisuian"
+		line "Typhlosion."
+		done
+	sjump .NamePrinted
+.Name_15:
+	writethistext
+		text "Hisuian"
+		line "Decidueye."
+		done
+	sjump .NamePrinted
+.Name_16:
+	writethistext
+		text "Hisuian"
+		line "Samurott."
+		done
+	sjump .NamePrinted
+.Name_17:
+	writethistext
+		text "Jolteon."
+		done
+	sjump .NamePrinted
+.Name_18:
+	writethistext
+		text "Vaporeon."
+		done
+	sjump .NamePrinted
+.Name_19:
+	writethistext
+		text "Flareon."
+		done
+	sjump .NamePrinted
+.Name_20:
+	writethistext
+		text "Leafeon."
+		done
+	sjump .NamePrinted
+.Name_21:
+	writethistext
+		text "Sylveon."
+		done
+	sjump .NamePrinted
+.Name_22:
+	writethistext
+		text "Glaceon."
+		done
+	sjump .NamePrinted
+.Name_23:
+	writethistext
+		text "Espeon."
+		done
+	sjump .NamePrinted
+.Name_24:
+	writethistext
+		text "Umbreon."
+		done
+	sjump .NamePrinted
+.Name_25:
+	writethistext
+		text "Alakazam."
+		done
+	sjump .NamePrinted
+.Name_26:
+	writethistext
+		text "Magnezone."
+		done
+	sjump .NamePrinted
+.Name_27:
+	writethistext
+		text "Mamoswine."
+		done
+	sjump .NamePrinted
+.Name_28:
+	writethistext
+		text "Rhyperior."
+		done
+	sjump .NamePrinted
+.Name_29:
+	writethistext
+		text "Sneasler."
+		done
+	sjump .NamePrinted
+.Name_30:
+	writethistext
+		text "Porygon2."
+		done
+	sjump .NamePrinted
+.Name_31:
+	writethistext
+		text "PorygonZ."
+		done
+	sjump .NamePrinted
+.Name_32:
+	writethistext
+		text "Rampardos."
+		done
+	sjump .NamePrinted
+.Name_33:
+	writethistext
+		text "Bronzong."
+		done
+	sjump .NamePrinted
+.Name_34:
+	writethistext
+		text "Zoroark."
+		done
+	sjump .NamePrinted
+.Name_35:
+	writethistext
+		text "Garchomp."
+		done
+	sjump .NamePrinted
+.Name_36:
+	writethistext
+		text "Snorlax."
+		done
+	sjump .NamePrinted
+.Name_37:
+	writethistext
+		text "Gliscor."
+		done
+;	fallthrough
+.NamePrinted:
+	readmem wFacilityLoopStage
+	ifequal 0, .AfterAnnounce1
+	ifequal 1, .AfterAnnounce2
+	ifequal 2, .AfterOfferFirst
+;	stage 3 fallthru
+	sjump .AfterOfferSecond
 
 
 ; =========

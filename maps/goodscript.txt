@@ -1,0 +1,377 @@
+
+StadiumFacility_Pokemon1Event:
+	turnobject STADIUM_FACILITY_CLERK, LEFT
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext FacilityAreYouReadyText
+	yesorno
+	iffalse_jumptext FacilityGetReadyText
+	writetext FacilityExplainBallText
+	waitbutton
+	setval 27                      ; N = 27 mons
+	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
+
+; ---- step 2: announce mon1, mon2, "or random" ----
+	setval 0
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilityFirstTrainer
+	sjump .PrintName
+.AfterAnnounce1:
+	waitbutton
+	setval 1
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterAnnounce2:
+	waitbutton
+	writethistext
+		text "Or, I can call"
+		line "a random #mon."
+		done
+	waitbutton
+
+; ---- step 3: offer mon1 ----
+.OfferFirst:
+	setval 2
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilityFirstTrainer
+	sjump .PrintName
+.AfterOfferFirst:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
+	yesorno
+	iftrue .ChoseFirst
+
+; ---- step 4: offer mon2 ----
+.OfferSecond:
+	setval 3
+	writemem wFacilityLoopStage
+	readmem wStadiumFacilitySecondTrainer
+	sjump .PrintName
+.AfterOfferSecond:
+	waitbutton
+	writethistext
+		text "Try to catch"
+		line "this one?"
+		done
+	yesorno
+	iftrue .ChoseSecond
+
+; ---- step 5: offer random, else loop to step 3 ----
+	writethistext
+		text "Shall I call a"
+		line "random #mon"
+		cont "instead?"
+		done
+	yesorno
+	iffalse .OfferFirst
+	readmem wStadiumFacilityThirdTrainer
+	sjump .HaveChoice
+
+.ChoseFirst:
+	readmem wStadiumFacilityFirstTrainer
+	sjump .HaveChoice
+.ChoseSecond:
+	readmem wStadiumFacilitySecondTrainer
+;	fallthrough
+.HaveChoice:
+	ifequal 0,  .CallPokemon1_0
+	ifequal 1,  .CallPokemon1_1
+	ifequal 2,  .CallPokemon1_2
+	ifequal 3,  .CallPokemon1_3
+	ifequal 4,  .CallPokemon1_4
+	ifequal 5,  .CallPokemon1_5
+	ifequal 6,  .CallPokemon1_6
+	ifequal 7,  .CallPokemon1_7
+	ifequal 8,  .CallPokemon1_8
+	ifequal 9,  .CallPokemon1_9
+	ifequal 10, .CallPokemon1_10
+	ifequal 11, .CallPokemon1_11
+	ifequal 12, .CallPokemon1_12
+	ifequal 13, .CallPokemon1_13
+	ifequal 14, .CallPokemon1_14
+	ifequal 15, .CallPokemon1_15
+	ifequal 16, .CallPokemon1_16
+	ifequal 17, .CallPokemon1_17
+	ifequal 18, .CallPokemon1_18
+	ifequal 19, .CallPokemon1_19
+	ifequal 20, .CallPokemon1_20
+	ifequal 21, .CallPokemon1_21
+	ifequal 22, .CallPokemon1_22
+	ifequal 23, .CallPokemon1_23
+	ifequal 24, .CallPokemon1_24
+	ifequal 25, .CallPokemon1_25
+	loadwildmon VICTREEBEL, 100            ; index 26
+	sjump .AfterPokemon1
+.CallPokemon1_0:
+	loadwildmon MAGCARGO, OTHER_FORM, 100
+	sjump .AfterPokemon1
+.CallPokemon1_1:
+	loadwildmon ELECTRODE, HISUIAN_FORM, 100
+	sjump .AfterPokemon1
+.CallPokemon1_2:
+	loadwildmon SLOWBRO, GALARIAN_FORM, 100
+	sjump .AfterPokemon1
+.CallPokemon1_3:
+	loadwildmon SLOWKING, GALARIAN_FORM, 100
+	sjump .AfterPokemon1
+.CallPokemon1_4:
+	loadwildmon SCIZOR, 100
+	sjump .AfterPokemon1
+.CallPokemon1_5:
+	loadwildmon KLEAVOR, 100
+	sjump .AfterPokemon1
+.CallPokemon1_6:
+	loadwildmon MINSIR, 100
+	sjump .AfterPokemon1
+.CallPokemon1_7:
+	loadwildmon YANMEGA, 100
+	sjump .AfterPokemon1
+.CallPokemon1_8:
+	loadwildmon FURRET, 100
+	sjump .AfterPokemon1
+.CallPokemon1_9:
+	loadwildmon PINSIR, 100
+	sjump .AfterPokemon1
+.CallPokemon1_10:
+	loadwildmon SCYTHER, 100
+	sjump .AfterPokemon1
+.CallPokemon1_11:
+	loadwildmon HIPPOWDON, 100
+	sjump .AfterPokemon1
+.CallPokemon1_12:
+	loadwildmon ABOMASNOW, 100
+	sjump .AfterPokemon1
+.CallPokemon1_13:
+	loadwildmon AVALUGG, 100
+	sjump .AfterPokemon1
+.CallPokemon1_14:
+	loadwildmon HERACROSS, 100
+	sjump .AfterPokemon1
+.CallPokemon1_15:
+	loadwildmon FORRETRESS, 100
+	sjump .AfterPokemon1
+.CallPokemon1_16:
+	loadwildmon MAGCARGO, 100
+	sjump .AfterPokemon1
+.CallPokemon1_17:
+	loadwildmon ARIADOS, 100
+	sjump .AfterPokemon1
+.CallPokemon1_18:
+	loadwildmon LEDIAN, 100
+	sjump .AfterPokemon1
+.CallPokemon1_19:
+	loadwildmon NOCTOWL, OTHER_FORM, 100
+	sjump .AfterPokemon1
+.CallPokemon1_20:
+	loadwildmon PARASECT, 100
+	sjump .AfterPokemon1
+.CallPokemon1_21:
+	loadwildmon SLOWBRO, 100
+	sjump .AfterPokemon1
+.CallPokemon1_22:
+	loadwildmon SLOWKING, 100
+	sjump .AfterPokemon1
+.CallPokemon1_23:
+	loadwildmon QUAGSIRE, 100
+	sjump .AfterPokemon1
+.CallPokemon1_24:
+	loadwildmon STARAPTOR, 100
+	sjump .AfterPokemon1
+.CallPokemon1_25:
+	loadwildmon JUMPLUFF, 100
+;	fallthrough
+.AfterPokemon1:
+	startbattle
+	reloadmapafterbattle
+	special UpdateStadiumStreak
+	opentext
+	writetext FacilityCurrentStreakText
+	waitbutton
+	special HealParty
+	writetext FacilityComeBackWhenYoureReadyText
+	waitbutton
+	closetext
+	readdifficultymode
+	ifequal DIFFICULTY_HARD, .hard
+	sjump .NotHardDifficulty
+.hard:
+	clearevent EVENT_TROPHY_MON
+.NotHardDifficulty:
+	setscene $1
+	applyonemovement PLAYER, step_left
+	end
+
+; ===== single shared name table =====
+.PrintName:
+	ifequal 0,  .Name_0
+	ifequal 1,  .Name_1
+	ifequal 2,  .Name_2
+	ifequal 3,  .Name_3
+	ifequal 4,  .Name_4
+	ifequal 5,  .Name_5
+	ifequal 6,  .Name_6
+	ifequal 7,  .Name_7
+	ifequal 8,  .Name_8
+	ifequal 9,  .Name_9
+	ifequal 10, .Name_10
+	ifequal 11, .Name_11
+	ifequal 12, .Name_12
+	ifequal 13, .Name_13
+	ifequal 14, .Name_14
+	ifequal 15, .Name_15
+	ifequal 16, .Name_16
+	ifequal 17, .Name_17
+	ifequal 18, .Name_18
+	ifequal 19, .Name_19
+	ifequal 20, .Name_20
+	ifequal 21, .Name_21
+	ifequal 22, .Name_22
+	ifequal 23, .Name_23
+	ifequal 24, .Name_24
+	ifequal 25, .Name_25
+	writethistext
+		text "Victreebel."
+		done
+	sjump .NamePrinted
+.Name_0:
+	writethistext
+		text "Ancestor Magcargo."
+		done
+	sjump .NamePrinted
+.Name_1:
+	writethistext
+		text "Hisuian Electrode."
+		done
+	sjump .NamePrinted
+.Name_2:
+	writethistext
+		text "Galarian Slowbro."
+		done
+	sjump .NamePrinted
+.Name_3:
+	writethistext
+		text "Galarian Slowking."
+		done
+	sjump .NamePrinted
+.Name_4:
+	writethistext
+		text "Scizor."
+		done
+	sjump .NamePrinted
+.Name_5:
+	writethistext
+		text "Kleavor."
+		done
+	sjump .NamePrinted
+.Name_6:
+	writethistext
+		text "Minsir."
+		done
+	sjump .NamePrinted
+.Name_7:
+	writethistext
+		text "Yanmega."
+		done
+	sjump .NamePrinted
+.Name_8:
+	writethistext
+		text "Furret."
+		done
+	sjump .NamePrinted
+.Name_9:
+	writethistext
+		text "Pinsir."
+		done
+	sjump .NamePrinted
+.Name_10:
+	writethistext
+		text "Scyther."
+		done
+	sjump .NamePrinted
+.Name_11:
+	writethistext
+		text "Hippowdon."
+		done
+	sjump .NamePrinted
+.Name_12:
+	writethistext
+		text "Abomasnow."
+		done
+	sjump .NamePrinted
+.Name_13:
+	writethistext
+		text "Avalugg."
+		done
+	sjump .NamePrinted
+.Name_14:
+	writethistext
+		text "Heracross."
+		done
+	sjump .NamePrinted
+.Name_15:
+	writethistext
+		text "Forretress."
+		done
+	sjump .NamePrinted
+.Name_16:
+	writethistext
+		text "Magcargo."
+		done
+	sjump .NamePrinted
+.Name_17:
+	writethistext
+		text "Ariados."
+		done
+	sjump .NamePrinted
+.Name_18:
+	writethistext
+		text "Ledian."
+		done
+	sjump .NamePrinted
+.Name_19:
+	writethistext
+		text "Ancestor Noctowl."
+		done
+	sjump .NamePrinted
+.Name_20:
+	writethistext
+		text "Parasect."
+		done
+	sjump .NamePrinted
+.Name_21:
+	writethistext
+		text "Slowbro."
+		done
+	sjump .NamePrinted
+.Name_22:
+	writethistext
+		text "Slowking."
+		done
+	sjump .NamePrinted
+.Name_23:
+	writethistext
+		text "Quagsire."
+		done
+	sjump .NamePrinted
+.Name_24:
+	writethistext
+		text "Staraptor."
+		done
+	sjump .NamePrinted
+.Name_25:
+	writethistext
+		text "Jumpluff."
+		done
+;	fallthrough
+.NamePrinted:
+	readmem wFacilityLoopStage
+	ifequal 0, .AfterAnnounce1
+	ifequal 1, .AfterAnnounce2
+	ifequal 2, .AfterOfferFirst
+;	stage 3 fallthru
+	sjump .AfterOfferSecond
+	
