@@ -8,13 +8,11 @@ StadiumGroundsFacility_MapScriptHeader:
 	; todo check a few more rounds of the final section
 	; fix the shiny star showing up for ff with non ee,ff dvs
 	; adjust the format of the first pokemon event to the other five --> todo check 
+	; prevent infinite master balls from the patron --> TODO CHECK 
 	
 ; testing fixes
 	; todo write phrases for all trainers 
 	; todo adjust enemy levels based on testing 
-
-; stretch goals 
-	; todo see how hard it would be to tell you one, then two, then random mon 
 
 
 	def_callbacks
@@ -2577,6 +2575,7 @@ StadiumFacility_Trainers3Event:
 	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
 	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
+	clearevent EVENT_GAVE_PATRON_ITEM
 	writetext FacilityExplainTrainersText
 	waitbutton
 	closetext
@@ -2794,6 +2793,7 @@ StadiumFacility_Trainers4Event:
 	iffalse_jumptext FacilityGetReadyText
 	; clear the events
 ;	clearevent EVENT_STADIUM_HEALED ; this is below so that you don't accidentally waste your heal before the first trainer 
+	clearevent EVENT_GAVE_PATRON_ITEM
 	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
 	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
@@ -3015,6 +3015,7 @@ StadiumFacility_Trainers5Event:
 	iffalse_jumptext FacilityGetReadyText
 	; clear the events
 ;	clearevent EVENT_STADIUM_HEALED ; this is below so that you don't accidentally waste your heal before the first trainer 
+	clearevent EVENT_GAVE_PATRON_ITEM
 	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
 	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
@@ -3246,6 +3247,7 @@ StadiumFacility_TrainersEndlessEvent:
 	iffalse_jumptext FacilityGetReadyText
 	; clear the events
 ;	clearevent EVENT_STADIUM_HEALED ; this is below so that you don't accidentally waste your heal before the first trainer 
+	clearevent EVENT_GAVE_PATRON_ITEM
 	clearevent EVENT_BEAT_FIRST_FACILITY_TRAINER
 	clearevent EVENT_BEAT_SECOND_FACILITY_TRAINER
 	clearevent EVENT_BEAT_THIRD_FACILITY_TRAINER
@@ -4314,6 +4316,11 @@ FacilityLossTextVesperFinal:
 	text "Lose Vesper Final"
 	done
 
+; ============
+; MOVE REMINDER  
+; ============
+
+
 FacilityMoveReminderScript:
 	faceplayer
 	opentext
@@ -4351,11 +4358,15 @@ MoveReminderCancelTextFacility:
 	text "Best of luck!"
 	done
 
-
+; ============
+; PATRON 
+; ============
 
 RandomGiftGiverScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GAVE_PATRON_ITEM 
+	iftrue_jumptext PatronGaveText
 	writetext RandomGiftGiverText
 	waitbutton
 ;.CheckStreak:
@@ -4397,16 +4408,19 @@ RandomGiftGiverScript:
 .Consolation:
 	readmem wStadiumFacilityFirstTrainer
 	ifless 12, .GiveBigNuggetScript     ; the band just above the MB cutoff
+	setevent EVENT_GAVE_PATRON_ITEM
 	verbosegiveitem ULTRA_BALL
 	jumptext RandomGiftAfterText
 
 
 .GiveMasterBallScript:
+	setevent EVENT_GAVE_PATRON_ITEM
 	verbosegiveitem MASTER_BALL
 	jumptext RandomGiftAfterText
 
 
 .GiveBigNuggetScript:
+	setevent EVENT_GAVE_PATRON_ITEM
 	verbosegiveitem BIG_NUGGET
 	jumptext RandomGiftAfterText
 
@@ -4454,4 +4468,9 @@ InterestedPatronText:
 
 RandomGiftAfterText:
 	text "Keep going!"
+	done
+
+PatronGaveText:
+	text "Enjoy the gift"
+	line "from your patron!"
 	done
