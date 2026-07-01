@@ -3811,29 +3811,67 @@ UpdateEnemyHUD::
 	jmp PopBCDEHL
 
 CheckShinyDV:
-; this returns true for enemy mon with tempmonDVs +0 = ff and +1 =fb and +2 = be; I think it needs to be updated 
-	ld a, [wTempMonDVs + 0]
-	cp $ff
-	jr nz, .check_last
-;	ld a, [wTempMonDVs + 1]
-;	cp $ff
-;	jr nz, .check_last
-	scf
-	ret
-
-.check_last
-	ld a, [wTempMonDVs + 1]
-	cp $ff
-	jr nz, .no_match
-	ld a, [wTempMonDVs + 2]
-	cp $ff
-	jr nz, .no_match
-	scf
+; return carry set if all the nibbles
+; are either $e or $f 
+	ld hl, wTempMonDVs
+	ld b, 3 ; loop counter 
+.loop
+	ld a, [hl]
+	and $0f ; mask the high nibble 
+	cp $0e ; compare low nibble to a value less than e, which include e and f 
+	jr c, .no_match
+	
+	ld a, [hl]
+	swap a ; swap nibble
+	and $0f
+	cp $0e
+	jr c, .no_match
+	
+	inc hl
+	dec b
+	jr nz, .loop
+	
+	scf ; set carry flag 
 	ret
 
 .no_match
-	and a
+	and a ; reset a 
 	ret
+
+
+; ; Hidden Power DV patterns
+;.HPFightingPattern:
+;	db $ff, $ee, $ee
+;.HPFlyingPattern:
+;	db $ff, $fe, $ee
+;.HPPoisonPattern:
+;	db $ff, $ef, $ee
+;.HPGroundPattern:
+;	db $ff, $ff, $ee
+;.HPRockPattern:
+;	db $ff, $ee, $fe
+;.HPBugPattern:
+;	db $ff, $fe, $fe
+;.HPGhostPattern:
+;	db $ff, $ef, $fe
+;.HPSteelPattern:
+;	db $ff, $ff, $fe
+;.HPFirePattern:
+;	db $ff, $ee, $ef
+;.HPWaterPattern:
+;	db $ff, $fe, $ef
+;.HPGrassPattern:
+;	db $ff, $ef, $ef
+;.HPElectricPattern:
+;	db $ff, $ff, $ef
+;.HPPsychicPattern:
+;	db $ff, $ee, $ff
+;.HPIcePattern:
+;	db $ff, $fe, $ff
+;.HPDragonPattern:
+;	db $ff, $ef, $ff
+;.HPDarkPattern:
+;	db $fe, $ff, $ff
 
 DrawEnemyHUD:
 	ld a, [wEnemySubStatus2]

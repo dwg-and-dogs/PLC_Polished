@@ -6,7 +6,7 @@ StadiumGroundsFacility_MapScriptHeader:
 
 ; battle fixes
 	; todo check a few more rounds of the final section
-	; fix the shiny star showing up for ff with non ee,ff dvs
+	; fix the shiny star showing up for ff with non ee,ff dvs --> todo check 
 	; adjust the format of the first pokemon event to the other five --> todo check 
 	; prevent infinite master balls from the patron --> TODO CHECK 
 	
