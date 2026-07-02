@@ -4,14 +4,14 @@ WhirlIsland1F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  3,  3, WHIRL_ISLAND_NW, 2 ; ok 
+	warp_event  3,  3, WHIRL_ISLAND_NW, 2 ; ok
 	warp_event 15, 13, WHIRL_ISLAND_NE, 2 ; ok
-	warp_event  7, 23, WHIRL_ISLAND_SW, 2 ; ok 
-	warp_event 23, 23, WHIRL_ISLAND_SE, 2 ; ok 
+	warp_event  7, 23, WHIRL_ISLAND_SW, 2 ; ok
+	warp_event 23, 23, WHIRL_ISLAND_SE, 2 ; ok
 	warp_event 21, 11, WHIRL_ISLAND_B1F, 1 ; 5
-	warp_event 11,  5, WHIRL_ISLAND_B1F, 2 ; 6 
-	warp_event 25, 13, WHIRL_ISLAND_B1F, 3 ; 7 
-	warp_event  5, 19, WHIRL_ISLAND_B1F, 4 ; 8 
+	warp_event 11,  5, WHIRL_ISLAND_B1F, 2 ; 6
+	warp_event 29, 13, WHIRL_ISLAND_B1F, 3 ; 7 ; removed
+	warp_event  5, 19, WHIRL_ISLAND_B1F, 4 ; 8
 
 	def_coord_events
 

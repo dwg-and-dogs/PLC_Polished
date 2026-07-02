@@ -37,9 +37,9 @@ Marts:
 	dw SinjohCrossroadsMonMart ; unused
 	dw GauldenrodTMMart ; unused
 	dw ShamoutiMart2 ; unused
-	dw BattleTowerMart1 ; unused
-	dw BattleTowerMart2 ; unused
-	dw BattleTowerMart3 ; unused
+	dw BattleTowerMart1 
+	dw BattleTowerMart2 
+	dw BattleTowerMart3 
 	assert_table_length NUM_MARTS
 
 CherrygroveMart:; UNUSED
@@ -47,10 +47,6 @@ CherrygroveMart:; UNUSED
 	db POTION
 	db -1
 
-BattleTowerMart4: ; UNUSED
-	db 1 ; # items
-	db POTION
-	db -1
 	
 BlackthornMart:; UNUSED
 	db 1 ; # items
@@ -107,10 +103,7 @@ Goldenrod2FMart2:
 	db DREAM_BALL
 	db -1
 
-BattleTowerMart5:  
-	db 1 ; # items
-	db RARE_CANDY
-	db -1
+
 
 Goldenrod3FMart:
 Celadon5FMart2:
@@ -436,7 +429,7 @@ BattleTowerMart2:
 	db WEAK_POLICY
 	db WHITE_HERB
 	db POWER_HERB
-	db PP_MAX
+	db FOCUS_BAND
 	db -1
 
 BattleTowerMart3:
@@ -451,3 +444,35 @@ BattleTowerMart3:
 	db ROCKY_HELMET
 	db SAFE_GOGGLES
 	db -1
+
+BattleTowerMart4: 
+	db 12 ; # items
+	db QUICK_CLAW
+	db KINGS_ROCK
+	db WIDE_LENS
+	db ZOOM_LENS
+	db SCOPE_LENS
+	db THICK_CLUB
+	db BIG_ROOT
+	db LAGGING_TAIL
+	db ABSORB_BULB
+	db CELL_BATTERY
+	db LUMINOUSMOSS
+	db SNOWBALL
+	db -1
+	
+BattleTowerMart5:  
+	db 11 ; # items
+	db RARE_CANDY
+	db ULTRA_BALL
+	db ABILITYPATCH
+	db ABILITY_CAP
+	db PP_MAX
+	db EVIOLITE
+	db EJECT_PACK
+	db ROOM_SERVICE
+	db BLUNDRPOLICY
+	db THROAT_SPRAY
+	db UTILUMBRELLA
+	db -1
+	

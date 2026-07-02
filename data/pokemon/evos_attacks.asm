@@ -3600,9 +3600,12 @@ YanmegaEvosAttacks:
 UnownEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HIDDEN_POWER
+	db 5, GLARE
+	db 10, CALM_MIND
 	db 20, ANCIENTPOWER
+	db 30, SKETCH
 	db 40, TRANSFORM
-	db 60, PERISH_SONG
+	db 50, PERISH_SONG
 	db 0 ; no more level-up moves
 
 GirafarigEvosAttacks: ;  ADD EVO METHOD 

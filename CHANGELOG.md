@@ -135,12 +135,12 @@ Update some NPC text to give more guidance on where to go with Tin Tower and Whi
 Fix Tangela back sprite colors 
 Restore map music on some maps where it was paused after an event. 
 Misc. text fixes. 
+Update Unown learnset. 
 
 Todo for v110:
-* Double check jynx 
-* Finish Stadium todos 
-* Fix CheckShinyDV in engine/battle/core to check better for the various DVs; right now it only checks +0 and not +1, +2 
-
+* Finish Stadium todos -> check NPCs in the second prep room 
+* Fix CheckShinyDV in engine/battle/core to check better for the various DVs; right now it only checks +0 and not +1, +2 --> todo: check 
+* Look into fishing selected in battle causing glitch 
 * Update all docs
 
 vAny

@@ -7,7 +7,7 @@ WhirlIslandB1F_MapScriptHeader:
 	def_warp_events
 	warp_event 9, 5, WHIRL_ISLAND_1F, 5 ; 1
 	warp_event 7, 11, WHIRL_ISLAND_1F, 6 ; 2
-	warp_event 29, 17, WHIRL_ISLAND_1F, 7 ; 3
+	warp_event 39, 17, WHIRL_ISLAND_1F, 7 ; 3 ; removed
 	warp_event 37, 21, WHIRL_ISLAND_1F, 8 ; 4
 
 

@@ -3,7 +3,7 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 
 
 	def_callbacks
-	; TODO FILL OUT BF MARTS
+
 	
 	def_warp_events
 	warp_event 13, 23, STADIUM_GROUNDS, 6
@@ -85,7 +85,7 @@ StadiumGroundsFaciltyPrepClerkScript:
 	; memory is all set up time to go 
 	faceplayer
 	opentext
-	writetext FacilityPrep_ExplainText ; todo fix 
+	writetext FacilityPrep_ExplainText 
 	waitbutton
 	yesorno
 	iffalse .NoExplain
@@ -175,7 +175,7 @@ FacilityPrep_ExplainFullText:
 	
 	para "You may not use"
 	line "any healing"
-	cont "items in battle." ; todo 
+	cont "items in battle." 
 	
 	para "Enemy trainers do"
 	line "not have any"
@@ -1259,7 +1259,7 @@ TrophyPokemonScript:
 		text "   "
 		text_ram wStringBuffer3        ; <- the resolved name, not a party mon
 		line "Expert streak:"
-		text_decimal wBattleTowerTopStreakExpert, 2, 5 ; todo the streak needs to only be re-written if playing on expert mode 
+		text_decimal wBattleTowerTopStreakExpert, 2, 5 ; 
 		done
 	waitbutton
 	closetext
