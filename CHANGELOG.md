@@ -110,7 +110,7 @@ Minor text, tile, object palette issues.
 
 Major Updates: 
 Postgame Battle Facility: Stadium! <todo description> 
-New Ancestor forms: Ledian (Bug/Water Special Attacker) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in <todo> and Cianwood Cave, respectively. 
+New Ancestor forms: Ledian (Bug/Water Special Attacker with HA Drizzle) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in Anarres Holt and Cianwood Cave, respectively. 
 Special mark on trainer and enemy mon if they have max DVs. 
 Stadium Facility Rematches are a bit harder. 
 EV trainers in the Stadium Facility Prep Room. 
@@ -136,12 +136,18 @@ Fix Tangela back sprite colors
 Restore map music on some maps where it was paused after an event. 
 Misc. text fixes. 
 Update Unown learnset. 
+Add Drain Punch to more movesets.
+Update Ancestor Forms learnsets. 
+Add a few more technician moves to Samurott move relearner learnset. 
+Remove Hall of Fame from Pokecenter PCs. 
+Removed Sleep Talk from learnsets - addressing a bug. 
 
 Todo for v110:
-* Finish Stadium todos -> check NPCs in the second prep room 
-* Fix CheckShinyDV in engine/battle/core to check better for the various DVs; right now it only checks +0 and not +1, +2 --> todo: check 
-* Look into fishing selected in battle causing glitch 
-* Update all docs
+* Finish Stadium todos
+* Update all docs: Evos/Attacks, trainer guide 
+* Update moves to give hisuian forms their signature moves?
+* Check that losing to elders does reset your streak 
+* Fix rest - sleep talk 
 
 vAny
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?

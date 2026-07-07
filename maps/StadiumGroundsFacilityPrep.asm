@@ -40,7 +40,7 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	object_event 2, 17, SPRITE_TROPHY_MON, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrophyPokemonScript, EVENT_TROPHY_MON 
 	object_event 1, 17, SPRITE_GOLD_TROPHY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldTrophyScript, EVENT_FACILITY_GOLD_TROPHY
 
-
+	object_event 8, 22, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, FacilityPrepJudgeMachine, -1
 
 	object_const_def
 	const FACILITY_URSULA
@@ -54,6 +54,19 @@ StadiumGroundsFacilityPrep_MapScriptHeader:
 	const FACILITY_PETRA
 	const FACILITY_AMOS
 	const FACILITY_PIPER
+
+
+FacilityPrepJudgeMachine:
+	faceplayer
+	opentext
+	writethistext
+		text "I can measure"
+		line "your #mon EV"
+		cont "and DVs."
+		done
+	waitbutton
+	special JudgeMachine
+	waitendtext
 
 FacilityNatuScript:
 	opentext
@@ -72,8 +85,8 @@ NatuFacilityText:
 
 StadiumGroundsFaciltyPrepClerkScript:
 	setmapscene STADIUM_GROUNDS_FACILITY, 0
-	loadmem wBattleTowerCurStreak, 0       ; reset streak (both bytes)
-	loadmem wBattleTowerCurStreak + 1, 0	; reset streak (both bytes) 
+	loadmem wBattleTowerCurStreak, 0 ; 0       ; reset streak (both bytes) DEBUG TODO: THIS IS TO SEE IF THE PATRON WILL GIVE YOU ANYTHING 
+	loadmem wBattleTowerCurStreak + 1, 25 ; 0 	; reset streak (both bytes) 
 	; only try to reset the streak if the mon is there 
 	readdifficultymode
 	ifequal DIFFICULTY_HARD, .hard
@@ -120,6 +133,22 @@ StadiumGroundsFaciltyPrepClerkScript:
 	blackoutmod STADIUM_GROUNDS_FACILITY_PREP
 	; FALLTHRU 
 .BlackoutSet:	
+	setevent EVENT_FACILITY_BUG_MANIAC
+	setevent EVENT_FACILITY_AROMA_LADY
+	setevent EVENT_FACILITY_SAGE
+	setevent EVENT_FACILITY_NOMADF
+	setevent EVENT_FACILITY_NINJA
+	setevent EVENT_FACILITY_BRIGADER
+	
+	setevent EVENT_FACILITY_SILAS
+	setevent EVENT_FACILITY_SANDRA
+	setevent EVENT_FACILITY_SYBIL
+	setevent EVENT_FACILITY_REMY
+	setevent EVENT_FACILITY_AMOS
+	setevent EVENT_FACILITY_VESPER
+	setevent EVENT_FACILITY_KURT
+	setevent EVENT_STADIUM_HEALED
+	
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx	
@@ -128,8 +157,7 @@ StadiumGroundsFaciltyPrepClerkScript:
 	
 FacilityPrep_ExplainText:
 	text "Welcome to the"
-	line "Gauldenrod"
-	cont "Stadium!"
+	line "National Stadium!"
 	
 	para "It's a true test"
 	line "for trainers to"
@@ -157,6 +185,10 @@ FacilityPrep_ExplainFullText:
 	line "battle a #mon"
 	para "that you have the"
 	line "option to catch."
+	
+	para "You get to keep"
+	line "each #mon you"
+	cont "catch here."
 	
 	para "Your team is then"
 	line "healed,"

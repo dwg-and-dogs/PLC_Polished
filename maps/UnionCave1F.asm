@@ -85,7 +85,7 @@ ScientistDennettSeenText:
 	done
 
 ScientistDennettBeatenText:
-	text "Dynamite!"
+	text "You zapped me!"
 	done
 
 UnionHealerScript:

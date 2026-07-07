@@ -107,7 +107,7 @@ TMHMMoves:
 	db SEED_BOMB    ; MT21
 	db SEISMIC_TOSS ; MT22 
 	db SKILL_SWAP   ; MT23
-	db SLEEP_TALK   ; MT24
+	db SLEEP_TALK   ; MT24 ; not available, sleep talk is bugged 
 	db SUCKER_PUNCH ; MT25
 	db SWAGGER      ; MT26
 	db THUNDERPUNCH ; MT27

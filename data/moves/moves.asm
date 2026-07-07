@@ -21,7 +21,7 @@ Moves::
 	move FIRE_PUNCH,   EFFECT_BURN_HIT,           75, FIRE,      100, 15,  10, PHYSICAL
 	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         75, ICE,       100, 15,  10, PHYSICAL
 	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       75, ELECTRIC,  100, 15,  10, PHYSICAL
-	move MAGMA_STORM,  EFFECT_TRAP,        		 100, FIRE,    	  75,  5,   0, SPECIAL ; replaces scratch
+	move MAGMA_STORM,  EFFECT_TRAP,        		 100, FIRE,    	  75,  5,   0, SPECIAL 
 	move X_SCISSOR,    EFFECT_NORMAL_HIT,         80, BUG,       100, 15,   0, PHYSICAL
 	move NIGHT_SLASH,  EFFECT_NORMAL_HIT,         70, DARK,      100, 15,   0, PHYSICAL
 	move AIR_SLASH,    EFFECT_FLINCH_HIT,         75, FLYING,     95, 15,  30, SPECIAL
@@ -93,7 +93,7 @@ Moves::
 	move SLEEP_POWDER, EFFECT_SLEEP,               0, GRASS,      75, 15,   0, STATUS
 	move PETAL_DANCE,  EFFECT_RAMPAGE,           120, GRASS,     100, 10,   0, SPECIAL
 	move STRING_SHOT,  EFFECT_SPEED_DOWN_2,        0, BUG,        95, 40,   0, STATUS
-	move DRAGON_RAGE,  EFFECT_STATIC_DAMAGE,      40, DRAGON,    100, 10,   0, SPECIAL
+	move DRAGON_RAGE,  EFFECT_STATIC_DAMAGE,      40, DRAGON,    100, 10,   0, SPECIAL ; candidate for removal 
 	move FIRE_SPIN,    EFFECT_TRAP,               35, FIRE,       85, 15,   0, SPECIAL
 	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       40, ELECTRIC,  100, 30,  10, SPECIAL
 	move THUNDERBOLT,  EFFECT_PARALYZE_HIT,       90, ELECTRIC,  100, 15,  10, SPECIAL
@@ -163,10 +163,10 @@ Moves::
 	move EXTRASENSORY, EFFECT_FLINCH_HIT,         80, PSYCHIC,   100, 20,  10, SPECIAL
 	move SPLASH,       EFFECT_SPLASH,              0, NORMAL,    100, 40,   0, STATUS
 	move DRAGON_DANCE, EFFECT_DRAGON_DANCE,        0, DRAGON,    100, 20,   0, STATUS
-	move CRABHAMMER,   EFFECT_NORMAL_HIT,        100, WATER,      90, 10,   0, PHYSICAL
+	move CRABHAMMER,   EFFECT_NORMAL_HIT,        100, WATER,      90, 10,   0, PHYSICAL ; candidate for removal 
 	move EXPLOSION,    EFFECT_EXPLOSION,         250, NORMAL,    100,  5,   0, PHYSICAL
 	move FURY_STRIKES, EFFECT_FURY_STRIKES,       18, NORMAL,     80, 15,   0, PHYSICAL
-	move BONEMERANG,   EFFECT_DOUBLE_HIT,         50, GROUND,     90, 10,   0, PHYSICAL
+	move BONEMERANG,   EFFECT_DOUBLE_HIT,         50, GROUND,     90, 10,   0, PHYSICAL ; candidate for removal 
 	move REST,         EFFECT_HEAL,                0, PSYCHIC,   100, 10,   0, STATUS
 	move ROCK_SLIDE,   EFFECT_FLINCH_HIT,         75, ROCK,       90, 10,  30, PHYSICAL
 	move HYPER_FANG,   EFFECT_FLINCH_HIT,         80, NORMAL,     90, 15,  10, PHYSICAL

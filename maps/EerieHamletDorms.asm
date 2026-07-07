@@ -23,7 +23,7 @@ EerieHamletDorms_MapScriptHeader:
 
 	def_object_events
 	object_event 10, 4, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HamletDormsKurtScript, EVENT_BEAT_AMOS ; event_talked_to_kurt_cc
-	object_event 2, 4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EerieDormsSleepTalkScript, -1 
+;	object_event 2, 4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EerieDormsSleepTalkScript, -1 
 	object_event 5, 3, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC1Text, -1
 	pokemon_event  6, 3, SNEASEL, -1, -1, PAL_NPC_RED, SneaselText, -1
 	object_event 2, 2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, HamletDormsNPC2Text, -1

@@ -123,7 +123,8 @@ SchoolgirlMollySeenText:
 	done
 
 SchoolgirlMollyBeatenText:
-	text "Devastating."
+	text "I'm all tangled"
+	line "up!"
 	done
 	
 GenericTrainerSchoolgirlEliza:

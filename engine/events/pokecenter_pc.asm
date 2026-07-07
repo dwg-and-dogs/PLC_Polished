@@ -63,9 +63,9 @@ PokemonCenterPC:
 	db  1, 0, 2, 4 ; bill's, player's, oak's, turn off
 	db -1
 
-	; postgame
-	db  5 ; items
-	db  1, 0, 2, 3, 4 ; bill's, player's, oak's, hall of fame, turn off
+	; postgame, no hall of fame 
+	db  4 ; items
+	db  1, 0, 2, 4 ; bill's, player's, oak's, hall of fame, turn off
 	db -1
 
 .ChooseWhichPCListToUse:

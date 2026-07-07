@@ -1,0 +1,22 @@
+Level Caps are the same for all difficulties. 
+
+Anarres:  16
+Azalea Gym (Optional): 18
+Gauldenrod: 21
+Stadium Grounds: 24
+Goldenrod: 29
+Violet: 33
+Western Capital: 36
+Trader's Landing Docks: 40
+Lighthouse: 43
+Mahogany: 45
+Olivine Gym (Optional): 48
+Ecruteak Gym (Optional): 49
+Sinjoh: 48
+Empire's Extent Temple (Optional): 50
+Eerie Hamlet: 51
+Clast's Cradle: 53
+Final Gauntlet: 57
+Final Boss: 60
+
+Cynthia (Optional): 63

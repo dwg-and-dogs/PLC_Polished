@@ -278,7 +278,7 @@ RuinsOfAlphKabutoChamberScientistCrypticText:
 	
 	para "If you help me"
 	line "solve it, I'll"
-	para "share on of our"
+	para "share one of our"
 	line "Unown Reports."
 	
 	para "We believe this"

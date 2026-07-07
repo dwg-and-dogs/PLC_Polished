@@ -1,6 +1,6 @@
 StadiumGroundsFacilityPrep2_MapScriptHeader:
 	def_scene_scripts
-	; TODO CHECK ALL NPCS 
+
 
 	def_callbacks
 	
@@ -43,6 +43,7 @@ StadiumGroundsFacilityPrep2_MapScriptHeader:
 
 	object_event 7, 17, SPRITE_TAMER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE, OBJECTTYPE_SCRIPT, 0, FacilityPrepSPDefTrainer,  -1
 	object_event 8, 17, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, POLITOED, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptext, FacilityPolitoedText, -1
+
 
 
 

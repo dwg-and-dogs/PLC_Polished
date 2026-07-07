@@ -440,7 +440,7 @@ CamdenLeavingText:
 	cont "isn't all bad."
 	
 	para "Take one of my"
-	line "Abilitypatches,"
+	line "AbilityPatches,"
 	para "see if your mind"
 	line "changes."
 	done

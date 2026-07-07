@@ -62,10 +62,10 @@ NewsMachineOffText:
 	done
 
 NewsMachineIntroText:
-	text "It's the #mon"
-	line "Judge Machine!"
+;	text "It's the #mon"
+;	line "Judge Machine!"
 
-	para "Would you like to"
+	text "Would you like to"
 	line "judge a #mon's"
 	cont "overall power?"
 	done

@@ -202,6 +202,9 @@ DewottEvosAttacks:
 
 SamurottEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, AERIAL_ACE
+	db 1, QUICK_ATTACK
+	db 1, KARATE_CHOP
 	db 1, TACKLE
 	db 1, LEER
 	db 6, AQUA_JET
@@ -1005,7 +1008,6 @@ Alakazam_AncestorEvosAttacks: ;
 	db 36, SHADOW_BALL ; Ally Switch → new move
 	db 38, PSYCHIC_M
 	db 41, CALM_MIND
-	db 43, AURA_SPHERE ; Role Play → new move
 	db 46, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
@@ -2761,7 +2763,7 @@ SnorlaxEvosAttacks:
 	db 20, TAKE_DOWN ; Yawn → RBY TM move
 	db 25, BODY_SLAM
 	db 28, REST
-	db 33, SLEEP_TALK
+;	db 33, SLEEP_TALK
 	db 36, ROLLOUT
 	db 41, OUTRAGE ; Block → HGSS tutor move
 	db 44, BELLY_DRUM
@@ -4055,6 +4057,7 @@ UrsaringEvosAttacks:
 
 UrsalunaEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, EARTH_POWER
 	db 1, GUNK_SHOT ; HGSS tutor move
 	db 1, THIEF ; Covet → TM move
 	db 1, TACKLE
@@ -4076,23 +4079,24 @@ UrsalunaEvosAttacks:
 
 Ursaluna_BloodmoonEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, EARTHQUAKE 
 	db 1, RECOVER ; HGSS tutor move
 	db 1, THIEF ; Covet → TM move
 	db 1, TACKLE
 	db 1, LEER
 	db 1, LICK
 	db 1, FOCUS_ENERGY ; Fake Tears → egg move
-	db 8, FURY_STRIKES ; Fury Swipes → similar move
+	db 8, FURY_STRIKES ; 
 	db 15, FEINT_ATTACK
-	db 22, BELLY_DRUM ; Sweet Scent → egg move
-	db 25, PLAY_ROUGH ; Play Nice → egg move
+	db 22, BELLY_DRUM ;
+	db 25, PLAY_ROUGH
 	db 29, SLASH
 	db 34, REST
-	db 38, EARTHQUAKE ; Snore → egg move
+	db 38, EARTH_POWER
 	db 43, MOONBLAST
 	db 48, FOCUS_BLAST
 	db 55, CLOSE_COMBAT
-	db 60, GUNK_SHOT ; Hammer Arm → new move
+	db 60, GUNK_SHOT 
 	db 0 ; no more level-up moves
 
 
@@ -4771,7 +4775,8 @@ SpiritombEvosAttacks:;encounter at lv 35
 	db 0 ; no more evolutions
 	db 1, ASTONISH
 	db 10, REST
-	db 10, SLEEP_TALK
+	db 15, POWER_GEM
+;	db 10, SLEEP_TALK
 	db 20, DARK_PULSE
 	db 25, CALM_MIND
 	db 36, CURSE
@@ -4813,6 +4818,7 @@ GabiteEvosAttacks:
 	
 GarchompEvosAttacks:
 	db 0 ; no more Evolutions
+	db 1, DRAGONBREATH
 	db 9, DRAGONBREATH
 	db 14, BULLDOZE
 	db 18, BITE

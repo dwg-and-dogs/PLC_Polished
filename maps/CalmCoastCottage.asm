@@ -54,6 +54,8 @@ CalmCoastCottageDayCareWomanScript:
 	waitbutton
 	closetext
 
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
 	special HealParty
 	pause 60

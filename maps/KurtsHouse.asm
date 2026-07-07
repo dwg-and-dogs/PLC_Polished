@@ -913,7 +913,7 @@ endr
 	givepoke SUICUNE, 200
 	loadmem wPartyMon1Moves+0, SURF
 	loadmem wPartyMon1Moves+1, ICE_BEAM
-	loadmem wPartyMon1Moves+2, CALM_MIND
+	loadmem wPartyMon1Moves+2, SLEEP_TALK 
 	loadmem wPartyMon1Moves+3, REST
 	loadmem wPartyMon1EVs+0, 252
 	loadmem wPartyMon1EVs+1, 252
@@ -999,6 +999,8 @@ endr
 	loadmem wPartyMon6DVs+0, $ff
 	loadmem wPartyMon6DVs+1, $ff
 	loadmem wPartyMon6DVs+2, $ff	
+	
+	givepoke SPIRITOMB, 10
 
 	setevent EVENT_REACHED_CREDITS_ONCE
 

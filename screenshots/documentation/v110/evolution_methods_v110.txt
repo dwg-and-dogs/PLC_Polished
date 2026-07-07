@@ -1,0 +1,435 @@
+CyndaquilEvosAttacks:
+	db EVOLVE_LEVEL, 14, QUILAVA
+
+QuilavaEvosAttacks:
+	db EVOLVE_LEVEL, 36, TYPHLOSION
+	db EVOLVE_ITEM, ODD_SOUVENIR, TYPHLOSION
+
+RowletEvosAttacks:
+	db EVOLVE_LEVEL, 16, DARTRIX
+
+DartrixEvosAttacks:
+	db EVOLVE_LEVEL, 34, DECIDUEYE
+	db EVOLVE_ITEM, ODD_SOUVENIR, DECIDUEYE
+
+OshawottEvosAttacks:
+	db EVOLVE_LEVEL, 16, DEWOTT
+
+DewottEvosAttacks:
+	db EVOLVE_LEVEL, 34, SAMUROTT
+	db EVOLVE_ITEM, ODD_SOUVENIR, SAMUROTT
+
+HoothootEvosAttacks:
+	db EVOLVE_LEVEL, 18, NOCTOWL
+	db EVOLVE_ITEM, ODD_SOUVENIR, NOCTOWL
+
+PikachuEvosAttacks:
+	db EVOLVE_ITEM, THUNDERSTONE, RAICHU
+	db EVOLVE_ITEM, ODD_SOUVENIR, RAICHU
+
+NidoranEvosAttacks:
+	db EVOLVE_STAT, 16, ATK_LT_DEF, NIDORINA
+	db EVOLVE_STAT, 16, ATK_GT_DEF, NIDORINO
+
+NidorinaEvosAttacks:
+	db EVOLVE_ITEM, MOON_STONE, NIDOQUEEN
+
+NidorinoEvosAttacks:
+	db EVOLVE_ITEM, MOON_STONE, NIDOKING
+
+ClefairyEvosAttacks:
+	db EVOLVE_ITEM, MOON_STONE, CLEFABLE
+
+VulpixEvosAttacks:
+	db EVOLVE_ITEM, FIRE_STONE, NINETALES
+	db EVOLVE_ITEM, ODD_SOUVENIR, NINETALES
+
+Vulpix_AlolanEvosAttacks:
+	db EVOLVE_LEVEL, 25, NINETALES
+
+ZubatEvosAttacks:
+	db EVOLVE_LEVEL, 22, GOLBAT
+
+GolbatEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_ANYTIME, CROBAT
+
+OddishEvosAttacks:
+	db EVOLVE_LEVEL, 18, GLOOM
+
+GloomEvosAttacks:
+	db EVOLVE_ITEM, LEAF_STONE, VILEPLUME
+	db EVOLVE_ITEM, SUN_STONE, BELLOSSOM
+
+ParasEvosAttacks:
+	db EVOLVE_LEVEL, 20, PARASECT
+
+MankeyEvosAttacks:
+	db EVOLVE_LEVEL, 24, PRIMEAPE
+
+PrimeapeEvosAttacks:
+	db EVOLVE_MOVE, OUTRAGE, ANNIHILAPE ; level 48
+
+GrowlitheEvosAttacks:
+	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
+	db EVOLVE_ITEM, ODD_SOUVENIR, ARCANINE
+
+Growlithe_HisuianEvosAttacks:
+	db EVOLVE_LEVEL, 25, ARCANINE
+
+PoliwagEvosAttacks:
+	db EVOLVE_LEVEL, 15, POLIWHIRL
+
+PoliwhirlEvosAttacks:
+	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
+	db EVOLVE_HOLDING, KINGS_ROCK, POLITOED
+
+AbraEvosAttacks:
+	db EVOLVE_LEVEL, 15, KADABRA
+
+KadabraEvosAttacks:
+	db EVOLVE_LEVEL, 40, ALAKAZAM
+	db EVOLVE_ITEM, ODD_SOUVENIR, ALAKAZAM
+
+MachopEvosAttacks:
+	db EVOLVE_LEVEL, 20, MACHOKE
+
+MachokeEvosAttacks:
+	db EVOLVE_LEVEL, 40, MACHAMP
+
+BellsproutEvosAttacks:
+	db EVOLVE_LEVEL, 18, WEEPINBELL
+
+WeepinbellEvosAttacks:
+	db EVOLVE_ITEM, LEAF_STONE, VICTREEBEL
+
+TentacoolEvosAttacks:
+	db EVOLVE_LEVEL, 28, TENTACRUEL
+
+GeodudeEvosAttacks:
+	db EVOLVE_LEVEL, 20, GRAVELER
+	db EVOLVE_ITEM, ODD_SOUVENIR, GRAVELER
+
+GravelerEvosAttacks:
+	db EVOLVE_LEVEL, 40, GOLEM
+	db EVOLVE_ITEM, ODD_SOUVENIR, GOLEM
+
+Geodude_AlolanEvosAttacks:
+	db EVOLVE_LEVEL, 20, GRAVELER
+
+Graveler_AlolanEvosAttacks:
+	db EVOLVE_LEVEL, 40, GOLEM
+
+PonytaEvosAttacks:
+	db EVOLVE_LEVEL, 25, RAPIDASH
+	db EVOLVE_ITEM, ODD_SOUVENIR, RAPIDASH
+
+Ponyta_GalarianEvosAttacks:
+	db EVOLVE_LEVEL, 25, RAPIDASH
+
+SlowpokeEvosAttacks:
+	db EVOLVE_HOLDING, KINGS_ROCK, SLOWKING
+	db EVOLVE_LEVEL, 31, SLOWBRO
+	db EVOLVE_ITEM, ODD_SOUVENIR, SLOWBRO
+
+Slowpoke_GalarianEvosAttacks:
+	db EVOLVE_HOLDING, KINGS_ROCK, SLOWKING
+	db EVOLVE_LEVEL, 31, SLOWBRO
+
+MagnemiteEvosAttacks:
+	db EVOLVE_LEVEL, 25, MAGNETON
+
+MagnetonEvosAttacks:
+	db EVOLVE_ITEM, THUNDERSTONE, MAGNEZONE
+
+GrimerEvosAttacks:
+	db EVOLVE_LEVEL, 25, MUK
+	db EVOLVE_ITEM, ODD_SOUVENIR, MUK
+
+Grimer_AlolanEvosAttacks:
+	db EVOLVE_LEVEL, 25, MUK
+
+GastlyEvosAttacks:
+	db EVOLVE_LEVEL, 20, HAUNTER
+
+HaunterEvosAttacks:
+	db EVOLVE_LEVEL, 40, GENGAR
+
+OnixEvosAttacks:
+	db EVOLVE_HOLDING, METAL_COAT, STEELIX
+
+VoltorbEvosAttacks:
+	db EVOLVE_LEVEL, 25, ELECTRODE
+	db EVOLVE_ITEM, ODD_SOUVENIR, ELECTRODE
+
+Voltorb_HisuianEvosAttacks:
+	db EVOLVE_LEVEL, 25, ELECTRODE
+
+ExeggcuteEvosAttacks:
+	db EVOLVE_ITEM, LEAF_STONE, EXEGGUTOR
+	db EVOLVE_ITEM, ODD_SOUVENIR, EXEGGUTOR
+
+KoffingEvosAttacks:
+	db EVOLVE_LEVEL, 30, WEEZING
+	db EVOLVE_ITEM, ODD_SOUVENIR, WEEZING
+
+RhyhornEvosAttacks:
+	db EVOLVE_LEVEL, 30, RHYDON
+
+RhydonEvosAttacks:
+	db EVOLVE_HOLDING, PROTECTOR, RHYPERIOR
+
+ChanseyEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
+
+TangelaEvosAttacks:
+	db EVOLVE_MOVE, ANCIENTPOWER, TANGROWTH ; level 38
+
+HorseaEvosAttacks:
+	db EVOLVE_LEVEL, 32, SEADRA
+
+SeadraEvosAttacks:
+	db EVOLVE_HOLDING, DRAGON_SCALE, KINGDRA
+
+ScytherEvosAttacks:
+	db EVOLVE_HOLDING, METAL_COAT, SCIZOR
+	db EVOLVE_HOLDING, HARD_STONE, KLEAVOR
+
+ElectabuzzEvosAttacks:
+	db EVOLVE_HOLDING, ELECTIRIZER, ELECTIVIRE
+
+MagmarEvosAttacks:
+	db EVOLVE_HOLDING, MAGMARIZER, MAGMORTAR
+
+PinsirEvosAttacks:
+	db EVOLVE_ITEM, DUSK_STONE, MINSIR
+
+MagikarpEvosAttacks:
+	db EVOLVE_LEVEL, 20, GYARADOS
+
+EeveeEvosAttacks:
+	db EVOLVE_ITEM, THUNDERSTONE, JOLTEON
+	db EVOLVE_ITEM, WATER_STONE, VAPOREON
+	db EVOLVE_ITEM, FIRE_STONE, FLAREON
+	db EVOLVE_ITEM, SHINY_STONE, SYLVEON
+	db EVOLVE_ITEM, LEAF_STONE, LEAFEON
+	db EVOLVE_ITEM, ICE_STONE, GLACEON
+	db EVOLVE_ITEM, SUN_STONE, ESPEON
+	db EVOLVE_ITEM, DUSK_STONE, UMBREON
+
+PorygonEvosAttacks:
+	db EVOLVE_HOLDING, UP_GRADE, PORYGON2
+
+Porygon2EvosAttacks:
+	db EVOLVE_HOLDING, DUBIOUS_DISC, PORYGON_Z
+
+ChikoritaEvosAttacks:
+	db EVOLVE_LEVEL, 16, BAYLEEF
+
+BayleefEvosAttacks:
+	db EVOLVE_LEVEL, 32, MEGANIUM
+	db EVOLVE_ITEM, ODD_SOUVENIR, MEGANIUM
+
+TotodileEvosAttacks:
+	db EVOLVE_LEVEL, 18, CROCONAW
+
+CroconawEvosAttacks:
+	db EVOLVE_LEVEL, 32, FERALIGATR
+	db EVOLVE_ITEM, ODD_SOUVENIR, FERALIGATR
+
+SentretEvosAttacks:
+	db EVOLVE_LEVEL, 15, FURRET
+
+LedybaEvosAttacks:
+	db EVOLVE_LEVEL, 14, LEDIAN
+	db EVOLVE_ITEM, ODD_SOUVENIR, LEDIAN
+
+SpinarakEvosAttacks:
+	db EVOLVE_LEVEL, 14, ARIADOS
+
+ChinchouEvosAttacks:
+	db EVOLVE_LEVEL, 25, LANTURN
+
+TogeticEvosAttacks:
+	db EVOLVE_ITEM, SHINY_STONE, TOGEKISS
+
+NatuEvosAttacks:
+	db EVOLVE_LEVEL, 25, XATU
+	db EVOLVE_ITEM, ODD_SOUVENIR, XATU
+
+MareepEvosAttacks:
+	db EVOLVE_LEVEL, 16, FLAAFFY
+
+FlaaffyEvosAttacks:
+	db EVOLVE_LEVEL, 30, AMPHAROS
+
+MarillEvosAttacks:
+	db EVOLVE_LEVEL, 18, AZUMARILL
+
+HoppipEvosAttacks:
+	db EVOLVE_LEVEL, 14, SKIPLOOM
+
+SkiploomEvosAttacks:
+	db EVOLVE_LEVEL, 27, JUMPLUFF
+
+SunkernEvosAttacks:
+	db EVOLVE_ITEM, SUN_STONE, SUNFLORA
+
+WooperEvosAttacks:
+	db EVOLVE_LEVEL, 20, QUAGSIRE
+
+MurkrowEvosAttacks:
+	db EVOLVE_ITEM, DUSK_STONE, HONCHKROW
+
+MisdreavusEvosAttacks:
+	db EVOLVE_ITEM, DUSK_STONE, MISMAGIUS
+
+YanmaEvosAttacks:
+	db EVOLVE_MOVE, ANCIENTPOWER, YANMEGA ; level 33
+
+GirafarigEvosAttacks:
+	db EVOLVE_MOVE, ZEN_HEADBUTT, FARIGIRAF ; level 32
+
+PinecoEvosAttacks:
+	db EVOLVE_LEVEL, 25, FORRETRESS
+
+DunsparceEvosAttacks:
+	db EVOLVE_LEVEL, 32, DUDUNSPARCE ; preserve pre-evo form
+
+GligarEvosAttacks:
+	db EVOLVE_HOLDING, RAZOR_FANG, GLISCOR
+
+SnubbullEvosAttacks:
+	db EVOLVE_LEVEL, 20, GRANBULL
+
+QwilfishEvosAttacks:
+	db EVOLVE_ITEM, ODD_SOUVENIR, OVERQWIL
+
+Qwilfish_HisuianEvosAttacks:
+	db EVOLVE_MOVE, CRUNCH, OVERQWIL ; level 37
+
+SneaselEvosAttacks:
+	db EVOLVE_HOLDING, RAZOR_CLAW, WEAVILE
+	db EVOLVE_ITEM, ODD_SOUVENIR, SNEASLER
+
+Sneasel_HisuianEvosAttacks:
+	db EVOLVE_HOLDING, RAZOR_CLAW, SNEASLER
+
+TeddiursaEvosAttacks:
+	db EVOLVE_LEVEL, 25, URSARING
+
+UrsaringEvosAttacks:
+	db EVOLVE_ITEM, MOON_STONE, URSALUNA
+
+SlugmaEvosAttacks:
+	db EVOLVE_ITEM, ODD_SOUVENIR, MAGCARGO
+	db EVOLVE_LEVEL, 24, MAGCARGO
+
+SwinubEvosAttacks:
+	db EVOLVE_LEVEL, 28, PILOSWINE
+
+PiloswineEvosAttacks:
+	db EVOLVE_MOVE, ANCIENTPOWER, MAMOSWINE ; level 41
+
+RemoraidEvosAttacks:
+	db EVOLVE_LEVEL, 25, OCTILLERY
+
+HoundourEvosAttacks:
+	db EVOLVE_LEVEL, 24, HOUNDOOM
+
+PhanpyEvosAttacks:
+	db EVOLVE_LEVEL, 25, DONPHAN
+
+StantlerEvosAttacks:
+	db EVOLVE_MOVE, ZEN_HEADBUTT, WYRDEER ; level 38
+
+StarlyEvosAttacks:
+	db EVOLVE_LEVEL, 14, STARAVIA
+
+StaraviaEvosAttacks:
+	db EVOLVE_LEVEL, 34, STARAPTOR
+
+ShinxEvosAttacks:
+	db EVOLVE_LEVEL, 15, LUXIO
+
+LuxioEvosAttacks:
+	db EVOLVE_LEVEL, 30, LUXRAY
+
+CranidosEvosAttacks:
+	db EVOLVE_LEVEL, 30, RAMPARDOS
+
+ShieldonEvosAttacks:
+	db EVOLVE_LEVEL, 30, BASTIODON
+
+AipomEvosAttacks:
+	db EVOLVE_MOVE, DOUBLE_SLAP, AMBIPOM ; level 32
+
+DrifloonEvosAttacks:
+	db EVOLVE_LEVEL, 24, DRIFBLIM
+
+BronzorEvosAttacks:
+	db EVOLVE_LEVEL, 25, BRONZONG
+
+GibleEvosAttacks:
+	db EVOLVE_LEVEL, 24, GABITE
+
+GabiteEvosAttacks:
+	db EVOLVE_LEVEL, 48, GARCHOMP
+
+RioluEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_ANYTIME, LUCARIO
+
+HippopotasEvosAttacks:
+	db EVOLVE_LEVEL, 28, HIPPOWDON
+
+CroagunkEvosAttacks:
+	db EVOLVE_LEVEL, 27, TOXICROAK
+
+SnoverEvosAttacks:
+	db EVOLVE_LEVEL, 28, ABOMASNOW
+
+DuskullEvosAttacks:
+	db EVOLVE_LEVEL, 27, DUSCLOPS
+
+DusclopsEvosAttacks:
+	db EVOLVE_ITEM, DUSK_STONE, DUSKNOIR
+
+SnoruntEvosAttacks:
+	db EVOLVE_LEVEL, 32, GLALIE
+	db EVOLVE_ITEM, DAWN_STONE, FROSLASS
+
+BergmiteEvosAttacks:
+	db EVOLVE_LEVEL, 31, AVALUGG
+
+BasculinEvosAttacks:
+	db EVOLVE_LOCATION, GROTTOED_GLACIER, BASCULEGION
+
+RuffletEvosAttacks:
+	db EVOLVE_LEVEL, 36, BRAVIARY
+
+RaltsEvosAttacks:
+	db EVOLVE_LEVEL, 15, KIRLIA
+
+KirliaEvosAttacks:
+	db EVOLVE_LEVEL, 30, GARDEVOIR
+	db EVOLVE_ITEM, DAWN_STONE, GALLADE
+
+GoomyEvosAttacks:
+	db EVOLVE_LEVEL, 25, SLIGGOO ; reduced
+
+SliggooEvosAttacks:
+	db EVOLVE_LEVEL, 50, GOODRA
+
+ZoruaEvosAttacks:
+	db EVOLVE_LEVEL, 30, ZOROARK
+
+DratiniEvosAttacks:
+	db EVOLVE_LEVEL, 25, DRAGONAIR
+
+DragonairEvosAttacks:
+	db EVOLVE_LEVEL, 55, DRAGONITE
+
+LarvitarEvosAttacks:
+	db EVOLVE_LEVEL, 30, PUPITAR
+
+PupitarEvosAttacks:
+	db EVOLVE_LEVEL, 55, TYRANITAR

@@ -6,14 +6,11 @@ StadiumGroundsFacility_MapScriptHeader:
 
 ; battle fixes
 	; todo check a few more rounds of the final section
-	; fix the shiny star showing up for ff with non ee,ff dvs --> todo check 
-	; adjust the format of the first pokemon event to the other five --> todo check 
-	; prevent infinite master balls from the patron --> TODO CHECK 
 	; todo write missingno teams into the parties 
+	; todo check what happens if you lose to an elder vs a generic 
 	
 ; testing fixes
-	; todo write phrases for all trainers 
-	; todo adjust enemy levels based on testing 
+	; todo write phrases for all trainers and names 
 
 
 	def_callbacks
@@ -4378,10 +4375,10 @@ RandomGiftGiverScript:
 	jumptext RandomGiftNotYetText
 
 .CheckForGift:
-	readmem wStadiumFacilityThirdTrainer
-	ifequal 0, .HasPatron          ; ~1-in-N gate, also frozen per round
-	jumptext NoInterestedPatronsText
-.HasPatron:
+;	readmem wStadiumFacilityThirdTrainer
+;	ifequal 0, .HasPatron          ; ~1-in-N gate, also frozen per round
+;	jumptext NoInterestedPatronsText
+;.HasPatron:
 	writetext InterestedPatronText
 	waitbutton
 	; pick the Master Ball cutoff from the streak band
@@ -4392,23 +4389,23 @@ RandomGiftGiverScript:
 	sjump .Tier4                   ; 30+
 .Tier1:
 	readmem wStadiumFacilityFirstTrainer
-	ifless 1, .GiveMasterBallScript     ; 1/20  = 5%
+	ifless $2, .GiveMasterBallScript     ; 1/20  = 5%
 	sjump .Consolation
 .Tier2:
 	readmem wStadiumFacilityFirstTrainer
-	ifless 2, .GiveMasterBallScript     ; 2/20  = 10%
+	ifless $3, .GiveMasterBallScript     ; 2/20  = 10%
 	sjump .Consolation
 .Tier3:
 	readmem wStadiumFacilityFirstTrainer
-	ifless 3, .GiveMasterBallScript     ; 3/20  = 15%
+	ifless $4, .GiveMasterBallScript     ; 3/20  = 15%
 	sjump .Consolation
 .Tier4:
 	readmem wStadiumFacilityFirstTrainer
-	ifless 4, .GiveMasterBallScript     ; 4/20  = 20%
+	ifless $5, .GiveMasterBallScript     ; 4/20  = 20%
 ;	fallthrough
 .Consolation:
 	readmem wStadiumFacilityFirstTrainer
-	ifless 12, .GiveBigNuggetScript     ; the band just above the MB cutoff
+	ifless $a, .GiveBigNuggetScript     ; the band just above the MB cutoff
 	setevent EVENT_GAVE_PATRON_ITEM
 	verbosegiveitem ULTRA_BALL
 	jumptext RandomGiftAfterText
