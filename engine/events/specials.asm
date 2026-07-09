@@ -675,3 +675,85 @@ UpdateStadiumStreak:
 	ld [wStadiumFacilityBestMon], a
 .done
 	ret
+
+StadiumRecalcLevelHundred: ; 
+; Set party mon 1 to level 100, recalculate Exp/stats, heal to full
+; c.f. : https://github.com/Rangi42/polishedcrystal/blob/8c96f5d2415795b77cbaa4ded2bf06d19f2fb6e5/engine/events/battle_tower/load_trainer.asm#L749 
+
+; Set the first party mon to level 100, recalculate its stats, and fully heal it.
+
+	; Load species and form so GetBaseData grabs the right base stats / growth group
+	ld a, [wPartyMon1Species]
+	ld [wCurSpecies], a
+	ld [wCurPartySpecies], a
+	ld a, [wPartyMon1Form]
+	ld [wCurForm], a
+	call GetBaseData
+
+	; Set level to 100
+	ld a, MAX_LEVEL            ; MAX_LEVEL = 100
+	ld [wPartyMon1Level], a
+	ld [wCurPartyLevel], a     ; for stat calculation
+
+	; Set Exp to the minimum for level 100
+	ld d, a                    ; level, needed for CalcExpAtLevel
+	farcall CalcExpAtLevel
+	ld hl, wPartyMon1Exp
+	ldh a, [hProduct + 1]
+	ld [hli], a
+	ldh a, [hProduct + 2]
+	ld [hli], a
+	ldh a, [hProduct + 3]
+	ld [hl], a
+
+	; Recalculate all six stats (no hyper training -> b = 1)
+	ld hl, wPartyMon1EVs - 1   ; input pointer expected by CalcPkmnStats
+	ld de, wPartyMon1MaxHP     ; destination for the six stats
+	ld b, 1
+	farcall CalcPkmnStats
+
+	; Set current HP to the new max HP
+	ld a, [wPartyMon1MaxHP]
+	ld [wPartyMon1HP], a
+	ld a, [wPartyMon1MaxHP + 1]
+	ld [wPartyMon1HP + 1], a
+	ret
+
+StadiumRecalcLevelNinety: ;c.f. above 
+
+	; Load species and form so GetBaseData grabs the right base stats / growth group
+	ld a, [wPartyMon1Species]
+	ld [wCurSpecies], a
+	ld [wCurPartySpecies], a
+	ld a, [wPartyMon1Form]
+	ld [wCurForm], a
+	call GetBaseData
+
+	; Set level to 90
+	ld a, 90            ; MAX_LEVEL = 100
+	ld [wPartyMon1Level], a
+	ld [wCurPartyLevel], a     ; for stat calculation
+
+	; Set Exp to the minimum for level 100
+	ld d, a                    ; level, needed for CalcExpAtLevel
+	farcall CalcExpAtLevel
+	ld hl, wPartyMon1Exp
+	ldh a, [hProduct + 1]
+	ld [hli], a
+	ldh a, [hProduct + 2]
+	ld [hli], a
+	ldh a, [hProduct + 3]
+	ld [hl], a
+
+	; Recalculate all six stats (no hyper training -> b = 1)
+	ld hl, wPartyMon1EVs - 1   ; input pointer expected by CalcPkmnStats
+	ld de, wPartyMon1MaxHP     ; destination for the six stats
+	ld b, 1
+	farcall CalcPkmnStats
+
+	; Set current HP to the new max HP
+	ld a, [wPartyMon1MaxHP]
+	ld [wPartyMon1HP], a
+	ld a, [wPartyMon1MaxHP + 1]
+	ld [wPartyMon1HP + 1], a
+	ret

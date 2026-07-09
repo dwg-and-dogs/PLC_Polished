@@ -65,6 +65,22 @@ FacilityPrepJudgeMachine:
 		cont "and DVs."
 		done
 	waitbutton
+ 	writethistext
+		text "If you'd like to"
+ 		line "increase your"
+ 		para "#mon stats by"
+		line "training, I can"
+ 		para "set your level"
+ 		line "back to 90."
+		done
+ 	yesorno
+	iffalse .DontSetLevelToNinety
+	special StadiumRecalcLevelNinety
+	writethistext
+		text "Successful!"
+		done
+	waitbutton
+.DontSetLevelToNinety:
 	special JudgeMachine
 	waitendtext
 
@@ -121,6 +137,13 @@ StadiumGroundsFaciltyPrepClerkScript:
 		done
 	
 .WarpToFacility:
+	writetext FacilityPrep_RecalculcateLevelText
+	yesorno
+	iffalse .NoRecalculation
+	special StadiumRecalcLevelHundred
+	writetext FacilityPrep_RecalculcateLevelTextSuccessful
+	waitbutton
+.NoRecalculation:
 	writetext FacilityPrep_AreYouReadyText
 	waitbutton
 	yesorno
@@ -235,6 +258,19 @@ FacilityPrep_ExplainFullText:
 	
 	para "Recommended to"
 	line "enter at Lv100."	
+	done
+
+FacilityPrep_RecalculcateLevelText:
+	text "Would you like to"
+	line "have your #mon"
+	para "level and stats"
+	line "updated for"
+	cont "Level 100?"
+	done
+
+FacilityPrep_RecalculcateLevelTextSuccessful:
+	text "The method was"
+	line "successful!"
 	done
 
 FacilityPrep_AreYouReadyText:

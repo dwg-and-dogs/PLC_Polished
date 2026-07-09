@@ -910,10 +910,10 @@ endr
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
 
-	givepoke SUICUNE, 200
+	givepoke SUICUNE, 100
 	loadmem wPartyMon1Moves+0, SURF
 	loadmem wPartyMon1Moves+1, ICE_BEAM
-	loadmem wPartyMon1Moves+2, SLEEP_TALK 
+	loadmem wPartyMon1Moves+2, CALM_MIND 
 	loadmem wPartyMon1Moves+3, REST
 	loadmem wPartyMon1EVs+0, 252
 	loadmem wPartyMon1EVs+1, 252
@@ -930,15 +930,15 @@ endr
 	loadmem wPartyMon2Moves+1, CRUNCH
 	loadmem wPartyMon2Moves+2, CALM_MIND
 	loadmem wPartyMon2Moves+3, THUNDERBOLT
-	loadmem wPartyMon2EVs+0, 252
-	loadmem wPartyMon2EVs+1, 252
-	loadmem wPartyMon2EVs+2, 252
-	loadmem wPartyMon2EVs+3, 252
-	loadmem wPartyMon2EVs+4, 252
-	loadmem wPartyMon2EVs+5, 252
-	loadmem wPartyMon2DVs+0, $ff
-	loadmem wPartyMon2DVs+1, $ff
-	loadmem wPartyMon2DVs+2, $ff
+;	loadmem wPartyMon2EVs+0, 252
+;	loadmem wPartyMon2EVs+1, 252
+;	loadmem wPartyMon2EVs+2, 252
+;	loadmem wPartyMon2EVs+3, 252
+;	loadmem wPartyMon2EVs+4, 252
+;	loadmem wPartyMon2EVs+5, 252
+;	loadmem wPartyMon2DVs+0, $ff
+;	loadmem wPartyMon2DVs+1, $ff
+;	loadmem wPartyMon2DVs+2, $ff
 
 	givepoke ENTEI, 100
 	loadmem wPartyMon3Moves+0, FLAMETHROWER
@@ -955,9 +955,9 @@ endr
 	loadmem wPartyMon3DVs+1, $ff
 	loadmem wPartyMon3DVs+2, $ff	
 
-	givepoke SNORLAX, 100
-	loadmem wPartyMon4Moves+0, CURSE
-	loadmem wPartyMon4Moves+1, REST
+	givepoke URSALUNA, 100
+	loadmem wPartyMon4Moves+0, BELLY_DRUM
+	loadmem wPartyMon4Moves+1, FIRE_PUNCH
 	loadmem wPartyMon4Moves+2, BODY_SLAM
 	loadmem wPartyMon4Moves+3, EARTHQUAKE
 	loadmem wPartyMon4EVs+0, 252
@@ -973,7 +973,7 @@ endr
 	givepoke DRAGONITE, 100
 	loadmem wPartyMon5Moves+0, DRAGON_DANCE
 	loadmem wPartyMon5Moves+1, DRAGON_CLAW
-	loadmem wPartyMon5Moves+2, IRON_HEAD
+	loadmem wPartyMon5Moves+2, EARTHQUAKE
 	loadmem wPartyMon5Moves+3, FIRE_PUNCH
 	loadmem wPartyMon5EVs+0, 252
 	loadmem wPartyMon5EVs+1, 252
@@ -985,7 +985,7 @@ endr
 	loadmem wPartyMon5DVs+1, $ff
 	loadmem wPartyMon5DVs+2, $ff	
 
-	givepoke BLISSEY, 100
+	givepoke BLISSEY, 50
 	loadmem wPartyMon6Moves+0, RECOVER
 	loadmem wPartyMon6Moves+1, SEISMIC_TOSS
 	loadmem wPartyMon6Moves+2, HEAL_BELL
@@ -999,8 +999,6 @@ endr
 	loadmem wPartyMon6DVs+0, $ff
 	loadmem wPartyMon6DVs+1, $ff
 	loadmem wPartyMon6DVs+2, $ff	
-	
-	givepoke SPIRITOMB, 10
 
 	setevent EVENT_REACHED_CREDITS_ONCE
 

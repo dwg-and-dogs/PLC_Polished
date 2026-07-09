@@ -3,6 +3,8 @@ add_special: MACRO
 	dba \1
 ENDM
 
+; engine/events/specials
+
 SpecialsPointers::
 	add_special WarpToSpawnPoint
 
@@ -168,4 +170,5 @@ SpecialsPointers::
 	add_special GetCurBoxName
 	add_special FacilityThreeRandoms
 	add_special UpdateStadiumStreak 
-;	add_special KimonoDVsUpdate
+	add_special StadiumRecalcLevelHundred
+	add_special StadiumRecalcLevelNinety

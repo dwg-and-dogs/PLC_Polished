@@ -3555,7 +3555,7 @@ MismagiusEvosAttacks:
 YanmaEvosAttacks:
 	db EVOLVE_MOVE, ANCIENTPOWER, YANMEGA
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, GUST
 	db 1, FORESIGHT
 	db 1, BUG_BITE
 	db 6, QUICK_ATTACK
@@ -3563,14 +3563,14 @@ YanmaEvosAttacks:
 	db 14, SONIC_BOOM
 	db 17, PROTECT ; Detect → similar move
 	db 22, DRAGON_RAGE ; Supersonic → new move
-	db 27, SUPERSONIC ; Uproar → Supersonic
+	db 27, AIR_SLASH ; Uproar → Supersonic
 	db 30, PURSUIT
 	db 33, ANCIENTPOWER
 	db 38, HYPNOSIS
 	db 43, WING_ATTACK
 	db 46, SCREECH
 	db 49, U_TURN
-	db 54, AIR_SLASH
+	db 54, HURRICANE
 	db 57, BUG_BUZZ
 	db 62, DREAM_EATER ; event move
 	db 0 ; no more level-up moves
@@ -3587,7 +3587,7 @@ YanmegaEvosAttacks:
 	db 14, SONIC_BOOM
 	db 17, PROTECT ; Detect → similar move
 	db 22, DRAGON_RAGE ; Supersonic → new move
-	db 27, SUPERSONIC ; Uproar → Supersonic
+	db 27, AIR_SLASH ; Uproar → Supersonic
 	db 30, PURSUIT
 	db 33, ANCIENTPOWER
 	db 38, DRAGONBREATH ; Feint → Slash

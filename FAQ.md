@@ -44,9 +44,21 @@ Ancestor Meganium
 
 Ancestor Feraligatr
 	Ground/Electric
-		hp  atk  def  spd  sat  sdf	
+	hp  atk  def  spd  sat  sdf	
 	85, 79, 83,  68,  105,  110 ; 530 BST
 	INTIMIDATE, GUTS, WATER_ABSORB
+
+Ancestor Alakazam
+	Dark
+	hp  atk  def  spd  sat  sdf	
+	55,  45,  95, 120, 135,  50 ; 500 BST
+	SYNCHRONIZE, MAGIC_GUARD, SNIPER
+
+Ancestor Ledian 
+	Bug/Water 
+	hp  atk  def  spd  sat  sdf	
+	55,  35,  50, 110,  95,  85 ; 430 BST
+	RAIN_DISH, TINTED_LENS, DRIZZLE 
 
 
 ### Difficulty Selection 

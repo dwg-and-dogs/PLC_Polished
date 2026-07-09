@@ -11,6 +11,7 @@ StadiumGroundsFacility_MapScriptHeader:
 	
 ; testing fixes
 	; todo write phrases for all trainers and names 
+	; load level 100 into the game 
 
 
 	def_callbacks

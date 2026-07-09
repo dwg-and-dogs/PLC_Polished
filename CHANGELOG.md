@@ -144,9 +144,8 @@ Removed Sleep Talk from learnsets - addressing a bug.
 
 Todo for v110:
 * Finish Stadium todos
-* Update all docs: Evos/Attacks, trainer guide 
+* Update all docs: Evos/Attacks, trainer guides 
 * Update moves to give hisuian forms their signature moves?
-* Check that losing to elders does reset your streak 
 * Fix rest - sleep talk 
 
 vAny

@@ -4460,21 +4460,23 @@ _CelebiCallWhirlIslandLugia::
 	text "Bring Lugia back"
 	line "to Elder Remy."
 	
-	para "She's in the deep-"
-	line "est cavern of the"
+	para "She's deep within"
+	line "the modern"
 	cont "Whirl Islands."
 	
-	para "Some islands are"
-	line "blocked by a"
-	cont "vortex."
+	para "Unfortunately,"
+	line "some islands are"
+	cont "blocked by a"
+	cont "Vortex."
 	
 	para "The method to"
-	line "pass a vortex"
+	line "pass a Vortex"
 	cont "is lost to time,"
 	
 	para "but there're some"
 	line "sages at the"
 	cont "Whirl Islands who"
+
 	para "may be able to"
 	line "help you find the"
 	cont "ancient HM!"
