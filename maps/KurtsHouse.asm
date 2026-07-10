@@ -824,7 +824,7 @@ for x, NUM_TMS + NUM_HMS
 endr
 	; useful items
 for x, POKE_BALL, CHERISH_BALL + 1
-if x != PARK_BALL && x != SAFARI_BALL
+if x != PARK_BALL && x != SAFARI_BALL && x != MASTER_BALL
 	giveitem x, 99
 endc
 endr
@@ -930,15 +930,15 @@ endr
 	loadmem wPartyMon2Moves+1, CRUNCH
 	loadmem wPartyMon2Moves+2, CALM_MIND
 	loadmem wPartyMon2Moves+3, THUNDERBOLT
-;	loadmem wPartyMon2EVs+0, 252
-;	loadmem wPartyMon2EVs+1, 252
-;	loadmem wPartyMon2EVs+2, 252
-;	loadmem wPartyMon2EVs+3, 252
-;	loadmem wPartyMon2EVs+4, 252
-;	loadmem wPartyMon2EVs+5, 252
-;	loadmem wPartyMon2DVs+0, $ff
-;	loadmem wPartyMon2DVs+1, $ff
-;	loadmem wPartyMon2DVs+2, $ff
+	loadmem wPartyMon2EVs+0, 252
+	loadmem wPartyMon2EVs+1, 252
+	loadmem wPartyMon2EVs+2, 252
+	loadmem wPartyMon2EVs+3, 252
+	loadmem wPartyMon2EVs+4, 252
+	loadmem wPartyMon2EVs+5, 252
+	loadmem wPartyMon2DVs+0, $ff
+	loadmem wPartyMon2DVs+1, $ff
+	loadmem wPartyMon2DVs+2, $ff
 
 	givepoke ENTEI, 100
 	loadmem wPartyMon3Moves+0, FLAMETHROWER
@@ -985,7 +985,7 @@ endr
 	loadmem wPartyMon5DVs+1, $ff
 	loadmem wPartyMon5DVs+2, $ff	
 
-	givepoke BLISSEY, 50
+	givepoke BLISSEY, 100
 	loadmem wPartyMon6Moves+0, RECOVER
 	loadmem wPartyMon6Moves+1, SEISMIC_TOSS
 	loadmem wPartyMon6Moves+2, HEAL_BELL

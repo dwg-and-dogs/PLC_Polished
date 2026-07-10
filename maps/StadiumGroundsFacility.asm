@@ -3,15 +3,9 @@ StadiumGroundsFacility_MapScriptHeader:
 
 ; 06.24.26  ROMX bank #29:   	SECTION: $4000-$6811 ($2812 bytes) ["Tohjo Falls Scripts"]
 
-
-; battle fixes
-	; todo check a few more rounds of the final section
-	; todo write missingno teams into the parties 
-	; todo check what happens if you lose to an elder vs a generic 
 	
 ; testing fixes
 	; todo write phrases for all trainers and names 
-	; load level 100 into the game 
 
 
 	def_callbacks
@@ -118,7 +112,7 @@ FacilityClerkRetireScript:
 	special FadeOutPalettes
 	waitsfx	
 	iftrue .WarpToPrepRoom
-	warp KURTS_HOUSE, 7, 1 ; TODO CHECK 
+	warp KURTS_HOUSE, 7, 1
 	sjump .Warped
 .WarpToPrepRoom:
 	warp STADIUM_GROUNDS_FACILITY_PREP, 13, 12
@@ -2325,7 +2319,7 @@ StadiumFacility_Trainers1Event:
 	showtext HOLLIS_HOLLIS_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_SILAS
@@ -2545,7 +2539,7 @@ StadiumFacility_Trainers2Event:
 	showtext SANDRA_SANDRA_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_SILAS
@@ -2767,7 +2761,7 @@ StadiumFacility_Trainers3Event:
 	showtext SAMSARA_SAMSARA_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkAwayMovement 
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_SYBIL
@@ -2988,7 +2982,7 @@ StadiumFacility_Trainers4Event:
 	showtext BARBEAU_REMY_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkAwayMovement 
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_REMY
@@ -3210,7 +3204,7 @@ StadiumFacility_Trainers5Event:
 	showtext AMOS_AMOS_STADIUM_Text
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkAwayMovement 
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_AMOS
@@ -3236,7 +3230,7 @@ StadiumFacility_Trainers5Event:
 
 
 StadiumFacility_TrainersEndlessEvent:
-	; todo rewrite for up to 30 trainers 
+	; supports up to 30 trainers 
 	; EVERY FOUR TURNS YOU GET THE CHANCE TO STEP ASIDE AND CHANGE UP YOUR TEAM 
 	turnobject STADIUM_FACILITY_CLERK, LEFT
 	turnobject PLAYER, RIGHT
@@ -3253,7 +3247,7 @@ StadiumFacility_TrainersEndlessEvent:
 	writetext FacilityExplainTrainersText
 	waitbutton
 	closetext
-	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	setval 30                       ; N = how many mons to choose among. setval passes the number to the next ... 
 	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
@@ -3306,8 +3300,17 @@ StadiumFacility_TrainersEndlessEvent:
 	ifequal 16, .CallTrainer1_16
 	ifequal 17, .CallTrainer1_17
 	ifequal 18, .CallTrainer1_18
-;	ifequal 19, .CallTrainer1_19 ; fallthru
-;.CallTrainer1_19:
+	ifequal 19, .CallTrainer1_19
+	ifequal 20, .CallTrainer1_20
+	ifequal 21, .CallTrainer1_21
+	ifequal 22, .CallTrainer1_22
+	ifequal 23, .CallTrainer1_23
+	ifequal 24, .CallTrainer1_24
+	ifequal 25, .CallTrainer1_25
+	ifequal 26, .CallTrainer1_26
+	ifequal 27, .CallTrainer1_27
+	ifequal 28, .CallTrainer1_28
+	ifequal 29, .CallTrainer1_29
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 20
 	showtext BRIGADER_FACILITY_20_Text
@@ -3406,6 +3409,61 @@ StadiumFacility_TrainersEndlessEvent:
 	winlosstext FacilityWinText, FacilityLossText
 	loadtrainer BRIGADER_FACILITY, 19
 	showtext BRIGADER_FACILITY_19_Text
+	sjump .LoadedTrainer
+.CallTrainer1_19:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 20
+	showtext BRIGADER_FACILITY_20_Text
+	sjump .LoadedTrainer
+.CallTrainer1_20:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 21
+	showtext BRIGADER_FACILITY_21_Text
+	sjump .LoadedTrainer
+.CallTrainer1_21:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 22
+	showtext BRIGADER_FACILITY_22_Text
+	sjump .LoadedTrainer
+.CallTrainer1_22:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 23
+	showtext BRIGADER_FACILITY_23_Text
+	sjump .LoadedTrainer
+.CallTrainer1_23:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 24
+	showtext BRIGADER_FACILITY_24_Text
+	sjump .LoadedTrainer
+.CallTrainer1_24:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 25
+	showtext BRIGADER_FACILITY_25_Text
+	sjump .LoadedTrainer
+.CallTrainer1_25:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 26
+	showtext BRIGADER_FACILITY_26_Text
+	sjump .LoadedTrainer
+.CallTrainer1_26:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 27
+	showtext BRIGADER_FACILITY_27_Text
+	sjump .LoadedTrainer
+.CallTrainer1_27:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 28
+	showtext BRIGADER_FACILITY_28_Text
+	sjump .LoadedTrainer
+.CallTrainer1_28:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 29
+	showtext BRIGADER_FACILITY_29_Text
+	sjump .LoadedTrainer
+.CallTrainer1_29:
+	winlosstext FacilityWinText, FacilityLossText
+	loadtrainer BRIGADER_FACILITY, 30
+	showtext BRIGADER_FACILITY_30_Text
 ;	sjump .LoadedTrainer ; fallthru
 .LoadedTrainer:
 	startbattle
@@ -3433,10 +3491,7 @@ StadiumFacility_TrainersEndlessEvent:
 	setevent EVENT_FACILITY_BRIGADER
 	disappear STADIUM_FACILITY_BRIGADER
 	; roll for one of seven. 
-	; TODO THIS ONE JUST CYCLES THROUGH FOUR BRIGADERS FROM THE GP OF 20, 
-	; WHILE AFTER EACH SET OF 4 THERE IS ONE OF THE FOLLOWING BOSS TRAINERS LOADED RANDOMLY, 
-	; FROM A, B, C, D, E, F, G
-	
+
 	; random  1 - 7 
 	random 7
 	ifequal 0, .BattleSilasFinal
@@ -3452,7 +3507,7 @@ StadiumFacility_TrainersEndlessEvent:
 	loadtrainer MEJIMI, MEJIMI_STADIUM_FINAL
 	showtext VesperStadiumFinalText
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_MEJIMI, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_VESPER
 	disappear STADIUM_FACILITY_MEJIMI	
@@ -3465,7 +3520,7 @@ StadiumFacility_TrainersEndlessEvent:
 	loadtrainer HOLLIS, HOLLIS_STADIUM_FINAL
 	showtext HollisStadiumFinalText
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_SILAS
 	disappear STADIUM_FACILITY_HOLLIS	
@@ -3478,7 +3533,7 @@ StadiumFacility_TrainersEndlessEvent:
 	loadtrainer SANDRA, SANDRA_STADIUM_FINAL
 	showtext SandraStadiumFinalText
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_SANDRA
 	disappear STADIUM_FACILITY_SANDRA	
@@ -3491,7 +3546,7 @@ StadiumFacility_TrainersEndlessEvent:
 	loadtrainer SAMSARA, SAMSARA_STADIUM_FINAL
 	showtext SamsaraStadiumFinalText
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_SYBIL
 	disappear STADIUM_FACILITY_SAMSARA	
@@ -3504,7 +3559,7 @@ StadiumFacility_TrainersEndlessEvent:
 	loadtrainer BARBEAU, REMY_STADIUM_FINAL
 	showtext RemyStadiumFinalText
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_REMY
 	disappear STADIUM_FACILITY_BARBEAU	
@@ -3517,7 +3572,7 @@ StadiumFacility_TrainersEndlessEvent:
 	loadtrainer AMOS, AMOS_STADIUM_FINAL
 	showtext AmosStadiumFinalText
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_AMOS
 	disappear STADIUM_FACILITY_AMOS	
@@ -3530,7 +3585,7 @@ StadiumFacility_TrainersEndlessEvent:
 	loadtrainer AMOS, AMOS_STADIUM_FINAL
 	showtext KurtStadiumFinalText
 	startbattle
-	reloadmap
+	reloadmapafterbattle
 	applymovement STADIUM_FACILITY_KURTF, BossTrainerWalkAwayMovement 
 	setevent EVENT_FACILITY_KURT
 	disappear STADIUM_FACILITY_KURTF	
@@ -3826,6 +3881,47 @@ BRIGADER_FACILITY_19_Text:
 	text "Brigader 19"
 	done
 
+BRIGADER_FACILITY_21_Text:
+	text "Brigader 21"
+	done
+
+BRIGADER_FACILITY_22_Text:
+	text "Brigader 22"
+	done
+
+BRIGADER_FACILITY_23_Text:
+	text "Brigader 23"
+	done
+
+BRIGADER_FACILITY_24_Text:
+	text "Brigader 24"
+	done
+
+BRIGADER_FACILITY_25_Text:
+	text "Brigader 25"
+	done
+
+BRIGADER_FACILITY_26_Text:
+	text "Brigader 26"
+	done
+
+BRIGADER_FACILITY_27_Text:
+	text "Brigader 27"
+	done
+
+BRIGADER_FACILITY_28_Text:
+	text "Brigader 28"
+	done
+
+BRIGADER_FACILITY_29_Text:
+	text "Brigader 29"
+	done
+
+BRIGADER_FACILITY_30_Text:
+	text "FEEL THE RHYTHM"
+	line "OF THE DESERT"
+	done
+
 BUG_MANIAC_FACILITY_20_Text:
 	text "Bug Maniac 20"
 	done
@@ -3907,7 +4003,7 @@ BUG_MANIAC_FACILITY_19_Text:
 	done
 
 HOLLIS_HOLLIS_STADIUM_Text:
-	text "Hollis Hollis Stadium"
+	text "Silas Stadium"
 	done
 
 NINJA_FACILITY_20_Text:

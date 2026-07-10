@@ -144,11 +144,11 @@ Removed Sleep Talk from learnsets - addressing a bug.
 
 Todo for v110:
 * Finish Stadium todos
-* Update all docs: Evos/Attacks, trainer guides 
 * Update moves to give hisuian forms their signature moves?
-* Fix rest - sleep talk 
+
 
 vAny
+* Fix rest - sleep talk 
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
 * New pokedex entries
 * Fly as an item

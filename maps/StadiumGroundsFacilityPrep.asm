@@ -102,7 +102,7 @@ NatuFacilityText:
 StadiumGroundsFaciltyPrepClerkScript:
 	setmapscene STADIUM_GROUNDS_FACILITY, 0
 	loadmem wBattleTowerCurStreak, 0 ; 0       ; reset streak (both bytes) DEBUG TODO: THIS IS TO SEE IF THE PATRON WILL GIVE YOU ANYTHING 
-	loadmem wBattleTowerCurStreak + 1, 25 ; 0 	; reset streak (both bytes) 
+	loadmem wBattleTowerCurStreak + 1, 0 ; 0 	; reset streak (both bytes) 
 	; only try to reset the streak if the mon is there 
 	readdifficultymode
 	ifequal DIFFICULTY_HARD, .hard
