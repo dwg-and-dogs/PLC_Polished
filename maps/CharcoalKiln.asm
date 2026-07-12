@@ -187,15 +187,15 @@ RivalLetterText:
 	line "project with the"
 	cont "elders here."
 	
-	para "The water in the"
-	line "Dragon's Den makes"
-	para "#mon remain"
-	line "youthful and"
-	cont "energetic."
+	para "The water in"
+	line "Blackthorn makes"
+	para "#mon become"
+	line "healthier and"
+	cont "livelier."
 	
 	para "I'm going to study"
-	line "it to help people"
-	cont "for once."
+	line "it-to help other"
+	cont "people, for once."
 	
 	para "I know you wanted"
 	line "me to take over"

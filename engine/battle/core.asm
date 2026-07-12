@@ -3779,7 +3779,7 @@ endr
 .not_own_shiny:
 	call CheckShinyDV
 	jr nc, .not_hp_star_own
-	ld a, "<STAR>"
+	ld a, "▲"
 	hlcoord 14, 8
 	ld [hl], a
 
@@ -3918,7 +3918,7 @@ endr
 .not_shiny:
 	call CheckShinyDV
 	jr nc, .not_hp_star
-	ld a, "<STAR>"
+	ld a, "▲"
 	hlcoord 4, 1
 	ld [hl], a
 

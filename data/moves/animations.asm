@@ -83,7 +83,7 @@ BattleAnimations::
 	dw BattleAnim_SleepPowder
 	dw BattleAnim_PetalDance
 	dw BattleAnim_StringShot
-	dw BattleAnim_DragonRage
+	dw BattleAnim_InfernalParade;DragonRage
 	dw BattleAnim_FireSpin
 	dw BattleAnim_Thundershock
 	dw BattleAnim_Thunderbolt
@@ -153,10 +153,10 @@ BattleAnimations::
 	dw BattleAnim_Extrasensory
 	dw BattleAnim_Splash
 	dw BattleAnim_DragonDance
-	dw BattleAnim_Crabhammer
+	dw BattleAnim_CeaselessEdge;Crabhammer
 	dw BattleAnim_Explosion
 	dw BattleAnim_FuryStrikes
-	dw BattleAnim_Bonemerang
+	dw BattleAnim_TripleArrows;Bonemerang
 	dw BattleAnim_Rest
 	dw BattleAnim_RockSlide
 	dw BattleAnim_HyperFang
@@ -972,6 +972,18 @@ BattleAnim_FireSpin:
 	anim_loop 2, .loop
 	anim_wait 96
 	anim_ret
+
+BattleAnim_InfernalParade: ; todo check , cf shadow ball and dragon rage 
+	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_SMOKE
+	anim_bgp $1b
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_obj ANIM_OBJ_DRAGON_RAGE,   8, 0,  11, 4, $2
+	anim_wait 32
+	anim_obj ANIM_OBJ_BALL_POOF, -16, 4,   7, 0, $10
+	anim_wait 24
+	anim_bgp $e4
+	anim_ret
+
 
 BattleAnim_DragonRage:
 	anim_1gfx ANIM_GFX_FIRE
@@ -2648,6 +2660,25 @@ BattleAnim_DrainKiss:
 	anim_wait 48
 	anim_ret
 
+BattleAnim_TripleArrows: ; pin missile copy with icicle animation object 
+	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
+;.loop
+	anim_obj ANIM_OBJ_NEEDLE,   8, 0,  11, 4, $28
+	anim_wait 8
+	anim_obj ANIM_OBJ_NEEDLE,   7, 0,  10, 4, $28
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_HIT_SMALL, -15, 0,   7, 0, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_NEEDLE,   6, 4,  11, 0, $28
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_HIT_SMALL,  16, 0,   6, 0, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_HIT_SMALL, -16, 4,   6, 4, $0
+;	anim_loop 3, .loop
+;	anim_wait 16
+	anim_ret
+
 BattleAnim_Bonemerang:
 	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_HIT
 	anim_sound 6, 2, SFX_HYDRO_PUMP
@@ -2668,6 +2699,31 @@ BattleAnim_Swift:
 	anim_obj ANIM_OBJ_SWIFT,   8, 0,   9, 4, $4
 	anim_wait 64
 	anim_ret
+
+BattleAnim_CeaselessEdge:
+	; crabhammer + spikes 
+	anim_1gfx ANIM_GFX_HIT
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $40, $2, $0
+	anim_wait 48
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $3
+.loop
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj ANIM_OBJ_HIT_BIG_YFIX, -15, 0,   7, 0, $0
+	anim_wait 12
+	anim_loop 3, .loop
+	; spikes 
+;	anim_1gfx ANIM_GFX_MISC
+;	anim_sound 6, 2, SFX_MENU
+;	anim_obj ANIM_OBJ_SPIKES,   6, 0,  11, 0, $20
+;	anim_wait 8
+;	anim_sound 6, 2, SFX_MENU
+;	anim_obj ANIM_OBJ_SPIKES,   6, 0,  11, 0, $30
+;	anim_wait 8
+;	anim_sound 6, 2, SFX_MENU
+;	anim_obj ANIM_OBJ_SPIKES,   6, 0,  11, 0, $28
+;	anim_wait 64
+	anim_ret
+
 
 BattleAnim_Crabhammer:
 	anim_1gfx ANIM_GFX_HIT

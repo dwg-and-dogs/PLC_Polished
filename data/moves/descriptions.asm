@@ -82,7 +82,7 @@ MoveDescriptions::
 	dw SleepPowderDescription
 	dw PetalDanceDescription
 	dw StringShotDescription
-	dw DragonRageDescription
+	dw InfernalParadeDescription;DragonRageDescription
 	dw FireSpinDescription
 	dw ThundershockDescription
 	dw ThunderboltDescription
@@ -152,10 +152,10 @@ MoveDescriptions::
 	dw ExtrasensoryDescription
 	dw SplashDescription
 	dw DragonDanceDescription
-	dw CrabhammerDescription
+	dw CeaselessEdgeDescription;CrabhammerDescription
 	dw ExplosionDescription
 	dw FuryStrikesDescription
-	dw BonemerangDescription
+	dw TripleArrowsDescription;BonemerangDescription
 	dw RestDescription
 	dw RockSlideDescription
 	dw HyperFangDescription
@@ -263,9 +263,12 @@ MoveDescriptions::
 Move00Description:
 	db "?@"
 
+CeaselessEdgeDescription:
+	db   "Lays spikes, has a"
+	next "high crit rate.@"
+
 KarateChopDescription:
 RazorLeafDescription:
-CrabhammerDescription:
 SlashDescription:
 AeroblastDescription:
 CrossChopDescription:
@@ -347,6 +350,7 @@ GunkShotDescription:
 	db   "An attack that may"
 	next "poison the foe.@"
 
+InfernalParadeDescription:
 EmberDescription:
 FlamethrowerDescription:
 FireBlastDescription:
@@ -885,6 +889,10 @@ TransformDescription:
 SplashDescription:
 	db   "Has no effect"
 	next "whatsoever.@"
+
+TripleArrowsDescription:
+	db   "Often sharply"
+	next "lowers defense.@"
 
 BonemerangDescription:
 	db   "An attack that"

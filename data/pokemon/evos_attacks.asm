@@ -80,7 +80,7 @@ Typhlosion_HisuianEvosAttacks:
 	db 35, DIG ; Flame Charge → TM move
 	db 43, SHADOW_BALL ; Lava Plume → egg move
 	db 48, FLAMETHROWER
-	db 56, WILL_O_WISP ; Inferno → new move
+	db 56, INFERNAL_PARADE ; Inferno → new move
 	db 60, FLARE_BLITZ ; Inferno → new move
 	db 0 ; no more level-up moves
 
@@ -155,8 +155,8 @@ Decidueye_HisuianEvosAttacks:
 	db 31, FALSE_SWIPE
 	db 39, AIR_SLASH ; Lava Plume → egg move
 	db 45, PETAL_DANCE
-	db 50, AURA_SPHERE ; Inferno → new move
-	db 55, CLOSE_COMBAT
+	db 50, TRIPLE_ARROWS ; Inferno → new move
+	db 55, AURA_SPHERE
 	db 60, SOLAR_BEAM ; Eruption → egg move
 	db 0 ; no more level-up moves
 
@@ -235,7 +235,7 @@ Samurott_HisuianEvosAttacks:
 	db 40, REST 
 	db 45, HYDRO_PUMP
 	db 50, CRUNCH 
-	db 55, MEGAHORN
+	db 55, CEASELESS_EDGE
 	db 60, SWORDS_DANCE 
 	db 0 ; no more level-up moves
 	
@@ -1903,7 +1903,7 @@ Exeggutor_AlolanEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, CONFUSION
 	db 1, DRAGON_PULSE ; evolution move
-	db 17, DRAGON_RAGE ; Psyshock → new move
+	db 17, DRAGON_PULSE ; Psyshock → new move
 	db 27, ZEN_HEADBUTT ; Egg Bomb → tutor move
 	db 37, POWER_WHIP ; Wood Hammer → new move
 	db 47, OUTRAGE ; Leaf Storm → S/M TM move
@@ -2474,11 +2474,10 @@ GyaradosEvosAttacks:
 	db 1, WATERFALL ; HM move
 	db 1, BITE ; evolution move
 	db 1, THRASH
-	db 1, DRAGON_RAGE
 	db 1, WRAP ; Bind → similar move
 	db 21, LEER
 	db 24, GUST ; Twister → new move
-	db 27, DRAGON_RAGE ; Ice Fang → Dragon Rage
+	db 27, ICE_SHARD ; Ice Fang → Ice Shard
 	db 30, AQUA_TAIL
 	db 33, SCARY_FACE
 	db 36, DRAGONBREATH ; Dragon Rage → GSC TM move
@@ -2494,7 +2493,6 @@ GyaradosEvosAttacks:
 LaprasEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ANCIENTPOWER ; HGSS tutor move
-	db 1, DRAGON_RAGE ; RBY TM move
 	db 1, DRAGONBREATH ; GSC TM move
 	db 1, SING
 	db 1, GROWL
@@ -3562,41 +3560,35 @@ YanmaEvosAttacks:
 	db 11, DOUBLE_TEAM
 	db 14, SONIC_BOOM
 	db 17, PROTECT ; Detect → similar move
-	db 22, DRAGON_RAGE ; Supersonic → new move
-	db 27, AIR_SLASH ; Uproar → Supersonic
-	db 30, PURSUIT
+	db 22, WING_ATTACK ; Supersonic → new move
+	db 27, DRAGONBREATH ; Uproar → Supersonic
+	db 30, AIR_SLASH
 	db 33, ANCIENTPOWER
-	db 38, HYPNOSIS
-	db 43, WING_ATTACK
+	db 38, BUG_BUZZ ; Feint → Slash
+	db 43, U_TURN ; Slash → Wing Attack
 	db 46, SCREECH
-	db 49, U_TURN
-	db 54, HURRICANE
-	db 57, BUG_BUZZ
-	db 62, DREAM_EATER ; event move
+	db 49, HURRICANE
+	db 54, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 YanmegaEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, DRAGONBREATH ; evolution move
-	db 1, NIGHT_SLASH
-	db 1, TACKLE
+	db 1, GUST
 	db 1, FORESIGHT
 	db 1, BUG_BITE
 	db 6, QUICK_ATTACK
 	db 11, DOUBLE_TEAM
 	db 14, SONIC_BOOM
 	db 17, PROTECT ; Detect → similar move
-	db 22, DRAGON_RAGE ; Supersonic → new move
-	db 27, AIR_SLASH ; Uproar → Supersonic
-	db 30, PURSUIT
+	db 22, WING_ATTACK ; Supersonic → new move
+	db 27, DRAGONBREATH ; Uproar → Supersonic
+	db 30, AIR_SLASH
 	db 33, ANCIENTPOWER
-	db 38, DRAGONBREATH ; Feint → Slash
-	db 43, WING_ATTACK ; Slash → Wing Attack
+	db 38, BUG_BUZZ ; Feint → Slash
+	db 43, U_TURN ; Slash → Wing Attack
 	db 46, SCREECH
-	db 49, U_TURN
-	db 54, AIR_SLASH
-	db 57, BUG_BUZZ
-	db 62, FLY ; new move
+	db 49, HURRICANE
+	db 54, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 UnownEvosAttacks:
@@ -3705,7 +3697,6 @@ DunsparceEvosAttacks:
 	db 16, FURY_STRIKES ; Yawn → event move (Fury Attack)
 	db 18, ANCIENTPOWER
 	db 21, BODY_SLAM
-	db 23, DRAGON_RAGE ; Drill Run → new move
 	db 26, ROOST
 	db 28, TAKE_DOWN
 	db 31, DRAGON_DANCE ; Coil → new move
@@ -3731,7 +3722,6 @@ DudunsparceEvosAttacks:
 	db 16, FURY_STRIKES ; Yawn → event move (Fury Attack)
 	db 18, ANCIENTPOWER
 	db 21, BODY_SLAM
-	db 23, DRAGON_RAGE ; Drill Run → new move
 	db 26, ROOST
 	db 28, TAKE_DOWN
 	db 31, DRAGON_DANCE ; Coil → new move
@@ -5336,9 +5326,8 @@ DratiniEvosAttacks:
 	db 5, THUNDER_WAVE
 	db 11, AQUA_JET ; Twister → egg move
 	db 15, HEADBUTT
-	db 21, DRAGON_RAGE ; Slam → tutor move
+	db 21, DRAGONBREATH ; Slam → tutor move
 	db 25, AGILITY
-	db 31, DRAGONBREATH ; Dragon Tail → GSC TM move
 	db 35, AQUA_TAIL
 	db 41, BARRIER ; Dragon Rush → event move
 	db 45, SAFEGUARD
@@ -5354,10 +5343,9 @@ DragonairEvosAttacks:
 	db 1, LEER
 	db 5, THUNDER_WAVE
 	db 11, AQUA_JET ; Twister → egg move
-	db 15, DRAGON_RAGE
 	db 21, HEADBUTT ; Slam → tutor move
 	db 25, AGILITY
-	db 33, DRAGONBREATH ; Dragon Tail → GSC TM move
+	db 33, DRAGON_PULSE ; Dragon Tail → GSC TM move
 	db 39, AQUA_TAIL
 	db 47, BARRIER ; Dragon Rush → event move
 	db 53, SAFEGUARD
@@ -5379,7 +5367,6 @@ DragoniteEvosAttacks:
 	db 1, WING_ATTACK ; evolution move
 	db 5, THUNDER_WAVE
 	db 11, AQUA_JET ; Twister → egg move
-	db 15, DRAGON_RAGE
 	db 21, HEADBUTT ; Slam → tutor move
 	db 25, AGILITY
 	db 33, DRAGONBREATH ; Dragon Tail → GSC TM move

@@ -87,7 +87,7 @@
 	const SLEEP_POWDER ; $4f
 	const PETAL_DANCE  ; $50
 	const STRING_SHOT  ; $51
-	const DRAGON_RAGE  ; $52
+	const INFERNAL_PARADE  ; $52
 	const FIRE_SPIN    ; $53
 	const THUNDERSHOCK ; $54
 	const THUNDERBOLT  ; $55
@@ -157,10 +157,10 @@
 	const EXTRASENSORY ; $95
 	const SPLASH       ; $96
 	const DRAGON_DANCE ; $97
-	const CRABHAMMER   ; $98
+	const CEASELESS_EDGE   ; $98
 	const EXPLOSION    ; $99
 	const FURY_STRIKES ; $9a
-	const BONEMERANG   ; $9b
+	const TRIPLE_ARROWS   ; $9b
 	const REST         ; $9c
 	const ROCK_SLIDE   ; $9d
 	const HYPER_FANG   ; $9e

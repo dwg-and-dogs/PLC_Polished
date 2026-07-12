@@ -910,10 +910,10 @@ endr
 	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
 	; good party
 
-	givepoke SUICUNE, 100
+	givepoke SAMUROTT, HISUIAN_FORM, 100
 	loadmem wPartyMon1Moves+0, SURF
 	loadmem wPartyMon1Moves+1, ICE_BEAM
-	loadmem wPartyMon1Moves+2, CALM_MIND 
+	loadmem wPartyMon1Moves+2, CEASELESS_EDGE 
 	loadmem wPartyMon1Moves+3, REST
 	loadmem wPartyMon1EVs+0, 252
 	loadmem wPartyMon1EVs+1, 252
@@ -925,10 +925,10 @@ endr
 	loadmem wPartyMon1DVs+1, $ff
 	loadmem wPartyMon1DVs+2, $ff
 
-	givepoke RAIKOU, 100
+	givepoke DECIDUEYE, HISUIAN_FORM, 100
 	loadmem wPartyMon2Moves+0, EXTRASENSORY
 	loadmem wPartyMon2Moves+1, CRUNCH
-	loadmem wPartyMon2Moves+2, CALM_MIND
+	loadmem wPartyMon2Moves+2, TRIPLE_ARROWS
 	loadmem wPartyMon2Moves+3, THUNDERBOLT
 	loadmem wPartyMon2EVs+0, 252
 	loadmem wPartyMon2EVs+1, 252
@@ -940,10 +940,10 @@ endr
 	loadmem wPartyMon2DVs+1, $ff
 	loadmem wPartyMon2DVs+2, $ff
 
-	givepoke ENTEI, 100
+	givepoke TYPHLOSION, 100
 	loadmem wPartyMon3Moves+0, FLAMETHROWER
 	loadmem wPartyMon3Moves+1, EARTH_POWER
-	loadmem wPartyMon3Moves+2, CALM_MIND
+	loadmem wPartyMon3Moves+2, INFERNAL_PARADE
 	loadmem wPartyMon3Moves+3, BODY_SLAM
 	loadmem wPartyMon3EVs+0, 252
 	loadmem wPartyMon3EVs+1, 252
@@ -955,50 +955,50 @@ endr
 	loadmem wPartyMon3DVs+1, $ff
 	loadmem wPartyMon3DVs+2, $ff	
 
-	givepoke URSALUNA, 100
-	loadmem wPartyMon4Moves+0, BELLY_DRUM
-	loadmem wPartyMon4Moves+1, FIRE_PUNCH
-	loadmem wPartyMon4Moves+2, BODY_SLAM
-	loadmem wPartyMon4Moves+3, EARTHQUAKE
-	loadmem wPartyMon4EVs+0, 252
-	loadmem wPartyMon4EVs+1, 252
-	loadmem wPartyMon4EVs+2, 252
-	loadmem wPartyMon4EVs+3, 252
-	loadmem wPartyMon4EVs+4, 252
-	loadmem wPartyMon4EVs+5, 252
-	loadmem wPartyMon4DVs+0, $ff
-	loadmem wPartyMon4DVs+1, $ff
-	loadmem wPartyMon4DVs+2, $ff	
+;	givepoke URSALUNA, 100
+;	loadmem wPartyMon4Moves+0, BELLY_DRUM
+;	loadmem wPartyMon4Moves+1, FIRE_PUNCH
+;	loadmem wPartyMon4Moves+2, BODY_SLAM
+;	loadmem wPartyMon4Moves+3, EARTHQUAKE
+;	loadmem wPartyMon4EVs+0, 252
+;	loadmem wPartyMon4EVs+1, 252
+;	loadmem wPartyMon4EVs+2, 252
+;	loadmem wPartyMon4EVs+3, 252
+;	loadmem wPartyMon4EVs+4, 252
+;	loadmem wPartyMon4EVs+5, 252
+;	loadmem wPartyMon4DVs+0, $ff
+;	loadmem wPartyMon4DVs+1, $ff
+;	loadmem wPartyMon4DVs+2, $ff	
 	
-	givepoke DRAGONITE, 100
-	loadmem wPartyMon5Moves+0, DRAGON_DANCE
-	loadmem wPartyMon5Moves+1, DRAGON_CLAW
-	loadmem wPartyMon5Moves+2, EARTHQUAKE
-	loadmem wPartyMon5Moves+3, FIRE_PUNCH
-	loadmem wPartyMon5EVs+0, 252
-	loadmem wPartyMon5EVs+1, 252
-	loadmem wPartyMon5EVs+2, 252
-	loadmem wPartyMon5EVs+3, 252
-	loadmem wPartyMon5EVs+4, 252
-	loadmem wPartyMon5EVs+5, 252
-	loadmem wPartyMon5DVs+0, $ff
-	loadmem wPartyMon5DVs+1, $ff
-	loadmem wPartyMon5DVs+2, $ff	
+;	givepoke DRAGONITE, 100
+;	loadmem wPartyMon5Moves+0, DRAGON_DANCE
+;	loadmem wPartyMon5Moves+1, DRAGON_CLAW
+;	loadmem wPartyMon5Moves+2, EARTHQUAKE
+;	loadmem wPartyMon5Moves+3, FIRE_PUNCH
+;	loadmem wPartyMon5EVs+0, 252
+;	loadmem wPartyMon5EVs+1, 252
+;	loadmem wPartyMon5EVs+2, 252
+;	loadmem wPartyMon5EVs+3, 252
+;	loadmem wPartyMon5EVs+4, 252
+;	loadmem wPartyMon5EVs+5, 252
+;	loadmem wPartyMon5DVs+0, $ff
+;	loadmem wPartyMon5DVs+1, $ff
+;	loadmem wPartyMon5DVs+2, $ff	
 
-	givepoke BLISSEY, 100
-	loadmem wPartyMon6Moves+0, RECOVER
-	loadmem wPartyMon6Moves+1, SEISMIC_TOSS
-	loadmem wPartyMon6Moves+2, HEAL_BELL
-	loadmem wPartyMon6Moves+3, DOUBLE_TEAM
-	loadmem wPartyMon6EVs+0, 252
-	loadmem wPartyMon6EVs+1, 252
-	loadmem wPartyMon6EVs+2, 252
-	loadmem wPartyMon6EVs+3, 252
-	loadmem wPartyMon6EVs+4, 252
-	loadmem wPartyMon6EVs+5, 252
-	loadmem wPartyMon6DVs+0, $ff
-	loadmem wPartyMon6DVs+1, $ff
-	loadmem wPartyMon6DVs+2, $ff	
+;	givepoke BLISSEY, 100
+;	loadmem wPartyMon6Moves+0, RECOVER
+;	loadmem wPartyMon6Moves+1, SEISMIC_TOSS
+;	loadmem wPartyMon6Moves+2, HEAL_BELL
+;	loadmem wPartyMon6Moves+3, DOUBLE_TEAM
+;	loadmem wPartyMon6EVs+0, 252
+;	loadmem wPartyMon6EVs+1, 252
+;	loadmem wPartyMon6EVs+2, 252
+;	loadmem wPartyMon6EVs+3, 252
+;	loadmem wPartyMon6EVs+4, 252
+;	loadmem wPartyMon6EVs+5, 252
+;	loadmem wPartyMon6DVs+0, $ff
+;	loadmem wPartyMon6DVs+1, $ff
+;	loadmem wPartyMon6DVs+2, $ff	
 
 	setevent EVENT_REACHED_CREDITS_ONCE
 

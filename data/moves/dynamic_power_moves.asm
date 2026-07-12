@@ -1,7 +1,6 @@
 DynamicPowerMoves::
 ; used by Forewarn and for move power listing
 	db COUNTER
-	db DRAGON_RAGE
 	db GYRO_BALL
 	db LOW_KICK
 	db MAGNITUDE

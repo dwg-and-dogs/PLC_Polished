@@ -109,11 +109,12 @@ Minor text, tile, object palette issues.
 * Release 1.1.0 
 
 Major Updates: 
-Postgame Battle Facility: Stadium! <todo description> 
+Postgame Battle Facility: Stadium!
 New Ancestor forms: Ledian (Bug/Water Special Attacker with HA Drizzle) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in Anarres Holt and Cianwood Cave, respectively. 
-Special mark on trainer and enemy mon if they have max DVs. 
+Max DV mons get a Black Triangle symbol in battle. 
 Stadium Facility Rematches are a bit harder. 
 EV trainers in the Stadium Facility Prep Room. 
+Add signature moves of Infernal Parade, Triple Arrows, and Ceaseless Edge to Hisui starts at Lv55. 
 
 Minor updates: 
 Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
@@ -140,24 +141,39 @@ Add Drain Punch to more movesets.
 Update Ancestor Forms learnsets. 
 Add a few more technician moves to Samurott move relearner learnset. 
 Remove Hall of Fame from Pokecenter PCs. 
+Add Dawn Stone to Goldenrod Mart. 
+Reduce value of smashrock items. 
 Removed Sleep Talk from learnsets - addressing a bug. 
 
+
 Todo for v110:
-* Finish Stadium todos
-* Update moves to give hisuian forms their signature moves?
-
-
-vAny
+* Finish Stadium todos:
+	* Names (20/130)
+	* Phrases
+* Stadium Documentation
+	* Phase + Pokemon
+	* Trainer Teams
+* Publish:
+	* Stadium
+		* Overview
+		* Catching Phase
+		* Battle Phase with Elder
+		* Patron
+		* Endless Phase 
+	* New Forms: Alakazam, Ledian
+		On each slide:
+		* Front vs Backs
+		* Stat Distribution
+		* Met Locations
+	
+vOneDay
 * Fix rest - sleep talk 
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
-* New pokedex entries
-* Fly as an item
-* Move animations
-* Brick Break + Light Screen interaction: to check 
+* Move animations??
 
 v120
 * Epilogue: New Bark --> Blackthorn
 
 
-Last updated: 06/24/26
+Last updated: 07/12/26
 

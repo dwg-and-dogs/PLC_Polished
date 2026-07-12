@@ -85,12 +85,12 @@ FinalText_SinglePhrases:
 	dw KannaFinalPkmnText ;new
 	dw NULL
 	dw NULL ; 
-	dw KukuiFinalPkmnText ; Kukui
+	dw NULL ; Kukui
 	dw NULL ; Victor
-	dw BillFinalPkmnText
+	dw NULL ; trainee 
 	dw TammyFinalPkmnText ;new
-	dw WalkerFinalPkmnText
-	dw ImakuniFinalPkmnText
+	dw NULL
+	dw NULL
 	dw KenseyFinalPkmnText ;new
 	dw ReiFinalPkmnText 
 	

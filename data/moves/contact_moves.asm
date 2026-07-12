@@ -12,7 +12,6 @@ ContactMoves:
 	db BULLET_PUNCH
 	db CLOSE_COMBAT
 	db COUNTER
-	db CRABHAMMER
 	db CROSS_CHOP
 	db CRUNCH
 	db CUT
@@ -89,4 +88,5 @@ ContactMoves:
 	db WRAP
 	db X_SCISSOR
 	db ZEN_HEADBUTT
+	db CEASELESS_EDGE	
 	db STRUGGLE ; -1

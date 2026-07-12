@@ -9,7 +9,6 @@ AquaJet:
 AquaTail:
 AuraSphere:
 BulletPunch:
-Crabhammer:
 CrossChop:
 Cut:
 Dazzlingleam:
@@ -138,7 +137,6 @@ SwitchHit:
 	endmove
 
 MultiHit:
-Bonemerang:
 CometPunch:
 DoubleKick:
 DoubleSlap:
@@ -553,6 +551,28 @@ IronTail:
 	posthiteffects
 	endmove
 
+TripleArrows:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	loweroppstat $10 | DEFENSE
+	postfainteffects
+	posthiteffects
+	endmove
+
 BrickBreak:
 	checkobedience
 	usedmovetext
@@ -724,7 +744,6 @@ CloseCombat:
 
 StaticDamage:
 Sonicboom:
-DragonRage:
 NightShade:
 SeismicToss:
 SuperFang:
@@ -2190,6 +2209,51 @@ FlareBlitz:
 	supereffectivetext
 	recoil
 	defrost
+	postfainteffects
+	posthiteffects
+	burntarget
+	endmove
+
+CeaselessEdge:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	bounceback
+	spikes
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	postfainteffects
+	posthiteffects
+	endmove
+
+InfernalParade:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	conditionalboost
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
 	postfainteffects
 	posthiteffects
 	burntarget

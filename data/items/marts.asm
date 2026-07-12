@@ -107,16 +107,19 @@ Goldenrod2FMart2:
 
 Goldenrod3FMart:
 Celadon5FMart2:
-	db 9 ; 
+	db 10  
+	db MOON_STONE
+
 	db FIRE_STONE
 	db WATER_STONE
 	db THUNDERSTONE
 	db LEAF_STONE
-	db MOON_STONE
+
 	db SUN_STONE
 	db ICE_STONE
 	db DUSK_STONE
 	db SHINY_STONE
+	db DAWN_STONE
 	db -1
 
 Goldenrod4FMart:
