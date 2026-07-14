@@ -151,11 +151,9 @@ Removed Sleep Talk from learnsets - addressing a bug.
 Todo for v110:
 * CHECK stadium names arent too long 
 * Finish Stadium todos:
-	* Names (40/130)
+	* Names (90/130)
 	* Phrases
-* Stadium Documentation
-	* Phase + Pokemon
-	* Trainer Teams
+* Redo all the documentation again: parties, learnsets, etc. 
 * Publish:
 	* Stadium
 		* Overview
@@ -168,7 +166,10 @@ Todo for v110:
 		* Front vs Backs
 		* Stat Distribution
 		* Met Locations
-	
+	* Stadium Documentation
+		* Phase + Pokemon
+		* Trainer Teams	
+
 vOneDay
 * Fix rest - sleep talk 
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?

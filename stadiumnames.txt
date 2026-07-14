@@ -62,7 +62,7 @@ MALE SAGES (41-60)
 57. Arthur
 58. Ryan
 59. Roger
-60. Joe
+60. Poe
 
 FEMALE SAILORS (61-80)
 61. Mary
@@ -73,21 +73,21 @@ FEMALE SAILORS (61-80)
 66. Elizabeth
 67. Susan
 68. Jessica
-69. Sarah
-70. Karen
-71. Nancy
-72. Lisa
-73. Betty
-74. Margaret
-75. Sandra
-76. Ashley
-77. Kimberly
+69. Sally
+70. Karla
+71. Nan
+72. Lissa
+73. Beatty
+74. Maggie
+75. Sadie
+76. Ashleigh
+77. Bera
 78. Emily
 79. Donna
 80. Carol
 
 EITHER GENDER NINJAS (81-100)
-81. Alex
+81. Al
 82. Casey
 83. Morgan
 84. Riley
