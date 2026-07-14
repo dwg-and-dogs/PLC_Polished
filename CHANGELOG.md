@@ -114,7 +114,9 @@ New Ancestor forms: Ledian (Bug/Water Special Attacker with HA Drizzle) and Alak
 Max DV mons get a Black Triangle symbol in battle. 
 Stadium Facility Rematches are a bit harder. 
 EV trainers in the Stadium Facility Prep Room. 
-Add signature moves of Infernal Parade, Triple Arrows, and Ceaseless Edge to Hisui starts at Lv55. 
+Add signature moves of Infernal Parade, Triple Arrows, Ceaseless Edge, Stone Axe to Hisui mons Lv40. 
+Add Phantom Force. Note: Needs to be invulnerable one turn, and then also update the text for "dug a hole" to "disappeared".
+Remove DoubleSlap, Teleport, Dragon Rage, Bonemerang, and Crabhammer. 
 
 Minor updates: 
 Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 

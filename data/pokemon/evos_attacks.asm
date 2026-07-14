@@ -78,10 +78,9 @@ Typhlosion_HisuianEvosAttacks:
 	db 24, FLAME_CHARGE ; Defense Curl → Flame Charge
 	db 31, SWIFT
 	db 35, DIG ; Flame Charge → TM move
-	db 43, SHADOW_BALL ; Lava Plume → egg move
-	db 48, FLAMETHROWER
-	db 56, INFERNAL_PARADE ; Inferno → new move
-	db 60, FLARE_BLITZ ; Inferno → new move
+	db 40, INFERNAL_PARADE ; Inferno → new move
+	db 46, FLAMETHROWER
+	db 52, FLARE_BLITZ ; Inferno → new move
 	db 0 ; no more level-up moves
 
 RowletEvosAttacks:
@@ -137,7 +136,7 @@ DecidueyeEvosAttacks:
 	db 31, FALSE_SWIPE
 	db 39, AIR_SLASH ; Lava Plume → egg move
 	db 45, PETAL_DANCE
-	db 50, SHADOW_BALL ; Inferno → new move
+	db 50, PHANTOM_FORCE ; Inferno → new move
 	db 55, BRAVE_BIRD
 	db 60, SOLAR_BEAM ; Eruption → egg move
 	db 0 ; no more level-up moves
@@ -153,11 +152,11 @@ Decidueye_HisuianEvosAttacks:
 	db 22, ENERGY_BALL ; Defense Curl → Flame Charge
 	db 28, WING_ATTACK ; Flame Charge → TM move
 	db 31, FALSE_SWIPE
-	db 39, AIR_SLASH ; Lava Plume → egg move
+	db 39, TRIPLE_ARROWS ; Inferno → new move
 	db 45, PETAL_DANCE
-	db 50, TRIPLE_ARROWS ; Inferno → new move
-	db 55, AURA_SPHERE
-	db 60, SOLAR_BEAM ; Eruption → egg move
+	db 49, AIR_SLASH ; Lava Plume → egg move
+	db 53, AURA_SPHERE
+	db 57, SOLAR_BEAM ; Eruption → egg move
 	db 0 ; no more level-up moves
 
 OshawottEvosAttacks:
@@ -232,11 +231,10 @@ Samurott_HisuianEvosAttacks:
 	db 25, SLASH 
 	db 30, AQUA_TAIL 
 	db 33, HEADBUTT
-	db 40, REST 
+	db 39, CEASELESS_EDGE
 	db 45, HYDRO_PUMP
-	db 50, CRUNCH 
-	db 55, CEASELESS_EDGE
-	db 60, SWORDS_DANCE 
+	db 50, CRUNCH
+	db 54, SWORDS_DANCE 
 	db 0 ; no more level-up moves
 	
 HoothootEvosAttacks:
@@ -438,7 +436,7 @@ ClefairyEvosAttacks:
 	db 1, GROWL
 	db 1, ENCORE
 	db 7, SING
-	db 10, DOUBLE_SLAP
+	db 10, FURY_STRIKES
 	db 13, CHARM
 	db 16, SWEET_KISS ; Follow Me → new move
 	db 19, DIZZY_PUNCH ; Bestow → Crystal unique move
@@ -464,7 +462,7 @@ ClefableEvosAttacks:
 	db 1, SING
 	db 1, MINIMIZE
 	db 1, METRONOME
-	db 1, DOUBLE_SLAP
+	db 1, FURY_STRIKES
 	db 31, METRONOME
 	db 34, REFLECT ; Cosmic Power → TM move
 	db 37, LIGHT_SCREEN ; Lucky Chant → TM move
@@ -886,7 +884,7 @@ PoliwagEvosAttacks:
 	db 1, SWEET_KISS ; event move
 	db 1, WATER_GUN ; Water Sport → Water Gun
 	db 5, HYPNOSIS ; Water Gun → Hypnosis
-	db 8, DOUBLE_SLAP ; Hypnosis → Double Slap
+	db 8, FURY_STRIKES ; Hypnosis → Double Slap
 	db 11, AQUA_JET ; Bubble → new move
 	db 16, MUD_SLAP ; Double Slap → TM move
 	db 18, RAIN_DANCE
@@ -906,7 +904,7 @@ PoliwhirlEvosAttacks:
 	db 1, SWEET_KISS ; event move
 	db 1, WATER_GUN ; Water Sport → Water Gun
 	db 5, HYPNOSIS ; Water Gun → Hypnosis
-	db 8, DOUBLE_SLAP ; Hypnosis → Double Slap
+	db 8, FURY_STRIKES ; Hypnosis → Double Slap
 	db 11, AQUA_JET ; Bubble → new move
 	db 15, AMNESIA ; Double Slap → TM move
 	db 18, RAIN_DANCE
@@ -923,7 +921,7 @@ PoliwrathEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUBBLE_BEAM
 	db 1, HYPNOSIS
-	db 1, DOUBLE_SLAP
+	db 1, FURY_STRIKES
 	db 1, HYPNOSIS
 	db 1, KARATE_CHOP
 	db 1, AQUA_JET
@@ -939,7 +937,7 @@ PolitoedEvosAttacks:
 	db 1, GIGA_DRAIN ; Bounce → TM move ; evolution move
 	db 1, BUBBLE_BEAM
 	db 1, HYPNOSIS
-	db 1, DOUBLE_SLAP
+	db 1, FURY_STRIKES
 	db 1, PERISH_SONG
 	db 27, SWAGGER
 	db 48, HYPER_VOICE
@@ -2105,7 +2103,7 @@ ChanseyEvosAttacks:
 	db 1, GROWL
 	db 5, LEER ; Tail Whip → similar move
 	db 9, SWEET_KISS ; Refresh → Happiny move
-	db 12, DOUBLE_SLAP
+	db 12, FURY_STRIKES
 	db 16, FRESH_SNACK ; Soft-Boiled → similar move
 	db 20, METRONOME ; Bestow → egg move
 	db 23, MINIMIZE
@@ -2126,7 +2124,7 @@ BlisseyEvosAttacks:
 	db 1, GROWL
 	db 5, LEER ; Tail Whip → similar move
 	db 9, SWEET_KISS ; Refresh → Happiny move
-	db 12, DOUBLE_SLAP
+	db 12, FURY_STRIKES
 	db 16, FRESH_SNACK ; Soft-Boiled → similar move
 	db 20, METRONOME ; Bestow → egg move
 	db 23, MINIMIZE
@@ -2291,7 +2289,7 @@ KleavorEvosAttacks:
 	db 17, AGILITY
 	db 21, WING_ATTACK
 	db 25, BUG_BITE ; Fury Cutter → similar move
-	db 29, SLASH
+	db 29, STONE_EDGE
 	db 33, ROCK_SLIDE ; Razor Wind → egg move
 	db 37, ANCIENTPOWER ; Iron Defense → similar move
 	db 41, X_SCISSOR
@@ -2310,7 +2308,7 @@ JynxEvosAttacks:
 	db 5, SING ; Lovely Kiss → Smoochum move
 	db 8, SCREECH ; Lovely Kiss → Let's Go move
 	db 11, ICY_WIND ; Powder Snow → TM move
-	db 15, DOUBLE_SLAP
+	db 15, FURY_STRIKES
 	db 18, ICE_PUNCH
 	db 21, METRONOME ; Heart Stamp → RBY TM move
 	db 25, MEAN_LOOK
@@ -4665,7 +4663,7 @@ BastiodonEvosAttacks:
 	db 0 ; no more level-up moves
 
 AipomEvosAttacks:
-	db EVOLVE_MOVE, DOUBLE_SLAP, AMBIPOM
+	db EVOLVE_MOVE, FURY_STRIKES, AMBIPOM
 	db 0 ; no more Evolutions
 	db 1, TACKLE
 	db 1, LEER ; Tail Whip → similar move
@@ -4677,14 +4675,14 @@ AipomEvosAttacks:
 	db 22, METRONOME
 	db 25, SCREECH
 	db 29, AGILITY
-	db 32, DOUBLE_SLAP ; Double Hit → egg move
+	db 32, FURY_STRIKES ; Double Hit → egg move
 	db 36, ACROBATICS ; Fling → TM move
 	db 39, NASTY_PLOT
 	db 43, DOUBLE_EDGE ; Last Resort → tutor move
 
 AmbipomEvosAttacks:
 	db 0 ; no more Evolutions
-	db 1, DOUBLE_SLAP
+	db 1, FURY_STRIKES
 	db 1, MUD_SLAP
 	db 1, METRONOME
 	db 1, SCREECH
@@ -5116,6 +5114,7 @@ BasculegionEvosAttacks:
 	db 21, SCARY_FACE
 	db 24, AQUA_TAIL
 	db 30, CRUNCH
+	db 38, PHANTOM_FORCE
 	db 46, ZEN_HEADBUTT
 	db 50, DOUBLE_EDGE
 	db 55, OUTRAGE

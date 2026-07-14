@@ -2472,6 +2472,11 @@ _BattleTookSunlightText::
 	line "took in sunlight!"
 	prompt
 
+SECTION "_BattlePhantomForceText", ROMX
+_BattlePhantomForceText::
+	line "disappeared!"
+	prompt
+
 SECTION "_BattleFlewText", ROMX
 _BattleFlewText::
 	line "flew up high!"

@@ -8,7 +8,7 @@
 	const NO_MOVE      ; $00
 	const ACROBATICS   ; $01
 	const KARATE_CHOP  ; $02
-	const DOUBLE_SLAP  ; $03
+	const PHANTOM_FORCE  ; $03
 	const AERIAL_ACE   ; $04
 	const DRAGON_CLAW  ; $05
 	const PAY_DAY      ; $06
@@ -105,7 +105,7 @@
 	const AGILITY      ; $61
 	const QUICK_ATTACK ; $62
 	const RAGE         ; $63
-	const TELEPORT     ; $64
+	const STONE_AXE     ; $64
 	const NIGHT_SHADE  ; $65
 	const DRAGON_PULSE ; $66
 	const SCREECH      ; $67

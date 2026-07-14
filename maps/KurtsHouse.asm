@@ -955,11 +955,11 @@ endr
 	loadmem wPartyMon3DVs+1, $ff
 	loadmem wPartyMon3DVs+2, $ff	
 
-;	givepoke URSALUNA, 100
-;	loadmem wPartyMon4Moves+0, BELLY_DRUM
-;	loadmem wPartyMon4Moves+1, FIRE_PUNCH
-;	loadmem wPartyMon4Moves+2, BODY_SLAM
-;	loadmem wPartyMon4Moves+3, EARTHQUAKE
+	givepoke KLEAVOR, 15
+	loadmem wPartyMon4Moves+0, STONE_AXE
+	loadmem wPartyMon4Moves+1, FIRE_PUNCH
+	loadmem wPartyMon4Moves+2, BODY_SLAM
+	loadmem wPartyMon4Moves+3, EARTHQUAKE
 ;	loadmem wPartyMon4EVs+0, 252
 ;	loadmem wPartyMon4EVs+1, 252
 ;	loadmem wPartyMon4EVs+2, 252
@@ -970,11 +970,11 @@ endr
 ;	loadmem wPartyMon4DVs+1, $ff
 ;	loadmem wPartyMon4DVs+2, $ff	
 	
-;	givepoke DRAGONITE, 100
-;	loadmem wPartyMon5Moves+0, DRAGON_DANCE
-;	loadmem wPartyMon5Moves+1, DRAGON_CLAW
-;	loadmem wPartyMon5Moves+2, EARTHQUAKE
-;	loadmem wPartyMon5Moves+3, FIRE_PUNCH
+	givepoke BASCULEGION, 15
+	loadmem wPartyMon5Moves+0, PHANTOM_FORCE
+	loadmem wPartyMon5Moves+1, DRAGON_CLAW
+	loadmem wPartyMon5Moves+2, EARTHQUAKE
+	loadmem wPartyMon5Moves+3, FIRE_PUNCH
 ;	loadmem wPartyMon5EVs+0, 252
 ;	loadmem wPartyMon5EVs+1, 252
 ;	loadmem wPartyMon5EVs+2, 252

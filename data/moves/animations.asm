@@ -4,7 +4,7 @@ BattleAnimations::
 	dw BattleAnim_0
 	dw BattleAnim_Acrobatics
 	dw BattleAnim_KarateChop
-	dw BattleAnim_DoubleSlap
+	dw BattleAnim_PhantomForce;DoubleSlap
 	dw BattleAnim_AerialAce
 	dw BattleAnim_DragonClaw
 	dw BattleAnim_PayDay
@@ -101,7 +101,7 @@ BattleAnimations::
 	dw BattleAnim_Agility
 	dw BattleAnim_QuickAttack
 	dw BattleAnim_Rage
-	dw BattleAnim_Teleport
+	dw BattleAnim_StoneAxe;Teleport
 	dw BattleAnim_NightShade
 	dw BattleAnim_DragonPulse
 	dw BattleAnim_Screech
@@ -753,6 +753,32 @@ BattleAnim_KarateChop:
 	anim_wait 16
 	anim_ret
 
+BattleAnim_PhantomForce: ; copy of fly + shadow ball 
+	anim_jumpif $1, .turn1
+	anim_jumpif $2, .miss
+	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_SMOKE
+	anim_bgp $1b
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_obj ANIM_OBJ_SHADOW_BALL,   8, 0,  11, 4, $2
+	anim_wait 32
+	anim_obj ANIM_OBJ_BALL_POOF, -16, 4,   7, 0, $10
+	anim_wait 24
+	anim_bgp $e4
+.miss
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_wait 32
+	anim_ret
+
+.turn1
+	anim_1gfx ANIM_GFX_SPEED
+	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $1, $0
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_call BattleAnimSub_WarpAway
+	anim_wait 64
+	anim_ret
+
+
+
 BattleAnim_DoubleSlap:
 	anim_1gfx ANIM_GFX_HIT
 	anim_jumpif $1, .alternate
@@ -974,12 +1000,12 @@ BattleAnim_FireSpin:
 	anim_ret
 
 BattleAnim_InfernalParade: ; todo check , cf shadow ball and dragon rage 
-	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_SMOKE
+	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_SMOKE
 	anim_bgp $1b
 	anim_sound 6, 2, SFX_SLUDGE_BOMB
 	anim_obj ANIM_OBJ_DRAGON_RAGE,   8, 0,  11, 4, $2
 	anim_wait 32
-	anim_obj ANIM_OBJ_BALL_POOF, -16, 4,   7, 0, $10
+	anim_obj ANIM_OBJ_DRAGON_RAGE, -16, 4,   7, 0, $10
 	anim_wait 24
 	anim_bgp $e4
 	anim_ret
@@ -1760,6 +1786,34 @@ BattleAnim_Bite:
 	anim_sound 0, 1, SFX_BITE
 	anim_obj ANIM_OBJ_HIT_YFIX,  16, 0,   8, 0, $18
 	anim_wait 8
+	anim_ret
+
+BattleAnim_StoneAxe:
+	; slash 
+	anim_1gfx ANIM_GFX_CUT
+	anim_sound 0, 1, SFX_STRENGTH
+	anim_obj ANIM_OBJ_CUT_LONG_DOWN_LEFT, -13, 0,   5, 0, $0
+	anim_obj ANIM_OBJ_CUT_LONG_DOWN_LEFT, -14, 4,   4, 4, $0
+	anim_wait 32
+	; rock throw 
+	anim_1gfx ANIM_GFX_ROCKS
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $60, $1, $0
+	anim_sound 0, 1, SFX_STRENGTH
+	anim_obj ANIM_OBJ_SMALL_ROCK,  16, 0,   8, 0, $40
+	anim_wait 2
+	anim_sound 0, 1, SFX_STRENGTH
+	anim_obj ANIM_OBJ_BIG_ROCK,  15, 0,   8, 4, $30
+	anim_wait 2
+	anim_sound 0, 1, SFX_STRENGTH
+	anim_obj ANIM_OBJ_SMALL_ROCK, -13, 0,   8, 4, $30
+	anim_wait 2
+	anim_sound 0, 1, SFX_STRENGTH
+	anim_obj ANIM_OBJ_BIG_ROCK, -14, 0,   8, 0, $40
+	anim_wait 2
+	anim_sound 0, 1, SFX_STRENGTH
+	anim_obj ANIM_OBJ_SMALL_ROCK, -15, 0,   8, 4, $30
+	anim_wait 32
+	; end 
 	anim_ret
 
 BattleAnim_Teleport:

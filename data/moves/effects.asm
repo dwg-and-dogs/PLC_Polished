@@ -2220,14 +2220,14 @@ CeaselessEdge:
 	doturn
 	hastarget
 	checkhit
+	critical
 	bounceback
 	spikes
-	critical
 	damagestats
 	damagecalc
 	stab
 	damagevariation
-	moveanim
+;	moveanim
 	failuretext
 	applydamage
 	criticaltext

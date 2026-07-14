@@ -476,6 +476,8 @@ CantMove:
 	call GetBattleVarAddr
 	cp FLY
 	jr z, .fly_dig
+	cp PHANTOM_FORCE
+	jr z, .fly_dig
 	cp DIG
 	ret nz
 .fly_dig
@@ -2214,6 +2216,8 @@ BattleCommand_moveanimnosub:
 	call GetBattleVar
 	cp FLY
 	jr z, .fly_dig
+	cp PHANTOM_FORCE
+	jr z, .fly_dig
 	cp DIG
 	ret nz
 
@@ -2345,6 +2349,8 @@ BattleCommand_failuretext:
 	jr z, .fly_dig
 	cp DIG
 	jr z, .fly_dig
+	cp PHANTOM_FORCE
+	jr z, .phantom_force
 
 ; Move effect:
 	inc hl
@@ -2371,6 +2377,14 @@ BattleCommand_failuretext:
 	res SUBSTATUS_FLYING, [hl]
 	call AppearUserRaiseSub
 	jmp EndMoveEffect
+
+.phantom_force
+	ld a, BATTLE_VARS_SUBSTATUS1
+	call GetBattleVarAddr
+	res SUBSTATUS_PROTECT, [hl]
+	call AppearUserRaiseSub
+	jmp EndMoveEffect
+
 
 BattleCommand_applydamage:
 ; b is set to an endure flag as follows:
@@ -5445,6 +5459,19 @@ BattleCommand_charge:
 
 .flying
 	call DisappearUser
+; CHECK IF PHANTOM Force
+	ld a, BATTLE_VARS_SUBSTATUS1
+	call GetBattleVarAddr
+	ld a, BATTLE_VARS_MOVE_ANIM
+	call GetBattleVar
+	ld b, a
+	cp PHANTOM_FORCE
+	jr nz, .not_phantom_force
+;.set_phantom_force_protect
+	set SUBSTATUS_PROTECT, [hl] ; proetct 
+	jmp .skip_set_flying
+
+.not_phantom_force
 .not_flying
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
@@ -5458,9 +5485,11 @@ BattleCommand_charge:
 	set SUBSTATUS_UNDERGROUND, [hl]
 	jr .dont_set_digging
 
+
 .set_flying
 	set SUBSTATUS_FLYING, [hl]
 
+.skip_set_flying
 .dont_set_digging
 	call ResetDamage
 
@@ -5478,6 +5507,10 @@ BattleCommand_charge:
 	cp SOLAR_BEAM
 	ret z
 
+	ld hl, .PhantomForce
+	cp PHANTOM_FORCE
+	ret z
+
 	ld hl, .Fly
 	cp FLY
 	ret z
@@ -5489,6 +5522,11 @@ BattleCommand_charge:
 .SolarBeam:
 ; 'took in sunlight!'
 	text_far _BattleTookSunlightText
+	text_end
+
+.PhantomForce
+; disappeared!
+	text_far _BattlePhantomForceText
 	text_end
 
 .Fly:

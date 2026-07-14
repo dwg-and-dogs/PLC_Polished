@@ -3,7 +3,7 @@ MoveDescriptions::
 	table_width 2, MoveDescriptions
 	dw AcrobaticsDescription
 	dw KarateChopDescription
-	dw DoubleSlapDescription
+	dw PhantomForceDescription
 	dw AerialAceDescription
 	dw DragonClawDescription
 	dw PayDayDescription
@@ -100,7 +100,7 @@ MoveDescriptions::
 	dw AgilityDescription
 	dw QuickAttackDescription
 	dw RageDescription
-	dw TeleportDescription
+	dw StoneAxeDescription ; telport 
 	dw NightShadeDescription
 	dw DragonPulseDescription
 	dw ScreechDescription
@@ -295,9 +295,9 @@ DrainPunchDescription:
 	db   "Steals 1/2 of the"
 	next "damage inflicted.@"
 
-DoubleSlapDescription:
-	db   "Repeatedly slaps"
-	next "2-5 times.@"
+PhantomForceDescription:
+	db   "Disappears,"
+	next "then strikes.@"
 
 FuryStrikesDescription:
 	db   "Scratches or jabs"
@@ -351,6 +351,11 @@ GunkShotDescription:
 	next "poison the foe.@"
 
 InfernalParadeDescription:
+	db   "May burn. Statused"
+	next "foes damaged more.@"
+
+
+
 EmberDescription:
 FlamethrowerDescription:
 FireBlastDescription:
@@ -853,6 +858,10 @@ EarthquakeDescription:
 RageDescription:
 	db   "Raises Attack if"
 	next "the user is hit.@"
+
+StoneAxeDescription:
+	db   "Strike spreads"
+	next "spikes.@"
 
 TeleportDescription:
 	db   "A move for fleeing"

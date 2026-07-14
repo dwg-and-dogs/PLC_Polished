@@ -440,7 +440,6 @@ ChinchouEggMoves:
 
 PikachuEggMoves:
 	db DISARM_VOICE
-	db DOUBLE_SLAP
 	db ENCORE
 	db REVERSAL
 	db $ff

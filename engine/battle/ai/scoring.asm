@@ -1192,7 +1192,7 @@ AI_Smart_Encore:
 	db SUBSTITUTE
 	db SUPER_FANG
 	db SWORDS_DANCE
-	db TELEPORT
+;	db TELEPORT
 	db TRICK
 	db $ff
 
