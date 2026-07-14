@@ -114,8 +114,8 @@ New Ancestor forms: Ledian (Bug/Water Special Attacker with HA Drizzle) and Alak
 Max DV mons get a Black Triangle symbol in battle. 
 Stadium Facility Rematches are a bit harder. 
 EV trainers in the Stadium Facility Prep Room. 
-Add signature moves of Infernal Parade, Triple Arrows, Ceaseless Edge, Stone Axe to Hisui mons Lv40. 
-Add Phantom Force. Note: Needs to be invulnerable one turn, and then also update the text for "dug a hole" to "disappeared".
+Add signature moves of Infernal Parade, Triple Arrows, Ceaseless Edge, Stone Axe to Hisui Pokemon and some trainer teams. 
+Add Phantom Force. 
 Remove DoubleSlap, Teleport, Dragon Rage, Bonemerang, and Crabhammer. 
 
 Minor updates: 
@@ -149,8 +149,9 @@ Removed Sleep Talk from learnsets - addressing a bug.
 
 
 Todo for v110:
+* CHECK stadium names arent too long 
 * Finish Stadium todos:
-	* Names (20/130)
+	* Names (40/130)
 	* Phrases
 * Stadium Documentation
 	* Phase + Pokemon
