@@ -21,7 +21,9 @@ GoldenrodMagnetTrainStation_MapScriptHeader:
 	object_event 11, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationGentlemanScript, EVENT_GENTLEMAN_READ_TRAIN_MAIL
 	object_event  6, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationCooltrainerf1Script, -1
 	object_event  7, 13, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodMagnetTrainStationCooltrainerf2Script, -1
-	itemball_event 5,  2, MAGNET, 1, EVENT_MAGNET_TRAIN_MAGNET
+	tmhmball_event  5, 2, HM_FLY, EVENT_GOT_FLY_KURT ; maintain legacy compatibility 
+
+	itemball_event 11, 10, MAGNET, 1, EVENT_MAGNET_TRAIN_MAGNET
 	object_event  6, 16, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MagnetTrainFixedChargeScript, -1
 
 

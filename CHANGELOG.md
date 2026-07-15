@@ -119,6 +119,7 @@ Add Phantom Force.
 Remove DoubleSlap, Teleport, Dragon Rage, Bonemerang, and Crabhammer. 
 
 Minor updates: 
+Move HM Fly to Magnet Train Station after Whitney. --> todo check 
 Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
 Higher EVs for the Stadium Rematch teams. 
 Updated composition for Stadium Rematch teams. 
@@ -151,8 +152,7 @@ Removed Sleep Talk from learnsets - addressing a bug.
 Todo for v110:
 * CHECK stadium names arent too long 
 * Finish Stadium todos:
-	* Names (90/130)
-	* Phrases
+	* Phrases (21/130)
 * Redo all the documentation again: parties, learnsets, etc. 
 * Publish:
 	* Stadium

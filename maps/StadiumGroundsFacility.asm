@@ -3516,7 +3516,7 @@ StadiumFacility_TrainersEndlessEvent:
 .BattleSilasFinal:
 	appear STADIUM_FACILITY_HOLLIS
 	applymovement STADIUM_FACILITY_HOLLIS, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextHollisFinal, FacilityLossTextHollisFinal
+	winlosstext FacilityWinTextSilas, FacilityLossTextSilas
 	loadtrainer HOLLIS, HOLLIS_STADIUM_FINAL
 	showtext HollisStadiumFinalText
 	startbattle
@@ -3529,7 +3529,7 @@ StadiumFacility_TrainersEndlessEvent:
 .BattleSandraFinal:
 	appear STADIUM_FACILITY_SANDRA
 	applymovement STADIUM_FACILITY_SANDRA, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextSandraFinal, FacilityLossTextSandraFinal
+	winlosstext FacilityWinTextSandra, FacilityLossTextSandra
 	loadtrainer SANDRA, SANDRA_STADIUM_FINAL
 	showtext SandraStadiumFinalText
 	startbattle
@@ -3542,7 +3542,7 @@ StadiumFacility_TrainersEndlessEvent:
 .BattleSybilFinal:
 	appear STADIUM_FACILITY_SAMSARA
 	applymovement STADIUM_FACILITY_SAMSARA, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextSamsaraFinal, FacilityLossTextSamsaraFinal
+	winlosstext FacilityWinTextSybil, FacilityLossTextSybil
 	loadtrainer SAMSARA, SAMSARA_STADIUM_FINAL
 	showtext SamsaraStadiumFinalText
 	startbattle
@@ -3555,7 +3555,7 @@ StadiumFacility_TrainersEndlessEvent:
 .BattleRemyFinal:
 	appear STADIUM_FACILITY_BARBEAU
 	applymovement STADIUM_FACILITY_BARBEAU, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextRemyFinal, FacilityLossTextRemyFinal
+	winlosstext FacilityWinTextRemy, FacilityLossTextRemy
 	loadtrainer BARBEAU, REMY_STADIUM_FINAL
 	showtext RemyStadiumFinalText
 	startbattle
@@ -3568,7 +3568,7 @@ StadiumFacility_TrainersEndlessEvent:
 .BattleAmosFinal:
 	appear STADIUM_FACILITY_AMOS
 	applymovement STADIUM_FACILITY_AMOS, BossTrainerWalkTowardMovement
-	winlosstext FacilityWinTextAmosFinal, FacilityLossTextAmosFinal
+	winlosstext FacilityWinTextAmos, FacilityLossTextAmos
 	loadtrainer AMOS, AMOS_STADIUM_FINAL
 	showtext AmosStadiumFinalText
 	startbattle
@@ -3679,43 +3679,49 @@ FacilityLossText:
 	done
 
 FacilityWinTextSilas:
-	text "Congrats"
+	text "YOU'RE ALWAYS"
+	line "IMPROVING"
 	done
 
 FacilityLossTextSilas:
-	text "ha ha ha"
+	text "NOT SO SMART"
+	line "NOW KID"
 	done
 
 FacilityWinTextSandra:
-	text "yay"
+	text "todo"
 	done
 
 FacilityLossTextSandra:
-	text "he he he"
+	text "YOU LACK TRUST"
 	done
 
 FacilityWinTextSybil:
-	text "nice"
+	text "YOUR ANCESTORS"
+	line "WOULD BE PROUD"
 	done
 
 FacilityLossTextSybil:
-	text "gg"
+	text "EMBARASSING"
 	done
 
 FacilityWinTextRemy:
-	text "wp"
+	text "YOU RAN CIRCLES"
+	line "AROUND ME"
 	done
 	
 FacilityLossTextRemy:
-	text "uh oh"
+	text "NICE TRY"
 	done
 
 FacilityWinTextAmos:
-	text "ugh"
+	text "I KNEW YOU WERE"
+	line "TRUE"
 	done
 
 FacilityLossTextAmos:
-	text "u mad"
+	text "ITS ALL COMING UP"
+	line "TAILS FOR YOU"
 	done
 
 StadiumFacilityClerkMidRoundText:
@@ -3786,228 +3792,125 @@ BossTrainerWalkAwayMovement:
 	step_end
 
 SANDRA_SANDRA_STADIUM_Text:
-	text "Sandra Stadium"
+	text "YOU WILL FEEL"
+	line "THE SONDER"
 	done
 
 AMOS_AMOS_STADIUM_Text:
-	text "Amos Stadium"
+	text "I SEE RIGHT"
+	line "THROUGH YOU"
 	done
 
 BARBEAU_REMY_STADIUM_Text:
-	text "Remy Stadium"
+	text "IVE GOT THE WIND"
+	line "AT MY BACK"
 	done
 
 SAMSARA_SAMSARA_STADIUM_Text:
-	text "Samsara Stadium"
+	text "IM SENDING YOU TO"
+	line "YOUR ANCESTORS"
 	done
 
-BRIGADER_FACILITY_20_Text:
-	text "Brigader 20"
-	done
-
-BRIGADER_FACILITY_1_Text:
-	text "Brigader 1"
-	done
-
-BRIGADER_FACILITY_2_Text:
-	text "Brigader 2"
-	done
-
-BRIGADER_FACILITY_3_Text:
-	text "Brigader 3"
-	done
-
-BRIGADER_FACILITY_4_Text:
-	text "Brigader 4"
-	done
-
-BRIGADER_FACILITY_5_Text:
-	text "Brigader 5"
-	done
-
-BRIGADER_FACILITY_6_Text:
-	text "Brigader 6"
-	done
-
-BRIGADER_FACILITY_7_Text:
-	text "Brigader 7"
-	done
-
-BRIGADER_FACILITY_8_Text:
-	text "Brigader 8"
-	done
-
-BRIGADER_FACILITY_9_Text:
-	text "Brigader 9"
-	done
-
-BRIGADER_FACILITY_10_Text:
-	text "Brigader 10"
-	done
-
-BRIGADER_FACILITY_11_Text:
-	text "Brigader 11"
-	done
-
-BRIGADER_FACILITY_12_Text:
-	text "Brigader 12"
-	done
-
-BRIGADER_FACILITY_13_Text:
-	text "Brigader 13"
-	done
-
-BRIGADER_FACILITY_14_Text:
-	text "Brigader 14"
-	done
-
-BRIGADER_FACILITY_15_Text:
-	text "Brigader 15"
-	done
-
-BRIGADER_FACILITY_16_Text:
-	text "Brigader 16"
-	done
-
-BRIGADER_FACILITY_17_Text:
-	text "Brigader 17"
-	done
-
-BRIGADER_FACILITY_18_Text:
-	text "Brigader 18"
-	done
-
-BRIGADER_FACILITY_19_Text:
-	text "Brigader 19"
-	done
-
-BRIGADER_FACILITY_21_Text:
-	text "Brigader 21"
-	done
-
-BRIGADER_FACILITY_22_Text:
-	text "Brigader 22"
-	done
-
-BRIGADER_FACILITY_23_Text:
-	text "Brigader 23"
-	done
-
-BRIGADER_FACILITY_24_Text:
-	text "Brigader 24"
-	done
-
-BRIGADER_FACILITY_25_Text:
-	text "Brigader 25"
-	done
-
-BRIGADER_FACILITY_26_Text:
-	text "Brigader 26"
-	done
-
-BRIGADER_FACILITY_27_Text:
-	text "Brigader 27"
-	done
-
-BRIGADER_FACILITY_28_Text:
-	text "Brigader 28"
-	done
-
-BRIGADER_FACILITY_29_Text:
-	text "Brigader 29"
-	done
-
-BRIGADER_FACILITY_30_Text:
-	text "FEEL THE RHYTHM"
-	line "OF THE DESERT"
-	done
 
 BUG_MANIAC_FACILITY_20_Text:
-	text "Bug Maniac 20"
+	text "AM I BUGGING YOU"
 	done
 
 BUG_MANIAC_FACILITY_1_Text:
-	text "Bug Maniac 1"
+	text "DONT FLY TOO"
+	line "CLOSE TO THE SUN"
 	done
 
 BUG_MANIAC_FACILITY_2_Text:
-	text "Bug Maniac 2"
+	text "DO YOU FEEL THE"
+	line "STATIC"
 	done
 
 BUG_MANIAC_FACILITY_3_Text:
-	text "Bug Maniac 3"
+	text "SOMETHING STINKS"
+	line "AND ITS NOT ME"
 	done
 
 BUG_MANIAC_FACILITY_4_Text:
-	text "Bug Maniac 4"
+	text "IM HUNGRY FOR"
+	line "A WIN"
 	done
 
 BUG_MANIAC_FACILITY_5_Text:
-	text "Bug Maniac 5"
+	text "YOU GET TWO FOR"
+	line "FLINCHING"
 	done
 
 BUG_MANIAC_FACILITY_6_Text:
-	text "Bug Maniac 6"
+	text "I SEE A FUTURE"
+	line "WHERE YOU LOSE"
 	done
 
 BUG_MANIAC_FACILITY_7_Text:
-	text "Bug Maniac 7"
+	text "TOO FAST FOR YOU?"
 	done
 
 BUG_MANIAC_FACILITY_8_Text:
-	text "Bug Maniac 8"
+	text "DO YOU WANT TO"
+	line "BUILD A SNOWMAN"
 	done
 
 BUG_MANIAC_FACILITY_9_Text:
-	text "Bug Maniac 9"
+	text "THIS ESCARGO HAS"
+	line "A TANG"
 	done
 
 BUG_MANIAC_FACILITY_10_Text:
-	text "Bug Maniac 10"
+	text "CAN YOU EVEN LOOK"
+	line "AT YOURSELF IN"
+	cont "THE MIRROR"
 	done
 
 BUG_MANIAC_FACILITY_11_Text:
-	text "Bug Maniac 11"
+	text "COME OUT OF YOUR"
+	line "SHELL"
 	done
 
 BUG_MANIAC_FACILITY_12_Text:
-	text "Bug Maniac 12"
+	text "HOLD ON TIGHT"
 	done
 
 BUG_MANIAC_FACILITY_13_Text:
-	text "Bug Maniac 13"
+	text "REVENGE IS SERVED"
+	line "HOT"
 	done
 
 BUG_MANIAC_FACILITY_14_Text:
-	text "Bug Maniac 14"
+	text "STAY OFF THE"
+	line "MOUNTAIN"
 	done
 
 BUG_MANIAC_FACILITY_15_Text:
-	text "Bug Maniac 15"
+	text "IM FEELING A BUZZ"
 	done
 
 BUG_MANIAC_FACILITY_16_Text:
-	text "Bug Maniac 16"
+	text "KNOCK KNOCK WHO"
+	line "IS THERE"
 	done
 
 BUG_MANIAC_FACILITY_17_Text:
-	text "Bug Maniac 17"
+	text "MY BEETLES MAKE"
+	line "SO MUCH NOISE"
 	done
 
 BUG_MANIAC_FACILITY_18_Text:
-	text "Bug Maniac 18"
+	text "YOU DONT HAVE TO"
+	line "WALK ON EGGSHELLS"
 	done
 
 BUG_MANIAC_FACILITY_19_Text:
-	text "Bug Maniac 19"
+	text "THIS IS A HARD"
+	line "HAT ZONE"
 	done
 
 HOLLIS_HOLLIS_STADIUM_Text:
-	text "Silas Stadium"
-	done
-
-NINJA_FACILITY_20_Text:
-	text "Ninja 20"
+	text "PREPARE TO LEARN"
 	done
 
 NINJA_FACILITY_1_Text:
@@ -4086,8 +3989,9 @@ NINJA_FACILITY_19_Text:
 	text "Ninja 19"
 	done
 
-NOMAD_F_FACILITY_20_Text:
-	text "Nomad F 20"
+
+NINJA_FACILITY_20_Text:
+	text "Ninja 20"
 	done
 
 NOMAD_F_FACILITY_1_Text:
@@ -4166,8 +4070,8 @@ NOMAD_F_FACILITY_19_Text:
 	text "Nomad F 19"
 	done
 
-PKMN_TRAINER_HF_FACILITY_20_Text:
-	text "Pkmn Trainer Hf 20"
+NOMAD_F_FACILITY_20_Text:
+	text "Nomad F 20"
 	done
 
 PKMN_TRAINER_HF_FACILITY_1_Text:
@@ -4246,8 +4150,8 @@ PKMN_TRAINER_HF_FACILITY_19_Text:
 	text "Pkmn Trainer Hf 19"
 	done
 
-SAGE_FACILITY_20_Text:
-	text "Sage 20"
+PKMN_TRAINER_HF_FACILITY_20_Text:
+	text "Pkmn Trainer Hf 20"
 	done
 
 SAGE_FACILITY_1_Text:
@@ -4327,88 +4231,186 @@ SAGE_FACILITY_19_Text:
 	done
 
 
+SAGE_FACILITY_20_Text:
+	text "Sage 20"
+	done
+
+
+
+BRIGADER_FACILITY_1_Text:
+	text "Brigader 1"
+	done
+
+BRIGADER_FACILITY_2_Text:
+	text "Brigader 2"
+	done
+
+BRIGADER_FACILITY_3_Text:
+	text "Brigader 3"
+	done
+
+BRIGADER_FACILITY_4_Text:
+	text "Brigader 4"
+	done
+
+BRIGADER_FACILITY_5_Text:
+	text "Brigader 5"
+	done
+
+BRIGADER_FACILITY_6_Text:
+	text "Brigader 6"
+	done
+
+BRIGADER_FACILITY_7_Text:
+	text "Brigader 7"
+	done
+
+BRIGADER_FACILITY_8_Text:
+	text "Brigader 8"
+	done
+
+BRIGADER_FACILITY_9_Text:
+	text "Brigader 9"
+	done
+
+BRIGADER_FACILITY_10_Text:
+	text "Brigader 10"
+	done
+
+BRIGADER_FACILITY_11_Text:
+	text "Brigader 11"
+	done
+
+BRIGADER_FACILITY_12_Text:
+	text "Brigader 12"
+	done
+
+BRIGADER_FACILITY_13_Text:
+	text "Brigader 13"
+	done
+
+BRIGADER_FACILITY_14_Text:
+	text "Brigader 14"
+	done
+
+BRIGADER_FACILITY_15_Text:
+	text "Brigader 15"
+	done
+
+BRIGADER_FACILITY_16_Text:
+	text "Brigader 16"
+	done
+
+BRIGADER_FACILITY_17_Text:
+	text "Brigader 17"
+	done
+
+BRIGADER_FACILITY_18_Text:
+	text "Brigader 18"
+	done
+
+BRIGADER_FACILITY_19_Text:
+	text "Brigader 19"
+	done
+
+BRIGADER_FACILITY_20_Text:
+	text "Brigader 20"
+	done
+
+BRIGADER_FACILITY_21_Text:
+	text "Brigader 21"
+	done
+
+BRIGADER_FACILITY_22_Text:
+	text "Brigader 22"
+	done
+
+BRIGADER_FACILITY_23_Text:
+	text "Brigader 23"
+	done
+
+BRIGADER_FACILITY_24_Text:
+	text "Brigader 24"
+	done
+
+BRIGADER_FACILITY_25_Text:
+	text "Brigader 25"
+	done
+
+BRIGADER_FACILITY_26_Text:
+	text "Brigader 26"
+	done
+
+BRIGADER_FACILITY_27_Text:
+	text "Brigader 27"
+	done
+
+BRIGADER_FACILITY_28_Text:
+	text "Brigader 28"
+	done
+
+BRIGADER_FACILITY_29_Text:
+	text "Brigader 29"
+	done
+
+BRIGADER_FACILITY_30_Text:
+	text "FEEL THE RHYTHM"
+	line "OF THE DESERT"
+	done
+
 HollisStadiumFinalText:
-	text "Silas Final Text"
+	text "I DRAW FROM THE"
+	line "PURE WATERS OF"
+	cont "THE MISTY BASIN"
 	done
 
 SandraStadiumFinalText:
-	text "Sandra Final Text"
+	text "A SACRED FIRE CAN"
+	line "BRING NEW LIFE"
 	done
 
 SamsaraStadiumFinalText:
-	text "Sybil Final Text"
+	text "ASHES TO ASHES"
 	done
 	
 RemyStadiumFinalText:
-	text "Remy Final Text"
+	text "RISE MY GUARDIAN"
+	line "FROM THE SEA"
 	done
 	
 AmosStadiumFinalText:
-	text "Amos Final Text"
+	text "YOULL BE GONE IN"
+	line "A FLASH"
 	done
 	
 KurtStadiumFinalText:
-	text "Kurt Final Text"
+	text "DONT CRY, ITS"
+	line "JUST AN ONION"
 	done
 	
 VesperStadiumFinalText:
-	text "Vesper Final Text"
-	done
-
-FacilityWinTextAmosFinal:
-	text "Beat Amos Final"
-	done
-
-FacilityWinTextHollisFinal:
-	text "Beat Silas Final"
+	text "MY NAME IS"
+	line "OZYMANDIAS"
 	done
 
 FacilityWinTextKurtFinal:
-	text "Beat Kurt Final"
-	done
-
-FacilityWinTextRemyFinal:
-	text "Beat Remy Final"
-	done
-
-FacilityWinTextSamsaraFinal:
-	text "Beat Sybil Final"
-	done
-
-FacilityWinTextSandraFinal:
-	text "Beat Sandra Final"
+	text "AZALEA WOULD BE"
+	line "PROUD OF YOU"
 	done
 
 FacilityWinTextVesperFinal:
-	text "Beat Vesper Final"
-	done
-
-FacilityLossTextAmosFinal:
-	text "Lose Amos Final"
-	done
-
-FacilityLossTextHollisFinal:
-	text "Lose Silas Final"
+	text "THE LONE LEVEL"
+	line "SANDS STRETCH"
+	cont "FAR AWAY"
 	done
 
 FacilityLossTextKurtFinal:
-	text "Lose Kurt Final"
-	done
-
-FacilityLossTextRemyFinal:
-	text "Lose Remy Final"
-	done
-
-FacilityLossTextSamsaraFinal:
-	text "Lose Sybil Final"
-	done
-
-FacilityLossTextSandraFinal:
-	text "Lose Sandra Final"
+	text "STILL I HAUNT YOU"
 	done
 
 FacilityLossTextVesperFinal:
-	text "Lose Vesper Final"
+	text "LOOK ON MY"
+	line "MIGHTY WORKS"
 	done
 
 ; ============

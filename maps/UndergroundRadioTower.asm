@@ -80,12 +80,12 @@ UndergroundRadioTowerKurtScript:
     iffalse .NotReady
     writetext KurtReadyText
     waitbutton
-    writetext KurtAfterFlyText
-    promptbutton
-    verbosegivetmhm HM_FLY
-	waitbutton
+;    writetext KurtAfterFlyText
+;    promptbutton
+;    verbosegivetmhm HM_FLY
+;	waitbutton
 ;	verbosegivekeyitem NATU_CALL 
-    setevent EVENT_GOT_FLY_KURT
+;    setevent EVENT_GOT_FLY_KURT
 	setevent EVENT_RIVAL_RADIO_TOWER
 ;	waitbutton
     closetext
