@@ -110,6 +110,7 @@ Minor text, tile, object palette issues.
 
 Major Updates: 
 Postgame Battle Facility: Stadium!
+	* Play right away from the debug room, or train up your 
 New Ancestor forms: Ledian (Bug/Water Special Attacker with HA Drizzle) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in Anarres Holt and Cianwood Cave, respectively. 
 Max DV mons get a Black Triangle symbol in battle. 
 Stadium Facility Rematches are a bit harder. 
@@ -147,13 +148,16 @@ Remove Hall of Fame from Pokecenter PCs.
 Add Dawn Stone to Goldenrod Mart. 
 Reduce value of smashrock items. 
 Removed Sleep Talk from learnsets - addressing a bug. 
+Address a possible soft lock in Whispers Way. 
+A few more hints in the early game. 
+Buff wild levels in Union Cave. 
 
 
 Todo for v110:
-* CHECK stadium names arent too long 
-* Finish Stadium todos:
-	* Phrases (21/130)
+* Check leveling in early game 
+
 * Redo all the documentation again: parties, learnsets, etc. 
+
 * Publish:
 	* Stadium
 		* Overview

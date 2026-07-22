@@ -15,7 +15,7 @@ DebugRoom_MapScriptHeader:
 
 	def_bg_events
 	bg_event  5,  2, BGEVENT_READ, DebugCPU2
-	bg_event  0,  2, BGEVENT_UP, DebugInteraction
+
 
 	def_object_events
 	object_event  4,  3, SPRITE_ENGINEER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED,  OBJECTTYPE_SCRIPT, 0, dwgDebugScript, -1 
@@ -25,6 +25,9 @@ DebugRoom_MapScriptHeader:
 	object_event  6,  4, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PURPLE,  OBJECTTYPE_SCRIPT, 0, Breeder6Script, -1 ; wonder gift CHECK
 	object_event  1,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, ItemVendorScript, -1 ; gives all items and TMs 
 	object_event  0,  3, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN,  OBJECTTYPE_SCRIPT, 0, BreederTypeScript, -1 ; asks if you want fire, water, ... then gives you a first stage
+
+	object_event  0,  8, SPRITE_BOBESH, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0,  OBJECTTYPE_SCRIPT, 0, StadiumWarperScript, -1 ; asks if you want fire, water, ... then gives you a first stage
+
 
 	
 	object_const_def
@@ -180,95 +183,6 @@ VendorYesText:
 	text "Here you go!"
 	done
 
-DebugInteraction: 
-	opentext
-	setflag ENGINE_POKEDEX
-	callasm FillPokedex
-	special Special_SetDayOfWeek
-	setflag ENGINE_POKEGEAR
-	setflag ENGINE_HAVE_SHINY_CHARM
-	; useful items
-for x, POKE_BALL, ODD_SOUVENIR + 1
-if x != PARK_BALL && x != SAFARI_BALL && x != POLYCHROME
-	giveitem x, 99
-endc
-endr
-	; all key items
-for x, NUM_KEY_ITEMS
-if x != MACHINE_PART
-	givekeyitem x
-endc
-endr
-	; all tms+hms
-for x, NUM_TMS + NUM_HMS
-	givetmhm x
-endr
-	; all badges
-	setflag ENGINE_ZEPHYRBADGE
-	setflag ENGINE_HIVEBADGE
-	setflag ENGINE_PLAINBADGE
-	setflag ENGINE_FOGBADGE
-	setflag ENGINE_STORMBADGE
-	setflag ENGINE_MINERALBADGE
-	setflag ENGINE_GLACIERBADGE
-	setflag ENGINE_RISINGBADGE
-	setflag ENGINE_BOULDERBADGE
-	setflag ENGINE_CASCADEBADGE
-	setflag ENGINE_THUNDERBADGE
-	setflag ENGINE_RAINBOWBADGE
-	setflag ENGINE_MARSHBADGE
-	setflag ENGINE_SOULBADGE
-	; fly anywhere
-	setflag ENGINE_FLYPOINT_AZALEA
-	setflag ENGINE_FLYPOINT_GOLDENROD
-	setflag ENGINE_FLYPOINT_VIOLET
-	setflag ENGINE_FLYPOINT_UNION_CAVE
-	setflag ENGINE_FLYPOINT_ECRUTEAK
-	setflag ENGINE_FLYPOINT_OLIVINE
-	setflag ENGINE_FLYPOINT_CIANWOOD
-	setflag ENGINE_FLYPOINT_MAHOGANY
-	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
-; historic johto
-	setflag ENGINE_FLYPOINT_ANARRES_TOWN
-	setflag ENGINE_FLYPOINT_GAULDENROD
-	setflag ENGINE_FLYPOINT_WESTERN_CAPITAL
-	setflag ENGINE_FLYPOINT_TRADERS_LANDING
-	setflag ENGINE_FLYPOINT_SHELTERED_SHORES
-	setflag ENGINE_FLYPOINT_CIANWOOD_COVE
-	setflag ENGINE_FLYPOINT_TRANQUIL_TARN
-	setflag ENGINE_FLYPOINT_EERIE_HAMLET
-	setflag ENGINE_FLYPOINT_SULFUR_STY
-	setflag ENGINE_FLYPOINT_TIMELESS_TAPESTRY
-	; givepokes
-	givepoke LUGIA, 100
-	givepoke ENTEI, 100
-	givepoke RAIKOU, 100
-	; useful items
-	opentext
-	writethistext
-		text "Elder Hollis"
-		line "wants to battle!"
-
-		para "Elder Sandra"
-		line "wants to battle!"
-
-		para "Chronicler Sybil"
-		line "wants to battle!"
-
-		para "Elder Remy"
-		line "wants to battle!"
-
-		para "Hisui Petra"
-		line "wants to battle!"
-
-		para "Johto Amos"
-		line "wants to battle!"		
-	waitbutton
-	closetext
-; debug 
-	loadtrainer BOBESH, 3 ; check normalmode or hardmode 
-	startbattle
-	end
 
 Breeder1Script:
 	faceplayer
@@ -1854,3 +1768,41 @@ GaveMonText:
 NoThanksText:
 	text "Maybe next time!"
 	done
+
+
+StadiumWarperScript: 
+	opentext
+	; all key items
+	; useful items
+	writethistext
+		text "Play the Stadium?"
+		line "You will want to"
+		para "get the TMs from"
+		line "the other NPC"
+		cont "before you go."
+		done
+	yesorno
+	iffalse_jumptext NoThanksText
+;.GoToStadium:
+	writethistext
+		text "You can EV train"
+		line "at the Stadium"
+		cont "Prep Room."
+		done
+	waitbutton
+	
+	giveitem POKE_BALL, 99
+	giveitem BIG_NUGGET, 99
+	; good party
+	givepoke SAMUROTT, HISUIAN_FORM, 90, EXPERT_BELT
+	givepoke DECIDUEYE, HISUIAN_FORM, 90, LEFTOVERS
+	givepoke TYPHLOSION, HISUIAN_FORM, 90, CHOICE_SPECS
+	givepoke KLEAVOR, 90, CHOICE_BAND
+	givepoke BASCULEGION, 90, CHOICE_SCARF
+	givepoke BLISSEY, 90, LEFTOVERS
+
+	closetext
+;	setevent EVENT_REACHED_CREDITS_ONCE
+
+	warp STADIUM_GROUNDS_FACILITY_PREP, 15, 15
+	end

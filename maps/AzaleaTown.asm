@@ -241,18 +241,14 @@ AzaleaTownYoungsterScript:
 	done
 
 .Text4:
-	text "If I had my own"
-	line "#mon, I would"
-	cont "go exploring."
+	text "I can hear the"
+	line "Union Cave miners"
+	para "working from the"
+	line "Slowpoke Well."
 	
-	para "I've never even"
-	line "been to Slowpoke"
-	cont "Well or Route 33."
-	
-	para "I've heard of a"
-	line "secret grotto"
-	para "somewhere in the"
-	line "Ilex Forest, too!"
+	para "I wonder if they"
+	line "are connected,"
+	cont "deep underground?"
 	done
 
 AzaleaTownMatronScript:

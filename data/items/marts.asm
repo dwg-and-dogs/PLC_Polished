@@ -409,7 +409,7 @@ ShamoutiMart2:
 	db -1
 
 BattleTowerMart1:
-	db 9 ; # items
+	db 10 ; # items
 	db CHOICE_BAND
 	db CHOICE_SCARF
 	db CHOICE_SPECS
@@ -419,6 +419,7 @@ BattleTowerMart1:
 	db BINDING_BAND
 	db QUICK_CLAW
 	db LEFTOVERS
+	db MACHO_BRACE
 	db -1
 
 BattleTowerMart2:

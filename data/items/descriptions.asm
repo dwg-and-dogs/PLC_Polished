@@ -1301,8 +1301,8 @@ SquirtBottleDesc:
 	next "watering plants.@"
 
 UnownReportDesc:
-	db   "Documents all"
-	next "Unown.@"
+	db   "Kurt to use at"
+	next "the Ilex Shrine.@"
 
 RedScaleDesc:
 	db   "A scale from the"
@@ -1344,8 +1344,8 @@ ClearBellDesc:
 	next "ringing.@"
 
 GSBallDesc:
-	db   "Mysterious ball"
-	next "from Ilex.@"
+	db   "Needs text from"
+	next "Ruins of Alph.@"
 
 BlueCardDesc:
 	db   "Card to save"

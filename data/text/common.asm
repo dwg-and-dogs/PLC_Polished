@@ -4561,6 +4561,11 @@ _CelebiCallClastsCradle::
 	line "Andrea, before"
 	cont "she captures the"
 	cont "powerful #mon!"
+	
+	para "You will need a"
+	line "#mon that can"
+	para "use Waterfall to"
+	line "reach the Hamlet."
 	prompt
 
 
@@ -4569,6 +4574,10 @@ _CelebiCallTimelessTapestry::
 	text "Regroup with Amos"
 	line "at the Timeless"
 	cont "Tapestry."
+	
+	para "Head south from"
+	line "the Western"
+	cont "Capital."
 	prompt
 
 SECTION "_CelebiCallBrassTowerRoof", ROMX

@@ -803,7 +803,7 @@ KurtsJournal6Text: ; tinder garden 2
 	line "did with you."
 	done
 
-DebugRadioScriptKurt: ; remove before submitting 
+DebugRadioScriptKurt: ; TODO ALWAYS CHECK BEFORE SUBMITTING 
 	opentext
 	; time
 	special Special_SetDayOfWeek
@@ -1008,20 +1008,5 @@ endr
 	closetext
 ; debug only
 ; debug 
-	warp STADIUM_GROUNDS_FACILITY_PREP, 15, 15
-	end
-
-TimeShiftRadio:
-	opentext
-	writethistext
-		text "It's Kurt's Radio!"
-		line "Tuned to an oldies"
-		para "station playing"
-		line "the Mankees."
-		para "Listen until what"
-		line "time?"
-		done
-	waitbutton
-	closetext
-	farcall InitClock
+	warp WHISPERS_WAY, 9, 4
 	end

@@ -885,6 +885,12 @@ PryceWatchKurtPleaseText4:
 	line "community's"
 	para "legacy, not just"
 	line "their own."
+	
+	para "Where is Kurt?"
+	line "He must be at the"
+	cont "Ilex Shrine, to"
+	para "finish your"
+	line "ceremony."
 	done
 
 

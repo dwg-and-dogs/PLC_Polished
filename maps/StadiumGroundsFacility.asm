@@ -1,12 +1,6 @@
 StadiumGroundsFacility_MapScriptHeader:
 	def_scene_scripts
 
-; 06.24.26  ROMX bank #29:   	SECTION: $4000-$6811 ($2812 bytes) ["Tohjo Falls Scripts"]
-
-	
-; testing fixes
-	; todo write phrases for all trainers and names 
-
 
 	def_callbacks
 
@@ -875,7 +869,7 @@ StadiumFacility_Pokemon2Event:
 	sjump .NamePrinted
 .Name_24:
 	writethistext
-		text "Alolan Meganium."
+		text "Ancestor Meganium."
 		done
 	sjump .NamePrinted
 .Name_25:
@@ -3914,443 +3908,546 @@ HOLLIS_HOLLIS_STADIUM_Text:
 	done
 
 NINJA_FACILITY_1_Text:
-	text "Ninja 1"
+	text "DONT MIND MY"
+	line "SNORING"
 	done
 
 NINJA_FACILITY_2_Text:
-	text "Ninja 2"
+	text "YOURE STUCK IN"
+	line "A QUAGMIRE"
 	done
 
 NINJA_FACILITY_3_Text:
-	text "Ninja 3"
+	text "ILL ROLL ALL"
+	line "OVER YOU"
 	done
 
 NINJA_FACILITY_4_Text:
-	text "Ninja 4"
+	text "CAN YOU HIT MY"
+	line "GHOST #MON?"
 	done
 
 NINJA_FACILITY_5_Text:
-	text "Ninja 5"
+	text "WATCH THESE"
+	line "FIREWORKS"
 	done
 
 NINJA_FACILITY_6_Text:
-	text "Ninja 6"
+	text "THIS DUCK EATS"
+	line "BUGS"
 	done
 
 NINJA_FACILITY_7_Text:
-	text "Ninja 7"
+	text "THE STATIC PULLS"
+	line "YOU CLOSER"
 	done
 
 NINJA_FACILITY_8_Text:
-	text "Ninja 8"
+	text "IF YOURE ON TOP"
+	line "HOLD ON TIGHT"
 	done
 
 NINJA_FACILITY_9_Text:
-	text "Ninja 9"
+	text "YOUVE GOT A"
+	line "MAMMOTH STREAK"
 	done
 
 NINJA_FACILITY_10_Text:
-	text "Ninja 10"
+	text "MY SCORPION WILL"
+	line "ACE THE MATCH"
 	done
 
 NINJA_FACILITY_11_Text:
-	text "Ninja 11"
+	text "MY LANTURN LIGHTS"
+	line "QUICKLY"
 	done
 
 NINJA_FACILITY_12_Text:
-	text "Ninja 12"
+	text "KING GYARADOS"
+	line "WILL REIGN!"
 	done
 
 NINJA_FACILITY_13_Text:
-	text "Ninja 13"
+	text "CAN YOU KEEP UP"
+	line "WITH MY LAPRAS"
 	done
 
 NINJA_FACILITY_14_Text:
-	text "Ninja 14"
+	text "DOESN'T MY"
+	line "VILEPLUME SPARKLE"
 	done
 
 NINJA_FACILITY_15_Text:
-	text "Ninja 15"
+	text "YOU'RE GOING TO"
+	line "SEE DOUBLE WITH"
+	cont "MY XATU"
 	done
 
 NINJA_FACILITY_16_Text:
-	text "Ninja 16"
+	text "POLIWRATH DOESN'T"
+	line "WAIT ITS TURN"
 	done
 
 NINJA_FACILITY_17_Text:
-	text "Ninja 17"
+	text "ITS CRUEL THAT"
+	line "YOU CAN'T SEE MY"
+	cont "#MON"
 	done
 
 NINJA_FACILITY_18_Text:
-	text "Ninja 18"
+	text "DON'T YOU LOVE"
+	line "MY CORSOLA"
 	done
 
 NINJA_FACILITY_19_Text:
-	text "Ninja 19"
+	text "ITS A MISDREA WHY"
+	line "YOU CANT HIT US"
 	done
 
 
 NINJA_FACILITY_20_Text:
-	text "Ninja 20"
+	text "SNEASLER HOLDS ON"
+	line "TILL THE END"
 	done
 
 NOMAD_F_FACILITY_1_Text:
-	text "Nomad F 1"
+	text "HAIL TO THE KING"
 	done
 
 NOMAD_F_FACILITY_2_Text:
-	text "Nomad F 2"
+	text "I ONLY WEAR WOOL"
 	done
 
 NOMAD_F_FACILITY_3_Text:
-	text "Nomad F 3"
+	text "OUR MEETING WAS"
+	line "DESTINY"
 	done
 
 NOMAD_F_FACILITY_4_Text:
-	text "Nomad F 4"
+	text "I FEEL A BOND"
+	line "WITH YOU"
 	done
 
 NOMAD_F_FACILITY_5_Text:
-	text "Nomad F 5"
+	text "IM THE ONE WHO"
+	line "WILL PASS THROUGH"
 	done
 
 NOMAD_F_FACILITY_6_Text:
-	text "Nomad F 6"
+	text "TRY TO BE BRAVE"
 	done
 
 NOMAD_F_FACILITY_7_Text:
-	text "Nomad F 7"
+	text "FEEL MY WRATH"
 	done
 
 NOMAD_F_FACILITY_8_Text:
-	text "Nomad F 8"
+	text "I TAKE MY TEA"
+	line "SCALDING"
 	done
 
 NOMAD_F_FACILITY_9_Text:
-	text "Nomad F 9"
+	text "I DON'T GIVE A"
+	line "SHUCK"
 	done
 
 NOMAD_F_FACILITY_10_Text:
-	text "Nomad F 10"
+	text "ICE IS CORS-ING"
+	line "THRU MY VEINS"
 	done
 
 NOMAD_F_FACILITY_11_Text:
-	text "Nomad F 11"
+	text "DON'T BE A HATR"
 	done
 
 NOMAD_F_FACILITY_12_Text:
-	text "Nomad F 12"
+	text "I AM YOUR DOOM"
 	done
 
 NOMAD_F_FACILITY_13_Text:
-	text "Nomad F 13"
+	text "ARE YOU SNOW"
+	line "BLIND?"
 	done
 
 NOMAD_F_FACILITY_14_Text:
-	text "Nomad F 14"
+	text "PREPARE TO BE"
+	line "SCRAMBLED"
 	done
 
 NOMAD_F_FACILITY_15_Text:
-	text "Nomad F 15"
+	text "THATS NOT AN"
+	line "APRICORN"
 	done
 
 NOMAD_F_FACILITY_16_Text:
-	text "Nomad F 16"
+	text "FOCUS HARDER OR"
+	line "YOU'LL SEE DOUBLE"
 	done
 
 NOMAD_F_FACILITY_17_Text:
-	text "Nomad F 17"
+	text "THEY ARE RAPT AT"
+	line "ATTENTION FOR ME"
 	done
 
 NOMAD_F_FACILITY_18_Text:
-	text "Nomad F 18"
+	text "IVE GOT AN AXE"
+	line "TO GRIND!"
 	done
 
 NOMAD_F_FACILITY_19_Text:
-	text "Nomad F 19"
+	text "YOU'RE JUST MINCE"
+	line "MEAT FOR A PIE"
 	done
 
 NOMAD_F_FACILITY_20_Text:
-	text "Nomad F 20"
+	text "NOC NOC,"
+	line "WHO'S THERE?"
 	done
 
 PKMN_TRAINER_HF_FACILITY_1_Text:
-	text "Pkmn Trainer Hf 1"
+	text "ILL BE IN BLISS"
+	line "WHEN YOU LOSE"
 	done
 
 PKMN_TRAINER_HF_FACILITY_2_Text:
-	text "Pkmn Trainer Hf 2"
+	text "GET CAUGHT IN MY"
+	line "TANGLES"
 	done
 
 PKMN_TRAINER_HF_FACILITY_3_Text:
-	text "Pkmn Trainer Hf 3"
+	text "BE LIKE A BANANA"
+	line "AND SPLIT"
 	done
 
 PKMN_TRAINER_HF_FACILITY_4_Text:
-	text "Pkmn Trainer Hf 4"
+	text "YOU CAN'T COUNTER"
+	line "MY STRATEGY"
 	done
 
 PKMN_TRAINER_HF_FACILITY_5_Text:
-	text "Pkmn Trainer Hf 5"
+	text "I AM TOP OF MY"
+	line "CLASS"
 	done
 
 PKMN_TRAINER_HF_FACILITY_6_Text:
-	text "Pkmn Trainer Hf 6"
+	text "I'M ON A SHORT"
+	line "FUSE"
 	done
 
 PKMN_TRAINER_HF_FACILITY_7_Text:
-	text "Pkmn Trainer Hf 7"
+	text "I'LL JINX YOUR"
+	line "LUCKY STREAK"
 	done
 
 PKMN_TRAINER_HF_FACILITY_8_Text:
-	text "Pkmn Trainer Hf 8"
+	text "I'LL SPLIT YOU"
+	line "APART"
 	done
 
 PKMN_TRAINER_HF_FACILITY_9_Text:
-	text "Pkmn Trainer Hf 9"
+	text "PREPARE TO HAVE"
+	line "YOUR BELL RUNG"
 	done
 
 PKMN_TRAINER_HF_FACILITY_10_Text:
-	text "Pkmn Trainer Hf 10"
+	text "WAVE BYE TO YOUR"
+	line "STREAK"
 	done
 
 PKMN_TRAINER_HF_FACILITY_11_Text:
-	text "Pkmn Trainer Hf 11"
+	text "YOU'RE NOT SPECIAL"
 	done
 
 PKMN_TRAINER_HF_FACILITY_12_Text:
-	text "Pkmn Trainer Hf 12"
+	text "I FEEL IMPATIENT"
 	done
 
 PKMN_TRAINER_HF_FACILITY_13_Text:
-	text "Pkmn Trainer Hf 13"
+	text "WHAT DOES YOUR"
+	line "REFLECTION SAY?"
 	done
 
 PKMN_TRAINER_HF_FACILITY_14_Text:
-	text "Pkmn Trainer Hf 14"
+	text "YOU'RE GOING TO"
+	line "CROAK"
 	done
 
 PKMN_TRAINER_HF_FACILITY_15_Text:
-	text "Pkmn Trainer Hf 15"
+	text "I'M THE QUEEN AND"
+	line "YOU'RE THE PAWN"
 	done
 
 PKMN_TRAINER_HF_FACILITY_16_Text:
-	text "Pkmn Trainer Hf 16"
+	text "DID YOU FALL OFF"
+	line "A COCONUT TREE?"
 	done
 
 PKMN_TRAINER_HF_FACILITY_17_Text:
-	text "Pkmn Trainer Hf 17"
+	text "I'VE GOT A BONE"
+	line "TO PICK WITH YOU"
 	done
 
 PKMN_TRAINER_HF_FACILITY_18_Text:
-	text "Pkmn Trainer Hf 18"
+	text "I WORK DOUBLE AS"
+	line "HARD AS YOU"
 	done
 
 PKMN_TRAINER_HF_FACILITY_19_Text:
-	text "Pkmn Trainer Hf 19"
+	text "JUST TRY TO HIT"
+	line "MY #MON"
 	done
 
 PKMN_TRAINER_HF_FACILITY_20_Text:
-	text "Pkmn Trainer Hf 20"
+	text "THERE IS NO"
+	line "SUBSTITUTE FOR"
+	cont "WINNING"
 	done
 
 SAGE_FACILITY_1_Text:
-	text "Sage 1"
+	text "YOU LOOK LIKE A"
+	line "TASTY SNACK"
 	done
 
 SAGE_FACILITY_2_Text:
-	text "Sage 2"
+	text "I HAVE A TRICK"
+	line "UP MY SLEEVE"
 	done
 
 SAGE_FACILITY_3_Text:
-	text "Sage 3"
+	text "THERE'S 108 WAYS"
+	line "FOR ME TO WIN"
 	done
 
 SAGE_FACILITY_4_Text:
-	text "Sage 4"
+	text "I SAID NO MONKEY"
+	line "BUSINESS"
 	done
 
 SAGE_FACILITY_5_Text:
-	text "Sage 5"
+	text "A SQUIRTBOTTLE"
+	line "CAN'T HELP YOU"
 	done
 
 SAGE_FACILITY_6_Text:
-	text "Sage 6"
+	text "KEEP IT ROLLING"
 	done
 
 SAGE_FACILITY_7_Text:
-	text "Sage 7"
+	text "I GOT MY FIRST"
+	line "CHOICE"
 	done
 
 SAGE_FACILITY_8_Text:
-	text "Sage 8"
+	text "DO YOU HAVE"
+	line "SUNGLASSES?"
 	done
 
 SAGE_FACILITY_9_Text:
-	text "Sage 9"
+	text "I TRAINED AT"
+	line "MT MOON"
 	done
 
 SAGE_FACILITY_10_Text:
-	text "Sage 10"
+	text "RESPECT THE CROWN"
 	done
 
 SAGE_FACILITY_11_Text:
-	text "Sage 11"
+	text "A MAN A PLAN"
+	line "A CANAL PANAMA"
 	done
 
 SAGE_FACILITY_12_Text:
-	text "Sage 12"
+	text "I HAVE A HAIR"
+	line "TRIGGER"
 	done
 
 SAGE_FACILITY_13_Text:
-	text "Sage 13"
+	text "WINNING PUTS A"
+	line "VILE ON MY FACE"
 	done
 
 SAGE_FACILITY_14_Text:
-	text "Sage 14"
+	text "MY #MON ARE"
+	line "MOST LOYAL"
 	done
 
 SAGE_FACILITY_15_Text:
-	text "Sage 15"
+	text "THIS IS A BIG"
+	line "POND FOR SUCH A"
+	cont "SMALL GUPPY"
 	done
 
 SAGE_FACILITY_16_Text:
-	text "Sage 16"
+	text "WANNA SEE HOW HI"
+	line "I CAN JUMP"
 	done
 
 SAGE_FACILITY_17_Text:
-	text "Sage 17"
+	text "I WILL DRIVE YOU"
+	line "BATTY"
 	done
 
 SAGE_FACILITY_18_Text:
-	text "Sage 18"
+	text "I DANCE TO MY"
+	line "OWN DRUM"
 	done
 
 SAGE_FACILITY_19_Text:
-	text "Sage 19"
+	text "READY TO MEET THE"
+	line "BIG BOSS?"
 	done
-
 
 SAGE_FACILITY_20_Text:
-	text "Sage 20"
+	text "MY #MON ARE"
+	line "DYNAMITE"
 	done
 
-
-
 BRIGADER_FACILITY_1_Text:
-	text "Brigader 1"
+	text "CHOMP CHOMP"
 	done
 
 BRIGADER_FACILITY_2_Text:
-	text "Brigader 2"
+	text "I AM THE SAND"
+	line "IN YOUR GEARS"
 	done
 
 BRIGADER_FACILITY_3_Text:
-	text "Brigader 3"
+	text "THIS IS HOW WE"
+	line "BLACKTHORNERS"
+	cont "BATTLE"
 	done
 
 BRIGADER_FACILITY_4_Text:
-	text "Brigader 4"
+	text "I AM PLOTTING"
+	line "YOUR DEMISE"
 	done
 
 BRIGADER_FACILITY_5_Text:
-	text "Brigader 5"
+	text "MY TRAINING IS"
+	line "CEASELESS"
 	done
 
 BRIGADER_FACILITY_6_Text:
-	text "Brigader 6"
+	text "MY TYPHLOSION"
+	line "STAYS CALM"
 	done
 
 BRIGADER_FACILITY_7_Text:
-	text "Brigader 7"
+	text "DECIDUEYE IS MY"
+	line "CHOICE"
 	done
 
 BRIGADER_FACILITY_8_Text:
-	text "Brigader 8"
+	text "YOU'RE THE FIRST"
+	line "BLOOD ON THE"
+	cont "BLOODMOON"
 	done
 
 BRIGADER_FACILITY_9_Text:
-	text "Brigader 9"
+	text "WOULD YOU LIKE TO"
+	line "DANCE?"
 	done
 
 BRIGADER_FACILITY_10_Text:
-	text "Brigader 10"
+	text "I'M TOO DYNAMIC"
+	line "TO DEFEAT"
 	done
 
 BRIGADER_FACILITY_11_Text:
-	text "Brigader 11"
+	text "HARC THE HERALD"
+	line "ANGELS SING"
 	done
 
 BRIGADER_FACILITY_12_Text:
-	text "Brigader 12"
+	text "YOU WOULDN'T"
+	line "DOWNLOAD A"
+	cont "#MON"
 	done
 
 BRIGADER_FACILITY_13_Text:
-	text "Brigader 13"
+	text "MY FOCUS IS TOO"
+	line "STRONG TO BREAK"
 	done
 
 BRIGADER_FACILITY_14_Text:
-	text "Brigader 14"
+	text "ARE YOU FEELING"
+	line "HUNGRY YET"
 	done
 
 BRIGADER_FACILITY_15_Text:
-	text "Brigader 15"
+	text "RHYPERIOR IS ON"
+	line "AN ASSAULT"
 	done
 
 BRIGADER_FACILITY_16_Text:
-	text "Brigader 16"
+	text "I BRING PEARLS"
+	line "BEFORE SWINE"
 	done
 
 BRIGADER_FACILITY_17_Text:
-	text "Brigader 17"
+	text "I AM A MASTER OF"
+	line "EARTH AND AIR"
 	done
 
 BRIGADER_FACILITY_18_Text:
-	text "Brigader 18"
+	text "FOCUS ON WHAT"
+	line "REALLY MATTERS"
 	done
 
 BRIGADER_FACILITY_19_Text:
-	text "Brigader 19"
+	text "CAN YOU BREAK MY"
+	line "BARRIER"
 	done
 
 BRIGADER_FACILITY_20_Text:
-	text "Brigader 20"
+	text "SO YOU THINK YOU"
+	line "CAN DANCE"
 	done
 
 BRIGADER_FACILITY_21_Text:
-	text "Brigader 21"
+	text "YOU WILL NEVER"
+	line "RECOVER FROM THIS"
 	done
 
 BRIGADER_FACILITY_22_Text:
-	text "Brigader 22"
+	text "YOUR FAIRY GOD-"
+	line "MOTHER CAN'T HELP"
+	cont "YOU NOW"
 	done
 
 BRIGADER_FACILITY_23_Text:
-	text "Brigader 23"
+	text "I'M GOING TO GO"
+	line "ON A RAMPAGE"
 	done
 
 BRIGADER_FACILITY_24_Text:
-	text "Brigader 24"
+	text "I HAVE A TRICK"
+	line "UP MY SLEEVE"
 	done
 
 BRIGADER_FACILITY_25_Text:
-	text "Brigader 25"
+	text "YOU AND I ARE"
+	line "POLES APART"
 	done
 
 BRIGADER_FACILITY_26_Text:
-	text "Brigader 26"
+	text "PREP FOR TROUBLE"
+	line "N MAKE IT DOUBLE"
 	done
 
 BRIGADER_FACILITY_27_Text:
-	text "Brigader 27"
+	text "I TAKE UMBRAGE"
+	line "WITH UR SWAGGER"
 	done
 
 BRIGADER_FACILITY_28_Text:
-	text "Brigader 28"
+	text "THUNDER STRIKES"
+	line "FROM THE SHADOWS"
 	done
 
 BRIGADER_FACILITY_29_Text:
-	text "Brigader 29"
+	text "MY STYLE IS A"
+	line "BLITZKRIEG"
 	done
 
 BRIGADER_FACILITY_30_Text:

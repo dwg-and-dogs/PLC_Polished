@@ -368,113 +368,113 @@
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 5, WOOPER
-	wildmon 6, NATU
-	wildmon 5, GASTLY
-	wildmon 6, SENTRET
-	wildmon 6, SENTRET
-	wildmon 6, SENTRET
-	wildmon 7, ABRA
+	wildmon 7, WOOPER
+	wildmon 8, NATU
+	wildmon 7, GASTLY
+	wildmon 8, SENTRET
+	wildmon 8, SENTRET
+	wildmon 8, SENTRET
+	wildmon 9, ABRA
 	; day
-	wildmon 5, WOOPER
-	wildmon 6, NATU
-	wildmon 5, GASTLY
-	wildmon 6, SENTRET
-	wildmon 6, SENTRET
-	wildmon 6, SENTRET
-	wildmon 7, ABRA
+	wildmon 7, WOOPER
+	wildmon 8, NATU
+	wildmon 7, GASTLY
+	wildmon 8, SENTRET
+	wildmon 8, SENTRET
+	wildmon 8, SENTRET
+	wildmon 9, ABRA
 	; nite
-	wildmon 5, WOOPER
-	wildmon 6, NATU
-	wildmon 5, GASTLY
-	wildmon 6, SENTRET
-	wildmon 6, SENTRET
-	wildmon 6, SENTRET
-	wildmon 7, ABRA
+	wildmon 7, WOOPER
+	wildmon 8, NATU
+	wildmon 7, GASTLY
+	wildmon 8, SENTRET
+	wildmon 8, SENTRET
+	wildmon 8, SENTRET
+	wildmon 9, ABRA
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 2, GEODUDE
-	wildmon 3, ONIX
-	wildmon 4, TEDDIURSA
+	wildmon 4, GEODUDE
+	wildmon 5, ONIX
+	wildmon 6, TEDDIURSA
 	wildmon 5, MACHOP
-	wildmon 4, PHANPY
-	wildmon 3, PHANPY
-	wildmon 2, DUNSPARCE
+	wildmon 6, PHANPY
+	wildmon 5, PHANPY
+	wildmon 4, DUNSPARCE
 	; day
-	wildmon 2, GEODUDE
-	wildmon 3, ONIX
-	wildmon 4, TEDDIURSA
+	wildmon 4, GEODUDE
+	wildmon 5, ONIX
+	wildmon 6, TEDDIURSA
 	wildmon 5, MACHOP
-	wildmon 4, PHANPY
-	wildmon 3, PHANPY
-	wildmon 2, DUNSPARCE
+	wildmon 6, PHANPY
+	wildmon 5, PHANPY
+	wildmon 4, DUNSPARCE
 	; nite
-	wildmon 2, GEODUDE
-	wildmon 3, ONIX
-	wildmon 4, TEDDIURSA
+	wildmon 4, GEODUDE
+	wildmon 5, ONIX
+	wildmon 6, TEDDIURSA
 	wildmon 5, MACHOP
-	wildmon 4, PHANPY
-	wildmon 3, PHANPY
-	wildmon 2, DUNSPARCE
+	wildmon 6, PHANPY
+	wildmon 5, PHANPY
+	wildmon 4, DUNSPARCE
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B1F_NORTH
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 2, SLUGMA
-	wildmon 3, GEODUDE
-	wildmon 4, ONIX
+	wildmon 4, SLUGMA
+	wildmon 5, GEODUDE
+	wildmon 6, ONIX
 	wildmon 5, MACHOP
-	wildmon 4, KOFFING
-	wildmon 3, GRIMER
-	wildmon 2, GROWLITHE, HISUIAN_FORM
+	wildmon 6, KOFFING
+	wildmon 5, GRIMER
+	wildmon 4, GROWLITHE, HISUIAN_FORM
 	; day
-	wildmon 2, SLUGMA
-	wildmon 3, GEODUDE
-	wildmon 4, ONIX
+	wildmon 4, SLUGMA
+	wildmon 5, GEODUDE
+	wildmon 6, ONIX
 	wildmon 5, MACHOP
-	wildmon 4, KOFFING
-	wildmon 3, GRIMER
-	wildmon 2, GROWLITHE, HISUIAN_FORM
+	wildmon 6, KOFFING
+	wildmon 5, GRIMER
+	wildmon 4, GROWLITHE, HISUIAN_FORM
 	; nite
-	wildmon 2, SLUGMA
-	wildmon 3, GEODUDE
-	wildmon 4, ONIX
+	wildmon 4, SLUGMA
+	wildmon 5, GEODUDE
+	wildmon 6, ONIX
 	wildmon 5, MACHOP
-	wildmon 4, KOFFING
-	wildmon 3, GRIMER
-	wildmon 2, GROWLITHE, HISUIAN_FORM
+	wildmon 6, KOFFING
+	wildmon 5, GRIMER
+	wildmon 4, GROWLITHE, HISUIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B1F_SOUTH
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 2, SLUGMA
-	wildmon 3, GEODUDE
-	wildmon 4, ONIX
+	wildmon 4, SLUGMA
+	wildmon 5, GEODUDE
+	wildmon 6, ONIX
 	wildmon 5, MACHOP
-	wildmon 4, KOFFING
-	wildmon 3, GRIMER
-	wildmon 2, GROWLITHE, HISUIAN_FORM
+	wildmon 6, KOFFING
+	wildmon 5, GRIMER
+	wildmon 4, GROWLITHE, HISUIAN_FORM
 	; day
-	wildmon 2, SLUGMA
-	wildmon 3, GEODUDE
-	wildmon 4, ONIX
+	wildmon 4, SLUGMA
+	wildmon 5, GEODUDE
+	wildmon 6, ONIX
 	wildmon 5, MACHOP
-	wildmon 4, KOFFING
-	wildmon 3, GRIMER
-	wildmon 2, GROWLITHE, HISUIAN_FORM
+	wildmon 6, KOFFING
+	wildmon 5, GRIMER
+	wildmon 4, GROWLITHE, HISUIAN_FORM
 	; nite
-	wildmon 2, SLUGMA
-	wildmon 3, GEODUDE
-	wildmon 4, ONIX
+	wildmon 4, SLUGMA
+	wildmon 5, GEODUDE
+	wildmon 6, ONIX
 	wildmon 5, MACHOP
-	wildmon 4, KOFFING
-	wildmon 3, GRIMER
-	wildmon 2, GROWLITHE, HISUIAN_FORM
+	wildmon 6, KOFFING
+	wildmon 5, GRIMER
+	wildmon 4, GROWLITHE, HISUIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B2F

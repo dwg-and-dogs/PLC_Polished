@@ -68,6 +68,7 @@ TyphlosionEvosAttacks:
 	
 Typhlosion_HisuianEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, PHANTOM_FORCE
 	db 1, FIRE_PUNCH ; evolution move
 	db 1, TACKLE
 	db 1, LEER
@@ -297,7 +298,7 @@ Noctowl_ImmortalEvosAttacks: ; encountered first at level 25
 	db 35, DREAM_EATER
 	db 35, KNOCK_OFF
 	db 41, HAZE
-	db 45, HEX
+	db 45, PHANTOM_FORCE
 	db 55, PAIN_SPLIT
 	db 0 ; no more level-up moves	
 	
@@ -710,6 +711,7 @@ ParasEvosAttacks:
 
 ParasectEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, PHANTOM_FORCE
 	db 1, SHADOW_CLAW ; evolution move
 	db 1, TACKLE
 	db 2, SLEEP_POWDER ; Let's Go move
@@ -766,8 +768,8 @@ PrimeapeEvosAttacks:
 	db 30, FEINT_ATTACK ; Punishment → new move
 	db 35, THRASH
 	db 39, CLOSE_COMBAT
-	db 44, SCREECH
-	db 48, OUTRAGE
+	db 44, OUTRAGE
+	db 48, PHANTOM_FORCE
 	db 53, GUNK_SHOT ; Stomping Tantrum → HGSS tutor move
 	db 0 ; no more level-up moves
 
@@ -788,9 +790,9 @@ AnnihilapeEvosAttacks:
 	db 30, FEINT_ATTACK ; Punishment → new move
 	db 35, THRASH
 	db 39, CLOSE_COMBAT
-	db 44, SCREECH
-	db 48, OUTRAGE
-	db 53, SWORDS_DANCE
+	db 44, OUTRAGE
+	db 48, PHANTOM_FORCE
+	db 53, GUNK_SHOT ; Stomping Tantrum → HGSS tutor move
 	db 0 ; no more level-up moves
 	
 GrowlitheEvosAttacks:
@@ -1685,6 +1687,7 @@ GastlyEvosAttacks:
 HaunterEvosAttacks:
 	db EVOLVE_LEVEL, 40, GENGAR
 	db 0 ; no more evolutions
+	db 1, PHANTOM_FORCE
 	db 1, SHADOW_CLAW ; Shadow Punch → TM move ; evolution move
 	db 1, HYPNOSIS
 	db 1, LICK
@@ -3531,6 +3534,7 @@ MisdreavusEvosAttacks:
 
 MismagiusEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, PHANTOM_FORCE
 	db 1, POWER_GEM
 	db 1, SHADOW_BALL ; Phantom Force → TM move
 	db 1, FLAMETHROWER ; Mystical Fire → TM move
@@ -4715,7 +4719,7 @@ DrifloonEvosAttacks:
 
 DrifblimEvosAttacks:
 	db 0 ; no more Evolutions
-	db 1, ASTONISH
+	db 1, PHANTOM_FORCE
 	db 1, MINIMIZE
 	db 6, GUST
 	db 10, FOCUS_ENERGY
@@ -4771,6 +4775,7 @@ SpiritombEvosAttacks:;encounter at lv 35
 	db 40, HYPNOSIS
 	db 40, DREAM_EATER
 	db 44, SHADOW_BALL
+	db 47, PHANTOM_FORCE
 	db 50, NASTY_PLOT
 	db 0 ; no more level-up moves
 
@@ -5026,6 +5031,7 @@ FroslassEvosAttacks:
 	db 1, ICE_SHARD
 	db 1, HEX
 	db 1, HAIL
+	db 1, PHANTOM_FORCE
 	db 24, DRAIN_KISS
 	db 28, ICY_WIND
 	db 33, SPIKES
@@ -5299,7 +5305,7 @@ ZoruaEvosAttacks:
 
 ZoroarkEvosAttacks: ; fought at Lv 30 
 	db 0 ; no more Evolutions
-	db 1, ASTONISH
+	db 1, PHANTOM_FORCE
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, TRANSFORM

@@ -23,7 +23,7 @@ WhispersWay_MapScriptHeader:
 
 	def_object_events
 	object_event 9, 6, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WhispersKurtScript, EVENT_SKIRMISH_STARTED
-
+	object_event 9, 12, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, NATU, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NatuScriptWW, -1
 
 WhispersWaySign:
 	text "Whispering Way"
@@ -90,7 +90,7 @@ WW_SomeOtherTimes:
 
 
 NatuScriptWW:
-	blackoutmod TIMELESS_TAPESTRY
+	blackoutmod WESTERN_CAPITAL
 	opentext
 	writetext WW_NatuText_1
 	promptbutton
@@ -103,7 +103,5 @@ WW_NatuText_1:
 	line "It can teleport"
 	para "to the present to"
 	line "manage the party."
-	
-	para "It also sets the"
-	line "waypoint here."
+
 	done
