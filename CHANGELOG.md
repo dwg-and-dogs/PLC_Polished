@@ -156,6 +156,8 @@ Buff wild levels in Union Cave.
 Todo for v110:
 * Check leveling in early game 
 
+* Update Azalea NPCs to give you more hints 
+
 * Redo all the documentation again: parties, learnsets, etc. 
 
 * Publish:

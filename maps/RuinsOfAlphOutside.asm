@@ -32,10 +32,12 @@ RuinsOfAlphOutside_MapScriptHeader:
 	object_event 13, 17, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphNorthScientistScript, -1
 	object_event 15, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist1Script, EVENT_BEAT_FALKNER ; OK
 	object_event 16, 14, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist2Script, EVENT_BEAT_FALKNER ; OK
-	object_event 13, 25, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist3Script, -1 ; OK
+	object_event 13, 25, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphOutsideScientist3Script, -1 ; 
 	object_event 9, 39, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolgirlEliza, -1;
 	object_event 10, 38, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSchoolgirlMolly, -1;
-	object_event  8, 36, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphTeacherScript, -1 ; SHOULD HEAL YOU
+	object_event 19, 39, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SchoolgirlPainterScript, -1;
+
+	object_event  8, 36, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RuinsOfAlphTeacherScript, -1 ;
 	object_event 14, 32, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerFisherRalph, -1 ;
 	; SIGHTSEERS
 	object_event 16, 34, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerSightseerFPilar, -1;
@@ -271,4 +273,37 @@ SightseerFPilarBeatenText:
 	para "symbols on the"
 	line "floor say?"
 	done
-		
+
+SchoolgirlPainterScript:
+	faceplayer
+	showtext AlphSchoolgirlPainterCelebiText1
+	yesorno
+	iffalse_jumptext AlphSchoolgirlPainterCelebiTextDeny
+	closetext
+	refreshscreen
+	paintingpic CELEBI_PUZZLE
+	waitbutton
+	closepokepic
+	jumpthistext
+
+	text "Isn't it cute?"
+	done
+
+
+AlphSchoolgirlPainterCelebiText1:
+	text "I love to draw on"
+	line "my field trips!"
+	
+	para "There's drawings"
+	line "on the walls all"
+	cont "over the Ruins of"
+	cont "historic #mon!"
+	
+	para "I made a drawing"
+	line "of my favorite."
+	cont "Wanna see?"
+	done
+
+AlphSchoolgirlPainterCelebiTextDeny:
+	text "Hey, you're mean!"
+	done

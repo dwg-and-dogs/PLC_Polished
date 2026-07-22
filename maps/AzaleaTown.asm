@@ -168,6 +168,8 @@ AzaleaTownIlexForestSignText:
 	done
 
 AzaleaTownGrampsScript:
+	checkevent EVENT_SOLVED_KABUTO_PUZZLE
+	iftrue_jumptextfaceplayer .Text22
 	checkevent EVENT_GOT_A_POKEMON
 	iftrue_jumptextfaceplayer .Text2
 	jumpthistextfaceplayer
@@ -192,6 +194,14 @@ AzaleaTownGrampsScript:
 	cont "Union Cave?"
 	done
 
+.Text22:
+	text "What's Kurt doing"
+	line "in Ilex Forest?"
+	
+	para "Is he waiting for"
+	line "you in there?"
+	done
+
 KurtAZScript:
 	opentext
 	jumpthisopenedtext
@@ -203,6 +213,8 @@ KurtAZScript:
 	done
 
 AzaleaTownPokefanFScript:
+	checkevent EVENT_SOLVED_KABUTO_PUZZLE
+	iftrue_jumptextfaceplayer .Text33
 	checkevent EVENT_GOT_A_POKEMON
 	iftrue_jumptextfaceplayer .Text3
 	jumpthistextfaceplayer
@@ -225,10 +237,27 @@ AzaleaTownPokefanFScript:
 	para "yawned, and a"
 	line "rain started for"
 	cont "thirty days!"
+	
+	para "There's so many"
+	line "caverns inside, I"
+	para "wonder if it is"
+	line "affected by the"
+	cont "Union Cave mine."
 	done
 
+.Text33:
+	text "Oh, you have an"
+	line "Unown Report?"
+	
+	para "Are you going to"
+	line "use it for your"
+	para "ceremony at the"
+	line "Ilex Shrine?"
+	done
 
 AzaleaTownYoungsterScript:
+	checkevent EVENT_SOLVED_KABUTO_PUZZLE
+	iftrue_jumptextfaceplayer .Text44
 	checkevent EVENT_GOT_A_POKEMON
 	iftrue_jumptextfaceplayer .Text4
 	jumpthistextfaceplayer
@@ -249,6 +278,16 @@ AzaleaTownYoungsterScript:
 	para "I wonder if they"
 	line "are connected,"
 	cont "deep underground?"
+	done
+
+.Text44:
+	text "I saw <RIVAL> go"
+	line "into Ilex Forest."
+	
+	para "I wonder if he is"
+	line "going to finish"
+	para "the ceremony at"
+	line "the Ilex Shrine?"
 	done
 
 AzaleaTownMatronScript:

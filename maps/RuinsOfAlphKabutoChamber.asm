@@ -276,6 +276,12 @@ RuinsOfAlphKabutoChamberScientistCrypticText:
 	text "This mosaic is"
 	line "giving me fits!"
 	
+	para "This chamber is"
+	line "clearly built to"
+	para "honor Celebi, but"
+	line "the pieces are all"
+	cont "mixed up."
+	
 	para "If you help me"
 	line "solve it, I'll"
 	para "share one of our"
