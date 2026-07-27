@@ -26,8 +26,10 @@ KurtsHouse_MapScriptHeader:
 	def_object_events
 	object_event    6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
 	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV5Script, EVENT_KURTS_HOUSE_NOTEBOOK
-	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FiddlerBookScript, -1	
+	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, JournalBookScript, -1	
 	pokemon_event  14,  4, NATU, -1, -1, PAL_NPC_GREEN, KurtsHouseShuckleText, EVENT_GOT_A_POKEMON
+
+
 ; kurt's books 
 	object_event  0,  1, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal1Script, EVENT_KURTS_HOUSE_BOOK_1 ; INITIALLY SET  
 	object_event  0,  2, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KurtsJournal2Script, EVENT_KURTS_HOUSE_BOOK_2 ; INITIALLY SET  
@@ -1010,3 +1012,450 @@ endr
 ; debug 
 	warp WHISPERS_WAY, 9, 4
 	end
+
+JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE 
+	opentext
+	writethistext
+		text "It's notes from"
+		line "my journey."
+		cont "Read them?"
+		done
+	yesorno
+	iffalse_jumptext JournalOverText
+	
+	closetext
+	refreshscreen
+	trainerpic KURT
+	waitbutton
+	closepokepic
+	opentext
+	
+	writetext JournalText_Intro
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+; todo add ability to jump forward up to ten pages at a time 
+
+	checkevent EVENT_GOT_A_POKEMON
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic RIVAL1
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_GotAPokemon
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_CAMDEN ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatCamden
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_GOT_UNOWN_REPORT ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_GotReport
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_RIVAL_FOREST ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatIlexRival
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_URSULA ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic TAMMY
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatUrsula
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_HOLLIS ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic HOLLIS
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatHollis
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_SANDRA_TOWER ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic SANDRA
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatSandraTower
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_COOLTRAINER_BETH ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatBeth
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_BOBESH_STADIUM ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic BOBESH
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatBobeshStadium
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_SANDRA_WARPED ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_SandraWarped
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_GOT_KURTS_BASEMENT_KEY; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_GotKurtsKey
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_WHITNEY; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic WHITNEY
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatWhitney
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_ELDER_LI; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_BeatElderLi
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_FALKNER; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic FALKNER
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatFalkner
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+	
+	checkevent EVENT_BEAT_RIVAL_THEATRE; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_BeatRivalTheatre
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+	
+	checkevent EVENT_BEAT_CHRONICLER_EMI; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_BeatEmi
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+	
+	checkevent EVENT_BEAT_AMOS_GARDEN; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+	
+	closetext
+	refreshscreen
+	trainerpic MEJIMI
+	waitbutton
+	closepokepic
+	opentext
+	
+	writetext JournalText_BeatAmosGarden
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_SAMSARA_TOWER; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic SAMSARA
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatSamsara
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BARBEAU_WARPED; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic BARBEAU
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BarbeauWarpedFromLanding
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_KURT_GOT_TO_LUGIA_FIRST; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_KurtCatchesLugiaText
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_CIANWOOD_WARPED; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_WarpedFromCianwood
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_KENSEY_DOCKS; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic KENSEY
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatKenseyDocks
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_RIVAL_LIGHTHOUSE; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatRivalLighthouse
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_CHUCK; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic CHUCK
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatChuck
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_PRYCE; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic PRYCE
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatPryceText
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_RIVAL_LAKE; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_BeatRivalLake
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_KANNA; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic KANNA
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatKanna
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_AMOS_REDOUBT; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic AMOS
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatAmosRedoubt
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_ADRINNA_MINE; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic ADRINNA
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatAdrinnaMine
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_AMOS_SENT_NINJAS_TO_TOWER ; CHECK TODO 
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_BrassTowerAmbiguous
+	waitbutton
+	closetext
+	end
+
+
+
+
+JournalText_Intro:
+	text_high
+    text " Kurt's House: " 
+	next
+	text_start 
+
+
+	text "Kurt's monologue"
+	done
+
+JournalText_GotAPokemon:
+	text_high
+    text " Tinder Garden: " 
+	next
+	text_start 
+
+
+	text "..."
+	done
+
+JournalText_BeatCamden:
+	text_high
+    text "Ilex Shrine: " 
+	next
+	text_start 
+
+
+	text "..."
+	done
+
+JournalText_GotReport:
+
+
+KeepReadingJournalText:
+	text "Keep reading?"
+	done
+
+JournalOverText:
+	text "Back to it!"
+	done
+
+EndOfJournalText:
+	text "It's just blank"
+	line "pages!"
+	done
