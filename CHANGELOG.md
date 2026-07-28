@@ -151,12 +151,14 @@ Removed Sleep Talk from learnsets - addressing a bug.
 Address a possible soft lock in Whispers Way. 
 A few more hints in the early game. 
 Buff wild levels in Union Cave. 
-
+Updated Completionist document. 
 
 Todo for v110:
 * Check leveling in early game 
-
-* Update Azalea NPCs to give you more hints 
+* Remove Doll Mart; replace with mart for light ball / berserk gene / stick / ... AND UPDATE ITEMS DOC & TODO TEST 
+* Update Random Rolls for stadium at end of N-1 script instead of start of N script
+* Update dialog if you fail to catch Heatran 
+* Add journal to kurt's house 
 
 * Redo all the documentation again: parties, learnsets, etc. 
 

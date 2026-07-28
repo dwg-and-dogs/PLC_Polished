@@ -1,9 +1,5 @@
 Completionist Checklist, Crystal Inheritance v1.1.0
 
-Facility
-* Silver Trophy for beating all trainer rematches
-* Gold Trophy for reaching 25 wins at the Stadium
-
 Exploration 
 * Reach B2F of Union Cave 
 * Return the wayward Nomad in the Vortex Caverns 
@@ -13,6 +9,11 @@ Exploration
 * Find all four hidden grottoes
 * Save the Route KaJo schoolgirl
 * Read your Rival's letter to his father 
+* Beat the generals on expert difficulty after you reach the credits once
+* Defeat Cynthia (Mahogany Gate), Artist Mario (Goldenrod Museum), dwg (Debug Room)
+* Collect all TM and HM 
+* Collect all 14 badges
+* Complete the Pokedex
 
 Puzzles
 * Solve all the Ruins of Alph puzzles
@@ -21,14 +22,16 @@ Puzzles
 * Solve all five of the Kimono Cabin puzzles
 * Complete the Master Ball trade quest
 
-Optional battles 
-* Beat the generals on expert difficulty after you reach the credits once
-* Defeat Cynthia (Mahogany Gate), Artist Mario (Goldenrod Museum), dwg (Debug Room)
+Facility
+* Silver Trophy for beating all trainer rematches
+* Gold Trophy for reaching 25 wins at the Stadium
 
-Other 
-* Collect all TM and HM 
-* Collect all 14 badges
-* Complete the Pokedex
+Writing Prompts 
+* (Creative) Write a short story about the Rival's journey to Blackthorn. Does he succeed or fail in his quest to find himself? How will he be shaped by the Elders in the Dragon's Den? Given his history with water purification, how willing will the Elders be to let him have access to the pools?
+* (Nonfiction) Kurt and the Rival have opposing ideas of what is better to leave as an inheritance. Kurt's position by the end of the story is that a changing world can be handled better by looking to the past for inspiration, whereas the Rival is more interested in developing new technologies to solve modern issues. To what extent are these two ideas in conflict? 
+* (Creative) Andrea's sanctum is a reference to her hometown. Why did she leave? 
+* (Nonfiction) How much sacrifice is owed by the present generation to future generations? How much do present generations owe to prior generations? 
+
 
 
 

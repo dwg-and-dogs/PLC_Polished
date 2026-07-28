@@ -1017,18 +1017,17 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	opentext
 	writethistext
 		text "It's notes from"
-		line "my journey."
-		cont "Read them?"
+		line "the journey. Read?"
 		done
 	yesorno
 	iffalse_jumptext JournalOverText
 	
-	closetext
-	refreshscreen
-	trainerpic KURT
-	waitbutton
-	closepokepic
-	opentext
+;	closetext
+;	refreshscreen
+;	trainerpic KURT
+;	waitbutton
+;	closepokepic
+;	opentext
 	
 	writetext JournalText_Intro
 	waitbutton
@@ -1063,15 +1062,6 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_GOT_UNOWN_REPORT ; CHECK TODO 
-	iffalse_jumptext EndOfJournalText
-
-	writetext JournalText_GotReport
-	waitbutton
-	writetext KeepReadingJournalText
-	yesorno
-	iffalse_jumptext JournalOverText
-
 	checkevent EVENT_BEAT_RIVAL_FOREST ; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
 
@@ -1083,13 +1073,6 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 
 	checkevent EVENT_BEAT_URSULA ; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
-
-	closetext
-	refreshscreen
-	trainerpic TAMMY
-	waitbutton
-	closepokepic
-	opentext
 
 	writetext JournalText_BeatUrsula
 	waitbutton
@@ -1165,6 +1148,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 
 	checkevent EVENT_GOT_KURTS_BASEMENT_KEY; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
+
 	writetext JournalText_GotKurtsKey
 	waitbutton
 	writetext KeepReadingJournalText
@@ -1174,13 +1158,6 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	checkevent EVENT_BEAT_WHITNEY; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
 
-	closetext
-	refreshscreen
-	trainerpic WHITNEY
-	waitbutton
-	closepokepic
-	opentext
-
 	writetext JournalText_BeatWhitney
 	waitbutton
 	writetext KeepReadingJournalText
@@ -1189,6 +1166,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 
 	checkevent EVENT_BEAT_ELDER_LI; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
+	
 	writetext JournalText_BeatElderLi
 	waitbutton
 	writetext KeepReadingJournalText
@@ -1198,13 +1176,6 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	checkevent EVENT_BEAT_FALKNER; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
 
-	closetext
-	refreshscreen
-	trainerpic FALKNER
-	waitbutton
-	closepokepic
-	opentext
-
 	writetext JournalText_BeatFalkner
 	waitbutton
 	writetext KeepReadingJournalText
@@ -1213,6 +1184,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	
 	checkevent EVENT_BEAT_RIVAL_THEATRE; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
+	
 	writetext JournalText_BeatRivalTheatre
 	waitbutton
 	writetext KeepReadingJournalText
@@ -1319,13 +1291,6 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	checkevent EVENT_BEAT_CHUCK; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
 
-	closetext
-	refreshscreen
-	trainerpic CHUCK
-	waitbutton
-	closepokepic
-	opentext
-
 	writetext JournalText_BeatChuck
 	waitbutton
 	writetext KeepReadingJournalText
@@ -1335,14 +1300,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	checkevent EVENT_BEAT_PRYCE; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
 
-	closetext
-	refreshscreen
-	trainerpic PRYCE
-	waitbutton
-	closepokepic
-	opentext
-
-	writetext JournalText_BeatPryceText
+	writetext JournalText_BeatPryce
 	waitbutton
 	writetext KeepReadingJournalText
 	yesorno
@@ -1421,7 +1379,17 @@ JournalText_Intro:
 	text_start 
 
 
-	text "Kurt's monologue"
+	text "Grandpa Kurt says"
+	line "he's going to do"
+	para "the Ilex Ceremony"
+	line "without telling"
+	cont "my parents."
+	
+	para "He asked me to go"
+	line "get <RIVAL>, but"
+	para "I thought they"
+	line "didn't get along?"
+
 	done
 
 JournalText_GotAPokemon:
@@ -1431,21 +1399,223 @@ JournalText_GotAPokemon:
 	text_start 
 
 
-	text "..."
+	text "Celebi appeared"
+	line "at our ceremony!"
+	
+	para "It gave me and"
+	line "<RIVAL> a gift"
+	cont "#mon, the same"
+	para "set that were"
+	line "used by a hero"
+	cont "long ago, and a"
+	
+	para "request to stop"
+	line "an unnatural"
+	cont "force. Hm?"
+	
+	para "<RIVAL> ran away"
+	line "because he felt"
+	para "like his Apricorn"
+	line "oil distiller was"
+	cont "not appreciated."
+	
+	para "We heard a loud"
+	line "noise coming from"
+	cont "Ilex Forest."
 	done
 
 JournalText_BeatCamden:
 	text_high
-    text "Ilex Shrine: " 
+    text " Ilex Shrine: " 
 	next
 	text_start 
 
+	text "A Silph logger"
+	line "nearly damaged"
+	cont "the shrine."
+	
+	para "In the rubble,"
+	line "Kurt found the"
+	cont "GS Ball. He says"
+	para "with a copy of"
+	line "writing from the"
+	cont "Ruins of Alph,"
+	
+	para "he can use it to"
+	line "call Celebi to "
+	para "go back in time"
+	line "and stop Johto"
+	cont "from modernizing."
+	
+	para "Then we would've"
+	line "completed Celebi's"
+	cont "request!"
+	done
 
+JournalText_BeatIlexRival:
+	text_high
+    text " Ilex Shrine: " 
+	next
+	text_start 
+
+	text "<RIVAL> appeared"
+	line "right was we were"
+	para "going to insert"
+	line "the GS Ball."
+	
+	para "He thinks that"
+	line "Celebi's quest is"
+	cont "for him!"
+	
+	para "Defeated him, and"
+	line "Celebi appeared,"
+	
+	para "sending us back"
+	line "in time. Met the"
+	para "Elder of Anarres,"
+	line "Hollis, who is"
+	para "trying to handle"
+	line "an infestation of"
+	cont "Pineco without"
+	cont "any input."
+
+	para "I wonder what the"
+	line "Slowpoke Well was"
+	cont "like back then?"
+	
+	para "We need to get to"
+	line "historic Olivine"
+	para "to stop whatever"
+	line "outside influence"
+	para "is going to set"
+	line "Johto on a path"
+	cont "away from Celebi."
+	done
+
+JournalText_BeatUrsula:
+	text_high
+    text " Misty Basin: " 
+	next
+	text_start 
+
+	text "Met an inventor"
+	line "from Anarres. She"
+	para "invented a method"
+	line "to remove Pineco"
+	para "without damaging"
+	line "the trees!"
+	
+	para "She asked me to"
+	line "confront Hollis"
+	cont "with her."
+	done
+
+JournalText_BeatHollis:
+	text_high
+    text " Anarres: " 
+	next
+	text_start 
+	
+	text "Convinced Hollis"
+	line "to use Ursula's"
+	cont "invention."
+	
+	para "Gave me the Cut"
+	line "HM, so now we can"
+	para "go north to stop"
+	line "the unnatural"
+	cont "invention Celebi"
+	cont "referenced."
+	done
+
+JournalText_BeatSandraTower:
+	text_high
+    text " Gauldenrod: " 
+	next
+	text_start 
+	
+	text ""
+	done
+
+JournalText_BeatBeth
+JournalText_BeatBobeshStadium
+JournalText_SandraWarped
+JournalText_GotKurtsKey
+JournalText_BeatWhitney
+JournalText_BeatElderLi
+JournalText_BeatFalkner
+JournalText_BeatRivalTheatre ; optional 
+JournalText_BeatEmi
+JournalText_BeatAmosGarden
+JournalText_BeatSamsara
+JournalText_BarbeauWarpedFromLanding
+JournalText_KurtCatchesLugiaText
+JournalText_WarpedFromCianwood
+JournalText_BeatKenseyDocks
+JournalText_BeatRivalLighthouse ; remove 
+
+JournalText_BeatChuck
+	text_high
+    text "Lighthouse: " 
+	next
+	text_start 
+	
 	text "..."
 	done
 
-JournalText_GotReport:
+JournalText_BeatPryce
+	text_high
+    text " Mahogany: " 
+	next
+	text_start 
+	
+	text "..."
+	done
 
+JournalText_BeatRivalLake
+	text_high
+    text " Silph Springs: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+
+JournalText_BeatKanna
+	text_high
+    text " Sinjoh: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+
+JournalText_BeatAmosRedoubt
+	text_high
+    text " Eerie Hamlet: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+
+JournalText_BeatAdrinnaMine
+	text_high
+    text " Clast's Cradle: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+	
+JournalText_BrassTowerAmbiguous:
+	text_high
+    text " Brass Tower: " 
+	next
+	text_start 
+	
+	text "..."
+	done
 
 KeepReadingJournalText:
 	text "Keep reading?"

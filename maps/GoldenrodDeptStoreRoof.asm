@@ -129,60 +129,40 @@ PokeDollVendingMachine:
 	loadmenu .MenuData
 	verticalmenu
 	closewindow
-	ifequal $1, .JigglypuffDoll
-	ifequal $2, .DittoDoll
-	ifequal $3, .MeowthDoll
+	ifequal $1, .LightBall
+	ifequal $2, .ThickClub
+	ifequal $3, .BerserkGene
 	endtext
 
-.JigglypuffDoll:
-	checkmoney $0, 2400
+.LightBall:
+	checkmoney $0, 1000
 	ifequal $2, .NotEnoughMoney
-	checkevent EVENT_DECO_JIGGLYPUFF_DOLL
-	iftrue .AlreadyBought
-	takemoney $0, 2400
-	setevent EVENT_DECO_JIGGLYPUFF_DOLL
-	writetext BoughtJigglypuffDollText
+	takemoney $0, 1000
 	playsound SFX_TRANSACTION
-	waitbutton
-	writetext JigglypuffDollSentText
+	verbosegiveitem LIGHT_BALL
 	waitbutton
 	sjump .Start
 
-.DittoDoll:
-	checkmoney $0, 2400
+.ThickClub:
+	checkmoney $0, 3000
 	ifequal $2, .NotEnoughMoney
-	checkevent EVENT_DECO_DITTO_DOLL
-	iftrue .AlreadyBought
-	takemoney $0, 2400
-	setevent EVENT_DECO_DITTO_DOLL
-	writetext BoughtDittoDollText
+	takemoney $0, 3000
 	playsound SFX_TRANSACTION
-	waitbutton
-	writetext DittoDollSentText
+	verbosegiveitem THICK_CLUB
 	waitbutton
 	sjump .Start
 
-.MeowthDoll:
-	checkmoney $0, 2400
+.BerserkGene:
+	checkmoney $0, 30000
 	ifequal $2, .NotEnoughMoney
-	checkevent EVENT_DECO_MEOWTH_DOLL
-	iftrue .AlreadyBought
-	takemoney $0, 2400
-	setevent EVENT_DECO_MEOWTH_DOLL
-	writetext BoughtMeowthDollText
+	takemoney $0, 30000
 	playsound SFX_TRANSACTION
-	waitbutton
-	writetext MeowthDollSentText
+	verbosegiveitem BERSERK_GENE
 	waitbutton
 	sjump .Start
 
 .NotEnoughMoney:
 	writetext PokeDollVendingMachineNoMoneyText
-	waitbutton
-	sjump .Start
-
-.AlreadyBought:
-	writetext PokeDollVendingMachineAlreadyBoughtText
 	waitbutton
 	sjump .Start
 
@@ -196,9 +176,9 @@ PokeDollVendingMachine:
 .MenuData2:
 	db $80 ; flags
 	db 4 ; items
-	db "Jigglypuff  ¥2400@"
-	db "Ditto       ¥2400@"
-	db "Meowth      ¥2400@"
+	db "Light Ball  ¥1000@"
+	db "Thick Club  ¥3000@"
+	db "Berserk Gene ¥30k@"
 	db "Cancel@"
 
 GoldenrodDeptStoreRoofPokefanFText:
@@ -228,15 +208,18 @@ GoldenrodDeptStoreRoofSuperNerdQuitBotheringMeText:
 	done
 
 GoldenrodDeptStoreRoofPokefanMText:
-	text "There's something"
-	line "I really want, but"
-
-	para "I don't have the"
-	line "necessary cash…"
-
-	para "Maybe I'll sell"
-	line "off the Berries"
-	cont "I've collected…"
+	text "Did you know that"
+	line "some #mon can"
+	para "be much stronger"
+	line "with certain held"
+	cont "items?"
+	
+	para "Pikachu loves a"
+	line "Light Ball, and"
+	
+	para "Snubbull and"
+	line "Granbull love to"
+	cont "hold Thick Club."
 	done
 
 GoldenrodDeptStoreRoofTeacherText:
@@ -285,7 +268,7 @@ Binoculars3Text:
 
 PokeDollVendingMachineText:
 	text "A vending machine"
-	line "for #mon dolls!"
+	line "for held items!"
 	done
 
 PokeDollVendingMachineNoMoneyText:
