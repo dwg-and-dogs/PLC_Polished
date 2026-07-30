@@ -1393,10 +1393,11 @@ SlowpokeEvosAttacks:
 	db 1, CURSE
 	db 1, TACKLE
 	db 5, GROWL
-	db 9, WATER_GUN
-	db 14, CONFUSION
-	db 19, DISABLE
-	db 23, HEADBUTT
+	db 7, CONFUSION
+	db 10, WATER_GUN
+	db 14, DISABLE
+	db 19, HEADBUTT
+	db 24, PSYBEAM
 	db 28, WATER_PULSE
 	db 32, ZEN_HEADBUTT
 	db 36, SAFEGUARD ; Slack Off → egg move

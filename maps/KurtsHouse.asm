@@ -1017,10 +1017,11 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	opentext
 	writethistext
 		text "It's notes from"
-		line "the journey. Read?"
+		line "the journey. Read"
+		cont "from start?"
 		done
 	yesorno
-	iffalse_jumptext JournalOverText
+	iffalse JournalFromEnd
 	
 ;	closetext
 ;	refreshscreen
@@ -1370,7 +1371,16 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	end
 
 
-
+JournalFromEnd:
+	opentext
+	writethistext
+		text "Read the last"
+		line "entry?"
+		done
+	yesorno
+	iffalse_jumptext ; TODO
+	; todo check in reverse 
+	done
 
 JournalText_Intro:
 	text_high
@@ -1534,36 +1544,174 @@ JournalText_BeatSandraTower:
 	next
 	text_start 
 	
-	text ""
+	text "Explored historic"
+	line "Goldenrod. Path"
+	para "north blocked, so"
+	line "I asked the Elder"
+	para "atop the tower"
+	line "to help get past."
+		
+	para "When our battle"
+	line "ended, Brigaders"
+	cont "from the Capital"
+	para "arrived to take"
+	line "her to General"
+	cont "Tyrus' Stadium."
+	
+	para "Right after, a"
+	line "mysterious woman"
+	para "named General"
+	line "Andrea warped in"
+	para "and gave me the"
+	line "Strength HM while"
+	cont "mocking Tyrus."
+	
+	para "I had another run"
+	line "in with Amos, who"
+	para "also wanted to "
+	line "see Sandra. Why"
+	para "are there signs"
+	line "calling for his"
+	cont "arrest?"
 	done
-
-JournalText_BeatBeth
-JournalText_BeatBobeshStadium
-JournalText_SandraWarped
-JournalText_GotKurtsKey
-JournalText_BeatWhitney
-JournalText_BeatElderLi
-JournalText_BeatFalkner
-JournalText_BeatRivalTheatre ; optional 
-JournalText_BeatEmi
-JournalText_BeatAmosGarden
-JournalText_BeatSamsara
-JournalText_BarbeauWarpedFromLanding
-JournalText_KurtCatchesLugiaText
-JournalText_WarpedFromCianwood
-JournalText_BeatKenseyDocks
-JournalText_BeatRivalLighthouse ; remove 
-
-JournalText_BeatChuck
+	
+JournalText_BeatBobeshStadium:
 	text_high
-    text "Lighthouse: " 
+    text " Stadium: " 
+	next
+	text_start 
+	
+	text "Joined with an"
+	line "Underground group"
+	cont "in Gauldenrod to"
+	para "confront General"
+	line "Tyrus. Used the"
+	para "Strength HM to"
+	line "divert a spring"
+	para "filling the Stad-"
+	line "ium with water."
+	done
+	
+JournalText_SandraWarped:
+	text_high
+    text " Stadium Grounds: " 
+	next
+	text_start ; todo from here 
+	
+
+	text "Stopped Tyrus'"
+	line "plan, but I had"
+	para "another encounter"
+	line "with the charming"
+	cont "General Andrea."
+	
+	para "To leave it all"
+	line "behind to 
+
+	work on"
+	cont "myself. Is that how"
+	cont "how <RIVAL> feels?"
+	done
+	
+JournalText_GotKurtsKey:
+	text_high
+    text " Route 35: " 
+	next
+	text_start 
+	
+	done
+	
+JournalText_BeatWhitney:
+	text_high
+    text " Goldenrod: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+	
+JournalText_BeatFalkner:
+	text_high
+    text " Violet City: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+	
+JournalText_BeatEmi:
+	text_high
+    text " Bellchime Trail: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+	
+JournalText_BeatAmosGarden:
+	text_high
+    text " Royal Garden: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+	
+JournalText_BeatSamsara:
+	text_high
+    text " W. Capital: " 
 	next
 	text_start 
 	
 	text "..."
 	done
 
-JournalText_BeatPryce
+JournalText_BarbeauWarpedFromLanding:
+	text_high
+    text " T. Landing: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+	
+JournalText_KurtCatchesLugiaText:
+	text_high
+    text " Whirl Islands: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+
+JournalText_WarpedFromCianwood:
+	text_high
+    text " Cianwood: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+	
+JournalText_BeatKenseyDocks: 
+	text_high
+    text " Landing Docks: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+	
+JournalText_BeatChuck: 
+	text_high
+    text " Lighthouse: " 
+	next
+	text_start 
+	
+	text "..."
+	done
+
+JournalText_BeatPryce: 
 	text_high
     text " Mahogany: " 
 	next
@@ -1572,7 +1720,7 @@ JournalText_BeatPryce
 	text "..."
 	done
 
-JournalText_BeatRivalLake
+JournalText_BeatRivalLake:
 	text_high
     text " Silph Springs: " 
 	next
@@ -1581,7 +1729,7 @@ JournalText_BeatRivalLake
 	text "..."
 	done
 
-JournalText_BeatKanna
+JournalText_BeatKanna:
 	text_high
     text " Sinjoh: " 
 	next
@@ -1590,7 +1738,7 @@ JournalText_BeatKanna
 	text "..."
 	done
 
-JournalText_BeatAmosRedoubt
+JournalText_BeatAmosRedoubt:
 	text_high
     text " Eerie Hamlet: " 
 	next
@@ -1599,7 +1747,7 @@ JournalText_BeatAmosRedoubt
 	text "..."
 	done
 
-JournalText_BeatAdrinnaMine
+JournalText_BeatAdrinnaMine:
 	text_high
     text " Clast's Cradle: " 
 	next

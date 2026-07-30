@@ -2561,7 +2561,7 @@ FisherGroup:
 	db "Ralph@" ; ALPH
 	db TRAINERTYPE_NORMAL
 	; party
-	db 9, CHINCHOU
+	db 6, CHINCHOU
 	db 8, TENTACOOL
 	db 7, TOTODILE
 	db -1 ; end
@@ -2772,7 +2772,7 @@ HikerGroup:
 	db "Leonard@" ; union cave 
 	db TRAINERTYPE_NORMAL
 	; party
-	db 5, PHANPY
+	db 7, PHANPY
 ;	db 5, RHYHORN
 	db -1 ; end
 
@@ -3692,7 +3692,7 @@ FirebreatherGroup:
 	db "Otis@"
 	db TRAINERTYPE_NORMAL
 	; party
-	db 6, PONYTA
+	db 7, PONYTA
 	db -1 ; end
 
 ; ================

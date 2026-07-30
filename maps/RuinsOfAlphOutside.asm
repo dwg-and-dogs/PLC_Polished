@@ -276,7 +276,8 @@ SightseerFPilarBeatenText:
 
 SchoolgirlPainterScript:
 	faceplayer
-	showtext AlphSchoolgirlPainterCelebiText1
+	opentext
+	writetext AlphSchoolgirlPainterCelebiText1
 	yesorno
 	iffalse_jumptext AlphSchoolgirlPainterCelebiTextDeny
 	closetext

@@ -79,9 +79,8 @@ GenericTrainerScientistDennett:
 	done
 
 ScientistDennettSeenText:
-	text "A mine is no"
-	line "place for a"
-	cont "child."
+	text "Shouldn't you be"
+	line "at school?"
 	done
 
 ScientistDennettBeatenText:

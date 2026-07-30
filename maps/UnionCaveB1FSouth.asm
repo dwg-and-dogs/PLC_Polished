@@ -36,9 +36,8 @@ GenericTrainerHikerParry:
 	done
 
 HikerParrySeenText:
-	text "A mine is no"
-	line "place for a"
-	cont "child."
+	text "Hm? You're too"
+	line "young to be here!"
 	done
 
 HikerParryBeatenText:

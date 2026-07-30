@@ -94,15 +94,17 @@ endc
 endr
 .Medicines:
 	writethistext
-		text "All meds and"
-		line "vitamins?"
+		text "Meds, Vitamins,"
+		line "Exp Share?"
 		done
 	yesorno
 	iffalse .PokemonUpgrades
 	giveitem FULL_RESTORE, 99
 	giveitem MAX_REVIVE, 99
 	giveitem PP_MAX, 99 
-	giveitem MAX_ELIXIR, 99 
+	giveitem MAX_ELIXIR, 99
+	verbosegiveitem MACHO_BRACE, 1
+	verbosegiveitem EXP_SHARE, 1
 for x, HP_UP, ZINC + 1
 	giveitem x, 99
 endr
@@ -444,6 +446,8 @@ Breeder2Script:
 	givepoke MEGANIUM, OTHER_FORM, 5, NO_ITEM ; SAURO FORM 
 	givepoke MAGCARGO, OTHER_FORM , 5, NO_ITEM; DEEP CRUST 
 	givepoke XATU, OTHER_FORM, 5, NO_ITEM ; TOWER FORM 
+	givepoke LEDIAN, OTHER_FORM, 5, NO_ITEM
+	givepoke ALAKAZAM, OTHER_FORM, 5, NO_ITEM
 	closetext
 	end
 	
@@ -1793,13 +1797,14 @@ StadiumWarperScript:
 	
 	giveitem POKE_BALL, 99
 	giveitem BIG_NUGGET, 99
-	; good party
+	giveitem MACHO_BRACE, 1
+	; decent party
 	givepoke SAMUROTT, HISUIAN_FORM, 90, EXPERT_BELT
 	givepoke DECIDUEYE, HISUIAN_FORM, 90, LEFTOVERS
 	givepoke TYPHLOSION, HISUIAN_FORM, 90, CHOICE_SPECS
-	givepoke KLEAVOR, 90, CHOICE_BAND
-	givepoke BASCULEGION, 90, CHOICE_SCARF
-	givepoke BLISSEY, 90, LEFTOVERS
+	givepoke KLEAVOR, NO_FORM, 90, CHOICE_BAND
+	givepoke BASCULEGION, NO_FORM, 90, CHOICE_SCARF
+	givepoke BLISSEY, NO_FORM, 90, LEFTOVERS
 
 	closetext
 ;	setevent EVENT_REACHED_CREDITS_ONCE
