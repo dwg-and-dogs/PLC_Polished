@@ -1183,16 +1183,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 	
-	checkevent EVENT_BEAT_RIVAL_THEATRE; CHECK TODO 
-	iffalse_jumptext EndOfJournalText
-	
-	writetext JournalText_BeatRivalTheatre
-	waitbutton
-	writetext KeepReadingJournalText
-	yesorno
-	iffalse_jumptext JournalOverText
-	
-	checkevent EVENT_BEAT_CHRONICLER_EMI; CHECK TODO 
+	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI; CHECK TODO 
 	iffalse_jumptext EndOfJournalText
 	writetext JournalText_BeatEmi
 	waitbutton
@@ -1596,21 +1587,24 @@ JournalText_SandraWarped:
 	text_high
     text " Stadium Grounds: " 
 	next
-	text_start ; todo from here 
+	text_start ; todo fix
 	
-
 	text "Stopped Tyrus'"
-	line "plan, but I had"
-	para "another encounter"
-	line "with the charming"
-	cont "General Andrea."
-	
-	para "To leave it all"
-	line "behind to 
+	line "plan, and had"
+	cont "another encounter"
+	para "with the magnetic"
+	line "General Andrea."
 
-	work on"
 	cont "myself. Is that how"
 	cont "how <RIVAL> feels?"
+	
+	para "Sandra warped me back"
+	
+	para "The drought has"
+	line "hit the National"
+	cont "Park fountain,"
+	para "now just an empty"
+	line "basin."
 	done
 	
 JournalText_GotKurtsKey:
@@ -1618,6 +1612,34 @@ JournalText_GotKurtsKey:
     text " Route 35: " 
 	next
 	text_start 
+	
+	text "Met with Kurt at"
+	line "the Goldenrod"
+	cont "#com Center."
+	
+	para "He knows some"
+	line "people who also"
+	para "oppose what Silph"
+	line "is doing, which"
+	para "is easier to see"
+	line "in Goldenrod than"
+	cont "anywhere else."
+	
+	para "Whitney's show is"
+	line "so different than"
+	cont "I remember:"
+	
+	para "she has more att-"
+	line "ention than ever,"
+	
+	para "but still says"
+	line "she's slighted."
+	
+	para "Need to sneak out"
+	line "the Radio Tower"
+	para "onto the tracks"
+	line "so we can find a"
+	cont "way to Ecruteak."
 	
 	done
 	
@@ -1627,7 +1649,45 @@ JournalText_BeatWhitney:
 	next
 	text_start 
 	
-	text "..."
+	text "Encounted <RIVAL>"
+	line "at the Tower."
+	
+	para "He was a guest"
+	line "with Whitney,"
+	para "going on about"
+	line "how Kurt and his"
+	cont "dad treated him."
+	
+	para "I guess he wants"
+	line "to be adopted by"
+	cont "Silph now to make"
+	cont "his distiller for"
+	cont "Olivine now."
+	
+	para "Had a battle with"
+	line "Whitney. She said"
+	para "no one comes to"
+	line "the ceremonies"
+	para "anymore because"
+	line "they're boring."
+	
+	para "But I wonder if"
+	line "it's not more"
+	cont "related to what"
+	cont "<RIVAL> said."
+	
+	para "Sneaking out the"
+	line "Radio Tower to"
+	cont "Route Ka-Jo."
+	
+	para "The route is so"
+	line "steep, the only"
+	cont "way it could be"
+	para "accessed for many"
+	line "years was from a"
+	para "narrow cave from"
+	line "the west."	
+	
 	done
 	
 JournalText_BeatFalkner:
@@ -1636,7 +1696,33 @@ JournalText_BeatFalkner:
 	next
 	text_start 
 	
-	text "..."
+	text "Road to Ecruteak"
+	line "was blocked from"
+	cont "Violet side also."
+	
+	para "Falkner had a dig"
+	line "to uncover a"
+	cont "Bronzong to do a"
+	cont "Rain Dance on his"
+	cont "renovated Tower."
+	
+	para "Why is there a"
+	line "Bronzong there,"
+	cont "I wonder?"
+	
+	para "Elder Li told me"
+	line "to remind him of"
+	cont "his roots."
+	
+	para "After our battle"
+	line "he saw that he"
+	para "was taking nature"
+	line "out of balance,"
+	
+	para "and destroying"
+	line "what made Violet"
+	cont "City special."
+
 	done
 	
 JournalText_BeatEmi:
@@ -1645,7 +1731,36 @@ JournalText_BeatEmi:
 	next
 	text_start 
 	
-	text "..."
+	text "Another encounter"
+	line "with <RIVAL> at "
+	cont "the Theatre."
+	
+	para "He's going to make"
+	line "his distiller for"
+	para "Silph in Olivine"
+	line "for some project"
+	cont "related to water"
+	cont "desalination."
+	
+	para "Sounds great, but"
+	line "Silph has already"
+	para "bungled the Lake"
+	line "of Rage project"
+	para "and the logging"
+	line "in Ilex. Hope it"
+	cont "goes better here."
+	
+	para "Dance Theatre had"
+	line "an immersive show"
+	para "about the events"
+	line "of the Burned"
+	cont "Tower."
+	
+	para "As a reward, we"
+	line "were invited to"
+	cont "Bellchime Trail."
+
+
 	done
 	
 JournalText_BeatAmosGarden:
@@ -1654,7 +1769,57 @@ JournalText_BeatAmosGarden:
 	next
 	text_start 
 	
-	text "..."
+	text "Chronicler Emi"
+	line "prayed with me at"
+	cont "Bellchime Trail"
+	
+	para "sending me back"
+	line "to when Ecruteak"
+	cont "was known as the"
+	cont "Western Capital."
+	
+	para "I overheard the"
+	line "Emperor talking"
+	cont "to his Generals."
+	
+	para "The Emperor has a"
+	line "plan to re-make"
+	cont "Johto and squash"
+	cont "its traditions."
+	
+	para "General Andrea"
+	line "battled me, and"
+	cont "gave me a Silver"
+	cont "Wing, inviting me"
+	cont "westward to the"
+	cont "Trader's Landing."
+	
+	para "She gave me the"
+	line "Strength HM the"
+	cont "last time she met"
+	cont "me - what is she"
+	cont "up to?"
+	
+	para "Just afterward, I"
+	line "was ambushed by"
+	cont "Amos. He accused"
+	para "me of being part"
+	line "of Andrea's plot."
+	
+	para "Amos said the"
+	line "Emperor will make"
+	para "Johto closed off,"
+	line "reliant on only"
+	para "him, and set it"
+	line "on a dark path."
+	
+	para "I have to find a"
+	line "way out of the"
+	para "Western Capital's"
+	line "moat. Perhaps an"
+	para "elder in the Tin"
+	line "Tower will have"
+	cont "a way to help."	
 	done
 	
 JournalText_BeatSamsara:
@@ -1663,7 +1828,27 @@ JournalText_BeatSamsara:
 	next
 	text_start 
 	
-	text "..."
+	text "Chronicler Sybil"
+	line "is deeply worried"
+	cont "about Emperor"
+	cont "Vesper's ambition."
+	
+	para "She and her Sages"
+	line "have given me the"
+	para "Surf HM to try to"
+	line "stop his plans to"
+	para "buy time for them"
+	line "to convince him"
+	para "that his plan is"
+	line "against nature."
+	
+	para "Must head to the"
+	line "Trader's Landing,"
+	
+	para "I wonder if the"
+	line "Silver Wing will"
+	cont "be of use?"
+		
 	done
 
 JournalText_BarbeauWarpedFromLanding:
@@ -1672,7 +1857,41 @@ JournalText_BarbeauWarpedFromLanding:
 	next
 	text_start 
 	
-	text "..."
+	text "General Nemo has"
+	line "taken over the"
+	para "Landing from"
+	line "Elder Remy."
+	
+	para "It's now a place"
+	line "where outsider"
+	para "tech, like #balls"
+	line "and items, are"
+	cont "copied for Johto."
+	
+	para "The locals don't"
+	line "seem to enjoy it,"
+	
+	para "since they're used"
+	line "to sailing to and"
+	cont "fro from shore to"
+	cont "island, protected"
+	cont "by Lugia."
+	
+	para "Elder Remy has"
+	line "blessed Kurt's"
+	para "plan to bring"
+	line "Lugia from our"
+	cont "timeline to them,"
+	
+	para "so that Lugia can"
+	line "wreck Nemo's port."
+
+	para "The caverns are a"
+	line "maze, but I know"
+	para "I can use the"
+	line "Celebi Call if"
+	cont "I get lost."
+	
 	done
 	
 JournalText_KurtCatchesLugiaText:
@@ -1775,5 +1994,7 @@ JournalOverText:
 
 EndOfJournalText:
 	text "It's just blank"
-	line "pages!"
+	line "pages, waiting"
+	cont "for a story to"
+	cont "be written!"
 	done
