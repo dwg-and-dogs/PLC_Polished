@@ -1517,7 +1517,7 @@ JournalText_BeatHollis:
 	next
 	text_start 
 	
-	text "Convinced Hollis"
+	text "Convinced Silas"
 	line "to use Ursula's"
 	cont "invention."
 	
@@ -1527,6 +1527,16 @@ JournalText_BeatHollis:
 	line "the unnatural"
 	cont "invention Celebi"
 	cont "referenced."
+	
+	para "There was someone"
+	line "named Amos there,"
+	para "before I arrived,"
+	line "but he left in a"
+	cont "hurry. He was"
+	para "telling Silas to"
+	line "take the Emperor's"
+	para "threat more"
+	line "seriously."
 	done
 
 JournalText_BeatSandraTower:
@@ -1900,7 +1910,21 @@ JournalText_KurtCatchesLugiaText:
 	next
 	text_start 
 	
-	text "..."
+	text "Found Lugia, deep"
+	line "within the Whirl"
+	cont "Islands."
+	
+	para "Kurt caught her"
+	line "to bring back to"
+	cont "General Nemo's"
+	cont "Docks."
+	
+	para "He seems changed,"
+	line "somehow. We need"
+	para "to head to what's"
+	line "left of Cianwood"
+	cont "City to reach the"
+	cont "Docks."
 	done
 
 JournalText_WarpedFromCianwood:
@@ -1909,7 +1933,30 @@ JournalText_WarpedFromCianwood:
 	next
 	text_start 
 	
-	text "..."
+	text "Met Eusine in"
+	line "Cianwood City."
+	
+	para "He explained that"
+	line "a large hurricane"
+	para "grew so large,"
+	line "so fast, that"
+	para "Chuck and others"
+	line "couldn't react in"
+	para "time to save the"
+	line "city."
+	
+	para "Kurt showed him"
+	line "Lugia, but there"
+	para "was so much less"
+	line "reverence for her"
+	cont "compared to the"
+	cont "way Eusine spoke."
+	
+	para "I worry for what"
+	line "may happen to"
+	cont "Kurt. Was he "
+	para "meant to handle"
+	line "this much power?"	
 	done
 	
 JournalText_BeatKenseyDocks: 
@@ -1918,7 +1965,31 @@ JournalText_BeatKenseyDocks:
 	next
 	text_start 
 	
-	text "..."
+	text "We scared off the"
+	line "outsiders' ships"
+	para "and General Nemo"
+	line "but at what cost?"
+	
+	para "Lugia, once the"
+	line "guardian of the"
+	cont "sea, may be gone"
+	cont "forever. After"
+	cont "using Aeroblast,"
+	para "she disappeared"
+	line "beneath the waves"
+	para "like a full moon"
+	line "falls below the"
+	cont "horizon."
+	
+	para "Elder Remy and"
+	line "Celebi scolded us"
+	para "for risking Lugia"
+	line "in that way."
+	
+	para "I wonder: are we"
+	line "still worthy to"
+	cont "complete Celebi's"
+	cont "quest?"
 	done
 	
 JournalText_BeatChuck: 
@@ -1927,7 +1998,68 @@ JournalText_BeatChuck:
 	next
 	text_start 
 	
-	text "..."
+	text "Olivine is not a"
+	line "port town but a"
+	cont "distiller town."
+	
+	para "Only problem, the"
+	line "Machine Part that"
+	para "goes to <RIVAL>'s"
+	line "distiller is"
+	cont "missing."
+	
+	para "Had a run-in with"
+	line "him. He seemed"
+	cont "regretful about"
+	para "how Silph had not"
+	line "used the tech to"
+	para "make more water"
+	line "for Johto, but"
+	para "to feed a project"
+	line "called the OMLAS."
+	
+	para "OMLAS is a Slow-"
+	line "king that washed"
+	cont "up in the storm,"
+	
+	para "with a massive"
+	line "Tentacruel on its"
+	cont "head."
+	
+	para "Chuck found a way"
+	line "to keep the Tent-"
+	cont "acruel toxins at"
+	para "a high toxicity"
+	line "using the source"
+	cont "of fresh water,"
+	
+	para "and then Chuck"
+	line "asks OMLAS to"
+	cont "solve problems,"
+	cont "like an Oracle."
+	
+	para "Jasmine and I"
+	line "showed him that"
+	para "his project was"
+	line "harming the very"
+	para "community he was"
+	line "trying to protect"
+	para "and convinved him"
+	line "to scale back."
+	
+	para "We must head to"
+	line "Mahogany, where"
+	para "Pryce can help us"
+	line "reach the Eastern"
+	cont "Mines, the last"
+	para "source of power"
+	line "for Emperor Ves-"
+	cont "per and General"
+	cont "Andrea."
+	
+	para "We must set Johto"
+	line "on a better path."
+	
 	done
 
 JournalText_BeatPryce: 
@@ -1936,7 +2068,22 @@ JournalText_BeatPryce:
 	next
 	text_start 
 	
-	text "..."
+	text "Pryce agreed to"
+	line "take us to the"
+	cont "drained Lake of"
+	cont "Rage."
+	
+	para "However, he said"
+	line "something:"
+	
+	para "But what about"
+	line "staying here to"
+	cont "build the future?"
+
+	para "When this is all"
+	line "done, I must"
+	cont "reflect on his"
+	cont "words more."
 	done
 
 JournalText_BeatRivalLake:
@@ -1945,7 +2092,30 @@ JournalText_BeatRivalLake:
 	next
 	text_start 
 	
-	text "..."
+	text "Battled <RIVAL>"
+	line "at the drained"
+	cont "Lake of Rage."
+	
+	para "The site was once"
+	line "a freshwater pro-"
+	cont "ject for Silph."
+	
+	para "Their advanced"
+	line "technology has"
+	para "left the Lake a"
+	line "shambles, but has"
+	para "also revealed the"
+	line "ruins of temples"
+	para "which resemble"
+	line "those at Ruins of"
+	cont "Alph."
+	
+	para "The site was once"
+	line "a gathering place"
+	para "for Johto and"
+	line "Hisui. Why was it"
+	cont "abandonded?"
+
 	done
 
 JournalText_BeatKanna:
@@ -1954,7 +2124,29 @@ JournalText_BeatKanna:
 	next
 	text_start 
 	
-	text "..."
+	text "Tried to stop"
+	line "General Andrea's"
+	para "plot to seduce"
+	line "the Hisuians with"
+	cont "raw power, but I"
+	para "foiled Petra's"
+	line "plan to trap her"
+	cont "in the glacier."
+	
+	para "Andrea's Brigaders"
+	line "destroyed the"
+	para "glacier used by"
+	line "the Hisuians to"
+	cont "travel to Sinjoh,"
+	
+	para "preventing them"
+	line "from making an"
+	cont "easy trip again."
+	
+	para "I only have one"
+	line "chance to stop"
+	cont "Andrea again."
+	
 	done
 
 JournalText_BeatAmosRedoubt:
@@ -1963,7 +2155,19 @@ JournalText_BeatAmosRedoubt:
 	next
 	text_start 
 	
-	text "..."
+	text "Amos had doubts"
+	line "about me, given"
+	para "what happened at"
+	line "Sinjoh. But the"
+	para "Elders Silas,"
+	line "Sandra, and Remy"
+	para "convinced him I"
+	line "could be counted"
+	cont "on to aid him."
+
+	para "We will now siege"
+	line "General Andrea's"
+	cont "mine."
 	done
 
 JournalText_BeatAdrinnaMine:
@@ -1972,7 +2176,25 @@ JournalText_BeatAdrinnaMine:
 	next
 	text_start 
 	
-	text "..."
+	text "General Andrea"
+	line "gave me one more"
+	cont "gift: Heatran."
+	
+	para "The #mon that"
+	line "she would use to"
+	para "remake Johto up"
+	line "from the bedrock."
+	
+	para "I rebuffed her,"
+	line "but she is so"
+	cont "charming: maybe"
+	para "Kurt's tradition"
+	line "is holding Johto"
+	cont "back? This must"
+	para "be how <RIVAL>"
+	line "felt when Silph"
+	para "offered him the"
+	line "Olivine project."
 	done
 	
 JournalText_BrassTowerAmbiguous:
@@ -1981,7 +2203,36 @@ JournalText_BrassTowerAmbiguous:
 	next
 	text_start 
 	
-	text "..."
+	text "There's only one"
+	line "obstacle left:"
+	para "Emperor Vesper in"
+	line "his tower. If we"
+	para "can stop him,"
+	line "maybe Johto can"
+	para "be on a better"
+	line "path. But I can't"
+	para "stop thinking"
+	line "about Andrea's"
+	cont "offer."
+		
+	para "I contain Kurt's"
+	line "traditionalism,"
+	para "but also my dad's"
+	line "urge to leave it"
+	cont "all behind."
+	
+	para "Must put those"
+	line "thoughts away."
+	
+	para "There's a storm"
+	line "approaching, and"
+	para "clouds darken"
+	line "the sky, making"
+	para "it feel like the"
+	line "sun is pushed out"
+	cont "by the lightning."
+	
+	
 	done
 
 KeepReadingJournalText:
