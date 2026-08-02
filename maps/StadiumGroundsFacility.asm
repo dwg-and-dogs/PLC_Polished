@@ -329,6 +329,12 @@ StadiumFacility_Pokemon1Event:
 .NotHardDifficulty:
 	setscene $1
 	applyonemovement PLAYER, step_left
+
+; set trainers for next round 
+	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+; 
+
 	end
 
 ; ===== single shared name table =====
@@ -519,8 +525,8 @@ StadiumFacility_Pokemon2Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 28                      ; N = 28 mons
-	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
+;	setval 28                      ; N = 28 mons
+;	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
 
 ; ---- step 2: announce mon1, mon2, "or random" ----
 	setval 0
@@ -712,6 +718,10 @@ StadiumFacility_Pokemon2Event:
 	closetext
 	setscene $3
 	applyonemovement PLAYER, step_left
+; set trainers for next time 
+	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+
 	end
 
 ; ===== single shared name table =====
@@ -905,8 +915,8 @@ StadiumFacility_Pokemon3Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 25                      ; N = 25 mons
-	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
+;	setval 25                      ; N = 25 mons
+;	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
 
 ; ---- step 2: announce mon1, mon2, "or random" ----
 	setval 0
@@ -1086,6 +1096,10 @@ StadiumFacility_Pokemon3Event:
 	closetext
 	setscene $5
 	applyonemovement PLAYER, step_left
+	; set trainers for next 
+	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+
 	end
 
 ; ===== single shared name table =====
@@ -1261,8 +1275,8 @@ StadiumFacility_Pokemon4Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 25                      ; N = 25 mons
-	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
+;	setval 25                      ; N = 25 mons
+;	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
 
 ; ---- step 2: announce mon1, mon2, "or random" ----
 	setval 0
@@ -1442,6 +1456,8 @@ StadiumFacility_Pokemon4Event:
 	closetext
 	setscene $7
 	applyonemovement PLAYER, step_left
+	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	end
 
 ; ===== single shared name table =====
@@ -1617,8 +1633,8 @@ StadiumFacility_Pokemon5Event:
 	iffalse_jumptext FacilityGetReadyText
 	writetext FacilityExplainBallText
 	waitbutton
-	setval 39                      ; N = 39 mons
-	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
+;	setval 39                      ; N = 39 mons
+;	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
 
 ; ---- step 2: announce mon1, mon2, "or random" ----
 	setval 0
@@ -1854,6 +1870,8 @@ StadiumFacility_Pokemon5Event:
 	closetext
 	setscene $9
 	applyonemovement PLAYER, step_left
+	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	end
 
 ; ===== single shared name table =====
@@ -2123,8 +2141,8 @@ StadiumFacility_Trainers1Event:
 	writetext FacilityExplainTrainersText
 	waitbutton
 	closetext
-	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+;	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+;	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
@@ -2327,6 +2345,9 @@ StadiumFacility_Trainers1Event:
 	setevent EVENT_STADIUM_HEALED
 	setscene $2 
 	applyonemovement PLAYER, step_left
+	; for pokemon2event 
+	setval 28                      ; N = 28 mons
+	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
 	end
 
 StadiumFacility_Trainers2Event:
@@ -2344,8 +2365,8 @@ StadiumFacility_Trainers2Event:
 	writetext FacilityExplainTrainersText
 	waitbutton
 	closetext
-	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+;	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+;	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
@@ -2547,6 +2568,9 @@ StadiumFacility_Trainers2Event:
 	setevent EVENT_STADIUM_HEALED
 	setscene $4
 	applyonemovement PLAYER, step_left
+	; for pokemon3event 
+	setval 25                      ; N = 25 mons
+	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
 	end
 
 
@@ -2566,8 +2590,8 @@ StadiumFacility_Trainers3Event:
 	writetext FacilityExplainTrainersText
 	waitbutton
 	closetext
-	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+;	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+;	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
@@ -2769,6 +2793,9 @@ StadiumFacility_Trainers3Event:
 	setscene $6
 	setevent EVENT_STADIUM_HEALED
 	applyonemovement PLAYER, step_left
+	; for pokemon4event 
+	setval 25                      ; N = 25 mons
+	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
 	end
 
 StadiumFacility_Trainers4Event:
@@ -2787,8 +2814,8 @@ StadiumFacility_Trainers4Event:
 	writetext FacilityExplainTrainersText
 	waitbutton
 	closetext
-	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+;	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+;	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
@@ -2990,6 +3017,9 @@ StadiumFacility_Trainers4Event:
 	setevent EVENT_STADIUM_HEALED
 	setscene $8
 	applyonemovement PLAYER, step_left
+	; for pokemon5event 
+	setval 39                      ; N =  mons
+	special FacilityThreeRandoms   ; rolls 3 distinct values into First/Second/Third
 	end
 
 
@@ -3009,8 +3039,8 @@ StadiumFacility_Trainers5Event:
 	writetext FacilityExplainTrainersText
 	waitbutton
 	closetext
-	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+;	setval 20                       ; N = how many mons to choose among. setval passes the number to the next ... 
+;	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
@@ -3220,6 +3250,8 @@ StadiumFacility_Trainers5Event:
 	setscene 10
 	setevent EVENT_STADIUM_HEALED
 	applyonemovement PLAYER, step_left
+	setval 30                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	end
 
 
@@ -3241,8 +3273,8 @@ StadiumFacility_TrainersEndlessEvent:
 	writetext FacilityExplainTrainersText
 	waitbutton
 	closetext
-	setval 30                       ; N = how many mons to choose among. setval passes the number to the next ... 
-	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
+;	setval 30                       ; N = how many mons to choose among. setval passes the number to the next ... 
+;	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkAwayMovement  ; walks one step up, one step left, turns head down 
 .FacilityTrainerBattles:
 	checkevent EVENT_STADIUM_HEALED
@@ -3596,6 +3628,9 @@ StadiumFacility_TrainersEndlessEvent:
 	closetext
 	setevent EVENT_STADIUM_HEALED
 	applyonemovement PLAYER, step_left
+; trainers for next time 
+	setval 30                       ; N = how many mons to choose among. setval passes the number to the next ... 
+	special FacilityThreeRandoms   ; rolls 3 distinct values 0..N-1 into the 3 RAM bytes
 	end
 
 ; =================

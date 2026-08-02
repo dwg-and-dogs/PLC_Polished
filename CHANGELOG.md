@@ -154,13 +154,13 @@ Buff wild levels in Union Cave.
 Updated Completionist document. 
 
 Todo for v110:
-* Check leveling in early game 
+* Check leveling in early game; todo play through again 
 * Remove Doll Mart; replace with mart for light ball / berserk gene / stick / ... AND UPDATE ITEMS DOC & TODO TEST 
-* Update Random Rolls for stadium at end of N-1 script instead of start of N script
-* Update dialog if you fail to catch Heatran 
-* Add journal to kurt's house 
+* Update Random Rolls for stadium at end of N-1 script instead of start of N script --> todo check 
+* Add journal to kurt's house --> todo proofread and check in game 
+* Update npc in d den to unown --> todo check 
 
-* Redo all the documentation again: parties, learnsets, etc. 
+* All documentation (stadium docs done)
 
 * Publish:
 	* Stadium

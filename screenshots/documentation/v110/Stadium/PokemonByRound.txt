@@ -1,0 +1,155 @@
+# Stadium Grounds Facility — Pokémon Lists
+
+## Pokemon1 List (27)
+1. Victreebel
+2. Ancestor Magcargo
+3. Hisuian Electrode
+4. Galarian Slowbro
+5. Galarian Slowking
+6. Scizor
+7. Kleavor
+8. Minsir
+9. Yanmega
+10. Furret
+11. Pinsir
+12. Scyther
+13. Hippowdon
+14. Abomasnow
+15. Avalugg
+16. Heracross
+17. Forretress
+18. Magcargo
+19. Ariados
+20. Ledian
+21. Ancestor Noctowl
+22. Parasect
+23. Slowbro
+24. Slowking
+25. Quagsire
+26. Staraptor
+27. Jumpluff
+
+## Pokemon2 List (28)
+1. Alolan Golem
+2. Clefable
+3. Togekiss
+4. Bellossom
+5. Nidoqueen
+6. Jynx
+7. Blissey
+8. Toxicroak
+9. Golem
+10. Nidoking
+11. Exeggutor
+12. Granbull
+13. Azumarill
+14. Hitmonlee
+15. Hitmonchan
+16. Hitmontop
+17. Tangrowth
+18. Rapidash
+19. Bastiodon
+20. Raichu
+21. Meganium
+22. Weezing
+23. Sunflora
+24. Gardevoir
+25. Alolan Raichu
+26. Ancestor Meganium
+27. Galarian Weezing
+28. Galarian Rapidash
+
+## Pokemon3 List (25)
+1. Alolan Muk
+2. Sudowoodo
+3. Gengar
+4. Vileplume
+5. Wyrdeer
+6. Annihilape
+7. Ambipom
+8. Xatu
+9. Honchkrow
+10. Houndoom
+11. Crobat
+12. Ninetales
+13. Farigiraf
+14. Magmortar
+15. Basculegion
+16. Mismagius
+17. Dusknoir
+18. Weavile
+19. Entei
+20. Muk
+21. Electrode
+22. Donphan
+23. Spiritomb
+24. Rotom
+25. Ancestor Xatu
+
+## Pokemon4 List (25)
+1. Suicune
+2. Ampharos
+3. Politoed
+4. Poliwrath
+5. Gyarados
+6. Kingdra
+7. Shuckle
+8. Feraligatr
+9. Goodra
+10. Skarmory
+11. Drifblim
+12. Braviary
+13. Miltank
+14. Electivire
+15. Overqwil
+16. Tentacruel
+17. Octillery
+18. Lanturn
+19. Corsola
+20. Mantine
+21. Lapras
+22. Alolan Ninetales
+23. Galarian Corsola
+24. Galarian Exeggutor
+25. Ancestor Feraligatr
+
+## Pokemon5 List (39)
+1. Bloodmoon Ursaluna
+2. Typhlosion
+3. Decidueye
+4. Samurott
+5. Machamp
+6. Ursaluna
+7. Luxray
+8. Lucario
+9. Gallade
+10. Dragonite
+11. Tyranitar
+12. Hisuian Arcanine
+13. Steelix
+14. Dudunsparce
+15. Arcanine
+16. Hisuian Typhlosion
+17. Hisuian Decidueye
+18. Hisuian Samurott
+19. Jolteon
+20. Vaporeon
+21. Flareon
+22. Leafeon
+23. Sylveon
+24. Glaceon
+25. Espeon
+26. Umbreon
+27. Alakazam
+28. Magnezone
+29. Mamoswine
+30. Rhyperior
+31. Sneasler
+32. Porygon2
+33. PorygonZ
+34. Rampardos
+35. Bronzong
+36. Zoroark
+37. Garchomp
+38. Snorlax
+39. Gliscor

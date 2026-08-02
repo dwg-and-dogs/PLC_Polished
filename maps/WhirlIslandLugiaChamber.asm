@@ -60,6 +60,7 @@ WhirlIslandKurtLugiaScript:
 	setevent EVENT_WHIRL_ISLAND_LUGIA_CHAMBER_KURT
 	setevent EVENT_CIANWOODCITY_KURT
 	setevent EVENT_CIANWOODCITY_LUGIA
+	setevent EVENT_KURT_CAUGHT_LUGIA 
 	end
 	
 KurtLugiaText1:

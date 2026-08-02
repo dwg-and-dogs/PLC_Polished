@@ -1,0 +1,347 @@
+JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE 
+	opentext
+	writethistext
+		text "It's notes from"
+		line "the journey. Read"
+		cont "from start?"
+		done
+	yesorno
+	iffalse JournalFromEnd
+	
+;	closetext
+;	refreshscreen
+;	trainerpic KURT
+;	waitbutton
+;	closepokepic
+;	opentext
+	
+	writetext JournalText_Intro
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+; todo add ability to jump forward up to ten pages at a time 
+
+	checkevent EVENT_GOT_A_POKEMON
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic RIVAL1
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_GotAPokemon
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_LOGGERS_ILEX_FOREST
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatCamden
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_ILEX_SHRINE_CELEBI
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatIlexRival
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_TAMMY
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatUrsula
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_HOLLIS
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic HOLLIS
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatHollis
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_SANDRA
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic SANDRA
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatSandraTower
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_COOLTRAINERF_BETH
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatBeth
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_BOBESH_STADIUM
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic BOBESH
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatBobeshStadium
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_SANDRA_WARPED  
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_SandraWarped
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_GOT_BASEMENT_KEY
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_GotKurtsKey
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_WHITNEY
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatWhitney
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_ELDER_LI
+	iffalse_jumptext EndOfJournalText
+	
+	writetext JournalText_BeatElderLi
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_FALKNER
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatFalkner
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+	
+	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_BeatEmi
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+	
+	checkevent EVENT_BATTLED_AMOS_GARDEN
+	iffalse_jumptext EndOfJournalText
+	
+	closetext
+	refreshscreen
+	trainerpic MEJIMI
+	waitbutton
+	closepokepic
+	opentext
+	
+	writetext JournalText_BeatAmosGarden
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_SAMSARA 
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic SAMSARA
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatSamsara
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_LANDING_TIME_TRAVELED
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic BARBEAU
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BarbeauWarpedFromLanding
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_KURT_CAUGHT_LUGIA
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_KurtCatchesLugiaText
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_CIANWOODCITY_EUSINE 
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_WarpedFromCianwood
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_KENSEY_PORT
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic KENSEY
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatKenseyDocks
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_RIVAL_LIGHTHOUSE
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatRivalLighthouse
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_CHUCK
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatChuck
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_PRYCE
+	iffalse_jumptext EndOfJournalText
+
+	writetext JournalText_BeatPryce
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_FOUGHT_LAKE_RIVAL
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_BeatRivalLake
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_KANNA
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic KANNA
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatKanna
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_AMOS
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic AMOS
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatAmosRedoubt
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_BEAT_ADRINNA_MINE
+	iffalse_jumptext EndOfJournalText
+
+	closetext
+	refreshscreen
+	trainerpic ADRINNA
+	waitbutton
+	closepokepic
+	opentext
+
+	writetext JournalText_BeatAdrinnaMine
+	waitbutton
+	writetext KeepReadingJournalText
+	yesorno
+	iffalse_jumptext JournalOverText
+
+	checkevent EVENT_SKIRMISH_STARTED
+	iffalse_jumptext EndOfJournalText
+	writetext JournalText_BrassTowerAmbiguous
+	waitbutton
+	closetext
+	end

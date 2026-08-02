@@ -1054,7 +1054,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_CAMDEN ; CHECK TODO 
+	checkevent EVENT_LOGGERS_ILEX_FOREST
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_BeatCamden
@@ -1063,7 +1063,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_RIVAL_FOREST ; CHECK TODO 
+	checkevent EVENT_ILEX_SHRINE_CELEBI
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_BeatIlexRival
@@ -1072,7 +1072,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_URSULA ; CHECK TODO 
+	checkevent EVENT_BEAT_TAMMY
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_BeatUrsula
@@ -1081,7 +1081,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_HOLLIS ; CHECK TODO 
+	checkevent EVENT_BEAT_HOLLIS
 	iffalse_jumptext EndOfJournalText
 
 	closetext
@@ -1097,7 +1097,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_SANDRA_TOWER ; CHECK TODO 
+	checkevent EVENT_BEAT_SANDRA
 	iffalse_jumptext EndOfJournalText
 
 	closetext
@@ -1113,7 +1113,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_COOLTRAINER_BETH ; CHECK TODO 
+	checkevent EVENT_BEAT_COOLTRAINERF_BETH
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_BeatBeth
@@ -1122,7 +1122,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_BOBESH_STADIUM ; CHECK TODO 
+	checkevent EVENT_BEAT_BOBESH_STADIUM
 	iffalse_jumptext EndOfJournalText
 
 	closetext
@@ -1138,7 +1138,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_SANDRA_WARPED ; CHECK TODO 
+	checkevent EVENT_SANDRA_WARPED  
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_SandraWarped
@@ -1147,7 +1147,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_GOT_KURTS_BASEMENT_KEY; CHECK TODO 
+	checkevent EVENT_GOT_BASEMENT_KEY
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_GotKurtsKey
@@ -1156,7 +1156,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_WHITNEY; CHECK TODO 
+	checkevent EVENT_BEAT_WHITNEY
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_BeatWhitney
@@ -1165,7 +1165,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_ELDER_LI; CHECK TODO 
+	checkevent EVENT_BEAT_ELDER_LI
 	iffalse_jumptext EndOfJournalText
 	
 	writetext JournalText_BeatElderLi
@@ -1174,7 +1174,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_FALKNER; CHECK TODO 
+	checkevent EVENT_BEAT_FALKNER
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_BeatFalkner
@@ -1183,7 +1183,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 	
-	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI; CHECK TODO 
+	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI
 	iffalse_jumptext EndOfJournalText
 	writetext JournalText_BeatEmi
 	waitbutton
@@ -1191,7 +1191,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 	
-	checkevent EVENT_BEAT_AMOS_GARDEN; CHECK TODO 
+	checkevent EVENT_BATTLED_AMOS_GARDEN
 	iffalse_jumptext EndOfJournalText
 	
 	closetext
@@ -1207,7 +1207,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_SAMSARA_TOWER; CHECK TODO 
+	checkevent EVENT_BEAT_SAMSARA 
 	iffalse_jumptext EndOfJournalText
 
 	closetext
@@ -1223,7 +1223,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BARBEAU_WARPED; CHECK TODO 
+	checkevent EVENT_LANDING_TIME_TRAVELED
 	iffalse_jumptext EndOfJournalText
 
 	closetext
@@ -1239,7 +1239,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_KURT_GOT_TO_LUGIA_FIRST; CHECK TODO 
+	checkevent EVENT_KURT_CAUGHT_LUGIA
 	iffalse_jumptext EndOfJournalText
 	writetext JournalText_KurtCatchesLugiaText
 	waitbutton
@@ -1247,7 +1247,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_CIANWOOD_WARPED; CHECK TODO 
+	checkevent EVENT_CIANWOODCITY_EUSINE 
 	iffalse_jumptext EndOfJournalText
 	writetext JournalText_WarpedFromCianwood
 	waitbutton
@@ -1255,7 +1255,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_KENSEY_DOCKS; CHECK TODO 
+	checkevent EVENT_BEAT_KENSEY_PORT
 	iffalse_jumptext EndOfJournalText
 
 	closetext
@@ -1271,7 +1271,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_RIVAL_LIGHTHOUSE; CHECK TODO 
+	checkevent EVENT_RIVAL_LIGHTHOUSE
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_BeatRivalLighthouse
@@ -1280,7 +1280,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_CHUCK; CHECK TODO 
+	checkevent EVENT_BEAT_CHUCK
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_BeatChuck
@@ -1289,7 +1289,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_PRYCE; CHECK TODO 
+	checkevent EVENT_BEAT_PRYCE
 	iffalse_jumptext EndOfJournalText
 
 	writetext JournalText_BeatPryce
@@ -1298,7 +1298,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_RIVAL_LAKE; CHECK TODO 
+	checkevent EVENT_FOUGHT_LAKE_RIVAL
 	iffalse_jumptext EndOfJournalText
 	writetext JournalText_BeatRivalLake
 	waitbutton
@@ -1306,7 +1306,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_KANNA; CHECK TODO 
+	checkevent EVENT_BEAT_KANNA
 	iffalse_jumptext EndOfJournalText
 
 	closetext
@@ -1322,7 +1322,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_AMOS_REDOUBT; CHECK TODO 
+	checkevent EVENT_BEAT_AMOS
 	iffalse_jumptext EndOfJournalText
 
 	closetext
@@ -1338,7 +1338,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_ADRINNA_MINE; CHECK TODO 
+	checkevent EVENT_BEAT_ADRINNA_MINE
 	iffalse_jumptext EndOfJournalText
 
 	closetext
@@ -1354,7 +1354,7 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_AMOS_SENT_NINJAS_TO_TOWER ; CHECK TODO 
+	checkevent EVENT_SKIRMISH_STARTED
 	iffalse_jumptext EndOfJournalText
 	writetext JournalText_BrassTowerAmbiguous
 	waitbutton
@@ -1363,15 +1363,91 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 
 
 JournalFromEnd:
-	opentext
-	writethistext
-		text "Read the last"
-		line "entry?"
-		done
-	yesorno
-	iffalse_jumptext ; TODO
-	; todo check in reverse 
-	done
+	checkevent EVENT_SKIRMISH_STARTED
+	iftrue_jumptext JournalText_BrassTowerAmbiguous
+
+	checkevent EVENT_BEAT_ADRINNA_MINE
+	iftrue_jumptext JournalText_BeatAdrinnaMine
+
+	checkevent EVENT_BEAT_AMOS
+	iftrue_jumptext JournalText_BeatAmosRedoubt
+
+	checkevent EVENT_BEAT_KANNA
+	iftrue_jumptext JournalText_BeatKanna
+
+	checkevent EVENT_FOUGHT_LAKE_RIVAL
+	iftrue_jumptext JournalText_BeatRivalLake
+
+	checkevent EVENT_BEAT_PRYCE
+	iftrue_jumptext JournalText_BeatPryce
+
+	checkevent EVENT_BEAT_CHUCK
+	iftrue_jumptext JournalText_BeatChuck
+
+	checkevent EVENT_RIVAL_LIGHTHOUSE
+	iftrue_jumptext JournalText_BeatRivalLighthouse
+
+	checkevent EVENT_BEAT_KENSEY_PORT
+	iftrue_jumptext JournalText_BeatKenseyDocks
+
+	checkevent EVENT_CIANWOODCITY_EUSINE
+	iftrue_jumptext JournalText_WarpedFromCianwood
+
+	checkevent EVENT_KURT_CAUGHT_LUGIA
+	iftrue_jumptext JournalText_KurtCatchesLugiaText
+
+	checkevent EVENT_LANDING_TIME_TRAVELED
+	iftrue_jumptext JournalText_BarbeauWarpedFromLanding
+
+	checkevent EVENT_BEAT_SAMSARA
+	iftrue_jumptext JournalText_BeatSamsara
+
+	checkevent EVENT_BATTLED_AMOS_GARDEN
+	iftrue_jumptext JournalText_BeatAmosGarden
+
+	checkevent EVENT_BEAT_KIMONO_GIRL_AKARI
+	iftrue_jumptext JournalText_BeatEmi
+
+	checkevent EVENT_BEAT_FALKNER
+	iftrue_jumptext JournalText_BeatFalkner
+
+	checkevent EVENT_BEAT_ELDER_LI
+	iftrue_jumptext JournalText_BeatElderLi
+
+	checkevent EVENT_BEAT_WHITNEY
+	iftrue_jumptext JournalText_BeatWhitney
+
+	checkevent EVENT_GOT_BASEMENT_KEY
+	iftrue_jumptext JournalText_GotKurtsKey
+
+	checkevent EVENT_SANDRA_WARPED
+	iftrue_jumptext JournalText_SandraWarped
+
+	checkevent EVENT_BEAT_BOBESH_STADIUM
+	iftrue_jumptext JournalText_BeatBobeshStadium
+
+	checkevent EVENT_BEAT_COOLTRAINERF_BETH
+	iftrue_jumptext JournalText_BeatBeth
+
+	checkevent EVENT_BEAT_SANDRA
+	iftrue_jumptext JournalText_BeatSandraTower
+
+	checkevent EVENT_BEAT_HOLLIS
+	iftrue_jumptext JournalText_BeatHollis
+
+	checkevent EVENT_BEAT_TAMMY
+	iftrue_jumptext JournalText_BeatUrsula
+
+	checkevent EVENT_ILEX_SHRINE_CELEBI
+	iftrue_jumptext JournalText_BeatIlexRival
+
+	checkevent EVENT_LOGGERS_ILEX_FOREST
+	iftrue_jumptext JournalText_BeatCamden
+
+	checkevent EVENT_GOT_A_POKEMON
+	iftrue_jumptext JournalText_GotAPokemon
+
+	jumptext JournalText_Intro
 
 JournalText_Intro:
 	text_high
@@ -2231,8 +2307,6 @@ JournalText_BrassTowerAmbiguous:
 	para "it feel like the"
 	line "sun is pushed out"
 	cont "by the lightning."
-	
-	
 	done
 
 KeepReadingJournalText:
