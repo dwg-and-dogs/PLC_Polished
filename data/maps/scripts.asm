@@ -224,7 +224,7 @@ INCLUDE "maps/AzaleaTown.asm"
 INCLUDE "maps/AzaleaMart.asm"
 INCLUDE "maps/AzaleaGym.asm"
 INCLUDE "maps/CharcoalKiln.asm"
-INCLUDE "maps/KurtsHouse.asm"
+
 INCLUDE "maps/TinderGarden.asm"
 
 
@@ -425,7 +425,7 @@ INCLUDE "maps/ClastsCradleB1F.asm"
 INCLUDE "maps/ClastsCradleB1FCredit.asm"
 
 SECTION "Quiet Cave Scripts", ROMX
-
+INCLUDE "maps/KurtsHouse.asm"
 
 
 SECTION "Mount Mortar Scripts", ROMX

@@ -3718,7 +3718,8 @@ FacilityLossTextSilas:
 	done
 
 FacilityWinTextSandra:
-	text "todo"
+	text "YOUR CONNECTION"
+	line "RUNS DEEP"
 	done
 
 FacilityLossTextSandra:

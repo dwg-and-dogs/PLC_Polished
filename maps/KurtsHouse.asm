@@ -25,8 +25,8 @@ KurtsHouse_MapScriptHeader:
 
 	def_object_events
 	object_event    6,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KurtHouseScript, EVENT_KURTS_HOUSE_KURT_0 ;
-	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV5Script, EVENT_KURTS_HOUSE_NOTEBOOK
-	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, JournalBookScript, -1	
+	object_event  8,  4, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IlexExcelsiorV5Script, EVENT_KURTS_HOUSE_NOTEBOOK
+	object_event  7,  3, SPRITE_BOOK_PAPER_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, JournalBookScript, -1	
 	pokemon_event  14,  4, NATU, -1, -1, PAL_NPC_GREEN, KurtsHouseShuckleText, EVENT_GOT_A_POKEMON
 
 
@@ -104,6 +104,7 @@ KurtHouseEventScript:
 	writetext KurtOutroText0
 	promptbutton
 	special SpecialNameRival
+	turnobject KURTSHOUSE_KURT, RIGHT
 	writetext KurtOutroText	
 	waitbutton
 	closetext
@@ -145,9 +146,6 @@ MomPokegearText:
 	
 	para "Try making balls"
 	line "from many things!"
-;
-;	para "Oh, say, remind"
-;	line "me the day today?"
 	done
 
 MomDSTText:
@@ -180,7 +178,17 @@ KurtOutroText0:
 	done
 
 KurtOutroText:
-	text "What's holding up"
+	text "The ceremony can"
+	line "be confusing. You"
+	para "can always check"
+	line "this journal on"
+	para "the table here to"
+	line "remember what's"
+	para "going on. It's the"
+	line "green book. Check"
+	cont "it before we go!"
+	
+	para "What's holding up"
 	line "<RIVAL>? Go see."
 	cont "I'll wait outside."
 	done
@@ -913,8 +921,8 @@ endr
 	; good party
 
 	givepoke SAMUROTT, HISUIAN_FORM, 100
-	loadmem wPartyMon1Moves+0, SURF
-	loadmem wPartyMon1Moves+1, ICE_BEAM
+	loadmem wPartyMon1Moves+0, NIGHT_SLASH
+	loadmem wPartyMon1Moves+1, BULK_UP
 	loadmem wPartyMon1Moves+2, CEASELESS_EDGE 
 	loadmem wPartyMon1Moves+3, REST
 	loadmem wPartyMon1EVs+0, 252
@@ -943,7 +951,7 @@ endr
 	loadmem wPartyMon2DVs+2, $ff
 
 	givepoke TYPHLOSION, 100
-	loadmem wPartyMon3Moves+0, FLAMETHROWER
+	loadmem wPartyMon3Moves+0, CALM_MIND
 	loadmem wPartyMon3Moves+1, EARTH_POWER
 	loadmem wPartyMon3Moves+2, INFERNAL_PARADE
 	loadmem wPartyMon3Moves+3, BODY_SLAM
@@ -1010,7 +1018,7 @@ endr
 	closetext
 ; debug only
 ; debug 
-	warp WHISPERS_WAY, 9, 4
+	warp CIANWOOD_CAVE, 3, 20
 	end
 
 JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE 
@@ -1113,14 +1121,6 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_COOLTRAINERF_BETH
-	iffalse_jumptext EndOfJournalText
-
-	writetext JournalText_BeatBeth
-	waitbutton
-	writetext KeepReadingJournalText
-	yesorno
-	iffalse_jumptext JournalOverText
 
 	checkevent EVENT_BEAT_BOBESH_STADIUM
 	iffalse_jumptext EndOfJournalText
@@ -1165,14 +1165,6 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_BEAT_ELDER_LI
-	iffalse_jumptext EndOfJournalText
-	
-	writetext JournalText_BeatElderLi
-	waitbutton
-	writetext KeepReadingJournalText
-	yesorno
-	iffalse_jumptext JournalOverText
 
 	checkevent EVENT_BEAT_FALKNER
 	iffalse_jumptext EndOfJournalText
@@ -1271,15 +1263,6 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-	checkevent EVENT_RIVAL_LIGHTHOUSE
-	iffalse_jumptext EndOfJournalText
-
-	writetext JournalText_BeatRivalLighthouse
-	waitbutton
-	writetext KeepReadingJournalText
-	yesorno
-	iffalse_jumptext JournalOverText
-
 	checkevent EVENT_BEAT_CHUCK
 	iffalse_jumptext EndOfJournalText
 
@@ -1363,6 +1346,11 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 
 
 JournalFromEnd:
+	writethistext
+		text "Here's the last"
+		line "entry."
+		done
+	waitbutton
 	checkevent EVENT_SKIRMISH_STARTED
 	iftrue_jumptext JournalText_BrassTowerAmbiguous
 
@@ -1383,9 +1371,6 @@ JournalFromEnd:
 
 	checkevent EVENT_BEAT_CHUCK
 	iftrue_jumptext JournalText_BeatChuck
-
-	checkevent EVENT_RIVAL_LIGHTHOUSE
-	iftrue_jumptext JournalText_BeatRivalLighthouse
 
 	checkevent EVENT_BEAT_KENSEY_PORT
 	iftrue_jumptext JournalText_BeatKenseyDocks
@@ -1411,9 +1396,6 @@ JournalFromEnd:
 	checkevent EVENT_BEAT_FALKNER
 	iftrue_jumptext JournalText_BeatFalkner
 
-	checkevent EVENT_BEAT_ELDER_LI
-	iftrue_jumptext JournalText_BeatElderLi
-
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue_jumptext JournalText_BeatWhitney
 
@@ -1425,9 +1407,6 @@ JournalFromEnd:
 
 	checkevent EVENT_BEAT_BOBESH_STADIUM
 	iftrue_jumptext JournalText_BeatBobeshStadium
-
-	checkevent EVENT_BEAT_COOLTRAINERF_BETH
-	iftrue_jumptext JournalText_BeatBeth
 
 	checkevent EVENT_BEAT_SANDRA
 	iftrue_jumptext JournalText_BeatSandraTower

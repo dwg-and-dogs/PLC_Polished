@@ -152,31 +152,33 @@ Address a possible soft lock in Whispers Way.
 A few more hints in the early game. 
 Buff wild levels in Union Cave. 
 Updated Completionist document. 
+Revise Dragon's Den NPC. 
 
 Todo for v110:
 * Check leveling in early game; todo play through again 
 * Remove Doll Mart; replace with mart for light ball / berserk gene / stick / ... AND UPDATE ITEMS DOC & TODO TEST 
 * Update Random Rolls for stadium at end of N-1 script instead of start of N script --> todo check 
 * Add journal to kurt's house --> todo proofread and check in game 
-* Update npc in d den to unown --> todo check 
+* Update Nicknames for Morty, etc. 
 
-* All documentation (stadium docs done)
+* All documentation redo 
 
 * Publish:
 	* Stadium
-		* Overview
-		* Catching Phase
-		* Battle Phase with Elder
-		* Patron
-		* Endless Phase 
-	* New Forms: Alakazam, Ledian
-		On each slide:
-		* Front vs Backs
-		* Stat Distribution
-		* Met Locations
-	* Stadium Documentation
-		* Phase + Pokemon
-		* Trainer Teams	
+Bring one partner with full EVs and learnset optimized. Bring lots of Pokeballs, too. 
+
+Rounds start with a draft. Pick between two specified Pokémon, or gamble on a third. Then set its item and moves. Each round has a list of possible Pokemon. 
+
+Next are three trainers and a boss. Their team size matches yours. You get one heal for the four battles, so use it wisely.
+
+Survive five rounds and earn the Gold Trophy. Then it's endless! Your best run is immortalized as a gold trophy of your Pokémon. 
+
+There's a few more wrinkles, but you'll have to play to find out!
+
+
+
+	* Bottom right: Gold Trophy Plus Pokemon Trophy 
+
 
 vOneDay
 * Fix rest - sleep talk 

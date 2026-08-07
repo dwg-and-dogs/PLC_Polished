@@ -210,10 +210,20 @@ Breeder1Script:
 ;	loadmem wPartyMon3Moves+2, CUT
 ;	loadmem wPartyMon3Moves+3, FLY
 	givepoke GARCHOMP, NO_FORM, 100, LEFTOVERS
-;	loadmem wPartyMon4Moves+0, EARTHQUAKE
-;	loadmem wPartyMon4Moves+1, DRAGON_CLAW
-;	loadmem wPartyMon4Moves+2, STRENGTH
-;	loadmem wPartyMon4Moves+3, SWORDS_DANCE
+	loadmem wPartyMon4Moves+0, EARTHQUAKE
+	loadmem wPartyMon4Moves+1, DRAGON_CLAW
+	loadmem wPartyMon4Moves+2, STRENGTH
+	loadmem wPartyMon4Moves+3, SWORDS_DANCE
+	loadmem wPartyMon4EVs+0, 252
+	loadmem wPartyMon4EVs+1, 252
+	loadmem wPartyMon4EVs+2, 252
+	loadmem wPartyMon4EVs+3, 252
+	loadmem wPartyMon4EVs+4, 252
+	loadmem wPartyMon4EVs+5, 252
+	loadmem wPartyMon4DVs+0, $ff
+	loadmem wPartyMon4DVs+1, $ff
+	loadmem wPartyMon4DVs+2, $ff
+
 	givepoke LUGIA, NO_FORM, 100, LEFTOVERS  
 ;	loadmem wPartyMon5Moves+0, SURF
 ;	loadmem wPartyMon5Moves+1, PSYCHIC
