@@ -110,14 +110,14 @@ Minor text, tile, object palette issues.
 
 Major Updates: 
 Postgame Battle Facility: Stadium!
-	* Play right away from the debug room, or train up your 
+	* Play right away from the debug room, or train up your favorite Pokemon from your playthrough!
 New Ancestor forms: Ledian (Bug/Water Special Attacker with HA Drizzle) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in Anarres Holt and Cianwood Cave, respectively. 
 Max DV mons get a Black Triangle symbol in battle. 
+Add signature moves of Infernal Parade, Triple Arrows, Ceaseless Edge, Stone Axe, and Phantom Force. 
+Remove DoubleSlap, Teleport, Dragon Rage, Bonemerang, and Crabhammer. 
 Stadium Facility Rematches are a bit harder. 
 EV trainers in the Stadium Facility Prep Room. 
-Add signature moves of Infernal Parade, Triple Arrows, Ceaseless Edge, Stone Axe to Hisui Pokemon and some trainer teams. 
-Add Phantom Force. 
-Remove DoubleSlap, Teleport, Dragon Rage, Bonemerang, and Crabhammer. 
+
 
 Minor updates: 
 Move HM Fly to Magnet Train Station after Whitney. --> todo check 
@@ -153,31 +153,14 @@ A few more hints in the early game.
 Buff wild levels in Union Cave. 
 Updated Completionist document. 
 Revise Dragon's Den NPC. 
+Revised Goldenrod Dept Store Roof Mart to sell Berserk Genes. 
 
 Todo for v110:
-* Check leveling in early game; todo play through again 
-* Remove Doll Mart; replace with mart for light ball / berserk gene / stick / ... AND UPDATE ITEMS DOC & TODO TEST 
-* Update Random Rolls for stadium at end of N-1 script instead of start of N script --> todo check 
-* Add journal to kurt's house --> todo proofread and check in game 
-* Update Nicknames for Morty, etc. 
-
-* All documentation redo 
-
-* Publish:
-	* Stadium
-Bring one partner with full EVs and learnset optimized. Bring lots of Pokeballs, too. 
-
-Rounds start with a draft. Pick between two specified Pokémon, or gamble on a third. Then set its item and moves. Each round has a list of possible Pokemon. 
-
-Next are three trainers and a boss. Their team size matches yours. You get one heal for the four battles, so use it wisely.
-
-Survive five rounds and earn the Gold Trophy. Then it's endless! Your best run is immortalized as a gold trophy of your Pokémon. 
-
-There's a few more wrinkles, but you'll have to play to find out!
-
-
-
-	* Bottom right: Gold Trophy Plus Pokemon Trophy 
+1. * Check leveling in early game; todo play through again 
+2. * Add journal to kurt's house --> todo proofread and check in game 
+3. * Update nicknames in parties (7)
+4. * Remove Kleavor animation? Check all of them 
+5. * All documentation redo 
 
 
 vOneDay

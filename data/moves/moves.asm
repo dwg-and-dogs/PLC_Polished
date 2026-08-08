@@ -93,7 +93,7 @@ Moves::
 	move SLEEP_POWDER, EFFECT_SLEEP,               0, GRASS,      75, 15,   0, STATUS
 	move PETAL_DANCE,  EFFECT_RAMPAGE,           120, GRASS,     100, 10,   0, SPECIAL
 	move STRING_SHOT,  EFFECT_SPEED_DOWN_2,        0, BUG,        95, 40,   0, STATUS
-	move INFERNAL_PARADE,  EFFECT_INFERNAL_PARADE,      60, GHOST,    100, 15,   30, SPECIAL ; remove for infernal parade  (dragon rage) ; TODO IF POSSIBLE ADD THE HEX MECHANIC 
+	move INFERNAL_PARADE,  EFFECT_INFERNAL_PARADE,      60, GHOST,    100, 15,   30, SPECIAL 
 	move FIRE_SPIN,    EFFECT_TRAP,               35, FIRE,       85, 15,   0, SPECIAL
 	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       40, ELECTRIC,  100, 30,  10, SPECIAL
 	move THUNDERBOLT,  EFFECT_PARALYZE_HIT,       90, ELECTRIC,  100, 15,  10, SPECIAL
@@ -166,7 +166,7 @@ Moves::
 	move CEASELESS_EDGE,   EFFECT_CLESS_EDGE,        65, DARK,      90, 10,   0, PHYSICAL ; remove for ceaseless edge (crabhammer), also a high crit move 
 	move EXPLOSION,    EFFECT_EXPLOSION,         250, NORMAL,    100,  5,   0, PHYSICAL
 	move FURY_STRIKES, EFFECT_FURY_STRIKES,       18, NORMAL,     80, 15,   0, PHYSICAL
-	move TRIPLE_ARROWS,   EFFECT_TRIPLE_ARROWS,         90, FIGHTING,     90, 10,  50, PHYSICAL ; remove for triple arrows (bonemerang), ALSO A HIGH CRIT MOVE TODO 
+	move TRIPLE_ARROWS,   EFFECT_TRIPLE_ARROWS,         90, FIGHTING,     90, 10,  50, PHYSICAL  
 	move REST,         EFFECT_HEAL,                0, PSYCHIC,   100, 10,   0, STATUS
 	move ROCK_SLIDE,   EFFECT_FLINCH_HIT,         75, ROCK,       90, 10,  30, PHYSICAL
 	move HYPER_FANG,   EFFECT_FLINCH_HIT,         80, NORMAL,     90, 15,  10, PHYSICAL

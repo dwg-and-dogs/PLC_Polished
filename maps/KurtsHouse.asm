@@ -950,11 +950,11 @@ endr
 	loadmem wPartyMon2DVs+1, $ff
 	loadmem wPartyMon2DVs+2, $ff
 
-	givepoke TYPHLOSION, 100
+	givepoke TYPHLOSION, HISUIAN_FORM, 100
 	loadmem wPartyMon3Moves+0, CALM_MIND
 	loadmem wPartyMon3Moves+1, EARTH_POWER
 	loadmem wPartyMon3Moves+2, INFERNAL_PARADE
-	loadmem wPartyMon3Moves+3, BODY_SLAM
+	loadmem wPartyMon3Moves+3, THUNDERPUNCH
 	loadmem wPartyMon3EVs+0, 252
 	loadmem wPartyMon3EVs+1, 252
 	loadmem wPartyMon3EVs+2, 252
@@ -967,9 +967,9 @@ endr
 
 	givepoke KLEAVOR, 15
 	loadmem wPartyMon4Moves+0, STONE_AXE
-	loadmem wPartyMon4Moves+1, FIRE_PUNCH
-	loadmem wPartyMon4Moves+2, BODY_SLAM
-	loadmem wPartyMon4Moves+3, EARTHQUAKE
+	loadmem wPartyMon4Moves+1, SWORDS_DANCE
+	loadmem wPartyMon4Moves+2, WING_ATTACK
+	loadmem wPartyMon4Moves+3, X_SCISSOR
 ;	loadmem wPartyMon4EVs+0, 252
 ;	loadmem wPartyMon4EVs+1, 252
 ;	loadmem wPartyMon4EVs+2, 252
@@ -982,9 +982,9 @@ endr
 	
 	givepoke BASCULEGION, 15
 	loadmem wPartyMon5Moves+0, PHANTOM_FORCE
-	loadmem wPartyMon5Moves+1, DRAGON_CLAW
-	loadmem wPartyMon5Moves+2, EARTHQUAKE
-	loadmem wPartyMon5Moves+3, FIRE_PUNCH
+	loadmem wPartyMon5Moves+1, CRUNCH
+	loadmem wPartyMon5Moves+2, WATERFALL
+	loadmem wPartyMon5Moves+3, GIGA_IMPACT
 ;	loadmem wPartyMon5EVs+0, 252
 ;	loadmem wPartyMon5EVs+1, 252
 ;	loadmem wPartyMon5EVs+2, 252
@@ -1018,10 +1018,10 @@ endr
 	closetext
 ; debug only
 ; debug 
-	warp CIANWOOD_CAVE, 3, 20
+	warp GOLDENROD_DEPT_STORE_6F, 13, 4
 	end
 
-JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE 
+JournalBookScript:
 	opentext
 	writethistext
 		text "It's notes from"
@@ -1044,7 +1044,6 @@ JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
 	yesorno
 	iffalse_jumptext JournalOverText
 
-; todo add ability to jump forward up to ten pages at a time 
 
 	checkevent EVENT_GOT_A_POKEMON
 	iffalse_jumptext EndOfJournalText
@@ -1652,7 +1651,7 @@ JournalText_SandraWarped:
 	text_high
     text " Stadium Grounds: " 
 	next
-	text_start ; todo fix
+	text_start 
 	
 	text "Stopped Tyrus'"
 	line "plan, and had"

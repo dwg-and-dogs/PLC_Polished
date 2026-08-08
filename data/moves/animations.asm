@@ -999,7 +999,7 @@ BattleAnim_FireSpin:
 	anim_wait 96
 	anim_ret
 
-BattleAnim_InfernalParade: ; todo check , cf shadow ball and dragon rage 
+BattleAnim_InfernalParade: 
 	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_SMOKE
 	anim_bgp $1b
 	anim_sound 6, 2, SFX_SLUDGE_BOMB

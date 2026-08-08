@@ -317,7 +317,11 @@ StadiumFacility_Pokemon1Event:
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
@@ -712,7 +716,11 @@ StadiumFacility_Pokemon2Event:
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
@@ -1090,7 +1098,11 @@ StadiumFacility_Pokemon3Event:
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
@@ -1450,7 +1462,11 @@ StadiumFacility_Pokemon4Event:
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
@@ -1864,7 +1880,11 @@ StadiumFacility_Pokemon5Event:
 	opentext
 	writetext FacilityCurrentStreakText
 	waitbutton
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	writetext FacilityComeBackWhenYoureReadyText
 	waitbutton
 	closetext
@@ -2151,9 +2171,14 @@ StadiumFacility_Trainers1Event:
 	writetext FacilityHealPartyText
 	yesorno
 	iffalse .AlreadyHealed
+
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	setevent EVENT_STADIUM_HEALED
-	; todo add heal sfx 
+
 .AlreadyHealed:
 	closetext
 	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
@@ -2336,7 +2361,12 @@ StadiumFacility_Trainers1Event:
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_SILAS
 	disappear STADIUM_FACILITY_HOLLIS	
+
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
 	writetext StadiumFacilityClerkPostRoundText
@@ -2375,9 +2405,12 @@ StadiumFacility_Trainers2Event:
 	writetext FacilityHealPartyText
 	yesorno
 	iffalse .AlreadyHealed
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	setevent EVENT_STADIUM_HEALED
-	; todo add heal sfx 
 .AlreadyHealed:
 	closetext
 	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
@@ -2559,7 +2592,10 @@ StadiumFacility_Trainers2Event:
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_SILAS
 	disappear STADIUM_FACILITY_SANDRA	
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
 	writetext StadiumFacilityClerkPostRoundText
@@ -2600,9 +2636,13 @@ StadiumFacility_Trainers3Event:
 	writetext FacilityHealPartyText
 	yesorno
 	iffalse .AlreadyHealed
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	setevent EVENT_STADIUM_HEALED
-	; todo add heal sfx 
+
 .AlreadyHealed:
 	closetext
 	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
@@ -2784,7 +2824,11 @@ StadiumFacility_Trainers3Event:
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_SYBIL
 	disappear STADIUM_FACILITY_SAMSARA	
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
 	writetext StadiumFacilityClerkPostRoundText
@@ -2824,9 +2868,13 @@ StadiumFacility_Trainers4Event:
 	writetext FacilityHealPartyText
 	yesorno
 	iffalse .AlreadyHealed
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	setevent EVENT_STADIUM_HEALED
-	; todo add heal sfx 
+
 .AlreadyHealed:
 	closetext
 	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
@@ -3008,7 +3056,11 @@ StadiumFacility_Trainers4Event:
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_REMY
 	disappear STADIUM_FACILITY_BARBEAU	
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
 	writetext StadiumFacilityClerkPostRoundText
@@ -3049,9 +3101,12 @@ StadiumFacility_Trainers5Event:
 	writetext FacilityHealPartyText
 	yesorno
 	iffalse .AlreadyHealed
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	setevent EVENT_STADIUM_HEALED
-	; todo add heal sfx 
 .AlreadyHealed:
 	closetext
 	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
@@ -3233,7 +3288,11 @@ StadiumFacility_Trainers5Event:
 	special UpdateStadiumStreak
 	setevent EVENT_FACILITY_AMOS
 	disappear STADIUM_FACILITY_AMOS	
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext
 	writetext StadiumFacilityClerkPostRoundText
@@ -3283,9 +3342,13 @@ StadiumFacility_TrainersEndlessEvent:
 	writetext FacilityHealPartyText
 	yesorno
 	iffalse .AlreadyHealed
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	setevent EVENT_STADIUM_HEALED
-	; todo add heal sfx 
+
 .AlreadyHealed:
 	closetext
 	checkevent EVENT_BEAT_THIRD_FACILITY_TRAINER
@@ -3619,7 +3682,11 @@ StadiumFacility_TrainersEndlessEvent:
 
 .EndOfBossFinals:
 ; end of random elder selection 
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special RestartMapMusic
+
 	special UpdateStadiumStreak
 	applymovement STADIUM_FACILITY_CLERK, ClerkWalkTowardsMovement
 	opentext

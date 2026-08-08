@@ -482,7 +482,7 @@ PinecoHeadbuttScript1:
 	line "sickly yellow."
 	done
 
-LedianAncestorScript:  ; todo 
+LedianAncestorScript:
 	opentext
 	writetext WeirdLedianText
 	waitbutton

@@ -3032,12 +3032,12 @@ Ledian_AncestorEvosAttacks: ; TODO IMPROVE
 	db 12, SAFEGUARD
 	db 15, MACH_PUNCH
 	db 20, BUBBLE_BEAM ; Silver Wind → event move
-	db 24, WATERFALL ; Comet Punch → new move
+	db 24, AGILITY ; Comet Punch → new move
 	db 29, BATON_PASS
-	db 33, AGILITY
+	db 33, BUG_BUZZ
 	db 38, HYDRO_PUMP
-	db 42, BUG_BUZZ
-	db 47, DOUBLE_EDGE
+	db 42, AIR_SLASH
+	db 47, ICY_WIND
 	db 0 ; no more level-up moves
 
 
