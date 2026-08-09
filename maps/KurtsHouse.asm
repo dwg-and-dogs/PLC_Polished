@@ -1433,7 +1433,6 @@ JournalText_Intro:
 	next
 	text_start 
 
-
 	text "Grandpa Kurt says"
 	line "he's going to do"
 	para "the Ilex Ceremony"
@@ -1441,10 +1440,11 @@ JournalText_Intro:
 	cont "my parents."
 	
 	para "He asked me to go"
-	line "get <RIVAL>, but"
-	para "I thought they"
-	line "didn't get along?"
-
+	line "get <RIVAL> from"
+	cont "the Charcoal Kiln"
+	para "but I thought"
+	line "Kurt didn't like"
+	cont "<RIVAL>?"
 	done
 
 JournalText_GotAPokemon:
@@ -1502,7 +1502,7 @@ JournalText_BeatCamden:
 	line "and stop Johto"
 	cont "from modernizing."
 	
-	para "Then we would've"
+	para "Then we will have"
 	line "completed Celebi's"
 	cont "request!"
 	done
@@ -1514,7 +1514,7 @@ JournalText_BeatIlexRival:
 	text_start 
 
 	text "<RIVAL> appeared"
-	line "right was we were"
+	line "right as we were"
 	para "going to insert"
 	line "the GS Ball."
 	
@@ -1532,7 +1532,7 @@ JournalText_BeatIlexRival:
 	para "trying to handle"
 	line "an infestation of"
 	cont "Pineco without"
-	cont "any input."
+	cont "any input. Say,"
 
 	para "I wonder what the"
 	line "Slowpoke Well was"
@@ -1543,8 +1543,8 @@ JournalText_BeatIlexRival:
 	para "to stop whatever"
 	line "outside influence"
 	para "is going to set"
-	line "Johto on a path"
-	cont "away from Celebi."
+	line "Johto on an"
+	cont "unnatural path."
 	done
 
 JournalText_BeatUrsula:
@@ -1553,7 +1553,7 @@ JournalText_BeatUrsula:
 	next
 	text_start 
 
-	text "Met an inventor"
+	text "Met Ursula"
 	line "from Anarres. She"
 	para "invented a method"
 	line "to remove Pineco"
@@ -1579,14 +1579,14 @@ JournalText_BeatHollis:
 	line "HM, so now we can"
 	para "go north to stop"
 	line "the unnatural"
-	cont "invention Celebi"
+	cont "force that Celebi"
 	cont "referenced."
 	
 	para "There was someone"
 	line "named Amos there,"
 	para "before I arrived,"
 	line "but he left in a"
-	cont "hurry. He was"
+	cont "hurry. Amos was"
 	para "telling Silas to"
 	line "take the Emperor's"
 	para "threat more"
@@ -1649,26 +1649,28 @@ JournalText_BeatBobeshStadium:
 	
 JournalText_SandraWarped:
 	text_high
-    text " Stadium Grounds: " 
+    text "Stadium Grounds: " 
 	next
 	text_start 
 	
-	text "Stopped Tyrus'"
-	line "plan, and had"
-	cont "another encounter"
-	para "with the magnetic"
-	line "General Andrea."
+	text "I had another"
+	line "encounter with"
+	para "magnetic General"
+	line "Andrea. She comp-"
+	cont "limented how I"
+	para "defeated Tyrus"
+	line "with little help"
+	cont "from others."
 
-	cont "myself. Is that how"
-	cont "how <RIVAL> feels?"
-	
-	para "Sandra warped me back"
+	para "Sandra warped me"
+	line "to the modern day"
+	cont "National Park."
 	
 	para "The drought has"
 	line "hit the National"
 	cont "Park fountain,"
-	para "now just an empty"
-	line "basin."
+	para "which is now just"
+	line "an empty basin."
 	done
 	
 JournalText_GotKurtsKey:
@@ -1690,10 +1692,9 @@ JournalText_GotKurtsKey:
 	cont "anywhere else."
 	
 	para "Whitney's show is"
-	line "so different than"
-	cont "I remember:"
+	line "so different."
 	
-	para "she has more att-"
+	para "She has more att-"
 	line "ention than ever,"
 	
 	para "but still says"
@@ -1724,8 +1725,8 @@ JournalText_BeatWhitney:
 	
 	para "I guess he wants"
 	line "to be adopted by"
-	cont "Silph now to make"
-	cont "his distiller for"
+	para "Silph now to make"
+	line "a distiller for"
 	cont "Olivine now."
 	
 	para "Had a battle with"
@@ -1735,10 +1736,9 @@ JournalText_BeatWhitney:
 	para "anymore because"
 	line "they're boring."
 	
-	para "But I wonder if"
-	line "it's not more"
-	cont "related to what"
-	cont "<RIVAL> said."
+	para "Or is it more"
+	line "because of what"
+	cont "<RIVAL> said?"
 	
 	para "Sneaking out the"
 	line "Radio Tower to"
@@ -1766,17 +1766,20 @@ JournalText_BeatFalkner:
 	
 	para "Falkner had a dig"
 	line "to uncover a"
-	cont "Bronzong to do a"
-	cont "Rain Dance on his"
-	cont "renovated Tower."
+	para "Bronzong to do a"
+	line "Rain Dance on his"
+	cont "renovated Tower,"
+	para "which will bring"
+	line "clouds from all"
+	cont "over to Violet."
 	
 	para "Why is there a"
 	line "Bronzong there,"
 	cont "I wonder?"
 	
 	para "Elder Li told me"
-	line "to remind him of"
-	cont "his roots."
+	line "to remind Falkner"
+	cont "of his roots."
 	
 	para "After our battle"
 	line "he saw that he"
@@ -1791,7 +1794,7 @@ JournalText_BeatFalkner:
 	
 JournalText_BeatEmi:
 	text_high
-    text " Bellchime Trail: " 
+    text "Bellchime Trail: " 
 	next
 	text_start 
 	
@@ -1802,28 +1805,22 @@ JournalText_BeatEmi:
 	para "He's going to make"
 	line "his distiller for"
 	para "Silph in Olivine"
-	line "for some project"
-	cont "related to water"
-	cont "desalination."
+	line "for a seawater"
+	cont "distiller."
 	
 	para "Sounds great, but"
 	line "Silph has already"
 	para "bungled the Lake"
-	line "of Rage project"
-	para "and the logging"
-	line "in Ilex. Hope it"
-	cont "goes better here."
+	line "of Rage project!"
 	
 	para "Dance Theatre had"
 	line "an immersive show"
-	para "about the events"
-	line "of the Burned"
-	cont "Tower."
+	para "about the Burned"
+	line "Tower."
 	
 	para "As a reward, we"
 	line "were invited to"
 	cont "Bellchime Trail."
-
 
 	done
 	
@@ -1835,7 +1832,7 @@ JournalText_BeatAmosGarden:
 	
 	text "Chronicler Emi"
 	line "prayed with me at"
-	cont "Bellchime Trail"
+	cont "Bellchime Trail,"
 	
 	para "sending me back"
 	line "to when Ecruteak"
@@ -1853,16 +1850,15 @@ JournalText_BeatAmosGarden:
 	
 	para "General Andrea"
 	line "battled me, and"
-	cont "gave me a Silver"
-	cont "Wing, inviting me"
-	cont "westward to the"
-	cont "Trader's Landing."
+	para "gave me a Silver"
+	line "Wing, inviting me"
+	para "westward to the"
+	line "Trader's Landing."
 	
 	para "She gave me the"
 	line "Strength HM the"
-	cont "last time she met"
-	cont "me - what is she"
-	cont "up to?"
+	cont "last time we met"
+	cont "what's she up to?"
 	
 	para "Just afterward, I"
 	line "was ambushed by"
@@ -1883,12 +1879,12 @@ JournalText_BeatAmosGarden:
 	line "moat. Perhaps an"
 	para "elder in the Tin"
 	line "Tower will have"
-	cont "a way to help."	
+	cont "a way to help."
 	done
 	
 JournalText_BeatSamsara:
 	text_high
-    text " W. Capital: " 
+    text "Western Capital: " 
 	next
 	text_start 
 	
@@ -1904,10 +1900,10 @@ JournalText_BeatSamsara:
 	para "buy time for them"
 	line "to convince him"
 	para "that his plan is"
-	line "against nature."
+	line "unnatural."
 	
 	para "Must head to the"
-	line "Trader's Landing,"
+	line "Trader's Landing."
 	
 	para "I wonder if the"
 	line "Silver Wing will"
@@ -1917,7 +1913,7 @@ JournalText_BeatSamsara:
 
 JournalText_BarbeauWarpedFromLanding:
 	text_high
-    text " T. Landing: " 
+    text "Traders Landing: " 
 	next
 	text_start 
 	
@@ -1937,15 +1933,15 @@ JournalText_BarbeauWarpedFromLanding:
 	
 	para "since they're used"
 	line "to sailing to and"
-	cont "fro from shore to"
-	cont "island, protected"
+	para "fro from shore to"
+	line "sea, protected"
 	cont "by Lugia."
 	
 	para "Elder Remy has"
 	line "blessed Kurt's"
 	para "plan to bring"
 	line "Lugia from our"
-	cont "timeline to them,"
+	cont "timeline to them"
 	
 	para "so that Lugia can"
 	line "wreck Nemo's port."
@@ -1968,16 +1964,17 @@ JournalText_KurtCatchesLugiaText:
 	line "within the Whirl"
 	cont "Islands."
 	
-	para "Kurt caught her"
+	para "Kurt caught Lugia"
 	line "to bring back to"
 	cont "General Nemo's"
 	cont "Docks."
 	
-	para "He seems changed,"
-	line "somehow. We need"
-	para "to head to what's"
-	line "left of Cianwood"
-	cont "City to reach the"
+	para "Kurt is changed,"
+	line "somehow."
+	para "We need to visit"
+	line "what's left of"
+	para "Cianwood so we"
+	line "can access the"
 	cont "Docks."
 	done
 
@@ -1991,26 +1988,26 @@ JournalText_WarpedFromCianwood:
 	line "Cianwood City."
 	
 	para "He explained that"
-	line "a large hurricane"
+	line "a hurricane"
 	para "grew so large,"
 	line "so fast, that"
 	para "Chuck and others"
-	line "couldn't react in"
-	para "time to save the"
-	line "city."
+	line "couldn't react."
 	
 	para "Kurt showed him"
 	line "Lugia, but there"
 	para "was so much less"
 	line "reverence for her"
-	cont "compared to the"
-	cont "way Eusine spoke."
+	para "compared to the"
+	line "way Eusine spoke."
 	
 	para "I worry for what"
 	line "may happen to"
 	cont "Kurt. Was he "
 	para "meant to handle"
 	line "this much power?"	
+	
+	para "Is anyone?"
 	done
 	
 JournalText_BeatKenseyDocks: 
@@ -2026,13 +2023,13 @@ JournalText_BeatKenseyDocks:
 	
 	para "Lugia, once the"
 	line "guardian of the"
-	cont "sea, may be gone"
-	cont "forever. After"
+	para "sea, may be gone"
+	line "forever. After"
 	cont "using Aeroblast,"
 	para "she disappeared"
 	line "beneath the waves"
 	para "like a full moon"
-	line "falls below the"
+	line "falling below the"
 	cont "horizon."
 	
 	para "Elder Remy and"
@@ -2042,8 +2039,8 @@ JournalText_BeatKenseyDocks:
 	
 	para "I wonder: are we"
 	line "still worthy to"
-	cont "complete Celebi's"
-	cont "quest?"
+	para "complete Celebi's"
+	line "quest?"
 	done
 	
 JournalText_BeatChuck: 
@@ -2074,7 +2071,7 @@ JournalText_BeatChuck:
 	
 	para "OMLAS is a Slow-"
 	line "king that washed"
-	cont "up in the storm,"
+	cont "up in the storm"
 	
 	para "with a massive"
 	line "Tentacruel on its"
@@ -2106,14 +2103,8 @@ JournalText_BeatChuck:
 	para "Pryce can help us"
 	line "reach the Eastern"
 	cont "Mines, the last"
-	para "source of power"
-	line "for Emperor Ves-"
-	cont "per and General"
-	cont "Andrea."
-	
-	para "We must set Johto"
-	line "on a better path."
-	
+	para "stronghold for"
+	line "Emperor Vesper."	
 	done
 
 JournalText_BeatPryce: 
@@ -2122,10 +2113,9 @@ JournalText_BeatPryce:
 	next
 	text_start 
 	
-	text "Pryce agreed to"
-	line "take us to the"
-	cont "drained Lake of"
-	cont "Rage."
+	text "Pryce will take "
+	line "us to the drained"
+	cont "Lake of Rage."
 	
 	para "However, he said"
 	line "something:"
@@ -2134,10 +2124,9 @@ JournalText_BeatPryce:
 	line "staying here to"
 	cont "build the future?"
 
-	para "When this is all"
-	line "done, I must"
-	cont "reflect on his"
-	cont "words more."
+	para "When this is over"
+	line "I must reflect on"
+	cont "his words."
 	done
 
 JournalText_BeatRivalLake:
@@ -2151,8 +2140,8 @@ JournalText_BeatRivalLake:
 	cont "Lake of Rage."
 	
 	para "The site was once"
-	line "a freshwater pro-"
-	cont "ject for Silph."
+	line "a freshwater site"
+	cont "managed by Silph."
 	
 	para "Their advanced"
 	line "technology has"
@@ -2160,9 +2149,9 @@ JournalText_BeatRivalLake:
 	line "shambles, but has"
 	para "also revealed the"
 	line "ruins of temples"
-	para "which resemble"
-	line "those at Ruins of"
-	cont "Alph."
+	para "that look a bit"
+	line "like those at the"
+	cont "Ruins of Alph."
 	
 	para "The site was once"
 	line "a gathering place"
@@ -2199,7 +2188,8 @@ JournalText_BeatKanna:
 	
 	para "I only have one"
 	line "chance to stop"
-	cont "Andrea again."
+	cont "General Andrea:"
+	cont "in her mine."
 	
 	done
 
@@ -2220,8 +2210,11 @@ JournalText_BeatAmosRedoubt:
 	cont "on to aid him."
 
 	para "We will now siege"
-	line "General Andrea's"
-	cont "mine."
+	line "the mine to stop"
+	para "General Andrea"
+	line "from catching a"
+	para "truly powerful"
+	line "#mon."
 	done
 
 JournalText_BeatAdrinnaMine:
@@ -2258,16 +2251,15 @@ JournalText_BrassTowerAmbiguous:
 	text_start 
 	
 	text "There's only one"
-	line "obstacle left:"
+	line "obstacle left,"
 	para "Emperor Vesper in"
 	line "his tower. If we"
 	para "can stop him,"
-	line "maybe Johto can"
-	para "be on a better"
-	line "path. But I can't"
-	para "stop thinking"
-	line "about Andrea's"
-	cont "offer."
+	line "then Johto can"
+	cont "avoid the unnatu-"
+	line "ral path."
+	para "But Andrea's words"
+	line "echo in my mind."
 		
 	para "I contain Kurt's"
 	line "traditionalism,"
@@ -2276,15 +2268,17 @@ JournalText_BrassTowerAmbiguous:
 	cont "all behind."
 	
 	para "Must put those"
-	line "thoughts away."
+	line "thoughts away!"
 	
-	para "There's a storm"
-	line "approaching, and"
+	para "A thunderstorm"
+	line "approaches, its"
 	para "clouds darken"
 	line "the sky, making"
 	para "it feel like the"
-	line "sun is pushed out"
-	cont "by the lightning."
+	line "sun and moon are"
+	para "washed out by"
+	line "the lightning."
+	
 	done
 
 KeepReadingJournalText:
