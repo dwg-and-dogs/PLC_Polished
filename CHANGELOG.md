@@ -92,8 +92,8 @@ Fix Sandbox L100 team.
 Garchomp gets Swords Dance. 
 Kirlia and Snorunt now evolve with the Dawn Stone. 
 Fixed Snover palette. 
-Ursaluna Bloodmoon respawns with credits.  (todo: check)
-Easier time travel with a Pokemon in Ecruteak and Western Capital. (todo: check!)
+Ursaluna Bloodmoon respawns with credits. 
+Easier time travel with a Pokemon in Ecruteak and Western Capital. 
 
 * Release 1.0.5
 
@@ -121,7 +121,7 @@ EV trainers in the Stadium Facility Prep Room.
 Revised some trainer pokemon nicknames. 
 
 Minor updates: 
-Move HM Fly to Magnet Train Station after Whitney. --> todo check 
+Move HM Fly to Magnet Train Station after Whitney.
 Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
 Higher EVs for the Stadium Rematch teams. 
 Updated composition for Stadium Rematch teams. 
@@ -157,19 +157,12 @@ Revise Dragon's Den NPC.
 Revised Goldenrod Dept Store Roof Mart to sell Berserk Genes. 
 
 Todo for v110:
-1. * Check leveling in early game; todo play through again 
-2. * Double check animations 
-4. * All documentation redo, INCLUDING ENEMY TEAMS 
-
+* Check leveling in early game; todo play through again 
+* Double check animations
+* All documentation redo, INCLUDING ENEMY TEAMS 
 
 vOneDay
-* Fix rest - sleep talk 
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
-* Move animations??
 
-v120
-* Epilogue: New Bark --> Blackthorn
-
-
-Last updated: 07/12/26
+Last updated: 08/11/26
 

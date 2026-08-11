@@ -6,6 +6,8 @@ You can report bugs on the discord or to me on Reddit by DM, u/dwg6m9.
 
 ### Which file do I need to play?
 
+Patches are hosted on HackDex and in the ["releases" folder.](todo)
+
 If you don't have a gbc file, the ROM you should use for patching:
 
 * Pokémon - Crystal Version (UE) (V1.0) [C][!].gbc
@@ -140,21 +142,27 @@ Some first forms, especially babies, were removed to make room for more evolutio
 
 ### Is there documentation for all the {Pokémon, items, moves, etc}?
 
-The game's [documentation](screenshots/documentation/v100) contains:
+The game's [documentation](screenshots/documentation/v110) contains:
 
-* [Level Caps](screenshots/documentation/v100/CrystalInheritance_LevelCaps_v100.txt)
-* [Evolution Methods](screenshots/documentation/v100/CrystalInheritance_evolution_methods_v100.txt)
-* [Faithful Mode Differences](screenshots/documentation/v100/CrystalInheritance_FaithfulMode_Changes_v100.txt)
-* [Learnsets](screenshots/documentation/v100/CrystalInheritance_evos_attacks_v100.txt)
-* [Item Locations](screenshots/documentation/v100/CrystalInheritance_Items_v100.pdf)
-* [Completionist Tasks](screenshots/documentation/v100/CrystalInheritance_Completionist_v100.txt)
-* [Encounters](screenshots/documentation/v100/CrystalInheritance_Encounters_v100.pdf)
+* [Level Caps](screenshots/documentation/v110/LevelCaps_CrystalInheritance_v110.txt)
+* [Evolution Methods](screenshots/documentation/v110/EvolutionMethods_Inheritance_v110.txt)
+* [Learnsets](screenshots/documentation/v110/EvosAttacks_Inheritance_v110.txt)
+* [Item Locations](screenshots/documentation/v110/Items_CrystalInheritance_v110.pdf)
+* [Encounters](screenshots/documentation/v110/Encounters_CrystalInheritance_v110.pdf)
+* [100% Guide](screenshots/documentation/v110/Completionist_CrystalInheritance_v110.pdf)
 
+Trainer Guides:
+* [Easy](screenshots/documentation/v110/trainer_guide_easy.pdf) TODO 
+* [Easy](screenshots/documentation/v110/trainer_guide_normal.pdf)
+* [Easy](screenshots/documentation/v110/trainer_guide_hard.pdf)
 
 You may also be interested in:
+* [Full Dex](screenshots/documentation/v110/Pokedex_CrystalInheritance_v110.png)
+* [Sandbox Room Typed Pokemon] (screenshots/documentation/v110/GiftMonTypes_SandboxRoom_CrystalInheritance_v110.txt)
+* [Faithful Mode Differences](screenshots/documentation/v110/FaithfulModeChanges_CrystalInheritance_Changes_v110.txt)
 * [Egg moves](data/pokemon/egg_moves.asm)
-* [Box Art](screenshots/Inheritance_Publish/PLC_BOX_v3.png)
-* [Base stats and TM learnsets](data/pokemon/base_stats/)
+* [Box Art](sscreenshots/documentation/v110/BoxArt_CrystalInheritance_ThxToNicMondo_060526.png)
+* [Base stats, TM/HM, Abilities](data/pokemon/base_stats/)
 * [Move attributes](data/moves/moves.asm)
 * [TM+HM+tutor list](data/moves/tmhm_moves.asm)
 * [Wild Pokémon](data/wild/)
@@ -360,10 +368,9 @@ Your rival feels bitter about the way he has been treated in Azalea and joins Si
 
 	Kimono 2: Talk to the hedgehog from the south, then east, then north, then south, then east. 
 
-![Kimono3](screenshots/Inheritance_Publish/Features/kimono3.png) 
+![Kimono3](screenshots/Inheritance_Publish/Features/solved_puzzles/kimono3.png) 
 
-![Kimono4](screenshots/Inheritance_Publish/Features/kimono_cabin_4_sudoku.png) 
-
+![Kimono4](screenshots/Inheritance_Publish/Features/solved_puzzles/kimono_cabin_4_sudoku.png) 
 
 
 Whirl Islands:
