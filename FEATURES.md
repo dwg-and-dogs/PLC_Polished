@@ -73,10 +73,6 @@ Pokémon with the highest possible DV for a given hidden power type will have a 
 
 ![Features](screenshots/Inheritance_Publish/Features/pokedex_front_images.png) 
 
-## Spotify Playlist
-
-Curated playlist: https://open.spotify.com/playlist/1yUCVhCgMnO10MIXvMtyh4?si=fc0b8107a7724a80
-
 # Features from Polished Crystal 3.0.0
 
 ## Battle Mechanics

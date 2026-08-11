@@ -292,5 +292,7 @@
 	dba Meganium_ancestorFrontpic
 	dba Magcargo_ancestorFrontpic
 	dba Xatu_ancestorFrontpic
-
+	dba Ledian_ancestorFrontpic
+	dba Alakazam_ancestorFrontpic
+	
 ;   bursaluna 

@@ -1,0 +1,12 @@
+Stadium description: 
+1. Enter with a Lv100 Pokemon
+2. Have the opportunity to catch one of three Lv100 Pokemon, two of which are known to you and one of which is a mystery. Your team size is now two.
+3. Party is healed. You have access to a move relearner, the option to use TM, adjust held items, etc. After 15 battle streak you can ask for a gift from you patron. 
+4. Battle four trainers with the same party size as you, but at a lower level, with the option to heal once at any point. The last trainer is a bit harder.
+5. Repeat steps 2-4 until your party size is 6 Pokemon.
+
+Some other notes: 
+* For each "round" of steps 2-4 there is a roster of Pokemon available. Enemies can only use the same Pokemon as you can up to that point, minus the Pokemon you brought at Step 1.
+* In expert mode, enemies have increasing amounts of EV from 0 to 50 over the five rounds. Your first Pokemon can have up to 252 EV in each stat because it's Gen 2. The Pokemon you catch will be stuck at 0 EVs.
+* There are many functional NPCs in the stadium prep area to help you grind EVs or purchase items. 
+

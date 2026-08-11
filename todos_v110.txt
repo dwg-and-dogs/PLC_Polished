@@ -1,5 +1,0 @@
-C:\Users\dwg11\PLC_Polished\maps\KurtsHouse.asm:
-  Line 816: DebugRadioScriptKurt: ; TODO ALWAYS CHECK BEFORE SUBMITTING
-  Line 1024: JournalBookScript: ; TODO ADD TRAINERPICS OR ITEMPICS TO ALL OF THESE
-  Line 1047: ; todo add ability to jump forward up to ten pages at a time
-  Line 1655: text_start ; todo fix

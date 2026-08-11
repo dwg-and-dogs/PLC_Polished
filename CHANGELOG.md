@@ -112,12 +112,13 @@ Major Updates:
 Postgame Battle Facility: Stadium!
 	* Play right away from the debug room, or train up your favorite Pokemon from your playthrough!
 New Ancestor forms: Ledian (Bug/Water Special Attacker with HA Drizzle) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in Anarres Holt and Cianwood Cave, respectively. 
+Journal in Kurt's house will recap the plot. 
 Max DV mons get a Black Triangle symbol in battle. 
 Add signature moves of Infernal Parade, Triple Arrows, Ceaseless Edge, Stone Axe, and Phantom Force. 
 Remove DoubleSlap, Teleport, Dragon Rage, Bonemerang, and Crabhammer. 
 Stadium Facility Rematches are a bit harder. 
 EV trainers in the Stadium Facility Prep Room. 
-
+Revised some trainer pokemon nicknames. 
 
 Minor updates: 
 Move HM Fly to Magnet Train Station after Whitney. --> todo check 
@@ -157,10 +158,8 @@ Revised Goldenrod Dept Store Roof Mart to sell Berserk Genes.
 
 Todo for v110:
 1. * Check leveling in early game; todo play through again 
-2. * Add journal to kurt's house --> todo proofread and check in game 
-3. * Update nicknames in parties (7)
-4. * Remove Kleavor animation? Check all of them 
-5. * All documentation redo 
+2. * Double check animations 
+4. * All documentation redo, INCLUDING ENEMY TEAMS 
 
 
 vOneDay

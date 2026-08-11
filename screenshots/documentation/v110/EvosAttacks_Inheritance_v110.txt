@@ -1,3 +1,8 @@
+INCLUDE "constants.asm"
+SECTION "Evolutions and Attacks", ROMX
+INCLUDE "data/pokemon/evolution_moves.asm"
+INCLUDE "data/pokemon/evos_attacks_pointers.asm"
+EvosAttacks::
 CyndaquilEvosAttacks:
 	db EVOLVE_LEVEL, 14, QUILAVA
 	db 1, TACKLE
@@ -47,6 +52,7 @@ TyphlosionEvosAttacks:
 	db 56, EARTH_POWER
 	db 60, FLARE_BLITZ
 Typhlosion_HisuianEvosAttacks:
+	db 1, PHANTOM_FORCE
 	db 1, FIRE_PUNCH
 	db 1, TACKLE
 	db 1, LEER
@@ -57,10 +63,9 @@ Typhlosion_HisuianEvosAttacks:
 	db 24, FLAME_CHARGE
 	db 31, SWIFT
 	db 35, DIG
-	db 43, SHADOW_BALL
-	db 48, FLAMETHROWER
-	db 56, WILL_O_WISP
-	db 60, FLARE_BLITZ
+	db 40, INFERNAL_PARADE
+	db 46, FLAMETHROWER
+	db 52, FLARE_BLITZ
 RowletEvosAttacks:
 	db EVOLVE_LEVEL, 16, DARTRIX
 	db 1, TACKLE
@@ -107,7 +112,7 @@ DecidueyeEvosAttacks:
 	db 31, FALSE_SWIPE
 	db 39, AIR_SLASH
 	db 45, PETAL_DANCE
-	db 50, SHADOW_BALL
+	db 50, PHANTOM_FORCE
 	db 55, BRAVE_BIRD
 	db 60, SOLAR_BEAM
 Decidueye_HisuianEvosAttacks:
@@ -120,11 +125,11 @@ Decidueye_HisuianEvosAttacks:
 	db 22, ENERGY_BALL
 	db 28, WING_ATTACK
 	db 31, FALSE_SWIPE
-	db 39, AIR_SLASH
+	db 39, TRIPLE_ARROWS
 	db 45, PETAL_DANCE
-	db 50, AURA_SPHERE
-	db 55, CLOSE_COMBAT
-	db 60, SOLAR_BEAM
+	db 49, AIR_SLASH
+	db 53, AURA_SPHERE
+	db 57, SOLAR_BEAM
 OshawottEvosAttacks:
 	db EVOLVE_LEVEL, 16, DEWOTT
 	db 1, TACKLE
@@ -187,11 +192,10 @@ Samurott_HisuianEvosAttacks:
 	db 25, SLASH
 	db 30, AQUA_TAIL
 	db 33, HEADBUTT
-	db 40, REST
+	db 39, CEASELESS_EDGE
 	db 45, HYDRO_PUMP
 	db 50, CRUNCH
-	db 55, MEGAHORN
-	db 60, SWORDS_DANCE
+	db 54, SWORDS_DANCE
 HoothootEvosAttacks:
 	db EVOLVE_LEVEL, 18, NOCTOWL
 	db EVOLVE_ITEM, ODD_SOUVENIR, NOCTOWL
@@ -245,7 +249,7 @@ Noctowl_ImmortalEvosAttacks:
 	db 35, DREAM_EATER
 	db 35, KNOCK_OFF
 	db 41, HAZE
-	db 45, HEX
+	db 45, PHANTOM_FORCE
 	db 55, PAIN_SPLIT
 PikachuEvosAttacks:
 	db EVOLVE_ITEM, THUNDERSTONE, RAICHU
@@ -356,7 +360,7 @@ ClefairyEvosAttacks:
 	db 1, GROWL
 	db 1, ENCORE
 	db 7, SING
-	db 10, DOUBLE_SLAP
+	db 10, FURY_STRIKES
 	db 13, CHARM
 	db 16, SWEET_KISS
 	db 19, DIZZY_PUNCH
@@ -379,7 +383,7 @@ ClefableEvosAttacks:
 	db 1, SING
 	db 1, MINIMIZE
 	db 1, METRONOME
-	db 1, DOUBLE_SLAP
+	db 1, FURY_STRIKES
 	db 31, METRONOME
 	db 34, REFLECT
 	db 37, LIGHT_SCREEN
@@ -587,6 +591,7 @@ ParasEvosAttacks:
 	db 49, HEALINGLIGHT
 	db 54, X_SCISSOR
 ParasectEvosAttacks:
+	db 1, PHANTOM_FORCE
 	db 1, SHADOW_CLAW
 	db 1, TACKLE
 	db 2, SLEEP_POWDER
@@ -637,8 +642,8 @@ PrimeapeEvosAttacks:
 	db 30, FEINT_ATTACK
 	db 35, THRASH
 	db 39, CLOSE_COMBAT
-	db 44, SCREECH
-	db 48, OUTRAGE
+	db 44, OUTRAGE
+	db 48, PHANTOM_FORCE
 	db 53, GUNK_SHOT
 AnnihilapeEvosAttacks:
 	db 1, RAGE
@@ -656,9 +661,9 @@ AnnihilapeEvosAttacks:
 	db 30, FEINT_ATTACK
 	db 35, THRASH
 	db 39, CLOSE_COMBAT
-	db 44, SCREECH
-	db 48, OUTRAGE
-	db 53, SWORDS_DANCE
+	db 44, OUTRAGE
+	db 48, PHANTOM_FORCE
+	db 53, GUNK_SHOT
 GrowlitheEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
 	db EVOLVE_ITEM, ODD_SOUVENIR, ARCANINE
@@ -737,7 +742,7 @@ PoliwagEvosAttacks:
 	db 1, SWEET_KISS
 	db 1, WATER_GUN
 	db 5, HYPNOSIS
-	db 8, DOUBLE_SLAP
+	db 8, FURY_STRIKES
 	db 11, AQUA_JET
 	db 16, MUD_SLAP
 	db 18, RAIN_DANCE
@@ -754,7 +759,7 @@ PoliwhirlEvosAttacks:
 	db 1, SWEET_KISS
 	db 1, WATER_GUN
 	db 5, HYPNOSIS
-	db 8, DOUBLE_SLAP
+	db 8, FURY_STRIKES
 	db 11, AQUA_JET
 	db 15, AMNESIA
 	db 18, RAIN_DANCE
@@ -768,7 +773,7 @@ PoliwhirlEvosAttacks:
 PoliwrathEvosAttacks:
 	db 1, BUBBLE_BEAM
 	db 1, HYPNOSIS
-	db 1, DOUBLE_SLAP
+	db 1, FURY_STRIKES
 	db 1, HYPNOSIS
 	db 1, KARATE_CHOP
 	db 1, AQUA_JET
@@ -781,7 +786,7 @@ PolitoedEvosAttacks:
 	db 1, GIGA_DRAIN
 	db 1, BUBBLE_BEAM
 	db 1, HYPNOSIS
-	db 1, DOUBLE_SLAP
+	db 1, FURY_STRIKES
 	db 1, PERISH_SONG
 	db 27, SWAGGER
 	db 48, HYPER_VOICE
@@ -1159,10 +1164,11 @@ SlowpokeEvosAttacks:
 	db 1, CURSE
 	db 1, TACKLE
 	db 5, GROWL
-	db 9, WATER_GUN
-	db 14, CONFUSION
-	db 19, DISABLE
-	db 23, HEADBUTT
+	db 7, CONFUSION
+	db 10, WATER_GUN
+	db 14, DISABLE
+	db 19, HEADBUTT
+	db 24, PSYBEAM
 	db 28, WATER_PULSE
 	db 32, ZEN_HEADBUTT
 	db 36, SAFEGUARD
@@ -1411,6 +1417,7 @@ GastlyEvosAttacks:
 	db 47, PERISH_SONG
 HaunterEvosAttacks:
 	db EVOLVE_LEVEL, 40, GENGAR
+	db 1, PHANTOM_FORCE
 	db 1, SHADOW_CLAW
 	db 1, HYPNOSIS
 	db 1, LICK
@@ -1596,7 +1603,7 @@ Exeggutor_AlolanEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, CONFUSION
 	db 1, DRAGON_PULSE
-	db 17, DRAGON_RAGE
+	db 17, DRAGON_PULSE
 	db 27, ZEN_HEADBUTT
 	db 37, POWER_WHIP
 	db 47, OUTRAGE
@@ -1768,7 +1775,7 @@ ChanseyEvosAttacks:
 	db 1, GROWL
 	db 5, LEER
 	db 9, SWEET_KISS
-	db 12, DOUBLE_SLAP
+	db 12, FURY_STRIKES
 	db 16, FRESH_SNACK
 	db 20, METRONOME
 	db 23, MINIMIZE
@@ -1786,7 +1793,7 @@ BlisseyEvosAttacks:
 	db 1, GROWL
 	db 5, LEER
 	db 9, SWEET_KISS
-	db 12, DOUBLE_SLAP
+	db 12, FURY_STRIKES
 	db 16, FRESH_SNACK
 	db 20, METRONOME
 	db 23, MINIMIZE
@@ -1927,7 +1934,7 @@ KleavorEvosAttacks:
 	db 17, AGILITY
 	db 21, WING_ATTACK
 	db 25, BUG_BITE
-	db 29, SLASH
+	db 29, STONE_EDGE
 	db 33, ROCK_SLIDE
 	db 37, ANCIENTPOWER
 	db 41, X_SCISSOR
@@ -1943,7 +1950,7 @@ JynxEvosAttacks:
 	db 5, SING
 	db 8, SCREECH
 	db 11, ICY_WIND
-	db 15, DOUBLE_SLAP
+	db 15, FURY_STRIKES
 	db 18, ICE_PUNCH
 	db 21, METRONOME
 	db 25, MEAN_LOOK
@@ -2080,11 +2087,10 @@ GyaradosEvosAttacks:
 	db 1, WATERFALL
 	db 1, BITE
 	db 1, THRASH
-	db 1, DRAGON_RAGE
 	db 1, WRAP
 	db 21, LEER
 	db 24, GUST
-	db 27, DRAGON_RAGE
+	db 27, ICE_SHARD
 	db 30, AQUA_TAIL
 	db 33, SCARY_FACE
 	db 36, DRAGONBREATH
@@ -2097,7 +2103,6 @@ GyaradosEvosAttacks:
 	db 57, OUTRAGE
 LaprasEvosAttacks:
 	db 1, ANCIENTPOWER
-	db 1, DRAGON_RAGE
 	db 1, DRAGONBREATH
 	db 1, SING
 	db 1, GROWL
@@ -2553,12 +2558,12 @@ Ledian_AncestorEvosAttacks:
 	db 12, SAFEGUARD
 	db 15, MACH_PUNCH
 	db 20, BUBBLE_BEAM
-	db 24, WATERFALL
+	db 24, AGILITY
 	db 29, BATON_PASS
-	db 33, AGILITY
+	db 33, BUG_BUZZ
 	db 38, HYDRO_PUMP
-	db 42, BUG_BUZZ
-	db 47, DOUBLE_EDGE
+	db 42, AIR_SLASH
+	db 47, ICY_WIND
 SpinarakEvosAttacks:
 	db EVOLVE_LEVEL, 14, ARIADOS
 	db 1, POISON_STING
@@ -2977,6 +2982,7 @@ MisdreavusEvosAttacks:
 	db 55, POWER_GEM
 	db 62, NASTY_PLOT
 MismagiusEvosAttacks:
+	db 1, PHANTOM_FORCE
 	db 1, POWER_GEM
 	db 1, SHADOW_BALL
 	db 1, FLAMETHROWER
@@ -3001,38 +3007,32 @@ YanmaEvosAttacks:
 	db 11, DOUBLE_TEAM
 	db 14, SONIC_BOOM
 	db 17, PROTECT
-	db 22, DRAGON_RAGE
-	db 27, AIR_SLASH
-	db 30, PURSUIT
+	db 22, WING_ATTACK
+	db 27, DRAGONBREATH
+	db 30, AIR_SLASH
 	db 33, ANCIENTPOWER
-	db 38, HYPNOSIS
-	db 43, WING_ATTACK
+	db 38, BUG_BUZZ
+	db 43, U_TURN
 	db 46, SCREECH
-	db 49, U_TURN
-	db 54, HURRICANE
-	db 57, BUG_BUZZ
-	db 62, DREAM_EATER
+	db 49, HURRICANE
+	db 54, DRAGON_PULSE
 YanmegaEvosAttacks:
-	db 1, DRAGONBREATH
-	db 1, NIGHT_SLASH
-	db 1, TACKLE
+	db 1, GUST
 	db 1, FORESIGHT
 	db 1, BUG_BITE
 	db 6, QUICK_ATTACK
 	db 11, DOUBLE_TEAM
 	db 14, SONIC_BOOM
 	db 17, PROTECT
-	db 22, DRAGON_RAGE
-	db 27, AIR_SLASH
-	db 30, PURSUIT
+	db 22, WING_ATTACK
+	db 27, DRAGONBREATH
+	db 30, AIR_SLASH
 	db 33, ANCIENTPOWER
-	db 38, DRAGONBREATH
-	db 43, WING_ATTACK
+	db 38, BUG_BUZZ
+	db 43, U_TURN
 	db 46, SCREECH
-	db 49, U_TURN
-	db 54, AIR_SLASH
-	db 57, BUG_BUZZ
-	db 62, FLY
+	db 49, HURRICANE
+	db 54, DRAGON_PULSE
 UnownEvosAttacks:
 	db 1, HIDDEN_POWER
 	db 5, GLARE
@@ -3123,7 +3123,6 @@ DunsparceEvosAttacks:
 	db 16, FURY_STRIKES
 	db 18, ANCIENTPOWER
 	db 21, BODY_SLAM
-	db 23, DRAGON_RAGE
 	db 26, ROOST
 	db 28, TAKE_DOWN
 	db 31, DRAGON_DANCE
@@ -3146,7 +3145,6 @@ DudunsparceEvosAttacks:
 	db 16, FURY_STRIKES
 	db 18, ANCIENTPOWER
 	db 21, BODY_SLAM
-	db 23, DRAGON_RAGE
 	db 26, ROOST
 	db 28, TAKE_DOWN
 	db 31, DRAGON_DANCE
@@ -3942,7 +3940,7 @@ BastiodonEvosAttacks:
 	db 50, STONE_EDGE
 	db 55, REST
 AipomEvosAttacks:
-	db EVOLVE_MOVE, DOUBLE_SLAP, AMBIPOM
+	db EVOLVE_MOVE, FURY_STRIKES, AMBIPOM
 	db 1, TACKLE
 	db 1, LEER
 	db 4, MUD_SLAP
@@ -3953,12 +3951,12 @@ AipomEvosAttacks:
 	db 22, METRONOME
 	db 25, SCREECH
 	db 29, AGILITY
-	db 32, DOUBLE_SLAP
+	db 32, FURY_STRIKES
 	db 36, ACROBATICS
 	db 39, NASTY_PLOT
 	db 43, DOUBLE_EDGE
 AmbipomEvosAttacks:
-	db 1, DOUBLE_SLAP
+	db 1, FURY_STRIKES
 	db 1, MUD_SLAP
 	db 1, METRONOME
 	db 1, SCREECH
@@ -3985,7 +3983,7 @@ DrifloonEvosAttacks:
 	db 42, EXPLOSION
 	db 48, AMNESIA
 DrifblimEvosAttacks:
-	db 1, ASTONISH
+	db 1, PHANTOM_FORCE
 	db 1, MINIMIZE
 	db 6, GUST
 	db 10, FOCUS_ENERGY
@@ -4031,6 +4029,7 @@ SpiritombEvosAttacks:
 	db 40, HYPNOSIS
 	db 40, DREAM_EATER
 	db 44, SHADOW_BALL
+	db 47, PHANTOM_FORCE
 	db 50, NASTY_PLOT
 GibleEvosAttacks:
 	db EVOLVE_LEVEL, 24, GABITE
@@ -4234,6 +4233,7 @@ FroslassEvosAttacks:
 	db 1, ICE_SHARD
 	db 1, HEX
 	db 1, HAIL
+	db 1, PHANTOM_FORCE
 	db 24, DRAIN_KISS
 	db 28, ICY_WIND
 	db 33, SPIKES
@@ -4307,6 +4307,7 @@ BasculegionEvosAttacks:
 	db 21, SCARY_FACE
 	db 24, AQUA_TAIL
 	db 30, CRUNCH
+	db 38, PHANTOM_FORCE
 	db 46, ZEN_HEADBUTT
 	db 50, DOUBLE_EDGE
 	db 55, OUTRAGE
@@ -4456,7 +4457,7 @@ ZoruaEvosAttacks:
 	db 44, NASTY_PLOT
 	db 48, EXTRASENSORY
 ZoroarkEvosAttacks:
-	db 1, ASTONISH
+	db 1, PHANTOM_FORCE
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, TRANSFORM
@@ -4479,9 +4480,8 @@ DratiniEvosAttacks:
 	db 5, THUNDER_WAVE
 	db 11, AQUA_JET
 	db 15, HEADBUTT
-	db 21, DRAGON_RAGE
+	db 21, DRAGONBREATH
 	db 25, AGILITY
-	db 31, DRAGONBREATH
 	db 35, AQUA_TAIL
 	db 41, BARRIER
 	db 45, SAFEGUARD
@@ -4494,10 +4494,9 @@ DragonairEvosAttacks:
 	db 1, LEER
 	db 5, THUNDER_WAVE
 	db 11, AQUA_JET
-	db 15, DRAGON_RAGE
 	db 21, HEADBUTT
 	db 25, AGILITY
-	db 33, DRAGONBREATH
+	db 33, DRAGON_PULSE
 	db 39, AQUA_TAIL
 	db 47, BARRIER
 	db 53, SAFEGUARD
@@ -4516,7 +4515,6 @@ DragoniteEvosAttacks:
 	db 1, WING_ATTACK
 	db 5, THUNDER_WAVE
 	db 11, AQUA_JET
-	db 15, DRAGON_RAGE
 	db 21, HEADBUTT
 	db 25, AGILITY
 	db 33, DRAGONBREATH

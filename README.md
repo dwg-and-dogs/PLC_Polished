@@ -17,4 +17,4 @@ In modern Johto, you'll confront Johto's wayward gym leaders as they wonder how 
 
 Nothing is inevitable - what path will you choose?
 
-![Box Art](screenshots/Inheritance_Publish/PLC_BOX_v3.png) 
+![Box Art](screenshots/Inheritance_BoxArt/pokemon_crystal_inheritance_cover_NicMondo_060526.png) 

@@ -12,8 +12,8 @@ KurtsHouse_MapScriptHeader:
 
 
 	def_bg_events
-;	bg_event  6,  1, BGEVENT_JUMPSTD, radio2
-	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
+	bg_event  6,  1, BGEVENT_JUMPSTD, radio2
+;	bg_event  6,  1, BGEVENT_READ, DebugRadioScriptKurt;	
 ;	bg_event  6,  1, BGEVENT_READ, TimeShiftRadio	
 	bg_event  8,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
 	bg_event  9,  0, BGEVENT_JUMPTEXT, KurtsHouseOakPhotoText
@@ -1031,13 +1031,7 @@ JournalBookScript:
 	yesorno
 	iffalse JournalFromEnd
 	
-;	closetext
-;	refreshscreen
-;	trainerpic KURT
-;	waitbutton
-;	closepokepic
-;	opentext
-	
+
 	writetext JournalText_Intro
 	waitbutton
 	writetext KeepReadingJournalText
@@ -1528,7 +1522,7 @@ JournalText_BeatIlexRival:
 	para "sending us back"
 	line "in time. Met the"
 	para "Elder of Anarres,"
-	line "Hollis, who is"
+	line "Silas, who is"
 	para "trying to handle"
 	line "an infestation of"
 	cont "Pineco without"
@@ -1553,7 +1547,7 @@ JournalText_BeatUrsula:
 	next
 	text_start 
 
-	text "Met Ursula"
+	text "Battled Ursula"
 	line "from Anarres. She"
 	para "invented a method"
 	line "to remove Pineco"
@@ -1575,7 +1569,7 @@ JournalText_BeatHollis:
 	line "to use Ursula's"
 	cont "invention."
 	
-	para "Gave me the Cut"
+	para "Gave us the Cut"
 	line "HM, so now we can"
 	para "go north to stop"
 	line "the unnatural"
@@ -1599,13 +1593,14 @@ JournalText_BeatSandraTower:
 	next
 	text_start 
 	
-	text "Explored historic"
-	line "Goldenrod. Path"
-	para "north blocked, so"
-	line "I asked the Elder"
-	para "atop the tower"
-	line "to help get past."
-		
+	text "Path north from"
+	line "Gauldenrod is"
+	para "blocked, so I"
+	line "went atop the"
+	para "tower to ask"
+	line "Elder Sandra for"
+	cont "assistance."
+			
 	para "When our battle"
 	line "ended, Brigaders"
 	cont "from the Capital"
@@ -1626,8 +1621,9 @@ JournalText_BeatSandraTower:
 	para "also wanted to "
 	line "see Sandra. Why"
 	para "are there signs"
-	line "calling for his"
-	cont "arrest?"
+	line "calling to"
+	cont "arrest Amos in"
+	cont "Gauldenrod?"
 	done
 	
 JournalText_BeatBobeshStadium:
@@ -1643,13 +1639,13 @@ JournalText_BeatBobeshStadium:
 	line "Tyrus. Used the"
 	para "Strength HM to"
 	line "divert a spring"
-	para "filling the Stad-"
-	line "ium with water."
+	para "to flood the"
+	line "Stadium."
 	done
 	
 JournalText_SandraWarped:
 	text_high
-    text "Stadium Grounds: " 
+    text " Stadium Grounds: " 
 	next
 	text_start 
 	
@@ -1702,10 +1698,9 @@ JournalText_GotKurtsKey:
 	
 	para "Need to sneak out"
 	line "the Radio Tower"
-	para "onto the tracks"
-	line "so we can find a"
-	cont "way to Ecruteak."
-	
+	para "onto the Magnet"
+	line "Train tracks to"
+	cont "get to Ecruteak."
 	done
 	
 JournalText_BeatWhitney:
@@ -1768,7 +1763,7 @@ JournalText_BeatFalkner:
 	line "to uncover a"
 	para "Bronzong to do a"
 	line "Rain Dance on his"
-	cont "renovated Tower,"
+	cont "Sprout Tower,"
 	para "which will bring"
 	line "clouds from all"
 	cont "over to Violet."
@@ -1794,7 +1789,7 @@ JournalText_BeatFalkner:
 	
 JournalText_BeatEmi:
 	text_high
-    text "Bellchime Trail: " 
+    text " Bellchime Trail: " 
 	next
 	text_start 
 	
@@ -1845,7 +1840,7 @@ JournalText_BeatAmosGarden:
 	
 	para "The Emperor has a"
 	line "plan to re-make"
-	cont "Johto and squash"
+	cont "Johto and remake"
 	cont "its traditions."
 	
 	para "General Andrea"
@@ -1857,7 +1852,7 @@ JournalText_BeatAmosGarden:
 	
 	para "She gave me the"
 	line "Strength HM the"
-	cont "last time we met"
+	cont "last time we met,"
 	cont "what's she up to?"
 	
 	para "Just afterward, I"
@@ -1884,7 +1879,7 @@ JournalText_BeatAmosGarden:
 	
 JournalText_BeatSamsara:
 	text_high
-    text "Western Capital: " 
+    text " Western Capital: " 
 	next
 	text_start 
 	
@@ -1905,15 +1900,15 @@ JournalText_BeatSamsara:
 	para "Must head to the"
 	line "Trader's Landing."
 	
-	para "I wonder if the"
-	line "Silver Wing will"
-	cont "be of use?"
+	para "What will they"
+	line "think of my"
+	cont "Silver Wing?"
 		
 	done
 
 JournalText_BarbeauWarpedFromLanding:
 	text_high
-    text "Traders Landing: " 
+    text " Trader's Landing: " 
 	next
 	text_start 
 	
@@ -1924,12 +1919,12 @@ JournalText_BarbeauWarpedFromLanding:
 	
 	para "It's now a place"
 	line "where outsider"
-	para "tech, like #balls"
-	line "and items, are"
-	cont "copied for Johto."
+	para "tech, like items"
+	line "and #balls, "
+	cont "are copied."
 	
-	para "The locals don't"
-	line "seem to enjoy it,"
+	para "The locals are"
+	line "opposed to it,"
 	
 	para "since they're used"
 	line "to sailing to and"
@@ -1971,11 +1966,9 @@ JournalText_KurtCatchesLugiaText:
 	
 	para "Kurt is changed,"
 	line "somehow."
-	para "We need to visit"
-	line "what's left of"
-	para "Cianwood so we"
-	line "can access the"
-	cont "Docks."
+	para "He was headed to"
+	line "a petroglyph on"
+	cont "Cianwood shore."
 	done
 
 JournalText_WarpedFromCianwood:
@@ -1992,7 +1985,8 @@ JournalText_WarpedFromCianwood:
 	para "grew so large,"
 	line "so fast, that"
 	para "Chuck and others"
-	line "couldn't react."
+	line "couldn't build a"
+	cont "seawall in time."
 	
 	para "Kurt showed him"
 	line "Lugia, but there"
@@ -2051,13 +2045,17 @@ JournalText_BeatChuck:
 	
 	text "Olivine is not a"
 	line "port town but a"
-	cont "distiller town."
+	cont "Desal Plant town."
 	
 	para "Only problem, the"
 	line "Machine Part that"
 	para "goes to <RIVAL>'s"
-	line "distiller is"
+	line "machine is"
 	cont "missing."
+	
+	para "Who could've"
+	line "removed it, with"
+	cont "all the security?"
 	
 	para "Had a run-in with"
 	line "him. He seemed"
@@ -2255,9 +2253,9 @@ JournalText_BrassTowerAmbiguous:
 	para "Emperor Vesper in"
 	line "his tower. If we"
 	para "can stop him,"
-	line "then Johto can"
-	cont "avoid the unnatu-"
-	line "ral path."
+	line "Johto can avoid"
+	cont "the unnatural"
+	cont "path."
 	para "But Andrea's words"
 	line "echo in my mind."
 		
@@ -2271,13 +2269,10 @@ JournalText_BrassTowerAmbiguous:
 	line "thoughts away!"
 	
 	para "A thunderstorm"
-	line "approaches, its"
-	para "clouds darken"
-	line "the sky, making"
-	para "it feel like the"
-	line "sun and moon are"
-	para "washed out by"
-	line "the lightning."
+	line "approaches,"
+	para "washing out the"
+	line "sun and moon in"
+	cont "the sky."
 	
 	done
 

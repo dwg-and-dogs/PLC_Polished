@@ -67,7 +67,7 @@ MankeyEvosAttacks:
 	db EVOLVE_LEVEL, 24, PRIMEAPE
 
 PrimeapeEvosAttacks:
-	db EVOLVE_MOVE, OUTRAGE, ANNIHILAPE ; level 48
+	db EVOLVE_MOVE, OUTRAGE, ANNIHILAPE ; level 44
 
 GrowlitheEvosAttacks:
 	db EVOLVE_ITEM, FIRE_STONE, ARCANINE
@@ -88,6 +88,7 @@ AbraEvosAttacks:
 
 KadabraEvosAttacks:
 	db EVOLVE_LEVEL, 40, ALAKAZAM
+	db EVOLVE_ITEM, ODD_SOUVENIR, ALAKAZAM
 
 MachopEvosAttacks:
 	db EVOLVE_LEVEL, 20, MACHOKE
@@ -240,6 +241,7 @@ SentretEvosAttacks:
 
 LedybaEvosAttacks:
 	db EVOLVE_LEVEL, 14, LEDIAN
+	db EVOLVE_ITEM, ODD_SOUVENIR, LEDIAN
 
 SpinarakEvosAttacks:
 	db EVOLVE_LEVEL, 14, ARIADOS
@@ -359,7 +361,7 @@ ShieldonEvosAttacks:
 	db EVOLVE_LEVEL, 30, BASTIODON
 
 AipomEvosAttacks:
-	db EVOLVE_MOVE, DOUBLE_SLAP, AMBIPOM ; level 32
+	db EVOLVE_MOVE, FURY_STRIKES, AMBIPOM ; level 32
 
 DrifloonEvosAttacks:
 	db EVOLVE_LEVEL, 24, DRIFBLIM
@@ -393,7 +395,7 @@ DusclopsEvosAttacks:
 
 SnoruntEvosAttacks:
 	db EVOLVE_LEVEL, 32, GLALIE
-	db EVOLVE_ITEM, ICE_STONE, FROSLASS
+	db EVOLVE_ITEM, DAWN_STONE, FROSLASS
 
 BergmiteEvosAttacks:
 	db EVOLVE_LEVEL, 31, AVALUGG
@@ -409,7 +411,7 @@ RaltsEvosAttacks:
 
 KirliaEvosAttacks:
 	db EVOLVE_LEVEL, 30, GARDEVOIR
-	db EVOLVE_ITEM, SHINY_STONE, GALLADE
+	db EVOLVE_ITEM, DAWN_STONE, GALLADE
 
 GoomyEvosAttacks:
 	db EVOLVE_LEVEL, 25, SLIGGOO ; reduced

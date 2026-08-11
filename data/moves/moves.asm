@@ -14,7 +14,7 @@ Moves::
 	table_width MOVE_LENGTH, Moves
 	move ACROBATICS,   EFFECT_CONDITIONAL_BOOST,  55, FLYING,    100, 15,   0, PHYSICAL
 	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING,  100, 25,   0, PHYSICAL
-	move PHANTOM_FORCE,  EFFECT_FLY,          	  90, GHOST,     100, 10,   0, PHYSICAL ; REPLACE DOUBLE SLAP 
+	move PHANTOM_FORCE,  EFFECT_FLY,          	  90, GHOST,     100, 10,   0, PHYSICAL 
 	move AERIAL_ACE,   EFFECT_ALWAYS_HIT,         60, FLYING,    100, 20,   0, PHYSICAL
 	move DRAGON_CLAW,  EFFECT_NORMAL_HIT,         80, DRAGON,    100, 15,   0, PHYSICAL
 	move PAY_DAY,      EFFECT_PAY_DAY,            40, NORMAL,    100, 20,   0, PHYSICAL 
@@ -30,7 +30,7 @@ Moves::
 	move GUST,         EFFECT_GUST,               40, FLYING,    100, 35,   0, SPECIAL
 	move WING_ATTACK,  EFFECT_NORMAL_HIT,         60, FLYING,    100, 35,   0, PHYSICAL
 	move SUCKER_PUNCH, EFFECT_SUCKER_PUNCH,       70, DARK,      100,  5,   0, PHYSICAL
-	move FLY,          EFFECT_FLY,                90, FLYING,    100, 15,   0, PHYSICAL
+	move FLY,          EFFECT_FLY,               100, FLYING,    100, 15,   0, PHYSICAL
 	move DAZZLINGLEAM, EFFECT_NORMAL_HIT,         80, FAIRY,     100, 10,   0, SPECIAL
 	move VOLT_SWITCH,  EFFECT_SWITCH_HIT,         70, ELECTRIC,  100, 20,   0, SPECIAL
 	move VINE_WHIP,    EFFECT_NORMAL_HIT,         45, GRASS,     100, 25,   0, PHYSICAL
@@ -163,7 +163,7 @@ Moves::
 	move EXTRASENSORY, EFFECT_FLINCH_HIT,         80, PSYCHIC,   100, 20,  10, SPECIAL
 	move SPLASH,       EFFECT_SPLASH,              0, NORMAL,    100, 40,   0, STATUS
 	move DRAGON_DANCE, EFFECT_DRAGON_DANCE,        0, DRAGON,    100, 20,   0, STATUS
-	move CEASELESS_EDGE,   EFFECT_CLESS_EDGE,        65, DARK,      90, 10,   0, PHYSICAL ; remove for ceaseless edge (crabhammer), also a high crit move 
+	move CEASELESS_EDGE,   EFFECT_CLESS_EDGE,        65, DARK,      90, 10,   0, PHYSICAL 
 	move EXPLOSION,    EFFECT_EXPLOSION,         250, NORMAL,    100,  5,   0, PHYSICAL
 	move FURY_STRIKES, EFFECT_FURY_STRIKES,       18, NORMAL,     80, 15,   0, PHYSICAL
 	move TRIPLE_ARROWS,   EFFECT_TRIPLE_ARROWS,         90, FIGHTING,     90, 10,  50, PHYSICAL  
