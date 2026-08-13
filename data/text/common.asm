@@ -1330,16 +1330,14 @@ _NPCTradeIntroText2::
 	text_ram wStringBuffer2
 	text "?"
 	
-	para "It would really"
-	line "help my clown"
-	cont "routine!"
+	para "I've been looking"
+	line "all over for it!"
 	done
 
 SECTION "_NPCTradeCancelText2", ROMX ; 
 _NPCTradeCancelText2::
 	text "Now I'll never"
-	line "make my career"
-	cont "dreams happen..."
+	line "find one..."
 	done
 
 SECTION "_NPCTradeWrongText2", ROMX

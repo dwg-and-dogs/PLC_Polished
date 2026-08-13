@@ -37,7 +37,7 @@ except ImportError:
 #  Configuration — edit paths here if your layout differs
 # ═══════════════════════════════════════════════════════════════════════════════
 
-MODE = sys.argv[1].lower() if len(sys.argv) > 1 else "normal"
+MODE = sys.argv[1].lower() if len(sys.argv) > 1 else "expert"
 if MODE not in ("easy", "normal", "expert"):
     print(f"Unknown mode '{MODE}'. Choose: easy | normal | expert", file=sys.stderr)
     sys.exit(1)
