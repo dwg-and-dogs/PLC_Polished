@@ -158,8 +158,7 @@ Revised Goldenrod Dept Store Roof Mart to sell Berserk Genes.
 
 Todo for v110:
 * Check leveling in early game; todo play through again 
-* Double check animations
-* All documentation redo, INCLUDING ENEMY TEAMS 
+
 
 vOneDay
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?
