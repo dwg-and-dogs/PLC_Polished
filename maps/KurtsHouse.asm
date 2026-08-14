@@ -1010,7 +1010,7 @@ endr
 ;	loadmem wPartyMon6DVs+1, $ff
 ;	loadmem wPartyMon6DVs+2, $ff	
 
-	setevent EVENT_REACHED_CREDITS_ONCE
+;	setevent EVENT_REACHED_CREDITS_ONCE
 
 	; fill pokedex
 	callasm FillPokedex

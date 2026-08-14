@@ -205,26 +205,26 @@ Breeder1Script:
 ;	loadmem wPartyMon2Moves+2, STRENGTH
 ;	loadmem wPartyMon2Moves+3, WATERFALL
 	givepoke DECIDUEYE, HISUIAN_FORM, 100, LEFTOVERS
-;	loadmem wPartyMon3Moves+0, ENERGY_BALL
-;	loadmem wPartyMon3Moves+1, SPORE
-;	loadmem wPartyMon3Moves+2, CUT
-;	loadmem wPartyMon3Moves+3, FLY
-	givepoke GARCHOMP, NO_FORM, 100, LEFTOVERS
-	loadmem wPartyMon4Moves+0, EARTHQUAKE
-	loadmem wPartyMon4Moves+1, DRAGON_CLAW
-	loadmem wPartyMon4Moves+2, STRENGTH
+	loadmem wPartyMon3Moves+0, TRIPLE_ARROWS
+	loadmem wPartyMon3Moves+1, BULK_UP
+	loadmem wPartyMon3Moves+2, STRENGTH
+	loadmem wPartyMon3Moves+3, FLY
+	givepoke KLEAVOR, NO_FORM, 100, LEFTOVERS
+	loadmem wPartyMon4Moves+0, STONE_AXE
+	loadmem wPartyMon4Moves+1, X_SCISSOR
+	loadmem wPartyMon4Moves+2, AGILITY
 	loadmem wPartyMon4Moves+3, SWORDS_DANCE
-	loadmem wPartyMon4EVs+0, 252
-	loadmem wPartyMon4EVs+1, 252
-	loadmem wPartyMon4EVs+2, 252
-	loadmem wPartyMon4EVs+3, 252
-	loadmem wPartyMon4EVs+4, 252
-	loadmem wPartyMon4EVs+5, 252
-	loadmem wPartyMon4DVs+0, $ff
-	loadmem wPartyMon4DVs+1, $ff
-	loadmem wPartyMon4DVs+2, $ff
+;	loadmem wPartyMon4EVs+0, 252
+;	loadmem wPartyMon4EVs+1, 252
+;	loadmem wPartyMon4EVs+2, 252
+;	loadmem wPartyMon4EVs+3, 252
+;	loadmem wPartyMon4EVs+4, 252
+;	loadmem wPartyMon4EVs+5, 252
+;	loadmem wPartyMon4DVs+0, $ff
+;	loadmem wPartyMon4DVs+1, $ff
+;	loadmem wPartyMon4DVs+2, $ff
 
-	givepoke LUGIA, NO_FORM, 100, LEFTOVERS  
+	givepoke SUICUNE, NO_FORM, 100, LEFTOVERS  
 ;	loadmem wPartyMon5Moves+0, SURF
 ;	loadmem wPartyMon5Moves+1, PSYCHIC
 ;	loadmem wPartyMon5Moves+2, HURRICANE

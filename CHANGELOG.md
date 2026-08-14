@@ -108,56 +108,55 @@ Minor text, tile, object palette issues.
 
 * Release 1.1.0 
 
-Major Updates: 
-Postgame Battle Facility: Stadium!
-	* Play right away from the debug room, or train up your favorite Pokemon from your playthrough!
-New Ancestor forms: Ledian (Bug/Water Special Attacker with HA Drizzle) and Alakazam (Dark, higher Defense) credit to u/Accad501. Their events are in Anarres Holt and Cianwood Cave, respectively. 
-Journal in Kurt's house will recap the plot. 
-Max DV mons get a Black Triangle symbol in battle. 
-Add signature moves of Infernal Parade, Triple Arrows, Ceaseless Edge, Stone Axe, and Phantom Force. 
-Remove DoubleSlap, Teleport, Dragon Rage, Bonemerang, and Crabhammer. 
-Stadium Facility Rematches are a bit harder. 
-EV trainers in the Stadium Facility Prep Room. 
-Revised some trainer pokemon nicknames. 
+# Major Updates
 
-Minor updates: 
-Move HM Fly to Magnet Train Station after Whitney.
-Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability 
-Higher EVs for the Stadium Rematch teams. 
-Updated composition for Stadium Rematch teams. 
-Mamoswine and Piloswine get Icicle Spear as Lv 1 move. 
-Update ANoctowl and AFeraligatr back sprites. 
-Reduce Union Cave trainer party size to split experience a little better. 
-Fix tiles on sheltered shores causing graphical glitch. 
-Slightly updated the "bad ending" text. 
-Fix text of "Adrinna" to "Andrea". 
-Increase Sneasler base EXP. 
-Revise Jynx sprite to the Crystal version. (Sorry I didn't notice this sooner!)
-Revise Lucario sprite to be better for Hidden Palette. 
-Add all evolution-hold items to Sandbox room. 
-Revise Rival Lake Battle Text. 
-Resolve Lake of Rage partial softlock. 
-Update some NPC text to give more guidance on where to go with Tin Tower and Whirl Island. 
-Fix Tangela back sprite colors 
-Restore map music on some maps where it was paused after an event. 
-Misc. text fixes. 
-Update Unown learnset. 
-Add Drain Punch to more movesets.
-Update Ancestor Forms learnsets. 
-Add a few more technician moves to Samurott move relearner learnset. 
-Remove Hall of Fame from Pokecenter PCs. 
-Add Dawn Stone to Goldenrod Mart. 
-Reduce value of smashrock items. 
-Removed Sleep Talk from learnsets - addressing a bug. 
-Address a possible soft lock in Whispers Way. 
-A few more hints in the early game. 
-Buff wild levels in Union Cave. 
-Updated Completionist document. 
-Revise Dragon's Den NPC. 
-Revised Goldenrod Dept Store Roof Mart to sell Berserk Genes. 
+* **Postgame Battle Facility: Stadium!** Play right away from the debug room, or train up your favorite Pokemon from your playthrough!
+* **New Ancestor forms:** Ledian (Bug/Water Special Attacker with HA Drizzle) and Alakazam (Dark, higher Defense) — credit to u/Accad501. Their events are in Anarres Holt and Cianwood Cave, respectively.
+* Journal in Kurt's house will recap the plot
+* Max DV mons get a Black Triangle symbol in battle
+* Add signature moves of Infernal Parade, Triple Arrows, Ceaseless Edge, Stone Axe, and Phantom Force
+* Remove DoubleSlap, Teleport, Dragon Rage, Bonemerang, and Crabhammer
+* Stadium Facility Rematches are a bit harder
+* EV trainers in the Stadium Facility Prep Room
+* Revised some trainer pokemon nicknames
 
-Todo for v110:
-* Check leveling in early game; todo play through again 
+# Minor Updates
+
+* Move HM Fly to Magnet Train Station after Whitney
+* Update abilities: ANoctowl gets Tough Claws (from Tinted Lens); Zoroark gets Frisk (from Compound Eyes); AMagcargo gets Aftermath (from Weak Armor); Basculegion gets Adaptability
+* Higher EVs for the Stadium Rematch teams
+* Updated composition for Stadium Rematch teams
+* Mamoswine and Piloswine get Icicle Spear as Lv 1 move
+* Update ANoctowl and AFeraligatr back sprites
+* Reduce Union Cave trainer party size to split experience a little better
+* Fix tiles on sheltered shores causing graphical glitch
+* Slightly updated the "bad ending" text
+* Fix text of "Adrinna" to "Andrea"
+* Increase Sneasler base EXP
+* Revise Jynx sprite to the Crystal version (sorry I didn't notice this sooner!)
+* Revise Lucario sprite to be better for Hidden Palette
+* Add all evolution-hold items to Sandbox room
+* Revise Rival Lake Battle Text
+* Resolve Lake of Rage partial softlock
+* Update some NPC text to give more guidance on where to go with Tin Tower and Whirl Island
+* Fix Tangela back sprite colors
+* Restore map music on some maps where it was paused after an event
+* Misc. text fixes
+* Update Unown learnset
+* Add Drain Punch to more movesets
+* Update Ancestor Forms learnsets
+* Add a few more technician moves to Samurott move relearner learnset
+* Remove Hall of Fame from Pokecenter PCs
+* Add Dawn Stone to Goldenrod Mart
+* Reduce value of smashrock items
+* Removed Sleep Talk from learnsets — addressing a bug
+* Address a possible soft lock in Whispers Way
+* A few more hints in the early game
+* Buff wild levels in Union Cave
+* Updated Completionist document
+* Revise Dragon's Den NPC
+* Revised Goldenrod Dept Store Roof Mart to sell Berserk Genes
+
 
 
 vOneDay
