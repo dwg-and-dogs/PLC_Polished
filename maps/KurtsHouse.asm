@@ -1018,7 +1018,8 @@ endr
 	closetext
 ; debug only
 ; debug 
-	warp GOLDENROD_DEPT_STORE_6F, 13, 4
+;	clearevent EVENT_FACILITY_SILVER_TROPHY
+	warp STADIUM_GROUNDS_FACILITY_PREP, 14, 12
 	end
 
 JournalBookScript:

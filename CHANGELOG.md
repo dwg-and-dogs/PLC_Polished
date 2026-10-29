@@ -157,7 +157,13 @@ Minor text, tile, object palette issues.
 * Revise Dragon's Den NPC
 * Revised Goldenrod Dept Store Roof Mart to sell Berserk Genes
 
+* Release 1.1.1 
 
+* Psychic TM for Ninetales Kanto
+* Scald TM for Goodra line
+* Fix Western Capital Dorms Apricorn Bench
+* Fix Girafarig typing: Dark-Psychic in regular, Normal-Psychic in Faithful
+* Fix Stadium Prep Room crash 
 
 vOneDay
 * Remove gender symbol from nickname screen -or- figure out why it's sometimes wrong. Sandbox type giver is OK, gauldenrod + goldenrod are not - why?

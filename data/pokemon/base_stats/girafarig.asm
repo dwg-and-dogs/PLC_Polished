@@ -7,9 +7,9 @@ else
 endc
 
 if DEF(FAITHFUL)
-	db DARK, PSYCHIC ; type
+	db NORMAL, PSYCHIC ; type
 else
-	db NORMAL, PSYCHIC
+	db DARK, PSYCHIC
 endc
 	db 60 ; catch rate
 	db 149 ; base exp

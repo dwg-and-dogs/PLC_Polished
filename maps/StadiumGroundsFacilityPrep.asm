@@ -1175,10 +1175,9 @@ StadiumGroundsFaciltyPrepClerkScript2:
 	iffalse_jumptext FacilityRecruitPiper
 	
 	clearevent EVENT_FACILITY_SILVER_TROPHY
+.CheckGoldTrophyAndMon: ; todo check 
 	jumptext CongratsSilverTrophyText2
-.CheckGoldTrophyAndMon:
-	; readmem MAX_BATTLE_ROUNDS or whatever
-	; ifless 
+
 
 	
 SilverTrophyExplainText:

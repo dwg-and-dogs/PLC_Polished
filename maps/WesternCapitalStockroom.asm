@@ -61,7 +61,7 @@ WCApricornBenchScript:
 	iftrue .GiveLoveBall
 	callasm .CheckHaveAnyApricorns
 	iftrue .AskApricorn
-	jumpopenedtext ASThatsALetdownText
+	jumpopenedtext WCThatsALetdownText
 
 .CheckHaveAnyApricorns:
 	xor a
